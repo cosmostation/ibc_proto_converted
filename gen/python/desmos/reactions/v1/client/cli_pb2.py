@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from desmos.reactions.v1 import models_pb2 as desmos_dot_reactions_dot_v1_dot_models__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$desmos/reactions/v1/client/cli.proto\x12\x1a\x64\x65smos.reactions.v1.client\x1a\x14gogoproto/gogo.proto\x1a desmos/reactions/v1/models.proto\"\xea\x01\n\x16SetReactionsParamsJSON\x12v\n\x1aregistered_reaction_params\x18\x01 \x01(\x0b\x32\x32.desmos.reactions.v1.RegisteredReactionValueParamsB\x04\xc8\xde\x1f\x00R\x18registeredReactionParams\x12X\n\x10\x66ree_text_params\x18\x02 \x01(\x0b\x32(.desmos.reactions.v1.FreeTextValueParamsB\x04\xc8\xde\x1f\x00R\x0e\x66reeTextParamsB\xf1\x01\n\x1e\x63om.desmos.reactions.v1.clientB\x08\x43liProtoP\x01Z9github.com/desmos-labs/desmos/v5/x/reactions/client/utils\xa2\x02\x04\x44RVC\xaa\x02\x1a\x44\x65smos.Reactions.V1.Client\xca\x02\x1a\x44\x65smos\\Reactions\\V1\\Client\xe2\x02&Desmos\\Reactions\\V1\\Client\\GPBMetadata\xea\x02\x1d\x44\x65smos::Reactions::V1::Clientb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$desmos/reactions/v1/client/cli.proto\x12\x1a\x64\x65smos.reactions.v1.client\x1a\x14gogoproto/gogo.proto\x1a desmos/reactions/v1/models.proto\"\xea\x01\n\x16SetReactionsParamsJSON\x12v\n\x1aregistered_reaction_params\x18\x01 \x01(\x0b\x32\x32.desmos.reactions.v1.RegisteredReactionValueParamsB\x04\xc8\xde\x1f\x00R\x18registeredReactionParams\x12X\n\x10\x66ree_text_params\x18\x02 \x01(\x0b\x32(.desmos.reactions.v1.FreeTextValueParamsB\x04\xc8\xde\x1f\x00R\x0e\x66reeTextParamsB\xef\x01\n\x1e\x63om.desmos.reactions.v1.clientB\x08\x43liProtoZ9github.com/desmos-labs/desmos/v5/x/reactions/client/utils\xa2\x02\x04\x44RVC\xaa\x02\x1a\x44\x65smos.Reactions.V1.Client\xca\x02\x1a\x44\x65smos\\Reactions\\V1\\Client\xe2\x02&Desmos\\Reactions\\V1\\Client\\GPBMetadata\xea\x02\x1d\x44\x65smos::Reactions::V1::Clientb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'desmos.reactions.v1.client.cli_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.desmos.reactions.v1.clientB\010CliProtoP\001Z9github.com/desmos-labs/desmos/v5/x/reactions/client/utils\242\002\004DRVC\252\002\032Desmos.Reactions.V1.Client\312\002\032Desmos\\Reactions\\V1\\Client\342\002&Desmos\\Reactions\\V1\\Client\\GPBMetadata\352\002\035Desmos::Reactions::V1::Client'
+  DESCRIPTOR._serialized_options = b'\n\036com.desmos.reactions.v1.clientB\010CliProtoZ9github.com/desmos-labs/desmos/v5/x/reactions/client/utils\242\002\004DRVC\252\002\032Desmos.Reactions.V1.Client\312\002\032Desmos\\Reactions\\V1\\Client\342\002&Desmos\\Reactions\\V1\\Client\\GPBMetadata\352\002\035Desmos::Reactions::V1::Client'
   _SETREACTIONSPARAMSJSON.fields_by_name['registered_reaction_params']._options = None
   _SETREACTIONSPARAMSJSON.fields_by_name['registered_reaction_params']._serialized_options = b'\310\336\037\000'
   _SETREACTIONSPARAMSJSON.fields_by_name['free_text_params']._options = None

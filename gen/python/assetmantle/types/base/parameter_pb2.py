@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.properties.base import meta_property_pb2 as assetmantle_dot_properties_dot_base_dot_meta__property__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&assetmantle/types/base/parameter.proto\x12\"assetmantle.schema.parameters.base\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/properties/base/meta_property.proto\"h\n\tParameter\x12U\n\rmeta_property\x18\x01 \x01(\x0b\x32\x30.assetmantle.schema.properties.base.MetaPropertyR\x0cmetaProperty:\x04\x88\xa0\x1f\x00\x42\xe4\x01\n&com.assetmantle.schema.parameters.baseB\x0eParameterProtoP\x01\xa2\x02\x04\x41SPB\xaa\x02\"Assetmantle.Schema.Parameters.Base\xca\x02\"Assetmantle\\Schema\\Parameters\\Base\xe2\x02.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\xea\x02%Assetmantle::Schema::Parameters::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&assetmantle/types/base/parameter.proto\x12\"assetmantle.schema.parameters.base\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/properties/base/meta_property.proto\"h\n\tParameter\x12U\n\rmeta_property\x18\x01 \x01(\x0b\x32\x30.assetmantle.schema.properties.base.MetaPropertyR\x0cmetaProperty:\x04\x88\xa0\x1f\x00\x42\xe2\x01\n&com.assetmantle.schema.parameters.baseB\x0eParameterProto\xa2\x02\x04\x41SPB\xaa\x02\"Assetmantle.Schema.Parameters.Base\xca\x02\"Assetmantle\\Schema\\Parameters\\Base\xe2\x02.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\xea\x02%Assetmantle::Schema::Parameters::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.types.base.parameter_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n&com.assetmantle.schema.parameters.baseB\016ParameterProtoP\001\242\002\004ASPB\252\002\"Assetmantle.Schema.Parameters.Base\312\002\"Assetmantle\\Schema\\Parameters\\Base\342\002.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\352\002%Assetmantle::Schema::Parameters::Base'
+  DESCRIPTOR._serialized_options = b'\n&com.assetmantle.schema.parameters.baseB\016ParameterProto\242\002\004ASPB\252\002\"Assetmantle.Schema.Parameters.Base\312\002\"Assetmantle\\Schema\\Parameters\\Base\342\002.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\352\002%Assetmantle::Schema::Parameters::Base'
   _PARAMETER._options = None
   _PARAMETER._serialized_options = b'\210\240\037\000'
   _globals['_PARAMETER']._serialized_start=149

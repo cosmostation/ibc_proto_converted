@@ -112,6 +112,7 @@ public final class LpfarmProto {
               com.crescent.lpfarm.v1beta1.LpfarmProto.Params.class, com.crescent.lpfarm.v1beta1.LpfarmProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PRIVATE_PLAN_CREATION_FEE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> privatePlanCreationFee_;
@@ -211,7 +212,7 @@ public final class LpfarmProto {
      */
     @java.lang.Override
     public boolean hasMaxBlockDuration() {
-      return maxBlockDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration max_block_duration = 4 [json_name = "maxBlockDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -252,7 +253,7 @@ public final class LpfarmProto {
       if (maxNumPrivatePlans_ != 0) {
         output.writeUInt32(3, maxNumPrivatePlans_);
       }
-      if (maxBlockDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getMaxBlockDuration());
       }
       getUnknownFields().writeTo(output);
@@ -275,7 +276,7 @@ public final class LpfarmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, maxNumPrivatePlans_);
       }
-      if (maxBlockDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMaxBlockDuration());
       }
@@ -447,13 +448,20 @@ public final class LpfarmProto {
 
       // Construct using com.crescent.lpfarm.v1beta1.LpfarmProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPrivatePlanCreationFeeFieldBuilder();
+          getMaxBlockDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -525,11 +533,14 @@ public final class LpfarmProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxNumPrivatePlans_ = maxNumPrivatePlans_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.maxBlockDuration_ = maxBlockDurationBuilder_ == null
               ? maxBlockDuration_
               : maxBlockDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1096,8 +1107,10 @@ public final class LpfarmProto {
         } else {
           maxBlockDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (maxBlockDuration_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1363,6 +1376,7 @@ public final class LpfarmProto {
               com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.class, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -1540,7 +1554,7 @@ public final class LpfarmProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1566,7 +1580,7 @@ public final class LpfarmProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return endTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1635,10 +1649,10 @@ public final class LpfarmProto {
       for (int i = 0; i < rewardAllocations_.size(); i++) {
         output.writeMessage(5, rewardAllocations_.get(i));
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getEndTime());
       }
       if (isPrivate_ != false) {
@@ -1673,11 +1687,11 @@ public final class LpfarmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, rewardAllocations_.get(i));
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getEndTime());
       }
@@ -1885,13 +1899,21 @@ public final class LpfarmProto {
 
       // Construct using com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardAllocationsFieldBuilder();
+          getStartTimeFieldBuilder();
+          getEndTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1978,15 +2000,18 @@ public final class LpfarmProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.terminationAddress_ = terminationAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.isPrivate_ = isPrivate_;
@@ -1994,6 +2019,7 @@ public final class LpfarmProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.isTerminated_ = isTerminated_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2750,8 +2776,10 @@ public final class LpfarmProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2869,8 +2897,10 @@ public final class LpfarmProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (endTime_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

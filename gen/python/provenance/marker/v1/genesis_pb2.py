@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from provenance.marker.v1 import marker_pb2 as provenance_dot_marker_dot_v1_dot_marker__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"provenance/marker/v1/genesis.proto\x12\x14provenance.marker.v1\x1a\x14gogoproto/gogo.proto\x1a!provenance/marker/v1/marker.proto\"\x99\x01\n\x0cGenesisState\x12:\n\x06params\x18\x01 \x01(\x0b\x32\x1c.provenance.marker.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x43\n\x07markers\x18\x02 \x03(\x0b\x32#.provenance.marker.v1.MarkerAccountB\x04\xc8\xde\x1f\x00R\x07markers:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xce\x01\n\x18\x63om.provenance.marker.v1B\x0cGenesisProtoP\x01Z2github.com/provenance-io/provenance/x/marker/types\xa2\x02\x03PMX\xaa\x02\x14Provenance.Marker.V1\xca\x02\x14Provenance\\Marker\\V1\xe2\x02 Provenance\\Marker\\V1\\GPBMetadata\xea\x02\x16Provenance::Marker::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"provenance/marker/v1/genesis.proto\x12\x14provenance.marker.v1\x1a\x14gogoproto/gogo.proto\x1a!provenance/marker/v1/marker.proto\"\x99\x01\n\x0cGenesisState\x12:\n\x06params\x18\x01 \x01(\x0b\x32\x1c.provenance.marker.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x43\n\x07markers\x18\x02 \x03(\x0b\x32#.provenance.marker.v1.MarkerAccountB\x04\xc8\xde\x1f\x00R\x07markers:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xce\x01\n\x18\x63om.provenance.marker.v1B\x0cGenesisProtoP\x00Z2github.com/provenance-io/provenance/x/marker/types\xa2\x02\x03PMX\xaa\x02\x14Provenance.Marker.V1\xca\x02\x14Provenance\\Marker\\V1\xe2\x02 Provenance\\Marker\\V1\\GPBMetadata\xea\x02\x16Provenance::Marker::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'provenance.marker.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.provenance.marker.v1B\014GenesisProtoP\001Z2github.com/provenance-io/provenance/x/marker/types\242\002\003PMX\252\002\024Provenance.Marker.V1\312\002\024Provenance\\Marker\\V1\342\002 Provenance\\Marker\\V1\\GPBMetadata\352\002\026Provenance::Marker::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.provenance.marker.v1B\014GenesisProtoP\000Z2github.com/provenance-io/provenance/x/marker/types\242\002\003PMX\252\002\024Provenance.Marker.V1\312\002\024Provenance\\Marker\\V1\342\002 Provenance\\Marker\\V1\\GPBMetadata\352\002\026Provenance::Marker::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['markers']._options = None

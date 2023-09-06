@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!stafihub/rmintreward/params.proto\x12\x1dstafihub.stafihub.rmintreward\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xf8\x01\n!com.stafihub.stafihub.rmintrewardB\x0bParamsProtoP\x01Z0github.com/stafihub/stafihub/x/rmintreward/types\xa2\x02\x03SSR\xaa\x02\x1dStafihub.Stafihub.Rmintreward\xca\x02\x1dStafihub\\Stafihub\\Rmintreward\xe2\x02)Stafihub\\Stafihub\\Rmintreward\\GPBMetadata\xea\x02\x1fStafihub::Stafihub::Rmintrewardb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!stafihub/rmintreward/params.proto\x12\x1dstafihub.stafihub.rmintreward\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xf6\x01\n!com.stafihub.stafihub.rmintrewardB\x0bParamsProtoZ0github.com/stafihub/stafihub/x/rmintreward/types\xa2\x02\x03SSR\xaa\x02\x1dStafihub.Stafihub.Rmintreward\xca\x02\x1dStafihub\\Stafihub\\Rmintreward\xe2\x02)Stafihub\\Stafihub\\Rmintreward\\GPBMetadata\xea\x02\x1fStafihub::Stafihub::Rmintrewardb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.rmintreward.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n!com.stafihub.stafihub.rmintrewardB\013ParamsProtoP\001Z0github.com/stafihub/stafihub/x/rmintreward/types\242\002\003SSR\252\002\035Stafihub.Stafihub.Rmintreward\312\002\035Stafihub\\Stafihub\\Rmintreward\342\002)Stafihub\\Stafihub\\Rmintreward\\GPBMetadata\352\002\037Stafihub::Stafihub::Rmintreward'
+  DESCRIPTOR._serialized_options = b'\n!com.stafihub.stafihub.rmintrewardB\013ParamsProtoZ0github.com/stafihub/stafihub/x/rmintreward/types\242\002\003SSR\252\002\035Stafihub.Stafihub.Rmintreward\312\002\035Stafihub\\Stafihub\\Rmintreward\342\002)Stafihub\\Stafihub\\Rmintreward\\GPBMetadata\352\002\037Stafihub::Stafihub::Rmintreward'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=90

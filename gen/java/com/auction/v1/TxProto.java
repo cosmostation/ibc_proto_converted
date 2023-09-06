@@ -102,6 +102,7 @@ public final class TxProto {
               com.auction.v1.TxProto.MsgSubmitBidRequest.class, com.auction.v1.TxProto.MsgSubmitBidRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AUCTION_ID_FIELD_NUMBER = 1;
     private int auctionId_ = 0;
     /**
@@ -160,7 +161,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMaxBidInUsomm() {
-      return maxBidInUsomm_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin max_bid_in_usomm = 3 [json_name = "maxBidInUsomm", (.gogoproto.nullable) = false];</code>
@@ -186,7 +187,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSaleTokenMinimumAmount() {
-      return saleTokenMinimumAmount_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin sale_token_minimum_amount = 4 [json_name = "saleTokenMinimumAmount", (.gogoproto.nullable) = false];</code>
@@ -224,10 +225,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signer_);
       }
-      if (maxBidInUsomm_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getMaxBidInUsomm());
       }
-      if (saleTokenMinimumAmount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getSaleTokenMinimumAmount());
       }
       getUnknownFields().writeTo(output);
@@ -246,11 +247,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, signer_);
       }
-      if (maxBidInUsomm_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMaxBidInUsomm());
       }
-      if (saleTokenMinimumAmount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSaleTokenMinimumAmount());
       }
@@ -425,13 +426,20 @@ public final class TxProto {
 
       // Construct using com.auction.v1.TxProto.MsgSubmitBidRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMaxBidInUsommFieldBuilder();
+          getSaleTokenMinimumAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -488,16 +496,20 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signer_ = signer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxBidInUsomm_ = maxBidInUsommBuilder_ == null
               ? maxBidInUsomm_
               : maxBidInUsommBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.saleTokenMinimumAmount_ = saleTokenMinimumAmountBuilder_ == null
               ? saleTokenMinimumAmount_
               : saleTokenMinimumAmountBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -795,8 +807,10 @@ public final class TxProto {
         } else {
           maxBidInUsommBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (maxBidInUsomm_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -914,8 +928,10 @@ public final class TxProto {
         } else {
           saleTokenMinimumAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (saleTokenMinimumAmount_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1084,6 +1100,7 @@ public final class TxProto {
               com.auction.v1.TxProto.MsgSubmitBidResponse.class, com.auction.v1.TxProto.MsgSubmitBidResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BID_FIELD_NUMBER = 1;
     private com.auction.v1.AuctionProto.Bid bid_;
     /**
@@ -1092,7 +1109,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBid() {
-      return bid_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.auction.v1.Bid bid = 1 [json_name = "bid"];</code>
@@ -1124,7 +1141,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (bid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBid());
       }
       getUnknownFields().writeTo(output);
@@ -1136,7 +1153,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (bid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBid());
       }
@@ -1294,13 +1311,19 @@ public final class TxProto {
 
       // Construct using com.auction.v1.TxProto.MsgSubmitBidResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBidFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1344,11 +1367,14 @@ public final class TxProto {
 
       private void buildPartial0(com.auction.v1.TxProto.MsgSubmitBidResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bid_ = bidBuilder_ == null
               ? bid_
               : bidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1514,8 +1540,10 @@ public final class TxProto {
         } else {
           bidBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (bid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

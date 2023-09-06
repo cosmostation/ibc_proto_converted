@@ -342,6 +342,7 @@ public final class LockProto {
               com.osmosis.lockup.LockProto.PeriodLock.class, com.osmosis.lockup.LockProto.PeriodLock.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long iD_ = 0L;
     /**
@@ -421,7 +422,7 @@ public final class LockProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -463,7 +464,7 @@ public final class LockProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return endTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -625,10 +626,10 @@ public final class LockProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getDuration());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getEndTime());
       }
       for (int i = 0; i < coins_.size(); i++) {
@@ -653,11 +654,11 @@ public final class LockProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDuration());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEndTime());
       }
@@ -858,13 +859,21 @@ public final class LockProto {
 
       // Construct using com.osmosis.lockup.LockProto.PeriodLock.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDurationFieldBuilder();
+          getEndTimeFieldBuilder();
+          getCoinsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -942,19 +951,23 @@ public final class LockProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.owner_ = owner_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.rewardReceiverAddress_ = rewardReceiverAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1369,8 +1382,10 @@ public final class LockProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1538,8 +1553,10 @@ public final class LockProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (endTime_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2244,6 +2261,7 @@ public final class LockProto {
               com.osmosis.lockup.LockProto.QueryCondition.class, com.osmosis.lockup.LockProto.QueryCondition.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCK_QUERY_TYPE_FIELD_NUMBER = 1;
     private int lockQueryType_ = 0;
     /**
@@ -2331,7 +2349,7 @@ public final class LockProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2375,7 +2393,7 @@ public final class LockProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return timestamp_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2425,10 +2443,10 @@ public final class LockProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getDuration());
       }
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getTimestamp());
       }
       getUnknownFields().writeTo(output);
@@ -2447,11 +2465,11 @@ public final class LockProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDuration());
       }
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTimestamp());
       }
@@ -2631,13 +2649,20 @@ public final class LockProto {
 
       // Construct using com.osmosis.lockup.LockProto.QueryCondition.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDurationFieldBuilder();
+          getTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2694,16 +2719,20 @@ public final class LockProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.denom_ = denom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3092,8 +3121,10 @@ public final class LockProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3265,8 +3296,10 @@ public final class LockProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (timestamp_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3545,6 +3578,7 @@ public final class LockProto {
               com.osmosis.lockup.LockProto.SyntheticLock.class, com.osmosis.lockup.LockProto.SyntheticLock.Builder.class);
     }
 
+    private int bitField0_;
     public static final int UNDERLYING_LOCK_ID_FIELD_NUMBER = 1;
     private long underlyingLockId_ = 0L;
     /**
@@ -3623,7 +3657,7 @@ public final class LockProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return endTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3664,7 +3698,7 @@ public final class LockProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -3712,10 +3746,10 @@ public final class LockProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(synthDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, synthDenom_);
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getEndTime());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getDuration());
       }
       getUnknownFields().writeTo(output);
@@ -3734,11 +3768,11 @@ public final class LockProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(synthDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, synthDenom_);
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEndTime());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDuration());
       }
@@ -3921,13 +3955,20 @@ public final class LockProto {
 
       // Construct using com.osmosis.lockup.LockProto.SyntheticLock.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEndTimeFieldBuilder();
+          getDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3984,16 +4025,20 @@ public final class LockProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.synthDenom_ = synthDenom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4356,8 +4401,10 @@ public final class LockProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (endTime_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4520,8 +4567,10 @@ public final class LockProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

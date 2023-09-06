@@ -17,15 +17,14 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fixo/entity/v1beta1/cosmos.proto\x12\x12ixo.entity.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x19google/protobuf/any.proto\"\x9c\x01\n\x05Grant\x12M\n\rauthorization\x18\x01 \x01(\x0b\x32\x14.google.protobuf.AnyB\x11\xca\xb4-\rAuthorizationR\rauthorization\x12\x44\n\nexpiration\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\nexpirationB\xc7\x01\n\x16\x63om.ixo.entity.v1beta1B\x0b\x43osmosProtoP\x01Z6github.com/ixofoundation/ixo-blockchain/x/entity/types\xa2\x02\x03IEX\xaa\x02\x12Ixo.Entity.V1beta1\xca\x02\x12Ixo\\Entity\\V1beta1\xe2\x02\x1eIxo\\Entity\\V1beta1\\GPBMetadata\xea\x02\x14Ixo::Entity::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fixo/entity/v1beta1/cosmos.proto\x12\x12ixo.entity.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x19google/protobuf/any.proto\"\x9c\x01\n\x05Grant\x12M\n\rauthorization\x18\x01 \x01(\x0b\x32\x14.google.protobuf.AnyB\x11\xca\xb4-\rAuthorizationR\rauthorization\x12\x44\n\nexpiration\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\nexpirationB\xc5\x01\n\x16\x63om.ixo.entity.v1beta1B\x0b\x43osmosProtoZ6github.com/ixofoundation/ixo-blockchain/x/entity/types\xa2\x02\x03IEX\xaa\x02\x12Ixo.Entity.V1beta1\xca\x02\x12Ixo\\Entity\\V1beta1\xe2\x02\x1eIxo\\Entity\\V1beta1\\GPBMetadata\xea\x02\x14Ixo::Entity::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ixo.entity.v1beta1.cosmos_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.ixo.entity.v1beta1B\013CosmosProtoP\001Z6github.com/ixofoundation/ixo-blockchain/x/entity/types\242\002\003IEX\252\002\022Ixo.Entity.V1beta1\312\002\022Ixo\\Entity\\V1beta1\342\002\036Ixo\\Entity\\V1beta1\\GPBMetadata\352\002\024Ixo::Entity::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\026com.ixo.entity.v1beta1B\013CosmosProtoZ6github.com/ixofoundation/ixo-blockchain/x/entity/types\242\002\003IEX\252\002\022Ixo.Entity.V1beta1\312\002\022Ixo\\Entity\\V1beta1\342\002\036Ixo\\Entity\\V1beta1\\GPBMetadata\352\002\024Ixo::Entity::V1beta1'
   _GRANT.fields_by_name['authorization']._options = None
   _GRANT.fields_by_name['authorization']._serialized_options = b'\312\264-\rAuthorization'
   _GRANT.fields_by_name['expiration']._options = None

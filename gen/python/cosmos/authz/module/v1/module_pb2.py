@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos.app.v1alpha1 import module_pb2 as cosmos_dot_app_dot_v1alpha1_dot_module__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#cosmos/authz/module/v1/module.proto\x12\x16\x63osmos.authz.module.v1\x1a cosmos/app/v1alpha1/module.proto\"6\n\x06Module:,\xba\xc0\x96\xda\x01&\n$github.com/cosmos/cosmos-sdk/x/authzB\xa4\x01\n\x1a\x63om.cosmos.authz.module.v1B\x0bModuleProtoP\x01\xa2\x02\x03\x43\x41M\xaa\x02\x16\x43osmos.Authz.Module.V1\xca\x02\x16\x43osmos\\Authz\\Module\\V1\xe2\x02\"Cosmos\\Authz\\Module\\V1\\GPBMetadata\xea\x02\x19\x43osmos::Authz::Module::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#cosmos/authz/module/v1/module.proto\x12\x16\x63osmos.authz.module.v1\x1a cosmos/app/v1alpha1/module.proto\"6\n\x06Module:,\xba\xc0\x96\xda\x01&\n$github.com/cosmos/cosmos-sdk/x/authzB\xa2\x01\n\x1a\x63om.cosmos.authz.module.v1B\x0bModuleProto\xa2\x02\x03\x43\x41M\xaa\x02\x16\x43osmos.Authz.Module.V1\xca\x02\x16\x43osmos\\Authz\\Module\\V1\xe2\x02\"Cosmos\\Authz\\Module\\V1\\GPBMetadata\xea\x02\x19\x43osmos::Authz::Module::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.authz.module.v1.module_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.cosmos.authz.module.v1B\013ModuleProtoP\001\242\002\003CAM\252\002\026Cosmos.Authz.Module.V1\312\002\026Cosmos\\Authz\\Module\\V1\342\002\"Cosmos\\Authz\\Module\\V1\\GPBMetadata\352\002\031Cosmos::Authz::Module::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.cosmos.authz.module.v1B\013ModuleProto\242\002\003CAM\252\002\026Cosmos.Authz.Module.V1\312\002\026Cosmos\\Authz\\Module\\V1\342\002\"Cosmos\\Authz\\Module\\V1\\GPBMetadata\352\002\031Cosmos::Authz::Module::V1'
   _MODULE._options = None
   _MODULE._serialized_options = b'\272\300\226\332\001&\n$github.com/cosmos/cosmos-sdk/x/authz'
   _globals['_MODULE']._serialized_start=97

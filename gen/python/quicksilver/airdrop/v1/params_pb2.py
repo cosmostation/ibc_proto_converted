@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#quicksilver/airdrop/v1/params.proto\x12\x16quicksilver.airdrop.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\x12\n\x06Params:\x08\x88\xa0\x1f\x00\x98\xa0\x1f\x00\x42\xdb\x01\n\x1a\x63om.quicksilver.airdrop.v1B\x0bParamsProtoP\x01Z6github.com/ingenuity-build/quicksilver/x/airdrop/types\xa2\x02\x03QAX\xaa\x02\x16Quicksilver.Airdrop.V1\xca\x02\x16Quicksilver\\Airdrop\\V1\xe2\x02\"Quicksilver\\Airdrop\\V1\\GPBMetadata\xea\x02\x18Quicksilver::Airdrop::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#quicksilver/airdrop/v1/params.proto\x12\x16quicksilver.airdrop.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\x12\n\x06Params:\x08\x88\xa0\x1f\x00\x98\xa0\x1f\x00\x42\xd9\x01\n\x1a\x63om.quicksilver.airdrop.v1B\x0bParamsProtoZ6github.com/ingenuity-build/quicksilver/x/airdrop/types\xa2\x02\x03QAX\xaa\x02\x16Quicksilver.Airdrop.V1\xca\x02\x16Quicksilver\\Airdrop\\V1\xe2\x02\"Quicksilver\\Airdrop\\V1\\GPBMetadata\xea\x02\x18Quicksilver::Airdrop::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.airdrop.v1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.quicksilver.airdrop.v1B\013ParamsProtoP\001Z6github.com/ingenuity-build/quicksilver/x/airdrop/types\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.quicksilver.airdrop.v1B\013ParamsProtoZ6github.com/ingenuity-build/quicksilver/x/airdrop/types\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop::V1'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\210\240\037\000\230\240\037\000'
   _globals['_PARAMS']._serialized_start=112

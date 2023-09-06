@@ -525,6 +525,7 @@ public final class ChannelProto {
               com.ibc.core.channel.v1.ChannelProto.Channel.class, com.ibc.core.channel.v1.ChannelProto.Channel.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private int state_ = 0;
     /**
@@ -589,7 +590,7 @@ public final class ChannelProto {
      */
     @java.lang.Override
     public boolean hasCounterparty() {
-      return counterparty_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -739,7 +740,7 @@ public final class ChannelProto {
       if (ordering_ != com.ibc.core.channel.v1.ChannelProto.Order.ORDER_NONE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, ordering_);
       }
-      if (counterparty_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCounterparty());
       }
       for (int i = 0; i < connectionHops_.size(); i++) {
@@ -765,7 +766,7 @@ public final class ChannelProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, ordering_);
       }
-      if (counterparty_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCounterparty());
       }
@@ -956,13 +957,19 @@ public final class ChannelProto {
 
       // Construct using com.ibc.core.channel.v1.ChannelProto.Channel.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCounterpartyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1017,10 +1024,12 @@ public final class ChannelProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.ordering_ = ordering_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.counterparty_ = counterpartyBuilder_ == null
               ? counterparty_
               : counterpartyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           connectionHops_.makeImmutable();
@@ -1029,6 +1038,7 @@ public final class ChannelProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.version_ = version_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1402,8 +1412,10 @@ public final class ChannelProto {
         } else {
           counterpartyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (counterparty_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2003,6 +2015,7 @@ public final class ChannelProto {
               com.ibc.core.channel.v1.ChannelProto.IdentifiedChannel.class, com.ibc.core.channel.v1.ChannelProto.IdentifiedChannel.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private int state_ = 0;
     /**
@@ -2067,7 +2080,7 @@ public final class ChannelProto {
      */
     @java.lang.Override
     public boolean hasCounterparty() {
-      return counterparty_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2311,7 +2324,7 @@ public final class ChannelProto {
       if (ordering_ != com.ibc.core.channel.v1.ChannelProto.Order.ORDER_NONE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, ordering_);
       }
-      if (counterparty_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCounterparty());
       }
       for (int i = 0; i < connectionHops_.size(); i++) {
@@ -2343,7 +2356,7 @@ public final class ChannelProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, ordering_);
       }
-      if (counterparty_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCounterparty());
       }
@@ -2547,13 +2560,19 @@ public final class ChannelProto {
 
       // Construct using com.ibc.core.channel.v1.ChannelProto.IdentifiedChannel.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCounterpartyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2610,10 +2629,12 @@ public final class ChannelProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.ordering_ = ordering_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.counterparty_ = counterpartyBuilder_ == null
               ? counterparty_
               : counterpartyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           connectionHops_.makeImmutable();
@@ -2628,6 +2649,7 @@ public final class ChannelProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.channelId_ = channelId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3021,8 +3043,10 @@ public final class ChannelProto {
         } else {
           counterpartyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (counterparty_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4552,6 +4576,7 @@ public final class ChannelProto {
               com.ibc.core.channel.v1.ChannelProto.Packet.class, com.ibc.core.channel.v1.ChannelProto.Packet.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SEQUENCE_FIELD_NUMBER = 1;
     private long sequence_ = 0L;
     /**
@@ -4784,7 +4809,7 @@ public final class ChannelProto {
      */
     @java.lang.Override
     public boolean hasTimeoutHeight() {
-      return timeoutHeight_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4857,7 +4882,7 @@ public final class ChannelProto {
       if (!data_.isEmpty()) {
         output.writeBytes(6, data_);
       }
-      if (timeoutHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getTimeoutHeight());
       }
       if (timeoutTimestamp_ != 0L) {
@@ -4892,7 +4917,7 @@ public final class ChannelProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(6, data_);
       }
-      if (timeoutHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getTimeoutHeight());
       }
@@ -5088,13 +5113,19 @@ public final class ChannelProto {
 
       // Construct using com.ibc.core.channel.v1.ChannelProto.Packet.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimeoutHeightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5163,14 +5194,17 @@ public final class ChannelProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.data_ = data_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.timeoutHeight_ = timeoutHeightBuilder_ == null
               ? timeoutHeight_
               : timeoutHeightBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.timeoutTimestamp_ = timeoutTimestamp_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5882,8 +5916,10 @@ public final class ChannelProto {
         } else {
           timeoutHeightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (timeoutHeight_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8782,6 +8818,7 @@ public final class ChannelProto {
               com.ibc.core.channel.v1.ChannelProto.Timeout.class, com.ibc.core.channel.v1.ChannelProto.Timeout.Builder.class);
     }
 
+    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private com.ibc.core.client.v1.ClientProto.Height height_;
     /**
@@ -8794,7 +8831,7 @@ public final class ChannelProto {
      */
     @java.lang.Override
     public boolean hasHeight() {
-      return height_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -8849,7 +8886,7 @@ public final class ChannelProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (height_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getHeight());
       }
       if (timestamp_ != 0L) {
@@ -8864,7 +8901,7 @@ public final class ChannelProto {
       if (size != -1) return size;
 
       size = 0;
-      if (height_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHeight());
       }
@@ -9037,13 +9074,19 @@ public final class ChannelProto {
 
       // Construct using com.ibc.core.channel.v1.ChannelProto.Timeout.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHeightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9088,14 +9131,17 @@ public final class ChannelProto {
 
       private void buildPartial0(com.ibc.core.channel.v1.ChannelProto.Timeout result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = heightBuilder_ == null
               ? height_
               : heightBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.timestamp_ = timestamp_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9289,8 +9335,10 @@ public final class ChannelProto {
         } else {
           heightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (height_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

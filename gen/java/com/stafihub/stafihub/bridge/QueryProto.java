@@ -489,6 +489,7 @@ public final class QueryProto {
               com.stafihub.stafihub.bridge.QueryProto.QueryParamsResponse.class, com.stafihub.stafihub.bridge.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.bridge.ParamsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.bridge.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.bridge.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1543,7 +1555,8 @@ public final class QueryProto {
 
     public static final int CHAINID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList chainId_;
+    private com.google.protobuf.Internal.IntList chainId_ =
+        emptyIntList();
     /**
      * <code>repeated uint32 chainId = 1 [json_name = "chainId"];</code>
      * @return A list containing the chainId.
@@ -1805,22 +1818,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.stafihub.stafihub.bridge.QueryProto.QueryChaindIdsResponse buildPartial() {
         com.stafihub.stafihub.bridge.QueryProto.QueryChaindIdsResponse result = new com.stafihub.stafihub.bridge.QueryProto.QueryChaindIdsResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.stafihub.stafihub.bridge.QueryProto.QueryChaindIdsResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          chainId_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.chainId_ = chainId_;
-      }
-
       private void buildPartial0(com.stafihub.stafihub.bridge.QueryProto.QueryChaindIdsResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          chainId_.makeImmutable();
+          result.chainId_ = chainId_;
+        }
       }
 
       @java.lang.Override
@@ -1870,7 +1878,8 @@ public final class QueryProto {
         if (!other.chainId_.isEmpty()) {
           if (chainId_.isEmpty()) {
             chainId_ = other.chainId_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            chainId_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureChainIdIsMutable();
             chainId_.addAll(other.chainId_);
@@ -1938,10 +1947,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.IntList chainId_ = emptyIntList();
       private void ensureChainIdIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          chainId_ = mutableCopy(chainId_);
-          bitField0_ |= 0x00000001;
+        if (!chainId_.isModifiable()) {
+          chainId_ = makeMutableCopy(chainId_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint32 chainId = 1 [json_name = "chainId"];</code>
@@ -1949,8 +1958,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Integer>
           getChainIdList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(chainId_) : chainId_;
+        chainId_.makeImmutable();
+        return chainId_;
       }
       /**
        * <code>repeated uint32 chainId = 1 [json_name = "chainId"];</code>
@@ -1978,6 +1987,7 @@ public final class QueryProto {
 
         ensureChainIdIsMutable();
         chainId_.setInt(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1990,6 +2000,7 @@ public final class QueryProto {
 
         ensureChainIdIsMutable();
         chainId_.addInt(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2003,6 +2014,7 @@ public final class QueryProto {
         ensureChainIdIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, chainId_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3127,6 +3139,7 @@ public final class QueryProto {
               com.stafihub.stafihub.bridge.QueryProto.QueryProposalDetailResponse.class, com.stafihub.stafihub.bridge.QueryProto.QueryProposalDetailResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROPOSAL_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.bridge.ProposalProto.Proposal proposal_;
     /**
@@ -3135,7 +3148,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProposal() {
-      return proposal_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.bridge.Proposal proposal = 1 [json_name = "proposal"];</code>
@@ -3167,7 +3180,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (proposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getProposal());
       }
       getUnknownFields().writeTo(output);
@@ -3179,7 +3192,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (proposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProposal());
       }
@@ -3337,13 +3350,19 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.bridge.QueryProto.QueryProposalDetailResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProposalFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3387,11 +3406,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.bridge.QueryProto.QueryProposalDetailResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proposal_ = proposalBuilder_ == null
               ? proposal_
               : proposalBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3557,8 +3579,10 @@ public final class QueryProto {
         } else {
           proposalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (proposal_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6331,6 +6355,7 @@ public final class QueryProto {
               com.stafihub.stafihub.bridge.QueryProto.QueryRelayFeeResponse.class, com.stafihub.stafihub.bridge.QueryProto.QueryRelayFeeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin value_;
     /**
@@ -6339,7 +6364,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return value_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -6371,7 +6396,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getValue());
       }
       getUnknownFields().writeTo(output);
@@ -6383,7 +6408,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValue());
       }
@@ -6541,13 +6566,19 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.bridge.QueryProto.QueryRelayFeeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValueFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6591,11 +6622,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.bridge.QueryProto.QueryRelayFeeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6761,8 +6795,10 @@ public final class QueryProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (value_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

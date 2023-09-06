@@ -70,7 +70,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.prototype.toO
  */
 proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    hostDenom: jspb.Message.getFieldWithDefault(msg, 1, "")
+    chainId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -109,7 +109,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.deserializeBi
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setHostDenom(value);
+      msg.setChainId(value);
       break;
     default:
       reader.skipField();
@@ -140,7 +140,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.prototype.ser
  */
 proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getHostDenom();
+  f = message.getChainId();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -151,10 +151,10 @@ proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.serializeBina
 
 
 /**
- * optional string host_denom = 1;
+ * optional string chain_id = 1;
  * @return {string}
  */
-proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.prototype.getHostDenom = function() {
+proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -163,7 +163,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.prototype.get
  * @param {string} value
  * @return {!proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest} returns this
  */
-proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.prototype.setHostDenom = function(value) {
+proto.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 

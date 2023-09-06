@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%lum-network/icacallbacks/params.proto\x12\x18lum.network.icacallbacks\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xe0\x01\n\x1c\x63om.lum.network.icacallbacksB\x0bParamsProtoP\x01Z1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%lum-network/icacallbacks/params.proto\x12\x18lum.network.icacallbacks\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xde\x01\n\x1c\x63om.lum.network.icacallbacksB\x0bParamsProtoZ1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.icacallbacks.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\013ParamsProtoP\001Z1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
+  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\013ParamsProtoZ1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=89

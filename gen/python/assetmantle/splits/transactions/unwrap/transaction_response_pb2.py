@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAassetmantle/splits/transactions/unwrap/transaction_response.proto\x12.assetmantle.modules.splits.transactions.unwrap\"\x15\n\x13TransactionResponseB\xac\x02\n2com.assetmantle.modules.splits.transactions.unwrapB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MSTU\xaa\x02.Assetmantle.Modules.Splits.Transactions.Unwrap\xca\x02.Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\xe2\x02:Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Splits::Transactions::Unwrapb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAassetmantle/splits/transactions/unwrap/transaction_response.proto\x12.assetmantle.modules.splits.transactions.unwrap\"\x15\n\x13TransactionResponseB\xaa\x02\n2com.assetmantle.modules.splits.transactions.unwrapB\x18TransactionResponseProto\xa2\x02\x05\x41MSTU\xaa\x02.Assetmantle.Modules.Splits.Transactions.Unwrap\xca\x02.Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\xe2\x02:Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Splits::Transactions::Unwrapb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.splits.transactions.unwrap.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.splits.transactions.unwrapB\030TransactionResponseProtoP\001\242\002\005AMSTU\252\002.Assetmantle.Modules.Splits.Transactions.Unwrap\312\002.Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\342\002:Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\\GPBMetadata\352\0022Assetmantle::Modules::Splits::Transactions::Unwrap'
+  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.splits.transactions.unwrapB\030TransactionResponseProto\242\002\005AMSTU\252\002.Assetmantle.Modules.Splits.Transactions.Unwrap\312\002.Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\342\002:Assetmantle\\Modules\\Splits\\Transactions\\Unwrap\\GPBMetadata\352\0022Assetmantle::Modules::Splits::Transactions::Unwrap'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=117
   _globals['_TRANSACTIONRESPONSE']._serialized_end=138
 # @@protoc_insertion_point(module_scope)

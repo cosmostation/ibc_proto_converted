@@ -342,6 +342,7 @@ public final class QuotaProto {
               com.umee.uibc.v1.QuotaProto.Params.class, com.umee.uibc.v1.QuotaProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int IBC_STATUS_FIELD_NUMBER = 1;
     private int ibcStatus_ = 0;
     /**
@@ -474,7 +475,7 @@ public final class QuotaProto {
      */
     @java.lang.Override
     public boolean hasQuotaDuration() {
-      return quotaDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -523,7 +524,7 @@ public final class QuotaProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenQuota_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tokenQuota_);
       }
-      if (quotaDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getQuotaDuration());
       }
       getUnknownFields().writeTo(output);
@@ -545,7 +546,7 @@ public final class QuotaProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenQuota_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tokenQuota_);
       }
-      if (quotaDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getQuotaDuration());
       }
@@ -718,13 +719,19 @@ public final class QuotaProto {
 
       // Construct using com.umee.uibc.v1.QuotaProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getQuotaDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -780,11 +787,14 @@ public final class QuotaProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tokenQuota_ = tokenQuota_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.quotaDuration_ = quotaDurationBuilder_ == null
               ? quotaDuration_
               : quotaDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1255,8 +1265,10 @@ public final class QuotaProto {
         } else {
           quotaDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (quotaDuration_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

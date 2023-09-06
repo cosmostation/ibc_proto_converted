@@ -16,15 +16,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14\x63udos/admin/tx.proto\x12!cudosnode.cudosnode.pocbasecosmos\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xbc\x01\n\x1aMsgAdminSpendCommunityPool\x12\x1c\n\tinitiator\x18\x01 \x01(\tR\tinitiator\x12\x1d\n\nto_address\x18\x02 \x01(\tR\ttoAddress\x12\x61\n\x05\x63oins\x18\x03 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins\"\x17\n\x15MsgAdminSpendResponse2\x9a\x01\n\x03Msg\x12\x92\x01\n\x17\x41\x64minSpendCommunityPool\x12=.cudosnode.cudosnode.pocbasecosmos.MsgAdminSpendCommunityPool\x1a\x38.cudosnode.cudosnode.pocbasecosmos.MsgAdminSpendResponseB\x88\x02\n%com.cudosnode.cudosnode.pocbasecosmosB\x07TxProtoP\x01Z0github.com/CudoVentures/cudos-node/x/admin/types\xa2\x02\x03\x43\x43P\xaa\x02!Cudosnode.Cudosnode.Pocbasecosmos\xca\x02!Cudosnode\\Cudosnode\\Pocbasecosmos\xe2\x02-Cudosnode\\Cudosnode\\Pocbasecosmos\\GPBMetadata\xea\x02#Cudosnode::Cudosnode::Pocbasecosmosb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14\x63udos/admin/tx.proto\x12!cudosnode.cudosnode.pocbasecosmos\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xbc\x01\n\x1aMsgAdminSpendCommunityPool\x12\x1c\n\tinitiator\x18\x01 \x01(\tR\tinitiator\x12\x1d\n\nto_address\x18\x02 \x01(\tR\ttoAddress\x12\x61\n\x05\x63oins\x18\x03 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins\"\x17\n\x15MsgAdminSpendResponse2\x9a\x01\n\x03Msg\x12\x92\x01\n\x17\x41\x64minSpendCommunityPool\x12=.cudosnode.cudosnode.pocbasecosmos.MsgAdminSpendCommunityPool\x1a\x38.cudosnode.cudosnode.pocbasecosmos.MsgAdminSpendResponseB\x86\x02\n%com.cudosnode.cudosnode.pocbasecosmosB\x07TxProtoZ0github.com/CudoVentures/cudos-node/x/admin/types\xa2\x02\x03\x43\x43P\xaa\x02!Cudosnode.Cudosnode.Pocbasecosmos\xca\x02!Cudosnode\\Cudosnode\\Pocbasecosmos\xe2\x02-Cudosnode\\Cudosnode\\Pocbasecosmos\\GPBMetadata\xea\x02#Cudosnode::Cudosnode::Pocbasecosmosb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cudos.admin.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n%com.cudosnode.cudosnode.pocbasecosmosB\007TxProtoP\001Z0github.com/CudoVentures/cudos-node/x/admin/types\242\002\003CCP\252\002!Cudosnode.Cudosnode.Pocbasecosmos\312\002!Cudosnode\\Cudosnode\\Pocbasecosmos\342\002-Cudosnode\\Cudosnode\\Pocbasecosmos\\GPBMetadata\352\002#Cudosnode::Cudosnode::Pocbasecosmos'
+  DESCRIPTOR._serialized_options = b'\n%com.cudosnode.cudosnode.pocbasecosmosB\007TxProtoZ0github.com/CudoVentures/cudos-node/x/admin/types\242\002\003CCP\252\002!Cudosnode.Cudosnode.Pocbasecosmos\312\002!Cudosnode\\Cudosnode\\Pocbasecosmos\342\002-Cudosnode\\Cudosnode\\Pocbasecosmos\\GPBMetadata\352\002#Cudosnode::Cudosnode::Pocbasecosmos'
   _MSGADMINSPENDCOMMUNITYPOOL.fields_by_name['coins']._options = None
   _MSGADMINSPENDCOMMUNITYPOOL.fields_by_name['coins']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _globals['_MSGADMINSPENDCOMMUNITYPOOL']._serialized_start=141

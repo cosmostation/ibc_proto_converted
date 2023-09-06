@@ -18,15 +18,14 @@ from tendermint.crypto import proof_pb2 as tendermint_dot_crypto_dot_proof__pb2
 from quicksilver.claimsmanager.v1 import claimsmanager_pb2 as quicksilver_dot_claimsmanager_dot_v1_dot_claimsmanager__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+quicksilver/claimsmanager/v1/messages.proto\x12\x1cquicksilver.claimsmanager.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1dtendermint/crypto/proof.proto\x1a\x30quicksilver/claimsmanager/v1/claimsmanager.proto2\x05\n\x03MsgB\x81\x02\n com.quicksilver.claimsmanager.v1B\rMessagesProtoP\x01Z<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\xa2\x02\x03QCX\xaa\x02\x1cQuicksilver.Claimsmanager.V1\xca\x02\x1cQuicksilver\\Claimsmanager\\V1\xe2\x02(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\xea\x02\x1eQuicksilver::Claimsmanager::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+quicksilver/claimsmanager/v1/messages.proto\x12\x1cquicksilver.claimsmanager.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1dtendermint/crypto/proof.proto\x1a\x30quicksilver/claimsmanager/v1/claimsmanager.proto2\x05\n\x03MsgB\xff\x01\n com.quicksilver.claimsmanager.v1B\rMessagesProtoZ<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\xa2\x02\x03QCX\xaa\x02\x1cQuicksilver.Claimsmanager.V1\xca\x02\x1cQuicksilver\\Claimsmanager\\V1\xe2\x02(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\xea\x02\x1eQuicksilver::Claimsmanager::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.claimsmanager.v1.messages_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.quicksilver.claimsmanager.v1B\rMessagesProtoP\001Z<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\242\002\003QCX\252\002\034Quicksilver.Claimsmanager.V1\312\002\034Quicksilver\\Claimsmanager\\V1\342\002(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\352\002\036Quicksilver::Claimsmanager::V1'
+  DESCRIPTOR._serialized_options = b'\n com.quicksilver.claimsmanager.v1B\rMessagesProtoZ<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\242\002\003QCX\252\002\034Quicksilver.Claimsmanager.V1\312\002\034Quicksilver\\Claimsmanager\\V1\342\002(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\352\002\036Quicksilver::Claimsmanager::V1'
   _globals['_MSG']._serialized_start=237
   _globals['_MSG']._serialized_end=242
 # @@protoc_insertion_point(module_scope)

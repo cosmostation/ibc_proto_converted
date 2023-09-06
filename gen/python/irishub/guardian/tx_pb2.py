@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19irishub/guardian/tx.proto\x12\x10irishub.guardian\"d\n\x0bMsgAddSuper\x12 \n\x0b\x64\x65scription\x18\x01 \x01(\tR\x0b\x64\x65scription\x12\x18\n\x07\x61\x64\x64ress\x18\x02 \x01(\tR\x07\x61\x64\x64ress\x12\x19\n\x08\x61\x64\x64\x65\x64_by\x18\x03 \x01(\tR\x07\x61\x64\x64\x65\x64\x42y\"\x15\n\x13MsgAddSuperResponse\"I\n\x0eMsgDeleteSuper\x12\x18\n\x07\x61\x64\x64ress\x18\x02 \x01(\tR\x07\x61\x64\x64ress\x12\x1d\n\ndeleted_by\x18\x03 \x01(\tR\tdeletedBy\"\x18\n\x16MsgDeleteSuperResponse2\xb2\x01\n\x03Msg\x12P\n\x08\x41\x64\x64Super\x12\x1d.irishub.guardian.MsgAddSuper\x1a%.irishub.guardian.MsgAddSuperResponse\x12Y\n\x0b\x44\x65leteSuper\x12 .irishub.guardian.MsgDeleteSuper\x1a(.irishub.guardian.MsgDeleteSuperResponseB\xb3\x01\n\x14\x63om.irishub.guardianB\x07TxProtoP\x01Z1github.com/irisnet/irishub/modules/guardian/types\xa2\x02\x03IGX\xaa\x02\x10Irishub.Guardian\xca\x02\x10Irishub\\Guardian\xe2\x02\x1cIrishub\\Guardian\\GPBMetadata\xea\x02\x11Irishub::Guardianb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19irishub/guardian/tx.proto\x12\x10irishub.guardian\"d\n\x0bMsgAddSuper\x12 \n\x0b\x64\x65scription\x18\x01 \x01(\tR\x0b\x64\x65scription\x12\x18\n\x07\x61\x64\x64ress\x18\x02 \x01(\tR\x07\x61\x64\x64ress\x12\x19\n\x08\x61\x64\x64\x65\x64_by\x18\x03 \x01(\tR\x07\x61\x64\x64\x65\x64\x42y\"\x15\n\x13MsgAddSuperResponse\"I\n\x0eMsgDeleteSuper\x12\x18\n\x07\x61\x64\x64ress\x18\x02 \x01(\tR\x07\x61\x64\x64ress\x12\x1d\n\ndeleted_by\x18\x03 \x01(\tR\tdeletedBy\"\x18\n\x16MsgDeleteSuperResponse2\xb2\x01\n\x03Msg\x12P\n\x08\x41\x64\x64Super\x12\x1d.irishub.guardian.MsgAddSuper\x1a%.irishub.guardian.MsgAddSuperResponse\x12Y\n\x0b\x44\x65leteSuper\x12 .irishub.guardian.MsgDeleteSuper\x1a(.irishub.guardian.MsgDeleteSuperResponseB\xb1\x01\n\x14\x63om.irishub.guardianB\x07TxProtoZ1github.com/irisnet/irishub/modules/guardian/types\xa2\x02\x03IGX\xaa\x02\x10Irishub.Guardian\xca\x02\x10Irishub\\Guardian\xe2\x02\x1cIrishub\\Guardian\\GPBMetadata\xea\x02\x11Irishub::Guardianb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irishub.guardian.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.irishub.guardianB\007TxProtoP\001Z1github.com/irisnet/irishub/modules/guardian/types\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishub\\Guardian\\GPBMetadata\352\002\021Irishub::Guardian'
+  DESCRIPTOR._serialized_options = b'\n\024com.irishub.guardianB\007TxProtoZ1github.com/irisnet/irishub/modules/guardian/types\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishub\\Guardian\\GPBMetadata\352\002\021Irishub::Guardian'
   _globals['_MSGADDSUPER']._serialized_start=47
   _globals['_MSGADDSUPER']._serialized_end=147
   _globals['_MSGADDSUPERRESPONSE']._serialized_start=149

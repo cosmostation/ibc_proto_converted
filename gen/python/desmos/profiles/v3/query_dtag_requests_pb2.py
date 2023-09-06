@@ -16,15 +16,14 @@ from desmos.profiles.v3 import models_dtag_requests_pb2 as desmos_dot_profiles_d
 from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_query_dot_v1beta1_dot_pagination__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,desmos/profiles/v3/query_dtag_requests.proto\x12\x12\x64\x65smos.profiles.v3\x1a\x14gogoproto/gogo.proto\x1a-desmos/profiles/v3/models_dtag_requests.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\"\x98\x01\n(QueryIncomingDTagTransferRequestsRequest\x12\x1a\n\x08receiver\x18\x01 \x01(\tR\x08receiver\x12\x46\n\npagination\x18\x02 \x01(\x0b\x32&.cosmos.base.query.v1beta1.PageRequestR\npagination:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\xbf\x01\n)QueryIncomingDTagTransferRequestsResponse\x12I\n\x08requests\x18\x01 \x03(\x0b\x32\'.desmos.profiles.v3.DTagTransferRequestB\x04\xc8\xde\x1f\x00R\x08requests\x12G\n\npagination\x18\x02 \x01(\x0b\x32\'.cosmos.base.query.v1beta1.PageResponseR\npaginationB\xcd\x01\n\x16\x63om.desmos.profiles.v3B\x16QueryDtagRequestsProtoP\x01Z1github.com/desmos-labs/desmos/v5/x/profiles/types\xa2\x02\x03\x44PX\xaa\x02\x12\x44\x65smos.Profiles.V3\xca\x02\x12\x44\x65smos\\Profiles\\V3\xe2\x02\x1e\x44\x65smos\\Profiles\\V3\\GPBMetadata\xea\x02\x14\x44\x65smos::Profiles::V3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,desmos/profiles/v3/query_dtag_requests.proto\x12\x12\x64\x65smos.profiles.v3\x1a\x14gogoproto/gogo.proto\x1a-desmos/profiles/v3/models_dtag_requests.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\"\x98\x01\n(QueryIncomingDTagTransferRequestsRequest\x12\x1a\n\x08receiver\x18\x01 \x01(\tR\x08receiver\x12\x46\n\npagination\x18\x02 \x01(\x0b\x32&.cosmos.base.query.v1beta1.PageRequestR\npagination:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\xbf\x01\n)QueryIncomingDTagTransferRequestsResponse\x12I\n\x08requests\x18\x01 \x03(\x0b\x32\'.desmos.profiles.v3.DTagTransferRequestB\x04\xc8\xde\x1f\x00R\x08requests\x12G\n\npagination\x18\x02 \x01(\x0b\x32\'.cosmos.base.query.v1beta1.PageResponseR\npaginationB\xcb\x01\n\x16\x63om.desmos.profiles.v3B\x16QueryDtagRequestsProtoZ1github.com/desmos-labs/desmos/v5/x/profiles/types\xa2\x02\x03\x44PX\xaa\x02\x12\x44\x65smos.Profiles.V3\xca\x02\x12\x44\x65smos\\Profiles\\V3\xe2\x02\x1e\x44\x65smos\\Profiles\\V3\\GPBMetadata\xea\x02\x14\x44\x65smos::Profiles::V3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'desmos.profiles.v3.query_dtag_requests_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.desmos.profiles.v3B\026QueryDtagRequestsProtoP\001Z1github.com/desmos-labs/desmos/v5/x/profiles/types\242\002\003DPX\252\002\022Desmos.Profiles.V3\312\002\022Desmos\\Profiles\\V3\342\002\036Desmos\\Profiles\\V3\\GPBMetadata\352\002\024Desmos::Profiles::V3'
+  DESCRIPTOR._serialized_options = b'\n\026com.desmos.profiles.v3B\026QueryDtagRequestsProtoZ1github.com/desmos-labs/desmos/v5/x/profiles/types\242\002\003DPX\252\002\022Desmos.Profiles.V3\312\002\022Desmos\\Profiles\\V3\342\002\036Desmos\\Profiles\\V3\\GPBMetadata\352\002\024Desmos::Profiles::V3'
   _QUERYINCOMINGDTAGTRANSFERREQUESTSREQUEST._options = None
   _QUERYINCOMINGDTAGTRANSFERREQUESTSREQUEST._serialized_options = b'\210\240\037\000\350\240\037\000'
   _QUERYINCOMINGDTAGTRANSFERREQUESTSRESPONSE.fields_by_name['requests']._options = None

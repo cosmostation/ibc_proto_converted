@@ -16,15 +16,14 @@ from neutron.cron import params_pb2 as neutron_dot_cron_dot_params__pb2
 from neutron.cron import schedule_pb2 as neutron_dot_cron_dot_schedule__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1aneutron/cron/genesis.proto\x12\x0cneutron.cron\x1a\x14gogoproto/gogo.proto\x1a\x19neutron/cron/params.proto\x1a\x1bneutron/cron/schedule.proto\"\x84\x01\n\x0cGenesisState\x12@\n\x0cscheduleList\x18\x02 \x03(\x0b\x32\x16.neutron.cron.ScheduleB\x04\xc8\xde\x1f\x00R\x0cscheduleList\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.neutron.cron.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\x9e\x01\n\x10\x63om.neutron.cronB\x0cGenesisProtoP\x01Z+github.com/neutron-org/neutron/x/cron/types\xa2\x02\x03NCX\xaa\x02\x0cNeutron.Cron\xca\x02\x0cNeutron\\Cron\xe2\x02\x18Neutron\\Cron\\GPBMetadata\xea\x02\rNeutron::Cronb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1aneutron/cron/genesis.proto\x12\x0cneutron.cron\x1a\x14gogoproto/gogo.proto\x1a\x19neutron/cron/params.proto\x1a\x1bneutron/cron/schedule.proto\"\x84\x01\n\x0cGenesisState\x12@\n\x0cscheduleList\x18\x02 \x03(\x0b\x32\x16.neutron.cron.ScheduleB\x04\xc8\xde\x1f\x00R\x0cscheduleList\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.neutron.cron.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\x9c\x01\n\x10\x63om.neutron.cronB\x0cGenesisProtoZ+github.com/neutron-org/neutron/x/cron/types\xa2\x02\x03NCX\xaa\x02\x0cNeutron.Cron\xca\x02\x0cNeutron\\Cron\xe2\x02\x18Neutron\\Cron\\GPBMetadata\xea\x02\rNeutron::Cronb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.cron.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.neutron.cronB\014GenesisProtoP\001Z+github.com/neutron-org/neutron/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeutron::Cron'
+  DESCRIPTOR._serialized_options = b'\n\020com.neutron.cronB\014GenesisProtoZ+github.com/neutron-org/neutron/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeutron::Cron'
   _GENESISSTATE.fields_by_name['scheduleList']._options = None
   _GENESISSTATE.fields_by_name['scheduleList']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['params']._options = None

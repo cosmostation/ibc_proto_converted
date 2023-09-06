@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#comdex/rewards/v1beta1/params.proto\x12\x16\x63omdex.rewards.v1beta1\"\x08\n\x06ParamsB\xd6\x01\n\x1a\x63om.comdex.rewards.v1beta1B\x0bParamsProtoP\x01Z1github.com/comdex-official/comdex/x/rewards/types\xa2\x02\x03\x43RX\xaa\x02\x16\x43omdex.Rewards.V1beta1\xca\x02\x16\x43omdex\\Rewards\\V1beta1\xe2\x02\"Comdex\\Rewards\\V1beta1\\GPBMetadata\xea\x02\x18\x43omdex::Rewards::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#comdex/rewards/v1beta1/params.proto\x12\x16\x63omdex.rewards.v1beta1\"\x08\n\x06ParamsB\xd4\x01\n\x1a\x63om.comdex.rewards.v1beta1B\x0bParamsProtoZ1github.com/comdex-official/comdex/x/rewards/types\xa2\x02\x03\x43RX\xaa\x02\x16\x43omdex.Rewards.V1beta1\xca\x02\x16\x43omdex\\Rewards\\V1beta1\xe2\x02\"Comdex\\Rewards\\V1beta1\\GPBMetadata\xea\x02\x18\x43omdex::Rewards::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.rewards.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.comdex.rewards.v1beta1B\013ParamsProtoP\001Z1github.com/comdex-official/comdex/x/rewards/types\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312\002\026Comdex\\Rewards\\V1beta1\342\002\"Comdex\\Rewards\\V1beta1\\GPBMetadata\352\002\030Comdex::Rewards::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\032com.comdex.rewards.v1beta1B\013ParamsProtoZ1github.com/comdex-official/comdex/x/rewards/types\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312\002\026Comdex\\Rewards\\V1beta1\342\002\"Comdex\\Rewards\\V1beta1\\GPBMetadata\352\002\030Comdex::Rewards::V1beta1'
   _globals['_PARAMS']._serialized_start=63
   _globals['_PARAMS']._serialized_end=71
 # @@protoc_insertion_point(module_scope)

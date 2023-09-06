@@ -107,6 +107,7 @@ public final class InflationProto {
               com.sentinel.mint.v1.InflationProto.Inflation.class, com.sentinel.mint.v1.InflationProto.Inflation.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MAX_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object max_ = "";
@@ -232,7 +233,7 @@ public final class InflationProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return timestamp_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -273,7 +274,7 @@ public final class InflationProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateChange_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, rateChange_);
       }
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getTimestamp());
       }
       getUnknownFields().writeTo(output);
@@ -294,7 +295,7 @@ public final class InflationProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateChange_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, rateChange_);
       }
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTimestamp());
       }
@@ -464,13 +465,19 @@ public final class InflationProto {
 
       // Construct using com.sentinel.mint.v1.InflationProto.Inflation.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -526,11 +533,14 @@ public final class InflationProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.rateChange_ = rateChange_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -942,8 +952,10 @@ public final class InflationProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (timestamp_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

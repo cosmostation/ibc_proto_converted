@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19\x63udos/cudoMint/mint.proto\x12\x0e\x63udos.cudoMint\x1a\x14gogoproto/gogo.proto\"\xb9\x01\n\x06Minter\x12U\n\x0emint_remainder\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\rmintRemainder\x12X\n\x10norm_time_passed\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0enormTimePassed\"g\n\x06Params\x12]\n\x12increment_modifier\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x11incrementModifierB\xad\x01\n\x12\x63om.cudos.cudoMintB\tMintProtoP\x01Z3github.com/CudoVentures/cudos-node/x/cudoMint/types\xa2\x02\x03\x43\x43X\xaa\x02\x0e\x43udos.CudoMint\xca\x02\x0e\x43udos\\CudoMint\xe2\x02\x1a\x43udos\\CudoMint\\GPBMetadata\xea\x02\x0f\x43udos::CudoMintb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19\x63udos/cudoMint/mint.proto\x12\x0e\x63udos.cudoMint\x1a\x14gogoproto/gogo.proto\"\xb9\x01\n\x06Minter\x12U\n\x0emint_remainder\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\rmintRemainder\x12X\n\x10norm_time_passed\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0enormTimePassed\"g\n\x06Params\x12]\n\x12increment_modifier\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x11incrementModifierB\xab\x01\n\x12\x63om.cudos.cudoMintB\tMintProtoZ3github.com/CudoVentures/cudos-node/x/cudoMint/types\xa2\x02\x03\x43\x43X\xaa\x02\x0e\x43udos.CudoMint\xca\x02\x0e\x43udos\\CudoMint\xe2\x02\x1a\x43udos\\CudoMint\\GPBMetadata\xea\x02\x0f\x43udos::CudoMintb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cudos.cudoMint.mint_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.cudos.cudoMintB\tMintProtoP\001Z3github.com/CudoVentures/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMetadata\352\002\017Cudos::CudoMint'
+  DESCRIPTOR._serialized_options = b'\n\022com.cudos.cudoMintB\tMintProtoZ3github.com/CudoVentures/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMetadata\352\002\017Cudos::CudoMint'
   _MINTER.fields_by_name['mint_remainder']._options = None
   _MINTER.fields_by_name['mint_remainder']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Dec'
   _MINTER.fields_by_name['norm_time_passed']._options = None

@@ -388,6 +388,7 @@ public final class TxProto {
               com.ixo.bonds.v1beta1.TxProto.MsgCreateBond.class, com.ixo.bonds.v1beta1.TxProto.MsgCreateBond.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BOND_DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object bondDid_ = "";
@@ -942,7 +943,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMaxSupply() {
-      return maxSupply_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin max_supply = 15 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
@@ -1285,7 +1286,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveWithdrawalAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, reserveWithdrawalAddress_);
       }
-      if (maxSupply_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(15, getMaxSupply());
       }
       for (int i = 0; i < orderQuantityLimits_.size(); i++) {
@@ -1372,7 +1373,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveWithdrawalAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, reserveWithdrawalAddress_);
       }
-      if (maxSupply_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getMaxSupply());
       }
@@ -1666,13 +1667,21 @@ public final class TxProto {
 
       // Construct using com.ixo.bonds.v1beta1.TxProto.MsgCreateBond.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFunctionParametersFieldBuilder();
+          getMaxSupplyFieldBuilder();
+          getOrderQuantityLimitsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1814,10 +1823,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.reserveWithdrawalAddress_ = reserveWithdrawalAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.maxSupply_ = maxSupplyBuilder_ == null
               ? maxSupply_
               : maxSupplyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00010000) != 0)) {
           result.sanityRate_ = sanityRate_;
@@ -1843,6 +1854,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00800000) != 0)) {
           result.creatorAddress_ = creatorAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3511,8 +3523,10 @@ public final class TxProto {
         } else {
           maxSupplyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00004000;
-        onChanged();
+        if (maxSupply_ != null) {
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9809,6 +9823,7 @@ public final class TxProto {
               com.ixo.bonds.v1beta1.TxProto.MsgBuy.class, com.ixo.bonds.v1beta1.TxProto.MsgBuy.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BUYER_DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object buyerDid_ = "";
@@ -9856,7 +9871,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
@@ -10010,7 +10025,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyerDid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, buyerDid_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAmount());
       }
       for (int i = 0; i < maxPrices_.size(); i++) {
@@ -10034,7 +10049,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyerDid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, buyerDid_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -10224,13 +10239,20 @@ public final class TxProto {
 
       // Construct using com.ixo.bonds.v1beta1.TxProto.MsgBuy.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+          getMaxPricesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10300,10 +10322,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.buyerDid_ = buyerDid_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.bondDid_ = bondDid_;
@@ -10311,6 +10335,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.buyerAddress_ = buyerAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10617,8 +10642,10 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11619,6 +11646,7 @@ public final class TxProto {
               com.ixo.bonds.v1beta1.TxProto.MsgSell.class, com.ixo.bonds.v1beta1.TxProto.MsgSell.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SELLER_DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sellerDid_ = "";
@@ -11666,7 +11694,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
@@ -11779,7 +11807,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellerDid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sellerDid_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDid_)) {
@@ -11800,7 +11828,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellerDid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sellerDid_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -11980,13 +12008,19 @@ public final class TxProto {
 
       // Construct using com.ixo.bonds.v1beta1.TxProto.MsgSell.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12036,10 +12070,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sellerDid_ = sellerDid_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.bondDid_ = bondDid_;
@@ -12047,6 +12083,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.sellerAddress_ = sellerAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12314,8 +12351,10 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13090,6 +13129,7 @@ public final class TxProto {
               com.ixo.bonds.v1beta1.TxProto.MsgSwap.class, com.ixo.bonds.v1beta1.TxProto.MsgSwap.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SWAPPER_DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object swapperDid_ = "";
@@ -13176,7 +13216,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasFrom() {
-      return from_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin from = 3 [json_name = "from", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"from&#92;""];</code>
@@ -13292,7 +13332,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bondDid_);
       }
-      if (from_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getFrom());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toToken_)) {
@@ -13316,7 +13356,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bondDid_);
       }
-      if (from_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFrom());
       }
@@ -13501,13 +13541,19 @@ public final class TxProto {
 
       // Construct using com.ixo.bonds.v1beta1.TxProto.MsgSwap.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFromFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13561,10 +13607,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bondDid_ = bondDid_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.from_ = fromBuilder_ == null
               ? from_
               : fromBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.toToken_ = toToken_;
@@ -13572,6 +13620,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.swapperAddress_ = swapperAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13921,8 +13970,10 @@ public final class TxProto {
         } else {
           fromBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (from_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

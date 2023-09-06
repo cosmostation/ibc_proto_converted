@@ -298,7 +298,7 @@ public final class CommitteeProto {
     }
     private BaseCommittee() {
       description_ = "";
-      members_ = java.util.Collections.emptyList();
+      members_ = emptyList(com.google.protobuf.ByteString.class);
       permissions_ = java.util.Collections.emptyList();
       voteThreshold_ = "";
       tallyOption_ = 0;
@@ -324,6 +324,7 @@ public final class CommitteeProto {
               com.kava.committee.v1beta1.CommitteeProto.BaseCommittee.class, com.kava.committee.v1beta1.CommitteeProto.BaseCommittee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -376,7 +377,8 @@ public final class CommitteeProto {
 
     public static final int MEMBERS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> members_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> members_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <code>repeated bytes members = 3 [json_name = "members", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
      * @return A list containing the members.
@@ -502,7 +504,7 @@ public final class CommitteeProto {
      */
     @java.lang.Override
     public boolean hasProposalDuration() {
-      return proposalDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -575,7 +577,7 @@ public final class CommitteeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteThreshold_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, voteThreshold_);
       }
-      if (proposalDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getProposalDuration());
       }
       if (tallyOption_ != com.kava.committee.v1beta1.CommitteeProto.TallyOption.TALLY_OPTION_UNSPECIFIED.getNumber()) {
@@ -613,7 +615,7 @@ public final class CommitteeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteThreshold_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, voteThreshold_);
       }
-      if (proposalDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getProposalDuration());
       }
@@ -807,13 +809,20 @@ public final class CommitteeProto {
 
       // Construct using com.kava.committee.v1beta1.CommitteeProto.BaseCommittee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPermissionsFieldBuilder();
+          getProposalDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -821,7 +830,7 @@ public final class CommitteeProto {
         bitField0_ = 0;
         id_ = 0L;
         description_ = "";
-        members_ = java.util.Collections.emptyList();
+        members_ = emptyList(com.google.protobuf.ByteString.class);
         if (permissionsBuilder_ == null) {
           permissions_ = java.util.Collections.emptyList();
         } else {
@@ -869,11 +878,6 @@ public final class CommitteeProto {
       }
 
       private void buildPartialRepeatedFields(com.kava.committee.v1beta1.CommitteeProto.BaseCommittee result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          members_ = java.util.Collections.unmodifiableList(members_);
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.members_ = members_;
         if (permissionsBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0)) {
             permissions_ = java.util.Collections.unmodifiableList(permissions_);
@@ -893,17 +897,24 @@ public final class CommitteeProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          members_.makeImmutable();
+          result.members_ = members_;
+        }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.voteThreshold_ = voteThreshold_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.proposalDuration_ = proposalDurationBuilder_ == null
               ? proposalDuration_
               : proposalDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.tallyOption_ = tallyOption_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -961,7 +972,8 @@ public final class CommitteeProto {
         if (!other.members_.isEmpty()) {
           if (members_.isEmpty()) {
             members_ = other.members_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            members_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureMembersIsMutable();
             members_.addAll(other.members_);
@@ -1198,12 +1210,12 @@ public final class CommitteeProto {
         return this;
       }
 
-      private java.util.List<com.google.protobuf.ByteString> members_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> members_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureMembersIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          members_ = new java.util.ArrayList<com.google.protobuf.ByteString>(members_);
-          bitField0_ |= 0x00000004;
+        if (!members_.isModifiable()) {
+          members_ = makeMutableCopy(members_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bytes members = 3 [json_name = "members", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
@@ -1211,8 +1223,8 @@ public final class CommitteeProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getMembersList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(members_) : members_;
+        members_.makeImmutable();
+        return members_;
       }
       /**
        * <code>repeated bytes members = 3 [json_name = "members", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
@@ -1240,6 +1252,7 @@ public final class CommitteeProto {
         if (value == null) { throw new NullPointerException(); }
         ensureMembersIsMutable();
         members_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1252,6 +1265,7 @@ public final class CommitteeProto {
         if (value == null) { throw new NullPointerException(); }
         ensureMembersIsMutable();
         members_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1265,6 +1279,7 @@ public final class CommitteeProto {
         ensureMembersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, members_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1273,7 +1288,7 @@ public final class CommitteeProto {
        * @return This builder for chaining.
        */
       public Builder clearMembers() {
-        members_ = java.util.Collections.emptyList();
+        members_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -1697,8 +1712,10 @@ public final class CommitteeProto {
         } else {
           proposalDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (proposalDuration_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1940,6 +1957,7 @@ public final class CommitteeProto {
               com.kava.committee.v1beta1.CommitteeProto.MemberCommittee.class, com.kava.committee.v1beta1.CommitteeProto.MemberCommittee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_COMMITTEE_FIELD_NUMBER = 1;
     private com.kava.committee.v1beta1.CommitteeProto.BaseCommittee baseCommittee_;
     /**
@@ -1948,7 +1966,7 @@ public final class CommitteeProto {
      */
     @java.lang.Override
     public boolean hasBaseCommittee() {
-      return baseCommittee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.committee.v1beta1.BaseCommittee base_committee = 1 [json_name = "baseCommittee", (.gogoproto.embed) = true];</code>
@@ -1980,7 +1998,7 @@ public final class CommitteeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseCommittee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseCommittee());
       }
       getUnknownFields().writeTo(output);
@@ -1992,7 +2010,7 @@ public final class CommitteeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseCommittee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseCommittee());
       }
@@ -2154,13 +2172,19 @@ public final class CommitteeProto {
 
       // Construct using com.kava.committee.v1beta1.CommitteeProto.MemberCommittee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseCommitteeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2204,11 +2228,14 @@ public final class CommitteeProto {
 
       private void buildPartial0(com.kava.committee.v1beta1.CommitteeProto.MemberCommittee result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseCommittee_ = baseCommitteeBuilder_ == null
               ? baseCommittee_
               : baseCommitteeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2374,8 +2401,10 @@ public final class CommitteeProto {
         } else {
           baseCommitteeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseCommittee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2574,6 +2603,7 @@ public final class CommitteeProto {
               com.kava.committee.v1beta1.CommitteeProto.TokenCommittee.class, com.kava.committee.v1beta1.CommitteeProto.TokenCommittee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_COMMITTEE_FIELD_NUMBER = 1;
     private com.kava.committee.v1beta1.CommitteeProto.BaseCommittee baseCommittee_;
     /**
@@ -2582,7 +2612,7 @@ public final class CommitteeProto {
      */
     @java.lang.Override
     public boolean hasBaseCommittee() {
-      return baseCommittee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.committee.v1beta1.BaseCommittee base_committee = 1 [json_name = "baseCommittee", (.gogoproto.embed) = true];</code>
@@ -2692,7 +2722,7 @@ public final class CommitteeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseCommittee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseCommittee());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quorum_)) {
@@ -2710,7 +2740,7 @@ public final class CommitteeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseCommittee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseCommittee());
       }
@@ -2886,13 +2916,19 @@ public final class CommitteeProto {
 
       // Construct using com.kava.committee.v1beta1.CommitteeProto.TokenCommittee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseCommitteeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2938,10 +2974,12 @@ public final class CommitteeProto {
 
       private void buildPartial0(com.kava.committee.v1beta1.CommitteeProto.TokenCommittee result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseCommittee_ = baseCommitteeBuilder_ == null
               ? baseCommittee_
               : baseCommitteeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.quorum_ = quorum_;
@@ -2949,6 +2987,7 @@ public final class CommitteeProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tallyDenom_ = tallyDenom_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3134,8 +3173,10 @@ public final class CommitteeProto {
         } else {
           baseCommitteeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseCommittee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

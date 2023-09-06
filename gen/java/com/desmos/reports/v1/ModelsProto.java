@@ -203,6 +203,7 @@ public final class ModelsProto {
               com.desmos.reports.v1.ModelsProto.Report.class, com.desmos.reports.v1.ModelsProto.Report.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -235,7 +236,8 @@ public final class ModelsProto {
 
     public static final int REASONS_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList reasonsIds_;
+    private com.google.protobuf.Internal.IntList reasonsIds_ =
+        emptyIntList();
     /**
      * <pre>
      * Id of the reason this report has been created for
@@ -380,7 +382,7 @@ public final class ModelsProto {
      */
     @java.lang.Override
     public boolean hasTarget() {
-      return target_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -418,7 +420,7 @@ public final class ModelsProto {
      */
     @java.lang.Override
     public boolean hasCreationDate() {
-      return creationDate_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -478,10 +480,10 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reporter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reporter_);
       }
-      if (target_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getTarget());
       }
-      if (creationDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getCreationDate());
       }
       getUnknownFields().writeTo(output);
@@ -521,11 +523,11 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reporter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reporter_);
       }
-      if (target_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTarget());
       }
-      if (creationDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCreationDate());
       }
@@ -720,13 +722,20 @@ public final class ModelsProto {
 
       // Construct using com.desmos.reports.v1.ModelsProto.Report.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTargetFieldBuilder();
+          getCreationDateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -773,18 +782,9 @@ public final class ModelsProto {
       @java.lang.Override
       public com.desmos.reports.v1.ModelsProto.Report buildPartial() {
         com.desmos.reports.v1.ModelsProto.Report result = new com.desmos.reports.v1.ModelsProto.Report(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.desmos.reports.v1.ModelsProto.Report result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          reasonsIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.reasonsIds_ = reasonsIds_;
       }
 
       private void buildPartial0(com.desmos.reports.v1.ModelsProto.Report result) {
@@ -795,22 +795,30 @@ public final class ModelsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          reasonsIds_.makeImmutable();
+          result.reasonsIds_ = reasonsIds_;
+        }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.message_ = message_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.reporter_ = reporter_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.target_ = targetBuilder_ == null
               ? target_
               : targetBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.creationDate_ = creationDateBuilder_ == null
               ? creationDate_
               : creationDateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -866,7 +874,8 @@ public final class ModelsProto {
         if (!other.reasonsIds_.isEmpty()) {
           if (reasonsIds_.isEmpty()) {
             reasonsIds_ = other.reasonsIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            reasonsIds_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureReasonsIdsIsMutable();
             reasonsIds_.addAll(other.reasonsIds_);
@@ -1072,10 +1081,10 @@ public final class ModelsProto {
 
       private com.google.protobuf.Internal.IntList reasonsIds_ = emptyIntList();
       private void ensureReasonsIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          reasonsIds_ = mutableCopy(reasonsIds_);
-          bitField0_ |= 0x00000004;
+        if (!reasonsIds_.isModifiable()) {
+          reasonsIds_ = makeMutableCopy(reasonsIds_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1087,8 +1096,8 @@ public final class ModelsProto {
        */
       public java.util.List<java.lang.Integer>
           getReasonsIdsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(reasonsIds_) : reasonsIds_;
+        reasonsIds_.makeImmutable();
+        return reasonsIds_;
       }
       /**
        * <pre>
@@ -1128,6 +1137,7 @@ public final class ModelsProto {
 
         ensureReasonsIdsIsMutable();
         reasonsIds_.setInt(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1144,6 +1154,7 @@ public final class ModelsProto {
 
         ensureReasonsIdsIsMutable();
         reasonsIds_.addInt(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1161,6 +1172,7 @@ public final class ModelsProto {
         ensureReasonsIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, reasonsIds_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1449,8 +1461,10 @@ public final class ModelsProto {
         } else {
           targetBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (target_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1604,8 +1618,10 @@ public final class ModelsProto {
         } else {
           creationDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (creationDate_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

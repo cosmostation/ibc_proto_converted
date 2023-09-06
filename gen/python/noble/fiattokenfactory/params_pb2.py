@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#noble/fiattokenfactory/params.proto\x12\x16noble.fiattokenfactory\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xe2\x01\n\x1a\x63om.noble.fiattokenfactoryB\x0bParamsProtoP\x01Z>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\xa2\x02\x03NFX\xaa\x02\x16Noble.Fiattokenfactory\xca\x02\x16Noble\\Fiattokenfactory\xe2\x02\"Noble\\Fiattokenfactory\\GPBMetadata\xea\x02\x17Noble::Fiattokenfactoryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#noble/fiattokenfactory/params.proto\x12\x16noble.fiattokenfactory\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xe0\x01\n\x1a\x63om.noble.fiattokenfactoryB\x0bParamsProtoZ>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\xa2\x02\x03NFX\xaa\x02\x16Noble.Fiattokenfactory\xca\x02\x16Noble\\Fiattokenfactory\xe2\x02\"Noble\\Fiattokenfactory\\GPBMetadata\xea\x02\x17Noble::Fiattokenfactoryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'noble.fiattokenfactory.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.noble.fiattokenfactoryB\013ParamsProtoP\001Z>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble.Fiattokenfactory\312\002\026Noble\\Fiattokenfactory\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352\002\027Noble::Fiattokenfactory'
+  DESCRIPTOR._serialized_options = b'\n\032com.noble.fiattokenfactoryB\013ParamsProtoZ>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble.Fiattokenfactory\312\002\026Noble\\Fiattokenfactory\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352\002\027Noble::Fiattokenfactory'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=85

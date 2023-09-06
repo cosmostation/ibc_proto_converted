@@ -656,6 +656,7 @@ public final class QueryProto {
               com.teritori.airdrop.v1beta1.QueryProto.QueryAllocationResponse.class, com.teritori.airdrop.v1beta1.QueryProto.QueryAllocationResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ALLOCATION_FIELD_NUMBER = 1;
     private com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation allocation_;
     /**
@@ -664,7 +665,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAllocation() {
-      return allocation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 1 [json_name = "allocation"];</code>
@@ -696,7 +697,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (allocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAllocation());
       }
       getUnknownFields().writeTo(output);
@@ -708,7 +709,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (allocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAllocation());
       }
@@ -866,13 +867,19 @@ public final class QueryProto {
 
       // Construct using com.teritori.airdrop.v1beta1.QueryProto.QueryAllocationResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAllocationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -916,11 +923,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.teritori.airdrop.v1beta1.QueryProto.QueryAllocationResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.allocation_ = allocationBuilder_ == null
               ? allocation_
               : allocationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1086,8 +1096,10 @@ public final class QueryProto {
         } else {
           allocationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (allocation_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1653,6 +1665,7 @@ public final class QueryProto {
               com.teritori.airdrop.v1beta1.QueryProto.QueryParamsResponse.class, com.teritori.airdrop.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.teritori.airdrop.v1beta1.ParamsProto.Params params_;
     /**
@@ -1661,7 +1674,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1693,7 +1706,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1705,7 +1718,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1863,13 +1876,19 @@ public final class QueryProto {
 
       // Construct using com.teritori.airdrop.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1913,11 +1932,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.teritori.airdrop.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2083,8 +2105,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

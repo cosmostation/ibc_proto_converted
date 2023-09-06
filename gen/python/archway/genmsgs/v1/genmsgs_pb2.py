@@ -20,7 +20,6 @@ _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'archway.genmsgs.v1.genmsgs_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'\n\025com.archway.genmsg.v1B\014GenmsgsProtoZ.github.com/archway-network/archway/x/genmsg/v1\242\002\003AGX\252\002\021Archway.Genmsg.V1\312\002\021Archway\\Genmsg\\V1\342\002\035Archway\\Genmsg\\V1\\GPBMetadata\352\002\023Archway::Genmsg::V1'
   _globals['_GENESISSTATE']._serialized_start=82

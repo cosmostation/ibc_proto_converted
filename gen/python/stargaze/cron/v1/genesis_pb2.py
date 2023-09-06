@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estargaze/cron/v1/genesis.proto\x12\x1epublicawesome.stargaze.cron.v1\x1a\x14gogoproto/gogo.proto\"\x7f\n\x0cGenesisState\x12o\n\x1dprivileged_contract_addresses\x18\x01 \x03(\tB+\xea\xde\x1f\'privileged_contract_addresses,omitemptyR\x1bprivilegedContractAddressesB\x82\x02\n\"com.publicawesome.stargaze.cron.v1B\x0cGenesisProtoP\x01Z3github.com/public-awesome/stargaze/v11/x/cron/types\xa2\x02\x03PSC\xaa\x02\x1ePublicawesome.Stargaze.Cron.V1\xca\x02\x1ePublicawesome\\Stargaze\\Cron\\V1\xe2\x02*Publicawesome\\Stargaze\\Cron\\V1\\GPBMetadata\xea\x02!Publicawesome::Stargaze::Cron::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estargaze/cron/v1/genesis.proto\x12\x1epublicawesome.stargaze.cron.v1\x1a\x14gogoproto/gogo.proto\"\x7f\n\x0cGenesisState\x12o\n\x1dprivileged_contract_addresses\x18\x01 \x03(\tB+\xea\xde\x1f\'privileged_contract_addresses,omitemptyR\x1bprivilegedContractAddressesB\x80\x02\n\"com.publicawesome.stargaze.cron.v1B\x0cGenesisProtoZ3github.com/public-awesome/stargaze/v11/x/cron/types\xa2\x02\x03PSC\xaa\x02\x1ePublicawesome.Stargaze.Cron.V1\xca\x02\x1ePublicawesome\\Stargaze\\Cron\\V1\xe2\x02*Publicawesome\\Stargaze\\Cron\\V1\\GPBMetadata\xea\x02!Publicawesome::Stargaze::Cron::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stargaze.cron.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\"com.publicawesome.stargaze.cron.v1B\014GenesisProtoP\001Z3github.com/public-awesome/stargaze/v11/x/cron/types\242\002\003PSC\252\002\036Publicawesome.Stargaze.Cron.V1\312\002\036Publicawesome\\Stargaze\\Cron\\V1\342\002*Publicawesome\\Stargaze\\Cron\\V1\\GPBMetadata\352\002!Publicawesome::Stargaze::Cron::V1'
+  DESCRIPTOR._serialized_options = b'\n\"com.publicawesome.stargaze.cron.v1B\014GenesisProtoZ3github.com/public-awesome/stargaze/v11/x/cron/types\242\002\003PSC\252\002\036Publicawesome.Stargaze.Cron.V1\312\002\036Publicawesome\\Stargaze\\Cron\\V1\342\002*Publicawesome\\Stargaze\\Cron\\V1\\GPBMetadata\352\002!Publicawesome::Stargaze::Cron::V1'
   _GENESISSTATE.fields_by_name['privileged_contract_addresses']._options = None
   _GENESISSTATE.fields_by_name['privileged_contract_addresses']._serialized_options = b'\352\336\037\'privileged_contract_addresses,omitempty'
   _globals['_GENESISSTATE']._serialized_start=88

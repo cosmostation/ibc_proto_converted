@@ -124,6 +124,7 @@ public final class QueryProto {
               com.akash.escrow.v1beta1.QueryProto.QueryAccountsRequest.class, com.akash.escrow.v1beta1.QueryProto.QueryAccountsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object scope_ = "";
@@ -288,7 +289,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 5 [json_name = "pagination"];</code>
@@ -332,7 +333,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -356,7 +357,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPagination());
       }
@@ -534,13 +535,19 @@ public final class QueryProto {
 
       // Construct using com.akash.escrow.v1beta1.QueryProto.QueryAccountsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -600,11 +607,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.state_ = state_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1098,8 +1108,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1297,6 +1309,7 @@ public final class QueryProto {
               com.akash.escrow.v1beta1.QueryProto.QueryAccountsResponse.class, com.akash.escrow.v1beta1.QueryProto.QueryAccountsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.akash.escrow.v1beta1.TypesProto.Account> accounts_;
@@ -1346,7 +1359,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -1381,7 +1394,7 @@ public final class QueryProto {
       for (int i = 0; i < accounts_.size(); i++) {
         output.writeMessage(1, accounts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1397,7 +1410,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, accounts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1565,13 +1578,20 @@ public final class QueryProto {
 
       // Construct using com.akash.escrow.v1beta1.QueryProto.QueryAccountsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccountsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1635,11 +1655,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.escrow.v1beta1.QueryProto.QueryAccountsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2084,8 +2107,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2323,6 +2348,7 @@ public final class QueryProto {
               com.akash.escrow.v1beta1.QueryProto.QueryPaymentsRequest.class, com.akash.escrow.v1beta1.QueryProto.QueryPaymentsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object scope_ = "";
@@ -2526,7 +2552,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
@@ -2573,7 +2599,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2600,7 +2626,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getPagination());
       }
@@ -2782,13 +2808,19 @@ public final class QueryProto {
 
       // Construct using com.akash.escrow.v1beta1.QueryProto.QueryPaymentsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2852,11 +2884,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.state_ = state_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3432,8 +3467,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3631,6 +3668,7 @@ public final class QueryProto {
               com.akash.escrow.v1beta1.QueryProto.QueryPaymentsResponse.class, com.akash.escrow.v1beta1.QueryProto.QueryPaymentsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAYMENTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.akash.escrow.v1beta1.TypesProto.Payment> payments_;
@@ -3680,7 +3718,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -3715,7 +3753,7 @@ public final class QueryProto {
       for (int i = 0; i < payments_.size(); i++) {
         output.writeMessage(1, payments_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3731,7 +3769,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, payments_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3899,13 +3937,20 @@ public final class QueryProto {
 
       // Construct using com.akash.escrow.v1beta1.QueryProto.QueryPaymentsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaymentsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3969,11 +4014,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.escrow.v1beta1.QueryProto.QueryPaymentsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4418,8 +4466,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

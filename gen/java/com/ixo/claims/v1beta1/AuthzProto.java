@@ -2793,6 +2793,7 @@ public final class AuthzProto {
               com.ixo.claims.v1beta1.AuthzProto.EvaluateClaimConstraints.class, com.ixo.claims.v1beta1.AuthzProto.EvaluateClaimConstraints.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTION_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collectionId_ = "";
@@ -2916,7 +2917,7 @@ public final class AuthzProto {
      */
     @java.lang.Override
     public boolean hasBeforeDate() {
-      return beforeDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3031,7 +3032,7 @@ public final class AuthzProto {
       if (agentQuota_ != 0L) {
         output.writeUInt64(3, agentQuota_);
       }
-      if (beforeDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getBeforeDate());
       }
       for (int i = 0; i < maxCustomAmount_.size(); i++) {
@@ -3061,7 +3062,7 @@ public final class AuthzProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, agentQuota_);
       }
-      if (beforeDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBeforeDate());
       }
@@ -3244,13 +3245,20 @@ public final class AuthzProto {
 
       // Construct using com.ixo.claims.v1beta1.AuthzProto.EvaluateClaimConstraints.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBeforeDateFieldBuilder();
+          getMaxCustomAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3328,11 +3336,14 @@ public final class AuthzProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.agentQuota_ = agentQuota_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.beforeDate_ = beforeDateBuilder_ == null
               ? beforeDate_
               : beforeDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3862,8 +3873,10 @@ public final class AuthzProto {
         } else {
           beforeDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (beforeDate_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5561,6 +5574,7 @@ public final class AuthzProto {
               com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.class, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLAIM_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object claimId_ = "";
@@ -5770,7 +5784,7 @@ public final class AuthzProto {
      */
     @java.lang.Override
     public boolean hasContract1155Payment() {
-      return contract1155Payment_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5903,7 +5917,7 @@ public final class AuthzProto {
      */
     @java.lang.Override
     public boolean hasReleaseDate() {
-      return releaseDate_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5957,7 +5971,7 @@ public final class AuthzProto {
       if (paymentType_ != com.ixo.claims.v1beta1.ClaimsProto.PaymentType.SUBMISSION.getNumber()) {
         output.writeEnum(4, paymentType_);
       }
-      if (contract1155Payment_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getContract1155Payment());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddress_)) {
@@ -5966,7 +5980,7 @@ public final class AuthzProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, fromAddress_);
       }
-      if (releaseDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getReleaseDate());
       }
       getUnknownFields().writeTo(output);
@@ -5993,7 +6007,7 @@ public final class AuthzProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, paymentType_);
       }
-      if (contract1155Payment_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getContract1155Payment());
       }
@@ -6003,7 +6017,7 @@ public final class AuthzProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, fromAddress_);
       }
-      if (releaseDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getReleaseDate());
       }
@@ -6197,13 +6211,22 @@ public final class AuthzProto {
 
       // Construct using com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputsFieldBuilder();
+          getOutputsFieldBuilder();
+          getContract1155PaymentFieldBuilder();
+          getReleaseDateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6298,10 +6321,12 @@ public final class AuthzProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.paymentType_ = paymentType_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.contract1155Payment_ = contract1155PaymentBuilder_ == null
               ? contract1155Payment_
               : contract1155PaymentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.toAddress_ = toAddress_;
@@ -6313,7 +6338,9 @@ public final class AuthzProto {
           result.releaseDate_ = releaseDateBuilder_ == null
               ? releaseDate_
               : releaseDateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7419,8 +7446,10 @@ public final class AuthzProto {
         } else {
           contract1155PaymentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (contract1155Payment_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7763,8 +7792,10 @@ public final class AuthzProto {
         } else {
           releaseDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (releaseDate_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**

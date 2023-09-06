@@ -4325,6 +4325,7 @@ public final class LiquidityProto {
               com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.class, com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -4547,7 +4548,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasMintedPoolCoin() {
-      return mintedPoolCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
@@ -4626,7 +4627,7 @@ public final class LiquidityProto {
       for (int i = 0; i < acceptedCoins_.size(); i++) {
         output.writeMessage(6, acceptedCoins_.get(i));
       }
-      if (mintedPoolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getMintedPoolCoin());
       }
       if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.REQUEST_STATUS_UNSPECIFIED.getNumber()) {
@@ -4667,7 +4668,7 @@ public final class LiquidityProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, acceptedCoins_.get(i));
       }
-      if (mintedPoolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getMintedPoolCoin());
       }
@@ -4876,13 +4877,21 @@ public final class LiquidityProto {
 
       // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositCoinsFieldBuilder();
+          getAcceptedCoinsFieldBuilder();
+          getMintedPoolCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4980,10 +4989,12 @@ public final class LiquidityProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.depositor_ = depositor_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.mintedPoolCoin_ = mintedPoolCoinBuilder_ == null
               ? mintedPoolCoin_
               : mintedPoolCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.status_ = status_;
@@ -4991,6 +5002,7 @@ public final class LiquidityProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.appId_ = appId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6132,8 +6144,10 @@ public final class LiquidityProto {
         } else {
           mintedPoolCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (mintedPoolCoin_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6517,6 +6531,7 @@ public final class LiquidityProto {
               com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.class, com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -6621,7 +6636,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasPoolCoin() {
-      return poolCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6763,7 +6778,7 @@ public final class LiquidityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, withdrawer_);
       }
-      if (poolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getPoolCoin());
       }
       for (int i = 0; i < withdrawnCoins_.size(); i++) {
@@ -6799,7 +6814,7 @@ public final class LiquidityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, withdrawer_);
       }
-      if (poolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPoolCoin());
       }
@@ -7006,13 +7021,20 @@ public final class LiquidityProto {
 
       // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolCoinFieldBuilder();
+          getWithdrawnCoinsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7094,10 +7116,12 @@ public final class LiquidityProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.withdrawer_ = withdrawer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.poolCoin_ = poolCoinBuilder_ == null
               ? poolCoin_
               : poolCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.status_ = status_;
@@ -7105,6 +7129,7 @@ public final class LiquidityProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.appId_ = appId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7603,8 +7628,10 @@ public final class LiquidityProto {
         } else {
           poolCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (poolCoin_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8425,6 +8452,7 @@ public final class LiquidityProto {
               com.comdex.liquidity.v1beta1.LiquidityProto.Order.class, com.comdex.liquidity.v1beta1.LiquidityProto.Order.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -8551,7 +8579,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasOfferCoin() {
-      return offerCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
@@ -8581,7 +8609,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasRemainingOfferCoin() {
-      return remainingOfferCoin_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -8619,7 +8647,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasReceivedCoin() {
-      return receivedCoin_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -8793,7 +8821,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasExpireAt() {
-      return expireAt_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -8895,13 +8923,13 @@ public final class LiquidityProto {
       if (direction_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection.ORDER_DIRECTION_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, direction_);
       }
-      if (offerCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getOfferCoin());
       }
-      if (remainingOfferCoin_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getRemainingOfferCoin());
       }
-      if (receivedCoin_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(8, getReceivedCoin());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
@@ -8916,7 +8944,7 @@ public final class LiquidityProto {
       if (batchId_ != 0L) {
         output.writeUInt64(12, batchId_);
       }
-      if (expireAt_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(13, getExpireAt());
       }
       if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
@@ -8956,15 +8984,15 @@ public final class LiquidityProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, direction_);
       }
-      if (offerCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getOfferCoin());
       }
-      if (remainingOfferCoin_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getRemainingOfferCoin());
       }
-      if (receivedCoin_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getReceivedCoin());
       }
@@ -8981,7 +9009,7 @@ public final class LiquidityProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(12, batchId_);
       }
-      if (expireAt_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getExpireAt());
       }
@@ -9232,13 +9260,22 @@ public final class LiquidityProto {
 
       // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.Order.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOfferCoinFieldBuilder();
+          getRemainingOfferCoinFieldBuilder();
+          getReceivedCoinFieldBuilder();
+          getExpireAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9324,20 +9361,24 @@ public final class LiquidityProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.direction_ = direction_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.offerCoin_ = offerCoinBuilder_ == null
               ? offerCoin_
               : offerCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.remainingOfferCoin_ = remainingOfferCoinBuilder_ == null
               ? remainingOfferCoin_
               : remainingOfferCoinBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.receivedCoin_ = receivedCoinBuilder_ == null
               ? receivedCoin_
               : receivedCoinBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.price_ = price_;
@@ -9355,6 +9396,7 @@ public final class LiquidityProto {
           result.expireAt_ = expireAtBuilder_ == null
               ? expireAt_
               : expireAtBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.status_ = status_;
@@ -9365,6 +9407,7 @@ public final class LiquidityProto {
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.type_ = type_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9961,8 +10004,10 @@ public final class LiquidityProto {
         } else {
           offerCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (offerCoin_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10100,8 +10145,10 @@ public final class LiquidityProto {
         } else {
           remainingOfferCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (remainingOfferCoin_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10255,8 +10302,10 @@ public final class LiquidityProto {
         } else {
           receivedCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (receivedCoin_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10670,8 +10719,10 @@ public final class LiquidityProto {
         } else {
           expireAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00001000;
-        onChanged();
+        if (expireAt_ != null) {
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11094,7 +11145,8 @@ public final class LiquidityProto {
 
     public static final int ORDER_IDS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList orderIds_;
+    private com.google.protobuf.Internal.LongList orderIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
      * @return A list containing the orderIds.
@@ -11398,18 +11450,9 @@ public final class LiquidityProto {
       @java.lang.Override
       public com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex buildPartial() {
         com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex result = new com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          orderIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.orderIds_ = orderIds_;
       }
 
       private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex result) {
@@ -11422,6 +11465,10 @@ public final class LiquidityProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pairId_ = pairId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          orderIds_.makeImmutable();
+          result.orderIds_ = orderIds_;
         }
       }
 
@@ -11483,7 +11530,8 @@ public final class LiquidityProto {
         if (!other.orderIds_.isEmpty()) {
           if (orderIds_.isEmpty()) {
             orderIds_ = other.orderIds_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            orderIds_.makeImmutable();
+            bitField0_ |= 0x00000008;
           } else {
             ensureOrderIdsIsMutable();
             orderIds_.addAll(other.orderIds_);
@@ -11702,10 +11750,10 @@ public final class LiquidityProto {
 
       private com.google.protobuf.Internal.LongList orderIds_ = emptyLongList();
       private void ensureOrderIdsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          orderIds_ = mutableCopy(orderIds_);
-          bitField0_ |= 0x00000008;
+        if (!orderIds_.isModifiable()) {
+          orderIds_ = makeMutableCopy(orderIds_);
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
@@ -11713,8 +11761,8 @@ public final class LiquidityProto {
        */
       public java.util.List<java.lang.Long>
           getOrderIdsList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(orderIds_) : orderIds_;
+        orderIds_.makeImmutable();
+        return orderIds_;
       }
       /**
        * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
@@ -11742,6 +11790,7 @@ public final class LiquidityProto {
 
         ensureOrderIdsIsMutable();
         orderIds_.setLong(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -11754,6 +11803,7 @@ public final class LiquidityProto {
 
         ensureOrderIdsIsMutable();
         orderIds_.addLong(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -11767,6 +11817,7 @@ public final class LiquidityProto {
         ensureOrderIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, orderIds_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -11923,6 +11974,7 @@ public final class LiquidityProto {
               com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.class, com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -11992,7 +12044,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasFarmedPoolCoin() {
-      return farmedPoolCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -12033,7 +12085,7 @@ public final class LiquidityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, farmer_);
       }
-      if (farmedPoolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getFarmedPoolCoin());
       }
       getUnknownFields().writeTo(output);
@@ -12056,7 +12108,7 @@ public final class LiquidityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, farmer_);
       }
-      if (farmedPoolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getFarmedPoolCoin());
       }
@@ -12228,13 +12280,19 @@ public final class LiquidityProto {
 
       // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFarmedPoolCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12290,11 +12348,14 @@ public final class LiquidityProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.farmer_ = farmer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.farmedPoolCoin_ = farmedPoolCoinBuilder_ == null
               ? farmedPoolCoin_
               : farmedPoolCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12622,8 +12683,10 @@ public final class LiquidityProto {
         } else {
           farmedPoolCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (farmedPoolCoin_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12807,6 +12870,7 @@ public final class LiquidityProto {
               com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.class, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FARMED_POOL_COIN_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin farmedPoolCoin_;
     /**
@@ -12815,7 +12879,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasFarmedPoolCoin() {
-      return farmedPoolCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -12841,7 +12905,7 @@ public final class LiquidityProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return createdAt_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -12873,10 +12937,10 @@ public final class LiquidityProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (farmedPoolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFarmedPoolCoin());
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getCreatedAt());
       }
       getUnknownFields().writeTo(output);
@@ -12888,11 +12952,11 @@ public final class LiquidityProto {
       if (size != -1) return size;
 
       size = 0;
-      if (farmedPoolCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFarmedPoolCoin());
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreatedAt());
       }
@@ -13059,13 +13123,20 @@ public final class LiquidityProto {
 
       // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFarmedPoolCoinFieldBuilder();
+          getCreatedAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13114,16 +13185,20 @@ public final class LiquidityProto {
 
       private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.farmedPoolCoin_ = farmedPoolCoinBuilder_ == null
               ? farmedPoolCoin_
               : farmedPoolCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13299,8 +13374,10 @@ public final class LiquidityProto {
         } else {
           farmedPoolCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (farmedPoolCoin_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13418,8 +13495,10 @@ public final class LiquidityProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

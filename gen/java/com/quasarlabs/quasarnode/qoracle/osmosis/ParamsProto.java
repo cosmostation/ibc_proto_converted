@@ -138,6 +138,7 @@ public final class ParamsProto {
               com.quasarlabs.quasarnode.qoracle.osmosis.ParamsProto.Params.class, com.quasarlabs.quasarnode.qoracle.osmosis.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ENABLED_FIELD_NUMBER = 1;
     private boolean enabled_ = false;
     /**
@@ -255,7 +256,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasPacketTimeoutHeight() {
-      return packetTimeoutHeight_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -319,7 +320,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorizedChannel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, authorizedChannel_);
       }
-      if (packetTimeoutHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getPacketTimeoutHeight());
       }
       if (packetTimeoutTimestamp_ != 0L) {
@@ -344,7 +345,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorizedChannel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, authorizedChannel_);
       }
-      if (packetTimeoutHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPacketTimeoutHeight());
       }
@@ -524,13 +525,19 @@ public final class ParamsProto {
 
       // Construct using com.quasarlabs.quasarnode.qoracle.osmosis.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPacketTimeoutHeightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -587,14 +594,17 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.authorizedChannel_ = authorizedChannel_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.packetTimeoutHeight_ = packetTimeoutHeightBuilder_ == null
               ? packetTimeoutHeight_
               : packetTimeoutHeightBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.packetTimeoutTimestamp_ = packetTimeoutTimestamp_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1032,8 +1042,10 @@ public final class ParamsProto {
         } else {
           packetTimeoutHeightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (packetTimeoutHeight_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

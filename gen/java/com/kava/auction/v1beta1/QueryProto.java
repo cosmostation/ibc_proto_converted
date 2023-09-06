@@ -477,6 +477,7 @@ public final class QueryProto {
               com.kava.auction.v1beta1.QueryProto.QueryParamsResponse.class, com.kava.auction.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.kava.auction.v1beta1.GenesisProto.Params params_;
     /**
@@ -485,7 +486,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.auction.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -517,7 +518,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -529,7 +530,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -691,13 +692,19 @@ public final class QueryProto {
 
       // Construct using com.kava.auction.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -741,11 +748,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.auction.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -911,8 +921,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1570,6 +1582,7 @@ public final class QueryProto {
               com.kava.auction.v1beta1.QueryProto.QueryAuctionResponse.class, com.kava.auction.v1beta1.QueryProto.QueryAuctionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AUCTION_FIELD_NUMBER = 1;
     private com.google.protobuf.Any auction_;
     /**
@@ -1578,7 +1591,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAuction() {
-      return auction_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any auction = 1 [json_name = "auction"];</code>
@@ -1610,7 +1623,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (auction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAuction());
       }
       getUnknownFields().writeTo(output);
@@ -1622,7 +1635,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (auction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAuction());
       }
@@ -1784,13 +1797,19 @@ public final class QueryProto {
 
       // Construct using com.kava.auction.v1beta1.QueryProto.QueryAuctionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAuctionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1834,11 +1853,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.auction.v1beta1.QueryProto.QueryAuctionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.auction_ = auctionBuilder_ == null
               ? auction_
               : auctionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2004,8 +2026,10 @@ public final class QueryProto {
         } else {
           auctionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (auction_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2242,6 +2266,7 @@ public final class QueryProto {
               com.kava.auction.v1beta1.QueryProto.QueryAuctionsRequest.class, com.kava.auction.v1beta1.QueryProto.QueryAuctionsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object type_ = "";
@@ -2410,7 +2435,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2462,7 +2487,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phase_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, phase_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2486,7 +2511,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phase_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, phase_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPagination());
       }
@@ -2664,13 +2689,19 @@ public final class QueryProto {
 
       // Construct using com.kava.auction.v1beta1.QueryProto.QueryAuctionsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2730,11 +2761,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.phase_ = phase_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3248,8 +3282,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3475,6 +3511,7 @@ public final class QueryProto {
               com.kava.auction.v1beta1.QueryProto.QueryAuctionsResponse.class, com.kava.auction.v1beta1.QueryProto.QueryAuctionsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AUCTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.Any> auctions_;
@@ -3528,7 +3565,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3571,7 +3608,7 @@ public final class QueryProto {
       for (int i = 0; i < auctions_.size(); i++) {
         output.writeMessage(1, auctions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3587,7 +3624,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, auctions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3755,13 +3792,20 @@ public final class QueryProto {
 
       // Construct using com.kava.auction.v1beta1.QueryProto.QueryAuctionsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAuctionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3825,11 +3869,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.auction.v1beta1.QueryProto.QueryAuctionsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4294,8 +4341,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

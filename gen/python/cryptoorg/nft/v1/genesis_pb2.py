@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cryptoorg.nft.v1 import nft_pb2 as cryptoorg_dot_nft_dot_v1_dot_nft__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x63ryptoorg/nft/v1/genesis.proto\x12\x10\x63hainmain.nft.v1\x1a\x14gogoproto/gogo.proto\x1a\x1a\x63ryptoorg/nft/v1/nft.proto\"T\n\x0cGenesisState\x12\x44\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32\x1c.chainmain.nft.v1.CollectionB\x04\xc8\xde\x1f\x00R\x0b\x63ollectionsB\xba\x01\n\x14\x63om.chainmain.nft.v1B\x0cGenesisProtoP\x01Z2github.com/crypto-org-chain/chain-main/x/nft/types\xa2\x02\x03\x43NX\xaa\x02\x10\x43hainmain.Nft.V1\xca\x02\x10\x43hainmain\\Nft\\V1\xe2\x02\x1c\x43hainmain\\Nft\\V1\\GPBMetadata\xea\x02\x12\x43hainmain::Nft::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x63ryptoorg/nft/v1/genesis.proto\x12\x10\x63hainmain.nft.v1\x1a\x14gogoproto/gogo.proto\x1a\x1a\x63ryptoorg/nft/v1/nft.proto\"T\n\x0cGenesisState\x12\x44\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32\x1c.chainmain.nft.v1.CollectionB\x04\xc8\xde\x1f\x00R\x0b\x63ollectionsB\xb8\x01\n\x14\x63om.chainmain.nft.v1B\x0cGenesisProtoZ2github.com/crypto-org-chain/chain-main/x/nft/types\xa2\x02\x03\x43NX\xaa\x02\x10\x43hainmain.Nft.V1\xca\x02\x10\x43hainmain\\Nft\\V1\xe2\x02\x1c\x43hainmain\\Nft\\V1\\GPBMetadata\xea\x02\x12\x43hainmain::Nft::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cryptoorg.nft.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.chainmain.nft.v1B\014GenesisProtoP\001Z2github.com/crypto-org-chain/chain-main/x/nft/types\242\002\003CNX\252\002\020Chainmain.Nft.V1\312\002\020Chainmain\\Nft\\V1\342\002\034Chainmain\\Nft\\V1\\GPBMetadata\352\002\022Chainmain::Nft::V1'
+  DESCRIPTOR._serialized_options = b'\n\024com.chainmain.nft.v1B\014GenesisProtoZ2github.com/crypto-org-chain/chain-main/x/nft/types\242\002\003CNX\252\002\020Chainmain.Nft.V1\312\002\020Chainmain\\Nft\\V1\342\002\034Chainmain\\Nft\\V1\\GPBMetadata\352\002\022Chainmain::Nft::V1'
   _GENESISSTATE.fields_by_name['collections']._options = None
   _GENESISSTATE.fields_by_name['collections']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=102

@@ -97,6 +97,7 @@ public final class CpuProto {
               com.akash.base.v1beta3.CpuProto.CPU.class, com.akash.base.v1beta3.CpuProto.CPU.Builder.class);
     }
 
+    private int bitField0_;
     public static final int UNITS_FIELD_NUMBER = 1;
     private com.akash.base.v1beta3.ResourcevalueProto.ResourceValue units_;
     /**
@@ -105,7 +106,7 @@ public final class CpuProto {
      */
     @java.lang.Override
     public boolean hasUnits() {
-      return units_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.base.v1beta3.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
@@ -178,7 +179,7 @@ public final class CpuProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (units_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getUnits());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -193,7 +194,7 @@ public final class CpuProto {
       if (size != -1) return size;
 
       size = 0;
-      if (units_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUnits());
       }
@@ -365,13 +366,20 @@ public final class CpuProto {
 
       // Construct using com.akash.base.v1beta3.CpuProto.CPU.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnitsFieldBuilder();
+          getAttributesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -435,11 +443,14 @@ public final class CpuProto {
 
       private void buildPartial0(com.akash.base.v1beta3.CpuProto.CPU result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.units_ = unitsBuilder_ == null
               ? units_
               : unitsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -644,8 +655,10 @@ public final class CpuProto {
         } else {
           unitsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (units_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

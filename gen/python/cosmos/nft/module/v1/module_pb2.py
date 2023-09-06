@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos.app.v1alpha1 import module_pb2 as cosmos_dot_app_dot_v1alpha1_dot_module__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!cosmos/nft/module/v1/module.proto\x12\x14\x63osmos.nft.module.v1\x1a cosmos/app/v1alpha1/module.proto\"$\n\x06Module:\x1a\xba\xc0\x96\xda\x01\x14\n\x12\x63osmossdk.io/x/nftB\x9a\x01\n\x18\x63om.cosmos.nft.module.v1B\x0bModuleProtoP\x01\xa2\x02\x03\x43NM\xaa\x02\x14\x43osmos.Nft.Module.V1\xca\x02\x14\x43osmos\\Nft\\Module\\V1\xe2\x02 Cosmos\\Nft\\Module\\V1\\GPBMetadata\xea\x02\x17\x43osmos::Nft::Module::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!cosmos/nft/module/v1/module.proto\x12\x14\x63osmos.nft.module.v1\x1a cosmos/app/v1alpha1/module.proto\"$\n\x06Module:\x1a\xba\xc0\x96\xda\x01\x14\n\x12\x63osmossdk.io/x/nftB\x98\x01\n\x18\x63om.cosmos.nft.module.v1B\x0bModuleProto\xa2\x02\x03\x43NM\xaa\x02\x14\x43osmos.Nft.Module.V1\xca\x02\x14\x43osmos\\Nft\\Module\\V1\xe2\x02 Cosmos\\Nft\\Module\\V1\\GPBMetadata\xea\x02\x17\x43osmos::Nft::Module::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.nft.module.v1.module_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.cosmos.nft.module.v1B\013ModuleProtoP\001\242\002\003CNM\252\002\024Cosmos.Nft.Module.V1\312\002\024Cosmos\\Nft\\Module\\V1\342\002 Cosmos\\Nft\\Module\\V1\\GPBMetadata\352\002\027Cosmos::Nft::Module::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.cosmos.nft.module.v1B\013ModuleProto\242\002\003CNM\252\002\024Cosmos.Nft.Module.V1\312\002\024Cosmos\\Nft\\Module\\V1\342\002 Cosmos\\Nft\\Module\\V1\\GPBMetadata\352\002\027Cosmos::Nft::Module::V1'
   _MODULE._options = None
   _MODULE._serialized_options = b'\272\300\226\332\001\024\n\022cosmossdk.io/x/nft'
   _globals['_MODULE']._serialized_start=93

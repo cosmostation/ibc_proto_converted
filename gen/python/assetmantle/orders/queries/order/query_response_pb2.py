@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.orders.mappable import mappable_pb2 as assetmantle_dot_orders_dot_mappable_dot_mappable__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5assetmantle/orders/queries/order/query_response.proto\x12(assetmantle.modules.orders.queries.order\x1a\x14gogoproto/gogo.proto\x1a*assetmantle/orders/mappable/mappable.proto\"X\n\rQueryResponse\x12\x41\n\x04list\x18\x01 \x03(\x0b\x32-.assetmantle.modules.orders.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\x88\x02\n,com.assetmantle.modules.orders.queries.orderB\x12QueryResponseProtoP\x01\xa2\x02\x05\x41MOQO\xaa\x02(Assetmantle.Modules.Orders.Queries.Order\xca\x02(Assetmantle\\Modules\\Orders\\Queries\\Order\xe2\x02\x34\x41ssetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\xea\x02,Assetmantle::Modules::Orders::Queries::Orderb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5assetmantle/orders/queries/order/query_response.proto\x12(assetmantle.modules.orders.queries.order\x1a\x14gogoproto/gogo.proto\x1a*assetmantle/orders/mappable/mappable.proto\"X\n\rQueryResponse\x12\x41\n\x04list\x18\x01 \x03(\x0b\x32-.assetmantle.modules.orders.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\x86\x02\n,com.assetmantle.modules.orders.queries.orderB\x12QueryResponseProto\xa2\x02\x05\x41MOQO\xaa\x02(Assetmantle.Modules.Orders.Queries.Order\xca\x02(Assetmantle\\Modules\\Orders\\Queries\\Order\xe2\x02\x34\x41ssetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\xea\x02,Assetmantle::Modules::Orders::Queries::Orderb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.queries.order.query_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n,com.assetmantle.modules.orders.queries.orderB\022QueryResponseProtoP\001\242\002\005AMOQO\252\002(Assetmantle.Modules.Orders.Queries.Order\312\002(Assetmantle\\Modules\\Orders\\Queries\\Order\342\0024Assetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\352\002,Assetmantle::Modules::Orders::Queries::Order'
+  DESCRIPTOR._serialized_options = b'\n,com.assetmantle.modules.orders.queries.orderB\022QueryResponseProto\242\002\005AMOQO\252\002(Assetmantle.Modules.Orders.Queries.Order\312\002(Assetmantle\\Modules\\Orders\\Queries\\Order\342\0024Assetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\352\002,Assetmantle::Modules::Orders::Queries::Order'
   _QUERYRESPONSE._options = None
   _QUERYRESPONSE._serialized_options = b'\210\240\037\000'
   _globals['_QUERYRESPONSE']._serialized_start=165

@@ -15,15 +15,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1blikechain/iscn/params.proto\x12\x0elikechain.iscn\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\x85\x01\n\x06Params\x12#\n\rregistry_name\x18\x01 \x01(\tR\x0cregistryName\x12\x44\n\x0c\x66\x65\x65_per_byte\x18\x02 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\nfeePerByte:\x10\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x80\xdc \x00\x42\xae\x01\n\x12\x63om.likechain.iscnB\x0bParamsProtoP\x01Z2github.com/likecoin/likecoin-chain/v4/x/iscn/types\xa2\x02\x03LIX\xaa\x02\x0eLikechain.Iscn\xca\x02\x0eLikechain\\Iscn\xe2\x02\x1aLikechain\\Iscn\\GPBMetadata\xea\x02\x0fLikechain::Iscnb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1blikechain/iscn/params.proto\x12\x0elikechain.iscn\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\x85\x01\n\x06Params\x12#\n\rregistry_name\x18\x01 \x01(\tR\x0cregistryName\x12\x44\n\x0c\x66\x65\x65_per_byte\x18\x02 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\nfeePerByte:\x10\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x80\xdc \x00\x42\xac\x01\n\x12\x63om.likechain.iscnB\x0bParamsProtoZ2github.com/likecoin/likecoin-chain/v4/x/iscn/types\xa2\x02\x03LIX\xaa\x02\x0eLikechain.Iscn\xca\x02\x0eLikechain\\Iscn\xe2\x02\x1aLikechain\\Iscn\\GPBMetadata\xea\x02\x0fLikechain::Iscnb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'likechain.iscn.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.likechain.iscnB\013ParamsProtoP\001Z2github.com/likecoin/likecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Likechain::Iscn'
+  DESCRIPTOR._serialized_options = b'\n\022com.likechain.iscnB\013ParamsProtoZ2github.com/likecoin/likecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Likechain::Iscn'
   _PARAMS.fields_by_name['fee_per_byte']._options = None
   _PARAMS.fields_by_name['fee_per_byte']._serialized_options = b'\310\336\037\000'
   _PARAMS._options = None

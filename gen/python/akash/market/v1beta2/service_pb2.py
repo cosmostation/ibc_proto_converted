@@ -15,15 +15,14 @@ from akash.market.v1beta2 import bid_pb2 as akash_dot_market_dot_v1beta2_dot_bid
 from akash.market.v1beta2 import lease_pb2 as akash_dot_market_dot_v1beta2_dot_lease__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"akash/market/v1beta2/service.proto\x12\x14\x61kash.market.v1beta2\x1a\x1e\x61kash/market/v1beta2/bid.proto\x1a akash/market/v1beta2/lease.proto2\xe8\x03\n\x03Msg\x12[\n\tCreateBid\x12\".akash.market.v1beta2.MsgCreateBid\x1a*.akash.market.v1beta2.MsgCreateBidResponse\x12X\n\x08\x43loseBid\x12!.akash.market.v1beta2.MsgCloseBid\x1a).akash.market.v1beta2.MsgCloseBidResponse\x12g\n\rWithdrawLease\x12&.akash.market.v1beta2.MsgWithdrawLease\x1a..akash.market.v1beta2.MsgWithdrawLeaseResponse\x12\x61\n\x0b\x43reateLease\x12$.akash.market.v1beta2.MsgCreateLease\x1a,.akash.market.v1beta2.MsgCreateLeaseResponse\x12^\n\nCloseLease\x12#.akash.market.v1beta2.MsgCloseLease\x1a+.akash.market.v1beta2.MsgCloseLeaseResponseB\xd5\x01\n\x18\x63om.akash.market.v1beta2B\x0cServiceProtoP\x01Z9github.com/akash-network/akash-api/go/node/market/v1beta2\xa2\x02\x03\x41MX\xaa\x02\x14\x41kash.Market.V1beta2\xca\x02\x14\x41kash\\Market\\V1beta2\xe2\x02 Akash\\Market\\V1beta2\\GPBMetadata\xea\x02\x16\x41kash::Market::V1beta2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"akash/market/v1beta2/service.proto\x12\x14\x61kash.market.v1beta2\x1a\x1e\x61kash/market/v1beta2/bid.proto\x1a akash/market/v1beta2/lease.proto2\xe8\x03\n\x03Msg\x12[\n\tCreateBid\x12\".akash.market.v1beta2.MsgCreateBid\x1a*.akash.market.v1beta2.MsgCreateBidResponse\x12X\n\x08\x43loseBid\x12!.akash.market.v1beta2.MsgCloseBid\x1a).akash.market.v1beta2.MsgCloseBidResponse\x12g\n\rWithdrawLease\x12&.akash.market.v1beta2.MsgWithdrawLease\x1a..akash.market.v1beta2.MsgWithdrawLeaseResponse\x12\x61\n\x0b\x43reateLease\x12$.akash.market.v1beta2.MsgCreateLease\x1a,.akash.market.v1beta2.MsgCreateLeaseResponse\x12^\n\nCloseLease\x12#.akash.market.v1beta2.MsgCloseLease\x1a+.akash.market.v1beta2.MsgCloseLeaseResponseB\xd3\x01\n\x18\x63om.akash.market.v1beta2B\x0cServiceProtoZ9github.com/akash-network/akash-api/go/node/market/v1beta2\xa2\x02\x03\x41MX\xaa\x02\x14\x41kash.Market.V1beta2\xca\x02\x14\x41kash\\Market\\V1beta2\xe2\x02 Akash\\Market\\V1beta2\\GPBMetadata\xea\x02\x16\x41kash::Market::V1beta2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.market.v1beta2.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.akash.market.v1beta2B\014ServiceProtoP\001Z9github.com/akash-network/akash-api/go/node/market/v1beta2\242\002\003AMX\252\002\024Akash.Market.V1beta2\312\002\024Akash\\Market\\V1beta2\342\002 Akash\\Market\\V1beta2\\GPBMetadata\352\002\026Akash::Market::V1beta2'
+  DESCRIPTOR._serialized_options = b'\n\030com.akash.market.v1beta2B\014ServiceProtoZ9github.com/akash-network/akash-api/go/node/market/v1beta2\242\002\003AMX\252\002\024Akash.Market.V1beta2\312\002\024Akash\\Market\\V1beta2\342\002 Akash\\Market\\V1beta2\\GPBMetadata\352\002\026Akash::Market::V1beta2'
   _globals['_MSG']._serialized_start=127
   _globals['_MSG']._serialized_end=615
 # @@protoc_insertion_point(module_scope)

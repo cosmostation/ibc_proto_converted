@@ -1550,6 +1550,7 @@ public final class TypesProto {
               com.tendermint.p2p.TypesProto.DefaultNodeInfo.class, com.tendermint.p2p.TypesProto.DefaultNodeInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROTOCOL_VERSION_FIELD_NUMBER = 1;
     private com.tendermint.p2p.TypesProto.ProtocolVersion protocolVersion_;
     /**
@@ -1558,7 +1559,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasProtocolVersion() {
-      return protocolVersion_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.tendermint.p2p.ProtocolVersion protocol_version = 1 [json_name = "protocolVersion", (.gogoproto.nullable) = false];</code>
@@ -1790,7 +1791,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasOther() {
-      return other_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.tendermint.p2p.DefaultNodeInfoOther other = 8 [json_name = "other", (.gogoproto.nullable) = false];</code>
@@ -1822,7 +1823,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (protocolVersion_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getProtocolVersion());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultNodeId_)) {
@@ -1843,7 +1844,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, moniker_);
       }
-      if (other_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getOther());
       }
       getUnknownFields().writeTo(output);
@@ -1855,7 +1856,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (protocolVersion_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProtocolVersion());
       }
@@ -1878,7 +1879,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, moniker_);
       }
-      if (other_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getOther());
       }
@@ -2069,13 +2070,20 @@ public final class TypesProto {
 
       // Construct using com.tendermint.p2p.TypesProto.DefaultNodeInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProtocolVersionFieldBuilder();
+          getOtherFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2130,10 +2138,12 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.p2p.TypesProto.DefaultNodeInfo result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.protocolVersion_ = protocolVersionBuilder_ == null
               ? protocolVersion_
               : protocolVersionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.defaultNodeId_ = defaultNodeId_;
@@ -2157,7 +2167,9 @@ public final class TypesProto {
           result.other_ = otherBuilder_ == null
               ? other_
               : otherBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2391,8 +2403,10 @@ public final class TypesProto {
         } else {
           protocolVersionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (protocolVersion_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2902,8 +2916,10 @@ public final class TypesProto {
         } else {
           otherBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (other_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n@assetmantle/metas/transactions/reveal/transaction_response.proto\x12-assetmantle.modules.metas.transactions.reveal\"\x15\n\x13TransactionResponseB\xa7\x02\n1com.assetmantle.modules.metas.transactions.revealB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MMTR\xaa\x02-Assetmantle.Modules.Metas.Transactions.Reveal\xca\x02-Assetmantle\\Modules\\Metas\\Transactions\\Reveal\xe2\x02\x39\x41ssetmantle\\Modules\\Metas\\Transactions\\Reveal\\GPBMetadata\xea\x02\x31\x41ssetmantle::Modules::Metas::Transactions::Revealb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n@assetmantle/metas/transactions/reveal/transaction_response.proto\x12-assetmantle.modules.metas.transactions.reveal\"\x15\n\x13TransactionResponseB\xa5\x02\n1com.assetmantle.modules.metas.transactions.revealB\x18TransactionResponseProto\xa2\x02\x05\x41MMTR\xaa\x02-Assetmantle.Modules.Metas.Transactions.Reveal\xca\x02-Assetmantle\\Modules\\Metas\\Transactions\\Reveal\xe2\x02\x39\x41ssetmantle\\Modules\\Metas\\Transactions\\Reveal\\GPBMetadata\xea\x02\x31\x41ssetmantle::Modules::Metas::Transactions::Revealb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.metas.transactions.reveal.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n1com.assetmantle.modules.metas.transactions.revealB\030TransactionResponseProtoP\001\242\002\005AMMTR\252\002-Assetmantle.Modules.Metas.Transactions.Reveal\312\002-Assetmantle\\Modules\\Metas\\Transactions\\Reveal\342\0029Assetmantle\\Modules\\Metas\\Transactions\\Reveal\\GPBMetadata\352\0021Assetmantle::Modules::Metas::Transactions::Reveal'
+  DESCRIPTOR._serialized_options = b'\n1com.assetmantle.modules.metas.transactions.revealB\030TransactionResponseProto\242\002\005AMMTR\252\002-Assetmantle.Modules.Metas.Transactions.Reveal\312\002-Assetmantle\\Modules\\Metas\\Transactions\\Reveal\342\0029Assetmantle\\Modules\\Metas\\Transactions\\Reveal\\GPBMetadata\352\0021Assetmantle::Modules::Metas::Transactions::Reveal'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=115
   _globals['_TRANSACTIONRESPONSE']._serialized_end=136
 # @@protoc_insertion_point(module_scope)

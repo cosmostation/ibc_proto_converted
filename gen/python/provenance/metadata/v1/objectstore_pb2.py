@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(provenance/metadata/v1/objectstore.proto\x12\x16provenance.metadata.v1\x1a\x14gogoproto/gogo.proto\"r\n\x12ObjectStoreLocator\x12\x14\n\x05owner\x18\x01 \x01(\tR\x05owner\x12\x1f\n\x0blocator_uri\x18\x02 \x01(\tR\nlocatorUri\x12%\n\x0e\x65ncryption_key\x18\x03 \x01(\tR\rencryptionKey\"`\n\x0fOSLocatorParams\x12M\n\x0emax_uri_length\x18\x01 \x01(\rB\'\xc8\xde\x1f\x00\xda\xde\x1f\x06uint32\xf2\xde\x1f\x15yaml:\"max_uri_length\"R\x0cmaxUriLengthB\xde\x01\n\x1a\x63om.provenance.metadata.v1B\x10ObjectstoreProtoP\x01Z4github.com/provenance-io/provenance/x/metadata/types\xa2\x02\x03PMX\xaa\x02\x16Provenance.Metadata.V1\xca\x02\x16Provenance\\Metadata\\V1\xe2\x02\"Provenance\\Metadata\\V1\\GPBMetadata\xea\x02\x18Provenance::Metadata::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(provenance/metadata/v1/objectstore.proto\x12\x16provenance.metadata.v1\x1a\x14gogoproto/gogo.proto\"r\n\x12ObjectStoreLocator\x12\x14\n\x05owner\x18\x01 \x01(\tR\x05owner\x12\x1f\n\x0blocator_uri\x18\x02 \x01(\tR\nlocatorUri\x12%\n\x0e\x65ncryption_key\x18\x03 \x01(\tR\rencryptionKey\"`\n\x0fOSLocatorParams\x12M\n\x0emax_uri_length\x18\x01 \x01(\rB\'\xc8\xde\x1f\x00\xda\xde\x1f\x06uint32\xf2\xde\x1f\x15yaml:\"max_uri_length\"R\x0cmaxUriLengthB\xde\x01\n\x1a\x63om.provenance.metadata.v1B\x10ObjectstoreProtoP\x00Z4github.com/provenance-io/provenance/x/metadata/types\xa2\x02\x03PMX\xaa\x02\x16Provenance.Metadata.V1\xca\x02\x16Provenance\\Metadata\\V1\xe2\x02\"Provenance\\Metadata\\V1\\GPBMetadata\xea\x02\x18Provenance::Metadata::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'provenance.metadata.v1.objectstore_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.provenance.metadata.v1B\020ObjectstoreProtoP\001Z4github.com/provenance-io/provenance/x/metadata/types\242\002\003PMX\252\002\026Provenance.Metadata.V1\312\002\026Provenance\\Metadata\\V1\342\002\"Provenance\\Metadata\\V1\\GPBMetadata\352\002\030Provenance::Metadata::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.provenance.metadata.v1B\020ObjectstoreProtoP\000Z4github.com/provenance-io/provenance/x/metadata/types\242\002\003PMX\252\002\026Provenance.Metadata.V1\312\002\026Provenance\\Metadata\\V1\342\002\"Provenance\\Metadata\\V1\\GPBMetadata\352\002\030Provenance::Metadata::V1'
   _OSLOCATORPARAMS.fields_by_name['max_uri_length']._options = None
   _OSLOCATORPARAMS.fields_by_name['max_uri_length']._serialized_options = b'\310\336\037\000\332\336\037\006uint32\362\336\037\025yaml:\"max_uri_length\"'
   _globals['_OBJECTSTORELOCATOR']._serialized_start=90

@@ -16,15 +16,14 @@ from comdex.bandoracle.v1beta1 import params_pb2 as comdex_dot_bandoracle_dot_v1
 from comdex.bandoracle.v1beta1 import fetch_price_pb2 as comdex_dot_bandoracle_dot_v1beta1_dot_fetch__price__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'comdex/bandoracle/v1beta1/genesis.proto\x12\x19\x63omdex.bandoracle.v1beta1\x1a\x14gogoproto/gogo.proto\x1a&comdex/bandoracle/v1beta1/params.proto\x1a+comdex/bandoracle/v1beta1/fetch_price.proto\"|\n\x0cGenesisState\x12?\n\x06params\x18\x01 \x01(\x0b\x32!.comdex.bandoracle.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x17\n\x07port_id\x18\x02 \x01(\tR\x06portId\x12\x12\n\x04\x66lag\x18\x03 \x01(\x08R\x04\x66lagB\xe9\x01\n\x1d\x63om.comdex.bandoracle.v1beta1B\x0cGenesisProtoP\x01Z4github.com/comdex-official/comdex/x/bandoracle/types\xa2\x02\x03\x43\x42X\xaa\x02\x19\x43omdex.Bandoracle.V1beta1\xca\x02\x19\x43omdex\\Bandoracle\\V1beta1\xe2\x02%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\xea\x02\x1b\x43omdex::Bandoracle::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'comdex/bandoracle/v1beta1/genesis.proto\x12\x19\x63omdex.bandoracle.v1beta1\x1a\x14gogoproto/gogo.proto\x1a&comdex/bandoracle/v1beta1/params.proto\x1a+comdex/bandoracle/v1beta1/fetch_price.proto\"|\n\x0cGenesisState\x12?\n\x06params\x18\x01 \x01(\x0b\x32!.comdex.bandoracle.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x17\n\x07port_id\x18\x02 \x01(\tR\x06portId\x12\x12\n\x04\x66lag\x18\x03 \x01(\x08R\x04\x66lagB\xe7\x01\n\x1d\x63om.comdex.bandoracle.v1beta1B\x0cGenesisProtoZ4github.com/comdex-official/comdex/x/bandoracle/types\xa2\x02\x03\x43\x42X\xaa\x02\x19\x43omdex.Bandoracle.V1beta1\xca\x02\x19\x43omdex\\Bandoracle\\V1beta1\xe2\x02%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\xea\x02\x1b\x43omdex::Bandoracle::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.bandoracle.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.comdex.bandoracle.v1beta1B\014GenesisProtoP\001Z4github.com/comdex-official/comdex/x/bandoracle/types\242\002\003CBX\252\002\031Comdex.Bandoracle.V1beta1\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\352\002\033Comdex::Bandoracle::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\035com.comdex.bandoracle.v1beta1B\014GenesisProtoZ4github.com/comdex-official/comdex/x/bandoracle/types\242\002\003CBX\252\002\031Comdex.Bandoracle.V1beta1\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\352\002\033Comdex::Bandoracle::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=177

@@ -88,6 +88,7 @@ public final class CosmosProto {
               com.ixo.entity.v1beta1.CosmosProto.Grant.class, com.ixo.entity.v1beta1.CosmosProto.Grant.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AUTHORIZATION_FIELD_NUMBER = 1;
     private com.google.protobuf.Any authorization_;
     /**
@@ -96,7 +97,7 @@ public final class CosmosProto {
      */
     @java.lang.Override
     public boolean hasAuthorization() {
-      return authorization_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any authorization = 1 [json_name = "authorization", (.cosmos_proto.accepts_interface) = "Authorization"];</code>
@@ -122,7 +123,7 @@ public final class CosmosProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return expiration_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -154,10 +155,10 @@ public final class CosmosProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (authorization_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAuthorization());
       }
-      if (expiration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getExpiration());
       }
       getUnknownFields().writeTo(output);
@@ -169,11 +170,11 @@ public final class CosmosProto {
       if (size != -1) return size;
 
       size = 0;
-      if (authorization_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAuthorization());
       }
-      if (expiration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExpiration());
       }
@@ -345,13 +346,20 @@ public final class CosmosProto {
 
       // Construct using com.ixo.entity.v1beta1.CosmosProto.Grant.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAuthorizationFieldBuilder();
+          getExpirationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -400,16 +408,20 @@ public final class CosmosProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.CosmosProto.Grant result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authorization_ = authorizationBuilder_ == null
               ? authorization_
               : authorizationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -585,8 +597,10 @@ public final class CosmosProto {
         } else {
           authorizationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (authorization_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -704,8 +718,10 @@ public final class CosmosProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (expiration_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

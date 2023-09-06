@@ -3313,6 +3313,7 @@ public final class TxProto {
               com.osmosis.superfluid.TxProto.MsgSuperfluidUndelegateAndUnbondLock.class, com.osmosis.superfluid.TxProto.MsgSuperfluidUndelegateAndUnbondLock.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -3375,7 +3376,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3421,7 +3422,7 @@ public final class TxProto {
       if (lockId_ != 0L) {
         output.writeUInt64(2, lockId_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -3440,7 +3441,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, lockId_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCoin());
       }
@@ -3607,13 +3608,19 @@ public final class TxProto {
 
       // Construct using com.osmosis.superfluid.TxProto.MsgSuperfluidUndelegateAndUnbondLock.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3665,11 +3672,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lockId_ = lockId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3977,8 +3987,10 @@ public final class TxProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8600,7 +8612,8 @@ public final class TxProto {
 
     public static final int EXITED_LOCK_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList exitedLockIds_;
+    private com.google.protobuf.Internal.LongList exitedLockIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 exited_lock_ids = 1 [json_name = "exitedLockIds"];</code>
      * @return A list containing the exitedLockIds.
@@ -8862,22 +8875,17 @@ public final class TxProto {
       @java.lang.Override
       public com.osmosis.superfluid.TxProto.MsgUnPoolWhitelistedPoolResponse buildPartial() {
         com.osmosis.superfluid.TxProto.MsgUnPoolWhitelistedPoolResponse result = new com.osmosis.superfluid.TxProto.MsgUnPoolWhitelistedPoolResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.osmosis.superfluid.TxProto.MsgUnPoolWhitelistedPoolResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          exitedLockIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.exitedLockIds_ = exitedLockIds_;
-      }
-
       private void buildPartial0(com.osmosis.superfluid.TxProto.MsgUnPoolWhitelistedPoolResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          exitedLockIds_.makeImmutable();
+          result.exitedLockIds_ = exitedLockIds_;
+        }
       }
 
       @java.lang.Override
@@ -8927,7 +8935,8 @@ public final class TxProto {
         if (!other.exitedLockIds_.isEmpty()) {
           if (exitedLockIds_.isEmpty()) {
             exitedLockIds_ = other.exitedLockIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            exitedLockIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureExitedLockIdsIsMutable();
             exitedLockIds_.addAll(other.exitedLockIds_);
@@ -8995,10 +9004,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList exitedLockIds_ = emptyLongList();
       private void ensureExitedLockIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          exitedLockIds_ = mutableCopy(exitedLockIds_);
-          bitField0_ |= 0x00000001;
+        if (!exitedLockIds_.isModifiable()) {
+          exitedLockIds_ = makeMutableCopy(exitedLockIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 exited_lock_ids = 1 [json_name = "exitedLockIds"];</code>
@@ -9006,8 +9015,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getExitedLockIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(exitedLockIds_) : exitedLockIds_;
+        exitedLockIds_.makeImmutable();
+        return exitedLockIds_;
       }
       /**
        * <code>repeated uint64 exited_lock_ids = 1 [json_name = "exitedLockIds"];</code>
@@ -9035,6 +9044,7 @@ public final class TxProto {
 
         ensureExitedLockIdsIsMutable();
         exitedLockIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9047,6 +9057,7 @@ public final class TxProto {
 
         ensureExitedLockIdsIsMutable();
         exitedLockIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9060,6 +9071,7 @@ public final class TxProto {
         ensureExitedLockIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, exitedLockIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9260,6 +9272,7 @@ public final class TxProto {
               com.osmosis.superfluid.TxProto.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition.class, com.osmosis.superfluid.TxProto.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -9318,7 +9331,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSharesToMigrate() {
-      return sharesToMigrate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin shares_to_migrate = 3 [json_name = "sharesToMigrate", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_migrate&#92;""];</code>
@@ -9417,7 +9430,7 @@ public final class TxProto {
       if (lockId_ != 0L) {
         output.writeUInt64(2, lockId_);
       }
-      if (sharesToMigrate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getSharesToMigrate());
       }
       for (int i = 0; i < tokenOutMins_.size(); i++) {
@@ -9439,7 +9452,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, lockId_);
       }
-      if (sharesToMigrate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSharesToMigrate());
       }
@@ -9621,13 +9634,20 @@ public final class TxProto {
 
       // Construct using com.osmosis.superfluid.TxProto.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSharesToMigrateFieldBuilder();
+          getTokenOutMinsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9699,11 +9719,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lockId_ = lockId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.sharesToMigrate_ = sharesToMigrateBuilder_ == null
               ? sharesToMigrate_
               : sharesToMigrateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10030,8 +10053,10 @@ public final class TxProto {
         } else {
           sharesToMigrateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (sharesToMigrate_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10551,6 +10576,7 @@ public final class TxProto {
               com.osmosis.superfluid.TxProto.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse.class, com.osmosis.superfluid.TxProto.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AMOUNT0_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount0_ = "";
@@ -10676,7 +10702,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasJoinTime() {
-      return joinTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp join_time = 4 [json_name = "joinTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"join_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -10717,7 +10743,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityCreated_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, liquidityCreated_);
       }
-      if (joinTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getJoinTime());
       }
       getUnknownFields().writeTo(output);
@@ -10738,7 +10764,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityCreated_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, liquidityCreated_);
       }
-      if (joinTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getJoinTime());
       }
@@ -10908,13 +10934,19 @@ public final class TxProto {
 
       // Construct using com.osmosis.superfluid.TxProto.MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getJoinTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10970,11 +11002,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.liquidityCreated_ = liquidityCreated_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.joinTime_ = joinTimeBuilder_ == null
               ? joinTime_
               : joinTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11386,8 +11421,10 @@ public final class TxProto {
         } else {
           joinTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (joinTime_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11594,6 +11631,7 @@ public final class TxProto {
               com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPosition.class, com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPosition.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POSITION_ID_FIELD_NUMBER = 1;
     private long positionId_ = 0L;
     /**
@@ -11652,7 +11690,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTokenDesired0() {
-      return tokenDesired0_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token_desired0 = 3 [json_name = "tokenDesired0", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_desired0&#92;""];</code>
@@ -11678,7 +11716,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTokenDesired1() {
-      return tokenDesired1_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token_desired1 = 4 [json_name = "tokenDesired1", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_desired1&#92;""];</code>
@@ -11716,10 +11754,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sender_);
       }
-      if (tokenDesired0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getTokenDesired0());
       }
-      if (tokenDesired1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getTokenDesired1());
       }
       getUnknownFields().writeTo(output);
@@ -11738,11 +11776,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sender_);
       }
-      if (tokenDesired0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTokenDesired0());
       }
-      if (tokenDesired1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTokenDesired1());
       }
@@ -11922,13 +11960,20 @@ public final class TxProto {
 
       // Construct using com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPosition.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenDesired0FieldBuilder();
+          getTokenDesired1FieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11985,16 +12030,20 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sender_ = sender_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tokenDesired0_ = tokenDesired0Builder_ == null
               ? tokenDesired0_
               : tokenDesired0Builder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.tokenDesired1_ = tokenDesired1Builder_ == null
               ? tokenDesired1_
               : tokenDesired1Builder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12292,8 +12341,10 @@ public final class TxProto {
         } else {
           tokenDesired0Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (tokenDesired0_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12411,8 +12462,10 @@ public final class TxProto {
         } else {
           tokenDesired1Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (tokenDesired1_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

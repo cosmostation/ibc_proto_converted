@@ -397,6 +397,7 @@ public final class DrawProto {
               com.lum.network.millions.DrawProto.Draw.class, com.lum.network.millions.DrawProto.Draw.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -492,7 +493,7 @@ public final class DrawProto {
      */
     @java.lang.Override
     public boolean hasPrizePool() {
-      return prizePool_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin prize_pool = 6 [json_name = "prizePool", (.gogoproto.nullable) = false];</code>
@@ -713,7 +714,7 @@ public final class DrawProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return createdAt_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 17 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -739,7 +740,7 @@ public final class DrawProto {
      */
     @java.lang.Override
     public boolean hasUpdatedAt() {
-      return updatedAt_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 18 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -786,7 +787,7 @@ public final class DrawProto {
       if (randSeed_ != 0L) {
         output.writeInt64(5, randSeed_);
       }
-      if (prizePool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getPrizePool());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prizePoolFreshAmount_)) {
@@ -810,10 +811,10 @@ public final class DrawProto {
       if (updatedAtHeight_ != 0L) {
         output.writeInt64(16, updatedAtHeight_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(17, getCreatedAt());
       }
-      if (updatedAt_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(18, getUpdatedAt());
       }
       getUnknownFields().writeTo(output);
@@ -845,7 +846,7 @@ public final class DrawProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, randSeed_);
       }
-      if (prizePool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getPrizePool());
       }
@@ -874,11 +875,11 @@ public final class DrawProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(16, updatedAtHeight_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getCreatedAt());
       }
-      if (updatedAt_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getUpdatedAt());
       }
@@ -1108,13 +1109,22 @@ public final class DrawProto {
 
       // Construct using com.lum.network.millions.DrawProto.Draw.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPrizePoolFieldBuilder();
+          getPrizesRefsFieldBuilder();
+          getCreatedAtFieldBuilder();
+          getUpdatedAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1214,10 +1224,12 @@ public final class DrawProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.randSeed_ = randSeed_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.prizePool_ = prizePoolBuilder_ == null
               ? prizePool_
               : prizePoolBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.prizePoolFreshAmount_ = prizePoolFreshAmount_;
@@ -1241,12 +1253,15 @@ public final class DrawProto {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.updatedAt_ = updatedAtBuilder_ == null
               ? updatedAt_
               : updatedAtBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1816,8 +1831,10 @@ public final class DrawProto {
         } else {
           prizePoolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (prizePool_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2499,8 +2516,10 @@ public final class DrawProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00002000;
-        onChanged();
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2618,8 +2637,10 @@ public final class DrawProto {
         } else {
           updatedAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00004000;
-        onChanged();
+        if (updatedAt_ != null) {
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dpanacea/burn/v2/genesis.proto\x12\x0fpanacea.burn.v2\"\x0e\n\x0cGenesisStateB\xb3\x01\n\x13\x63om.panacea.burn.v2B\x0cGenesisProtoP\x01Z0github.com/medibloc/panacea-core/v2/x/burn/types\xa2\x02\x03PBX\xaa\x02\x0fPanacea.Burn.V2\xca\x02\x0fPanacea\\Burn\\V2\xe2\x02\x1bPanacea\\Burn\\V2\\GPBMetadata\xea\x02\x11Panacea::Burn::V2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dpanacea/burn/v2/genesis.proto\x12\x0fpanacea.burn.v2\"\x0e\n\x0cGenesisStateB\xb3\x01\n\x13\x63om.panacea.burn.v2B\x0cGenesisProtoP\x00Z0github.com/medibloc/panacea-core/v2/x/burn/types\xa2\x02\x03PBX\xaa\x02\x0fPanacea.Burn.V2\xca\x02\x0fPanacea\\Burn\\V2\xe2\x02\x1bPanacea\\Burn\\V2\\GPBMetadata\xea\x02\x11Panacea::Burn::V2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'panacea.burn.v2.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\023com.panacea.burn.v2B\014GenesisProtoP\001Z0github.com/medibloc/panacea-core/v2/x/burn/types\242\002\003PBX\252\002\017Panacea.Burn.V2\312\002\017Panacea\\Burn\\V2\342\002\033Panacea\\Burn\\V2\\GPBMetadata\352\002\021Panacea::Burn::V2'
+  DESCRIPTOR._serialized_options = b'\n\023com.panacea.burn.v2B\014GenesisProtoP\000Z0github.com/medibloc/panacea-core/v2/x/burn/types\242\002\003PBX\252\002\017Panacea.Burn.V2\312\002\017Panacea\\Burn\\V2\342\002\033Panacea\\Burn\\V2\\GPBMetadata\352\002\021Panacea::Burn::V2'
   _globals['_GENESISSTATE']._serialized_start=50
   _globals['_GENESISSTATE']._serialized_end=64
 # @@protoc_insertion_point(module_scope)

@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*noble/fiattokenfactory/minting_denom.proto\x12\x16noble.fiattokenfactory\"$\n\x0cMintingDenom\x12\x14\n\x05\x64\x65nom\x18\x01 \x01(\tR\x05\x64\x65nomB\xe8\x01\n\x1a\x63om.noble.fiattokenfactoryB\x11MintingDenomProtoP\x01Z>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\xa2\x02\x03NFX\xaa\x02\x16Noble.Fiattokenfactory\xca\x02\x16Noble\\Fiattokenfactory\xe2\x02\"Noble\\Fiattokenfactory\\GPBMetadata\xea\x02\x17Noble::Fiattokenfactoryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*noble/fiattokenfactory/minting_denom.proto\x12\x16noble.fiattokenfactory\"$\n\x0cMintingDenom\x12\x14\n\x05\x64\x65nom\x18\x01 \x01(\tR\x05\x64\x65nomB\xe6\x01\n\x1a\x63om.noble.fiattokenfactoryB\x11MintingDenomProtoZ>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\xa2\x02\x03NFX\xaa\x02\x16Noble.Fiattokenfactory\xca\x02\x16Noble\\Fiattokenfactory\xe2\x02\"Noble\\Fiattokenfactory\\GPBMetadata\xea\x02\x17Noble::Fiattokenfactoryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'noble.fiattokenfactory.minting_denom_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.noble.fiattokenfactoryB\021MintingDenomProtoP\001Z>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble.Fiattokenfactory\312\002\026Noble\\Fiattokenfactory\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352\002\027Noble::Fiattokenfactory'
+  DESCRIPTOR._serialized_options = b'\n\032com.noble.fiattokenfactoryB\021MintingDenomProtoZ>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble.Fiattokenfactory\312\002\026Noble\\Fiattokenfactory\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352\002\027Noble::Fiattokenfactory'
   _globals['_MINTINGDENOM']._serialized_start=70
   _globals['_MINTINGDENOM']._serialized_end=106
 # @@protoc_insertion_point(module_scope)

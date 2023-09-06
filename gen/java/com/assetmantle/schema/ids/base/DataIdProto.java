@@ -83,6 +83,7 @@ public final class DataIdProto {
               com.assetmantle.schema.ids.base.DataIdProto.DataID.class, com.assetmantle.schema.ids.base.DataIdProto.DataID.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TYPE_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.StringIdProto.StringID typeID_;
     /**
@@ -91,7 +92,7 @@ public final class DataIdProto {
      */
     @java.lang.Override
     public boolean hasTypeID() {
-      return typeID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.StringID type_i_d = 1 [json_name = "typeID"];</code>
@@ -117,7 +118,7 @@ public final class DataIdProto {
      */
     @java.lang.Override
     public boolean hasHashID() {
-      return hashID_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.HashID hash_i_d = 2 [json_name = "hashID"];</code>
@@ -149,10 +150,10 @@ public final class DataIdProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (typeID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTypeID());
       }
-      if (hashID_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getHashID());
       }
       getUnknownFields().writeTo(output);
@@ -164,11 +165,11 @@ public final class DataIdProto {
       if (size != -1) return size;
 
       size = 0;
-      if (typeID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTypeID());
       }
-      if (hashID_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHashID());
       }
@@ -335,13 +336,20 @@ public final class DataIdProto {
 
       // Construct using com.assetmantle.schema.ids.base.DataIdProto.DataID.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTypeIDFieldBuilder();
+          getHashIDFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -390,16 +398,20 @@ public final class DataIdProto {
 
       private void buildPartial0(com.assetmantle.schema.ids.base.DataIdProto.DataID result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.typeID_ = typeIDBuilder_ == null
               ? typeID_
               : typeIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hashID_ = hashIDBuilder_ == null
               ? hashID_
               : hashIDBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -575,8 +587,10 @@ public final class DataIdProto {
         } else {
           typeIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (typeID_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -694,8 +708,10 @@ public final class DataIdProto {
         } else {
           hashIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (hashID_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

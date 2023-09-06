@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from stafihub.rbank import params_pb2 as stafihub_dot_rbank_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cstafihub/rbank/genesis.proto\x12\x17stafihub.stafihub.rbank\x1a\x14gogoproto/gogo.proto\x1a\x1bstafihub/rbank/params.proto\"\x9b\x01\n\x0cGenesisState\x12=\n\x06params\x18\x01 \x01(\x0b\x32\x1f.stafihub.stafihub.rbank.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12L\n\raddressPrefix\x18\x02 \x03(\x0b\x32&.stafihub.stafihub.rbank.AddressPrefixR\raddressPrefix\"}\n\rAddressPrefix\x12\x14\n\x05\x64\x65nom\x18\x01 \x01(\tR\x05\x64\x65nom\x12*\n\x10\x61\x63\x63\x41\x64\x64ressPrefix\x18\x02 \x01(\tR\x10\x61\x63\x63\x41\x64\x64ressPrefix\x12*\n\x10valAddressPrefix\x18\x03 \x01(\tR\x10valAddressPrefixB\xd5\x01\n\x1b\x63om.stafihub.stafihub.rbankB\x0cGenesisProtoP\x01Z*github.com/stafihub/stafihub/x/rbank/types\xa2\x02\x03SSR\xaa\x02\x17Stafihub.Stafihub.Rbank\xca\x02\x17Stafihub\\Stafihub\\Rbank\xe2\x02#Stafihub\\Stafihub\\Rbank\\GPBMetadata\xea\x02\x19Stafihub::Stafihub::Rbankb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cstafihub/rbank/genesis.proto\x12\x17stafihub.stafihub.rbank\x1a\x14gogoproto/gogo.proto\x1a\x1bstafihub/rbank/params.proto\"\x9b\x01\n\x0cGenesisState\x12=\n\x06params\x18\x01 \x01(\x0b\x32\x1f.stafihub.stafihub.rbank.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12L\n\raddressPrefix\x18\x02 \x03(\x0b\x32&.stafihub.stafihub.rbank.AddressPrefixR\raddressPrefix\"}\n\rAddressPrefix\x12\x14\n\x05\x64\x65nom\x18\x01 \x01(\tR\x05\x64\x65nom\x12*\n\x10\x61\x63\x63\x41\x64\x64ressPrefix\x18\x02 \x01(\tR\x10\x61\x63\x63\x41\x64\x64ressPrefix\x12*\n\x10valAddressPrefix\x18\x03 \x01(\tR\x10valAddressPrefixB\xd3\x01\n\x1b\x63om.stafihub.stafihub.rbankB\x0cGenesisProtoZ*github.com/stafihub/stafihub/x/rbank/types\xa2\x02\x03SSR\xaa\x02\x17Stafihub.Stafihub.Rbank\xca\x02\x17Stafihub\\Stafihub\\Rbank\xe2\x02#Stafihub\\Stafihub\\Rbank\\GPBMetadata\xea\x02\x19Stafihub::Stafihub::Rbankb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.rbank.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.stafihub.stafihub.rbankB\014GenesisProtoP\001Z*github.com/stafihub/stafihub/x/rbank/types\242\002\003SSR\252\002\027Stafihub.Stafihub.Rbank\312\002\027Stafihub\\Stafihub\\Rbank\342\002#Stafihub\\Stafihub\\Rbank\\GPBMetadata\352\002\031Stafihub::Stafihub::Rbank'
+  DESCRIPTOR._serialized_options = b'\n\033com.stafihub.stafihub.rbankB\014GenesisProtoZ*github.com/stafihub/stafihub/x/rbank/types\242\002\003SSR\252\002\027Stafihub.Stafihub.Rbank\312\002\027Stafihub\\Stafihub\\Rbank\342\002#Stafihub\\Stafihub\\Rbank\\GPBMetadata\352\002\031Stafihub::Stafihub::Rbank'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=109

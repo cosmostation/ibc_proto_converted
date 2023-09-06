@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n-comdex/liquidation/v1beta1/liquidations.proto\x12\x1a\x63omdex.liquidation.v1beta1\x1a\x14gogoproto/gogo.proto\"W\n\x17LiquidationOffsetHolder\x12\x15\n\x06\x61pp_id\x18\x01 \x01(\x04R\x05\x61ppId\x12%\n\x0e\x63urrent_offset\x18\x02 \x01(\x04R\rcurrentOffsetB\xfc\x01\n\x1e\x63om.comdex.liquidation.v1beta1B\x11LiquidationsProtoP\x01Z5github.com/comdex-official/comdex/x/liquidation/types\xa2\x02\x03\x43LX\xaa\x02\x1a\x43omdex.Liquidation.V1beta1\xca\x02\x1a\x43omdex\\Liquidation\\V1beta1\xe2\x02&Comdex\\Liquidation\\V1beta1\\GPBMetadata\xea\x02\x1c\x43omdex::Liquidation::V1beta1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n-comdex/liquidation/v1beta1/liquidations.proto\x12\x1a\x63omdex.liquidation.v1beta1\x1a\x14gogoproto/gogo.proto\"W\n\x17LiquidationOffsetHolder\x12\x15\n\x06\x61pp_id\x18\x01 \x01(\x04R\x05\x61ppId\x12%\n\x0e\x63urrent_offset\x18\x02 \x01(\x04R\rcurrentOffsetB\xfa\x01\n\x1e\x63om.comdex.liquidation.v1beta1B\x11LiquidationsProtoZ5github.com/comdex-official/comdex/x/liquidation/types\xa2\x02\x03\x43LX\xaa\x02\x1a\x43omdex.Liquidation.V1beta1\xca\x02\x1a\x43omdex\\Liquidation\\V1beta1\xe2\x02&Comdex\\Liquidation\\V1beta1\\GPBMetadata\xea\x02\x1c\x43omdex::Liquidation::V1beta1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.liquidation.v1beta1.liquidations_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.comdex.liquidation.v1beta1B\021LiquidationsProtoP\001Z5github.com/comdex-official/comdex/x/liquidation/types\242\002\003CLX\252\002\032Comdex.Liquidation.V1beta1\312\002\032Comdex\\Liquidation\\V1beta1\342\002&Comdex\\Liquidation\\V1beta1\\GPBMetadata\352\002\034Comdex::Liquidation::V1beta1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\036com.comdex.liquidation.v1beta1B\021LiquidationsProtoZ5github.com/comdex-official/comdex/x/liquidation/types\242\002\003CLX\252\002\032Comdex.Liquidation.V1beta1\312\002\032Comdex\\Liquidation\\V1beta1\342\002&Comdex\\Liquidation\\V1beta1\\GPBMetadata\352\002\034Comdex::Liquidation::V1beta1\310\341\036\000\250\342\036\000'
   _globals['_LIQUIDATIONOFFSETHOLDER']._serialized_start=99
   _globals['_LIQUIDATIONOFFSETHOLDER']._serialized_end=186
 # @@protoc_insertion_point(module_scope)

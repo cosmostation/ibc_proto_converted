@@ -16,15 +16,14 @@ from irismod.token import token_pb2 as irismod_dot_token_dot_token__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1birismod/token/genesis.proto\x12\rirismod.token\x1a\x14gogoproto/gogo.proto\x1a\x19irismod/token/token.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xbb\x01\n\x0cGenesisState\x12\x33\n\x06params\x18\x01 \x01(\x0b\x32\x15.irismod.token.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x32\n\x06tokens\x18\x02 \x03(\x0b\x32\x14.irismod.token.TokenB\x04\xc8\xde\x1f\x00R\x06tokens\x12\x42\n\x0c\x62urned_coins\x18\x03 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x0b\x62urnedCoinsB\xa6\x01\n\x11\x63om.irismod.tokenB\x0cGenesisProtoP\x01Z.github.com/irisnet/irismod/modules/token/types\xa2\x02\x03ITX\xaa\x02\rIrismod.Token\xca\x02\rIrismod\\Token\xe2\x02\x19Irismod\\Token\\GPBMetadata\xea\x02\x0eIrismod::Tokenb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1birismod/token/genesis.proto\x12\rirismod.token\x1a\x14gogoproto/gogo.proto\x1a\x19irismod/token/token.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xbb\x01\n\x0cGenesisState\x12\x33\n\x06params\x18\x01 \x01(\x0b\x32\x15.irismod.token.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x32\n\x06tokens\x18\x02 \x03(\x0b\x32\x14.irismod.token.TokenB\x04\xc8\xde\x1f\x00R\x06tokens\x12\x42\n\x0c\x62urned_coins\x18\x03 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x0b\x62urnedCoinsB\xa4\x01\n\x11\x63om.irismod.tokenB\x0cGenesisProtoZ.github.com/irisnet/irismod/modules/token/types\xa2\x02\x03ITX\xaa\x02\rIrismod.Token\xca\x02\rIrismod\\Token\xe2\x02\x19Irismod\\Token\\GPBMetadata\xea\x02\x0eIrismod::Tokenb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.token.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\021com.irismod.tokenB\014GenesisProtoP\001Z.github.com/irisnet/irismod/modules/token/types\242\002\003ITX\252\002\rIrismod.Token\312\002\rIrismod\\Token\342\002\031Irismod\\Token\\GPBMetadata\352\002\016Irismod::Token'
+  DESCRIPTOR._serialized_options = b'\n\021com.irismod.tokenB\014GenesisProtoZ.github.com/irisnet/irismod/modules/token/types\242\002\003ITX\252\002\rIrismod.Token\312\002\rIrismod\\Token\342\002\031Irismod\\Token\\GPBMetadata\352\002\016Irismod::Token'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['tokens']._options = None

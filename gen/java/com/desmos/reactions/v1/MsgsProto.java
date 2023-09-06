@@ -125,6 +125,7 @@ public final class MsgsProto {
               com.desmos.reactions.v1.MsgsProto.MsgAddReaction.class, com.desmos.reactions.v1.MsgsProto.MsgAddReaction.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -167,7 +168,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return value_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -260,7 +261,7 @@ public final class MsgsProto {
       if (postId_ != 0L) {
         output.writeUInt64(2, postId_);
       }
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getValue());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
@@ -283,7 +284,7 @@ public final class MsgsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, postId_);
       }
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getValue());
       }
@@ -462,13 +463,19 @@ public final class MsgsProto {
 
       // Construct using com.desmos.reactions.v1.MsgsProto.MsgAddReaction.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValueFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -521,14 +528,17 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.postId_ = postId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.user_ = user_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -828,8 +838,10 @@ public final class MsgsProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (value_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7279,6 +7291,7 @@ public final class MsgsProto {
               com.desmos.reactions.v1.MsgsProto.MsgSetReactionsParams.class, com.desmos.reactions.v1.MsgsProto.MsgSetReactionsParams.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -7306,7 +7319,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasRegisteredReaction() {
-      return registeredReaction_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -7344,7 +7357,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasFreeText() {
-      return freeText_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -7434,10 +7447,10 @@ public final class MsgsProto {
       if (subspaceId_ != 0L) {
         output.writeUInt64(1, subspaceId_);
       }
-      if (registeredReaction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getRegisteredReaction());
       }
-      if (freeText_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getFreeText());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
@@ -7456,11 +7469,11 @@ public final class MsgsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, subspaceId_);
       }
-      if (registeredReaction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRegisteredReaction());
       }
-      if (freeText_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFreeText());
       }
@@ -7644,13 +7657,20 @@ public final class MsgsProto {
 
       // Construct using com.desmos.reactions.v1.MsgsProto.MsgSetReactionsParams.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRegisteredReactionFieldBuilder();
+          getFreeTextFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7704,19 +7724,23 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subspaceId_ = subspaceId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.registeredReaction_ = registeredReactionBuilder_ == null
               ? registeredReaction_
               : registeredReactionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.freeText_ = freeTextBuilder_ == null
               ? freeText_
               : freeTextBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.user_ = user_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7974,8 +7998,10 @@ public final class MsgsProto {
         } else {
           registeredReactionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (registeredReaction_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8129,8 +8155,10 @@ public final class MsgsProto {
         } else {
           freeTextBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (freeText_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

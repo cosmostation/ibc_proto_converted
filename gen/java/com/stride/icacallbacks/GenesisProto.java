@@ -130,6 +130,7 @@ public final class GenesisProto {
               com.stride.icacallbacks.GenesisProto.GenesisState.class, com.stride.icacallbacks.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stride.icacallbacks.ParamsProto.Params params_;
     /**
@@ -138,7 +139,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stride.icacallbacks.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -270,7 +271,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
@@ -288,7 +289,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -467,13 +468,20 @@ public final class GenesisProto {
 
       // Construct using com.stride.icacallbacks.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getCallbackDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -538,14 +546,17 @@ public final class GenesisProto {
 
       private void buildPartial0(com.stride.icacallbacks.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.portId_ = portId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -760,8 +771,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

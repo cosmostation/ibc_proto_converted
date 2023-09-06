@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from canto.govshuttle.v1 import govshuttle_pb2 as canto_dot_govshuttle_dot_v1_dot_govshuttle__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!canto/govshuttle/v1/genesis.proto\x12\x13\x63\x61nto.govshuttle.v1\x1a\x14gogoproto/gogo.proto\x1a$canto/govshuttle/v1/govshuttle.proto\"I\n\x0cGenesisState\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.canto.govshuttle.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xcb\x01\n\x17\x63om.canto.govshuttle.v1B\x0cGenesisProtoP\x01Z4github.com/Canto-Network/Canto/v6/x/govshuttle/types\xa2\x02\x03\x43GX\xaa\x02\x13\x43\x61nto.Govshuttle.V1\xca\x02\x13\x43\x61nto\\Govshuttle\\V1\xe2\x02\x1f\x43\x61nto\\Govshuttle\\V1\\GPBMetadata\xea\x02\x15\x43\x61nto::Govshuttle::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!canto/govshuttle/v1/genesis.proto\x12\x13\x63\x61nto.govshuttle.v1\x1a\x14gogoproto/gogo.proto\x1a$canto/govshuttle/v1/govshuttle.proto\"I\n\x0cGenesisState\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.canto.govshuttle.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xc9\x01\n\x17\x63om.canto.govshuttle.v1B\x0cGenesisProtoZ4github.com/Canto-Network/Canto/v6/x/govshuttle/types\xa2\x02\x03\x43GX\xaa\x02\x13\x43\x61nto.Govshuttle.V1\xca\x02\x13\x43\x61nto\\Govshuttle\\V1\xe2\x02\x1f\x43\x61nto\\Govshuttle\\V1\\GPBMetadata\xea\x02\x15\x43\x61nto::Govshuttle::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.govshuttle.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.canto.govshuttle.v1B\014GenesisProtoP\001Z4github.com/Canto-Network/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Canto::Govshuttle::V1'
+  DESCRIPTOR._serialized_options = b'\n\027com.canto.govshuttle.v1B\014GenesisProtoZ4github.com/Canto-Network/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Canto::Govshuttle::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=118

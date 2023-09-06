@@ -68,6 +68,7 @@ public final class ParamsProto {
               com.comdex.asset.v1beta1.ParamsProto.Params.class, com.comdex.asset.v1beta1.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ASSET_REGISRATION_FEE_FIELD_NUMBER = 6;
     private com.cosmos.base.v1beta1.CoinProto.Coin assetRegisrationFee_;
     /**
@@ -76,7 +77,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasAssetRegisrationFee() {
-      return assetRegisrationFee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset_regisration_fee = 6 [json_name = "assetRegisrationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -108,7 +109,7 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (assetRegisrationFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getAssetRegisrationFee());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (assetRegisrationFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAssetRegisrationFee());
       }
@@ -278,13 +279,19 @@ public final class ParamsProto {
 
       // Construct using com.comdex.asset.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetRegisrationFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class ParamsProto {
 
       private void buildPartial0(com.comdex.asset.v1beta1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.assetRegisrationFee_ = assetRegisrationFeeBuilder_ == null
               ? assetRegisrationFee_
               : assetRegisrationFeeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class ParamsProto {
         } else {
           assetRegisrationFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (assetRegisrationFee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

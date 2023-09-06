@@ -286,6 +286,7 @@ public final class GenesisProto {
               com.comdex.liquidity.v1beta1.GenesisProto.AppGenesisState.class, com.comdex.liquidity.v1beta1.GenesisProto.AppGenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -305,7 +306,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasGenericParams() {
-      return genericParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.liquidity.v1beta1.GenericParams generic_params = 2 [json_name = "genericParams", (.gogoproto.nullable) = false];</code>
@@ -690,7 +691,7 @@ public final class GenesisProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (genericParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getGenericParams());
       }
       if (lastPairId_ != 0L) {
@@ -736,7 +737,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (genericParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getGenericParams());
       }
@@ -997,13 +998,27 @@ public final class GenesisProto {
 
       // Construct using com.comdex.liquidity.v1beta1.GenesisProto.AppGenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGenericParamsFieldBuilder();
+          getPairsFieldBuilder();
+          getPoolsFieldBuilder();
+          getDepositRequestsFieldBuilder();
+          getWithdrawRequestsFieldBuilder();
+          getOrdersFieldBuilder();
+          getActiveFarmersFieldBuilder();
+          getQueuedFarmersFieldBuilder();
+          getMarketMakingOrderIndexesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1185,10 +1200,12 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.genericParams_ = genericParamsBuilder_ == null
               ? genericParams_
               : genericParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.lastPairId_ = lastPairId_;
@@ -1196,6 +1213,7 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.lastPoolId_ = lastPoolId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1729,8 +1747,10 @@ public final class GenesisProto {
         } else {
           genericParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (genericParams_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3912,6 +3932,7 @@ public final class GenesisProto {
               com.comdex.liquidity.v1beta1.GenesisProto.GenesisState.class, com.comdex.liquidity.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.comdex.liquidity.v1beta1.ParamsProto.Params params_;
     /**
@@ -3920,7 +3941,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -3993,7 +4014,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < appGenesisState_.size(); i++) {
@@ -4008,7 +4029,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -4180,13 +4201,20 @@ public final class GenesisProto {
 
       // Construct using com.comdex.liquidity.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getAppGenesisStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4250,11 +4278,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.comdex.liquidity.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4459,8 +4490,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

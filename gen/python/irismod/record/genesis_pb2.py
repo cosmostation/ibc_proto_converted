@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from irismod.record import record_pb2 as irismod_dot_record_dot_record__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cirismod/record/genesis.proto\x12\x0eirismod.record\x1a\x14gogoproto/gogo.proto\x1a\x1birismod/record/record.proto\"F\n\x0cGenesisState\x12\x36\n\x07records\x18\x01 \x03(\x0b\x32\x16.irismod.record.RecordB\x04\xc8\xde\x1f\x00R\x07recordsB\xac\x01\n\x12\x63om.irismod.recordB\x0cGenesisProtoP\x01Z/github.com/irisnet/irismod/modules/record/types\xa2\x02\x03IRX\xaa\x02\x0eIrismod.Record\xca\x02\x0eIrismod\\Record\xe2\x02\x1aIrismod\\Record\\GPBMetadata\xea\x02\x0fIrismod::Recordb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cirismod/record/genesis.proto\x12\x0eirismod.record\x1a\x14gogoproto/gogo.proto\x1a\x1birismod/record/record.proto\"F\n\x0cGenesisState\x12\x36\n\x07records\x18\x01 \x03(\x0b\x32\x16.irismod.record.RecordB\x04\xc8\xde\x1f\x00R\x07recordsB\xaa\x01\n\x12\x63om.irismod.recordB\x0cGenesisProtoZ/github.com/irisnet/irismod/modules/record/types\xa2\x02\x03IRX\xaa\x02\x0eIrismod.Record\xca\x02\x0eIrismod\\Record\xe2\x02\x1aIrismod\\Record\\GPBMetadata\xea\x02\x0fIrismod::Recordb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.record.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.irismod.recordB\014GenesisProtoP\001Z/github.com/irisnet/irismod/modules/record/types\242\002\003IRX\252\002\016Irismod.Record\312\002\016Irismod\\Record\342\002\032Irismod\\Record\\GPBMetadata\352\002\017Irismod::Record'
+  DESCRIPTOR._serialized_options = b'\n\022com.irismod.recordB\014GenesisProtoZ/github.com/irisnet/irismod/modules/record/types\242\002\003IRX\252\002\016Irismod.Record\312\002\016Irismod\\Record\342\002\032Irismod\\Record\\GPBMetadata\352\002\017Irismod::Record'
   _GENESISSTATE.fields_by_name['records']._options = None
   _GENESISSTATE.fields_by_name['records']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=99

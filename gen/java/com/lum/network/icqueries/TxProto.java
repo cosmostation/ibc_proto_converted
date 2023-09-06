@@ -124,6 +124,7 @@ public final class TxProto {
               com.lum.network.icqueries.TxProto.MsgSubmitQueryResponse.class, com.lum.network.icqueries.TxProto.MsgSubmitQueryResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -221,7 +222,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasProofOps() {
-      return proofOps_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.tendermint.crypto.ProofOps proof_ops = 4 [json_name = "proofOps", (.gogoproto.moretags) = "yaml:&#92;"proof_ops&#92;""];</code>
@@ -312,7 +313,7 @@ public final class TxProto {
       if (!result_.isEmpty()) {
         output.writeBytes(3, result_);
       }
-      if (proofOps_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getProofOps());
       }
       if (height_ != 0L) {
@@ -340,7 +341,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, result_);
       }
-      if (proofOps_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProofOps());
       }
@@ -530,13 +531,19 @@ public final class TxProto {
 
       // Construct using com.lum.network.icqueries.TxProto.MsgSubmitQueryResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProofOpsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -594,10 +601,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.result_ = result_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.proofOps_ = proofOpsBuilder_ == null
               ? proofOps_
               : proofOpsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.height_ = height_;
@@ -605,6 +614,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.fromAddress_ = fromAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -992,8 +1002,10 @@ public final class TxProto {
         } else {
           proofOpsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (proofOps_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from axelar.permission.exported.v1beta1 import types_pb2 as axelar_dot_permission_dot_exported_dot_v1beta1_dot_types__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%axelar/permission/v1beta1/types.proto\x12\x19\x61xelar.permission.v1beta1\x1a\x14gogoproto/gogo.proto\x1a.axelar/permission/exported/v1beta1/types.proto\"\x97\x01\n\nGovAccount\x12K\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x07\x61\x64\x64ress\x12<\n\x04role\x18\x02 \x01(\x0e\x32(.axelar.permission.exported.v1beta1.RoleR\x04roleB\xee\x01\n\x1d\x63om.axelar.permission.v1beta1B\nTypesProtoP\x01Z7github.com/axelarnetwork/axelar-core/x/permission/types\xa2\x02\x03\x41PX\xaa\x02\x19\x41xelar.Permission.V1beta1\xca\x02\x19\x41xelar\\Permission\\V1beta1\xe2\x02%Axelar\\Permission\\V1beta1\\GPBMetadata\xea\x02\x1b\x41xelar::Permission::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%axelar/permission/v1beta1/types.proto\x12\x19\x61xelar.permission.v1beta1\x1a\x14gogoproto/gogo.proto\x1a.axelar/permission/exported/v1beta1/types.proto\"\x97\x01\n\nGovAccount\x12K\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x07\x61\x64\x64ress\x12<\n\x04role\x18\x02 \x01(\x0e\x32(.axelar.permission.exported.v1beta1.RoleR\x04roleB\xec\x01\n\x1d\x63om.axelar.permission.v1beta1B\nTypesProtoZ7github.com/axelarnetwork/axelar-core/x/permission/types\xa2\x02\x03\x41PX\xaa\x02\x19\x41xelar.Permission.V1beta1\xca\x02\x19\x41xelar\\Permission\\V1beta1\xe2\x02%Axelar\\Permission\\V1beta1\\GPBMetadata\xea\x02\x1b\x41xelar::Permission::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.permission.v1beta1.types_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.axelar.permission.v1beta1B\nTypesProtoP\001Z7github.com/axelarnetwork/axelar-core/x/permission/types\242\002\003APX\252\002\031Axelar.Permission.V1beta1\312\002\031Axelar\\Permission\\V1beta1\342\002%Axelar\\Permission\\V1beta1\\GPBMetadata\352\002\033Axelar::Permission::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\035com.axelar.permission.v1beta1B\nTypesProtoZ7github.com/axelarnetwork/axelar-core/x/permission/types\242\002\003APX\252\002\031Axelar.Permission.V1beta1\312\002\031Axelar\\Permission\\V1beta1\342\002%Axelar\\Permission\\V1beta1\\GPBMetadata\352\002\033Axelar::Permission::V1beta1\310\341\036\000'
   _GOVACCOUNT.fields_by_name['address']._options = None
   _GOVACCOUNT.fields_by_name['address']._serialized_options = b'\372\336\037-github.com/cosmos/cosmos-sdk/types.AccAddress'
   _globals['_GOVACCOUNT']._serialized_start=139

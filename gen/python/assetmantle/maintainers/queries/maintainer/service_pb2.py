@@ -16,15 +16,14 @@ from assetmantle.maintainers.queries.maintainer import query_request_pb2 as asse
 from assetmantle.maintainers.queries.maintainer import query_response_pb2 as assetmantle_dot_maintainers_dot_queries_dot_maintainer_dot_query__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8assetmantle/maintainers/queries/maintainer/service.proto\x12\x32\x61ssetmantle.modules.maintainers.queries.maintainer\x1a\x1cgoogle/api/annotations.proto\x1a>assetmantle/maintainers/queries/maintainer/query_request.proto\x1a?assetmantle/maintainers/queries/maintainer/query_response.proto2\xc9\x01\n\x07Service\x12\xbd\x01\n\x06Handle\x12@.assetmantle.modules.maintainers.queries.maintainer.QueryRequest\x1a\x41.assetmantle.modules.maintainers.queries.maintainer.QueryResponse\".\x82\xd3\xe4\x93\x02(\x12&/mantle/maintainers/v1beta1/maintainerB\xb4\x02\n6com.assetmantle.modules.maintainers.queries.maintainerB\x0cServiceProtoP\x01\xa2\x02\x05\x41MMQM\xaa\x02\x32\x41ssetmantle.Modules.Maintainers.Queries.Maintainer\xca\x02\x32\x41ssetmantle\\Modules\\Maintainers\\Queries\\Maintainer\xe2\x02>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Maintainers::Queries::Maintainerb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8assetmantle/maintainers/queries/maintainer/service.proto\x12\x32\x61ssetmantle.modules.maintainers.queries.maintainer\x1a\x1cgoogle/api/annotations.proto\x1a>assetmantle/maintainers/queries/maintainer/query_request.proto\x1a?assetmantle/maintainers/queries/maintainer/query_response.proto2\xc9\x01\n\x07Service\x12\xbd\x01\n\x06Handle\x12@.assetmantle.modules.maintainers.queries.maintainer.QueryRequest\x1a\x41.assetmantle.modules.maintainers.queries.maintainer.QueryResponse\".\x82\xd3\xe4\x93\x02(\x12&/mantle/maintainers/v1beta1/maintainerB\xb2\x02\n6com.assetmantle.modules.maintainers.queries.maintainerB\x0cServiceProto\xa2\x02\x05\x41MMQM\xaa\x02\x32\x41ssetmantle.Modules.Maintainers.Queries.Maintainer\xca\x02\x32\x41ssetmantle\\Modules\\Maintainers\\Queries\\Maintainer\xe2\x02>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Maintainers::Queries::Maintainerb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.maintainers.queries.maintainer.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.maintainers.queries.maintainerB\014ServiceProtoP\001\242\002\005AMMQM\252\0022Assetmantle.Modules.Maintainers.Queries.Maintainer\312\0022Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\342\002>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\352\0026Assetmantle::Modules::Maintainers::Queries::Maintainer'
+  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.maintainers.queries.maintainerB\014ServiceProto\242\002\005AMMQM\252\0022Assetmantle.Modules.Maintainers.Queries.Maintainer\312\0022Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\342\002>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\352\0026Assetmantle::Modules::Maintainers::Queries::Maintainer'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002(\022&/mantle/maintainers/v1beta1/maintainer'
   _globals['_SERVICE']._serialized_start=272

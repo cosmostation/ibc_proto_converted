@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n sommelier/pubsub/v1/params.proto\x12\tpubsub.v1\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\x91\x01\n\rcom.pubsub.v1B\x0bParamsProtoP\x01Z.github.com/peggyjv/sommelier/v4/x/pubsub/types\xa2\x02\x03PXX\xaa\x02\tPubsub.V1\xca\x02\tPubsub\\V1\xe2\x02\x15Pubsub\\V1\\GPBMetadata\xea\x02\nPubsub::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n sommelier/pubsub/v1/params.proto\x12\tpubsub.v1\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\x8f\x01\n\rcom.pubsub.v1B\x0bParamsProtoZ.github.com/peggyjv/sommelier/v4/x/pubsub/types\xa2\x02\x03PXX\xaa\x02\tPubsub.V1\xca\x02\tPubsub\\V1\xe2\x02\x15Pubsub\\V1\\GPBMetadata\xea\x02\nPubsub::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.pubsub.v1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\rcom.pubsub.v1B\013ParamsProtoP\001Z.github.com/peggyjv/sommelier/v4/x/pubsub/types\242\002\003PXX\252\002\tPubsub.V1\312\002\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBMetadata\352\002\nPubsub::V1'
+  DESCRIPTOR._serialized_options = b'\n\rcom.pubsub.v1B\013ParamsProtoZ.github.com/peggyjv/sommelier/v4/x/pubsub/types\242\002\003PXX\252\002\tPubsub.V1\312\002\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBMetadata\352\002\nPubsub::V1'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=69

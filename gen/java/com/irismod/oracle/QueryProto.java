@@ -632,6 +632,7 @@ public final class QueryProto {
               com.irismod.oracle.QueryProto.QueryFeedResponse.class, com.irismod.oracle.QueryProto.QueryFeedResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEED_FIELD_NUMBER = 1;
     private com.irismod.oracle.QueryProto.FeedContext feed_;
     /**
@@ -640,7 +641,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFeed() {
-      return feed_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.irismod.oracle.FeedContext feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
@@ -672,7 +673,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (feed_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFeed());
       }
       getUnknownFields().writeTo(output);
@@ -684,7 +685,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (feed_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFeed());
       }
@@ -846,13 +847,19 @@ public final class QueryProto {
 
       // Construct using com.irismod.oracle.QueryProto.QueryFeedResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -896,11 +903,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.oracle.QueryProto.QueryFeedResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feed_ = feedBuilder_ == null
               ? feed_
               : feedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1066,8 +1076,10 @@ public final class QueryProto {
         } else {
           feedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (feed_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1265,6 +1277,7 @@ public final class QueryProto {
               com.irismod.oracle.QueryProto.QueryFeedsRequest.class, com.irismod.oracle.QueryProto.QueryFeedsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object state_ = "";
@@ -1316,7 +1329,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1359,7 +1372,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1374,7 +1387,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1540,13 +1553,19 @@ public final class QueryProto {
 
       // Construct using com.irismod.oracle.QueryProto.QueryFeedsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1594,11 +1613,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = state_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1866,8 +1888,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2093,6 +2117,7 @@ public final class QueryProto {
               com.irismod.oracle.QueryProto.QueryFeedsResponse.class, com.irismod.oracle.QueryProto.QueryFeedsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEEDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.irismod.oracle.QueryProto.FeedContext> feeds_;
@@ -2146,7 +2171,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2189,7 +2214,7 @@ public final class QueryProto {
       for (int i = 0; i < feeds_.size(); i++) {
         output.writeMessage(1, feeds_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2205,7 +2230,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, feeds_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2373,13 +2398,20 @@ public final class QueryProto {
 
       // Construct using com.irismod.oracle.QueryProto.QueryFeedsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeedsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2443,11 +2475,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.oracle.QueryProto.QueryFeedsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2912,8 +2947,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4560,6 +4597,7 @@ public final class QueryProto {
               com.irismod.oracle.QueryProto.FeedContext.class, com.irismod.oracle.QueryProto.FeedContext.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEED_FIELD_NUMBER = 1;
     private com.irismod.oracle.OracleProto.Feed feed_;
     /**
@@ -4568,7 +4606,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFeed() {
-      return feed_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed"];</code>
@@ -4807,7 +4845,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (feed_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFeed());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
@@ -4843,7 +4881,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (feed_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFeed());
       }
@@ -5076,13 +5114,20 @@ public final class QueryProto {
 
       // Construct using com.irismod.oracle.QueryProto.FeedContext.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeedFieldBuilder();
+          getServiceFeeCapFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5154,10 +5199,12 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.oracle.QueryProto.FeedContext result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feed_ = feedBuilder_ == null
               ? feed_
               : feedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.serviceName_ = serviceName_;
@@ -5181,6 +5228,7 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.state_ = state_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5453,8 +5501,10 @@ public final class QueryProto {
         } else {
           feedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (feed_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -2415,6 +2415,7 @@ public final class LedgerProto {
               com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.class, com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -2501,7 +2502,7 @@ public final class LedgerProto {
      */
     @java.lang.Override
     public boolean hasChunk() {
-      return chunk_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.ledger.LinkChunk chunk = 3 [json_name = "chunk", (.gogoproto.nullable) = false];</code>
@@ -2539,7 +2540,7 @@ public final class LedgerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pool_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pool_);
       }
-      if (chunk_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getChunk());
       }
       getUnknownFields().writeTo(output);
@@ -2557,7 +2558,7 @@ public final class LedgerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pool_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pool_);
       }
-      if (chunk_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getChunk());
       }
@@ -2723,13 +2724,19 @@ public final class LedgerProto {
 
       // Construct using com.stafihub.stafihub.ledger.LedgerProto.BondPipeline.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChunkFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2781,11 +2788,14 @@ public final class LedgerProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pool_ = pool_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.chunk_ = chunkBuilder_ == null
               ? chunk_
               : chunkBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3115,8 +3125,10 @@ public final class LedgerProto {
         } else {
           chunkBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (chunk_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6658,6 +6670,7 @@ public final class LedgerProto {
               com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.class, com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -6755,7 +6768,7 @@ public final class LedgerProto {
      */
     @java.lang.Override
     public boolean hasChunk() {
-      return chunk_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.ledger.LinkChunk chunk = 4 [json_name = "chunk", (.gogoproto.nullable) = false];</code>
@@ -6814,7 +6827,7 @@ public final class LedgerProto {
       if (era_ != 0) {
         output.writeUInt32(3, era_);
       }
-      if (chunk_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getChunk());
       }
       if (bondState_ != com.stafihub.stafihub.ledger.LedgerProto.PoolBondState.ERA_UPDATED.getNumber()) {
@@ -6839,7 +6852,7 @@ public final class LedgerProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, era_);
       }
-      if (chunk_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getChunk());
       }
@@ -7016,13 +7029,19 @@ public final class LedgerProto {
 
       // Construct using com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChunkFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7079,14 +7098,17 @@ public final class LedgerProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.era_ = era_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.chunk_ = chunkBuilder_ == null
               ? chunk_
               : chunkBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.bondState_ = bondState_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7464,8 +7486,10 @@ public final class LedgerProto {
         } else {
           chunkBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (chunk_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9872,6 +9896,7 @@ public final class LedgerProto {
               com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.class, com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -9919,7 +9944,7 @@ public final class LedgerProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return value_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -9954,7 +9979,7 @@ public final class LedgerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
       }
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getValue());
       }
       getUnknownFields().writeTo(output);
@@ -9969,7 +9994,7 @@ public final class LedgerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
       }
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValue());
       }
@@ -10131,13 +10156,19 @@ public final class LedgerProto {
 
       // Construct using com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValueFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10185,11 +10216,14 @@ public final class LedgerProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10437,8 +10471,10 @@ public final class LedgerProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (value_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -16641,6 +16677,7 @@ public final class LedgerProto {
               com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.class, com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -16717,7 +16754,7 @@ public final class LedgerProto {
      */
     @java.lang.Override
     public boolean hasDelegationAccount() {
-      return delegationAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.ledger.IcaAccount DelegationAccount = 4 [json_name = "DelegationAccount"];</code>
@@ -16743,7 +16780,7 @@ public final class LedgerProto {
      */
     @java.lang.Override
     public boolean hasWithdrawalAccount() {
-      return withdrawalAccount_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.stafihub.stafihub.ledger.IcaAccount WithdrawalAccount = 5 [json_name = "WithdrawalAccount"];</code>
@@ -16784,10 +16821,10 @@ public final class LedgerProto {
       if (status_ != com.stafihub.stafihub.ledger.LedgerProto.IcaPoolStatus.ICA_POOL_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, status_);
       }
-      if (delegationAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getDelegationAccount());
       }
-      if (withdrawalAccount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getWithdrawalAccount());
       }
       getUnknownFields().writeTo(output);
@@ -16810,11 +16847,11 @@ public final class LedgerProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, status_);
       }
-      if (delegationAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDelegationAccount());
       }
-      if (withdrawalAccount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getWithdrawalAccount());
       }
@@ -16992,13 +17029,20 @@ public final class LedgerProto {
 
       // Construct using com.stafihub.stafihub.ledger.LedgerProto.IcaPoolDetail.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDelegationAccountFieldBuilder();
+          getWithdrawalAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17059,16 +17103,20 @@ public final class LedgerProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.status_ = status_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.delegationAccount_ = delegationAccountBuilder_ == null
               ? delegationAccount_
               : delegationAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.withdrawalAccount_ = withdrawalAccountBuilder_ == null
               ? withdrawalAccount_
               : withdrawalAccountBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17427,8 +17475,10 @@ public final class LedgerProto {
         } else {
           delegationAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (delegationAccount_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17546,8 +17596,10 @@ public final class LedgerProto {
         } else {
           withdrawalAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (withdrawalAccount_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

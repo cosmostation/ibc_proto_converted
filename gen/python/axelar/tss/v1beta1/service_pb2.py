@@ -17,15 +17,14 @@ from axelar.snapshot.v1beta1 import tx_pb2 as axelar_dot_snapshot_dot_v1beta1_do
 from axelar.tss.v1beta1 import tx_pb2 as axelar_dot_tss_dot_v1beta1_dot_tx__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n axelar/tss/v1beta1/service.proto\x12\x12\x61xelar.tss.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a axelar/snapshot/v1beta1/tx.proto\x1a\x1b\x61xelar/tss/v1beta1/tx.proto2\x88\x01\n\nMsgService\x12z\n\tHeartBeat\x12$.axelar.tss.v1beta1.HeartBeatRequest\x1a%.axelar.tss.v1beta1.HeartBeatResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/axelar/tss/heartbeat:\x01*2\x0e\n\x0cQueryServiceB\xc6\x01\n\x16\x63om.axelar.tss.v1beta1B\x0cServiceProtoP\x01Z0github.com/axelarnetwork/axelar-core/x/tss/types\xa2\x02\x03\x41TX\xaa\x02\x12\x41xelar.Tss.V1beta1\xca\x02\x12\x41xelar\\Tss\\V1beta1\xe2\x02\x1e\x41xelar\\Tss\\V1beta1\\GPBMetadata\xea\x02\x14\x41xelar::Tss::V1beta1\xc0\xe3\x1e\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n axelar/tss/v1beta1/service.proto\x12\x12\x61xelar.tss.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a axelar/snapshot/v1beta1/tx.proto\x1a\x1b\x61xelar/tss/v1beta1/tx.proto2\x88\x01\n\nMsgService\x12z\n\tHeartBeat\x12$.axelar.tss.v1beta1.HeartBeatRequest\x1a%.axelar.tss.v1beta1.HeartBeatResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/axelar/tss/heartbeat:\x01*2\x0e\n\x0cQueryServiceB\xc4\x01\n\x16\x63om.axelar.tss.v1beta1B\x0cServiceProtoZ0github.com/axelarnetwork/axelar-core/x/tss/types\xa2\x02\x03\x41TX\xaa\x02\x12\x41xelar.Tss.V1beta1\xca\x02\x12\x41xelar\\Tss\\V1beta1\xe2\x02\x1e\x41xelar\\Tss\\V1beta1\\GPBMetadata\xea\x02\x14\x41xelar::Tss::V1beta1\xc0\xe3\x1e\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.tss.v1beta1.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.axelar.tss.v1beta1B\014ServiceProtoP\001Z0github.com/axelarnetwork/axelar-core/x/tss/types\242\002\003ATX\252\002\022Axelar.Tss.V1beta1\312\002\022Axelar\\Tss\\V1beta1\342\002\036Axelar\\Tss\\V1beta1\\GPBMetadata\352\002\024Axelar::Tss::V1beta1\300\343\036\001'
+  DESCRIPTOR._serialized_options = b'\n\026com.axelar.tss.v1beta1B\014ServiceProtoZ0github.com/axelarnetwork/axelar-core/x/tss/types\242\002\003ATX\252\002\022Axelar.Tss.V1beta1\312\002\022Axelar\\Tss\\V1beta1\342\002\036Axelar\\Tss\\V1beta1\\GPBMetadata\352\002\024Axelar::Tss::V1beta1\300\343\036\001'
   _MSGSERVICE.methods_by_name['HeartBeat']._options = None
   _MSGSERVICE.methods_by_name['HeartBeat']._serialized_options = b'\202\323\344\223\002\032\"\025/axelar/tss/heartbeat:\001*'
   _globals['_MSGSERVICE']._serialized_start=172

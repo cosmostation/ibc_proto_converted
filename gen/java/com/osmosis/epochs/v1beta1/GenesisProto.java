@@ -258,6 +258,7 @@ public final class GenesisProto {
               com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.class, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int IDENTIFIER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object identifier_ = "";
@@ -319,7 +320,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -364,7 +365,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -442,7 +443,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasCurrentEpochStartTime() {
-      return currentEpochStartTime_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -549,16 +550,16 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, identifier_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getStartTime());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getDuration());
       }
       if (currentEpoch_ != 0L) {
         output.writeInt64(4, currentEpoch_);
       }
-      if (currentEpochStartTime_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(5, getCurrentEpochStartTime());
       }
       if (epochCountingStarted_ != false) {
@@ -579,11 +580,11 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, identifier_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getStartTime());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDuration());
       }
@@ -591,7 +592,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, currentEpoch_);
       }
-      if (currentEpochStartTime_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCurrentEpochStartTime());
       }
@@ -799,13 +800,21 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartTimeFieldBuilder();
+          getDurationFieldBuilder();
+          getCurrentEpochStartTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -866,15 +875,18 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.identifier_ = identifier_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.currentEpoch_ = currentEpoch_;
@@ -883,6 +895,7 @@ public final class GenesisProto {
           result.currentEpochStartTime_ = currentEpochStartTimeBuilder_ == null
               ? currentEpochStartTime_
               : currentEpochStartTimeBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.epochCountingStarted_ = epochCountingStarted_;
@@ -890,6 +903,7 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.currentEpochStartHeight_ = currentEpochStartHeight_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1231,8 +1245,10 @@ public final class GenesisProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1409,8 +1425,10 @@ public final class GenesisProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1709,8 +1727,10 @@ public final class GenesisProto {
         } else {
           currentEpochStartTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (currentEpochStartTime_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

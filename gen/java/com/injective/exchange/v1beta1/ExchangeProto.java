@@ -1350,6 +1350,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.Params.class, com.injective.exchange.v1beta1.ExchangeProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SPOT_MARKET_INSTANT_LISTING_FEE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin spotMarketInstantListingFee_;
     /**
@@ -1363,7 +1364,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasSpotMarketInstantListingFee() {
-      return spotMarketInstantListingFee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1404,7 +1405,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasDerivativeMarketInstantListingFee() {
-      return derivativeMarketInstantListingFee_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2046,7 +2047,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasBinaryOptionsMarketInstantListingFee() {
-      return binaryOptionsMarketInstantListingFee_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -2326,10 +2327,10 @@ public final class ExchangeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (spotMarketInstantListingFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSpotMarketInstantListingFee());
       }
-      if (derivativeMarketInstantListingFee_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getDerivativeMarketInstantListingFee());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultSpotMakerFeeRate_)) {
@@ -2377,7 +2378,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidatorRewardShareRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, liquidatorRewardShareRate_);
       }
-      if (binaryOptionsMarketInstantListingFee_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(18, getBinaryOptionsMarketInstantListingFee());
       }
       if (atomicMarketOrderAccessLevel_ != com.injective.exchange.v1beta1.ExchangeProto.AtomicMarketOrderAccessLevel.Nobody.getNumber()) {
@@ -2407,11 +2408,11 @@ public final class ExchangeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (spotMarketInstantListingFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpotMarketInstantListingFee());
       }
-      if (derivativeMarketInstantListingFee_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDerivativeMarketInstantListingFee());
       }
@@ -2464,7 +2465,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidatorRewardShareRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, liquidatorRewardShareRate_);
       }
-      if (binaryOptionsMarketInstantListingFee_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getBinaryOptionsMarketInstantListingFee());
       }
@@ -2747,13 +2748,21 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSpotMarketInstantListingFeeFieldBuilder();
+          getDerivativeMarketInstantListingFeeFieldBuilder();
+          getBinaryOptionsMarketInstantListingFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2828,15 +2837,18 @@ public final class ExchangeProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.spotMarketInstantListingFee_ = spotMarketInstantListingFeeBuilder_ == null
               ? spotMarketInstantListingFee_
               : spotMarketInstantListingFeeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.derivativeMarketInstantListingFee_ = derivativeMarketInstantListingFeeBuilder_ == null
               ? derivativeMarketInstantListingFee_
               : derivativeMarketInstantListingFeeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.defaultSpotMakerFeeRate_ = defaultSpotMakerFeeRate_;
@@ -2887,6 +2899,7 @@ public final class ExchangeProto {
           result.binaryOptionsMarketInstantListingFee_ = binaryOptionsMarketInstantListingFeeBuilder_ == null
               ? binaryOptionsMarketInstantListingFee_
               : binaryOptionsMarketInstantListingFeeBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00040000) != 0)) {
           result.atomicMarketOrderAccessLevel_ = atomicMarketOrderAccessLevel_;
@@ -2906,6 +2919,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00800000) != 0)) {
           result.isInstantDerivativeMarketLaunchEnabled_ = isInstantDerivativeMarketLaunchEnabled_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3314,8 +3328,10 @@ public final class ExchangeProto {
         } else {
           spotMarketInstantListingFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (spotMarketInstantListingFee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3478,8 +3494,10 @@ public final class ExchangeProto {
         } else {
           derivativeMarketInstantListingFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (derivativeMarketInstantListingFee_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4892,8 +4910,10 @@ public final class ExchangeProto {
         } else {
           binaryOptionsMarketInstantListingFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00020000;
-        onChanged();
+        if (binaryOptionsMarketInstantListingFee_ != null) {
+          bitField0_ |= 0x00020000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -22631,6 +22651,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.SpotOrder.class, com.injective.exchange.v1beta1.ExchangeProto.SpotOrder.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -22690,7 +22711,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasOrderInfo() {
-      return orderInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -22806,7 +22827,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, marketId_);
       }
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getOrderInfo());
       }
       if (orderType_ != com.injective.exchange.v1beta1.ExchangeProto.OrderType.UNSPECIFIED.getNumber()) {
@@ -22827,7 +22848,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, marketId_);
       }
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOrderInfo());
       }
@@ -23003,13 +23024,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.SpotOrder.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -23059,10 +23086,12 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketId_ = marketId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderInfo_ = orderInfoBuilder_ == null
               ? orderInfo_
               : orderInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.orderType_ = orderType_;
@@ -23070,6 +23099,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.triggerPrice_ = triggerPrice_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23375,8 +23405,10 @@ public final class ExchangeProto {
         } else {
           orderInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (orderInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -23811,6 +23843,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.SpotLimitOrder.class, com.injective.exchange.v1beta1.ExchangeProto.SpotLimitOrder.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORDER_INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.OrderInfo orderInfo_;
     /**
@@ -23823,7 +23856,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasOrderInfo() {
-      return orderInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -23994,7 +24027,7 @@ public final class ExchangeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOrderInfo());
       }
       if (orderType_ != com.injective.exchange.v1beta1.ExchangeProto.OrderType.UNSPECIFIED.getNumber()) {
@@ -24018,7 +24051,7 @@ public final class ExchangeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrderInfo());
       }
@@ -24209,13 +24242,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.SpotLimitOrder.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -24263,10 +24302,12 @@ public final class ExchangeProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.SpotLimitOrder result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.orderInfo_ = orderInfoBuilder_ == null
               ? orderInfo_
               : orderInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderType_ = orderType_;
@@ -24280,6 +24321,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.orderHash_ = orderHash_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -24501,8 +24543,10 @@ public final class ExchangeProto {
         } else {
           orderInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (orderInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -25053,6 +25097,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.SpotMarketOrder.class, com.injective.exchange.v1beta1.ExchangeProto.SpotMarketOrder.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORDER_INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.OrderInfo orderInfo_;
     /**
@@ -25065,7 +25110,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasOrderInfo() {
-      return orderInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -25228,7 +25273,7 @@ public final class ExchangeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOrderInfo());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(balanceHold_)) {
@@ -25252,7 +25297,7 @@ public final class ExchangeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrderInfo());
       }
@@ -25443,13 +25488,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.SpotMarketOrder.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -25497,10 +25548,12 @@ public final class ExchangeProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.SpotMarketOrder result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.orderInfo_ = orderInfoBuilder_ == null
               ? orderInfo_
               : orderInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.balanceHold_ = balanceHold_;
@@ -25514,6 +25567,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.triggerPrice_ = triggerPrice_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -25735,8 +25789,10 @@ public final class ExchangeProto {
         } else {
           orderInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (orderInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -26285,6 +26341,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.DerivativeOrder.class, com.injective.exchange.v1beta1.ExchangeProto.DerivativeOrder.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -26344,7 +26401,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasOrderInfo() {
-      return orderInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -26507,7 +26564,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, marketId_);
       }
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getOrderInfo());
       }
       if (orderType_ != com.injective.exchange.v1beta1.ExchangeProto.OrderType.UNSPECIFIED.getNumber()) {
@@ -26531,7 +26588,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, marketId_);
       }
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOrderInfo());
       }
@@ -26714,13 +26771,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.DerivativeOrder.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -26771,10 +26834,12 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketId_ = marketId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderInfo_ = orderInfoBuilder_ == null
               ? orderInfo_
               : orderInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.orderType_ = orderType_;
@@ -26785,6 +26850,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.triggerPrice_ = triggerPrice_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -27100,8 +27166,10 @@ public final class ExchangeProto {
         } else {
           orderInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (orderInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -29473,6 +29541,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.SubaccountOrderData.class, com.injective.exchange.v1beta1.ExchangeProto.SubaccountOrderData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORDER_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.SubaccountOrder order_;
     /**
@@ -29481,7 +29550,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasOrder() {
-      return order_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.SubaccountOrder order = 1 [json_name = "order"];</code>
@@ -29524,7 +29593,7 @@ public final class ExchangeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (order_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOrder());
       }
       if (!orderHash_.isEmpty()) {
@@ -29539,7 +29608,7 @@ public final class ExchangeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (order_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrder());
       }
@@ -29705,13 +29774,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.SubaccountOrderData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -29756,14 +29831,17 @@ public final class ExchangeProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.SubaccountOrderData result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.order_ = orderBuilder_ == null
               ? order_
               : orderBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderHash_ = orderHash_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -29937,8 +30015,10 @@ public final class ExchangeProto {
         } else {
           orderBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (order_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -30245,6 +30325,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.DerivativeLimitOrder.class, com.injective.exchange.v1beta1.ExchangeProto.DerivativeLimitOrder.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORDER_INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.OrderInfo orderInfo_;
     /**
@@ -30257,7 +30338,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasOrderInfo() {
-      return orderInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -30475,7 +30556,7 @@ public final class ExchangeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOrderInfo());
       }
       if (orderType_ != com.injective.exchange.v1beta1.ExchangeProto.OrderType.UNSPECIFIED.getNumber()) {
@@ -30502,7 +30583,7 @@ public final class ExchangeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrderInfo());
       }
@@ -30700,13 +30781,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.DerivativeLimitOrder.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -30755,10 +30842,12 @@ public final class ExchangeProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.DerivativeLimitOrder result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.orderInfo_ = orderInfoBuilder_ == null
               ? orderInfo_
               : orderInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderType_ = orderType_;
@@ -30775,6 +30864,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.orderHash_ = orderHash_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -31006,8 +31096,10 @@ public final class ExchangeProto {
         } else {
           orderInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (orderInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -31663,6 +31755,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.DerivativeMarketOrder.class, com.injective.exchange.v1beta1.ExchangeProto.DerivativeMarketOrder.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORDER_INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.OrderInfo orderInfo_;
     /**
@@ -31675,7 +31768,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasOrderInfo() {
-      return orderInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -31877,7 +31970,7 @@ public final class ExchangeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOrderInfo());
       }
       if (orderType_ != com.injective.exchange.v1beta1.ExchangeProto.OrderType.UNSPECIFIED.getNumber()) {
@@ -31904,7 +31997,7 @@ public final class ExchangeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (orderInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrderInfo());
       }
@@ -32102,13 +32195,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.DerivativeMarketOrder.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -32157,10 +32256,12 @@ public final class ExchangeProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.DerivativeMarketOrder result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.orderInfo_ = orderInfoBuilder_ == null
               ? orderInfo_
               : orderInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderType_ = orderType_;
@@ -32177,6 +32278,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.orderHash_ = orderHash_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -32408,8 +32510,10 @@ public final class ExchangeProto {
         } else {
           orderInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (orderInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -36720,6 +36824,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.DerivativeTradeLog.class, com.injective.exchange.v1beta1.ExchangeProto.DerivativeTradeLog.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBACCOUNT_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString subaccountId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -36739,7 +36844,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasPositionDelta() {
-      return positionDelta_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.PositionDelta position_delta = 2 [json_name = "positionDelta"];</code>
@@ -36874,7 +36979,7 @@ public final class ExchangeProto {
       if (!subaccountId_.isEmpty()) {
         output.writeBytes(1, subaccountId_);
       }
-      if (positionDelta_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPositionDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payout_)) {
@@ -36902,7 +37007,7 @@ public final class ExchangeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, subaccountId_);
       }
-      if (positionDelta_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPositionDelta());
       }
@@ -37094,13 +37199,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.DerivativeTradeLog.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPositionDeltaFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -37152,10 +37263,12 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subaccountId_ = subaccountId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.positionDelta_ = positionDeltaBuilder_ == null
               ? positionDelta_
               : positionDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.payout_ = payout_;
@@ -37169,6 +37282,7 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.feeRecipientAddress_ = feeRecipientAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -37410,8 +37524,10 @@ public final class ExchangeProto {
         } else {
           positionDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (positionDelta_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -37795,6 +37911,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.SubaccountPosition.class, com.injective.exchange.v1beta1.ExchangeProto.SubaccountPosition.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POSITION_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.Position position_;
     /**
@@ -37803,7 +37920,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasPosition() {
-      return position_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.Position position = 1 [json_name = "position"];</code>
@@ -37846,7 +37963,7 @@ public final class ExchangeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (position_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPosition());
       }
       if (!subaccountId_.isEmpty()) {
@@ -37861,7 +37978,7 @@ public final class ExchangeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (position_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPosition());
       }
@@ -38027,13 +38144,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.SubaccountPosition.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPositionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -38078,14 +38201,17 @@ public final class ExchangeProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.SubaccountPosition result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.position_ = positionBuilder_ == null
               ? position_
               : positionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.subaccountId_ = subaccountId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -38259,8 +38385,10 @@ public final class ExchangeProto {
         } else {
           positionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (position_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -38468,6 +38596,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.SubaccountDeposit.class, com.injective.exchange.v1beta1.ExchangeProto.SubaccountDeposit.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBACCOUNT_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString subaccountId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -38487,7 +38616,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return deposit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.Deposit deposit = 2 [json_name = "deposit"];</code>
@@ -38522,7 +38651,7 @@ public final class ExchangeProto {
       if (!subaccountId_.isEmpty()) {
         output.writeBytes(1, subaccountId_);
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDeposit());
       }
       getUnknownFields().writeTo(output);
@@ -38538,7 +38667,7 @@ public final class ExchangeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, subaccountId_);
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDeposit());
       }
@@ -38700,13 +38829,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.SubaccountDeposit.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -38754,11 +38889,14 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subaccountId_ = subaccountId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -38964,8 +39102,10 @@ public final class ExchangeProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (deposit_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -43451,6 +43591,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.TradingRewardCampaignInfo.class, com.injective.exchange.v1beta1.ExchangeProto.TradingRewardCampaignInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CAMPAIGN_DURATION_SECONDS_FIELD_NUMBER = 1;
     private long campaignDurationSeconds_ = 0L;
     /**
@@ -43531,7 +43672,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasTradingRewardBoostInfo() {
-      return tradingRewardBoostInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -43630,7 +43771,7 @@ public final class ExchangeProto {
       for (int i = 0; i < quoteDenoms_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, quoteDenoms_.getRaw(i));
       }
-      if (tradingRewardBoostInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getTradingRewardBoostInfo());
       }
       for (int i = 0; i < disqualifiedMarketIds_.size(); i++) {
@@ -43657,7 +43798,7 @@ public final class ExchangeProto {
         size += dataSize;
         size += 1 * getQuoteDenomsList().size();
       }
-      if (tradingRewardBoostInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTradingRewardBoostInfo());
       }
@@ -43840,13 +43981,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.TradingRewardCampaignInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTradingRewardBoostInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -43902,15 +44049,18 @@ public final class ExchangeProto {
           quoteDenoms_.makeImmutable();
           result.quoteDenoms_ = quoteDenoms_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tradingRewardBoostInfo_ = tradingRewardBoostInfoBuilder_ == null
               ? tradingRewardBoostInfo_
               : tradingRewardBoostInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           disqualifiedMarketIds_.makeImmutable();
           result.disqualifiedMarketIds_ = disqualifiedMarketIds_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -44327,8 +44477,10 @@ public final class ExchangeProto {
         } else {
           tradingRewardBoostInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (tradingRewardBoostInfo_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -50384,7 +50536,7 @@ public final class ExchangeProto {
       super(builder);
     }
     private SubaccountIDs() {
-      subaccountIds_ = java.util.Collections.emptyList();
+      subaccountIds_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -50409,7 +50561,8 @@ public final class ExchangeProto {
 
     public static final int SUBACCOUNT_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> subaccountIds_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> subaccountIds_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <code>repeated bytes subaccount_ids = 1 [json_name = "subaccountIds"];</code>
      * @return A list containing the subaccountIds.
@@ -50633,7 +50786,7 @@ public final class ExchangeProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        subaccountIds_ = java.util.Collections.emptyList();
+        subaccountIds_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -50660,22 +50813,17 @@ public final class ExchangeProto {
       @java.lang.Override
       public com.injective.exchange.v1beta1.ExchangeProto.SubaccountIDs buildPartial() {
         com.injective.exchange.v1beta1.ExchangeProto.SubaccountIDs result = new com.injective.exchange.v1beta1.ExchangeProto.SubaccountIDs(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.injective.exchange.v1beta1.ExchangeProto.SubaccountIDs result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          subaccountIds_ = java.util.Collections.unmodifiableList(subaccountIds_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.subaccountIds_ = subaccountIds_;
-      }
-
       private void buildPartial0(com.injective.exchange.v1beta1.ExchangeProto.SubaccountIDs result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          subaccountIds_.makeImmutable();
+          result.subaccountIds_ = subaccountIds_;
+        }
       }
 
       @java.lang.Override
@@ -50725,7 +50873,8 @@ public final class ExchangeProto {
         if (!other.subaccountIds_.isEmpty()) {
           if (subaccountIds_.isEmpty()) {
             subaccountIds_ = other.subaccountIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            subaccountIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureSubaccountIdsIsMutable();
             subaccountIds_.addAll(other.subaccountIds_);
@@ -50781,12 +50930,12 @@ public final class ExchangeProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.ByteString> subaccountIds_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> subaccountIds_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureSubaccountIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          subaccountIds_ = new java.util.ArrayList<com.google.protobuf.ByteString>(subaccountIds_);
-          bitField0_ |= 0x00000001;
+        if (!subaccountIds_.isModifiable()) {
+          subaccountIds_ = makeMutableCopy(subaccountIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes subaccount_ids = 1 [json_name = "subaccountIds"];</code>
@@ -50794,8 +50943,8 @@ public final class ExchangeProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getSubaccountIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(subaccountIds_) : subaccountIds_;
+        subaccountIds_.makeImmutable();
+        return subaccountIds_;
       }
       /**
        * <code>repeated bytes subaccount_ids = 1 [json_name = "subaccountIds"];</code>
@@ -50823,6 +50972,7 @@ public final class ExchangeProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSubaccountIdsIsMutable();
         subaccountIds_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -50835,6 +50985,7 @@ public final class ExchangeProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSubaccountIdsIsMutable();
         subaccountIds_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -50848,6 +50999,7 @@ public final class ExchangeProto {
         ensureSubaccountIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, subaccountIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -50856,7 +51008,7 @@ public final class ExchangeProto {
        * @return This builder for chaining.
        */
       public Builder clearSubaccountIds() {
-        subaccountIds_ = java.util.Collections.emptyList();
+        subaccountIds_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -54397,6 +54549,7 @@ public final class ExchangeProto {
               com.injective.exchange.v1beta1.ExchangeProto.MarketVolume.class, com.injective.exchange.v1beta1.ExchangeProto.MarketVolume.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -54444,7 +54597,7 @@ public final class ExchangeProto {
      */
     @java.lang.Override
     public boolean hasVolume() {
-      return volume_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.VolumeRecord volume = 2 [json_name = "volume", (.gogoproto.nullable) = false];</code>
@@ -54479,7 +54632,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, marketId_);
       }
-      if (volume_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getVolume());
       }
       getUnknownFields().writeTo(output);
@@ -54494,7 +54647,7 @@ public final class ExchangeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, marketId_);
       }
-      if (volume_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getVolume());
       }
@@ -54656,13 +54809,19 @@ public final class ExchangeProto {
 
       // Construct using com.injective.exchange.v1beta1.ExchangeProto.MarketVolume.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVolumeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -54710,11 +54869,14 @@ public final class ExchangeProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketId_ = marketId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.volume_ = volumeBuilder_ == null
               ? volume_
               : volumeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -54962,8 +55124,10 @@ public final class ExchangeProto {
         } else {
           volumeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (volume_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -242,6 +242,7 @@ public final class GenesisProto {
               com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.rmintreward.ParamsProto.Params params_;
     /**
@@ -250,7 +251,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -548,7 +549,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < actLatestCycleList_.size(); i++) {
@@ -578,7 +579,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -800,13 +801,25 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getActLatestCycleListFieldBuilder();
+          getActCurrentCycleListFieldBuilder();
+          getMintrewardActListFieldBuilder();
+          getUserClaimInfoListFieldBuilder();
+          getUserActListFieldBuilder();
+          getUserMintCountListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -950,11 +963,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1354,8 +1370,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4305,6 +4323,7 @@ public final class GenesisProto {
               com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -4363,7 +4382,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasMintRewardAct() {
-      return mintRewardAct_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
@@ -4401,7 +4420,7 @@ public final class GenesisProto {
       if (cycle_ != 0L) {
         output.writeUInt64(2, cycle_);
       }
-      if (mintRewardAct_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getMintRewardAct());
       }
       getUnknownFields().writeTo(output);
@@ -4420,7 +4439,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, cycle_);
       }
-      if (mintRewardAct_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMintRewardAct());
       }
@@ -4587,13 +4606,19 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMintRewardActFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4645,11 +4670,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.cycle_ = cycle_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.mintRewardAct_ = mintRewardActBuilder_ == null
               ? mintRewardAct_
               : mintRewardActBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4937,8 +4965,10 @@ public final class GenesisProto {
         } else {
           mintRewardActBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (mintRewardAct_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5145,6 +5175,7 @@ public final class GenesisProto {
               com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object account_ = "";
@@ -5253,7 +5284,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasUserClaimInfo() {
-      return userClaimInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
@@ -5297,7 +5328,7 @@ public final class GenesisProto {
       if (mintIndex_ != 0L) {
         output.writeUInt64(4, mintIndex_);
       }
-      if (userClaimInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getUserClaimInfo());
       }
       getUnknownFields().writeTo(output);
@@ -5323,7 +5354,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, mintIndex_);
       }
-      if (userClaimInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getUserClaimInfo());
       }
@@ -5499,13 +5530,19 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUserClaimInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5565,11 +5602,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.mintIndex_ = mintIndex_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.userClaimInfo_ = userClaimInfoBuilder_ == null
               ? userClaimInfo_
               : userClaimInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5979,8 +6019,10 @@ public final class GenesisProto {
         } else {
           userClaimInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (userClaimInfo_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6175,6 +6217,7 @@ public final class GenesisProto {
               com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object account_ = "";
@@ -6261,7 +6304,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasActs() {
-      return acts_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
@@ -6299,7 +6342,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
       }
-      if (acts_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getActs());
       }
       getUnknownFields().writeTo(output);
@@ -6317,7 +6360,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
       }
-      if (acts_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getActs());
       }
@@ -6483,13 +6526,19 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getActsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6541,11 +6590,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.denom_ = denom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.acts_ = actsBuilder_ == null
               ? acts_
               : actsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6875,8 +6927,10 @@ public final class GenesisProto {
         } else {
           actsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (acts_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

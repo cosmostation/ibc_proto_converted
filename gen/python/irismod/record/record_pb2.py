@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1birismod/record/record.proto\x12\x0eirismod.record\x1a\x14gogoproto/gogo.proto\"\x8f\x01\n\x07\x43ontent\x12\x16\n\x06\x64igest\x18\x01 \x01(\tR\x06\x64igest\x12\x37\n\x0b\x64igest_algo\x18\x02 \x01(\tB\x16\xf2\xde\x1f\x12yaml:\"digest_algo\"R\ndigestAlgo\x12\x19\n\x03uri\x18\x03 \x01(\tB\x07\xe2\xde\x1f\x03URIR\x03uri\x12\x12\n\x04meta\x18\x04 \x01(\tR\x04meta:\x04\xe8\xa0\x1f\x01\"\x90\x01\n\x06Record\x12+\n\x07tx_hash\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"tx_hash\"R\x06txHash\x12\x39\n\x08\x63ontents\x18\x02 \x03(\x0b\x32\x17.irismod.record.ContentB\x04\xc8\xde\x1f\x00R\x08\x63ontents\x12\x18\n\x07\x63reator\x18\x03 \x01(\tR\x07\x63reator:\x04\xe8\xa0\x1f\x01\x42\xaf\x01\n\x12\x63om.irismod.recordB\x0bRecordProtoP\x01Z/github.com/irisnet/irismod/modules/record/types\xa2\x02\x03IRX\xaa\x02\x0eIrismod.Record\xca\x02\x0eIrismod\\Record\xe2\x02\x1aIrismod\\Record\\GPBMetadata\xea\x02\x0fIrismod::Record\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1birismod/record/record.proto\x12\x0eirismod.record\x1a\x14gogoproto/gogo.proto\"\x8f\x01\n\x07\x43ontent\x12\x16\n\x06\x64igest\x18\x01 \x01(\tR\x06\x64igest\x12\x37\n\x0b\x64igest_algo\x18\x02 \x01(\tB\x16\xf2\xde\x1f\x12yaml:\"digest_algo\"R\ndigestAlgo\x12\x19\n\x03uri\x18\x03 \x01(\tB\x07\xe2\xde\x1f\x03URIR\x03uri\x12\x12\n\x04meta\x18\x04 \x01(\tR\x04meta:\x04\xe8\xa0\x1f\x01\"\x90\x01\n\x06Record\x12+\n\x07tx_hash\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"tx_hash\"R\x06txHash\x12\x39\n\x08\x63ontents\x18\x02 \x03(\x0b\x32\x17.irismod.record.ContentB\x04\xc8\xde\x1f\x00R\x08\x63ontents\x12\x18\n\x07\x63reator\x18\x03 \x01(\tR\x07\x63reator:\x04\xe8\xa0\x1f\x01\x42\xad\x01\n\x12\x63om.irismod.recordB\x0bRecordProtoZ/github.com/irisnet/irismod/modules/record/types\xa2\x02\x03IRX\xaa\x02\x0eIrismod.Record\xca\x02\x0eIrismod\\Record\xe2\x02\x1aIrismod\\Record\\GPBMetadata\xea\x02\x0fIrismod::Record\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.record.record_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.irismod.recordB\013RecordProtoP\001Z/github.com/irisnet/irismod/modules/record/types\242\002\003IRX\252\002\016Irismod.Record\312\002\016Irismod\\Record\342\002\032Irismod\\Record\\GPBMetadata\352\002\017Irismod::Record\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\022com.irismod.recordB\013RecordProtoZ/github.com/irisnet/irismod/modules/record/types\242\002\003IRX\252\002\016Irismod.Record\312\002\016Irismod\\Record\342\002\032Irismod\\Record\\GPBMetadata\352\002\017Irismod::Record\310\341\036\000'
   _CONTENT.fields_by_name['digest_algo']._options = None
   _CONTENT.fields_by_name['digest_algo']._serialized_options = b'\362\336\037\022yaml:\"digest_algo\"'
   _CONTENT.fields_by_name['uri']._options = None

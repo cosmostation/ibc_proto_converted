@@ -17,15 +17,14 @@ from bcna.bcna import bitcannaid_pb2 as bcna_dot_bcna_dot_bitcannaid__pb2
 from bcna.bcna import supplychain_pb2 as bcna_dot_bcna_dot_supplychain__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x62\x63na/bcna/genesis.proto\x12\x18\x62itcannaglobal.bcna.bcna\x1a\x14gogoproto/gogo.proto\x1a\x16\x62\x63na/bcna/params.proto\x1a\x1a\x62\x63na/bcna/bitcannaid.proto\x1a\x1b\x62\x63na/bcna/supplychain.proto\"\xcf\x02\n\x0cGenesisState\x12>\n\x06params\x18\x01 \x01(\x0b\x32 .bitcannaglobal.bcna.bcna.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12R\n\x0e\x62itcannaidList\x18\x02 \x03(\x0b\x32$.bitcannaglobal.bcna.bcna.BitcannaidB\x04\xc8\xde\x1f\x00R\x0e\x62itcannaidList\x12(\n\x0f\x62itcannaidCount\x18\x03 \x01(\x04R\x0f\x62itcannaidCount\x12U\n\x0fsupplychainList\x18\x04 \x03(\x0b\x32%.bitcannaglobal.bcna.bcna.SupplychainB\x04\xc8\xde\x1f\x00R\x0fsupplychainList\x12*\n\x10supplychainCount\x18\x05 \x01(\x04R\x10supplychainCountB\xdb\x01\n\x1c\x63om.bitcannaglobal.bcna.bcnaB\x0cGenesisProtoP\x01Z+github.com/BitCannaGlobal/bcna/x/bcna/types\xa2\x02\x03\x42\x42\x42\xaa\x02\x18\x42itcannaglobal.Bcna.Bcna\xca\x02\x18\x42itcannaglobal\\Bcna\\Bcna\xe2\x02$Bitcannaglobal\\Bcna\\Bcna\\GPBMetadata\xea\x02\x1a\x42itcannaglobal::Bcna::Bcnab\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x62\x63na/bcna/genesis.proto\x12\x18\x62itcannaglobal.bcna.bcna\x1a\x14gogoproto/gogo.proto\x1a\x16\x62\x63na/bcna/params.proto\x1a\x1a\x62\x63na/bcna/bitcannaid.proto\x1a\x1b\x62\x63na/bcna/supplychain.proto\"\xcf\x02\n\x0cGenesisState\x12>\n\x06params\x18\x01 \x01(\x0b\x32 .bitcannaglobal.bcna.bcna.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12R\n\x0e\x62itcannaidList\x18\x02 \x03(\x0b\x32$.bitcannaglobal.bcna.bcna.BitcannaidB\x04\xc8\xde\x1f\x00R\x0e\x62itcannaidList\x12(\n\x0f\x62itcannaidCount\x18\x03 \x01(\x04R\x0f\x62itcannaidCount\x12U\n\x0fsupplychainList\x18\x04 \x03(\x0b\x32%.bitcannaglobal.bcna.bcna.SupplychainB\x04\xc8\xde\x1f\x00R\x0fsupplychainList\x12*\n\x10supplychainCount\x18\x05 \x01(\x04R\x10supplychainCountB\xd9\x01\n\x1c\x63om.bitcannaglobal.bcna.bcnaB\x0cGenesisProtoZ+github.com/BitCannaGlobal/bcna/x/bcna/types\xa2\x02\x03\x42\x42\x42\xaa\x02\x18\x42itcannaglobal.Bcna.Bcna\xca\x02\x18\x42itcannaglobal\\Bcna\\Bcna\xe2\x02$Bitcannaglobal\\Bcna\\Bcna\\GPBMetadata\xea\x02\x1a\x42itcannaglobal::Bcna::Bcnab\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'bcna.bcna.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.bitcannaglobal.bcna.bcnaB\014GenesisProtoP\001Z+github.com/BitCannaGlobal/bcna/x/bcna/types\242\002\003BBB\252\002\030Bitcannaglobal.Bcna.Bcna\312\002\030Bitcannaglobal\\Bcna\\Bcna\342\002$Bitcannaglobal\\Bcna\\Bcna\\GPBMetadata\352\002\032Bitcannaglobal::Bcna::Bcna'
+  DESCRIPTOR._serialized_options = b'\n\034com.bitcannaglobal.bcna.bcnaB\014GenesisProtoZ+github.com/BitCannaGlobal/bcna/x/bcna/types\242\002\003BBB\252\002\030Bitcannaglobal.Bcna.Bcna\312\002\030Bitcannaglobal\\Bcna\\Bcna\342\002$Bitcannaglobal\\Bcna\\Bcna\\GPBMetadata\352\002\032Bitcannaglobal::Bcna::Bcna'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['bitcannaidList']._options = None

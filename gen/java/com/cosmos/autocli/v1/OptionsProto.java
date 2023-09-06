@@ -111,6 +111,7 @@ public final class OptionsProto {
               com.cosmos.autocli.v1.OptionsProto.ModuleOptions.class, com.cosmos.autocli.v1.OptionsProto.ModuleOptions.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TX_FIELD_NUMBER = 1;
     private com.cosmos.autocli.v1.OptionsProto.ServiceCommandDescriptor tx_;
     /**
@@ -123,7 +124,7 @@ public final class OptionsProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return tx_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -161,7 +162,7 @@ public final class OptionsProto {
      */
     @java.lang.Override
     public boolean hasQuery() {
-      return query_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -201,10 +202,10 @@ public final class OptionsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (tx_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTx());
       }
-      if (query_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getQuery());
       }
       getUnknownFields().writeTo(output);
@@ -216,11 +217,11 @@ public final class OptionsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (tx_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTx());
       }
-      if (query_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getQuery());
       }
@@ -391,13 +392,20 @@ public final class OptionsProto {
 
       // Construct using com.cosmos.autocli.v1.OptionsProto.ModuleOptions.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTxFieldBuilder();
+          getQueryFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -446,16 +454,20 @@ public final class OptionsProto {
 
       private void buildPartial0(com.cosmos.autocli.v1.OptionsProto.ModuleOptions result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.query_ = queryBuilder_ == null
               ? query_
               : queryBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -651,8 +663,10 @@ public final class OptionsProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (tx_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -806,8 +820,10 @@ public final class OptionsProto {
         } else {
           queryBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (query_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

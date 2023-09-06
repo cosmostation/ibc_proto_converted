@@ -94,6 +94,7 @@ public final class MessageProto {
               com.assetmantle.modules.identities.transactions.provision.MessageProto.Message.class, com.assetmantle.modules.identities.transactions.provision.MessageProto.Message.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -180,7 +181,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasIdentityID() {
-      return identityID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID identity_i_d = 3 [json_name = "identityID"];</code>
@@ -218,7 +219,7 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(to_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, to_);
       }
-      if (identityID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getIdentityID());
       }
       getUnknownFields().writeTo(output);
@@ -236,7 +237,7 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(to_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, to_);
       }
-      if (identityID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getIdentityID());
       }
@@ -402,13 +403,19 @@ public final class MessageProto {
 
       // Construct using com.assetmantle.modules.identities.transactions.provision.MessageProto.Message.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIdentityIDFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,11 +467,14 @@ public final class MessageProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.to_ = to_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.identityID_ = identityIDBuilder_ == null
               ? identityID_
               : identityIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -794,8 +804,10 @@ public final class MessageProto {
         } else {
           identityIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (identityID_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

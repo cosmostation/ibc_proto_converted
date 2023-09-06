@@ -477,6 +477,7 @@ public final class QueryProto {
               com.ixo.token.v1beta1.QueryProto.QueryParamsResponse.class, com.ixo.token.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.ixo.token.v1beta1.TokenProto.Params params_;
     /**
@@ -489,7 +490,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -529,7 +530,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -541,7 +542,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -699,13 +700,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.token.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -749,11 +756,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.token.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -939,8 +949,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1146,6 +1158,7 @@ public final class QueryProto {
               com.ixo.token.v1beta1.QueryProto.QueryTokenListRequest.class, com.ixo.token.v1beta1.QueryProto.QueryTokenListRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -1154,7 +1167,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -1233,7 +1246,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
@@ -1248,7 +1261,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -1413,13 +1426,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.token.v1beta1.QueryProto.QueryTokenListRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1464,14 +1483,17 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.token.v1beta1.QueryProto.QueryTokenListRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.minter_ = minter_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1647,8 +1669,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1934,6 +1958,7 @@ public final class QueryProto {
               com.ixo.token.v1beta1.QueryProto.QueryTokenListResponse.class, com.ixo.token.v1beta1.QueryProto.QueryTokenListResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
     /**
@@ -1942,7 +1967,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 1 [json_name = "pagination"];</code>
@@ -2015,7 +2040,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       for (int i = 0; i < tokenDocs_.size(); i++) {
@@ -2030,7 +2055,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -2198,13 +2223,20 @@ public final class QueryProto {
 
       // Construct using com.ixo.token.v1beta1.QueryProto.QueryTokenListResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+          getTokenDocsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2268,11 +2300,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.token.v1beta1.QueryProto.QueryTokenListResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2477,8 +2512,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3623,6 +3660,7 @@ public final class QueryProto {
               com.ixo.token.v1beta1.QueryProto.QueryTokenDocResponse.class, com.ixo.token.v1beta1.QueryProto.QueryTokenDocResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOKENDOC_FIELD_NUMBER = 1;
     private com.ixo.token.v1beta1.TokenProto.Token tokenDoc_;
     /**
@@ -3631,7 +3669,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTokenDoc() {
-      return tokenDoc_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.token.v1beta1.Token tokenDoc = 1 [json_name = "tokenDoc", (.gogoproto.nullable) = false];</code>
@@ -3663,7 +3701,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (tokenDoc_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTokenDoc());
       }
       getUnknownFields().writeTo(output);
@@ -3675,7 +3713,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (tokenDoc_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenDoc());
       }
@@ -3833,13 +3871,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.token.v1beta1.QueryProto.QueryTokenDocResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenDocFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3883,11 +3927,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.token.v1beta1.QueryProto.QueryTokenDocResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenDoc_ = tokenDocBuilder_ == null
               ? tokenDoc_
               : tokenDocBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4053,8 +4100,10 @@ public final class QueryProto {
         } else {
           tokenDocBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (tokenDoc_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4840,6 +4889,7 @@ public final class QueryProto {
               com.ixo.token.v1beta1.QueryProto.QueryTokenMetadataResponse.class, com.ixo.token.v1beta1.QueryProto.QueryTokenMetadataResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -5043,7 +5093,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProperties() {
-      return properties_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.token.v1beta1.TokenMetadataProperties properties = 6 [json_name = "properties"];</code>
@@ -5090,7 +5140,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, index_);
       }
-      if (properties_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getProperties());
       }
       getUnknownFields().writeTo(output);
@@ -5117,7 +5167,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, index_);
       }
-      if (properties_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getProperties());
       }
@@ -5295,13 +5345,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.token.v1beta1.QueryProto.QueryTokenMetadataResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPropertiesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5365,11 +5421,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.index_ = index_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.properties_ = propertiesBuilder_ == null
               ? properties_
               : propertiesBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5945,8 +6004,10 @@ public final class QueryProto {
         } else {
           propertiesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (properties_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

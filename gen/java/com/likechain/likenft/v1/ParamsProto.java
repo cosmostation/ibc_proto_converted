@@ -103,6 +103,7 @@ public final class ParamsProto {
               com.likechain.likenft.v1.ParamsProto.Params.class, com.likechain.likenft.v1.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PRICE_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object priceDenom_ = "";
@@ -150,7 +151,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasFeePerByte() {
-      return feePerByte_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin fee_per_byte = 2 [json_name = "feePerByte", (.gogoproto.nullable) = false];</code>
@@ -218,7 +219,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(priceDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, priceDenom_);
       }
-      if (feePerByte_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getFeePerByte());
       }
       if (maxOfferDurationDays_ != 0L) {
@@ -242,7 +243,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(priceDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, priceDenom_);
       }
-      if (feePerByte_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFeePerByte());
       }
@@ -435,13 +436,19 @@ public final class ParamsProto {
 
       // Construct using com.likechain.likenft.v1.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeePerByteFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -492,10 +499,12 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.priceDenom_ = priceDenom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.feePerByte_ = feePerByteBuilder_ == null
               ? feePerByte_
               : feePerByteBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxOfferDurationDays_ = maxOfferDurationDays_;
@@ -506,6 +515,7 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maxRoyaltyBasisPoints_ = maxRoyaltyBasisPoints_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -777,8 +787,10 @@ public final class ParamsProto {
         } else {
           feePerByteBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (feePerByte_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

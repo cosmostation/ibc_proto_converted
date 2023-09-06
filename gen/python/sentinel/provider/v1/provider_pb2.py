@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#sentinel/provider/v1/provider.proto\x12\x14sentinel.provider.v1\x1a\x14gogoproto/gogo.proto\"\x90\x01\n\x08Provider\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name\x12\x1a\n\x08identity\x18\x03 \x01(\tR\x08identity\x12\x18\n\x07website\x18\x04 \x01(\tR\x07website\x12 \n\x0b\x64\x65scription\x18\x05 \x01(\tR\x0b\x64\x65scriptionB\xe0\x01\n\x18\x63om.sentinel.provider.v1B\rProviderProtoP\x01Z;github.com/sentinel-official/hub/x/provider/legacy/v1/types\xa2\x02\x03SPX\xaa\x02\x14Sentinel.Provider.V1\xca\x02\x14Sentinel\\Provider\\V1\xe2\x02 Sentinel\\Provider\\V1\\GPBMetadata\xea\x02\x16Sentinel::Provider::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#sentinel/provider/v1/provider.proto\x12\x14sentinel.provider.v1\x1a\x14gogoproto/gogo.proto\"\x90\x01\n\x08Provider\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name\x12\x1a\n\x08identity\x18\x03 \x01(\tR\x08identity\x12\x18\n\x07website\x18\x04 \x01(\tR\x07website\x12 \n\x0b\x64\x65scription\x18\x05 \x01(\tR\x0b\x64\x65scriptionB\xde\x01\n\x18\x63om.sentinel.provider.v1B\rProviderProtoZ;github.com/sentinel-official/hub/x/provider/legacy/v1/types\xa2\x02\x03SPX\xaa\x02\x14Sentinel.Provider.V1\xca\x02\x14Sentinel\\Provider\\V1\xe2\x02 Sentinel\\Provider\\V1\\GPBMetadata\xea\x02\x16Sentinel::Provider::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.provider.v1.provider_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.sentinel.provider.v1B\rProviderProtoP\001Z;github.com/sentinel-official/hub/x/provider/legacy/v1/types\242\002\003SPX\252\002\024Sentinel.Provider.V1\312\002\024Sentinel\\Provider\\V1\342\002 Sentinel\\Provider\\V1\\GPBMetadata\352\002\026Sentinel::Provider::V1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\030com.sentinel.provider.v1B\rProviderProtoZ;github.com/sentinel-official/hub/x/provider/legacy/v1/types\242\002\003SPX\252\002\024Sentinel.Provider.V1\312\002\024Sentinel\\Provider\\V1\342\002 Sentinel\\Provider\\V1\\GPBMetadata\352\002\026Sentinel::Provider::V1\310\341\036\000\250\342\036\000'
   _globals['_PROVIDER']._serialized_start=84
   _globals['_PROVIDER']._serialized_end=228
 # @@protoc_insertion_point(module_scope)

@@ -16,15 +16,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n provenance/marker/v1/authz.proto\x12\x14provenance.marker.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xc3\x01\n\x1bMarkerTransferAuthorization\x12r\n\x0etransfer_limit\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\rtransferLimit\x12\x1d\n\nallow_list\x18\x02 \x03(\tR\tallowList:\x11\xca\xb4-\rAuthorizationB\xcc\x01\n\x18\x63om.provenance.marker.v1B\nAuthzProtoP\x01Z2github.com/provenance-io/provenance/x/marker/types\xa2\x02\x03PMX\xaa\x02\x14Provenance.Marker.V1\xca\x02\x14Provenance\\Marker\\V1\xe2\x02 Provenance\\Marker\\V1\\GPBMetadata\xea\x02\x16Provenance::Marker::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n provenance/marker/v1/authz.proto\x12\x14provenance.marker.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xc3\x01\n\x1bMarkerTransferAuthorization\x12r\n\x0etransfer_limit\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\rtransferLimit\x12\x1d\n\nallow_list\x18\x02 \x03(\tR\tallowList:\x11\xca\xb4-\rAuthorizationB\xcc\x01\n\x18\x63om.provenance.marker.v1B\nAuthzProtoP\x00Z2github.com/provenance-io/provenance/x/marker/types\xa2\x02\x03PMX\xaa\x02\x14Provenance.Marker.V1\xca\x02\x14Provenance\\Marker\\V1\xe2\x02 Provenance\\Marker\\V1\\GPBMetadata\xea\x02\x16Provenance::Marker::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'provenance.marker.v1.authz_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.provenance.marker.v1B\nAuthzProtoP\001Z2github.com/provenance-io/provenance/x/marker/types\242\002\003PMX\252\002\024Provenance.Marker.V1\312\002\024Provenance\\Marker\\V1\342\002 Provenance\\Marker\\V1\\GPBMetadata\352\002\026Provenance::Marker::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.provenance.marker.v1B\nAuthzProtoP\000Z2github.com/provenance-io/provenance/x/marker/types\242\002\003PMX\252\002\024Provenance.Marker.V1\312\002\024Provenance\\Marker\\V1\342\002 Provenance\\Marker\\V1\\GPBMetadata\352\002\026Provenance::Marker::V1'
   _MARKERTRANSFERAUTHORIZATION.fields_by_name['transfer_limit']._options = None
   _MARKERTRANSFERAUTHORIZATION.fields_by_name['transfer_limit']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _MARKERTRANSFERAUTHORIZATION._options = None

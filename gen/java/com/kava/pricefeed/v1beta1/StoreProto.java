@@ -887,7 +887,7 @@ public final class StoreProto {
       marketId_ = "";
       baseAsset_ = "";
       quoteAsset_ = "";
-      oracles_ = java.util.Collections.emptyList();
+      oracles_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -1029,7 +1029,8 @@ public final class StoreProto {
 
     public static final int ORACLES_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> oracles_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> oracles_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <code>repeated bytes oracles = 4 [json_name = "oracles", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
      * @return A list containing the oracles.
@@ -1313,7 +1314,7 @@ public final class StoreProto {
         marketId_ = "";
         baseAsset_ = "";
         quoteAsset_ = "";
-        oracles_ = java.util.Collections.emptyList();
+        oracles_ = emptyList(com.google.protobuf.ByteString.class);
         active_ = false;
         return this;
       }
@@ -1341,18 +1342,9 @@ public final class StoreProto {
       @java.lang.Override
       public com.kava.pricefeed.v1beta1.StoreProto.Market buildPartial() {
         com.kava.pricefeed.v1beta1.StoreProto.Market result = new com.kava.pricefeed.v1beta1.StoreProto.Market(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.kava.pricefeed.v1beta1.StoreProto.Market result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          oracles_ = java.util.Collections.unmodifiableList(oracles_);
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.oracles_ = oracles_;
       }
 
       private void buildPartial0(com.kava.pricefeed.v1beta1.StoreProto.Market result) {
@@ -1365,6 +1357,10 @@ public final class StoreProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.quoteAsset_ = quoteAsset_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          oracles_.makeImmutable();
+          result.oracles_ = oracles_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.active_ = active_;
@@ -1433,7 +1429,8 @@ public final class StoreProto {
         if (!other.oracles_.isEmpty()) {
           if (oracles_.isEmpty()) {
             oracles_ = other.oracles_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            oracles_.makeImmutable();
+            bitField0_ |= 0x00000008;
           } else {
             ensureOraclesIsMutable();
             oracles_.addAll(other.oracles_);
@@ -1728,12 +1725,12 @@ public final class StoreProto {
         return this;
       }
 
-      private java.util.List<com.google.protobuf.ByteString> oracles_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> oracles_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureOraclesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          oracles_ = new java.util.ArrayList<com.google.protobuf.ByteString>(oracles_);
-          bitField0_ |= 0x00000008;
+        if (!oracles_.isModifiable()) {
+          oracles_ = makeMutableCopy(oracles_);
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated bytes oracles = 4 [json_name = "oracles", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
@@ -1741,8 +1738,8 @@ public final class StoreProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getOraclesList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(oracles_) : oracles_;
+        oracles_.makeImmutable();
+        return oracles_;
       }
       /**
        * <code>repeated bytes oracles = 4 [json_name = "oracles", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
@@ -1770,6 +1767,7 @@ public final class StoreProto {
         if (value == null) { throw new NullPointerException(); }
         ensureOraclesIsMutable();
         oracles_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1782,6 +1780,7 @@ public final class StoreProto {
         if (value == null) { throw new NullPointerException(); }
         ensureOraclesIsMutable();
         oracles_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1795,6 +1794,7 @@ public final class StoreProto {
         ensureOraclesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, oracles_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1803,7 +1803,7 @@ public final class StoreProto {
        * @return This builder for chaining.
        */
       public Builder clearOracles() {
-        oracles_ = java.util.Collections.emptyList();
+        oracles_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
@@ -1995,6 +1995,7 @@ public final class StoreProto {
               com.kava.pricefeed.v1beta1.StoreProto.PostedPrice.class, com.kava.pricefeed.v1beta1.StoreProto.PostedPrice.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -2092,7 +2093,7 @@ public final class StoreProto {
      */
     @java.lang.Override
     public boolean hasExpiry() {
-      return expiry_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expiry = 4 [json_name = "expiry", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -2133,7 +2134,7 @@ public final class StoreProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, price_);
       }
-      if (expiry_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getExpiry());
       }
       getUnknownFields().writeTo(output);
@@ -2155,7 +2156,7 @@ public final class StoreProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, price_);
       }
-      if (expiry_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExpiry());
       }
@@ -2329,13 +2330,19 @@ public final class StoreProto {
 
       // Construct using com.kava.pricefeed.v1beta1.StoreProto.PostedPrice.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpiryFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2391,11 +2398,14 @@ public final class StoreProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.price_ = price_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.expiry_ = expiryBuilder_ == null
               ? expiry_
               : expiryBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2765,8 +2775,10 @@ public final class StoreProto {
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (expiry_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

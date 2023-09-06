@@ -193,6 +193,7 @@ public final class TxProto {
               com.coreum.asset.nft.v1.TxProto.MsgIssueClass.class, com.coreum.asset.nft.v1.TxProto.MsgIssueClass.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ISSUER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuer_ = "";
@@ -435,7 +436,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return data_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any data = 7 [json_name = "data"];</code>
@@ -583,7 +584,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, uriHash_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getData());
       }
       if (getFeaturesList().size() > 0) {
@@ -623,7 +624,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, uriHash_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getData());
       }
@@ -833,13 +834,19 @@ public final class TxProto {
 
       // Construct using com.coreum.asset.nft.v1.TxProto.MsgIssueClass.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -919,14 +926,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.uriHash_ = uriHash_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.royaltyRate_ = royaltyRate_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1621,8 +1631,10 @@ public final class TxProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (data_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2072,6 +2084,7 @@ public final class TxProto {
               com.coreum.asset.nft.v1.TxProto.MsgMint.class, com.coreum.asset.nft.v1.TxProto.MsgMint.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -2275,7 +2288,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return data_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any data = 6 [json_name = "data"];</code>
@@ -2322,7 +2335,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, uriHash_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getData());
       }
       getUnknownFields().writeTo(output);
@@ -2349,7 +2362,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, uriHash_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getData());
       }
@@ -2531,13 +2544,19 @@ public final class TxProto {
 
       // Construct using com.coreum.asset.nft.v1.TxProto.MsgMint.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2601,11 +2620,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.uriHash_ = uriHash_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3181,8 +3203,10 @@ public final class TxProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (data_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

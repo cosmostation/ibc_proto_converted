@@ -465,6 +465,7 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.pstake.liquidstakeibc.v1beta1.ParamsProto.Params params_;
     /**
@@ -473,7 +474,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pstake.liquidstakeibc.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -505,7 +506,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -517,7 +518,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -675,13 +676,19 @@ public final class QueryProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -725,11 +732,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -895,8 +905,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1617,6 +1629,7 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int HOST_CHAIN_FIELD_NUMBER = 1;
     private com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.HostChain hostChain_;
     /**
@@ -1625,7 +1638,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasHostChain() {
-      return hostChain_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pstake.liquidstakeibc.v1beta1.HostChain host_chain = 1 [json_name = "hostChain", (.gogoproto.nullable) = false];</code>
@@ -1657,7 +1670,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (hostChain_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getHostChain());
       }
       getUnknownFields().writeTo(output);
@@ -1669,7 +1682,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (hostChain_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHostChain());
       }
@@ -1827,13 +1840,19 @@ public final class QueryProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHostChainFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1877,11 +1896,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.hostChain_ = hostChainBuilder_ == null
               ? hostChain_
               : hostChainBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2047,8 +2069,10 @@ public final class QueryProto {
         } else {
           hostChainBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (hostChain_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3347,16 +3371,16 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
      */
-    java.lang.String getHostDenom();
+    java.lang.String getChainId();
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The bytes for hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
      */
     com.google.protobuf.ByteString
-        getHostDenomBytes();
+        getChainIdBytes();
   }
   /**
    * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryDepositsRequest}
@@ -3371,7 +3395,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryDepositsRequest() {
-      hostDenom_ = "";
+      chainId_ = "";
     }
 
     @java.lang.Override
@@ -3394,39 +3418,39 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest.Builder.class);
     }
 
-    public static final int HOST_DENOM_FIELD_NUMBER = 1;
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object hostDenom_ = "";
+    private volatile java.lang.Object chainId_ = "";
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
      */
     @java.lang.Override
-    public java.lang.String getHostDenom() {
-      java.lang.Object ref = hostDenom_;
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        hostDenom_ = s;
+        chainId_ = s;
         return s;
       }
     }
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The bytes for hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getHostDenomBytes() {
-      java.lang.Object ref = hostDenom_;
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        hostDenom_ = b;
+        chainId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3447,8 +3471,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostDenom_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostDenom_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3459,8 +3483,8 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostDenom_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostDenom_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3477,8 +3501,8 @@ public final class QueryProto {
       }
       com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest) obj;
 
-      if (!getHostDenom()
-          .equals(other.getHostDenom())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3490,8 +3514,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HOST_DENOM_FIELD_NUMBER;
-      hash = (53 * hash) + getHostDenom().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3623,7 +3647,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        hostDenom_ = "";
+        chainId_ = "";
         return this;
       }
 
@@ -3658,7 +3682,7 @@ public final class QueryProto {
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.hostDenom_ = hostDenom_;
+          result.chainId_ = chainId_;
         }
       }
 
@@ -3706,8 +3730,8 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest other) {
         if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest.getDefaultInstance()) return this;
-        if (!other.getHostDenom().isEmpty()) {
-          hostDenom_ = other.hostDenom_;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -3738,7 +3762,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                hostDenom_ = input.readStringRequireUtf8();
+                chainId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -3759,73 +3783,73 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.lang.Object hostDenom_ = "";
+      private java.lang.Object chainId_ = "";
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @return The hostDenom.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
        */
-      public java.lang.String getHostDenom() {
-        java.lang.Object ref = hostDenom_;
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          hostDenom_ = s;
+          chainId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @return The bytes for hostDenom.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
        */
       public com.google.protobuf.ByteString
-          getHostDenomBytes() {
-        java.lang.Object ref = hostDenom_;
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          hostDenom_ = b;
+          chainId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @param value The hostDenom to set.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
        * @return This builder for chaining.
        */
-      public Builder setHostDenom(
+      public Builder setChainId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        hostDenom_ = value;
+        chainId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearHostDenom() {
-        hostDenom_ = getDefaultInstance().getHostDenom();
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @param value The bytes for hostDenom to set.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
        * @return This builder for chaining.
        */
-      public Builder setHostDenomBytes(
+      public Builder setChainIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        hostDenom_ = value;
+        chainId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -4676,21 +4700,1355 @@ public final class QueryProto {
 
   }
 
+  public interface QueryLSMDepositsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest}
+   */
+  public static final class QueryLSMDepositsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest)
+      QueryLSMDepositsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLSMDepositsRequest.newBuilder() to construct.
+    private QueryLSMDepositsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLSMDepositsRequest() {
+      chainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLSMDepositsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLSMDepositsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLSMDepositsRequest>() {
+      @java.lang.Override
+      public QueryLSMDepositsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLSMDepositsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLSMDepositsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLSMDepositsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit> 
+        getDepositsList();
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit getDeposits(int index);
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    int getDepositsCount();
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    java.util.List<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder> 
+        getDepositsOrBuilderList();
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder getDepositsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse}
+   */
+  public static final class QueryLSMDepositsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse)
+      QueryLSMDepositsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLSMDepositsResponse.newBuilder() to construct.
+    private QueryLSMDepositsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLSMDepositsResponse() {
+      deposits_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLSMDepositsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.Builder.class);
+    }
+
+    public static final int DEPOSITS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit> deposits_;
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit> getDepositsList() {
+      return deposits_;
+    }
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder> 
+        getDepositsOrBuilderList() {
+      return deposits_;
+    }
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    @java.lang.Override
+    public int getDepositsCount() {
+      return deposits_.size();
+    }
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit getDeposits(int index) {
+      return deposits_.get(index);
+    }
+    /**
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+     */
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder getDepositsOrBuilder(
+        int index) {
+      return deposits_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < deposits_.size(); i++) {
+        output.writeMessage(1, deposits_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < deposits_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, deposits_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse) obj;
+
+      if (!getDepositsList()
+          .equals(other.getDepositsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDepositsCount() > 0) {
+        hash = (37 * hash) + DEPOSITS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+        } else {
+          deposits_ = null;
+          depositsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse result) {
+        if (depositsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            deposits_ = java.util.Collections.unmodifiableList(deposits_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.deposits_ = deposits_;
+        } else {
+          result.deposits_ = depositsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.getDefaultInstance()) return this;
+        if (depositsBuilder_ == null) {
+          if (!other.deposits_.isEmpty()) {
+            if (deposits_.isEmpty()) {
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDepositsIsMutable();
+              deposits_.addAll(other.deposits_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deposits_.isEmpty()) {
+            if (depositsBuilder_.isEmpty()) {
+              depositsBuilder_.dispose();
+              depositsBuilder_ = null;
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              depositsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDepositsFieldBuilder() : null;
+            } else {
+              depositsBuilder_.addAllMessages(other.deposits_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit m =
+                    input.readMessage(
+                        com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.parser(),
+                        extensionRegistry);
+                if (depositsBuilder_ == null) {
+                  ensureDepositsIsMutable();
+                  deposits_.add(m);
+                } else {
+                  depositsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit> deposits_ =
+        java.util.Collections.emptyList();
+      private void ensureDepositsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          deposits_ = new java.util.ArrayList<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit>(deposits_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder> depositsBuilder_;
+
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit> getDepositsList() {
+        if (depositsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deposits_);
+        } else {
+          return depositsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public int getDepositsCount() {
+        if (depositsBuilder_ == null) {
+          return deposits_.size();
+        } else {
+          return depositsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit getDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);
+        } else {
+          return depositsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder setDeposits(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.set(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder setDeposits(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder addDeposits(com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder addDeposits(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder addDeposits(
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder addDeposits(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder addAllDeposits(
+          java.lang.Iterable<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit> values) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deposits_);
+          onChanged();
+        } else {
+          depositsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder clearDeposits() {
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          depositsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public Builder removeDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.remove(index);
+          onChanged();
+        } else {
+          depositsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder getDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder getDepositsOrBuilder(
+          int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);  } else {
+          return depositsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public java.util.List<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder> 
+           getDepositsOrBuilderList() {
+        if (depositsBuilder_ != null) {
+          return depositsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deposits_);
+        }
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder addDepositsBuilder() {
+        return getDepositsFieldBuilder().addBuilder(
+            com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder addDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().addBuilder(
+            index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.LSMDeposit deposits = 1 [json_name = "deposits"];</code>
+       */
+      public java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder> 
+           getDepositsBuilderList() {
+        return getDepositsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder> 
+          getDepositsFieldBuilder() {
+        if (depositsBuilder_ == null) {
+          depositsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDeposit.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.LSMDepositOrBuilder>(
+                  deposits_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deposits_ = null;
+        }
+        return depositsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLSMDepositsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLSMDepositsResponse>() {
+      @java.lang.Override
+      public QueryLSMDepositsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLSMDepositsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLSMDepositsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface QueryUnbondingsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryUnbondingsRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
      */
-    java.lang.String getHostDenom();
+    java.lang.String getChainId();
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The bytes for hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
      */
     com.google.protobuf.ByteString
-        getHostDenomBytes();
+        getChainIdBytes();
   }
   /**
    * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryUnbondingsRequest}
@@ -4705,7 +6063,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryUnbondingsRequest() {
-      hostDenom_ = "";
+      chainId_ = "";
     }
 
     @java.lang.Override
@@ -4728,39 +6086,39 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest.Builder.class);
     }
 
-    public static final int HOST_DENOM_FIELD_NUMBER = 1;
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object hostDenom_ = "";
+    private volatile java.lang.Object chainId_ = "";
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
      */
     @java.lang.Override
-    public java.lang.String getHostDenom() {
-      java.lang.Object ref = hostDenom_;
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        hostDenom_ = s;
+        chainId_ = s;
         return s;
       }
     }
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The bytes for hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getHostDenomBytes() {
-      java.lang.Object ref = hostDenom_;
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        hostDenom_ = b;
+        chainId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -4781,8 +6139,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostDenom_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostDenom_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4793,8 +6151,8 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostDenom_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostDenom_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4811,8 +6169,8 @@ public final class QueryProto {
       }
       com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest) obj;
 
-      if (!getHostDenom()
-          .equals(other.getHostDenom())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4824,8 +6182,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HOST_DENOM_FIELD_NUMBER;
-      hash = (53 * hash) + getHostDenom().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4957,7 +6315,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        hostDenom_ = "";
+        chainId_ = "";
         return this;
       }
 
@@ -4992,7 +6350,7 @@ public final class QueryProto {
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.hostDenom_ = hostDenom_;
+          result.chainId_ = chainId_;
         }
       }
 
@@ -5040,8 +6398,8 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest other) {
         if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest.getDefaultInstance()) return this;
-        if (!other.getHostDenom().isEmpty()) {
-          hostDenom_ = other.hostDenom_;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -5072,7 +6430,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                hostDenom_ = input.readStringRequireUtf8();
+                chainId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -5093,73 +6451,73 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.lang.Object hostDenom_ = "";
+      private java.lang.Object chainId_ = "";
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @return The hostDenom.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
        */
-      public java.lang.String getHostDenom() {
-        java.lang.Object ref = hostDenom_;
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          hostDenom_ = s;
+          chainId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @return The bytes for hostDenom.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
        */
       public com.google.protobuf.ByteString
-          getHostDenomBytes() {
-        java.lang.Object ref = hostDenom_;
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          hostDenom_ = b;
+          chainId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @param value The hostDenom to set.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
        * @return This builder for chaining.
        */
-      public Builder setHostDenom(
+      public Builder setChainId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        hostDenom_ = value;
+        chainId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearHostDenom() {
-        hostDenom_ = getDefaultInstance().getHostDenom();
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @param value The bytes for hostDenom to set.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
        * @return This builder for chaining.
        */
-      public Builder setHostDenomBytes(
+      public Builder setChainIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        hostDenom_ = value;
+        chainId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -6005,6 +7363,1243 @@ public final class QueryProto {
 
     @java.lang.Override
     public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnbondingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>int64 epoch = 2 [json_name = "epoch"];</code>
+     * @return The epoch.
+     */
+    long getEpoch();
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest}
+   */
+  public static final class QueryUnbondingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest)
+      QueryUnbondingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnbondingRequest.newBuilder() to construct.
+    private QueryUnbondingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnbondingRequest() {
+      chainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnbondingRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPOCH_FIELD_NUMBER = 2;
+    private long epoch_ = 0L;
+    /**
+     * <code>int64 epoch = 2 [json_name = "epoch"];</code>
+     * @return The epoch.
+     */
+    @java.lang.Override
+    public long getEpoch() {
+      return epoch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      if (epoch_ != 0L) {
+        output.writeInt64(2, epoch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      if (epoch_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, epoch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (getEpoch()
+          != other.getEpoch()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + EPOCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpoch());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        epoch_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.epoch_ = epoch_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEpoch() != 0L) {
+          setEpoch(other.getEpoch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                epoch_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long epoch_ ;
+      /**
+       * <code>int64 epoch = 2 [json_name = "epoch"];</code>
+       * @return The epoch.
+       */
+      @java.lang.Override
+      public long getEpoch() {
+        return epoch_;
+      }
+      /**
+       * <code>int64 epoch = 2 [json_name = "epoch"];</code>
+       * @param value The epoch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpoch(long value) {
+
+        epoch_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 epoch = 2 [json_name = "epoch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        epoch_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnbondingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnbondingRequest>() {
+      @java.lang.Override
+      public QueryUnbondingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnbondingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnbondingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnbondingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+     * @return Whether the unbonding field is set.
+     */
+    boolean hasUnbonding();
+    /**
+     * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+     * @return The unbonding.
+     */
+    com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding getUnbonding();
+    /**
+     * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+     */
+    com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UnbondingOrBuilder getUnbondingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse}
+   */
+  public static final class QueryUnbondingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse)
+      QueryUnbondingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnbondingResponse.newBuilder() to construct.
+    private QueryUnbondingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnbondingResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnbondingResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UNBONDING_FIELD_NUMBER = 1;
+    private com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding unbonding_;
+    /**
+     * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+     * @return Whether the unbonding field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnbonding() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+     * @return The unbonding.
+     */
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding getUnbonding() {
+      return unbonding_ == null ? com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.getDefaultInstance() : unbonding_;
+    }
+    /**
+     * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+     */
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UnbondingOrBuilder getUnbondingOrBuilder() {
+      return unbonding_ == null ? com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.getDefaultInstance() : unbonding_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getUnbonding());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUnbonding());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse) obj;
+
+      if (hasUnbonding() != other.hasUnbonding()) return false;
+      if (hasUnbonding()) {
+        if (!getUnbonding()
+            .equals(other.getUnbonding())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUnbonding()) {
+        hash = (37 * hash) + UNBONDING_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbonding().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnbondingFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        unbonding_ = null;
+        if (unbondingBuilder_ != null) {
+          unbondingBuilder_.dispose();
+          unbondingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.unbonding_ = unbondingBuilder_ == null
+              ? unbonding_
+              : unbondingBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.getDefaultInstance()) return this;
+        if (other.hasUnbonding()) {
+          mergeUnbonding(other.getUnbonding());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getUnbondingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding unbonding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UnbondingOrBuilder> unbondingBuilder_;
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       * @return Whether the unbonding field is set.
+       */
+      public boolean hasUnbonding() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       * @return The unbonding.
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding getUnbonding() {
+        if (unbondingBuilder_ == null) {
+          return unbonding_ == null ? com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.getDefaultInstance() : unbonding_;
+        } else {
+          return unbondingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       */
+      public Builder setUnbonding(com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding value) {
+        if (unbondingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unbonding_ = value;
+        } else {
+          unbondingBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       */
+      public Builder setUnbonding(
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.Builder builderForValue) {
+        if (unbondingBuilder_ == null) {
+          unbonding_ = builderForValue.build();
+        } else {
+          unbondingBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       */
+      public Builder mergeUnbonding(com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding value) {
+        if (unbondingBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            unbonding_ != null &&
+            unbonding_ != com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.getDefaultInstance()) {
+            getUnbondingBuilder().mergeFrom(value);
+          } else {
+            unbonding_ = value;
+          }
+        } else {
+          unbondingBuilder_.mergeFrom(value);
+        }
+        if (unbonding_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       */
+      public Builder clearUnbonding() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        unbonding_ = null;
+        if (unbondingBuilder_ != null) {
+          unbondingBuilder_.dispose();
+          unbondingBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.Builder getUnbondingBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getUnbondingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UnbondingOrBuilder getUnbondingOrBuilder() {
+        if (unbondingBuilder_ != null) {
+          return unbondingBuilder_.getMessageOrBuilder();
+        } else {
+          return unbonding_ == null ?
+              com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.getDefaultInstance() : unbonding_;
+        }
+      }
+      /**
+       * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UnbondingOrBuilder> 
+          getUnbondingFieldBuilder() {
+        if (unbondingBuilder_ == null) {
+          unbondingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UnbondingOrBuilder>(
+                  getUnbonding(),
+                  getParentForChildren(),
+                  isClean());
+          unbonding_ = null;
+        }
+        return unbondingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnbondingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnbondingResponse>() {
+      @java.lang.Override
+      public QueryUnbondingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnbondingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnbondingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7349,16 +9944,16 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
      */
-    java.lang.String getHostDenom();
+    java.lang.String getChainId();
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The bytes for hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
      */
     com.google.protobuf.ByteString
-        getHostDenomBytes();
+        getChainIdBytes();
   }
   /**
    * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest}
@@ -7373,7 +9968,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryValidatorUnbondingRequest() {
-      hostDenom_ = "";
+      chainId_ = "";
     }
 
     @java.lang.Override
@@ -7396,39 +9991,39 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest.Builder.class);
     }
 
-    public static final int HOST_DENOM_FIELD_NUMBER = 1;
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object hostDenom_ = "";
+    private volatile java.lang.Object chainId_ = "";
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
      */
     @java.lang.Override
-    public java.lang.String getHostDenom() {
-      java.lang.Object ref = hostDenom_;
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        hostDenom_ = s;
+        chainId_ = s;
         return s;
       }
     }
     /**
-     * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-     * @return The bytes for hostDenom.
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getHostDenomBytes() {
-      java.lang.Object ref = hostDenom_;
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        hostDenom_ = b;
+        chainId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7449,8 +10044,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostDenom_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostDenom_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -7461,8 +10056,8 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostDenom_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostDenom_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7479,8 +10074,8 @@ public final class QueryProto {
       }
       com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest) obj;
 
-      if (!getHostDenom()
-          .equals(other.getHostDenom())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7492,8 +10087,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HOST_DENOM_FIELD_NUMBER;
-      hash = (53 * hash) + getHostDenom().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7625,7 +10220,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        hostDenom_ = "";
+        chainId_ = "";
         return this;
       }
 
@@ -7660,7 +10255,7 @@ public final class QueryProto {
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.hostDenom_ = hostDenom_;
+          result.chainId_ = chainId_;
         }
       }
 
@@ -7708,8 +10303,8 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest other) {
         if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest.getDefaultInstance()) return this;
-        if (!other.getHostDenom().isEmpty()) {
-          hostDenom_ = other.hostDenom_;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -7740,7 +10335,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                hostDenom_ = input.readStringRequireUtf8();
+                chainId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -7761,73 +10356,73 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.lang.Object hostDenom_ = "";
+      private java.lang.Object chainId_ = "";
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @return The hostDenom.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
        */
-      public java.lang.String getHostDenom() {
-        java.lang.Object ref = hostDenom_;
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          hostDenom_ = s;
+          chainId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @return The bytes for hostDenom.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
        */
       public com.google.protobuf.ByteString
-          getHostDenomBytes() {
-        java.lang.Object ref = hostDenom_;
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          hostDenom_ = b;
+          chainId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @param value The hostDenom to set.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
        * @return This builder for chaining.
        */
-      public Builder setHostDenom(
+      public Builder setChainId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        hostDenom_ = value;
+        chainId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearHostDenom() {
-        hostDenom_ = getDefaultInstance().getHostDenom();
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string host_denom = 1 [json_name = "hostDenom"];</code>
-       * @param value The bytes for hostDenom to set.
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
        * @return This builder for chaining.
        */
-      public Builder setHostDenomBytes(
+      public Builder setChainIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        hostDenom_ = value;
+        chainId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -8678,6 +11273,2274 @@ public final class QueryProto {
 
   }
 
+  public interface QueryDepositAccountBalanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest}
+   */
+  public static final class QueryDepositAccountBalanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest)
+      QueryDepositAccountBalanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDepositAccountBalanceRequest.newBuilder() to construct.
+    private QueryDepositAccountBalanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDepositAccountBalanceRequest() {
+      chainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDepositAccountBalanceRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDepositAccountBalanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDepositAccountBalanceRequest>() {
+      @java.lang.Override
+      public QueryDepositAccountBalanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDepositAccountBalanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDepositAccountBalanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDepositAccountBalanceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return The balance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse}
+   */
+  public static final class QueryDepositAccountBalanceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse)
+      QueryDepositAccountBalanceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDepositAccountBalanceResponse.newBuilder() to construct.
+    private QueryDepositAccountBalanceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDepositAccountBalanceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDepositAccountBalanceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int BALANCE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the balance field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return The balance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getBalance());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBalance());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse) obj;
+
+      if (hasBalance() != other.hasBalance()) return false;
+      if (hasBalance()) {
+        if (!getBalance()
+            .equals(other.getBalance())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBalance()) {
+        hash = (37 * hash) + BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getBalance().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBalanceFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.balance_ = balanceBuilder_ == null
+              ? balance_
+              : balanceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.getDefaultInstance()) return this;
+        if (other.hasBalance()) {
+          mergeBalance(other.getBalance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> balanceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       * @return Whether the balance field is set.
+       */
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       * @return The balance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+        if (balanceBuilder_ == null) {
+          return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        } else {
+          return balanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          balance_ = value;
+        } else {
+          balanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balanceBuilder_ == null) {
+          balance_ = builderForValue.build();
+        } else {
+          balanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            balance_ != null &&
+            balance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBalanceBuilder().mergeFrom(value);
+          } else {
+            balance_ = value;
+          }
+        } else {
+          balanceBuilder_.mergeFrom(value);
+        }
+        if (balance_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBalance() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBalanceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+        if (balanceBuilder_ != null) {
+          return balanceBuilder_.getMessageOrBuilder();
+        } else {
+          return balance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBalanceFieldBuilder() {
+        if (balanceBuilder_ == null) {
+          balanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBalance(),
+                  getParentForChildren(),
+                  isClean());
+          balance_ = null;
+        }
+        return balanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDepositAccountBalanceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDepositAccountBalanceResponse>() {
+      @java.lang.Override
+      public QueryDepositAccountBalanceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDepositAccountBalanceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDepositAccountBalanceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExchangeRateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest}
+   */
+  public static final class QueryExchangeRateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest)
+      QueryExchangeRateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExchangeRateRequest.newBuilder() to construct.
+    private QueryExchangeRateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExchangeRateRequest() {
+      chainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExchangeRateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExchangeRateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExchangeRateRequest>() {
+      @java.lang.Override
+      public QueryExchangeRateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExchangeRateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExchangeRateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExchangeRateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The rate.
+     */
+    java.lang.String getRate();
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for rate.
+     */
+    com.google.protobuf.ByteString
+        getRateBytes();
+  }
+  /**
+   * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse}
+   */
+  public static final class QueryExchangeRateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse)
+      QueryExchangeRateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExchangeRateResponse.newBuilder() to construct.
+    private QueryExchangeRateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExchangeRateResponse() {
+      rate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExchangeRateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.Builder.class);
+    }
+
+    public static final int RATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rate_ = "";
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The rate.
+     */
+    @java.lang.Override
+    public java.lang.String getRate() {
+      java.lang.Object ref = rate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for rate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRateBytes() {
+      java.lang.Object ref = rate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse other = (com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse) obj;
+
+      if (!getRate()
+          .equals(other.getRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse)
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse getDefaultInstanceForType() {
+        return com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse build() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse buildPartial() {
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse result = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rate_ = rate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse) {
+          return mergeFrom((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse other) {
+        if (other == com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.getDefaultInstance()) return this;
+        if (!other.getRate().isEmpty()) {
+          rate_ = other.rate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                rate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object rate_ = "";
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The rate.
+       */
+      public java.lang.String getRate() {
+        java.lang.Object ref = rate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for rate.
+       */
+      public com.google.protobuf.ByteString
+          getRateBytes() {
+        java.lang.Object ref = rate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The rate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRate() {
+        rate_ = getDefaultInstance().getRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for rate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse)
+    private static final com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse();
+    }
+
+    public static com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExchangeRateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExchangeRateResponse>() {
+      @java.lang.Override
+      public QueryExchangeRateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExchangeRateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExchangeRateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_liquidstakeibc_v1beta1_QueryParamsRequest_descriptor;
   private static final 
@@ -8719,6 +13582,16 @@ public final class QueryProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8728,6 +13601,16 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUserUnbondingsRequest_descriptor;
   private static final 
@@ -8748,6 +13631,26 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_liquidstakeibc_v1beta1_QueryValidatorUnbondingResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8761,76 +13664,113 @@ public final class QueryProto {
       "oto\022\035pstake.liquidstakeibc.v1beta1\032\024gogo" +
       "proto/gogo.proto\032\034google/api/annotations" +
       ".proto\032*cosmos/base/query/v1beta1/pagina" +
-      "tion.proto\032*pstake/liquidstakeibc/v1beta" +
-      "1/params.proto\0322pstake/liquidstakeibc/v1" +
-      "beta1/liquidstakeibc.proto\"\024\n\022QueryParam" +
-      "sRequest\"Z\n\023QueryParamsResponse\022C\n\006param" +
-      "s\030\001 \001(\0132%.pstake.liquidstakeibc.v1beta1." +
-      "ParamsB\004\310\336\037\000R\006params\"2\n\025QueryHostChainRe" +
-      "quest\022\031\n\010chain_id\030\001 \001(\tR\007chainId\"g\n\026Quer" +
-      "yHostChainResponse\022M\n\nhost_chain\030\001 \001(\0132(" +
-      ".pstake.liquidstakeibc.v1beta1.HostChain" +
-      "B\004\310\336\037\000R\thostChain\"\030\n\026QueryHostChainsRequ" +
-      "est\"d\n\027QueryHostChainsResponse\022I\n\013host_c" +
-      "hains\030\001 \003(\0132(.pstake.liquidstakeibc.v1be" +
-      "ta1.HostChainR\nhostChains\"5\n\024QueryDeposi" +
-      "tsRequest\022\035\n\nhost_denom\030\001 \001(\tR\thostDenom" +
-      "\"[\n\025QueryDepositsResponse\022B\n\010deposits\030\001 " +
-      "\003(\0132&.pstake.liquidstakeibc.v1beta1.Depo" +
-      "sitR\010deposits\"7\n\026QueryUnbondingsRequest\022" +
-      "\035\n\nhost_denom\030\001 \001(\tR\thostDenom\"c\n\027QueryU" +
-      "nbondingsResponse\022H\n\nunbondings\030\001 \003(\0132(." +
-      "pstake.liquidstakeibc.v1beta1.UnbondingR" +
-      "\nunbondings\"6\n\032QueryUserUnbondingsReques" +
-      "t\022\030\n\007address\030\001 \001(\tR\007address\"t\n\033QueryUser" +
-      "UnbondingsResponse\022U\n\017user_unbondings\030\001 " +
-      "\003(\0132,.pstake.liquidstakeibc.v1beta1.User" +
-      "UnbondingR\016userUnbondings\"?\n\036QueryValida" +
-      "torUnbondingRequest\022\035\n\nhost_denom\030\001 \001(\tR" +
-      "\thostDenom\"\207\001\n\037QueryValidatorUnbondingRe" +
-      "sponse\022d\n\024validator_unbondings\030\001 \003(\01321.p" +
-      "stake.liquidstakeibc.v1beta1.ValidatorUn" +
-      "bondingR\023validatorUnbondings2\264\n\n\005Query\022\236" +
-      "\001\n\006Params\0221.pstake.liquidstakeibc.v1beta" +
-      "1.QueryParamsRequest\0322.pstake.liquidstak" +
-      "eibc.v1beta1.QueryParamsResponse\"-\202\323\344\223\002\'" +
-      "\022%/pstake/liquidstakeibc/v1beta1/params\022" +
-      "\266\001\n\tHostChain\0224.pstake.liquidstakeibc.v1" +
-      "beta1.QueryHostChainRequest\0325.pstake.liq" +
-      "uidstakeibc.v1beta1.QueryHostChainRespon" +
-      "se\"<\202\323\344\223\0026\0224/pstake/liquidstakeibc/v1bet" +
-      "a1/host_chain/{chain_id}\022\257\001\n\nHostChains\022" +
-      "5.pstake.liquidstakeibc.v1beta1.QueryHos" +
-      "tChainsRequest\0326.pstake.liquidstakeibc.v" +
-      "1beta1.QueryHostChainsResponse\"2\202\323\344\223\002,\022*" +
-      "/pstake/liquidstakeibc/v1beta1/host_chai" +
-      "ns\022\263\001\n\010Deposits\0223.pstake.liquidstakeibc." +
-      "v1beta1.QueryDepositsRequest\0324.pstake.li" +
-      "quidstakeibc.v1beta1.QueryDepositsRespon" +
-      "se\"<\202\323\344\223\0026\0224/pstake/liquidstakeibc/v1bet" +
-      "a1/deposits/{host_denom}\022\273\001\n\nUnbondings\022" +
-      "5.pstake.liquidstakeibc.v1beta1.QueryUnb" +
-      "ondingsRequest\0326.pstake.liquidstakeibc.v" +
-      "1beta1.QueryUnbondingsResponse\">\202\323\344\223\0028\0226" +
-      "/pstake/liquidstakeibc/v1beta1/unbonding" +
-      "s/{host_denom}\022\311\001\n\016UserUnbondings\0229.psta" +
-      "ke.liquidstakeibc.v1beta1.QueryUserUnbon" +
-      "dingsRequest\032:.pstake.liquidstakeibc.v1b" +
-      "eta1.QueryUserUnbondingsResponse\"@\202\323\344\223\002:" +
-      "\0228/pstake/liquidstakeibc/v1beta1/user_un" +
-      "bondings/{address}\022\336\001\n\023ValidatorUnbondin" +
-      "gs\022=.pstake.liquidstakeibc.v1beta1.Query" +
-      "ValidatorUnbondingRequest\032>.pstake.liqui" +
-      "dstakeibc.v1beta1.QueryValidatorUnbondin" +
-      "gResponse\"H\202\323\344\223\002B\022@/pstake/liquidstakeib" +
-      "c/v1beta1/validator_unbondings/{host_den" +
-      "om}B\206\002\n!com.pstake.liquidstakeibc.v1beta" +
-      "1B\nQueryProtoZAgithub.com/persistenceOne" +
-      "/pstake-native/v2/x/liquidstakeibc/types" +
-      "\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1beta1\312\002" +
-      "\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Pstake\\" +
-      "Liquidstakeibc\\V1beta1\\GPBMetadata\352\002\037Pst" +
-      "ake::Liquidstakeibc::V1beta1b\006proto3"
+      "tion.proto\032\036cosmos/base/v1beta1/coin.pro" +
+      "to\032*pstake/liquidstakeibc/v1beta1/params" +
+      ".proto\0322pstake/liquidstakeibc/v1beta1/li" +
+      "quidstakeibc.proto\"\024\n\022QueryParamsRequest" +
+      "\"Z\n\023QueryParamsResponse\022C\n\006params\030\001 \001(\0132" +
+      "%.pstake.liquidstakeibc.v1beta1.ParamsB\004" +
+      "\310\336\037\000R\006params\"2\n\025QueryHostChainRequest\022\031\n" +
+      "\010chain_id\030\001 \001(\tR\007chainId\"g\n\026QueryHostCha" +
+      "inResponse\022M\n\nhost_chain\030\001 \001(\0132(.pstake." +
+      "liquidstakeibc.v1beta1.HostChainB\004\310\336\037\000R\t" +
+      "hostChain\"\030\n\026QueryHostChainsRequest\"d\n\027Q" +
+      "ueryHostChainsResponse\022I\n\013host_chains\030\001 " +
+      "\003(\0132(.pstake.liquidstakeibc.v1beta1.Host" +
+      "ChainR\nhostChains\"1\n\024QueryDepositsReques" +
+      "t\022\031\n\010chain_id\030\001 \001(\tR\007chainId\"[\n\025QueryDep" +
+      "ositsResponse\022B\n\010deposits\030\001 \003(\0132&.pstake" +
+      ".liquidstakeibc.v1beta1.DepositR\010deposit" +
+      "s\"4\n\027QueryLSMDepositsRequest\022\031\n\010chain_id" +
+      "\030\001 \001(\tR\007chainId\"a\n\030QueryLSMDepositsRespo" +
+      "nse\022E\n\010deposits\030\001 \003(\0132).pstake.liquidsta" +
+      "keibc.v1beta1.LSMDepositR\010deposits\"3\n\026Qu" +
+      "eryUnbondingsRequest\022\031\n\010chain_id\030\001 \001(\tR\007" +
+      "chainId\"c\n\027QueryUnbondingsResponse\022H\n\nun" +
+      "bondings\030\001 \003(\0132(.pstake.liquidstakeibc.v" +
+      "1beta1.UnbondingR\nunbondings\"H\n\025QueryUnb" +
+      "ondingRequest\022\031\n\010chain_id\030\001 \001(\tR\007chainId" +
+      "\022\024\n\005epoch\030\002 \001(\003R\005epoch\"`\n\026QueryUnbonding" +
+      "Response\022F\n\tunbonding\030\001 \001(\0132(.pstake.liq" +
+      "uidstakeibc.v1beta1.UnbondingR\tunbonding" +
+      "\"6\n\032QueryUserUnbondingsRequest\022\030\n\007addres" +
+      "s\030\001 \001(\tR\007address\"t\n\033QueryUserUnbondingsR" +
+      "esponse\022U\n\017user_unbondings\030\001 \003(\0132,.pstak" +
+      "e.liquidstakeibc.v1beta1.UserUnbondingR\016" +
+      "userUnbondings\";\n\036QueryValidatorUnbondin" +
+      "gRequest\022\031\n\010chain_id\030\001 \001(\tR\007chainId\"\207\001\n\037" +
+      "QueryValidatorUnbondingResponse\022d\n\024valid" +
+      "ator_unbondings\030\001 \003(\01321.pstake.liquidsta" +
+      "keibc.v1beta1.ValidatorUnbondingR\023valida" +
+      "torUnbondings\">\n!QueryDepositAccountBala" +
+      "nceRequest\022\031\n\010chain_id\030\001 \001(\tR\007chainId\"_\n" +
+      "\"QueryDepositAccountBalanceResponse\0229\n\007b" +
+      "alance\030\001 \001(\0132\031.cosmos.base.v1beta1.CoinB" +
+      "\004\310\336\037\000R\007balance\"5\n\030QueryExchangeRateReque" +
+      "st\022\031\n\010chain_id\030\001 \001(\tR\007chainId\"_\n\031QueryEx" +
+      "changeRateResponse\022B\n\004rate\030\001 \001(\tB.\310\336\037\000\332\336" +
+      "\037&github.com/cosmos/cosmos-sdk/types.Dec" +
+      "R\004rate2\336\020\n\005Query\022\236\001\n\006Params\0221.pstake.liq" +
+      "uidstakeibc.v1beta1.QueryParamsRequest\0322" +
+      ".pstake.liquidstakeibc.v1beta1.QueryPara" +
+      "msResponse\"-\202\323\344\223\002\'\022%/pstake/liquidstakei" +
+      "bc/v1beta1/params\022\266\001\n\tHostChain\0224.pstake" +
+      ".liquidstakeibc.v1beta1.QueryHostChainRe" +
+      "quest\0325.pstake.liquidstakeibc.v1beta1.Qu" +
+      "eryHostChainResponse\"<\202\323\344\223\0026\0224/pstake/li" +
+      "quidstakeibc/v1beta1/host_chain/{chain_i" +
+      "d}\022\257\001\n\nHostChains\0225.pstake.liquidstakeib" +
+      "c.v1beta1.QueryHostChainsRequest\0326.pstak" +
+      "e.liquidstakeibc.v1beta1.QueryHostChains" +
+      "Response\"2\202\323\344\223\002,\022*/pstake/liquidstakeibc" +
+      "/v1beta1/host_chains\022\261\001\n\010Deposits\0223.psta" +
+      "ke.liquidstakeibc.v1beta1.QueryDepositsR" +
+      "equest\0324.pstake.liquidstakeibc.v1beta1.Q" +
+      "ueryDepositsResponse\":\202\323\344\223\0024\0222/pstake/li" +
+      "quidstakeibc/v1beta1/deposits/{chain_id}" +
+      "\022\276\001\n\013LSMDeposits\0226.pstake.liquidstakeibc" +
+      ".v1beta1.QueryLSMDepositsRequest\0327.pstak" +
+      "e.liquidstakeibc.v1beta1.QueryLSMDeposit" +
+      "sResponse\">\202\323\344\223\0028\0226/pstake/liquidstakeib" +
+      "c/v1beta1/lsm_deposits/{chain_id}\022\271\001\n\nUn" +
+      "bondings\0225.pstake.liquidstakeibc.v1beta1" +
+      ".QueryUnbondingsRequest\0326.pstake.liquids" +
+      "takeibc.v1beta1.QueryUnbondingsResponse\"" +
+      "<\202\323\344\223\0026\0224/pstake/liquidstakeibc/v1beta1/" +
+      "unbondings/{chain_id}\022\275\001\n\tUnbonding\0224.ps" +
+      "take.liquidstakeibc.v1beta1.QueryUnbondi" +
+      "ngRequest\0325.pstake.liquidstakeibc.v1beta" +
+      "1.QueryUnbondingResponse\"C\202\323\344\223\002=\022;/pstak" +
+      "e/liquidstakeibc/v1beta1/unbonding/{chai" +
+      "n_id}/{epoch}\022\311\001\n\016UserUnbondings\0229.pstak" +
+      "e.liquidstakeibc.v1beta1.QueryUserUnbond" +
+      "ingsRequest\032:.pstake.liquidstakeibc.v1be" +
+      "ta1.QueryUserUnbondingsResponse\"@\202\323\344\223\002:\022" +
+      "8/pstake/liquidstakeibc/v1beta1/user_unb" +
+      "ondings/{address}\022\334\001\n\023ValidatorUnbonding" +
+      "s\022=.pstake.liquidstakeibc.v1beta1.QueryV" +
+      "alidatorUnbondingRequest\032>.pstake.liquid" +
+      "stakeibc.v1beta1.QueryValidatorUnbonding" +
+      "Response\"F\202\323\344\223\002@\022>/pstake/liquidstakeibc" +
+      "/v1beta1/validator_unbondings/{chain_id}" +
+      "\022\347\001\n\025DepositAccountBalance\022@.pstake.liqu" +
+      "idstakeibc.v1beta1.QueryDepositAccountBa" +
+      "lanceRequest\032A.pstake.liquidstakeibc.v1b" +
+      "eta1.QueryDepositAccountBalanceResponse\"" +
+      "I\202\323\344\223\002C\022A/pstake/liquidstakeibc/v1beta1/" +
+      "deposit_account_balance/{chain_id}\022\302\001\n\014E" +
+      "xchangeRate\0227.pstake.liquidstakeibc.v1be" +
+      "ta1.QueryExchangeRateRequest\0328.pstake.li" +
+      "quidstakeibc.v1beta1.QueryExchangeRateRe" +
+      "sponse\"?\202\323\344\223\0029\0227/pstake/liquidstakeibc/v" +
+      "1beta1/exchange_rate/{chain_id}B\206\002\n!com." +
+      "pstake.liquidstakeibc.v1beta1B\nQueryProt" +
+      "oZAgithub.com/persistenceOne/pstake-nati" +
+      "ve/v2/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pst" +
+      "ake.Liquidstakeibc.V1beta1\312\002\035Pstake\\Liqu" +
+      "idstakeibc\\V1beta1\342\002)Pstake\\Liquidstakei" +
+      "bc\\V1beta1\\GPBMetadata\352\002\037Pstake::Liquids" +
+      "takeibc::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8838,6 +13778,7 @@ public final class QueryProto {
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
+          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.pstake.liquidstakeibc.v1beta1.ParamsProto.getDescriptor(),
           com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.getDescriptor(),
         });
@@ -8882,51 +13823,100 @@ public final class QueryProto {
     internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositsRequest_descriptor,
-        new java.lang.String[] { "HostDenom", });
+        new java.lang.String[] { "ChainId", });
     internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositsResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositsResponse_descriptor,
         new java.lang.String[] { "Deposits", });
-    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsRequest_descriptor =
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsRequest_descriptor,
+        new java.lang.String[] { "ChainId", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryLSMDepositsResponse_descriptor,
+        new java.lang.String[] { "Deposits", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsRequest_descriptor,
-        new java.lang.String[] { "HostDenom", });
+        new java.lang.String[] { "ChainId", });
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingsResponse_descriptor,
         new java.lang.String[] { "Unbondings", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingRequest_descriptor,
+        new java.lang.String[] { "ChainId", "Epoch", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryUnbondingResponse_descriptor,
+        new java.lang.String[] { "Unbonding", });
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUserUnbondingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUserUnbondingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryUserUnbondingsRequest_descriptor,
         new java.lang.String[] { "Address", });
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUserUnbondingsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_pstake_liquidstakeibc_v1beta1_QueryUserUnbondingsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryUserUnbondingsResponse_descriptor,
         new java.lang.String[] { "UserUnbondings", });
     internal_static_pstake_liquidstakeibc_v1beta1_QueryValidatorUnbondingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_pstake_liquidstakeibc_v1beta1_QueryValidatorUnbondingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryValidatorUnbondingRequest_descriptor,
-        new java.lang.String[] { "HostDenom", });
+        new java.lang.String[] { "ChainId", });
     internal_static_pstake_liquidstakeibc_v1beta1_QueryValidatorUnbondingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_pstake_liquidstakeibc_v1beta1_QueryValidatorUnbondingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_QueryValidatorUnbondingResponse_descriptor,
         new java.lang.String[] { "ValidatorUnbondings", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceRequest_descriptor,
+        new java.lang.String[] { "ChainId", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryDepositAccountBalanceResponse_descriptor,
+        new java.lang.String[] { "Balance", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateRequest_descriptor,
+        new java.lang.String[] { "ChainId", });
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_pstake_liquidstakeibc_v1beta1_QueryExchangeRateResponse_descriptor,
+        new java.lang.String[] { "Rate", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.gogoproto.GogoProto.customtype);
     registry.add(com.gogoproto.GogoProto.nullable);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
@@ -8934,6 +13924,7 @@ public final class QueryProto {
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
+    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.pstake.liquidstakeibc.v1beta1.ParamsProto.getDescriptor();
     com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.getDescriptor();
   }

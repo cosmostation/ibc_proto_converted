@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n passage3d/claim/v1beta1/tx.proto\x12\x17passage3d.claim.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"E\n\x08MsgClaim\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12!\n\x0c\x63laim_action\x18\x02 \x01(\tR\x0b\x63laimAction\"\xa0\x01\n\x10MsgClaimResponse\x12\x8b\x01\n\x0e\x63laimed_amount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinBI\xc8\xde\x1f\x00\xf2\xde\x1f\x15yaml:\"claimed_amount\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\rclaimedAmount2\\\n\x03Msg\x12U\n\x05\x43laim\x12!.passage3d.claim.v1beta1.MsgClaim\x1a).passage3d.claim.v1beta1.MsgClaimResponseB\xd0\x01\n\x1b\x63om.passage3d.claim.v1beta1B\x07TxProtoP\x01Z*github.com/envadiv/passage3d/x/claim/types\xa2\x02\x03PCX\xaa\x02\x17Passage3d.Claim.V1beta1\xca\x02\x17Passage3d\\Claim\\V1beta1\xe2\x02#Passage3d\\Claim\\V1beta1\\GPBMetadata\xea\x02\x19Passage3d::Claim::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n passage3d/claim/v1beta1/tx.proto\x12\x17passage3d.claim.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"E\n\x08MsgClaim\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12!\n\x0c\x63laim_action\x18\x02 \x01(\tR\x0b\x63laimAction\"\xa0\x01\n\x10MsgClaimResponse\x12\x8b\x01\n\x0e\x63laimed_amount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinBI\xc8\xde\x1f\x00\xf2\xde\x1f\x15yaml:\"claimed_amount\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\rclaimedAmount2\\\n\x03Msg\x12U\n\x05\x43laim\x12!.passage3d.claim.v1beta1.MsgClaim\x1a).passage3d.claim.v1beta1.MsgClaimResponseB\xce\x01\n\x1b\x63om.passage3d.claim.v1beta1B\x07TxProtoZ*github.com/envadiv/passage3d/x/claim/types\xa2\x02\x03PCX\xaa\x02\x17Passage3d.Claim.V1beta1\xca\x02\x17Passage3d\\Claim\\V1beta1\xe2\x02#Passage3d\\Claim\\V1beta1\\GPBMetadata\xea\x02\x19Passage3d::Claim::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'passage3d.claim.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.passage3d.claim.v1beta1B\007TxProtoP\001Z*github.com/envadiv/passage3d/x/claim/types\242\002\003PCX\252\002\027Passage3d.Claim.V1beta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#Passage3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Passage3d::Claim::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\033com.passage3d.claim.v1beta1B\007TxProtoZ*github.com/envadiv/passage3d/x/claim/types\242\002\003PCX\252\002\027Passage3d.Claim.V1beta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#Passage3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Passage3d::Claim::V1beta1'
   _MSGCLAIMRESPONSE.fields_by_name['claimed_amount']._options = None
   _MSGCLAIMRESPONSE.fields_by_name['claimed_amount']._serialized_options = b'\310\336\037\000\362\336\037\025yaml:\"claimed_amount\"\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _globals['_MSGCLAIM']._serialized_start=115

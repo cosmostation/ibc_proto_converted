@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%sommelier/incentives/v1/genesis.proto\x12\rincentives.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"C\n\x0cGenesisState\x12\x33\n\x06params\x18\x01 \x01(\x0b\x32\x15.incentives.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"\x99\x01\n\x06Params\x12U\n\x16\x64istribution_per_block\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x14\x64istributionPerBlock\x12\x38\n\x18incentives_cutoff_height\x18\x02 \x01(\x04R\x16incentivesCutoffHeightB\xaa\x01\n\x11\x63om.incentives.v1B\x0cGenesisProtoP\x01Z2github.com/peggyjv/sommelier/v4/x/incentives/types\xa2\x02\x03IXX\xaa\x02\rIncentives.V1\xca\x02\rIncentives\\V1\xe2\x02\x19Incentives\\V1\\GPBMetadata\xea\x02\x0eIncentives::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%sommelier/incentives/v1/genesis.proto\x12\rincentives.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"C\n\x0cGenesisState\x12\x33\n\x06params\x18\x01 \x01(\x0b\x32\x15.incentives.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"\x99\x01\n\x06Params\x12U\n\x16\x64istribution_per_block\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x14\x64istributionPerBlock\x12\x38\n\x18incentives_cutoff_height\x18\x02 \x01(\x04R\x16incentivesCutoffHeightB\xa8\x01\n\x11\x63om.incentives.v1B\x0cGenesisProtoZ2github.com/peggyjv/sommelier/v4/x/incentives/types\xa2\x02\x03IXX\xaa\x02\rIncentives.V1\xca\x02\rIncentives\\V1\xe2\x02\x19Incentives\\V1\\GPBMetadata\xea\x02\x0eIncentives::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.incentives.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\021com.incentives.v1B\014GenesisProtoP\001Z2github.com/peggyjv/sommelier/v4/x/incentives/types\242\002\003IXX\252\002\rIncentives.V1\312\002\rIncentives\\V1\342\002\031Incentives\\V1\\GPBMetadata\352\002\016Incentives::V1'
+  DESCRIPTOR._serialized_options = b'\n\021com.incentives.v1B\014GenesisProtoZ2github.com/peggyjv/sommelier/v4/x/incentives/types\242\002\003IXX\252\002\rIncentives.V1\312\002\rIncentives\\V1\342\002\031Incentives\\V1\\GPBMetadata\352\002\016Incentives::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _PARAMS.fields_by_name['distribution_per_block']._options = None

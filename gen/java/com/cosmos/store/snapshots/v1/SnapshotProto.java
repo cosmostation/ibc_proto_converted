@@ -97,6 +97,7 @@ public final class SnapshotProto {
               com.cosmos.store.snapshots.v1.SnapshotProto.Snapshot.class, com.cosmos.store.snapshots.v1.SnapshotProto.Snapshot.Builder.class);
     }
 
+    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -149,7 +150,7 @@ public final class SnapshotProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return metadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.store.snapshots.v1.Metadata metadata = 5 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
@@ -193,7 +194,7 @@ public final class SnapshotProto {
       if (!hash_.isEmpty()) {
         output.writeBytes(4, hash_);
       }
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -221,7 +222,7 @@ public final class SnapshotProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, hash_);
       }
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMetadata());
       }
@@ -400,13 +401,19 @@ public final class SnapshotProto {
 
       // Construct using com.cosmos.store.snapshots.v1.SnapshotProto.Snapshot.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -466,11 +473,14 @@ public final class SnapshotProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.hash_ = hash_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -796,8 +806,10 @@ public final class SnapshotProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (metadata_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -962,7 +974,7 @@ public final class SnapshotProto {
       super(builder);
     }
     private Metadata() {
-      chunkHashes_ = java.util.Collections.emptyList();
+      chunkHashes_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -987,7 +999,8 @@ public final class SnapshotProto {
 
     public static final int CHUNK_HASHES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> chunkHashes_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> chunkHashes_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * SHA-256 chunk hashes
@@ -1227,7 +1240,7 @@ public final class SnapshotProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chunkHashes_ = java.util.Collections.emptyList();
+        chunkHashes_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -1254,22 +1267,17 @@ public final class SnapshotProto {
       @java.lang.Override
       public com.cosmos.store.snapshots.v1.SnapshotProto.Metadata buildPartial() {
         com.cosmos.store.snapshots.v1.SnapshotProto.Metadata result = new com.cosmos.store.snapshots.v1.SnapshotProto.Metadata(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.cosmos.store.snapshots.v1.SnapshotProto.Metadata result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          chunkHashes_ = java.util.Collections.unmodifiableList(chunkHashes_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.chunkHashes_ = chunkHashes_;
-      }
-
       private void buildPartial0(com.cosmos.store.snapshots.v1.SnapshotProto.Metadata result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          chunkHashes_.makeImmutable();
+          result.chunkHashes_ = chunkHashes_;
+        }
       }
 
       @java.lang.Override
@@ -1319,7 +1327,8 @@ public final class SnapshotProto {
         if (!other.chunkHashes_.isEmpty()) {
           if (chunkHashes_.isEmpty()) {
             chunkHashes_ = other.chunkHashes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            chunkHashes_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureChunkHashesIsMutable();
             chunkHashes_.addAll(other.chunkHashes_);
@@ -1375,12 +1384,12 @@ public final class SnapshotProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.ByteString> chunkHashes_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> chunkHashes_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureChunkHashesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          chunkHashes_ = new java.util.ArrayList<com.google.protobuf.ByteString>(chunkHashes_);
-          bitField0_ |= 0x00000001;
+        if (!chunkHashes_.isModifiable()) {
+          chunkHashes_ = makeMutableCopy(chunkHashes_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -1392,8 +1401,8 @@ public final class SnapshotProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getChunkHashesList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(chunkHashes_) : chunkHashes_;
+        chunkHashes_.makeImmutable();
+        return chunkHashes_;
       }
       /**
        * <pre>
@@ -1433,6 +1442,7 @@ public final class SnapshotProto {
         if (value == null) { throw new NullPointerException(); }
         ensureChunkHashesIsMutable();
         chunkHashes_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1449,6 +1459,7 @@ public final class SnapshotProto {
         if (value == null) { throw new NullPointerException(); }
         ensureChunkHashesIsMutable();
         chunkHashes_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1466,6 +1477,7 @@ public final class SnapshotProto {
         ensureChunkHashesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, chunkHashes_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1478,7 +1490,7 @@ public final class SnapshotProto {
        * @return This builder for chaining.
        */
       public Builder clearChunkHashes() {
-        chunkHashes_ = java.util.Collections.emptyList();
+        chunkHashes_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;

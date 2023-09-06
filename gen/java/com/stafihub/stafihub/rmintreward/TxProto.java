@@ -94,6 +94,7 @@ public final class TxProto {
               com.stafihub.stafihub.rmintreward.TxProto.MsgAddMintRewardAct.class, com.stafihub.stafihub.rmintreward.TxProto.MsgAddMintRewardAct.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -180,7 +181,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAct() {
-      return act_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rmintreward.MintRewardActPost act = 3 [json_name = "act"];</code>
@@ -218,7 +219,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
       }
-      if (act_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAct());
       }
       getUnknownFields().writeTo(output);
@@ -236,7 +237,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
       }
-      if (act_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAct());
       }
@@ -402,13 +403,19 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rmintreward.TxProto.MsgAddMintRewardAct.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getActFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,11 +467,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.denom_ = denom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.act_ = actBuilder_ == null
               ? act_
               : actBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -794,8 +804,10 @@ public final class TxProto {
         } else {
           actBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (act_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1393,6 +1405,7 @@ public final class TxProto {
               com.stafihub.stafihub.rmintreward.TxProto.MsgUpdateMintRewardAct.class, com.stafihub.stafihub.rmintreward.TxProto.MsgUpdateMintRewardAct.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -1490,7 +1503,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAct() {
-      return act_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rmintreward.MintRewardActPost act = 4 [json_name = "act"];</code>
@@ -1531,7 +1544,7 @@ public final class TxProto {
       if (cycle_ != 0L) {
         output.writeUInt64(3, cycle_);
       }
-      if (act_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getAct());
       }
       getUnknownFields().writeTo(output);
@@ -1553,7 +1566,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, cycle_);
       }
-      if (act_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAct());
       }
@@ -1724,13 +1737,19 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rmintreward.TxProto.MsgUpdateMintRewardAct.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getActFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1786,11 +1805,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.cycle_ = cycle_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.act_ = actBuilder_ == null
               ? act_
               : actBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2160,8 +2182,10 @@ public final class TxProto {
         } else {
           actBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (act_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3983,6 +4007,7 @@ public final class TxProto {
               com.stafihub.stafihub.rmintreward.TxProto.MsgProvideRewardToken.class, com.stafihub.stafihub.rmintreward.TxProto.MsgProvideRewardToken.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -4030,7 +4055,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4065,7 +4090,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -4080,7 +4105,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -4242,13 +4267,19 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rmintreward.TxProto.MsgProvideRewardToken.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4296,11 +4327,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.creator_ = creator_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4548,8 +4582,10 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -208,6 +208,7 @@ public final class GenesisProto {
               com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.class, com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OPERATORS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> operators_;
@@ -298,7 +299,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPoolParams() {
-      return poolParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
@@ -324,7 +325,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasTaskParams() {
-      return taskParams_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
@@ -485,10 +486,10 @@ public final class GenesisProto {
       for (int i = 0; i < totalCollateral_.size(); i++) {
         output.writeMessage(2, totalCollateral_.get(i));
       }
-      if (poolParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPoolParams());
       }
-      if (taskParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getTaskParams());
       }
       for (int i = 0; i < withdraws_.size(); i++) {
@@ -517,11 +518,11 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, totalCollateral_.get(i));
       }
-      if (poolParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPoolParams());
       }
-      if (taskParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTaskParams());
       }
@@ -730,13 +731,25 @@ public final class GenesisProto {
 
       // Construct using com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOperatorsFieldBuilder();
+          getTotalCollateralFieldBuilder();
+          getPoolParamsFieldBuilder();
+          getTaskParamsFieldBuilder();
+          getWithdrawsFieldBuilder();
+          getTasksFieldBuilder();
+          getTxTasksFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -869,16 +882,20 @@ public final class GenesisProto {
 
       private void buildPartial0(com.shentu.oracle.v1alpha1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.poolParams_ = poolParamsBuilder_ == null
               ? poolParams_
               : poolParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.taskParams_ = taskParamsBuilder_ == null
               ? taskParams_
               : taskParamsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1729,8 +1746,10 @@ public final class GenesisProto {
         } else {
           poolParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (poolParams_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1848,8 +1867,10 @@ public final class GenesisProto {
         } else {
           taskParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (taskParams_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

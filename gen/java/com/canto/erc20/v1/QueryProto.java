@@ -85,6 +85,7 @@ public final class QueryProto {
               com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.class, com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -97,7 +98,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -137,7 +138,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -149,7 +150,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -312,13 +313,19 @@ public final class QueryProto {
 
       // Construct using com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -362,11 +369,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -552,8 +562,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -780,6 +792,7 @@ public final class QueryProto {
               com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.class, com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOKEN_PAIRS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.canto.erc20.v1.Erc20Proto.TokenPair> tokenPairs_;
@@ -833,7 +846,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -876,7 +889,7 @@ public final class QueryProto {
       for (int i = 0; i < tokenPairs_.size(); i++) {
         output.writeMessage(1, tokenPairs_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -892,7 +905,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, tokenPairs_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1061,13 +1074,20 @@ public final class QueryProto {
 
       // Construct using com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenPairsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1131,11 +1151,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1600,8 +1623,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2396,6 +2421,7 @@ public final class QueryProto {
               com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.class, com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOKEN_PAIR_FIELD_NUMBER = 1;
     private com.canto.erc20.v1.Erc20Proto.TokenPair tokenPair_;
     /**
@@ -2404,7 +2430,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTokenPair() {
-      return tokenPair_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
@@ -2436,7 +2462,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (tokenPair_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTokenPair());
       }
       getUnknownFields().writeTo(output);
@@ -2448,7 +2474,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (tokenPair_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenPair());
       }
@@ -2611,13 +2637,19 @@ public final class QueryProto {
 
       // Construct using com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenPairFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2661,11 +2693,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryTokenPairResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenPair_ = tokenPairBuilder_ == null
               ? tokenPair_
               : tokenPairBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2831,8 +2866,10 @@ public final class QueryProto {
         } else {
           tokenPairBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (tokenPair_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3411,6 +3448,7 @@ public final class QueryProto {
               com.canto.erc20.v1.QueryProto.QueryParamsResponse.class, com.canto.erc20.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.canto.erc20.v1.GenesisProto.Params params_;
     /**
@@ -3419,7 +3457,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -3451,7 +3489,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -3463,7 +3501,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -3626,13 +3664,19 @@ public final class QueryProto {
 
       // Construct using com.canto.erc20.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3676,11 +3720,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3846,8 +3893,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

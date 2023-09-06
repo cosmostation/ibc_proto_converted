@@ -477,6 +477,7 @@ public final class QueryProto {
               com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params params_;
     /**
@@ -485,7 +486,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -517,7 +518,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -529,7 +530,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -691,13 +692,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -741,11 +748,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -911,8 +921,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2685,6 +2697,7 @@ public final class QueryProto {
               com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NET_AMOUNT_STATE_FIELD_NUMBER = 1;
     private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.NetAmountState netAmountState_;
     /**
@@ -2693,7 +2706,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasNetAmountState() {
-      return netAmountState_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.liquidstaking.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
@@ -2725,7 +2738,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (netAmountState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getNetAmountState());
       }
       getUnknownFields().writeTo(output);
@@ -2737,7 +2750,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (netAmountState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getNetAmountState());
       }
@@ -2899,13 +2912,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNetAmountStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2949,11 +2968,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryStatesResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.netAmountState_ = netAmountStateBuilder_ == null
               ? netAmountState_
               : netAmountStateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3119,8 +3141,10 @@ public final class QueryProto {
         } else {
           netAmountStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (netAmountState_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3853,6 +3877,7 @@ public final class QueryProto {
               com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.class, com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VOTING_POWER_FIELD_NUMBER = 1;
     private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.VotingPower votingPower_;
     /**
@@ -3861,7 +3886,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasVotingPower() {
-      return votingPower_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.liquidstaking.v1beta1.VotingPower voting_power = 1 [json_name = "votingPower", (.gogoproto.nullable) = false];</code>
@@ -3893,7 +3918,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (votingPower_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getVotingPower());
       }
       getUnknownFields().writeTo(output);
@@ -3905,7 +3930,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (votingPower_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVotingPower());
       }
@@ -4067,13 +4092,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVotingPowerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4117,11 +4148,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidstaking.v1beta1.QueryProto.QueryVotingPowerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.votingPower_ = votingPowerBuilder_ == null
               ? votingPower_
               : votingPowerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4287,8 +4321,10 @@ public final class QueryProto {
         } else {
           votingPowerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (votingPower_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

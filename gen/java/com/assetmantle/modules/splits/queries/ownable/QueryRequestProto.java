@@ -68,6 +68,7 @@ public final class QueryRequestProto {
               com.assetmantle.modules.splits.queries.ownable.QueryRequestProto.QueryRequest.class, com.assetmantle.modules.splits.queries.ownable.QueryRequestProto.QueryRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNABLE_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID ownableID_;
     /**
@@ -76,7 +77,7 @@ public final class QueryRequestProto {
      */
     @java.lang.Override
     public boolean hasOwnableID() {
-      return ownableID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.AnyOwnableID ownable_i_d = 1 [json_name = "ownableID"];</code>
@@ -108,7 +109,7 @@ public final class QueryRequestProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (ownableID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOwnableID());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class QueryRequestProto {
       if (size != -1) return size;
 
       size = 0;
-      if (ownableID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOwnableID());
       }
@@ -278,13 +279,19 @@ public final class QueryRequestProto {
 
       // Construct using com.assetmantle.modules.splits.queries.ownable.QueryRequestProto.QueryRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOwnableIDFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class QueryRequestProto {
 
       private void buildPartial0(com.assetmantle.modules.splits.queries.ownable.QueryRequestProto.QueryRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.ownableID_ = ownableIDBuilder_ == null
               ? ownableID_
               : ownableIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class QueryRequestProto {
         } else {
           ownableIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (ownableID_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

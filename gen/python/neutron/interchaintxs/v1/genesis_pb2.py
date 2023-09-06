@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from neutron.interchaintxs.v1 import params_pb2 as neutron_dot_interchaintxs_dot_v1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&neutron/interchaintxs/v1/genesis.proto\x12\x15neutron.interchaintxs\x1a\x14gogoproto/gogo.proto\x1a%neutron/interchaintxs/v1/params.proto\"K\n\x0cGenesisState\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.neutron.interchaintxs.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xd4\x01\n\x19\x63om.neutron.interchaintxsB\x0cGenesisProtoP\x01Z4github.com/neutron-org/neutron/x/interchaintxs/types\xa2\x02\x03NIX\xaa\x02\x15Neutron.Interchaintxs\xca\x02\x15Neutron\\Interchaintxs\xe2\x02!Neutron\\Interchaintxs\\GPBMetadata\xea\x02\x16Neutron::Interchaintxsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&neutron/interchaintxs/v1/genesis.proto\x12\x15neutron.interchaintxs\x1a\x14gogoproto/gogo.proto\x1a%neutron/interchaintxs/v1/params.proto\"K\n\x0cGenesisState\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.neutron.interchaintxs.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xd2\x01\n\x19\x63om.neutron.interchaintxsB\x0cGenesisProtoZ4github.com/neutron-org/neutron/x/interchaintxs/types\xa2\x02\x03NIX\xaa\x02\x15Neutron.Interchaintxs\xca\x02\x15Neutron\\Interchaintxs\xe2\x02!Neutron\\Interchaintxs\\GPBMetadata\xea\x02\x16Neutron::Interchaintxsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.interchaintxs.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.neutron.interchaintxsB\014GenesisProtoP\001Z4github.com/neutron-org/neutron/x/interchaintxs/types\242\002\003NIX\252\002\025Neutron.Interchaintxs\312\002\025Neutron\\Interchaintxs\342\002!Neutron\\Interchaintxs\\GPBMetadata\352\002\026Neutron::Interchaintxs'
+  DESCRIPTOR._serialized_options = b'\n\031com.neutron.interchaintxsB\014GenesisProtoZ4github.com/neutron-org/neutron/x/interchaintxs/types\242\002\003NIX\252\002\025Neutron.Interchaintxs\312\002\025Neutron\\Interchaintxs\342\002!Neutron\\Interchaintxs\\GPBMetadata\352\002\026Neutron::Interchaintxs'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=126

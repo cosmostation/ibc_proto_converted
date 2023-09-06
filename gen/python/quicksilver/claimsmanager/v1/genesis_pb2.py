@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from quicksilver.claimsmanager.v1 import claimsmanager_pb2 as quicksilver_dot_claimsmanager_dot_v1_dot_claimsmanager__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*quicksilver/claimsmanager/v1/genesis.proto\x12\x1cquicksilver.claimsmanager.v1\x1a\x14gogoproto/gogo.proto\x1a\x30quicksilver/claimsmanager/v1/claimsmanager.proto\"\x8f\x01\n\x0cGenesisState\x12\x42\n\x06params\x18\x01 \x01(\x0b\x32$.quicksilver.claimsmanager.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12;\n\x06\x63laims\x18\x02 \x03(\x0b\x32#.quicksilver.claimsmanager.v1.ClaimR\x06\x63laimsB\x80\x02\n com.quicksilver.claimsmanager.v1B\x0cGenesisProtoP\x01Z<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\xa2\x02\x03QCX\xaa\x02\x1cQuicksilver.Claimsmanager.V1\xca\x02\x1cQuicksilver\\Claimsmanager\\V1\xe2\x02(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\xea\x02\x1eQuicksilver::Claimsmanager::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*quicksilver/claimsmanager/v1/genesis.proto\x12\x1cquicksilver.claimsmanager.v1\x1a\x14gogoproto/gogo.proto\x1a\x30quicksilver/claimsmanager/v1/claimsmanager.proto\"\x8f\x01\n\x0cGenesisState\x12\x42\n\x06params\x18\x01 \x01(\x0b\x32$.quicksilver.claimsmanager.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12;\n\x06\x63laims\x18\x02 \x03(\x0b\x32#.quicksilver.claimsmanager.v1.ClaimR\x06\x63laimsB\xfe\x01\n com.quicksilver.claimsmanager.v1B\x0cGenesisProtoZ<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\xa2\x02\x03QCX\xaa\x02\x1cQuicksilver.Claimsmanager.V1\xca\x02\x1cQuicksilver\\Claimsmanager\\V1\xe2\x02(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\xea\x02\x1eQuicksilver::Claimsmanager::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.claimsmanager.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.quicksilver.claimsmanager.v1B\014GenesisProtoP\001Z<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\242\002\003QCX\252\002\034Quicksilver.Claimsmanager.V1\312\002\034Quicksilver\\Claimsmanager\\V1\342\002(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\352\002\036Quicksilver::Claimsmanager::V1'
+  DESCRIPTOR._serialized_options = b'\n com.quicksilver.claimsmanager.v1B\014GenesisProtoZ<github.com/ingenuity-build/quicksilver/x/claimsmanager/types\242\002\003QCX\252\002\034Quicksilver.Claimsmanager.V1\312\002\034Quicksilver\\Claimsmanager\\V1\342\002(Quicksilver\\Claimsmanager\\V1\\GPBMetadata\352\002\036Quicksilver::Claimsmanager::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=149

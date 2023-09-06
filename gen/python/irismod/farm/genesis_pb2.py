@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from irismod.farm import farm_pb2 as irismod_dot_farm_dot_farm__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1airismod/farm/genesis.proto\x12\x0cirismod.farm\x1a\x14gogoproto/gogo.proto\x1a\x17irismod/farm/farm.proto\"\xb3\x01\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.irismod.farm.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x32\n\x05pools\x18\x02 \x03(\x0b\x32\x16.irismod.farm.FarmPoolB\x04\xc8\xde\x1f\x00R\x05pools\x12;\n\nfarm_infos\x18\x03 \x03(\x0b\x32\x16.irismod.farm.FarmInfoB\x04\xc8\xde\x1f\x00R\tfarmInfosB\xa0\x01\n\x10\x63om.irismod.farmB\x0cGenesisProtoP\x01Z-github.com/irisnet/irismod/modules/farm/types\xa2\x02\x03IFX\xaa\x02\x0cIrismod.Farm\xca\x02\x0cIrismod\\Farm\xe2\x02\x18Irismod\\Farm\\GPBMetadata\xea\x02\rIrismod::Farmb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1airismod/farm/genesis.proto\x12\x0cirismod.farm\x1a\x14gogoproto/gogo.proto\x1a\x17irismod/farm/farm.proto\"\xb3\x01\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.irismod.farm.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x32\n\x05pools\x18\x02 \x03(\x0b\x32\x16.irismod.farm.FarmPoolB\x04\xc8\xde\x1f\x00R\x05pools\x12;\n\nfarm_infos\x18\x03 \x03(\x0b\x32\x16.irismod.farm.FarmInfoB\x04\xc8\xde\x1f\x00R\tfarmInfosB\x9e\x01\n\x10\x63om.irismod.farmB\x0cGenesisProtoZ-github.com/irisnet/irismod/modules/farm/types\xa2\x02\x03IFX\xaa\x02\x0cIrismod.Farm\xca\x02\x0cIrismod\\Farm\xe2\x02\x18Irismod\\Farm\\GPBMetadata\xea\x02\rIrismod::Farmb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.farm.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.irismod.farmB\014GenesisProtoP\001Z-github.com/irisnet/irismod/modules/farm/types\242\002\003IFX\252\002\014Irismod.Farm\312\002\014Irismod\\Farm\342\002\030Irismod\\Farm\\GPBMetadata\352\002\rIrismod::Farm'
+  DESCRIPTOR._serialized_options = b'\n\020com.irismod.farmB\014GenesisProtoZ-github.com/irisnet/irismod/modules/farm/types\242\002\003IFX\252\002\014Irismod.Farm\312\002\014Irismod\\Farm\342\002\030Irismod\\Farm\\GPBMetadata\352\002\rIrismod::Farm'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['pools']._options = None

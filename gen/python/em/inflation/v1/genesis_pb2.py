@@ -16,15 +16,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from em.inflation.v1 import inflation_pb2 as em_dot_inflation_dot_v1_dot_inflation__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x65m/inflation/v1/genesis.proto\x12\x0f\x65m.inflation.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1f\x65m/inflation/v1/inflation.proto\"p\n\x0cGenesisState\x12`\n\x06\x61ssets\x18\x01 \x01(\x0b\x32\x1f.em.inflation.v1.InflationStateB\'\xc8\xde\x1f\x00\xe2\xde\x1f\x0eInflationState\xf2\xde\x1f\ryaml:\"assets\"R\x06\x61ssetsB\xb1\x01\n\x13\x63om.em.inflation.v1B\x0cGenesisProtoP\x01Z.github.com/e-money/em-ledger/x/inflation/types\xa2\x02\x03\x45IX\xaa\x02\x0f\x45m.Inflation.V1\xca\x02\x0f\x45m\\Inflation\\V1\xe2\x02\x1b\x45m\\Inflation\\V1\\GPBMetadata\xea\x02\x11\x45m::Inflation::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x65m/inflation/v1/genesis.proto\x12\x0f\x65m.inflation.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1f\x65m/inflation/v1/inflation.proto\"p\n\x0cGenesisState\x12`\n\x06\x61ssets\x18\x01 \x01(\x0b\x32\x1f.em.inflation.v1.InflationStateB\'\xc8\xde\x1f\x00\xe2\xde\x1f\x0eInflationState\xf2\xde\x1f\ryaml:\"assets\"R\x06\x61ssetsB\xaf\x01\n\x13\x63om.em.inflation.v1B\x0cGenesisProtoZ.github.com/e-money/em-ledger/x/inflation/types\xa2\x02\x03\x45IX\xaa\x02\x0f\x45m.Inflation.V1\xca\x02\x0f\x45m\\Inflation\\V1\xe2\x02\x1b\x45m\\Inflation\\V1\\GPBMetadata\xea\x02\x11\x45m::Inflation::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'em.inflation.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\023com.em.inflation.v1B\014GenesisProtoP\001Z.github.com/e-money/em-ledger/x/inflation/types\242\002\003EIX\252\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V1\342\002\033Em\\Inflation\\V1\\GPBMetadata\352\002\021Em::Inflation::V1'
+  DESCRIPTOR._serialized_options = b'\n\023com.em.inflation.v1B\014GenesisProtoZ.github.com/e-money/em-ledger/x/inflation/types\242\002\003EIX\252\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V1\342\002\033Em\\Inflation\\V1\\GPBMetadata\352\002\021Em::Inflation::V1'
   _GENESISSTATE.fields_by_name['assets']._options = None
   _GENESISSTATE.fields_by_name['assets']._serialized_options = b'\310\336\037\000\342\336\037\016InflationState\362\336\037\ryaml:\"assets\"'
   _globals['_GENESISSTATE']._serialized_start=137

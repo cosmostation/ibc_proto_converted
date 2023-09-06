@@ -16,15 +16,14 @@ from neutron.feeburner import params_pb2 as neutron_dot_feeburner_dot_params__pb
 from neutron.feeburner import total_burned_neutrons_amount_pb2 as neutron_dot_feeburner_dot_total__burned__neutrons__amount__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fneutron/feeburner/genesis.proto\x12\x11neutron.feeburner\x1a\x14gogoproto/gogo.proto\x1a\x1eneutron/feeburner/params.proto\x1a\x34neutron/feeburner/total_burned_neutrons_amount.proto\"\xbc\x01\n\x0cGenesisState\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.neutron.feeburner.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12s\n\x1ctotal_burned_neutrons_amount\x18\x02 \x01(\x0b\x32,.neutron.feeburner.TotalBurnedNeutronsAmountB\x04\xc8\xde\x1f\x00R\x19totalBurnedNeutronsAmountB\xbc\x01\n\x15\x63om.neutron.feeburnerB\x0cGenesisProtoP\x01Z0github.com/neutron-org/neutron/x/feeburner/types\xa2\x02\x03NFX\xaa\x02\x11Neutron.Feeburner\xca\x02\x11Neutron\\Feeburner\xe2\x02\x1dNeutron\\Feeburner\\GPBMetadata\xea\x02\x12Neutron::Feeburnerb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fneutron/feeburner/genesis.proto\x12\x11neutron.feeburner\x1a\x14gogoproto/gogo.proto\x1a\x1eneutron/feeburner/params.proto\x1a\x34neutron/feeburner/total_burned_neutrons_amount.proto\"\xbc\x01\n\x0cGenesisState\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.neutron.feeburner.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12s\n\x1ctotal_burned_neutrons_amount\x18\x02 \x01(\x0b\x32,.neutron.feeburner.TotalBurnedNeutronsAmountB\x04\xc8\xde\x1f\x00R\x19totalBurnedNeutronsAmountB\xba\x01\n\x15\x63om.neutron.feeburnerB\x0cGenesisProtoZ0github.com/neutron-org/neutron/x/feeburner/types\xa2\x02\x03NFX\xaa\x02\x11Neutron.Feeburner\xca\x02\x11Neutron\\Feeburner\xe2\x02\x1dNeutron\\Feeburner\\GPBMetadata\xea\x02\x12Neutron::Feeburnerb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.feeburner.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.neutron.feeburnerB\014GenesisProtoP\001Z0github.com/neutron-org/neutron/x/feeburner/types\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron\\Feeburner\342\002\035Neutron\\Feeburner\\GPBMetadata\352\002\022Neutron::Feeburner'
+  DESCRIPTOR._serialized_options = b'\n\025com.neutron.feeburnerB\014GenesisProtoZ0github.com/neutron-org/neutron/x/feeburner/types\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron\\Feeburner\342\002\035Neutron\\Feeburner\\GPBMetadata\352\002\022Neutron::Feeburner'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['total_burned_neutrons_amount']._options = None

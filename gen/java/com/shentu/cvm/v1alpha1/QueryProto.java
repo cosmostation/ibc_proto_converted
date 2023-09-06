@@ -6239,6 +6239,7 @@ public final class QueryProto {
               com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.class, com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.auth.v1beta1.AuthProto.BaseAccount baseAccount_;
     /**
@@ -6247,7 +6248,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBaseAccount() {
-      return baseAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_account&#92;""];</code>
@@ -6357,7 +6358,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
@@ -6375,7 +6376,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAccount());
       }
@@ -6547,13 +6548,19 @@ public final class QueryProto {
 
       // Construct using com.shentu.cvm.v1alpha1.QueryProto.CVMAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6599,10 +6606,12 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.cvm.v1alpha1.QueryProto.CVMAccount result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAccount_ = baseAccountBuilder_ == null
               ? baseAccount_
               : baseAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.code_ = code_;
@@ -6610,6 +6619,7 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.abi_ = abi_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6795,8 +6805,10 @@ public final class QueryProto {
         } else {
           baseAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseAccount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

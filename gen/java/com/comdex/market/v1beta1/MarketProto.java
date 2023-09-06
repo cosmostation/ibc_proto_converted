@@ -164,7 +164,8 @@ public final class MarketProto {
 
     public static final int PRICE_VALUE_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList priceValue_;
+    private com.google.protobuf.Internal.LongList priceValue_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 price_value = 6 [json_name = "priceValue", (.gogoproto.customname) = "PriceValue", (.gogoproto.moretags) = "yaml:&#92;"price_value&#92;""];</code>
      * @return A list containing the priceValue.
@@ -515,18 +516,9 @@ public final class MarketProto {
       @java.lang.Override
       public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage buildPartial() {
         com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage result = new com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage result) {
-        if (((bitField0_ & 0x00000020) != 0)) {
-          priceValue_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000020);
-        }
-        result.priceValue_ = priceValue_;
       }
 
       private void buildPartial0(com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage result) {
@@ -545,6 +537,10 @@ public final class MarketProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.isPriceActive_ = isPriceActive_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          priceValue_.makeImmutable();
+          result.priceValue_ = priceValue_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.discardedHeightDiff_ = discardedHeightDiff_;
@@ -613,7 +609,8 @@ public final class MarketProto {
         if (!other.priceValue_.isEmpty()) {
           if (priceValue_.isEmpty()) {
             priceValue_ = other.priceValue_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            priceValue_.makeImmutable();
+            bitField0_ |= 0x00000020;
           } else {
             ensurePriceValueIsMutable();
             priceValue_.addAll(other.priceValue_);
@@ -874,10 +871,10 @@ public final class MarketProto {
 
       private com.google.protobuf.Internal.LongList priceValue_ = emptyLongList();
       private void ensurePriceValueIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
-          priceValue_ = mutableCopy(priceValue_);
-          bitField0_ |= 0x00000020;
+        if (!priceValue_.isModifiable()) {
+          priceValue_ = makeMutableCopy(priceValue_);
         }
+        bitField0_ |= 0x00000020;
       }
       /**
        * <code>repeated uint64 price_value = 6 [json_name = "priceValue", (.gogoproto.customname) = "PriceValue", (.gogoproto.moretags) = "yaml:&#92;"price_value&#92;""];</code>
@@ -885,8 +882,8 @@ public final class MarketProto {
        */
       public java.util.List<java.lang.Long>
           getPriceValueList() {
-        return ((bitField0_ & 0x00000020) != 0) ?
-                 java.util.Collections.unmodifiableList(priceValue_) : priceValue_;
+        priceValue_.makeImmutable();
+        return priceValue_;
       }
       /**
        * <code>repeated uint64 price_value = 6 [json_name = "priceValue", (.gogoproto.customname) = "PriceValue", (.gogoproto.moretags) = "yaml:&#92;"price_value&#92;""];</code>
@@ -914,6 +911,7 @@ public final class MarketProto {
 
         ensurePriceValueIsMutable();
         priceValue_.setLong(index, value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -926,6 +924,7 @@ public final class MarketProto {
 
         ensurePriceValueIsMutable();
         priceValue_.addLong(value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -939,6 +938,7 @@ public final class MarketProto {
         ensurePriceValueIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, priceValue_);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import order_id_pb2 as assetmantle_dot_ids_dot_base_dot_order__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/orders/transactions/make/transaction_response.proto\x12,assetmantle.modules.orders.transactions.make\x1a#assetmantle/ids/base/order_id.proto\"W\n\x13TransactionResponse\x12@\n\torder_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.OrderIDR\x07orderIDB\xa2\x02\n0com.assetmantle.modules.orders.transactions.makeB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MOTM\xaa\x02,Assetmantle.Modules.Orders.Transactions.Make\xca\x02,Assetmantle\\Modules\\Orders\\Transactions\\Make\xe2\x02\x38\x41ssetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Orders::Transactions::Makeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/orders/transactions/make/transaction_response.proto\x12,assetmantle.modules.orders.transactions.make\x1a#assetmantle/ids/base/order_id.proto\"W\n\x13TransactionResponse\x12@\n\torder_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.OrderIDR\x07orderIDB\xa0\x02\n0com.assetmantle.modules.orders.transactions.makeB\x18TransactionResponseProto\xa2\x02\x05\x41MOTM\xaa\x02,Assetmantle.Modules.Orders.Transactions.Make\xca\x02,Assetmantle\\Modules\\Orders\\Transactions\\Make\xe2\x02\x38\x41ssetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Orders::Transactions::Makeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.make.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.orders.transactions.makeB\030TransactionResponseProtoP\001\242\002\005AMOTM\252\002,Assetmantle.Modules.Orders.Transactions.Make\312\002,Assetmantle\\Modules\\Orders\\Transactions\\Make\342\0028Assetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\352\0020Assetmantle::Modules::Orders::Transactions::Make'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.orders.transactions.makeB\030TransactionResponseProto\242\002\005AMOTM\252\002,Assetmantle.Modules.Orders.Transactions.Make\312\002,Assetmantle\\Modules\\Orders\\Transactions\\Make\342\0028Assetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\352\0020Assetmantle::Modules::Orders::Transactions::Make'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=150
   _globals['_TRANSACTIONRESPONSE']._serialized_end=237
 # @@protoc_insertion_point(module_scope)

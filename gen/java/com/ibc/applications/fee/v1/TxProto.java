@@ -3298,6 +3298,7 @@ public final class TxProto {
               com.ibc.applications.fee.v1.TxProto.MsgPayPacketFee.class, com.ibc.applications.fee.v1.TxProto.MsgPayPacketFee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEE_FIELD_NUMBER = 1;
     private com.ibc.applications.fee.v1.FeeProto.Fee fee_;
     /**
@@ -3310,7 +3311,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return fee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3544,7 +3545,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFee());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourcePortId_)) {
@@ -3568,7 +3569,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFee());
       }
@@ -3767,13 +3768,19 @@ public final class TxProto {
 
       // Construct using com.ibc.applications.fee.v1.TxProto.MsgPayPacketFee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3822,10 +3829,12 @@ public final class TxProto {
 
       private void buildPartial0(com.ibc.applications.fee.v1.TxProto.MsgPayPacketFee result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sourcePortId_ = sourcePortId_;
@@ -3840,6 +3849,7 @@ public final class TxProto {
           relayers_.makeImmutable();
           result.relayers_ = relayers_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4071,8 +4081,10 @@ public final class TxProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (fee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5129,6 +5141,7 @@ public final class TxProto {
               com.ibc.applications.fee.v1.TxProto.MsgPayPacketFeeAsync.class, com.ibc.applications.fee.v1.TxProto.MsgPayPacketFeeAsync.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PACKET_ID_FIELD_NUMBER = 1;
     private com.ibc.core.channel.v1.ChannelProto.PacketId packetId_;
     /**
@@ -5141,7 +5154,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPacketId() {
-      return packetId_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5179,7 +5192,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPacketFee() {
-      return packetFee_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5219,10 +5232,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (packetId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPacketId());
       }
-      if (packetFee_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getPacketFee());
       }
       getUnknownFields().writeTo(output);
@@ -5234,11 +5247,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (packetId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPacketId());
       }
-      if (packetFee_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPacketFee());
       }
@@ -5410,13 +5423,20 @@ public final class TxProto {
 
       // Construct using com.ibc.applications.fee.v1.TxProto.MsgPayPacketFeeAsync.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPacketIdFieldBuilder();
+          getPacketFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5465,16 +5485,20 @@ public final class TxProto {
 
       private void buildPartial0(com.ibc.applications.fee.v1.TxProto.MsgPayPacketFeeAsync result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.packetId_ = packetIdBuilder_ == null
               ? packetId_
               : packetIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.packetFee_ = packetFeeBuilder_ == null
               ? packetFee_
               : packetFeeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5670,8 +5694,10 @@ public final class TxProto {
         } else {
           packetIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (packetId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5825,8 +5851,10 @@ public final class TxProto {
         } else {
           packetFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (packetFee_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

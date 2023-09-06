@@ -16,15 +16,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%sentinel/subscription/v2/payout.proto\x12\x18sentinel.subscription.v2\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xee\x01\n\x06Payout\x12\x16\n\x02id\x18\x01 \x01(\x04\x42\x06\xe2\xde\x1f\x02IDR\x02id\x12\x18\n\x07\x61\x64\x64ress\x18\x02 \x01(\tR\x07\x61\x64\x64ress\x12!\n\x0cnode_address\x18\x03 \x01(\tR\x0bnodeAddress\x12\x14\n\x05hours\x18\x04 \x01(\x03R\x05hours\x12\x35\n\x05price\x18\x05 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x05price\x12\x42\n\ttimestamp\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\ttimestampB\xec\x01\n\x1c\x63om.sentinel.subscription.v2B\x0bPayoutProtoP\x01Z5github.com/sentinel-official/hub/x/subscription/types\xa2\x02\x03SSX\xaa\x02\x18Sentinel.Subscription.V2\xca\x02\x18Sentinel\\Subscription\\V2\xe2\x02$Sentinel\\Subscription\\V2\\GPBMetadata\xea\x02\x1aSentinel::Subscription::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%sentinel/subscription/v2/payout.proto\x12\x18sentinel.subscription.v2\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xee\x01\n\x06Payout\x12\x16\n\x02id\x18\x01 \x01(\x04\x42\x06\xe2\xde\x1f\x02IDR\x02id\x12\x18\n\x07\x61\x64\x64ress\x18\x02 \x01(\tR\x07\x61\x64\x64ress\x12!\n\x0cnode_address\x18\x03 \x01(\tR\x0bnodeAddress\x12\x14\n\x05hours\x18\x04 \x01(\x03R\x05hours\x12\x35\n\x05price\x18\x05 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x05price\x12\x42\n\ttimestamp\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\ttimestampB\xea\x01\n\x1c\x63om.sentinel.subscription.v2B\x0bPayoutProtoZ5github.com/sentinel-official/hub/x/subscription/types\xa2\x02\x03SSX\xaa\x02\x18Sentinel.Subscription.V2\xca\x02\x18Sentinel\\Subscription\\V2\xe2\x02$Sentinel\\Subscription\\V2\\GPBMetadata\xea\x02\x1aSentinel::Subscription::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.subscription.v2.payout_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.sentinel.subscription.v2B\013PayoutProtoP\001Z5github.com/sentinel-official/hub/x/subscription/types\242\002\003SSX\252\002\030Sentinel.Subscription.V2\312\002\030Sentinel\\Subscription\\V2\342\002$Sentinel\\Subscription\\V2\\GPBMetadata\352\002\032Sentinel::Subscription::V2\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\034com.sentinel.subscription.v2B\013PayoutProtoZ5github.com/sentinel-official/hub/x/subscription/types\242\002\003SSX\252\002\030Sentinel.Subscription.V2\312\002\030Sentinel\\Subscription\\V2\342\002$Sentinel\\Subscription\\V2\\GPBMetadata\352\002\032Sentinel::Subscription::V2\310\341\036\000\250\342\036\000'
   _PAYOUT.fields_by_name['id']._options = None
   _PAYOUT.fields_by_name['id']._serialized_options = b'\342\336\037\002ID'
   _PAYOUT.fields_by_name['price']._options = None

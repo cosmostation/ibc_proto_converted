@@ -16,15 +16,14 @@ from capability.v1 import capability_pb2 as capability_dot_v1_dot_capability__pb
 from amino import amino_pb2 as amino_dot_amino__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x63\x61pability/v1/genesis.proto\x12\rcapability.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63\x61pability/v1/capability.proto\x1a\x11\x61mino/amino.proto\"t\n\rGenesisOwners\x12\x14\n\x05index\x18\x01 \x01(\x04R\x05index\x12M\n\x0cindex_owners\x18\x02 \x01(\x0b\x32\x1f.capability.v1.CapabilityOwnersB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x0bindexOwners\"e\n\x0cGenesisState\x12\x14\n\x05index\x18\x01 \x01(\x04R\x05index\x12?\n\x06owners\x18\x02 \x03(\x0b\x32\x1c.capability.v1.GenesisOwnersB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06ownersB\xa9\x01\n\x11\x63om.capability.v1B\x0cGenesisProtoP\x01Z1github.com/cosmos/ibc-go/modules/capability/types\xa2\x02\x03\x43XX\xaa\x02\rCapability.V1\xca\x02\rCapability\\V1\xe2\x02\x19\x43\x61pability\\V1\\GPBMetadata\xea\x02\x0e\x43\x61pability::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x63\x61pability/v1/genesis.proto\x12\rcapability.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63\x61pability/v1/capability.proto\x1a\x11\x61mino/amino.proto\"t\n\rGenesisOwners\x12\x14\n\x05index\x18\x01 \x01(\x04R\x05index\x12M\n\x0cindex_owners\x18\x02 \x01(\x0b\x32\x1f.capability.v1.CapabilityOwnersB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x0bindexOwners\"e\n\x0cGenesisState\x12\x14\n\x05index\x18\x01 \x01(\x04R\x05index\x12?\n\x06owners\x18\x02 \x03(\x0b\x32\x1c.capability.v1.GenesisOwnersB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06ownersB\xa7\x01\n\x11\x63om.capability.v1B\x0cGenesisProtoZ1github.com/cosmos/ibc-go/modules/capability/types\xa2\x02\x03\x43XX\xaa\x02\rCapability.V1\xca\x02\rCapability\\V1\xe2\x02\x19\x43\x61pability\\V1\\GPBMetadata\xea\x02\x0e\x43\x61pability::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'capability.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\021com.capability.v1B\014GenesisProtoP\001Z1github.com/cosmos/ibc-go/modules/capability/types\242\002\003CXX\252\002\rCapability.V1\312\002\rCapability\\V1\342\002\031Capability\\V1\\GPBMetadata\352\002\016Capability::V1'
+  DESCRIPTOR._serialized_options = b'\n\021com.capability.v1B\014GenesisProtoZ1github.com/cosmos/ibc-go/modules/capability/types\242\002\003CXX\252\002\rCapability.V1\312\002\rCapability\\V1\342\002\031Capability\\V1\\GPBMetadata\352\002\016Capability::V1'
   _GENESISOWNERS.fields_by_name['index_owners']._options = None
   _GENESISOWNERS.fields_by_name['index_owners']._serialized_options = b'\310\336\037\000\250\347\260*\001'
   _GENESISSTATE.fields_by_name['owners']._options = None

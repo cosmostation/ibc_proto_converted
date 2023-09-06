@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cudos.nft import nft_pb2 as cudos_dot_nft_dot_nft__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63udos/nft/genesis.proto\x12\x17\x63udosnode.cudosnode.nft\x1a\x14gogoproto/gogo.proto\x1a\x13\x63udos/nft/nft.proto\"[\n\x0cGenesisState\x12K\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32#.cudosnode.cudosnode.nft.CollectionB\x04\xc8\xde\x1f\x00R\x0b\x63ollectionsB\xd9\x01\n\x1b\x63om.cudosnode.cudosnode.nftB\x0cGenesisProtoP\x01Z.github.com/CudoVentures/cudos-node/x/nft/types\xa2\x02\x03\x43\x43N\xaa\x02\x17\x43udosnode.Cudosnode.Nft\xca\x02\x17\x43udosnode\\Cudosnode\\Nft\xe2\x02#Cudosnode\\Cudosnode\\Nft\\GPBMetadata\xea\x02\x19\x43udosnode::Cudosnode::Nftb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63udos/nft/genesis.proto\x12\x17\x63udosnode.cudosnode.nft\x1a\x14gogoproto/gogo.proto\x1a\x13\x63udos/nft/nft.proto\"[\n\x0cGenesisState\x12K\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32#.cudosnode.cudosnode.nft.CollectionB\x04\xc8\xde\x1f\x00R\x0b\x63ollectionsB\xd7\x01\n\x1b\x63om.cudosnode.cudosnode.nftB\x0cGenesisProtoZ.github.com/CudoVentures/cudos-node/x/nft/types\xa2\x02\x03\x43\x43N\xaa\x02\x17\x43udosnode.Cudosnode.Nft\xca\x02\x17\x43udosnode\\Cudosnode\\Nft\xe2\x02#Cudosnode\\Cudosnode\\Nft\\GPBMetadata\xea\x02\x19\x43udosnode::Cudosnode::Nftb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cudos.nft.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.cudosnode.cudosnode.nftB\014GenesisProtoP\001Z.github.com/CudoVentures/cudos-node/x/nft/types\242\002\003CCN\252\002\027Cudosnode.Cudosnode.Nft\312\002\027Cudosnode\\Cudosnode\\Nft\342\002#Cudosnode\\Cudosnode\\Nft\\GPBMetadata\352\002\031Cudosnode::Cudosnode::Nft'
+  DESCRIPTOR._serialized_options = b'\n\033com.cudosnode.cudosnode.nftB\014GenesisProtoZ.github.com/CudoVentures/cudos-node/x/nft/types\242\002\003CCN\252\002\027Cudosnode.Cudosnode.Nft\312\002\027Cudosnode\\Cudosnode\\Nft\342\002#Cudosnode\\Cudosnode\\Nft\\GPBMetadata\352\002\031Cudosnode::Cudosnode::Nft'
   _GENESISSTATE.fields_by_name['collections']._options = None
   _GENESISSTATE.fields_by_name['collections']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=95

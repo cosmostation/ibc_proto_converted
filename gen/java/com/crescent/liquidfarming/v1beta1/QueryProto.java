@@ -72,6 +72,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -80,7 +81,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -112,7 +113,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -124,7 +125,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -286,13 +287,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -336,11 +343,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -506,8 +516,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1955,6 +1967,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LIQUID_FARM_FIELD_NUMBER = 1;
     private com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse liquidFarm_;
     /**
@@ -1963,7 +1976,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLiquidFarm() {
-      return liquidFarm_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
@@ -1995,7 +2008,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (liquidFarm_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getLiquidFarm());
       }
       getUnknownFields().writeTo(output);
@@ -2007,7 +2020,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (liquidFarm_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLiquidFarm());
       }
@@ -2169,13 +2182,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLiquidFarmFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2219,11 +2238,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.liquidFarm_ = liquidFarmBuilder_ == null
               ? liquidFarm_
               : liquidFarmBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2389,8 +2411,10 @@ public final class QueryProto {
         } else {
           liquidFarmBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (liquidFarm_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2968,6 +2992,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.crescent.liquidfarming.v1beta1.ParamsProto.Params params_;
     /**
@@ -2976,7 +3001,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -3008,7 +3033,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -3020,7 +3045,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -3182,13 +3207,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3232,11 +3263,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3402,8 +3436,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3595,6 +3631,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -3653,7 +3690,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
@@ -3691,7 +3728,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3710,7 +3747,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -3881,13 +3918,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3939,11 +3982,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.status_ = status_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4231,8 +4277,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4430,6 +4478,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REWARDS_AUCTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction> rewardsAuctions_;
@@ -4479,7 +4528,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4514,7 +4563,7 @@ public final class QueryProto {
       for (int i = 0; i < rewardsAuctions_.size(); i++) {
         output.writeMessage(1, rewardsAuctions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4530,7 +4579,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, rewardsAuctions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4698,13 +4747,20 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardsAuctionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4768,11 +4824,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5217,8 +5276,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5949,6 +6010,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REWARDS_AUCTION_FIELD_NUMBER = 1;
     private com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction rewardsAuction_;
     /**
@@ -5957,7 +6019,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRewardsAuction() {
-      return rewardsAuction_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
@@ -5989,7 +6051,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (rewardsAuction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRewardsAuction());
       }
       getUnknownFields().writeTo(output);
@@ -6001,7 +6063,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (rewardsAuction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRewardsAuction());
       }
@@ -6163,13 +6225,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardsAuctionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6213,11 +6281,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.rewardsAuction_ = rewardsAuctionBuilder_ == null
               ? rewardsAuction_
               : rewardsAuctionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6383,8 +6454,10 @@ public final class QueryProto {
         } else {
           rewardsAuctionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (rewardsAuction_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6563,6 +6636,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -6582,7 +6656,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -6617,7 +6691,7 @@ public final class QueryProto {
       if (poolId_ != 0L) {
         output.writeUInt64(1, poolId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6633,7 +6707,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, poolId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6800,13 +6874,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6854,11 +6934,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.poolId_ = poolId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7064,8 +7147,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7263,6 +7348,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BIDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid> bids_;
@@ -7312,7 +7398,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -7347,7 +7433,7 @@ public final class QueryProto {
       for (int i = 0; i < bids_.size(); i++) {
         output.writeMessage(1, bids_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -7363,7 +7449,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, bids_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -7531,13 +7617,20 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBidsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7601,11 +7694,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8050,8 +8146,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9984,6 +10082,7 @@ public final class QueryProto {
               com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int EXCHANGE_RATE_FIELD_NUMBER = 1;
     private com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse exchangeRate_;
     /**
@@ -9992,7 +10091,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasExchangeRate() {
-      return exchangeRate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
@@ -10024,7 +10123,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (exchangeRate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getExchangeRate());
       }
       getUnknownFields().writeTo(output);
@@ -10036,7 +10135,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (exchangeRate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getExchangeRate());
       }
@@ -10198,13 +10297,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExchangeRateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10248,11 +10353,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.exchangeRate_ = exchangeRateBuilder_ == null
               ? exchangeRate_
               : exchangeRateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10418,8 +10526,10 @@ public final class QueryProto {
         } else {
           exchangeRateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (exchangeRate_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -17,15 +17,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)osmosis/tokenfactory/v1beta1/params.proto\x12\x1cosmosis.tokenfactory.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x34osmosis/tokenfactory/v1beta1/authorityMetadata.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x89\x02\n\x06Params\x12\x96\x01\n\x12\x64\x65nom_creation_fee\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinBM\xc8\xde\x1f\x00\xf2\xde\x1f\x19yaml:\"denom_creation_fee\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x10\x64\x65nomCreationFee\x12\x66\n\x1a\x64\x65nom_creation_gas_consume\x18\x02 \x01(\x04\x42)\xc8\xde\x1f\x01\xf2\xde\x1f!yaml:\"denom_creation_gas_consume\"R\x17\x64\x65nomCreationGasConsumeB\xfb\x01\n com.osmosis.tokenfactory.v1beta1B\x0bParamsProtoP\x01Z8github.com/osmosis-labs/osmosis/v15/x/tokenfactory/types\xa2\x02\x03OTX\xaa\x02\x1cOsmosis.Tokenfactory.V1beta1\xca\x02\x1cOsmosis\\Tokenfactory\\V1beta1\xe2\x02(Osmosis\\Tokenfactory\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Tokenfactory::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)osmosis/tokenfactory/v1beta1/params.proto\x12\x1cosmosis.tokenfactory.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x34osmosis/tokenfactory/v1beta1/authorityMetadata.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x89\x02\n\x06Params\x12\x96\x01\n\x12\x64\x65nom_creation_fee\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinBM\xc8\xde\x1f\x00\xf2\xde\x1f\x19yaml:\"denom_creation_fee\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x10\x64\x65nomCreationFee\x12\x66\n\x1a\x64\x65nom_creation_gas_consume\x18\x02 \x01(\x04\x42)\xc8\xde\x1f\x01\xf2\xde\x1f!yaml:\"denom_creation_gas_consume\"R\x17\x64\x65nomCreationGasConsumeB\xf9\x01\n com.osmosis.tokenfactory.v1beta1B\x0bParamsProtoZ8github.com/osmosis-labs/osmosis/v15/x/tokenfactory/types\xa2\x02\x03OTX\xaa\x02\x1cOsmosis.Tokenfactory.V1beta1\xca\x02\x1cOsmosis\\Tokenfactory\\V1beta1\xe2\x02(Osmosis\\Tokenfactory\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Tokenfactory::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.tokenfactory.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.osmosis.tokenfactory.v1beta1B\013ParamsProtoP\001Z8github.com/osmosis-labs/osmosis/v15/x/tokenfactory/types\242\002\003OTX\252\002\034Osmosis.Tokenfactory.V1beta1\312\002\034Osmosis\\Tokenfactory\\V1beta1\342\002(Osmosis\\Tokenfactory\\V1beta1\\GPBMetadata\352\002\036Osmosis::Tokenfactory::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n com.osmosis.tokenfactory.v1beta1B\013ParamsProtoZ8github.com/osmosis-labs/osmosis/v15/x/tokenfactory/types\242\002\003OTX\252\002\034Osmosis.Tokenfactory.V1beta1\312\002\034Osmosis\\Tokenfactory\\V1beta1\342\002(Osmosis\\Tokenfactory\\V1beta1\\GPBMetadata\352\002\036Osmosis::Tokenfactory::V1beta1'
   _PARAMS.fields_by_name['denom_creation_fee']._options = None
   _PARAMS.fields_by_name['denom_creation_fee']._serialized_options = b'\310\336\037\000\362\336\037\031yaml:\"denom_creation_fee\"\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _PARAMS.fields_by_name['denom_creation_gas_consume']._options = None

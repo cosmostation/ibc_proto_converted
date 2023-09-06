@@ -163,6 +163,7 @@ public final class GenesisProto {
               com.sentinel.vpn.v1.GenesisProto.GenesisState.class, com.sentinel.vpn.v1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSITS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit> deposits_;
@@ -212,7 +213,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasNodes() {
-      return nodes_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.sentinel.node.v2.GenesisState nodes = 2 [json_name = "nodes"];</code>
@@ -279,7 +280,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasProviders() {
-      return providers_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.sentinel.provider.v2.GenesisState providers = 4 [json_name = "providers"];</code>
@@ -305,7 +306,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSessions() {
-      return sessions_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.sentinel.session.v2.GenesisState sessions = 5 [json_name = "sessions"];</code>
@@ -331,7 +332,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSubscriptions() {
-      return subscriptions_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.sentinel.subscription.v2.GenesisState subscriptions = 6 [json_name = "subscriptions"];</code>
@@ -366,19 +367,19 @@ public final class GenesisProto {
       for (int i = 0; i < deposits_.size(); i++) {
         output.writeMessage(1, deposits_.get(i));
       }
-      if (nodes_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getNodes());
       }
       for (int i = 0; i < plans_.size(); i++) {
         output.writeMessage(3, plans_.get(i));
       }
-      if (providers_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getProviders());
       }
-      if (sessions_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(5, getSessions());
       }
-      if (subscriptions_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(6, getSubscriptions());
       }
       getUnknownFields().writeTo(output);
@@ -394,7 +395,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, deposits_.get(i));
       }
-      if (nodes_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNodes());
       }
@@ -402,15 +403,15 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, plans_.get(i));
       }
-      if (providers_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProviders());
       }
-      if (sessions_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSessions());
       }
-      if (subscriptions_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSubscriptions());
       }
@@ -607,13 +608,24 @@ public final class GenesisProto {
 
       // Construct using com.sentinel.vpn.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositsFieldBuilder();
+          getNodesFieldBuilder();
+          getPlansFieldBuilder();
+          getProvidersFieldBuilder();
+          getSessionsFieldBuilder();
+          getSubscriptionsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -708,26 +720,32 @@ public final class GenesisProto {
 
       private void buildPartial0(com.sentinel.vpn.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.nodes_ = nodesBuilder_ == null
               ? nodes_
               : nodesBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.providers_ = providersBuilder_ == null
               ? providers_
               : providersBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.sessions_ = sessionsBuilder_ == null
               ? sessions_
               : sessionsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.subscriptions_ = subscriptionsBuilder_ == null
               ? subscriptions_
               : subscriptionsBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1241,8 +1259,10 @@ public final class GenesisProto {
         } else {
           nodesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (nodes_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1600,8 +1620,10 @@ public final class GenesisProto {
         } else {
           providersBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (providers_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1719,8 +1741,10 @@ public final class GenesisProto {
         } else {
           sessionsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (sessions_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1838,8 +1862,10 @@ public final class GenesisProto {
         } else {
           subscriptionsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (subscriptions_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

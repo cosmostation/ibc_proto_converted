@@ -1090,6 +1090,7 @@ public final class HardProto {
               com.kava.hard.v1beta1.HardProto.MoneyMarket.class, com.kava.hard.v1beta1.HardProto.MoneyMarket.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -1137,7 +1138,7 @@ public final class HardProto {
      */
     @java.lang.Override
     public boolean hasBorrowLimit() {
-      return borrowLimit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.hard.v1beta1.BorrowLimit borrow_limit = 2 [json_name = "borrowLimit", (.gogoproto.nullable) = false];</code>
@@ -1241,7 +1242,7 @@ public final class HardProto {
      */
     @java.lang.Override
     public boolean hasInterestRateModel() {
-      return interestRateModel_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.kava.hard.v1beta1.InterestRateModel interest_rate_model = 5 [json_name = "interestRateModel", (.gogoproto.nullable) = false];</code>
@@ -1354,7 +1355,7 @@ public final class HardProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
       }
-      if (borrowLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getBorrowLimit());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spotMarketId_)) {
@@ -1363,7 +1364,7 @@ public final class HardProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversionFactor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, conversionFactor_);
       }
-      if (interestRateModel_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getInterestRateModel());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveFactor_)) {
@@ -1384,7 +1385,7 @@ public final class HardProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
       }
-      if (borrowLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBorrowLimit());
       }
@@ -1394,7 +1395,7 @@ public final class HardProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversionFactor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, conversionFactor_);
       }
-      if (interestRateModel_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getInterestRateModel());
       }
@@ -1591,13 +1592,20 @@ public final class HardProto {
 
       // Construct using com.kava.hard.v1beta1.HardProto.MoneyMarket.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBorrowLimitFieldBuilder();
+          getInterestRateModelFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1654,10 +1662,12 @@ public final class HardProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.borrowLimit_ = borrowLimitBuilder_ == null
               ? borrowLimit_
               : borrowLimitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.spotMarketId_ = spotMarketId_;
@@ -1669,6 +1679,7 @@ public final class HardProto {
           result.interestRateModel_ = interestRateModelBuilder_ == null
               ? interestRateModel_
               : interestRateModelBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.reserveFactor_ = reserveFactor_;
@@ -1676,6 +1687,7 @@ public final class HardProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.keeperRewardPercentage_ = keeperRewardPercentage_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1973,8 +1985,10 @@ public final class HardProto {
         } else {
           borrowLimitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (borrowLimit_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2236,8 +2250,10 @@ public final class HardProto {
         } else {
           interestRateModelBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (interestRateModel_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

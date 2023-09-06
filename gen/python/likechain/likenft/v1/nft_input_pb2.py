@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$likechain/likenft/v1/nft_input.proto\x12\x14likechain.likenft.v1\x1a\x14gogoproto/gogo.proto\"f\n\x08NFTInput\x12\x10\n\x03uri\x18\x01 \x01(\tR\x03uri\x12\x19\n\x08uri_hash\x18\x02 \x01(\tR\x07uriHash\x12-\n\x08metadata\x18\x03 \x01(\x0c\x42\x11\xc8\xde\x1f\x00\xda\xde\x1f\tJsonInputR\x08metadataB\xd2\x01\n\x18\x63om.likechain.likenft.v1B\rNftInputProtoP\x01Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$likechain/likenft/v1/nft_input.proto\x12\x14likechain.likenft.v1\x1a\x14gogoproto/gogo.proto\"f\n\x08NFTInput\x12\x10\n\x03uri\x18\x01 \x01(\tR\x03uri\x12\x19\n\x08uri_hash\x18\x02 \x01(\tR\x07uriHash\x12-\n\x08metadata\x18\x03 \x01(\x0c\x42\x11\xc8\xde\x1f\x00\xda\xde\x1f\tJsonInputR\x08metadataB\xd0\x01\n\x18\x63om.likechain.likenft.v1B\rNftInputProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'likechain.likenft.v1.nft_input_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\rNftInputProtoP\001Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\rNftInputProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
   _NFTINPUT.fields_by_name['metadata']._options = None
   _NFTINPUT.fields_by_name['metadata']._serialized_options = b'\310\336\037\000\332\336\037\tJsonInput'
   _globals['_NFTINPUT']._serialized_start=84

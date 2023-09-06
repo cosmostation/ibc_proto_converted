@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1astafihub/rdex/params.proto\x12\x16stafihub.stafihub.rdex\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xce\x01\n\x1a\x63om.stafihub.stafihub.rdexB\x0bParamsProtoP\x01Z)github.com/stafihub/stafihub/x/rdex/types\xa2\x02\x03SSR\xaa\x02\x16Stafihub.Stafihub.Rdex\xca\x02\x16Stafihub\\Stafihub\\Rdex\xe2\x02\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Rdexb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1astafihub/rdex/params.proto\x12\x16stafihub.stafihub.rdex\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xcc\x01\n\x1a\x63om.stafihub.stafihub.rdexB\x0bParamsProtoZ)github.com/stafihub/stafihub/x/rdex/types\xa2\x02\x03SSR\xaa\x02\x16Stafihub.Stafihub.Rdex\xca\x02\x16Stafihub\\Stafihub\\Rdex\xe2\x02\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Rdexb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.rdex.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.rdexB\013ParamsProtoP\001Z)github.com/stafihub/stafihub/x/rdex/types\242\002\003SSR\252\002\026Stafihub.Stafihub.Rdex\312\002\026Stafihub\\Stafihub\\Rdex\342\002\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\352\002\030Stafihub::Stafihub::Rdex'
+  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.rdexB\013ParamsProtoZ)github.com/stafihub/stafihub/x/rdex/types\242\002\003SSR\252\002\026Stafihub.Stafihub.Rdex\312\002\026Stafihub\\Stafihub\\Rdex\342\002\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\352\002\030Stafihub::Stafihub::Rdex'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=76

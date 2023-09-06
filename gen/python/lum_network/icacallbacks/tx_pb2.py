@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!lum-network/icacallbacks/tx.proto\x12\x18lum.network.icacallbacks2\x05\n\x03MsgB\xdc\x01\n\x1c\x63om.lum.network.icacallbacksB\x07TxProtoP\x01Z1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!lum-network/icacallbacks/tx.proto\x12\x18lum.network.icacallbacks2\x05\n\x03MsgB\xda\x01\n\x1c\x63om.lum.network.icacallbacksB\x07TxProtoZ1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.icacallbacks.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\007TxProtoP\001Z1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
+  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\007TxProtoZ1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
   _globals['_MSG']._serialized_start=63
   _globals['_MSG']._serialized_end=68
 # @@protoc_insertion_point(module_scope)

@@ -17,15 +17,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from coreum.customparams.v1 import params_pb2 as coreum_dot_customparams_dot_v1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"coreum/customparams/v1/query.proto\x12\x16\x63oreum.customparams.v1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a#coreum/customparams/v1/params.proto\"\x1b\n\x19QueryStakingParamsRequest\"a\n\x1aQueryStakingParamsResponse\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32%.coreum.customparams.v1.StakingParamsB\x04\xc8\xde\x1f\x00R\x06params2\xaf\x01\n\x05Query\x12\xa5\x01\n\rStakingParams\x12\x31.coreum.customparams.v1.QueryStakingParamsRequest\x1a\x32.coreum.customparams.v1.QueryStakingParamsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/coreum/customparams/v1/stakingparamsB\xdb\x01\n\x1a\x63om.coreum.customparams.v1B\nQueryProtoP\x01Z7github.com/CoreumFoundation/coreum/x/customparams/types\xa2\x02\x03\x43\x43X\xaa\x02\x16\x43oreum.Customparams.V1\xca\x02\x16\x43oreum\\Customparams\\V1\xe2\x02\"Coreum\\Customparams\\V1\\GPBMetadata\xea\x02\x18\x43oreum::Customparams::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"coreum/customparams/v1/query.proto\x12\x16\x63oreum.customparams.v1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a#coreum/customparams/v1/params.proto\"\x1b\n\x19QueryStakingParamsRequest\"a\n\x1aQueryStakingParamsResponse\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32%.coreum.customparams.v1.StakingParamsB\x04\xc8\xde\x1f\x00R\x06params2\xaf\x01\n\x05Query\x12\xa5\x01\n\rStakingParams\x12\x31.coreum.customparams.v1.QueryStakingParamsRequest\x1a\x32.coreum.customparams.v1.QueryStakingParamsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/coreum/customparams/v1/stakingparamsB\xd9\x01\n\x1a\x63om.coreum.customparams.v1B\nQueryProtoZ7github.com/CoreumFoundation/coreum/x/customparams/types\xa2\x02\x03\x43\x43X\xaa\x02\x16\x43oreum.Customparams.V1\xca\x02\x16\x43oreum\\Customparams\\V1\xe2\x02\"Coreum\\Customparams\\V1\\GPBMetadata\xea\x02\x18\x43oreum::Customparams::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'coreum.customparams.v1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.coreum.customparams.v1B\nQueryProtoP\001Z7github.com/CoreumFoundation/coreum/x/customparams/types\242\002\003CCX\252\002\026Coreum.Customparams.V1\312\002\026Coreum\\Customparams\\V1\342\002\"Coreum\\Customparams\\V1\\GPBMetadata\352\002\030Coreum::Customparams::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.coreum.customparams.v1B\nQueryProtoZ7github.com/CoreumFoundation/coreum/x/customparams/types\242\002\003CCX\252\002\026Coreum.Customparams.V1\312\002\026Coreum\\Customparams\\V1\342\002\"Coreum\\Customparams\\V1\\GPBMetadata\352\002\030Coreum::Customparams::V1'
   _QUERYSTAKINGPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYSTAKINGPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['StakingParams']._options = None

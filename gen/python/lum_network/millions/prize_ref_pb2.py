@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$lum-network/millions/prize_ref.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\xb8\x01\n\x08PrizeRef\x12\x46\n\x06\x61mount\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x06\x61mount\x12\x1f\n\x08prize_id\x18\x02 \x01(\x04\x42\x04\xc8\xde\x1f\x01R\x07prizeId\x12\x43\n\x0ewinner_address\x18\x03 \x01(\tB\x1c\xc8\xde\x1f\x01\xd2\xb4-\x14\x63osmos.AddressStringR\rwinnerAddressB\xca\x01\n\x18\x63om.lum.network.millionsB\rPrizeRefProtoP\x01Z-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$lum-network/millions/prize_ref.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\xb8\x01\n\x08PrizeRef\x12\x46\n\x06\x61mount\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x06\x61mount\x12\x1f\n\x08prize_id\x18\x02 \x01(\x04\x42\x04\xc8\xde\x1f\x01R\x07prizeId\x12\x43\n\x0ewinner_address\x18\x03 \x01(\tB\x1c\xc8\xde\x1f\x01\xd2\xb4-\x14\x63osmos.AddressStringR\rwinnerAddressB\xc8\x01\n\x18\x63om.lum.network.millionsB\rPrizeRefProtoZ-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.millions.prize_ref_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\rPrizeRefProtoP\001Z-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
+  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\rPrizeRefProtoZ-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
   _PRIZEREF.fields_by_name['amount']._options = None
   _PRIZEREF.fields_by_name['amount']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _PRIZEREF.fields_by_name['prize_id']._options = None

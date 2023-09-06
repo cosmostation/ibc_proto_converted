@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1astafihub/rdex/models.proto\x12\x16stafihub.stafihub.rdex\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xd2\x02\n\x08SwapPool\x12\x14\n\x05index\x18\x01 \x01(\rR\x05index\x12\x64\n\x07lpToken\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB/\xc8\xde\x1f\x00\xaa\xdf\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\x07lpToken\x12h\n\tbaseToken\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB/\xc8\xde\x1f\x00\xaa\xdf\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\tbaseToken\x12`\n\x05token\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB/\xc8\xde\x1f\x00\xaa\xdf\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\x05tokenB\xce\x01\n\x1a\x63om.stafihub.stafihub.rdexB\x0bModelsProtoP\x01Z)github.com/stafihub/stafihub/x/rdex/types\xa2\x02\x03SSR\xaa\x02\x16Stafihub.Stafihub.Rdex\xca\x02\x16Stafihub\\Stafihub\\Rdex\xe2\x02\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Rdexb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1astafihub/rdex/models.proto\x12\x16stafihub.stafihub.rdex\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xd2\x02\n\x08SwapPool\x12\x14\n\x05index\x18\x01 \x01(\rR\x05index\x12\x64\n\x07lpToken\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB/\xc8\xde\x1f\x00\xaa\xdf\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\x07lpToken\x12h\n\tbaseToken\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB/\xc8\xde\x1f\x00\xaa\xdf\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\tbaseToken\x12`\n\x05token\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB/\xc8\xde\x1f\x00\xaa\xdf\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\x05tokenB\xcc\x01\n\x1a\x63om.stafihub.stafihub.rdexB\x0bModelsProtoZ)github.com/stafihub/stafihub/x/rdex/types\xa2\x02\x03SSR\xaa\x02\x16Stafihub.Stafihub.Rdex\xca\x02\x16Stafihub\\Stafihub\\Rdex\xe2\x02\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Rdexb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.rdex.models_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.rdexB\013ModelsProtoP\001Z)github.com/stafihub/stafihub/x/rdex/types\242\002\003SSR\252\002\026Stafihub.Stafihub.Rdex\312\002\026Stafihub\\Stafihub\\Rdex\342\002\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\352\002\030Stafihub::Stafihub::Rdex'
+  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.rdexB\013ModelsProtoZ)github.com/stafihub/stafihub/x/rdex/types\242\002\003SSR\252\002\026Stafihub.Stafihub.Rdex\312\002\026Stafihub\\Stafihub\\Rdex\342\002\"Stafihub\\Stafihub\\Rdex\\GPBMetadata\352\002\030Stafihub::Stafihub::Rdex'
   _SWAPPOOL.fields_by_name['lpToken']._options = None
   _SWAPPOOL.fields_by_name['lpToken']._serialized_options = b'\310\336\037\000\252\337\037\'github.com/cosmos/cosmos-sdk/types.Coin'
   _SWAPPOOL.fields_by_name['baseToken']._options = None

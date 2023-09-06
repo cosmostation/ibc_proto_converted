@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n comdex/lend/v1beta1/params.proto\x12\x13\x63omdex.lend.v1beta1\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xc4\x01\n\x17\x63om.comdex.lend.v1beta1B\x0bParamsProtoP\x01Z.github.com/comdex-official/comdex/x/lend/types\xa2\x02\x03\x43LX\xaa\x02\x13\x43omdex.Lend.V1beta1\xca\x02\x13\x43omdex\\Lend\\V1beta1\xe2\x02\x1f\x43omdex\\Lend\\V1beta1\\GPBMetadata\xea\x02\x15\x43omdex::Lend::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n comdex/lend/v1beta1/params.proto\x12\x13\x63omdex.lend.v1beta1\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xc2\x01\n\x17\x63om.comdex.lend.v1beta1B\x0bParamsProtoZ.github.com/comdex-official/comdex/x/lend/types\xa2\x02\x03\x43LX\xaa\x02\x13\x43omdex.Lend.V1beta1\xca\x02\x13\x43omdex\\Lend\\V1beta1\xe2\x02\x1f\x43omdex\\Lend\\V1beta1\\GPBMetadata\xea\x02\x15\x43omdex::Lend::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.lend.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.comdex.lend.v1beta1B\013ParamsProtoP\001Z.github.com/comdex-official/comdex/x/lend/types\242\002\003CLX\252\002\023Comdex.Lend.V1beta1\312\002\023Comdex\\Lend\\V1beta1\342\002\037Comdex\\Lend\\V1beta1\\GPBMetadata\352\002\025Comdex::Lend::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.comdex.lend.v1beta1B\013ParamsProtoZ.github.com/comdex-official/comdex/x/lend/types\242\002\003CLX\252\002\023Comdex.Lend.V1beta1\312\002\023Comdex\\Lend\\V1beta1\342\002\037Comdex\\Lend\\V1beta1\\GPBMetadata\352\002\025Comdex::Lend::V1beta1'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=79

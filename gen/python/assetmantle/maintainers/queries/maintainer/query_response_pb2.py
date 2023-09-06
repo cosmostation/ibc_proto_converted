@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.maintainers.mappable import mappable_pb2 as assetmantle_dot_maintainers_dot_mappable_dot_mappable__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/maintainers/queries/maintainer/query_response.proto\x12\x32\x61ssetmantle.modules.maintainers.queries.maintainer\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/maintainers/mappable/mappable.proto\"]\n\rQueryResponse\x12\x46\n\x04list\x18\x01 \x03(\x0b\x32\x32.assetmantle.modules.maintainers.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\xba\x02\n6com.assetmantle.modules.maintainers.queries.maintainerB\x12QueryResponseProtoP\x01\xa2\x02\x05\x41MMQM\xaa\x02\x32\x41ssetmantle.Modules.Maintainers.Queries.Maintainer\xca\x02\x32\x41ssetmantle\\Modules\\Maintainers\\Queries\\Maintainer\xe2\x02>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Maintainers::Queries::Maintainerb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/maintainers/queries/maintainer/query_response.proto\x12\x32\x61ssetmantle.modules.maintainers.queries.maintainer\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/maintainers/mappable/mappable.proto\"]\n\rQueryResponse\x12\x46\n\x04list\x18\x01 \x03(\x0b\x32\x32.assetmantle.modules.maintainers.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\xb8\x02\n6com.assetmantle.modules.maintainers.queries.maintainerB\x12QueryResponseProto\xa2\x02\x05\x41MMQM\xaa\x02\x32\x41ssetmantle.Modules.Maintainers.Queries.Maintainer\xca\x02\x32\x41ssetmantle\\Modules\\Maintainers\\Queries\\Maintainer\xe2\x02>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Maintainers::Queries::Maintainerb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.maintainers.queries.maintainer.query_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.maintainers.queries.maintainerB\022QueryResponseProtoP\001\242\002\005AMMQM\252\0022Assetmantle.Modules.Maintainers.Queries.Maintainer\312\0022Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\342\002>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\352\0026Assetmantle::Modules::Maintainers::Queries::Maintainer'
+  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.maintainers.queries.maintainerB\022QueryResponseProto\242\002\005AMMQM\252\0022Assetmantle.Modules.Maintainers.Queries.Maintainer\312\0022Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\342\002>Assetmantle\\Modules\\Maintainers\\Queries\\Maintainer\\GPBMetadata\352\0026Assetmantle::Modules::Maintainers::Queries::Maintainer'
   _QUERYRESPONSE._options = None
   _QUERYRESPONSE._serialized_options = b'\210\240\037\000'
   _globals['_QUERYRESPONSE']._serialized_start=190

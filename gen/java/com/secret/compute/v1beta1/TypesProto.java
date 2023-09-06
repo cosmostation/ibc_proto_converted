@@ -2240,6 +2240,7 @@ public final class TypesProto {
               com.secret.compute.v1beta1.TypesProto.ContractInfo.class, com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CODE_ID_FIELD_NUMBER = 1;
     private long codeId_ = 0L;
     /**
@@ -2314,7 +2315,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasCreated() {
-      return created_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2404,7 +2405,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, label_);
       }
-      if (created_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getCreated());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcPortId_)) {
@@ -2430,7 +2431,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, label_);
       }
-      if (created_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCreated());
       }
@@ -2612,13 +2613,19 @@ public final class TypesProto {
 
       // Construct using com.secret.compute.v1beta1.TypesProto.ContractInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreatedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2675,14 +2682,17 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.label_ = label_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.created_ = createdBuilder_ == null
               ? created_
               : createdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.ibcPortId_ = ibcPortId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3045,8 +3055,10 @@ public final class TypesProto {
         } else {
           createdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (created_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

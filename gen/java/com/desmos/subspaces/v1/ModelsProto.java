@@ -201,6 +201,7 @@ public final class ModelsProto {
               com.desmos.subspaces.v1.ModelsProto.Subspace.class, com.desmos.subspaces.v1.ModelsProto.Subspace.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -465,7 +466,7 @@ public final class ModelsProto {
      */
     @java.lang.Override
     public boolean hasCreationTime() {
-      return creationTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -523,7 +524,7 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, creator_);
       }
-      if (creationTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getCreationTime());
       }
       getUnknownFields().writeTo(output);
@@ -554,7 +555,7 @@ public final class ModelsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, creator_);
       }
-      if (creationTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCreationTime());
       }
@@ -741,13 +742,19 @@ public final class ModelsProto {
 
       // Construct using com.desmos.subspaces.v1.ModelsProto.Subspace.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreationTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -815,11 +822,14 @@ public final class ModelsProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.creator_ = creator_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.creationTime_ = creationTimeBuilder_ == null
               ? creationTime_
               : creationTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1572,8 +1582,10 @@ public final class ModelsProto {
         } else {
           creationTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (creationTime_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

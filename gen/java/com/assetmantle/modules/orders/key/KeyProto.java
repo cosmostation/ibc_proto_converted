@@ -68,6 +68,7 @@ public final class KeyProto {
               com.assetmantle.modules.orders.key.KeyProto.Key.class, com.assetmantle.modules.orders.key.KeyProto.Key.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORDER_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.OrderIdProto.OrderID orderID_;
     /**
@@ -76,7 +77,7 @@ public final class KeyProto {
      */
     @java.lang.Override
     public boolean hasOrderID() {
-      return orderID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.OrderID order_i_d = 1 [json_name = "orderID"];</code>
@@ -108,7 +109,7 @@ public final class KeyProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (orderID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOrderID());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class KeyProto {
       if (size != -1) return size;
 
       size = 0;
-      if (orderID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrderID());
       }
@@ -278,13 +279,19 @@ public final class KeyProto {
 
       // Construct using com.assetmantle.modules.orders.key.KeyProto.Key.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderIDFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class KeyProto {
 
       private void buildPartial0(com.assetmantle.modules.orders.key.KeyProto.Key result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.orderID_ = orderIDBuilder_ == null
               ? orderID_
               : orderIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class KeyProto {
         } else {
           orderIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (orderID_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

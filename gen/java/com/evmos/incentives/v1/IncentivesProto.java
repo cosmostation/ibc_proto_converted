@@ -171,6 +171,7 @@ public final class IncentivesProto {
               com.evmos.incentives.v1.IncentivesProto.Incentive.class, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contract_ = "";
@@ -306,7 +307,7 @@ public final class IncentivesProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -370,7 +371,7 @@ public final class IncentivesProto {
       if (epochs_ != 0) {
         output.writeUInt32(3, epochs_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getStartTime());
       }
       if (totalGas_ != 0L) {
@@ -396,7 +397,7 @@ public final class IncentivesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, epochs_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getStartTime());
       }
@@ -582,13 +583,20 @@ public final class IncentivesProto {
 
       // Construct using com.evmos.incentives.v1.IncentivesProto.Incentive.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAllocationsFieldBuilder();
+          getStartTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -661,14 +669,17 @@ public final class IncentivesProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.epochs_ = epochs_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalGas_ = totalGas_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1367,8 +1378,10 @@ public final class IncentivesProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

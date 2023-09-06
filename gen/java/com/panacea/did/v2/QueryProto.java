@@ -668,6 +668,7 @@ public final class QueryProto {
               com.panacea.did.v2.QueryProto.QueryDIDResponse.class, com.panacea.did.v2.QueryProto.QueryDIDResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DID_DOCUMENT_WITH_SEQ_FIELD_NUMBER = 1;
     private com.panacea.did.v2.DidProto.DIDDocumentWithSeq didDocumentWithSeq_;
     /**
@@ -676,7 +677,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDidDocumentWithSeq() {
-      return didDocumentWithSeq_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.did.v2.DIDDocumentWithSeq did_document_with_seq = 1 [json_name = "didDocumentWithSeq"];</code>
@@ -708,7 +709,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (didDocumentWithSeq_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDidDocumentWithSeq());
       }
       getUnknownFields().writeTo(output);
@@ -720,7 +721,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (didDocumentWithSeq_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDidDocumentWithSeq());
       }
@@ -882,13 +883,19 @@ public final class QueryProto {
 
       // Construct using com.panacea.did.v2.QueryProto.QueryDIDResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDidDocumentWithSeqFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -932,11 +939,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.did.v2.QueryProto.QueryDIDResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.didDocumentWithSeq_ = didDocumentWithSeqBuilder_ == null
               ? didDocumentWithSeq_
               : didDocumentWithSeqBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1102,8 +1112,10 @@ public final class QueryProto {
         } else {
           didDocumentWithSeqBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (didDocumentWithSeq_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

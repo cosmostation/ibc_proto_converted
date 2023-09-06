@@ -15,15 +15,14 @@ from juno.feeshare.v1 import feeshare_pb2 as juno_dot_feeshare_dot_v1_dot_feesha
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ejuno/feeshare/v1/genesis.proto\x12\x10juno.feeshare.v1\x1a\x1fjuno/feeshare/v1/feeshare.proto\x1a\x14gogoproto/gogo.proto\"\x85\x01\n\x0cGenesisState\x12\x36\n\x06params\x18\x01 \x01(\x0b\x32\x18.juno.feeshare.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12=\n\tfee_share\x18\x02 \x03(\x0b\x32\x1a.juno.feeshare.v1.FeeShareB\x04\xc8\xde\x1f\x00R\x08\x66\x65\x65Share\"\xb4\x01\n\x06Params\x12(\n\x10\x65nable_fee_share\x18\x01 \x01(\x08R\x0e\x65nableFeeShare\x12Y\n\x10\x64\x65veloper_shares\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0f\x64\x65veloperShares\x12%\n\x0e\x61llowed_denoms\x18\x03 \x03(\tR\rallowedDenomsB\xb8\x01\n\x14\x63om.juno.feeshare.v1B\x0cGenesisProtoP\x01Z0github.com/CosmosContracts/juno/x/feeshare/types\xa2\x02\x03JFX\xaa\x02\x10Juno.Feeshare.V1\xca\x02\x10Juno\\Feeshare\\V1\xe2\x02\x1cJuno\\Feeshare\\V1\\GPBMetadata\xea\x02\x12Juno::Feeshare::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ejuno/feeshare/v1/genesis.proto\x12\x10juno.feeshare.v1\x1a\x1fjuno/feeshare/v1/feeshare.proto\x1a\x14gogoproto/gogo.proto\"\x85\x01\n\x0cGenesisState\x12\x36\n\x06params\x18\x01 \x01(\x0b\x32\x18.juno.feeshare.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12=\n\tfee_share\x18\x02 \x03(\x0b\x32\x1a.juno.feeshare.v1.FeeShareB\x04\xc8\xde\x1f\x00R\x08\x66\x65\x65Share\"\xb4\x01\n\x06Params\x12(\n\x10\x65nable_fee_share\x18\x01 \x01(\x08R\x0e\x65nableFeeShare\x12Y\n\x10\x64\x65veloper_shares\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0f\x64\x65veloperShares\x12%\n\x0e\x61llowed_denoms\x18\x03 \x03(\tR\rallowedDenomsB\xb6\x01\n\x14\x63om.juno.feeshare.v1B\x0cGenesisProtoZ0github.com/CosmosContracts/juno/x/feeshare/types\xa2\x02\x03JFX\xaa\x02\x10Juno.Feeshare.V1\xca\x02\x10Juno\\Feeshare\\V1\xe2\x02\x1cJuno\\Feeshare\\V1\\GPBMetadata\xea\x02\x12Juno::Feeshare::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'juno.feeshare.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.juno.feeshare.v1B\014GenesisProtoP\001Z0github.com/CosmosContracts/juno/x/feeshare/types\242\002\003JFX\252\002\020Juno.Feeshare.V1\312\002\020Juno\\Feeshare\\V1\342\002\034Juno\\Feeshare\\V1\\GPBMetadata\352\002\022Juno::Feeshare::V1'
+  DESCRIPTOR._serialized_options = b'\n\024com.juno.feeshare.v1B\014GenesisProtoZ0github.com/CosmosContracts/juno/x/feeshare/types\242\002\003JFX\252\002\020Juno.Feeshare.V1\312\002\020Juno\\Feeshare\\V1\342\002\034Juno\\Feeshare\\V1\\GPBMetadata\352\002\022Juno::Feeshare::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['fee_share']._options = None

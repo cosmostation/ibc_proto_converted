@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from xpla.reward.v1beta1 import reward_pb2 as xpla_dot_reward_dot_v1beta1_dot_reward__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!xpla/reward/v1beta1/genesis.proto\x12\x13xpla.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a xpla/reward/v1beta1/reward.proto\"Z\n\x0cGenesisState\x12J\n\x06params\x18\x01 \x01(\x0b\x32\x1b.xpla.reward.v1beta1.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xbd\x01\n\x17\x63om.xpla.reward.v1beta1B\x0cGenesisProtoP\x01Z&github.com/xpladev/xpla/x/reward/types\xa2\x02\x03XRX\xaa\x02\x13Xpla.Reward.V1beta1\xca\x02\x13Xpla\\Reward\\V1beta1\xe2\x02\x1fXpla\\Reward\\V1beta1\\GPBMetadata\xea\x02\x15Xpla::Reward::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!xpla/reward/v1beta1/genesis.proto\x12\x13xpla.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a xpla/reward/v1beta1/reward.proto\"Z\n\x0cGenesisState\x12J\n\x06params\x18\x01 \x01(\x0b\x32\x1b.xpla.reward.v1beta1.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xbb\x01\n\x17\x63om.xpla.reward.v1beta1B\x0cGenesisProtoZ&github.com/xpladev/xpla/x/reward/types\xa2\x02\x03XRX\xaa\x02\x13Xpla.Reward.V1beta1\xca\x02\x13Xpla\\Reward\\V1beta1\xe2\x02\x1fXpla\\Reward\\V1beta1\\GPBMetadata\xea\x02\x15Xpla::Reward::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'xpla.reward.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.xpla.reward.v1beta1B\014GenesisProtoP\001Z&github.com/xpladev/xpla/x/reward/types\242\002\003XRX\252\002\023Xpla.Reward.V1beta1\312\002\023Xpla\\Reward\\V1beta1\342\002\037Xpla\\Reward\\V1beta1\\GPBMetadata\352\002\025Xpla::Reward::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.xpla.reward.v1beta1B\014GenesisProtoZ&github.com/xpladev/xpla/x/reward/types\242\002\003XRX\252\002\023Xpla.Reward.V1beta1\312\002\023Xpla\\Reward\\V1beta1\342\002\037Xpla\\Reward\\V1beta1\\GPBMetadata\352\002\025Xpla::Reward::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000\362\336\037\ryaml:\"params\"'
   _globals['_GENESISSTATE']._serialized_start=114

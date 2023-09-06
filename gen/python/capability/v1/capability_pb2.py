@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from amino import amino_pb2 as amino_dot_amino__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x63\x61pability/v1/capability.proto\x12\rcapability.v1\x1a\x14gogoproto/gogo.proto\x1a\x11\x61mino/amino.proto\"(\n\nCapability\x12\x14\n\x05index\x18\x01 \x01(\x04R\x05index:\x04\x98\xa0\x1f\x00\"=\n\x05Owner\x12\x16\n\x06module\x18\x01 \x01(\tR\x06module\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name:\x08\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"K\n\x10\x43\x61pabilityOwners\x12\x37\n\x06owners\x18\x01 \x03(\x0b\x32\x14.capability.v1.OwnerB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06ownersB\xac\x01\n\x11\x63om.capability.v1B\x0f\x43\x61pabilityProtoP\x01Z1github.com/cosmos/ibc-go/modules/capability/types\xa2\x02\x03\x43XX\xaa\x02\rCapability.V1\xca\x02\rCapability\\V1\xe2\x02\x19\x43\x61pability\\V1\\GPBMetadata\xea\x02\x0e\x43\x61pability::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x63\x61pability/v1/capability.proto\x12\rcapability.v1\x1a\x14gogoproto/gogo.proto\x1a\x11\x61mino/amino.proto\"(\n\nCapability\x12\x14\n\x05index\x18\x01 \x01(\x04R\x05index:\x04\x98\xa0\x1f\x00\"=\n\x05Owner\x12\x16\n\x06module\x18\x01 \x01(\tR\x06module\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name:\x08\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"K\n\x10\x43\x61pabilityOwners\x12\x37\n\x06owners\x18\x01 \x03(\x0b\x32\x14.capability.v1.OwnerB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06ownersB\xaa\x01\n\x11\x63om.capability.v1B\x0f\x43\x61pabilityProtoZ1github.com/cosmos/ibc-go/modules/capability/types\xa2\x02\x03\x43XX\xaa\x02\rCapability.V1\xca\x02\rCapability\\V1\xe2\x02\x19\x43\x61pability\\V1\\GPBMetadata\xea\x02\x0e\x43\x61pability::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'capability.v1.capability_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\021com.capability.v1B\017CapabilityProtoP\001Z1github.com/cosmos/ibc-go/modules/capability/types\242\002\003CXX\252\002\rCapability.V1\312\002\rCapability\\V1\342\002\031Capability\\V1\\GPBMetadata\352\002\016Capability::V1'
+  DESCRIPTOR._serialized_options = b'\n\021com.capability.v1B\017CapabilityProtoZ1github.com/cosmos/ibc-go/modules/capability/types\242\002\003CXX\252\002\rCapability.V1\312\002\rCapability\\V1\342\002\031Capability\\V1\\GPBMetadata\352\002\016Capability::V1'
   _CAPABILITY._options = None
   _CAPABILITY._serialized_options = b'\230\240\037\000'
   _OWNER._options = None

@@ -408,6 +408,7 @@ public final class GenesisProto {
               com.comdex.lend.v1beta1.GenesisProto.GenesisState.class, com.comdex.lend.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BORROWASSET_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.lend.v1beta1.LendProto.BorrowAsset> borrowAsset_;
@@ -908,7 +909,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasModBal() {
-      return modBal_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.ModBal modBal = 13 [json_name = "modBal", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"modBal&#92;""];</code>
@@ -934,7 +935,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasReserveBal() {
-      return reserveBal_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.ReserveBal reserveBal = 14 [json_name = "reserveBal", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reserveBal&#92;""];</code>
@@ -1043,10 +1044,10 @@ public final class GenesisProto {
       for (int i = 0; i < assetRatesParams_.size(); i++) {
         output.writeMessage(12, assetRatesParams_.get(i));
       }
-      if (modBal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(13, getModBal());
       }
-      if (reserveBal_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(14, getReserveBal());
       }
       for (int i = 0; i < allReserveStats_.size(); i++) {
@@ -1109,11 +1110,11 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, assetRatesParams_.get(i));
       }
-      if (modBal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getModBal());
       }
-      if (reserveBal_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getReserveBal());
       }
@@ -1362,13 +1363,33 @@ public final class GenesisProto {
 
       // Construct using com.comdex.lend.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBorrowAssetFieldBuilder();
+          getBorrowInterestTrackerFieldBuilder();
+          getLendAssetFieldBuilder();
+          getPoolFieldBuilder();
+          getAssetToPairMappingFieldBuilder();
+          getPoolAssetLBMappingFieldBuilder();
+          getLendRewardsTrackerFieldBuilder();
+          getUserAssetLendBorrowMappingFieldBuilder();
+          getReserveBuybackAssetDataFieldBuilder();
+          getExtendedPairFieldBuilder();
+          getAuctionParamsFieldBuilder();
+          getAssetRatesParamsFieldBuilder();
+          getModBalFieldBuilder();
+          getReserveBalFieldBuilder();
+          getAllReserveStatsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1629,16 +1650,20 @@ public final class GenesisProto {
 
       private void buildPartial0(com.comdex.lend.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.modBal_ = modBalBuilder_ == null
               ? modBal_
               : modBalBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.reserveBal_ = reserveBalBuilder_ == null
               ? reserveBal_
               : reserveBalBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5201,8 +5226,10 @@ public final class GenesisProto {
         } else {
           modBalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00001000;
-        onChanged();
+        if (modBal_ != null) {
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5320,8 +5347,10 @@ public final class GenesisProto {
         } else {
           reserveBalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00002000;
-        onChanged();
+        if (reserveBal_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         return this;
       }
       /**

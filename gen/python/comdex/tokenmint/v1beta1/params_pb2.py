@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%comdex/tokenmint/v1beta1/params.proto\x12\x18\x63omdex.tokenmint.v1beta1\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xe2\x01\n\x1c\x63om.comdex.tokenmint.v1beta1B\x0bParamsProtoP\x01Z3github.com/comdex-official/comdex/x/tokenmint/types\xa2\x02\x03\x43TX\xaa\x02\x18\x43omdex.Tokenmint.V1beta1\xca\x02\x18\x43omdex\\Tokenmint\\V1beta1\xe2\x02$Comdex\\Tokenmint\\V1beta1\\GPBMetadata\xea\x02\x1a\x43omdex::Tokenmint::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%comdex/tokenmint/v1beta1/params.proto\x12\x18\x63omdex.tokenmint.v1beta1\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xe0\x01\n\x1c\x63om.comdex.tokenmint.v1beta1B\x0bParamsProtoZ3github.com/comdex-official/comdex/x/tokenmint/types\xa2\x02\x03\x43TX\xaa\x02\x18\x43omdex.Tokenmint.V1beta1\xca\x02\x18\x43omdex\\Tokenmint\\V1beta1\xe2\x02$Comdex\\Tokenmint\\V1beta1\\GPBMetadata\xea\x02\x1a\x43omdex::Tokenmint::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.tokenmint.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.comdex.tokenmint.v1beta1B\013ParamsProtoP\001Z3github.com/comdex-official/comdex/x/tokenmint/types\242\002\003CTX\252\002\030Comdex.Tokenmint.V1beta1\312\002\030Comdex\\Tokenmint\\V1beta1\342\002$Comdex\\Tokenmint\\V1beta1\\GPBMetadata\352\002\032Comdex::Tokenmint::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\034com.comdex.tokenmint.v1beta1B\013ParamsProtoZ3github.com/comdex-official/comdex/x/tokenmint/types\242\002\003CTX\252\002\030Comdex.Tokenmint.V1beta1\312\002\030Comdex\\Tokenmint\\V1beta1\342\002$Comdex\\Tokenmint\\V1beta1\\GPBMetadata\352\002\032Comdex::Tokenmint::V1beta1'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=89

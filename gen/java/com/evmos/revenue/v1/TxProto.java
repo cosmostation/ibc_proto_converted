@@ -303,7 +303,8 @@ public final class TxProto {
 
     public static final int NONCES_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList nonces_;
+    private com.google.protobuf.Internal.LongList nonces_ =
+        emptyLongList();
     /**
      * <pre>
      * nonces is an array of nonces from the address path, where the last nonce is the nonce
@@ -620,18 +621,9 @@ public final class TxProto {
       @java.lang.Override
       public com.evmos.revenue.v1.TxProto.MsgRegisterRevenue buildPartial() {
         com.evmos.revenue.v1.TxProto.MsgRegisterRevenue result = new com.evmos.revenue.v1.TxProto.MsgRegisterRevenue(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.evmos.revenue.v1.TxProto.MsgRegisterRevenue result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          nonces_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.nonces_ = nonces_;
       }
 
       private void buildPartial0(com.evmos.revenue.v1.TxProto.MsgRegisterRevenue result) {
@@ -644,6 +636,10 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.withdrawerAddress_ = withdrawerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          nonces_.makeImmutable();
+          result.nonces_ = nonces_;
         }
       }
 
@@ -709,7 +705,8 @@ public final class TxProto {
         if (!other.nonces_.isEmpty()) {
           if (nonces_.isEmpty()) {
             nonces_ = other.nonces_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            nonces_.makeImmutable();
+            bitField0_ |= 0x00000008;
           } else {
             ensureNoncesIsMutable();
             nonces_.addAll(other.nonces_);
@@ -1073,10 +1070,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList nonces_ = emptyLongList();
       private void ensureNoncesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          nonces_ = mutableCopy(nonces_);
-          bitField0_ |= 0x00000008;
+        if (!nonces_.isModifiable()) {
+          nonces_ = makeMutableCopy(nonces_);
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -1090,8 +1087,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getNoncesList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(nonces_) : nonces_;
+        nonces_.makeImmutable();
+        return nonces_;
       }
       /**
        * <pre>
@@ -1137,6 +1134,7 @@ public final class TxProto {
 
         ensureNoncesIsMutable();
         nonces_.setLong(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1155,6 +1153,7 @@ public final class TxProto {
 
         ensureNoncesIsMutable();
         nonces_.addLong(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1174,6 +1173,7 @@ public final class TxProto {
         ensureNoncesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, nonces_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4330,6 +4330,7 @@ public final class TxProto {
               com.evmos.revenue.v1.TxProto.MsgUpdateParams.class, com.evmos.revenue.v1.TxProto.MsgUpdateParams.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -4390,7 +4391,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4435,7 +4436,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -4450,7 +4451,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -4616,13 +4617,19 @@ public final class TxProto {
 
       // Construct using com.evmos.revenue.v1.TxProto.MsgUpdateParams.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4670,11 +4677,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4967,8 +4977,10 @@ public final class TxProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

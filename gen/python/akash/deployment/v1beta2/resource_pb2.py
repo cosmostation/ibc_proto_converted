@@ -16,15 +16,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from akash.base.v1beta2 import resourceunits_pb2 as akash_dot_base_dot_v1beta2_dot_resourceunits__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'akash/deployment/v1beta2/resource.proto\x12\x18\x61kash.deployment.v1beta2\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a&akash/base/v1beta2/resourceunits.proto\"\xf2\x01\n\x08Resource\x12\\\n\tresources\x18\x01 \x01(\x0b\x32!.akash.base.v1beta2.ResourceUnitsB\x1b\xc8\xde\x1f\x00\xea\xde\x1f\x04unit\xf2\xde\x1f\x0byaml:\"unit\"R\tresources\x12/\n\x05\x63ount\x18\x02 \x01(\rB\x19\xea\xde\x1f\x05\x63ount\xf2\xde\x1f\x0cyaml:\"count\"R\x05\x63ount\x12Q\n\x05price\x18\x03 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x1d\xc8\xde\x1f\x00\xea\xde\x1f\x05price\xf2\xde\x1f\x0cyaml:\"price\"R\x05price:\x04\xe8\xa0\x1f\x00\x42\xee\x01\n\x1c\x63om.akash.deployment.v1beta2B\rResourceProtoP\x01Z=github.com/akash-network/akash-api/go/node/deployment/v1beta2\xa2\x02\x03\x41\x44X\xaa\x02\x18\x41kash.Deployment.V1beta2\xca\x02\x18\x41kash\\Deployment\\V1beta2\xe2\x02$Akash\\Deployment\\V1beta2\\GPBMetadata\xea\x02\x1a\x41kash::Deployment::V1beta2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'akash/deployment/v1beta2/resource.proto\x12\x18\x61kash.deployment.v1beta2\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a&akash/base/v1beta2/resourceunits.proto\"\xf2\x01\n\x08Resource\x12\\\n\tresources\x18\x01 \x01(\x0b\x32!.akash.base.v1beta2.ResourceUnitsB\x1b\xc8\xde\x1f\x00\xea\xde\x1f\x04unit\xf2\xde\x1f\x0byaml:\"unit\"R\tresources\x12/\n\x05\x63ount\x18\x02 \x01(\rB\x19\xea\xde\x1f\x05\x63ount\xf2\xde\x1f\x0cyaml:\"count\"R\x05\x63ount\x12Q\n\x05price\x18\x03 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x1d\xc8\xde\x1f\x00\xea\xde\x1f\x05price\xf2\xde\x1f\x0cyaml:\"price\"R\x05price:\x04\xe8\xa0\x1f\x00\x42\xec\x01\n\x1c\x63om.akash.deployment.v1beta2B\rResourceProtoZ=github.com/akash-network/akash-api/go/node/deployment/v1beta2\xa2\x02\x03\x41\x44X\xaa\x02\x18\x41kash.Deployment.V1beta2\xca\x02\x18\x41kash\\Deployment\\V1beta2\xe2\x02$Akash\\Deployment\\V1beta2\\GPBMetadata\xea\x02\x1a\x41kash::Deployment::V1beta2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.deployment.v1beta2.resource_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.akash.deployment.v1beta2B\rResourceProtoP\001Z=github.com/akash-network/akash-api/go/node/deployment/v1beta2\242\002\003ADX\252\002\030Akash.Deployment.V1beta2\312\002\030Akash\\Deployment\\V1beta2\342\002$Akash\\Deployment\\V1beta2\\GPBMetadata\352\002\032Akash::Deployment::V1beta2'
+  DESCRIPTOR._serialized_options = b'\n\034com.akash.deployment.v1beta2B\rResourceProtoZ=github.com/akash-network/akash-api/go/node/deployment/v1beta2\242\002\003ADX\252\002\030Akash.Deployment.V1beta2\312\002\030Akash\\Deployment\\V1beta2\342\002$Akash\\Deployment\\V1beta2\\GPBMetadata\352\002\032Akash::Deployment::V1beta2'
   _RESOURCE.fields_by_name['resources']._options = None
   _RESOURCE.fields_by_name['resources']._serialized_options = b'\310\336\037\000\352\336\037\004unit\362\336\037\013yaml:\"unit\"'
   _RESOURCE.fields_by_name['count']._options = None

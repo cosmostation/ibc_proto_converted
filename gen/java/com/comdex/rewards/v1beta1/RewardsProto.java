@@ -2114,6 +2114,7 @@ public final class RewardsProto {
               com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.class, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -2155,7 +2156,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasTotalRewards() {
-      return totalRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_rewards = 4 [json_name = "totalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2203,7 +2204,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasAvailableRewards() {
-      return availableRewards_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin available_rewards = 7 [json_name = "availableRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"available_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2268,7 +2269,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasStartTimestamp() {
-      return startTimestamp_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_timestamp = 9 [json_name = "startTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2294,7 +2295,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasEndTimestamp() {
-      return endTimestamp_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_timestamp = 10 [json_name = "endTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2357,7 +2358,7 @@ public final class RewardsProto {
       if (assetId_ != 0L) {
         output.writeUInt64(3, assetId_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getTotalRewards());
       }
       if (durationDays_ != 0L) {
@@ -2366,16 +2367,16 @@ public final class RewardsProto {
       if (isActive_ != false) {
         output.writeBool(6, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(9, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(10, getEndTimestamp());
       }
       if (minLockupTimeSeconds_ != 0L) {
@@ -2405,7 +2406,7 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, assetId_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTotalRewards());
       }
@@ -2417,18 +2418,18 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getEndTimestamp());
       }
@@ -2660,13 +2661,22 @@ public final class RewardsProto {
 
       // Construct using com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalRewardsFieldBuilder();
+          getAvailableRewardsFieldBuilder();
+          getStartTimestampFieldBuilder();
+          getEndTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2742,10 +2752,12 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.assetId_ = assetId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.totalRewards_ = totalRewardsBuilder_ == null
               ? totalRewards_
               : totalRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.durationDays_ = durationDays_;
@@ -2757,6 +2769,7 @@ public final class RewardsProto {
           result.availableRewards_ = availableRewardsBuilder_ == null
               ? availableRewards_
               : availableRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.depositor_ = depositor_;
@@ -2765,11 +2778,13 @@ public final class RewardsProto {
           result.startTimestamp_ = startTimestampBuilder_ == null
               ? startTimestamp_
               : startTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.endTimestamp_ = endTimestampBuilder_ == null
               ? endTimestamp_
               : endTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.minLockupTimeSeconds_ = minLockupTimeSeconds_;
@@ -2777,6 +2792,7 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.epochId_ = epochId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3134,8 +3150,10 @@ public final class RewardsProto {
         } else {
           totalRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (totalRewards_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3317,8 +3335,10 @@ public final class RewardsProto {
         } else {
           availableRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (availableRewards_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3508,8 +3528,10 @@ public final class RewardsProto {
         } else {
           startTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (startTimestamp_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3627,8 +3649,10 @@ public final class RewardsProto {
         } else {
           endTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (endTimestamp_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3961,6 +3985,7 @@ public final class RewardsProto {
               com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.class, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -4002,7 +4027,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasTotalRewards() {
-      return totalRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_rewards = 4 [json_name = "totalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4050,7 +4075,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasAvailableRewards() {
-      return availableRewards_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin available_rewards = 7 [json_name = "availableRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"available_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4115,7 +4140,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasStartTimestamp() {
-      return startTimestamp_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_timestamp = 9 [json_name = "startTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -4141,7 +4166,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasEndTimestamp() {
-      return endTimestamp_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_timestamp = 10 [json_name = "endTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -4204,7 +4229,7 @@ public final class RewardsProto {
       if (extendedPairId_ != 0L) {
         output.writeUInt64(3, extendedPairId_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getTotalRewards());
       }
       if (durationDays_ != 0L) {
@@ -4213,16 +4238,16 @@ public final class RewardsProto {
       if (isActive_ != false) {
         output.writeBool(6, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(9, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(10, getEndTimestamp());
       }
       if (minLockupTimeSeconds_ != 0L) {
@@ -4252,7 +4277,7 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, extendedPairId_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTotalRewards());
       }
@@ -4264,18 +4289,18 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getEndTimestamp());
       }
@@ -4507,13 +4532,22 @@ public final class RewardsProto {
 
       // Construct using com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalRewardsFieldBuilder();
+          getAvailableRewardsFieldBuilder();
+          getStartTimestampFieldBuilder();
+          getEndTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4589,10 +4623,12 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.extendedPairId_ = extendedPairId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.totalRewards_ = totalRewardsBuilder_ == null
               ? totalRewards_
               : totalRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.durationDays_ = durationDays_;
@@ -4604,6 +4640,7 @@ public final class RewardsProto {
           result.availableRewards_ = availableRewardsBuilder_ == null
               ? availableRewards_
               : availableRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.depositor_ = depositor_;
@@ -4612,11 +4649,13 @@ public final class RewardsProto {
           result.startTimestamp_ = startTimestampBuilder_ == null
               ? startTimestamp_
               : startTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.endTimestamp_ = endTimestampBuilder_ == null
               ? endTimestamp_
               : endTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.minLockupTimeSeconds_ = minLockupTimeSeconds_;
@@ -4624,6 +4663,7 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.epochId_ = epochId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4981,8 +5021,10 @@ public final class RewardsProto {
         } else {
           totalRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (totalRewards_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5164,8 +5206,10 @@ public final class RewardsProto {
         } else {
           availableRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (availableRewards_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5355,8 +5399,10 @@ public final class RewardsProto {
         } else {
           startTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (startTimestamp_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5474,8 +5520,10 @@ public final class RewardsProto {
         } else {
           endTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (endTimestamp_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6519,6 +6567,7 @@ public final class RewardsProto {
               com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.class, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -6549,7 +6598,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasRewardsAssetPoolData() {
-      return rewardsAssetPoolData_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.rewards.v1beta1.RewardsAssetPoolData rewards_asset_pool_data = 3 [json_name = "rewardsAssetPoolData", (.gogoproto.moretags) = "yaml:&#92;"rewards_asset_pool_data&#92;""];</code>
@@ -6575,7 +6624,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasTotalRewards() {
-      return totalRewards_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_rewards = 4 [json_name = "totalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -6634,7 +6683,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasAvailableRewards() {
-      return availableRewards_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin available_rewards = 8 [json_name = "availableRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"available_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -6699,7 +6748,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasStartTimestamp() {
-      return startTimestamp_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_timestamp = 10 [json_name = "startTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -6725,7 +6774,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasEndTimestamp() {
-      return endTimestamp_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_timestamp = 11 [json_name = "endTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -6785,10 +6834,10 @@ public final class RewardsProto {
       if (appMappingId_ != 0L) {
         output.writeUInt64(2, appMappingId_);
       }
-      if (rewardsAssetPoolData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getRewardsAssetPoolData());
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getTotalRewards());
       }
       if (masterPoolId_ != 0L) {
@@ -6800,16 +6849,16 @@ public final class RewardsProto {
       if (isActive_ != false) {
         output.writeBool(7, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(8, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(10, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(11, getEndTimestamp());
       }
       if (minLockupTimeSeconds_ != 0L) {
@@ -6835,11 +6884,11 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, appMappingId_);
       }
-      if (rewardsAssetPoolData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRewardsAssetPoolData());
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTotalRewards());
       }
@@ -6855,18 +6904,18 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getEndTimestamp());
       }
@@ -7107,13 +7156,23 @@ public final class RewardsProto {
 
       // Construct using com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardsAssetPoolDataFieldBuilder();
+          getTotalRewardsFieldBuilder();
+          getAvailableRewardsFieldBuilder();
+          getStartTimestampFieldBuilder();
+          getEndTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7191,15 +7250,18 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.appMappingId_ = appMappingId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.rewardsAssetPoolData_ = rewardsAssetPoolDataBuilder_ == null
               ? rewardsAssetPoolData_
               : rewardsAssetPoolDataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.totalRewards_ = totalRewardsBuilder_ == null
               ? totalRewards_
               : totalRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.masterPoolId_ = masterPoolId_;
@@ -7214,6 +7276,7 @@ public final class RewardsProto {
           result.availableRewards_ = availableRewardsBuilder_ == null
               ? availableRewards_
               : availableRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.depositor_ = depositor_;
@@ -7222,11 +7285,13 @@ public final class RewardsProto {
           result.startTimestamp_ = startTimestampBuilder_ == null
               ? startTimestamp_
               : startTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.endTimestamp_ = endTimestampBuilder_ == null
               ? endTimestamp_
               : endTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.minLockupTimeSeconds_ = minLockupTimeSeconds_;
@@ -7234,6 +7299,7 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.epochId_ = epochId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7569,8 +7635,10 @@ public final class RewardsProto {
         } else {
           rewardsAssetPoolDataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (rewardsAssetPoolData_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7688,8 +7756,10 @@ public final class RewardsProto {
         } else {
           totalRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (totalRewards_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7903,8 +7973,10 @@ public final class RewardsProto {
         } else {
           availableRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (availableRewards_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8094,8 +8166,10 @@ public final class RewardsProto {
         } else {
           startTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (startTimestamp_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8213,8 +8287,10 @@ public final class RewardsProto {
         } else {
           endTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        if (endTimestamp_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8481,7 +8557,8 @@ public final class RewardsProto {
 
     public static final int ASSET_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList assetId_;
+    private com.google.protobuf.Internal.LongList assetId_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
      * @return A list containing the assetId.
@@ -8804,24 +8881,19 @@ public final class RewardsProto {
       @java.lang.Override
       public com.comdex.rewards.v1beta1.RewardsProto.RewardsAssetPoolData buildPartial() {
         com.comdex.rewards.v1beta1.RewardsProto.RewardsAssetPoolData result = new com.comdex.rewards.v1beta1.RewardsProto.RewardsAssetPoolData(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.RewardsProto.RewardsAssetPoolData result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          assetId_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.assetId_ = assetId_;
       }
 
       private void buildPartial0(com.comdex.rewards.v1beta1.RewardsProto.RewardsAssetPoolData result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cPoolId_ = cPoolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          assetId_.makeImmutable();
+          result.assetId_ = assetId_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.cSwapAppId_ = cSwapAppId_;
@@ -8881,7 +8953,8 @@ public final class RewardsProto {
         if (!other.assetId_.isEmpty()) {
           if (assetId_.isEmpty()) {
             assetId_ = other.assetId_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            assetId_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureAssetIdIsMutable();
             assetId_.addAll(other.assetId_);
@@ -9002,10 +9075,10 @@ public final class RewardsProto {
 
       private com.google.protobuf.Internal.LongList assetId_ = emptyLongList();
       private void ensureAssetIdIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          assetId_ = mutableCopy(assetId_);
-          bitField0_ |= 0x00000002;
+        if (!assetId_.isModifiable()) {
+          assetId_ = makeMutableCopy(assetId_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
@@ -9013,8 +9086,8 @@ public final class RewardsProto {
        */
       public java.util.List<java.lang.Long>
           getAssetIdList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(assetId_) : assetId_;
+        assetId_.makeImmutable();
+        return assetId_;
       }
       /**
        * <code>repeated uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
@@ -9042,6 +9115,7 @@ public final class RewardsProto {
 
         ensureAssetIdIsMutable();
         assetId_.setLong(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9054,6 +9128,7 @@ public final class RewardsProto {
 
         ensureAssetIdIsMutable();
         assetId_.addLong(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9067,6 +9142,7 @@ public final class RewardsProto {
         ensureAssetIdIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, assetId_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9368,6 +9444,7 @@ public final class RewardsProto {
               com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.class, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -9420,7 +9497,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasTotalRewards() {
-      return totalRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_rewards = 5 [json_name = "totalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -9468,7 +9545,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasAvailableRewards() {
-      return availableRewards_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin available_rewards = 8 [json_name = "availableRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"available_rewards&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -9533,7 +9610,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasStartTimestamp() {
-      return startTimestamp_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_timestamp = 10 [json_name = "startTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -9559,7 +9636,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasEndTimestamp() {
-      return endTimestamp_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_timestamp = 11 [json_name = "endTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -9625,7 +9702,7 @@ public final class RewardsProto {
       if (commodoAppId_ != 0L) {
         output.writeUInt64(4, commodoAppId_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getTotalRewards());
       }
       if (durationDays_ != 0L) {
@@ -9634,16 +9711,16 @@ public final class RewardsProto {
       if (isActive_ != false) {
         output.writeBool(7, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(10, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(11, getEndTimestamp());
       }
       if (acceptedBlockHeight_ != 0L) {
@@ -9677,7 +9754,7 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, commodoAppId_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTotalRewards());
       }
@@ -9689,18 +9766,18 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, isActive_);
       }
-      if (availableRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getAvailableRewards());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, depositor_);
       }
-      if (startTimestamp_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getStartTimestamp());
       }
-      if (endTimestamp_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getEndTimestamp());
       }
@@ -9937,13 +10014,22 @@ public final class RewardsProto {
 
       // Construct using com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalRewardsFieldBuilder();
+          getAvailableRewardsFieldBuilder();
+          getStartTimestampFieldBuilder();
+          getEndTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10023,10 +10109,12 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.commodoAppId_ = commodoAppId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalRewards_ = totalRewardsBuilder_ == null
               ? totalRewards_
               : totalRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.durationDays_ = durationDays_;
@@ -10038,6 +10126,7 @@ public final class RewardsProto {
           result.availableRewards_ = availableRewardsBuilder_ == null
               ? availableRewards_
               : availableRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.depositor_ = depositor_;
@@ -10046,11 +10135,13 @@ public final class RewardsProto {
           result.startTimestamp_ = startTimestampBuilder_ == null
               ? startTimestamp_
               : startTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.endTimestamp_ = endTimestampBuilder_ == null
               ? endTimestamp_
               : endTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.acceptedBlockHeight_ = acceptedBlockHeight_;
@@ -10058,6 +10149,7 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.epochId_ = epochId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10455,8 +10547,10 @@ public final class RewardsProto {
         } else {
           totalRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (totalRewards_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10638,8 +10732,10 @@ public final class RewardsProto {
         } else {
           availableRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (availableRewards_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10829,8 +10925,10 @@ public final class RewardsProto {
         } else {
           startTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (startTimestamp_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10948,8 +11046,10 @@ public final class RewardsProto {
         } else {
           endTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        if (endTimestamp_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
         return this;
       }
       /**

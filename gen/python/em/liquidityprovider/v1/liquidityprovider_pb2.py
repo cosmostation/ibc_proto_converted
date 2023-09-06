@@ -17,15 +17,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n/em/liquidityprovider/v1/liquidityprovider.proto\x12\x17\x65m.liquidityprovider.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19google/protobuf/any.proto\"\xd2\x01\n\x18LiquidityProviderAccount\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12z\n\x08mintable\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinBC\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"mintable\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x08mintable:\x0c\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xeb\x01\n\x1b\x63om.em.liquidityprovider.v1B\x16LiquidityproviderProtoP\x01Z6github.com/e-money/em-ledger/x/liquidityprovider/types\xa2\x02\x03\x45LX\xaa\x02\x17\x45m.Liquidityprovider.V1\xca\x02\x17\x45m\\Liquidityprovider\\V1\xe2\x02#Em\\Liquidityprovider\\V1\\GPBMetadata\xea\x02\x19\x45m::Liquidityprovider::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n/em/liquidityprovider/v1/liquidityprovider.proto\x12\x17\x65m.liquidityprovider.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19google/protobuf/any.proto\"\xd2\x01\n\x18LiquidityProviderAccount\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12z\n\x08mintable\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinBC\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"mintable\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x08mintable:\x0c\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xe9\x01\n\x1b\x63om.em.liquidityprovider.v1B\x16LiquidityproviderProtoZ6github.com/e-money/em-ledger/x/liquidityprovider/types\xa2\x02\x03\x45LX\xaa\x02\x17\x45m.Liquidityprovider.V1\xca\x02\x17\x45m\\Liquidityprovider\\V1\xe2\x02#Em\\Liquidityprovider\\V1\\GPBMetadata\xea\x02\x19\x45m::Liquidityprovider::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'em.liquidityprovider.v1.liquidityprovider_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.em.liquidityprovider.v1B\026LiquidityproviderProtoP\001Z6github.com/e-money/em-ledger/x/liquidityprovider/types\242\002\003ELX\252\002\027Em.Liquidityprovider.V1\312\002\027Em\\Liquidityprovider\\V1\342\002#Em\\Liquidityprovider\\V1\\GPBMetadata\352\002\031Em::Liquidityprovider::V1'
+  DESCRIPTOR._serialized_options = b'\n\033com.em.liquidityprovider.v1B\026LiquidityproviderProtoZ6github.com/e-money/em-ledger/x/liquidityprovider/types\242\002\003ELX\252\002\027Em.Liquidityprovider.V1\312\002\027Em\\Liquidityprovider\\V1\342\002#Em\\Liquidityprovider\\V1\\GPBMetadata\352\002\031Em::Liquidityprovider::V1'
   _LIQUIDITYPROVIDERACCOUNT.fields_by_name['address']._options = None
   _LIQUIDITYPROVIDERACCOUNT.fields_by_name['address']._serialized_options = b'\362\336\037\016yaml:\"address\"'
   _LIQUIDITYPROVIDERACCOUNT.fields_by_name['mintable']._options = None

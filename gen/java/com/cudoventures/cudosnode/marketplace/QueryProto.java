@@ -489,6 +489,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryParamsResponse.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.cudoventures.cudosnode.marketplace.ParamsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1618,6 +1630,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetCollectionResponse.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetCollectionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTION_FIELD_NUMBER = 1;
     private com.cudoventures.cudosnode.marketplace.CollectionProto.Collection collection_;
     /**
@@ -1626,7 +1639,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCollection() {
-      return collection_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudoventures.cudosnode.marketplace.Collection Collection = 1 [json_name = "Collection", (.gogoproto.nullable) = false];</code>
@@ -1658,7 +1671,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (collection_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCollection());
       }
       getUnknownFields().writeTo(output);
@@ -1670,7 +1683,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (collection_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCollection());
       }
@@ -1828,13 +1841,19 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetCollectionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1878,11 +1897,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetCollectionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collection_ = collectionBuilder_ == null
               ? collection_
               : collectionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2048,8 +2070,10 @@ public final class QueryProto {
         } else {
           collectionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (collection_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2218,6 +2242,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionRequest.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -2226,7 +2251,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -2258,7 +2283,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2270,7 +2295,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -2428,13 +2453,19 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2478,11 +2509,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2648,8 +2682,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2843,6 +2879,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionResponse.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cudoventures.cudosnode.marketplace.CollectionProto.Collection> collection_;
@@ -2892,7 +2929,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -2927,7 +2964,7 @@ public final class QueryProto {
       for (int i = 0; i < collection_.size(); i++) {
         output.writeMessage(1, collection_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2943,7 +2980,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, collection_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3107,13 +3144,20 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectionFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3177,11 +3221,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllCollectionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3626,8 +3673,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4273,6 +4322,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetNftResponse.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetNftResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NFT_FIELD_NUMBER = 1;
     private com.cudoventures.cudosnode.marketplace.NftProto.Nft nft_;
     /**
@@ -4281,7 +4331,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasNft() {
-      return nft_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudoventures.cudosnode.marketplace.Nft Nft = 1 [json_name = "Nft", (.gogoproto.nullable) = false];</code>
@@ -4313,7 +4363,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (nft_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getNft());
       }
       getUnknownFields().writeTo(output);
@@ -4325,7 +4375,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (nft_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getNft());
       }
@@ -4483,13 +4533,19 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetNftResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNftFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4533,11 +4589,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryGetNftResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.nft_ = nftBuilder_ == null
               ? nft_
               : nftBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4703,8 +4762,10 @@ public final class QueryProto {
         } else {
           nftBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (nft_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4873,6 +4934,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftRequest.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -4881,7 +4943,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -4913,7 +4975,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4925,7 +4987,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -5083,13 +5145,19 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5133,11 +5201,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5303,8 +5374,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5498,6 +5571,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftResponse.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NFT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cudoventures.cudosnode.marketplace.NftProto.Nft> nft_;
@@ -5547,7 +5621,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -5582,7 +5656,7 @@ public final class QueryProto {
       for (int i = 0; i < nft_.size(); i++) {
         output.writeMessage(1, nft_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5598,7 +5672,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, nft_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -5762,13 +5836,20 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNftFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5832,11 +5913,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryAllNftResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6281,8 +6365,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7003,6 +7089,7 @@ public final class QueryProto {
               com.cudoventures.cudosnode.marketplace.QueryProto.QueryCollectionByDenomIdResponse.class, com.cudoventures.cudosnode.marketplace.QueryProto.QueryCollectionByDenomIdResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTION_FIELD_NUMBER = 1;
     private com.cudoventures.cudosnode.marketplace.CollectionProto.Collection collection_;
     /**
@@ -7011,7 +7098,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCollection() {
-      return collection_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudoventures.cudosnode.marketplace.Collection Collection = 1 [json_name = "Collection", (.gogoproto.nullable) = false];</code>
@@ -7043,7 +7130,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (collection_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCollection());
       }
       getUnknownFields().writeTo(output);
@@ -7055,7 +7142,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (collection_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCollection());
       }
@@ -7213,13 +7300,19 @@ public final class QueryProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.QueryProto.QueryCollectionByDenomIdResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7263,11 +7356,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudoventures.cudosnode.marketplace.QueryProto.QueryCollectionByDenomIdResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collection_ = collectionBuilder_ == null
               ? collection_
               : collectionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7433,8 +7529,10 @@ public final class QueryProto {
         } else {
           collectionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (collection_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

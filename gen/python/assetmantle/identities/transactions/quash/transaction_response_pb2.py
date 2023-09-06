@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDassetmantle/identities/transactions/quash/transaction_response.proto\x12\x31\x61ssetmantle.modules.identities.transactions.quash\"\x15\n\x13TransactionResponseB\xbb\x02\n5com.assetmantle.modules.identities.transactions.quashB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MITQ\xaa\x02\x31\x41ssetmantle.Modules.Identities.Transactions.Quash\xca\x02\x31\x41ssetmantle\\Modules\\Identities\\Transactions\\Quash\xe2\x02=Assetmantle\\Modules\\Identities\\Transactions\\Quash\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Identities::Transactions::Quashb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDassetmantle/identities/transactions/quash/transaction_response.proto\x12\x31\x61ssetmantle.modules.identities.transactions.quash\"\x15\n\x13TransactionResponseB\xb9\x02\n5com.assetmantle.modules.identities.transactions.quashB\x18TransactionResponseProto\xa2\x02\x05\x41MITQ\xaa\x02\x31\x41ssetmantle.Modules.Identities.Transactions.Quash\xca\x02\x31\x41ssetmantle\\Modules\\Identities\\Transactions\\Quash\xe2\x02=Assetmantle\\Modules\\Identities\\Transactions\\Quash\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Identities::Transactions::Quashb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.quash.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.identities.transactions.quashB\030TransactionResponseProtoP\001\242\002\005AMITQ\252\0021Assetmantle.Modules.Identities.Transactions.Quash\312\0021Assetmantle\\Modules\\Identities\\Transactions\\Quash\342\002=Assetmantle\\Modules\\Identities\\Transactions\\Quash\\GPBMetadata\352\0025Assetmantle::Modules::Identities::Transactions::Quash'
+  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.identities.transactions.quashB\030TransactionResponseProto\242\002\005AMITQ\252\0021Assetmantle.Modules.Identities.Transactions.Quash\312\0021Assetmantle\\Modules\\Identities\\Transactions\\Quash\342\002=Assetmantle\\Modules\\Identities\\Transactions\\Quash\\GPBMetadata\352\0025Assetmantle::Modules::Identities::Transactions::Quash'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=123
   _globals['_TRANSACTIONRESPONSE']._serialized_end=144
 # @@protoc_insertion_point(module_scope)

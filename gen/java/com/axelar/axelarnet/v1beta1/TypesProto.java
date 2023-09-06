@@ -266,6 +266,7 @@ public final class TypesProto {
       // @@protoc_insertion_point(enum_scope:axelar.axelarnet.v1beta1.IBCTransfer.Status)
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -324,7 +325,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasToken() {
-      return token_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
@@ -482,7 +483,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receiver_);
       }
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getToken());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
@@ -516,7 +517,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receiver_);
       }
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getToken());
       }
@@ -721,13 +722,19 @@ public final class TypesProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.TypesProto.IBCTransfer.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -784,10 +791,12 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.receiver_ = receiver_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.token_ = tokenBuilder_ == null
               ? token_
               : tokenBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.portId_ = portId_;
@@ -804,6 +813,7 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.status_ = status_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1135,8 +1145,10 @@ public final class TypesProto {
         } else {
           tokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (token_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3430,6 +3442,7 @@ public final class TypesProto {
               com.axelar.axelarnet.v1beta1.TypesProto.Fee.class, com.axelar.axelarnet.v1beta1.TypesProto.Fee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
     /**
@@ -3438,7 +3451,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -3481,7 +3494,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAmount());
       }
       if (!recipient_.isEmpty()) {
@@ -3496,7 +3509,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAmount());
       }
@@ -3662,13 +3675,19 @@ public final class TypesProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.TypesProto.Fee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3713,14 +3732,17 @@ public final class TypesProto {
 
       private void buildPartial0(com.axelar.axelarnet.v1beta1.TypesProto.Fee result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recipient_ = recipient_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3894,8 +3916,10 @@ public final class TypesProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

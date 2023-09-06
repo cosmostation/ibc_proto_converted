@@ -87,6 +87,7 @@ public final class GrpcProto {
               com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockRequest.class, com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REQ_FIELD_NUMBER = 1;
     private com.tendermint.abci.TypesProto.RequestFinalizeBlock req_;
     /**
@@ -95,7 +96,7 @@ public final class GrpcProto {
      */
     @java.lang.Override
     public boolean hasReq() {
-      return req_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.tendermint.abci.RequestFinalizeBlock req = 1 [json_name = "req"];</code>
@@ -121,7 +122,7 @@ public final class GrpcProto {
      */
     @java.lang.Override
     public boolean hasRes() {
-      return res_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.tendermint.abci.ResponseFinalizeBlock res = 2 [json_name = "res"];</code>
@@ -153,10 +154,10 @@ public final class GrpcProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (req_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getReq());
       }
-      if (res_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getRes());
       }
       getUnknownFields().writeTo(output);
@@ -168,11 +169,11 @@ public final class GrpcProto {
       if (size != -1) return size;
 
       size = 0;
-      if (req_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReq());
       }
-      if (res_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRes());
       }
@@ -343,13 +344,20 @@ public final class GrpcProto {
 
       // Construct using com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getReqFieldBuilder();
+          getResFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -398,16 +406,20 @@ public final class GrpcProto {
 
       private void buildPartial0(com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.req_ = reqBuilder_ == null
               ? req_
               : reqBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.res_ = resBuilder_ == null
               ? res_
               : resBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -583,8 +595,10 @@ public final class GrpcProto {
         } else {
           reqBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (req_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -702,8 +716,10 @@ public final class GrpcProto {
         } else {
           resBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (res_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1316,6 +1332,7 @@ public final class GrpcProto {
               com.cosmos.store.streaming.abci.GrpcProto.ListenCommitRequest.class, com.cosmos.store.streaming.abci.GrpcProto.ListenCommitRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
     private long blockHeight_ = 0L;
     /**
@@ -1339,7 +1356,7 @@ public final class GrpcProto {
      */
     @java.lang.Override
     public boolean hasRes() {
-      return res_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.tendermint.abci.ResponseCommit res = 2 [json_name = "res"];</code>
@@ -1415,7 +1432,7 @@ public final class GrpcProto {
       if (blockHeight_ != 0L) {
         output.writeInt64(1, blockHeight_);
       }
-      if (res_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getRes());
       }
       for (int i = 0; i < changeSet_.size(); i++) {
@@ -1434,7 +1451,7 @@ public final class GrpcProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, blockHeight_);
       }
-      if (res_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRes());
       }
@@ -1611,13 +1628,20 @@ public final class GrpcProto {
 
       // Construct using com.cosmos.store.streaming.abci.GrpcProto.ListenCommitRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResFieldBuilder();
+          getChangeSetFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1685,11 +1709,14 @@ public final class GrpcProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blockHeight_ = blockHeight_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.res_ = resBuilder_ == null
               ? res_
               : resBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1946,8 +1973,10 @@ public final class GrpcProto {
         } else {
           resBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (res_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"osmosis/sumtree/v1beta1/tree.proto\x12\x15osmosis.store.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"@\n\x04Node\x12\x38\n\x08\x63hildren\x18\x01 \x03(\x0b\x32\x1c.osmosis.store.v1beta1.ChildR\x08\x63hildren\"q\n\x05\x43hild\x12\x14\n\x05index\x18\x01 \x01(\x0cR\x05index\x12R\n\x0c\x61\x63\x63umulation\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x0c\x61\x63\x63umulation\"8\n\x04Leaf\x12\x30\n\x04leaf\x18\x01 \x01(\x0b\x32\x1c.osmosis.store.v1beta1.ChildR\x04leafB\xcf\x01\n\x19\x63om.osmosis.store.v1beta1B\tTreeProtoP\x01Z1github.com/osmosis-labs/osmosis/osmoutils/sumtree\xa2\x02\x03OSX\xaa\x02\x15Osmosis.Store.V1beta1\xca\x02\x15Osmosis\\Store\\V1beta1\xe2\x02!Osmosis\\Store\\V1beta1\\GPBMetadata\xea\x02\x17Osmosis::Store::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"osmosis/sumtree/v1beta1/tree.proto\x12\x15osmosis.store.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"@\n\x04Node\x12\x38\n\x08\x63hildren\x18\x01 \x03(\x0b\x32\x1c.osmosis.store.v1beta1.ChildR\x08\x63hildren\"q\n\x05\x43hild\x12\x14\n\x05index\x18\x01 \x01(\x0cR\x05index\x12R\n\x0c\x61\x63\x63umulation\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x0c\x61\x63\x63umulation\"8\n\x04Leaf\x12\x30\n\x04leaf\x18\x01 \x01(\x0b\x32\x1c.osmosis.store.v1beta1.ChildR\x04leafB\xcd\x01\n\x19\x63om.osmosis.store.v1beta1B\tTreeProtoZ1github.com/osmosis-labs/osmosis/osmoutils/sumtree\xa2\x02\x03OSX\xaa\x02\x15Osmosis.Store.V1beta1\xca\x02\x15Osmosis\\Store\\V1beta1\xe2\x02!Osmosis\\Store\\V1beta1\\GPBMetadata\xea\x02\x17Osmosis::Store::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.sumtree.v1beta1.tree_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.osmosis.store.v1beta1B\tTreeProtoP\001Z1github.com/osmosis-labs/osmosis/osmoutils/sumtree\242\002\003OSX\252\002\025Osmosis.Store.V1beta1\312\002\025Osmosis\\Store\\V1beta1\342\002!Osmosis\\Store\\V1beta1\\GPBMetadata\352\002\027Osmosis::Store::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\031com.osmosis.store.v1beta1B\tTreeProtoZ1github.com/osmosis-labs/osmosis/osmoutils/sumtree\242\002\003OSX\252\002\025Osmosis.Store.V1beta1\312\002\025Osmosis\\Store\\V1beta1\342\002!Osmosis\\Store\\V1beta1\\GPBMetadata\352\002\027Osmosis::Store::V1beta1'
   _CHILD.fields_by_name['accumulation']._options = None
   _CHILD.fields_by_name['accumulation']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _globals['_NODE']._serialized_start=115

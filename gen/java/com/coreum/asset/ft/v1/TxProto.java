@@ -1982,6 +1982,7 @@ public final class TxProto {
               com.coreum.asset.ft.v1.TxProto.MsgMint.class, com.coreum.asset.ft.v1.TxProto.MsgMint.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -2029,7 +2030,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
@@ -2064,7 +2065,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -2079,7 +2080,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCoin());
       }
@@ -2241,13 +2242,19 @@ public final class TxProto {
 
       // Construct using com.coreum.asset.ft.v1.TxProto.MsgMint.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2295,11 +2302,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2547,8 +2557,10 @@ public final class TxProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2730,6 +2742,7 @@ public final class TxProto {
               com.coreum.asset.ft.v1.TxProto.MsgBurn.class, com.coreum.asset.ft.v1.TxProto.MsgBurn.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -2777,7 +2790,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
@@ -2812,7 +2825,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -2827,7 +2840,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCoin());
       }
@@ -2989,13 +3002,19 @@ public final class TxProto {
 
       // Construct using com.coreum.asset.ft.v1.TxProto.MsgBurn.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3043,11 +3062,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3295,8 +3317,10 @@ public final class TxProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3491,6 +3515,7 @@ public final class TxProto {
               com.coreum.asset.ft.v1.TxProto.MsgFreeze.class, com.coreum.asset.ft.v1.TxProto.MsgFreeze.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -3577,7 +3602,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
@@ -3615,7 +3640,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -3633,7 +3658,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCoin());
       }
@@ -3799,13 +3824,19 @@ public final class TxProto {
 
       // Construct using com.coreum.asset.ft.v1.TxProto.MsgFreeze.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3857,11 +3888,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.account_ = account_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4191,8 +4225,10 @@ public final class TxProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4387,6 +4423,7 @@ public final class TxProto {
               com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.class, com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -4473,7 +4510,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
@@ -4511,7 +4548,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -4529,7 +4566,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCoin());
       }
@@ -4695,13 +4732,19 @@ public final class TxProto {
 
       // Construct using com.coreum.asset.ft.v1.TxProto.MsgUnfreeze.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4753,11 +4796,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.account_ = account_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5087,8 +5133,10 @@ public final class TxProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6683,6 +6731,7 @@ public final class TxProto {
               com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.class, com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -6769,7 +6818,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false];</code>
@@ -6807,7 +6856,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -6825,7 +6874,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCoin());
       }
@@ -6991,13 +7040,19 @@ public final class TxProto {
 
       // Construct using com.coreum.asset.ft.v1.TxProto.MsgSetWhitelistedLimit.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7049,11 +7104,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.account_ = account_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7383,8 +7441,10 @@ public final class TxProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

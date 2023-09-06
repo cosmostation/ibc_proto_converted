@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n cosmos/authz/v1beta1/event.proto\x12\x14\x63osmos.authz.v1beta1\x1a\x19\x63osmos_proto/cosmos.proto\"\x96\x01\n\nEventGrant\x12 \n\x0cmsg_type_url\x18\x02 \x01(\tR\nmsgTypeUrl\x12\x32\n\x07granter\x18\x03 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07granter\x12\x32\n\x07grantee\x18\x04 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07grantee\"\x97\x01\n\x0b\x45ventRevoke\x12 \n\x0cmsg_type_url\x18\x02 \x01(\tR\nmsgTypeUrl\x12\x32\n\x07granter\x18\x03 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07granter\x12\x32\n\x07grantee\x18\x04 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07granteeB\xbe\x01\n\x18\x63om.cosmos.authz.v1beta1B\nEventProtoP\x01Z$github.com/cosmos/cosmos-sdk/x/authz\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43osmos.Authz.V1beta1\xca\x02\x14\x43osmos\\Authz\\V1beta1\xe2\x02 Cosmos\\Authz\\V1beta1\\GPBMetadata\xea\x02\x16\x43osmos::Authz::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n cosmos/authz/v1beta1/event.proto\x12\x14\x63osmos.authz.v1beta1\x1a\x19\x63osmos_proto/cosmos.proto\"\x96\x01\n\nEventGrant\x12 \n\x0cmsg_type_url\x18\x02 \x01(\tR\nmsgTypeUrl\x12\x32\n\x07granter\x18\x03 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07granter\x12\x32\n\x07grantee\x18\x04 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07grantee\"\x97\x01\n\x0b\x45ventRevoke\x12 \n\x0cmsg_type_url\x18\x02 \x01(\tR\nmsgTypeUrl\x12\x32\n\x07granter\x18\x03 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07granter\x12\x32\n\x07grantee\x18\x04 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x07granteeB\xbc\x01\n\x18\x63om.cosmos.authz.v1beta1B\nEventProtoZ$github.com/cosmos/cosmos-sdk/x/authz\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43osmos.Authz.V1beta1\xca\x02\x14\x43osmos\\Authz\\V1beta1\xe2\x02 Cosmos\\Authz\\V1beta1\\GPBMetadata\xea\x02\x16\x43osmos::Authz::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.authz.v1beta1.event_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.cosmos.authz.v1beta1B\nEventProtoP\001Z$github.com/cosmos/cosmos-sdk/x/authz\242\002\003CAX\252\002\024Cosmos.Authz.V1beta1\312\002\024Cosmos\\Authz\\V1beta1\342\002 Cosmos\\Authz\\V1beta1\\GPBMetadata\352\002\026Cosmos::Authz::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\030com.cosmos.authz.v1beta1B\nEventProtoZ$github.com/cosmos/cosmos-sdk/x/authz\242\002\003CAX\252\002\024Cosmos.Authz.V1beta1\312\002\024Cosmos\\Authz\\V1beta1\342\002 Cosmos\\Authz\\V1beta1\\GPBMetadata\352\002\026Cosmos::Authz::V1beta1'
   _EVENTGRANT.fields_by_name['granter']._options = None
   _EVENTGRANT.fields_by_name['granter']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _EVENTGRANT.fields_by_name['grantee']._options = None

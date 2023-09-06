@@ -2040,7 +2040,7 @@ public final class TypesProto {
       owner_ = com.google.protobuf.ByteString.EMPTY;
       broker_ = com.google.protobuf.ByteString.EMPTY;
       resources_ = java.util.Collections.emptyList();
-      certificates_ = java.util.Collections.emptyList();
+      certificates_ = emptyList(com.google.protobuf.ByteString.class);
       metadataUri_ = "";
     }
 
@@ -2064,6 +2064,7 @@ public final class TypesProto {
               com.starnamed.x.starname.v1beta1.TypesProto.Account.class, com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOMAIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object domain_ = "";
@@ -2123,7 +2124,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasName() {
-      return name_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2259,7 +2260,8 @@ public final class TypesProto {
 
     public static final int CERTIFICATES_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> certificates_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> certificates_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * Certificates contains the list of certificates to identify the account
@@ -2364,7 +2366,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
       }
-      if (name_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getName());
       }
       if (!owner_.isEmpty()) {
@@ -2397,7 +2399,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
       }
-      if (name_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getName());
       }
@@ -2622,13 +2624,20 @@ public final class TypesProto {
 
       // Construct using com.starnamed.x.starname.v1beta1.TypesProto.Account.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNameFieldBuilder();
+          getResourcesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2650,7 +2659,7 @@ public final class TypesProto {
           resourcesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
-        certificates_ = java.util.Collections.emptyList();
+        certificates_ = emptyList(com.google.protobuf.ByteString.class);
         metadataUri_ = "";
         return this;
       }
@@ -2694,11 +2703,6 @@ public final class TypesProto {
         } else {
           result.resources_ = resourcesBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) != 0)) {
-          certificates_ = java.util.Collections.unmodifiableList(certificates_);
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.certificates_ = certificates_;
       }
 
       private void buildPartial0(com.starnamed.x.starname.v1beta1.TypesProto.Account result) {
@@ -2706,10 +2710,12 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.domain_ = domain_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.name_ = nameBuilder_ == null
               ? name_
               : nameBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.owner_ = owner_;
@@ -2720,9 +2726,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.validUntil_ = validUntil_;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          certificates_.makeImmutable();
+          result.certificates_ = certificates_;
+        }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.metadataUri_ = metadataUri_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2815,7 +2826,8 @@ public final class TypesProto {
         if (!other.certificates_.isEmpty()) {
           if (certificates_.isEmpty()) {
             certificates_ = other.certificates_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            certificates_.makeImmutable();
+            bitField0_ |= 0x00000040;
           } else {
             ensureCertificatesIsMutable();
             certificates_.addAll(other.certificates_);
@@ -3099,8 +3111,10 @@ public final class TypesProto {
         } else {
           nameBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (name_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3618,12 +3632,12 @@ public final class TypesProto {
         return resourcesBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.ByteString> certificates_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> certificates_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureCertificatesIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
-          certificates_ = new java.util.ArrayList<com.google.protobuf.ByteString>(certificates_);
-          bitField0_ |= 0x00000040;
+        if (!certificates_.isModifiable()) {
+          certificates_ = makeMutableCopy(certificates_);
         }
+        bitField0_ |= 0x00000040;
       }
       /**
        * <pre>
@@ -3636,8 +3650,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getCertificatesList() {
-        return ((bitField0_ & 0x00000040) != 0) ?
-                 java.util.Collections.unmodifiableList(certificates_) : certificates_;
+        certificates_.makeImmutable();
+        return certificates_;
       }
       /**
        * <pre>
@@ -3680,6 +3694,7 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureCertificatesIsMutable();
         certificates_.set(index, value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3697,6 +3712,7 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureCertificatesIsMutable();
         certificates_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3715,6 +3731,7 @@ public final class TypesProto {
         ensureCertificatesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, certificates_);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3728,7 +3745,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearCertificates() {
-        certificates_ = java.util.Collections.emptyList();
+        certificates_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;

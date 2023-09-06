@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDassetmantle/orders/transactions/immediate/transaction_response.proto\x12\x31\x61ssetmantle.modules.orders.transactions.immediate\"\x15\n\x13TransactionResponseB\xbb\x02\n5com.assetmantle.modules.orders.transactions.immediateB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MOTI\xaa\x02\x31\x41ssetmantle.Modules.Orders.Transactions.Immediate\xca\x02\x31\x41ssetmantle\\Modules\\Orders\\Transactions\\Immediate\xe2\x02=Assetmantle\\Modules\\Orders\\Transactions\\Immediate\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Orders::Transactions::Immediateb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDassetmantle/orders/transactions/immediate/transaction_response.proto\x12\x31\x61ssetmantle.modules.orders.transactions.immediate\"\x15\n\x13TransactionResponseB\xb9\x02\n5com.assetmantle.modules.orders.transactions.immediateB\x18TransactionResponseProto\xa2\x02\x05\x41MOTI\xaa\x02\x31\x41ssetmantle.Modules.Orders.Transactions.Immediate\xca\x02\x31\x41ssetmantle\\Modules\\Orders\\Transactions\\Immediate\xe2\x02=Assetmantle\\Modules\\Orders\\Transactions\\Immediate\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Orders::Transactions::Immediateb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.immediate.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.orders.transactions.immediateB\030TransactionResponseProtoP\001\242\002\005AMOTI\252\0021Assetmantle.Modules.Orders.Transactions.Immediate\312\0021Assetmantle\\Modules\\Orders\\Transactions\\Immediate\342\002=Assetmantle\\Modules\\Orders\\Transactions\\Immediate\\GPBMetadata\352\0025Assetmantle::Modules::Orders::Transactions::Immediate'
+  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.orders.transactions.immediateB\030TransactionResponseProto\242\002\005AMOTI\252\0021Assetmantle.Modules.Orders.Transactions.Immediate\312\0021Assetmantle\\Modules\\Orders\\Transactions\\Immediate\342\002=Assetmantle\\Modules\\Orders\\Transactions\\Immediate\\GPBMetadata\352\0025Assetmantle::Modules::Orders::Transactions::Immediate'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=123
   _globals['_TRANSACTIONRESPONSE']._serialized_end=144
 # @@protoc_insertion_point(module_scope)

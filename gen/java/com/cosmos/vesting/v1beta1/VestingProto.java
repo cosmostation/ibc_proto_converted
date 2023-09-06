@@ -158,6 +158,7 @@ public final class VestingProto {
               com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount.class, com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.auth.v1beta1.AuthProto.BaseAccount baseAccount_;
     /**
@@ -166,7 +167,7 @@ public final class VestingProto {
      */
     @java.lang.Override
     public boolean hasBaseAccount() {
-      return baseAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true];</code>
@@ -336,7 +337,7 @@ public final class VestingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseAccount());
       }
       for (int i = 0; i < originalVesting_.size(); i++) {
@@ -360,7 +361,7 @@ public final class VestingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAccount());
       }
@@ -562,13 +563,22 @@ public final class VestingProto {
 
       // Construct using com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseAccountFieldBuilder();
+          getOriginalVestingFieldBuilder();
+          getDelegatedFreeFieldBuilder();
+          getDelegatedVestingFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -665,14 +675,17 @@ public final class VestingProto {
 
       private void buildPartial0(com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAccount_ = baseAccountBuilder_ == null
               ? baseAccount_
               : baseAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.endTime_ = endTime_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -963,8 +976,10 @@ public final class VestingProto {
         } else {
           baseAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseAccount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1912,6 +1927,7 @@ public final class VestingProto {
               com.cosmos.vesting.v1beta1.VestingProto.ContinuousVestingAccount.class, com.cosmos.vesting.v1beta1.VestingProto.ContinuousVestingAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_VESTING_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount baseVestingAccount_;
     /**
@@ -1920,7 +1936,7 @@ public final class VestingProto {
      */
     @java.lang.Override
     public boolean hasBaseVestingAccount() {
-      return baseVestingAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.vesting.v1beta1.BaseVestingAccount base_vesting_account = 1 [json_name = "baseVestingAccount", (.gogoproto.embed) = true];</code>
@@ -1967,7 +1983,7 @@ public final class VestingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseVestingAccount());
       }
       if (startTime_ != 0L) {
@@ -1982,7 +1998,7 @@ public final class VestingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseVestingAccount());
       }
@@ -2154,13 +2170,19 @@ public final class VestingProto {
 
       // Construct using com.cosmos.vesting.v1beta1.VestingProto.ContinuousVestingAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseVestingAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2205,14 +2227,17 @@ public final class VestingProto {
 
       private void buildPartial0(com.cosmos.vesting.v1beta1.VestingProto.ContinuousVestingAccount result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseVestingAccount_ = baseVestingAccountBuilder_ == null
               ? baseVestingAccount_
               : baseVestingAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startTime_ = startTime_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2386,8 +2411,10 @@ public final class VestingProto {
         } else {
           baseVestingAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseVestingAccount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2606,6 +2633,7 @@ public final class VestingProto {
               com.cosmos.vesting.v1beta1.VestingProto.DelayedVestingAccount.class, com.cosmos.vesting.v1beta1.VestingProto.DelayedVestingAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_VESTING_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount baseVestingAccount_;
     /**
@@ -2614,7 +2642,7 @@ public final class VestingProto {
      */
     @java.lang.Override
     public boolean hasBaseVestingAccount() {
-      return baseVestingAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.vesting.v1beta1.BaseVestingAccount base_vesting_account = 1 [json_name = "baseVestingAccount", (.gogoproto.embed) = true];</code>
@@ -2646,7 +2674,7 @@ public final class VestingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseVestingAccount());
       }
       getUnknownFields().writeTo(output);
@@ -2658,7 +2686,7 @@ public final class VestingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseVestingAccount());
       }
@@ -2822,13 +2850,19 @@ public final class VestingProto {
 
       // Construct using com.cosmos.vesting.v1beta1.VestingProto.DelayedVestingAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseVestingAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2872,11 +2906,14 @@ public final class VestingProto {
 
       private void buildPartial0(com.cosmos.vesting.v1beta1.VestingProto.DelayedVestingAccount result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseVestingAccount_ = baseVestingAccountBuilder_ == null
               ? baseVestingAccount_
               : baseVestingAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3042,8 +3079,10 @@ public final class VestingProto {
         } else {
           baseVestingAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseVestingAccount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4131,6 +4170,7 @@ public final class VestingProto {
               com.cosmos.vesting.v1beta1.VestingProto.PeriodicVestingAccount.class, com.cosmos.vesting.v1beta1.VestingProto.PeriodicVestingAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_VESTING_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount baseVestingAccount_;
     /**
@@ -4139,7 +4179,7 @@ public final class VestingProto {
      */
     @java.lang.Override
     public boolean hasBaseVestingAccount() {
-      return baseVestingAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.vesting.v1beta1.BaseVestingAccount base_vesting_account = 1 [json_name = "baseVestingAccount", (.gogoproto.embed) = true];</code>
@@ -4223,7 +4263,7 @@ public final class VestingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseVestingAccount());
       }
       if (startTime_ != 0L) {
@@ -4241,7 +4281,7 @@ public final class VestingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseVestingAccount());
       }
@@ -4423,13 +4463,20 @@ public final class VestingProto {
 
       // Construct using com.cosmos.vesting.v1beta1.VestingProto.PeriodicVestingAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseVestingAccountFieldBuilder();
+          getVestingPeriodsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4494,14 +4541,17 @@ public final class VestingProto {
 
       private void buildPartial0(com.cosmos.vesting.v1beta1.VestingProto.PeriodicVestingAccount result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseVestingAccount_ = baseVestingAccountBuilder_ == null
               ? baseVestingAccount_
               : baseVestingAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startTime_ = startTime_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4714,8 +4764,10 @@ public final class VestingProto {
         } else {
           baseVestingAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseVestingAccount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5164,6 +5216,7 @@ public final class VestingProto {
               com.cosmos.vesting.v1beta1.VestingProto.PermanentLockedAccount.class, com.cosmos.vesting.v1beta1.VestingProto.PermanentLockedAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_VESTING_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount baseVestingAccount_;
     /**
@@ -5172,7 +5225,7 @@ public final class VestingProto {
      */
     @java.lang.Override
     public boolean hasBaseVestingAccount() {
-      return baseVestingAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.vesting.v1beta1.BaseVestingAccount base_vesting_account = 1 [json_name = "baseVestingAccount", (.gogoproto.embed) = true];</code>
@@ -5204,7 +5257,7 @@ public final class VestingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseVestingAccount());
       }
       getUnknownFields().writeTo(output);
@@ -5216,7 +5269,7 @@ public final class VestingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseVestingAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseVestingAccount());
       }
@@ -5382,13 +5435,19 @@ public final class VestingProto {
 
       // Construct using com.cosmos.vesting.v1beta1.VestingProto.PermanentLockedAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseVestingAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5432,11 +5491,14 @@ public final class VestingProto {
 
       private void buildPartial0(com.cosmos.vesting.v1beta1.VestingProto.PermanentLockedAccount result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseVestingAccount_ = baseVestingAccountBuilder_ == null
               ? baseVestingAccount_
               : baseVestingAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5602,8 +5664,10 @@ public final class VestingProto {
         } else {
           baseVestingAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseVestingAccount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

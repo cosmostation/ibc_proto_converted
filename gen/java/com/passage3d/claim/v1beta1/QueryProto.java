@@ -1796,6 +1796,7 @@ public final class QueryProto {
               com.passage3d.claim.v1beta1.QueryProto.QueryParamsResponse.class, com.passage3d.claim.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.passage3d.claim.v1beta1.ParamsProto.Params params_;
     /**
@@ -1808,7 +1809,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1848,7 +1849,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1860,7 +1861,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -2022,13 +2023,19 @@ public final class QueryProto {
 
       // Construct using com.passage3d.claim.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2072,11 +2079,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.passage3d.claim.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2262,8 +2272,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3012,6 +3024,7 @@ public final class QueryProto {
               com.passage3d.claim.v1beta1.QueryProto.QueryClaimRecordResponse.class, com.passage3d.claim.v1beta1.QueryProto.QueryClaimRecordResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLAIM_RECORD_FIELD_NUMBER = 1;
     private com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord claimRecord_;
     /**
@@ -3020,7 +3033,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasClaimRecord() {
-      return claimRecord_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.passage3d.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_record&#92;""];</code>
@@ -3052,7 +3065,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (claimRecord_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getClaimRecord());
       }
       getUnknownFields().writeTo(output);
@@ -3064,7 +3077,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (claimRecord_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClaimRecord());
       }
@@ -3226,13 +3239,19 @@ public final class QueryProto {
 
       // Construct using com.passage3d.claim.v1beta1.QueryProto.QueryClaimRecordResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClaimRecordFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3276,11 +3295,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.passage3d.claim.v1beta1.QueryProto.QueryClaimRecordResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.claimRecord_ = claimRecordBuilder_ == null
               ? claimRecord_
               : claimRecordBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3446,8 +3468,10 @@ public final class QueryProto {
         } else {
           claimRecordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (claimRecord_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4328,6 +4352,7 @@ public final class QueryProto {
               com.passage3d.claim.v1beta1.QueryProto.QueryClaimableForActionResponse.class, com.passage3d.claim.v1beta1.QueryProto.QueryClaimableForActionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
     /**
@@ -4336,7 +4361,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4368,7 +4393,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -4380,7 +4405,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAmount());
       }
@@ -4542,13 +4567,19 @@ public final class QueryProto {
 
       // Construct using com.passage3d.claim.v1beta1.QueryProto.QueryClaimableForActionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4592,11 +4623,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.passage3d.claim.v1beta1.QueryProto.QueryClaimableForActionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4762,8 +4796,10 @@ public final class QueryProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

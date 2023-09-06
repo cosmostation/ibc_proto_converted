@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estafihub/bridge/proposal.proto\x12\x18stafihub.stafihub.bridge\x1a\x14gogoproto/gogo.proto\"\x83\x01\n\x08Proposal\x12\x43\n\x07\x63ontent\x18\x01 \x01(\x0b\x32).stafihub.stafihub.bridge.ProposalContentR\x07\x63ontent\x12\x1a\n\x08\x65xecuted\x18\x02 \x01(\x08R\x08\x65xecuted\x12\x16\n\x06voters\x18\x03 \x03(\tR\x06voters\"u\n\x0fProposalContent\x12\x46\n\x06\x61mount\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x06\x61mount\x12\x1a\n\x08receiver\x18\x02 \x01(\tR\x08receiverB\xdc\x01\n\x1c\x63om.stafihub.stafihub.bridgeB\rProposalProtoP\x01Z+github.com/stafihub/stafihub/x/bridge/types\xa2\x02\x03SSB\xaa\x02\x18Stafihub.Stafihub.Bridge\xca\x02\x18Stafihub\\Stafihub\\Bridge\xe2\x02$Stafihub\\Stafihub\\Bridge\\GPBMetadata\xea\x02\x1aStafihub::Stafihub::Bridgeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estafihub/bridge/proposal.proto\x12\x18stafihub.stafihub.bridge\x1a\x14gogoproto/gogo.proto\"\x83\x01\n\x08Proposal\x12\x43\n\x07\x63ontent\x18\x01 \x01(\x0b\x32).stafihub.stafihub.bridge.ProposalContentR\x07\x63ontent\x12\x1a\n\x08\x65xecuted\x18\x02 \x01(\x08R\x08\x65xecuted\x12\x16\n\x06voters\x18\x03 \x03(\tR\x06voters\"u\n\x0fProposalContent\x12\x46\n\x06\x61mount\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x06\x61mount\x12\x1a\n\x08receiver\x18\x02 \x01(\tR\x08receiverB\xda\x01\n\x1c\x63om.stafihub.stafihub.bridgeB\rProposalProtoZ+github.com/stafihub/stafihub/x/bridge/types\xa2\x02\x03SSB\xaa\x02\x18Stafihub.Stafihub.Bridge\xca\x02\x18Stafihub\\Stafihub\\Bridge\xe2\x02$Stafihub\\Stafihub\\Bridge\\GPBMetadata\xea\x02\x1aStafihub::Stafihub::Bridgeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.bridge.proposal_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.stafihub.stafihub.bridgeB\rProposalProtoP\001Z+github.com/stafihub/stafihub/x/bridge/types\242\002\003SSB\252\002\030Stafihub.Stafihub.Bridge\312\002\030Stafihub\\Stafihub\\Bridge\342\002$Stafihub\\Stafihub\\Bridge\\GPBMetadata\352\002\032Stafihub::Stafihub::Bridge'
+  DESCRIPTOR._serialized_options = b'\n\034com.stafihub.stafihub.bridgeB\rProposalProtoZ+github.com/stafihub/stafihub/x/bridge/types\242\002\003SSB\252\002\030Stafihub.Stafihub.Bridge\312\002\030Stafihub\\Stafihub\\Bridge\342\002$Stafihub\\Stafihub\\Bridge\\GPBMetadata\352\002\032Stafihub::Stafihub::Bridge'
   _PROPOSALCONTENT.fields_by_name['amount']._options = None
   _PROPOSALCONTENT.fields_by_name['amount']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _globals['_PROPOSAL']._serialized_start=83

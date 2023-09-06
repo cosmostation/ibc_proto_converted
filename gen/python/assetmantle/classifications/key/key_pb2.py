@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import classification_id_pb2 as assetmantle_dot_ids_dot_base_dot_classification__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/classifications/key/key.proto\x12\'assetmantle.modules.classifications.key\x1a,assetmantle/ids/base/classification_id.proto\"b\n\x03Key\x12[\n\x12\x63lassification_i_d\x18\x01 \x01(\x0b\x32-.assetmantle.schema.ids.base.ClassificationIDR\x10\x63lassificationIDB\xf7\x01\n+com.assetmantle.modules.classifications.keyB\x08KeyProtoP\x01\xa2\x02\x04\x41MCK\xaa\x02\'Assetmantle.Modules.Classifications.Key\xca\x02\'Assetmantle\\Modules\\Classifications\\Key\xe2\x02\x33\x41ssetmantle\\Modules\\Classifications\\Key\\GPBMetadata\xea\x02*Assetmantle::Modules::Classifications::Keyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/classifications/key/key.proto\x12\'assetmantle.modules.classifications.key\x1a,assetmantle/ids/base/classification_id.proto\"b\n\x03Key\x12[\n\x12\x63lassification_i_d\x18\x01 \x01(\x0b\x32-.assetmantle.schema.ids.base.ClassificationIDR\x10\x63lassificationIDB\xf5\x01\n+com.assetmantle.modules.classifications.keyB\x08KeyProto\xa2\x02\x04\x41MCK\xaa\x02\'Assetmantle.Modules.Classifications.Key\xca\x02\'Assetmantle\\Modules\\Classifications\\Key\xe2\x02\x33\x41ssetmantle\\Modules\\Classifications\\Key\\GPBMetadata\xea\x02*Assetmantle::Modules::Classifications::Keyb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.classifications.key.key_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n+com.assetmantle.modules.classifications.keyB\010KeyProtoP\001\242\002\004AMCK\252\002\'Assetmantle.Modules.Classifications.Key\312\002\'Assetmantle\\Modules\\Classifications\\Key\342\0023Assetmantle\\Modules\\Classifications\\Key\\GPBMetadata\352\002*Assetmantle::Modules::Classifications::Key'
+  DESCRIPTOR._serialized_options = b'\n+com.assetmantle.modules.classifications.keyB\010KeyProto\242\002\004AMCK\252\002\'Assetmantle.Modules.Classifications.Key\312\002\'Assetmantle\\Modules\\Classifications\\Key\342\0023Assetmantle\\Modules\\Classifications\\Key\\GPBMetadata\352\002*Assetmantle::Modules::Classifications::Key'
   _globals['_KEY']._serialized_start=132
   _globals['_KEY']._serialized_end=230
 # @@protoc_insertion_point(module_scope)

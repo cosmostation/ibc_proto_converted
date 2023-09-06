@@ -929,6 +929,7 @@ public final class GenesisProto {
               com.osmosis.poolmanager.v1beta1.GenesisProto.GenesisState.class, com.osmosis.poolmanager.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NEXT_POOL_ID_FIELD_NUMBER = 1;
     private long nextPoolId_ = 0L;
     /**
@@ -956,7 +957,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1060,7 +1061,7 @@ public final class GenesisProto {
       if (nextPoolId_ != 0L) {
         output.writeUInt64(1, nextPoolId_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getParams());
       }
       for (int i = 0; i < poolRoutes_.size(); i++) {
@@ -1079,7 +1080,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, nextPoolId_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -1256,13 +1257,20 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.poolmanager.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getPoolRoutesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1330,11 +1338,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.nextPoolId_ = nextPoolId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1611,8 +1622,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

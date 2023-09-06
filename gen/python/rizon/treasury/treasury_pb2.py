@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1drizon/treasury/treasury.proto\x12\x19rizonworld.rizon.treasury\x1a\x14gogoproto/gogo.proto\"\xb0\x01\n\x08\x43urrency\x12&\n\x05\x64\x65nom\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"denom\"R\x05\x64\x65nom\x12#\n\x04\x64\x65sc\x18\x02 \x01(\tB\x0f\xf2\xde\x1f\x0byaml:\"desc\"R\x04\x64\x65sc\x12&\n\x05owner\x18\x03 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"owner\"R\x05owner\x12/\n\x08mintable\x18\x04 \x01(\x08\x42\x13\xf2\xde\x1f\x0fyaml:\"mintable\"R\x08mintable\"7\n\nCurrencies\x12)\n\x06\x64\x65noms\x18\x01 \x03(\tB\x11\xf2\xde\x1f\ryaml:\"denoms\"R\x06\x64\x65noms\";\n\x0eMaxAtoloSupply\x12)\n\x06\x61mount\x18\x01 \x01(\x03\x42\x11\xf2\xde\x1f\ryaml:\"amount\"R\x06\x61mount\"5\n\x08Sequence\x12)\n\x06number\x18\x01 \x01(\x03\x42\x11\xf2\xde\x1f\ryaml:\"number\"R\x06numberB\xe3\x01\n\x1d\x63om.rizonworld.rizon.treasuryB\rTreasuryProtoP\x01Z-github.com/rizon-world/rizon/x/treasury/types\xa2\x02\x03RRT\xaa\x02\x19Rizonworld.Rizon.Treasury\xca\x02\x19Rizonworld\\Rizon\\Treasury\xe2\x02%Rizonworld\\Rizon\\Treasury\\GPBMetadata\xea\x02\x1bRizonworld::Rizon::Treasuryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1drizon/treasury/treasury.proto\x12\x19rizonworld.rizon.treasury\x1a\x14gogoproto/gogo.proto\"\xb0\x01\n\x08\x43urrency\x12&\n\x05\x64\x65nom\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"denom\"R\x05\x64\x65nom\x12#\n\x04\x64\x65sc\x18\x02 \x01(\tB\x0f\xf2\xde\x1f\x0byaml:\"desc\"R\x04\x64\x65sc\x12&\n\x05owner\x18\x03 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"owner\"R\x05owner\x12/\n\x08mintable\x18\x04 \x01(\x08\x42\x13\xf2\xde\x1f\x0fyaml:\"mintable\"R\x08mintable\"7\n\nCurrencies\x12)\n\x06\x64\x65noms\x18\x01 \x03(\tB\x11\xf2\xde\x1f\ryaml:\"denoms\"R\x06\x64\x65noms\";\n\x0eMaxAtoloSupply\x12)\n\x06\x61mount\x18\x01 \x01(\x03\x42\x11\xf2\xde\x1f\ryaml:\"amount\"R\x06\x61mount\"5\n\x08Sequence\x12)\n\x06number\x18\x01 \x01(\x03\x42\x11\xf2\xde\x1f\ryaml:\"number\"R\x06numberB\xe1\x01\n\x1d\x63om.rizonworld.rizon.treasuryB\rTreasuryProtoZ-github.com/rizon-world/rizon/x/treasury/types\xa2\x02\x03RRT\xaa\x02\x19Rizonworld.Rizon.Treasury\xca\x02\x19Rizonworld\\Rizon\\Treasury\xe2\x02%Rizonworld\\Rizon\\Treasury\\GPBMetadata\xea\x02\x1bRizonworld::Rizon::Treasuryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'rizon.treasury.treasury_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.rizonworld.rizon.treasuryB\rTreasuryProtoP\001Z-github.com/rizon-world/rizon/x/treasury/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Treasury\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizonworld\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizonworld::Rizon::Treasury'
+  DESCRIPTOR._serialized_options = b'\n\035com.rizonworld.rizon.treasuryB\rTreasuryProtoZ-github.com/rizon-world/rizon/x/treasury/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Treasury\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizonworld\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizonworld::Rizon::Treasury'
   _CURRENCY.fields_by_name['denom']._options = None
   _CURRENCY.fields_by_name['denom']._serialized_options = b'\362\336\037\014yaml:\"denom\"'
   _CURRENCY.fields_by_name['desc']._options = None

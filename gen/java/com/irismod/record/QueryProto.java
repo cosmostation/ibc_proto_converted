@@ -632,6 +632,7 @@ public final class QueryProto {
               com.irismod.record.QueryProto.QueryRecordResponse.class, com.irismod.record.QueryProto.QueryRecordResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECORD_FIELD_NUMBER = 1;
     private com.irismod.record.RecordProto.Record record_;
     /**
@@ -640,7 +641,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return record_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
@@ -672,7 +673,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRecord());
       }
       getUnknownFields().writeTo(output);
@@ -684,7 +685,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRecord());
       }
@@ -846,13 +847,19 @@ public final class QueryProto {
 
       // Construct using com.irismod.record.QueryProto.QueryRecordResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -896,11 +903,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.record.QueryProto.QueryRecordResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1066,8 +1076,10 @@ public final class QueryProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (record_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

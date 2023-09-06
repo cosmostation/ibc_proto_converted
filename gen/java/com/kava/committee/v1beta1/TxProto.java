@@ -91,6 +91,7 @@ public final class TxProto {
               com.kava.committee.v1beta1.TxProto.MsgSubmitProposal.class, com.kava.committee.v1beta1.TxProto.MsgSubmitProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PUB_PROPOSAL_FIELD_NUMBER = 1;
     private com.google.protobuf.Any pubProposal_;
     /**
@@ -99,7 +100,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPubProposal() {
-      return pubProposal_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any pub_proposal = 1 [json_name = "pubProposal", (.cosmos_proto.accepts_interface) = "cosmos.gov.v1beta1.Content"];</code>
@@ -181,7 +182,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pubProposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPubProposal());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
@@ -199,7 +200,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pubProposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPubProposal());
       }
@@ -377,13 +378,19 @@ public final class TxProto {
 
       // Construct using com.kava.committee.v1beta1.TxProto.MsgSubmitProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPubProposalFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -429,10 +436,12 @@ public final class TxProto {
 
       private void buildPartial0(com.kava.committee.v1beta1.TxProto.MsgSubmitProposal result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pubProposal_ = pubProposalBuilder_ == null
               ? pubProposal_
               : pubProposalBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proposer_ = proposer_;
@@ -440,6 +449,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.committeeId_ = committeeId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -623,8 +633,10 @@ public final class TxProto {
         } else {
           pubProposalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pubProposal_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

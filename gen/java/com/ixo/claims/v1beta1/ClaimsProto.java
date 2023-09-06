@@ -1798,6 +1798,7 @@ public final class ClaimsProto {
               com.ixo.claims.v1beta1.ClaimsProto.Collection.class, com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -2000,7 +2001,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasStartDate() {
-      return startDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2039,7 +2040,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasEndDate() {
-      return endDate_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2200,7 +2201,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasPayments() {
-      return payments_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -2301,10 +2302,10 @@ public final class ClaimsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(protocol_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, protocol_);
       }
-      if (startDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getStartDate());
       }
-      if (endDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getEndDate());
       }
       if (quota_ != 0L) {
@@ -2328,7 +2329,7 @@ public final class ClaimsProto {
       if (state_ != com.ixo.claims.v1beta1.ClaimsProto.CollectionState.OPEN.getNumber()) {
         output.writeEnum(13, state_);
       }
-      if (payments_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(14, getPayments());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -2355,11 +2356,11 @@ public final class ClaimsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(protocol_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, protocol_);
       }
-      if (startDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartDate());
       }
-      if (endDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getEndDate());
       }
@@ -2391,7 +2392,7 @@ public final class ClaimsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(13, state_);
       }
-      if (payments_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getPayments());
       }
@@ -2623,13 +2624,21 @@ public final class ClaimsProto {
 
       // Construct using com.ixo.claims.v1beta1.ClaimsProto.Collection.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartDateFieldBuilder();
+          getEndDateFieldBuilder();
+          getPaymentsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2707,15 +2716,18 @@ public final class ClaimsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.protocol_ = protocol_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.startDate_ = startDateBuilder_ == null
               ? startDate_
               : startDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.endDate_ = endDateBuilder_ == null
               ? endDate_
               : endDateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.quota_ = quota_;
@@ -2742,10 +2754,12 @@ public final class ClaimsProto {
           result.payments_ = paymentsBuilder_ == null
               ? payments_
               : paymentsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3430,8 +3444,10 @@ public final class ClaimsProto {
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (startDate_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3590,8 +3606,10 @@ public final class ClaimsProto {
         } else {
           endDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (endDate_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4103,8 +4121,10 @@ public final class ClaimsProto {
         } else {
           paymentsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00002000;
-        onChanged();
+        if (payments_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4442,6 +4462,7 @@ public final class ClaimsProto {
               com.ixo.claims.v1beta1.ClaimsProto.Payments.class, com.ixo.claims.v1beta1.ClaimsProto.Payments.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBMISSION_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.ClaimsProto.Payment submission_;
     /**
@@ -4450,7 +4471,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasSubmission() {
-      return submission_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.claims.v1beta1.Payment submission = 1 [json_name = "submission"];</code>
@@ -4476,7 +4497,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasEvaluation() {
-      return evaluation_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.ixo.claims.v1beta1.Payment evaluation = 2 [json_name = "evaluation"];</code>
@@ -4502,7 +4523,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasApproval() {
-      return approval_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.ixo.claims.v1beta1.Payment approval = 3 [json_name = "approval"];</code>
@@ -4532,7 +4553,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasRejection() {
-      return rejection_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -4572,16 +4593,16 @@ public final class ClaimsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (submission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSubmission());
       }
-      if (evaluation_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getEvaluation());
       }
-      if (approval_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getApproval());
       }
-      if (rejection_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getRejection());
       }
       getUnknownFields().writeTo(output);
@@ -4593,19 +4614,19 @@ public final class ClaimsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (submission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubmission());
       }
-      if (evaluation_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEvaluation());
       }
-      if (approval_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getApproval());
       }
-      if (rejection_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRejection());
       }
@@ -4790,13 +4811,22 @@ public final class ClaimsProto {
 
       // Construct using com.ixo.claims.v1beta1.ClaimsProto.Payments.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubmissionFieldBuilder();
+          getEvaluationFieldBuilder();
+          getApprovalFieldBuilder();
+          getRejectionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4855,26 +4885,32 @@ public final class ClaimsProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.ClaimsProto.Payments result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.submission_ = submissionBuilder_ == null
               ? submission_
               : submissionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.evaluation_ = evaluationBuilder_ == null
               ? evaluation_
               : evaluationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.approval_ = approvalBuilder_ == null
               ? approval_
               : approvalBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.rejection_ = rejectionBuilder_ == null
               ? rejection_
               : rejectionBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5070,8 +5106,10 @@ public final class ClaimsProto {
         } else {
           submissionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (submission_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5189,8 +5227,10 @@ public final class ClaimsProto {
         } else {
           evaluationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (evaluation_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5308,8 +5348,10 @@ public final class ClaimsProto {
         } else {
           approvalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (approval_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5447,8 +5489,10 @@ public final class ClaimsProto {
         } else {
           rejectionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (rejection_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5721,6 +5765,7 @@ public final class ClaimsProto {
               com.ixo.claims.v1beta1.ClaimsProto.Payment.class, com.ixo.claims.v1beta1.ClaimsProto.Payment.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object account_ = "";
@@ -5821,7 +5866,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasContract1155Payment() {
-      return contract1155Payment_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5860,7 +5905,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasTimeoutNs() {
-      return timeoutNs_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5908,10 +5953,10 @@ public final class ClaimsProto {
       for (int i = 0; i < amount_.size(); i++) {
         output.writeMessage(2, amount_.get(i));
       }
-      if (contract1155Payment_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getContract1155Payment());
       }
-      if (timeoutNs_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getTimeoutNs());
       }
       getUnknownFields().writeTo(output);
@@ -5930,11 +5975,11 @@ public final class ClaimsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, amount_.get(i));
       }
-      if (contract1155Payment_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getContract1155Payment());
       }
-      if (timeoutNs_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTimeoutNs());
       }
@@ -6111,13 +6156,21 @@ public final class ClaimsProto {
 
       // Construct using com.ixo.claims.v1beta1.ClaimsProto.Payment.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+          getContract1155PaymentFieldBuilder();
+          getTimeoutNsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6190,16 +6243,20 @@ public final class ClaimsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.account_ = account_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.contract1155Payment_ = contract1155PaymentBuilder_ == null
               ? contract1155Payment_
               : contract1155PaymentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timeoutNs_ = timeoutNsBuilder_ == null
               ? timeoutNs_
               : timeoutNsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6776,8 +6833,10 @@ public final class ClaimsProto {
         } else {
           contract1155PaymentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (contract1155Payment_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6936,8 +6995,10 @@ public final class ClaimsProto {
         } else {
           timeoutNsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (timeoutNs_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8028,6 +8089,7 @@ public final class ClaimsProto {
               com.ixo.claims.v1beta1.ClaimsProto.Claim.class, com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTION_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collectionId_ = "";
@@ -8173,7 +8235,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasSubmissionDate() {
-      return submissionDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -8258,7 +8320,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasEvaluation() {
-      return evaluation_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -8292,7 +8354,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasPaymentsStatus() {
-      return paymentsStatus_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.ixo.claims.v1beta1.ClaimPayments payments_status = 7 [json_name = "paymentsStatus"];</code>
@@ -8333,16 +8395,16 @@ public final class ClaimsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, agentAddress_);
       }
-      if (submissionDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getSubmissionDate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, claimId_);
       }
-      if (evaluation_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getEvaluation());
       }
-      if (paymentsStatus_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(7, getPaymentsStatus());
       }
       getUnknownFields().writeTo(output);
@@ -8363,18 +8425,18 @@ public final class ClaimsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, agentAddress_);
       }
-      if (submissionDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSubmissionDate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, claimId_);
       }
-      if (evaluation_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getEvaluation());
       }
-      if (paymentsStatus_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getPaymentsStatus());
       }
@@ -8566,13 +8628,21 @@ public final class ClaimsProto {
 
       // Construct using com.ixo.claims.v1beta1.ClaimsProto.Claim.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubmissionDateFieldBuilder();
+          getEvaluationFieldBuilder();
+          getPaymentsStatusFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8639,10 +8709,12 @@ public final class ClaimsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.agentAddress_ = agentAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.submissionDate_ = submissionDateBuilder_ == null
               ? submissionDate_
               : submissionDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.claimId_ = claimId_;
@@ -8651,12 +8723,15 @@ public final class ClaimsProto {
           result.evaluation_ = evaluationBuilder_ == null
               ? evaluation_
               : evaluationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.paymentsStatus_ = paymentsStatusBuilder_ == null
               ? paymentsStatus_
               : paymentsStatusBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9158,8 +9233,10 @@ public final class ClaimsProto {
         } else {
           submissionDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (submissionDate_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9405,8 +9482,10 @@ public final class ClaimsProto {
         } else {
           evaluationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (evaluation_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9540,8 +9619,10 @@ public final class ClaimsProto {
         } else {
           paymentsStatusBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (paymentsStatus_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10788,6 +10869,7 @@ public final class ClaimsProto {
               com.ixo.claims.v1beta1.ClaimsProto.Evaluation.class, com.ixo.claims.v1beta1.ClaimsProto.Evaluation.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLAIM_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object claimId_ = "";
@@ -11121,7 +11203,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasEvaluationDate() {
-      return evaluationDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -11253,7 +11335,7 @@ public final class ClaimsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(verificationProof_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, verificationProof_);
       }
-      if (evaluationDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(9, getEvaluationDate());
       }
       for (int i = 0; i < amount_.size(); i++) {
@@ -11294,7 +11376,7 @@ public final class ClaimsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(verificationProof_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, verificationProof_);
       }
-      if (evaluationDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getEvaluationDate());
       }
@@ -11493,13 +11575,20 @@ public final class ClaimsProto {
 
       // Construct using com.ixo.claims.v1beta1.ClaimsProto.Evaluation.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEvaluationDateFieldBuilder();
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11595,11 +11684,14 @@ public final class ClaimsProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.verificationProof_ = verificationProof_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.evaluationDate_ = evaluationDateBuilder_ == null
               ? evaluationDate_
               : evaluationDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12567,8 +12659,10 @@ public final class ClaimsProto {
         } else {
           evaluationDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (evaluationDate_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13110,6 +13204,7 @@ public final class ClaimsProto {
               com.ixo.claims.v1beta1.ClaimsProto.Dispute.class, com.ixo.claims.v1beta1.ClaimsProto.Dispute.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBJECT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object subjectId_ = "";
@@ -13172,7 +13267,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return data_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.claims.v1beta1.DisputeData data = 3 [json_name = "data"];</code>
@@ -13210,7 +13305,7 @@ public final class ClaimsProto {
       if (type_ != 0) {
         output.writeInt32(2, type_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getData());
       }
       getUnknownFields().writeTo(output);
@@ -13229,7 +13324,7 @@ public final class ClaimsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, type_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getData());
       }
@@ -13395,13 +13490,19 @@ public final class ClaimsProto {
 
       // Construct using com.ixo.claims.v1beta1.ClaimsProto.Dispute.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13453,11 +13554,14 @@ public final class ClaimsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.type_ = type_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13757,8 +13861,10 @@ public final class ClaimsProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (data_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

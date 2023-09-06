@@ -96,6 +96,7 @@ public final class TxProto {
               com.stafihub.stafihub.rdex.TxProto.MsgCreatePool.class, com.stafihub.stafihub.rdex.TxProto.MsgCreatePool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -143,7 +144,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasToken0() {
-      return token0_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token0 = 2 [json_name = "token0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -169,7 +170,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasToken1() {
-      return token1_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token1 = 3 [json_name = "token1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -204,10 +205,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
       }
-      if (token0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getToken0());
       }
-      if (token1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getToken1());
       }
       getUnknownFields().writeTo(output);
@@ -222,11 +223,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
       }
-      if (token0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getToken0());
       }
-      if (token1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getToken1());
       }
@@ -397,13 +398,20 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rdex.TxProto.MsgCreatePool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getToken0FieldBuilder();
+          getToken1FieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -456,16 +464,20 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.creator_ = creator_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.token0_ = token0Builder_ == null
               ? token0_
               : token0Builder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.token1_ = token1Builder_ == null
               ? token1_
               : token1Builder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -723,8 +735,10 @@ public final class TxProto {
         } else {
           token0Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (token0_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -842,8 +856,10 @@ public final class TxProto {
         } else {
           token1Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (token1_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1443,6 +1459,7 @@ public final class TxProto {
               com.stafihub.stafihub.rdex.TxProto.MsgAddLiquidity.class, com.stafihub.stafihub.rdex.TxProto.MsgAddLiquidity.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -1501,7 +1518,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasToken0() {
-      return token0_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token0 = 3 [json_name = "token0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1527,7 +1544,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasToken1() {
-      return token1_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token1 = 4 [json_name = "token1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1565,10 +1582,10 @@ public final class TxProto {
       if (swapPoolIndex_ != 0) {
         output.writeUInt32(2, swapPoolIndex_);
       }
-      if (token0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getToken0());
       }
-      if (token1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getToken1());
       }
       getUnknownFields().writeTo(output);
@@ -1587,11 +1604,11 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, swapPoolIndex_);
       }
-      if (token0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getToken0());
       }
-      if (token1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getToken1());
       }
@@ -1766,13 +1783,20 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rdex.TxProto.MsgAddLiquidity.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getToken0FieldBuilder();
+          getToken1FieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1829,16 +1853,20 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.swapPoolIndex_ = swapPoolIndex_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.token0_ = token0Builder_ == null
               ? token0_
               : token0Builder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.token1_ = token1Builder_ == null
               ? token1_
               : token1Builder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2136,8 +2164,10 @@ public final class TxProto {
         } else {
           token0Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (token0_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2255,8 +2285,10 @@ public final class TxProto {
         } else {
           token1Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (token1_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2856,6 +2888,7 @@ public final class TxProto {
               com.stafihub.stafihub.rdex.TxProto.MsgSwap.class, com.stafihub.stafihub.rdex.TxProto.MsgSwap.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -2914,7 +2947,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInputToken() {
-      return inputToken_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin inputToken = 3 [json_name = "inputToken", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2940,7 +2973,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinOutToken() {
-      return minOutToken_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin minOutToken = 4 [json_name = "minOutToken", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2978,10 +3011,10 @@ public final class TxProto {
       if (swapPoolIndex_ != 0) {
         output.writeUInt32(2, swapPoolIndex_);
       }
-      if (inputToken_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getInputToken());
       }
-      if (minOutToken_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getMinOutToken());
       }
       getUnknownFields().writeTo(output);
@@ -3000,11 +3033,11 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, swapPoolIndex_);
       }
-      if (inputToken_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInputToken());
       }
-      if (minOutToken_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMinOutToken());
       }
@@ -3179,13 +3212,20 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rdex.TxProto.MsgSwap.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputTokenFieldBuilder();
+          getMinOutTokenFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3242,16 +3282,20 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.swapPoolIndex_ = swapPoolIndex_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.inputToken_ = inputTokenBuilder_ == null
               ? inputToken_
               : inputTokenBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.minOutToken_ = minOutTokenBuilder_ == null
               ? minOutToken_
               : minOutTokenBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3549,8 +3593,10 @@ public final class TxProto {
         } else {
           inputTokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (inputToken_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3668,8 +3714,10 @@ public final class TxProto {
         } else {
           minOutTokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (minOutToken_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4308,6 +4356,7 @@ public final class TxProto {
               com.stafihub.stafihub.rdex.TxProto.MsgRemoveLiquidity.class, com.stafihub.stafihub.rdex.TxProto.MsgRemoveLiquidity.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -4444,7 +4493,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinOutToken0() {
-      return minOutToken0_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin minOutToken0 = 5 [json_name = "minOutToken0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4470,7 +4519,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinOutToken1() {
-      return minOutToken1_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin minOutToken1 = 6 [json_name = "minOutToken1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4553,10 +4602,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapUnit_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, swapUnit_);
       }
-      if (minOutToken0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getMinOutToken0());
       }
-      if (minOutToken1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getMinOutToken1());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inputTokenDenom_)) {
@@ -4584,11 +4633,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapUnit_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, swapUnit_);
       }
-      if (minOutToken0_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMinOutToken0());
       }
-      if (minOutToken1_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getMinOutToken1());
       }
@@ -4778,13 +4827,20 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rdex.TxProto.MsgRemoveLiquidity.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinOutToken0FieldBuilder();
+          getMinOutToken1FieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4850,19 +4906,23 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.swapUnit_ = swapUnit_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.minOutToken0_ = minOutToken0Builder_ == null
               ? minOutToken0_
               : minOutToken0Builder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.minOutToken1_ = minOutToken1Builder_ == null
               ? minOutToken1_
               : minOutToken1Builder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.inputTokenDenom_ = inputTokenDenom_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5334,8 +5394,10 @@ public final class TxProto {
         } else {
           minOutToken0Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (minOutToken0_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5453,8 +5515,10 @@ public final class TxProto {
         } else {
           minOutToken1Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (minOutToken1_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

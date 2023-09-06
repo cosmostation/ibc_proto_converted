@@ -3090,6 +3090,7 @@ public final class TrackingProto {
               com.archway.tracking.v1.TrackingProto.TxTracking.class, com.archway.tracking.v1.TrackingProto.TxTracking.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INFO_FIELD_NUMBER = 1;
     private com.archway.tracking.v1.TrackingProto.TxInfo info_;
     /**
@@ -3102,7 +3103,7 @@ public final class TrackingProto {
      */
     @java.lang.Override
     public boolean hasInfo() {
-      return info_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3208,7 +3209,7 @@ public final class TrackingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInfo());
       }
       for (int i = 0; i < contractOperations_.size(); i++) {
@@ -3223,7 +3224,7 @@ public final class TrackingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInfo());
       }
@@ -3395,13 +3396,20 @@ public final class TrackingProto {
 
       // Construct using com.archway.tracking.v1.TrackingProto.TxTracking.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInfoFieldBuilder();
+          getContractOperationsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3465,11 +3473,14 @@ public final class TrackingProto {
 
       private void buildPartial0(com.archway.tracking.v1.TrackingProto.TxTracking result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.info_ = infoBuilder_ == null
               ? info_
               : infoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3694,8 +3705,10 @@ public final class TrackingProto {
         } else {
           infoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (info_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

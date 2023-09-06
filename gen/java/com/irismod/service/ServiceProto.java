@@ -1813,6 +1813,7 @@ public final class ServiceProto {
               com.irismod.service.ServiceProto.ServiceBinding.class, com.irismod.service.ServiceProto.ServiceBinding.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SERVICE_NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object serviceName_ = "";
@@ -2040,7 +2041,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasDisabledTime() {
-      return disabledTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp disabled_time = 8 [json_name = "disabledTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"disabled_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2132,7 +2133,7 @@ public final class ServiceProto {
       if (available_ != false) {
         output.writeBool(7, available_);
       }
-      if (disabledTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(8, getDisabledTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
@@ -2171,7 +2172,7 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, available_);
       }
-      if (disabledTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getDisabledTime());
       }
@@ -2372,13 +2373,20 @@ public final class ServiceProto {
 
       // Construct using com.irismod.service.ServiceProto.ServiceBinding.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositFieldBuilder();
+          getDisabledTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2467,14 +2475,17 @@ public final class ServiceProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.available_ = available_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.disabledTime_ = disabledTimeBuilder_ == null
               ? disabledTime_
               : disabledTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.owner_ = owner_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3337,8 +3348,10 @@ public final class ServiceProto {
         } else {
           disabledTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (disabledTime_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12035,6 +12048,7 @@ public final class ServiceProto {
               com.irismod.service.ServiceProto.PromotionByTime.class, com.irismod.service.ServiceProto.PromotionByTime.Builder.class);
     }
 
+    private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
@@ -12043,7 +12057,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -12069,7 +12083,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return endTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -12140,10 +12154,10 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getEndTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(discount_)) {
@@ -12158,11 +12172,11 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEndTime());
       }
@@ -12340,13 +12354,20 @@ public final class ServiceProto {
 
       // Construct using com.irismod.service.ServiceProto.PromotionByTime.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartTimeFieldBuilder();
+          getEndTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12396,19 +12417,23 @@ public final class ServiceProto {
 
       private void buildPartial0(com.irismod.service.ServiceProto.PromotionByTime result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.discount_ = discount_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12594,8 +12619,10 @@ public final class ServiceProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12713,8 +12740,10 @@ public final class ServiceProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (endTime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13695,6 +13724,7 @@ public final class ServiceProto {
               com.irismod.service.ServiceProto.Params.class, com.irismod.service.ServiceProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MAX_REQUEST_TIMEOUT_FIELD_NUMBER = 1;
     private long maxRequestTimeout_ = 0L;
     /**
@@ -13844,7 +13874,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasComplaintRetrospect() {
-      return complaintRetrospect_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration complaint_retrospect = 6 [json_name = "complaintRetrospect", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complaint_retrospect&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -13870,7 +13900,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasArbitrationTimeLimit() {
-      return arbitrationTimeLimit_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Duration arbitration_time_limit = 7 [json_name = "arbitrationTimeLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arbitration_time_limit&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -13978,10 +14008,10 @@ public final class ServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFraction_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, slashFraction_);
       }
-      if (complaintRetrospect_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getComplaintRetrospect());
       }
-      if (arbitrationTimeLimit_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getArbitrationTimeLimit());
       }
       if (txSizeLimit_ != 0L) {
@@ -14020,11 +14050,11 @@ public final class ServiceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFraction_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, slashFraction_);
       }
-      if (complaintRetrospect_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getComplaintRetrospect());
       }
-      if (arbitrationTimeLimit_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getArbitrationTimeLimit());
       }
@@ -14244,13 +14274,21 @@ public final class ServiceProto {
 
       // Construct using com.irismod.service.ServiceProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinDepositFieldBuilder();
+          getComplaintRetrospectFieldBuilder();
+          getArbitrationTimeLimitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14338,15 +14376,18 @@ public final class ServiceProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.slashFraction_ = slashFraction_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.complaintRetrospect_ = complaintRetrospectBuilder_ == null
               ? complaintRetrospect_
               : complaintRetrospectBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.arbitrationTimeLimit_ = arbitrationTimeLimitBuilder_ == null
               ? arbitrationTimeLimit_
               : arbitrationTimeLimitBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.txSizeLimit_ = txSizeLimit_;
@@ -14357,6 +14398,7 @@ public final class ServiceProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.restrictedServiceFeeDenom_ = restrictedServiceFeeDenom_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15081,8 +15123,10 @@ public final class ServiceProto {
         } else {
           complaintRetrospectBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (complaintRetrospect_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15200,8 +15244,10 @@ public final class ServiceProto {
         } else {
           arbitrationTimeLimitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (arbitrationTimeLimit_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

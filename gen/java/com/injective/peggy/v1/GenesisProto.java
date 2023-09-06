@@ -338,6 +338,7 @@ public final class GenesisProto {
               com.injective.peggy.v1.GenesisProto.GenesisState.class, com.injective.peggy.v1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.ParamsProto.Params params_;
     /**
@@ -346,7 +347,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.peggy.v1.Params params = 1 [json_name = "params"];</code>
@@ -744,7 +745,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasLastObservedValset() {
-      return lastObservedValset_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.injective.peggy.v1.Valset last_observed_valset = 14 [json_name = "lastObservedValset", (.gogoproto.nullable) = false];</code>
@@ -813,7 +814,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       if (lastObservedNonce_ != 0L) {
@@ -852,7 +853,7 @@ public final class GenesisProto {
       if (lastOutgoingPoolId_ != 0L) {
         output.writeUInt64(13, lastOutgoingPoolId_);
       }
-      if (lastObservedValset_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(14, getLastObservedValset());
       }
       for (int i = 0; i < ethereumBlacklist_.size(); i++) {
@@ -867,7 +868,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -919,7 +920,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(13, lastOutgoingPoolId_);
       }
-      if (lastObservedValset_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getLastObservedValset());
       }
@@ -1172,13 +1173,28 @@ public final class GenesisProto {
 
       // Construct using com.injective.peggy.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getValsetsFieldBuilder();
+          getValsetConfirmsFieldBuilder();
+          getBatchesFieldBuilder();
+          getBatchConfirmsFieldBuilder();
+          getAttestationsFieldBuilder();
+          getOrchestratorAddressesFieldBuilder();
+          getErc20ToDenomsFieldBuilder();
+          getUnbatchedTransfersFieldBuilder();
+          getLastObservedValsetFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1365,10 +1381,12 @@ public final class GenesisProto {
 
       private void buildPartial0(com.injective.peggy.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lastObservedNonce_ = lastObservedNonce_;
@@ -1386,11 +1404,13 @@ public final class GenesisProto {
           result.lastObservedValset_ = lastObservedValsetBuilder_ == null
               ? lastObservedValset_
               : lastObservedValsetBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
           ethereumBlacklist_.makeImmutable();
           result.ethereumBlacklist_ = ethereumBlacklist_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1926,8 +1946,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4093,8 +4115,10 @@ public final class GenesisProto {
         } else {
           lastObservedValsetBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00002000;
-        onChanged();
+        if (lastObservedValset_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         return this;
       }
       /**

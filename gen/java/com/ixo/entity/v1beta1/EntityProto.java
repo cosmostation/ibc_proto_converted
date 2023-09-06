@@ -1088,6 +1088,7 @@ public final class EntityProto {
               com.ixo.entity.v1beta1.EntityProto.Entity.class, com.ixo.entity.v1beta1.EntityProto.Entity.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -1195,7 +1196,7 @@ public final class EntityProto {
      */
     @java.lang.Override
     public boolean hasStartDate() {
-      return startDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1236,7 +1237,7 @@ public final class EntityProto {
      */
     @java.lang.Override
     public boolean hasEndDate() {
-      return endDate_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1408,7 +1409,7 @@ public final class EntityProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return metadata_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1517,10 +1518,10 @@ public final class EntityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
-      if (startDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getStartDate());
       }
-      if (endDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getEndDate());
       }
       if (status_ != 0) {
@@ -1535,7 +1536,7 @@ public final class EntityProto {
       if (entityVerified_ != false) {
         output.writeBool(8, entityVerified_);
       }
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(9, getMetadata());
       }
       for (int i = 0; i < accounts_.size(); i++) {
@@ -1556,11 +1557,11 @@ public final class EntityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
-      if (startDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStartDate());
       }
-      if (endDate_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEndDate());
       }
@@ -1583,7 +1584,7 @@ public final class EntityProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, entityVerified_);
       }
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getMetadata());
       }
@@ -1796,13 +1797,22 @@ public final class EntityProto {
 
       // Construct using com.ixo.entity.v1beta1.EntityProto.Entity.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartDateFieldBuilder();
+          getEndDateFieldBuilder();
+          getMetadataFieldBuilder();
+          getAccountsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1889,15 +1899,18 @@ public final class EntityProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.type_ = type_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.startDate_ = startDateBuilder_ == null
               ? startDate_
               : startDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.endDate_ = endDateBuilder_ == null
               ? endDate_
               : endDateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.status_ = status_;
@@ -1916,7 +1929,9 @@ public final class EntityProto {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2412,8 +2427,10 @@ public final class EntityProto {
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (startDate_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2576,8 +2593,10 @@ public final class EntityProto {
         } else {
           endDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (endDate_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3070,8 +3089,10 @@ public final class EntityProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (metadata_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4304,6 +4325,7 @@ public final class EntityProto {
               com.ixo.entity.v1beta1.EntityProto.EntityMetadata.class, com.ixo.entity.v1beta1.EntityProto.EntityMetadata.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VERSION_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object versionId_ = "";
@@ -4351,7 +4373,7 @@ public final class EntityProto {
      */
     @java.lang.Override
     public boolean hasCreated() {
-      return created_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
@@ -4377,7 +4399,7 @@ public final class EntityProto {
      */
     @java.lang.Override
     public boolean hasUpdated() {
-      return updated_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
@@ -4412,10 +4434,10 @@ public final class EntityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versionId_);
       }
-      if (created_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getCreated());
       }
-      if (updated_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getUpdated());
       }
       getUnknownFields().writeTo(output);
@@ -4430,11 +4452,11 @@ public final class EntityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, versionId_);
       }
-      if (created_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreated());
       }
-      if (updated_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdated());
       }
@@ -4609,13 +4631,20 @@ public final class EntityProto {
 
       // Construct using com.ixo.entity.v1beta1.EntityProto.EntityMetadata.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreatedFieldBuilder();
+          getUpdatedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4668,16 +4697,20 @@ public final class EntityProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.versionId_ = versionId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.created_ = createdBuilder_ == null
               ? created_
               : createdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.updated_ = updatedBuilder_ == null
               ? updated_
               : updatedBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4935,8 +4968,10 @@ public final class EntityProto {
         } else {
           createdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (created_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5054,8 +5089,10 @@ public final class EntityProto {
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (updated_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -16,15 +16,14 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 from crescent.marker.v1beta1 import marker_pb2 as crescent_dot_marker_dot_v1beta1_dot_marker__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%crescent/marker/v1beta1/genesis.proto\x12\x17\x63rescent.marker.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a$crescent/marker/v1beta1/marker.proto\"\x97\x01\n\x0cGenesisState\x12=\n\x06params\x18\x01 \x01(\x0b\x32\x1f.crescent.marker.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12H\n\x0flast_block_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x04\x90\xdf\x1f\x01R\rlastBlockTimeB\xe5\x01\n\x1b\x63om.crescent.marker.v1beta1B\x0cGenesisProtoP\x01Z6github.com/crescent-network/crescent/v5/x/marker/types\xa2\x02\x03\x43MX\xaa\x02\x17\x43rescent.Marker.V1beta1\xca\x02\x17\x43rescent\\Marker\\V1beta1\xe2\x02#Crescent\\Marker\\V1beta1\\GPBMetadata\xea\x02\x19\x43rescent::Marker::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%crescent/marker/v1beta1/genesis.proto\x12\x17\x63rescent.marker.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a$crescent/marker/v1beta1/marker.proto\"\x97\x01\n\x0cGenesisState\x12=\n\x06params\x18\x01 \x01(\x0b\x32\x1f.crescent.marker.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12H\n\x0flast_block_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x04\x90\xdf\x1f\x01R\rlastBlockTimeB\xe3\x01\n\x1b\x63om.crescent.marker.v1beta1B\x0cGenesisProtoZ6github.com/crescent-network/crescent/v5/x/marker/types\xa2\x02\x03\x43MX\xaa\x02\x17\x43rescent.Marker.V1beta1\xca\x02\x17\x43rescent\\Marker\\V1beta1\xe2\x02#Crescent\\Marker\\V1beta1\\GPBMetadata\xea\x02\x19\x43rescent::Marker::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'crescent.marker.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.crescent.marker.v1beta1B\014GenesisProtoP\001Z6github.com/crescent-network/crescent/v5/x/marker/types\242\002\003CMX\252\002\027Crescent.Marker.V1beta1\312\002\027Crescent\\Marker\\V1beta1\342\002#Crescent\\Marker\\V1beta1\\GPBMetadata\352\002\031Crescent::Marker::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\033com.crescent.marker.v1beta1B\014GenesisProtoZ6github.com/crescent-network/crescent/v5/x/marker/types\242\002\003CMX\252\002\027Crescent.Marker.V1beta1\312\002\027Crescent\\Marker\\V1beta1\342\002#Crescent\\Marker\\V1beta1\\GPBMetadata\352\002\031Crescent::Marker::V1beta1\310\341\036\000'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['last_block_time']._options = None

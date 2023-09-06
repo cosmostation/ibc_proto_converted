@@ -117,6 +117,7 @@ public final class NftProto {
               com.cudoventures.cudosnode.marketplace.NftProto.Nft.class, com.cudoventures.cudosnode.marketplace.NftProto.Nft.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -214,7 +215,7 @@ public final class NftProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return price_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -294,7 +295,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, denomId_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getPrice());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
@@ -319,7 +320,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, denomId_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPrice());
       }
@@ -501,13 +502,19 @@ public final class NftProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.NftProto.Nft.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPriceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -564,14 +571,17 @@ public final class NftProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.denomId_ = denomId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.owner_ = owner_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -951,8 +961,10 @@ public final class NftProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (price_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.types.base import split_pb2 as assetmantle_dot_types_dot_base_dot_split__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*assetmantle/splits/mappable/mappable.proto\x12#assetmantle.modules.splits.mappable\x1a\"assetmantle/types/base/split.proto\"F\n\x08Mappable\x12:\n\x05split\x18\x01 \x01(\x0b\x32$.assetmantle.schema.types.base.SplitR\x05splitB\xe8\x01\n\'com.assetmantle.modules.splits.mappableB\rMappableProtoP\x01\xa2\x02\x04\x41MSM\xaa\x02#Assetmantle.Modules.Splits.Mappable\xca\x02#Assetmantle\\Modules\\Splits\\Mappable\xe2\x02/Assetmantle\\Modules\\Splits\\Mappable\\GPBMetadata\xea\x02&Assetmantle::Modules::Splits::Mappableb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*assetmantle/splits/mappable/mappable.proto\x12#assetmantle.modules.splits.mappable\x1a\"assetmantle/types/base/split.proto\"F\n\x08Mappable\x12:\n\x05split\x18\x01 \x01(\x0b\x32$.assetmantle.schema.types.base.SplitR\x05splitB\xe6\x01\n\'com.assetmantle.modules.splits.mappableB\rMappableProto\xa2\x02\x04\x41MSM\xaa\x02#Assetmantle.Modules.Splits.Mappable\xca\x02#Assetmantle\\Modules\\Splits\\Mappable\xe2\x02/Assetmantle\\Modules\\Splits\\Mappable\\GPBMetadata\xea\x02&Assetmantle::Modules::Splits::Mappableb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.splits.mappable.mappable_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\'com.assetmantle.modules.splits.mappableB\rMappableProtoP\001\242\002\004AMSM\252\002#Assetmantle.Modules.Splits.Mappable\312\002#Assetmantle\\Modules\\Splits\\Mappable\342\002/Assetmantle\\Modules\\Splits\\Mappable\\GPBMetadata\352\002&Assetmantle::Modules::Splits::Mappable'
+  DESCRIPTOR._serialized_options = b'\n\'com.assetmantle.modules.splits.mappableB\rMappableProto\242\002\004AMSM\252\002#Assetmantle.Modules.Splits.Mappable\312\002#Assetmantle\\Modules\\Splits\\Mappable\342\002/Assetmantle\\Modules\\Splits\\Mappable\\GPBMetadata\352\002&Assetmantle::Modules::Splits::Mappable'
   _globals['_MAPPABLE']._serialized_start=119
   _globals['_MAPPABLE']._serialized_end=189
 # @@protoc_insertion_point(module_scope)

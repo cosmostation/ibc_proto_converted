@@ -15,15 +15,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kava/incentive/v1beta1/apy.proto\x12\x16kava.incentive.v1beta1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"~\n\x03\x41py\x12\'\n\x0f\x63ollateral_type\x18\x01 \x01(\tR\x0e\x63ollateralType\x12N\n\x03\x61py\x18\x02 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\x03\x61pyB\xcd\x01\n\x1a\x63om.kava.incentive.v1beta1B\x08\x41pyProtoP\x01Z+github.com/kava-labs/kava/x/incentive/types\xa2\x02\x03KIX\xaa\x02\x16Kava.Incentive.V1beta1\xca\x02\x16Kava\\Incentive\\V1beta1\xe2\x02\"Kava\\Incentive\\V1beta1\\GPBMetadata\xea\x02\x18Kava::Incentive::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kava/incentive/v1beta1/apy.proto\x12\x16kava.incentive.v1beta1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"~\n\x03\x41py\x12\'\n\x0f\x63ollateral_type\x18\x01 \x01(\tR\x0e\x63ollateralType\x12N\n\x03\x61py\x18\x02 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\x03\x61pyB\xcb\x01\n\x1a\x63om.kava.incentive.v1beta1B\x08\x41pyProtoZ+github.com/kava-labs/kava/x/incentive/types\xa2\x02\x03KIX\xaa\x02\x16Kava.Incentive.V1beta1\xca\x02\x16Kava\\Incentive\\V1beta1\xe2\x02\"Kava\\Incentive\\V1beta1\\GPBMetadata\xea\x02\x18Kava::Incentive::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.incentive.v1beta1.apy_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.kava.incentive.v1beta1B\010ApyProtoP\001Z+github.com/kava-labs/kava/x/incentive/types\242\002\003KIX\252\002\026Kava.Incentive.V1beta1\312\002\026Kava\\Incentive\\V1beta1\342\002\"Kava\\Incentive\\V1beta1\\GPBMetadata\352\002\030Kava::Incentive::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\032com.kava.incentive.v1beta1B\010ApyProtoZ+github.com/kava-labs/kava/x/incentive/types\242\002\003KIX\252\002\026Kava.Incentive.V1beta1\312\002\026Kava\\Incentive\\V1beta1\342\002\"Kava\\Incentive\\V1beta1\\GPBMetadata\352\002\030Kava::Incentive::V1beta1'
   _APY.fields_by_name['apy']._options = None
   _APY.fields_by_name['apy']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Dec\322\264-\ncosmos.Dec'
   _globals['_APY']._serialized_start=109

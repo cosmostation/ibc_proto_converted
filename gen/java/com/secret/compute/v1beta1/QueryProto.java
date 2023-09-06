@@ -2848,6 +2848,7 @@ public final class QueryProto {
               com.secret.compute.v1beta1.QueryProto.QueryContractInfoResponse.class, com.secret.compute.v1beta1.QueryProto.QueryContractInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contractAddress_ = "";
@@ -2903,7 +2904,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasContractInfo() {
-      return contractInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.secret.compute.v1beta1.ContractInfo ContractInfo = 2 [json_name = "ContractInfo", (.gogoproto.embed) = true, (.gogoproto.jsontag) = ""];</code>
@@ -2938,7 +2939,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
       }
-      if (contractInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getContractInfo());
       }
       getUnknownFields().writeTo(output);
@@ -2953,7 +2954,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
       }
-      if (contractInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContractInfo());
       }
@@ -3119,13 +3120,19 @@ public final class QueryProto {
 
       // Construct using com.secret.compute.v1beta1.QueryProto.QueryContractInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContractInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3173,11 +3180,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractAddress_ = contractAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractInfo_ = contractInfoBuilder_ == null
               ? contractInfo_
               : contractInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3445,8 +3455,10 @@ public final class QueryProto {
         } else {
           contractInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (contractInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3640,6 +3652,7 @@ public final class QueryProto {
               com.secret.compute.v1beta1.QueryProto.ContractInfoWithAddress.class, com.secret.compute.v1beta1.QueryProto.ContractInfoWithAddress.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contractAddress_ = "";
@@ -3695,7 +3708,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasContractInfo() {
-      return contractInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.secret.compute.v1beta1.ContractInfo ContractInfo = 2 [json_name = "ContractInfo", (.gogoproto.embed) = true, (.gogoproto.jsontag) = ""];</code>
@@ -3730,7 +3743,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
       }
-      if (contractInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getContractInfo());
       }
       getUnknownFields().writeTo(output);
@@ -3745,7 +3758,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
       }
-      if (contractInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContractInfo());
       }
@@ -3911,13 +3924,19 @@ public final class QueryProto {
 
       // Construct using com.secret.compute.v1beta1.QueryProto.ContractInfoWithAddress.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContractInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3965,11 +3984,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractAddress_ = contractAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractInfo_ = contractInfoBuilder_ == null
               ? contractInfo_
               : contractInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4237,8 +4259,10 @@ public final class QueryProto {
         } else {
           contractInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (contractInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6301,6 +6325,7 @@ public final class QueryProto {
               com.secret.compute.v1beta1.QueryProto.QueryCodeResponse.class, com.secret.compute.v1beta1.QueryProto.QueryCodeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CODE_INFO_FIELD_NUMBER = 1;
     private com.secret.compute.v1beta1.QueryProto.CodeInfoResponse codeInfo_;
     /**
@@ -6309,7 +6334,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCodeInfo() {
-      return codeInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.secret.compute.v1beta1.CodeInfoResponse code_info = 1 [json_name = "codeInfo", (.gogoproto.embed) = true, (.gogoproto.jsontag) = ""];</code>
@@ -6352,7 +6377,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (codeInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCodeInfo());
       }
       if (!wasm_.isEmpty()) {
@@ -6367,7 +6392,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (codeInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCodeInfo());
       }
@@ -6533,13 +6558,19 @@ public final class QueryProto {
 
       // Construct using com.secret.compute.v1beta1.QueryProto.QueryCodeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCodeInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6584,14 +6615,17 @@ public final class QueryProto {
 
       private void buildPartial0(com.secret.compute.v1beta1.QueryProto.QueryCodeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.codeInfo_ = codeInfoBuilder_ == null
               ? codeInfo_
               : codeInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.wasm_ = wasm_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6765,8 +6799,10 @@ public final class QueryProto {
         } else {
           codeInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (codeInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

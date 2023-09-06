@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1frizon/tokenswap/tokenswap.proto\x12\x1arizonworld.rizon.tokenswap\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xbd\x01\n\tTokenswap\x12\x17\n\x07tx_hash\x18\x01 \x01(\tR\x06txHash\x12\x1a\n\x08receiver\x18\x02 \x01(\tR\x08receiver\x12\x16\n\x06signer\x18\x03 \x01(\tR\x06signer\x12\x63\n\x06\x61mount\x18\x04 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mount\":\n\rSwappedAmount\x12)\n\x06\x61mount\x18\x01 \x01(\x03\x42\x11\xf2\xde\x1f\ryaml:\"amount\"R\x06\x61mountB\xea\x01\n\x1e\x63om.rizonworld.rizon.tokenswapB\x0eTokenswapProtoP\x01Z.github.com/rizon-world/rizon/x/tokenswap/types\xa2\x02\x03RRT\xaa\x02\x1aRizonworld.Rizon.Tokenswap\xca\x02\x1aRizonworld\\Rizon\\Tokenswap\xe2\x02&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\xea\x02\x1cRizonworld::Rizon::Tokenswapb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1frizon/tokenswap/tokenswap.proto\x12\x1arizonworld.rizon.tokenswap\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xbd\x01\n\tTokenswap\x12\x17\n\x07tx_hash\x18\x01 \x01(\tR\x06txHash\x12\x1a\n\x08receiver\x18\x02 \x01(\tR\x08receiver\x12\x16\n\x06signer\x18\x03 \x01(\tR\x06signer\x12\x63\n\x06\x61mount\x18\x04 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mount\":\n\rSwappedAmount\x12)\n\x06\x61mount\x18\x01 \x01(\x03\x42\x11\xf2\xde\x1f\ryaml:\"amount\"R\x06\x61mountB\xe8\x01\n\x1e\x63om.rizonworld.rizon.tokenswapB\x0eTokenswapProtoZ.github.com/rizon-world/rizon/x/tokenswap/types\xa2\x02\x03RRT\xaa\x02\x1aRizonworld.Rizon.Tokenswap\xca\x02\x1aRizonworld\\Rizon\\Tokenswap\xe2\x02&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\xea\x02\x1cRizonworld::Rizon::Tokenswapb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'rizon.tokenswap.tokenswap_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.rizonworld.rizon.tokenswapB\016TokenswapProtoP\001Z.github.com/rizon-world/rizon/x/tokenswap/types\242\002\003RRT\252\002\032Rizonworld.Rizon.Tokenswap\312\002\032Rizonworld\\Rizon\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\352\002\034Rizonworld::Rizon::Tokenswap'
+  DESCRIPTOR._serialized_options = b'\n\036com.rizonworld.rizon.tokenswapB\016TokenswapProtoZ.github.com/rizon-world/rizon/x/tokenswap/types\242\002\003RRT\252\002\032Rizonworld.Rizon.Tokenswap\312\002\032Rizonworld\\Rizon\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\352\002\034Rizonworld::Rizon::Tokenswap'
   _TOKENSWAP.fields_by_name['amount']._options = None
   _TOKENSWAP.fields_by_name['amount']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _SWAPPEDAMOUNT.fields_by_name['amount']._options = None

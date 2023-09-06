@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from akash.provider.v1beta3 import provider_pb2 as akash_dot_provider_dot_v1beta3_dot_provider__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$akash/provider/v1beta3/genesis.proto\x12\x16\x61kash.provider.v1beta3\x1a\x14gogoproto/gogo.proto\x1a%akash/provider/v1beta3/provider.proto\"u\n\x0cGenesisState\x12\x65\n\tproviders\x18\x01 \x03(\x0b\x32 .akash.provider.v1beta3.ProviderB%\xc8\xde\x1f\x00\xea\xde\x1f\tproviders\xf2\xde\x1f\x10yaml:\"providers\"R\tprovidersB\xe1\x01\n\x1a\x63om.akash.provider.v1beta3B\x0cGenesisProtoP\x01Z;github.com/akash-network/akash-api/go/node/provider/v1beta3\xa2\x02\x03\x41PX\xaa\x02\x16\x41kash.Provider.V1beta3\xca\x02\x16\x41kash\\Provider\\V1beta3\xe2\x02\"Akash\\Provider\\V1beta3\\GPBMetadata\xea\x02\x18\x41kash::Provider::V1beta3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$akash/provider/v1beta3/genesis.proto\x12\x16\x61kash.provider.v1beta3\x1a\x14gogoproto/gogo.proto\x1a%akash/provider/v1beta3/provider.proto\"u\n\x0cGenesisState\x12\x65\n\tproviders\x18\x01 \x03(\x0b\x32 .akash.provider.v1beta3.ProviderB%\xc8\xde\x1f\x00\xea\xde\x1f\tproviders\xf2\xde\x1f\x10yaml:\"providers\"R\tprovidersB\xdf\x01\n\x1a\x63om.akash.provider.v1beta3B\x0cGenesisProtoZ;github.com/akash-network/akash-api/go/node/provider/v1beta3\xa2\x02\x03\x41PX\xaa\x02\x16\x41kash.Provider.V1beta3\xca\x02\x16\x41kash\\Provider\\V1beta3\xe2\x02\"Akash\\Provider\\V1beta3\\GPBMetadata\xea\x02\x18\x41kash::Provider::V1beta3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.provider.v1beta3.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.akash.provider.v1beta3B\014GenesisProtoP\001Z;github.com/akash-network/akash-api/go/node/provider/v1beta3\242\002\003APX\252\002\026Akash.Provider.V1beta3\312\002\026Akash\\Provider\\V1beta3\342\002\"Akash\\Provider\\V1beta3\\GPBMetadata\352\002\030Akash::Provider::V1beta3'
+  DESCRIPTOR._serialized_options = b'\n\032com.akash.provider.v1beta3B\014GenesisProtoZ;github.com/akash-network/akash-api/go/node/provider/v1beta3\242\002\003APX\252\002\026Akash.Provider.V1beta3\312\002\026Akash\\Provider\\V1beta3\342\002\"Akash\\Provider\\V1beta3\\GPBMetadata\352\002\030Akash::Provider::V1beta3'
   _GENESISSTATE.fields_by_name['providers']._options = None
   _GENESISSTATE.fields_by_name['providers']._serialized_options = b'\310\336\037\000\352\336\037\tproviders\362\336\037\020yaml:\"providers\"'
   _globals['_GENESISSTATE']._serialized_start=125

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&neutron/interchainqueries/params.proto\x12\x19neutron.interchainqueries\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xe7\x01\n\x06Params\x12\x30\n\x14query_submit_timeout\x18\x01 \x01(\x04R\x12querySubmitTimeout\x12p\n\rquery_deposit\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x0cqueryDeposit\x12\x33\n\x16tx_query_removal_limit\x18\x03 \x01(\x04R\x13txQueryRemovalLimit:\x04\x98\xa0\x1f\x00\x42\xeb\x01\n\x1d\x63om.neutron.interchainqueriesB\x0bParamsProtoP\x01Z8github.com/neutron-org/neutron/x/interchainqueries/types\xa2\x02\x03NIX\xaa\x02\x19Neutron.Interchainqueries\xca\x02\x19Neutron\\Interchainqueries\xe2\x02%Neutron\\Interchainqueries\\GPBMetadata\xea\x02\x1aNeutron::Interchainqueriesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&neutron/interchainqueries/params.proto\x12\x19neutron.interchainqueries\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xe7\x01\n\x06Params\x12\x30\n\x14query_submit_timeout\x18\x01 \x01(\x04R\x12querySubmitTimeout\x12p\n\rquery_deposit\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x0cqueryDeposit\x12\x33\n\x16tx_query_removal_limit\x18\x03 \x01(\x04R\x13txQueryRemovalLimit:\x04\x98\xa0\x1f\x00\x42\xe9\x01\n\x1d\x63om.neutron.interchainqueriesB\x0bParamsProtoZ8github.com/neutron-org/neutron/x/interchainqueries/types\xa2\x02\x03NIX\xaa\x02\x19Neutron.Interchainqueries\xca\x02\x19Neutron\\Interchainqueries\xe2\x02%Neutron\\Interchainqueries\\GPBMetadata\xea\x02\x1aNeutron::Interchainqueriesb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.interchainqueries.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.neutron.interchainqueriesB\013ParamsProtoP\001Z8github.com/neutron-org/neutron/x/interchainqueries/types\242\002\003NIX\252\002\031Neutron.Interchainqueries\312\002\031Neutron\\Interchainqueries\342\002%Neutron\\Interchainqueries\\GPBMetadata\352\002\032Neutron::Interchainqueries'
+  DESCRIPTOR._serialized_options = b'\n\035com.neutron.interchainqueriesB\013ParamsProtoZ8github.com/neutron-org/neutron/x/interchainqueries/types\242\002\003NIX\252\002\031Neutron.Interchainqueries\312\002\031Neutron\\Interchainqueries\342\002%Neutron\\Interchainqueries\\GPBMetadata\352\002\032Neutron::Interchainqueries'
   _PARAMS.fields_by_name['query_deposit']._options = None
   _PARAMS.fields_by_name['query_deposit']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _PARAMS._options = None

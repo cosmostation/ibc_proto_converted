@@ -17,15 +17,14 @@ from evmos.inflation.v1 import genesis_pb2 as evmos_dot_inflation_dot_v1_dot_gen
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x65vmos/inflation/v1/tx.proto\x12\x12\x65vmos.inflation.v1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a evmos/inflation/v1/genesis.proto\x1a\x14gogoproto/gogo.proto\"\x93\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x38\n\x06params\x18\x02 \x01(\x0b\x32\x1a.evmos.inflation.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponse2g\n\x03Msg\x12`\n\x0cUpdateParams\x12#.evmos.inflation.v1.MsgUpdateParams\x1a+.evmos.inflation.v1.MsgUpdateParamsResponseB\xb9\x01\n\x16\x63om.evmos.inflation.v1B\x07TxProtoP\x01Z,github.com/evmos/evmos/v13/x/inflation/types\xa2\x02\x03\x45IX\xaa\x02\x12\x45vmos.Inflation.V1\xca\x02\x12\x45vmos\\Inflation\\V1\xe2\x02\x1e\x45vmos\\Inflation\\V1\\GPBMetadata\xea\x02\x14\x45vmos::Inflation::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x65vmos/inflation/v1/tx.proto\x12\x12\x65vmos.inflation.v1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a evmos/inflation/v1/genesis.proto\x1a\x14gogoproto/gogo.proto\"\x93\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x38\n\x06params\x18\x02 \x01(\x0b\x32\x1a.evmos.inflation.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponse2g\n\x03Msg\x12`\n\x0cUpdateParams\x12#.evmos.inflation.v1.MsgUpdateParams\x1a+.evmos.inflation.v1.MsgUpdateParamsResponseB\xb7\x01\n\x16\x63om.evmos.inflation.v1B\x07TxProtoZ,github.com/evmos/evmos/v13/x/inflation/types\xa2\x02\x03\x45IX\xaa\x02\x12\x45vmos.Inflation.V1\xca\x02\x12\x45vmos\\Inflation\\V1\xe2\x02\x1e\x45vmos\\Inflation\\V1\\GPBMetadata\xea\x02\x14\x45vmos::Inflation::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'evmos.inflation.v1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.evmos.inflation.v1B\007TxProtoP\001Z,github.com/evmos/evmos/v13/x/inflation/types\242\002\003EIX\252\002\022Evmos.Inflation.V1\312\002\022Evmos\\Inflation\\V1\342\002\036Evmos\\Inflation\\V1\\GPBMetadata\352\002\024Evmos::Inflation::V1'
+  DESCRIPTOR._serialized_options = b'\n\026com.evmos.inflation.v1B\007TxProtoZ,github.com/evmos/evmos/v13/x/inflation/types\242\002\003EIX\252\002\022Evmos.Inflation.V1\312\002\022Evmos\\Inflation\\V1\342\002\036Evmos\\Inflation\\V1\\GPBMetadata\352\002\024Evmos::Inflation::V1'
   _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
   _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGUPDATEPARAMS.fields_by_name['params']._options = None

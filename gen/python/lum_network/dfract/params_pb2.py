@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1flum-network/dfract/params.proto\x12\x12lum.network.dfract\"]\n\x06Params\x12%\n\x0e\x64\x65posit_denoms\x18\x01 \x03(\tR\rdepositDenoms\x12,\n\x12min_deposit_amount\x18\x02 \x01(\rR\x10minDepositAmountB\xbc\x01\n\x16\x63om.lum.network.dfractB\x0bParamsProtoP\x01Z+github.com/lum-network/chain/x/dfract/types\xa2\x02\x03LND\xaa\x02\x12Lum.Network.Dfract\xca\x02\x12Lum\\Network\\Dfract\xe2\x02\x1eLum\\Network\\Dfract\\GPBMetadata\xea\x02\x14Lum::Network::Dfractb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1flum-network/dfract/params.proto\x12\x12lum.network.dfract\"]\n\x06Params\x12%\n\x0e\x64\x65posit_denoms\x18\x01 \x03(\tR\rdepositDenoms\x12,\n\x12min_deposit_amount\x18\x02 \x01(\rR\x10minDepositAmountB\xba\x01\n\x16\x63om.lum.network.dfractB\x0bParamsProtoZ+github.com/lum-network/chain/x/dfract/types\xa2\x02\x03LND\xaa\x02\x12Lum.Network.Dfract\xca\x02\x12Lum\\Network\\Dfract\xe2\x02\x1eLum\\Network\\Dfract\\GPBMetadata\xea\x02\x14Lum::Network::Dfractb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.dfract.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.lum.network.dfractB\013ParamsProtoP\001Z+github.com/lum-network/chain/x/dfract/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024Lum::Network::Dfract'
+  DESCRIPTOR._serialized_options = b'\n\026com.lum.network.dfractB\013ParamsProtoZ+github.com/lum-network/chain/x/dfract/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024Lum::Network::Dfract'
   _globals['_PARAMS']._serialized_start=55
   _globals['_PARAMS']._serialized_end=148
 # @@protoc_insertion_point(module_scope)

@@ -640,7 +640,7 @@ public final class SpecificationProto {
       ownerAddresses_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       partiesInvolved_ = java.util.Collections.emptyList();
-      contractSpecIds_ = java.util.Collections.emptyList();
+      contractSpecIds_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -663,6 +663,7 @@ public final class SpecificationProto {
               com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.class, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SPECIFICATION_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -690,7 +691,7 @@ public final class SpecificationProto {
      */
     @java.lang.Override
     public boolean hasDescription() {
-      return description_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -849,7 +850,8 @@ public final class SpecificationProto {
 
     public static final int CONTRACT_SPEC_IDS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> contractSpecIds_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> contractSpecIds_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * A list of contract specification ids allowed for a scope based on this specification.
@@ -905,7 +907,7 @@ public final class SpecificationProto {
       if (!specificationId_.isEmpty()) {
         output.writeBytes(1, specificationId_);
       }
-      if (description_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDescription());
       }
       for (int i = 0; i < ownerAddresses_.size(); i++) {
@@ -934,7 +936,7 @@ public final class SpecificationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, specificationId_);
       }
-      if (description_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDescription());
       }
@@ -1146,13 +1148,19 @@ public final class SpecificationProto {
 
       // Construct using com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDescriptionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1168,7 +1176,7 @@ public final class SpecificationProto {
             com.google.protobuf.LazyStringArrayList.emptyList();
         partiesInvolved_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
-        contractSpecIds_ = java.util.Collections.emptyList();
+        contractSpecIds_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -1207,11 +1215,6 @@ public final class SpecificationProto {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.partiesInvolved_ = partiesInvolved_;
-        if (((bitField0_ & 0x00000010) != 0)) {
-          contractSpecIds_ = java.util.Collections.unmodifiableList(contractSpecIds_);
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.contractSpecIds_ = contractSpecIds_;
       }
 
       private void buildPartial0(com.provenance.metadata.v1.SpecificationProto.ScopeSpecification result) {
@@ -1219,15 +1222,22 @@ public final class SpecificationProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specificationId_ = specificationId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = descriptionBuilder_ == null
               ? description_
               : descriptionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           ownerAddresses_.makeImmutable();
           result.ownerAddresses_ = ownerAddresses_;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          contractSpecIds_.makeImmutable();
+          result.contractSpecIds_ = contractSpecIds_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1303,7 +1313,8 @@ public final class SpecificationProto {
         if (!other.contractSpecIds_.isEmpty()) {
           if (contractSpecIds_.isEmpty()) {
             contractSpecIds_ = other.contractSpecIds_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            contractSpecIds_.makeImmutable();
+            bitField0_ |= 0x00000010;
           } else {
             ensureContractSpecIdsIsMutable();
             contractSpecIds_.addAll(other.contractSpecIds_);
@@ -1524,8 +1535,10 @@ public final class SpecificationProto {
         } else {
           descriptionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (description_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1928,12 +1941,12 @@ public final class SpecificationProto {
         return this;
       }
 
-      private java.util.List<com.google.protobuf.ByteString> contractSpecIds_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> contractSpecIds_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureContractSpecIdsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
-          contractSpecIds_ = new java.util.ArrayList<com.google.protobuf.ByteString>(contractSpecIds_);
-          bitField0_ |= 0x00000010;
+        if (!contractSpecIds_.isModifiable()) {
+          contractSpecIds_ = makeMutableCopy(contractSpecIds_);
         }
+        bitField0_ |= 0x00000010;
       }
       /**
        * <pre>
@@ -1945,8 +1958,8 @@ public final class SpecificationProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getContractSpecIdsList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
-                 java.util.Collections.unmodifiableList(contractSpecIds_) : contractSpecIds_;
+        contractSpecIds_.makeImmutable();
+        return contractSpecIds_;
       }
       /**
        * <pre>
@@ -1986,6 +1999,7 @@ public final class SpecificationProto {
         if (value == null) { throw new NullPointerException(); }
         ensureContractSpecIdsIsMutable();
         contractSpecIds_.set(index, value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2002,6 +2016,7 @@ public final class SpecificationProto {
         if (value == null) { throw new NullPointerException(); }
         ensureContractSpecIdsIsMutable();
         contractSpecIds_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2019,6 +2034,7 @@ public final class SpecificationProto {
         ensureContractSpecIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, contractSpecIds_);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2031,7 +2047,7 @@ public final class SpecificationProto {
        * @return This builder for chaining.
        */
       public Builder clearContractSpecIds() {
-        contractSpecIds_ = java.util.Collections.emptyList();
+        contractSpecIds_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
@@ -2345,6 +2361,7 @@ public final class SpecificationProto {
               com.provenance.metadata.v1.SpecificationProto.ContractSpecification.class, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder.class);
     }
 
+    private int bitField0_;
     private int sourceCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object source_;
@@ -2414,7 +2431,7 @@ public final class SpecificationProto {
      */
     @java.lang.Override
     public boolean hasDescription() {
-      return description_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2729,7 +2746,7 @@ public final class SpecificationProto {
       if (!specificationId_.isEmpty()) {
         output.writeBytes(1, specificationId_);
       }
-      if (description_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDescription());
       }
       for (int i = 0; i < ownerAddresses_.size(); i++) {
@@ -2765,7 +2782,7 @@ public final class SpecificationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, specificationId_);
       }
-      if (description_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDescription());
       }
@@ -3002,13 +3019,19 @@ public final class SpecificationProto {
 
       // Construct using com.provenance.metadata.v1.SpecificationProto.ContractSpecification.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDescriptionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3073,10 +3096,12 @@ public final class SpecificationProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specificationId_ = specificationId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = descriptionBuilder_ == null
               ? description_
               : descriptionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           ownerAddresses_.makeImmutable();
@@ -3085,6 +3110,7 @@ public final class SpecificationProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.className_ = className_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.provenance.metadata.v1.SpecificationProto.ContractSpecification result) {
@@ -3421,8 +3447,10 @@ public final class SpecificationProto {
         } else {
           descriptionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (description_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

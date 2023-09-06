@@ -148,6 +148,7 @@ public final class SessionProto {
               com.sentinel.session.v1.SessionProto.Session.class, com.sentinel.session.v1.SessionProto.Session.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -256,7 +257,7 @@ public final class SessionProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration duration = 5 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -282,7 +283,7 @@ public final class SessionProto {
      */
     @java.lang.Override
     public boolean hasBandwidth() {
-      return bandwidth_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.sentinel.types.v1.Bandwidth bandwidth = 6 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
@@ -326,7 +327,7 @@ public final class SessionProto {
      */
     @java.lang.Override
     public boolean hasStatusAt() {
-      return statusAt_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp status_at = 8 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -370,16 +371,16 @@ public final class SessionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getDuration());
       }
-      if (bandwidth_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getBandwidth());
       }
       if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(7, status_);
       }
-      if (statusAt_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(8, getStatusAt());
       }
       getUnknownFields().writeTo(output);
@@ -405,11 +406,11 @@ public final class SessionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDuration());
       }
-      if (bandwidth_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getBandwidth());
       }
@@ -417,7 +418,7 @@ public final class SessionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, status_);
       }
-      if (statusAt_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getStatusAt());
       }
@@ -614,13 +615,21 @@ public final class SessionProto {
 
       // Construct using com.sentinel.session.v1.SessionProto.Session.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDurationFieldBuilder();
+          getBandwidthFieldBuilder();
+          getStatusAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -691,15 +700,18 @@ public final class SessionProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.bandwidth_ = bandwidthBuilder_ == null
               ? bandwidth_
               : bandwidthBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.status_ = status_;
@@ -708,7 +720,9 @@ public final class SessionProto {
           result.statusAt_ = statusAtBuilder_ == null
               ? statusAt_
               : statusAtBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1146,8 +1160,10 @@ public final class SessionProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1265,8 +1281,10 @@ public final class SessionProto {
         } else {
           bandwidthBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (bandwidth_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1437,8 +1455,10 @@ public final class SessionProto {
         } else {
           statusAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (statusAt_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**

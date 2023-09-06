@@ -4119,6 +4119,7 @@ public final class QueryProto {
               com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     private com.kyve.team.v1beta1.TeamProto.TeamVestingAccount account_;
     /**
@@ -4131,7 +4132,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAccount() {
-      return account_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4171,7 +4172,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAccount());
       }
       getUnknownFields().writeTo(output);
@@ -4183,7 +4184,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAccount());
       }
@@ -4345,13 +4346,19 @@ public final class QueryProto {
 
       // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4395,11 +4402,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.account_ = accountBuilder_ == null
               ? account_
               : accountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4585,8 +4595,10 @@ public final class QueryProto {
         } else {
           accountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (account_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5340,6 +5352,7 @@ public final class QueryProto {
               com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REQUEST_DATE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object requestDate_ = "";
@@ -5399,7 +5412,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPlan() {
-      return plan_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5437,7 +5450,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStatus() {
-      return status_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5480,10 +5493,10 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestDate_);
       }
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPlan());
       }
-      if (status_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getStatus());
       }
       getUnknownFields().writeTo(output);
@@ -5498,11 +5511,11 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestDate_);
       }
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPlan());
       }
-      if (status_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStatus());
       }
@@ -5677,13 +5690,20 @@ public final class QueryProto {
 
       // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlanFieldBuilder();
+          getStatusFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5736,16 +5756,20 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.requestDate_ = requestDate_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.plan_ = planBuilder_ == null
               ? plan_
               : planBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.status_ = statusBuilder_ == null
               ? status_
               : statusBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6043,8 +6067,10 @@ public final class QueryProto {
         } else {
           planBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (plan_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6198,8 +6224,10 @@ public final class QueryProto {
         } else {
           statusBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (status_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7046,6 +7074,7 @@ public final class QueryProto {
               com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REQUEST_DATE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object requestDate_ = "";
@@ -7105,7 +7134,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPlan() {
-      return plan_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -7143,7 +7172,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStatus() {
-      return status_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -7186,10 +7215,10 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestDate_);
       }
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPlan());
       }
-      if (status_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getStatus());
       }
       getUnknownFields().writeTo(output);
@@ -7204,11 +7233,11 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestDate_);
       }
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPlan());
       }
-      if (status_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStatus());
       }
@@ -7383,13 +7412,20 @@ public final class QueryProto {
 
       // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlanFieldBuilder();
+          getStatusFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7442,16 +7478,20 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.requestDate_ = requestDate_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.plan_ = planBuilder_ == null
               ? plan_
               : planBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.status_ = statusBuilder_ == null
               ? status_
               : statusBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7749,8 +7789,10 @@ public final class QueryProto {
         } else {
           planBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (plan_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7904,8 +7946,10 @@ public final class QueryProto {
         } else {
           statusBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (status_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

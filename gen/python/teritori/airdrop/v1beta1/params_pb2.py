@@ -16,15 +16,14 @@ from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%teritori/airdrop/v1beta1/params.proto\x12\x18teritori.airdrop.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1e\n\x06Params\x12\x14\n\x05owner\x18\x01 \x01(\tR\x05ownerB\xe1\x01\n\x1c\x63om.teritori.airdrop.v1beta1B\x0bParamsProtoP\x01Z2github.com/TERITORI/teritori-chain/x/airdrop/types\xa2\x02\x03TAX\xaa\x02\x18Teritori.Airdrop.V1beta1\xca\x02\x18Teritori\\Airdrop\\V1beta1\xe2\x02$Teritori\\Airdrop\\V1beta1\\GPBMetadata\xea\x02\x1aTeritori::Airdrop::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%teritori/airdrop/v1beta1/params.proto\x12\x18teritori.airdrop.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1e\n\x06Params\x12\x14\n\x05owner\x18\x01 \x01(\tR\x05ownerB\xdf\x01\n\x1c\x63om.teritori.airdrop.v1beta1B\x0bParamsProtoZ2github.com/TERITORI/teritori-chain/x/airdrop/types\xa2\x02\x03TAX\xaa\x02\x18Teritori.Airdrop.V1beta1\xca\x02\x18Teritori\\Airdrop\\V1beta1\xe2\x02$Teritori\\Airdrop\\V1beta1\\GPBMetadata\xea\x02\x1aTeritori::Airdrop::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'teritori.airdrop.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.teritori.airdrop.v1beta1B\013ParamsProtoP\001Z2github.com/TERITORI/teritori-chain/x/airdrop/types\242\002\003TAX\252\002\030Teritori.Airdrop.V1beta1\312\002\030Teritori\\Airdrop\\V1beta1\342\002$Teritori\\Airdrop\\V1beta1\\GPBMetadata\352\002\032Teritori::Airdrop::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\034com.teritori.airdrop.v1beta1B\013ParamsProtoZ2github.com/TERITORI/teritori-chain/x/airdrop/types\242\002\003TAX\252\002\030Teritori.Airdrop.V1beta1\312\002\030Teritori\\Airdrop\\V1beta1\342\002$Teritori\\Airdrop\\V1beta1\\GPBMetadata\352\002\032Teritori::Airdrop::V1beta1'
   _globals['_PARAMS']._serialized_start=154
   _globals['_PARAMS']._serialized_end=184
 # @@protoc_insertion_point(module_scope)

@@ -80,6 +80,7 @@ public final class GenesisProto {
               com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisDowntimeEntry.class, com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisDowntimeEntry.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DURATION_FIELD_NUMBER = 1;
     private int duration_ = 0;
     /**
@@ -106,7 +107,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasLastDowntime() {
-      return lastDowntime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp last_downtime = 2 [json_name = "lastDowntime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_downtime&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -141,7 +142,7 @@ public final class GenesisProto {
       if (duration_ != com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.DURATION_30S.getNumber()) {
         output.writeEnum(1, duration_);
       }
-      if (lastDowntime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLastDowntime());
       }
       getUnknownFields().writeTo(output);
@@ -157,7 +158,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, duration_);
       }
-      if (lastDowntime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLastDowntime());
       }
@@ -318,13 +319,19 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisDowntimeEntry.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLastDowntimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -372,11 +379,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.duration_ = duration_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lastDowntime_ = lastDowntimeBuilder_ == null
               ? lastDowntime_
               : lastDowntimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -603,8 +613,10 @@ public final class GenesisProto {
         } else {
           lastDowntimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (lastDowntime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -802,6 +814,7 @@ public final class GenesisProto {
               com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisState.class, com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DOWNTIMES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisDowntimeEntry> downtimes_;
@@ -851,7 +864,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasLastBlockTime() {
-      return lastBlockTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_block_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -886,7 +899,7 @@ public final class GenesisProto {
       for (int i = 0; i < downtimes_.size(); i++) {
         output.writeMessage(1, downtimes_.get(i));
       }
-      if (lastBlockTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLastBlockTime());
       }
       getUnknownFields().writeTo(output);
@@ -902,7 +915,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, downtimes_.get(i));
       }
-      if (lastBlockTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLastBlockTime());
       }
@@ -1070,13 +1083,20 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDowntimesFieldBuilder();
+          getLastBlockTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1140,11 +1160,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.osmosis.downtimedetector.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lastBlockTime_ = lastBlockTimeBuilder_ == null
               ? lastBlockTime_
               : lastBlockTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1589,8 +1612,10 @@ public final class GenesisProto {
         } else {
           lastBlockTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (lastBlockTime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

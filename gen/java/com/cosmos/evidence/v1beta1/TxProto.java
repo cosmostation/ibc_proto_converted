@@ -106,6 +106,7 @@ public final class TxProto {
               com.cosmos.evidence.v1beta1.TxProto.MsgSubmitEvidence.class, com.cosmos.evidence.v1beta1.TxProto.MsgSubmitEvidence.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBMITTER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object submitter_ = "";
@@ -165,7 +166,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasEvidence() {
-      return evidence_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -208,7 +209,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, submitter_);
       }
-      if (evidence_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getEvidence());
       }
       getUnknownFields().writeTo(output);
@@ -223,7 +224,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, submitter_);
       }
-      if (evidence_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEvidence());
       }
@@ -390,13 +391,19 @@ public final class TxProto {
 
       // Construct using com.cosmos.evidence.v1beta1.TxProto.MsgSubmitEvidence.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEvidenceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -444,11 +451,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.submitter_ = submitter_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.evidence_ = evidenceBuilder_ == null
               ? evidence_
               : evidenceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -736,8 +746,10 @@ public final class TxProto {
         } else {
           evidenceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (evidence_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

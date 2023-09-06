@@ -105,6 +105,7 @@ public final class GenesisProto {
               com.osmosis.concentratedliquidity.v1beta1.GenesisProto.FullTick.class, com.osmosis.concentratedliquidity.v1beta1.GenesisProto.FullTick.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -147,7 +148,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasInfo() {
-      return info_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -193,7 +194,7 @@ public final class GenesisProto {
       if (tickIndex_ != 0L) {
         output.writeInt64(2, tickIndex_);
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getInfo());
       }
       getUnknownFields().writeTo(output);
@@ -213,7 +214,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, tickIndex_);
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInfo());
       }
@@ -386,13 +387,19 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.GenesisProto.FullTick.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -444,11 +451,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tickIndex_ = tickIndex_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.info_ = infoBuilder_ == null
               ? info_
               : infoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -738,8 +748,10 @@ public final class GenesisProto {
         } else {
           infoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (info_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1071,6 +1083,7 @@ public final class GenesisProto {
               com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PoolData.class, com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PoolData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_FIELD_NUMBER = 1;
     private com.google.protobuf.Any pool_;
     /**
@@ -1083,7 +1096,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPool() {
-      return pool_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1178,7 +1191,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSpreadRewardAccumulator() {
-      return spreadRewardAccumulator_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.osmosis.concentratedliquidity.v1beta1.AccumObject spread_reward_accumulator = 3 [json_name = "spreadRewardAccumulator", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"spread_reward_accumulator&#92;""];</code>
@@ -1312,13 +1325,13 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPool());
       }
       for (int i = 0; i < ticks_.size(); i++) {
         output.writeMessage(2, ticks_.get(i));
       }
-      if (spreadRewardAccumulator_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getSpreadRewardAccumulator());
       }
       for (int i = 0; i < incentivesAccumulators_.size(); i++) {
@@ -1336,7 +1349,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPool());
       }
@@ -1344,7 +1357,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, ticks_.get(i));
       }
-      if (spreadRewardAccumulator_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSpreadRewardAccumulator());
       }
@@ -1542,13 +1555,23 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PoolData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolFieldBuilder();
+          getTicksFieldBuilder();
+          getSpreadRewardAccumulatorFieldBuilder();
+          getIncentivesAccumulatorsFieldBuilder();
+          getIncentiveRecordsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1649,16 +1672,20 @@ public final class GenesisProto {
 
       private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PoolData result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pool_ = poolBuilder_ == null
               ? pool_
               : poolBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.spreadRewardAccumulator_ = spreadRewardAccumulatorBuilder_ == null
               ? spreadRewardAccumulator_
               : spreadRewardAccumulatorBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1971,8 +1998,10 @@ public final class GenesisProto {
         } else {
           poolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pool_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2418,8 +2447,10 @@ public final class GenesisProto {
         } else {
           spreadRewardAccumulatorBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (spreadRewardAccumulator_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3161,6 +3192,7 @@ public final class GenesisProto {
               com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PositionData.class, com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PositionData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POSITION_FIELD_NUMBER = 1;
     private com.osmosis.concentratedliquidity.v1beta1.PositionProto.Position position_;
     /**
@@ -3169,7 +3201,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPosition() {
-      return position_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.concentratedliquidity.v1beta1.Position position = 1 [json_name = "position"];</code>
@@ -3206,7 +3238,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSpreadRewardAccumRecord() {
-      return spreadRewardAccumRecord_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.osmosis.accum.v1beta1.Record spread_reward_accum_record = 3 [json_name = "spreadRewardAccumRecord", (.gogoproto.nullable) = false];</code>
@@ -3238,13 +3270,13 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (position_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPosition());
       }
       if (lockId_ != 0L) {
         output.writeUInt64(2, lockId_);
       }
-      if (spreadRewardAccumRecord_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getSpreadRewardAccumRecord());
       }
       getUnknownFields().writeTo(output);
@@ -3256,7 +3288,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (position_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPosition());
       }
@@ -3264,7 +3296,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, lockId_);
       }
-      if (spreadRewardAccumRecord_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSpreadRewardAccumRecord());
       }
@@ -3436,13 +3468,20 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PositionData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPositionFieldBuilder();
+          getSpreadRewardAccumRecordFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3492,10 +3531,12 @@ public final class GenesisProto {
 
       private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.GenesisProto.PositionData result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.position_ = positionBuilder_ == null
               ? position_
               : positionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lockId_ = lockId_;
@@ -3504,7 +3545,9 @@ public final class GenesisProto {
           result.spreadRewardAccumRecord_ = spreadRewardAccumRecordBuilder_ == null
               ? spreadRewardAccumRecord_
               : spreadRewardAccumRecordBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3688,8 +3731,10 @@ public final class GenesisProto {
         } else {
           positionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (position_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3839,8 +3884,10 @@ public final class GenesisProto {
         } else {
           spreadRewardAccumRecordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (spreadRewardAccumRecord_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4101,6 +4148,7 @@ public final class GenesisProto {
               com.osmosis.concentratedliquidity.v1beta1.GenesisProto.GenesisState.class, com.osmosis.concentratedliquidity.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.osmosis.concentratedliquidity.ParamsProto.Params params_;
     /**
@@ -4113,7 +4161,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4266,7 +4314,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < poolData_.size(); i++) {
@@ -4287,7 +4335,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -4478,13 +4526,21 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getPoolDataFieldBuilder();
+          getPositionDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4565,14 +4621,17 @@ public final class GenesisProto {
 
       private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.nextPositionId_ = nextPositionId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4844,8 +4903,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5641,6 +5702,7 @@ public final class GenesisProto {
               com.osmosis.concentratedliquidity.v1beta1.GenesisProto.AccumObject.class, com.osmosis.concentratedliquidity.v1beta1.GenesisProto.AccumObject.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -5696,7 +5758,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasAccumContent() {
-      return accumContent_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.accum.v1beta1.AccumulatorContent accum_content = 2 [json_name = "accumContent"];</code>
@@ -5731,7 +5793,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (accumContent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAccumContent());
       }
       getUnknownFields().writeTo(output);
@@ -5746,7 +5808,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (accumContent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAccumContent());
       }
@@ -5914,13 +5976,19 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.GenesisProto.AccumObject.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccumContentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5968,11 +6036,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.accumContent_ = accumContentBuilder_ == null
               ? accumContent_
               : accumContentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6240,8 +6311,10 @@ public final class GenesisProto {
         } else {
           accumContentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (accumContent_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -176,6 +176,7 @@ public final class VaultProto {
               com.comdex.vault.v1beta1.VaultProto.Vault.class, com.comdex.vault.v1beta1.VaultProto.Vault.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -334,7 +335,7 @@ public final class VaultProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return createdAt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 7 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -449,7 +450,7 @@ public final class VaultProto {
      */
     @java.lang.Override
     public boolean hasBlockTime() {
-      return blockTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp block_time = 11 [json_name = "blockTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"block_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -499,7 +500,7 @@ public final class VaultProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountOut_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, amountOut_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getCreatedAt());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(interestAccumulated_)) {
@@ -511,7 +512,7 @@ public final class VaultProto {
       if (blockHeight_ != 0L) {
         output.writeInt64(10, blockHeight_);
       }
-      if (blockTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(11, getBlockTime());
       }
       getUnknownFields().writeTo(output);
@@ -544,7 +545,7 @@ public final class VaultProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountOut_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, amountOut_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCreatedAt());
       }
@@ -558,7 +559,7 @@ public final class VaultProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(10, blockHeight_);
       }
-      if (blockTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getBlockTime());
       }
@@ -769,13 +770,20 @@ public final class VaultProto {
 
       // Construct using com.comdex.vault.v1beta1.VaultProto.Vault.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreatedAtFieldBuilder();
+          getBlockTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -851,10 +859,12 @@ public final class VaultProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.amountOut_ = amountOut_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.interestAccumulated_ = interestAccumulated_;
@@ -869,7 +879,9 @@ public final class VaultProto {
           result.blockTime_ = blockTimeBuilder_ == null
               ? blockTime_
               : blockTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1439,8 +1451,10 @@ public final class VaultProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1734,8 +1748,10 @@ public final class VaultProto {
         } else {
           blockTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        if (blockTime_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2740,7 +2756,8 @@ public final class VaultProto {
 
     public static final int VAULT_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList vaultIds_;
+    private com.google.protobuf.Internal.LongList vaultIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 vault_ids = 3 [json_name = "vaultIds", (.gogoproto.moretags) = "yaml:&#92;"vault_ids&#92;""];</code>
      * @return A list containing the vaultIds.
@@ -3128,18 +3145,9 @@ public final class VaultProto {
       @java.lang.Override
       public com.comdex.vault.v1beta1.VaultProto.AppExtendedPairVaultMappingData buildPartial() {
         com.comdex.vault.v1beta1.VaultProto.AppExtendedPairVaultMappingData result = new com.comdex.vault.v1beta1.VaultProto.AppExtendedPairVaultMappingData(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.comdex.vault.v1beta1.VaultProto.AppExtendedPairVaultMappingData result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          vaultIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.vaultIds_ = vaultIds_;
       }
 
       private void buildPartial0(com.comdex.vault.v1beta1.VaultProto.AppExtendedPairVaultMappingData result) {
@@ -3149,6 +3157,10 @@ public final class VaultProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.extendedPairId_ = extendedPairId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          vaultIds_.makeImmutable();
+          result.vaultIds_ = vaultIds_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.tokenMintedAmount_ = tokenMintedAmount_;
@@ -3211,7 +3223,8 @@ public final class VaultProto {
         if (!other.vaultIds_.isEmpty()) {
           if (vaultIds_.isEmpty()) {
             vaultIds_ = other.vaultIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            vaultIds_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureVaultIdsIsMutable();
             vaultIds_.addAll(other.vaultIds_);
@@ -3373,10 +3386,10 @@ public final class VaultProto {
 
       private com.google.protobuf.Internal.LongList vaultIds_ = emptyLongList();
       private void ensureVaultIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          vaultIds_ = mutableCopy(vaultIds_);
-          bitField0_ |= 0x00000004;
+        if (!vaultIds_.isModifiable()) {
+          vaultIds_ = makeMutableCopy(vaultIds_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 vault_ids = 3 [json_name = "vaultIds", (.gogoproto.moretags) = "yaml:&#92;"vault_ids&#92;""];</code>
@@ -3384,8 +3397,8 @@ public final class VaultProto {
        */
       public java.util.List<java.lang.Long>
           getVaultIdsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(vaultIds_) : vaultIds_;
+        vaultIds_.makeImmutable();
+        return vaultIds_;
       }
       /**
        * <code>repeated uint64 vault_ids = 3 [json_name = "vaultIds", (.gogoproto.moretags) = "yaml:&#92;"vault_ids&#92;""];</code>
@@ -3413,6 +3426,7 @@ public final class VaultProto {
 
         ensureVaultIdsIsMutable();
         vaultIds_.setLong(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3425,6 +3439,7 @@ public final class VaultProto {
 
         ensureVaultIdsIsMutable();
         vaultIds_.addLong(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3438,6 +3453,7 @@ public final class VaultProto {
         ensureVaultIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, vaultIds_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5157,6 +5173,7 @@ public final class VaultProto {
               com.comdex.vault.v1beta1.VaultProto.StableMintVault.class, com.comdex.vault.v1beta1.VaultProto.StableMintVault.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -5276,7 +5293,7 @@ public final class VaultProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return createdAt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -5323,7 +5340,7 @@ public final class VaultProto {
       if (extendedPairVaultId_ != 0L) {
         output.writeUInt64(5, extendedPairVaultId_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getCreatedAt());
       }
       getUnknownFields().writeTo(output);
@@ -5353,7 +5370,7 @@ public final class VaultProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(5, extendedPairVaultId_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCreatedAt());
       }
@@ -5534,13 +5551,19 @@ public final class VaultProto {
 
       // Construct using com.comdex.vault.v1beta1.VaultProto.StableMintVault.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreatedAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5604,11 +5627,14 @@ public final class VaultProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.extendedPairVaultId_ = extendedPairVaultId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6058,8 +6084,10 @@ public final class VaultProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

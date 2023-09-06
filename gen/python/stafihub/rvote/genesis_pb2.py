@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cstafihub/rvote/genesis.proto\x12\x17stafihub.stafihub.rvote\x1a\x14gogoproto/gogo.proto\"M\n\x0cGenesisState\x12=\n\rproposal_life\x18\x01 \x01(\x03\x42\x18\xf2\xde\x1f\x14yaml:\"proposal_life\"R\x0cproposalLifeB\xd5\x01\n\x1b\x63om.stafihub.stafihub.rvoteB\x0cGenesisProtoP\x01Z*github.com/stafihub/stafihub/x/rvote/types\xa2\x02\x03SSR\xaa\x02\x17Stafihub.Stafihub.Rvote\xca\x02\x17Stafihub\\Stafihub\\Rvote\xe2\x02#Stafihub\\Stafihub\\Rvote\\GPBMetadata\xea\x02\x19Stafihub::Stafihub::Rvoteb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cstafihub/rvote/genesis.proto\x12\x17stafihub.stafihub.rvote\x1a\x14gogoproto/gogo.proto\"M\n\x0cGenesisState\x12=\n\rproposal_life\x18\x01 \x01(\x03\x42\x18\xf2\xde\x1f\x14yaml:\"proposal_life\"R\x0cproposalLifeB\xd3\x01\n\x1b\x63om.stafihub.stafihub.rvoteB\x0cGenesisProtoZ*github.com/stafihub/stafihub/x/rvote/types\xa2\x02\x03SSR\xaa\x02\x17Stafihub.Stafihub.Rvote\xca\x02\x17Stafihub\\Stafihub\\Rvote\xe2\x02#Stafihub\\Stafihub\\Rvote\\GPBMetadata\xea\x02\x19Stafihub::Stafihub::Rvoteb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.rvote.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.stafihub.stafihub.rvoteB\014GenesisProtoP\001Z*github.com/stafihub/stafihub/x/rvote/types\242\002\003SSR\252\002\027Stafihub.Stafihub.Rvote\312\002\027Stafihub\\Stafihub\\Rvote\342\002#Stafihub\\Stafihub\\Rvote\\GPBMetadata\352\002\031Stafihub::Stafihub::Rvote'
+  DESCRIPTOR._serialized_options = b'\n\033com.stafihub.stafihub.rvoteB\014GenesisProtoZ*github.com/stafihub/stafihub/x/rvote/types\242\002\003SSR\252\002\027Stafihub.Stafihub.Rvote\312\002\027Stafihub\\Stafihub\\Rvote\342\002#Stafihub\\Stafihub\\Rvote\\GPBMetadata\352\002\031Stafihub::Stafihub::Rvote'
   _GENESISSTATE.fields_by_name['proposal_life']._options = None
   _GENESISSTATE.fields_by_name['proposal_life']._serialized_options = b'\362\336\037\024yaml:\"proposal_life\"'
   _globals['_GENESISSTATE']._serialized_start=79

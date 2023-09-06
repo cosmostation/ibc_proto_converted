@@ -1625,6 +1625,7 @@ public final class AccumProto {
               com.osmosis.accum.v1beta1.AccumProto.Record.class, com.osmosis.accum.v1beta1.AccumProto.Record.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NUM_SHARES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object numShares_ = "";
@@ -1904,7 +1905,7 @@ public final class AccumProto {
      */
     @java.lang.Override
     public boolean hasOptions() {
-      return options_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.accum.v1beta1.Options options = 4 [json_name = "options"];</code>
@@ -1945,7 +1946,7 @@ public final class AccumProto {
       for (int i = 0; i < unclaimedRewardsTotal_.size(); i++) {
         output.writeMessage(3, unclaimedRewardsTotal_.get(i));
       }
-      if (options_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getOptions());
       }
       getUnknownFields().writeTo(output);
@@ -1968,7 +1969,7 @@ public final class AccumProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, unclaimedRewardsTotal_.get(i));
       }
-      if (options_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOptions());
       }
@@ -2147,13 +2148,21 @@ public final class AccumProto {
 
       // Construct using com.osmosis.accum.v1beta1.AccumProto.Record.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccumValuePerShareFieldBuilder();
+          getUnclaimedRewardsTotalFieldBuilder();
+          getOptionsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2237,11 +2246,14 @@ public final class AccumProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.numShares_ = numShares_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.options_ = optionsBuilder_ == null
               ? options_
               : optionsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3576,8 +3588,10 @@ public final class AccumProto {
         } else {
           optionsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (options_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -156,6 +156,7 @@ public final class GenesisProto {
               com.passage3d.claim.v1beta1.GenesisProto.GenesisState.class, com.passage3d.claim.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MODULE_ACCOUNT_BALANCE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin moduleAccountBalance_;
     /**
@@ -168,7 +169,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasModuleAccountBalance() {
-      return moduleAccountBalance_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -206,7 +207,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -307,10 +308,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (moduleAccountBalance_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getModuleAccountBalance());
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getParams());
       }
       for (int i = 0; i < claimRecords_.size(); i++) {
@@ -325,11 +326,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (moduleAccountBalance_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getModuleAccountBalance());
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -510,13 +511,21 @@ public final class GenesisProto {
 
       // Construct using com.passage3d.claim.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getModuleAccountBalanceFieldBuilder();
+          getParamsFieldBuilder();
+          getClaimRecordsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -585,16 +594,20 @@ public final class GenesisProto {
 
       private void buildPartial0(com.passage3d.claim.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.moduleAccountBalance_ = moduleAccountBalanceBuilder_ == null
               ? moduleAccountBalance_
               : moduleAccountBalanceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -829,8 +842,10 @@ public final class GenesisProto {
         } else {
           moduleAccountBalanceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (moduleAccountBalance_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -984,8 +999,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

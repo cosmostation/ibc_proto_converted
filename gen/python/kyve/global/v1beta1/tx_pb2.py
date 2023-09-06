@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ckyve/global/v1beta1/tx.proto\x12\x13kyve.global.v1beta1\x1a\x19\x63osmos_proto/cosmos.proto\"c\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x18\n\x07payload\x18\x02 \x01(\tR\x07payload\"\x19\n\x17MsgUpdateParamsResponse2i\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.kyve.global.v1beta1.MsgUpdateParams\x1a,.kyve.global.v1beta1.MsgUpdateParamsResponseB\xbf\x01\n\x17\x63om.kyve.global.v1beta1B\x07TxProtoP\x01Z+github.com/KYVENetwork/chain/x/global/types\xa2\x02\x03KGX\xaa\x02\x13Kyve.Global.V1beta1\xca\x02\x14Kyve\\Global_\\V1beta1\xe2\x02 Kyve\\Global_\\V1beta1\\GPBMetadata\xea\x02\x15Kyve::Global::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ckyve/global/v1beta1/tx.proto\x12\x13kyve.global.v1beta1\x1a\x19\x63osmos_proto/cosmos.proto\"c\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x18\n\x07payload\x18\x02 \x01(\tR\x07payload\"\x19\n\x17MsgUpdateParamsResponse2i\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.kyve.global.v1beta1.MsgUpdateParams\x1a,.kyve.global.v1beta1.MsgUpdateParamsResponseB\xbd\x01\n\x17\x63om.kyve.global.v1beta1B\x07TxProtoZ+github.com/KYVENetwork/chain/x/global/types\xa2\x02\x03KGX\xaa\x02\x13Kyve.Global.V1beta1\xca\x02\x14Kyve\\Global_\\V1beta1\xe2\x02 Kyve\\Global_\\V1beta1\\GPBMetadata\xea\x02\x15Kyve::Global::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kyve.global.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.kyve.global.v1beta1B\007TxProtoP\001Z+github.com/KYVENetwork/chain/x/global/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002\024Kyve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1beta1\\GPBMetadata\352\002\025Kyve::Global::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.kyve.global.v1beta1B\007TxProtoZ+github.com/KYVENetwork/chain/x/global/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002\024Kyve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1beta1\\GPBMetadata\352\002\025Kyve::Global::V1beta1'
   _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
   _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _globals['_MSGUPDATEPARAMS']._serialized_start=80

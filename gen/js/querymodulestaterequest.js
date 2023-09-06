@@ -1,4 +1,4 @@
-// source: pstake/lscosmos/v1beta1/query.proto
+// source: injective/wasmx/v1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest');
+goog.provide('proto.injective.wasmx.v1.QueryModuleStateRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest = function(opt_data) {
+proto.injective.wasmx.v1.QueryModuleStateRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest, jspb.Message);
+goog.inherits(proto.injective.wasmx.v1.QueryModuleStateRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.displayName = 'proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest';
+  proto.injective.wasmx.v1.QueryModuleStateRequest.displayName = 'proto.injective.wasmx.v1.QueryModuleStateRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.toObject(opt_includeInstance, this);
+proto.injective.wasmx.v1.QueryModuleStateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.injective.wasmx.v1.QueryModuleStateRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest} msg The msg instance to transform.
+ * @param {!proto.injective.wasmx.v1.QueryModuleStateRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.toObject = function(includeInstance, msg) {
+proto.injective.wasmx.v1.QueryModuleStateRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -84,23 +84,23 @@ proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest}
+ * @return {!proto.injective.wasmx.v1.QueryModuleStateRequest}
  */
-proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.deserializeBinary = function(bytes) {
+proto.injective.wasmx.v1.QueryModuleStateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest;
-  return proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.injective.wasmx.v1.QueryModuleStateRequest;
+  return proto.injective.wasmx.v1.QueryModuleStateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest} msg The message object to deserialize into.
+ * @param {!proto.injective.wasmx.v1.QueryModuleStateRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest}
+ * @return {!proto.injective.wasmx.v1.QueryModuleStateRequest}
  */
-proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.injective.wasmx.v1.QueryModuleStateRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.prototype.serializeBinary = function() {
+proto.injective.wasmx.v1.QueryModuleStateRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.serializeBinaryToWriter(this, writer);
+  proto.injective.wasmx.v1.QueryModuleStateRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest} message
+ * @param {!proto.injective.wasmx.v1.QueryModuleStateRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lscosmos.v1beta1.QueryModuleStateRequest.serializeBinaryToWriter = function(message, writer) {
+proto.injective.wasmx.v1.QueryModuleStateRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 

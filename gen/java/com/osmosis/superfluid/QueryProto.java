@@ -477,6 +477,7 @@ public final class QueryProto {
               com.osmosis.superfluid.QueryProto.QueryParamsResponse.class, com.osmosis.superfluid.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.osmosis.superfluid.ParamsProto.Params params_;
     /**
@@ -489,7 +490,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -529,7 +530,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -541,7 +542,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -699,13 +700,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.superfluid.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -749,11 +756,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.superfluid.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -939,8 +949,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3917,6 +3929,7 @@ public final class QueryProto {
               com.osmosis.superfluid.QueryProto.AssetMultiplierResponse.class, com.osmosis.superfluid.QueryProto.AssetMultiplierResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OSMO_EQUIVALENT_MULTIPLIER_FIELD_NUMBER = 1;
     private com.osmosis.superfluid.SuperfluidProto.OsmoEquivalentMultiplierRecord osmoEquivalentMultiplier_;
     /**
@@ -3925,7 +3938,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOsmoEquivalentMultiplier() {
-      return osmoEquivalentMultiplier_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.superfluid.OsmoEquivalentMultiplierRecord osmo_equivalent_multiplier = 1 [json_name = "osmoEquivalentMultiplier"];</code>
@@ -3957,7 +3970,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (osmoEquivalentMultiplier_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOsmoEquivalentMultiplier());
       }
       getUnknownFields().writeTo(output);
@@ -3969,7 +3982,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (osmoEquivalentMultiplier_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOsmoEquivalentMultiplier());
       }
@@ -4127,13 +4140,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.superfluid.QueryProto.AssetMultiplierResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOsmoEquivalentMultiplierFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4177,11 +4196,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.superfluid.QueryProto.AssetMultiplierResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.osmoEquivalentMultiplier_ = osmoEquivalentMultiplierBuilder_ == null
               ? osmoEquivalentMultiplier_
               : osmoEquivalentMultiplierBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4347,8 +4369,10 @@ public final class QueryProto {
         } else {
           osmoEquivalentMultiplierBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (osmoEquivalentMultiplier_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5438,6 +5462,7 @@ public final class QueryProto {
               com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsRequest.class, com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -5446,7 +5471,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -5478,7 +5503,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5490,7 +5515,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -5648,13 +5673,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5698,11 +5729,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5868,8 +5902,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6063,6 +6099,7 @@ public final class QueryProto {
               com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsResponse.class, com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.osmosis.superfluid.QueryProto.SuperfluidIntermediaryAccountInfo> accounts_;
@@ -6112,7 +6149,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -6147,7 +6184,7 @@ public final class QueryProto {
       for (int i = 0; i < accounts_.size(); i++) {
         output.writeMessage(1, accounts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6163,7 +6200,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, accounts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6327,13 +6364,20 @@ public final class QueryProto {
 
       // Construct using com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccountsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6397,11 +6441,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.superfluid.QueryProto.AllIntermediaryAccountsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6846,8 +6893,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7493,6 +7542,7 @@ public final class QueryProto {
               com.osmosis.superfluid.QueryProto.ConnectedIntermediaryAccountResponse.class, com.osmosis.superfluid.QueryProto.ConnectedIntermediaryAccountResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     private com.osmosis.superfluid.QueryProto.SuperfluidIntermediaryAccountInfo account_;
     /**
@@ -7501,7 +7551,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAccount() {
-      return account_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.superfluid.SuperfluidIntermediaryAccountInfo account = 1 [json_name = "account"];</code>
@@ -7533,7 +7583,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAccount());
       }
       getUnknownFields().writeTo(output);
@@ -7545,7 +7595,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAccount());
       }
@@ -7703,13 +7753,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.superfluid.QueryProto.ConnectedIntermediaryAccountResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7753,11 +7809,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.superfluid.QueryProto.ConnectedIntermediaryAccountResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.account_ = accountBuilder_ == null
               ? account_
               : accountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7923,8 +7982,10 @@ public final class QueryProto {
         } else {
           accountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (account_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13456,6 +13517,7 @@ public final class QueryProto {
               com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorResponse.class, com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUPERFLUID_DELEGATION_RECORDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidDelegationRecord> superfluidDelegationRecords_;
@@ -13546,7 +13608,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTotalEquivalentStakedAmount() {
-      return totalEquivalentStakedAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_equivalent_staked_amount = 3 [json_name = "totalEquivalentStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -13584,7 +13646,7 @@ public final class QueryProto {
       for (int i = 0; i < totalDelegatedCoins_.size(); i++) {
         output.writeMessage(2, totalDelegatedCoins_.get(i));
       }
-      if (totalEquivalentStakedAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getTotalEquivalentStakedAmount());
       }
       getUnknownFields().writeTo(output);
@@ -13604,7 +13666,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, totalDelegatedCoins_.get(i));
       }
-      if (totalEquivalentStakedAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTotalEquivalentStakedAmount());
       }
@@ -13774,13 +13836,21 @@ public final class QueryProto {
 
       // Construct using com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSuperfluidDelegationRecordsFieldBuilder();
+          getTotalDelegatedCoinsFieldBuilder();
+          getTotalEquivalentStakedAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13860,11 +13930,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.totalEquivalentStakedAmount_ = totalEquivalentStakedAmountBuilder_ == null
               ? totalEquivalentStakedAmount_
               : totalEquivalentStakedAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14588,8 +14661,10 @@ public final class QueryProto {
         } else {
           totalEquivalentStakedAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (totalEquivalentStakedAmount_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -20579,6 +20654,7 @@ public final class QueryProto {
               com.osmosis.superfluid.QueryProto.QueryTotalDelegationByDelegatorResponse.class, com.osmosis.superfluid.QueryProto.QueryTotalDelegationByDelegatorResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUPERFLUID_DELEGATION_RECORDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidDelegationRecord> superfluidDelegationRecords_;
@@ -20710,7 +20786,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTotalEquivalentStakedAmount() {
-      return totalEquivalentStakedAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_equivalent_staked_amount = 4 [json_name = "totalEquivalentStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -20751,7 +20827,7 @@ public final class QueryProto {
       for (int i = 0; i < totalDelegatedCoins_.size(); i++) {
         output.writeMessage(3, totalDelegatedCoins_.get(i));
       }
-      if (totalEquivalentStakedAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getTotalEquivalentStakedAmount());
       }
       getUnknownFields().writeTo(output);
@@ -20775,7 +20851,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, totalDelegatedCoins_.get(i));
       }
-      if (totalEquivalentStakedAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTotalEquivalentStakedAmount());
       }
@@ -20951,13 +21027,22 @@ public final class QueryProto {
 
       // Construct using com.osmosis.superfluid.QueryProto.QueryTotalDelegationByDelegatorResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSuperfluidDelegationRecordsFieldBuilder();
+          getDelegationResponseFieldBuilder();
+          getTotalDelegatedCoinsFieldBuilder();
+          getTotalEquivalentStakedAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -21053,11 +21138,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.superfluid.QueryProto.QueryTotalDelegationByDelegatorResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.totalEquivalentStakedAmount_ = totalEquivalentStakedAmountBuilder_ == null
               ? totalEquivalentStakedAmount_
               : totalEquivalentStakedAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22060,8 +22148,10 @@ public final class QueryProto {
         } else {
           totalEquivalentStakedAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (totalEquivalentStakedAmount_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -22632,7 +22722,8 @@ public final class QueryProto {
 
     public static final int POOL_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList poolIds_;
+    private com.google.protobuf.Internal.LongList poolIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
      * @return A list containing the poolIds.
@@ -22894,22 +22985,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse buildPartial() {
         com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse result = new com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          poolIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.poolIds_ = poolIds_;
-      }
-
       private void buildPartial0(com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          poolIds_.makeImmutable();
+          result.poolIds_ = poolIds_;
+        }
       }
 
       @java.lang.Override
@@ -22959,7 +23045,8 @@ public final class QueryProto {
         if (!other.poolIds_.isEmpty()) {
           if (poolIds_.isEmpty()) {
             poolIds_ = other.poolIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            poolIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensurePoolIdsIsMutable();
             poolIds_.addAll(other.poolIds_);
@@ -23027,10 +23114,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList poolIds_ = emptyLongList();
       private void ensurePoolIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          poolIds_ = mutableCopy(poolIds_);
-          bitField0_ |= 0x00000001;
+        if (!poolIds_.isModifiable()) {
+          poolIds_ = makeMutableCopy(poolIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
@@ -23038,8 +23125,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getPoolIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(poolIds_) : poolIds_;
+        poolIds_.makeImmutable();
+        return poolIds_;
       }
       /**
        * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
@@ -23067,6 +23154,7 @@ public final class QueryProto {
 
         ensurePoolIdsIsMutable();
         poolIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -23079,6 +23167,7 @@ public final class QueryProto {
 
         ensurePoolIdsIsMutable();
         poolIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -23092,6 +23181,7 @@ public final class QueryProto {
         ensurePoolIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, poolIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

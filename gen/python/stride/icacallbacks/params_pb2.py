@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n stride/icacallbacks/params.proto\x12\x13stride.icacallbacks\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xca\x01\n\x17\x63om.stride.icacallbacksB\x0bParamsProtoP\x01Z5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\xa2\x02\x03SIX\xaa\x02\x13Stride.Icacallbacks\xca\x02\x13Stride\\Icacallbacks\xe2\x02\x1fStride\\Icacallbacks\\GPBMetadata\xea\x02\x14Stride::Icacallbacksb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n stride/icacallbacks/params.proto\x12\x13stride.icacallbacks\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xc8\x01\n\x17\x63om.stride.icacallbacksB\x0bParamsProtoZ5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\xa2\x02\x03SIX\xaa\x02\x13Stride.Icacallbacks\xca\x02\x13Stride\\Icacallbacks\xe2\x02\x1fStride\\Icacallbacks\\GPBMetadata\xea\x02\x14Stride::Icacallbacksb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stride.icacallbacks.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.stride.icacallbacksB\013ParamsProtoP\001Z5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\242\002\003SIX\252\002\023Stride.Icacallbacks\312\002\023Stride\\Icacallbacks\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024Stride::Icacallbacks'
+  DESCRIPTOR._serialized_options = b'\n\027com.stride.icacallbacksB\013ParamsProtoZ5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\242\002\003SIX\252\002\023Stride.Icacallbacks\312\002\023Stride\\Icacallbacks\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024Stride::Icacallbacks'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=79

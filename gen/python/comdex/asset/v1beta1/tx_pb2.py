@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from comdex.asset.v1beta1 import asset_pb2 as comdex_dot_asset_dot_v1beta1_dot_asset__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x63omdex/asset/v1beta1/tx.proto\x12\x14\x63omdex.asset.v1beta1\x1a\x14gogoproto/gogo.proto\x1a comdex/asset/v1beta1/asset.proto\"`\n\x0bMsgAddAsset\x12\x18\n\x07\x63reator\x18\x01 \x01(\tR\x07\x63reator\x12\x37\n\x05\x61sset\x18\x02 \x01(\x0b\x32\x1b.comdex.asset.v1beta1.AssetB\x04\xc8\xde\x1f\x00R\x05\x61sset\"\x15\n\x13MsgAddAssetResponse2_\n\x03Msg\x12X\n\x08\x41\x64\x64\x41sset\x12!.comdex.asset.v1beta1.MsgAddAsset\x1a).comdex.asset.v1beta1.MsgAddAssetResponseB\xca\x01\n\x18\x63om.comdex.asset.v1beta1B\x07TxProtoP\x01Z/github.com/comdex-official/comdex/x/asset/types\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43omdex.Asset.V1beta1\xca\x02\x14\x43omdex\\Asset\\V1beta1\xe2\x02 Comdex\\Asset\\V1beta1\\GPBMetadata\xea\x02\x16\x43omdex::Asset::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x63omdex/asset/v1beta1/tx.proto\x12\x14\x63omdex.asset.v1beta1\x1a\x14gogoproto/gogo.proto\x1a comdex/asset/v1beta1/asset.proto\"`\n\x0bMsgAddAsset\x12\x18\n\x07\x63reator\x18\x01 \x01(\tR\x07\x63reator\x12\x37\n\x05\x61sset\x18\x02 \x01(\x0b\x32\x1b.comdex.asset.v1beta1.AssetB\x04\xc8\xde\x1f\x00R\x05\x61sset\"\x15\n\x13MsgAddAssetResponse2_\n\x03Msg\x12X\n\x08\x41\x64\x64\x41sset\x12!.comdex.asset.v1beta1.MsgAddAsset\x1a).comdex.asset.v1beta1.MsgAddAssetResponseB\xc8\x01\n\x18\x63om.comdex.asset.v1beta1B\x07TxProtoZ/github.com/comdex-official/comdex/x/asset/types\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43omdex.Asset.V1beta1\xca\x02\x14\x43omdex\\Asset\\V1beta1\xe2\x02 Comdex\\Asset\\V1beta1\\GPBMetadata\xea\x02\x16\x43omdex::Asset::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.asset.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.comdex.asset.v1beta1B\007TxProtoP\001Z/github.com/comdex-official/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::Asset::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\030com.comdex.asset.v1beta1B\007TxProtoZ/github.com/comdex-official/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::Asset::V1beta1\310\341\036\000'
   _MSGADDASSET.fields_by_name['asset']._options = None
   _MSGADDASSET.fields_by_name['asset']._serialized_options = b'\310\336\037\000'
   _globals['_MSGADDASSET']._serialized_start=111

@@ -15,15 +15,14 @@ from assetmantle.properties.base import any_property_pb2 as assetmantle_dot_prop
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*assetmantle/lists/base/property_list.proto\x12\x1d\x61ssetmantle.schema.lists.base\x1a.assetmantle/properties/base/any_property.proto\x1a\x14gogoproto/gogo.proto\"l\n\x0cPropertyList\x12V\n\x0e\x61ny_properties\x18\x01 \x03(\x0b\x32/.assetmantle.schema.properties.base.AnyPropertyR\ranyProperties:\x04\x88\xa0\x1f\x00\x42\xce\x01\n!com.assetmantle.schema.lists.baseB\x11PropertyListProtoP\x01\xa2\x02\x04\x41SLB\xaa\x02\x1d\x41ssetmantle.Schema.Lists.Base\xca\x02\x1d\x41ssetmantle\\Schema\\Lists\\Base\xe2\x02)Assetmantle\\Schema\\Lists\\Base\\GPBMetadata\xea\x02 Assetmantle::Schema::Lists::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*assetmantle/lists/base/property_list.proto\x12\x1d\x61ssetmantle.schema.lists.base\x1a.assetmantle/properties/base/any_property.proto\x1a\x14gogoproto/gogo.proto\"l\n\x0cPropertyList\x12V\n\x0e\x61ny_properties\x18\x01 \x03(\x0b\x32/.assetmantle.schema.properties.base.AnyPropertyR\ranyProperties:\x04\x88\xa0\x1f\x00\x42\xcc\x01\n!com.assetmantle.schema.lists.baseB\x11PropertyListProto\xa2\x02\x04\x41SLB\xaa\x02\x1d\x41ssetmantle.Schema.Lists.Base\xca\x02\x1d\x41ssetmantle\\Schema\\Lists\\Base\xe2\x02)Assetmantle\\Schema\\Lists\\Base\\GPBMetadata\xea\x02 Assetmantle::Schema::Lists::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.lists.base.property_list_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n!com.assetmantle.schema.lists.baseB\021PropertyListProtoP\001\242\002\004ASLB\252\002\035Assetmantle.Schema.Lists.Base\312\002\035Assetmantle\\Schema\\Lists\\Base\342\002)Assetmantle\\Schema\\Lists\\Base\\GPBMetadata\352\002 Assetmantle::Schema::Lists::Base'
+  DESCRIPTOR._serialized_options = b'\n!com.assetmantle.schema.lists.baseB\021PropertyListProto\242\002\004ASLB\252\002\035Assetmantle.Schema.Lists.Base\312\002\035Assetmantle\\Schema\\Lists\\Base\342\002)Assetmantle\\Schema\\Lists\\Base\\GPBMetadata\352\002 Assetmantle::Schema::Lists::Base'
   _PROPERTYLIST._options = None
   _PROPERTYLIST._serialized_options = b'\210\240\037\000'
   _globals['_PROPERTYLIST']._serialized_start=147

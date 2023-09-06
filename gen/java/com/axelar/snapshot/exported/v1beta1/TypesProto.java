@@ -677,6 +677,7 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue);
               com.axelar.snapshot.exported.v1beta1.TypesProto.Snapshot.class, com.axelar.snapshot.exported.v1beta1.TypesProto.Snapshot.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TIMESTAMP_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp timestamp_;
     /**
@@ -685,7 +686,7 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue);
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return timestamp_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -818,7 +819,7 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getTimestamp());
       }
       if (height_ != 0L) {
@@ -842,7 +843,7 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTimestamp());
       }
@@ -1055,13 +1056,19 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue) {
 
       // Construct using com.axelar.snapshot.exported.v1beta1.TypesProto.Snapshot.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1108,10 +1115,12 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue) {
 
       private void buildPartial0(com.axelar.snapshot.exported.v1beta1.TypesProto.Snapshot result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.height_ = height_;
@@ -1123,6 +1132,7 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue) {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.bondedWeight_ = bondedWeight_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1316,8 +1326,10 @@ com.axelar.snapshot.exported.v1beta1.TypesProto.Participant defaultValue) {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (timestamp_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from panacea.did.v2 import did_pb2 as panacea_dot_did_dot_v2_dot_did__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cpanacea/did/v2/genesis.proto\x12\x0epanacea.did.v2\x1a\x18panacea/did/v2/did.proto\"\xbb\x01\n\x0cGenesisState\x12I\n\tdocuments\x18\x01 \x03(\x0b\x32+.panacea.did.v2.GenesisState.DocumentsEntryR\tdocuments\x1a`\n\x0e\x44ocumentsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x38\n\x05value\x18\x02 \x01(\x0b\x32\".panacea.did.v2.DIDDocumentWithSeqR\x05value:\x02\x38\x01\x42\xad\x01\n\x12\x63om.panacea.did.v2B\x0cGenesisProtoP\x01Z/github.com/medibloc/panacea-core/v2/x/did/types\xa2\x02\x03PDX\xaa\x02\x0ePanacea.Did.V2\xca\x02\x0ePanacea\\Did\\V2\xe2\x02\x1aPanacea\\Did\\V2\\GPBMetadata\xea\x02\x10Panacea::Did::V2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cpanacea/did/v2/genesis.proto\x12\x0epanacea.did.v2\x1a\x18panacea/did/v2/did.proto\"\xbb\x01\n\x0cGenesisState\x12I\n\tdocuments\x18\x01 \x03(\x0b\x32+.panacea.did.v2.GenesisState.DocumentsEntryR\tdocuments\x1a`\n\x0e\x44ocumentsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x38\n\x05value\x18\x02 \x01(\x0b\x32\".panacea.did.v2.DIDDocumentWithSeqR\x05value:\x02\x38\x01\x42\xad\x01\n\x12\x63om.panacea.did.v2B\x0cGenesisProtoP\x00Z/github.com/medibloc/panacea-core/v2/x/did/types\xa2\x02\x03PDX\xaa\x02\x0ePanacea.Did.V2\xca\x02\x0ePanacea\\Did\\V2\xe2\x02\x1aPanacea\\Did\\V2\\GPBMetadata\xea\x02\x10Panacea::Did::V2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'panacea.did.v2.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.panacea.did.v2B\014GenesisProtoP\001Z/github.com/medibloc/panacea-core/v2/x/did/types\242\002\003PDX\252\002\016Panacea.Did.V2\312\002\016Panacea\\Did\\V2\342\002\032Panacea\\Did\\V2\\GPBMetadata\352\002\020Panacea::Did::V2'
+  DESCRIPTOR._serialized_options = b'\n\022com.panacea.did.v2B\014GenesisProtoP\000Z/github.com/medibloc/panacea-core/v2/x/did/types\242\002\003PDX\252\002\016Panacea.Did.V2\312\002\016Panacea\\Did\\V2\342\002\032Panacea\\Did\\V2\\GPBMetadata\352\002\020Panacea::Did::V2'
   _GENESISSTATE_DOCUMENTSENTRY._options = None
   _GENESISSTATE_DOCUMENTSENTRY._serialized_options = b'8\001'
   _globals['_GENESISSTATE']._serialized_start=75

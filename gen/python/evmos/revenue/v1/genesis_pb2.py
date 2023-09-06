@@ -15,15 +15,14 @@ from evmos.revenue.v1 import revenue_pb2 as evmos_dot_revenue_dot_v1_dot_revenue
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x65vmos/revenue/v1/genesis.proto\x12\x10\x65vmos.revenue.v1\x1a\x1e\x65vmos/revenue/v1/revenue.proto\x1a\x14gogoproto/gogo.proto\"\x83\x01\n\x0cGenesisState\x12\x36\n\x06params\x18\x01 \x01(\x0b\x32\x18.evmos.revenue.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12;\n\x08revenues\x18\x02 \x03(\x0b\x32\x19.evmos.revenue.v1.RevenueB\x04\xc8\xde\x1f\x00R\x08revenues\"\xc9\x01\n\x06Params\x12%\n\x0e\x65nable_revenue\x18\x01 \x01(\x08R\renableRevenue\x12Y\n\x10\x64\x65veloper_shares\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0f\x64\x65veloperShares\x12=\n\x1b\x61\x64\x64r_derivation_cost_create\x18\x03 \x01(\x04R\x18\x61\x64\x64rDerivationCostCreateB\xb5\x01\n\x14\x63om.evmos.revenue.v1B\x0cGenesisProtoP\x01Z-github.com/evmos/evmos/v13/x/revenue/v1/types\xa2\x02\x03\x45RX\xaa\x02\x10\x45vmos.Revenue.V1\xca\x02\x10\x45vmos\\Revenue\\V1\xe2\x02\x1c\x45vmos\\Revenue\\V1\\GPBMetadata\xea\x02\x12\x45vmos::Revenue::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x65vmos/revenue/v1/genesis.proto\x12\x10\x65vmos.revenue.v1\x1a\x1e\x65vmos/revenue/v1/revenue.proto\x1a\x14gogoproto/gogo.proto\"\x83\x01\n\x0cGenesisState\x12\x36\n\x06params\x18\x01 \x01(\x0b\x32\x18.evmos.revenue.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12;\n\x08revenues\x18\x02 \x03(\x0b\x32\x19.evmos.revenue.v1.RevenueB\x04\xc8\xde\x1f\x00R\x08revenues\"\xc9\x01\n\x06Params\x12%\n\x0e\x65nable_revenue\x18\x01 \x01(\x08R\renableRevenue\x12Y\n\x10\x64\x65veloper_shares\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0f\x64\x65veloperShares\x12=\n\x1b\x61\x64\x64r_derivation_cost_create\x18\x03 \x01(\x04R\x18\x61\x64\x64rDerivationCostCreateB\xb3\x01\n\x14\x63om.evmos.revenue.v1B\x0cGenesisProtoZ-github.com/evmos/evmos/v13/x/revenue/v1/types\xa2\x02\x03\x45RX\xaa\x02\x10\x45vmos.Revenue.V1\xca\x02\x10\x45vmos\\Revenue\\V1\xe2\x02\x1c\x45vmos\\Revenue\\V1\\GPBMetadata\xea\x02\x12\x45vmos::Revenue::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'evmos.revenue.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.evmos.revenue.v1B\014GenesisProtoP\001Z-github.com/evmos/evmos/v13/x/revenue/v1/types\242\002\003ERX\252\002\020Evmos.Revenue.V1\312\002\020Evmos\\Revenue\\V1\342\002\034Evmos\\Revenue\\V1\\GPBMetadata\352\002\022Evmos::Revenue::V1'
+  DESCRIPTOR._serialized_options = b'\n\024com.evmos.revenue.v1B\014GenesisProtoZ-github.com/evmos/evmos/v13/x/revenue/v1/types\242\002\003ERX\252\002\020Evmos.Revenue.V1\312\002\020Evmos\\Revenue\\V1\342\002\034Evmos\\Revenue\\V1\\GPBMetadata\352\002\022Evmos::Revenue::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['revenues']._options = None

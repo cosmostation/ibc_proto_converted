@@ -83,6 +83,7 @@ public final class DrawScheduleProto {
               com.lum.network.millions.DrawScheduleProto.DrawSchedule.class, com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INITIAL_DRAW_AT_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp initialDrawAt_;
     /**
@@ -91,7 +92,7 @@ public final class DrawScheduleProto {
      */
     @java.lang.Override
     public boolean hasInitialDrawAt() {
-      return initialDrawAt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp initial_draw_at = 1 [json_name = "initialDrawAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -117,7 +118,7 @@ public final class DrawScheduleProto {
      */
     @java.lang.Override
     public boolean hasDrawDelta() {
-      return drawDelta_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Duration draw_delta = 2 [json_name = "drawDelta", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -149,10 +150,10 @@ public final class DrawScheduleProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (initialDrawAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInitialDrawAt());
       }
-      if (drawDelta_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getDrawDelta());
       }
       getUnknownFields().writeTo(output);
@@ -164,11 +165,11 @@ public final class DrawScheduleProto {
       if (size != -1) return size;
 
       size = 0;
-      if (initialDrawAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInitialDrawAt());
       }
-      if (drawDelta_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDrawDelta());
       }
@@ -335,13 +336,20 @@ public final class DrawScheduleProto {
 
       // Construct using com.lum.network.millions.DrawScheduleProto.DrawSchedule.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInitialDrawAtFieldBuilder();
+          getDrawDeltaFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -390,16 +398,20 @@ public final class DrawScheduleProto {
 
       private void buildPartial0(com.lum.network.millions.DrawScheduleProto.DrawSchedule result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.initialDrawAt_ = initialDrawAtBuilder_ == null
               ? initialDrawAt_
               : initialDrawAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.drawDelta_ = drawDeltaBuilder_ == null
               ? drawDelta_
               : drawDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -575,8 +587,10 @@ public final class DrawScheduleProto {
         } else {
           initialDrawAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (initialDrawAt_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -694,8 +708,10 @@ public final class DrawScheduleProto {
         } else {
           drawDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (drawDelta_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

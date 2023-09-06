@@ -17,15 +17,14 @@ from osmosis.incentives import params_pb2 as osmosis_dot_incentives_dot_params__
 from osmosis.incentives import gauge_pb2 as osmosis_dot_incentives_dot_gauge__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n osmosis/incentives/genesis.proto\x12\x12osmosis.incentives\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fosmosis/incentives/params.proto\x1a\x1eosmosis/incentives/gauge.proto\"\x96\x02\n\x0cGenesisState\x12\x38\n\x06params\x18\x01 \x01(\x0b\x32\x1a.osmosis.incentives.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x37\n\x06gauges\x18\x02 \x03(\x0b\x32\x19.osmosis.incentives.GaugeB\x04\xc8\xde\x1f\x00R\x06gauges\x12o\n\x12lockable_durations\x18\x03 \x03(\x0b\x32\x19.google.protobuf.DurationB%\xc8\xde\x1f\x00\xf2\xde\x1f\x19yaml:\"lockable_durations\"\x98\xdf\x1f\x01R\x11lockableDurations\x12\"\n\rlast_gauge_id\x18\x04 \x01(\x04R\x0blastGaugeIdB\xc7\x01\n\x16\x63om.osmosis.incentivesB\x0cGenesisProtoP\x01Z6github.com/osmosis-labs/osmosis/v15/x/incentives/types\xa2\x02\x03OIX\xaa\x02\x12Osmosis.Incentives\xca\x02\x12Osmosis\\Incentives\xe2\x02\x1eOsmosis\\Incentives\\GPBMetadata\xea\x02\x13Osmosis::Incentivesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n osmosis/incentives/genesis.proto\x12\x12osmosis.incentives\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fosmosis/incentives/params.proto\x1a\x1eosmosis/incentives/gauge.proto\"\x96\x02\n\x0cGenesisState\x12\x38\n\x06params\x18\x01 \x01(\x0b\x32\x1a.osmosis.incentives.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x37\n\x06gauges\x18\x02 \x03(\x0b\x32\x19.osmosis.incentives.GaugeB\x04\xc8\xde\x1f\x00R\x06gauges\x12o\n\x12lockable_durations\x18\x03 \x03(\x0b\x32\x19.google.protobuf.DurationB%\xc8\xde\x1f\x00\xf2\xde\x1f\x19yaml:\"lockable_durations\"\x98\xdf\x1f\x01R\x11lockableDurations\x12\"\n\rlast_gauge_id\x18\x04 \x01(\x04R\x0blastGaugeIdB\xc5\x01\n\x16\x63om.osmosis.incentivesB\x0cGenesisProtoZ6github.com/osmosis-labs/osmosis/v15/x/incentives/types\xa2\x02\x03OIX\xaa\x02\x12Osmosis.Incentives\xca\x02\x12Osmosis\\Incentives\xe2\x02\x1eOsmosis\\Incentives\\GPBMetadata\xea\x02\x13Osmosis::Incentivesb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.incentives.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.osmosis.incentivesB\014GenesisProtoP\001Z6github.com/osmosis-labs/osmosis/v15/x/incentives/types\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022Osmosis\\Incentives\342\002\036Osmosis\\Incentives\\GPBMetadata\352\002\023Osmosis::Incentives'
+  DESCRIPTOR._serialized_options = b'\n\026com.osmosis.incentivesB\014GenesisProtoZ6github.com/osmosis-labs/osmosis/v15/x/incentives/types\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022Osmosis\\Incentives\342\002\036Osmosis\\Incentives\\GPBMetadata\352\002\023Osmosis::Incentives'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['gauges']._options = None

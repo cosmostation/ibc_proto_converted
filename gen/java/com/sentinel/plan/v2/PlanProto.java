@@ -152,6 +152,7 @@ public final class PlanProto {
               com.sentinel.plan.v2.PlanProto.Plan.class, com.sentinel.plan.v2.PlanProto.Plan.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -249,7 +250,7 @@ public final class PlanProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -334,7 +335,7 @@ public final class PlanProto {
      */
     @java.lang.Override
     public boolean hasStatusAt() {
-      return statusAt_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp status_at = 7 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -375,7 +376,7 @@ public final class PlanProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bytes_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bytes_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getDuration());
       }
       for (int i = 0; i < prices_.size(); i++) {
@@ -384,7 +385,7 @@ public final class PlanProto {
       if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, status_);
       }
-      if (statusAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getStatusAt());
       }
       getUnknownFields().writeTo(output);
@@ -406,7 +407,7 @@ public final class PlanProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bytes_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bytes_);
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDuration());
       }
@@ -418,7 +419,7 @@ public final class PlanProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, status_);
       }
-      if (statusAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getStatusAt());
       }
@@ -607,13 +608,21 @@ public final class PlanProto {
 
       // Construct using com.sentinel.plan.v2.PlanProto.Plan.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDurationFieldBuilder();
+          getPricesFieldBuilder();
+          getStatusAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -695,10 +704,12 @@ public final class PlanProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.bytes_ = bytes_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.status_ = status_;
@@ -707,7 +718,9 @@ public final class PlanProto {
           result.statusAt_ = statusAtBuilder_ == null
               ? statusAt_
               : statusAtBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1134,8 +1147,10 @@ public final class PlanProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1546,8 +1561,10 @@ public final class PlanProto {
         } else {
           statusAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (statusAt_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

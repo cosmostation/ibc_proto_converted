@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%desmos/subspaces/v2/authz/authz.proto\x12\x19\x64\x65smos.subspaces.v2.authz\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\x8f\x01\n\x1cGenericSubspaceAuthorization\x12\x35\n\rsubspaces_ids\x18\x01 \x03(\x04\x42\x10\xe2\xde\x1f\x0cSubspacesIDsR\x0csubspacesIds\x12\x10\n\x03msg\x18\x02 \x01(\tR\x03msg:&\xca\xb4-\"cosmos.authz.v1beta1.AuthorizationB\xeb\x01\n\x1d\x63om.desmos.subspaces.v2.authzB\nAuthzProtoP\x01Z6github.com/desmos-labs/desmos/v5/x/subspaces/legacy/v2\xa2\x02\x04\x44SVA\xaa\x02\x19\x44\x65smos.Subspaces.V2.Authz\xca\x02\x19\x44\x65smos\\Subspaces\\V2\\Authz\xe2\x02%Desmos\\Subspaces\\V2\\Authz\\GPBMetadata\xea\x02\x1c\x44\x65smos::Subspaces::V2::Authzb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%desmos/subspaces/v2/authz/authz.proto\x12\x19\x64\x65smos.subspaces.v2.authz\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\x8f\x01\n\x1cGenericSubspaceAuthorization\x12\x35\n\rsubspaces_ids\x18\x01 \x03(\x04\x42\x10\xe2\xde\x1f\x0cSubspacesIDsR\x0csubspacesIds\x12\x10\n\x03msg\x18\x02 \x01(\tR\x03msg:&\xca\xb4-\"cosmos.authz.v1beta1.AuthorizationB\xe9\x01\n\x1d\x63om.desmos.subspaces.v2.authzB\nAuthzProtoZ6github.com/desmos-labs/desmos/v5/x/subspaces/legacy/v2\xa2\x02\x04\x44SVA\xaa\x02\x19\x44\x65smos.Subspaces.V2.Authz\xca\x02\x19\x44\x65smos\\Subspaces\\V2\\Authz\xe2\x02%Desmos\\Subspaces\\V2\\Authz\\GPBMetadata\xea\x02\x1c\x44\x65smos::Subspaces::V2::Authzb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'desmos.subspaces.v2.authz.authz_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.desmos.subspaces.v2.authzB\nAuthzProtoP\001Z6github.com/desmos-labs/desmos/v5/x/subspaces/legacy/v2\242\002\004DSVA\252\002\031Desmos.Subspaces.V2.Authz\312\002\031Desmos\\Subspaces\\V2\\Authz\342\002%Desmos\\Subspaces\\V2\\Authz\\GPBMetadata\352\002\034Desmos::Subspaces::V2::Authz'
+  DESCRIPTOR._serialized_options = b'\n\035com.desmos.subspaces.v2.authzB\nAuthzProtoZ6github.com/desmos-labs/desmos/v5/x/subspaces/legacy/v2\242\002\004DSVA\252\002\031Desmos.Subspaces.V2.Authz\312\002\031Desmos\\Subspaces\\V2\\Authz\342\002%Desmos\\Subspaces\\V2\\Authz\\GPBMetadata\352\002\034Desmos::Subspaces::V2::Authz'
   _GENERICSUBSPACEAUTHORIZATION.fields_by_name['subspaces_ids']._options = None
   _GENERICSUBSPACEAUTHORIZATION.fields_by_name['subspaces_ids']._serialized_options = b'\342\336\037\014SubspacesIDs'
   _GENERICSUBSPACEAUTHORIZATION._options = None

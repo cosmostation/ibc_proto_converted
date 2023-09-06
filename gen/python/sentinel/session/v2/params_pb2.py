@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n sentinel/session/v2/params.proto\x12\x13sentinel.session.v2\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\"\x98\x01\n\x06Params\x12P\n\x11inactive_duration\x18\x01 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\x10inactiveDuration\x12<\n\x1aproof_verification_enabled\x18\x02 \x01(\x08R\x18proofVerificationEnabledB\xce\x01\n\x17\x63om.sentinel.session.v2B\x0bParamsProtoP\x01Z0github.com/sentinel-official/hub/x/session/types\xa2\x02\x03SSX\xaa\x02\x13Sentinel.Session.V2\xca\x02\x13Sentinel\\Session\\V2\xe2\x02\x1fSentinel\\Session\\V2\\GPBMetadata\xea\x02\x15Sentinel::Session::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n sentinel/session/v2/params.proto\x12\x13sentinel.session.v2\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\"\x98\x01\n\x06Params\x12P\n\x11inactive_duration\x18\x01 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\x10inactiveDuration\x12<\n\x1aproof_verification_enabled\x18\x02 \x01(\x08R\x18proofVerificationEnabledB\xcc\x01\n\x17\x63om.sentinel.session.v2B\x0bParamsProtoZ0github.com/sentinel-official/hub/x/session/types\xa2\x02\x03SSX\xaa\x02\x13Sentinel.Session.V2\xca\x02\x13Sentinel\\Session\\V2\xe2\x02\x1fSentinel\\Session\\V2\\GPBMetadata\xea\x02\x15Sentinel::Session::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.session.v2.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.session.v2B\013ParamsProtoP\001Z0github.com/sentinel-official/hub/x/session/types\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.session.v2B\013ParamsProtoZ0github.com/sentinel-official/hub/x/session/types\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000'
   _PARAMS.fields_by_name['inactive_duration']._options = None
   _PARAMS.fields_by_name['inactive_duration']._serialized_options = b'\310\336\037\000\230\337\037\001'
   _globals['_PARAMS']._serialized_start=112

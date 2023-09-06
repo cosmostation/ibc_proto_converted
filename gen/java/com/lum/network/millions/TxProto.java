@@ -178,6 +178,7 @@ public final class TxProto {
               com.lum.network.millions.TxProto.MsgUpdateParams.class, com.lum.network.millions.TxProto.MsgUpdateParams.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MIN_DEPOSIT_AMOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object minDepositAmount_ = "";
@@ -303,7 +304,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinDrawScheduleDelta() {
-      return minDrawScheduleDelta_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration min_draw_schedule_delta = 4 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -329,7 +330,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMaxDrawScheduleDelta() {
-      return maxDrawScheduleDelta_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Duration max_draw_schedule_delta = 5 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -355,7 +356,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrizeExpirationDelta() {
-      return prizeExpirationDelta_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Duration prize_expiration_delta = 6 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -420,7 +421,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinDepositDrawDelta() {
-      return minDepositDrawDelta_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Duration min_deposit_draw_delta = 8 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -500,19 +501,19 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeBatchQuantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, maxPrizeBatchQuantity_);
       }
-      if (minDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getMinDrawScheduleDelta());
       }
-      if (maxDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getMaxDrawScheduleDelta());
       }
-      if (prizeExpirationDelta_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(6, getPrizeExpirationDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, feesStakers_);
       }
-      if (minDepositDrawDelta_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(8, getMinDepositDrawDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updaterAddress_)) {
@@ -536,22 +537,22 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeBatchQuantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, maxPrizeBatchQuantity_);
       }
-      if (minDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMinDrawScheduleDelta());
       }
-      if (maxDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMaxDrawScheduleDelta());
       }
-      if (prizeExpirationDelta_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getPrizeExpirationDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, feesStakers_);
       }
-      if (minDepositDrawDelta_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getMinDepositDrawDelta());
       }
@@ -759,13 +760,22 @@ public final class TxProto {
 
       // Construct using com.lum.network.millions.TxProto.MsgUpdateParams.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinDrawScheduleDeltaFieldBuilder();
+          getMaxDrawScheduleDeltaFieldBuilder();
+          getPrizeExpirationDeltaFieldBuilder();
+          getMinDepositDrawDeltaFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -838,20 +848,24 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxPrizeBatchQuantity_ = maxPrizeBatchQuantity_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.minDrawScheduleDelta_ = minDrawScheduleDeltaBuilder_ == null
               ? minDrawScheduleDelta_
               : minDrawScheduleDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maxDrawScheduleDelta_ = maxDrawScheduleDeltaBuilder_ == null
               ? maxDrawScheduleDelta_
               : maxDrawScheduleDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.prizeExpirationDelta_ = prizeExpirationDeltaBuilder_ == null
               ? prizeExpirationDelta_
               : prizeExpirationDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.feesStakers_ = feesStakers_;
@@ -860,10 +874,12 @@ public final class TxProto {
           result.minDepositDrawDelta_ = minDepositDrawDeltaBuilder_ == null
               ? minDepositDrawDelta_
               : minDepositDrawDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.updaterAddress_ = updaterAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1325,8 +1341,10 @@ public final class TxProto {
         } else {
           minDrawScheduleDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (minDrawScheduleDelta_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1444,8 +1462,10 @@ public final class TxProto {
         } else {
           maxDrawScheduleDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (maxDrawScheduleDelta_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1563,8 +1583,10 @@ public final class TxProto {
         } else {
           prizeExpirationDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (prizeExpirationDelta_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1754,8 +1776,10 @@ public final class TxProto {
         } else {
           minDepositDrawDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (minDepositDrawDelta_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2539,6 +2563,7 @@ public final class TxProto {
               com.lum.network.millions.TxProto.MsgRegisterPool.class, com.lum.network.millions.TxProto.MsgRegisterPool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -2779,7 +2804,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDrawSchedule() {
-      return drawSchedule_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.millions.DrawSchedule draw_schedule = 7 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
@@ -2805,7 +2830,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrizeStrategy() {
-      return prizeStrategy_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.lum.network.millions.PrizeStrategy prize_strategy = 8 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
@@ -2972,10 +2997,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, minDepositAmount_);
       }
-      if (drawSchedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getDrawSchedule());
       }
-      if (prizeStrategy_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getPrizeStrategy());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bech32PrefixAccAddr_)) {
@@ -3019,11 +3044,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, minDepositAmount_);
       }
-      if (drawSchedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getDrawSchedule());
       }
-      if (prizeStrategy_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getPrizeStrategy());
       }
@@ -3237,13 +3262,20 @@ public final class TxProto {
 
       // Construct using com.lum.network.millions.TxProto.MsgRegisterPool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDrawScheduleFieldBuilder();
+          getPrizeStrategyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3321,15 +3353,18 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.minDepositAmount_ = minDepositAmount_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.drawSchedule_ = drawScheduleBuilder_ == null
               ? drawSchedule_
               : drawScheduleBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.prizeStrategy_ = prizeStrategyBuilder_ == null
               ? prizeStrategy_
               : prizeStrategyBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.bech32PrefixAccAddr_ = bech32PrefixAccAddr_;
@@ -3340,6 +3375,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.creatorAddress_ = creatorAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4082,8 +4118,10 @@ public final class TxProto {
         } else {
           drawScheduleBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (drawSchedule_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4201,8 +4239,10 @@ public final class TxProto {
         } else {
           prizeStrategyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (prizeStrategy_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5138,6 +5178,7 @@ public final class TxProto {
               com.lum.network.millions.TxProto.MsgUpdatePool.class, com.lum.network.millions.TxProto.MsgUpdatePool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -5233,7 +5274,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDrawSchedule() {
-      return drawSchedule_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.millions.DrawSchedule draw_schedule = 4 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
@@ -5259,7 +5300,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrizeStrategy() {
-      return prizeStrategy_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.lum.network.millions.PrizeStrategy prize_strategy = 5 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
@@ -5339,10 +5380,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, minDepositAmount_);
       }
-      if (drawSchedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getDrawSchedule());
       }
-      if (prizeStrategy_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getPrizeStrategy());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updaterAddress_)) {
@@ -5372,11 +5413,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, minDepositAmount_);
       }
-      if (drawSchedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDrawSchedule());
       }
-      if (prizeStrategy_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPrizeStrategy());
       }
@@ -5565,13 +5606,20 @@ public final class TxProto {
 
       // Construct using com.lum.network.millions.TxProto.MsgUpdatePool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDrawScheduleFieldBuilder();
+          getPrizeStrategyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5635,19 +5683,23 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minDepositAmount_ = minDepositAmount_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.drawSchedule_ = drawScheduleBuilder_ == null
               ? drawSchedule_
               : drawScheduleBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.prizeStrategy_ = prizeStrategyBuilder_ == null
               ? prizeStrategy_
               : prizeStrategyBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.updaterAddress_ = updaterAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6082,8 +6134,10 @@ public final class TxProto {
         } else {
           drawScheduleBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (drawSchedule_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6201,8 +6255,10 @@ public final class TxProto {
         } else {
           prizeStrategyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (prizeStrategy_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6878,6 +6934,7 @@ public final class TxProto {
               com.lum.network.millions.TxProto.MsgDeposit.class, com.lum.network.millions.TxProto.MsgDeposit.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -6897,7 +6954,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -7021,7 +7078,7 @@ public final class TxProto {
       if (poolId_ != 0L) {
         output.writeUInt64(1, poolId_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositorAddress_)) {
@@ -7046,7 +7103,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, poolId_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -7232,13 +7289,19 @@ public final class TxProto {
 
       // Construct using com.lum.network.millions.TxProto.MsgDeposit.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7289,10 +7352,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.poolId_ = poolId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.depositorAddress_ = depositorAddress_;
@@ -7303,6 +7368,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.isSponsor_ = isSponsor_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7536,8 +7602,10 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

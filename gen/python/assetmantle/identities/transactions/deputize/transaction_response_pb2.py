@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nGassetmantle/identities/transactions/deputize/transaction_response.proto\x12\x34\x61ssetmantle.modules.identities.transactions.deputize\"\x15\n\x13TransactionResponseB\xca\x02\n8com.assetmantle.modules.identities.transactions.deputizeB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MITD\xaa\x02\x34\x41ssetmantle.Modules.Identities.Transactions.Deputize\xca\x02\x34\x41ssetmantle\\Modules\\Identities\\Transactions\\Deputize\xe2\x02@Assetmantle\\Modules\\Identities\\Transactions\\Deputize\\GPBMetadata\xea\x02\x38\x41ssetmantle::Modules::Identities::Transactions::Deputizeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nGassetmantle/identities/transactions/deputize/transaction_response.proto\x12\x34\x61ssetmantle.modules.identities.transactions.deputize\"\x15\n\x13TransactionResponseB\xc8\x02\n8com.assetmantle.modules.identities.transactions.deputizeB\x18TransactionResponseProto\xa2\x02\x05\x41MITD\xaa\x02\x34\x41ssetmantle.Modules.Identities.Transactions.Deputize\xca\x02\x34\x41ssetmantle\\Modules\\Identities\\Transactions\\Deputize\xe2\x02@Assetmantle\\Modules\\Identities\\Transactions\\Deputize\\GPBMetadata\xea\x02\x38\x41ssetmantle::Modules::Identities::Transactions::Deputizeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.deputize.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n8com.assetmantle.modules.identities.transactions.deputizeB\030TransactionResponseProtoP\001\242\002\005AMITD\252\0024Assetmantle.Modules.Identities.Transactions.Deputize\312\0024Assetmantle\\Modules\\Identities\\Transactions\\Deputize\342\002@Assetmantle\\Modules\\Identities\\Transactions\\Deputize\\GPBMetadata\352\0028Assetmantle::Modules::Identities::Transactions::Deputize'
+  DESCRIPTOR._serialized_options = b'\n8com.assetmantle.modules.identities.transactions.deputizeB\030TransactionResponseProto\242\002\005AMITD\252\0024Assetmantle.Modules.Identities.Transactions.Deputize\312\0024Assetmantle\\Modules\\Identities\\Transactions\\Deputize\342\002@Assetmantle\\Modules\\Identities\\Transactions\\Deputize\\GPBMetadata\352\0028Assetmantle::Modules::Identities::Transactions::Deputize'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=129
   _globals['_TRANSACTIONRESPONSE']._serialized_end=150
 # @@protoc_insertion_point(module_scope)

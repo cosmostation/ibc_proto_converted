@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import maintainer_id_pb2 as assetmantle_dot_ids_dot_base_dot_maintainer__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%assetmantle/maintainers/key/key.proto\x12#assetmantle.modules.maintainers.key\x1a(assetmantle/ids/base/maintainer_id.proto\"V\n\x03Key\x12O\n\x0emaintainer_i_d\x18\x01 \x01(\x0b\x32).assetmantle.schema.ids.base.MaintainerIDR\x0cmaintainerIDB\xe3\x01\n\'com.assetmantle.modules.maintainers.keyB\x08KeyProtoP\x01\xa2\x02\x04\x41MMK\xaa\x02#Assetmantle.Modules.Maintainers.Key\xca\x02#Assetmantle\\Modules\\Maintainers\\Key\xe2\x02/Assetmantle\\Modules\\Maintainers\\Key\\GPBMetadata\xea\x02&Assetmantle::Modules::Maintainers::Keyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%assetmantle/maintainers/key/key.proto\x12#assetmantle.modules.maintainers.key\x1a(assetmantle/ids/base/maintainer_id.proto\"V\n\x03Key\x12O\n\x0emaintainer_i_d\x18\x01 \x01(\x0b\x32).assetmantle.schema.ids.base.MaintainerIDR\x0cmaintainerIDB\xe1\x01\n\'com.assetmantle.modules.maintainers.keyB\x08KeyProto\xa2\x02\x04\x41MMK\xaa\x02#Assetmantle.Modules.Maintainers.Key\xca\x02#Assetmantle\\Modules\\Maintainers\\Key\xe2\x02/Assetmantle\\Modules\\Maintainers\\Key\\GPBMetadata\xea\x02&Assetmantle::Modules::Maintainers::Keyb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.maintainers.key.key_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\'com.assetmantle.modules.maintainers.keyB\010KeyProtoP\001\242\002\004AMMK\252\002#Assetmantle.Modules.Maintainers.Key\312\002#Assetmantle\\Modules\\Maintainers\\Key\342\002/Assetmantle\\Modules\\Maintainers\\Key\\GPBMetadata\352\002&Assetmantle::Modules::Maintainers::Key'
+  DESCRIPTOR._serialized_options = b'\n\'com.assetmantle.modules.maintainers.keyB\010KeyProto\242\002\004AMMK\252\002#Assetmantle.Modules.Maintainers.Key\312\002#Assetmantle\\Modules\\Maintainers\\Key\342\002/Assetmantle\\Modules\\Maintainers\\Key\\GPBMetadata\352\002&Assetmantle::Modules::Maintainers::Key'
   _globals['_KEY']._serialized_start=120
   _globals['_KEY']._serialized_end=206
 # @@protoc_insertion_point(module_scope)

@@ -68,6 +68,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsRequest.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -76,7 +77,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -108,7 +109,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -278,13 +279,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -681,6 +693,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForAccountRequest.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForAccountRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -728,7 +741,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -763,7 +776,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -778,7 +791,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -940,13 +953,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForAccountRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -994,11 +1013,14 @@ public final class QuerierProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1246,8 +1268,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1429,6 +1453,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForNodeRequest.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForNodeRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -1476,7 +1501,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -1511,7 +1536,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1526,7 +1551,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1688,13 +1713,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForNodeRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1742,11 +1773,14 @@ public final class QuerierProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1994,8 +2028,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2170,6 +2206,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForPlanRequest.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForPlanRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -2189,7 +2226,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -2224,7 +2261,7 @@ public final class QuerierProto {
       if (id_ != 0L) {
         output.writeUInt64(1, id_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2240,7 +2277,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, id_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2403,13 +2440,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForPlanRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2457,11 +2500,14 @@ public final class QuerierProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2667,8 +2713,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3945,6 +3993,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryAllocationsRequest.class, com.sentinel.subscription.v2.QuerierProto.QueryAllocationsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -3964,7 +4013,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -3999,7 +4048,7 @@ public final class QuerierProto {
       if (id_ != 0L) {
         output.writeUInt64(1, id_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4015,7 +4064,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, id_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4178,13 +4227,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryAllocationsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4232,11 +4287,14 @@ public final class QuerierProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4442,8 +4500,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4612,6 +4672,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryPayoutsRequest.class, com.sentinel.subscription.v2.QuerierProto.QueryPayoutsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -4620,7 +4681,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -4652,7 +4713,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4664,7 +4725,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -4822,13 +4883,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryPayoutsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4872,11 +4939,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryPayoutsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5042,8 +5112,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5225,6 +5297,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForAccountRequest.class, com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForAccountRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -5272,7 +5345,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -5307,7 +5380,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5322,7 +5395,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -5484,13 +5557,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForAccountRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5538,11 +5617,14 @@ public final class QuerierProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5790,8 +5872,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5973,6 +6057,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForNodeRequest.class, com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForNodeRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -6020,7 +6105,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -6055,7 +6140,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6070,7 +6155,7 @@ public final class QuerierProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6232,13 +6317,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForNodeRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6286,11 +6377,14 @@ public final class QuerierProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6538,8 +6632,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7607,6 +7703,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsResponse.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIPTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.Any> subscriptions_;
@@ -7656,7 +7753,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -7691,7 +7788,7 @@ public final class QuerierProto {
       for (int i = 0; i < subscriptions_.size(); i++) {
         output.writeMessage(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -7707,7 +7804,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -7871,13 +7968,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriptionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7941,11 +8045,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8390,8 +8497,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8585,6 +8694,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForAccountResponse.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForAccountResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIPTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.Any> subscriptions_;
@@ -8634,7 +8744,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -8669,7 +8779,7 @@ public final class QuerierProto {
       for (int i = 0; i < subscriptions_.size(); i++) {
         output.writeMessage(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -8685,7 +8795,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -8849,13 +8959,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForAccountResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriptionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8919,11 +9036,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForAccountResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9368,8 +9488,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9563,6 +9685,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForNodeResponse.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForNodeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIPTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.Any> subscriptions_;
@@ -9612,7 +9735,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -9647,7 +9770,7 @@ public final class QuerierProto {
       for (int i = 0; i < subscriptions_.size(); i++) {
         output.writeMessage(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -9663,7 +9786,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -9827,13 +9950,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForNodeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriptionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9897,11 +10027,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForNodeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10346,8 +10479,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10541,6 +10676,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForPlanResponse.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForPlanResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIPTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.Any> subscriptions_;
@@ -10590,7 +10726,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -10625,7 +10761,7 @@ public final class QuerierProto {
       for (int i = 0; i < subscriptions_.size(); i++) {
         output.writeMessage(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -10641,7 +10777,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subscriptions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -10805,13 +10941,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForPlanResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriptionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10875,11 +11018,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionsForPlanResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11324,8 +11470,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11494,6 +11642,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionResponse.class, com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIPTION_FIELD_NUMBER = 1;
     private com.google.protobuf.Any subscription_;
     /**
@@ -11502,7 +11651,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasSubscription() {
-      return subscription_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any subscription = 1 [json_name = "subscription"];</code>
@@ -11534,7 +11683,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (subscription_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSubscription());
       }
       getUnknownFields().writeTo(output);
@@ -11546,7 +11695,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (subscription_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubscription());
       }
@@ -11704,13 +11853,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriptionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11754,11 +11909,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QuerySubscriptionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subscription_ = subscriptionBuilder_ == null
               ? subscription_
               : subscriptionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11924,8 +12082,10 @@ public final class QuerierProto {
         } else {
           subscriptionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (subscription_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12094,6 +12254,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryAllocationResponse.class, com.sentinel.subscription.v2.QuerierProto.QueryAllocationResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ALLOCATION_FIELD_NUMBER = 1;
     private com.sentinel.subscription.v2.AllocationProto.Allocation allocation_;
     /**
@@ -12102,7 +12263,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasAllocation() {
-      return allocation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.sentinel.subscription.v2.Allocation allocation = 1 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
@@ -12134,7 +12295,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (allocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAllocation());
       }
       getUnknownFields().writeTo(output);
@@ -12146,7 +12307,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (allocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAllocation());
       }
@@ -12304,13 +12465,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryAllocationResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAllocationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12354,11 +12521,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryAllocationResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.allocation_ = allocationBuilder_ == null
               ? allocation_
               : allocationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12524,8 +12694,10 @@ public final class QuerierProto {
         } else {
           allocationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (allocation_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12719,6 +12891,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryAllocationsResponse.class, com.sentinel.subscription.v2.QuerierProto.QueryAllocationsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ALLOCATIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.sentinel.subscription.v2.AllocationProto.Allocation> allocations_;
@@ -12768,7 +12941,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -12803,7 +12976,7 @@ public final class QuerierProto {
       for (int i = 0; i < allocations_.size(); i++) {
         output.writeMessage(1, allocations_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -12819,7 +12992,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, allocations_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -12983,13 +13156,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryAllocationsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAllocationsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13053,11 +13233,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryAllocationsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13502,8 +13685,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13697,6 +13882,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryPayoutsResponse.class, com.sentinel.subscription.v2.QuerierProto.QueryPayoutsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAYOUTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.sentinel.subscription.v2.PayoutProto.Payout> payouts_;
@@ -13746,7 +13932,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -13781,7 +13967,7 @@ public final class QuerierProto {
       for (int i = 0; i < payouts_.size(); i++) {
         output.writeMessage(1, payouts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -13797,7 +13983,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, payouts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -13961,13 +14147,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryPayoutsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPayoutsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14031,11 +14224,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryPayoutsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14480,8 +14676,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14675,6 +14873,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForAccountResponse.class, com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForAccountResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAYOUTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.sentinel.subscription.v2.PayoutProto.Payout> payouts_;
@@ -14724,7 +14923,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -14759,7 +14958,7 @@ public final class QuerierProto {
       for (int i = 0; i < payouts_.size(); i++) {
         output.writeMessage(1, payouts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -14775,7 +14974,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, payouts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -14939,13 +15138,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForAccountResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPayoutsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15009,11 +15215,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForAccountResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15458,8 +15667,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15653,6 +15864,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForNodeResponse.class, com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForNodeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAYOUTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.sentinel.subscription.v2.PayoutProto.Payout> payouts_;
@@ -15702,7 +15914,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -15737,7 +15949,7 @@ public final class QuerierProto {
       for (int i = 0; i < payouts_.size(); i++) {
         output.writeMessage(1, payouts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -15753,7 +15965,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, payouts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -15917,13 +16129,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForNodeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPayoutsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15987,11 +16206,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryPayoutsForNodeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16436,8 +16658,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -16606,6 +16830,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryPayoutResponse.class, com.sentinel.subscription.v2.QuerierProto.QueryPayoutResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAYOUT_FIELD_NUMBER = 1;
     private com.sentinel.subscription.v2.PayoutProto.Payout payout_;
     /**
@@ -16614,7 +16839,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPayout() {
-      return payout_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.sentinel.subscription.v2.Payout payout = 1 [json_name = "payout", (.gogoproto.nullable) = false];</code>
@@ -16646,7 +16871,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (payout_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPayout());
       }
       getUnknownFields().writeTo(output);
@@ -16658,7 +16883,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (payout_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPayout());
       }
@@ -16816,13 +17041,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryPayoutResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPayoutFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -16866,11 +17097,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryPayoutResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.payout_ = payoutBuilder_ == null
               ? payout_
               : payoutBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17036,8 +17270,10 @@ public final class QuerierProto {
         } else {
           payoutBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (payout_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17206,6 +17442,7 @@ public final class QuerierProto {
               com.sentinel.subscription.v2.QuerierProto.QueryParamsResponse.class, com.sentinel.subscription.v2.QuerierProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.sentinel.subscription.v2.ParamsProto.Params params_;
     /**
@@ -17214,7 +17451,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.sentinel.subscription.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -17246,7 +17483,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -17258,7 +17495,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -17416,13 +17653,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.subscription.v2.QuerierProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17466,11 +17709,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.QuerierProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17636,8 +17882,10 @@ public final class QuerierProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

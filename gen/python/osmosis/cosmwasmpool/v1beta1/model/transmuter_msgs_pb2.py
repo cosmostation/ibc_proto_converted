@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8osmosis/cosmwasmpool/v1beta1/model/transmuter_msgs.proto\x12\x1cosmosis.cosmwasmpool.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x0e\n\x0c\x45mptyRequest\"j\n\x19JoinPoolExecuteMsgRequest\x12M\n\tjoin_pool\x18\x01 \x01(\x0b\x32*.osmosis.cosmwasmpool.v1beta1.EmptyRequestB\x04\xc8\xde\x1f\x00R\x08joinPool\"\x1c\n\x1aJoinPoolExecuteMsgResponse\"j\n\x19\x45xitPoolExecuteMsgRequest\x12M\n\texit_pool\x18\x01 \x01(\x0b\x32*.osmosis.cosmwasmpool.v1beta1.EmptyRequestB\x04\xc8\xde\x1f\x00R\x08\x65xitPool\"\x1c\n\x1a\x45xitPoolExecuteMsgResponseB\x95\x02\n com.osmosis.cosmwasmpool.v1beta1B\x13TransmuterMsgsProtoP\x01ZJgithub.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/cosmwasm/msg/transmuter\xa2\x02\x03OCX\xaa\x02\x1cOsmosis.Cosmwasmpool.V1beta1\xca\x02\x1cOsmosis\\Cosmwasmpool\\V1beta1\xe2\x02(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Cosmwasmpool::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8osmosis/cosmwasmpool/v1beta1/model/transmuter_msgs.proto\x12\x1cosmosis.cosmwasmpool.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x0e\n\x0c\x45mptyRequest\"j\n\x19JoinPoolExecuteMsgRequest\x12M\n\tjoin_pool\x18\x01 \x01(\x0b\x32*.osmosis.cosmwasmpool.v1beta1.EmptyRequestB\x04\xc8\xde\x1f\x00R\x08joinPool\"\x1c\n\x1aJoinPoolExecuteMsgResponse\"j\n\x19\x45xitPoolExecuteMsgRequest\x12M\n\texit_pool\x18\x01 \x01(\x0b\x32*.osmosis.cosmwasmpool.v1beta1.EmptyRequestB\x04\xc8\xde\x1f\x00R\x08\x65xitPool\"\x1c\n\x1a\x45xitPoolExecuteMsgResponseB\x93\x02\n com.osmosis.cosmwasmpool.v1beta1B\x13TransmuterMsgsProtoZJgithub.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/cosmwasm/msg/transmuter\xa2\x02\x03OCX\xaa\x02\x1cOsmosis.Cosmwasmpool.V1beta1\xca\x02\x1cOsmosis\\Cosmwasmpool\\V1beta1\xe2\x02(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Cosmwasmpool::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.cosmwasmpool.v1beta1.model.transmuter_msgs_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.osmosis.cosmwasmpool.v1beta1B\023TransmuterMsgsProtoP\001ZJgithub.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/cosmwasm/msg/transmuter\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cosmwasmpool::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n com.osmosis.cosmwasmpool.v1beta1B\023TransmuterMsgsProtoZJgithub.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/cosmwasm/msg/transmuter\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cosmwasmpool::V1beta1'
   _JOINPOOLEXECUTEMSGREQUEST.fields_by_name['join_pool']._options = None
   _JOINPOOLEXECUTEMSGREQUEST.fields_by_name['join_pool']._serialized_options = b'\310\336\037\000'
   _EXITPOOLEXECUTEMSGREQUEST.fields_by_name['exit_pool']._options = None

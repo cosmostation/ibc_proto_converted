@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n mars/envoy/v1beta1/genesis.proto\x12\x12mars.envoy.v1beta1\"\x0e\n\x0cGenesisStateB\xbc\x01\n\x16\x63om.mars.envoy.v1beta1B\x0cGenesisProtoP\x01Z*github.com/mars-protocol/hub/x/envoy/types\xa2\x02\x03MEX\xaa\x02\x12Mars.Envoy.V1beta1\xca\x02\x12Mars\\Envoy\\V1beta1\xe2\x02\x1eMars\\Envoy\\V1beta1\\GPBMetadata\xea\x02\x14Mars::Envoy::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n mars/envoy/v1beta1/genesis.proto\x12\x12mars.envoy.v1beta1\"\x0e\n\x0cGenesisStateB\xba\x01\n\x16\x63om.mars.envoy.v1beta1B\x0cGenesisProtoZ*github.com/mars-protocol/hub/x/envoy/types\xa2\x02\x03MEX\xaa\x02\x12Mars.Envoy.V1beta1\xca\x02\x12Mars\\Envoy\\V1beta1\xe2\x02\x1eMars\\Envoy\\V1beta1\\GPBMetadata\xea\x02\x14Mars::Envoy::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'mars.envoy.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.mars.envoy.v1beta1B\014GenesisProtoP\001Z*github.com/mars-protocol/hub/x/envoy/types\242\002\003MEX\252\002\022Mars.Envoy.V1beta1\312\002\022Mars\\Envoy\\V1beta1\342\002\036Mars\\Envoy\\V1beta1\\GPBMetadata\352\002\024Mars::Envoy::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\026com.mars.envoy.v1beta1B\014GenesisProtoZ*github.com/mars-protocol/hub/x/envoy/types\242\002\003MEX\252\002\022Mars.Envoy.V1beta1\312\002\022Mars\\Envoy\\V1beta1\342\002\036Mars\\Envoy\\V1beta1\\GPBMetadata\352\002\024Mars::Envoy::V1beta1'
   _globals['_GENESISSTATE']._serialized_start=56
   _globals['_GENESISSTATE']._serialized_end=70
 # @@protoc_insertion_point(module_scope)

@@ -632,6 +632,7 @@ public final class QueryProto {
               com.starnamed.x.escrow.v1beta1.QueryProto.QueryEscrowResponse.class, com.starnamed.x.escrow.v1beta1.QueryProto.QueryEscrowResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ESCROW_FIELD_NUMBER = 1;
     private com.starnamed.x.escrow.v1beta1.TypesProto.Escrow escrow_;
     /**
@@ -640,7 +641,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEscrow() {
-      return escrow_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.starnamed.x.escrow.v1beta1.Escrow escrow = 1 [json_name = "escrow"];</code>
@@ -672,7 +673,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (escrow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getEscrow());
       }
       getUnknownFields().writeTo(output);
@@ -684,7 +685,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (escrow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEscrow());
       }
@@ -846,13 +847,19 @@ public final class QueryProto {
 
       // Construct using com.starnamed.x.escrow.v1beta1.QueryProto.QueryEscrowResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEscrowFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -896,11 +903,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.starnamed.x.escrow.v1beta1.QueryProto.QueryEscrowResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.escrow_ = escrowBuilder_ == null
               ? escrow_
               : escrowBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1066,8 +1076,10 @@ public final class QueryProto {
         } else {
           escrowBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (escrow_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bquasar/qoracle/params.proto\x12\x1dquasarlabs.quasarnode.qoracle\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xf8\x01\n!com.quasarlabs.quasarnode.qoracleB\x0bParamsProtoP\x01Z0github.com/quasarlabs/quasarnode/x/qoracle/types\xa2\x02\x03QQQ\xaa\x02\x1dQuasarlabs.Quasarnode.Qoracle\xca\x02\x1dQuasarlabs\\Quasarnode\\Qoracle\xe2\x02)Quasarlabs\\Quasarnode\\Qoracle\\GPBMetadata\xea\x02\x1fQuasarlabs::Quasarnode::Qoracleb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bquasar/qoracle/params.proto\x12\x1dquasarlabs.quasarnode.qoracle\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xf6\x01\n!com.quasarlabs.quasarnode.qoracleB\x0bParamsProtoZ0github.com/quasarlabs/quasarnode/x/qoracle/types\xa2\x02\x03QQQ\xaa\x02\x1dQuasarlabs.Quasarnode.Qoracle\xca\x02\x1dQuasarlabs\\Quasarnode\\Qoracle\xe2\x02)Quasarlabs\\Quasarnode\\Qoracle\\GPBMetadata\xea\x02\x1fQuasarlabs::Quasarnode::Qoracleb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quasar.qoracle.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n!com.quasarlabs.quasarnode.qoracleB\013ParamsProtoP\001Z0github.com/quasarlabs/quasarnode/x/qoracle/types\242\002\003QQQ\252\002\035Quasarlabs.Quasarnode.Qoracle\312\002\035Quasarlabs\\Quasarnode\\Qoracle\342\002)Quasarlabs\\Quasarnode\\Qoracle\\GPBMetadata\352\002\037Quasarlabs::Quasarnode::Qoracle'
+  DESCRIPTOR._serialized_options = b'\n!com.quasarlabs.quasarnode.qoracleB\013ParamsProtoZ0github.com/quasarlabs/quasarnode/x/qoracle/types\242\002\003QQQ\252\002\035Quasarlabs.Quasarnode.Qoracle\312\002\035Quasarlabs\\Quasarnode\\Qoracle\342\002)Quasarlabs\\Quasarnode\\Qoracle\\GPBMetadata\352\002\037Quasarlabs::Quasarnode::Qoracle'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=84

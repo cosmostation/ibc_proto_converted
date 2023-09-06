@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%cryptoorg/nft_transfer/v1/trace.proto\x12\x19\x63hainmain.nft_transfer.v1\"D\n\nClassTrace\x12\x12\n\x04path\x18\x01 \x01(\tR\x04path\x12\"\n\rbase_class_id\x18\x02 \x01(\tR\x0b\x62\x61seClassIdB\xea\x01\n\x1d\x63om.chainmain.nft_transfer.v1B\nTraceProtoP\x01Z;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\xa2\x02\x03\x43NX\xaa\x02\x18\x43hainmain.NftTransfer.V1\xca\x02\x18\x43hainmain\\NftTransfer\\V1\xe2\x02$Chainmain\\NftTransfer\\V1\\GPBMetadata\xea\x02\x1a\x43hainmain::NftTransfer::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%cryptoorg/nft_transfer/v1/trace.proto\x12\x19\x63hainmain.nft_transfer.v1\"D\n\nClassTrace\x12\x12\n\x04path\x18\x01 \x01(\tR\x04path\x12\"\n\rbase_class_id\x18\x02 \x01(\tR\x0b\x62\x61seClassIdB\xe8\x01\n\x1d\x63om.chainmain.nft_transfer.v1B\nTraceProtoZ;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\xa2\x02\x03\x43NX\xaa\x02\x18\x43hainmain.NftTransfer.V1\xca\x02\x18\x43hainmain\\NftTransfer\\V1\xe2\x02$Chainmain\\NftTransfer\\V1\\GPBMetadata\xea\x02\x1a\x43hainmain::NftTransfer::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cryptoorg.nft_transfer.v1.trace_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.chainmain.nft_transfer.v1B\nTraceProtoP\001Z;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\242\002\003CNX\252\002\030Chainmain.NftTransfer.V1\312\002\030Chainmain\\NftTransfer\\V1\342\002$Chainmain\\NftTransfer\\V1\\GPBMetadata\352\002\032Chainmain::NftTransfer::V1'
+  DESCRIPTOR._serialized_options = b'\n\035com.chainmain.nft_transfer.v1B\nTraceProtoZ;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\242\002\003CNX\252\002\030Chainmain.NftTransfer.V1\312\002\030Chainmain\\NftTransfer\\V1\342\002$Chainmain\\NftTransfer\\V1\\GPBMetadata\352\002\032Chainmain::NftTransfer::V1'
   _globals['_CLASSTRACE']._serialized_start=68
   _globals['_CLASSTRACE']._serialized_end=136
 # @@protoc_insertion_point(module_scope)

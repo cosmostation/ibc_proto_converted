@@ -18,15 +18,14 @@ from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_quer
 from quasar.qtransfer import params_pb2 as quasar_dot_qtransfer_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cquasar/qtransfer/query.proto\x12\x1fquasarlabs.quasarnode.qtransfer\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a\x1dquasar/qtransfer/params.proto\"\x14\n\x12QueryParamsRequest\"\\\n\x13QueryParamsResponse\x12\x45\n\x06params\x18\x01 \x01(\x0b\x32\'.quasarlabs.quasarnode.qtransfer.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\xae\x01\n\x05Query\x12\xa4\x01\n\x06Params\x12\x33.quasarlabs.quasarnode.qtransfer.QueryParamsRequest\x1a\x34.quasarlabs.quasarnode.qtransfer.QueryParamsResponse\"/\x82\xd3\xe4\x93\x02)\x12\'/quasarlabs/quasarnode/qtransfer/paramsB\x83\x02\n#com.quasarlabs.quasarnode.qtransferB\nQueryProtoP\x01Z2github.com/quasarlabs/quasarnode/x/qtransfer/types\xa2\x02\x03QQQ\xaa\x02\x1fQuasarlabs.Quasarnode.Qtransfer\xca\x02\x1fQuasarlabs\\Quasarnode\\Qtransfer\xe2\x02+Quasarlabs\\Quasarnode\\Qtransfer\\GPBMetadata\xea\x02!Quasarlabs::Quasarnode::Qtransferb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cquasar/qtransfer/query.proto\x12\x1fquasarlabs.quasarnode.qtransfer\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a\x1dquasar/qtransfer/params.proto\"\x14\n\x12QueryParamsRequest\"\\\n\x13QueryParamsResponse\x12\x45\n\x06params\x18\x01 \x01(\x0b\x32\'.quasarlabs.quasarnode.qtransfer.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\xae\x01\n\x05Query\x12\xa4\x01\n\x06Params\x12\x33.quasarlabs.quasarnode.qtransfer.QueryParamsRequest\x1a\x34.quasarlabs.quasarnode.qtransfer.QueryParamsResponse\"/\x82\xd3\xe4\x93\x02)\x12\'/quasarlabs/quasarnode/qtransfer/paramsB\x81\x02\n#com.quasarlabs.quasarnode.qtransferB\nQueryProtoZ2github.com/quasarlabs/quasarnode/x/qtransfer/types\xa2\x02\x03QQQ\xaa\x02\x1fQuasarlabs.Quasarnode.Qtransfer\xca\x02\x1fQuasarlabs\\Quasarnode\\Qtransfer\xe2\x02+Quasarlabs\\Quasarnode\\Qtransfer\\GPBMetadata\xea\x02!Quasarlabs::Quasarnode::Qtransferb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quasar.qtransfer.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n#com.quasarlabs.quasarnode.qtransferB\nQueryProtoP\001Z2github.com/quasarlabs/quasarnode/x/qtransfer/types\242\002\003QQQ\252\002\037Quasarlabs.Quasarnode.Qtransfer\312\002\037Quasarlabs\\Quasarnode\\Qtransfer\342\002+Quasarlabs\\Quasarnode\\Qtransfer\\GPBMetadata\352\002!Quasarlabs::Quasarnode::Qtransfer'
+  DESCRIPTOR._serialized_options = b'\n#com.quasarlabs.quasarnode.qtransferB\nQueryProtoZ2github.com/quasarlabs/quasarnode/x/qtransfer/types\242\002\003QQQ\252\002\037Quasarlabs.Quasarnode.Qtransfer\312\002\037Quasarlabs\\Quasarnode\\Qtransfer\342\002+Quasarlabs\\Quasarnode\\Qtransfer\\GPBMetadata\352\002!Quasarlabs::Quasarnode::Qtransfer'
   _QUERYPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Params']._options = None

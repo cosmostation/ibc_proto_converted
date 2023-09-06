@@ -147,6 +147,7 @@ public final class TxProto {
               com.cosmos.consensus.v1.TxProto.MsgUpdateParams.class, com.cosmos.consensus.v1.TxProto.MsgUpdateParams.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -210,7 +211,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBlock() {
-      return block_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -252,7 +253,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasEvidence() {
-      return evidence_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.tendermint.types.EvidenceParams evidence = 3 [json_name = "evidence"];</code>
@@ -278,7 +279,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasValidator() {
-      return validator_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.tendermint.types.ValidatorParams validator = 4 [json_name = "validator"];</code>
@@ -313,13 +314,13 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (block_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getBlock());
       }
-      if (evidence_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getEvidence());
       }
-      if (validator_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(4, getValidator());
       }
       getUnknownFields().writeTo(output);
@@ -334,15 +335,15 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (block_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBlock());
       }
-      if (evidence_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEvidence());
       }
-      if (validator_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getValidator());
       }
@@ -526,13 +527,21 @@ public final class TxProto {
 
       // Construct using com.cosmos.consensus.v1.TxProto.MsgUpdateParams.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBlockFieldBuilder();
+          getEvidenceFieldBuilder();
+          getValidatorFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -590,21 +599,26 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.block_ = blockBuilder_ == null
               ? block_
               : blockBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.evidence_ = evidenceBuilder_ == null
               ? evidence_
               : evidenceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.validator_ = validatorBuilder_ == null
               ? validator_
               : validatorBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -932,8 +946,10 @@ public final class TxProto {
         } else {
           blockBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (block_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1083,8 +1099,10 @@ public final class TxProto {
         } else {
           evidenceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (evidence_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1202,8 +1220,10 @@ public final class TxProto {
         } else {
           validatorBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (validator_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

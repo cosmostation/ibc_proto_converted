@@ -16,15 +16,14 @@ from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from sommelier.cork.v1 import cork_pb2 as sommelier_dot_cork_dot_v1_dot_cork__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1asommelier/cork/v1/tx.proto\x12\x07\x63ork.v1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x19google/protobuf/any.proto\x1a\x1csommelier/cork/v1/cork.proto\"Q\n\x14MsgSubmitCorkRequest\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12\x16\n\x06signer\x18\x02 \x01(\tR\x06signer\"\x17\n\x15MsgSubmitCorkResponse\"v\n\x16MsgScheduleCorkRequest\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12!\n\x0c\x62lock_height\x18\x02 \x01(\x04R\x0b\x62lockHeight\x12\x16\n\x06signer\x18\x03 \x01(\tR\x06signer\"\x19\n\x17MsgScheduleCorkResponse2\xa5\x01\n\x03Msg\x12K\n\nSubmitCork\x12\x1d.cork.v1.MsgSubmitCorkRequest\x1a\x1e.cork.v1.MsgSubmitCorkResponse\x12Q\n\x0cScheduleCork\x12\x1f.cork.v1.MsgScheduleCorkRequest\x1a .cork.v1.MsgScheduleCorkResponseB\x81\x01\n\x0b\x63om.cork.v1B\x07TxProtoP\x01Z,github.com/peggyjv/sommelier/v4/x/cork/types\xa2\x02\x03\x43XX\xaa\x02\x07\x43ork.V1\xca\x02\x07\x43ork\\V1\xe2\x02\x13\x43ork\\V1\\GPBMetadata\xea\x02\x08\x43ork::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1asommelier/cork/v1/tx.proto\x12\x07\x63ork.v1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x19google/protobuf/any.proto\x1a\x1csommelier/cork/v1/cork.proto\"Q\n\x14MsgSubmitCorkRequest\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12\x16\n\x06signer\x18\x02 \x01(\tR\x06signer\"\x17\n\x15MsgSubmitCorkResponse\"v\n\x16MsgScheduleCorkRequest\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12!\n\x0c\x62lock_height\x18\x02 \x01(\x04R\x0b\x62lockHeight\x12\x16\n\x06signer\x18\x03 \x01(\tR\x06signer\"\x19\n\x17MsgScheduleCorkResponse2\xa5\x01\n\x03Msg\x12K\n\nSubmitCork\x12\x1d.cork.v1.MsgSubmitCorkRequest\x1a\x1e.cork.v1.MsgSubmitCorkResponse\x12Q\n\x0cScheduleCork\x12\x1f.cork.v1.MsgScheduleCorkRequest\x1a .cork.v1.MsgScheduleCorkResponseB\x7f\n\x0b\x63om.cork.v1B\x07TxProtoZ,github.com/peggyjv/sommelier/v4/x/cork/types\xa2\x02\x03\x43XX\xaa\x02\x07\x43ork.V1\xca\x02\x07\x43ork\\V1\xe2\x02\x13\x43ork\\V1\\GPBMetadata\xea\x02\x08\x43ork::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.cork.v1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\013com.cork.v1B\007TxProtoP\001Z,github.com/peggyjv/sommelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V1\312\002\007Cork\\V1\342\002\023Cork\\V1\\GPBMetadata\352\002\010Cork::V1'
+  DESCRIPTOR._serialized_options = b'\n\013com.cork.v1B\007TxProtoZ,github.com/peggyjv/sommelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V1\312\002\007Cork\\V1\342\002\023Cork\\V1\\GPBMetadata\352\002\010Cork::V1'
   _globals['_MSGSUBMITCORKREQUEST']._serialized_start=123
   _globals['_MSGSUBMITCORKREQUEST']._serialized_end=204
   _globals['_MSGSUBMITCORKRESPONSE']._serialized_start=206

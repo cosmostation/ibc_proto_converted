@@ -16,15 +16,14 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n lum-network/dfract/deposit.proto\x12\x12lum.network.dfract\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xb4\x01\n\x07\x44\x65posit\x12+\n\x11\x64\x65positor_address\x18\x01 \x01(\tR\x10\x64\x65positorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount\x12\x43\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\tcreatedAtB\xbd\x01\n\x16\x63om.lum.network.dfractB\x0c\x44\x65positProtoP\x01Z+github.com/lum-network/chain/x/dfract/types\xa2\x02\x03LND\xaa\x02\x12Lum.Network.Dfract\xca\x02\x12Lum\\Network\\Dfract\xe2\x02\x1eLum\\Network\\Dfract\\GPBMetadata\xea\x02\x14Lum::Network::Dfractb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n lum-network/dfract/deposit.proto\x12\x12lum.network.dfract\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xb4\x01\n\x07\x44\x65posit\x12+\n\x11\x64\x65positor_address\x18\x01 \x01(\tR\x10\x64\x65positorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount\x12\x43\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\tcreatedAtB\xbb\x01\n\x16\x63om.lum.network.dfractB\x0c\x44\x65positProtoZ+github.com/lum-network/chain/x/dfract/types\xa2\x02\x03LND\xaa\x02\x12Lum.Network.Dfract\xca\x02\x12Lum\\Network\\Dfract\xe2\x02\x1eLum\\Network\\Dfract\\GPBMetadata\xea\x02\x14Lum::Network::Dfractb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.dfract.deposit_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.lum.network.dfractB\014DepositProtoP\001Z+github.com/lum-network/chain/x/dfract/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024Lum::Network::Dfract'
+  DESCRIPTOR._serialized_options = b'\n\026com.lum.network.dfractB\014DepositProtoZ+github.com/lum-network/chain/x/dfract/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024Lum::Network::Dfract'
   _DEPOSIT.fields_by_name['amount']._options = None
   _DEPOSIT.fields_by_name['amount']._serialized_options = b'\310\336\037\000'
   _DEPOSIT.fields_by_name['created_at']._options = None

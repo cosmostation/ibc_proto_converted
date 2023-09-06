@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.classifications.mappable import mappable_pb2 as assetmantle_dot_classifications_dot_mappable_dot_mappable__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nGassetmantle/classifications/queries/classification/query_response.proto\x12:assetmantle.modules.classifications.queries.classification\x1a\x14gogoproto/gogo.proto\x1a\x33\x61ssetmantle/classifications/mappable/mappable.proto\"a\n\rQueryResponse\x12J\n\x04list\x18\x01 \x03(\x0b\x32\x36.assetmantle.modules.classifications.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\xe2\x02\n>com.assetmantle.modules.classifications.queries.classificationB\x12QueryResponseProtoP\x01\xa2\x02\x05\x41MCQC\xaa\x02:Assetmantle.Modules.Classifications.Queries.Classification\xca\x02:Assetmantle\\Modules\\Classifications\\Queries\\Classification\xe2\x02\x46\x41ssetmantle\\Modules\\Classifications\\Queries\\Classification\\GPBMetadata\xea\x02>Assetmantle::Modules::Classifications::Queries::Classificationb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nGassetmantle/classifications/queries/classification/query_response.proto\x12:assetmantle.modules.classifications.queries.classification\x1a\x14gogoproto/gogo.proto\x1a\x33\x61ssetmantle/classifications/mappable/mappable.proto\"a\n\rQueryResponse\x12J\n\x04list\x18\x01 \x03(\x0b\x32\x36.assetmantle.modules.classifications.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\xe0\x02\n>com.assetmantle.modules.classifications.queries.classificationB\x12QueryResponseProto\xa2\x02\x05\x41MCQC\xaa\x02:Assetmantle.Modules.Classifications.Queries.Classification\xca\x02:Assetmantle\\Modules\\Classifications\\Queries\\Classification\xe2\x02\x46\x41ssetmantle\\Modules\\Classifications\\Queries\\Classification\\GPBMetadata\xea\x02>Assetmantle::Modules::Classifications::Queries::Classificationb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.classifications.queries.classification.query_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n>com.assetmantle.modules.classifications.queries.classificationB\022QueryResponseProtoP\001\242\002\005AMCQC\252\002:Assetmantle.Modules.Classifications.Queries.Classification\312\002:Assetmantle\\Modules\\Classifications\\Queries\\Classification\342\002FAssetmantle\\Modules\\Classifications\\Queries\\Classification\\GPBMetadata\352\002>Assetmantle::Modules::Classifications::Queries::Classification'
+  DESCRIPTOR._serialized_options = b'\n>com.assetmantle.modules.classifications.queries.classificationB\022QueryResponseProto\242\002\005AMCQC\252\002:Assetmantle.Modules.Classifications.Queries.Classification\312\002:Assetmantle\\Modules\\Classifications\\Queries\\Classification\342\002FAssetmantle\\Modules\\Classifications\\Queries\\Classification\\GPBMetadata\352\002>Assetmantle::Modules::Classifications::Queries::Classification'
   _QUERYRESPONSE._options = None
   _QUERYRESPONSE._serialized_options = b'\210\240\037\000'
   _globals['_QUERYRESPONSE']._serialized_start=210

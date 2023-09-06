@@ -764,7 +764,8 @@ public final class FetchPriceProto {
 
     public static final int RATES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList rates_;
+    private com.google.protobuf.Internal.LongList rates_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
      * @return A list containing the rates.
@@ -1026,22 +1027,17 @@ public final class FetchPriceProto {
       @java.lang.Override
       public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult buildPartial() {
         com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result = new com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          rates_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.rates_ = rates_;
-      }
-
       private void buildPartial0(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          rates_.makeImmutable();
+          result.rates_ = rates_;
+        }
       }
 
       @java.lang.Override
@@ -1091,7 +1087,8 @@ public final class FetchPriceProto {
         if (!other.rates_.isEmpty()) {
           if (rates_.isEmpty()) {
             rates_ = other.rates_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            rates_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureRatesIsMutable();
             rates_.addAll(other.rates_);
@@ -1159,10 +1156,10 @@ public final class FetchPriceProto {
 
       private com.google.protobuf.Internal.LongList rates_ = emptyLongList();
       private void ensureRatesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          rates_ = mutableCopy(rates_);
-          bitField0_ |= 0x00000001;
+        if (!rates_.isModifiable()) {
+          rates_ = makeMutableCopy(rates_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
@@ -1170,8 +1167,8 @@ public final class FetchPriceProto {
        */
       public java.util.List<java.lang.Long>
           getRatesList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(rates_) : rates_;
+        rates_.makeImmutable();
+        return rates_;
       }
       /**
        * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
@@ -1199,6 +1196,7 @@ public final class FetchPriceProto {
 
         ensureRatesIsMutable();
         rates_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1211,6 +1209,7 @@ public final class FetchPriceProto {
 
         ensureRatesIsMutable();
         rates_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1224,6 +1223,7 @@ public final class FetchPriceProto {
         ensureRatesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, rates_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

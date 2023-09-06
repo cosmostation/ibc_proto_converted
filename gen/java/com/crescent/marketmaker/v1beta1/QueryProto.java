@@ -477,6 +477,7 @@ public final class QueryProto {
               com.crescent.marketmaker.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.marketmaker.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.crescent.marketmaker.v1beta1.MarketmakerProto.Params params_;
     /**
@@ -485,7 +486,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.marketmaker.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -517,7 +518,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -529,7 +530,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -691,13 +692,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.marketmaker.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -741,11 +748,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.marketmaker.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -911,8 +921,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1117,6 +1129,7 @@ public final class QueryProto {
               com.crescent.marketmaker.v1beta1.QueryProto.QueryMarketMakersRequest.class, com.crescent.marketmaker.v1beta1.QueryProto.QueryMarketMakersRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -1214,7 +1227,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 4 [json_name = "pagination"];</code>
@@ -1255,7 +1268,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eligible_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, eligible_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1277,7 +1290,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eligible_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, eligible_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPagination());
       }
@@ -1452,13 +1465,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.marketmaker.v1beta1.QueryProto.QueryMarketMakersRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1514,11 +1533,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.eligible_ = eligible_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1888,8 +1910,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2099,6 +2123,7 @@ public final class QueryProto {
               com.crescent.marketmaker.v1beta1.QueryProto.QueryMarketMakersResponse.class, com.crescent.marketmaker.v1beta1.QueryProto.QueryMarketMakersResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKETMAKERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.crescent.marketmaker.v1beta1.MarketmakerProto.MarketMaker> marketmakers_;
@@ -2152,7 +2177,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2195,7 +2220,7 @@ public final class QueryProto {
       for (int i = 0; i < marketmakers_.size(); i++) {
         output.writeMessage(1, marketmakers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2211,7 +2236,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, marketmakers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2379,13 +2404,20 @@ public final class QueryProto {
 
       // Construct using com.crescent.marketmaker.v1beta1.QueryProto.QueryMarketMakersResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMarketmakersFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2449,11 +2481,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.marketmaker.v1beta1.QueryProto.QueryMarketMakersResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2918,8 +2953,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3668,6 +3705,7 @@ public final class QueryProto {
               com.crescent.marketmaker.v1beta1.QueryProto.QueryIncentiveResponse.class, com.crescent.marketmaker.v1beta1.QueryProto.QueryIncentiveResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INCENTIVE_FIELD_NUMBER = 1;
     private com.crescent.marketmaker.v1beta1.MarketmakerProto.Incentive incentive_;
     /**
@@ -3676,7 +3714,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasIncentive() {
-      return incentive_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.marketmaker.v1beta1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
@@ -3708,7 +3746,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (incentive_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getIncentive());
       }
       getUnknownFields().writeTo(output);
@@ -3720,7 +3758,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (incentive_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIncentive());
       }
@@ -3882,13 +3920,19 @@ public final class QueryProto {
 
       // Construct using com.crescent.marketmaker.v1beta1.QueryProto.QueryIncentiveResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIncentiveFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3932,11 +3976,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.marketmaker.v1beta1.QueryProto.QueryIncentiveResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.incentive_ = incentiveBuilder_ == null
               ? incentive_
               : incentiveBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4102,8 +4149,10 @@ public final class QueryProto {
         } else {
           incentiveBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (incentive_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

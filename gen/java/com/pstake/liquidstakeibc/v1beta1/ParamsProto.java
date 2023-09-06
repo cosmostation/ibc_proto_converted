@@ -57,6 +57,46 @@ public final class ParamsProto {
      */
     com.google.protobuf.ByteString
         getFeeAddressBytes();
+
+    /**
+     * <pre>
+     * upper limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The upperCValueLimit.
+     */
+    java.lang.String getUpperCValueLimit();
+    /**
+     * <pre>
+     * upper limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for upperCValueLimit.
+     */
+    com.google.protobuf.ByteString
+        getUpperCValueLimitBytes();
+
+    /**
+     * <pre>
+     * lower limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The lowerCValueLimit.
+     */
+    java.lang.String getLowerCValueLimit();
+    /**
+     * <pre>
+     * lower limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for lowerCValueLimit.
+     */
+    com.google.protobuf.ByteString
+        getLowerCValueLimitBytes();
   }
   /**
    * <pre>
@@ -77,6 +117,8 @@ public final class ParamsProto {
     private Params() {
       adminAddress_ = "";
       feeAddress_ = "";
+      upperCValueLimit_ = "";
+      lowerCValueLimit_ = "";
     }
 
     @java.lang.Override
@@ -193,6 +235,100 @@ public final class ParamsProto {
       }
     }
 
+    public static final int UPPER_C_VALUE_LIMIT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object upperCValueLimit_ = "";
+    /**
+     * <pre>
+     * upper limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The upperCValueLimit.
+     */
+    @java.lang.Override
+    public java.lang.String getUpperCValueLimit() {
+      java.lang.Object ref = upperCValueLimit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        upperCValueLimit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * upper limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for upperCValueLimit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUpperCValueLimitBytes() {
+      java.lang.Object ref = upperCValueLimit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        upperCValueLimit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOWER_C_VALUE_LIMIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lowerCValueLimit_ = "";
+    /**
+     * <pre>
+     * lower limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The lowerCValueLimit.
+     */
+    @java.lang.Override
+    public java.lang.String getLowerCValueLimit() {
+      java.lang.Object ref = lowerCValueLimit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lowerCValueLimit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * lower limit for the c value of a host chain
+     * </pre>
+     *
+     * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for lowerCValueLimit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLowerCValueLimitBytes() {
+      java.lang.Object ref = lowerCValueLimit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lowerCValueLimit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -213,6 +349,12 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feeAddress_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(upperCValueLimit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, upperCValueLimit_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lowerCValueLimit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lowerCValueLimit_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -227,6 +369,12 @@ public final class ParamsProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feeAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(upperCValueLimit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, upperCValueLimit_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lowerCValueLimit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lowerCValueLimit_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -247,6 +395,10 @@ public final class ParamsProto {
           .equals(other.getAdminAddress())) return false;
       if (!getFeeAddress()
           .equals(other.getFeeAddress())) return false;
+      if (!getUpperCValueLimit()
+          .equals(other.getUpperCValueLimit())) return false;
+      if (!getLowerCValueLimit()
+          .equals(other.getLowerCValueLimit())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -262,6 +414,10 @@ public final class ParamsProto {
       hash = (53 * hash) + getAdminAddress().hashCode();
       hash = (37 * hash) + FEE_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getFeeAddress().hashCode();
+      hash = (37 * hash) + UPPER_C_VALUE_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getUpperCValueLimit().hashCode();
+      hash = (37 * hash) + LOWER_C_VALUE_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getLowerCValueLimit().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -399,6 +555,8 @@ public final class ParamsProto {
         bitField0_ = 0;
         adminAddress_ = "";
         feeAddress_ = "";
+        upperCValueLimit_ = "";
+        lowerCValueLimit_ = "";
         return this;
       }
 
@@ -437,6 +595,12 @@ public final class ParamsProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.feeAddress_ = feeAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.upperCValueLimit_ = upperCValueLimit_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lowerCValueLimit_ = lowerCValueLimit_;
         }
       }
 
@@ -494,6 +658,16 @@ public final class ParamsProto {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (!other.getUpperCValueLimit().isEmpty()) {
+          upperCValueLimit_ = other.upperCValueLimit_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getLowerCValueLimit().isEmpty()) {
+          lowerCValueLimit_ = other.lowerCValueLimit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -530,6 +704,16 @@ public final class ParamsProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                upperCValueLimit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                lowerCValueLimit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -730,6 +914,190 @@ public final class ParamsProto {
         onChanged();
         return this;
       }
+
+      private java.lang.Object upperCValueLimit_ = "";
+      /**
+       * <pre>
+       * upper limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The upperCValueLimit.
+       */
+      public java.lang.String getUpperCValueLimit() {
+        java.lang.Object ref = upperCValueLimit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          upperCValueLimit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * upper limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for upperCValueLimit.
+       */
+      public com.google.protobuf.ByteString
+          getUpperCValueLimitBytes() {
+        java.lang.Object ref = upperCValueLimit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          upperCValueLimit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * upper limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The upperCValueLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpperCValueLimit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        upperCValueLimit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * upper limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpperCValueLimit() {
+        upperCValueLimit_ = getDefaultInstance().getUpperCValueLimit();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * upper limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string upper_c_value_limit = 3 [json_name = "upperCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for upperCValueLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpperCValueLimitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        upperCValueLimit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object lowerCValueLimit_ = "";
+      /**
+       * <pre>
+       * lower limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The lowerCValueLimit.
+       */
+      public java.lang.String getLowerCValueLimit() {
+        java.lang.Object ref = lowerCValueLimit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lowerCValueLimit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * lower limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for lowerCValueLimit.
+       */
+      public com.google.protobuf.ByteString
+          getLowerCValueLimitBytes() {
+        java.lang.Object ref = lowerCValueLimit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lowerCValueLimit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * lower limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The lowerCValueLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLowerCValueLimit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lowerCValueLimit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * lower limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLowerCValueLimit() {
+        lowerCValueLimit_ = getDefaultInstance().getLowerCValueLimit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * lower limit for the c value of a host chain
+       * </pre>
+       *
+       * <code>string lower_c_value_limit = 4 [json_name = "lowerCValueLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for lowerCValueLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLowerCValueLimitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lowerCValueLimit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -811,17 +1179,22 @@ public final class ParamsProto {
       "\n*pstake/liquidstakeibc/v1beta1/params.p" +
       "roto\022\035pstake.liquidstakeibc.v1beta1\032\024gog" +
       "oproto/gogo.proto\032\031cosmos_proto/cosmos.p" +
-      "roto\"\210\001\n\006Params\022=\n\radmin_address\030\001 \001(\tB\030" +
+      "roto\"\334\002\n\006Params\022=\n\radmin_address\030\001 \001(\tB\030" +
       "\322\264-\024cosmos.AddressStringR\014adminAddress\0229" +
       "\n\013fee_address\030\002 \001(\tB\030\322\264-\024cosmos.AddressS" +
-      "tringR\nfeeAddress:\004\230\240\037\000B\207\002\n!com.pstake.l" +
-      "iquidstakeibc.v1beta1B\013ParamsProtoZAgith" +
-      "ub.com/persistenceOne/pstake-native/v2/x" +
-      "/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.Liq" +
-      "uidstakeibc.V1beta1\312\002\035Pstake\\Liquidstake" +
-      "ibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1be" +
-      "ta1\\GPBMetadata\352\002\037Pstake::Liquidstakeibc" +
-      "::V1beta1b\006proto3"
+      "tringR\nfeeAddress\022k\n\023upper_c_value_limit" +
+      "\030\003 \001(\tB<\310\336\037\000\332\336\037&github.com/cosmos/cosmos" +
+      "-sdk/types.Dec\322\264-\ncosmos.DecR\020upperCValu" +
+      "eLimit\022k\n\023lower_c_value_limit\030\004 \001(\tB<\310\336\037" +
+      "\000\332\336\037&github.com/cosmos/cosmos-sdk/types." +
+      "Dec\322\264-\ncosmos.DecR\020lowerCValueLimitB\207\002\n!" +
+      "com.pstake.liquidstakeibc.v1beta1B\013Param" +
+      "sProtoZAgithub.com/persistenceOne/pstake" +
+      "-native/v2/x/liquidstakeibc/types\242\002\003PLX\252" +
+      "\002\035Pstake.Liquidstakeibc.V1beta1\312\002\035Pstake" +
+      "\\Liquidstakeibc\\V1beta1\342\002)Pstake\\Liquids" +
+      "takeibc\\V1beta1\\GPBMetadata\352\002\037Pstake::Li" +
+      "quidstakeibc::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -834,11 +1207,12 @@ public final class ParamsProto {
     internal_static_pstake_liquidstakeibc_v1beta1_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_Params_descriptor,
-        new java.lang.String[] { "AdminAddress", "FeeAddress", });
+        new java.lang.String[] { "AdminAddress", "FeeAddress", "UpperCValueLimit", "LowerCValueLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);
-    registry.add(com.gogoproto.GogoProto.goprotoStringer);
+    registry.add(com.gogoproto.GogoProto.customtype);
+    registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16\x63\x61nto/csr/v1/csr.proto\x12\x0c\x63\x61nto.csr.v1\x1a\x14gogoproto/gogo.proto\"\x8f\x01\n\x03\x43SR\x12\x1c\n\tcontracts\x18\x01 \x03(\tR\tcontracts\x12\x0e\n\x02id\x18\x02 \x01(\x04R\x02id\x12\x10\n\x03txs\x18\x03 \x01(\x04R\x03txs\x12H\n\x07revenue\x18\x04 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x07revenueB\x9d\x01\n\x10\x63om.canto.csr.v1B\x08\x43srProtoP\x01Z-github.com/Canto-Network/Canto/v6/x/csr/types\xa2\x02\x03\x43\x43X\xaa\x02\x0c\x43\x61nto.Csr.V1\xca\x02\x0c\x43\x61nto\\Csr\\V1\xe2\x02\x18\x43\x61nto\\Csr\\V1\\GPBMetadata\xea\x02\x0e\x43\x61nto::Csr::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16\x63\x61nto/csr/v1/csr.proto\x12\x0c\x63\x61nto.csr.v1\x1a\x14gogoproto/gogo.proto\"\x8f\x01\n\x03\x43SR\x12\x1c\n\tcontracts\x18\x01 \x03(\tR\tcontracts\x12\x0e\n\x02id\x18\x02 \x01(\x04R\x02id\x12\x10\n\x03txs\x18\x03 \x01(\x04R\x03txs\x12H\n\x07revenue\x18\x04 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x07revenueB\x9b\x01\n\x10\x63om.canto.csr.v1B\x08\x43srProtoZ-github.com/Canto-Network/Canto/v6/x/csr/types\xa2\x02\x03\x43\x43X\xaa\x02\x0c\x43\x61nto.Csr.V1\xca\x02\x0c\x43\x61nto\\Csr\\V1\xe2\x02\x18\x43\x61nto\\Csr\\V1\\GPBMetadata\xea\x02\x0e\x43\x61nto::Csr::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.csr.v1.csr_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.canto.csr.v1B\010CsrProtoP\001Z-github.com/Canto-Network/Canto/v6/x/csr/types\242\002\003CCX\252\002\014Canto.Csr.V1\312\002\014Canto\\Csr\\V1\342\002\030Canto\\Csr\\V1\\GPBMetadata\352\002\016Canto::Csr::V1'
+  DESCRIPTOR._serialized_options = b'\n\020com.canto.csr.v1B\010CsrProtoZ-github.com/Canto-Network/Canto/v6/x/csr/types\242\002\003CCX\252\002\014Canto.Csr.V1\312\002\014Canto\\Csr\\V1\342\002\030Canto\\Csr\\V1\\GPBMetadata\352\002\016Canto::Csr::V1'
   _CSR.fields_by_name['revenue']._options = None
   _CSR.fields_by_name['revenue']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _globals['_CSR']._serialized_start=63

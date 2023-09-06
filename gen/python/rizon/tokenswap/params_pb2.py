@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1crizon/tokenswap/params.proto\x12\x1arizonworld.rizon.tokenswap\x1a\x14gogoproto/gogo.proto\"\x95\x01\n\x06Params\x12\x32\n\tswappable\x18\x01 \x01(\x08\x42\x14\xf2\xde\x1f\x10yaml:\"swappable\"R\tswappable\x12)\n\x06signer\x18\x02 \x01(\tB\x11\xf2\xde\x1f\ryaml:\"signer\"R\x06signer\x12&\n\x05limit\x18\x03 \x01(\x03\x42\x10\xf2\xde\x1f\x0cyaml:\"limit\"R\x05limit:\x04\x98\xa0\x1f\x00\x42\xe7\x01\n\x1e\x63om.rizonworld.rizon.tokenswapB\x0bParamsProtoP\x01Z.github.com/rizon-world/rizon/x/tokenswap/types\xa2\x02\x03RRT\xaa\x02\x1aRizonworld.Rizon.Tokenswap\xca\x02\x1aRizonworld\\Rizon\\Tokenswap\xe2\x02&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\xea\x02\x1cRizonworld::Rizon::Tokenswapb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1crizon/tokenswap/params.proto\x12\x1arizonworld.rizon.tokenswap\x1a\x14gogoproto/gogo.proto\"\x95\x01\n\x06Params\x12\x32\n\tswappable\x18\x01 \x01(\x08\x42\x14\xf2\xde\x1f\x10yaml:\"swappable\"R\tswappable\x12)\n\x06signer\x18\x02 \x01(\tB\x11\xf2\xde\x1f\ryaml:\"signer\"R\x06signer\x12&\n\x05limit\x18\x03 \x01(\x03\x42\x10\xf2\xde\x1f\x0cyaml:\"limit\"R\x05limit:\x04\x98\xa0\x1f\x00\x42\xe5\x01\n\x1e\x63om.rizonworld.rizon.tokenswapB\x0bParamsProtoZ.github.com/rizon-world/rizon/x/tokenswap/types\xa2\x02\x03RRT\xaa\x02\x1aRizonworld.Rizon.Tokenswap\xca\x02\x1aRizonworld\\Rizon\\Tokenswap\xe2\x02&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\xea\x02\x1cRizonworld::Rizon::Tokenswapb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'rizon.tokenswap.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.rizonworld.rizon.tokenswapB\013ParamsProtoP\001Z.github.com/rizon-world/rizon/x/tokenswap/types\242\002\003RRT\252\002\032Rizonworld.Rizon.Tokenswap\312\002\032Rizonworld\\Rizon\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\352\002\034Rizonworld::Rizon::Tokenswap'
+  DESCRIPTOR._serialized_options = b'\n\036com.rizonworld.rizon.tokenswapB\013ParamsProtoZ.github.com/rizon-world/rizon/x/tokenswap/types\242\002\003RRT\252\002\032Rizonworld.Rizon.Tokenswap\312\002\032Rizonworld\\Rizon\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokenswap\\GPBMetadata\352\002\034Rizonworld::Rizon::Tokenswap'
   _PARAMS.fields_by_name['swappable']._options = None
   _PARAMS.fields_by_name['swappable']._serialized_options = b'\362\336\037\020yaml:\"swappable\"'
   _PARAMS.fields_by_name['signer']._options = None

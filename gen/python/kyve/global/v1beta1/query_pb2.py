@@ -17,15 +17,14 @@ import importlib
 kyve_dot_global_dot_v1beta1_dot_global__pb2 = importlib.import_module('kyve.global.v1beta1.global_pb2')
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkyve/global/v1beta1/query.proto\x12\x13kyve.global.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a kyve/global/v1beta1/global.proto\"\x14\n\x12QueryParamsRequest\"P\n\x13QueryParamsResponse\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.kyve.global.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x8a\x01\n\x05Query\x12\x80\x01\n\x06Params\x12\'.kyve.global.v1beta1.QueryParamsRequest\x1a(.kyve.global.v1beta1.QueryParamsResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/kyve/global/v1beta1/paramsB\xc2\x01\n\x17\x63om.kyve.global.v1beta1B\nQueryProtoP\x01Z+github.com/KYVENetwork/chain/x/global/types\xa2\x02\x03KGX\xaa\x02\x13Kyve.Global.V1beta1\xca\x02\x14Kyve\\Global_\\V1beta1\xe2\x02 Kyve\\Global_\\V1beta1\\GPBMetadata\xea\x02\x15Kyve::Global::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkyve/global/v1beta1/query.proto\x12\x13kyve.global.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a kyve/global/v1beta1/global.proto\"\x14\n\x12QueryParamsRequest\"P\n\x13QueryParamsResponse\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.kyve.global.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x8a\x01\n\x05Query\x12\x80\x01\n\x06Params\x12\'.kyve.global.v1beta1.QueryParamsRequest\x1a(.kyve.global.v1beta1.QueryParamsResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/kyve/global/v1beta1/paramsB\xc0\x01\n\x17\x63om.kyve.global.v1beta1B\nQueryProtoZ+github.com/KYVENetwork/chain/x/global/types\xa2\x02\x03KGX\xaa\x02\x13Kyve.Global.V1beta1\xca\x02\x14Kyve\\Global_\\V1beta1\xe2\x02 Kyve\\Global_\\V1beta1\\GPBMetadata\xea\x02\x15Kyve::Global::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kyve.global.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.kyve.global.v1beta1B\nQueryProtoP\001Z+github.com/KYVENetwork/chain/x/global/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002\024Kyve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1beta1\\GPBMetadata\352\002\025Kyve::Global::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.kyve.global.v1beta1B\nQueryProtoZ+github.com/KYVENetwork/chain/x/global/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002\024Kyve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1beta1\\GPBMetadata\352\002\025Kyve::Global::V1beta1'
   _QUERYPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Params']._options = None

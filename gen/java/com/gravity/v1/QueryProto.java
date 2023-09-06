@@ -465,6 +465,7 @@ public final class QueryProto {
               com.gravity.v1.QueryProto.QueryParamsResponse.class, com.gravity.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.gravity.v1.GenesisProto.Params params_;
     /**
@@ -473,7 +474,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.gravity.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -505,7 +506,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -517,7 +518,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -675,13 +676,19 @@ public final class QueryProto {
 
       // Construct using com.gravity.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -725,11 +732,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.gravity.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -895,8 +905,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1462,6 +1474,7 @@ public final class QueryProto {
               com.gravity.v1.QueryProto.QueryCurrentValsetResponse.class, com.gravity.v1.QueryProto.QueryCurrentValsetResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALSET_FIELD_NUMBER = 1;
     private com.gravity.v1.TypesProto.Valset valset_;
     /**
@@ -1470,7 +1483,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasValset() {
-      return valset_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.gravity.v1.Valset valset = 1 [json_name = "valset", (.gogoproto.nullable) = false];</code>
@@ -1502,7 +1515,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (valset_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getValset());
       }
       getUnknownFields().writeTo(output);
@@ -1514,7 +1527,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (valset_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValset());
       }
@@ -1672,13 +1685,19 @@ public final class QueryProto {
 
       // Construct using com.gravity.v1.QueryProto.QueryCurrentValsetResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValsetFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1722,11 +1741,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.gravity.v1.QueryProto.QueryCurrentValsetResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.valset_ = valsetBuilder_ == null
               ? valset_
               : valsetBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1892,8 +1914,10 @@ public final class QueryProto {
         } else {
           valsetBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (valset_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2539,6 +2563,7 @@ public final class QueryProto {
               com.gravity.v1.QueryProto.QueryValsetRequestResponse.class, com.gravity.v1.QueryProto.QueryValsetRequestResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALSET_FIELD_NUMBER = 1;
     private com.gravity.v1.TypesProto.Valset valset_;
     /**
@@ -2547,7 +2572,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasValset() {
-      return valset_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.gravity.v1.Valset valset = 1 [json_name = "valset"];</code>
@@ -2579,7 +2604,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (valset_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getValset());
       }
       getUnknownFields().writeTo(output);
@@ -2591,7 +2616,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (valset_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValset());
       }
@@ -2749,13 +2774,19 @@ public final class QueryProto {
 
       // Construct using com.gravity.v1.QueryProto.QueryValsetRequestResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValsetFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2799,11 +2830,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.gravity.v1.QueryProto.QueryValsetRequestResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.valset_ = valsetBuilder_ == null
               ? valset_
               : valsetBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2969,8 +3003,10 @@ public final class QueryProto {
         } else {
           valsetBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (valset_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3764,6 +3800,7 @@ public final class QueryProto {
               com.gravity.v1.QueryProto.QueryValsetConfirmResponse.class, com.gravity.v1.QueryProto.QueryValsetConfirmResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONFIRM_FIELD_NUMBER = 1;
     private com.gravity.v1.MsgsProto.MsgValsetConfirm confirm_;
     /**
@@ -3772,7 +3809,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasConfirm() {
-      return confirm_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.gravity.v1.MsgValsetConfirm confirm = 1 [json_name = "confirm"];</code>
@@ -3804,7 +3841,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (confirm_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getConfirm());
       }
       getUnknownFields().writeTo(output);
@@ -3816,7 +3853,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (confirm_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConfirm());
       }
@@ -3974,13 +4011,19 @@ public final class QueryProto {
 
       // Construct using com.gravity.v1.QueryProto.QueryValsetConfirmResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getConfirmFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4024,11 +4067,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.gravity.v1.QueryProto.QueryValsetConfirmResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.confirm_ = confirmBuilder_ == null
               ? confirm_
               : confirmBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4194,8 +4240,10 @@ public final class QueryProto {
         } else {
           confirmBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (confirm_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14966,6 +15014,7 @@ public final class QueryProto {
               com.gravity.v1.QueryProto.QueryBatchRequestByNonceResponse.class, com.gravity.v1.QueryProto.QueryBatchRequestByNonceResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BATCH_FIELD_NUMBER = 1;
     private com.gravity.v1.BatchProto.OutgoingTxBatch batch_;
     /**
@@ -14974,7 +15023,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBatch() {
-      return batch_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.gravity.v1.OutgoingTxBatch batch = 1 [json_name = "batch", (.gogoproto.nullable) = false];</code>
@@ -15006,7 +15055,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (batch_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBatch());
       }
       getUnknownFields().writeTo(output);
@@ -15018,7 +15067,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (batch_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBatch());
       }
@@ -15176,13 +15225,19 @@ public final class QueryProto {
 
       // Construct using com.gravity.v1.QueryProto.QueryBatchRequestByNonceResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBatchFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15226,11 +15281,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.gravity.v1.QueryProto.QueryBatchRequestByNonceResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.batch_ = batchBuilder_ == null
               ? batch_
               : batchBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15396,8 +15454,10 @@ public final class QueryProto {
         } else {
           batchBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (batch_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

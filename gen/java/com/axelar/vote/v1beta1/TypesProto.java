@@ -130,6 +130,7 @@ public final class TypesProto {
               com.axelar.vote.v1beta1.TypesProto.TalliedVote.class, com.axelar.vote.v1beta1.TypesProto.TalliedVote.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TALLY_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString tally_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -149,7 +150,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return data_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any data = 3 [json_name = "data", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
@@ -272,7 +273,7 @@ public final class TypesProto {
       if (!tally_.isEmpty()) {
         output.writeBytes(1, tally_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getData());
       }
       if (pollId_ != 0L) {
@@ -297,7 +298,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, tally_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getData());
       }
@@ -511,13 +512,19 @@ public final class TypesProto {
 
       // Construct using com.axelar.vote.v1beta1.TypesProto.TalliedVote.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -567,10 +574,12 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tally_ = tally_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pollId_ = pollId_;
@@ -579,6 +588,7 @@ public final class TypesProto {
           result.isVoterLate_ = internalGetIsVoterLate();
           result.isVoterLate_.makeImmutable();
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -804,8 +814,10 @@ public final class TypesProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (data_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

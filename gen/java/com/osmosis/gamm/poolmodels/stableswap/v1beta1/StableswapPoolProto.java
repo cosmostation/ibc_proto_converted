@@ -1017,6 +1017,7 @@ public final class StableswapPoolProto {
               com.osmosis.gamm.poolmodels.stableswap.v1beta1.StableswapPoolProto.Pool.class, com.osmosis.gamm.poolmodels.stableswap.v1beta1.StableswapPoolProto.Pool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -1075,7 +1076,7 @@ public final class StableswapPoolProto {
      */
     @java.lang.Override
     public boolean hasPoolParams() {
-      return poolParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.gamm.poolmodels.stableswap.v1beta1.PoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stableswap_pool_params&#92;""];</code>
@@ -1166,7 +1167,7 @@ public final class StableswapPoolProto {
      */
     @java.lang.Override
     public boolean hasTotalShares() {
-      return totalShares_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1255,7 +1256,8 @@ public final class StableswapPoolProto {
 
     public static final int SCALING_FACTORS_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList scalingFactors_;
+    private com.google.protobuf.Internal.LongList scalingFactors_ =
+        emptyLongList();
     /**
      * <pre>
      * for calculation amognst assets with different precisions
@@ -1362,13 +1364,13 @@ public final class StableswapPoolProto {
       if (id_ != 0L) {
         output.writeUInt64(2, id_);
       }
-      if (poolParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPoolParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(futurePoolGovernor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, futurePoolGovernor_);
       }
-      if (totalShares_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getTotalShares());
       }
       for (int i = 0; i < poolLiquidity_.size(); i++) {
@@ -1400,14 +1402,14 @@ public final class StableswapPoolProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, id_);
       }
-      if (poolParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPoolParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(futurePoolGovernor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, futurePoolGovernor_);
       }
-      if (totalShares_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTotalShares());
       }
@@ -1628,13 +1630,21 @@ public final class StableswapPoolProto {
 
       // Construct using com.osmosis.gamm.poolmodels.stableswap.v1beta1.StableswapPoolProto.Pool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolParamsFieldBuilder();
+          getTotalSharesFieldBuilder();
+          getPoolLiquidityFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1704,11 +1714,6 @@ public final class StableswapPoolProto {
         } else {
           result.poolLiquidity_ = poolLiquidityBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) != 0)) {
-          scalingFactors_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.scalingFactors_ = scalingFactors_;
       }
 
       private void buildPartial0(com.osmosis.gamm.poolmodels.stableswap.v1beta1.StableswapPoolProto.Pool result) {
@@ -1719,10 +1724,12 @@ public final class StableswapPoolProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.poolParams_ = poolParamsBuilder_ == null
               ? poolParams_
               : poolParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.futurePoolGovernor_ = futurePoolGovernor_;
@@ -1731,10 +1738,16 @@ public final class StableswapPoolProto {
           result.totalShares_ = totalSharesBuilder_ == null
               ? totalShares_
               : totalSharesBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          scalingFactors_.makeImmutable();
+          result.scalingFactors_ = scalingFactors_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.scalingFactorController_ = scalingFactorController_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1829,7 +1842,8 @@ public final class StableswapPoolProto {
         if (!other.scalingFactors_.isEmpty()) {
           if (scalingFactors_.isEmpty()) {
             scalingFactors_ = other.scalingFactors_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            scalingFactors_.makeImmutable();
+            bitField0_ |= 0x00000040;
           } else {
             ensureScalingFactorsIsMutable();
             scalingFactors_.addAll(other.scalingFactors_);
@@ -2117,8 +2131,10 @@ public final class StableswapPoolProto {
         } else {
           poolParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (poolParams_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2383,8 +2399,10 @@ public final class StableswapPoolProto {
         } else {
           totalSharesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (totalShares_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2766,10 +2784,10 @@ public final class StableswapPoolProto {
 
       private com.google.protobuf.Internal.LongList scalingFactors_ = emptyLongList();
       private void ensureScalingFactorsIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
-          scalingFactors_ = mutableCopy(scalingFactors_);
-          bitField0_ |= 0x00000040;
+        if (!scalingFactors_.isModifiable()) {
+          scalingFactors_ = makeMutableCopy(scalingFactors_);
         }
+        bitField0_ |= 0x00000040;
       }
       /**
        * <pre>
@@ -2781,8 +2799,8 @@ public final class StableswapPoolProto {
        */
       public java.util.List<java.lang.Long>
           getScalingFactorsList() {
-        return ((bitField0_ & 0x00000040) != 0) ?
-                 java.util.Collections.unmodifiableList(scalingFactors_) : scalingFactors_;
+        scalingFactors_.makeImmutable();
+        return scalingFactors_;
       }
       /**
        * <pre>
@@ -2822,6 +2840,7 @@ public final class StableswapPoolProto {
 
         ensureScalingFactorsIsMutable();
         scalingFactors_.setLong(index, value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2838,6 +2857,7 @@ public final class StableswapPoolProto {
 
         ensureScalingFactorsIsMutable();
         scalingFactors_.addLong(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2855,6 +2875,7 @@ public final class StableswapPoolProto {
         ensureScalingFactorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, scalingFactors_);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }

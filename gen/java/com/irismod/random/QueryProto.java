@@ -632,6 +632,7 @@ public final class QueryProto {
               com.irismod.random.QueryProto.QueryRandomResponse.class, com.irismod.random.QueryProto.QueryRandomResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RANDOM_FIELD_NUMBER = 1;
     private com.irismod.random.RandomProto.Random random_;
     /**
@@ -640,7 +641,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRandom() {
-      return random_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
@@ -672,7 +673,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (random_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRandom());
       }
       getUnknownFields().writeTo(output);
@@ -684,7 +685,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (random_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRandom());
       }
@@ -846,13 +847,19 @@ public final class QueryProto {
 
       // Construct using com.irismod.random.QueryProto.QueryRandomResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRandomFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -896,11 +903,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.random.QueryProto.QueryRandomResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.random_ = randomBuilder_ == null
               ? random_
               : randomBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1066,8 +1076,10 @@ public final class QueryProto {
         } else {
           randomBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (random_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

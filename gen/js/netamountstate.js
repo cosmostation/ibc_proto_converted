@@ -1,4 +1,4 @@
-// source: pstake/lspersistence/v1beta1/liquidstaking.proto
+// source: crescent/liquidstaking/v1beta1/liquidstaking.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lspersistence.v1beta1.NetAmountState');
+goog.provide('proto.crescent.liquidstaking.v1beta1.NetAmountState');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState = function(opt_data) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.pstake.lspersistence.v1beta1.NetAmountState, jspb.Message);
+goog.inherits(proto.crescent.liquidstaking.v1beta1.NetAmountState, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.pstake.lspersistence.v1beta1.NetAmountState.displayName = 'proto.pstake.lspersistence.v1beta1.NetAmountState';
+  proto.crescent.liquidstaking.v1beta1.NetAmountState.displayName = 'proto.crescent.liquidstaking.v1beta1.NetAmountState';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.toObject = function(opt_includeInstance) {
-  return proto.pstake.lspersistence.v1beta1.NetAmountState.toObject(opt_includeInstance, this);
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.toObject = function(opt_includeInstance) {
+  return proto.crescent.liquidstaking.v1beta1.NetAmountState.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.toObject = function(
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.pstake.lspersistence.v1beta1.NetAmountState} msg The msg instance to transform.
+ * @param {!proto.crescent.liquidstaking.v1beta1.NetAmountState} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.toObject = function(includeInstance, msg) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.toObject = function(includeInstance, msg) {
   var f, obj = {
     mintRate: jspb.Message.getFieldWithDefault(msg, 1, ""),
     btokenTotalSupply: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -91,23 +91,23 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.toObject = function(includeIns
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState}
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.deserializeBinary = function(bytes) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.pstake.lspersistence.v1beta1.NetAmountState;
-  return proto.pstake.lspersistence.v1beta1.NetAmountState.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.crescent.liquidstaking.v1beta1.NetAmountState;
+  return proto.crescent.liquidstaking.v1beta1.NetAmountState.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.pstake.lspersistence.v1beta1.NetAmountState} msg The message object to deserialize into.
+ * @param {!proto.crescent.liquidstaking.v1beta1.NetAmountState} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState}
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.deserializeBinaryFromReader = function(msg, reader) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -159,9 +159,9 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.deserializeBinaryFromReader = 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.serializeBinary = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.pstake.lspersistence.v1beta1.NetAmountState.serializeBinaryToWriter(this, writer);
+  proto.crescent.liquidstaking.v1beta1.NetAmountState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -169,11 +169,11 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.serializeBinary = fu
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.pstake.lspersistence.v1beta1.NetAmountState} message
+ * @param {!proto.crescent.liquidstaking.v1beta1.NetAmountState} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.serializeBinaryToWriter = function(message, writer) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMintRate();
   if (f.length > 0) {
@@ -238,16 +238,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.serializeBinaryToWriter = func
  * optional string mint_rate = 1;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getMintRate = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getMintRate = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setMintRate = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setMintRate = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -256,16 +256,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setMintRate = functi
  * optional string btoken_total_supply = 2;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getBtokenTotalSupply = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getBtokenTotalSupply = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setBtokenTotalSupply = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setBtokenTotalSupply = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -274,16 +274,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setBtokenTotalSupply
  * optional string net_amount = 3;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getNetAmount = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getNetAmount = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setNetAmount = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setNetAmount = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -292,16 +292,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setNetAmount = funct
  * optional string total_del_shares = 4;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getTotalDelShares = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getTotalDelShares = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalDelShares = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setTotalDelShares = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -310,16 +310,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalDelShares = 
  * optional string total_liquid_tokens = 5;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getTotalLiquidTokens = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getTotalLiquidTokens = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalLiquidTokens = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setTotalLiquidTokens = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -328,16 +328,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalLiquidTokens
  * optional string total_remaining_rewards = 6;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getTotalRemainingRewards = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getTotalRemainingRewards = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalRemainingRewards = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setTotalRemainingRewards = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -346,16 +346,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalRemainingRew
  * optional string total_unbonding_balance = 7;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getTotalUnbondingBalance = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getTotalUnbondingBalance = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalUnbondingBalance = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setTotalUnbondingBalance = function(value) {
   return jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -364,16 +364,16 @@ proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setTotalUnbondingBal
  * optional string proxy_acc_balance = 8;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.getProxyAccBalance = function() {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.getProxyAccBalance = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.NetAmountState} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.NetAmountState} returns this
  */
-proto.pstake.lspersistence.v1beta1.NetAmountState.prototype.setProxyAccBalance = function(value) {
+proto.crescent.liquidstaking.v1beta1.NetAmountState.prototype.setProxyAccBalance = function(value) {
   return jspb.Message.setProto3StringField(this, 8, value);
 };
 

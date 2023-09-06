@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!kyve/stakers/v1beta1/params.proto\x12\x14kyve.stakers.v1beta1\"f\n\x06Params\x12\x34\n\x16\x63ommission_change_time\x18\x01 \x01(\x04R\x14\x63ommissionChangeTime\x12&\n\x0fleave_pool_time\x18\x02 \x01(\x04R\rleavePoolTimeB\xc7\x01\n\x18\x63om.kyve.stakers.v1beta1B\x0bParamsProtoP\x01Z,github.com/KYVENetwork/chain/x/stakers/types\xa2\x02\x03KSX\xaa\x02\x14Kyve.Stakers.V1beta1\xca\x02\x14Kyve\\Stakers\\V1beta1\xe2\x02 Kyve\\Stakers\\V1beta1\\GPBMetadata\xea\x02\x16Kyve::Stakers::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!kyve/stakers/v1beta1/params.proto\x12\x14kyve.stakers.v1beta1\"f\n\x06Params\x12\x34\n\x16\x63ommission_change_time\x18\x01 \x01(\x04R\x14\x63ommissionChangeTime\x12&\n\x0fleave_pool_time\x18\x02 \x01(\x04R\rleavePoolTimeB\xc5\x01\n\x18\x63om.kyve.stakers.v1beta1B\x0bParamsProtoZ,github.com/KYVENetwork/chain/x/stakers/types\xa2\x02\x03KSX\xaa\x02\x14Kyve.Stakers.V1beta1\xca\x02\x14Kyve\\Stakers\\V1beta1\xe2\x02 Kyve\\Stakers\\V1beta1\\GPBMetadata\xea\x02\x16Kyve::Stakers::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kyve.stakers.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.kyve.stakers.v1beta1B\013ParamsProtoP\001Z,github.com/KYVENetwork/chain/x/stakers/types\242\002\003KSX\252\002\024Kyve.Stakers.V1beta1\312\002\024Kyve\\Stakers\\V1beta1\342\002 Kyve\\Stakers\\V1beta1\\GPBMetadata\352\002\026Kyve::Stakers::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\030com.kyve.stakers.v1beta1B\013ParamsProtoZ,github.com/KYVENetwork/chain/x/stakers/types\242\002\003KSX\252\002\024Kyve.Stakers.V1beta1\312\002\024Kyve\\Stakers\\V1beta1\342\002 Kyve\\Stakers\\V1beta1\\GPBMetadata\352\002\026Kyve::Stakers::V1beta1'
   _globals['_PARAMS']._serialized_start=59
   _globals['_PARAMS']._serialized_end=161
 # @@protoc_insertion_point(module_scope)

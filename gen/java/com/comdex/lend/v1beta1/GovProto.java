@@ -94,6 +94,7 @@ public final class GovProto {
               com.comdex.lend.v1beta1.GovProto.LendPairsProposal.class, com.comdex.lend.v1beta1.GovProto.LendPairsProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -180,7 +181,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasPairs() {
-      return pairs_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.Extended_Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
@@ -218,7 +219,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (pairs_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPairs());
       }
       getUnknownFields().writeTo(output);
@@ -236,7 +237,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (pairs_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPairs());
       }
@@ -402,13 +403,19 @@ public final class GovProto {
 
       // Construct using com.comdex.lend.v1beta1.GovProto.LendPairsProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPairsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,11 +467,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pairs_ = pairsBuilder_ == null
               ? pairs_
               : pairsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -794,8 +804,10 @@ public final class GovProto {
         } else {
           pairsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pairs_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2068,6 +2080,7 @@ public final class GovProto {
               com.comdex.lend.v1beta1.GovProto.AddPoolsProposal.class, com.comdex.lend.v1beta1.GovProto.AddPoolsProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -2154,7 +2167,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasPool() {
-      return pool_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.Pool Pool = 3 [json_name = "Pool", (.gogoproto.nullable) = false];</code>
@@ -2192,7 +2205,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPool());
       }
       getUnknownFields().writeTo(output);
@@ -2210,7 +2223,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPool());
       }
@@ -2376,13 +2389,19 @@ public final class GovProto {
 
       // Construct using com.comdex.lend.v1beta1.GovProto.AddPoolsProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2434,11 +2453,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pool_ = poolBuilder_ == null
               ? pool_
               : poolBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2768,8 +2790,10 @@ public final class GovProto {
         } else {
           poolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pool_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2964,6 +2988,7 @@ public final class GovProto {
               com.comdex.lend.v1beta1.GovProto.AddAssetToPairProposal.class, com.comdex.lend.v1beta1.GovProto.AddAssetToPairProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -3050,7 +3075,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasAssetToPairMapping() {
-      return assetToPairMapping_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.AssetToPairMapping AssetToPairMapping = 3 [json_name = "AssetToPairMapping", (.gogoproto.nullable) = false];</code>
@@ -3088,7 +3113,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (assetToPairMapping_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAssetToPairMapping());
       }
       getUnknownFields().writeTo(output);
@@ -3106,7 +3131,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (assetToPairMapping_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAssetToPairMapping());
       }
@@ -3272,13 +3297,19 @@ public final class GovProto {
 
       // Construct using com.comdex.lend.v1beta1.GovProto.AddAssetToPairProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetToPairMappingFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3330,11 +3361,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.assetToPairMapping_ = assetToPairMappingBuilder_ == null
               ? assetToPairMapping_
               : assetToPairMappingBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3664,8 +3698,10 @@ public final class GovProto {
         } else {
           assetToPairMappingBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (assetToPairMapping_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4938,6 +4974,7 @@ public final class GovProto {
               com.comdex.lend.v1beta1.GovProto.AddAssetRatesParams.class, com.comdex.lend.v1beta1.GovProto.AddAssetRatesParams.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -5024,7 +5061,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasAssetRatesParams() {
-      return assetRatesParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.AssetRatesParams AssetRatesParams = 3 [json_name = "AssetRatesParams", (.gogoproto.nullable) = false];</code>
@@ -5062,7 +5099,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (assetRatesParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAssetRatesParams());
       }
       getUnknownFields().writeTo(output);
@@ -5080,7 +5117,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (assetRatesParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAssetRatesParams());
       }
@@ -5246,13 +5283,19 @@ public final class GovProto {
 
       // Construct using com.comdex.lend.v1beta1.GovProto.AddAssetRatesParams.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetRatesParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5304,11 +5347,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.assetRatesParams_ = assetRatesParamsBuilder_ == null
               ? assetRatesParams_
               : assetRatesParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5638,8 +5684,10 @@ public final class GovProto {
         } else {
           assetRatesParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (assetRatesParams_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5834,6 +5882,7 @@ public final class GovProto {
               com.comdex.lend.v1beta1.GovProto.AddAuctionParamsProposal.class, com.comdex.lend.v1beta1.GovProto.AddAuctionParamsProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -5920,7 +5969,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasAuctionParams() {
-      return auctionParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.AuctionParams AuctionParams = 3 [json_name = "AuctionParams", (.gogoproto.nullable) = false];</code>
@@ -5958,7 +6007,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (auctionParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAuctionParams());
       }
       getUnknownFields().writeTo(output);
@@ -5976,7 +6025,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (auctionParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAuctionParams());
       }
@@ -6142,13 +6191,19 @@ public final class GovProto {
 
       // Construct using com.comdex.lend.v1beta1.GovProto.AddAuctionParamsProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAuctionParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6200,11 +6255,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.auctionParams_ = auctionParamsBuilder_ == null
               ? auctionParams_
               : auctionParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6534,8 +6592,10 @@ public final class GovProto {
         } else {
           auctionParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (auctionParams_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6730,6 +6790,7 @@ public final class GovProto {
               com.comdex.lend.v1beta1.GovProto.AddPoolPairsProposal.class, com.comdex.lend.v1beta1.GovProto.AddPoolPairsProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -6816,7 +6877,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasPoolPairs() {
-      return poolPairs_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.PoolPairs PoolPairs = 3 [json_name = "PoolPairs", (.gogoproto.nullable) = false];</code>
@@ -6854,7 +6915,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (poolPairs_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPoolPairs());
       }
       getUnknownFields().writeTo(output);
@@ -6872,7 +6933,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (poolPairs_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPoolPairs());
       }
@@ -7038,13 +7099,19 @@ public final class GovProto {
 
       // Construct using com.comdex.lend.v1beta1.GovProto.AddPoolPairsProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolPairsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7096,11 +7163,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.poolPairs_ = poolPairsBuilder_ == null
               ? poolPairs_
               : poolPairsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7430,8 +7500,10 @@ public final class GovProto {
         } else {
           poolPairsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (poolPairs_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7626,6 +7698,7 @@ public final class GovProto {
               com.comdex.lend.v1beta1.GovProto.AddAssetRatesPoolPairsProposal.class, com.comdex.lend.v1beta1.GovProto.AddAssetRatesPoolPairsProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -7712,7 +7785,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasAssetRatesPoolPairs() {
-      return assetRatesPoolPairs_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.lend.v1beta1.AssetRatesPoolPairs AssetRatesPoolPairs = 3 [json_name = "AssetRatesPoolPairs", (.gogoproto.nullable) = false];</code>
@@ -7750,7 +7823,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (assetRatesPoolPairs_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAssetRatesPoolPairs());
       }
       getUnknownFields().writeTo(output);
@@ -7768,7 +7841,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (assetRatesPoolPairs_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAssetRatesPoolPairs());
       }
@@ -7934,13 +8007,19 @@ public final class GovProto {
 
       // Construct using com.comdex.lend.v1beta1.GovProto.AddAssetRatesPoolPairsProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetRatesPoolPairsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7992,11 +8071,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.assetRatesPoolPairs_ = assetRatesPoolPairsBuilder_ == null
               ? assetRatesPoolPairs_
               : assetRatesPoolPairsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8326,8 +8408,10 @@ public final class GovProto {
         } else {
           assetRatesPoolPairsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (assetRatesPoolPairs_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

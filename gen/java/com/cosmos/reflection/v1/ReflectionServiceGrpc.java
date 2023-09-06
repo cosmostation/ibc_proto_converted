@@ -9,14 +9,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: cosmos/reflection/v1/reflection.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ReflectionServiceGrpc {
 
   private ReflectionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "cosmos.reflection.v1.ReflectionService";
+  public static final java.lang.String SERVICE_NAME = "cosmos.reflection.v1.ReflectionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.cosmos.reflection.v1.ReflectionProto.FileDescriptorsRequest,
@@ -301,9 +301,9 @@ public final class ReflectionServiceGrpc {
   private static final class ReflectionServiceMethodDescriptorSupplier
       extends ReflectionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ReflectionServiceMethodDescriptorSupplier(String methodName) {
+    ReflectionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

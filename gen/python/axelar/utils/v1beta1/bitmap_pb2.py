@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!axelar/utils/v1beta1/bitmap.proto\x12\x14\x61xelar.utils.v1beta1\x1a\x14gogoproto/gogo.proto\"X\n\x06\x42itmap\x12N\n\x10true_count_cache\x18\x02 \x01(\x0b\x32$.axelar.utils.v1beta1.CircularBufferR\x0etrueCountCache\"l\n\x0e\x43ircularBuffer\x12)\n\x10\x63umulative_value\x18\x01 \x03(\x04R\x0f\x63umulativeValue\x12\x14\n\x05index\x18\x02 \x01(\x05R\x05index\x12\x19\n\x08max_size\x18\x03 \x01(\x05R\x07maxSizeB\xc9\x01\n\x18\x63om.axelar.utils.v1beta1B\x0b\x42itmapProtoP\x01Z*github.com/axelarnetwork/axelar-core/utils\xa2\x02\x03\x41UX\xaa\x02\x14\x41xelar.Utils.V1beta1\xca\x02\x14\x41xelar\\Utils\\V1beta1\xe2\x02 Axelar\\Utils\\V1beta1\\GPBMetadata\xea\x02\x16\x41xelar::Utils::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!axelar/utils/v1beta1/bitmap.proto\x12\x14\x61xelar.utils.v1beta1\x1a\x14gogoproto/gogo.proto\"X\n\x06\x42itmap\x12N\n\x10true_count_cache\x18\x02 \x01(\x0b\x32$.axelar.utils.v1beta1.CircularBufferR\x0etrueCountCache\"l\n\x0e\x43ircularBuffer\x12)\n\x10\x63umulative_value\x18\x01 \x03(\x04R\x0f\x63umulativeValue\x12\x14\n\x05index\x18\x02 \x01(\x05R\x05index\x12\x19\n\x08max_size\x18\x03 \x01(\x05R\x07maxSizeB\xc7\x01\n\x18\x63om.axelar.utils.v1beta1B\x0b\x42itmapProtoZ*github.com/axelarnetwork/axelar-core/utils\xa2\x02\x03\x41UX\xaa\x02\x14\x41xelar.Utils.V1beta1\xca\x02\x14\x41xelar\\Utils\\V1beta1\xe2\x02 Axelar\\Utils\\V1beta1\\GPBMetadata\xea\x02\x16\x41xelar::Utils::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.utils.v1beta1.bitmap_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.axelar.utils.v1beta1B\013BitmapProtoP\001Z*github.com/axelarnetwork/axelar-core/utils\242\002\003AUX\252\002\024Axelar.Utils.V1beta1\312\002\024Axelar\\Utils\\V1beta1\342\002 Axelar\\Utils\\V1beta1\\GPBMetadata\352\002\026Axelar::Utils::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\030com.axelar.utils.v1beta1B\013BitmapProtoZ*github.com/axelarnetwork/axelar-core/utils\242\002\003AUX\252\002\024Axelar.Utils.V1beta1\312\002\024Axelar\\Utils\\V1beta1\342\002 Axelar\\Utils\\V1beta1\\GPBMetadata\352\002\026Axelar::Utils::V1beta1\310\341\036\000'
   _globals['_BITMAP']._serialized_start=81
   _globals['_BITMAP']._serialized_end=169
   _globals['_CIRCULARBUFFER']._serialized_start=171

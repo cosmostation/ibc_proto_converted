@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_query_dot_v1beta1_dot_pagination__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5assetmantle/assets/queries/assets/query_request.proto\x12)assetmantle.modules.assets.queries.assets\x1a*cosmos/base/query/v1beta1/pagination.proto\"Y\n\x0cQueryRequest\x12I\n\x0cpage_request\x18\x01 \x01(\x0b\x32&.cosmos.base.query.v1beta1.PageRequestR\x0bpageRequestB\x8c\x02\n-com.assetmantle.modules.assets.queries.assetsB\x11QueryRequestProtoP\x01\xa2\x02\x05\x41MAQA\xaa\x02)Assetmantle.Modules.Assets.Queries.Assets\xca\x02)Assetmantle\\Modules\\Assets\\Queries\\Assets\xe2\x02\x35\x41ssetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\xea\x02-Assetmantle::Modules::Assets::Queries::Assetsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5assetmantle/assets/queries/assets/query_request.proto\x12)assetmantle.modules.assets.queries.assets\x1a*cosmos/base/query/v1beta1/pagination.proto\"Y\n\x0cQueryRequest\x12I\n\x0cpage_request\x18\x01 \x01(\x0b\x32&.cosmos.base.query.v1beta1.PageRequestR\x0bpageRequestB\x8a\x02\n-com.assetmantle.modules.assets.queries.assetsB\x11QueryRequestProto\xa2\x02\x05\x41MAQA\xaa\x02)Assetmantle.Modules.Assets.Queries.Assets\xca\x02)Assetmantle\\Modules\\Assets\\Queries\\Assets\xe2\x02\x35\x41ssetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\xea\x02-Assetmantle::Modules::Assets::Queries::Assetsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.assets.queries.assets.query_request_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n-com.assetmantle.modules.assets.queries.assetsB\021QueryRequestProtoP\001\242\002\005AMAQA\252\002)Assetmantle.Modules.Assets.Queries.Assets\312\002)Assetmantle\\Modules\\Assets\\Queries\\Assets\342\0025Assetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\352\002-Assetmantle::Modules::Assets::Queries::Assets'
+  DESCRIPTOR._serialized_options = b'\n-com.assetmantle.modules.assets.queries.assetsB\021QueryRequestProto\242\002\005AMAQA\252\002)Assetmantle.Modules.Assets.Queries.Assets\312\002)Assetmantle\\Modules\\Assets\\Queries\\Assets\342\0025Assetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\352\002-Assetmantle::Modules::Assets::Queries::Assets'
   _globals['_QUERYREQUEST']._serialized_start=144
   _globals['_QUERYREQUEST']._serialized_end=233
 # @@protoc_insertion_point(module_scope)

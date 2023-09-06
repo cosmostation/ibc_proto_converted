@@ -18,15 +18,14 @@ from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*osmosis/cosmwasmpool/v1beta1/genesis.proto\x12\x1cosmosis.cosmwasmpool.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x08\n\x06Params\"R\n\x0cGenesisState\x12\x42\n\x06params\x18\x01 \x01(\x0b\x32$.osmosis.cosmwasmpool.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xfc\x01\n com.osmosis.cosmwasmpool.v1beta1B\x0cGenesisProtoP\x01Z8github.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/types\xa2\x02\x03OCX\xaa\x02\x1cOsmosis.Cosmwasmpool.V1beta1\xca\x02\x1cOsmosis\\Cosmwasmpool\\V1beta1\xe2\x02(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Cosmwasmpool::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*osmosis/cosmwasmpool/v1beta1/genesis.proto\x12\x1cosmosis.cosmwasmpool.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x08\n\x06Params\"R\n\x0cGenesisState\x12\x42\n\x06params\x18\x01 \x01(\x0b\x32$.osmosis.cosmwasmpool.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xfa\x01\n com.osmosis.cosmwasmpool.v1beta1B\x0cGenesisProtoZ8github.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/types\xa2\x02\x03OCX\xaa\x02\x1cOsmosis.Cosmwasmpool.V1beta1\xca\x02\x1cOsmosis\\Cosmwasmpool\\V1beta1\xe2\x02(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Cosmwasmpool::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.cosmwasmpool.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.osmosis.cosmwasmpool.v1beta1B\014GenesisProtoP\001Z8github.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/types\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cosmwasmpool::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n com.osmosis.cosmwasmpool.v1beta1B\014GenesisProtoZ8github.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/types\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cosmwasmpool::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_PARAMS']._serialized_start=216

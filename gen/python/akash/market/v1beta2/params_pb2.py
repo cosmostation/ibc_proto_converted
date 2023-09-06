@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!akash/market/v1beta2/params.proto\x12\x14\x61kash.market.v1beta2\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xf3\x01\n\x06Params\x12\x85\x01\n\x0f\x62id_min_deposit\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinBB\xc8\xde\x1f\x00\xe2\xde\x1f\rBidMinDeposit\xea\xde\x1f\x0f\x62id_min_deposit\xf2\xde\x1f\x16yaml:\"bid_min_deposit\"R\rbidMinDeposit\x12\x61\n\x0eorder_max_bids\x18\x02 \x01(\rB;\xe2\xde\x1f\x0cOrderMaxBids\xea\xde\x1f\x0eorder_max_bids\xf2\xde\x1f\x15yaml:\"order_max_bids\"R\x0corderMaxBidsB\xd4\x01\n\x18\x63om.akash.market.v1beta2B\x0bParamsProtoP\x01Z9github.com/akash-network/akash-api/go/node/market/v1beta2\xa2\x02\x03\x41MX\xaa\x02\x14\x41kash.Market.V1beta2\xca\x02\x14\x41kash\\Market\\V1beta2\xe2\x02 Akash\\Market\\V1beta2\\GPBMetadata\xea\x02\x16\x41kash::Market::V1beta2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!akash/market/v1beta2/params.proto\x12\x14\x61kash.market.v1beta2\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xf3\x01\n\x06Params\x12\x85\x01\n\x0f\x62id_min_deposit\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinBB\xc8\xde\x1f\x00\xe2\xde\x1f\rBidMinDeposit\xea\xde\x1f\x0f\x62id_min_deposit\xf2\xde\x1f\x16yaml:\"bid_min_deposit\"R\rbidMinDeposit\x12\x61\n\x0eorder_max_bids\x18\x02 \x01(\rB;\xe2\xde\x1f\x0cOrderMaxBids\xea\xde\x1f\x0eorder_max_bids\xf2\xde\x1f\x15yaml:\"order_max_bids\"R\x0corderMaxBidsB\xd2\x01\n\x18\x63om.akash.market.v1beta2B\x0bParamsProtoZ9github.com/akash-network/akash-api/go/node/market/v1beta2\xa2\x02\x03\x41MX\xaa\x02\x14\x41kash.Market.V1beta2\xca\x02\x14\x41kash\\Market\\V1beta2\xe2\x02 Akash\\Market\\V1beta2\\GPBMetadata\xea\x02\x16\x41kash::Market::V1beta2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.market.v1beta2.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.akash.market.v1beta2B\013ParamsProtoP\001Z9github.com/akash-network/akash-api/go/node/market/v1beta2\242\002\003AMX\252\002\024Akash.Market.V1beta2\312\002\024Akash\\Market\\V1beta2\342\002 Akash\\Market\\V1beta2\\GPBMetadata\352\002\026Akash::Market::V1beta2'
+  DESCRIPTOR._serialized_options = b'\n\030com.akash.market.v1beta2B\013ParamsProtoZ9github.com/akash-network/akash-api/go/node/market/v1beta2\242\002\003AMX\252\002\024Akash.Market.V1beta2\312\002\024Akash\\Market\\V1beta2\342\002 Akash\\Market\\V1beta2\\GPBMetadata\352\002\026Akash::Market::V1beta2'
   _PARAMS.fields_by_name['bid_min_deposit']._options = None
   _PARAMS.fields_by_name['bid_min_deposit']._serialized_options = b'\310\336\037\000\342\336\037\rBidMinDeposit\352\336\037\017bid_min_deposit\362\336\037\026yaml:\"bid_min_deposit\"'
   _PARAMS.fields_by_name['order_max_bids']._options = None

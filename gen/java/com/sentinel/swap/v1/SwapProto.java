@@ -88,6 +88,7 @@ public final class SwapProto {
               com.sentinel.swap.v1.SwapProto.Swap.class, com.sentinel.swap.v1.SwapProto.Swap.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TX_HASH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString txHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -146,7 +147,7 @@ public final class SwapProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -184,7 +185,7 @@ public final class SwapProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receiver_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -203,7 +204,7 @@ public final class SwapProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receiver_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -369,13 +370,19 @@ public final class SwapProto {
 
       // Construct using com.sentinel.swap.v1.SwapProto.Swap.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -427,11 +434,14 @@ public final class SwapProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.receiver_ = receiver_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -719,8 +729,10 @@ public final class SwapProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

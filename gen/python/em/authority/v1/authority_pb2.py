@@ -16,15 +16,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x65m/authority/v1/authority.proto\x12\x0f\x65m.authority.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xde\x01\n\tAuthority\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12@\n\x0e\x66ormer_address\x18\x02 \x01(\tB\x19\xf2\xde\x1f\x15yaml:\"former_address\"R\rformerAddress\x12\x61\n\rlast_modified\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB \xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"last_modified\"\x90\xdf\x1f\x01R\x0clastModified\"\x8a\x01\n\tGasPrices\x12}\n\x07minimum\x18\x01 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinBE\xc8\xde\x1f\x00\xf2\xde\x1f\x0eyaml:\"minimum\"\xaa\xdf\x1f+github.com/cosmos/cosmos-sdk/types.DecCoinsR\x07minimumB\xb3\x01\n\x13\x63om.em.authority.v1B\x0e\x41uthorityProtoP\x01Z.github.com/e-money/em-ledger/x/authority/types\xa2\x02\x03\x45\x41X\xaa\x02\x0f\x45m.Authority.V1\xca\x02\x0f\x45m\\Authority\\V1\xe2\x02\x1b\x45m\\Authority\\V1\\GPBMetadata\xea\x02\x11\x45m::Authority::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x65m/authority/v1/authority.proto\x12\x0f\x65m.authority.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xde\x01\n\tAuthority\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12@\n\x0e\x66ormer_address\x18\x02 \x01(\tB\x19\xf2\xde\x1f\x15yaml:\"former_address\"R\rformerAddress\x12\x61\n\rlast_modified\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB \xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"last_modified\"\x90\xdf\x1f\x01R\x0clastModified\"\x8a\x01\n\tGasPrices\x12}\n\x07minimum\x18\x01 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinBE\xc8\xde\x1f\x00\xf2\xde\x1f\x0eyaml:\"minimum\"\xaa\xdf\x1f+github.com/cosmos/cosmos-sdk/types.DecCoinsR\x07minimumB\xb1\x01\n\x13\x63om.em.authority.v1B\x0e\x41uthorityProtoZ.github.com/e-money/em-ledger/x/authority/types\xa2\x02\x03\x45\x41X\xaa\x02\x0f\x45m.Authority.V1\xca\x02\x0f\x45m\\Authority\\V1\xe2\x02\x1b\x45m\\Authority\\V1\\GPBMetadata\xea\x02\x11\x45m::Authority::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'em.authority.v1.authority_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\023com.em.authority.v1B\016AuthorityProtoP\001Z.github.com/e-money/em-ledger/x/authority/types\242\002\003EAX\252\002\017Em.Authority.V1\312\002\017Em\\Authority\\V1\342\002\033Em\\Authority\\V1\\GPBMetadata\352\002\021Em::Authority::V1'
+  DESCRIPTOR._serialized_options = b'\n\023com.em.authority.v1B\016AuthorityProtoZ.github.com/e-money/em-ledger/x/authority/types\242\002\003EAX\252\002\017Em.Authority.V1\312\002\017Em\\Authority\\V1\342\002\033Em\\Authority\\V1\\GPBMetadata\352\002\021Em::Authority::V1'
   _AUTHORITY.fields_by_name['address']._options = None
   _AUTHORITY.fields_by_name['address']._serialized_options = b'\362\336\037\016yaml:\"address\"'
   _AUTHORITY.fields_by_name['former_address']._options = None

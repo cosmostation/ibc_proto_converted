@@ -115,6 +115,7 @@ public final class BidProto {
               com.akash.market.v1beta3.BidProto.MsgCreateBid.class, com.akash.market.v1beta3.BidProto.MsgCreateBid.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORDER_FIELD_NUMBER = 1;
     private com.akash.market.v1beta3.OrderProto.OrderID order_;
     /**
@@ -123,7 +124,7 @@ public final class BidProto {
      */
     @java.lang.Override
     public boolean hasOrder() {
-      return order_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.market.v1beta3.OrderID order = 1 [json_name = "order", (.gogoproto.nullable) = false, (.gogoproto.customname) = "Order", (.gogoproto.jsontag) = "order", (.gogoproto.moretags) = "yaml:&#92;"order&#92;""];</code>
@@ -188,7 +189,7 @@ public final class BidProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return price_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
@@ -214,7 +215,7 @@ public final class BidProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return deposit_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deposit = 4 [json_name = "deposit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
@@ -246,16 +247,16 @@ public final class BidProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (order_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOrder());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, provider_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getPrice());
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(4, getDeposit());
       }
       getUnknownFields().writeTo(output);
@@ -267,18 +268,18 @@ public final class BidProto {
       if (size != -1) return size;
 
       size = 0;
-      if (order_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrder());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, provider_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrice());
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDeposit());
       }
@@ -462,13 +463,21 @@ public final class BidProto {
 
       // Construct using com.akash.market.v1beta3.BidProto.MsgCreateBid.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOrderFieldBuilder();
+          getPriceFieldBuilder();
+          getDepositFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -523,10 +532,12 @@ public final class BidProto {
 
       private void buildPartial0(com.akash.market.v1beta3.BidProto.MsgCreateBid result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.order_ = orderBuilder_ == null
               ? order_
               : orderBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.provider_ = provider_;
@@ -535,12 +546,15 @@ public final class BidProto {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -736,8 +750,10 @@ public final class BidProto {
         } else {
           orderBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (order_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -927,8 +943,10 @@ public final class BidProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (price_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1046,8 +1064,10 @@ public final class BidProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (deposit_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1625,6 +1645,7 @@ public final class BidProto {
               com.akash.market.v1beta3.BidProto.MsgCloseBid.class, com.akash.market.v1beta3.BidProto.MsgCloseBid.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BID_ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta3.BidProto.BidID bidId_;
     /**
@@ -1633,7 +1654,7 @@ public final class BidProto {
      */
     @java.lang.Override
     public boolean hasBidId() {
-      return bidId_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -1665,7 +1686,7 @@ public final class BidProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (bidId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBidId());
       }
       getUnknownFields().writeTo(output);
@@ -1677,7 +1698,7 @@ public final class BidProto {
       if (size != -1) return size;
 
       size = 0;
-      if (bidId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBidId());
       }
@@ -1839,13 +1860,19 @@ public final class BidProto {
 
       // Construct using com.akash.market.v1beta3.BidProto.MsgCloseBid.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBidIdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1889,11 +1916,14 @@ public final class BidProto {
 
       private void buildPartial0(com.akash.market.v1beta3.BidProto.MsgCloseBid result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bidId_ = bidIdBuilder_ == null
               ? bidId_
               : bidIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2059,8 +2089,10 @@ public final class BidProto {
         } else {
           bidIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (bidId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3777,6 +3809,7 @@ public final class BidProto {
       // @@protoc_insertion_point(enum_scope:akash.market.v1beta3.Bid.State)
     }
 
+    private int bitField0_;
     public static final int BID_ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta3.BidProto.BidID bidId_;
     /**
@@ -3785,7 +3818,7 @@ public final class BidProto {
      */
     @java.lang.Override
     public boolean hasBidId() {
-      return bidId_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.market.v1beta3.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -3829,7 +3862,7 @@ public final class BidProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return price_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
@@ -3872,13 +3905,13 @@ public final class BidProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (bidId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBidId());
       }
       if (state_ != com.akash.market.v1beta3.BidProto.Bid.State.invalid.getNumber()) {
         output.writeEnum(2, state_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getPrice());
       }
       if (createdAt_ != 0L) {
@@ -3893,7 +3926,7 @@ public final class BidProto {
       if (size != -1) return size;
 
       size = 0;
-      if (bidId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBidId());
       }
@@ -3901,7 +3934,7 @@ public final class BidProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, state_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrice());
       }
@@ -4084,13 +4117,20 @@ public final class BidProto {
 
       // Construct using com.akash.market.v1beta3.BidProto.Bid.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBidIdFieldBuilder();
+          getPriceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4141,10 +4181,12 @@ public final class BidProto {
 
       private void buildPartial0(com.akash.market.v1beta3.BidProto.Bid result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bidId_ = bidIdBuilder_ == null
               ? bidId_
               : bidIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = state_;
@@ -4153,10 +4195,12 @@ public final class BidProto {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.createdAt_ = createdAt_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4348,8 +4392,10 @@ public final class BidProto {
         } else {
           bidIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (bidId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4520,8 +4566,10 @@ public final class BidProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (price_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

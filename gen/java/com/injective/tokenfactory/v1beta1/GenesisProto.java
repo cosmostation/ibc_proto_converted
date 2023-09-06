@@ -109,6 +109,7 @@ public final class GenesisProto {
               com.injective.tokenfactory.v1beta1.GenesisProto.GenesisState.class, com.injective.tokenfactory.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.tokenfactory.v1beta1.ParamsProto.Params params_;
     /**
@@ -121,7 +122,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -202,7 +203,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < factoryDenoms_.size(); i++) {
@@ -217,7 +218,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -389,13 +390,20 @@ public final class GenesisProto {
 
       // Construct using com.injective.tokenfactory.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getFactoryDenomsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -459,11 +467,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.injective.tokenfactory.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -688,8 +699,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1133,6 +1146,7 @@ public final class GenesisProto {
               com.injective.tokenfactory.v1beta1.GenesisProto.GenesisDenom.class, com.injective.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -1180,7 +1194,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasAuthorityMetadata() {
-      return authorityMetadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
@@ -1215,7 +1229,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
       }
-      if (authorityMetadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAuthorityMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -1230,7 +1244,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
       }
-      if (authorityMetadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAuthorityMetadata());
       }
@@ -1398,13 +1412,19 @@ public final class GenesisProto {
 
       // Construct using com.injective.tokenfactory.v1beta1.GenesisProto.GenesisDenom.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAuthorityMetadataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1452,11 +1472,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.authorityMetadata_ = authorityMetadataBuilder_ == null
               ? authorityMetadata_
               : authorityMetadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1704,8 +1727,10 @@ public final class GenesisProto {
         } else {
           authorityMetadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (authorityMetadata_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

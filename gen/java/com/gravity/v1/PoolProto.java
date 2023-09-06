@@ -77,7 +77,8 @@ public final class PoolProto {
 
     public static final int IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList ids_;
+    private com.google.protobuf.Internal.LongList ids_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      * @return A list containing the ids.
@@ -343,22 +344,17 @@ public final class PoolProto {
       @java.lang.Override
       public com.gravity.v1.PoolProto.IDSet buildPartial() {
         com.gravity.v1.PoolProto.IDSet result = new com.gravity.v1.PoolProto.IDSet(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.gravity.v1.PoolProto.IDSet result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          ids_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.ids_ = ids_;
-      }
-
       private void buildPartial0(com.gravity.v1.PoolProto.IDSet result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          ids_.makeImmutable();
+          result.ids_ = ids_;
+        }
       }
 
       @java.lang.Override
@@ -408,7 +404,8 @@ public final class PoolProto {
         if (!other.ids_.isEmpty()) {
           if (ids_.isEmpty()) {
             ids_ = other.ids_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            ids_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureIdsIsMutable();
             ids_.addAll(other.ids_);
@@ -476,10 +473,10 @@ public final class PoolProto {
 
       private com.google.protobuf.Internal.LongList ids_ = emptyLongList();
       private void ensureIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          ids_ = mutableCopy(ids_);
-          bitField0_ |= 0x00000001;
+        if (!ids_.isModifiable()) {
+          ids_ = makeMutableCopy(ids_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
@@ -487,8 +484,8 @@ public final class PoolProto {
        */
       public java.util.List<java.lang.Long>
           getIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(ids_) : ids_;
+        ids_.makeImmutable();
+        return ids_;
       }
       /**
        * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
@@ -516,6 +513,7 @@ public final class PoolProto {
 
         ensureIdsIsMutable();
         ids_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -528,6 +526,7 @@ public final class PoolProto {
 
         ensureIdsIsMutable();
         ids_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -541,6 +540,7 @@ public final class PoolProto {
         ensureIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, ids_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

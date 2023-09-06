@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: kyve/query/v1beta1/params.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryParamsGrpc {
 
   private QueryParamsGrpc() {}
 
-  public static final String SERVICE_NAME = "kyve.query.v1beta1.QueryParams";
+  public static final java.lang.String SERVICE_NAME = "kyve.query.v1beta1.QueryParams";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.kyve.query.v1beta1.ParamsProto.QueryParamsRequest,
@@ -291,9 +291,9 @@ public final class QueryParamsGrpc {
   private static final class QueryParamsMethodDescriptorSupplier
       extends QueryParamsBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    QueryParamsMethodDescriptorSupplier(String methodName) {
+    QueryParamsMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

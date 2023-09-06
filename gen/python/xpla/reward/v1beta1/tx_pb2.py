@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cxpla/reward/v1beta1/tx.proto\x12\x13xpla.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xa2\x01\n\x13MsgFundFeeCollector\x12\x63\n\x06\x61mount\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mount\x12\x1c\n\tdepositor\x18\x02 \x01(\tR\tdepositor:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x1d\n\x1bMsgFundFeeCollectorResponse2u\n\x03Msg\x12n\n\x10\x46undFeeCollector\x12(.xpla.reward.v1beta1.MsgFundFeeCollector\x1a\x30.xpla.reward.v1beta1.MsgFundFeeCollectorResponseB\xb8\x01\n\x17\x63om.xpla.reward.v1beta1B\x07TxProtoP\x01Z&github.com/xpladev/xpla/x/reward/types\xa2\x02\x03XRX\xaa\x02\x13Xpla.Reward.V1beta1\xca\x02\x13Xpla\\Reward\\V1beta1\xe2\x02\x1fXpla\\Reward\\V1beta1\\GPBMetadata\xea\x02\x15Xpla::Reward::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cxpla/reward/v1beta1/tx.proto\x12\x13xpla.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xa2\x01\n\x13MsgFundFeeCollector\x12\x63\n\x06\x61mount\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mount\x12\x1c\n\tdepositor\x18\x02 \x01(\tR\tdepositor:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x1d\n\x1bMsgFundFeeCollectorResponse2u\n\x03Msg\x12n\n\x10\x46undFeeCollector\x12(.xpla.reward.v1beta1.MsgFundFeeCollector\x1a\x30.xpla.reward.v1beta1.MsgFundFeeCollectorResponseB\xb6\x01\n\x17\x63om.xpla.reward.v1beta1B\x07TxProtoZ&github.com/xpladev/xpla/x/reward/types\xa2\x02\x03XRX\xaa\x02\x13Xpla.Reward.V1beta1\xca\x02\x13Xpla\\Reward\\V1beta1\xe2\x02\x1fXpla\\Reward\\V1beta1\\GPBMetadata\xea\x02\x15Xpla::Reward::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'xpla.reward.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.xpla.reward.v1beta1B\007TxProtoP\001Z&github.com/xpladev/xpla/x/reward/types\242\002\003XRX\252\002\023Xpla.Reward.V1beta1\312\002\023Xpla\\Reward\\V1beta1\342\002\037Xpla\\Reward\\V1beta1\\GPBMetadata\352\002\025Xpla::Reward::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.xpla.reward.v1beta1B\007TxProtoZ&github.com/xpladev/xpla/x/reward/types\242\002\003XRX\252\002\023Xpla.Reward.V1beta1\312\002\023Xpla\\Reward\\V1beta1\342\002\037Xpla\\Reward\\V1beta1\\GPBMetadata\352\002\025Xpla::Reward::V1beta1'
   _MSGFUNDFEECOLLECTOR.fields_by_name['amount']._options = None
   _MSGFUNDFEECOLLECTOR.fields_by_name['amount']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _MSGFUNDFEECOLLECTOR._options = None

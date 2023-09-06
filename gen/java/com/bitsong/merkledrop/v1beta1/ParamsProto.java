@@ -72,6 +72,7 @@ public final class ParamsProto {
               com.bitsong.merkledrop.v1beta1.ParamsProto.Params.class, com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATION_FEE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin creationFee_;
     /**
@@ -80,7 +81,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasCreationFee() {
-      return creationFee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin creation_fee = 1 [json_name = "creationFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin", (.gogoproto.moretags) = "yaml:&#92;"creation_fee&#92;""];</code>
@@ -112,7 +113,7 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (creationFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCreationFee());
       }
       getUnknownFields().writeTo(output);
@@ -124,7 +125,7 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (creationFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreationFee());
       }
@@ -286,13 +287,19 @@ public final class ParamsProto {
 
       // Construct using com.bitsong.merkledrop.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreationFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -336,11 +343,14 @@ public final class ParamsProto {
 
       private void buildPartial0(com.bitsong.merkledrop.v1beta1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.creationFee_ = creationFeeBuilder_ == null
               ? creationFee_
               : creationFeeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -506,8 +516,10 @@ public final class ParamsProto {
         } else {
           creationFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (creationFee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

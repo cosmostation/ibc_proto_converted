@@ -187,6 +187,7 @@ public final class TxProto {
               com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.class, com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -284,7 +285,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCalldata() {
-      return calldata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.bandoracle.v1beta1.FetchPriceCallData calldata = 4 [json_name = "calldata"];</code>
@@ -510,7 +511,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChannel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sourceChannel_);
       }
-      if (calldata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getCalldata());
       }
       if (askCount_ != 0L) {
@@ -559,7 +560,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChannel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sourceChannel_);
       }
-      if (calldata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCalldata());
       }
@@ -808,13 +809,20 @@ public final class TxProto {
 
       // Construct using com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCalldataFieldBuilder();
+          getFeeLimitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -898,10 +906,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.sourceChannel_ = sourceChannel_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.calldata_ = calldataBuilder_ == null
               ? calldata_
               : calldataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.askCount_ = askCount_;
@@ -927,6 +937,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.acceptedHeightDiff_ = acceptedHeightDiff_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1403,8 +1414,10 @@ public final class TxProto {
         } else {
           calldataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (calldata_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

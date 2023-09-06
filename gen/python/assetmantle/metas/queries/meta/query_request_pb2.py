@@ -15,15 +15,14 @@ from assetmantle.ids.base import data_id_pb2 as assetmantle_dot_ids_dot_base_dot
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/metas/queries/meta/query_request.proto\x12&assetmantle.modules.metas.queries.meta\x1a\"assetmantle/ids/base/data_id.proto\x1a\x14gogoproto/gogo.proto\"S\n\x0cQueryRequest\x12=\n\x08\x64\x61ta_i_d\x18\x01 \x01(\x0b\x32#.assetmantle.schema.ids.base.DataIDR\x06\x64\x61taID:\x04\x88\xa0\x1f\x00\x42\xfd\x01\n*com.assetmantle.modules.metas.queries.metaB\x11QueryRequestProtoP\x01\xa2\x02\x05\x41MMQM\xaa\x02&Assetmantle.Modules.Metas.Queries.Meta\xca\x02&Assetmantle\\Modules\\Metas\\Queries\\Meta\xe2\x02\x32\x41ssetmantle\\Modules\\Metas\\Queries\\Meta\\GPBMetadata\xea\x02*Assetmantle::Modules::Metas::Queries::Metab\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/metas/queries/meta/query_request.proto\x12&assetmantle.modules.metas.queries.meta\x1a\"assetmantle/ids/base/data_id.proto\x1a\x14gogoproto/gogo.proto\"S\n\x0cQueryRequest\x12=\n\x08\x64\x61ta_i_d\x18\x01 \x01(\x0b\x32#.assetmantle.schema.ids.base.DataIDR\x06\x64\x61taID:\x04\x88\xa0\x1f\x00\x42\xfb\x01\n*com.assetmantle.modules.metas.queries.metaB\x11QueryRequestProto\xa2\x02\x05\x41MMQM\xaa\x02&Assetmantle.Modules.Metas.Queries.Meta\xca\x02&Assetmantle\\Modules\\Metas\\Queries\\Meta\xe2\x02\x32\x41ssetmantle\\Modules\\Metas\\Queries\\Meta\\GPBMetadata\xea\x02*Assetmantle::Modules::Metas::Queries::Metab\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.metas.queries.meta.query_request_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n*com.assetmantle.modules.metas.queries.metaB\021QueryRequestProtoP\001\242\002\005AMMQM\252\002&Assetmantle.Modules.Metas.Queries.Meta\312\002&Assetmantle\\Modules\\Metas\\Queries\\Meta\342\0022Assetmantle\\Modules\\Metas\\Queries\\Meta\\GPBMetadata\352\002*Assetmantle::Modules::Metas::Queries::Meta'
+  DESCRIPTOR._serialized_options = b'\n*com.assetmantle.modules.metas.queries.metaB\021QueryRequestProto\242\002\005AMMQM\252\002&Assetmantle.Modules.Metas.Queries.Meta\312\002&Assetmantle\\Modules\\Metas\\Queries\\Meta\342\0022Assetmantle\\Modules\\Metas\\Queries\\Meta\\GPBMetadata\352\002*Assetmantle::Modules::Metas::Queries::Meta'
   _QUERYREQUEST._options = None
   _QUERYREQUEST._serialized_options = b'\210\240\037\000'
   _globals['_QUERYREQUEST']._serialized_start=152

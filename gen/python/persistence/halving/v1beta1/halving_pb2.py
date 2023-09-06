@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)persistence/halving/v1beta1/halving.proto\x12\x1bpersistence.halving.v1beta1\x1a\x14gogoproto/gogo.proto\"H\n\x06Params\x12\x38\n\x0b\x62lockHeight\x18\x01 \x01(\x04\x42\x16\xf2\xde\x1f\x12yaml:\"blockHeight\"R\x0b\x62lockHeight:\x04\x98\xa0\x1f\x00\x42\xfb\x01\n\x1f\x63om.persistence.halving.v1beta1B\x0cHalvingProtoP\x01Z<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\xa2\x02\x03PHX\xaa\x02\x1bPersistence.Halving.V1beta1\xca\x02\x1bPersistence\\Halving\\V1beta1\xe2\x02\'Persistence\\Halving\\V1beta1\\GPBMetadata\xea\x02\x1dPersistence::Halving::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)persistence/halving/v1beta1/halving.proto\x12\x1bpersistence.halving.v1beta1\x1a\x14gogoproto/gogo.proto\"H\n\x06Params\x12\x38\n\x0b\x62lockHeight\x18\x01 \x01(\x04\x42\x16\xf2\xde\x1f\x12yaml:\"blockHeight\"R\x0b\x62lockHeight:\x04\x98\xa0\x1f\x00\x42\xf9\x01\n\x1f\x63om.persistence.halving.v1beta1B\x0cHalvingProtoZ<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\xa2\x02\x03PHX\xaa\x02\x1bPersistence.Halving.V1beta1\xca\x02\x1bPersistence\\Halving\\V1beta1\xe2\x02\'Persistence\\Halving\\V1beta1\\GPBMetadata\xea\x02\x1dPersistence::Halving::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'persistence.halving.v1beta1.halving_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\037com.persistence.halving.v1beta1B\014HalvingProtoP\001Z<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\242\002\003PHX\252\002\033Persistence.Halving.V1beta1\312\002\033Persistence\\Halving\\V1beta1\342\002\'Persistence\\Halving\\V1beta1\\GPBMetadata\352\002\035Persistence::Halving::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\037com.persistence.halving.v1beta1B\014HalvingProtoZ<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\242\002\003PHX\252\002\033Persistence.Halving.V1beta1\312\002\033Persistence\\Halving\\V1beta1\342\002\'Persistence\\Halving\\V1beta1\\GPBMetadata\352\002\035Persistence::Halving::V1beta1'
   _PARAMS.fields_by_name['blockHeight']._options = None
   _PARAMS.fields_by_name['blockHeight']._serialized_options = b'\362\336\037\022yaml:\"blockHeight\"'
   _PARAMS._options = None

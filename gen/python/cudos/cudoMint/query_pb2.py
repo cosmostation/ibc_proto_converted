@@ -15,15 +15,14 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_query_dot_v1beta1_dot_pagination__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x63udos/cudoMint/query.proto\x12\x0e\x63udos.cudoMint\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto2\x07\n\x05QueryB\xae\x01\n\x12\x63om.cudos.cudoMintB\nQueryProtoP\x01Z3github.com/CudoVentures/cudos-node/x/cudoMint/types\xa2\x02\x03\x43\x43X\xaa\x02\x0e\x43udos.CudoMint\xca\x02\x0e\x43udos\\CudoMint\xe2\x02\x1a\x43udos\\CudoMint\\GPBMetadata\xea\x02\x0f\x43udos::CudoMintb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x63udos/cudoMint/query.proto\x12\x0e\x63udos.cudoMint\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto2\x07\n\x05QueryB\xac\x01\n\x12\x63om.cudos.cudoMintB\nQueryProtoZ3github.com/CudoVentures/cudos-node/x/cudoMint/types\xa2\x02\x03\x43\x43X\xaa\x02\x0e\x43udos.CudoMint\xca\x02\x0e\x43udos\\CudoMint\xe2\x02\x1a\x43udos\\CudoMint\\GPBMetadata\xea\x02\x0f\x43udos::CudoMintb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cudos.cudoMint.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.cudos.cudoMintB\nQueryProtoP\001Z3github.com/CudoVentures/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMetadata\352\002\017Cudos::CudoMint'
+  DESCRIPTOR._serialized_options = b'\n\022com.cudos.cudoMintB\nQueryProtoZ3github.com/CudoVentures/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMetadata\352\002\017Cudos::CudoMint'
   _globals['_QUERY']._serialized_start=120
   _globals['_QUERY']._serialized_end=127
 # @@protoc_insertion_point(module_scope)

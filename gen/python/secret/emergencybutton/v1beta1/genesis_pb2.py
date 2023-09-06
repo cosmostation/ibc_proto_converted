@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from secret.emergencybutton.v1beta1 import params_pb2 as secret_dot_emergencybutton_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,secret/emergencybutton/v1beta1/genesis.proto\x12\x1esecret.emergencybutton.v1beta1\x1a\x14gogoproto/gogo.proto\x1a+secret/emergencybutton/v1beta1/params.proto\"T\n\x0cGenesisState\x12\x44\n\x06params\x18\x01 \x01(\x0b\x32&.secret.emergencybutton.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\x87\x02\n\"com.secret.emergencybutton.v1beta1B\x0cGenesisProtoP\x01Z9github.com/scrtlabs/SecretNetwork/x/emergencybutton/types\xa2\x02\x03SEX\xaa\x02\x1eSecret.Emergencybutton.V1beta1\xca\x02\x1eSecret\\Emergencybutton\\V1beta1\xe2\x02*Secret\\Emergencybutton\\V1beta1\\GPBMetadata\xea\x02 Secret::Emergencybutton::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,secret/emergencybutton/v1beta1/genesis.proto\x12\x1esecret.emergencybutton.v1beta1\x1a\x14gogoproto/gogo.proto\x1a+secret/emergencybutton/v1beta1/params.proto\"T\n\x0cGenesisState\x12\x44\n\x06params\x18\x01 \x01(\x0b\x32&.secret.emergencybutton.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\x85\x02\n\"com.secret.emergencybutton.v1beta1B\x0cGenesisProtoZ9github.com/scrtlabs/SecretNetwork/x/emergencybutton/types\xa2\x02\x03SEX\xaa\x02\x1eSecret.Emergencybutton.V1beta1\xca\x02\x1eSecret\\Emergencybutton\\V1beta1\xe2\x02*Secret\\Emergencybutton\\V1beta1\\GPBMetadata\xea\x02 Secret::Emergencybutton::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'secret.emergencybutton.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\"com.secret.emergencybutton.v1beta1B\014GenesisProtoP\001Z9github.com/scrtlabs/SecretNetwork/x/emergencybutton/types\242\002\003SEX\252\002\036Secret.Emergencybutton.V1beta1\312\002\036Secret\\Emergencybutton\\V1beta1\342\002*Secret\\Emergencybutton\\V1beta1\\GPBMetadata\352\002 Secret::Emergencybutton::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\"com.secret.emergencybutton.v1beta1B\014GenesisProtoZ9github.com/scrtlabs/SecretNetwork/x/emergencybutton/types\242\002\003SEX\252\002\036Secret.Emergencybutton.V1beta1\312\002\036Secret\\Emergencybutton\\V1beta1\342\002*Secret\\Emergencybutton\\V1beta1\\GPBMetadata\352\002 Secret::Emergencybutton::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=147

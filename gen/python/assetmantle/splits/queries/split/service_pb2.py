@@ -16,15 +16,14 @@ from assetmantle.splits.queries.split import query_request_pb2 as assetmantle_do
 from assetmantle.splits.queries.split import query_response_pb2 as assetmantle_dot_splits_dot_queries_dot_split_dot_query__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.assetmantle/splits/queries/split/service.proto\x12(assetmantle.modules.splits.queries.split\x1a\x1cgoogle/api/annotations.proto\x1a\x34\x61ssetmantle/splits/queries/split/query_request.proto\x1a\x35\x61ssetmantle/splits/queries/split/query_response.proto2\xab\x01\n\x07Service\x12\x9f\x01\n\x06Handle\x12\x36.assetmantle.modules.splits.queries.split.QueryRequest\x1a\x37.assetmantle.modules.splits.queries.split.QueryResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/mantle/splits/v1beta1/splitB\x82\x02\n,com.assetmantle.modules.splits.queries.splitB\x0cServiceProtoP\x01\xa2\x02\x05\x41MSQS\xaa\x02(Assetmantle.Modules.Splits.Queries.Split\xca\x02(Assetmantle\\Modules\\Splits\\Queries\\Split\xe2\x02\x34\x41ssetmantle\\Modules\\Splits\\Queries\\Split\\GPBMetadata\xea\x02,Assetmantle::Modules::Splits::Queries::Splitb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.assetmantle/splits/queries/split/service.proto\x12(assetmantle.modules.splits.queries.split\x1a\x1cgoogle/api/annotations.proto\x1a\x34\x61ssetmantle/splits/queries/split/query_request.proto\x1a\x35\x61ssetmantle/splits/queries/split/query_response.proto2\xab\x01\n\x07Service\x12\x9f\x01\n\x06Handle\x12\x36.assetmantle.modules.splits.queries.split.QueryRequest\x1a\x37.assetmantle.modules.splits.queries.split.QueryResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/mantle/splits/v1beta1/splitB\x80\x02\n,com.assetmantle.modules.splits.queries.splitB\x0cServiceProto\xa2\x02\x05\x41MSQS\xaa\x02(Assetmantle.Modules.Splits.Queries.Split\xca\x02(Assetmantle\\Modules\\Splits\\Queries\\Split\xe2\x02\x34\x41ssetmantle\\Modules\\Splits\\Queries\\Split\\GPBMetadata\xea\x02,Assetmantle::Modules::Splits::Queries::Splitb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.splits.queries.split.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n,com.assetmantle.modules.splits.queries.splitB\014ServiceProtoP\001\242\002\005AMSQS\252\002(Assetmantle.Modules.Splits.Queries.Split\312\002(Assetmantle\\Modules\\Splits\\Queries\\Split\342\0024Assetmantle\\Modules\\Splits\\Queries\\Split\\GPBMetadata\352\002,Assetmantle::Modules::Splits::Queries::Split'
+  DESCRIPTOR._serialized_options = b'\n,com.assetmantle.modules.splits.queries.splitB\014ServiceProto\242\002\005AMSQS\252\002(Assetmantle.Modules.Splits.Queries.Split\312\002(Assetmantle\\Modules\\Splits\\Queries\\Split\342\0024Assetmantle\\Modules\\Splits\\Queries\\Split\\GPBMetadata\352\002,Assetmantle::Modules::Splits::Queries::Split'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\036\022\034/mantle/splits/v1beta1/split'
   _globals['_SERVICE']._serialized_start=232

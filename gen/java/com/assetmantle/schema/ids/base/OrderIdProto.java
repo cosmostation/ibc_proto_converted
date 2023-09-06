@@ -68,6 +68,7 @@ public final class OrderIdProto {
               com.assetmantle.schema.ids.base.OrderIdProto.OrderID.class, com.assetmantle.schema.ids.base.OrderIdProto.OrderID.Builder.class);
     }
 
+    private int bitField0_;
     public static final int HASH_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.HashIdProto.HashID hashID_;
     /**
@@ -76,7 +77,7 @@ public final class OrderIdProto {
      */
     @java.lang.Override
     public boolean hasHashID() {
-      return hashID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.HashID hash_i_d = 1 [json_name = "hashID"];</code>
@@ -108,7 +109,7 @@ public final class OrderIdProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (hashID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getHashID());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class OrderIdProto {
       if (size != -1) return size;
 
       size = 0;
-      if (hashID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHashID());
       }
@@ -278,13 +279,19 @@ public final class OrderIdProto {
 
       // Construct using com.assetmantle.schema.ids.base.OrderIdProto.OrderID.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHashIDFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class OrderIdProto {
 
       private void buildPartial0(com.assetmantle.schema.ids.base.OrderIdProto.OrderID result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.hashID_ = hashIDBuilder_ == null
               ? hashID_
               : hashIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class OrderIdProto {
         } else {
           hashIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (hashID_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

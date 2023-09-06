@@ -185,6 +185,7 @@ public final class GenesisProto {
               com.desmos.profiles.v3.GenesisProto.GenesisState.class, com.desmos.profiles.v3.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DTAG_TRANSFER_REQUESTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.profiles.v3.ModelsDtagRequestsProto.DTagTransferRequest> dtagTransferRequests_;
@@ -396,7 +397,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.desmos.profiles.v3.Params params = 6 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
@@ -443,7 +444,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcPortId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ibcPortId_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -474,7 +475,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcPortId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ibcPortId_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getParams());
       }
@@ -664,13 +665,23 @@ public final class GenesisProto {
 
       // Construct using com.desmos.profiles.v3.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDtagTransferRequestsFieldBuilder();
+          getChainLinksFieldBuilder();
+          getApplicationLinksFieldBuilder();
+          getDefaultExternalAddressesFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -786,11 +797,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.ibcPortId_ = ibcPortId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2154,8 +2168,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

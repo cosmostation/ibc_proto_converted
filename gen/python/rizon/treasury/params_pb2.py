@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from rizon.treasury import treasury_pb2 as rizon_dot_treasury_dot_treasury__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1brizon/treasury/params.proto\x12\x19rizonworld.rizon.treasury\x1a\x14gogoproto/gogo.proto\x1a\x1drizon/treasury/treasury.proto\"\xd8\x01\n\x06Params\x12/\n\x08mintable\x18\x01 \x01(\x08\x42\x13\xf2\xde\x1f\x0fyaml:\"mintable\"R\x08mintable\x12/\n\x08sequence\x18\x02 \x01(\x03\x42\x13\xf2\xde\x1f\x0fyaml:\"sequence\"R\x08sequence\x12\x66\n\rcurrency_list\x18\x03 \x03(\x0b\x32#.rizonworld.rizon.treasury.CurrencyB\x1c\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"currency_list\"R\x0c\x63urrencyList:\x04\x98\xa0\x1f\x00\x42\xe1\x01\n\x1d\x63om.rizonworld.rizon.treasuryB\x0bParamsProtoP\x01Z-github.com/rizon-world/rizon/x/treasury/types\xa2\x02\x03RRT\xaa\x02\x19Rizonworld.Rizon.Treasury\xca\x02\x19Rizonworld\\Rizon\\Treasury\xe2\x02%Rizonworld\\Rizon\\Treasury\\GPBMetadata\xea\x02\x1bRizonworld::Rizon::Treasuryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1brizon/treasury/params.proto\x12\x19rizonworld.rizon.treasury\x1a\x14gogoproto/gogo.proto\x1a\x1drizon/treasury/treasury.proto\"\xd8\x01\n\x06Params\x12/\n\x08mintable\x18\x01 \x01(\x08\x42\x13\xf2\xde\x1f\x0fyaml:\"mintable\"R\x08mintable\x12/\n\x08sequence\x18\x02 \x01(\x03\x42\x13\xf2\xde\x1f\x0fyaml:\"sequence\"R\x08sequence\x12\x66\n\rcurrency_list\x18\x03 \x03(\x0b\x32#.rizonworld.rizon.treasury.CurrencyB\x1c\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"currency_list\"R\x0c\x63urrencyList:\x04\x98\xa0\x1f\x00\x42\xdf\x01\n\x1d\x63om.rizonworld.rizon.treasuryB\x0bParamsProtoZ-github.com/rizon-world/rizon/x/treasury/types\xa2\x02\x03RRT\xaa\x02\x19Rizonworld.Rizon.Treasury\xca\x02\x19Rizonworld\\Rizon\\Treasury\xe2\x02%Rizonworld\\Rizon\\Treasury\\GPBMetadata\xea\x02\x1bRizonworld::Rizon::Treasuryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'rizon.treasury.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.rizonworld.rizon.treasuryB\013ParamsProtoP\001Z-github.com/rizon-world/rizon/x/treasury/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Treasury\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizonworld\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizonworld::Rizon::Treasury'
+  DESCRIPTOR._serialized_options = b'\n\035com.rizonworld.rizon.treasuryB\013ParamsProtoZ-github.com/rizon-world/rizon/x/treasury/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Treasury\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizonworld\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizonworld::Rizon::Treasury'
   _PARAMS.fields_by_name['mintable']._options = None
   _PARAMS.fields_by_name['mintable']._serialized_options = b'\362\336\037\017yaml:\"mintable\"'
   _PARAMS.fields_by_name['sequence']._options = None

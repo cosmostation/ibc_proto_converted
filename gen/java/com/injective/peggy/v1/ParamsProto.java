@@ -228,6 +228,7 @@ public final class ParamsProto {
               com.injective.peggy.v1.ParamsProto.Params.class, com.injective.peggy.v1.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PEGGY_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object peggyId_ = "";
@@ -596,7 +597,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasValsetReward() {
-      return valsetReward_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin valset_reward = 21 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
@@ -688,7 +689,7 @@ public final class ParamsProto {
       if (bridgeContractStartHeight_ != 0L) {
         output.writeUInt64(20, bridgeContractStartHeight_);
       }
-      if (valsetReward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(21, getValsetReward());
       }
       getUnknownFields().writeTo(output);
@@ -775,7 +776,7 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(20, bridgeContractStartHeight_);
       }
-      if (valsetReward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(21, getValsetReward());
       }
@@ -1023,13 +1024,19 @@ public final class ParamsProto {
 
       // Construct using com.injective.peggy.v1.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValsetRewardFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1153,11 +1160,14 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00080000) != 0)) {
           result.bridgeContractStartHeight_ = bridgeContractStartHeight_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00100000) != 0)) {
           result.valsetReward_ = valsetRewardBuilder_ == null
               ? valsetReward_
               : valsetRewardBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2333,8 +2343,10 @@ public final class ParamsProto {
         } else {
           valsetRewardBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00100000;
-        onChanged();
+        if (valsetReward_ != null) {
+          bitField0_ |= 0x00100000;
+          onChanged();
+        }
         return this;
       }
       /**

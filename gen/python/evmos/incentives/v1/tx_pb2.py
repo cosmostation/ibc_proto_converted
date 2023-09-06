@@ -17,15 +17,14 @@ from evmos.incentives.v1 import genesis_pb2 as evmos_dot_incentives_dot_v1_dot_g
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x65vmos/incentives/v1/tx.proto\x12\x13\x65vmos.incentives.v1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a!evmos/incentives/v1/genesis.proto\x1a\x14gogoproto/gogo.proto\"\x94\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x39\n\x06params\x18\x02 \x01(\x0b\x32\x1b.evmos.incentives.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponse2i\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.evmos.incentives.v1.MsgUpdateParams\x1a,.evmos.incentives.v1.MsgUpdateParamsResponseB\xbf\x01\n\x17\x63om.evmos.incentives.v1B\x07TxProtoP\x01Z-github.com/evmos/evmos/v13/x/incentives/types\xa2\x02\x03\x45IX\xaa\x02\x13\x45vmos.Incentives.V1\xca\x02\x13\x45vmos\\Incentives\\V1\xe2\x02\x1f\x45vmos\\Incentives\\V1\\GPBMetadata\xea\x02\x15\x45vmos::Incentives::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x65vmos/incentives/v1/tx.proto\x12\x13\x65vmos.incentives.v1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a!evmos/incentives/v1/genesis.proto\x1a\x14gogoproto/gogo.proto\"\x94\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x39\n\x06params\x18\x02 \x01(\x0b\x32\x1b.evmos.incentives.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponse2i\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.evmos.incentives.v1.MsgUpdateParams\x1a,.evmos.incentives.v1.MsgUpdateParamsResponseB\xbd\x01\n\x17\x63om.evmos.incentives.v1B\x07TxProtoZ-github.com/evmos/evmos/v13/x/incentives/types\xa2\x02\x03\x45IX\xaa\x02\x13\x45vmos.Incentives.V1\xca\x02\x13\x45vmos\\Incentives\\V1\xe2\x02\x1f\x45vmos\\Incentives\\V1\\GPBMetadata\xea\x02\x15\x45vmos::Incentives::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'evmos.incentives.v1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.evmos.incentives.v1B\007TxProtoP\001Z-github.com/evmos/evmos/v13/x/incentives/types\242\002\003EIX\252\002\023Evmos.Incentives.V1\312\002\023Evmos\\Incentives\\V1\342\002\037Evmos\\Incentives\\V1\\GPBMetadata\352\002\025Evmos::Incentives::V1'
+  DESCRIPTOR._serialized_options = b'\n\027com.evmos.incentives.v1B\007TxProtoZ-github.com/evmos/evmos/v13/x/incentives/types\242\002\003EIX\252\002\023Evmos.Incentives.V1\312\002\023Evmos\\Incentives\\V1\342\002\037Evmos\\Incentives\\V1\\GPBMetadata\352\002\025Evmos::Incentives::V1'
   _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
   _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGUPDATEPARAMS.fields_by_name['params']._options = None

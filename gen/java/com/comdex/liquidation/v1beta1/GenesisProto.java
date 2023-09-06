@@ -111,6 +111,7 @@ public final class GenesisProto {
               com.comdex.liquidation.v1beta1.GenesisProto.GenesisState.class, com.comdex.liquidation.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKEDVAULT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.liquidation.v1beta1.LockedVaultProto.LockedVault> lockedVault_;
@@ -154,7 +155,8 @@ public final class GenesisProto {
 
     public static final int WHITELISTEDAPPS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList whitelistedApps_;
+    private com.google.protobuf.Internal.LongList whitelistedApps_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 whitelistedApps = 2 [json_name = "whitelistedApps", (.gogoproto.moretags) = "yaml:&#92;"whitelistedApps&#92;""];</code>
      * @return A list containing the whitelistedApps.
@@ -189,7 +191,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.liquidation.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -232,7 +234,7 @@ public final class GenesisProto {
       for (int i = 0; i < whitelistedApps_.size(); i++) {
         output.writeUInt64NoTag(whitelistedApps_.getLong(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -262,7 +264,7 @@ public final class GenesisProto {
         }
         whitelistedAppsMemoizedSerializedSize = dataSize;
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getParams());
       }
@@ -432,13 +434,20 @@ public final class GenesisProto {
 
       // Construct using com.comdex.liquidation.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLockedVaultFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -499,20 +508,22 @@ public final class GenesisProto {
         } else {
           result.lockedVault_ = lockedVaultBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          whitelistedApps_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.whitelistedApps_ = whitelistedApps_;
       }
 
       private void buildPartial0(com.comdex.liquidation.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          whitelistedApps_.makeImmutable();
+          result.whitelistedApps_ = whitelistedApps_;
+        }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -588,7 +599,8 @@ public final class GenesisProto {
         if (!other.whitelistedApps_.isEmpty()) {
           if (whitelistedApps_.isEmpty()) {
             whitelistedApps_ = other.whitelistedApps_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            whitelistedApps_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureWhitelistedAppsIsMutable();
             whitelistedApps_.addAll(other.whitelistedApps_);
@@ -919,10 +931,10 @@ public final class GenesisProto {
 
       private com.google.protobuf.Internal.LongList whitelistedApps_ = emptyLongList();
       private void ensureWhitelistedAppsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          whitelistedApps_ = mutableCopy(whitelistedApps_);
-          bitField0_ |= 0x00000002;
+        if (!whitelistedApps_.isModifiable()) {
+          whitelistedApps_ = makeMutableCopy(whitelistedApps_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 whitelistedApps = 2 [json_name = "whitelistedApps", (.gogoproto.moretags) = "yaml:&#92;"whitelistedApps&#92;""];</code>
@@ -930,8 +942,8 @@ public final class GenesisProto {
        */
       public java.util.List<java.lang.Long>
           getWhitelistedAppsList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(whitelistedApps_) : whitelistedApps_;
+        whitelistedApps_.makeImmutable();
+        return whitelistedApps_;
       }
       /**
        * <code>repeated uint64 whitelistedApps = 2 [json_name = "whitelistedApps", (.gogoproto.moretags) = "yaml:&#92;"whitelistedApps&#92;""];</code>
@@ -959,6 +971,7 @@ public final class GenesisProto {
 
         ensureWhitelistedAppsIsMutable();
         whitelistedApps_.setLong(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -971,6 +984,7 @@ public final class GenesisProto {
 
         ensureWhitelistedAppsIsMutable();
         whitelistedApps_.addLong(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -984,6 +998,7 @@ public final class GenesisProto {
         ensureWhitelistedAppsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, whitelistedApps_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1064,8 +1079,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

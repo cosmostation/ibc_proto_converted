@@ -71,7 +71,9 @@ proto.pstake.liquidstakeibc.v1beta1.Params.prototype.toObject = function(opt_inc
 proto.pstake.liquidstakeibc.v1beta1.Params.toObject = function(includeInstance, msg) {
   var f, obj = {
     adminAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    feeAddress: jspb.Message.getFieldWithDefault(msg, 2, "")
+    feeAddress: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    upperCValueLimit: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    lowerCValueLimit: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -116,6 +118,14 @@ proto.pstake.liquidstakeibc.v1beta1.Params.deserializeBinaryFromReader = functio
       var value = /** @type {string} */ (reader.readString());
       msg.setFeeAddress(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUpperCValueLimit(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLowerCValueLimit(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -159,6 +169,20 @@ proto.pstake.liquidstakeibc.v1beta1.Params.serializeBinaryToWriter = function(me
       f
     );
   }
+  f = message.getUpperCValueLimit();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getLowerCValueLimit();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
 };
 
 
@@ -195,6 +219,42 @@ proto.pstake.liquidstakeibc.v1beta1.Params.prototype.getFeeAddress = function() 
  */
 proto.pstake.liquidstakeibc.v1beta1.Params.prototype.setFeeAddress = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string upper_c_value_limit = 3;
+ * @return {string}
+ */
+proto.pstake.liquidstakeibc.v1beta1.Params.prototype.getUpperCValueLimit = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.Params} returns this
+ */
+proto.pstake.liquidstakeibc.v1beta1.Params.prototype.setUpperCValueLimit = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string lower_c_value_limit = 4;
+ * @return {string}
+ */
+proto.pstake.liquidstakeibc.v1beta1.Params.prototype.getLowerCValueLimit = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.Params} returns this
+ */
+proto.pstake.liquidstakeibc.v1beta1.Params.prototype.setLowerCValueLimit = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 

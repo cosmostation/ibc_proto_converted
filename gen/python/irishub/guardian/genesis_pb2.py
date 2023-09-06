@@ -15,15 +15,14 @@ from irishub.guardian import guardian_pb2 as irishub_dot_guardian_dot_guardian__
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1eirishub/guardian/genesis.proto\x12\x10irishub.guardian\x1a\x1firishub/guardian/guardian.proto\x1a\x14gogoproto/gogo.proto\"E\n\x0cGenesisState\x12\x35\n\x06supers\x18\x01 \x03(\x0b\x32\x17.irishub.guardian.SuperB\x04\xc8\xde\x1f\x00R\x06supersB\xb8\x01\n\x14\x63om.irishub.guardianB\x0cGenesisProtoP\x01Z1github.com/irisnet/irishub/modules/guardian/types\xa2\x02\x03IGX\xaa\x02\x10Irishub.Guardian\xca\x02\x10Irishub\\Guardian\xe2\x02\x1cIrishub\\Guardian\\GPBMetadata\xea\x02\x11Irishub::Guardianb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1eirishub/guardian/genesis.proto\x12\x10irishub.guardian\x1a\x1firishub/guardian/guardian.proto\x1a\x14gogoproto/gogo.proto\"E\n\x0cGenesisState\x12\x35\n\x06supers\x18\x01 \x03(\x0b\x32\x17.irishub.guardian.SuperB\x04\xc8\xde\x1f\x00R\x06supersB\xb6\x01\n\x14\x63om.irishub.guardianB\x0cGenesisProtoZ1github.com/irisnet/irishub/modules/guardian/types\xa2\x02\x03IGX\xaa\x02\x10Irishub.Guardian\xca\x02\x10Irishub\\Guardian\xe2\x02\x1cIrishub\\Guardian\\GPBMetadata\xea\x02\x11Irishub::Guardianb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irishub.guardian.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.irishub.guardianB\014GenesisProtoP\001Z1github.com/irisnet/irishub/modules/guardian/types\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishub\\Guardian\\GPBMetadata\352\002\021Irishub::Guardian'
+  DESCRIPTOR._serialized_options = b'\n\024com.irishub.guardianB\014GenesisProtoZ1github.com/irisnet/irishub/modules/guardian/types\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishub\\Guardian\\GPBMetadata\352\002\021Irishub::Guardian'
   _GENESISSTATE.fields_by_name['supers']._options = None
   _GENESISSTATE.fields_by_name['supers']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=107

@@ -954,6 +954,7 @@ public final class InflationProto {
               com.em.inflation.v1.InflationProto.InflationState.class, com.em.inflation.v1.InflationProto.InflationState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LAST_APPLIED_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp lastApplied_;
     /**
@@ -962,7 +963,7 @@ public final class InflationProto {
      */
     @java.lang.Override
     public boolean hasLastApplied() {
-      return lastApplied_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1074,7 +1075,7 @@ public final class InflationProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (lastApplied_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getLastApplied());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastAppliedHeight_)) {
@@ -1092,7 +1093,7 @@ public final class InflationProto {
       if (size != -1) return size;
 
       size = 0;
-      if (lastApplied_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLastApplied());
       }
@@ -1267,13 +1268,20 @@ public final class InflationProto {
 
       // Construct using com.em.inflation.v1.InflationProto.InflationState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLastAppliedFieldBuilder();
+          getAssetsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1338,14 +1346,17 @@ public final class InflationProto {
 
       private void buildPartial0(com.em.inflation.v1.InflationProto.InflationState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lastApplied_ = lastAppliedBuilder_ == null
               ? lastApplied_
               : lastAppliedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lastAppliedHeight_ = lastAppliedHeight_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1560,8 +1571,10 @@ public final class InflationProto {
         } else {
           lastAppliedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (lastApplied_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

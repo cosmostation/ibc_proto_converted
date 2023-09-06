@@ -368,6 +368,7 @@ public final class GenesisProto {
               com.cosmos.gov.v1.GenesisProto.GenesisState.class, com.cosmos.gov.v1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STARTING_PROPOSAL_ID_FIELD_NUMBER = 1;
     private long startingProposalId_ = 0L;
     /**
@@ -581,7 +582,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasDepositParams() {
-      return depositParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -626,7 +627,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasVotingParams() {
-      return votingParams_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -671,7 +672,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasTallyParams() {
-      return tallyParams_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -715,7 +716,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -828,16 +829,16 @@ public final class GenesisProto {
       for (int i = 0; i < proposals_.size(); i++) {
         output.writeMessage(4, proposals_.get(i));
       }
-      if (depositParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getDepositParams());
       }
-      if (votingParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getVotingParams());
       }
-      if (tallyParams_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(7, getTallyParams());
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(8, getParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(constitution_)) {
@@ -868,19 +869,19 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, proposals_.get(i));
       }
-      if (depositParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDepositParams());
       }
-      if (votingParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getVotingParams());
       }
-      if (tallyParams_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getTallyParams());
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getParams());
       }
@@ -1099,13 +1100,25 @@ public final class GenesisProto {
 
       // Construct using com.cosmos.gov.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositsFieldBuilder();
+          getVotesFieldBuilder();
+          getProposalsFieldBuilder();
+          getDepositParamsFieldBuilder();
+          getVotingParamsFieldBuilder();
+          getTallyParamsFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1221,29 +1234,35 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startingProposalId_ = startingProposalId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.depositParams_ = depositParamsBuilder_ == null
               ? depositParams_
               : depositParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.votingParams_ = votingParamsBuilder_ == null
               ? votingParams_
               : votingParamsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.tallyParams_ = tallyParamsBuilder_ == null
               ? tallyParams_
               : tallyParamsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.constitution_ = constitution_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2583,8 +2602,10 @@ public final class GenesisProto {
         } else {
           depositParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (depositParams_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2751,8 +2772,10 @@ public final class GenesisProto {
         } else {
           votingParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (votingParams_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2919,8 +2942,10 @@ public final class GenesisProto {
         } else {
           tallyParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (tallyParams_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3088,8 +3113,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -15,15 +15,14 @@ from cosmos.autocli.v1 import options_pb2 as cosmos_dot_autocli_dot_v1_dot_optio
 from cosmos.query.v1 import query_pb2 as cosmos_dot_query_dot_v1_dot_query__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x63osmos/autocli/v1/query.proto\x12\x11\x63osmos.autocli.v1\x1a\x1f\x63osmos/autocli/v1/options.proto\x1a\x1b\x63osmos/query/v1/query.proto\"\x13\n\x11\x41ppOptionsRequest\"\xd9\x01\n\x12\x41ppOptionsResponse\x12_\n\x0emodule_options\x18\x01 \x03(\x0b\x32\x38.cosmos.autocli.v1.AppOptionsResponse.ModuleOptionsEntryR\rmoduleOptions\x1a\x62\n\x12ModuleOptionsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x36\n\x05value\x18\x02 \x01(\x0b\x32 .cosmos.autocli.v1.ModuleOptionsR\x05value:\x02\x38\x01\x32i\n\x05Query\x12`\n\nAppOptions\x12$.cosmos.autocli.v1.AppOptionsRequest\x1a%.cosmos.autocli.v1.AppOptionsResponse\"\x05\x88\xe7\xb0*\x00\x42\xb4\x01\n\x15\x63om.cosmos.autocli.v1B\nQueryProtoP\x01Z)cosmossdk.io/api/cosmos/base/cli/v1;cliv1\xa2\x02\x03\x43\x41X\xaa\x02\x11\x43osmos.Autocli.V1\xca\x02\x11\x43osmos\\Autocli\\V1\xe2\x02\x1d\x43osmos\\Autocli\\V1\\GPBMetadata\xea\x02\x13\x43osmos::Autocli::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x63osmos/autocli/v1/query.proto\x12\x11\x63osmos.autocli.v1\x1a\x1f\x63osmos/autocli/v1/options.proto\x1a\x1b\x63osmos/query/v1/query.proto\"\x13\n\x11\x41ppOptionsRequest\"\xd9\x01\n\x12\x41ppOptionsResponse\x12_\n\x0emodule_options\x18\x01 \x03(\x0b\x32\x38.cosmos.autocli.v1.AppOptionsResponse.ModuleOptionsEntryR\rmoduleOptions\x1a\x62\n\x12ModuleOptionsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x36\n\x05value\x18\x02 \x01(\x0b\x32 .cosmos.autocli.v1.ModuleOptionsR\x05value:\x02\x38\x01\x32i\n\x05Query\x12`\n\nAppOptions\x12$.cosmos.autocli.v1.AppOptionsRequest\x1a%.cosmos.autocli.v1.AppOptionsResponse\"\x05\x88\xe7\xb0*\x00\x42\xb2\x01\n\x15\x63om.cosmos.autocli.v1B\nQueryProtoZ)cosmossdk.io/api/cosmos/base/cli/v1;cliv1\xa2\x02\x03\x43\x41X\xaa\x02\x11\x43osmos.Autocli.V1\xca\x02\x11\x43osmos\\Autocli\\V1\xe2\x02\x1d\x43osmos\\Autocli\\V1\\GPBMetadata\xea\x02\x13\x43osmos::Autocli::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.autocli.v1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.cosmos.autocli.v1B\nQueryProtoP\001Z)cosmossdk.io/api/cosmos/base/cli/v1;cliv1\242\002\003CAX\252\002\021Cosmos.Autocli.V1\312\002\021Cosmos\\Autocli\\V1\342\002\035Cosmos\\Autocli\\V1\\GPBMetadata\352\002\023Cosmos::Autocli::V1'
+  DESCRIPTOR._serialized_options = b'\n\025com.cosmos.autocli.v1B\nQueryProtoZ)cosmossdk.io/api/cosmos/base/cli/v1;cliv1\242\002\003CAX\252\002\021Cosmos.Autocli.V1\312\002\021Cosmos\\Autocli\\V1\342\002\035Cosmos\\Autocli\\V1\\GPBMetadata\352\002\023Cosmos::Autocli::V1'
   _APPOPTIONSRESPONSE_MODULEOPTIONSENTRY._options = None
   _APPOPTIONSRESPONSE_MODULEOPTIONSENTRY._serialized_options = b'8\001'
   _QUERY.methods_by_name['AppOptions']._options = None

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dnoble/globalfee/genesis.proto\x12\x0fnoble.globalfee\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"Y\n\x0cGenesisState\x12I\n\x06params\x18\x01 \x01(\x0b\x32\x17.noble.globalfee.ParamsB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10params,omitemptyR\x06params\"\xcb\x02\n\x06Params\x12\xbc\x01\n\x12minimum_gas_prices\x18\x01 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinBp\xc8\xde\x1f\x00\xea\xde\x1f\x1cminimum_gas_prices,omitempty\xf2\xde\x1f\x19yaml:\"minimum_gas_prices\"\xaa\xdf\x1f+github.com/cosmos/cosmos-sdk/types.DecCoinsR\x10minimumGasPrices\x12\x81\x01\n\x18\x62ypass_min_fee_msg_types\x18\x02 \x03(\tBI\xea\xde\x1f\"bypass_min_fee_msg_types,omitempty\xf2\xde\x1f\x1fyaml:\"bypass_min_fee_msg_types\"R\x14\x62ypassMinFeeMsgTypesB\xb9\x01\n\x13\x63om.noble.globalfeeB\x0cGenesisProtoP\x01Z7github.com/strangelove-ventures/noble/x/globalfee/types\xa2\x02\x03NGX\xaa\x02\x0fNoble.Globalfee\xca\x02\x0fNoble\\Globalfee\xe2\x02\x1bNoble\\Globalfee\\GPBMetadata\xea\x02\x10Noble::Globalfeeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dnoble/globalfee/genesis.proto\x12\x0fnoble.globalfee\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"Y\n\x0cGenesisState\x12I\n\x06params\x18\x01 \x01(\x0b\x32\x17.noble.globalfee.ParamsB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10params,omitemptyR\x06params\"\xcb\x02\n\x06Params\x12\xbc\x01\n\x12minimum_gas_prices\x18\x01 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinBp\xc8\xde\x1f\x00\xea\xde\x1f\x1cminimum_gas_prices,omitempty\xf2\xde\x1f\x19yaml:\"minimum_gas_prices\"\xaa\xdf\x1f+github.com/cosmos/cosmos-sdk/types.DecCoinsR\x10minimumGasPrices\x12\x81\x01\n\x18\x62ypass_min_fee_msg_types\x18\x02 \x03(\tBI\xea\xde\x1f\"bypass_min_fee_msg_types,omitempty\xf2\xde\x1f\x1fyaml:\"bypass_min_fee_msg_types\"R\x14\x62ypassMinFeeMsgTypesB\xb7\x01\n\x13\x63om.noble.globalfeeB\x0cGenesisProtoZ7github.com/strangelove-ventures/noble/x/globalfee/types\xa2\x02\x03NGX\xaa\x02\x0fNoble.Globalfee\xca\x02\x0fNoble\\Globalfee\xe2\x02\x1bNoble\\Globalfee\\GPBMetadata\xea\x02\x10Noble::Globalfeeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'noble.globalfee.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\023com.noble.globalfeeB\014GenesisProtoP\001Z7github.com/strangelove-ventures/noble/x/globalfee/types\242\002\003NGX\252\002\017Noble.Globalfee\312\002\017Noble\\Globalfee\342\002\033Noble\\Globalfee\\GPBMetadata\352\002\020Noble::Globalfee'
+  DESCRIPTOR._serialized_options = b'\n\023com.noble.globalfeeB\014GenesisProtoZ7github.com/strangelove-ventures/noble/x/globalfee/types\242\002\003NGX\252\002\017Noble.Globalfee\312\002\017Noble\\Globalfee\342\002\033Noble\\Globalfee\\GPBMetadata\352\002\020Noble::Globalfee'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000\352\336\037\020params,omitempty'
   _PARAMS.fields_by_name['minimum_gas_prices']._options = None

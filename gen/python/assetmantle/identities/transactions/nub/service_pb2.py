@@ -16,15 +16,14 @@ from assetmantle.identities.transactions.nub import message_pb2 as assetmantle_d
 from assetmantle.identities.transactions.nub import transaction_response_pb2 as assetmantle_dot_identities_dot_transactions_dot_nub_dot_transaction__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5assetmantle/identities/transactions/nub/service.proto\x12/assetmantle.modules.identities.transactions.nub\x1a\x1cgoogle/api/annotations.proto\x1a\x35\x61ssetmantle/identities/transactions/nub/message.proto\x1a\x42\x61ssetmantle/identities/transactions/nub/transaction_response.proto2\xb4\x01\n\x07Service\x12\xa8\x01\n\x06Handle\x12\x38.assetmantle.modules.identities.transactions.nub.Message\x1a\x44.assetmantle.modules.identities.transactions.nub.TransactionResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x16/mantle/identities/nubB\xa5\x02\n3com.assetmantle.modules.identities.transactions.nubB\x0cServiceProtoP\x01\xa2\x02\x05\x41MITN\xaa\x02/Assetmantle.Modules.Identities.Transactions.Nub\xca\x02/Assetmantle\\Modules\\Identities\\Transactions\\Nub\xe2\x02;Assetmantle\\Modules\\Identities\\Transactions\\Nub\\GPBMetadata\xea\x02\x33\x41ssetmantle::Modules::Identities::Transactions::Nubb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5assetmantle/identities/transactions/nub/service.proto\x12/assetmantle.modules.identities.transactions.nub\x1a\x1cgoogle/api/annotations.proto\x1a\x35\x61ssetmantle/identities/transactions/nub/message.proto\x1a\x42\x61ssetmantle/identities/transactions/nub/transaction_response.proto2\xb4\x01\n\x07Service\x12\xa8\x01\n\x06Handle\x12\x38.assetmantle.modules.identities.transactions.nub.Message\x1a\x44.assetmantle.modules.identities.transactions.nub.TransactionResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x16/mantle/identities/nubB\xa3\x02\n3com.assetmantle.modules.identities.transactions.nubB\x0cServiceProto\xa2\x02\x05\x41MITN\xaa\x02/Assetmantle.Modules.Identities.Transactions.Nub\xca\x02/Assetmantle\\Modules\\Identities\\Transactions\\Nub\xe2\x02;Assetmantle\\Modules\\Identities\\Transactions\\Nub\\GPBMetadata\xea\x02\x33\x41ssetmantle::Modules::Identities::Transactions::Nubb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.nub.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n3com.assetmantle.modules.identities.transactions.nubB\014ServiceProtoP\001\242\002\005AMITN\252\002/Assetmantle.Modules.Identities.Transactions.Nub\312\002/Assetmantle\\Modules\\Identities\\Transactions\\Nub\342\002;Assetmantle\\Modules\\Identities\\Transactions\\Nub\\GPBMetadata\352\0023Assetmantle::Modules::Identities::Transactions::Nub'
+  DESCRIPTOR._serialized_options = b'\n3com.assetmantle.modules.identities.transactions.nubB\014ServiceProto\242\002\005AMITN\252\002/Assetmantle.Modules.Identities.Transactions.Nub\312\002/Assetmantle\\Modules\\Identities\\Transactions\\Nub\342\002;Assetmantle\\Modules\\Identities\\Transactions\\Nub\\GPBMetadata\352\0023Assetmantle::Modules::Identities::Transactions::Nub'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\030\"\026/mantle/identities/nub'
   _globals['_SERVICE']._serialized_start=260

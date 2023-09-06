@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&cryptoorg/nft_transfer/v1/packet.proto\x12\x19\x63hainmain.nft_transfer.v1\"\xc4\x01\n\x1aNonFungibleTokenPacketData\x12\x19\n\x08\x63lass_id\x18\x01 \x01(\tR\x07\x63lassId\x12\x1b\n\tclass_uri\x18\x02 \x01(\tR\x08\x63lassUri\x12\x1b\n\ttoken_ids\x18\x03 \x03(\tR\x08tokenIds\x12\x1d\n\ntoken_uris\x18\x04 \x03(\tR\ttokenUris\x12\x16\n\x06sender\x18\x05 \x01(\tR\x06sender\x12\x1a\n\x08receiver\x18\x06 \x01(\tR\x08receiverB\xeb\x01\n\x1d\x63om.chainmain.nft_transfer.v1B\x0bPacketProtoP\x01Z;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\xa2\x02\x03\x43NX\xaa\x02\x18\x43hainmain.NftTransfer.V1\xca\x02\x18\x43hainmain\\NftTransfer\\V1\xe2\x02$Chainmain\\NftTransfer\\V1\\GPBMetadata\xea\x02\x1a\x43hainmain::NftTransfer::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&cryptoorg/nft_transfer/v1/packet.proto\x12\x19\x63hainmain.nft_transfer.v1\"\xc4\x01\n\x1aNonFungibleTokenPacketData\x12\x19\n\x08\x63lass_id\x18\x01 \x01(\tR\x07\x63lassId\x12\x1b\n\tclass_uri\x18\x02 \x01(\tR\x08\x63lassUri\x12\x1b\n\ttoken_ids\x18\x03 \x03(\tR\x08tokenIds\x12\x1d\n\ntoken_uris\x18\x04 \x03(\tR\ttokenUris\x12\x16\n\x06sender\x18\x05 \x01(\tR\x06sender\x12\x1a\n\x08receiver\x18\x06 \x01(\tR\x08receiverB\xe9\x01\n\x1d\x63om.chainmain.nft_transfer.v1B\x0bPacketProtoZ;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\xa2\x02\x03\x43NX\xaa\x02\x18\x43hainmain.NftTransfer.V1\xca\x02\x18\x43hainmain\\NftTransfer\\V1\xe2\x02$Chainmain\\NftTransfer\\V1\\GPBMetadata\xea\x02\x1a\x43hainmain::NftTransfer::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cryptoorg.nft_transfer.v1.packet_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.chainmain.nft_transfer.v1B\013PacketProtoP\001Z;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\242\002\003CNX\252\002\030Chainmain.NftTransfer.V1\312\002\030Chainmain\\NftTransfer\\V1\342\002$Chainmain\\NftTransfer\\V1\\GPBMetadata\352\002\032Chainmain::NftTransfer::V1'
+  DESCRIPTOR._serialized_options = b'\n\035com.chainmain.nft_transfer.v1B\013PacketProtoZ;github.com/crypto-org-chain/chain-main/x/nft-transfer/types\242\002\003CNX\252\002\030Chainmain.NftTransfer.V1\312\002\030Chainmain\\NftTransfer\\V1\342\002$Chainmain\\NftTransfer\\V1\\GPBMetadata\352\002\032Chainmain::NftTransfer::V1'
   _globals['_NONFUNGIBLETOKENPACKETDATA']._serialized_start=70
   _globals['_NONFUNGIBLETOKENPACKETDATA']._serialized_end=266
 # @@protoc_insertion_point(module_scope)

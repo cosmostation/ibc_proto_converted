@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n stride/icacallbacks/packet.proto\x12\x13stride.icacallbacks\"Z\n\x16IcacallbacksPacketData\x12\x36\n\x07no_data\x18\x01 \x01(\x0b\x32\x1b.stride.icacallbacks.NoDataH\x00R\x06noDataB\x08\n\x06packet\"\x08\n\x06NoDataB\xca\x01\n\x17\x63om.stride.icacallbacksB\x0bPacketProtoP\x01Z5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\xa2\x02\x03SIX\xaa\x02\x13Stride.Icacallbacks\xca\x02\x13Stride\\Icacallbacks\xe2\x02\x1fStride\\Icacallbacks\\GPBMetadata\xea\x02\x14Stride::Icacallbacksb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n stride/icacallbacks/packet.proto\x12\x13stride.icacallbacks\"Z\n\x16IcacallbacksPacketData\x12\x36\n\x07no_data\x18\x01 \x01(\x0b\x32\x1b.stride.icacallbacks.NoDataH\x00R\x06noDataB\x08\n\x06packet\"\x08\n\x06NoDataB\xc8\x01\n\x17\x63om.stride.icacallbacksB\x0bPacketProtoZ5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\xa2\x02\x03SIX\xaa\x02\x13Stride.Icacallbacks\xca\x02\x13Stride\\Icacallbacks\xe2\x02\x1fStride\\Icacallbacks\\GPBMetadata\xea\x02\x14Stride::Icacallbacksb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stride.icacallbacks.packet_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.stride.icacallbacksB\013PacketProtoP\001Z5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\242\002\003SIX\252\002\023Stride.Icacallbacks\312\002\023Stride\\Icacallbacks\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024Stride::Icacallbacks'
+  DESCRIPTOR._serialized_options = b'\n\027com.stride.icacallbacksB\013PacketProtoZ5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\242\002\003SIX\252\002\023Stride.Icacallbacks\312\002\023Stride\\Icacallbacks\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024Stride::Icacallbacks'
   _globals['_ICACALLBACKSPACKETDATA']._serialized_start=57
   _globals['_ICACALLBACKSPACKETDATA']._serialized_end=147
   _globals['_NODATA']._serialized_start=149

@@ -263,6 +263,7 @@ public final class ProposalProto {
               com.stafihub.stafihub.rvalidator.ProposalProto.UpdateRValidatorProposal.class, com.stafihub.stafihub.rvalidator.ProposalProto.UpdateRValidatorProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -505,7 +506,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasCycle() {
-      return cycle_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rvalidator.Cycle cycle = 7 [json_name = "cycle"];</code>
@@ -555,7 +556,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(propId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, propId_);
       }
-      if (cycle_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getCycle());
       }
       getUnknownFields().writeTo(output);
@@ -585,7 +586,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(propId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, propId_);
       }
-      if (cycle_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCycle());
       }
@@ -767,13 +768,19 @@ public final class ProposalProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.ProposalProto.UpdateRValidatorProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCycleFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -841,11 +848,14 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.propId_ = propId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.cycle_ = cycleBuilder_ == null
               ? cycle_
               : cycleBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1503,8 +1513,10 @@ public final class ProposalProto {
         } else {
           cycleBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (cycle_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1737,6 +1749,7 @@ public final class ProposalProto {
               com.stafihub.stafihub.rvalidator.ProposalProto.UpdateRValidatorReportProposal.class, com.stafihub.stafihub.rvalidator.ProposalProto.UpdateRValidatorReportProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -1901,7 +1914,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasCycle() {
-      return cycle_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.rvalidator.Cycle cycle = 5 [json_name = "cycle"];</code>
@@ -1963,7 +1976,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(propId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, propId_);
       }
-      if (cycle_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getCycle());
       }
       if (status_ != com.stafihub.stafihub.rvalidator.ProposalProto.UpdateRValidatorStatus.UPDATE_RVALIDATOR_STATUS_UNSPECIFIED.getNumber()) {
@@ -1990,7 +2003,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(propId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, propId_);
       }
-      if (cycle_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCycle());
       }
@@ -2171,13 +2184,19 @@ public final class ProposalProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.ProposalProto.UpdateRValidatorReportProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCycleFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2238,14 +2257,17 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.propId_ = propId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.cycle_ = cycleBuilder_ == null
               ? cycle_
               : cycleBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.status_ = status_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2747,8 +2769,10 @@ public final class ProposalProto {
         } else {
           cycleBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (cycle_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

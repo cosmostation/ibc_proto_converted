@@ -72,6 +72,7 @@ public final class ParamsProto {
               com.neutron.feerefunder.ParamsProto.Params.class, com.neutron.feerefunder.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MIN_FEE_FIELD_NUMBER = 1;
     private com.neutron.feerefunder.FeeProto.Fee minFee_;
     /**
@@ -80,7 +81,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMinFee() {
-      return minFee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.neutron.feerefunder.Fee min_fee = 1 [json_name = "minFee", (.gogoproto.nullable) = false];</code>
@@ -112,7 +113,7 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (minFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMinFee());
       }
       getUnknownFields().writeTo(output);
@@ -124,7 +125,7 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (minFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMinFee());
       }
@@ -286,13 +287,19 @@ public final class ParamsProto {
 
       // Construct using com.neutron.feerefunder.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -336,11 +343,14 @@ public final class ParamsProto {
 
       private void buildPartial0(com.neutron.feerefunder.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minFee_ = minFeeBuilder_ == null
               ? minFee_
               : minFeeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -506,8 +516,10 @@ public final class ParamsProto {
         } else {
           minFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (minFee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from persistence.halving.v1beta1 import halving_pb2 as persistence_dot_halving_dot_v1beta1_dot_halving__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)persistence/halving/v1beta1/genesis.proto\x12\x1bpersistence.halving.v1beta1\x1a\x14gogoproto/gogo.proto\x1a)persistence/halving/v1beta1/halving.proto\"Q\n\x0cGenesisState\x12\x41\n\x06params\x18\x01 \x01(\x0b\x32#.persistence.halving.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xfb\x01\n\x1f\x63om.persistence.halving.v1beta1B\x0cGenesisProtoP\x01Z<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\xa2\x02\x03PHX\xaa\x02\x1bPersistence.Halving.V1beta1\xca\x02\x1bPersistence\\Halving\\V1beta1\xe2\x02\'Persistence\\Halving\\V1beta1\\GPBMetadata\xea\x02\x1dPersistence::Halving::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)persistence/halving/v1beta1/genesis.proto\x12\x1bpersistence.halving.v1beta1\x1a\x14gogoproto/gogo.proto\x1a)persistence/halving/v1beta1/halving.proto\"Q\n\x0cGenesisState\x12\x41\n\x06params\x18\x01 \x01(\x0b\x32#.persistence.halving.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xf9\x01\n\x1f\x63om.persistence.halving.v1beta1B\x0cGenesisProtoZ<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\xa2\x02\x03PHX\xaa\x02\x1bPersistence.Halving.V1beta1\xca\x02\x1bPersistence\\Halving\\V1beta1\xe2\x02\'Persistence\\Halving\\V1beta1\\GPBMetadata\xea\x02\x1dPersistence::Halving::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'persistence.halving.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\037com.persistence.halving.v1beta1B\014GenesisProtoP\001Z<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\242\002\003PHX\252\002\033Persistence.Halving.V1beta1\312\002\033Persistence\\Halving\\V1beta1\342\002\'Persistence\\Halving\\V1beta1\\GPBMetadata\352\002\035Persistence::Halving::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\037com.persistence.halving.v1beta1B\014GenesisProtoZ<github.com/persistenceOne/persistence-sdk/v2/x/halving/types\242\002\003PHX\252\002\033Persistence.Halving.V1beta1\312\002\033Persistence\\Halving\\V1beta1\342\002\'Persistence\\Halving\\V1beta1\\GPBMetadata\352\002\035Persistence::Halving::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=139

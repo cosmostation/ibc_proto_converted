@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63\x61nto/recovery/v1/genesis.proto\x12\x11\x63\x61nto.recovery.v1\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\"G\n\x0cGenesisState\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.canto.recovery.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"\x8e\x01\n\x06Params\x12\'\n\x0f\x65nable_recovery\x18\x01 \x01(\x08R\x0e\x65nableRecovery\x12[\n\x17packet_timeout_duration\x18\x02 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\x15packetTimeoutDurationB\xbf\x01\n\x15\x63om.canto.recovery.v1B\x0cGenesisProtoP\x01Z2github.com/Canto-Network/Canto/v6/x/recovery/types\xa2\x02\x03\x43RX\xaa\x02\x11\x43\x61nto.Recovery.V1\xca\x02\x11\x43\x61nto\\Recovery\\V1\xe2\x02\x1d\x43\x61nto\\Recovery\\V1\\GPBMetadata\xea\x02\x13\x43\x61nto::Recovery::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63\x61nto/recovery/v1/genesis.proto\x12\x11\x63\x61nto.recovery.v1\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\"G\n\x0cGenesisState\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.canto.recovery.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"\x8e\x01\n\x06Params\x12\'\n\x0f\x65nable_recovery\x18\x01 \x01(\x08R\x0e\x65nableRecovery\x12[\n\x17packet_timeout_duration\x18\x02 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\x15packetTimeoutDurationB\xbd\x01\n\x15\x63om.canto.recovery.v1B\x0cGenesisProtoZ2github.com/Canto-Network/Canto/v6/x/recovery/types\xa2\x02\x03\x43RX\xaa\x02\x11\x43\x61nto.Recovery.V1\xca\x02\x11\x43\x61nto\\Recovery\\V1\xe2\x02\x1d\x43\x61nto\\Recovery\\V1\\GPBMetadata\xea\x02\x13\x43\x61nto::Recovery::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.recovery.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.canto.recovery.v1B\014GenesisProtoP\001Z2github.com/Canto-Network/Canto/v6/x/recovery/types\242\002\003CRX\252\002\021Canto.Recovery.V1\312\002\021Canto\\Recovery\\V1\342\002\035Canto\\Recovery\\V1\\GPBMetadata\352\002\023Canto::Recovery::V1'
+  DESCRIPTOR._serialized_options = b'\n\025com.canto.recovery.v1B\014GenesisProtoZ2github.com/Canto-Network/Canto/v6/x/recovery/types\242\002\003CRX\252\002\021Canto.Recovery.V1\312\002\021Canto\\Recovery\\V1\342\002\035Canto\\Recovery\\V1\\GPBMetadata\352\002\023Canto::Recovery::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _PARAMS.fields_by_name['packet_timeout_duration']._options = None

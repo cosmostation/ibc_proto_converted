@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ethermint/types/v1/indexer.proto\x12\x12\x65thermint.types.v1\x1a\x14gogoproto/gogo.proto\"\xe5\x01\n\x08TxResult\x12\x16\n\x06height\x18\x01 \x01(\x03R\x06height\x12\x19\n\x08tx_index\x18\x02 \x01(\rR\x07txIndex\x12\x1b\n\tmsg_index\x18\x03 \x01(\rR\x08msgIndex\x12 \n\x0c\x65th_tx_index\x18\x04 \x01(\x05R\nethTxIndex\x12\x16\n\x06\x66\x61iled\x18\x05 \x01(\x08R\x06\x66\x61iled\x12\x19\n\x08gas_used\x18\x06 \x01(\x04R\x07gasUsed\x12.\n\x13\x63umulative_gas_used\x18\x07 \x01(\x04R\x11\x63umulativeGasUsed:\x04\x88\xa0\x1f\x00\x42\xb2\x01\n\x16\x63om.ethermint.types.v1B\x0cIndexerProtoP\x01Z github.com/evmos/evmos/v13/types\xa2\x02\x03\x45TX\xaa\x02\x12\x45thermint.Types.V1\xca\x02\x12\x45thermint\\Types\\V1\xe2\x02\x1e\x45thermint\\Types\\V1\\GPBMetadata\xea\x02\x14\x45thermint::Types::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ethermint/types/v1/indexer.proto\x12\x12\x65thermint.types.v1\x1a\x14gogoproto/gogo.proto\"\xe5\x01\n\x08TxResult\x12\x16\n\x06height\x18\x01 \x01(\x03R\x06height\x12\x19\n\x08tx_index\x18\x02 \x01(\rR\x07txIndex\x12\x1b\n\tmsg_index\x18\x03 \x01(\rR\x08msgIndex\x12 \n\x0c\x65th_tx_index\x18\x04 \x01(\x05R\nethTxIndex\x12\x16\n\x06\x66\x61iled\x18\x05 \x01(\x08R\x06\x66\x61iled\x12\x19\n\x08gas_used\x18\x06 \x01(\x04R\x07gasUsed\x12.\n\x13\x63umulative_gas_used\x18\x07 \x01(\x04R\x11\x63umulativeGasUsed:\x04\x88\xa0\x1f\x00\x42\xb0\x01\n\x16\x63om.ethermint.types.v1B\x0cIndexerProtoZ github.com/evmos/evmos/v13/types\xa2\x02\x03\x45TX\xaa\x02\x12\x45thermint.Types.V1\xca\x02\x12\x45thermint\\Types\\V1\xe2\x02\x1e\x45thermint\\Types\\V1\\GPBMetadata\xea\x02\x14\x45thermint::Types::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ethermint.types.v1.indexer_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.ethermint.types.v1B\014IndexerProtoP\001Z github.com/evmos/evmos/v13/types\242\002\003ETX\252\002\022Ethermint.Types.V1\312\002\022Ethermint\\Types\\V1\342\002\036Ethermint\\Types\\V1\\GPBMetadata\352\002\024Ethermint::Types::V1'
+  DESCRIPTOR._serialized_options = b'\n\026com.ethermint.types.v1B\014IndexerProtoZ github.com/evmos/evmos/v13/types\242\002\003ETX\252\002\022Ethermint.Types.V1\312\002\022Ethermint\\Types\\V1\342\002\036Ethermint\\Types\\V1\\GPBMetadata\352\002\024Ethermint::Types::V1'
   _TXRESULT._options = None
   _TXRESULT._serialized_options = b'\210\240\037\000'
   _globals['_TXRESULT']._serialized_start=79

@@ -90,7 +90,8 @@ public final class GenesisProto {
 
     public static final int INDEX_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList index_;
+    private com.google.protobuf.Internal.LongList index_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
      * @return A list containing the index.
@@ -365,24 +366,19 @@ public final class GenesisProto {
       @java.lang.Override
       public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes buildPartial() {
         com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes result = new com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          index_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.index_ = index_;
       }
 
       private void buildPartial0(com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.merkledropId_ = merkledropId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          index_.makeImmutable();
+          result.index_ = index_;
         }
       }
 
@@ -436,7 +432,8 @@ public final class GenesisProto {
         if (!other.index_.isEmpty()) {
           if (index_.isEmpty()) {
             index_ = other.index_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            index_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureIndexIsMutable();
             index_.addAll(other.index_);
@@ -541,10 +538,10 @@ public final class GenesisProto {
 
       private com.google.protobuf.Internal.LongList index_ = emptyLongList();
       private void ensureIndexIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          index_ = mutableCopy(index_);
-          bitField0_ |= 0x00000002;
+        if (!index_.isModifiable()) {
+          index_ = makeMutableCopy(index_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
@@ -552,8 +549,8 @@ public final class GenesisProto {
        */
       public java.util.List<java.lang.Long>
           getIndexList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(index_) : index_;
+        index_.makeImmutable();
+        return index_;
       }
       /**
        * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
@@ -581,6 +578,7 @@ public final class GenesisProto {
 
         ensureIndexIsMutable();
         index_.setLong(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -593,6 +591,7 @@ public final class GenesisProto {
 
         ensureIndexIsMutable();
         index_.addLong(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -606,6 +605,7 @@ public final class GenesisProto {
         ensureIndexIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, index_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -793,6 +793,7 @@ public final class GenesisProto {
               com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.class, com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LAST_MERKLEDROP_ID_FIELD_NUMBER = 1;
     private long lastMerkledropId_ = 0L;
     /**
@@ -894,7 +895,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -935,7 +936,7 @@ public final class GenesisProto {
       for (int i = 0; i < indexes_.size(); i++) {
         output.writeMessage(3, indexes_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -959,7 +960,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, indexes_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getParams());
       }
@@ -1134,13 +1135,21 @@ public final class GenesisProto {
 
       // Construct using com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMerkledropsFieldBuilder();
+          getIndexesFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1224,11 +1233,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lastMerkledropId_ = lastMerkledropId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1992,8 +2004,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

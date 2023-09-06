@@ -695,6 +695,7 @@ public final class RewardProto {
       // @@protoc_insertion_point(enum_scope:provenance.reward.v1.RewardProgram.State)
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -863,7 +864,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasTotalRewardPool() {
-      return totalRewardPool_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -901,7 +902,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasRemainingPoolBalance() {
-      return remainingPoolBalance_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -939,7 +940,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasClaimedAmount() {
-      return claimedAmount_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -977,7 +978,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasMaxRewardByAddress() {
-      return maxRewardByAddress_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1015,7 +1016,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasMinimumRolloverAmount() {
-      return minimumRolloverAmount_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1068,7 +1069,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasProgramStartTime() {
-      return programStartTime_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1106,7 +1107,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasExpectedProgramEndTime() {
-      return expectedProgramEndTime_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1144,7 +1145,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasProgramEndTimeMax() {
-      return programEndTimeMax_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1182,7 +1183,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasClaimPeriodEndTime() {
-      return claimPeriodEndTime_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -1220,7 +1221,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasActualProgramEndTime() {
-      return actualProgramEndTime_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -1420,37 +1421,37 @@ public final class RewardProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributeFromAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, distributeFromAddress_);
       }
-      if (totalRewardPool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getTotalRewardPool());
       }
-      if (remainingPoolBalance_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getRemainingPoolBalance());
       }
-      if (claimedAmount_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(7, getClaimedAmount());
       }
-      if (maxRewardByAddress_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(8, getMaxRewardByAddress());
       }
-      if (minimumRolloverAmount_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(9, getMinimumRolloverAmount());
       }
       if (claimPeriodSeconds_ != 0L) {
         output.writeUInt64(10, claimPeriodSeconds_);
       }
-      if (programStartTime_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(11, getProgramStartTime());
       }
-      if (expectedProgramEndTime_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeMessage(12, getExpectedProgramEndTime());
       }
-      if (programEndTimeMax_ != null) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeMessage(13, getProgramEndTimeMax());
       }
-      if (claimPeriodEndTime_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(14, getClaimPeriodEndTime());
       }
-      if (actualProgramEndTime_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeMessage(15, getActualProgramEndTime());
       }
       if (claimPeriods_ != 0L) {
@@ -1493,23 +1494,23 @@ public final class RewardProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributeFromAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, distributeFromAddress_);
       }
-      if (totalRewardPool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTotalRewardPool());
       }
-      if (remainingPoolBalance_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getRemainingPoolBalance());
       }
-      if (claimedAmount_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getClaimedAmount());
       }
-      if (maxRewardByAddress_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getMaxRewardByAddress());
       }
-      if (minimumRolloverAmount_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getMinimumRolloverAmount());
       }
@@ -1517,23 +1518,23 @@ public final class RewardProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(10, claimPeriodSeconds_);
       }
-      if (programStartTime_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getProgramStartTime());
       }
-      if (expectedProgramEndTime_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getExpectedProgramEndTime());
       }
-      if (programEndTimeMax_ != null) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getProgramEndTimeMax());
       }
-      if (claimPeriodEndTime_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getClaimPeriodEndTime());
       }
-      if (actualProgramEndTime_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getActualProgramEndTime());
       }
@@ -1851,13 +1852,29 @@ public final class RewardProto {
 
       // Construct using com.provenance.reward.v1.RewardProto.RewardProgram.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalRewardPoolFieldBuilder();
+          getRemainingPoolBalanceFieldBuilder();
+          getClaimedAmountFieldBuilder();
+          getMaxRewardByAddressFieldBuilder();
+          getMinimumRolloverAmountFieldBuilder();
+          getProgramStartTimeFieldBuilder();
+          getExpectedProgramEndTimeFieldBuilder();
+          getProgramEndTimeMaxFieldBuilder();
+          getClaimPeriodEndTimeFieldBuilder();
+          getActualProgramEndTimeFieldBuilder();
+          getQualifyingActionsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1988,30 +2005,36 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.distributeFromAddress_ = distributeFromAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalRewardPool_ = totalRewardPoolBuilder_ == null
               ? totalRewardPool_
               : totalRewardPoolBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.remainingPoolBalance_ = remainingPoolBalanceBuilder_ == null
               ? remainingPoolBalance_
               : remainingPoolBalanceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.claimedAmount_ = claimedAmountBuilder_ == null
               ? claimedAmount_
               : claimedAmountBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.maxRewardByAddress_ = maxRewardByAddressBuilder_ == null
               ? maxRewardByAddress_
               : maxRewardByAddressBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.minimumRolloverAmount_ = minimumRolloverAmountBuilder_ == null
               ? minimumRolloverAmount_
               : minimumRolloverAmountBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.claimPeriodSeconds_ = claimPeriodSeconds_;
@@ -2020,26 +2043,31 @@ public final class RewardProto {
           result.programStartTime_ = programStartTimeBuilder_ == null
               ? programStartTime_
               : programStartTimeBuilder_.build();
+          to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.expectedProgramEndTime_ = expectedProgramEndTimeBuilder_ == null
               ? expectedProgramEndTime_
               : expectedProgramEndTimeBuilder_.build();
+          to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.programEndTimeMax_ = programEndTimeMaxBuilder_ == null
               ? programEndTimeMax_
               : programEndTimeMaxBuilder_.build();
+          to_bitField0_ |= 0x00000080;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.claimPeriodEndTime_ = claimPeriodEndTimeBuilder_ == null
               ? claimPeriodEndTime_
               : claimPeriodEndTimeBuilder_.build();
+          to_bitField0_ |= 0x00000100;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.actualProgramEndTime_ = actualProgramEndTimeBuilder_ == null
               ? actualProgramEndTime_
               : actualProgramEndTimeBuilder_.build();
+          to_bitField0_ |= 0x00000200;
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.claimPeriods_ = claimPeriods_;
@@ -2056,6 +2084,7 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00080000) != 0)) {
           result.expirationOffset_ = expirationOffset_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2776,8 +2805,10 @@ public final class RewardProto {
         } else {
           totalRewardPoolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (totalRewardPool_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2931,8 +2962,10 @@ public final class RewardProto {
         } else {
           remainingPoolBalanceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (remainingPoolBalance_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3086,8 +3119,10 @@ public final class RewardProto {
         } else {
           claimedAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (claimedAmount_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3241,8 +3276,10 @@ public final class RewardProto {
         } else {
           maxRewardByAddressBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (maxRewardByAddress_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3396,8 +3433,10 @@ public final class RewardProto {
         } else {
           minimumRolloverAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (minimumRolloverAmount_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3595,8 +3634,10 @@ public final class RewardProto {
         } else {
           programStartTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        if (programStartTime_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3750,8 +3791,10 @@ public final class RewardProto {
         } else {
           expectedProgramEndTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000800;
-        onChanged();
+        if (expectedProgramEndTime_ != null) {
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3905,8 +3948,10 @@ public final class RewardProto {
         } else {
           programEndTimeMaxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00001000;
-        onChanged();
+        if (programEndTimeMax_ != null) {
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4060,8 +4105,10 @@ public final class RewardProto {
         } else {
           claimPeriodEndTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00002000;
-        onChanged();
+        if (claimPeriodEndTime_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4215,8 +4262,10 @@ public final class RewardProto {
         } else {
           actualProgramEndTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00004000;
-        onChanged();
+        if (actualProgramEndTime_ != null) {
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5048,6 +5097,7 @@ public final class RewardProto {
               com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.class, com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLAIM_PERIOD_ID_FIELD_NUMBER = 1;
     private long claimPeriodId_ = 0L;
     /**
@@ -5090,7 +5140,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasTotalRewardsPoolForClaimPeriod() {
-      return totalRewardsPoolForClaimPeriod_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5128,7 +5178,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasRewardsPool() {
-      return rewardsPool_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5204,10 +5254,10 @@ public final class RewardProto {
       if (rewardProgramId_ != 0L) {
         output.writeUInt64(2, rewardProgramId_);
       }
-      if (totalRewardsPoolForClaimPeriod_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getTotalRewardsPoolForClaimPeriod());
       }
-      if (rewardsPool_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getRewardsPool());
       }
       if (totalShares_ != 0L) {
@@ -5233,11 +5283,11 @@ public final class RewardProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, rewardProgramId_);
       }
-      if (totalRewardsPoolForClaimPeriod_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTotalRewardsPoolForClaimPeriod());
       }
-      if (rewardsPool_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRewardsPool());
       }
@@ -5436,13 +5486,20 @@ public final class RewardProto {
 
       // Construct using com.provenance.reward.v1.RewardProto.ClaimPeriodRewardDistribution.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalRewardsPoolForClaimPeriodFieldBuilder();
+          getRewardsPoolFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5501,15 +5558,18 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.rewardProgramId_ = rewardProgramId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.totalRewardsPoolForClaimPeriod_ = totalRewardsPoolForClaimPeriodBuilder_ == null
               ? totalRewardsPoolForClaimPeriod_
               : totalRewardsPoolForClaimPeriodBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.rewardsPool_ = rewardsPoolBuilder_ == null
               ? rewardsPool_
               : rewardsPoolBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalShares_ = totalShares_;
@@ -5517,6 +5577,7 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.claimPeriodEnded_ = claimPeriodEnded_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5832,8 +5893,10 @@ public final class RewardProto {
         } else {
           totalRewardsPoolForClaimPeriodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (totalRewardsPoolForClaimPeriod_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5987,8 +6050,10 @@ public final class RewardProto {
         } else {
           rewardsPoolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (rewardsPool_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10111,6 +10176,7 @@ public final class RewardProto {
               com.provenance.reward.v1.RewardProto.ActionDelegate.class, com.provenance.reward.v1.RewardProto.ActionDelegate.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINIMUM_ACTIONS_FIELD_NUMBER = 1;
     private long minimumActions_ = 0L;
     /**
@@ -10153,7 +10219,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasMinimumDelegationAmount() {
-      return minimumDelegationAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -10191,7 +10257,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasMaximumDelegationAmount() {
-      return maximumDelegationAmount_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -10331,10 +10397,10 @@ public final class RewardProto {
       if (maximumActions_ != 0L) {
         output.writeUInt64(2, maximumActions_);
       }
-      if (minimumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getMinimumDelegationAmount());
       }
-      if (maximumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getMaximumDelegationAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minimumActiveStakePercentile_)) {
@@ -10360,11 +10426,11 @@ public final class RewardProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, maximumActions_);
       }
-      if (minimumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMinimumDelegationAmount());
       }
-      if (maximumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMaximumDelegationAmount());
       }
@@ -10559,13 +10625,20 @@ public final class RewardProto {
 
       // Construct using com.provenance.reward.v1.RewardProto.ActionDelegate.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinimumDelegationAmountFieldBuilder();
+          getMaximumDelegationAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10624,15 +10697,18 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maximumActions_ = maximumActions_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minimumDelegationAmount_ = minimumDelegationAmountBuilder_ == null
               ? minimumDelegationAmount_
               : minimumDelegationAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.maximumDelegationAmount_ = maximumDelegationAmountBuilder_ == null
               ? maximumDelegationAmount_
               : maximumDelegationAmountBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.minimumActiveStakePercentile_ = minimumActiveStakePercentile_;
@@ -10640,6 +10716,7 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.maximumActiveStakePercentile_ = maximumActiveStakePercentile_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10959,8 +11036,10 @@ public final class RewardProto {
         } else {
           minimumDelegationAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (minimumDelegationAmount_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11114,8 +11193,10 @@ public final class RewardProto {
         } else {
           maximumDelegationAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (maximumDelegationAmount_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11520,6 +11601,7 @@ public final class RewardProto {
               com.provenance.reward.v1.RewardProto.ActionTransfer.class, com.provenance.reward.v1.RewardProto.ActionTransfer.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINIMUM_ACTIONS_FIELD_NUMBER = 1;
     private long minimumActions_ = 0L;
     /**
@@ -11562,7 +11644,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasMinimumDelegationAmount() {
-      return minimumDelegationAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -11608,7 +11690,7 @@ public final class RewardProto {
       if (maximumActions_ != 0L) {
         output.writeUInt64(2, maximumActions_);
       }
-      if (minimumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getMinimumDelegationAmount());
       }
       getUnknownFields().writeTo(output);
@@ -11628,7 +11710,7 @@ public final class RewardProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, maximumActions_);
       }
-      if (minimumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMinimumDelegationAmount());
       }
@@ -11800,13 +11882,19 @@ public final class RewardProto {
 
       // Construct using com.provenance.reward.v1.RewardProto.ActionTransfer.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinimumDelegationAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11858,11 +11946,14 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maximumActions_ = maximumActions_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minimumDelegationAmount_ = minimumDelegationAmountBuilder_ == null
               ? minimumDelegationAmount_
               : minimumDelegationAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12152,8 +12243,10 @@ public final class RewardProto {
         } else {
           minimumDelegationAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (minimumDelegationAmount_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12386,6 +12479,7 @@ public final class RewardProto {
               com.provenance.reward.v1.RewardProto.ActionVote.class, com.provenance.reward.v1.RewardProto.ActionVote.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINIMUM_ACTIONS_FIELD_NUMBER = 1;
     private long minimumActions_ = 0L;
     /**
@@ -12428,7 +12522,7 @@ public final class RewardProto {
      */
     @java.lang.Override
     public boolean hasMinimumDelegationAmount() {
-      return minimumDelegationAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -12491,7 +12585,7 @@ public final class RewardProto {
       if (maximumActions_ != 0L) {
         output.writeUInt64(2, maximumActions_);
       }
-      if (minimumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getMinimumDelegationAmount());
       }
       if (validatorMultiplier_ != 0L) {
@@ -12514,7 +12608,7 @@ public final class RewardProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, maximumActions_);
       }
-      if (minimumDelegationAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMinimumDelegationAmount());
       }
@@ -12695,13 +12789,19 @@ public final class RewardProto {
 
       // Construct using com.provenance.reward.v1.RewardProto.ActionVote.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinimumDelegationAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12754,14 +12854,17 @@ public final class RewardProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maximumActions_ = maximumActions_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minimumDelegationAmount_ = minimumDelegationAmountBuilder_ == null
               ? minimumDelegationAmount_
               : minimumDelegationAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.validatorMultiplier_ = validatorMultiplier_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13059,8 +13162,10 @@ public final class RewardProto {
         } else {
           minimumDelegationAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (minimumDelegationAmount_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

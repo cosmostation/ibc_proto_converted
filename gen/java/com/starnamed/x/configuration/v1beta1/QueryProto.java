@@ -492,6 +492,7 @@ public final class QueryProto {
               com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private com.starnamed.x.configuration.v1beta1.TypesProto.Config config_;
     /**
@@ -504,7 +505,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return config_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -544,7 +545,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getConfig());
       }
       getUnknownFields().writeTo(output);
@@ -556,7 +557,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConfig());
       }
@@ -719,13 +720,19 @@ public final class QueryProto {
 
       // Construct using com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getConfigFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -769,11 +776,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -959,8 +969,10 @@ public final class QueryProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (config_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1566,6 +1578,7 @@ public final class QueryProto {
               com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEES_FIELD_NUMBER = 1;
     private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
     /**
@@ -1578,7 +1591,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFees() {
-      return fees_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1618,7 +1631,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fees_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFees());
       }
       getUnknownFields().writeTo(output);
@@ -1630,7 +1643,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (fees_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFees());
       }
@@ -1792,13 +1805,19 @@ public final class QueryProto {
 
       // Construct using com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1842,11 +1861,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fees_ = feesBuilder_ == null
               ? fees_
               : feesBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2032,8 +2054,10 @@ public final class QueryProto {
         } else {
           feesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (fees_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

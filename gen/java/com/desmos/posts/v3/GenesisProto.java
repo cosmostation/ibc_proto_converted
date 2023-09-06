@@ -222,6 +222,7 @@ public final class GenesisProto {
               com.desmos.posts.v3.GenesisProto.GenesisState.class, com.desmos.posts.v3.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACES_DATA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.posts.v3.GenesisProto.SubspaceDataEntry> subspacesData_;
@@ -476,7 +477,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.desmos.posts.v3.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -526,7 +527,7 @@ public final class GenesisProto {
       for (int i = 0; i < userAnswers_.size(); i++) {
         output.writeMessage(6, userAnswers_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -562,7 +563,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, userAnswers_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getParams());
       }
@@ -760,13 +761,25 @@ public final class GenesisProto {
 
       // Construct using com.desmos.posts.v3.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubspacesDataFieldBuilder();
+          getPostsDataFieldBuilder();
+          getPostsFieldBuilder();
+          getAttachmentsFieldBuilder();
+          getActivePollsFieldBuilder();
+          getUserAnswersFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -910,11 +923,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.desmos.posts.v3.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2754,8 +2770,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4134,6 +4152,7 @@ public final class GenesisProto {
               com.desmos.posts.v3.GenesisProto.ActivePollData.class, com.desmos.posts.v3.GenesisProto.ActivePollData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -4175,7 +4194,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEndDate() {
-      return endDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -4216,7 +4235,7 @@ public final class GenesisProto {
       if (pollId_ != 0) {
         output.writeUInt32(3, pollId_);
       }
-      if (endDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getEndDate());
       }
       getUnknownFields().writeTo(output);
@@ -4240,7 +4259,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, pollId_);
       }
-      if (endDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEndDate());
       }
@@ -4416,13 +4435,19 @@ public final class GenesisProto {
 
       // Construct using com.desmos.posts.v3.GenesisProto.ActivePollData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEndDateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4478,11 +4503,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pollId_ = pollId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.endDate_ = endDateBuilder_ == null
               ? endDate_
               : endDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4768,8 +4796,10 @@ public final class GenesisProto {
         } else {
           endDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (endDate_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

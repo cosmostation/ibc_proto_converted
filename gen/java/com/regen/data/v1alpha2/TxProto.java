@@ -109,6 +109,7 @@ public final class TxProto {
               com.regen.data.v1alpha2.TxProto.MsgAnchorData.class, com.regen.data.v1alpha2.TxProto.MsgAnchorData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -172,7 +173,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasHash() {
-      return hash_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -215,7 +216,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (hash_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getHash());
       }
       getUnknownFields().writeTo(output);
@@ -230,7 +231,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (hash_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHash());
       }
@@ -396,13 +397,19 @@ public final class TxProto {
 
       // Construct using com.regen.data.v1alpha2.TxProto.MsgAnchorData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHashFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -450,11 +457,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hash_ = hashBuilder_ == null
               ? hash_
               : hashBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -752,8 +762,10 @@ public final class TxProto {
         } else {
           hashBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (hash_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -975,6 +987,7 @@ public final class TxProto {
               com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.class, com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TIMESTAMP_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp timestamp_;
     /**
@@ -987,7 +1000,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return timestamp_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1074,7 +1087,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTimestamp());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
@@ -1089,7 +1102,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTimestamp());
       }
@@ -1258,13 +1271,19 @@ public final class TxProto {
 
       // Construct using com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1309,14 +1328,17 @@ public final class TxProto {
 
       private void buildPartial0(com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.iri_ = iri_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1512,8 +1534,10 @@ public final class TxProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (timestamp_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1864,6 +1888,7 @@ public final class TxProto {
               com.regen.data.v1alpha2.TxProto.MsgSignData.class, com.regen.data.v1alpha2.TxProto.MsgSignData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SIGNERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList signers_ =
@@ -1942,7 +1967,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasHash() {
-      return hash_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1987,7 +2012,7 @@ public final class TxProto {
       for (int i = 0; i < signers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signers_.getRaw(i));
       }
-      if (hash_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getHash());
       }
       getUnknownFields().writeTo(output);
@@ -2007,7 +2032,7 @@ public final class TxProto {
         size += dataSize;
         size += 1 * getSignersList().size();
       }
-      if (hash_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHash());
       }
@@ -2175,13 +2200,19 @@ public final class TxProto {
 
       // Construct using com.regen.data.v1alpha2.TxProto.MsgSignData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHashFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2231,11 +2262,14 @@ public final class TxProto {
           signers_.makeImmutable();
           result.signers_ = signers_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hash_ = hashBuilder_ == null
               ? hash_
               : hashBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2616,8 +2650,10 @@ public final class TxProto {
         } else {
           hashBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (hash_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

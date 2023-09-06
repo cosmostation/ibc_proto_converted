@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19umee/ugov/v1/events.proto\x12\x0cumee.ugov.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"T\n\x0e\x45ventMinTxFees\x12\x42\n\x0bmin_tx_fees\x18\x01 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\tminTxFeesB\x9d\x01\n\x10\x63om.umee.ugov.v1B\x0b\x45ventsProtoP\x01Z&github.com/umee-network/umee/v5/x/ugov\xa2\x02\x03UUX\xaa\x02\x0cUmee.Ugov.V1\xca\x02\x0cUmee\\Ugov\\V1\xe2\x02\x18Umee\\Ugov\\V1\\GPBMetadata\xea\x02\x0eUmee::Ugov::V1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19umee/ugov/v1/events.proto\x12\x0cumee.ugov.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"T\n\x0e\x45ventMinTxFees\x12\x42\n\x0bmin_tx_fees\x18\x01 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\tminTxFeesB\x9b\x01\n\x10\x63om.umee.ugov.v1B\x0b\x45ventsProtoZ&github.com/umee-network/umee/v5/x/ugov\xa2\x02\x03UUX\xaa\x02\x0cUmee.Ugov.V1\xca\x02\x0cUmee\\Ugov\\V1\xe2\x02\x18Umee\\Ugov\\V1\\GPBMetadata\xea\x02\x0eUmee::Ugov::V1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'umee.ugov.v1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.umee.ugov.v1B\013EventsProtoP\001Z&github.com/umee-network/umee/v5/x/ugov\242\002\003UUX\252\002\014Umee.Ugov.V1\312\002\014Umee\\Ugov\\V1\342\002\030Umee\\Ugov\\V1\\GPBMetadata\352\002\016Umee::Ugov::V1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\020com.umee.ugov.v1B\013EventsProtoZ&github.com/umee-network/umee/v5/x/ugov\242\002\003UUX\252\002\014Umee.Ugov.V1\312\002\014Umee\\Ugov\\V1\342\002\030Umee\\Ugov\\V1\\GPBMetadata\352\002\016Umee::Ugov::V1\310\341\036\000'
   _EVENTMINTXFEES.fields_by_name['min_tx_fees']._options = None
   _EVENTMINTXFEES.fields_by_name['min_tx_fees']._serialized_options = b'\310\336\037\000'
   _globals['_EVENTMINTXFEES']._serialized_start=97

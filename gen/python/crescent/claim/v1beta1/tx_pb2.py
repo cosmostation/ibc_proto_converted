@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from crescent.claim.v1beta1 import claim_pb2 as crescent_dot_claim_dot_v1beta1_dot_claim__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63rescent/claim/v1beta1/tx.proto\x12\x16\x63rescent.claim.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"crescent/claim/v1beta1/claim.proto\"\x95\x01\n\x08MsgClaim\x12\x1d\n\nairdrop_id\x18\x01 \x01(\x04R\tairdropId\x12\x1c\n\trecipient\x18\x02 \x01(\tR\trecipient\x12L\n\x0e\x63ondition_type\x18\x03 \x01(\x0e\x32%.crescent.claim.v1beta1.ConditionTypeR\rconditionType\"\x12\n\x10MsgClaimResponse2Z\n\x03Msg\x12S\n\x05\x43laim\x12 .crescent.claim.v1beta1.MsgClaim\x1a(.crescent.claim.v1beta1.MsgClaimResponseB\xda\x01\n\x1a\x63om.crescent.claim.v1beta1B\x07TxProtoP\x01Z5github.com/crescent-network/crescent/v5/x/claim/types\xa2\x02\x03\x43\x43X\xaa\x02\x16\x43rescent.Claim.V1beta1\xca\x02\x16\x43rescent\\Claim\\V1beta1\xe2\x02\"Crescent\\Claim\\V1beta1\\GPBMetadata\xea\x02\x18\x43rescent::Claim::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63rescent/claim/v1beta1/tx.proto\x12\x16\x63rescent.claim.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"crescent/claim/v1beta1/claim.proto\"\x95\x01\n\x08MsgClaim\x12\x1d\n\nairdrop_id\x18\x01 \x01(\x04R\tairdropId\x12\x1c\n\trecipient\x18\x02 \x01(\tR\trecipient\x12L\n\x0e\x63ondition_type\x18\x03 \x01(\x0e\x32%.crescent.claim.v1beta1.ConditionTypeR\rconditionType\"\x12\n\x10MsgClaimResponse2Z\n\x03Msg\x12S\n\x05\x43laim\x12 .crescent.claim.v1beta1.MsgClaim\x1a(.crescent.claim.v1beta1.MsgClaimResponseB\xd8\x01\n\x1a\x63om.crescent.claim.v1beta1B\x07TxProtoZ5github.com/crescent-network/crescent/v5/x/claim/types\xa2\x02\x03\x43\x43X\xaa\x02\x16\x43rescent.Claim.V1beta1\xca\x02\x16\x43rescent\\Claim\\V1beta1\xe2\x02\"Crescent\\Claim\\V1beta1\\GPBMetadata\xea\x02\x18\x43rescent::Claim::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'crescent.claim.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.crescent.claim.v1beta1B\007TxProtoP\001Z5github.com/crescent-network/crescent/v5/x/claim/types\242\002\003CCX\252\002\026Crescent.Claim.V1beta1\312\002\026Crescent\\Claim\\V1beta1\342\002\"Crescent\\Claim\\V1beta1\\GPBMetadata\352\002\030Crescent::Claim::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\032com.crescent.claim.v1beta1B\007TxProtoZ5github.com/crescent-network/crescent/v5/x/claim/types\242\002\003CCX\252\002\026Crescent.Claim.V1beta1\312\002\026Crescent\\Claim\\V1beta1\342\002\"Crescent\\Claim\\V1beta1\\GPBMetadata\352\002\030Crescent::Claim::V1beta1\310\341\036\000'
   _globals['_MSGCLAIM']._serialized_start=118
   _globals['_MSGCLAIM']._serialized_end=267
   _globals['_MSGCLAIMRESPONSE']._serialized_start=269

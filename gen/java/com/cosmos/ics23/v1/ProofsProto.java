@@ -550,6 +550,7 @@ public final class ProofsProto {
               com.cosmos.ics23.v1.ProofsProto.ExistenceProof.class, com.cosmos.ics23.v1.ProofsProto.ExistenceProof.Builder.class);
     }
 
+    private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -580,7 +581,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasLeaf() {
-      return leaf_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.ics23.v1.LeafOp leaf = 3 [json_name = "leaf"];</code>
@@ -659,7 +660,7 @@ public final class ProofsProto {
       if (!value_.isEmpty()) {
         output.writeBytes(2, value_);
       }
-      if (leaf_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getLeaf());
       }
       for (int i = 0; i < path_.size(); i++) {
@@ -682,7 +683,7 @@ public final class ProofsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, value_);
       }
-      if (leaf_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLeaf());
       }
@@ -881,13 +882,20 @@ public final class ProofsProto {
 
       // Construct using com.cosmos.ics23.v1.ProofsProto.ExistenceProof.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLeafFieldBuilder();
+          getPathFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -959,11 +967,14 @@ public final class ProofsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.value_ = value_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.leaf_ = leafBuilder_ == null
               ? leaf_
               : leafBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1248,8 +1259,10 @@ public final class ProofsProto {
         } else {
           leafBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (leaf_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1691,6 +1704,7 @@ public final class ProofsProto {
               com.cosmos.ics23.v1.ProofsProto.NonExistenceProof.class, com.cosmos.ics23.v1.ProofsProto.NonExistenceProof.Builder.class);
     }
 
+    private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -1714,7 +1728,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasLeft() {
-      return left_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.ics23.v1.ExistenceProof left = 2 [json_name = "left"];</code>
@@ -1740,7 +1754,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasRight() {
-      return right_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.ics23.v1.ExistenceProof right = 3 [json_name = "right"];</code>
@@ -1775,10 +1789,10 @@ public final class ProofsProto {
       if (!key_.isEmpty()) {
         output.writeBytes(1, key_);
       }
-      if (left_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLeft());
       }
-      if (right_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getRight());
       }
       getUnknownFields().writeTo(output);
@@ -1794,11 +1808,11 @@ public final class ProofsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, key_);
       }
-      if (left_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLeft());
       }
-      if (right_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRight());
       }
@@ -1976,13 +1990,20 @@ public final class ProofsProto {
 
       // Construct using com.cosmos.ics23.v1.ProofsProto.NonExistenceProof.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLeftFieldBuilder();
+          getRightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2035,16 +2056,20 @@ public final class ProofsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.key_ = key_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.left_ = leftBuilder_ == null
               ? left_
               : leftBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.right_ = rightBuilder_ == null
               ? right_
               : rightBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2272,8 +2297,10 @@ public final class ProofsProto {
         } else {
           leftBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (left_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2391,8 +2418,10 @@ public final class ProofsProto {
         } else {
           rightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (right_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5671,6 +5700,7 @@ public final class ProofsProto {
               com.cosmos.ics23.v1.ProofsProto.ProofSpec.class, com.cosmos.ics23.v1.ProofsProto.ProofSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LEAF_SPEC_FIELD_NUMBER = 1;
     private com.cosmos.ics23.v1.ProofsProto.LeafOp leafSpec_;
     /**
@@ -5684,7 +5714,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasLeafSpec() {
-      return leafSpec_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5720,7 +5750,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasInnerSpec() {
-      return innerSpec_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.ics23.v1.InnerSpec inner_spec = 2 [json_name = "innerSpec"];</code>
@@ -5799,10 +5829,10 @@ public final class ProofsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (leafSpec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getLeafSpec());
       }
-      if (innerSpec_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getInnerSpec());
       }
       if (maxDepth_ != 0) {
@@ -5823,11 +5853,11 @@ public final class ProofsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (leafSpec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLeafSpec());
       }
-      if (innerSpec_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInnerSpec());
       }
@@ -6033,13 +6063,20 @@ public final class ProofsProto {
 
       // Construct using com.cosmos.ics23.v1.ProofsProto.ProofSpec.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLeafSpecFieldBuilder();
+          getInnerSpecFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6091,15 +6128,18 @@ public final class ProofsProto {
 
       private void buildPartial0(com.cosmos.ics23.v1.ProofsProto.ProofSpec result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.leafSpec_ = leafSpecBuilder_ == null
               ? leafSpec_
               : leafSpecBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.innerSpec_ = innerSpecBuilder_ == null
               ? innerSpec_
               : innerSpecBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxDepth_ = maxDepth_;
@@ -6110,6 +6150,7 @@ public final class ProofsProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.prehashKeyBeforeComparison_ = prehashKeyBeforeComparison_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6334,8 +6375,10 @@ public final class ProofsProto {
         } else {
           leafSpecBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (leafSpec_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6473,8 +6516,10 @@ public final class ProofsProto {
         } else {
           innerSpecBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (innerSpec_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6865,7 +6910,8 @@ public final class ProofsProto {
 
     public static final int CHILD_ORDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList childOrder_;
+    private com.google.protobuf.Internal.IntList childOrder_ =
+        emptyIntList();
     /**
      * <pre>
      * Child order is the ordering of the children node, must count from 0
@@ -7290,22 +7336,17 @@ public final class ProofsProto {
       @java.lang.Override
       public com.cosmos.ics23.v1.ProofsProto.InnerSpec buildPartial() {
         com.cosmos.ics23.v1.ProofsProto.InnerSpec result = new com.cosmos.ics23.v1.ProofsProto.InnerSpec(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.cosmos.ics23.v1.ProofsProto.InnerSpec result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          childOrder_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.childOrder_ = childOrder_;
-      }
-
       private void buildPartial0(com.cosmos.ics23.v1.ProofsProto.InnerSpec result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          childOrder_.makeImmutable();
+          result.childOrder_ = childOrder_;
+        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.childSize_ = childSize_;
         }
@@ -7370,7 +7411,8 @@ public final class ProofsProto {
         if (!other.childOrder_.isEmpty()) {
           if (childOrder_.isEmpty()) {
             childOrder_ = other.childOrder_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            childOrder_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureChildOrderIsMutable();
             childOrder_.addAll(other.childOrder_);
@@ -7478,10 +7520,10 @@ public final class ProofsProto {
 
       private com.google.protobuf.Internal.IntList childOrder_ = emptyIntList();
       private void ensureChildOrderIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          childOrder_ = mutableCopy(childOrder_);
-          bitField0_ |= 0x00000001;
+        if (!childOrder_.isModifiable()) {
+          childOrder_ = makeMutableCopy(childOrder_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -7495,8 +7537,8 @@ public final class ProofsProto {
        */
       public java.util.List<java.lang.Integer>
           getChildOrderList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(childOrder_) : childOrder_;
+        childOrder_.makeImmutable();
+        return childOrder_;
       }
       /**
        * <pre>
@@ -7542,6 +7584,7 @@ public final class ProofsProto {
 
         ensureChildOrderIsMutable();
         childOrder_.setInt(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7560,6 +7603,7 @@ public final class ProofsProto {
 
         ensureChildOrderIsMutable();
         childOrder_.addInt(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7579,6 +7623,7 @@ public final class ProofsProto {
         ensureChildOrderIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, childOrder_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11791,6 +11836,7 @@ public final class ProofsProto {
               com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof.class, com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof.Builder.class);
     }
 
+    private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -11821,7 +11867,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasLeaf() {
-      return leaf_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.ics23.v1.LeafOp leaf = 3 [json_name = "leaf"];</code>
@@ -11841,7 +11887,8 @@ public final class ProofsProto {
 
     public static final int PATH_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList path_;
+    private com.google.protobuf.Internal.IntList path_ =
+        emptyIntList();
     /**
      * <pre>
      * these are indexes into the lookup_inners table in CompressedBatchProof
@@ -11901,7 +11948,7 @@ public final class ProofsProto {
       if (!value_.isEmpty()) {
         output.writeBytes(2, value_);
       }
-      if (leaf_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getLeaf());
       }
       if (getPathList().size() > 0) {
@@ -11928,7 +11975,7 @@ public final class ProofsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, value_);
       }
-      if (leaf_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLeaf());
       }
@@ -12114,13 +12161,19 @@ public final class ProofsProto {
 
       // Construct using com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLeafFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12160,18 +12213,9 @@ public final class ProofsProto {
       @java.lang.Override
       public com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof buildPartial() {
         com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof result = new com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          path_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.path_ = path_;
       }
 
       private void buildPartial0(com.cosmos.ics23.v1.ProofsProto.CompressedExistenceProof result) {
@@ -12182,11 +12226,18 @@ public final class ProofsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.value_ = value_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.leaf_ = leafBuilder_ == null
               ? leaf_
               : leafBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          path_.makeImmutable();
+          result.path_ = path_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12245,7 +12296,8 @@ public final class ProofsProto {
         if (!other.path_.isEmpty()) {
           if (path_.isEmpty()) {
             path_ = other.path_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            path_.makeImmutable();
+            bitField0_ |= 0x00000008;
           } else {
             ensurePathIsMutable();
             path_.addAll(other.path_);
@@ -12458,8 +12510,10 @@ public final class ProofsProto {
         } else {
           leafBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (leaf_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12513,10 +12567,10 @@ public final class ProofsProto {
 
       private com.google.protobuf.Internal.IntList path_ = emptyIntList();
       private void ensurePathIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          path_ = mutableCopy(path_);
-          bitField0_ |= 0x00000008;
+        if (!path_.isModifiable()) {
+          path_ = makeMutableCopy(path_);
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -12528,8 +12582,8 @@ public final class ProofsProto {
        */
       public java.util.List<java.lang.Integer>
           getPathList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(path_) : path_;
+        path_.makeImmutable();
+        return path_;
       }
       /**
        * <pre>
@@ -12569,6 +12623,7 @@ public final class ProofsProto {
 
         ensurePathIsMutable();
         path_.setInt(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -12585,6 +12640,7 @@ public final class ProofsProto {
 
         ensurePathIsMutable();
         path_.addInt(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -12602,6 +12658,7 @@ public final class ProofsProto {
         ensurePathIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, path_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -12763,6 +12820,7 @@ public final class ProofsProto {
               com.cosmos.ics23.v1.ProofsProto.CompressedNonExistenceProof.class, com.cosmos.ics23.v1.ProofsProto.CompressedNonExistenceProof.Builder.class);
     }
 
+    private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -12786,7 +12844,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasLeft() {
-      return left_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.ics23.v1.CompressedExistenceProof left = 2 [json_name = "left"];</code>
@@ -12812,7 +12870,7 @@ public final class ProofsProto {
      */
     @java.lang.Override
     public boolean hasRight() {
-      return right_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.ics23.v1.CompressedExistenceProof right = 3 [json_name = "right"];</code>
@@ -12847,10 +12905,10 @@ public final class ProofsProto {
       if (!key_.isEmpty()) {
         output.writeBytes(1, key_);
       }
-      if (left_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLeft());
       }
-      if (right_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getRight());
       }
       getUnknownFields().writeTo(output);
@@ -12866,11 +12924,11 @@ public final class ProofsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, key_);
       }
-      if (left_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLeft());
       }
-      if (right_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRight());
       }
@@ -13041,13 +13099,20 @@ public final class ProofsProto {
 
       // Construct using com.cosmos.ics23.v1.ProofsProto.CompressedNonExistenceProof.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLeftFieldBuilder();
+          getRightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13100,16 +13165,20 @@ public final class ProofsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.key_ = key_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.left_ = leftBuilder_ == null
               ? left_
               : leftBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.right_ = rightBuilder_ == null
               ? right_
               : rightBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13337,8 +13406,10 @@ public final class ProofsProto {
         } else {
           leftBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (left_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13456,8 +13527,10 @@ public final class ProofsProto {
         } else {
           rightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (right_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

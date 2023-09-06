@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.documents.base import document_pb2 as assetmantle_dot_documents_dot_base_dot_document__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*assetmantle/assets/mappable/mappable.proto\x12#assetmantle.modules.assets.mappable\x1a)assetmantle/documents/base/document.proto\"M\n\x08Mappable\x12\x41\n\x05\x61sset\x18\x01 \x01(\x0b\x32+.assetmantle.schema.documents.base.DocumentR\x05\x61ssetB\xe8\x01\n\'com.assetmantle.modules.assets.mappableB\rMappableProtoP\x01\xa2\x02\x04\x41MAM\xaa\x02#Assetmantle.Modules.Assets.Mappable\xca\x02#Assetmantle\\Modules\\Assets\\Mappable\xe2\x02/Assetmantle\\Modules\\Assets\\Mappable\\GPBMetadata\xea\x02&Assetmantle::Modules::Assets::Mappableb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*assetmantle/assets/mappable/mappable.proto\x12#assetmantle.modules.assets.mappable\x1a)assetmantle/documents/base/document.proto\"M\n\x08Mappable\x12\x41\n\x05\x61sset\x18\x01 \x01(\x0b\x32+.assetmantle.schema.documents.base.DocumentR\x05\x61ssetB\xe6\x01\n\'com.assetmantle.modules.assets.mappableB\rMappableProto\xa2\x02\x04\x41MAM\xaa\x02#Assetmantle.Modules.Assets.Mappable\xca\x02#Assetmantle\\Modules\\Assets\\Mappable\xe2\x02/Assetmantle\\Modules\\Assets\\Mappable\\GPBMetadata\xea\x02&Assetmantle::Modules::Assets::Mappableb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.assets.mappable.mappable_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\'com.assetmantle.modules.assets.mappableB\rMappableProtoP\001\242\002\004AMAM\252\002#Assetmantle.Modules.Assets.Mappable\312\002#Assetmantle\\Modules\\Assets\\Mappable\342\002/Assetmantle\\Modules\\Assets\\Mappable\\GPBMetadata\352\002&Assetmantle::Modules::Assets::Mappable'
+  DESCRIPTOR._serialized_options = b'\n\'com.assetmantle.modules.assets.mappableB\rMappableProto\242\002\004AMAM\252\002#Assetmantle.Modules.Assets.Mappable\312\002#Assetmantle\\Modules\\Assets\\Mappable\342\002/Assetmantle\\Modules\\Assets\\Mappable\\GPBMetadata\352\002&Assetmantle::Modules::Assets::Mappable'
   _globals['_MAPPABLE']._serialized_start=126
   _globals['_MAPPABLE']._serialized_end=203
 # @@protoc_insertion_point(module_scope)

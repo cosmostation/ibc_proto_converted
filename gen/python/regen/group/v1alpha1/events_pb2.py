@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!regen/group/v1alpha1/events.proto\x12\x14regen.group.v1alpha1\"-\n\x10\x45ventCreateGroup\x12\x19\n\x08group_id\x18\x01 \x01(\x04R\x07groupId\"-\n\x10\x45ventUpdateGroup\x12\x19\n\x08group_id\x18\x01 \x01(\x04R\x07groupId\"3\n\x17\x45ventCreateGroupAccount\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"3\n\x17\x45ventUpdateGroupAccount\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"6\n\x13\x45ventCreateProposal\x12\x1f\n\x0bproposal_id\x18\x01 \x01(\x04R\nproposalId\",\n\tEventVote\x12\x1f\n\x0bproposal_id\x18\x01 \x01(\x04R\nproposalId\",\n\tEventExec\x12\x1f\n\x0bproposal_id\x18\x01 \x01(\x04R\nproposalIdB\xc8\x01\n\x18\x63om.regen.group.v1alpha1B\x0b\x45ventsProtoP\x01Z-github.com/regen-network/regen-ledger/x/group\xa2\x02\x03RGX\xaa\x02\x14Regen.Group.V1alpha1\xca\x02\x14Regen\\Group\\V1alpha1\xe2\x02 Regen\\Group\\V1alpha1\\GPBMetadata\xea\x02\x16Regen::Group::V1alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!regen/group/v1alpha1/events.proto\x12\x14regen.group.v1alpha1\"-\n\x10\x45ventCreateGroup\x12\x19\n\x08group_id\x18\x01 \x01(\x04R\x07groupId\"-\n\x10\x45ventUpdateGroup\x12\x19\n\x08group_id\x18\x01 \x01(\x04R\x07groupId\"3\n\x17\x45ventCreateGroupAccount\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"3\n\x17\x45ventUpdateGroupAccount\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"6\n\x13\x45ventCreateProposal\x12\x1f\n\x0bproposal_id\x18\x01 \x01(\x04R\nproposalId\",\n\tEventVote\x12\x1f\n\x0bproposal_id\x18\x01 \x01(\x04R\nproposalId\",\n\tEventExec\x12\x1f\n\x0bproposal_id\x18\x01 \x01(\x04R\nproposalIdB\xc6\x01\n\x18\x63om.regen.group.v1alpha1B\x0b\x45ventsProtoZ-github.com/regen-network/regen-ledger/x/group\xa2\x02\x03RGX\xaa\x02\x14Regen.Group.V1alpha1\xca\x02\x14Regen\\Group\\V1alpha1\xe2\x02 Regen\\Group\\V1alpha1\\GPBMetadata\xea\x02\x16Regen::Group::V1alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'regen.group.v1alpha1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.regen.group.v1alpha1B\013EventsProtoP\001Z-github.com/regen-network/regen-ledger/x/group\242\002\003RGX\252\002\024Regen.Group.V1alpha1\312\002\024Regen\\Group\\V1alpha1\342\002 Regen\\Group\\V1alpha1\\GPBMetadata\352\002\026Regen::Group::V1alpha1'
+  DESCRIPTOR._serialized_options = b'\n\030com.regen.group.v1alpha1B\013EventsProtoZ-github.com/regen-network/regen-ledger/x/group\242\002\003RGX\252\002\024Regen.Group.V1alpha1\312\002\024Regen\\Group\\V1alpha1\342\002 Regen\\Group\\V1alpha1\\GPBMetadata\352\002\026Regen::Group::V1alpha1'
   _globals['_EVENTCREATEGROUP']._serialized_start=59
   _globals['_EVENTCREATEGROUP']._serialized_end=104
   _globals['_EVENTUPDATEGROUP']._serialized_start=106

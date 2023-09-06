@@ -489,6 +489,7 @@ public final class QueryProto {
               com.osmosis.protorev.v1beta1.QueryProto.QueryParamsResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.osmosis.protorev.v1beta1.ParamsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2761,6 +2773,7 @@ public final class QueryProto {
               com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevProfitsByDenomResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevProfitsByDenomResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROFIT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin profit_;
     /**
@@ -2773,7 +2786,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProfit() {
-      return profit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2813,7 +2826,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (profit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getProfit());
       }
       getUnknownFields().writeTo(output);
@@ -2825,7 +2838,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (profit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProfit());
       }
@@ -2988,13 +3001,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevProfitsByDenomResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProfitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3038,11 +3057,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevProfitsByDenomResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.profit_ = profitBuilder_ == null
               ? profit_
               : profitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3228,8 +3250,10 @@ public final class QueryProto {
         } else {
           profitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (profit_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4747,7 +4771,8 @@ public final class QueryProto {
 
     public static final int ROUTE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList route_;
+    private com.google.protobuf.Internal.LongList route_ =
+        emptyLongList();
     /**
      * <pre>
      * route is the set of pool ids to query statistics by i.e. 1,2,3
@@ -5026,22 +5051,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteRequest buildPartial() {
         com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteRequest result = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteRequest(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteRequest result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          route_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.route_ = route_;
-      }
-
       private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteRequest result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          route_.makeImmutable();
+          result.route_ = route_;
+        }
       }
 
       @java.lang.Override
@@ -5091,7 +5111,8 @@ public final class QueryProto {
         if (!other.route_.isEmpty()) {
           if (route_.isEmpty()) {
             route_ = other.route_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            route_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureRouteIsMutable();
             route_.addAll(other.route_);
@@ -5159,10 +5180,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList route_ = emptyLongList();
       private void ensureRouteIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          route_ = mutableCopy(route_);
-          bitField0_ |= 0x00000001;
+        if (!route_.isModifiable()) {
+          route_ = makeMutableCopy(route_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -5174,8 +5195,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getRouteList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(route_) : route_;
+        route_.makeImmutable();
+        return route_;
       }
       /**
        * <pre>
@@ -5215,6 +5236,7 @@ public final class QueryProto {
 
         ensureRouteIsMutable();
         route_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5231,6 +5253,7 @@ public final class QueryProto {
 
         ensureRouteIsMutable();
         route_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5248,6 +5271,7 @@ public final class QueryProto {
         ensureRouteIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, route_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5403,6 +5427,7 @@ public final class QueryProto {
               com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATISTICS_FIELD_NUMBER = 1;
     private com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics statistics_;
     /**
@@ -5416,7 +5441,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStatistics() {
-      return statistics_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5458,7 +5483,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (statistics_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStatistics());
       }
       getUnknownFields().writeTo(output);
@@ -5470,7 +5495,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (statistics_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStatistics());
       }
@@ -5633,13 +5658,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStatisticsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5683,11 +5714,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevStatisticsByRouteResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.statistics_ = statisticsBuilder_ == null
               ? statistics_
               : statisticsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5878,8 +5912,10 @@ public final class QueryProto {
         } else {
           statisticsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (statistics_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11180,6 +11216,7 @@ public final class QueryProto {
               com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_WEIGHTS_FIELD_NUMBER = 1;
     private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
     /**
@@ -11192,7 +11229,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPoolWeights() {
-      return poolWeights_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -11232,7 +11269,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (poolWeights_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPoolWeights());
       }
       getUnknownFields().writeTo(output);
@@ -11244,7 +11281,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (poolWeights_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPoolWeights());
       }
@@ -11407,13 +11444,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolWeightsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11457,11 +11500,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.poolWeights_ = poolWeightsBuilder_ == null
               ? poolWeights_
               : poolWeightsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11647,8 +11693,10 @@ public final class QueryProto {
         } else {
           poolWeightsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (poolWeights_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

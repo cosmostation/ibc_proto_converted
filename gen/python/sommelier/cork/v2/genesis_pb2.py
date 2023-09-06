@@ -15,15 +15,14 @@ from sommelier.cork.v2 import cork_pb2 as sommelier_dot_cork_dot_v2_dot_cork__pb
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fsommelier/cork/v2/genesis.proto\x12\x07\x63ork.v2\x1a\x1csommelier/cork/v2/cork.proto\x1a\x14gogoproto/gogo.proto\"\xa0\x02\n\x0cGenesisState\x12-\n\x06params\x18\x01 \x01(\x0b\x32\x0f.cork.v2.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x39\n\ncellar_ids\x18\x02 \x01(\x0b\x32\x14.cork.v2.CellarIDSetB\x04\xc8\xde\x1f\x00R\tcellarIds\x12-\n\x12invalidation_nonce\x18\x03 \x01(\x04R\x11invalidationNonce\x12?\n\x0fscheduled_corks\x18\x04 \x03(\x0b\x32\x16.cork.v2.ScheduledCorkR\x0escheduledCorks\x12\x36\n\x0c\x63ork_results\x18\x05 \x03(\x0b\x32\x13.cork.v2.CorkResultR\x0b\x63orkResults\"x\n\x06Params\x12n\n\x0evote_threshold\x18\x01 \x01(\tBG\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x15yaml:\"vote_threshold\"R\rvoteThresholdB\x86\x01\n\x0b\x63om.cork.v2B\x0cGenesisProtoP\x01Z,github.com/peggyjv/sommelier/v4/x/cork/types\xa2\x02\x03\x43XX\xaa\x02\x07\x43ork.V2\xca\x02\x07\x43ork\\V2\xe2\x02\x13\x43ork\\V2\\GPBMetadata\xea\x02\x08\x43ork::V2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fsommelier/cork/v2/genesis.proto\x12\x07\x63ork.v2\x1a\x1csommelier/cork/v2/cork.proto\x1a\x14gogoproto/gogo.proto\"\xa0\x02\n\x0cGenesisState\x12-\n\x06params\x18\x01 \x01(\x0b\x32\x0f.cork.v2.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x39\n\ncellar_ids\x18\x02 \x01(\x0b\x32\x14.cork.v2.CellarIDSetB\x04\xc8\xde\x1f\x00R\tcellarIds\x12-\n\x12invalidation_nonce\x18\x03 \x01(\x04R\x11invalidationNonce\x12?\n\x0fscheduled_corks\x18\x04 \x03(\x0b\x32\x16.cork.v2.ScheduledCorkR\x0escheduledCorks\x12\x36\n\x0c\x63ork_results\x18\x05 \x03(\x0b\x32\x13.cork.v2.CorkResultR\x0b\x63orkResults\"x\n\x06Params\x12n\n\x0evote_threshold\x18\x01 \x01(\tBG\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x15yaml:\"vote_threshold\"R\rvoteThresholdB\x84\x01\n\x0b\x63om.cork.v2B\x0cGenesisProtoZ,github.com/peggyjv/sommelier/v4/x/cork/types\xa2\x02\x03\x43XX\xaa\x02\x07\x43ork.V2\xca\x02\x07\x43ork\\V2\xe2\x02\x13\x43ork\\V2\\GPBMetadata\xea\x02\x08\x43ork::V2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.cork.v2.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\013com.cork.v2B\014GenesisProtoP\001Z,github.com/peggyjv/sommelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V2\312\002\007Cork\\V2\342\002\023Cork\\V2\\GPBMetadata\352\002\010Cork::V2'
+  DESCRIPTOR._serialized_options = b'\n\013com.cork.v2B\014GenesisProtoZ,github.com/peggyjv/sommelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V2\312\002\007Cork\\V2\342\002\023Cork\\V2\\GPBMetadata\352\002\010Cork::V2'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['cellar_ids']._options = None

@@ -64,7 +64,7 @@ public final class GenesisProto {
       super(builder);
     }
     private GenesisState() {
-      genTxs_ = java.util.Collections.emptyList();
+      genTxs_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -89,7 +89,8 @@ public final class GenesisProto {
 
     public static final int GEN_TXS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> genTxs_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> genTxs_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * gen_txs defines the genesis transactions.
@@ -329,7 +330,7 @@ public final class GenesisProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        genTxs_ = java.util.Collections.emptyList();
+        genTxs_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -356,22 +357,17 @@ public final class GenesisProto {
       @java.lang.Override
       public com.cosmos.genutil.v1beta1.GenesisProto.GenesisState buildPartial() {
         com.cosmos.genutil.v1beta1.GenesisProto.GenesisState result = new com.cosmos.genutil.v1beta1.GenesisProto.GenesisState(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.cosmos.genutil.v1beta1.GenesisProto.GenesisState result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          genTxs_ = java.util.Collections.unmodifiableList(genTxs_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.genTxs_ = genTxs_;
-      }
-
       private void buildPartial0(com.cosmos.genutil.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          genTxs_.makeImmutable();
+          result.genTxs_ = genTxs_;
+        }
       }
 
       @java.lang.Override
@@ -421,7 +417,8 @@ public final class GenesisProto {
         if (!other.genTxs_.isEmpty()) {
           if (genTxs_.isEmpty()) {
             genTxs_ = other.genTxs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            genTxs_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureGenTxsIsMutable();
             genTxs_.addAll(other.genTxs_);
@@ -477,12 +474,12 @@ public final class GenesisProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.ByteString> genTxs_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> genTxs_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureGenTxsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          genTxs_ = new java.util.ArrayList<com.google.protobuf.ByteString>(genTxs_);
-          bitField0_ |= 0x00000001;
+        if (!genTxs_.isModifiable()) {
+          genTxs_ = makeMutableCopy(genTxs_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -494,8 +491,8 @@ public final class GenesisProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getGenTxsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(genTxs_) : genTxs_;
+        genTxs_.makeImmutable();
+        return genTxs_;
       }
       /**
        * <pre>
@@ -535,6 +532,7 @@ public final class GenesisProto {
         if (value == null) { throw new NullPointerException(); }
         ensureGenTxsIsMutable();
         genTxs_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -551,6 +549,7 @@ public final class GenesisProto {
         if (value == null) { throw new NullPointerException(); }
         ensureGenTxsIsMutable();
         genTxs_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -568,6 +567,7 @@ public final class GenesisProto {
         ensureGenTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, genTxs_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -580,7 +580,7 @@ public final class GenesisProto {
        * @return This builder for chaining.
        */
       public Builder clearGenTxs() {
-        genTxs_ = java.util.Collections.emptyList();
+        genTxs_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;

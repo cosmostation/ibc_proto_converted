@@ -16,15 +16,14 @@ from kyve.bundles.v1beta1 import bundles_pb2 as kyve_dot_bundles_dot_v1beta1_dot
 from kyve.bundles.v1beta1 import params_pb2 as kyve_dot_bundles_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"kyve/bundles/v1beta1/genesis.proto\x12\x14kyve.bundles.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"kyve/bundles/v1beta1/bundles.proto\x1a!kyve/bundles/v1beta1/params.proto\"\x89\x02\n\x0cGenesisState\x12:\n\x06params\x18\x01 \x01(\x0b\x32\x1c.kyve.bundles.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\\\n\x14\x62undle_proposal_list\x18\x02 \x03(\x0b\x32$.kyve.bundles.v1beta1.BundleProposalB\x04\xc8\xde\x1f\x00R\x12\x62undleProposalList\x12_\n\x15\x66inalized_bundle_list\x18\x03 \x03(\x0b\x32%.kyve.bundles.v1beta1.FinalizedBundleB\x04\xc8\xde\x1f\x00R\x13\x66inalizedBundleListB\xc8\x01\n\x18\x63om.kyve.bundles.v1beta1B\x0cGenesisProtoP\x01Z,github.com/KYVENetwork/chain/x/bundles/types\xa2\x02\x03KBX\xaa\x02\x14Kyve.Bundles.V1beta1\xca\x02\x14Kyve\\Bundles\\V1beta1\xe2\x02 Kyve\\Bundles\\V1beta1\\GPBMetadata\xea\x02\x16Kyve::Bundles::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"kyve/bundles/v1beta1/genesis.proto\x12\x14kyve.bundles.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"kyve/bundles/v1beta1/bundles.proto\x1a!kyve/bundles/v1beta1/params.proto\"\x89\x02\n\x0cGenesisState\x12:\n\x06params\x18\x01 \x01(\x0b\x32\x1c.kyve.bundles.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\\\n\x14\x62undle_proposal_list\x18\x02 \x03(\x0b\x32$.kyve.bundles.v1beta1.BundleProposalB\x04\xc8\xde\x1f\x00R\x12\x62undleProposalList\x12_\n\x15\x66inalized_bundle_list\x18\x03 \x03(\x0b\x32%.kyve.bundles.v1beta1.FinalizedBundleB\x04\xc8\xde\x1f\x00R\x13\x66inalizedBundleListB\xc6\x01\n\x18\x63om.kyve.bundles.v1beta1B\x0cGenesisProtoZ,github.com/KYVENetwork/chain/x/bundles/types\xa2\x02\x03KBX\xaa\x02\x14Kyve.Bundles.V1beta1\xca\x02\x14Kyve\\Bundles\\V1beta1\xe2\x02 Kyve\\Bundles\\V1beta1\\GPBMetadata\xea\x02\x16Kyve::Bundles::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kyve.bundles.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.kyve.bundles.v1beta1B\014GenesisProtoP\001Z,github.com/KYVENetwork/chain/x/bundles/types\242\002\003KBX\252\002\024Kyve.Bundles.V1beta1\312\002\024Kyve\\Bundles\\V1beta1\342\002 Kyve\\Bundles\\V1beta1\\GPBMetadata\352\002\026Kyve::Bundles::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\030com.kyve.bundles.v1beta1B\014GenesisProtoZ,github.com/KYVENetwork/chain/x/bundles/types\242\002\003KBX\252\002\024Kyve.Bundles.V1beta1\312\002\024Kyve\\Bundles\\V1beta1\342\002 Kyve\\Bundles\\V1beta1\\GPBMetadata\352\002\026Kyve::Bundles::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['bundle_proposal_list']._options = None

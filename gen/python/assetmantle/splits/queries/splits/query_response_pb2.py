@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.splits.mappable import mappable_pb2 as assetmantle_dot_splits_dot_mappable_dot_mappable__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n6assetmantle/splits/queries/splits/query_response.proto\x12)assetmantle.modules.splits.queries.splits\x1a\x14gogoproto/gogo.proto\x1a*assetmantle/splits/mappable/mappable.proto\"X\n\rQueryResponse\x12\x41\n\x04list\x18\x01 \x03(\x0b\x32-.assetmantle.modules.splits.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\x8d\x02\n-com.assetmantle.modules.splits.queries.splitsB\x12QueryResponseProtoP\x01\xa2\x02\x05\x41MSQS\xaa\x02)Assetmantle.Modules.Splits.Queries.Splits\xca\x02)Assetmantle\\Modules\\Splits\\Queries\\Splits\xe2\x02\x35\x41ssetmantle\\Modules\\Splits\\Queries\\Splits\\GPBMetadata\xea\x02-Assetmantle::Modules::Splits::Queries::Splitsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n6assetmantle/splits/queries/splits/query_response.proto\x12)assetmantle.modules.splits.queries.splits\x1a\x14gogoproto/gogo.proto\x1a*assetmantle/splits/mappable/mappable.proto\"X\n\rQueryResponse\x12\x41\n\x04list\x18\x01 \x03(\x0b\x32-.assetmantle.modules.splits.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\x8b\x02\n-com.assetmantle.modules.splits.queries.splitsB\x12QueryResponseProto\xa2\x02\x05\x41MSQS\xaa\x02)Assetmantle.Modules.Splits.Queries.Splits\xca\x02)Assetmantle\\Modules\\Splits\\Queries\\Splits\xe2\x02\x35\x41ssetmantle\\Modules\\Splits\\Queries\\Splits\\GPBMetadata\xea\x02-Assetmantle::Modules::Splits::Queries::Splitsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.splits.queries.splits.query_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n-com.assetmantle.modules.splits.queries.splitsB\022QueryResponseProtoP\001\242\002\005AMSQS\252\002)Assetmantle.Modules.Splits.Queries.Splits\312\002)Assetmantle\\Modules\\Splits\\Queries\\Splits\342\0025Assetmantle\\Modules\\Splits\\Queries\\Splits\\GPBMetadata\352\002-Assetmantle::Modules::Splits::Queries::Splits'
+  DESCRIPTOR._serialized_options = b'\n-com.assetmantle.modules.splits.queries.splitsB\022QueryResponseProto\242\002\005AMSQS\252\002)Assetmantle.Modules.Splits.Queries.Splits\312\002)Assetmantle\\Modules\\Splits\\Queries\\Splits\342\0025Assetmantle\\Modules\\Splits\\Queries\\Splits\\GPBMetadata\352\002-Assetmantle::Modules::Splits::Queries::Splits'
   _QUERYRESPONSE._options = None
   _QUERYRESPONSE._serialized_options = b'\210\240\037\000'
   _globals['_QUERYRESPONSE']._serialized_start=167

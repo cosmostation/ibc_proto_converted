@@ -74,7 +74,7 @@ proto.pstake.liquidstakeibc.v1beta1.Validator.toObject = function(includeInstanc
     status: jspb.Message.getFieldWithDefault(msg, 2, ""),
     weight: jspb.Message.getFieldWithDefault(msg, 3, ""),
     delegatedAmount: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    totalAmount: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    exchangeRate: jspb.Message.getFieldWithDefault(msg, 5, ""),
     unbondingEpoch: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
@@ -130,7 +130,7 @@ proto.pstake.liquidstakeibc.v1beta1.Validator.deserializeBinaryFromReader = func
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTotalAmount(value);
+      msg.setExchangeRate(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readInt64());
@@ -193,7 +193,7 @@ proto.pstake.liquidstakeibc.v1beta1.Validator.serializeBinaryToWriter = function
       f
     );
   }
-  f = message.getTotalAmount();
+  f = message.getExchangeRate();
   if (f.length > 0) {
     writer.writeString(
       5,
@@ -283,10 +283,10 @@ proto.pstake.liquidstakeibc.v1beta1.Validator.prototype.setDelegatedAmount = fun
 
 
 /**
- * optional string total_amount = 5;
+ * optional string exchange_rate = 5;
  * @return {string}
  */
-proto.pstake.liquidstakeibc.v1beta1.Validator.prototype.getTotalAmount = function() {
+proto.pstake.liquidstakeibc.v1beta1.Validator.prototype.getExchangeRate = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
@@ -295,7 +295,7 @@ proto.pstake.liquidstakeibc.v1beta1.Validator.prototype.getTotalAmount = functio
  * @param {string} value
  * @return {!proto.pstake.liquidstakeibc.v1beta1.Validator} returns this
  */
-proto.pstake.liquidstakeibc.v1beta1.Validator.prototype.setTotalAmount = function(value) {
+proto.pstake.liquidstakeibc.v1beta1.Validator.prototype.setExchangeRate = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
 };
 

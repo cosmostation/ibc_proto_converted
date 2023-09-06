@@ -104,6 +104,7 @@ public final class ModelsProto {
               com.stafihub.stafihub.rdex.ModelsProto.SwapPool.class, com.stafihub.stafihub.rdex.ModelsProto.SwapPool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INDEX_FIELD_NUMBER = 1;
     private int index_ = 0;
     /**
@@ -123,7 +124,7 @@ public final class ModelsProto {
      */
     @java.lang.Override
     public boolean hasLpToken() {
-      return lpToken_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin lpToken = 2 [json_name = "lpToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -149,7 +150,7 @@ public final class ModelsProto {
      */
     @java.lang.Override
     public boolean hasBaseToken() {
-      return baseToken_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin baseToken = 3 [json_name = "baseToken", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -175,7 +176,7 @@ public final class ModelsProto {
      */
     @java.lang.Override
     public boolean hasToken() {
-      return token_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin token = 4 [json_name = "token", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -210,13 +211,13 @@ public final class ModelsProto {
       if (index_ != 0) {
         output.writeUInt32(1, index_);
       }
-      if (lpToken_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLpToken());
       }
-      if (baseToken_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getBaseToken());
       }
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(4, getToken());
       }
       getUnknownFields().writeTo(output);
@@ -232,15 +233,15 @@ public final class ModelsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, index_);
       }
-      if (lpToken_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLpToken());
       }
-      if (baseToken_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBaseToken());
       }
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getToken());
       }
@@ -420,13 +421,21 @@ public final class ModelsProto {
 
       // Construct using com.stafihub.stafihub.rdex.ModelsProto.SwapPool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLpTokenFieldBuilder();
+          getBaseTokenFieldBuilder();
+          getTokenFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -484,21 +493,26 @@ public final class ModelsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.index_ = index_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lpToken_ = lpTokenBuilder_ == null
               ? lpToken_
               : lpTokenBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.baseToken_ = baseTokenBuilder_ == null
               ? baseToken_
               : baseTokenBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.token_ = tokenBuilder_ == null
               ? token_
               : tokenBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -724,8 +738,10 @@ public final class ModelsProto {
         } else {
           lpTokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (lpToken_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -843,8 +859,10 @@ public final class ModelsProto {
         } else {
           baseTokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (baseToken_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -962,8 +980,10 @@ public final class ModelsProto {
         } else {
           tokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (token_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

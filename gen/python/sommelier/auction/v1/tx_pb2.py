@@ -17,15 +17,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dsommelier/auction/v1/tx.proto\x12\nauction.v1\x1a\"sommelier/auction/v1/auction.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\xf2\x01\n\x13MsgSubmitBidRequest\x12\x1d\n\nauction_id\x18\x01 \x01(\rR\tauctionId\x12\x16\n\x06signer\x18\x02 \x01(\tR\x06signer\x12H\n\x10max_bid_in_usomm\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\rmaxBidInUsomm\x12Z\n\x19sale_token_minimum_amount\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x16saleTokenMinimumAmount\"9\n\x14MsgSubmitBidResponse\x12!\n\x03\x62id\x18\x01 \x01(\x0b\x32\x0f.auction.v1.BidR\x03\x62id2U\n\x03Msg\x12N\n\tSubmitBid\x12\x1f.auction.v1.MsgSubmitBidRequest\x1a .auction.v1.MsgSubmitBidResponseB\x93\x01\n\x0e\x63om.auction.v1B\x07TxProtoP\x01Z/github.com/peggyjv/sommelier/v4/x/auction/types\xa2\x02\x03\x41XX\xaa\x02\nAuction.V1\xca\x02\nAuction\\V1\xe2\x02\x16\x41uction\\V1\\GPBMetadata\xea\x02\x0b\x41uction::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dsommelier/auction/v1/tx.proto\x12\nauction.v1\x1a\"sommelier/auction/v1/auction.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\xf2\x01\n\x13MsgSubmitBidRequest\x12\x1d\n\nauction_id\x18\x01 \x01(\rR\tauctionId\x12\x16\n\x06signer\x18\x02 \x01(\tR\x06signer\x12H\n\x10max_bid_in_usomm\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\rmaxBidInUsomm\x12Z\n\x19sale_token_minimum_amount\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x16saleTokenMinimumAmount\"9\n\x14MsgSubmitBidResponse\x12!\n\x03\x62id\x18\x01 \x01(\x0b\x32\x0f.auction.v1.BidR\x03\x62id2U\n\x03Msg\x12N\n\tSubmitBid\x12\x1f.auction.v1.MsgSubmitBidRequest\x1a .auction.v1.MsgSubmitBidResponseB\x91\x01\n\x0e\x63om.auction.v1B\x07TxProtoZ/github.com/peggyjv/sommelier/v4/x/auction/types\xa2\x02\x03\x41XX\xaa\x02\nAuction.V1\xca\x02\nAuction\\V1\xe2\x02\x16\x41uction\\V1\\GPBMetadata\xea\x02\x0b\x41uction::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.auction.v1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\016com.auction.v1B\007TxProtoP\001Z/github.com/peggyjv/sommelier/v4/x/auction/types\242\002\003AXX\252\002\nAuction.V1\312\002\nAuction\\V1\342\002\026Auction\\V1\\GPBMetadata\352\002\013Auction::V1'
+  DESCRIPTOR._serialized_options = b'\n\016com.auction.v1B\007TxProtoZ/github.com/peggyjv/sommelier/v4/x/auction/types\242\002\003AXX\252\002\nAuction.V1\312\002\nAuction\\V1\342\002\026Auction\\V1\\GPBMetadata\352\002\013Auction::V1'
   _MSGSUBMITBIDREQUEST.fields_by_name['max_bid_in_usomm']._options = None
   _MSGSUBMITBIDREQUEST.fields_by_name['max_bid_in_usomm']._serialized_options = b'\310\336\037\000'
   _MSGSUBMITBIDREQUEST.fields_by_name['sale_token_minimum_amount']._options = None

@@ -68,6 +68,7 @@ public final class ParameterProto {
               com.assetmantle.schema.parameters.base.ParameterProto.Parameter.class, com.assetmantle.schema.parameters.base.ParameterProto.Parameter.Builder.class);
     }
 
+    private int bitField0_;
     public static final int META_PROPERTY_FIELD_NUMBER = 1;
     private com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty metaProperty_;
     /**
@@ -76,7 +77,7 @@ public final class ParameterProto {
      */
     @java.lang.Override
     public boolean hasMetaProperty() {
-      return metaProperty_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.properties.base.MetaProperty meta_property = 1 [json_name = "metaProperty"];</code>
@@ -108,7 +109,7 @@ public final class ParameterProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (metaProperty_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMetaProperty());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class ParameterProto {
       if (size != -1) return size;
 
       size = 0;
-      if (metaProperty_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMetaProperty());
       }
@@ -278,13 +279,19 @@ public final class ParameterProto {
 
       // Construct using com.assetmantle.schema.parameters.base.ParameterProto.Parameter.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetaPropertyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class ParameterProto {
 
       private void buildPartial0(com.assetmantle.schema.parameters.base.ParameterProto.Parameter result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.metaProperty_ = metaPropertyBuilder_ == null
               ? metaProperty_
               : metaPropertyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class ParameterProto {
         } else {
           metaPropertyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (metaProperty_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

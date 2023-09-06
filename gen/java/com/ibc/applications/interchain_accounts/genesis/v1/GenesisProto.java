@@ -87,6 +87,7 @@ public final class GenesisProto {
               com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.GenesisState.class, com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTROLLER_GENESIS_STATE_FIELD_NUMBER = 1;
     private com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.ControllerGenesisState controllerGenesisState_;
     /**
@@ -95,7 +96,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasControllerGenesisState() {
-      return controllerGenesisState_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ibc.applications.interchain_accounts.genesis.v1.ControllerGenesisState controller_genesis_state = 1 [json_name = "controllerGenesisState", (.gogoproto.nullable) = false];</code>
@@ -121,7 +122,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasHostGenesisState() {
-      return hostGenesisState_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.ibc.applications.interchain_accounts.genesis.v1.HostGenesisState host_genesis_state = 2 [json_name = "hostGenesisState", (.gogoproto.nullable) = false];</code>
@@ -153,10 +154,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (controllerGenesisState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getControllerGenesisState());
       }
-      if (hostGenesisState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getHostGenesisState());
       }
       getUnknownFields().writeTo(output);
@@ -168,11 +169,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (controllerGenesisState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getControllerGenesisState());
       }
-      if (hostGenesisState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHostGenesisState());
       }
@@ -343,13 +344,20 @@ public final class GenesisProto {
 
       // Construct using com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getControllerGenesisStateFieldBuilder();
+          getHostGenesisStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -398,16 +406,20 @@ public final class GenesisProto {
 
       private void buildPartial0(com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.controllerGenesisState_ = controllerGenesisStateBuilder_ == null
               ? controllerGenesisState_
               : controllerGenesisStateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hostGenesisState_ = hostGenesisStateBuilder_ == null
               ? hostGenesisState_
               : hostGenesisStateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -583,8 +595,10 @@ public final class GenesisProto {
         } else {
           controllerGenesisStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (controllerGenesisState_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -702,8 +716,10 @@ public final class GenesisProto {
         } else {
           hostGenesisStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (hostGenesisState_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -953,6 +969,7 @@ public final class GenesisProto {
               com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.ControllerGenesisState.class, com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.ControllerGenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACTIVE_CHANNELS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.ActiveChannel> activeChannels_;
@@ -1080,7 +1097,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ibc.applications.interchain_accounts.controller.v1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1121,7 +1138,7 @@ public final class GenesisProto {
       for (int i = 0; i < ports_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ports_.getRaw(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1149,7 +1166,7 @@ public final class GenesisProto {
         size += dataSize;
         size += 1 * getPortsList().size();
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getParams());
       }
@@ -1329,13 +1346,21 @@ public final class GenesisProto {
 
       // Construct using com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.ControllerGenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getActiveChannelsFieldBuilder();
+          getInterchainAccountsFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1421,11 +1446,14 @@ public final class GenesisProto {
           ports_.makeImmutable();
           result.ports_ = ports_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2276,8 +2304,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2513,6 +2543,7 @@ public final class GenesisProto {
               com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.HostGenesisState.class, com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.HostGenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACTIVE_CHANNELS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.ActiveChannel> activeChannels_;
@@ -2642,7 +2673,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ibc.applications.interchain_accounts.host.v1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -2683,7 +2714,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, port_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -2706,7 +2737,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, port_);
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getParams());
       }
@@ -2884,13 +2915,21 @@ public final class GenesisProto {
 
       // Construct using com.ibc.applications.interchain_accounts.genesis.v1.GenesisProto.HostGenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getActiveChannelsFieldBuilder();
+          getInterchainAccountsFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2974,11 +3013,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.port_ = port_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3784,8 +3826,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

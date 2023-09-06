@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from quicksilver.airdrop.v1 import airdrop_pb2 as quicksilver_dot_airdrop_dot_v1_dot_airdrop__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&quicksilver/airdrop/v1/proposals.proto\x12\x16quicksilver.airdrop.v1\x1a\x14gogoproto/gogo.proto\x1a$quicksilver/airdrop/v1/airdrop.proto\"\xf4\x01\n\x18RegisterZoneDropProposal\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12S\n\tzone_drop\x18\x03 \x01(\x0b\x32 .quicksilver.airdrop.v1.ZoneDropB\x14\xf2\xde\x1f\x10yaml:\"zone_drop\"R\x08zoneDrop\x12=\n\rclaim_records\x18\x04 \x01(\x0c\x42\x18\xf2\xde\x1f\x14yaml:\"claim_records\"R\x0c\x63laimRecords:\x0c\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xde\x01\n\x1a\x63om.quicksilver.airdrop.v1B\x0eProposalsProtoP\x01Z6github.com/ingenuity-build/quicksilver/x/airdrop/types\xa2\x02\x03QAX\xaa\x02\x16Quicksilver.Airdrop.V1\xca\x02\x16Quicksilver\\Airdrop\\V1\xe2\x02\"Quicksilver\\Airdrop\\V1\\GPBMetadata\xea\x02\x18Quicksilver::Airdrop::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&quicksilver/airdrop/v1/proposals.proto\x12\x16quicksilver.airdrop.v1\x1a\x14gogoproto/gogo.proto\x1a$quicksilver/airdrop/v1/airdrop.proto\"\xf4\x01\n\x18RegisterZoneDropProposal\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12S\n\tzone_drop\x18\x03 \x01(\x0b\x32 .quicksilver.airdrop.v1.ZoneDropB\x14\xf2\xde\x1f\x10yaml:\"zone_drop\"R\x08zoneDrop\x12=\n\rclaim_records\x18\x04 \x01(\x0c\x42\x18\xf2\xde\x1f\x14yaml:\"claim_records\"R\x0c\x63laimRecords:\x0c\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xdc\x01\n\x1a\x63om.quicksilver.airdrop.v1B\x0eProposalsProtoZ6github.com/ingenuity-build/quicksilver/x/airdrop/types\xa2\x02\x03QAX\xaa\x02\x16Quicksilver.Airdrop.V1\xca\x02\x16Quicksilver\\Airdrop\\V1\xe2\x02\"Quicksilver\\Airdrop\\V1\\GPBMetadata\xea\x02\x18Quicksilver::Airdrop::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.airdrop.v1.proposals_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.quicksilver.airdrop.v1B\016ProposalsProtoP\001Z6github.com/ingenuity-build/quicksilver/x/airdrop/types\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.quicksilver.airdrop.v1B\016ProposalsProtoZ6github.com/ingenuity-build/quicksilver/x/airdrop/types\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop::V1'
   _REGISTERZONEDROPPROPOSAL.fields_by_name['zone_drop']._options = None
   _REGISTERZONEDROPPROPOSAL.fields_by_name['zone_drop']._serialized_options = b'\362\336\037\020yaml:\"zone_drop\"'
   _REGISTERZONEDROPPROPOSAL.fields_by_name['claim_records']._options = None

@@ -1091,6 +1091,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.Contract.class, com.provenance.metadata.v1.p8e.P8eProto.Contract.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEFINITION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec definition_;
     /**
@@ -1099,7 +1100,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasDefinition() {
-      return definition_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
@@ -1125,7 +1126,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasSpec() {
-      return spec_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
@@ -1151,7 +1152,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasInvoker() {
-      return invoker_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
@@ -1352,7 +1353,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
@@ -1395,13 +1396,13 @@ public final class P8eProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (definition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDefinition());
       }
-      if (spec_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getSpec());
       }
-      if (invoker_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getInvoker());
       }
       for (int i = 0; i < inputs_.size(); i++) {
@@ -1419,7 +1420,7 @@ public final class P8eProto {
       if (timesExecuted_ != 0) {
         output.writeInt32(8, timesExecuted_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(9, getStartTime());
       }
       if (!context_.isEmpty()) {
@@ -1434,15 +1435,15 @@ public final class P8eProto {
       if (size != -1) return size;
 
       size = 0;
-      if (definition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDefinition());
       }
-      if (spec_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSpec());
       }
-      if (invoker_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInvoker());
       }
@@ -1466,7 +1467,7 @@ public final class P8eProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(8, timesExecuted_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getStartTime());
       }
@@ -1691,13 +1692,26 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.Contract.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDefinitionFieldBuilder();
+          getSpecFieldBuilder();
+          getInvokerFieldBuilder();
+          getInputsFieldBuilder();
+          getConditionsFieldBuilder();
+          getConsiderationsFieldBuilder();
+          getRecitalsFieldBuilder();
+          getStartTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1826,20 +1840,24 @@ public final class P8eProto {
 
       private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Contract result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.definition_ = definitionBuilder_ == null
               ? definition_
               : definitionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.spec_ = specBuilder_ == null
               ? spec_
               : specBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.invoker_ = invokerBuilder_ == null
               ? invoker_
               : invokerBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.timesExecuted_ = timesExecuted_;
@@ -1848,10 +1866,12 @@ public final class P8eProto {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.context_ = context_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2219,8 +2239,10 @@ public final class P8eProto {
         } else {
           definitionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (definition_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2338,8 +2360,10 @@ public final class P8eProto {
         } else {
           specBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (spec_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2457,8 +2481,10 @@ public final class P8eProto {
         } else {
           invokerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (invoker_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3568,8 +3594,10 @@ public final class P8eProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3814,6 +3842,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.class, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -3861,7 +3890,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasResourceLocation() {
-      return resourceLocation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
@@ -3887,7 +3916,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasSignature() {
-      return signature_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
@@ -3940,10 +3969,10 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (resourceLocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getResourceLocation());
       }
-      if (signature_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getSignature());
       }
       if (type_ != com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType.DEFINITION_SPEC_TYPE_UNKNOWN.getNumber()) {
@@ -3961,11 +3990,11 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (resourceLocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResourceLocation());
       }
-      if (signature_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSignature());
       }
@@ -4147,13 +4176,20 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResourceLocationFieldBuilder();
+          getSignatureFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4207,19 +4243,23 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.resourceLocation_ = resourceLocationBuilder_ == null
               ? resourceLocation_
               : resourceLocationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signature_ = signatureBuilder_ == null
               ? signature_
               : signatureBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.type_ = type_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4485,8 +4525,10 @@ public final class P8eProto {
         } else {
           resourceLocationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (resourceLocation_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4604,8 +4646,10 @@ public final class P8eProto {
         } else {
           signatureBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (signature_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4844,6 +4888,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.Fact.class, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -4891,7 +4936,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasDataLocation() {
-      return dataLocation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
@@ -4926,7 +4971,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (dataLocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDataLocation());
       }
       getUnknownFields().writeTo(output);
@@ -4941,7 +4986,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (dataLocation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDataLocation());
       }
@@ -5107,13 +5152,19 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.Fact.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataLocationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5161,11 +5212,14 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dataLocation_ = dataLocationBuilder_ == null
               ? dataLocation_
               : dataLocationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5413,8 +5467,10 @@ public final class P8eProto {
         } else {
           dataLocationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (dataLocation_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5600,6 +5656,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.Condition.class, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONDITION_NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object conditionName_ = "";
@@ -5647,7 +5704,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return result_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
@@ -5682,7 +5739,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conditionName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, conditionName_);
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -5697,7 +5754,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conditionName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, conditionName_);
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResult());
       }
@@ -5863,13 +5920,19 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.Condition.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResultFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5917,11 +5980,14 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.conditionName_ = conditionName_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6169,8 +6235,10 @@ public final class P8eProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (result_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6381,6 +6449,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.Consideration.class, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONSIDERATION_NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object considerationName_ = "";
@@ -6469,7 +6538,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return result_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
@@ -6507,7 +6576,7 @@ public final class P8eProto {
       for (int i = 0; i < inputs_.size(); i++) {
         output.writeMessage(2, inputs_.get(i));
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -6526,7 +6595,7 @@ public final class P8eProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, inputs_.get(i));
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getResult());
       }
@@ -6698,13 +6767,20 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.Consideration.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputsFieldBuilder();
+          getResultFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6772,11 +6848,14 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.considerationName_ = considerationName_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7303,8 +7382,10 @@ public final class P8eProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (result_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7516,6 +7597,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.class, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -7641,7 +7723,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasAncestor() {
-      return ancestor_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
@@ -7682,7 +7764,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classname_);
       }
-      if (ancestor_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getAncestor());
       }
       getUnknownFields().writeTo(output);
@@ -7703,7 +7785,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classname_);
       }
-      if (ancestor_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAncestor());
       }
@@ -7877,13 +7959,19 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAncestorFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7939,11 +8027,14 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.classname_ = classname_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.ancestor_ = ancestorBuilder_ == null
               ? ancestor_
               : ancestorBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8355,8 +8446,10 @@ public final class P8eProto {
         } else {
           ancestorBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (ancestor_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8569,6 +8662,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.class, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OUTPUT_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.ProposedFact output_;
     /**
@@ -8577,7 +8671,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasOutput() {
-      return output_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
@@ -8621,7 +8715,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasRecordedAt() {
-      return recordedAt_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
@@ -8692,13 +8786,13 @@ public final class P8eProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (output_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOutput());
       }
       if (result_ != com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType.RESULT_TYPE_UNKNOWN.getNumber()) {
         output.writeEnum(2, result_);
       }
-      if (recordedAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getRecordedAt());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
@@ -8713,7 +8807,7 @@ public final class P8eProto {
       if (size != -1) return size;
 
       size = 0;
-      if (output_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOutput());
       }
@@ -8721,7 +8815,7 @@ public final class P8eProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, result_);
       }
-      if (recordedAt_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRecordedAt());
       }
@@ -8902,13 +8996,20 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOutputFieldBuilder();
+          getRecordedAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8959,10 +9060,12 @@ public final class P8eProto {
 
       private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.output_ = outputBuilder_ == null
               ? output_
               : outputBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = result_;
@@ -8971,10 +9074,12 @@ public final class P8eProto {
           result.recordedAt_ = recordedAtBuilder_ == null
               ? recordedAt_
               : recordedAtBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.errorMessage_ = errorMessage_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9168,8 +9273,10 @@ public final class P8eProto {
         } else {
           outputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (output_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9340,8 +9447,10 @@ public final class P8eProto {
         } else {
           recordedAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (recordedAt_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10395,6 +10504,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.Recital.class, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SIGNER_ROLE_FIELD_NUMBER = 1;
     private int signerRole_ = 0;
     /**
@@ -10421,7 +10531,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasSigner() {
-      return signer_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
@@ -10467,7 +10577,7 @@ public final class P8eProto {
       if (signerRole_ != com.provenance.metadata.v1.p8e.P8eProto.PartyType.PARTY_TYPE_UNKNOWN.getNumber()) {
         output.writeEnum(1, signerRole_);
       }
-      if (signer_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getSigner());
       }
       if (!address_.isEmpty()) {
@@ -10486,7 +10596,7 @@ public final class P8eProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, signerRole_);
       }
-      if (signer_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSigner());
       }
@@ -10659,13 +10769,19 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.Recital.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSignerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10714,14 +10830,17 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.signerRole_ = signerRole_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signer_ = signerBuilder_ == null
               ? signer_
               : signerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.address_ = address_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10956,8 +11075,10 @@ public final class P8eProto {
         } else {
           signerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (signer_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11175,6 +11296,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.Location.class, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REF_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference ref_;
     /**
@@ -11183,7 +11305,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasRef() {
-      return ref_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
@@ -11254,7 +11376,7 @@ public final class P8eProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (ref_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRef());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classname_)) {
@@ -11269,7 +11391,7 @@ public final class P8eProto {
       if (size != -1) return size;
 
       size = 0;
-      if (ref_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRef());
       }
@@ -11438,13 +11560,19 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.Location.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRefFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11489,14 +11617,17 @@ public final class P8eProto {
 
       private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Location result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.ref_ = refBuilder_ == null
               ? ref_
               : refBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.classname_ = classname_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11672,8 +11803,10 @@ public final class P8eProto {
         } else {
           refBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (ref_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11959,6 +12092,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.class, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_UUID_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.UUID scopeUuid_;
     /**
@@ -11967,7 +12101,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasScopeUuid() {
-      return scopeUuid_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
@@ -11993,7 +12127,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasGroupUuid() {
-      return groupUuid_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
@@ -12103,10 +12237,10 @@ public final class P8eProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (scopeUuid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getScopeUuid());
       }
-      if (groupUuid_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getGroupUuid());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
@@ -12124,11 +12258,11 @@ public final class P8eProto {
       if (size != -1) return size;
 
       size = 0;
-      if (scopeUuid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScopeUuid());
       }
-      if (groupUuid_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getGroupUuid());
       }
@@ -12313,13 +12447,20 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopeUuidFieldBuilder();
+          getGroupUuidFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12370,15 +12511,18 @@ public final class P8eProto {
 
       private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scopeUuid_ = scopeUuidBuilder_ == null
               ? scopeUuid_
               : scopeUuidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.groupUuid_ = groupUuidBuilder_ == null
               ? groupUuid_
               : groupUuidBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.hash_ = hash_;
@@ -12386,6 +12530,7 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.name_ = name_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12581,8 +12726,10 @@ public final class P8eProto {
         } else {
           scopeUuidBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (scopeUuid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12700,8 +12847,10 @@ public final class P8eProto {
         } else {
           groupUuidBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (groupUuid_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13847,6 +13996,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.Signature.class, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ALGO_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object algo_ = "";
@@ -13972,7 +14122,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasSigner() {
-      return signer_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
@@ -14013,7 +14163,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, signature_);
       }
-      if (signer_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getSigner());
       }
       getUnknownFields().writeTo(output);
@@ -14034,7 +14184,7 @@ public final class P8eProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, signature_);
       }
-      if (signer_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSigner());
       }
@@ -14208,13 +14358,19 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.Signature.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSignerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14270,11 +14426,14 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signature_ = signature_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.signer_ = signerBuilder_ == null
               ? signer_
               : signerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14686,8 +14845,10 @@ public final class P8eProto {
         } else {
           signerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (signer_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14875,6 +15036,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.class, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SIGNING_PUBLIC_KEY_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.PublicKey signingPublicKey_;
     /**
@@ -14883,7 +15045,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasSigningPublicKey() {
-      return signingPublicKey_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
@@ -14909,7 +15071,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasEncryptionPublicKey() {
-      return encryptionPublicKey_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
@@ -14941,10 +15103,10 @@ public final class P8eProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (signingPublicKey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSigningPublicKey());
       }
-      if (encryptionPublicKey_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getEncryptionPublicKey());
       }
       getUnknownFields().writeTo(output);
@@ -14956,11 +15118,11 @@ public final class P8eProto {
       if (size != -1) return size;
 
       size = 0;
-      if (signingPublicKey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSigningPublicKey());
       }
-      if (encryptionPublicKey_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEncryptionPublicKey());
       }
@@ -15131,13 +15293,20 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSigningPublicKeyFieldBuilder();
+          getEncryptionPublicKeyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15186,16 +15355,20 @@ public final class P8eProto {
 
       private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.signingPublicKey_ = signingPublicKeyBuilder_ == null
               ? signingPublicKey_
               : signingPublicKeyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.encryptionPublicKey_ = encryptionPublicKeyBuilder_ == null
               ? encryptionPublicKey_
               : encryptionPublicKeyBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15371,8 +15544,10 @@ public final class P8eProto {
         } else {
           signingPublicKeyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (signingPublicKey_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15490,8 +15665,10 @@ public final class P8eProto {
         } else {
           encryptionPublicKeyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (encryptionPublicKey_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17581,6 +17758,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEFINITION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec definition_;
     /**
@@ -17589,7 +17767,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasDefinition() {
-      return definition_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
@@ -17803,7 +17981,7 @@ public final class P8eProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (definition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDefinition());
       }
       for (int i = 0; i < inputSpecs_.size(); i++) {
@@ -17831,7 +18009,7 @@ public final class P8eProto {
       if (size != -1) return size;
 
       size = 0;
-      if (definition_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDefinition());
       }
@@ -18040,13 +18218,22 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDefinitionFieldBuilder();
+          getInputSpecsFieldBuilder();
+          getConditionSpecsFieldBuilder();
+          getConsiderationSpecsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -18149,11 +18336,14 @@ public final class P8eProto {
 
       private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ContractSpec result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.definition_ = definitionBuilder_ == null
               ? definition_
               : definitionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18463,8 +18653,10 @@ public final class P8eProto {
         } else {
           definitionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (definition_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -19535,6 +19727,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FUNC_NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object funcName_ = "";
@@ -19623,7 +19816,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasOutputSpec() {
-      return outputSpec_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
@@ -19661,7 +19854,7 @@ public final class P8eProto {
       for (int i = 0; i < inputSpecs_.size(); i++) {
         output.writeMessage(2, inputSpecs_.get(i));
       }
-      if (outputSpec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getOutputSpec());
       }
       getUnknownFields().writeTo(output);
@@ -19680,7 +19873,7 @@ public final class P8eProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, inputSpecs_.get(i));
       }
-      if (outputSpec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getOutputSpec());
       }
@@ -19852,13 +20045,20 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputSpecsFieldBuilder();
+          getOutputSpecFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -19926,11 +20126,14 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.funcName_ = funcName_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.outputSpec_ = outputSpecBuilder_ == null
               ? outputSpec_
               : outputSpecBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20457,8 +20660,10 @@ public final class P8eProto {
         } else {
           outputSpecBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (outputSpec_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -20681,6 +20886,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FUNC_NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object funcName_ = "";
@@ -20787,7 +20993,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasOutputSpec() {
-      return outputSpec_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
@@ -20828,7 +21034,7 @@ public final class P8eProto {
       for (int i = 0; i < inputSpecs_.size(); i++) {
         output.writeMessage(3, inputSpecs_.get(i));
       }
-      if (outputSpec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getOutputSpec());
       }
       getUnknownFields().writeTo(output);
@@ -20851,7 +21057,7 @@ public final class P8eProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, inputSpecs_.get(i));
       }
-      if (outputSpec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOutputSpec());
       }
@@ -21026,13 +21232,20 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputSpecsFieldBuilder();
+          getOutputSpecFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -21104,11 +21317,14 @@ public final class P8eProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.responsibleParty_ = responsibleParty_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.outputSpec_ = outputSpecBuilder_ == null
               ? outputSpec_
               : outputSpecBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21696,8 +21912,10 @@ public final class P8eProto {
         } else {
           outputSpecBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (outputSpec_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -21870,6 +22088,7 @@ public final class P8eProto {
               com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.class, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SPEC_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec spec_;
     /**
@@ -21878,7 +22097,7 @@ public final class P8eProto {
      */
     @java.lang.Override
     public boolean hasSpec() {
-      return spec_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
@@ -21910,7 +22129,7 @@ public final class P8eProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (spec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSpec());
       }
       getUnknownFields().writeTo(output);
@@ -21922,7 +22141,7 @@ public final class P8eProto {
       if (size != -1) return size;
 
       size = 0;
-      if (spec_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpec());
       }
@@ -22084,13 +22303,19 @@ public final class P8eProto {
 
       // Construct using com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSpecFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -22134,11 +22359,14 @@ public final class P8eProto {
 
       private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.spec_ = specBuilder_ == null
               ? spec_
               : specBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22304,8 +22532,10 @@ public final class P8eProto {
         } else {
           specBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (spec_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

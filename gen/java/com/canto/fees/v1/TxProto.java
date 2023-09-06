@@ -303,7 +303,8 @@ public final class TxProto {
 
     public static final int NONCES_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList nonces_;
+    private com.google.protobuf.Internal.LongList nonces_ =
+        emptyLongList();
     /**
      * <pre>
      * array of nonces from the address path, where the last nonce is
@@ -620,18 +621,9 @@ public final class TxProto {
       @java.lang.Override
       public com.canto.fees.v1.TxProto.MsgRegisterFee buildPartial() {
         com.canto.fees.v1.TxProto.MsgRegisterFee result = new com.canto.fees.v1.TxProto.MsgRegisterFee(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.canto.fees.v1.TxProto.MsgRegisterFee result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          nonces_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.nonces_ = nonces_;
       }
 
       private void buildPartial0(com.canto.fees.v1.TxProto.MsgRegisterFee result) {
@@ -644,6 +636,10 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.withdrawAddress_ = withdrawAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          nonces_.makeImmutable();
+          result.nonces_ = nonces_;
         }
       }
 
@@ -709,7 +705,8 @@ public final class TxProto {
         if (!other.nonces_.isEmpty()) {
           if (nonces_.isEmpty()) {
             nonces_ = other.nonces_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            nonces_.makeImmutable();
+            bitField0_ |= 0x00000008;
           } else {
             ensureNoncesIsMutable();
             nonces_.addAll(other.nonces_);
@@ -1073,10 +1070,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList nonces_ = emptyLongList();
       private void ensureNoncesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          nonces_ = mutableCopy(nonces_);
-          bitField0_ |= 0x00000008;
+        if (!nonces_.isModifiable()) {
+          nonces_ = makeMutableCopy(nonces_);
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -1090,8 +1087,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getNoncesList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(nonces_) : nonces_;
+        nonces_.makeImmutable();
+        return nonces_;
       }
       /**
        * <pre>
@@ -1137,6 +1134,7 @@ public final class TxProto {
 
         ensureNoncesIsMutable();
         nonces_.setLong(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1155,6 +1153,7 @@ public final class TxProto {
 
         ensureNoncesIsMutable();
         nonces_.addLong(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1174,6 +1173,7 @@ public final class TxProto {
         ensureNoncesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, nonces_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }

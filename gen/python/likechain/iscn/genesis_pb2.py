@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from likechain.iscn import params_pb2 as likechain_dot_iscn_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1clikechain/iscn/genesis.proto\x12\x0elikechain.iscn\x1a\x14gogoproto/gogo.proto\x1a\x1blikechain/iscn/params.proto\"\xc5\x02\n\x0cGenesisState\x12\x34\n\x06params\x18\x01 \x01(\x0b\x32\x16.likechain.iscn.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12`\n\x12\x63ontent_id_records\x18\x02 \x03(\x0b\x32,.likechain.iscn.GenesisState.ContentIdRecordB\x04\xc8\xde\x1f\x00R\x10\x63ontentIdRecords\x12\x34\n\x0ciscn_records\x18\x03 \x03(\x0c\x42\x11\xc8\xde\x1f\x00\xda\xde\x1f\tIscnInputR\x0biscnRecords\x1ag\n\x0f\x43ontentIdRecord\x12\x17\n\x07iscn_id\x18\x01 \x01(\tR\x06iscnId\x12\x14\n\x05owner\x18\x02 \x01(\tR\x05owner\x12%\n\x0elatest_version\x18\x03 \x01(\x04R\rlatestVersionB\xaf\x01\n\x12\x63om.likechain.iscnB\x0cGenesisProtoP\x01Z2github.com/likecoin/likecoin-chain/v4/x/iscn/types\xa2\x02\x03LIX\xaa\x02\x0eLikechain.Iscn\xca\x02\x0eLikechain\\Iscn\xe2\x02\x1aLikechain\\Iscn\\GPBMetadata\xea\x02\x0fLikechain::Iscnb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1clikechain/iscn/genesis.proto\x12\x0elikechain.iscn\x1a\x14gogoproto/gogo.proto\x1a\x1blikechain/iscn/params.proto\"\xc5\x02\n\x0cGenesisState\x12\x34\n\x06params\x18\x01 \x01(\x0b\x32\x16.likechain.iscn.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12`\n\x12\x63ontent_id_records\x18\x02 \x03(\x0b\x32,.likechain.iscn.GenesisState.ContentIdRecordB\x04\xc8\xde\x1f\x00R\x10\x63ontentIdRecords\x12\x34\n\x0ciscn_records\x18\x03 \x03(\x0c\x42\x11\xc8\xde\x1f\x00\xda\xde\x1f\tIscnInputR\x0biscnRecords\x1ag\n\x0f\x43ontentIdRecord\x12\x17\n\x07iscn_id\x18\x01 \x01(\tR\x06iscnId\x12\x14\n\x05owner\x18\x02 \x01(\tR\x05owner\x12%\n\x0elatest_version\x18\x03 \x01(\x04R\rlatestVersionB\xad\x01\n\x12\x63om.likechain.iscnB\x0cGenesisProtoZ2github.com/likecoin/likecoin-chain/v4/x/iscn/types\xa2\x02\x03LIX\xaa\x02\x0eLikechain.Iscn\xca\x02\x0eLikechain\\Iscn\xe2\x02\x1aLikechain\\Iscn\\GPBMetadata\xea\x02\x0fLikechain::Iscnb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'likechain.iscn.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.likechain.iscnB\014GenesisProtoP\001Z2github.com/likecoin/likecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Likechain::Iscn'
+  DESCRIPTOR._serialized_options = b'\n\022com.likechain.iscnB\014GenesisProtoZ2github.com/likecoin/likecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Likechain::Iscn'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['content_id_records']._options = None

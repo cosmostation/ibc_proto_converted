@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x65vmos/vesting/v1/events.proto\x12\x10\x65vmos.vesting.v1\"\xa0\x01\n!EventCreateClawbackVestingAccount\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12\x14\n\x05\x63oins\x18\x02 \x01(\tR\x05\x63oins\x12\x1d\n\nstart_time\x18\x03 \x01(\tR\tstartTime\x12\x14\n\x05merge\x18\x04 \x01(\tR\x05merge\x12\x18\n\x07\x61\x63\x63ount\x18\x05 \x01(\tR\x07\x61\x63\x63ount\"c\n\rEventClawback\x12\x16\n\x06\x66under\x18\x01 \x01(\tR\x06\x66under\x12\x18\n\x07\x61\x63\x63ount\x18\x02 \x01(\tR\x07\x61\x63\x63ount\x12 \n\x0b\x64\x65stination\x18\x03 \x01(\tR\x0b\x64\x65stination\"k\n\x18\x45ventUpdateVestingFunder\x12\x16\n\x06\x66under\x18\x01 \x01(\tR\x06\x66under\x12\x18\n\x07\x61\x63\x63ount\x18\x02 \x01(\tR\x07\x61\x63\x63ount\x12\x1d\n\nnew_funder\x18\x03 \x01(\tR\tnewFunderB\xb1\x01\n\x14\x63om.evmos.vesting.v1B\x0b\x45ventsProtoP\x01Z*github.com/evmos/evmos/v13/x/vesting/types\xa2\x02\x03\x45VX\xaa\x02\x10\x45vmos.Vesting.V1\xca\x02\x10\x45vmos\\Vesting\\V1\xe2\x02\x1c\x45vmos\\Vesting\\V1\\GPBMetadata\xea\x02\x12\x45vmos::Vesting::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x65vmos/vesting/v1/events.proto\x12\x10\x65vmos.vesting.v1\"\xa0\x01\n!EventCreateClawbackVestingAccount\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12\x14\n\x05\x63oins\x18\x02 \x01(\tR\x05\x63oins\x12\x1d\n\nstart_time\x18\x03 \x01(\tR\tstartTime\x12\x14\n\x05merge\x18\x04 \x01(\tR\x05merge\x12\x18\n\x07\x61\x63\x63ount\x18\x05 \x01(\tR\x07\x61\x63\x63ount\"c\n\rEventClawback\x12\x16\n\x06\x66under\x18\x01 \x01(\tR\x06\x66under\x12\x18\n\x07\x61\x63\x63ount\x18\x02 \x01(\tR\x07\x61\x63\x63ount\x12 \n\x0b\x64\x65stination\x18\x03 \x01(\tR\x0b\x64\x65stination\"k\n\x18\x45ventUpdateVestingFunder\x12\x16\n\x06\x66under\x18\x01 \x01(\tR\x06\x66under\x12\x18\n\x07\x61\x63\x63ount\x18\x02 \x01(\tR\x07\x61\x63\x63ount\x12\x1d\n\nnew_funder\x18\x03 \x01(\tR\tnewFunderB\xaf\x01\n\x14\x63om.evmos.vesting.v1B\x0b\x45ventsProtoZ*github.com/evmos/evmos/v13/x/vesting/types\xa2\x02\x03\x45VX\xaa\x02\x10\x45vmos.Vesting.V1\xca\x02\x10\x45vmos\\Vesting\\V1\xe2\x02\x1c\x45vmos\\Vesting\\V1\\GPBMetadata\xea\x02\x12\x45vmos::Vesting::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'evmos.vesting.v1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.evmos.vesting.v1B\013EventsProtoP\001Z*github.com/evmos/evmos/v13/x/vesting/types\242\002\003EVX\252\002\020Evmos.Vesting.V1\312\002\020Evmos\\Vesting\\V1\342\002\034Evmos\\Vesting\\V1\\GPBMetadata\352\002\022Evmos::Vesting::V1'
+  DESCRIPTOR._serialized_options = b'\n\024com.evmos.vesting.v1B\013EventsProtoZ*github.com/evmos/evmos/v13/x/vesting/types\242\002\003EVX\252\002\020Evmos.Vesting.V1\312\002\020Evmos\\Vesting\\V1\342\002\034Evmos\\Vesting\\V1\\GPBMetadata\352\002\022Evmos::Vesting::V1'
   _globals['_EVENTCREATECLAWBACKVESTINGACCOUNT']._serialized_start=52
   _globals['_EVENTCREATECLAWBACKVESTINGACCOUNT']._serialized_end=212
   _globals['_EVENTCLAWBACK']._serialized_start=214

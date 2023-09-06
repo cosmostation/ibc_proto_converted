@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: sentinel/swap/v1/msg.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgServiceGrpc {
 
   private MsgServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "sentinel.swap.v1.MsgService";
+  public static final java.lang.String SERVICE_NAME = "sentinel.swap.v1.MsgService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.sentinel.swap.v1.MsgProto.MsgSwapRequest,
@@ -261,9 +261,9 @@ public final class MsgServiceGrpc {
   private static final class MsgServiceMethodDescriptorSupplier
       extends MsgServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MsgServiceMethodDescriptorSupplier(String methodName) {
+    MsgServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

@@ -494,6 +494,7 @@ public final class LiquidfarmingProto {
               com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -630,7 +631,7 @@ public final class LiquidfarmingProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -668,7 +669,7 @@ public final class LiquidfarmingProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return endTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -781,7 +782,7 @@ public final class LiquidfarmingProto {
      */
     @java.lang.Override
     public boolean hasWinningAmount() {
-      return winningAmount_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -979,10 +980,10 @@ public final class LiquidfarmingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payingReserveAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, payingReserveAddress_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getEndTime());
       }
       if (status_ != com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.AuctionStatus.AUCTION_STATUS_UNSPECIFIED.getNumber()) {
@@ -991,7 +992,7 @@ public final class LiquidfarmingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, winner_);
       }
-      if (winningAmount_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(9, getWinningAmount());
       }
       for (int i = 0; i < rewards_.size(); i++) {
@@ -1026,11 +1027,11 @@ public final class LiquidfarmingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payingReserveAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, payingReserveAddress_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getEndTime());
       }
@@ -1041,7 +1042,7 @@ public final class LiquidfarmingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, winner_);
       }
-      if (winningAmount_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getWinningAmount());
       }
@@ -1274,13 +1275,23 @@ public final class LiquidfarmingProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartTimeFieldBuilder();
+          getEndTimeFieldBuilder();
+          getWinningAmountFieldBuilder();
+          getRewardsFieldBuilder();
+          getFeesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1389,15 +1400,18 @@ public final class LiquidfarmingProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.payingReserveAddress_ = payingReserveAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.status_ = status_;
@@ -1409,10 +1423,12 @@ public final class LiquidfarmingProto {
           result.winningAmount_ = winningAmountBuilder_ == null
               ? winningAmount_
               : winningAmountBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.feeRate_ = feeRate_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2032,8 +2048,10 @@ public final class LiquidfarmingProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2187,8 +2205,10 @@ public final class LiquidfarmingProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (endTime_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2512,8 +2532,10 @@ public final class LiquidfarmingProto {
         } else {
           winningAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (winningAmount_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3949,6 +3971,7 @@ public final class LiquidfarmingProto {
               com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.class, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -4023,7 +4046,7 @@ public final class LiquidfarmingProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4069,7 +4092,7 @@ public final class LiquidfarmingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bidder_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -4088,7 +4111,7 @@ public final class LiquidfarmingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bidder_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -4259,13 +4282,19 @@ public final class LiquidfarmingProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4317,11 +4346,14 @@ public final class LiquidfarmingProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bidder_ = bidder_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4661,8 +4693,10 @@ public final class LiquidfarmingProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

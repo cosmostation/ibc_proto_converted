@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from neutron.feerefunder import fee_pb2 as neutron_dot_feerefunder_dot_fee__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n neutron/feerefunder/params.proto\x12\x13neutron.feerefunder\x1a\x14gogoproto/gogo.proto\x1a\x1dneutron/feerefunder/fee.proto\"G\n\x06Params\x12\x37\n\x07min_fee\x18\x01 \x01(\x0b\x32\x18.neutron.feerefunder.FeeB\x04\xc8\xde\x1f\x00R\x06minFee:\x04\x98\xa0\x1f\x00\x42\xc7\x01\n\x17\x63om.neutron.feerefunderB\x0bParamsProtoP\x01Z2github.com/neutron-org/neutron/x/feerefunder/types\xa2\x02\x03NFX\xaa\x02\x13Neutron.Feerefunder\xca\x02\x13Neutron\\Feerefunder\xe2\x02\x1fNeutron\\Feerefunder\\GPBMetadata\xea\x02\x14Neutron::Feerefunderb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n neutron/feerefunder/params.proto\x12\x13neutron.feerefunder\x1a\x14gogoproto/gogo.proto\x1a\x1dneutron/feerefunder/fee.proto\"G\n\x06Params\x12\x37\n\x07min_fee\x18\x01 \x01(\x0b\x32\x18.neutron.feerefunder.FeeB\x04\xc8\xde\x1f\x00R\x06minFee:\x04\x98\xa0\x1f\x00\x42\xc5\x01\n\x17\x63om.neutron.feerefunderB\x0bParamsProtoZ2github.com/neutron-org/neutron/x/feerefunder/types\xa2\x02\x03NFX\xaa\x02\x13Neutron.Feerefunder\xca\x02\x13Neutron\\Feerefunder\xe2\x02\x1fNeutron\\Feerefunder\\GPBMetadata\xea\x02\x14Neutron::Feerefunderb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.feerefunder.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.neutron.feerefunderB\013ParamsProtoP\001Z2github.com/neutron-org/neutron/x/feerefunder/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Feerefunder\342\002\037Neutron\\Feerefunder\\GPBMetadata\352\002\024Neutron::Feerefunder'
+  DESCRIPTOR._serialized_options = b'\n\027com.neutron.feerefunderB\013ParamsProtoZ2github.com/neutron-org/neutron/x/feerefunder/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Feerefunder\342\002\037Neutron\\Feerefunder\\GPBMetadata\352\002\024Neutron::Feerefunder'
   _PARAMS.fields_by_name['min_fee']._options = None
   _PARAMS.fields_by_name['min_fee']._serialized_options = b'\310\336\037\000'
   _PARAMS._options = None

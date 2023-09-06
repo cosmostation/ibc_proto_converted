@@ -16,15 +16,14 @@ from stride.claim import claim_pb2 as stride_dot_claim_dot_claim__pb2
 from stride.claim import params_pb2 as stride_dot_claim_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1astride/claim/genesis.proto\x12\x0cstride.claim\x1a\x14gogoproto/gogo.proto\x1a\x18stride/claim/claim.proto\x1a\x19stride/claim/params.proto\"\xb1\x01\n\x0cGenesisState\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32\x14.stride.claim.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06params\x12\\\n\rclaim_records\x18\x02 \x03(\x0b\x32\x19.stride.claim.ClaimRecordB\x1c\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"claim_records\"R\x0c\x63laimRecordsB\xa1\x01\n\x10\x63om.stride.claimB\x0cGenesisProtoP\x01Z.github.com/Stride-Labs/stride/v9/x/claim/types\xa2\x02\x03SCX\xaa\x02\x0cStride.Claim\xca\x02\x0cStride\\Claim\xe2\x02\x18Stride\\Claim\\GPBMetadata\xea\x02\rStride::Claimb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1astride/claim/genesis.proto\x12\x0cstride.claim\x1a\x14gogoproto/gogo.proto\x1a\x18stride/claim/claim.proto\x1a\x19stride/claim/params.proto\"\xb1\x01\n\x0cGenesisState\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32\x14.stride.claim.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06params\x12\\\n\rclaim_records\x18\x02 \x03(\x0b\x32\x19.stride.claim.ClaimRecordB\x1c\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"claim_records\"R\x0c\x63laimRecordsB\x9f\x01\n\x10\x63om.stride.claimB\x0cGenesisProtoZ.github.com/Stride-Labs/stride/v9/x/claim/types\xa2\x02\x03SCX\xaa\x02\x0cStride.Claim\xca\x02\x0cStride\\Claim\xe2\x02\x18Stride\\Claim\\GPBMetadata\xea\x02\rStride::Claimb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stride.claim.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.stride.claimB\014GenesisProtoP\001Z.github.com/Stride-Labs/stride/v9/x/claim/types\242\002\003SCX\252\002\014Stride.Claim\312\002\014Stride\\Claim\342\002\030Stride\\Claim\\GPBMetadata\352\002\rStride::Claim'
+  DESCRIPTOR._serialized_options = b'\n\020com.stride.claimB\014GenesisProtoZ.github.com/Stride-Labs/stride/v9/x/claim/types\242\002\003SCX\252\002\014Stride.Claim\312\002\014Stride\\Claim\342\002\030Stride\\Claim\\GPBMetadata\352\002\rStride::Claim'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000\362\336\037\ryaml:\"params\"'
   _GENESISSTATE.fields_by_name['claim_records']._options = None

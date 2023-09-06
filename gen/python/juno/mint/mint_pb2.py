@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14juno/mint/mint.proto\x12\tjuno.mint\x1a\x14gogoproto/gogo.proto\"\x9c\x03\n\x06Minter\x12L\n\tinflation\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\tinflation\x12\x14\n\x05phase\x18\x02 \x01(\x04R\x05phase\x12H\n\x11start_phase_block\x18\x03 \x01(\x04\x42\x1c\xf2\xde\x1f\x18yaml:\"start_phase_block\"R\x0fstartPhaseBlock\x12w\n\x11\x61nnual_provisions\x18\x04 \x01(\tBJ\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x18yaml:\"annual_provisions\"R\x10\x61nnualProvisions\x12k\n\rtarget_supply\x18\x05 \x01(\tBF\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xf2\xde\x1f\x14yaml:\"target_supply\"R\x0ctargetSupply\"q\n\x06Params\x12\x1d\n\nmint_denom\x18\x01 \x01(\tR\tmintDenom\x12\x42\n\x0f\x62locks_per_year\x18\x02 \x01(\x04\x42\x1a\xf2\xde\x1f\x16yaml:\"blocks_per_year\"R\rblocksPerYear:\x04\x98\xa0\x1f\x00\x42\x8d\x01\n\rcom.juno.mintB\tMintProtoP\x01Z,github.com/CosmosContracts/juno/x/mint/types\xa2\x02\x03JMX\xaa\x02\tJuno.Mint\xca\x02\tJuno\\Mint\xe2\x02\x15Juno\\Mint\\GPBMetadata\xea\x02\nJuno::Mintb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14juno/mint/mint.proto\x12\tjuno.mint\x1a\x14gogoproto/gogo.proto\"\x9c\x03\n\x06Minter\x12L\n\tinflation\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\tinflation\x12\x14\n\x05phase\x18\x02 \x01(\x04R\x05phase\x12H\n\x11start_phase_block\x18\x03 \x01(\x04\x42\x1c\xf2\xde\x1f\x18yaml:\"start_phase_block\"R\x0fstartPhaseBlock\x12w\n\x11\x61nnual_provisions\x18\x04 \x01(\tBJ\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x18yaml:\"annual_provisions\"R\x10\x61nnualProvisions\x12k\n\rtarget_supply\x18\x05 \x01(\tBF\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xf2\xde\x1f\x14yaml:\"target_supply\"R\x0ctargetSupply\"q\n\x06Params\x12\x1d\n\nmint_denom\x18\x01 \x01(\tR\tmintDenom\x12\x42\n\x0f\x62locks_per_year\x18\x02 \x01(\x04\x42\x1a\xf2\xde\x1f\x16yaml:\"blocks_per_year\"R\rblocksPerYear:\x04\x98\xa0\x1f\x00\x42\x8b\x01\n\rcom.juno.mintB\tMintProtoZ,github.com/CosmosContracts/juno/x/mint/types\xa2\x02\x03JMX\xaa\x02\tJuno.Mint\xca\x02\tJuno\\Mint\xe2\x02\x15Juno\\Mint\\GPBMetadata\xea\x02\nJuno::Mintb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'juno.mint.mint_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\rcom.juno.mintB\tMintProtoP\001Z,github.com/CosmosContracts/juno/x/mint/types\242\002\003JMX\252\002\tJuno.Mint\312\002\tJuno\\Mint\342\002\025Juno\\Mint\\GPBMetadata\352\002\nJuno::Mint'
+  DESCRIPTOR._serialized_options = b'\n\rcom.juno.mintB\tMintProtoZ,github.com/CosmosContracts/juno/x/mint/types\242\002\003JMX\252\002\tJuno.Mint\312\002\tJuno\\Mint\342\002\025Juno\\Mint\\GPBMetadata\352\002\nJuno::Mint'
   _MINTER.fields_by_name['inflation']._options = None
   _MINTER.fields_by_name['inflation']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Dec'
   _MINTER.fields_by_name['start_phase_block']._options = None

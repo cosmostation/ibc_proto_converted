@@ -107,7 +107,8 @@ public final class GaugeProto {
 
     public static final int CHILD_POOL_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList childPoolIds_;
+    private com.google.protobuf.Internal.LongList childPoolIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 child_pool_ids = 3 [json_name = "childPoolIds"];</code>
      * @return A list containing the childPoolIds.
@@ -395,18 +396,9 @@ public final class GaugeProto {
       @java.lang.Override
       public com.comdex.rewards.v1beta1.GaugeProto.LiquidtyGaugeMetaData buildPartial() {
         com.comdex.rewards.v1beta1.GaugeProto.LiquidtyGaugeMetaData result = new com.comdex.rewards.v1beta1.GaugeProto.LiquidtyGaugeMetaData(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.GaugeProto.LiquidtyGaugeMetaData result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          childPoolIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.childPoolIds_ = childPoolIds_;
       }
 
       private void buildPartial0(com.comdex.rewards.v1beta1.GaugeProto.LiquidtyGaugeMetaData result) {
@@ -416,6 +408,10 @@ public final class GaugeProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.isMasterPool_ = isMasterPool_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          childPoolIds_.makeImmutable();
+          result.childPoolIds_ = childPoolIds_;
         }
       }
 
@@ -472,7 +468,8 @@ public final class GaugeProto {
         if (!other.childPoolIds_.isEmpty()) {
           if (childPoolIds_.isEmpty()) {
             childPoolIds_ = other.childPoolIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            childPoolIds_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureChildPoolIdsIsMutable();
             childPoolIds_.addAll(other.childPoolIds_);
@@ -614,10 +611,10 @@ public final class GaugeProto {
 
       private com.google.protobuf.Internal.LongList childPoolIds_ = emptyLongList();
       private void ensureChildPoolIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          childPoolIds_ = mutableCopy(childPoolIds_);
-          bitField0_ |= 0x00000004;
+        if (!childPoolIds_.isModifiable()) {
+          childPoolIds_ = makeMutableCopy(childPoolIds_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 child_pool_ids = 3 [json_name = "childPoolIds"];</code>
@@ -625,8 +622,8 @@ public final class GaugeProto {
        */
       public java.util.List<java.lang.Long>
           getChildPoolIdsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(childPoolIds_) : childPoolIds_;
+        childPoolIds_.makeImmutable();
+        return childPoolIds_;
       }
       /**
        * <code>repeated uint64 child_pool_ids = 3 [json_name = "childPoolIds"];</code>
@@ -654,6 +651,7 @@ public final class GaugeProto {
 
         ensureChildPoolIdsIsMutable();
         childPoolIds_.setLong(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -666,6 +664,7 @@ public final class GaugeProto {
 
         ensureChildPoolIdsIsMutable();
         childPoolIds_.addLong(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -679,6 +678,7 @@ public final class GaugeProto {
         ensureChildPoolIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, childPoolIds_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -942,6 +942,7 @@ public final class GaugeProto {
               com.comdex.rewards.v1beta1.GaugeProto.Gauge.class, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder.class);
     }
 
+    private int bitField0_;
     private int kindCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object kind_;
@@ -1040,7 +1041,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return createdAt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1066,7 +1067,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1103,7 +1104,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasTriggerDuration() {
-      return triggerDuration_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Duration trigger_duration = 6 [json_name = "triggerDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "trigger_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"trigger_duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1129,7 +1130,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasDepositAmount() {
-      return depositAmount_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deposit_amount = 7 [json_name = "depositAmount", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1177,7 +1178,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasDistributedAmount() {
-      return distributedAmount_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin distributed_amount = 10 [json_name = "distributedAmount", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1279,19 +1280,19 @@ public final class GaugeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, from_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCreatedAt());
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getStartTime());
       }
       if (gaugeTypeId_ != 0L) {
         output.writeUInt64(5, gaugeTypeId_);
       }
-      if (triggerDuration_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(6, getTriggerDuration());
       }
-      if (depositAmount_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(7, getDepositAmount());
       }
       if (totalTriggers_ != 0L) {
@@ -1300,7 +1301,7 @@ public final class GaugeProto {
       if (triggeredCount_ != 0L) {
         output.writeUInt64(9, triggeredCount_);
       }
-      if (distributedAmount_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(10, getDistributedAmount());
       }
       if (isActive_ != false) {
@@ -1331,11 +1332,11 @@ public final class GaugeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, from_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getStartTime());
       }
@@ -1343,11 +1344,11 @@ public final class GaugeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(5, gaugeTypeId_);
       }
-      if (triggerDuration_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTriggerDuration());
       }
-      if (depositAmount_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getDepositAmount());
       }
@@ -1359,7 +1360,7 @@ public final class GaugeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(9, triggeredCount_);
       }
-      if (distributedAmount_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getDistributedAmount());
       }
@@ -1625,13 +1626,23 @@ public final class GaugeProto {
 
       // Construct using com.comdex.rewards.v1beta1.GaugeProto.Gauge.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreatedAtFieldBuilder();
+          getStartTimeFieldBuilder();
+          getTriggerDurationFieldBuilder();
+          getDepositAmountFieldBuilder();
+          getDistributedAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1715,15 +1726,18 @@ public final class GaugeProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.from_ = from_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.gaugeTypeId_ = gaugeTypeId_;
@@ -1732,11 +1746,13 @@ public final class GaugeProto {
           result.triggerDuration_ = triggerDurationBuilder_ == null
               ? triggerDuration_
               : triggerDurationBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.depositAmount_ = depositAmountBuilder_ == null
               ? depositAmount_
               : depositAmountBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.totalTriggers_ = totalTriggers_;
@@ -1748,6 +1764,7 @@ public final class GaugeProto {
           result.distributedAmount_ = distributedAmountBuilder_ == null
               ? distributedAmount_
               : distributedAmountBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.isActive_ = isActive_;
@@ -1758,6 +1775,7 @@ public final class GaugeProto {
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.appId_ = appId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.comdex.rewards.v1beta1.GaugeProto.Gauge result) {
@@ -2173,8 +2191,10 @@ public final class GaugeProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2292,8 +2312,10 @@ public final class GaugeProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2443,8 +2465,10 @@ public final class GaugeProto {
         } else {
           triggerDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (triggerDuration_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2562,8 +2586,10 @@ public final class GaugeProto {
         } else {
           depositAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (depositAmount_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2745,8 +2771,10 @@ public final class GaugeProto {
         } else {
           distributedAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (distributedAmount_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3171,6 +3199,7 @@ public final class GaugeProto {
               com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.class, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TRIGGER_DURATION_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration triggerDuration_;
     /**
@@ -3179,7 +3208,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasTriggerDuration() {
-      return triggerDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration trigger_duration = 1 [json_name = "triggerDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "trigger_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"trigger_duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -3199,7 +3228,8 @@ public final class GaugeProto {
 
     public static final int GAUGE_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList gaugeIds_;
+    private com.google.protobuf.Internal.LongList gaugeIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 gauge_ids = 2 [json_name = "gaugeIds"];</code>
      * @return A list containing the gaugeIds.
@@ -3241,7 +3271,7 @@ public final class GaugeProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (triggerDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTriggerDuration());
       }
       if (getGaugeIdsList().size() > 0) {
@@ -3260,7 +3290,7 @@ public final class GaugeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (triggerDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTriggerDuration());
       }
@@ -3438,13 +3468,19 @@ public final class GaugeProto {
 
       // Construct using com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTriggerDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3482,27 +3518,25 @@ public final class GaugeProto {
       @java.lang.Override
       public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration buildPartial() {
         com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration result = new com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          gaugeIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.gaugeIds_ = gaugeIds_;
-      }
-
       private void buildPartial0(com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.triggerDuration_ = triggerDurationBuilder_ == null
               ? triggerDuration_
               : triggerDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          gaugeIds_.makeImmutable();
+          result.gaugeIds_ = gaugeIds_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3555,7 +3589,8 @@ public final class GaugeProto {
         if (!other.gaugeIds_.isEmpty()) {
           if (gaugeIds_.isEmpty()) {
             gaugeIds_ = other.gaugeIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            gaugeIds_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureGaugeIdsIsMutable();
             gaugeIds_.addAll(other.gaugeIds_);
@@ -3694,8 +3729,10 @@ public final class GaugeProto {
         } else {
           triggerDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (triggerDuration_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3749,10 +3786,10 @@ public final class GaugeProto {
 
       private com.google.protobuf.Internal.LongList gaugeIds_ = emptyLongList();
       private void ensureGaugeIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          gaugeIds_ = mutableCopy(gaugeIds_);
-          bitField0_ |= 0x00000002;
+        if (!gaugeIds_.isModifiable()) {
+          gaugeIds_ = makeMutableCopy(gaugeIds_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 gauge_ids = 2 [json_name = "gaugeIds"];</code>
@@ -3760,8 +3797,8 @@ public final class GaugeProto {
        */
       public java.util.List<java.lang.Long>
           getGaugeIdsList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(gaugeIds_) : gaugeIds_;
+        gaugeIds_.makeImmutable();
+        return gaugeIds_;
       }
       /**
        * <code>repeated uint64 gauge_ids = 2 [json_name = "gaugeIds"];</code>
@@ -3789,6 +3826,7 @@ public final class GaugeProto {
 
         ensureGaugeIdsIsMutable();
         gaugeIds_.setLong(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3801,6 +3839,7 @@ public final class GaugeProto {
 
         ensureGaugeIdsIsMutable();
         gaugeIds_.addLong(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3814,6 +3853,7 @@ public final class GaugeProto {
         ensureGaugeIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, gaugeIds_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

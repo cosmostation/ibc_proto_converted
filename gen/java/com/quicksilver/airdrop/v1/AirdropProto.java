@@ -582,6 +582,7 @@ public final class AirdropProto {
               com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.class, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -629,7 +630,7 @@ public final class AirdropProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -655,7 +656,7 @@ public final class AirdropProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -681,7 +682,7 @@ public final class AirdropProto {
      */
     @java.lang.Override
     public boolean hasDecay() {
-      return decay_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -775,13 +776,13 @@ public final class AirdropProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getStartTime());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getDuration());
       }
-      if (decay_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(4, getDecay());
       }
       if (allocation_ != 0L) {
@@ -805,15 +806,15 @@ public final class AirdropProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getStartTime());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDuration());
       }
-      if (decay_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDecay());
       }
@@ -1029,13 +1030,21 @@ public final class AirdropProto {
 
       // Construct using com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartTimeFieldBuilder();
+          getDurationFieldBuilder();
+          getDecayFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1097,20 +1106,24 @@ public final class AirdropProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.chainId_ = chainId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.decay_ = decayBuilder_ == null
               ? decay_
               : decayBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.allocation_ = allocation_;
@@ -1122,6 +1135,7 @@ public final class AirdropProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.isConcluded_ = isConcluded_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1421,8 +1435,10 @@ public final class AirdropProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1540,8 +1556,10 @@ public final class AirdropProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1659,8 +1677,10 @@ public final class AirdropProto {
         } else {
           decayBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (decay_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3247,6 +3267,7 @@ com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
               com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.class, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COMPLETE_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp completeTime_;
     /**
@@ -3255,7 +3276,7 @@ com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
      */
     @java.lang.Override
     public boolean hasCompleteTime() {
-      return completeTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -3298,7 +3319,7 @@ com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (completeTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCompleteTime());
       }
       if (claimAmount_ != 0L) {
@@ -3313,7 +3334,7 @@ com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (completeTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCompleteTime());
       }
@@ -3484,13 +3505,19 @@ com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
 
       // Construct using com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCompleteTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3535,14 +3562,17 @@ com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
 
       private void buildPartial0(com.quicksilver.airdrop.v1.AirdropProto.CompletedAction result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.completeTime_ = completeTimeBuilder_ == null
               ? completeTime_
               : completeTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.claimAmount_ = claimAmount_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3716,8 +3746,10 @@ com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
         } else {
           completeTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (completeTime_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

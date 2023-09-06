@@ -145,6 +145,7 @@ public final class TxProto {
               com.panacea.datadeal.v2alpha1.TxProto.MsgCreateDeal.class, com.panacea.datadeal.v2alpha1.TxProto.MsgCreateDeal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_SCHEMA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList dataSchema_ =
@@ -190,7 +191,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBudget() {
-      return budget_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin budget = 2 [json_name = "budget"];</code>
@@ -312,7 +313,7 @@ public final class TxProto {
       for (int i = 0; i < dataSchema_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataSchema_.getRaw(i));
       }
-      if (budget_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getBudget());
       }
       if (maxNumData_ != 0L) {
@@ -341,7 +342,7 @@ public final class TxProto {
         size += dataSize;
         size += 1 * getDataSchemaList().size();
       }
-      if (budget_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBudget());
       }
@@ -539,13 +540,19 @@ public final class TxProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.TxProto.MsgCreateDeal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBudgetFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -599,10 +606,12 @@ public final class TxProto {
           dataSchema_.makeImmutable();
           result.dataSchema_ = dataSchema_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.budget_ = budgetBuilder_ == null
               ? budget_
               : budgetBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxNumData_ = maxNumData_;
@@ -614,6 +623,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.owner_ = owner_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -940,8 +950,10 @@ public final class TxProto {
         } else {
           budgetBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (budget_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1827,6 +1839,7 @@ public final class TxProto {
               com.panacea.datadeal.v2alpha1.TxProto.MsgSellData.class, com.panacea.datadeal.v2alpha1.TxProto.MsgSellData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CERT_FIELD_NUMBER = 1;
     private com.panacea.datadeal.v2alpha1.TxProto.DataCert cert_;
     /**
@@ -1835,7 +1848,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCert() {
-      return cert_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datadeal.v2alpha1.DataCert cert = 1 [json_name = "cert"];</code>
@@ -1906,7 +1919,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (cert_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCert());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
@@ -1921,7 +1934,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (cert_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCert());
       }
@@ -2090,13 +2103,19 @@ public final class TxProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.TxProto.MsgSellData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCertFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2141,14 +2160,17 @@ public final class TxProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.TxProto.MsgSellData result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cert_ = certBuilder_ == null
               ? cert_
               : certBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.seller_ = seller_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2324,8 +2346,10 @@ public final class TxProto {
         } else {
           certBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (cert_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2570,6 +2594,7 @@ public final class TxProto {
               com.panacea.datadeal.v2alpha1.TxProto.MsgSellDataResponse.class, com.panacea.datadeal.v2alpha1.TxProto.MsgSellDataResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REWARD_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin reward_;
     /**
@@ -2578,7 +2603,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasReward() {
-      return reward_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin reward = 1 [json_name = "reward"];</code>
@@ -2610,7 +2635,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getReward());
       }
       getUnknownFields().writeTo(output);
@@ -2622,7 +2647,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReward());
       }
@@ -2784,13 +2809,19 @@ public final class TxProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.TxProto.MsgSellDataResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2834,11 +2865,14 @@ public final class TxProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.TxProto.MsgSellDataResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reward_ = rewardBuilder_ == null
               ? reward_
               : rewardBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3004,8 +3038,10 @@ public final class TxProto {
         } else {
           rewardBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (reward_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3185,6 +3221,7 @@ public final class TxProto {
               com.panacea.datadeal.v2alpha1.TxProto.DataCert.class, com.panacea.datadeal.v2alpha1.TxProto.DataCert.Builder.class);
     }
 
+    private int bitField0_;
     public static final int UNSIGNED_CERT_FIELD_NUMBER = 1;
     private com.panacea.datadeal.v2alpha1.TxProto.UnsignedDataCert unsignedCert_;
     /**
@@ -3193,7 +3230,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasUnsignedCert() {
-      return unsignedCert_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datadeal.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
@@ -3236,7 +3273,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (unsignedCert_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getUnsignedCert());
       }
       if (!signature_.isEmpty()) {
@@ -3251,7 +3288,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (unsignedCert_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUnsignedCert());
       }
@@ -3421,13 +3458,19 @@ public final class TxProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.TxProto.DataCert.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnsignedCertFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3472,14 +3515,17 @@ public final class TxProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.TxProto.DataCert result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.unsignedCert_ = unsignedCertBuilder_ == null
               ? unsignedCert_
               : unsignedCertBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signature_ = signature_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3653,8 +3699,10 @@ public final class TxProto {
         } else {
           unsignedCertBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (unsignedCert_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

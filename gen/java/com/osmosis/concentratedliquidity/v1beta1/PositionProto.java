@@ -123,6 +123,7 @@ public final class PositionProto {
               com.osmosis.concentratedliquidity.v1beta1.PositionProto.Position.class, com.osmosis.concentratedliquidity.v1beta1.PositionProto.Position.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POSITION_ID_FIELD_NUMBER = 1;
     private long positionId_ = 0L;
     /**
@@ -214,7 +215,7 @@ public final class PositionProto {
      */
     @java.lang.Override
     public boolean hasJoinTime() {
-      return joinTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp join_time = 6 [json_name = "joinTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"join_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -300,7 +301,7 @@ public final class PositionProto {
       if (upperTick_ != 0L) {
         output.writeInt64(5, upperTick_);
       }
-      if (joinTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getJoinTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidity_)) {
@@ -334,7 +335,7 @@ public final class PositionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, upperTick_);
       }
-      if (joinTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getJoinTime());
       }
@@ -528,13 +529,19 @@ public final class PositionProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.PositionProto.Position.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getJoinTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -599,14 +606,17 @@ public final class PositionProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.upperTick_ = upperTick_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.joinTime_ = joinTimeBuilder_ == null
               ? joinTime_
               : joinTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.liquidity_ = liquidity_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1024,8 +1034,10 @@ public final class PositionProto {
         } else {
           joinTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (joinTime_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1381,6 +1393,7 @@ public final class PositionProto {
               com.osmosis.concentratedliquidity.v1beta1.PositionProto.FullPositionBreakdown.class, com.osmosis.concentratedliquidity.v1beta1.PositionProto.FullPositionBreakdown.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POSITION_FIELD_NUMBER = 1;
     private com.osmosis.concentratedliquidity.v1beta1.PositionProto.Position position_;
     /**
@@ -1389,7 +1402,7 @@ public final class PositionProto {
      */
     @java.lang.Override
     public boolean hasPosition() {
-      return position_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.concentratedliquidity.v1beta1.Position position = 1 [json_name = "position", (.gogoproto.nullable) = false];</code>
@@ -1415,7 +1428,7 @@ public final class PositionProto {
      */
     @java.lang.Override
     public boolean hasAsset0() {
-      return asset0_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset0 = 2 [json_name = "asset0", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1441,7 +1454,7 @@ public final class PositionProto {
      */
     @java.lang.Override
     public boolean hasAsset1() {
-      return asset1_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset1 = 3 [json_name = "asset1", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1596,13 +1609,13 @@ public final class PositionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (position_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPosition());
       }
-      if (asset0_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getAsset0());
       }
-      if (asset1_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getAsset1());
       }
       for (int i = 0; i < claimableFees_.size(); i++) {
@@ -1623,15 +1636,15 @@ public final class PositionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (position_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPosition());
       }
-      if (asset0_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAsset0());
       }
-      if (asset1_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAsset1());
       }
@@ -1847,13 +1860,24 @@ public final class PositionProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.PositionProto.FullPositionBreakdown.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPositionFieldBuilder();
+          getAsset0FieldBuilder();
+          getAsset1FieldBuilder();
+          getClaimableFeesFieldBuilder();
+          getClaimableIncentivesFieldBuilder();
+          getForfeitedIncentivesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1959,21 +1983,26 @@ public final class PositionProto {
 
       private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.PositionProto.FullPositionBreakdown result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.position_ = positionBuilder_ == null
               ? position_
               : positionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.asset0_ = asset0Builder_ == null
               ? asset0_
               : asset0Builder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.asset1_ = asset1Builder_ == null
               ? asset1_
               : asset1Builder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2276,8 +2305,10 @@ public final class PositionProto {
         } else {
           positionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (position_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2395,8 +2426,10 @@ public final class PositionProto {
         } else {
           asset0Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (asset0_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2514,8 +2547,10 @@ public final class PositionProto {
         } else {
           asset1Builder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (asset1_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

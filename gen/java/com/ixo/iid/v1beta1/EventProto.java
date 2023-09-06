@@ -72,6 +72,7 @@ public final class EventProto {
               com.ixo.iid.v1beta1.EventProto.IidDocumentCreatedEvent.class, com.ixo.iid.v1beta1.EventProto.IidDocumentCreatedEvent.Builder.class);
     }
 
+    private int bitField0_;
     public static final int IIDDOCUMENT_FIELD_NUMBER = 1;
     private com.ixo.iid.v1beta1.IidProto.IidDocument iidDocument_;
     /**
@@ -80,7 +81,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasIidDocument() {
-      return iidDocument_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument"];</code>
@@ -112,7 +113,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getIidDocument());
       }
       getUnknownFields().writeTo(output);
@@ -124,7 +125,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIidDocument());
       }
@@ -286,13 +287,19 @@ public final class EventProto {
 
       // Construct using com.ixo.iid.v1beta1.EventProto.IidDocumentCreatedEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIidDocumentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -336,11 +343,14 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.iid.v1beta1.EventProto.IidDocumentCreatedEvent result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.iidDocument_ = iidDocumentBuilder_ == null
               ? iidDocument_
               : iidDocumentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -506,8 +516,10 @@ public final class EventProto {
         } else {
           iidDocumentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (iidDocument_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -680,6 +692,7 @@ public final class EventProto {
               com.ixo.iid.v1beta1.EventProto.IidDocumentUpdatedEvent.class, com.ixo.iid.v1beta1.EventProto.IidDocumentUpdatedEvent.Builder.class);
     }
 
+    private int bitField0_;
     public static final int IIDDOCUMENT_FIELD_NUMBER = 1;
     private com.ixo.iid.v1beta1.IidProto.IidDocument iidDocument_;
     /**
@@ -688,7 +701,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasIidDocument() {
-      return iidDocument_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument"];</code>
@@ -720,7 +733,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getIidDocument());
       }
       getUnknownFields().writeTo(output);
@@ -732,7 +745,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIidDocument());
       }
@@ -894,13 +907,19 @@ public final class EventProto {
 
       // Construct using com.ixo.iid.v1beta1.EventProto.IidDocumentUpdatedEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIidDocumentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -944,11 +963,14 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.iid.v1beta1.EventProto.IidDocumentUpdatedEvent result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.iidDocument_ = iidDocumentBuilder_ == null
               ? iidDocument_
               : iidDocumentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1114,8 +1136,10 @@ public final class EventProto {
         } else {
           iidDocumentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (iidDocument_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

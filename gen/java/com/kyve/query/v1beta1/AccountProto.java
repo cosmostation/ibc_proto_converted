@@ -1764,6 +1764,7 @@ public final class AccountProto {
               com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsRequest.class, com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -1776,7 +1777,7 @@ public final class AccountProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1863,7 +1864,7 @@ public final class AccountProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
@@ -1878,7 +1879,7 @@ public final class AccountProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -2047,13 +2048,19 @@ public final class AccountProto {
 
       // Construct using com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2098,14 +2105,17 @@ public final class AccountProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.address_ = address_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2301,8 +2311,10 @@ public final class AccountProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2640,6 +2652,7 @@ public final class AccountProto {
               com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsResponse.class, com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int UNBONDINGS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kyve.query.v1beta1.AccountProto.DelegationUnbonding> unbondings_;
@@ -2713,7 +2726,7 @@ public final class AccountProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2756,7 +2769,7 @@ public final class AccountProto {
       for (int i = 0; i < unbondings_.size(); i++) {
         output.writeMessage(1, unbondings_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2772,7 +2785,7 @@ public final class AccountProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, unbondings_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2940,13 +2953,20 @@ public final class AccountProto {
 
       // Construct using com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnbondingsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3010,11 +3030,14 @@ public final class AccountProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.AccountProto.QueryAccountDelegationUnbondingsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3551,8 +3574,10 @@ public final class AccountProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3773,6 +3798,7 @@ public final class AccountProto {
               com.kyve.query.v1beta1.AccountProto.DelegationUnbonding.class, com.kyve.query.v1beta1.AccountProto.DelegationUnbonding.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private long amount_ = 0L;
     /**
@@ -3815,7 +3841,7 @@ public final class AccountProto {
      */
     @java.lang.Override
     public boolean hasStaker() {
-      return staker_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3861,7 +3887,7 @@ public final class AccountProto {
       if (creationTime_ != 0L) {
         output.writeUInt64(2, creationTime_);
       }
-      if (staker_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getStaker());
       }
       getUnknownFields().writeTo(output);
@@ -3881,7 +3907,7 @@ public final class AccountProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, creationTime_);
       }
-      if (staker_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStaker());
       }
@@ -4053,13 +4079,19 @@ public final class AccountProto {
 
       // Construct using com.kyve.query.v1beta1.AccountProto.DelegationUnbonding.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4111,11 +4143,14 @@ public final class AccountProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.creationTime_ = creationTime_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.staker_ = stakerBuilder_ == null
               ? staker_
               : stakerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4405,8 +4440,10 @@ public final class AccountProto {
         } else {
           stakerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (staker_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6115,6 +6152,7 @@ public final class AccountProto {
               com.kyve.query.v1beta1.AccountProto.Funded.class, com.kyve.query.v1beta1.AccountProto.Funded.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private long amount_ = 0L;
     /**
@@ -6142,7 +6180,7 @@ public final class AccountProto {
      */
     @java.lang.Override
     public boolean hasPool() {
-      return pool_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6185,7 +6223,7 @@ public final class AccountProto {
       if (amount_ != 0L) {
         output.writeUInt64(1, amount_);
       }
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPool());
       }
       getUnknownFields().writeTo(output);
@@ -6201,7 +6239,7 @@ public final class AccountProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, amount_);
       }
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPool());
       }
@@ -6368,13 +6406,19 @@ public final class AccountProto {
 
       // Construct using com.kyve.query.v1beta1.AccountProto.Funded.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6422,11 +6466,14 @@ public final class AccountProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.amount_ = amount_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pool_ = poolBuilder_ == null
               ? pool_
               : poolBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6664,8 +6711,10 @@ public final class AccountProto {
         } else {
           poolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pool_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

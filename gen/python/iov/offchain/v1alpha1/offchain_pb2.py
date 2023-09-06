@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$iov/offchain/v1alpha1/offchain.proto\x12\x18\x63osmos.offchain.v1alpha1\x1a\x14gogoproto/gogo.proto\"9\n\x0bMsgSignData\x12\x16\n\x06signer\x18\x01 \x01(\tR\x06signer\x12\x12\n\x04\x64\x61ta\x18\x02 \x01(\x0cR\x04\x64\x61ta\"N\n\x11ListOfMsgSignData\x12\x39\n\x04msgs\x18\x01 \x03(\x0b\x32%.cosmos.offchain.v1alpha1.MsgSignDataR\x04msgsB\xde\x01\n\x1c\x63om.cosmos.offchain.v1alpha1B\rOffchainProtoP\x01Z-github.com/iov-one/starnamed/x/offchain/types\xa2\x02\x03\x43OX\xaa\x02\x18\x43osmos.Offchain.V1alpha1\xca\x02\x18\x43osmos\\Offchain\\V1alpha1\xe2\x02$Cosmos\\Offchain\\V1alpha1\\GPBMetadata\xea\x02\x1a\x43osmos::Offchain::V1alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$iov/offchain/v1alpha1/offchain.proto\x12\x18\x63osmos.offchain.v1alpha1\x1a\x14gogoproto/gogo.proto\"9\n\x0bMsgSignData\x12\x16\n\x06signer\x18\x01 \x01(\tR\x06signer\x12\x12\n\x04\x64\x61ta\x18\x02 \x01(\x0cR\x04\x64\x61ta\"N\n\x11ListOfMsgSignData\x12\x39\n\x04msgs\x18\x01 \x03(\x0b\x32%.cosmos.offchain.v1alpha1.MsgSignDataR\x04msgsB\xdc\x01\n\x1c\x63om.cosmos.offchain.v1alpha1B\rOffchainProtoZ-github.com/iov-one/starnamed/x/offchain/types\xa2\x02\x03\x43OX\xaa\x02\x18\x43osmos.Offchain.V1alpha1\xca\x02\x18\x43osmos\\Offchain\\V1alpha1\xe2\x02$Cosmos\\Offchain\\V1alpha1\\GPBMetadata\xea\x02\x1a\x43osmos::Offchain::V1alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'iov.offchain.v1alpha1.offchain_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.cosmos.offchain.v1alpha1B\rOffchainProtoP\001Z-github.com/iov-one/starnamed/x/offchain/types\242\002\003COX\252\002\030Cosmos.Offchain.V1alpha1\312\002\030Cosmos\\Offchain\\V1alpha1\342\002$Cosmos\\Offchain\\V1alpha1\\GPBMetadata\352\002\032Cosmos::Offchain::V1alpha1'
+  DESCRIPTOR._serialized_options = b'\n\034com.cosmos.offchain.v1alpha1B\rOffchainProtoZ-github.com/iov-one/starnamed/x/offchain/types\242\002\003COX\252\002\030Cosmos.Offchain.V1alpha1\312\002\030Cosmos\\Offchain\\V1alpha1\342\002$Cosmos\\Offchain\\V1alpha1\\GPBMetadata\352\002\032Cosmos::Offchain::V1alpha1'
   _globals['_MSGSIGNDATA']._serialized_start=88
   _globals['_MSGSIGNDATA']._serialized_end=145
   _globals['_LISTOFMSGSIGNDATA']._serialized_start=147

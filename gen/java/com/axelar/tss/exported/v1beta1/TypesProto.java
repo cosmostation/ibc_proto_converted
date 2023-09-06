@@ -546,6 +546,7 @@ public final class TypesProto {
               com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.class, com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.Builder.class);
     }
 
+    private int bitField0_;
     public static final int KEY_ROLE_FIELD_NUMBER = 1;
     private int keyRole_ = 0;
     /**
@@ -590,7 +591,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasMinKeygenThreshold() {
-      return minKeygenThreshold_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
@@ -616,7 +617,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSafetyThreshold() {
-      return safetyThreshold_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
@@ -682,7 +683,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasKeygenVotingThreshold() {
-      return keygenVotingThreshold_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
@@ -708,7 +709,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSignVotingThreshold() {
-      return signVotingThreshold_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
@@ -768,10 +769,10 @@ public final class TypesProto {
       if (keyType_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyType.KEY_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, keyType_);
       }
-      if (minKeygenThreshold_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getMinKeygenThreshold());
       }
-      if (safetyThreshold_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getSafetyThreshold());
       }
       if (keyShareDistributionPolicy_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy.KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED.getNumber()) {
@@ -783,10 +784,10 @@ public final class TypesProto {
       if (minTotalShareCount_ != 0L) {
         output.writeInt64(7, minTotalShareCount_);
       }
-      if (keygenVotingThreshold_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(8, getKeygenVotingThreshold());
       }
-      if (signVotingThreshold_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(9, getSignVotingThreshold());
       }
       if (keygenTimeout_ != 0L) {
@@ -812,11 +813,11 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, keyType_);
       }
-      if (minKeygenThreshold_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMinKeygenThreshold());
       }
-      if (safetyThreshold_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSafetyThreshold());
       }
@@ -832,11 +833,11 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, minTotalShareCount_);
       }
-      if (keygenVotingThreshold_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getKeygenVotingThreshold());
       }
-      if (signVotingThreshold_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getSignVotingThreshold());
       }
@@ -1062,13 +1063,22 @@ public final class TypesProto {
 
       // Construct using com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinKeygenThresholdFieldBuilder();
+          getSafetyThresholdFieldBuilder();
+          getKeygenVotingThresholdFieldBuilder();
+          getSignVotingThresholdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1140,15 +1150,18 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.keyType_ = keyType_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minKeygenThreshold_ = minKeygenThresholdBuilder_ == null
               ? minKeygenThreshold_
               : minKeygenThresholdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.safetyThreshold_ = safetyThresholdBuilder_ == null
               ? safetyThreshold_
               : safetyThresholdBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.keyShareDistributionPolicy_ = keyShareDistributionPolicy_;
@@ -1163,11 +1176,13 @@ public final class TypesProto {
           result.keygenVotingThreshold_ = keygenVotingThresholdBuilder_ == null
               ? keygenVotingThreshold_
               : keygenVotingThresholdBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.signVotingThreshold_ = signVotingThresholdBuilder_ == null
               ? signVotingThreshold_
               : signVotingThresholdBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.keygenTimeout_ = keygenTimeout_;
@@ -1175,6 +1190,7 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.signTimeout_ = signTimeout_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1532,8 +1548,10 @@ public final class TypesProto {
         } else {
           minKeygenThresholdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (minKeygenThreshold_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1651,8 +1669,10 @@ public final class TypesProto {
         } else {
           safetyThresholdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (safetyThreshold_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1887,8 +1907,10 @@ public final class TypesProto {
         } else {
           keygenVotingThresholdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (keygenVotingThreshold_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2006,8 +2028,10 @@ public final class TypesProto {
         } else {
           signVotingThresholdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (signVotingThreshold_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**

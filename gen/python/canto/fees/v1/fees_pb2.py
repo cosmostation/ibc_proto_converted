@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x63\x61nto/fees/v1/fees.proto\x12\rcanto.fees.v1\"\x86\x01\n\x03\x46\x65\x65\x12)\n\x10\x63ontract_address\x18\x01 \x01(\tR\x0f\x63ontractAddress\x12)\n\x10\x64\x65ployer_address\x18\x02 \x01(\tR\x0f\x64\x65ployerAddress\x12)\n\x10withdraw_address\x18\x03 \x01(\tR\x0fwithdrawAddressB\xa4\x01\n\x11\x63om.canto.fees.v1B\tFeesProtoP\x01Z.github.com/Canto-Network/Canto/v6/x/fees/types\xa2\x02\x03\x43\x46X\xaa\x02\rCanto.Fees.V1\xca\x02\rCanto\\Fees\\V1\xe2\x02\x19\x43\x61nto\\Fees\\V1\\GPBMetadata\xea\x02\x0f\x43\x61nto::Fees::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x63\x61nto/fees/v1/fees.proto\x12\rcanto.fees.v1\"\x86\x01\n\x03\x46\x65\x65\x12)\n\x10\x63ontract_address\x18\x01 \x01(\tR\x0f\x63ontractAddress\x12)\n\x10\x64\x65ployer_address\x18\x02 \x01(\tR\x0f\x64\x65ployerAddress\x12)\n\x10withdraw_address\x18\x03 \x01(\tR\x0fwithdrawAddressB\xa2\x01\n\x11\x63om.canto.fees.v1B\tFeesProtoZ.github.com/Canto-Network/Canto/v6/x/fees/types\xa2\x02\x03\x43\x46X\xaa\x02\rCanto.Fees.V1\xca\x02\rCanto\\Fees\\V1\xe2\x02\x19\x43\x61nto\\Fees\\V1\\GPBMetadata\xea\x02\x0f\x43\x61nto::Fees::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.fees.v1.fees_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\021com.canto.fees.v1B\tFeesProtoP\001Z.github.com/Canto-Network/Canto/v6/x/fees/types\242\002\003CFX\252\002\rCanto.Fees.V1\312\002\rCanto\\Fees\\V1\342\002\031Canto\\Fees\\V1\\GPBMetadata\352\002\017Canto::Fees::V1'
+  DESCRIPTOR._serialized_options = b'\n\021com.canto.fees.v1B\tFeesProtoZ.github.com/Canto-Network/Canto/v6/x/fees/types\242\002\003CFX\252\002\rCanto.Fees.V1\312\002\rCanto\\Fees\\V1\342\002\031Canto\\Fees\\V1\\GPBMetadata\352\002\017Canto::Fees::V1'
   _globals['_FEE']._serialized_start=44
   _globals['_FEE']._serialized_end=178
 # @@protoc_insertion_point(module_scope)

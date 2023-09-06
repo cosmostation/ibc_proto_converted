@@ -17,15 +17,14 @@ from axelar.permission.v1beta1 import types_pb2 as axelar_dot_permission_dot_v1b
 from axelar.permission.v1beta1 import params_pb2 as axelar_dot_permission_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'axelar/permission/v1beta1/genesis.proto\x12\x19\x61xelar.permission.v1beta1\x1a\x14gogoproto/gogo.proto\x1a!cosmos/crypto/multisig/keys.proto\x1a%axelar/permission/v1beta1/types.proto\x1a&axelar/permission/v1beta1/params.proto\"\xf1\x01\n\x0cGenesisState\x12?\n\x06params\x18\x01 \x01(\x0b\x32!.axelar.permission.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12P\n\x0egovernance_key\x18\x02 \x01(\x0b\x32).cosmos.crypto.multisig.LegacyAminoPubKeyR\rgovernanceKey\x12N\n\x0cgov_accounts\x18\x03 \x03(\x0b\x32%.axelar.permission.v1beta1.GovAccountB\x04\xc8\xde\x1f\x00R\x0bgovAccountsB\xf0\x01\n\x1d\x63om.axelar.permission.v1beta1B\x0cGenesisProtoP\x01Z7github.com/axelarnetwork/axelar-core/x/permission/types\xa2\x02\x03\x41PX\xaa\x02\x19\x41xelar.Permission.V1beta1\xca\x02\x19\x41xelar\\Permission\\V1beta1\xe2\x02%Axelar\\Permission\\V1beta1\\GPBMetadata\xea\x02\x1b\x41xelar::Permission::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'axelar/permission/v1beta1/genesis.proto\x12\x19\x61xelar.permission.v1beta1\x1a\x14gogoproto/gogo.proto\x1a!cosmos/crypto/multisig/keys.proto\x1a%axelar/permission/v1beta1/types.proto\x1a&axelar/permission/v1beta1/params.proto\"\xf1\x01\n\x0cGenesisState\x12?\n\x06params\x18\x01 \x01(\x0b\x32!.axelar.permission.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12P\n\x0egovernance_key\x18\x02 \x01(\x0b\x32).cosmos.crypto.multisig.LegacyAminoPubKeyR\rgovernanceKey\x12N\n\x0cgov_accounts\x18\x03 \x03(\x0b\x32%.axelar.permission.v1beta1.GovAccountB\x04\xc8\xde\x1f\x00R\x0bgovAccountsB\xee\x01\n\x1d\x63om.axelar.permission.v1beta1B\x0cGenesisProtoZ7github.com/axelarnetwork/axelar-core/x/permission/types\xa2\x02\x03\x41PX\xaa\x02\x19\x41xelar.Permission.V1beta1\xca\x02\x19\x41xelar\\Permission\\V1beta1\xe2\x02%Axelar\\Permission\\V1beta1\\GPBMetadata\xea\x02\x1b\x41xelar::Permission::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.permission.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.axelar.permission.v1beta1B\014GenesisProtoP\001Z7github.com/axelarnetwork/axelar-core/x/permission/types\242\002\003APX\252\002\031Axelar.Permission.V1beta1\312\002\031Axelar\\Permission\\V1beta1\342\002%Axelar\\Permission\\V1beta1\\GPBMetadata\352\002\033Axelar::Permission::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\035com.axelar.permission.v1beta1B\014GenesisProtoZ7github.com/axelarnetwork/axelar-core/x/permission/types\242\002\003APX\252\002\031Axelar.Permission.V1beta1\312\002\031Axelar\\Permission\\V1beta1\342\002%Axelar\\Permission\\V1beta1\\GPBMetadata\352\002\033Axelar::Permission::V1beta1\310\341\036\000'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['gov_accounts']._options = None

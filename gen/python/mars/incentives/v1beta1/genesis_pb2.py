@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from mars.incentives.v1beta1 import store_pb2 as mars_dot_incentives_dot_v1beta1_dot_store__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%mars/incentives/v1beta1/genesis.proto\x12\x17mars.incentives.v1beta1\x1a\x14gogoproto/gogo.proto\x1a#mars/incentives/v1beta1/store.proto\"\x9c\x01\n\x0cGenesisState\x12\x45\n\x10next_schedule_id\x18\x01 \x01(\x04\x42\x1b\xf2\xde\x1f\x17yaml:\"next_schedule_id\"R\x0enextScheduleId\x12\x45\n\tschedules\x18\x02 \x03(\x0b\x32!.mars.incentives.v1beta1.ScheduleB\x04\xc8\xde\x1f\x00R\tschedulesB\xda\x01\n\x1b\x63om.mars.incentives.v1beta1B\x0cGenesisProtoP\x01Z/github.com/mars-protocol/hub/x/incentives/types\xa2\x02\x03MIX\xaa\x02\x17Mars.Incentives.V1beta1\xca\x02\x17Mars\\Incentives\\V1beta1\xe2\x02#Mars\\Incentives\\V1beta1\\GPBMetadata\xea\x02\x19Mars::Incentives::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%mars/incentives/v1beta1/genesis.proto\x12\x17mars.incentives.v1beta1\x1a\x14gogoproto/gogo.proto\x1a#mars/incentives/v1beta1/store.proto\"\x9c\x01\n\x0cGenesisState\x12\x45\n\x10next_schedule_id\x18\x01 \x01(\x04\x42\x1b\xf2\xde\x1f\x17yaml:\"next_schedule_id\"R\x0enextScheduleId\x12\x45\n\tschedules\x18\x02 \x03(\x0b\x32!.mars.incentives.v1beta1.ScheduleB\x04\xc8\xde\x1f\x00R\tschedulesB\xd8\x01\n\x1b\x63om.mars.incentives.v1beta1B\x0cGenesisProtoZ/github.com/mars-protocol/hub/x/incentives/types\xa2\x02\x03MIX\xaa\x02\x17Mars.Incentives.V1beta1\xca\x02\x17Mars\\Incentives\\V1beta1\xe2\x02#Mars\\Incentives\\V1beta1\\GPBMetadata\xea\x02\x19Mars::Incentives::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'mars.incentives.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.mars.incentives.v1beta1B\014GenesisProtoP\001Z/github.com/mars-protocol/hub/x/incentives/types\242\002\003MIX\252\002\027Mars.Incentives.V1beta1\312\002\027Mars\\Incentives\\V1beta1\342\002#Mars\\Incentives\\V1beta1\\GPBMetadata\352\002\031Mars::Incentives::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\033com.mars.incentives.v1beta1B\014GenesisProtoZ/github.com/mars-protocol/hub/x/incentives/types\242\002\003MIX\252\002\027Mars.Incentives.V1beta1\312\002\027Mars\\Incentives\\V1beta1\342\002#Mars\\Incentives\\V1beta1\\GPBMetadata\352\002\031Mars::Incentives::V1beta1'
   _GENESISSTATE.fields_by_name['next_schedule_id']._options = None
   _GENESISSTATE.fields_by_name['next_schedule_id']._serialized_options = b'\362\336\037\027yaml:\"next_schedule_id\"'
   _GENESISSTATE.fields_by_name['schedules']._options = None

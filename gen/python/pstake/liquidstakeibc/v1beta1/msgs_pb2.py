@@ -17,17 +17,17 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.msg.v1 import msg_pb2 as cosmos_dot_msg_dot_v1_dot_msg__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 from pstake.liquidstakeibc.v1beta1 import liquidstakeibc_pb2 as pstake_dot_liquidstakeibc_dot_v1beta1_dot_liquidstakeibc__pb2
+from pstake.liquidstakeibc.v1beta1 import params_pb2 as pstake_dot_liquidstakeibc_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(pstake/liquidstakeibc/v1beta1/msgs.proto\x12\x1dpstake.liquidstakeibc.v1beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x32pstake/liquidstakeibc/v1beta1/liquidstakeibc.proto\"\xe8\x05\n\x14MsgRegisterHostChain\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12#\n\rconnection_id\x18\x02 \x01(\tR\x0c\x63onnectionId\x12]\n\x0b\x64\x65posit_fee\x18\x03 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\ndepositFee\x12]\n\x0brestake_fee\x18\x04 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\nrestakeFee\x12]\n\x0bunstake_fee\x18\x05 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\nunstakeFee\x12\x63\n\x0eredemption_fee\x18\x06 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\rredemptionFee\x12\x1d\n\nchannel_id\x18\x07 \x01(\tR\tchannelId\x12\x17\n\x07port_id\x18\x08 \x01(\tR\x06portId\x12\x1d\n\nhost_denom\x18\t \x01(\tR\thostDenom\x12\x65\n\x0fminimum_deposit\x18\n \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xd2\xb4-\ncosmos.IntR\x0eminimumDeposit\x12)\n\x10unbonding_factor\x18\x0b \x01(\x03R\x0funbondingFactor:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x1e\n\x1cMsgRegisterHostChainResponse\"\xb4\x01\n\x12MsgUpdateHostChain\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x19\n\x08\x63hain_id\x18\x02 \x01(\tR\x07\x63hainId\x12\x41\n\x07updates\x18\x03 \x03(\x0b\x32\'.pstake.liquidstakeibc.v1beta1.KVUpdateR\x07updates:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x1c\n\x1aMsgUpdateHostChainResponse\"\xa8\x01\n\x0eMsgLiquidStake\x12\x45\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x10\x64\x65legatorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount:\x16\x82\xe7\xb0*\x11\x64\x65legator_address\"\x18\n\x16MsgLiquidStakeResponse\"\xc9\x01\n\x10MsgLiquidUnstake\x12\x45\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x10\x64\x65legatorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount\x12\x1d\n\nhost_denom\x18\x03 \x01(\tR\thostDenom:\x16\x82\xe7\xb0*\x11\x64\x65legator_address\"\x1a\n\x18MsgLiquidUnstakeResponse\"\xc2\x01\n\tMsgRedeem\x12\x45\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x10\x64\x65legatorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount\x12\x1d\n\nhost_denom\x18\x03 \x01(\tR\thostDenom:\x16\x82\xe7\xb0*\x11\x64\x65legator_address\"\x13\n\x11MsgRedeemResponse2\x80\x06\n\x03Msg\x12\x85\x01\n\x11RegisterHostChain\x12\x33.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain\x1a;.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChainResponse\x12\x7f\n\x0fUpdateHostChain\x12\x31.pstake.liquidstakeibc.v1beta1.MsgUpdateHostChain\x1a\x39.pstake.liquidstakeibc.v1beta1.MsgUpdateHostChainResponse\x12\xa7\x01\n\x0bLiquidStake\x12-.pstake.liquidstakeibc.v1beta1.MsgLiquidStake\x1a\x35.pstake.liquidstakeibc.v1beta1.MsgLiquidStakeResponse\"2\x82\xd3\xe4\x93\x02,\"*/pstake/liquidstakeibc/v1beta1/LiquidStake\x12\xaf\x01\n\rLiquidUnstake\x12/.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake\x1a\x37.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstakeResponse\"4\x82\xd3\xe4\x93\x02.\",/pstake/liquidstakeibc/v1beta1/LiquidUnstake\x12\x93\x01\n\x06Redeem\x12(.pstake.liquidstakeibc.v1beta1.MsgRedeem\x1a\x30.pstake.liquidstakeibc.v1beta1.MsgRedeemResponse\"-\x82\xd3\xe4\x93\x02\'\"%/pstake/liquidstakeibc/v1beta1/RedeemB\x87\x02\n!com.pstake.liquidstakeibc.v1beta1B\tMsgsProtoP\x01ZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\xa2\x02\x03PLX\xaa\x02\x1dPstake.Liquidstakeibc.V1beta1\xca\x02\x1dPstake\\Liquidstakeibc\\V1beta1\xe2\x02)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\xea\x02\x1fPstake::Liquidstakeibc::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(pstake/liquidstakeibc/v1beta1/msgs.proto\x12\x1dpstake.liquidstakeibc.v1beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x32pstake/liquidstakeibc/v1beta1/liquidstakeibc.proto\x1a*pstake/liquidstakeibc/v1beta1/params.proto\"\x9a\x06\n\x14MsgRegisterHostChain\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12#\n\rconnection_id\x18\x02 \x01(\tR\x0c\x63onnectionId\x12]\n\x0b\x64\x65posit_fee\x18\x03 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\ndepositFee\x12]\n\x0brestake_fee\x18\x04 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\nrestakeFee\x12]\n\x0bunstake_fee\x18\x05 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\nunstakeFee\x12\x63\n\x0eredemption_fee\x18\x06 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\rredemptionFee\x12\x1d\n\nchannel_id\x18\x07 \x01(\tR\tchannelId\x12\x17\n\x07port_id\x18\x08 \x01(\tR\x06portId\x12\x1d\n\nhost_denom\x18\t \x01(\tR\thostDenom\x12\x65\n\x0fminimum_deposit\x18\n \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xd2\xb4-\ncosmos.IntR\x0eminimumDeposit\x12)\n\x10unbonding_factor\x18\x0b \x01(\x03R\x0funbondingFactor\x12\x30\n\x14\x61uto_compound_factor\x18\x0c \x01(\x03R\x12\x61utoCompoundFactor:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x1e\n\x1cMsgRegisterHostChainResponse\"\xb4\x01\n\x12MsgUpdateHostChain\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x19\n\x08\x63hain_id\x18\x02 \x01(\tR\x07\x63hainId\x12\x41\n\x07updates\x18\x03 \x03(\x0b\x32\'.pstake.liquidstakeibc.v1beta1.KVUpdateR\x07updates:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x1c\n\x1aMsgUpdateHostChainResponse\"\xa8\x01\n\x0eMsgLiquidStake\x12\x45\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x10\x64\x65legatorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount:\x16\x82\xe7\xb0*\x11\x64\x65legator_address\"\x18\n\x16MsgLiquidStakeResponse\"\xe1\x01\n\x11MsgLiquidStakeLSM\x12\x45\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x10\x64\x65legatorAddress\x12m\n\x0b\x64\x65legations\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x0b\x64\x65legations:\x16\x82\xe7\xb0*\x11\x64\x65legator_address\"\x1b\n\x19MsgLiquidStakeLSMResponse\"\xaa\x01\n\x10MsgLiquidUnstake\x12\x45\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x10\x64\x65legatorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount:\x16\x82\xe7\xb0*\x11\x64\x65legator_address\"\x1a\n\x18MsgLiquidUnstakeResponse\"\xa3\x01\n\tMsgRedeem\x12\x45\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x10\x64\x65legatorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount:\x16\x82\xe7\xb0*\x11\x64\x65legator_address\"\x13\n\x11MsgRedeemResponse\"\xa6\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x43\n\x06params\x18\x02 \x01(\x0b\x32%.pstake.liquidstakeibc.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x16\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponse2\xae\x08\n\x03Msg\x12\x85\x01\n\x11RegisterHostChain\x12\x33.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain\x1a;.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChainResponse\x12\x7f\n\x0fUpdateHostChain\x12\x31.pstake.liquidstakeibc.v1beta1.MsgUpdateHostChain\x1a\x39.pstake.liquidstakeibc.v1beta1.MsgUpdateHostChainResponse\x12\xa7\x01\n\x0bLiquidStake\x12-.pstake.liquidstakeibc.v1beta1.MsgLiquidStake\x1a\x35.pstake.liquidstakeibc.v1beta1.MsgLiquidStakeResponse\"2\x82\xd3\xe4\x93\x02,\"*/pstake/liquidstakeibc/v1beta1/LiquidStake\x12\xb3\x01\n\x0eLiquidStakeLSM\x12\x30.pstake.liquidstakeibc.v1beta1.MsgLiquidStakeLSM\x1a\x38.pstake.liquidstakeibc.v1beta1.MsgLiquidStakeLSMResponse\"5\x82\xd3\xe4\x93\x02/\"-/pstake/liquidstakeibc/v1beta1/LiquidStakeLSM\x12\xaf\x01\n\rLiquidUnstake\x12/.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake\x1a\x37.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstakeResponse\"4\x82\xd3\xe4\x93\x02.\",/pstake/liquidstakeibc/v1beta1/LiquidUnstake\x12\x93\x01\n\x06Redeem\x12(.pstake.liquidstakeibc.v1beta1.MsgRedeem\x1a\x30.pstake.liquidstakeibc.v1beta1.MsgRedeemResponse\"-\x82\xd3\xe4\x93\x02\'\"%/pstake/liquidstakeibc/v1beta1/Redeem\x12v\n\x0cUpdateParams\x12..pstake.liquidstakeibc.v1beta1.MsgUpdateParams\x1a\x36.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponseB\x85\x02\n!com.pstake.liquidstakeibc.v1beta1B\tMsgsProtoZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\xa2\x02\x03PLX\xaa\x02\x1dPstake.Liquidstakeibc.V1beta1\xca\x02\x1dPstake\\Liquidstakeibc\\V1beta1\xe2\x02)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\xea\x02\x1fPstake::Liquidstakeibc::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'pstake.liquidstakeibc.v1beta1.msgs_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n!com.pstake.liquidstakeibc.v1beta1B\tMsgsProtoP\001ZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1beta1\312\002\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\352\002\037Pstake::Liquidstakeibc::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n!com.pstake.liquidstakeibc.v1beta1B\tMsgsProtoZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1beta1\312\002\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\352\002\037Pstake::Liquidstakeibc::V1beta1'
   _MSGREGISTERHOSTCHAIN.fields_by_name['authority']._options = None
   _MSGREGISTERHOSTCHAIN.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGREGISTERHOSTCHAIN.fields_by_name['deposit_fee']._options = None
@@ -52,6 +52,12 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _MSGLIQUIDSTAKE.fields_by_name['amount']._serialized_options = b'\310\336\037\000'
   _MSGLIQUIDSTAKE._options = None
   _MSGLIQUIDSTAKE._serialized_options = b'\202\347\260*\021delegator_address'
+  _MSGLIQUIDSTAKELSM.fields_by_name['delegator_address']._options = None
+  _MSGLIQUIDSTAKELSM.fields_by_name['delegator_address']._serialized_options = b'\322\264-\024cosmos.AddressString'
+  _MSGLIQUIDSTAKELSM.fields_by_name['delegations']._options = None
+  _MSGLIQUIDSTAKELSM.fields_by_name['delegations']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
+  _MSGLIQUIDSTAKELSM._options = None
+  _MSGLIQUIDSTAKELSM._serialized_options = b'\202\347\260*\021delegator_address'
   _MSGLIQUIDUNSTAKE.fields_by_name['delegator_address']._options = None
   _MSGLIQUIDUNSTAKE.fields_by_name['delegator_address']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGLIQUIDUNSTAKE.fields_by_name['amount']._options = None
@@ -64,32 +70,48 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _MSGREDEEM.fields_by_name['amount']._serialized_options = b'\310\336\037\000'
   _MSGREDEEM._options = None
   _MSGREDEEM._serialized_options = b'\202\347\260*\021delegator_address'
+  _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
+  _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
+  _MSGUPDATEPARAMS.fields_by_name['params']._options = None
+  _MSGUPDATEPARAMS.fields_by_name['params']._serialized_options = b'\310\336\037\000'
+  _MSGUPDATEPARAMS._options = None
+  _MSGUPDATEPARAMS._serialized_options = b'\210\240\037\000\350\240\037\000\202\347\260*\tauthority'
   _MSG.methods_by_name['LiquidStake']._options = None
   _MSG.methods_by_name['LiquidStake']._serialized_options = b'\202\323\344\223\002,\"*/pstake/liquidstakeibc/v1beta1/LiquidStake'
+  _MSG.methods_by_name['LiquidStakeLSM']._options = None
+  _MSG.methods_by_name['LiquidStakeLSM']._serialized_options = b'\202\323\344\223\002/\"-/pstake/liquidstakeibc/v1beta1/LiquidStakeLSM'
   _MSG.methods_by_name['LiquidUnstake']._options = None
   _MSG.methods_by_name['LiquidUnstake']._serialized_options = b'\202\323\344\223\002.\",/pstake/liquidstakeibc/v1beta1/LiquidUnstake'
   _MSG.methods_by_name['Redeem']._options = None
   _MSG.methods_by_name['Redeem']._serialized_options = b'\202\323\344\223\002\'\"%/pstake/liquidstakeibc/v1beta1/Redeem'
-  _globals['_MSGREGISTERHOSTCHAIN']._serialized_start=264
-  _globals['_MSGREGISTERHOSTCHAIN']._serialized_end=1008
-  _globals['_MSGREGISTERHOSTCHAINRESPONSE']._serialized_start=1010
-  _globals['_MSGREGISTERHOSTCHAINRESPONSE']._serialized_end=1040
-  _globals['_MSGUPDATEHOSTCHAIN']._serialized_start=1043
-  _globals['_MSGUPDATEHOSTCHAIN']._serialized_end=1223
-  _globals['_MSGUPDATEHOSTCHAINRESPONSE']._serialized_start=1225
-  _globals['_MSGUPDATEHOSTCHAINRESPONSE']._serialized_end=1253
-  _globals['_MSGLIQUIDSTAKE']._serialized_start=1256
-  _globals['_MSGLIQUIDSTAKE']._serialized_end=1424
-  _globals['_MSGLIQUIDSTAKERESPONSE']._serialized_start=1426
-  _globals['_MSGLIQUIDSTAKERESPONSE']._serialized_end=1450
-  _globals['_MSGLIQUIDUNSTAKE']._serialized_start=1453
-  _globals['_MSGLIQUIDUNSTAKE']._serialized_end=1654
-  _globals['_MSGLIQUIDUNSTAKERESPONSE']._serialized_start=1656
-  _globals['_MSGLIQUIDUNSTAKERESPONSE']._serialized_end=1682
-  _globals['_MSGREDEEM']._serialized_start=1685
-  _globals['_MSGREDEEM']._serialized_end=1879
-  _globals['_MSGREDEEMRESPONSE']._serialized_start=1881
-  _globals['_MSGREDEEMRESPONSE']._serialized_end=1900
-  _globals['_MSG']._serialized_start=1903
-  _globals['_MSG']._serialized_end=2671
+  _globals['_MSGREGISTERHOSTCHAIN']._serialized_start=308
+  _globals['_MSGREGISTERHOSTCHAIN']._serialized_end=1102
+  _globals['_MSGREGISTERHOSTCHAINRESPONSE']._serialized_start=1104
+  _globals['_MSGREGISTERHOSTCHAINRESPONSE']._serialized_end=1134
+  _globals['_MSGUPDATEHOSTCHAIN']._serialized_start=1137
+  _globals['_MSGUPDATEHOSTCHAIN']._serialized_end=1317
+  _globals['_MSGUPDATEHOSTCHAINRESPONSE']._serialized_start=1319
+  _globals['_MSGUPDATEHOSTCHAINRESPONSE']._serialized_end=1347
+  _globals['_MSGLIQUIDSTAKE']._serialized_start=1350
+  _globals['_MSGLIQUIDSTAKE']._serialized_end=1518
+  _globals['_MSGLIQUIDSTAKERESPONSE']._serialized_start=1520
+  _globals['_MSGLIQUIDSTAKERESPONSE']._serialized_end=1544
+  _globals['_MSGLIQUIDSTAKELSM']._serialized_start=1547
+  _globals['_MSGLIQUIDSTAKELSM']._serialized_end=1772
+  _globals['_MSGLIQUIDSTAKELSMRESPONSE']._serialized_start=1774
+  _globals['_MSGLIQUIDSTAKELSMRESPONSE']._serialized_end=1801
+  _globals['_MSGLIQUIDUNSTAKE']._serialized_start=1804
+  _globals['_MSGLIQUIDUNSTAKE']._serialized_end=1974
+  _globals['_MSGLIQUIDUNSTAKERESPONSE']._serialized_start=1976
+  _globals['_MSGLIQUIDUNSTAKERESPONSE']._serialized_end=2002
+  _globals['_MSGREDEEM']._serialized_start=2005
+  _globals['_MSGREDEEM']._serialized_end=2168
+  _globals['_MSGREDEEMRESPONSE']._serialized_start=2170
+  _globals['_MSGREDEEMRESPONSE']._serialized_end=2189
+  _globals['_MSGUPDATEPARAMS']._serialized_start=2192
+  _globals['_MSGUPDATEPARAMS']._serialized_end=2358
+  _globals['_MSGUPDATEPARAMSRESPONSE']._serialized_start=2360
+  _globals['_MSGUPDATEPARAMSRESPONSE']._serialized_end=2385
+  _globals['_MSG']._serialized_start=2388
+  _globals['_MSG']._serialized_end=3458
 # @@protoc_insertion_point(module_scope)

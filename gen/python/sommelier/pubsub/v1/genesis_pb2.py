@@ -16,15 +16,14 @@ from sommelier.pubsub.v1 import params_pb2 as sommelier_dot_pubsub_dot_v1_dot_pa
 from sommelier.pubsub.v1 import pubsub_pb2 as sommelier_dot_pubsub_dot_v1_dot_pubsub__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!sommelier/pubsub/v1/genesis.proto\x12\tpubsub.v1\x1a\x14gogoproto/gogo.proto\x1a sommelier/pubsub/v1/params.proto\x1a sommelier/pubsub/v1/pubsub.proto\"\x98\x03\n\x0cGenesisState\x12/\n\x06params\x18\x01 \x01(\x0b\x32\x11.pubsub.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x34\n\npublishers\x18\x02 \x03(\x0b\x32\x14.pubsub.v1.PublisherR\npublishers\x12\x37\n\x0bsubscribers\x18\x03 \x03(\x0b\x32\x15.pubsub.v1.SubscriberR\x0bsubscribers\x12G\n\x11publisher_intents\x18\x04 \x03(\x0b\x32\x1a.pubsub.v1.PublisherIntentR\x10publisherIntents\x12J\n\x12subscriber_intents\x18\x05 \x03(\x0b\x32\x1b.pubsub.v1.SubscriberIntentR\x11subscriberIntents\x12S\n\x15\x64\x65\x66\x61ult_subscriptions\x18\x06 \x03(\x0b\x32\x1e.pubsub.v1.DefaultSubscriptionR\x14\x64\x65\x66\x61ultSubscriptionsB\x92\x01\n\rcom.pubsub.v1B\x0cGenesisProtoP\x01Z.github.com/peggyjv/sommelier/v4/x/pubsub/types\xa2\x02\x03PXX\xaa\x02\tPubsub.V1\xca\x02\tPubsub\\V1\xe2\x02\x15Pubsub\\V1\\GPBMetadata\xea\x02\nPubsub::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!sommelier/pubsub/v1/genesis.proto\x12\tpubsub.v1\x1a\x14gogoproto/gogo.proto\x1a sommelier/pubsub/v1/params.proto\x1a sommelier/pubsub/v1/pubsub.proto\"\x98\x03\n\x0cGenesisState\x12/\n\x06params\x18\x01 \x01(\x0b\x32\x11.pubsub.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x34\n\npublishers\x18\x02 \x03(\x0b\x32\x14.pubsub.v1.PublisherR\npublishers\x12\x37\n\x0bsubscribers\x18\x03 \x03(\x0b\x32\x15.pubsub.v1.SubscriberR\x0bsubscribers\x12G\n\x11publisher_intents\x18\x04 \x03(\x0b\x32\x1a.pubsub.v1.PublisherIntentR\x10publisherIntents\x12J\n\x12subscriber_intents\x18\x05 \x03(\x0b\x32\x1b.pubsub.v1.SubscriberIntentR\x11subscriberIntents\x12S\n\x15\x64\x65\x66\x61ult_subscriptions\x18\x06 \x03(\x0b\x32\x1e.pubsub.v1.DefaultSubscriptionR\x14\x64\x65\x66\x61ultSubscriptionsB\x90\x01\n\rcom.pubsub.v1B\x0cGenesisProtoZ.github.com/peggyjv/sommelier/v4/x/pubsub/types\xa2\x02\x03PXX\xaa\x02\tPubsub.V1\xca\x02\tPubsub\\V1\xe2\x02\x15Pubsub\\V1\\GPBMetadata\xea\x02\nPubsub::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.pubsub.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\rcom.pubsub.v1B\014GenesisProtoP\001Z.github.com/peggyjv/sommelier/v4/x/pubsub/types\242\002\003PXX\252\002\tPubsub.V1\312\002\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBMetadata\352\002\nPubsub::V1'
+  DESCRIPTOR._serialized_options = b'\n\rcom.pubsub.v1B\014GenesisProtoZ.github.com/peggyjv/sommelier/v4/x/pubsub/types\242\002\003PXX\252\002\tPubsub.V1\312\002\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBMetadata\352\002\nPubsub::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=139

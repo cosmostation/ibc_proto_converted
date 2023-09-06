@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: cosmos/tx/v1beta1/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ServiceGrpc {
 
   private ServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "cosmos.tx.v1beta1.Service";
+  public static final java.lang.String SERVICE_NAME = "cosmos.tx.v1beta1.Service";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.cosmos.tx.v1beta1.ServiceProto.SimulateRequest,
@@ -991,9 +991,9 @@ public final class ServiceGrpc {
   private static final class ServiceMethodDescriptorSupplier
       extends ServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ServiceMethodDescriptorSupplier(String methodName) {
+    ServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

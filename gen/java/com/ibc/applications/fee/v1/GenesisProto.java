@@ -5661,6 +5661,7 @@ public final class GenesisProto {
               com.ibc.applications.fee.v1.GenesisProto.ForwardRelayerAddress.class, com.ibc.applications.fee.v1.GenesisProto.ForwardRelayerAddress.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -5720,7 +5721,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPacketId() {
-      return packetId_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5763,7 +5764,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (packetId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPacketId());
       }
       getUnknownFields().writeTo(output);
@@ -5778,7 +5779,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (packetId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPacketId());
       }
@@ -5944,13 +5945,19 @@ public final class GenesisProto {
 
       // Construct using com.ibc.applications.fee.v1.GenesisProto.ForwardRelayerAddress.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPacketIdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5998,11 +6005,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.packetId_ = packetIdBuilder_ == null
               ? packetId_
               : packetIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6290,8 +6300,10 @@ public final class GenesisProto {
         } else {
           packetIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (packetId_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -75,6 +75,7 @@ public final class OfferExpireQueueProto {
               com.likechain.likenft.v1.OfferExpireQueueProto.OfferExpireQueueEntry.class, com.likechain.likenft.v1.OfferExpireQueueProto.OfferExpireQueueEntry.Builder.class);
     }
 
+    private int bitField0_;
     public static final int EXPIRE_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp expireTime_;
     /**
@@ -83,7 +84,7 @@ public final class OfferExpireQueueProto {
      */
     @java.lang.Override
     public boolean hasExpireTime() {
-      return expireTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expire_time = 1 [json_name = "expireTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -126,7 +127,7 @@ public final class OfferExpireQueueProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (expireTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getExpireTime());
       }
       if (!offerKey_.isEmpty()) {
@@ -141,7 +142,7 @@ public final class OfferExpireQueueProto {
       if (size != -1) return size;
 
       size = 0;
-      if (expireTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getExpireTime());
       }
@@ -307,13 +308,19 @@ public final class OfferExpireQueueProto {
 
       // Construct using com.likechain.likenft.v1.OfferExpireQueueProto.OfferExpireQueueEntry.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpireTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -358,14 +365,17 @@ public final class OfferExpireQueueProto {
 
       private void buildPartial0(com.likechain.likenft.v1.OfferExpireQueueProto.OfferExpireQueueEntry result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.expireTime_ = expireTimeBuilder_ == null
               ? expireTime_
               : expireTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.offerKey_ = offerKey_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -539,8 +549,10 @@ public final class OfferExpireQueueProto {
         } else {
           expireTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (expireTime_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

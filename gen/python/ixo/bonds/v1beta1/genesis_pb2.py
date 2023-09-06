@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from ixo.bonds.v1beta1 import bonds_pb2 as ixo_dot_bonds_dot_v1beta1_dot_bonds__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fixo/bonds/v1beta1/genesis.proto\x12\x11ixo.bonds.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1dixo/bonds/v1beta1/bonds.proto\"\xe9\x01\n\x0cGenesisState\x12\x43\n\x05\x62onds\x18\x01 \x03(\x0b\x32\x17.ixo.bonds.v1beta1.BondB\x14\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"bonds\"R\x05\x62onds\x12J\n\x07\x62\x61tches\x18\x02 \x03(\x0b\x32\x18.ixo.bonds.v1beta1.BatchB\x16\xc8\xde\x1f\x00\xf2\xde\x1f\x0eyaml:\"batches\"R\x07\x62\x61tches\x12H\n\x06params\x18\x03 \x01(\x0b\x32\x19.ixo.bonds.v1beta1.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xc2\x01\n\x15\x63om.ixo.bonds.v1beta1B\x0cGenesisProtoP\x01Z5github.com/ixofoundation/ixo-blockchain/x/bonds/types\xa2\x02\x03IBX\xaa\x02\x11Ixo.Bonds.V1beta1\xca\x02\x11Ixo\\Bonds\\V1beta1\xe2\x02\x1dIxo\\Bonds\\V1beta1\\GPBMetadata\xea\x02\x13Ixo::Bonds::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fixo/bonds/v1beta1/genesis.proto\x12\x11ixo.bonds.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1dixo/bonds/v1beta1/bonds.proto\"\xe9\x01\n\x0cGenesisState\x12\x43\n\x05\x62onds\x18\x01 \x03(\x0b\x32\x17.ixo.bonds.v1beta1.BondB\x14\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"bonds\"R\x05\x62onds\x12J\n\x07\x62\x61tches\x18\x02 \x03(\x0b\x32\x18.ixo.bonds.v1beta1.BatchB\x16\xc8\xde\x1f\x00\xf2\xde\x1f\x0eyaml:\"batches\"R\x07\x62\x61tches\x12H\n\x06params\x18\x03 \x01(\x0b\x32\x19.ixo.bonds.v1beta1.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xc0\x01\n\x15\x63om.ixo.bonds.v1beta1B\x0cGenesisProtoZ5github.com/ixofoundation/ixo-blockchain/x/bonds/types\xa2\x02\x03IBX\xaa\x02\x11Ixo.Bonds.V1beta1\xca\x02\x11Ixo\\Bonds\\V1beta1\xe2\x02\x1dIxo\\Bonds\\V1beta1\\GPBMetadata\xea\x02\x13Ixo::Bonds::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ixo.bonds.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.ixo.bonds.v1beta1B\014GenesisProtoP\001Z5github.com/ixofoundation/ixo-blockchain/x/bonds/types\242\002\003IBX\252\002\021Ixo.Bonds.V1beta1\312\002\021Ixo\\Bonds\\V1beta1\342\002\035Ixo\\Bonds\\V1beta1\\GPBMetadata\352\002\023Ixo::Bonds::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\025com.ixo.bonds.v1beta1B\014GenesisProtoZ5github.com/ixofoundation/ixo-blockchain/x/bonds/types\242\002\003IBX\252\002\021Ixo.Bonds.V1beta1\312\002\021Ixo\\Bonds\\V1beta1\342\002\035Ixo\\Bonds\\V1beta1\\GPBMetadata\352\002\023Ixo::Bonds::V1beta1'
   _GENESISSTATE.fields_by_name['bonds']._options = None
   _GENESISSTATE.fields_by_name['bonds']._serialized_options = b'\310\336\037\000\362\336\037\014yaml:\"bonds\"'
   _GENESISSTATE.fields_by_name['batches']._options = None

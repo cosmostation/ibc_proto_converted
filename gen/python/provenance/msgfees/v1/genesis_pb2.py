@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from provenance.msgfees.v1 import msgfees_pb2 as provenance_dot_msgfees_dot_v1_dot_msgfees__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#provenance/msgfees/v1/genesis.proto\x12\x15provenance.msgfees.v1\x1a\x14gogoproto/gogo.proto\x1a#provenance/msgfees/v1/msgfees.proto\"\x8b\x01\n\x0cGenesisState\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.provenance.msgfees.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12>\n\x08msg_fees\x18\x02 \x03(\x0b\x32\x1d.provenance.msgfees.v1.MsgFeeB\x04\xc8\xde\x1f\x00R\x07msgFeesB\xd4\x01\n\x19\x63om.provenance.msgfees.v1B\x0cGenesisProtoP\x01Z3github.com/provenance-io/provenance/x/msgfees/types\xa2\x02\x03PMX\xaa\x02\x15Provenance.Msgfees.V1\xca\x02\x15Provenance\\Msgfees\\V1\xe2\x02!Provenance\\Msgfees\\V1\\GPBMetadata\xea\x02\x17Provenance::Msgfees::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#provenance/msgfees/v1/genesis.proto\x12\x15provenance.msgfees.v1\x1a\x14gogoproto/gogo.proto\x1a#provenance/msgfees/v1/msgfees.proto\"\x8b\x01\n\x0cGenesisState\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.provenance.msgfees.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12>\n\x08msg_fees\x18\x02 \x03(\x0b\x32\x1d.provenance.msgfees.v1.MsgFeeB\x04\xc8\xde\x1f\x00R\x07msgFeesB\xd4\x01\n\x19\x63om.provenance.msgfees.v1B\x0cGenesisProtoP\x00Z3github.com/provenance-io/provenance/x/msgfees/types\xa2\x02\x03PMX\xaa\x02\x15Provenance.Msgfees.V1\xca\x02\x15Provenance\\Msgfees\\V1\xe2\x02!Provenance\\Msgfees\\V1\\GPBMetadata\xea\x02\x17Provenance::Msgfees::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'provenance.msgfees.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.provenance.msgfees.v1B\014GenesisProtoP\001Z3github.com/provenance-io/provenance/x/msgfees/types\242\002\003PMX\252\002\025Provenance.Msgfees.V1\312\002\025Provenance\\Msgfees\\V1\342\002!Provenance\\Msgfees\\V1\\GPBMetadata\352\002\027Provenance::Msgfees::V1'
+  DESCRIPTOR._serialized_options = b'\n\031com.provenance.msgfees.v1B\014GenesisProtoP\000Z3github.com/provenance-io/provenance/x/msgfees/types\242\002\003PMX\252\002\025Provenance.Msgfees.V1\312\002\025Provenance\\Msgfees\\V1\342\002!Provenance\\Msgfees\\V1\\GPBMetadata\352\002\027Provenance::Msgfees::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['msg_fees']._options = None

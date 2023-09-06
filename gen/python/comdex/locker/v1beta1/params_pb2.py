@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"comdex/locker/v1beta1/params.proto\x12\x15\x63omdex.locker.v1beta1\"\x08\n\x06ParamsB\xd0\x01\n\x19\x63om.comdex.locker.v1beta1B\x0bParamsProtoP\x01Z0github.com/comdex-official/comdex/x/locker/types\xa2\x02\x03\x43LX\xaa\x02\x15\x43omdex.Locker.V1beta1\xca\x02\x15\x43omdex\\Locker\\V1beta1\xe2\x02!Comdex\\Locker\\V1beta1\\GPBMetadata\xea\x02\x17\x43omdex::Locker::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"comdex/locker/v1beta1/params.proto\x12\x15\x63omdex.locker.v1beta1\"\x08\n\x06ParamsB\xce\x01\n\x19\x63om.comdex.locker.v1beta1B\x0bParamsProtoZ0github.com/comdex-official/comdex/x/locker/types\xa2\x02\x03\x43LX\xaa\x02\x15\x43omdex.Locker.V1beta1\xca\x02\x15\x43omdex\\Locker\\V1beta1\xe2\x02!Comdex\\Locker\\V1beta1\\GPBMetadata\xea\x02\x17\x43omdex::Locker::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.locker.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.comdex.locker.v1beta1B\013ParamsProtoP\001Z0github.com/comdex-official/comdex/x/locker/types\242\002\003CLX\252\002\025Comdex.Locker.V1beta1\312\002\025Comdex\\Locker\\V1beta1\342\002!Comdex\\Locker\\V1beta1\\GPBMetadata\352\002\027Comdex::Locker::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\031com.comdex.locker.v1beta1B\013ParamsProtoZ0github.com/comdex-official/comdex/x/locker/types\242\002\003CLX\252\002\025Comdex.Locker.V1beta1\312\002\025Comdex\\Locker\\V1beta1\342\002!Comdex\\Locker\\V1beta1\\GPBMetadata\352\002\027Comdex::Locker::V1beta1'
   _globals['_PARAMS']._serialized_start=61
   _globals['_PARAMS']._serialized_end=69
 # @@protoc_insertion_point(module_scope)

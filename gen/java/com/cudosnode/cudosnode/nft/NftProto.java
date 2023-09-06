@@ -4919,6 +4919,7 @@ public final class NftProto {
               com.cudosnode.cudosnode.nft.NftProto.Collection.class, com.cudosnode.cudosnode.nft.NftProto.Collection.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
     /**
@@ -4927,7 +4928,7 @@ public final class NftProto {
      */
     @java.lang.Override
     public boolean hasDenom() {
-      return denom_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
@@ -5000,7 +5001,7 @@ public final class NftProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDenom());
       }
       for (int i = 0; i < nfts_.size(); i++) {
@@ -5015,7 +5016,7 @@ public final class NftProto {
       if (size != -1) return size;
 
       size = 0;
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDenom());
       }
@@ -5187,13 +5188,20 @@ public final class NftProto {
 
       // Construct using com.cudosnode.cudosnode.nft.NftProto.Collection.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDenomFieldBuilder();
+          getNftsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5257,11 +5265,14 @@ public final class NftProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.NftProto.Collection result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denomBuilder_ == null
               ? denom_
               : denomBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5466,8 +5477,10 @@ public final class NftProto {
         } else {
           denomBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (denom_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

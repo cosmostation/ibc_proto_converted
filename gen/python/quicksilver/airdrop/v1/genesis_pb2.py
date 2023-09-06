@@ -16,15 +16,14 @@ from quicksilver.airdrop.v1 import params_pb2 as quicksilver_dot_airdrop_dot_v1_
 from quicksilver.airdrop.v1 import airdrop_pb2 as quicksilver_dot_airdrop_dot_v1_dot_airdrop__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$quicksilver/airdrop/v1/genesis.proto\x12\x16quicksilver.airdrop.v1\x1a\x14gogoproto/gogo.proto\x1a#quicksilver/airdrop/v1/params.proto\x1a$quicksilver/airdrop/v1/airdrop.proto\"\xdd\x01\n\x0cGenesisState\x12<\n\x06params\x18\x01 \x01(\x0b\x32\x1e.quicksilver.airdrop.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12?\n\nzone_drops\x18\x02 \x03(\x0b\x32 .quicksilver.airdrop.v1.ZoneDropR\tzoneDrops\x12H\n\rclaim_records\x18\x03 \x03(\x0b\x32#.quicksilver.airdrop.v1.ClaimRecordR\x0c\x63laimRecords:\x04\x88\xa0\x1f\x00\x42\xdc\x01\n\x1a\x63om.quicksilver.airdrop.v1B\x0cGenesisProtoP\x01Z6github.com/ingenuity-build/quicksilver/x/airdrop/types\xa2\x02\x03QAX\xaa\x02\x16Quicksilver.Airdrop.V1\xca\x02\x16Quicksilver\\Airdrop\\V1\xe2\x02\"Quicksilver\\Airdrop\\V1\\GPBMetadata\xea\x02\x18Quicksilver::Airdrop::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$quicksilver/airdrop/v1/genesis.proto\x12\x16quicksilver.airdrop.v1\x1a\x14gogoproto/gogo.proto\x1a#quicksilver/airdrop/v1/params.proto\x1a$quicksilver/airdrop/v1/airdrop.proto\"\xdd\x01\n\x0cGenesisState\x12<\n\x06params\x18\x01 \x01(\x0b\x32\x1e.quicksilver.airdrop.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12?\n\nzone_drops\x18\x02 \x03(\x0b\x32 .quicksilver.airdrop.v1.ZoneDropR\tzoneDrops\x12H\n\rclaim_records\x18\x03 \x03(\x0b\x32#.quicksilver.airdrop.v1.ClaimRecordR\x0c\x63laimRecords:\x04\x88\xa0\x1f\x00\x42\xda\x01\n\x1a\x63om.quicksilver.airdrop.v1B\x0cGenesisProtoZ6github.com/ingenuity-build/quicksilver/x/airdrop/types\xa2\x02\x03QAX\xaa\x02\x16Quicksilver.Airdrop.V1\xca\x02\x16Quicksilver\\Airdrop\\V1\xe2\x02\"Quicksilver\\Airdrop\\V1\\GPBMetadata\xea\x02\x18Quicksilver::Airdrop::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.airdrop.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.quicksilver.airdrop.v1B\014GenesisProtoP\001Z6github.com/ingenuity-build/quicksilver/x/airdrop/types\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.quicksilver.airdrop.v1B\014GenesisProtoZ6github.com/ingenuity-build/quicksilver/x/airdrop/types\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Quicksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdrop\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE._options = None

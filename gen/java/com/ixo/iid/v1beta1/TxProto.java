@@ -175,6 +175,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.Verification.class, com.ixo.iid.v1beta1.TxProto.Verification.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RELATIONSHIPS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList relationships_ =
@@ -244,7 +245,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMethod() {
-      return method_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -340,7 +341,7 @@ public final class TxProto {
       for (int i = 0; i < relationships_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, relationships_.getRaw(i));
       }
-      if (method_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getMethod());
       }
       for (int i = 0; i < context_.size(); i++) {
@@ -363,7 +364,7 @@ public final class TxProto {
         size += dataSize;
         size += 1 * getRelationshipsList().size();
       }
-      if (method_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMethod());
       }
@@ -546,13 +547,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.Verification.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMethodFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -604,15 +611,18 @@ public final class TxProto {
           relationships_.makeImmutable();
           result.relationships_ = relationships_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.method_ = methodBuilder_ == null
               ? method_
               : methodBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           context_.makeImmutable();
           result.context_ = context_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -986,8 +996,10 @@ public final class TxProto {
         } else {
           methodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (method_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10057,6 +10069,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.MsgAddVerification.class, com.ixo.iid.v1beta1.TxProto.MsgAddVerification.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -10116,7 +10129,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasVerification() {
-      return verification_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -10206,7 +10219,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (verification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getVerification());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -10224,7 +10237,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (verification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getVerification());
       }
@@ -10393,13 +10406,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.MsgAddVerification.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVerificationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10448,14 +10467,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.verification_ = verificationBuilder_ == null
               ? verification_
               : verificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10753,8 +10775,10 @@ public final class TxProto {
         } else {
           verificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (verification_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14470,6 +14494,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.MsgAddService.class, com.ixo.iid.v1beta1.TxProto.MsgAddService.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -14529,7 +14554,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasServiceData() {
-      return serviceData_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -14619,7 +14644,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (serviceData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getServiceData());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -14637,7 +14662,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (serviceData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getServiceData());
       }
@@ -14806,13 +14831,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.MsgAddService.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getServiceDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14861,14 +14892,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.serviceData_ = serviceDataBuilder_ == null
               ? serviceData_
               : serviceDataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15166,8 +15200,10 @@ public final class TxProto {
         } else {
           serviceDataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (serviceData_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -19954,6 +19990,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.MsgAddLinkedResource.class, com.ixo.iid.v1beta1.TxProto.MsgAddLinkedResource.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -20013,7 +20050,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLinkedResource() {
-      return linkedResource_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -20103,7 +20140,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (linkedResource_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLinkedResource());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -20121,7 +20158,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (linkedResource_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLinkedResource());
       }
@@ -20290,13 +20327,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.MsgAddLinkedResource.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLinkedResourceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -20345,14 +20388,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.linkedResource_ = linkedResourceBuilder_ == null
               ? linkedResource_
               : linkedResourceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20650,8 +20696,10 @@ public final class TxProto {
         } else {
           linkedResourceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (linkedResource_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -21938,6 +21986,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.MsgAddLinkedClaim.class, com.ixo.iid.v1beta1.TxProto.MsgAddLinkedClaim.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -21997,7 +22046,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLinkedClaim() {
-      return linkedClaim_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -22087,7 +22136,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (linkedClaim_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLinkedClaim());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -22105,7 +22154,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (linkedClaim_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLinkedClaim());
       }
@@ -22274,13 +22323,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.MsgAddLinkedClaim.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLinkedClaimFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -22329,14 +22384,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.linkedClaim_ = linkedClaimBuilder_ == null
               ? linkedClaim_
               : linkedClaimBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22634,8 +22692,10 @@ public final class TxProto {
         } else {
           linkedClaimBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (linkedClaim_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -23922,6 +23982,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.MsgAddLinkedEntity.class, com.ixo.iid.v1beta1.TxProto.MsgAddLinkedEntity.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -23981,7 +24042,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLinkedEntity() {
-      return linkedEntity_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -24071,7 +24132,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (linkedEntity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLinkedEntity());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -24089,7 +24150,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (linkedEntity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLinkedEntity());
       }
@@ -24258,13 +24319,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.MsgAddLinkedEntity.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLinkedEntityFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -24313,14 +24380,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.linkedEntity_ = linkedEntityBuilder_ == null
               ? linkedEntity_
               : linkedEntityBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -24618,8 +24688,10 @@ public final class TxProto {
         } else {
           linkedEntityBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (linkedEntity_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -25906,6 +25978,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.MsgAddAccordedRight.class, com.ixo.iid.v1beta1.TxProto.MsgAddAccordedRight.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -25965,7 +26038,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAccordedRight() {
-      return accordedRight_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -26055,7 +26128,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (accordedRight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAccordedRight());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -26073,7 +26146,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (accordedRight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAccordedRight());
       }
@@ -26242,13 +26315,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.MsgAddAccordedRight.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccordedRightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -26297,14 +26376,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.accordedRight_ = accordedRightBuilder_ == null
               ? accordedRight_
               : accordedRightBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -26602,8 +26684,10 @@ public final class TxProto {
         } else {
           accordedRightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (accordedRight_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -27890,6 +27974,7 @@ public final class TxProto {
               com.ixo.iid.v1beta1.TxProto.MsgAddIidContext.class, com.ixo.iid.v1beta1.TxProto.MsgAddIidContext.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -27949,7 +28034,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContext() {
-      return context_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -28039,7 +28124,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (context_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getContext());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -28057,7 +28142,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (context_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContext());
       }
@@ -28226,13 +28311,19 @@ public final class TxProto {
 
       // Construct using com.ixo.iid.v1beta1.TxProto.MsgAddIidContext.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContextFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -28281,14 +28372,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.context_ = contextBuilder_ == null
               ? context_
               : contextBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -28586,8 +28680,10 @@ public final class TxProto {
         } else {
           contextBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (context_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

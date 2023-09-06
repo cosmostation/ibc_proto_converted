@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1apanacea/aol/v2/owner.proto\x12\x0epanacea.aol.v2\x1a\x14gogoproto/gogo.proto\"*\n\x05Owner\x12!\n\x0ctotal_topics\x18\x01 \x01(\x04R\x0btotalTopicsB\xab\x01\n\x12\x63om.panacea.aol.v2B\nOwnerProtoP\x01Z/github.com/medibloc/panacea-core/v2/x/aol/types\xa2\x02\x03PAX\xaa\x02\x0ePanacea.Aol.V2\xca\x02\x0ePanacea\\Aol\\V2\xe2\x02\x1aPanacea\\Aol\\V2\\GPBMetadata\xea\x02\x10Panacea::Aol::V2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1apanacea/aol/v2/owner.proto\x12\x0epanacea.aol.v2\x1a\x14gogoproto/gogo.proto\"*\n\x05Owner\x12!\n\x0ctotal_topics\x18\x01 \x01(\x04R\x0btotalTopicsB\xab\x01\n\x12\x63om.panacea.aol.v2B\nOwnerProtoP\x00Z/github.com/medibloc/panacea-core/v2/x/aol/types\xa2\x02\x03PAX\xaa\x02\x0ePanacea.Aol.V2\xca\x02\x0ePanacea\\Aol\\V2\xe2\x02\x1aPanacea\\Aol\\V2\\GPBMetadata\xea\x02\x10Panacea::Aol::V2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'panacea.aol.v2.owner_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.panacea.aol.v2B\nOwnerProtoP\001Z/github.com/medibloc/panacea-core/v2/x/aol/types\242\002\003PAX\252\002\016Panacea.Aol.V2\312\002\016Panacea\\Aol\\V2\342\002\032Panacea\\Aol\\V2\\GPBMetadata\352\002\020Panacea::Aol::V2'
+  DESCRIPTOR._serialized_options = b'\n\022com.panacea.aol.v2B\nOwnerProtoP\000Z/github.com/medibloc/panacea-core/v2/x/aol/types\242\002\003PAX\252\002\016Panacea.Aol.V2\312\002\016Panacea\\Aol\\V2\342\002\032Panacea\\Aol\\V2\\GPBMetadata\352\002\020Panacea::Aol::V2'
   _globals['_OWNER']._serialized_start=68
   _globals['_OWNER']._serialized_end=110
 # @@protoc_insertion_point(module_scope)

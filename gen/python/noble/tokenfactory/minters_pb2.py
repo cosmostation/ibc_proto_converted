@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n noble/tokenfactory/minters.proto\x12\x12noble.tokenfactory\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"b\n\x07Minters\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12=\n\tallowance\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\tallowanceB\xcb\x01\n\x16\x63om.noble.tokenfactoryB\x0cMintersProtoP\x01Z:github.com/strangelove-ventures/noble/x/tokenfactory/types\xa2\x02\x03NTX\xaa\x02\x12Noble.Tokenfactory\xca\x02\x12Noble\\Tokenfactory\xe2\x02\x1eNoble\\Tokenfactory\\GPBMetadata\xea\x02\x13Noble::Tokenfactoryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n noble/tokenfactory/minters.proto\x12\x12noble.tokenfactory\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"b\n\x07Minters\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12=\n\tallowance\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\tallowanceB\xc9\x01\n\x16\x63om.noble.tokenfactoryB\x0cMintersProtoZ:github.com/strangelove-ventures/noble/x/tokenfactory/types\xa2\x02\x03NTX\xaa\x02\x12Noble.Tokenfactory\xca\x02\x12Noble\\Tokenfactory\xe2\x02\x1eNoble\\Tokenfactory\\GPBMetadata\xea\x02\x13Noble::Tokenfactoryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'noble.tokenfactory.minters_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.noble.tokenfactoryB\014MintersProtoP\001Z:github.com/strangelove-ventures/noble/x/tokenfactory/types\242\002\003NTX\252\002\022Noble.Tokenfactory\312\002\022Noble\\Tokenfactory\342\002\036Noble\\Tokenfactory\\GPBMetadata\352\002\023Noble::Tokenfactory'
+  DESCRIPTOR._serialized_options = b'\n\026com.noble.tokenfactoryB\014MintersProtoZ:github.com/strangelove-ventures/noble/x/tokenfactory/types\242\002\003NTX\252\002\022Noble.Tokenfactory\312\002\022Noble\\Tokenfactory\342\002\036Noble\\Tokenfactory\\GPBMetadata\352\002\023Noble::Tokenfactory'
   _MINTERS.fields_by_name['allowance']._options = None
   _MINTERS.fields_by_name['allowance']._serialized_options = b'\310\336\037\000'
   _globals['_MINTERS']._serialized_start=110

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from quicksilver.interchainquery.v1 import interchainquery_pb2 as quicksilver_dot_interchainquery_dot_v1_dot_interchainquery__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,quicksilver/interchainquery/v1/genesis.proto\x12\x1equicksilver.interchainquery.v1\x1a\x14gogoproto/gogo.proto\x1a\x34quicksilver/interchainquery/v1/interchainquery.proto\"[\n\x0cGenesisState\x12\x45\n\x07queries\x18\x01 \x03(\x0b\x32%.quicksilver.interchainquery.v1.QueryB\x04\xc8\xde\x1f\x00R\x07queries:\x04\x88\xa0\x1f\x00\x42\x8c\x02\n\"com.quicksilver.interchainquery.v1B\x0cGenesisProtoP\x01Z>github.com/ingenuity-build/quicksilver/x/interchainquery/types\xa2\x02\x03QIX\xaa\x02\x1eQuicksilver.Interchainquery.V1\xca\x02\x1eQuicksilver\\Interchainquery\\V1\xe2\x02*Quicksilver\\Interchainquery\\V1\\GPBMetadata\xea\x02 Quicksilver::Interchainquery::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,quicksilver/interchainquery/v1/genesis.proto\x12\x1equicksilver.interchainquery.v1\x1a\x14gogoproto/gogo.proto\x1a\x34quicksilver/interchainquery/v1/interchainquery.proto\"[\n\x0cGenesisState\x12\x45\n\x07queries\x18\x01 \x03(\x0b\x32%.quicksilver.interchainquery.v1.QueryB\x04\xc8\xde\x1f\x00R\x07queries:\x04\x88\xa0\x1f\x00\x42\x8a\x02\n\"com.quicksilver.interchainquery.v1B\x0cGenesisProtoZ>github.com/ingenuity-build/quicksilver/x/interchainquery/types\xa2\x02\x03QIX\xaa\x02\x1eQuicksilver.Interchainquery.V1\xca\x02\x1eQuicksilver\\Interchainquery\\V1\xe2\x02*Quicksilver\\Interchainquery\\V1\\GPBMetadata\xea\x02 Quicksilver::Interchainquery::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.interchainquery.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\"com.quicksilver.interchainquery.v1B\014GenesisProtoP\001Z>github.com/ingenuity-build/quicksilver/x/interchainquery/types\242\002\003QIX\252\002\036Quicksilver.Interchainquery.V1\312\002\036Quicksilver\\Interchainquery\\V1\342\002*Quicksilver\\Interchainquery\\V1\\GPBMetadata\352\002 Quicksilver::Interchainquery::V1'
+  DESCRIPTOR._serialized_options = b'\n\"com.quicksilver.interchainquery.v1B\014GenesisProtoZ>github.com/ingenuity-build/quicksilver/x/interchainquery/types\242\002\003QIX\252\002\036Quicksilver.Interchainquery.V1\312\002\036Quicksilver\\Interchainquery\\V1\342\002*Quicksilver\\Interchainquery\\V1\\GPBMetadata\352\002 Quicksilver::Interchainquery::V1'
   _GENESISSTATE.fields_by_name['queries']._options = None
   _GENESISSTATE.fields_by_name['queries']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE._options = None

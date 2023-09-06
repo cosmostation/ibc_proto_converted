@@ -489,6 +489,7 @@ public final class QueryProto {
               com.quicksilver.participationrewards.v1.QueryProto.QueryParamsResponse.class, com.quicksilver.participationrewards.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.quicksilver.participationrewards.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.quicksilver.participationrewards.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1845,7 +1857,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryProtocolDataResponse() {
-      data_ = java.util.Collections.emptyList();
+      data_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -1870,7 +1882,8 @@ public final class QueryProto {
 
     public static final int DATA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> data_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> data_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * data defines the underlying protocol data.
@@ -2110,7 +2123,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        data_ = java.util.Collections.emptyList();
+        data_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -2137,22 +2150,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.quicksilver.participationrewards.v1.QueryProto.QueryProtocolDataResponse buildPartial() {
         com.quicksilver.participationrewards.v1.QueryProto.QueryProtocolDataResponse result = new com.quicksilver.participationrewards.v1.QueryProto.QueryProtocolDataResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.quicksilver.participationrewards.v1.QueryProto.QueryProtocolDataResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          data_ = java.util.Collections.unmodifiableList(data_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.data_ = data_;
-      }
-
       private void buildPartial0(com.quicksilver.participationrewards.v1.QueryProto.QueryProtocolDataResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          data_.makeImmutable();
+          result.data_ = data_;
+        }
       }
 
       @java.lang.Override
@@ -2202,7 +2210,8 @@ public final class QueryProto {
         if (!other.data_.isEmpty()) {
           if (data_.isEmpty()) {
             data_ = other.data_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            data_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureDataIsMutable();
             data_.addAll(other.data_);
@@ -2258,12 +2267,12 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.ByteString> data_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> data_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureDataIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          data_ = new java.util.ArrayList<com.google.protobuf.ByteString>(data_);
-          bitField0_ |= 0x00000001;
+        if (!data_.isModifiable()) {
+          data_ = makeMutableCopy(data_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -2275,8 +2284,8 @@ public final class QueryProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getDataList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(data_) : data_;
+        data_.makeImmutable();
+        return data_;
       }
       /**
        * <pre>
@@ -2316,6 +2325,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         ensureDataIsMutable();
         data_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2332,6 +2342,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         ensureDataIsMutable();
         data_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2349,6 +2360,7 @@ public final class QueryProto {
         ensureDataIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, data_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2361,7 +2373,7 @@ public final class QueryProto {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        data_ = java.util.Collections.emptyList();
+        data_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;

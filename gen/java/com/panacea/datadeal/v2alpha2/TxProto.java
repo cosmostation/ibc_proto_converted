@@ -125,6 +125,7 @@ public final class TxProto {
               com.panacea.datadeal.v2alpha2.TxProto.MsgCreateDeal.class, com.panacea.datadeal.v2alpha2.TxProto.MsgCreateDeal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_SCHEMA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList dataSchema_ =
@@ -170,7 +171,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBudget() {
-      return budget_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin budget = 2 [json_name = "budget"];</code>
@@ -266,7 +267,7 @@ public final class TxProto {
       for (int i = 0; i < dataSchema_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataSchema_.getRaw(i));
       }
-      if (budget_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getBudget());
       }
       if (maxNumData_ != 0L) {
@@ -295,7 +296,7 @@ public final class TxProto {
         size += dataSize;
         size += 1 * getDataSchemaList().size();
       }
-      if (budget_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBudget());
       }
@@ -487,13 +488,19 @@ public final class TxProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.TxProto.MsgCreateDeal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBudgetFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -546,10 +553,12 @@ public final class TxProto {
           dataSchema_.makeImmutable();
           result.dataSchema_ = dataSchema_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.budget_ = budgetBuilder_ == null
               ? budget_
               : budgetBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxNumData_ = maxNumData_;
@@ -560,6 +569,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.nonce_ = nonce_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -878,8 +888,10 @@ public final class TxProto {
         } else {
           budgetBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (budget_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3014,6 +3026,7 @@ public final class TxProto {
               com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataVerification.class, com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataVerification.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_VERIFICATION_VOTE_FIELD_NUMBER = 1;
     private com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote dataVerificationVote_;
     /**
@@ -3022,7 +3035,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDataVerificationVote() {
-      return dataVerificationVote_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datadeal.v2alpha2.DataVerificationVote data_verification_vote = 1 [json_name = "dataVerificationVote"];</code>
@@ -3065,7 +3078,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataVerificationVote_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDataVerificationVote());
       }
       if (!signature_.isEmpty()) {
@@ -3080,7 +3093,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (dataVerificationVote_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataVerificationVote());
       }
@@ -3250,13 +3263,19 @@ public final class TxProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataVerification.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataVerificationVoteFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3301,14 +3320,17 @@ public final class TxProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataVerification result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataVerificationVote_ = dataVerificationVoteBuilder_ == null
               ? dataVerificationVote_
               : dataVerificationVoteBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signature_ = signature_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3482,8 +3504,10 @@ public final class TxProto {
         } else {
           dataVerificationVoteBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (dataVerificationVote_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5134,6 +5158,7 @@ public final class TxProto {
               com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataDelivery.class, com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataDelivery.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_DELIVERY_VOTE_FIELD_NUMBER = 1;
     private com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote dataDeliveryVote_;
     /**
@@ -5142,7 +5167,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDataDeliveryVote() {
-      return dataDeliveryVote_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_vote = 1 [json_name = "dataDeliveryVote"];</code>
@@ -5185,7 +5210,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataDeliveryVote_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDataDeliveryVote());
       }
       if (!signature_.isEmpty()) {
@@ -5200,7 +5225,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (dataDeliveryVote_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataDeliveryVote());
       }
@@ -5370,13 +5395,19 @@ public final class TxProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataDelivery.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataDeliveryVoteFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5421,14 +5452,17 @@ public final class TxProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha2.TxProto.MsgVoteDataDelivery result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataDeliveryVote_ = dataDeliveryVoteBuilder_ == null
               ? dataDeliveryVote_
               : dataDeliveryVoteBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signature_ = signature_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5602,8 +5636,10 @@ public final class TxProto {
         } else {
           dataDeliveryVoteBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (dataDeliveryVote_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

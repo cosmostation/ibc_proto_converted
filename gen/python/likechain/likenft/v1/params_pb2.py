@@ -15,15 +15,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!likechain/likenft/v1/params.proto\x12\x14likechain.likenft.v1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\xa0\x02\n\x06Params\x12\x1f\n\x0bprice_denom\x18\x01 \x01(\tR\npriceDenom\x12\x44\n\x0c\x66\x65\x65_per_byte\x18\x02 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\nfeePerByte\x12\x35\n\x17max_offer_duration_days\x18\x03 \x01(\x04R\x14maxOfferDurationDays\x12\x39\n\x19max_listing_duration_days\x18\x04 \x01(\x04R\x16maxListingDurationDays\x12\x37\n\x18max_royalty_basis_points\x18\x05 \x01(\x04R\x15maxRoyaltyBasisPoints:\x04\x98\xa0\x1f\x00\x42\xd0\x01\n\x18\x63om.likechain.likenft.v1B\x0bParamsProtoP\x01Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!likechain/likenft/v1/params.proto\x12\x14likechain.likenft.v1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\xa0\x02\n\x06Params\x12\x1f\n\x0bprice_denom\x18\x01 \x01(\tR\npriceDenom\x12\x44\n\x0c\x66\x65\x65_per_byte\x18\x02 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\nfeePerByte\x12\x35\n\x17max_offer_duration_days\x18\x03 \x01(\x04R\x14maxOfferDurationDays\x12\x39\n\x19max_listing_duration_days\x18\x04 \x01(\x04R\x16maxListingDurationDays\x12\x37\n\x18max_royalty_basis_points\x18\x05 \x01(\x04R\x15maxRoyaltyBasisPoints:\x04\x98\xa0\x1f\x00\x42\xce\x01\n\x18\x63om.likechain.likenft.v1B\x0bParamsProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'likechain.likenft.v1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\013ParamsProtoP\001Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\013ParamsProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
   _PARAMS.fields_by_name['fee_per_byte']._options = None
   _PARAMS.fields_by_name['fee_per_byte']._serialized_options = b'\310\336\037\000'
   _PARAMS._options = None

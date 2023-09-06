@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!comdex/asset/v1beta1/params.proto\x12\x14\x63omdex.asset.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x89\x01\n\x06Params\x12\x7f\n\x15\x61sset_regisration_fee\x18\x06 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x13\x61ssetRegisrationFeeB\xd2\x01\n\x18\x63om.comdex.asset.v1beta1B\x0bParamsProtoP\x01Z/github.com/comdex-official/comdex/x/asset/types\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43omdex.Asset.V1beta1\xca\x02\x14\x43omdex\\Asset\\V1beta1\xe2\x02 Comdex\\Asset\\V1beta1\\GPBMetadata\xea\x02\x16\x43omdex::Asset::V1beta1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!comdex/asset/v1beta1/params.proto\x12\x14\x63omdex.asset.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x89\x01\n\x06Params\x12\x7f\n\x15\x61sset_regisration_fee\x18\x06 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x13\x61ssetRegisrationFeeB\xd0\x01\n\x18\x63om.comdex.asset.v1beta1B\x0bParamsProtoZ/github.com/comdex-official/comdex/x/asset/types\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43omdex.Asset.V1beta1\xca\x02\x14\x43omdex\\Asset\\V1beta1\xe2\x02 Comdex\\Asset\\V1beta1\\GPBMetadata\xea\x02\x16\x43omdex::Asset::V1beta1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.asset.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.comdex.asset.v1beta1B\013ParamsProtoP\001Z/github.com/comdex-official/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::Asset::V1beta1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\030com.comdex.asset.v1beta1B\013ParamsProtoZ/github.com/comdex-official/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::Asset::V1beta1\310\341\036\000\250\342\036\000'
   _PARAMS.fields_by_name['asset_regisration_fee']._options = None
   _PARAMS.fields_by_name['asset_regisration_fee']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _globals['_PARAMS']._serialized_start=114

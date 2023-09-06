@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.ids.base import string_id_pb2 as assetmantle_dot_ids_dot_base_dot_string__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"assetmantle/ids/base/coin_id.proto\x12\x1b\x61ssetmantle.schema.ids.base\x1a\x14gogoproto/gogo.proto\x1a$assetmantle/ids/base/string_id.proto\"S\n\x06\x43oinID\x12\x43\n\nstring_i_d\x18\x01 \x01(\x0b\x32%.assetmantle.schema.ids.base.StringIDR\x08stringID:\x04\x88\xa0\x1f\x00\x42\xbe\x01\n\x1f\x63om.assetmantle.schema.ids.baseB\x0b\x43oinIdProtoP\x01\xa2\x02\x04\x41SIB\xaa\x02\x1b\x41ssetmantle.Schema.Ids.Base\xca\x02\x1b\x41ssetmantle\\Schema\\Ids\\Base\xe2\x02\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\xea\x02\x1e\x41ssetmantle::Schema::Ids::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"assetmantle/ids/base/coin_id.proto\x12\x1b\x61ssetmantle.schema.ids.base\x1a\x14gogoproto/gogo.proto\x1a$assetmantle/ids/base/string_id.proto\"S\n\x06\x43oinID\x12\x43\n\nstring_i_d\x18\x01 \x01(\x0b\x32%.assetmantle.schema.ids.base.StringIDR\x08stringID:\x04\x88\xa0\x1f\x00\x42\xbc\x01\n\x1f\x63om.assetmantle.schema.ids.baseB\x0b\x43oinIdProto\xa2\x02\x04\x41SIB\xaa\x02\x1b\x41ssetmantle.Schema.Ids.Base\xca\x02\x1b\x41ssetmantle\\Schema\\Ids\\Base\xe2\x02\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\xea\x02\x1e\x41ssetmantle::Schema::Ids::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.ids.base.coin_id_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\037com.assetmantle.schema.ids.baseB\013CoinIdProtoP\001\242\002\004ASIB\252\002\033Assetmantle.Schema.Ids.Base\312\002\033Assetmantle\\Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\352\002\036Assetmantle::Schema::Ids::Base'
+  DESCRIPTOR._serialized_options = b'\n\037com.assetmantle.schema.ids.baseB\013CoinIdProto\242\002\004ASIB\252\002\033Assetmantle.Schema.Ids.Base\312\002\033Assetmantle\\Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\352\002\036Assetmantle::Schema::Ids::Base'
   _COINID._options = None
   _COINID._serialized_options = b'\210\240\037\000'
   _globals['_COINID']._serialized_start=127

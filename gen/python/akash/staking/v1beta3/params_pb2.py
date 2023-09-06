@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"akash/staking/v1beta3/params.proto\x12\x15\x61kash.staking.v1beta3\x1a\x14gogoproto/gogo.proto\"\x86\x01\n\x06Params\x12|\n\x13min_commission_rate\x18\x01 \x01(\tBL\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x1ayaml:\"min_commission_rate\"R\x11minCommissionRateB\xda\x01\n\x19\x63om.akash.staking.v1beta3B\x0bParamsProtoP\x01Z:github.com/akash-network/akash-api/go/node/staking/v1beta3\xa2\x02\x03\x41SX\xaa\x02\x15\x41kash.Staking.V1beta3\xca\x02\x15\x41kash\\Staking\\V1beta3\xe2\x02!Akash\\Staking\\V1beta3\\GPBMetadata\xea\x02\x17\x41kash::Staking::V1beta3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"akash/staking/v1beta3/params.proto\x12\x15\x61kash.staking.v1beta3\x1a\x14gogoproto/gogo.proto\"\x86\x01\n\x06Params\x12|\n\x13min_commission_rate\x18\x01 \x01(\tBL\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x1ayaml:\"min_commission_rate\"R\x11minCommissionRateB\xd8\x01\n\x19\x63om.akash.staking.v1beta3B\x0bParamsProtoZ:github.com/akash-network/akash-api/go/node/staking/v1beta3\xa2\x02\x03\x41SX\xaa\x02\x15\x41kash.Staking.V1beta3\xca\x02\x15\x41kash\\Staking\\V1beta3\xe2\x02!Akash\\Staking\\V1beta3\\GPBMetadata\xea\x02\x17\x41kash::Staking::V1beta3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.staking.v1beta3.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.akash.staking.v1beta3B\013ParamsProtoP\001Z:github.com/akash-network/akash-api/go/node/staking/v1beta3\242\002\003ASX\252\002\025Akash.Staking.V1beta3\312\002\025Akash\\Staking\\V1beta3\342\002!Akash\\Staking\\V1beta3\\GPBMetadata\352\002\027Akash::Staking::V1beta3'
+  DESCRIPTOR._serialized_options = b'\n\031com.akash.staking.v1beta3B\013ParamsProtoZ:github.com/akash-network/akash-api/go/node/staking/v1beta3\242\002\003ASX\252\002\025Akash.Staking.V1beta3\312\002\025Akash\\Staking\\V1beta3\342\002!Akash\\Staking\\V1beta3\\GPBMetadata\352\002\027Akash::Staking::V1beta3'
   _PARAMS.fields_by_name['min_commission_rate']._options = None
   _PARAMS.fields_by_name['min_commission_rate']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Dec\362\336\037\032yaml:\"min_commission_rate\"'
   _globals['_PARAMS']._serialized_start=84

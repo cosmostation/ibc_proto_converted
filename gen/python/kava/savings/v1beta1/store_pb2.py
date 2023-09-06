@@ -16,15 +16,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kava/savings/v1beta1/store.proto\x12\x14kava.savings.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"3\n\x06Params\x12)\n\x10supported_denoms\x18\x01 \x03(\tR\x0fsupportedDenoms\"\xd6\x01\n\x07\x44\x65posit\x12\x66\n\tdepositor\x18\x01 \x01(\tBH\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddress\xd2\xb4-\x13\x63osmos.AddressBytesR\tdepositor\x12\x63\n\x06\x61mount\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mountB\xc7\x01\n\x18\x63om.kava.savings.v1beta1B\nStoreProtoP\x01Z)github.com/kava-labs/kava/x/savings/types\xa2\x02\x03KSX\xaa\x02\x14Kava.Savings.V1beta1\xca\x02\x14Kava\\Savings\\V1beta1\xe2\x02 Kava\\Savings\\V1beta1\\GPBMetadata\xea\x02\x16Kava::Savings::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kava/savings/v1beta1/store.proto\x12\x14kava.savings.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"3\n\x06Params\x12)\n\x10supported_denoms\x18\x01 \x03(\tR\x0fsupportedDenoms\"\xd6\x01\n\x07\x44\x65posit\x12\x66\n\tdepositor\x18\x01 \x01(\tBH\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddress\xd2\xb4-\x13\x63osmos.AddressBytesR\tdepositor\x12\x63\n\x06\x61mount\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mountB\xc5\x01\n\x18\x63om.kava.savings.v1beta1B\nStoreProtoZ)github.com/kava-labs/kava/x/savings/types\xa2\x02\x03KSX\xaa\x02\x14Kava.Savings.V1beta1\xca\x02\x14Kava\\Savings\\V1beta1\xe2\x02 Kava\\Savings\\V1beta1\\GPBMetadata\xea\x02\x16Kava::Savings::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.savings.v1beta1.store_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.kava.savings.v1beta1B\nStoreProtoP\001Z)github.com/kava-labs/kava/x/savings/types\242\002\003KSX\252\002\024Kava.Savings.V1beta1\312\002\024Kava\\Savings\\V1beta1\342\002 Kava\\Savings\\V1beta1\\GPBMetadata\352\002\026Kava::Savings::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\030com.kava.savings.v1beta1B\nStoreProtoZ)github.com/kava-labs/kava/x/savings/types\242\002\003KSX\252\002\024Kava.Savings.V1beta1\312\002\024Kava\\Savings\\V1beta1\342\002 Kava\\Savings\\V1beta1\\GPBMetadata\352\002\026Kava::Savings::V1beta1\310\341\036\000'
   _DEPOSIT.fields_by_name['depositor']._options = None
   _DEPOSIT.fields_by_name['depositor']._serialized_options = b'\372\336\037-github.com/cosmos/cosmos-sdk/types.AccAddress\322\264-\023cosmos.AddressBytes'
   _DEPOSIT.fields_by_name['amount']._options = None

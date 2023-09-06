@@ -259,6 +259,7 @@ public final class TwapRecordProto {
               com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.class, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -392,7 +393,7 @@ public final class TwapRecordProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return time_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -639,7 +640,7 @@ public final class TwapRecordProto {
      */
     @java.lang.Override
     public boolean hasLastErrorTime() {
-      return lastErrorTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -695,7 +696,7 @@ public final class TwapRecordProto {
       if (height_ != 0L) {
         output.writeInt64(4, height_);
       }
-      if (time_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(p0LastSpotPrice_)) {
@@ -713,7 +714,7 @@ public final class TwapRecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(geometricTwapAccumulator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, geometricTwapAccumulator_);
       }
-      if (lastErrorTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(11, getLastErrorTime());
       }
       getUnknownFields().writeTo(output);
@@ -739,7 +740,7 @@ public final class TwapRecordProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, height_);
       }
-      if (time_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTime());
       }
@@ -758,7 +759,7 @@ public final class TwapRecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(geometricTwapAccumulator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, geometricTwapAccumulator_);
       }
-      if (lastErrorTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getLastErrorTime());
       }
@@ -973,13 +974,20 @@ public final class TwapRecordProto {
 
       // Construct using com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimeFieldBuilder();
+          getLastErrorTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1049,10 +1057,12 @@ public final class TwapRecordProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.height_ = height_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.p0LastSpotPrice_ = p0LastSpotPrice_;
@@ -1073,7 +1083,9 @@ public final class TwapRecordProto {
           result.lastErrorTime_ = lastErrorTimeBuilder_ == null
               ? lastErrorTime_
               : lastErrorTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1620,8 +1632,10 @@ public final class TwapRecordProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (time_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2174,8 +2188,10 @@ public final class TwapRecordProto {
         } else {
           lastErrorTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        if (lastErrorTime_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
         return this;
       }
       /**

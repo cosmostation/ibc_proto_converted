@@ -14,23 +14,27 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_query_dot_v1beta1_dot_pagination__pb2
+from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 from pstake.liquidstakeibc.v1beta1 import params_pb2 as pstake_dot_liquidstakeibc_dot_v1beta1_dot_params__pb2
 from pstake.liquidstakeibc.v1beta1 import liquidstakeibc_pb2 as pstake_dot_liquidstakeibc_dot_v1beta1_dot_liquidstakeibc__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)pstake/liquidstakeibc/v1beta1/query.proto\x12\x1dpstake.liquidstakeibc.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a*pstake/liquidstakeibc/v1beta1/params.proto\x1a\x32pstake/liquidstakeibc/v1beta1/liquidstakeibc.proto\"\x14\n\x12QueryParamsRequest\"Z\n\x13QueryParamsResponse\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32%.pstake.liquidstakeibc.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"2\n\x15QueryHostChainRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"g\n\x16QueryHostChainResponse\x12M\n\nhost_chain\x18\x01 \x01(\x0b\x32(.pstake.liquidstakeibc.v1beta1.HostChainB\x04\xc8\xde\x1f\x00R\thostChain\"\x18\n\x16QueryHostChainsRequest\"d\n\x17QueryHostChainsResponse\x12I\n\x0bhost_chains\x18\x01 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.HostChainR\nhostChains\"5\n\x14QueryDepositsRequest\x12\x1d\n\nhost_denom\x18\x01 \x01(\tR\thostDenom\"[\n\x15QueryDepositsResponse\x12\x42\n\x08\x64\x65posits\x18\x01 \x03(\x0b\x32&.pstake.liquidstakeibc.v1beta1.DepositR\x08\x64\x65posits\"7\n\x16QueryUnbondingsRequest\x12\x1d\n\nhost_denom\x18\x01 \x01(\tR\thostDenom\"c\n\x17QueryUnbondingsResponse\x12H\n\nunbondings\x18\x01 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.UnbondingR\nunbondings\"6\n\x1aQueryUserUnbondingsRequest\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"t\n\x1bQueryUserUnbondingsResponse\x12U\n\x0fuser_unbondings\x18\x01 \x03(\x0b\x32,.pstake.liquidstakeibc.v1beta1.UserUnbondingR\x0euserUnbondings\"?\n\x1eQueryValidatorUnbondingRequest\x12\x1d\n\nhost_denom\x18\x01 \x01(\tR\thostDenom\"\x87\x01\n\x1fQueryValidatorUnbondingResponse\x12\x64\n\x14validator_unbondings\x18\x01 \x03(\x0b\x32\x31.pstake.liquidstakeibc.v1beta1.ValidatorUnbondingR\x13validatorUnbondings2\xb4\n\n\x05Query\x12\x9e\x01\n\x06Params\x12\x31.pstake.liquidstakeibc.v1beta1.QueryParamsRequest\x1a\x32.pstake.liquidstakeibc.v1beta1.QueryParamsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/pstake/liquidstakeibc/v1beta1/params\x12\xb6\x01\n\tHostChain\x12\x34.pstake.liquidstakeibc.v1beta1.QueryHostChainRequest\x1a\x35.pstake.liquidstakeibc.v1beta1.QueryHostChainResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/pstake/liquidstakeibc/v1beta1/host_chain/{chain_id}\x12\xaf\x01\n\nHostChains\x12\x35.pstake.liquidstakeibc.v1beta1.QueryHostChainsRequest\x1a\x36.pstake.liquidstakeibc.v1beta1.QueryHostChainsResponse\"2\x82\xd3\xe4\x93\x02,\x12*/pstake/liquidstakeibc/v1beta1/host_chains\x12\xb3\x01\n\x08\x44\x65posits\x12\x33.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest\x1a\x34.pstake.liquidstakeibc.v1beta1.QueryDepositsResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/pstake/liquidstakeibc/v1beta1/deposits/{host_denom}\x12\xbb\x01\n\nUnbondings\x12\x35.pstake.liquidstakeibc.v1beta1.QueryUnbondingsRequest\x1a\x36.pstake.liquidstakeibc.v1beta1.QueryUnbondingsResponse\">\x82\xd3\xe4\x93\x02\x38\x12\x36/pstake/liquidstakeibc/v1beta1/unbondings/{host_denom}\x12\xc9\x01\n\x0eUserUnbondings\x12\x39.pstake.liquidstakeibc.v1beta1.QueryUserUnbondingsRequest\x1a:.pstake.liquidstakeibc.v1beta1.QueryUserUnbondingsResponse\"@\x82\xd3\xe4\x93\x02:\x12\x38/pstake/liquidstakeibc/v1beta1/user_unbondings/{address}\x12\xde\x01\n\x13ValidatorUnbondings\x12=.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest\x1a>.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingResponse\"H\x82\xd3\xe4\x93\x02\x42\x12@/pstake/liquidstakeibc/v1beta1/validator_unbondings/{host_denom}B\x88\x02\n!com.pstake.liquidstakeibc.v1beta1B\nQueryProtoP\x01ZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\xa2\x02\x03PLX\xaa\x02\x1dPstake.Liquidstakeibc.V1beta1\xca\x02\x1dPstake\\Liquidstakeibc\\V1beta1\xe2\x02)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\xea\x02\x1fPstake::Liquidstakeibc::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)pstake/liquidstakeibc/v1beta1/query.proto\x12\x1dpstake.liquidstakeibc.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a*pstake/liquidstakeibc/v1beta1/params.proto\x1a\x32pstake/liquidstakeibc/v1beta1/liquidstakeibc.proto\"\x14\n\x12QueryParamsRequest\"Z\n\x13QueryParamsResponse\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32%.pstake.liquidstakeibc.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"2\n\x15QueryHostChainRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"g\n\x16QueryHostChainResponse\x12M\n\nhost_chain\x18\x01 \x01(\x0b\x32(.pstake.liquidstakeibc.v1beta1.HostChainB\x04\xc8\xde\x1f\x00R\thostChain\"\x18\n\x16QueryHostChainsRequest\"d\n\x17QueryHostChainsResponse\x12I\n\x0bhost_chains\x18\x01 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.HostChainR\nhostChains\"1\n\x14QueryDepositsRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"[\n\x15QueryDepositsResponse\x12\x42\n\x08\x64\x65posits\x18\x01 \x03(\x0b\x32&.pstake.liquidstakeibc.v1beta1.DepositR\x08\x64\x65posits\"4\n\x17QueryLSMDepositsRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"a\n\x18QueryLSMDepositsResponse\x12\x45\n\x08\x64\x65posits\x18\x01 \x03(\x0b\x32).pstake.liquidstakeibc.v1beta1.LSMDepositR\x08\x64\x65posits\"3\n\x16QueryUnbondingsRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"c\n\x17QueryUnbondingsResponse\x12H\n\nunbondings\x18\x01 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.UnbondingR\nunbondings\"H\n\x15QueryUnbondingRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\x12\x14\n\x05\x65poch\x18\x02 \x01(\x03R\x05\x65poch\"`\n\x16QueryUnbondingResponse\x12\x46\n\tunbonding\x18\x01 \x01(\x0b\x32(.pstake.liquidstakeibc.v1beta1.UnbondingR\tunbonding\"6\n\x1aQueryUserUnbondingsRequest\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"t\n\x1bQueryUserUnbondingsResponse\x12U\n\x0fuser_unbondings\x18\x01 \x03(\x0b\x32,.pstake.liquidstakeibc.v1beta1.UserUnbondingR\x0euserUnbondings\";\n\x1eQueryValidatorUnbondingRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"\x87\x01\n\x1fQueryValidatorUnbondingResponse\x12\x64\n\x14validator_unbondings\x18\x01 \x03(\x0b\x32\x31.pstake.liquidstakeibc.v1beta1.ValidatorUnbondingR\x13validatorUnbondings\">\n!QueryDepositAccountBalanceRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"_\n\"QueryDepositAccountBalanceResponse\x12\x39\n\x07\x62\x61lance\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x07\x62\x61lance\"5\n\x18QueryExchangeRateRequest\x12\x19\n\x08\x63hain_id\x18\x01 \x01(\tR\x07\x63hainId\"_\n\x19QueryExchangeRateResponse\x12\x42\n\x04rate\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x04rate2\xde\x10\n\x05Query\x12\x9e\x01\n\x06Params\x12\x31.pstake.liquidstakeibc.v1beta1.QueryParamsRequest\x1a\x32.pstake.liquidstakeibc.v1beta1.QueryParamsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/pstake/liquidstakeibc/v1beta1/params\x12\xb6\x01\n\tHostChain\x12\x34.pstake.liquidstakeibc.v1beta1.QueryHostChainRequest\x1a\x35.pstake.liquidstakeibc.v1beta1.QueryHostChainResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/pstake/liquidstakeibc/v1beta1/host_chain/{chain_id}\x12\xaf\x01\n\nHostChains\x12\x35.pstake.liquidstakeibc.v1beta1.QueryHostChainsRequest\x1a\x36.pstake.liquidstakeibc.v1beta1.QueryHostChainsResponse\"2\x82\xd3\xe4\x93\x02,\x12*/pstake/liquidstakeibc/v1beta1/host_chains\x12\xb1\x01\n\x08\x44\x65posits\x12\x33.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest\x1a\x34.pstake.liquidstakeibc.v1beta1.QueryDepositsResponse\":\x82\xd3\xe4\x93\x02\x34\x12\x32/pstake/liquidstakeibc/v1beta1/deposits/{chain_id}\x12\xbe\x01\n\x0bLSMDeposits\x12\x36.pstake.liquidstakeibc.v1beta1.QueryLSMDepositsRequest\x1a\x37.pstake.liquidstakeibc.v1beta1.QueryLSMDepositsResponse\">\x82\xd3\xe4\x93\x02\x38\x12\x36/pstake/liquidstakeibc/v1beta1/lsm_deposits/{chain_id}\x12\xb9\x01\n\nUnbondings\x12\x35.pstake.liquidstakeibc.v1beta1.QueryUnbondingsRequest\x1a\x36.pstake.liquidstakeibc.v1beta1.QueryUnbondingsResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/pstake/liquidstakeibc/v1beta1/unbondings/{chain_id}\x12\xbd\x01\n\tUnbonding\x12\x34.pstake.liquidstakeibc.v1beta1.QueryUnbondingRequest\x1a\x35.pstake.liquidstakeibc.v1beta1.QueryUnbondingResponse\"C\x82\xd3\xe4\x93\x02=\x12;/pstake/liquidstakeibc/v1beta1/unbonding/{chain_id}/{epoch}\x12\xc9\x01\n\x0eUserUnbondings\x12\x39.pstake.liquidstakeibc.v1beta1.QueryUserUnbondingsRequest\x1a:.pstake.liquidstakeibc.v1beta1.QueryUserUnbondingsResponse\"@\x82\xd3\xe4\x93\x02:\x12\x38/pstake/liquidstakeibc/v1beta1/user_unbondings/{address}\x12\xdc\x01\n\x13ValidatorUnbondings\x12=.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingRequest\x1a>.pstake.liquidstakeibc.v1beta1.QueryValidatorUnbondingResponse\"F\x82\xd3\xe4\x93\x02@\x12>/pstake/liquidstakeibc/v1beta1/validator_unbondings/{chain_id}\x12\xe7\x01\n\x15\x44\x65positAccountBalance\x12@.pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceRequest\x1a\x41.pstake.liquidstakeibc.v1beta1.QueryDepositAccountBalanceResponse\"I\x82\xd3\xe4\x93\x02\x43\x12\x41/pstake/liquidstakeibc/v1beta1/deposit_account_balance/{chain_id}\x12\xc2\x01\n\x0c\x45xchangeRate\x12\x37.pstake.liquidstakeibc.v1beta1.QueryExchangeRateRequest\x1a\x38.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse\"?\x82\xd3\xe4\x93\x02\x39\x12\x37/pstake/liquidstakeibc/v1beta1/exchange_rate/{chain_id}B\x86\x02\n!com.pstake.liquidstakeibc.v1beta1B\nQueryProtoZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\xa2\x02\x03PLX\xaa\x02\x1dPstake.Liquidstakeibc.V1beta1\xca\x02\x1dPstake\\Liquidstakeibc\\V1beta1\xe2\x02)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\xea\x02\x1fPstake::Liquidstakeibc::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'pstake.liquidstakeibc.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n!com.pstake.liquidstakeibc.v1beta1B\nQueryProtoP\001ZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1beta1\312\002\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\352\002\037Pstake::Liquidstakeibc::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n!com.pstake.liquidstakeibc.v1beta1B\nQueryProtoZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1beta1\312\002\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\352\002\037Pstake::Liquidstakeibc::V1beta1'
   _QUERYPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERYHOSTCHAINRESPONSE.fields_by_name['host_chain']._options = None
   _QUERYHOSTCHAINRESPONSE.fields_by_name['host_chain']._serialized_options = b'\310\336\037\000'
+  _QUERYDEPOSITACCOUNTBALANCERESPONSE.fields_by_name['balance']._options = None
+  _QUERYDEPOSITACCOUNTBALANCERESPONSE.fields_by_name['balance']._serialized_options = b'\310\336\037\000'
+  _QUERYEXCHANGERATERESPONSE.fields_by_name['rate']._options = None
+  _QUERYEXCHANGERATERESPONSE.fields_by_name['rate']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Dec'
   _QUERY.methods_by_name['Params']._options = None
   _QUERY.methods_by_name['Params']._serialized_options = b'\202\323\344\223\002\'\022%/pstake/liquidstakeibc/v1beta1/params'
   _QUERY.methods_by_name['HostChain']._options = None
@@ -38,41 +42,65 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _QUERY.methods_by_name['HostChains']._options = None
   _QUERY.methods_by_name['HostChains']._serialized_options = b'\202\323\344\223\002,\022*/pstake/liquidstakeibc/v1beta1/host_chains'
   _QUERY.methods_by_name['Deposits']._options = None
-  _QUERY.methods_by_name['Deposits']._serialized_options = b'\202\323\344\223\0026\0224/pstake/liquidstakeibc/v1beta1/deposits/{host_denom}'
+  _QUERY.methods_by_name['Deposits']._serialized_options = b'\202\323\344\223\0024\0222/pstake/liquidstakeibc/v1beta1/deposits/{chain_id}'
+  _QUERY.methods_by_name['LSMDeposits']._options = None
+  _QUERY.methods_by_name['LSMDeposits']._serialized_options = b'\202\323\344\223\0028\0226/pstake/liquidstakeibc/v1beta1/lsm_deposits/{chain_id}'
   _QUERY.methods_by_name['Unbondings']._options = None
-  _QUERY.methods_by_name['Unbondings']._serialized_options = b'\202\323\344\223\0028\0226/pstake/liquidstakeibc/v1beta1/unbondings/{host_denom}'
+  _QUERY.methods_by_name['Unbondings']._serialized_options = b'\202\323\344\223\0026\0224/pstake/liquidstakeibc/v1beta1/unbondings/{chain_id}'
+  _QUERY.methods_by_name['Unbonding']._options = None
+  _QUERY.methods_by_name['Unbonding']._serialized_options = b'\202\323\344\223\002=\022;/pstake/liquidstakeibc/v1beta1/unbonding/{chain_id}/{epoch}'
   _QUERY.methods_by_name['UserUnbondings']._options = None
   _QUERY.methods_by_name['UserUnbondings']._serialized_options = b'\202\323\344\223\002:\0228/pstake/liquidstakeibc/v1beta1/user_unbondings/{address}'
   _QUERY.methods_by_name['ValidatorUnbondings']._options = None
-  _QUERY.methods_by_name['ValidatorUnbondings']._serialized_options = b'\202\323\344\223\002B\022@/pstake/liquidstakeibc/v1beta1/validator_unbondings/{host_denom}'
-  _globals['_QUERYPARAMSREQUEST']._serialized_start=268
-  _globals['_QUERYPARAMSREQUEST']._serialized_end=288
-  _globals['_QUERYPARAMSRESPONSE']._serialized_start=290
-  _globals['_QUERYPARAMSRESPONSE']._serialized_end=380
-  _globals['_QUERYHOSTCHAINREQUEST']._serialized_start=382
-  _globals['_QUERYHOSTCHAINREQUEST']._serialized_end=432
-  _globals['_QUERYHOSTCHAINRESPONSE']._serialized_start=434
-  _globals['_QUERYHOSTCHAINRESPONSE']._serialized_end=537
-  _globals['_QUERYHOSTCHAINSREQUEST']._serialized_start=539
-  _globals['_QUERYHOSTCHAINSREQUEST']._serialized_end=563
-  _globals['_QUERYHOSTCHAINSRESPONSE']._serialized_start=565
-  _globals['_QUERYHOSTCHAINSRESPONSE']._serialized_end=665
-  _globals['_QUERYDEPOSITSREQUEST']._serialized_start=667
-  _globals['_QUERYDEPOSITSREQUEST']._serialized_end=720
-  _globals['_QUERYDEPOSITSRESPONSE']._serialized_start=722
-  _globals['_QUERYDEPOSITSRESPONSE']._serialized_end=813
-  _globals['_QUERYUNBONDINGSREQUEST']._serialized_start=815
-  _globals['_QUERYUNBONDINGSREQUEST']._serialized_end=870
-  _globals['_QUERYUNBONDINGSRESPONSE']._serialized_start=872
-  _globals['_QUERYUNBONDINGSRESPONSE']._serialized_end=971
-  _globals['_QUERYUSERUNBONDINGSREQUEST']._serialized_start=973
-  _globals['_QUERYUSERUNBONDINGSREQUEST']._serialized_end=1027
-  _globals['_QUERYUSERUNBONDINGSRESPONSE']._serialized_start=1029
-  _globals['_QUERYUSERUNBONDINGSRESPONSE']._serialized_end=1145
-  _globals['_QUERYVALIDATORUNBONDINGREQUEST']._serialized_start=1147
-  _globals['_QUERYVALIDATORUNBONDINGREQUEST']._serialized_end=1210
-  _globals['_QUERYVALIDATORUNBONDINGRESPONSE']._serialized_start=1213
-  _globals['_QUERYVALIDATORUNBONDINGRESPONSE']._serialized_end=1348
-  _globals['_QUERY']._serialized_start=1351
-  _globals['_QUERY']._serialized_end=2683
+  _QUERY.methods_by_name['ValidatorUnbondings']._serialized_options = b'\202\323\344\223\002@\022>/pstake/liquidstakeibc/v1beta1/validator_unbondings/{chain_id}'
+  _QUERY.methods_by_name['DepositAccountBalance']._options = None
+  _QUERY.methods_by_name['DepositAccountBalance']._serialized_options = b'\202\323\344\223\002C\022A/pstake/liquidstakeibc/v1beta1/deposit_account_balance/{chain_id}'
+  _QUERY.methods_by_name['ExchangeRate']._options = None
+  _QUERY.methods_by_name['ExchangeRate']._serialized_options = b'\202\323\344\223\0029\0227/pstake/liquidstakeibc/v1beta1/exchange_rate/{chain_id}'
+  _globals['_QUERYPARAMSREQUEST']._serialized_start=300
+  _globals['_QUERYPARAMSREQUEST']._serialized_end=320
+  _globals['_QUERYPARAMSRESPONSE']._serialized_start=322
+  _globals['_QUERYPARAMSRESPONSE']._serialized_end=412
+  _globals['_QUERYHOSTCHAINREQUEST']._serialized_start=414
+  _globals['_QUERYHOSTCHAINREQUEST']._serialized_end=464
+  _globals['_QUERYHOSTCHAINRESPONSE']._serialized_start=466
+  _globals['_QUERYHOSTCHAINRESPONSE']._serialized_end=569
+  _globals['_QUERYHOSTCHAINSREQUEST']._serialized_start=571
+  _globals['_QUERYHOSTCHAINSREQUEST']._serialized_end=595
+  _globals['_QUERYHOSTCHAINSRESPONSE']._serialized_start=597
+  _globals['_QUERYHOSTCHAINSRESPONSE']._serialized_end=697
+  _globals['_QUERYDEPOSITSREQUEST']._serialized_start=699
+  _globals['_QUERYDEPOSITSREQUEST']._serialized_end=748
+  _globals['_QUERYDEPOSITSRESPONSE']._serialized_start=750
+  _globals['_QUERYDEPOSITSRESPONSE']._serialized_end=841
+  _globals['_QUERYLSMDEPOSITSREQUEST']._serialized_start=843
+  _globals['_QUERYLSMDEPOSITSREQUEST']._serialized_end=895
+  _globals['_QUERYLSMDEPOSITSRESPONSE']._serialized_start=897
+  _globals['_QUERYLSMDEPOSITSRESPONSE']._serialized_end=994
+  _globals['_QUERYUNBONDINGSREQUEST']._serialized_start=996
+  _globals['_QUERYUNBONDINGSREQUEST']._serialized_end=1047
+  _globals['_QUERYUNBONDINGSRESPONSE']._serialized_start=1049
+  _globals['_QUERYUNBONDINGSRESPONSE']._serialized_end=1148
+  _globals['_QUERYUNBONDINGREQUEST']._serialized_start=1150
+  _globals['_QUERYUNBONDINGREQUEST']._serialized_end=1222
+  _globals['_QUERYUNBONDINGRESPONSE']._serialized_start=1224
+  _globals['_QUERYUNBONDINGRESPONSE']._serialized_end=1320
+  _globals['_QUERYUSERUNBONDINGSREQUEST']._serialized_start=1322
+  _globals['_QUERYUSERUNBONDINGSREQUEST']._serialized_end=1376
+  _globals['_QUERYUSERUNBONDINGSRESPONSE']._serialized_start=1378
+  _globals['_QUERYUSERUNBONDINGSRESPONSE']._serialized_end=1494
+  _globals['_QUERYVALIDATORUNBONDINGREQUEST']._serialized_start=1496
+  _globals['_QUERYVALIDATORUNBONDINGREQUEST']._serialized_end=1555
+  _globals['_QUERYVALIDATORUNBONDINGRESPONSE']._serialized_start=1558
+  _globals['_QUERYVALIDATORUNBONDINGRESPONSE']._serialized_end=1693
+  _globals['_QUERYDEPOSITACCOUNTBALANCEREQUEST']._serialized_start=1695
+  _globals['_QUERYDEPOSITACCOUNTBALANCEREQUEST']._serialized_end=1757
+  _globals['_QUERYDEPOSITACCOUNTBALANCERESPONSE']._serialized_start=1759
+  _globals['_QUERYDEPOSITACCOUNTBALANCERESPONSE']._serialized_end=1854
+  _globals['_QUERYEXCHANGERATEREQUEST']._serialized_start=1856
+  _globals['_QUERYEXCHANGERATEREQUEST']._serialized_end=1909
+  _globals['_QUERYEXCHANGERATERESPONSE']._serialized_start=1911
+  _globals['_QUERYEXCHANGERATERESPONSE']._serialized_end=2006
+  _globals['_QUERY']._serialized_start=2009
+  _globals['_QUERY']._serialized_end=4151
 # @@protoc_insertion_point(module_scope)

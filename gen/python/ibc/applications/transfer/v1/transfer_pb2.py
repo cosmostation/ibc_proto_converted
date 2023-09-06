@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+ibc/applications/transfer/v1/transfer.proto\x12\x1cibc.applications.transfer.v1\"?\n\nDenomTrace\x12\x12\n\x04path\x18\x01 \x01(\tR\x04path\x12\x1d\n\nbase_denom\x18\x02 \x01(\tR\tbaseDenom\"T\n\x06Params\x12!\n\x0csend_enabled\x18\x01 \x01(\x08R\x0bsendEnabled\x12\'\n\x0freceive_enabled\x18\x02 \x01(\x08R\x0ereceiveEnabledB\xfd\x01\n com.ibc.applications.transfer.v1B\rTransferProtoP\x01Z7github.com/cosmos/ibc-go/v7/modules/apps/transfer/types\xa2\x02\x03IAT\xaa\x02\x1cIbc.Applications.Transfer.V1\xca\x02\x1cIbc\\Applications\\Transfer\\V1\xe2\x02(Ibc\\Applications\\Transfer\\V1\\GPBMetadata\xea\x02\x1fIbc::Applications::Transfer::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+ibc/applications/transfer/v1/transfer.proto\x12\x1cibc.applications.transfer.v1\"?\n\nDenomTrace\x12\x12\n\x04path\x18\x01 \x01(\tR\x04path\x12\x1d\n\nbase_denom\x18\x02 \x01(\tR\tbaseDenom\"T\n\x06Params\x12!\n\x0csend_enabled\x18\x01 \x01(\x08R\x0bsendEnabled\x12\'\n\x0freceive_enabled\x18\x02 \x01(\x08R\x0ereceiveEnabledB\xfb\x01\n com.ibc.applications.transfer.v1B\rTransferProtoZ7github.com/cosmos/ibc-go/v7/modules/apps/transfer/types\xa2\x02\x03IAT\xaa\x02\x1cIbc.Applications.Transfer.V1\xca\x02\x1cIbc\\Applications\\Transfer\\V1\xe2\x02(Ibc\\Applications\\Transfer\\V1\\GPBMetadata\xea\x02\x1fIbc::Applications::Transfer::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ibc.applications.transfer.v1.transfer_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.ibc.applications.transfer.v1B\rTransferProtoP\001Z7github.com/cosmos/ibc-go/v7/modules/apps/transfer/types\242\002\003IAT\252\002\034Ibc.Applications.Transfer.V1\312\002\034Ibc\\Applications\\Transfer\\V1\342\002(Ibc\\Applications\\Transfer\\V1\\GPBMetadata\352\002\037Ibc::Applications::Transfer::V1'
+  DESCRIPTOR._serialized_options = b'\n com.ibc.applications.transfer.v1B\rTransferProtoZ7github.com/cosmos/ibc-go/v7/modules/apps/transfer/types\242\002\003IAT\252\002\034Ibc.Applications.Transfer.V1\312\002\034Ibc\\Applications\\Transfer\\V1\342\002(Ibc\\Applications\\Transfer\\V1\\GPBMetadata\352\002\037Ibc::Applications::Transfer::V1'
   _globals['_DENOMTRACE']._serialized_start=77
   _globals['_DENOMTRACE']._serialized_end=140
   _globals['_PARAMS']._serialized_start=142

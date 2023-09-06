@@ -2555,6 +2555,7 @@ public final class DaoProto {
               com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.class, com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COIN_ASK_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin coinAsk_;
     /**
@@ -2563,7 +2564,7 @@ public final class DaoProto {
      */
     @java.lang.Override
     public boolean hasCoinAsk() {
-      return coinAsk_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin_ask = 1 [json_name = "coinAsk", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_ask&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2589,7 +2590,7 @@ public final class DaoProto {
      */
     @java.lang.Override
     public boolean hasCoinBid() {
-      return coinBid_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin_bid = 2 [json_name = "coinBid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin_bid&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2621,10 +2622,10 @@ public final class DaoProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (coinAsk_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCoinAsk());
       }
-      if (coinBid_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getCoinBid());
       }
       getUnknownFields().writeTo(output);
@@ -2636,11 +2637,11 @@ public final class DaoProto {
       if (size != -1) return size;
 
       size = 0;
-      if (coinAsk_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCoinAsk());
       }
-      if (coinBid_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCoinBid());
       }
@@ -2811,13 +2812,20 @@ public final class DaoProto {
 
       // Construct using com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinAskFieldBuilder();
+          getCoinBidFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2866,16 +2874,20 @@ public final class DaoProto {
 
       private void buildPartial0(com.onomyprotocol.dao.v1.DaoProto.CoinsExchangePair result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.coinAsk_ = coinAskBuilder_ == null
               ? coinAsk_
               : coinAskBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.coinBid_ = coinBidBuilder_ == null
               ? coinBid_
               : coinBidBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3051,8 +3063,10 @@ public final class DaoProto {
         } else {
           coinAskBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (coinAsk_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3170,8 +3184,10 @@ public final class DaoProto {
         } else {
           coinBidBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (coinBid_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

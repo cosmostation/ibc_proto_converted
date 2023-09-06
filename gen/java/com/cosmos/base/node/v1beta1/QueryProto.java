@@ -1828,6 +1828,7 @@ public final class QueryProto {
               com.cosmos.base.node.v1beta1.QueryProto.StatusResponse.class, com.cosmos.base.node.v1beta1.QueryProto.StatusResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int EARLIEST_STORE_HEIGHT_FIELD_NUMBER = 1;
     private long earliestStoreHeight_ = 0L;
     /**
@@ -1870,7 +1871,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return timestamp_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1946,7 +1947,7 @@ public final class QueryProto {
       if (height_ != 0L) {
         output.writeUInt64(2, height_);
       }
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getTimestamp());
       }
       if (!appHash_.isEmpty()) {
@@ -1972,7 +1973,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, height_);
       }
-      if (timestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimestamp());
       }
@@ -2160,13 +2161,19 @@ public final class QueryProto {
 
       // Construct using com.cosmos.base.node.v1beta1.QueryProto.StatusResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2220,10 +2227,12 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.height_ = height_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.appHash_ = appHash_;
@@ -2231,6 +2240,7 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.validatorHash_ = validatorHash_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2536,8 +2546,10 @@ public final class QueryProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (timestamp_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

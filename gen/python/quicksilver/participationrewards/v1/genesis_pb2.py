@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from quicksilver.participationrewards.v1 import participationrewards_pb2 as quicksilver_dot_participationrewards_dot_v1_dot_participationrewards__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n1quicksilver/participationrewards/v1/genesis.proto\x12#quicksilver.participationrewards.v1\x1a\x14gogoproto/gogo.proto\x1a>quicksilver/participationrewards/v1/participationrewards.proto\"\xb6\x01\n\x0cGenesisState\x12I\n\x06params\x18\x01 \x01(\x0b\x32+.quicksilver.participationrewards.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12[\n\rprotocol_data\x18\x02 \x03(\x0b\x32\x36.quicksilver.participationrewards.v1.KeyedProtocolDataR\x0cprotocolDataB\xaa\x02\n\'com.quicksilver.participationrewards.v1B\x0cGenesisProtoP\x01ZCgithub.com/ingenuity-build/quicksilver/x/participationrewards/types\xa2\x02\x03QPX\xaa\x02#Quicksilver.Participationrewards.V1\xca\x02#Quicksilver\\Participationrewards\\V1\xe2\x02/Quicksilver\\Participationrewards\\V1\\GPBMetadata\xea\x02%Quicksilver::Participationrewards::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n1quicksilver/participationrewards/v1/genesis.proto\x12#quicksilver.participationrewards.v1\x1a\x14gogoproto/gogo.proto\x1a>quicksilver/participationrewards/v1/participationrewards.proto\"\xb6\x01\n\x0cGenesisState\x12I\n\x06params\x18\x01 \x01(\x0b\x32+.quicksilver.participationrewards.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12[\n\rprotocol_data\x18\x02 \x03(\x0b\x32\x36.quicksilver.participationrewards.v1.KeyedProtocolDataR\x0cprotocolDataB\xa8\x02\n\'com.quicksilver.participationrewards.v1B\x0cGenesisProtoZCgithub.com/ingenuity-build/quicksilver/x/participationrewards/types\xa2\x02\x03QPX\xaa\x02#Quicksilver.Participationrewards.V1\xca\x02#Quicksilver\\Participationrewards\\V1\xe2\x02/Quicksilver\\Participationrewards\\V1\\GPBMetadata\xea\x02%Quicksilver::Participationrewards::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.participationrewards.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\'com.quicksilver.participationrewards.v1B\014GenesisProtoP\001ZCgithub.com/ingenuity-build/quicksilver/x/participationrewards/types\242\002\003QPX\252\002#Quicksilver.Participationrewards.V1\312\002#Quicksilver\\Participationrewards\\V1\342\002/Quicksilver\\Participationrewards\\V1\\GPBMetadata\352\002%Quicksilver::Participationrewards::V1'
+  DESCRIPTOR._serialized_options = b'\n\'com.quicksilver.participationrewards.v1B\014GenesisProtoZCgithub.com/ingenuity-build/quicksilver/x/participationrewards/types\242\002\003QPX\252\002#Quicksilver.Participationrewards.V1\312\002#Quicksilver\\Participationrewards\\V1\342\002/Quicksilver\\Participationrewards\\V1\\GPBMetadata\352\002%Quicksilver::Participationrewards::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=177

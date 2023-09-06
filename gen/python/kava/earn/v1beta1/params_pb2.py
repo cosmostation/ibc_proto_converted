@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from kava.earn.v1beta1 import vault_pb2 as kava_dot_earn_dot_v1beta1_dot_vault__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ekava/earn/v1beta1/params.proto\x12\x11kava.earn.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1dkava/earn/v1beta1/vault.proto\"g\n\x06Params\x12]\n\x0e\x61llowed_vaults\x18\x01 \x03(\x0b\x32\x1f.kava.earn.v1beta1.AllowedVaultB\x15\xc8\xde\x1f\x00\xaa\xdf\x1f\rAllowedVaultsR\rallowedVaultsB\xb2\x01\n\x15\x63om.kava.earn.v1beta1B\x0bParamsProtoP\x01Z&github.com/kava-labs/kava/x/earn/types\xa2\x02\x03KEX\xaa\x02\x11Kava.Earn.V1beta1\xca\x02\x11Kava\\Earn\\V1beta1\xe2\x02\x1dKava\\Earn\\V1beta1\\GPBMetadata\xea\x02\x13Kava::Earn::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ekava/earn/v1beta1/params.proto\x12\x11kava.earn.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1dkava/earn/v1beta1/vault.proto\"g\n\x06Params\x12]\n\x0e\x61llowed_vaults\x18\x01 \x03(\x0b\x32\x1f.kava.earn.v1beta1.AllowedVaultB\x15\xc8\xde\x1f\x00\xaa\xdf\x1f\rAllowedVaultsR\rallowedVaultsB\xb0\x01\n\x15\x63om.kava.earn.v1beta1B\x0bParamsProtoZ&github.com/kava-labs/kava/x/earn/types\xa2\x02\x03KEX\xaa\x02\x11Kava.Earn.V1beta1\xca\x02\x11Kava\\Earn\\V1beta1\xe2\x02\x1dKava\\Earn\\V1beta1\\GPBMetadata\xea\x02\x13Kava::Earn::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.earn.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.kava.earn.v1beta1B\013ParamsProtoP\001Z&github.com/kava-labs/kava/x/earn/types\242\002\003KEX\252\002\021Kava.Earn.V1beta1\312\002\021Kava\\Earn\\V1beta1\342\002\035Kava\\Earn\\V1beta1\\GPBMetadata\352\002\023Kava::Earn::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\025com.kava.earn.v1beta1B\013ParamsProtoZ&github.com/kava-labs/kava/x/earn/types\242\002\003KEX\252\002\021Kava.Earn.V1beta1\312\002\021Kava\\Earn\\V1beta1\342\002\035Kava\\Earn\\V1beta1\\GPBMetadata\352\002\023Kava::Earn::V1beta1'
   _PARAMS.fields_by_name['allowed_vaults']._options = None
   _PARAMS.fields_by_name['allowed_vaults']._serialized_options = b'\310\336\037\000\252\337\037\rAllowedVaults'
   _globals['_PARAMS']._serialized_start=106

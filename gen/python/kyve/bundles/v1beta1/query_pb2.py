@@ -16,15 +16,14 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from kyve.bundles.v1beta1 import params_pb2 as kyve_dot_bundles_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kyve/bundles/v1beta1/query.proto\x12\x14kyve.bundles.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a!kyve/bundles/v1beta1/params.proto\"\x14\n\x12QueryParamsRequest\"Q\n\x13QueryParamsResponse\x12:\n\x06params\x18\x01 \x01(\x0b\x32\x1c.kyve.bundles.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x8d\x01\n\x05Query\x12\x83\x01\n\x06Params\x12(.kyve.bundles.v1beta1.QueryParamsRequest\x1a).kyve.bundles.v1beta1.QueryParamsResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/kyve/bundles/v1beta1/paramsB\xc6\x01\n\x18\x63om.kyve.bundles.v1beta1B\nQueryProtoP\x01Z,github.com/KYVENetwork/chain/x/bundles/types\xa2\x02\x03KBX\xaa\x02\x14Kyve.Bundles.V1beta1\xca\x02\x14Kyve\\Bundles\\V1beta1\xe2\x02 Kyve\\Bundles\\V1beta1\\GPBMetadata\xea\x02\x16Kyve::Bundles::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kyve/bundles/v1beta1/query.proto\x12\x14kyve.bundles.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a!kyve/bundles/v1beta1/params.proto\"\x14\n\x12QueryParamsRequest\"Q\n\x13QueryParamsResponse\x12:\n\x06params\x18\x01 \x01(\x0b\x32\x1c.kyve.bundles.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x8d\x01\n\x05Query\x12\x83\x01\n\x06Params\x12(.kyve.bundles.v1beta1.QueryParamsRequest\x1a).kyve.bundles.v1beta1.QueryParamsResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/kyve/bundles/v1beta1/paramsB\xc4\x01\n\x18\x63om.kyve.bundles.v1beta1B\nQueryProtoZ,github.com/KYVENetwork/chain/x/bundles/types\xa2\x02\x03KBX\xaa\x02\x14Kyve.Bundles.V1beta1\xca\x02\x14Kyve\\Bundles\\V1beta1\xe2\x02 Kyve\\Bundles\\V1beta1\\GPBMetadata\xea\x02\x16Kyve::Bundles::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kyve.bundles.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.kyve.bundles.v1beta1B\nQueryProtoP\001Z,github.com/KYVENetwork/chain/x/bundles/types\242\002\003KBX\252\002\024Kyve.Bundles.V1beta1\312\002\024Kyve\\Bundles\\V1beta1\342\002 Kyve\\Bundles\\V1beta1\\GPBMetadata\352\002\026Kyve::Bundles::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\030com.kyve.bundles.v1beta1B\nQueryProtoZ,github.com/KYVENetwork/chain/x/bundles/types\242\002\003KBX\252\002\024Kyve.Bundles.V1beta1\312\002\024Kyve\\Bundles\\V1beta1\342\002 Kyve\\Bundles\\V1beta1\\GPBMetadata\352\002\026Kyve::Bundles::V1beta1'
   _QUERYPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Params']._options = None

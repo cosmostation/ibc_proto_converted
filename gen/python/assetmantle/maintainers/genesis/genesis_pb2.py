@@ -16,15 +16,14 @@ from assetmantle.maintainers.mappable import mappable_pb2 as assetmantle_dot_mai
 from assetmantle.lists.base import parameter_list_pb2 as assetmantle_dot_lists_dot_base_dot_parameter__list__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n-assetmantle/maintainers/genesis/genesis.proto\x12\'assetmantle.modules.maintainers.genesis\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/maintainers/mappable/mappable.proto\x1a+assetmantle/lists/base/parameter_list.proto\"\xbb\x01\n\x07Genesis\x12P\n\tmappables\x18\x01 \x03(\x0b\x32\x32.assetmantle.modules.maintainers.mappable.MappableR\tmappables\x12X\n\x0eparameter_list\x18\x02 \x01(\x0b\x32\x31.assetmantle.schema.parameters.base.ParameterListR\rparameterList:\x04\x88\xa0\x1f\x00\x42\xfb\x01\n+com.assetmantle.modules.maintainers.genesisB\x0cGenesisProtoP\x01\xa2\x02\x04\x41MMG\xaa\x02\'Assetmantle.Modules.Maintainers.Genesis\xca\x02\'Assetmantle\\Modules\\Maintainers\\Genesis\xe2\x02\x33\x41ssetmantle\\Modules\\Maintainers\\Genesis\\GPBMetadata\xea\x02*Assetmantle::Modules::Maintainers::Genesisb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n-assetmantle/maintainers/genesis/genesis.proto\x12\'assetmantle.modules.maintainers.genesis\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/maintainers/mappable/mappable.proto\x1a+assetmantle/lists/base/parameter_list.proto\"\xbb\x01\n\x07Genesis\x12P\n\tmappables\x18\x01 \x03(\x0b\x32\x32.assetmantle.modules.maintainers.mappable.MappableR\tmappables\x12X\n\x0eparameter_list\x18\x02 \x01(\x0b\x32\x31.assetmantle.schema.parameters.base.ParameterListR\rparameterList:\x04\x88\xa0\x1f\x00\x42\xf9\x01\n+com.assetmantle.modules.maintainers.genesisB\x0cGenesisProto\xa2\x02\x04\x41MMG\xaa\x02\'Assetmantle.Modules.Maintainers.Genesis\xca\x02\'Assetmantle\\Modules\\Maintainers\\Genesis\xe2\x02\x33\x41ssetmantle\\Modules\\Maintainers\\Genesis\\GPBMetadata\xea\x02*Assetmantle::Modules::Maintainers::Genesisb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.maintainers.genesis.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n+com.assetmantle.modules.maintainers.genesisB\014GenesisProtoP\001\242\002\004AMMG\252\002\'Assetmantle.Modules.Maintainers.Genesis\312\002\'Assetmantle\\Modules\\Maintainers\\Genesis\342\0023Assetmantle\\Modules\\Maintainers\\Genesis\\GPBMetadata\352\002*Assetmantle::Modules::Maintainers::Genesis'
+  DESCRIPTOR._serialized_options = b'\n+com.assetmantle.modules.maintainers.genesisB\014GenesisProto\242\002\004AMMG\252\002\'Assetmantle.Modules.Maintainers.Genesis\312\002\'Assetmantle\\Modules\\Maintainers\\Genesis\342\0023Assetmantle\\Modules\\Maintainers\\Genesis\\GPBMetadata\352\002*Assetmantle::Modules::Maintainers::Genesis'
   _GENESIS._options = None
   _GENESIS._serialized_options = b'\210\240\037\000'
   _globals['_GENESIS']._serialized_start=207

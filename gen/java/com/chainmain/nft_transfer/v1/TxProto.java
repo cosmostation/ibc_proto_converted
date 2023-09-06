@@ -248,6 +248,7 @@ public final class TxProto {
               com.chainmain.nft_transfer.v1.TxProto.MsgTransfer.class, com.chainmain.nft_transfer.v1.TxProto.MsgTransfer.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SOURCE_PORT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sourcePort_ = "";
@@ -549,7 +550,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTimeoutHeight() {
-      return timeoutHeight_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -625,7 +626,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, receiver_);
       }
-      if (timeoutHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getTimeoutHeight());
       }
       if (timeoutTimestamp_ != 0L) {
@@ -663,7 +664,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, receiver_);
       }
-      if (timeoutHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getTimeoutHeight());
       }
@@ -862,13 +863,19 @@ public final class TxProto {
 
       // Construct using com.chainmain.nft_transfer.v1.TxProto.MsgTransfer.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimeoutHeightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -939,14 +946,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.receiver_ = receiver_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.timeoutHeight_ = timeoutHeightBuilder_ == null
               ? timeoutHeight_
               : timeoutHeightBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.timeoutTimestamp_ = timeoutTimestamp_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1818,8 +1828,10 @@ public final class TxProto {
         } else {
           timeoutHeightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (timeoutHeight_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

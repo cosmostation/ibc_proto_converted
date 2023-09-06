@@ -81,6 +81,7 @@ public final class GenesisProto {
               com.injective.wasmx.v1.GenesisProto.RegisteredContractWithAddress.class, com.injective.wasmx.v1.GenesisProto.RegisteredContractWithAddress.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -128,7 +129,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasRegisteredContract() {
-      return registeredContract_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.wasmx.v1.RegisteredContract registered_contract = 2 [json_name = "registeredContract"];</code>
@@ -163,7 +164,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (registeredContract_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getRegisteredContract());
       }
       getUnknownFields().writeTo(output);
@@ -178,7 +179,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (registeredContract_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRegisteredContract());
       }
@@ -340,13 +341,19 @@ public final class GenesisProto {
 
       // Construct using com.injective.wasmx.v1.GenesisProto.RegisteredContractWithAddress.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRegisteredContractFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -394,11 +401,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.registeredContract_ = registeredContractBuilder_ == null
               ? registeredContract_
               : registeredContractBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -646,8 +656,10 @@ public final class GenesisProto {
         } else {
           registeredContractBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (registeredContract_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -882,6 +894,7 @@ public final class GenesisProto {
               com.injective.wasmx.v1.GenesisProto.GenesisState.class, com.injective.wasmx.v1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.wasmx.v1.WasmxProto.Params params_;
     /**
@@ -894,7 +907,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1000,7 +1013,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < registeredContracts_.size(); i++) {
@@ -1015,7 +1028,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1187,13 +1200,20 @@ public final class GenesisProto {
 
       // Construct using com.injective.wasmx.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getRegisteredContractsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1257,11 +1277,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.injective.wasmx.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1486,8 +1509,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

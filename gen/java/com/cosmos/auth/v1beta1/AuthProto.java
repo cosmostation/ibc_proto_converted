@@ -99,6 +99,7 @@ public final class AuthProto {
               com.cosmos.auth.v1beta1.AuthProto.BaseAccount.class, com.cosmos.auth.v1beta1.AuthProto.BaseAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -146,7 +147,7 @@ public final class AuthProto {
      */
     @java.lang.Override
     public boolean hasPubKey() {
-      return pubKey_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any pub_key = 2 [json_name = "pubKey", (.gogoproto.jsontag) = "public_key,omitempty", (.amino.field_name) = "public_key"];</code>
@@ -203,7 +204,7 @@ public final class AuthProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (pubKey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPubKey());
       }
       if (accountNumber_ != 0L) {
@@ -224,7 +225,7 @@ public final class AuthProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (pubKey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPubKey());
       }
@@ -410,13 +411,19 @@ public final class AuthProto {
 
       // Construct using com.cosmos.auth.v1beta1.AuthProto.BaseAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPubKeyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -466,10 +473,12 @@ public final class AuthProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pubKey_ = pubKeyBuilder_ == null
               ? pubKey_
               : pubKeyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.accountNumber_ = accountNumber_;
@@ -477,6 +486,7 @@ public final class AuthProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.sequence_ = sequence_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -740,8 +750,10 @@ public final class AuthProto {
         } else {
           pubKeyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pubKey_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1018,6 +1030,7 @@ public final class AuthProto {
               com.cosmos.auth.v1beta1.AuthProto.ModuleAccount.class, com.cosmos.auth.v1beta1.AuthProto.ModuleAccount.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.auth.v1beta1.AuthProto.BaseAccount baseAccount_;
     /**
@@ -1026,7 +1039,7 @@ public final class AuthProto {
      */
     @java.lang.Override
     public boolean hasBaseAccount() {
-      return baseAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true];</code>
@@ -1134,7 +1147,7 @@ public final class AuthProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -1152,7 +1165,7 @@ public final class AuthProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAccount());
       }
@@ -1335,13 +1348,19 @@ public final class AuthProto {
 
       // Construct using com.cosmos.auth.v1beta1.AuthProto.ModuleAccount.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1388,10 +1407,12 @@ public final class AuthProto {
 
       private void buildPartial0(com.cosmos.auth.v1beta1.AuthProto.ModuleAccount result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAccount_ = baseAccountBuilder_ == null
               ? baseAccount_
               : baseAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.name_ = name_;
@@ -1400,6 +1421,7 @@ public final class AuthProto {
           permissions_.makeImmutable();
           result.permissions_ = permissions_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1591,8 +1613,10 @@ public final class AuthProto {
         } else {
           baseAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseAccount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1966,7 +1990,7 @@ public final class AuthProto {
     }
     private ModuleCredential() {
       moduleName_ = "";
-      derivationKeys_ = java.util.Collections.emptyList();
+      derivationKeys_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -2038,7 +2062,8 @@ public final class AuthProto {
 
     public static final int DERIVATION_KEYS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> derivationKeys_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> derivationKeys_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * derivation_keys is for deriving a module account address (passed into address.Module)
@@ -2294,7 +2319,7 @@ public final class AuthProto {
         super.clear();
         bitField0_ = 0;
         moduleName_ = "";
-        derivationKeys_ = java.util.Collections.emptyList();
+        derivationKeys_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -2321,24 +2346,19 @@ public final class AuthProto {
       @java.lang.Override
       public com.cosmos.auth.v1beta1.AuthProto.ModuleCredential buildPartial() {
         com.cosmos.auth.v1beta1.AuthProto.ModuleCredential result = new com.cosmos.auth.v1beta1.AuthProto.ModuleCredential(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.cosmos.auth.v1beta1.AuthProto.ModuleCredential result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          derivationKeys_ = java.util.Collections.unmodifiableList(derivationKeys_);
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.derivationKeys_ = derivationKeys_;
       }
 
       private void buildPartial0(com.cosmos.auth.v1beta1.AuthProto.ModuleCredential result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.moduleName_ = moduleName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          derivationKeys_.makeImmutable();
+          result.derivationKeys_ = derivationKeys_;
         }
       }
 
@@ -2394,7 +2414,8 @@ public final class AuthProto {
         if (!other.derivationKeys_.isEmpty()) {
           if (derivationKeys_.isEmpty()) {
             derivationKeys_ = other.derivationKeys_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            derivationKeys_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureDerivationKeysIsMutable();
             derivationKeys_.addAll(other.derivationKeys_);
@@ -2547,12 +2568,12 @@ public final class AuthProto {
         return this;
       }
 
-      private java.util.List<com.google.protobuf.ByteString> derivationKeys_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> derivationKeys_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureDerivationKeysIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          derivationKeys_ = new java.util.ArrayList<com.google.protobuf.ByteString>(derivationKeys_);
-          bitField0_ |= 0x00000002;
+        if (!derivationKeys_.isModifiable()) {
+          derivationKeys_ = makeMutableCopy(derivationKeys_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -2565,8 +2586,8 @@ public final class AuthProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getDerivationKeysList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(derivationKeys_) : derivationKeys_;
+        derivationKeys_.makeImmutable();
+        return derivationKeys_;
       }
       /**
        * <pre>
@@ -2609,6 +2630,7 @@ public final class AuthProto {
         if (value == null) { throw new NullPointerException(); }
         ensureDerivationKeysIsMutable();
         derivationKeys_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2626,6 +2648,7 @@ public final class AuthProto {
         if (value == null) { throw new NullPointerException(); }
         ensureDerivationKeysIsMutable();
         derivationKeys_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2644,6 +2667,7 @@ public final class AuthProto {
         ensureDerivationKeysIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, derivationKeys_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2657,7 +2681,7 @@ public final class AuthProto {
        * @return This builder for chaining.
        */
       public Builder clearDerivationKeys() {
-        derivationKeys_ = java.util.Collections.emptyList();
+        derivationKeys_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8quicksilver/tokenfactory/v1beta1/authorityMetadata.proto\x12 quicksilver.tokenfactory.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"F\n\x16\x44\x65nomAuthorityMetadata\x12&\n\x05\x61\x64min\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"admin\"R\x05\x61\x64min:\x04\xe8\xa0\x1f\x01\x42\x9d\x02\n$com.quicksilver.tokenfactory.v1beta1B\x16\x41uthorityMetadataProtoP\x01Z;github.com/ingenuity-build/quicksilver/x/tokenfactory/types\xa2\x02\x03QTX\xaa\x02 Quicksilver.Tokenfactory.V1beta1\xca\x02 Quicksilver\\Tokenfactory\\V1beta1\xe2\x02,Quicksilver\\Tokenfactory\\V1beta1\\GPBMetadata\xea\x02\"Quicksilver::Tokenfactory::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8quicksilver/tokenfactory/v1beta1/authorityMetadata.proto\x12 quicksilver.tokenfactory.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"F\n\x16\x44\x65nomAuthorityMetadata\x12&\n\x05\x61\x64min\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"admin\"R\x05\x61\x64min:\x04\xe8\xa0\x1f\x01\x42\x9b\x02\n$com.quicksilver.tokenfactory.v1beta1B\x16\x41uthorityMetadataProtoZ;github.com/ingenuity-build/quicksilver/x/tokenfactory/types\xa2\x02\x03QTX\xaa\x02 Quicksilver.Tokenfactory.V1beta1\xca\x02 Quicksilver\\Tokenfactory\\V1beta1\xe2\x02,Quicksilver\\Tokenfactory\\V1beta1\\GPBMetadata\xea\x02\"Quicksilver::Tokenfactory::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.tokenfactory.v1beta1.authorityMetadata_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n$com.quicksilver.tokenfactory.v1beta1B\026AuthorityMetadataProtoP\001Z;github.com/ingenuity-build/quicksilver/x/tokenfactory/types\242\002\003QTX\252\002 Quicksilver.Tokenfactory.V1beta1\312\002 Quicksilver\\Tokenfactory\\V1beta1\342\002,Quicksilver\\Tokenfactory\\V1beta1\\GPBMetadata\352\002\"Quicksilver::Tokenfactory::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n$com.quicksilver.tokenfactory.v1beta1B\026AuthorityMetadataProtoZ;github.com/ingenuity-build/quicksilver/x/tokenfactory/types\242\002\003QTX\252\002 Quicksilver.Tokenfactory.V1beta1\312\002 Quicksilver\\Tokenfactory\\V1beta1\342\002,Quicksilver\\Tokenfactory\\V1beta1\\GPBMetadata\352\002\"Quicksilver::Tokenfactory::V1beta1'
   _DENOMAUTHORITYMETADATA.fields_by_name['admin']._options = None
   _DENOMAUTHORITYMETADATA.fields_by_name['admin']._serialized_options = b'\362\336\037\014yaml:\"admin\"'
   _DENOMAUTHORITYMETADATA._options = None

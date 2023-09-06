@@ -1819,6 +1819,7 @@ public final class AttributeProto {
               com.akash.base.v1beta2.AttributeProto.PlacementRequirements.class, com.akash.base.v1beta2.AttributeProto.PlacementRequirements.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SIGNED_BY_FIELD_NUMBER = 1;
     private com.akash.base.v1beta2.AttributeProto.SignedBy signedBy_;
     /**
@@ -1831,7 +1832,7 @@ public final class AttributeProto {
      */
     @java.lang.Override
     public boolean hasSignedBy() {
-      return signedBy_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1932,7 +1933,7 @@ public final class AttributeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (signedBy_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSignedBy());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -1947,7 +1948,7 @@ public final class AttributeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (signedBy_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSignedBy());
       }
@@ -2119,13 +2120,20 @@ public final class AttributeProto {
 
       // Construct using com.akash.base.v1beta2.AttributeProto.PlacementRequirements.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSignedByFieldBuilder();
+          getAttributesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2189,11 +2197,14 @@ public final class AttributeProto {
 
       private void buildPartial0(com.akash.base.v1beta2.AttributeProto.PlacementRequirements result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.signedBy_ = signedByBuilder_ == null
               ? signedBy_
               : signedByBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2418,8 +2429,10 @@ public final class AttributeProto {
         } else {
           signedByBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (signedBy_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

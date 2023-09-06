@@ -16,17 +16,16 @@ from pstake.liquidstakeibc.v1beta1 import params_pb2 as pstake_dot_liquidstakeib
 from pstake.liquidstakeibc.v1beta1 import liquidstakeibc_pb2 as pstake_dot_liquidstakeibc_dot_v1beta1_dot_liquidstakeibc__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+pstake/liquidstakeibc/v1beta1/genesis.proto\x12\x1dpstake.liquidstakeibc.v1beta1\x1a\x14gogoproto/gogo.proto\x1a*pstake/liquidstakeibc/v1beta1/params.proto\x1a\x32pstake/liquidstakeibc/v1beta1/liquidstakeibc.proto\"\x83\x03\n\x0cGenesisState\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32%.pstake.liquidstakeibc.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12I\n\x0bhost_chains\x18\x02 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.HostChainR\nhostChains\x12\x42\n\x08\x64\x65posits\x18\x03 \x03(\x0b\x32&.pstake.liquidstakeibc.v1beta1.DepositR\x08\x64\x65posits\x12H\n\nunbondings\x18\x04 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.UnbondingR\nunbondings\x12U\n\x0fuser_unbondings\x18\x05 \x03(\x0b\x32,.pstake.liquidstakeibc.v1beta1.UserUnbondingR\x0euserUnbondingsB\x8a\x02\n!com.pstake.liquidstakeibc.v1beta1B\x0cGenesisProtoP\x01ZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\xa2\x02\x03PLX\xaa\x02\x1dPstake.Liquidstakeibc.V1beta1\xca\x02\x1dPstake\\Liquidstakeibc\\V1beta1\xe2\x02)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\xea\x02\x1fPstake::Liquidstakeibc::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+pstake/liquidstakeibc/v1beta1/genesis.proto\x12\x1dpstake.liquidstakeibc.v1beta1\x1a\x14gogoproto/gogo.proto\x1a*pstake/liquidstakeibc/v1beta1/params.proto\x1a\x32pstake/liquidstakeibc/v1beta1/liquidstakeibc.proto\"\xe9\x03\n\x0cGenesisState\x12\x43\n\x06params\x18\x01 \x01(\x0b\x32%.pstake.liquidstakeibc.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12I\n\x0bhost_chains\x18\x02 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.HostChainR\nhostChains\x12\x42\n\x08\x64\x65posits\x18\x03 \x03(\x0b\x32&.pstake.liquidstakeibc.v1beta1.DepositR\x08\x64\x65posits\x12H\n\nunbondings\x18\x04 \x03(\x0b\x32(.pstake.liquidstakeibc.v1beta1.UnbondingR\nunbondings\x12U\n\x0fuser_unbondings\x18\x05 \x03(\x0b\x32,.pstake.liquidstakeibc.v1beta1.UserUnbondingR\x0euserUnbondings\x12\x64\n\x14validator_unbondings\x18\x06 \x03(\x0b\x32\x31.pstake.liquidstakeibc.v1beta1.ValidatorUnbondingR\x13validatorUnbondingsB\x88\x02\n!com.pstake.liquidstakeibc.v1beta1B\x0cGenesisProtoZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\xa2\x02\x03PLX\xaa\x02\x1dPstake.Liquidstakeibc.V1beta1\xca\x02\x1dPstake\\Liquidstakeibc\\V1beta1\xe2\x02)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\xea\x02\x1fPstake::Liquidstakeibc::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'pstake.liquidstakeibc.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n!com.pstake.liquidstakeibc.v1beta1B\014GenesisProtoP\001ZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1beta1\312\002\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\352\002\037Pstake::Liquidstakeibc::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n!com.pstake.liquidstakeibc.v1beta1B\014GenesisProtoZAgithub.com/persistenceOne/pstake-native/v2/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1beta1\312\002\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1beta1\\GPBMetadata\352\002\037Pstake::Liquidstakeibc::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=197
-  _globals['_GENESISSTATE']._serialized_end=584
+  _globals['_GENESISSTATE']._serialized_end=686
 # @@protoc_insertion_point(module_scope)

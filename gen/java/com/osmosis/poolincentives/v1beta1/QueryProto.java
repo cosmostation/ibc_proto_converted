@@ -628,6 +628,7 @@ public final class QueryProto {
                 com.osmosis.poolincentives.v1beta1.QueryProto.QueryGaugeIdsResponse.GaugeIdWithDuration.class, com.osmosis.poolincentives.v1beta1.QueryProto.QueryGaugeIdsResponse.GaugeIdWithDuration.Builder.class);
       }
 
+      private int bitField0_;
       public static final int GAUGE_ID_FIELD_NUMBER = 1;
       private long gaugeId_ = 0L;
       /**
@@ -647,7 +648,7 @@ public final class QueryProto {
        */
       @java.lang.Override
       public boolean hasDuration() {
-        return duration_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.google.protobuf.Duration duration = 2 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -721,7 +722,7 @@ public final class QueryProto {
         if (gaugeId_ != 0L) {
           output.writeUInt64(1, gaugeId_);
         }
-        if (duration_ != null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           output.writeMessage(2, getDuration());
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gaugeIncentivePercentage_)) {
@@ -740,7 +741,7 @@ public final class QueryProto {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt64Size(1, gaugeId_);
         }
-        if (duration_ != null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getDuration());
         }
@@ -910,13 +911,19 @@ public final class QueryProto {
 
         // Construct using com.osmosis.poolincentives.v1beta1.QueryProto.QueryGaugeIdsResponse.GaugeIdWithDuration.newBuilder()
         private Builder() {
-
+          maybeForceBuilderInitialization();
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getDurationFieldBuilder();
+          }
         }
         @java.lang.Override
         public Builder clear() {
@@ -965,14 +972,17 @@ public final class QueryProto {
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.gaugeId_ = gaugeId_;
           }
+          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.duration_ = durationBuilder_ == null
                 ? duration_
                 : durationBuilder_.build();
+            to_bitField0_ |= 0x00000001;
           }
           if (((from_bitField0_ & 0x00000004) != 0)) {
             result.gaugeIncentivePercentage_ = gaugeIncentivePercentage_;
           }
+          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -1188,8 +1198,10 @@ public final class QueryProto {
           } else {
             durationBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000002;
-          onChanged();
+          if (duration_ != null) {
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
           return this;
         }
         /**
@@ -2545,6 +2557,7 @@ public final class QueryProto {
               com.osmosis.poolincentives.v1beta1.QueryProto.QueryDistrInfoResponse.class, com.osmosis.poolincentives.v1beta1.QueryProto.QueryDistrInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DISTR_INFO_FIELD_NUMBER = 1;
     private com.osmosis.poolincentives.v1beta1.IncentivesProto.DistrInfo distrInfo_;
     /**
@@ -2553,7 +2566,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDistrInfo() {
-      return distrInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.poolincentives.v1beta1.DistrInfo distr_info = 1 [json_name = "distrInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"distr_info&#92;""];</code>
@@ -2585,7 +2598,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (distrInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDistrInfo());
       }
       getUnknownFields().writeTo(output);
@@ -2597,7 +2610,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (distrInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDistrInfo());
       }
@@ -2755,13 +2768,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.poolincentives.v1beta1.QueryProto.QueryDistrInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDistrInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2805,11 +2824,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.poolincentives.v1beta1.QueryProto.QueryDistrInfoResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.distrInfo_ = distrInfoBuilder_ == null
               ? distrInfo_
               : distrInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2975,8 +2997,10 @@ public final class QueryProto {
         } else {
           distrInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (distrInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3542,6 +3566,7 @@ public final class QueryProto {
               com.osmosis.poolincentives.v1beta1.QueryProto.QueryParamsResponse.class, com.osmosis.poolincentives.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.osmosis.poolincentives.v1beta1.IncentivesProto.Params params_;
     /**
@@ -3550,7 +3575,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.osmosis.poolincentives.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -3582,7 +3607,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -3594,7 +3619,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -3752,13 +3777,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.poolincentives.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3802,11 +3833,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.osmosis.poolincentives.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3972,8 +4006,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5730,6 +5766,7 @@ public final class QueryProto {
               com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.class, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -5749,7 +5786,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLockableDuration() {
-      return lockableDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration lockable_duration = 2 [json_name = "lockableDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -5795,7 +5832,7 @@ public final class QueryProto {
       if (poolId_ != 0L) {
         output.writeUInt64(1, poolId_);
       }
-      if (lockableDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getLockableDuration());
       }
       if (gaugeId_ != 0L) {
@@ -5814,7 +5851,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, poolId_);
       }
-      if (lockableDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLockableDuration());
       }
@@ -5986,13 +6023,19 @@ public final class QueryProto {
 
       // Construct using com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLockableDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6041,14 +6084,17 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.poolId_ = poolId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lockableDuration_ = lockableDurationBuilder_ == null
               ? lockableDuration_
               : lockableDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.gaugeId_ = gaugeId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6262,8 +6308,10 @@ public final class QueryProto {
         } else {
           lockableDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (lockableDuration_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

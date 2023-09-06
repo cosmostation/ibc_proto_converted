@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1csommelier/cork/v1/cork.proto\x12\x07\x63ork.v1\x1a\x19\x63osmos_proto/cosmos.proto\"r\n\x04\x43ork\x12\x32\n\x15\x65ncoded_contract_call\x18\x01 \x01(\x0cR\x13\x65ncodedContractCall\x12\x36\n\x17target_contract_address\x18\x02 \x01(\tR\x15targetContractAddress\"P\n\rValidatorCork\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12\x1c\n\tvalidator\x18\x02 \x01(\tR\tvalidator\"s\n\rScheduledCork\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12!\n\x0c\x62lock_height\x18\x02 \x01(\x04R\x0b\x62lockHeight\x12\x1c\n\tvalidator\x18\x03 \x01(\tR\tvalidator\"\x1f\n\x0b\x43\x65llarIDSet\x12\x10\n\x03ids\x18\x01 \x03(\tR\x03idsB\x83\x01\n\x0b\x63om.cork.v1B\tCorkProtoP\x01Z,github.com/peggyjv/sommelier/v4/x/cork/types\xa2\x02\x03\x43XX\xaa\x02\x07\x43ork.V1\xca\x02\x07\x43ork\\V1\xe2\x02\x13\x43ork\\V1\\GPBMetadata\xea\x02\x08\x43ork::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1csommelier/cork/v1/cork.proto\x12\x07\x63ork.v1\x1a\x19\x63osmos_proto/cosmos.proto\"r\n\x04\x43ork\x12\x32\n\x15\x65ncoded_contract_call\x18\x01 \x01(\x0cR\x13\x65ncodedContractCall\x12\x36\n\x17target_contract_address\x18\x02 \x01(\tR\x15targetContractAddress\"P\n\rValidatorCork\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12\x1c\n\tvalidator\x18\x02 \x01(\tR\tvalidator\"s\n\rScheduledCork\x12!\n\x04\x63ork\x18\x01 \x01(\x0b\x32\r.cork.v1.CorkR\x04\x63ork\x12!\n\x0c\x62lock_height\x18\x02 \x01(\x04R\x0b\x62lockHeight\x12\x1c\n\tvalidator\x18\x03 \x01(\tR\tvalidator\"\x1f\n\x0b\x43\x65llarIDSet\x12\x10\n\x03ids\x18\x01 \x03(\tR\x03idsB\x81\x01\n\x0b\x63om.cork.v1B\tCorkProtoZ,github.com/peggyjv/sommelier/v4/x/cork/types\xa2\x02\x03\x43XX\xaa\x02\x07\x43ork.V1\xca\x02\x07\x43ork\\V1\xe2\x02\x13\x43ork\\V1\\GPBMetadata\xea\x02\x08\x43ork::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.cork.v1.cork_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\013com.cork.v1B\tCorkProtoP\001Z,github.com/peggyjv/sommelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V1\312\002\007Cork\\V1\342\002\023Cork\\V1\\GPBMetadata\352\002\010Cork::V1'
+  DESCRIPTOR._serialized_options = b'\n\013com.cork.v1B\tCorkProtoZ,github.com/peggyjv/sommelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V1\312\002\007Cork\\V1\342\002\023Cork\\V1\\GPBMetadata\352\002\010Cork::V1'
   _globals['_CORK']._serialized_start=68
   _globals['_CORK']._serialized_end=182
   _globals['_VALIDATORCORK']._serialized_start=184

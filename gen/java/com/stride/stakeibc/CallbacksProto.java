@@ -2569,6 +2569,7 @@ public final class CallbacksProto {
               com.stride.stakeibc.CallbacksProto.ReinvestCallback.class, com.stride.stakeibc.CallbacksProto.ReinvestCallback.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REINVEST_AMOUNT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin reinvestAmount_;
     /**
@@ -2577,7 +2578,7 @@ public final class CallbacksProto {
      */
     @java.lang.Override
     public boolean hasReinvestAmount() {
-      return reinvestAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin reinvest_amount = 1 [json_name = "reinvestAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2648,7 +2649,7 @@ public final class CallbacksProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (reinvestAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getReinvestAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostZoneId_)) {
@@ -2663,7 +2664,7 @@ public final class CallbacksProto {
       if (size != -1) return size;
 
       size = 0;
-      if (reinvestAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReinvestAmount());
       }
@@ -2832,13 +2833,19 @@ public final class CallbacksProto {
 
       // Construct using com.stride.stakeibc.CallbacksProto.ReinvestCallback.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getReinvestAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2883,14 +2890,17 @@ public final class CallbacksProto {
 
       private void buildPartial0(com.stride.stakeibc.CallbacksProto.ReinvestCallback result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reinvestAmount_ = reinvestAmountBuilder_ == null
               ? reinvestAmount_
               : reinvestAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hostZoneId_ = hostZoneId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3066,8 +3076,10 @@ public final class CallbacksProto {
         } else {
           reinvestAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (reinvestAmount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3435,7 +3447,8 @@ public final class CallbacksProto {
 
     public static final int EPOCH_UNBONDING_RECORD_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList epochUnbondingRecordIds_;
+    private com.google.protobuf.Internal.LongList epochUnbondingRecordIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 epoch_unbonding_record_ids = 3 [json_name = "epochUnbondingRecordIds"];</code>
      * @return A list containing the epochUnbondingRecordIds.
@@ -3748,17 +3761,16 @@ public final class CallbacksProto {
         } else {
           result.splitDelegations_ = splitDelegationsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          epochUnbondingRecordIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.epochUnbondingRecordIds_ = epochUnbondingRecordIds_;
       }
 
       private void buildPartial0(com.stride.stakeibc.CallbacksProto.UndelegateCallback result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.hostZoneId_ = hostZoneId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          epochUnbondingRecordIds_.makeImmutable();
+          result.epochUnbondingRecordIds_ = epochUnbondingRecordIds_;
         }
       }
 
@@ -3840,7 +3852,8 @@ public final class CallbacksProto {
         if (!other.epochUnbondingRecordIds_.isEmpty()) {
           if (epochUnbondingRecordIds_.isEmpty()) {
             epochUnbondingRecordIds_ = other.epochUnbondingRecordIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            epochUnbondingRecordIds_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureEpochUnbondingRecordIdsIsMutable();
             epochUnbondingRecordIds_.addAll(other.epochUnbondingRecordIds_);
@@ -4238,10 +4251,10 @@ public final class CallbacksProto {
 
       private com.google.protobuf.Internal.LongList epochUnbondingRecordIds_ = emptyLongList();
       private void ensureEpochUnbondingRecordIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          epochUnbondingRecordIds_ = mutableCopy(epochUnbondingRecordIds_);
-          bitField0_ |= 0x00000004;
+        if (!epochUnbondingRecordIds_.isModifiable()) {
+          epochUnbondingRecordIds_ = makeMutableCopy(epochUnbondingRecordIds_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 epoch_unbonding_record_ids = 3 [json_name = "epochUnbondingRecordIds"];</code>
@@ -4249,8 +4262,8 @@ public final class CallbacksProto {
        */
       public java.util.List<java.lang.Long>
           getEpochUnbondingRecordIdsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(epochUnbondingRecordIds_) : epochUnbondingRecordIds_;
+        epochUnbondingRecordIds_.makeImmutable();
+        return epochUnbondingRecordIds_;
       }
       /**
        * <code>repeated uint64 epoch_unbonding_record_ids = 3 [json_name = "epochUnbondingRecordIds"];</code>
@@ -4278,6 +4291,7 @@ public final class CallbacksProto {
 
         ensureEpochUnbondingRecordIdsIsMutable();
         epochUnbondingRecordIds_.setLong(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4290,6 +4304,7 @@ public final class CallbacksProto {
 
         ensureEpochUnbondingRecordIdsIsMutable();
         epochUnbondingRecordIds_.addLong(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4303,6 +4318,7 @@ public final class CallbacksProto {
         ensureEpochUnbondingRecordIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, epochUnbondingRecordIds_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4495,7 +4511,8 @@ public final class CallbacksProto {
 
     public static final int EPOCH_UNBONDING_RECORD_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList epochUnbondingRecordIds_;
+    private com.google.protobuf.Internal.LongList epochUnbondingRecordIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 epoch_unbonding_record_ids = 2 [json_name = "epochUnbondingRecordIds"];</code>
      * @return A list containing the epochUnbondingRecordIds.
@@ -4772,24 +4789,19 @@ public final class CallbacksProto {
       @java.lang.Override
       public com.stride.stakeibc.CallbacksProto.RedemptionCallback buildPartial() {
         com.stride.stakeibc.CallbacksProto.RedemptionCallback result = new com.stride.stakeibc.CallbacksProto.RedemptionCallback(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.stride.stakeibc.CallbacksProto.RedemptionCallback result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          epochUnbondingRecordIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.epochUnbondingRecordIds_ = epochUnbondingRecordIds_;
       }
 
       private void buildPartial0(com.stride.stakeibc.CallbacksProto.RedemptionCallback result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.hostZoneId_ = hostZoneId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          epochUnbondingRecordIds_.makeImmutable();
+          result.epochUnbondingRecordIds_ = epochUnbondingRecordIds_;
         }
       }
 
@@ -4845,7 +4857,8 @@ public final class CallbacksProto {
         if (!other.epochUnbondingRecordIds_.isEmpty()) {
           if (epochUnbondingRecordIds_.isEmpty()) {
             epochUnbondingRecordIds_ = other.epochUnbondingRecordIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            epochUnbondingRecordIds_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureEpochUnbondingRecordIdsIsMutable();
             epochUnbondingRecordIds_.addAll(other.epochUnbondingRecordIds_);
@@ -4990,10 +5003,10 @@ public final class CallbacksProto {
 
       private com.google.protobuf.Internal.LongList epochUnbondingRecordIds_ = emptyLongList();
       private void ensureEpochUnbondingRecordIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          epochUnbondingRecordIds_ = mutableCopy(epochUnbondingRecordIds_);
-          bitField0_ |= 0x00000002;
+        if (!epochUnbondingRecordIds_.isModifiable()) {
+          epochUnbondingRecordIds_ = makeMutableCopy(epochUnbondingRecordIds_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 epoch_unbonding_record_ids = 2 [json_name = "epochUnbondingRecordIds"];</code>
@@ -5001,8 +5014,8 @@ public final class CallbacksProto {
        */
       public java.util.List<java.lang.Long>
           getEpochUnbondingRecordIdsList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(epochUnbondingRecordIds_) : epochUnbondingRecordIds_;
+        epochUnbondingRecordIds_.makeImmutable();
+        return epochUnbondingRecordIds_;
       }
       /**
        * <code>repeated uint64 epoch_unbonding_record_ids = 2 [json_name = "epochUnbondingRecordIds"];</code>
@@ -5030,6 +5043,7 @@ public final class CallbacksProto {
 
         ensureEpochUnbondingRecordIdsIsMutable();
         epochUnbondingRecordIds_.setLong(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5042,6 +5056,7 @@ public final class CallbacksProto {
 
         ensureEpochUnbondingRecordIdsIsMutable();
         epochUnbondingRecordIds_.addLong(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5055,6 +5070,7 @@ public final class CallbacksProto {
         ensureEpochUnbondingRecordIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, epochUnbondingRecordIds_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

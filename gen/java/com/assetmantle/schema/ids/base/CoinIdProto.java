@@ -68,6 +68,7 @@ public final class CoinIdProto {
               com.assetmantle.schema.ids.base.CoinIdProto.CoinID.class, com.assetmantle.schema.ids.base.CoinIdProto.CoinID.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STRING_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.StringIdProto.StringID stringID_;
     /**
@@ -76,7 +77,7 @@ public final class CoinIdProto {
      */
     @java.lang.Override
     public boolean hasStringID() {
-      return stringID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.StringID string_i_d = 1 [json_name = "stringID"];</code>
@@ -108,7 +109,7 @@ public final class CoinIdProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (stringID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStringID());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class CoinIdProto {
       if (size != -1) return size;
 
       size = 0;
-      if (stringID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStringID());
       }
@@ -278,13 +279,19 @@ public final class CoinIdProto {
 
       // Construct using com.assetmantle.schema.ids.base.CoinIdProto.CoinID.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStringIDFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class CoinIdProto {
 
       private void buildPartial0(com.assetmantle.schema.ids.base.CoinIdProto.CoinID result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.stringID_ = stringIDBuilder_ == null
               ? stringID_
               : stringIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class CoinIdProto {
         } else {
           stringIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (stringID_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

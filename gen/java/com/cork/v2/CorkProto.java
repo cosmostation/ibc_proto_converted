@@ -775,6 +775,7 @@ public final class CorkProto {
               com.cork.v2.CorkProto.ScheduledCork.class, com.cork.v2.CorkProto.ScheduledCork.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CORK_FIELD_NUMBER = 1;
     private com.cork.v2.CorkProto.Cork cork_;
     /**
@@ -783,7 +784,7 @@ public final class CorkProto {
      */
     @java.lang.Override
     public boolean hasCork() {
-      return cork_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cork.v2.Cork cork = 1 [json_name = "cork"];</code>
@@ -876,7 +877,7 @@ public final class CorkProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (cork_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCork());
       }
       if (blockHeight_ != 0L) {
@@ -897,7 +898,7 @@ public final class CorkProto {
       if (size != -1) return size;
 
       size = 0;
-      if (cork_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCork());
       }
@@ -1079,13 +1080,19 @@ public final class CorkProto {
 
       // Construct using com.cork.v2.CorkProto.ScheduledCork.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCorkFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1132,10 +1139,12 @@ public final class CorkProto {
 
       private void buildPartial0(com.cork.v2.CorkProto.ScheduledCork result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cork_ = corkBuilder_ == null
               ? cork_
               : corkBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.blockHeight_ = blockHeight_;
@@ -1146,6 +1155,7 @@ public final class CorkProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.id_ = id_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1337,8 +1347,10 @@ public final class CorkProto {
         } else {
           corkBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (cork_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1668,6 +1680,7 @@ public final class CorkProto {
               com.cork.v2.CorkProto.CorkResult.class, com.cork.v2.CorkProto.CorkResult.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CORK_FIELD_NUMBER = 1;
     private com.cork.v2.CorkProto.Cork cork_;
     /**
@@ -1676,7 +1689,7 @@ public final class CorkProto {
      */
     @java.lang.Override
     public boolean hasCork() {
-      return cork_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cork.v2.Cork cork = 1 [json_name = "cork"];</code>
@@ -1769,7 +1782,7 @@ public final class CorkProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (cork_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCork());
       }
       if (blockHeight_ != 0L) {
@@ -1790,7 +1803,7 @@ public final class CorkProto {
       if (size != -1) return size;
 
       size = 0;
-      if (cork_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCork());
       }
@@ -1973,13 +1986,19 @@ public final class CorkProto {
 
       // Construct using com.cork.v2.CorkProto.CorkResult.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCorkFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2026,10 +2045,12 @@ public final class CorkProto {
 
       private void buildPartial0(com.cork.v2.CorkProto.CorkResult result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cork_ = corkBuilder_ == null
               ? cork_
               : corkBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.blockHeight_ = blockHeight_;
@@ -2040,6 +2061,7 @@ public final class CorkProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.approvalPercentage_ = approvalPercentage_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2231,8 +2253,10 @@ public final class CorkProto {
         } else {
           corkBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (cork_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

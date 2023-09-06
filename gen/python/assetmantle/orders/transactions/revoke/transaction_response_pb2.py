@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAassetmantle/orders/transactions/revoke/transaction_response.proto\x12.assetmantle.modules.orders.transactions.revoke\"\x15\n\x13TransactionResponseB\xac\x02\n2com.assetmantle.modules.orders.transactions.revokeB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MOTR\xaa\x02.Assetmantle.Modules.Orders.Transactions.Revoke\xca\x02.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\xe2\x02:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Orders::Transactions::Revokeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAassetmantle/orders/transactions/revoke/transaction_response.proto\x12.assetmantle.modules.orders.transactions.revoke\"\x15\n\x13TransactionResponseB\xaa\x02\n2com.assetmantle.modules.orders.transactions.revokeB\x18TransactionResponseProto\xa2\x02\x05\x41MOTR\xaa\x02.Assetmantle.Modules.Orders.Transactions.Revoke\xca\x02.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\xe2\x02:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Orders::Transactions::Revokeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.revoke.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.orders.transactions.revokeB\030TransactionResponseProtoP\001\242\002\005AMOTR\252\002.Assetmantle.Modules.Orders.Transactions.Revoke\312\002.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\342\002:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\352\0022Assetmantle::Modules::Orders::Transactions::Revoke'
+  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.orders.transactions.revokeB\030TransactionResponseProto\242\002\005AMOTR\252\002.Assetmantle.Modules.Orders.Transactions.Revoke\312\002.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\342\002:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\352\0022Assetmantle::Modules::Orders::Transactions::Revoke'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=117
   _globals['_TRANSACTIONRESPONSE']._serialized_end=138
 # @@protoc_insertion_point(module_scope)

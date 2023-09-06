@@ -94,6 +94,7 @@ public final class AuthorityProto {
               com.em.authority.v1.AuthorityProto.Authority.class, com.em.authority.v1.AuthorityProto.Authority.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -180,7 +181,7 @@ public final class AuthorityProto {
      */
     @java.lang.Override
     public boolean hasLastModified() {
-      return lastModified_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -218,7 +219,7 @@ public final class AuthorityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formerAddress_);
       }
-      if (lastModified_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getLastModified());
       }
       getUnknownFields().writeTo(output);
@@ -236,7 +237,7 @@ public final class AuthorityProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formerAddress_);
       }
-      if (lastModified_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLastModified());
       }
@@ -402,13 +403,19 @@ public final class AuthorityProto {
 
       // Construct using com.em.authority.v1.AuthorityProto.Authority.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLastModifiedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,11 +467,14 @@ public final class AuthorityProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.formerAddress_ = formerAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.lastModified_ = lastModifiedBuilder_ == null
               ? lastModified_
               : lastModifiedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -794,8 +804,10 @@ public final class AuthorityProto {
         } else {
           lastModifiedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (lastModified_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

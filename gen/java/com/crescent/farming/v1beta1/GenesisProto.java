@@ -397,6 +397,7 @@ public final class GenesisProto {
               com.crescent.farming.v1beta1.GenesisProto.GenesisState.class, com.crescent.farming.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.crescent.farming.v1beta1.FarmingProto.Params params_;
     /**
@@ -409,7 +410,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -872,7 +873,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasLastEpochTime() {
-      return lastEpochTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -927,7 +928,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       if (globalPlanId_ != 0L) {
@@ -960,7 +961,7 @@ public final class GenesisProto {
       for (int i = 0; i < rewardPoolCoins_.size(); i++) {
         output.writeMessage(11, rewardPoolCoins_.get(i));
       }
-      if (lastEpochTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(12, getLastEpochTime());
       }
       if (currentEpochDays_ != 0) {
@@ -975,7 +976,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1019,7 +1020,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, rewardPoolCoins_.get(i));
       }
-      if (lastEpochTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getLastEpochTime());
       }
@@ -1257,13 +1258,29 @@ public final class GenesisProto {
 
       // Construct using com.crescent.farming.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getPlanRecordsFieldBuilder();
+          getStakingRecordsFieldBuilder();
+          getQueuedStakingRecordsFieldBuilder();
+          getHistoricalRewardsRecordsFieldBuilder();
+          getOutstandingRewardsRecordsFieldBuilder();
+          getUnharvestedRewardsRecordsFieldBuilder();
+          getCurrentEpochRecordsFieldBuilder();
+          getTotalStakingsRecordsFieldBuilder();
+          getRewardPoolCoinsFieldBuilder();
+          getLastEpochTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1462,10 +1479,12 @@ public final class GenesisProto {
 
       private void buildPartial0(com.crescent.farming.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.globalPlanId_ = globalPlanId_;
@@ -1474,10 +1493,12 @@ public final class GenesisProto {
           result.lastEpochTime_ = lastEpochTimeBuilder_ == null
               ? lastEpochTime_
               : lastEpochTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.currentEpochDays_ = currentEpochDays_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2040,8 +2061,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4549,8 +4572,10 @@ public final class GenesisProto {
         } else {
           lastEpochTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000800;
-        onChanged();
+        if (lastEpochTime_ != null) {
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4845,6 +4870,7 @@ public final class GenesisProto {
               com.crescent.farming.v1beta1.GenesisProto.PlanRecord.class, com.crescent.farming.v1beta1.GenesisProto.PlanRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PLAN_FIELD_NUMBER = 1;
     private com.google.protobuf.Any plan_;
     /**
@@ -4857,7 +4883,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPlan() {
-      return plan_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4963,7 +4989,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPlan());
       }
       for (int i = 0; i < farmingPoolCoins_.size(); i++) {
@@ -4978,7 +5004,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPlan());
       }
@@ -5150,13 +5176,20 @@ public final class GenesisProto {
 
       // Construct using com.crescent.farming.v1beta1.GenesisProto.PlanRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlanFieldBuilder();
+          getFarmingPoolCoinsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5220,11 +5253,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.crescent.farming.v1beta1.GenesisProto.PlanRecord result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.plan_ = planBuilder_ == null
               ? plan_
               : planBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5449,8 +5485,10 @@ public final class GenesisProto {
         } else {
           planBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (plan_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5995,6 +6033,7 @@ public final class GenesisProto {
               com.crescent.farming.v1beta1.GenesisProto.StakingRecord.class, com.crescent.farming.v1beta1.GenesisProto.StakingRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object stakingCoinDenom_ = "";
@@ -6081,7 +6120,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasStaking() {
-      return staking_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.farming.v1beta1.Staking staking = 3 [json_name = "staking", (.gogoproto.nullable) = false];</code>
@@ -6119,7 +6158,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmer_);
       }
-      if (staking_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getStaking());
       }
       getUnknownFields().writeTo(output);
@@ -6137,7 +6176,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmer_);
       }
-      if (staking_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStaking());
       }
@@ -6307,13 +6346,19 @@ public final class GenesisProto {
 
       // Construct using com.crescent.farming.v1beta1.GenesisProto.StakingRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakingFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6365,11 +6410,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.farmer_ = farmer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.staking_ = stakingBuilder_ == null
               ? staking_
               : stakingBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6699,8 +6747,10 @@ public final class GenesisProto {
         } else {
           stakingBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (staking_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6914,6 +6964,7 @@ public final class GenesisProto {
               com.crescent.farming.v1beta1.GenesisProto.QueuedStakingRecord.class, com.crescent.farming.v1beta1.GenesisProto.QueuedStakingRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int END_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp endTime_;
     /**
@@ -6922,7 +6973,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return endTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 1 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -7026,7 +7077,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasQueuedStaking() {
-      return queuedStaking_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.crescent.farming.v1beta1.QueuedStaking queued_staking = 4 [json_name = "queuedStaking", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"queued_staking&#92;""];</code>
@@ -7058,7 +7109,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getEndTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
@@ -7067,7 +7118,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, farmer_);
       }
-      if (queuedStaking_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getQueuedStaking());
       }
       getUnknownFields().writeTo(output);
@@ -7079,7 +7130,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEndTime());
       }
@@ -7089,7 +7140,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, farmer_);
       }
-      if (queuedStaking_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getQueuedStaking());
       }
@@ -7268,13 +7319,20 @@ public final class GenesisProto {
 
       // Construct using com.crescent.farming.v1beta1.GenesisProto.QueuedStakingRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEndTimeFieldBuilder();
+          getQueuedStakingFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7325,10 +7383,12 @@ public final class GenesisProto {
 
       private void buildPartial0(com.crescent.farming.v1beta1.GenesisProto.QueuedStakingRecord result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.stakingCoinDenom_ = stakingCoinDenom_;
@@ -7340,7 +7400,9 @@ public final class GenesisProto {
           result.queuedStaking_ = queuedStakingBuilder_ == null
               ? queuedStaking_
               : queuedStakingBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7536,8 +7598,10 @@ public final class GenesisProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (endTime_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7799,8 +7863,10 @@ public final class GenesisProto {
         } else {
           queuedStakingBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (queuedStaking_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9254,6 +9320,7 @@ public final class GenesisProto {
               com.crescent.farming.v1beta1.GenesisProto.HistoricalRewardsRecord.class, com.crescent.farming.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object stakingCoinDenom_ = "";
@@ -9312,7 +9379,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasHistoricalRewards() {
-      return historicalRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.farming.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"historical_rewards&#92;""];</code>
@@ -9350,7 +9417,7 @@ public final class GenesisProto {
       if (epoch_ != 0L) {
         output.writeUInt64(2, epoch_);
       }
-      if (historicalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getHistoricalRewards());
       }
       getUnknownFields().writeTo(output);
@@ -9369,7 +9436,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, epoch_);
       }
-      if (historicalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getHistoricalRewards());
       }
@@ -9540,13 +9607,19 @@ public final class GenesisProto {
 
       // Construct using com.crescent.farming.v1beta1.GenesisProto.HistoricalRewardsRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHistoricalRewardsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9598,11 +9671,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.epoch_ = epoch_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.historicalRewards_ = historicalRewardsBuilder_ == null
               ? historicalRewards_
               : historicalRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9890,8 +9966,10 @@ public final class GenesisProto {
         } else {
           historicalRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (historicalRewards_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10077,6 +10155,7 @@ public final class GenesisProto {
               com.crescent.farming.v1beta1.GenesisProto.OutstandingRewardsRecord.class, com.crescent.farming.v1beta1.GenesisProto.OutstandingRewardsRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object stakingCoinDenom_ = "";
@@ -10124,7 +10203,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasOutstandingRewards() {
-      return outstandingRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.farming.v1beta1.OutstandingRewards outstanding_rewards = 2 [json_name = "outstandingRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outstanding_rewards&#92;""];</code>
@@ -10159,7 +10238,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingCoinDenom_);
       }
-      if (outstandingRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getOutstandingRewards());
       }
       getUnknownFields().writeTo(output);
@@ -10174,7 +10253,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingCoinDenom_);
       }
-      if (outstandingRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOutstandingRewards());
       }
@@ -10340,13 +10419,19 @@ public final class GenesisProto {
 
       // Construct using com.crescent.farming.v1beta1.GenesisProto.OutstandingRewardsRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOutstandingRewardsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10394,11 +10479,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.stakingCoinDenom_ = stakingCoinDenom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.outstandingRewards_ = outstandingRewardsBuilder_ == null
               ? outstandingRewards_
               : outstandingRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10646,8 +10734,10 @@ public final class GenesisProto {
         } else {
           outstandingRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (outstandingRewards_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10842,6 +10932,7 @@ public final class GenesisProto {
               com.crescent.farming.v1beta1.GenesisProto.UnharvestedRewardsRecord.class, com.crescent.farming.v1beta1.GenesisProto.UnharvestedRewardsRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FARMER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object farmer_ = "";
@@ -10928,7 +11019,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasUnharvestedRewards() {
-      return unharvestedRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.farming.v1beta1.UnharvestedRewards unharvested_rewards = 3 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unharvested_rewards&#92;""];</code>
@@ -10966,7 +11057,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingCoinDenom_);
       }
-      if (unharvestedRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getUnharvestedRewards());
       }
       getUnknownFields().writeTo(output);
@@ -10984,7 +11075,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingCoinDenom_);
       }
-      if (unharvestedRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUnharvestedRewards());
       }
@@ -11150,13 +11241,19 @@ public final class GenesisProto {
 
       // Construct using com.crescent.farming.v1beta1.GenesisProto.UnharvestedRewardsRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnharvestedRewardsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11208,11 +11305,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.stakingCoinDenom_ = stakingCoinDenom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.unharvestedRewards_ = unharvestedRewardsBuilder_ == null
               ? unharvestedRewards_
               : unharvestedRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11542,8 +11642,10 @@ public final class GenesisProto {
         } else {
           unharvestedRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (unharvestedRewards_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

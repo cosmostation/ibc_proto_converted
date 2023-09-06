@@ -489,6 +489,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryParamsResponse.class, com.noble.fiattokenfactory.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.ParamsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1693,6 +1705,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetBlacklistedResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetBlacklistedResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BLACKLISTED_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.BlacklistedProto.Blacklisted blacklisted_;
     /**
@@ -1701,7 +1714,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBlacklisted() {
-      return blacklisted_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
@@ -1733,7 +1746,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (blacklisted_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBlacklisted());
       }
       getUnknownFields().writeTo(output);
@@ -1745,7 +1758,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (blacklisted_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBlacklisted());
       }
@@ -1903,13 +1916,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetBlacklistedResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBlacklistedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1953,11 +1972,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetBlacklistedResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blacklisted_ = blacklistedBuilder_ == null
               ? blacklisted_
               : blacklistedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2123,8 +2145,10 @@ public final class QueryProto {
         } else {
           blacklistedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (blacklisted_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2293,6 +2317,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedRequest.class, com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -2301,7 +2326,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -2333,7 +2358,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2345,7 +2370,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -2503,13 +2528,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2553,11 +2584,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2723,8 +2757,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2918,6 +2954,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedResponse.class, com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BLACKLISTED_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.noble.fiattokenfactory.BlacklistedProto.Blacklisted> blacklisted_;
@@ -2967,7 +3004,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -3002,7 +3039,7 @@ public final class QueryProto {
       for (int i = 0; i < blacklisted_.size(); i++) {
         output.writeMessage(1, blacklisted_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3018,7 +3055,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, blacklisted_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3182,13 +3219,20 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBlacklistedFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3252,11 +3296,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryAllBlacklistedResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3701,8 +3748,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4268,6 +4317,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetPausedResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetPausedResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAUSED_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.PausedProto.Paused paused_;
     /**
@@ -4276,7 +4326,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPaused() {
-      return paused_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
@@ -4308,7 +4358,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (paused_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPaused());
       }
       getUnknownFields().writeTo(output);
@@ -4320,7 +4370,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (paused_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPaused());
       }
@@ -4478,13 +4528,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetPausedResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPausedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4528,11 +4584,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetPausedResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.paused_ = pausedBuilder_ == null
               ? paused_
               : pausedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4698,8 +4757,10 @@ public final class QueryProto {
         } else {
           pausedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (paused_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5265,6 +5326,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetMasterMinterResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetMasterMinterResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MASTERMINTER_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.MasterMinterProto.MasterMinter masterMinter_;
     /**
@@ -5273,7 +5335,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMasterMinter() {
-      return masterMinter_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
@@ -5305,7 +5367,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (masterMinter_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMasterMinter());
       }
       getUnknownFields().writeTo(output);
@@ -5317,7 +5379,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (masterMinter_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMasterMinter());
       }
@@ -5475,13 +5537,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetMasterMinterResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMasterMinterFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5525,11 +5593,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetMasterMinterResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.masterMinter_ = masterMinterBuilder_ == null
               ? masterMinter_
               : masterMinterBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5695,8 +5766,10 @@ public final class QueryProto {
         } else {
           masterMinterBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (masterMinter_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6417,6 +6490,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetMintersResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetMintersResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINTERS_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.MintersProto.Minters minters_;
     /**
@@ -6425,7 +6499,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMinters() {
-      return minters_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
@@ -6457,7 +6531,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (minters_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMinters());
       }
       getUnknownFields().writeTo(output);
@@ -6469,7 +6543,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (minters_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMinters());
       }
@@ -6627,13 +6701,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetMintersResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMintersFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6677,11 +6757,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetMintersResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minters_ = mintersBuilder_ == null
               ? minters_
               : mintersBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6847,8 +6930,10 @@ public final class QueryProto {
         } else {
           mintersBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (minters_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7017,6 +7102,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryAllMintersRequest.class, com.noble.fiattokenfactory.QueryProto.QueryAllMintersRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -7025,7 +7111,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -7057,7 +7143,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -7069,7 +7155,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -7227,13 +7313,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryAllMintersRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7277,11 +7369,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryAllMintersRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7447,8 +7542,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7642,6 +7739,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryAllMintersResponse.class, com.noble.fiattokenfactory.QueryProto.QueryAllMintersResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINTERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.noble.fiattokenfactory.MintersProto.Minters> minters_;
@@ -7691,7 +7789,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -7726,7 +7824,7 @@ public final class QueryProto {
       for (int i = 0; i < minters_.size(); i++) {
         output.writeMessage(1, minters_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -7742,7 +7840,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, minters_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -7906,13 +8004,20 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryAllMintersResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMintersFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7976,11 +8081,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryAllMintersResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8425,8 +8533,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8992,6 +9102,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetPauserResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetPauserResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAUSER_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.PauserProto.Pauser pauser_;
     /**
@@ -9000,7 +9111,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPauser() {
-      return pauser_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
@@ -9032,7 +9143,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pauser_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPauser());
       }
       getUnknownFields().writeTo(output);
@@ -9044,7 +9155,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pauser_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPauser());
       }
@@ -9202,13 +9313,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetPauserResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPauserFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9252,11 +9369,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetPauserResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pauser_ = pauserBuilder_ == null
               ? pauser_
               : pauserBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9422,8 +9542,10 @@ public final class QueryProto {
         } else {
           pauserBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pauser_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9989,6 +10111,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetBlacklisterResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetBlacklisterResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BLACKLISTER_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.BlacklisterProto.Blacklister blacklister_;
     /**
@@ -9997,7 +10120,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBlacklister() {
-      return blacklister_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
@@ -10029,7 +10152,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (blacklister_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBlacklister());
       }
       getUnknownFields().writeTo(output);
@@ -10041,7 +10164,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (blacklister_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBlacklister());
       }
@@ -10199,13 +10322,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetBlacklisterResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBlacklisterFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10249,11 +10378,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetBlacklisterResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blacklister_ = blacklisterBuilder_ == null
               ? blacklister_
               : blacklisterBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10419,8 +10551,10 @@ public final class QueryProto {
         } else {
           blacklisterBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (blacklister_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10986,6 +11120,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetOwnerResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetOwnerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.OwnerProto.Owner owner_;
     /**
@@ -10994,7 +11129,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOwner() {
-      return owner_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
@@ -11026,7 +11161,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (owner_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOwner());
       }
       getUnknownFields().writeTo(output);
@@ -11038,7 +11173,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (owner_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOwner());
       }
@@ -11196,13 +11331,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetOwnerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOwnerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11246,11 +11387,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetOwnerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.owner_ = ownerBuilder_ == null
               ? owner_
               : ownerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11416,8 +11560,10 @@ public final class QueryProto {
         } else {
           ownerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (owner_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12138,6 +12284,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetMinterControllerResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetMinterControllerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINTERCONTROLLER_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.MinterControllerProto.MinterController minterController_;
     /**
@@ -12146,7 +12293,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMinterController() {
-      return minterController_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
@@ -12178,7 +12325,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (minterController_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMinterController());
       }
       getUnknownFields().writeTo(output);
@@ -12190,7 +12337,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (minterController_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMinterController());
       }
@@ -12348,13 +12495,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetMinterControllerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinterControllerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12398,11 +12551,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetMinterControllerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minterController_ = minterControllerBuilder_ == null
               ? minterController_
               : minterControllerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12568,8 +12724,10 @@ public final class QueryProto {
         } else {
           minterControllerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (minterController_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12738,6 +12896,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerRequest.class, com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -12746,7 +12905,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -12778,7 +12937,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -12790,7 +12949,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -12948,13 +13107,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12998,11 +13163,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13168,8 +13336,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13363,6 +13533,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerResponse.class, com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINTERCONTROLLER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.noble.fiattokenfactory.MinterControllerProto.MinterController> minterController_;
@@ -13412,7 +13583,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -13447,7 +13618,7 @@ public final class QueryProto {
       for (int i = 0; i < minterController_.size(); i++) {
         output.writeMessage(1, minterController_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -13463,7 +13634,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, minterController_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -13627,13 +13798,20 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinterControllerFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13697,11 +13875,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryAllMinterControllerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14146,8 +14327,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14713,6 +14896,7 @@ public final class QueryProto {
               com.noble.fiattokenfactory.QueryProto.QueryGetMintingDenomResponse.class, com.noble.fiattokenfactory.QueryProto.QueryGetMintingDenomResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINTINGDENOM_FIELD_NUMBER = 1;
     private com.noble.fiattokenfactory.MintingDenomProto.MintingDenom mintingDenom_;
     /**
@@ -14721,7 +14905,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMintingDenom() {
-      return mintingDenom_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.noble.fiattokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
@@ -14753,7 +14937,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (mintingDenom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMintingDenom());
       }
       getUnknownFields().writeTo(output);
@@ -14765,7 +14949,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (mintingDenom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMintingDenom());
       }
@@ -14923,13 +15107,19 @@ public final class QueryProto {
 
       // Construct using com.noble.fiattokenfactory.QueryProto.QueryGetMintingDenomResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMintingDenomFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14973,11 +15163,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.noble.fiattokenfactory.QueryProto.QueryGetMintingDenomResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.mintingDenom_ = mintingDenomBuilder_ == null
               ? mintingDenom_
               : mintingDenomBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15143,8 +15336,10 @@ public final class QueryProto {
         } else {
           mintingDenomBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (mintingDenom_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from panacea.oracle.v2alpha1 import oracle_pb2 as panacea_dot_oracle_dot_v2alpha1_dot_oracle__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n panacea/oracle/v2alpha1/tx.proto\x12\x17panacea.oracle.v2alpha1\x1a$panacea/oracle/v2alpha1/oracle.proto\"Y\n\x11MsgRegisterOracle\x12\x44\n\roracle_detail\x18\x01 \x01(\x0b\x32\x1f.panacea.oracle.v2alpha1.OracleR\x0coracleDetail\"\x1b\n\x19MsgRegisterOracleResponse\"E\n\x0fMsgUpdateOracle\x12\x16\n\x06oracle\x18\x01 \x01(\tR\x06oracle\x12\x1a\n\x08\x65ndpoint\x18\x02 \x01(\tR\x08\x65ndpoint\"\x19\n\x17MsgUpdateOracleResponse2\xe3\x01\n\x03Msg\x12p\n\x0eRegisterOracle\x12*.panacea.oracle.v2alpha1.MsgRegisterOracle\x1a\x32.panacea.oracle.v2alpha1.MsgRegisterOracleResponse\x12j\n\x0cUpdateOracle\x12(.panacea.oracle.v2alpha1.MsgUpdateOracle\x1a\x30.panacea.oracle.v2alpha1.MsgUpdateOracleResponseB\xd8\x01\n\x1b\x63om.panacea.oracle.v2alpha1B\x07TxProtoP\x01Z2github.com/medibloc/panacea-core/v2/x/oracle/types\xa2\x02\x03POX\xaa\x02\x17Panacea.Oracle.V2alpha1\xca\x02\x17Panacea\\Oracle\\V2alpha1\xe2\x02#Panacea\\Oracle\\V2alpha1\\GPBMetadata\xea\x02\x19Panacea::Oracle::V2alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n panacea/oracle/v2alpha1/tx.proto\x12\x17panacea.oracle.v2alpha1\x1a$panacea/oracle/v2alpha1/oracle.proto\"Y\n\x11MsgRegisterOracle\x12\x44\n\roracle_detail\x18\x01 \x01(\x0b\x32\x1f.panacea.oracle.v2alpha1.OracleR\x0coracleDetail\"\x1b\n\x19MsgRegisterOracleResponse\"E\n\x0fMsgUpdateOracle\x12\x16\n\x06oracle\x18\x01 \x01(\tR\x06oracle\x12\x1a\n\x08\x65ndpoint\x18\x02 \x01(\tR\x08\x65ndpoint\"\x19\n\x17MsgUpdateOracleResponse2\xe3\x01\n\x03Msg\x12p\n\x0eRegisterOracle\x12*.panacea.oracle.v2alpha1.MsgRegisterOracle\x1a\x32.panacea.oracle.v2alpha1.MsgRegisterOracleResponse\x12j\n\x0cUpdateOracle\x12(.panacea.oracle.v2alpha1.MsgUpdateOracle\x1a\x30.panacea.oracle.v2alpha1.MsgUpdateOracleResponseB\xd6\x01\n\x1b\x63om.panacea.oracle.v2alpha1B\x07TxProtoZ2github.com/medibloc/panacea-core/v2/x/oracle/types\xa2\x02\x03POX\xaa\x02\x17Panacea.Oracle.V2alpha1\xca\x02\x17Panacea\\Oracle\\V2alpha1\xe2\x02#Panacea\\Oracle\\V2alpha1\\GPBMetadata\xea\x02\x19Panacea::Oracle::V2alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'panacea.oracle.v2alpha1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.panacea.oracle.v2alpha1B\007TxProtoP\001Z2github.com/medibloc/panacea-core/v2/x/oracle/types\242\002\003POX\252\002\027Panacea.Oracle.V2alpha1\312\002\027Panacea\\Oracle\\V2alpha1\342\002#Panacea\\Oracle\\V2alpha1\\GPBMetadata\352\002\031Panacea::Oracle::V2alpha1'
+  DESCRIPTOR._serialized_options = b'\n\033com.panacea.oracle.v2alpha1B\007TxProtoZ2github.com/medibloc/panacea-core/v2/x/oracle/types\242\002\003POX\252\002\027Panacea.Oracle.V2alpha1\312\002\027Panacea\\Oracle\\V2alpha1\342\002#Panacea\\Oracle\\V2alpha1\\GPBMetadata\352\002\031Panacea::Oracle::V2alpha1'
   _globals['_MSGREGISTERORACLE']._serialized_start=99
   _globals['_MSGREGISTERORACLE']._serialized_end=188
   _globals['_MSGREGISTERORACLERESPONSE']._serialized_start=190

@@ -125,7 +125,8 @@ public final class TxProto {
 
     public static final int PAIR_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList pairIds_;
+    private com.google.protobuf.Internal.LongList pairIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
      * @return A list containing the pairIds.
@@ -398,24 +399,19 @@ public final class TxProto {
       @java.lang.Override
       public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker buildPartial() {
         com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker result = new com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          pairIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.pairIds_ = pairIds_;
       }
 
       private void buildPartial0(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          pairIds_.makeImmutable();
+          result.pairIds_ = pairIds_;
         }
       }
 
@@ -471,7 +467,8 @@ public final class TxProto {
         if (!other.pairIds_.isEmpty()) {
           if (pairIds_.isEmpty()) {
             pairIds_ = other.pairIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            pairIds_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensurePairIdsIsMutable();
             pairIds_.addAll(other.pairIds_);
@@ -616,10 +613,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList pairIds_ = emptyLongList();
       private void ensurePairIdsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          pairIds_ = mutableCopy(pairIds_);
-          bitField0_ |= 0x00000002;
+        if (!pairIds_.isModifiable()) {
+          pairIds_ = makeMutableCopy(pairIds_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
@@ -627,8 +624,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getPairIdsList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(pairIds_) : pairIds_;
+        pairIds_.makeImmutable();
+        return pairIds_;
       }
       /**
        * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
@@ -656,6 +653,7 @@ public final class TxProto {
 
         ensurePairIdsIsMutable();
         pairIds_.setLong(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -668,6 +666,7 @@ public final class TxProto {
 
         ensurePairIdsIsMutable();
         pairIds_.addLong(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -681,6 +680,7 @@ public final class TxProto {
         ensurePairIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, pairIds_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

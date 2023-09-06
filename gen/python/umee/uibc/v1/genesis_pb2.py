@@ -18,15 +18,14 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 from umee.uibc.v1 import quota_pb2 as umee_dot_uibc_dot_v1_dot_quota__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1aumee/uibc/v1/genesis.proto\x12\x0cumee.uibc.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x18umee/uibc/v1/quota.proto\"\x9a\x03\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.umee.uibc.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12m\n\x08outflows\x18\x02 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB3\xc8\xde\x1f\x00\xaa\xdf\x1f+github.com/cosmos/cosmos-sdk/types.DecCoinsR\x08outflows\x12h\n\x11total_outflow_sum\x18\x03 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\x0ftotalOutflowSum\x12}\n\rquota_expires\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB<\xc8\xde\x1f\x00\xea\xde\x1f\x18quota_duration,omitempty\xf2\xde\x1f\x14yaml:\"quota_expires\"\x90\xdf\x1f\x01R\x0cquotaExpiresB\x9e\x01\n\x10\x63om.umee.uibc.v1B\x0cGenesisProtoP\x01Z&github.com/umee-network/umee/v5/x/uibc\xa2\x02\x03UUX\xaa\x02\x0cUmee.Uibc.V1\xca\x02\x0cUmee\\Uibc\\V1\xe2\x02\x18Umee\\Uibc\\V1\\GPBMetadata\xea\x02\x0eUmee::Uibc::V1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1aumee/uibc/v1/genesis.proto\x12\x0cumee.uibc.v1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x18umee/uibc/v1/quota.proto\"\x9a\x03\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.umee.uibc.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12m\n\x08outflows\x18\x02 \x03(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB3\xc8\xde\x1f\x00\xaa\xdf\x1f+github.com/cosmos/cosmos-sdk/types.DecCoinsR\x08outflows\x12h\n\x11total_outflow_sum\x18\x03 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\x0ftotalOutflowSum\x12}\n\rquota_expires\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB<\xc8\xde\x1f\x00\xea\xde\x1f\x18quota_duration,omitempty\xf2\xde\x1f\x14yaml:\"quota_expires\"\x90\xdf\x1f\x01R\x0cquotaExpiresB\x9c\x01\n\x10\x63om.umee.uibc.v1B\x0cGenesisProtoZ&github.com/umee-network/umee/v5/x/uibc\xa2\x02\x03UUX\xaa\x02\x0cUmee.Uibc.V1\xca\x02\x0cUmee\\Uibc\\V1\xe2\x02\x18Umee\\Uibc\\V1\\GPBMetadata\xea\x02\x0eUmee::Uibc::V1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'umee.uibc.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.umee.uibc.v1B\014GenesisProtoP\001Z&github.com/umee-network/umee/v5/x/uibc\242\002\003UUX\252\002\014Umee.Uibc.V1\312\002\014Umee\\Uibc\\V1\342\002\030Umee\\Uibc\\V1\\GPBMetadata\352\002\016Umee::Uibc::V1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\020com.umee.uibc.v1B\014GenesisProtoZ&github.com/umee-network/umee/v5/x/uibc\242\002\003UUX\252\002\014Umee.Uibc.V1\312\002\014Umee\\Uibc\\V1\342\002\030Umee\\Uibc\\V1\\GPBMetadata\352\002\016Umee::Uibc::V1\310\341\036\000'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['outflows']._options = None

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1eteritori/mint/v1beta1/tx.proto\x12\x15teritori.mint.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\"p\n\rMsgBurnTokens\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12G\n\x06\x61mount\x18\x02 \x03(\tB/\xc8\xde\x1f\x00\xda\xde\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\x06\x61mount\"\x17\n\x15MsgBurnTokensResponse2g\n\x03Msg\x12`\n\nBurnTokens\x12$.teritori.mint.v1beta1.MsgBurnTokens\x1a,.teritori.mint.v1beta1.MsgBurnTokensResponseB\xcb\x01\n\x19\x63om.teritori.mint.v1beta1B\x07TxProtoP\x01Z/github.com/TERITORI/teritori-chain/x/mint/types\xa2\x02\x03TMX\xaa\x02\x15Teritori.Mint.V1beta1\xca\x02\x15Teritori\\Mint\\V1beta1\xe2\x02!Teritori\\Mint\\V1beta1\\GPBMetadata\xea\x02\x17Teritori::Mint::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1eteritori/mint/v1beta1/tx.proto\x12\x15teritori.mint.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\"p\n\rMsgBurnTokens\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12G\n\x06\x61mount\x18\x02 \x03(\tB/\xc8\xde\x1f\x00\xda\xde\x1f\'github.com/cosmos/cosmos-sdk/types.CoinR\x06\x61mount\"\x17\n\x15MsgBurnTokensResponse2g\n\x03Msg\x12`\n\nBurnTokens\x12$.teritori.mint.v1beta1.MsgBurnTokens\x1a,.teritori.mint.v1beta1.MsgBurnTokensResponseB\xc9\x01\n\x19\x63om.teritori.mint.v1beta1B\x07TxProtoZ/github.com/TERITORI/teritori-chain/x/mint/types\xa2\x02\x03TMX\xaa\x02\x15Teritori.Mint.V1beta1\xca\x02\x15Teritori\\Mint\\V1beta1\xe2\x02!Teritori\\Mint\\V1beta1\\GPBMetadata\xea\x02\x17Teritori::Mint::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'teritori.mint.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.teritori.mint.v1beta1B\007TxProtoP\001Z/github.com/TERITORI/teritori-chain/x/mint/types\242\002\003TMX\252\002\025Teritori.Mint.V1beta1\312\002\025Teritori\\Mint\\V1beta1\342\002!Teritori\\Mint\\V1beta1\\GPBMetadata\352\002\027Teritori::Mint::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\031com.teritori.mint.v1beta1B\007TxProtoZ/github.com/TERITORI/teritori-chain/x/mint/types\242\002\003TMX\252\002\025Teritori.Mint.V1beta1\312\002\025Teritori\\Mint\\V1beta1\342\002!Teritori\\Mint\\V1beta1\\GPBMetadata\352\002\027Teritori::Mint::V1beta1'
   _MSGBURNTOKENS.fields_by_name['amount']._options = None
   _MSGBURNTOKENS.fields_by_name['amount']._serialized_options = b'\310\336\037\000\332\336\037\'github.com/cosmos/cosmos-sdk/types.Coin'
   _globals['_MSGBURNTOKENS']._serialized_start=106

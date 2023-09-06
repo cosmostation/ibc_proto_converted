@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from likechain.likenft.v1 import nft_input_pb2 as likechain_dot_likenft_dot_v1_dot_nft__input__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,likechain/likenft/v1/blind_box_content.proto\x12\x14likechain.likenft.v1\x1a\x14gogoproto/gogo.proto\x1a$likechain/likenft/v1/nft_input.proto\"x\n\x0f\x42lindBoxContent\x12\x19\n\x08\x63lass_id\x18\x01 \x01(\tR\x07\x63lassId\x12\x0e\n\x02id\x18\x02 \x01(\tR\x02id\x12:\n\x05input\x18\x03 \x01(\x0b\x32\x1e.likechain.likenft.v1.NFTInputB\x04\xc8\xde\x1f\x00R\x05inputB\xd9\x01\n\x18\x63om.likechain.likenft.v1B\x14\x42lindBoxContentProtoP\x01Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,likechain/likenft/v1/blind_box_content.proto\x12\x14likechain.likenft.v1\x1a\x14gogoproto/gogo.proto\x1a$likechain/likenft/v1/nft_input.proto\"x\n\x0f\x42lindBoxContent\x12\x19\n\x08\x63lass_id\x18\x01 \x01(\tR\x07\x63lassId\x12\x0e\n\x02id\x18\x02 \x01(\tR\x02id\x12:\n\x05input\x18\x03 \x01(\x0b\x32\x1e.likechain.likenft.v1.NFTInputB\x04\xc8\xde\x1f\x00R\x05inputB\xd7\x01\n\x18\x63om.likechain.likenft.v1B\x14\x42lindBoxContentProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'likechain.likenft.v1.blind_box_content_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\024BlindBoxContentProtoP\001Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\024BlindBoxContentProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
   _BLINDBOXCONTENT.fields_by_name['input']._options = None
   _BLINDBOXCONTENT.fields_by_name['input']._serialized_options = b'\310\336\037\000'
   _globals['_BLINDBOXCONTENT']._serialized_start=130

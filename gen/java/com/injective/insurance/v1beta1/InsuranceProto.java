@@ -86,6 +86,7 @@ public final class InsuranceProto {
               com.injective.insurance.v1beta1.InsuranceProto.Params.class, com.injective.insurance.v1beta1.InsuranceProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEFAULT_REDEMPTION_NOTICE_PERIOD_DURATION_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration defaultRedemptionNoticePeriodDuration_;
     /**
@@ -100,7 +101,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasDefaultRedemptionNoticePeriodDuration() {
-      return defaultRedemptionNoticePeriodDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -144,7 +145,7 @@ public final class InsuranceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (defaultRedemptionNoticePeriodDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDefaultRedemptionNoticePeriodDuration());
       }
       getUnknownFields().writeTo(output);
@@ -156,7 +157,7 @@ public final class InsuranceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (defaultRedemptionNoticePeriodDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDefaultRedemptionNoticePeriodDuration());
       }
@@ -314,13 +315,19 @@ public final class InsuranceProto {
 
       // Construct using com.injective.insurance.v1beta1.InsuranceProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDefaultRedemptionNoticePeriodDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -364,11 +371,14 @@ public final class InsuranceProto {
 
       private void buildPartial0(com.injective.insurance.v1beta1.InsuranceProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.defaultRedemptionNoticePeriodDuration_ = defaultRedemptionNoticePeriodDurationBuilder_ == null
               ? defaultRedemptionNoticePeriodDuration_
               : defaultRedemptionNoticePeriodDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -564,8 +574,10 @@ public final class InsuranceProto {
         } else {
           defaultRedemptionNoticePeriodDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (defaultRedemptionNoticePeriodDuration_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -979,6 +991,7 @@ public final class InsuranceProto {
               com.injective.insurance.v1beta1.InsuranceProto.InsuranceFund.class, com.injective.insurance.v1beta1.InsuranceProto.InsuranceFund.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSIT_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object depositDenom_ = "";
@@ -1087,7 +1100,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasRedemptionNoticePeriodDuration() {
-      return redemptionNoticePeriodDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1465,7 +1478,7 @@ public final class InsuranceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insurancePoolTokenDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, insurancePoolTokenDenom_);
       }
-      if (redemptionNoticePeriodDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getRedemptionNoticePeriodDuration());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(balance_)) {
@@ -1507,7 +1520,7 @@ public final class InsuranceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insurancePoolTokenDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, insurancePoolTokenDenom_);
       }
-      if (redemptionNoticePeriodDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRedemptionNoticePeriodDuration());
       }
@@ -1731,13 +1744,19 @@ public final class InsuranceProto {
 
       // Construct using com.injective.insurance.v1beta1.InsuranceProto.InsuranceFund.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRedemptionNoticePeriodDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1797,10 +1816,12 @@ public final class InsuranceProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.insurancePoolTokenDenom_ = insurancePoolTokenDenom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.redemptionNoticePeriodDuration_ = redemptionNoticePeriodDurationBuilder_ == null
               ? redemptionNoticePeriodDuration_
               : redemptionNoticePeriodDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.balance_ = balance_;
@@ -1826,6 +1847,7 @@ public final class InsuranceProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.expiry_ = expiry_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2301,8 +2323,10 @@ public final class InsuranceProto {
         } else {
           redemptionNoticePeriodDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (redemptionNoticePeriodDuration_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3268,6 +3292,7 @@ public final class InsuranceProto {
               com.injective.insurance.v1beta1.InsuranceProto.RedemptionSchedule.class, com.injective.insurance.v1beta1.InsuranceProto.RedemptionSchedule.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -3389,7 +3414,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasClaimableRedemptionTime() {
-      return claimableRedemptionTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3427,7 +3452,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasRedemptionAmount() {
-      return redemptionAmount_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -3476,10 +3501,10 @@ public final class InsuranceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, redeemer_);
       }
-      if (claimableRedemptionTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getClaimableRedemptionTime());
       }
-      if (redemptionAmount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getRedemptionAmount());
       }
       getUnknownFields().writeTo(output);
@@ -3501,11 +3526,11 @@ public final class InsuranceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, redeemer_);
       }
-      if (claimableRedemptionTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getClaimableRedemptionTime());
       }
-      if (redemptionAmount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getRedemptionAmount());
       }
@@ -3685,13 +3710,20 @@ public final class InsuranceProto {
 
       // Construct using com.injective.insurance.v1beta1.InsuranceProto.RedemptionSchedule.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClaimableRedemptionTimeFieldBuilder();
+          getRedemptionAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3752,16 +3784,20 @@ public final class InsuranceProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.redeemer_ = redeemer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.claimableRedemptionTime_ = claimableRedemptionTimeBuilder_ == null
               ? claimableRedemptionTime_
               : claimableRedemptionTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.redemptionAmount_ = redemptionAmountBuilder_ == null
               ? redemptionAmount_
               : redemptionAmountBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4213,8 +4249,10 @@ public final class InsuranceProto {
         } else {
           claimableRedemptionTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (claimableRedemptionTime_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4368,8 +4406,10 @@ public final class InsuranceProto {
         } else {
           redemptionAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (redemptionAmount_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4554,6 +4594,7 @@ public final class InsuranceProto {
               com.injective.insurance.v1beta1.InsuranceProto.EventInsuranceFundUpdate.class, com.injective.insurance.v1beta1.InsuranceProto.EventInsuranceFundUpdate.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FUND_FIELD_NUMBER = 1;
     private com.injective.insurance.v1beta1.InsuranceProto.InsuranceFund fund_;
     /**
@@ -4562,7 +4603,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasFund() {
-      return fund_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.insurance.v1beta1.InsuranceFund fund = 1 [json_name = "fund"];</code>
@@ -4594,7 +4635,7 @@ public final class InsuranceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fund_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFund());
       }
       getUnknownFields().writeTo(output);
@@ -4606,7 +4647,7 @@ public final class InsuranceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (fund_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFund());
       }
@@ -4764,13 +4805,19 @@ public final class InsuranceProto {
 
       // Construct using com.injective.insurance.v1beta1.InsuranceProto.EventInsuranceFundUpdate.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFundFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4814,11 +4861,14 @@ public final class InsuranceProto {
 
       private void buildPartial0(com.injective.insurance.v1beta1.InsuranceProto.EventInsuranceFundUpdate result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fund_ = fundBuilder_ == null
               ? fund_
               : fundBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4984,8 +5034,10 @@ public final class InsuranceProto {
         } else {
           fundBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (fund_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5154,6 +5206,7 @@ public final class InsuranceProto {
               com.injective.insurance.v1beta1.InsuranceProto.EventRequestRedemption.class, com.injective.insurance.v1beta1.InsuranceProto.EventRequestRedemption.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCHEDULE_FIELD_NUMBER = 1;
     private com.injective.insurance.v1beta1.InsuranceProto.RedemptionSchedule schedule_;
     /**
@@ -5162,7 +5215,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasSchedule() {
-      return schedule_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.insurance.v1beta1.RedemptionSchedule schedule = 1 [json_name = "schedule"];</code>
@@ -5194,7 +5247,7 @@ public final class InsuranceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (schedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSchedule());
       }
       getUnknownFields().writeTo(output);
@@ -5206,7 +5259,7 @@ public final class InsuranceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (schedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSchedule());
       }
@@ -5364,13 +5417,19 @@ public final class InsuranceProto {
 
       // Construct using com.injective.insurance.v1beta1.InsuranceProto.EventRequestRedemption.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScheduleFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5414,11 +5473,14 @@ public final class InsuranceProto {
 
       private void buildPartial0(com.injective.insurance.v1beta1.InsuranceProto.EventRequestRedemption result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.schedule_ = scheduleBuilder_ == null
               ? schedule_
               : scheduleBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5584,8 +5646,10 @@ public final class InsuranceProto {
         } else {
           scheduleBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (schedule_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5793,6 +5857,7 @@ public final class InsuranceProto {
               com.injective.insurance.v1beta1.InsuranceProto.EventWithdrawRedemption.class, com.injective.insurance.v1beta1.InsuranceProto.EventWithdrawRedemption.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCHEDULE_FIELD_NUMBER = 1;
     private com.injective.insurance.v1beta1.InsuranceProto.RedemptionSchedule schedule_;
     /**
@@ -5805,7 +5870,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasSchedule() {
-      return schedule_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5843,7 +5908,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasRedeemCoin() {
-      return redeemCoin_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5883,10 +5948,10 @@ public final class InsuranceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (schedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSchedule());
       }
-      if (redeemCoin_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getRedeemCoin());
       }
       getUnknownFields().writeTo(output);
@@ -5898,11 +5963,11 @@ public final class InsuranceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (schedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSchedule());
       }
-      if (redeemCoin_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRedeemCoin());
       }
@@ -6069,13 +6134,20 @@ public final class InsuranceProto {
 
       // Construct using com.injective.insurance.v1beta1.InsuranceProto.EventWithdrawRedemption.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScheduleFieldBuilder();
+          getRedeemCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6124,16 +6196,20 @@ public final class InsuranceProto {
 
       private void buildPartial0(com.injective.insurance.v1beta1.InsuranceProto.EventWithdrawRedemption result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.schedule_ = scheduleBuilder_ == null
               ? schedule_
               : scheduleBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.redeemCoin_ = redeemCoinBuilder_ == null
               ? redeemCoin_
               : redeemCoinBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6329,8 +6405,10 @@ public final class InsuranceProto {
         } else {
           scheduleBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (schedule_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6484,8 +6562,10 @@ public final class InsuranceProto {
         } else {
           redeemCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (redeemCoin_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6751,6 +6831,7 @@ public final class InsuranceProto {
               com.injective.insurance.v1beta1.InsuranceProto.EventUnderwrite.class, com.injective.insurance.v1beta1.InsuranceProto.EventUnderwrite.Builder.class);
     }
 
+    private int bitField0_;
     public static final int UNDERWRITER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object underwriter_ = "";
@@ -6857,7 +6938,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return deposit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6895,7 +6976,7 @@ public final class InsuranceProto {
      */
     @java.lang.Override
     public boolean hasShares() {
-      return shares_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -6941,10 +7022,10 @@ public final class InsuranceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, marketId_);
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getDeposit());
       }
-      if (shares_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getShares());
       }
       getUnknownFields().writeTo(output);
@@ -6962,11 +7043,11 @@ public final class InsuranceProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, marketId_);
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDeposit());
       }
-      if (shares_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getShares());
       }
@@ -7141,13 +7222,20 @@ public final class InsuranceProto {
 
       // Construct using com.injective.insurance.v1beta1.InsuranceProto.EventUnderwrite.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositFieldBuilder();
+          getSharesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7204,16 +7292,20 @@ public final class InsuranceProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.marketId_ = marketId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.shares_ = sharesBuilder_ == null
               ? shares_
               : sharesBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7613,8 +7705,10 @@ public final class InsuranceProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (deposit_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7768,8 +7862,10 @@ public final class InsuranceProto {
         } else {
           sharesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (shares_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

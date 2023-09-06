@@ -16,15 +16,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from coreum.feemodel.v1 import params_pb2 as coreum_dot_feemodel_dot_v1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n coreum/feemodel/v1/genesis.proto\x12\x12\x63oreum.feemodel.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1f\x63oreum/feemodel/v1/params.proto\"\x9a\x01\n\x0cGenesisState\x12\x38\n\x06params\x18\x01 \x01(\x0b\x32\x1a.coreum.feemodel.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x46\n\rmin_gas_price\x18\x02 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\x0bminGasPrice:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xc5\x01\n\x16\x63om.coreum.feemodel.v1B\x0cGenesisProtoP\x01Z3github.com/CoreumFoundation/coreum/x/feemodel/types\xa2\x02\x03\x43\x46X\xaa\x02\x12\x43oreum.Feemodel.V1\xca\x02\x12\x43oreum\\Feemodel\\V1\xe2\x02\x1e\x43oreum\\Feemodel\\V1\\GPBMetadata\xea\x02\x14\x43oreum::Feemodel::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n coreum/feemodel/v1/genesis.proto\x12\x12\x63oreum.feemodel.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1f\x63oreum/feemodel/v1/params.proto\"\x9a\x01\n\x0cGenesisState\x12\x38\n\x06params\x18\x01 \x01(\x0b\x32\x1a.coreum.feemodel.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x46\n\rmin_gas_price\x18\x02 \x01(\x0b\x32\x1c.cosmos.base.v1beta1.DecCoinB\x04\xc8\xde\x1f\x00R\x0bminGasPrice:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xc3\x01\n\x16\x63om.coreum.feemodel.v1B\x0cGenesisProtoZ3github.com/CoreumFoundation/coreum/x/feemodel/types\xa2\x02\x03\x43\x46X\xaa\x02\x12\x43oreum.Feemodel.V1\xca\x02\x12\x43oreum\\Feemodel\\V1\xe2\x02\x1e\x43oreum\\Feemodel\\V1\\GPBMetadata\xea\x02\x14\x43oreum::Feemodel::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'coreum.feemodel.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.coreum.feemodel.v1B\014GenesisProtoP\001Z3github.com/CoreumFoundation/coreum/x/feemodel/types\242\002\003CFX\252\002\022Coreum.Feemodel.V1\312\002\022Coreum\\Feemodel\\V1\342\002\036Coreum\\Feemodel\\V1\\GPBMetadata\352\002\024Coreum::Feemodel::V1'
+  DESCRIPTOR._serialized_options = b'\n\026com.coreum.feemodel.v1B\014GenesisProtoZ3github.com/CoreumFoundation/coreum/x/feemodel/types\242\002\003CFX\252\002\022Coreum.Feemodel.V1\312\002\022Coreum\\Feemodel\\V1\342\002\036Coreum\\Feemodel\\V1\\GPBMetadata\352\002\024Coreum::Feemodel::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['min_gas_price']._options = None

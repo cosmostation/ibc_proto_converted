@@ -477,6 +477,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.QueryParamsResponse.class, com.archway.rewards.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.archway.rewards.v1.RewardsProto.Params params_;
     /**
@@ -485,7 +486,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.archway.rewards.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -517,7 +518,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -529,7 +530,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -691,13 +692,19 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -741,11 +748,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.archway.rewards.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -911,8 +921,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1681,6 +1693,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.QueryContractMetadataResponse.class, com.archway.rewards.v1.QueryProto.QueryContractMetadataResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private com.archway.rewards.v1.RewardsProto.ContractMetadata metadata_;
     /**
@@ -1689,7 +1702,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return metadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.archway.rewards.v1.ContractMetadata metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
@@ -1721,7 +1734,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -1733,7 +1746,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMetadata());
       }
@@ -1895,13 +1908,19 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.QueryContractMetadataResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1945,11 +1964,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.archway.rewards.v1.QueryProto.QueryContractMetadataResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2115,8 +2137,10 @@ public final class QueryProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (metadata_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2697,6 +2721,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.QueryBlockRewardsTrackingResponse.class, com.archway.rewards.v1.QueryProto.QueryBlockRewardsTrackingResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BLOCK_FIELD_NUMBER = 1;
     private com.archway.rewards.v1.QueryProto.BlockTracking block_;
     /**
@@ -2705,7 +2730,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBlock() {
-      return block_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.archway.rewards.v1.BlockTracking block = 1 [json_name = "block", (.gogoproto.nullable) = false];</code>
@@ -2737,7 +2762,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (block_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBlock());
       }
       getUnknownFields().writeTo(output);
@@ -2749,7 +2774,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (block_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBlock());
       }
@@ -2912,13 +2937,19 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.QueryBlockRewardsTrackingResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBlockFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2962,11 +2993,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.archway.rewards.v1.QueryProto.QueryBlockRewardsTrackingResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.block_ = blockBuilder_ == null
               ? block_
               : blockBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3132,8 +3166,10 @@ public final class QueryProto {
         } else {
           blockBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (block_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5901,6 +5937,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.QueryEstimateTxFeesResponse.class, com.archway.rewards.v1.QueryProto.QueryEstimateTxFeesResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int GAS_UNIT_PRICE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.DecCoin gasUnitPrice_;
     /**
@@ -5913,7 +5950,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasGasUnitPrice() {
-      return gasUnitPrice_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6014,7 +6051,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (gasUnitPrice_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getGasUnitPrice());
       }
       for (int i = 0; i < estimatedFee_.size(); i++) {
@@ -6029,7 +6066,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (gasUnitPrice_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGasUnitPrice());
       }
@@ -6201,13 +6238,20 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.QueryEstimateTxFeesResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGasUnitPriceFieldBuilder();
+          getEstimatedFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6271,11 +6315,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.archway.rewards.v1.QueryProto.QueryEstimateTxFeesResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.gasUnitPrice_ = gasUnitPriceBuilder_ == null
               ? gasUnitPrice_
               : gasUnitPriceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6500,8 +6547,10 @@ public final class QueryProto {
         } else {
           gasUnitPriceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (gasUnitPrice_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7059,6 +7108,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.BlockTracking.class, com.archway.rewards.v1.QueryProto.BlockTracking.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INFLATION_REWARDS_FIELD_NUMBER = 1;
     private com.archway.rewards.v1.RewardsProto.BlockRewards inflationRewards_;
     /**
@@ -7071,7 +7121,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasInflationRewards() {
-      return inflationRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -7172,7 +7222,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (inflationRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInflationRewards());
       }
       for (int i = 0; i < txRewards_.size(); i++) {
@@ -7187,7 +7237,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (inflationRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInflationRewards());
       }
@@ -7359,13 +7409,20 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.BlockTracking.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInflationRewardsFieldBuilder();
+          getTxRewardsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7429,11 +7486,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.archway.rewards.v1.QueryProto.BlockTracking result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.inflationRewards_ = inflationRewardsBuilder_ == null
               ? inflationRewards_
               : inflationRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7658,8 +7718,10 @@ public final class QueryProto {
         } else {
           inflationRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (inflationRewards_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8195,6 +8257,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.QueryRewardsRecordsRequest.class, com.archway.rewards.v1.QueryProto.QueryRewardsRecordsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REWARDS_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object rewardsAddress_ = "";
@@ -8256,7 +8319,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -8299,7 +8362,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardsAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rewardsAddress_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -8314,7 +8377,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardsAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rewardsAddress_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -8480,13 +8543,19 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.QueryRewardsRecordsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8534,11 +8603,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.rewardsAddress_ = rewardsAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8831,8 +8903,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9078,6 +9152,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.QueryRewardsRecordsResponse.class, com.archway.rewards.v1.QueryProto.QueryRewardsRecordsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECORDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.archway.rewards.v1.RewardsProto.RewardsRecord> records_;
@@ -9151,7 +9226,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -9194,7 +9269,7 @@ public final class QueryProto {
       for (int i = 0; i < records_.size(); i++) {
         output.writeMessage(1, records_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -9210,7 +9285,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, records_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -9378,13 +9453,20 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.QueryRewardsRecordsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9448,11 +9530,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.archway.rewards.v1.QueryProto.QueryRewardsRecordsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9989,8 +10074,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12395,6 +12482,7 @@ public final class QueryProto {
               com.archway.rewards.v1.QueryProto.QueryFlatFeeResponse.class, com.archway.rewards.v1.QueryProto.QueryFlatFeeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FLAT_FEE_AMOUNT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin flatFeeAmount_;
     /**
@@ -12408,7 +12496,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFlatFeeAmount() {
-      return flatFeeAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -12450,7 +12538,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (flatFeeAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFlatFeeAmount());
       }
       getUnknownFields().writeTo(output);
@@ -12462,7 +12550,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (flatFeeAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFlatFeeAmount());
       }
@@ -12624,13 +12712,19 @@ public final class QueryProto {
 
       // Construct using com.archway.rewards.v1.QueryProto.QueryFlatFeeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFlatFeeAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12674,11 +12768,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.archway.rewards.v1.QueryProto.QueryFlatFeeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.flatFeeAmount_ = flatFeeAmountBuilder_ == null
               ? flatFeeAmount_
               : flatFeeAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12869,8 +12966,10 @@ public final class QueryProto {
         } else {
           flatFeeAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (flatFeeAmount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

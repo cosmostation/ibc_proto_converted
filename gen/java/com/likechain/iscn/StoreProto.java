@@ -82,6 +82,7 @@ public final class StoreProto {
               com.likechain.iscn.StoreProto.StoreRecord.class, com.likechain.iscn.StoreProto.StoreRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ISCN_ID_FIELD_NUMBER = 1;
     private com.likechain.iscn.IscnidProto.IscnId iscnId_;
     /**
@@ -90,7 +91,7 @@ public final class StoreProto {
      */
     @java.lang.Override
     public boolean hasIscnId() {
-      return iscnId_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
@@ -144,7 +145,7 @@ public final class StoreProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (iscnId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getIscnId());
       }
       if (!cidBytes_.isEmpty()) {
@@ -162,7 +163,7 @@ public final class StoreProto {
       if (size != -1) return size;
 
       size = 0;
-      if (iscnId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIscnId());
       }
@@ -336,13 +337,19 @@ public final class StoreProto {
 
       // Construct using com.likechain.iscn.StoreProto.StoreRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIscnIdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -388,10 +395,12 @@ public final class StoreProto {
 
       private void buildPartial0(com.likechain.iscn.StoreProto.StoreRecord result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.iscnId_ = iscnIdBuilder_ == null
               ? iscnId_
               : iscnIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.cidBytes_ = cidBytes_;
@@ -399,6 +408,7 @@ public final class StoreProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.data_ = data_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -580,8 +590,10 @@ public final class StoreProto {
         } else {
           iscnIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (iscnId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -85,6 +85,7 @@ public final class GenesisProto {
               com.akash.cert.v1beta2.GenesisProto.GenesisCertificate.class, com.akash.cert.v1beta2.GenesisProto.GenesisCertificate.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -132,7 +133,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasCertificate() {
-      return certificate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.cert.v1beta2.Certificate certificate = 2 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
@@ -167,7 +168,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
       }
-      if (certificate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getCertificate());
       }
       getUnknownFields().writeTo(output);
@@ -182,7 +183,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
       }
-      if (certificate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCertificate());
       }
@@ -348,13 +349,19 @@ public final class GenesisProto {
 
       // Construct using com.akash.cert.v1beta2.GenesisProto.GenesisCertificate.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCertificateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -402,11 +409,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.owner_ = owner_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.certificate_ = certificateBuilder_ == null
               ? certificate_
               : certificateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -654,8 +664,10 @@ public final class GenesisProto {
         } else {
           certificateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (certificate_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

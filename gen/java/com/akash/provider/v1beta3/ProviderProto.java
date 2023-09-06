@@ -831,6 +831,7 @@ public final class ProviderProto {
               com.akash.provider.v1beta3.ProviderProto.MsgCreateProvider.class, com.akash.provider.v1beta3.ProviderProto.MsgCreateProvider.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -958,7 +959,7 @@ public final class ProviderProto {
      */
     @java.lang.Override
     public boolean hasInfo() {
-      return info_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.provider.v1beta3.ProviderInfo info = 4 [json_name = "info", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "info", (.gogoproto.moretags) = "yaml:&#92;"info&#92;""];</code>
@@ -999,7 +1000,7 @@ public final class ProviderProto {
       for (int i = 0; i < attributes_.size(); i++) {
         output.writeMessage(3, attributes_.get(i));
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getInfo());
       }
       getUnknownFields().writeTo(output);
@@ -1021,7 +1022,7 @@ public final class ProviderProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, attributes_.get(i));
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getInfo());
       }
@@ -1197,13 +1198,20 @@ public final class ProviderProto {
 
       // Construct using com.akash.provider.v1beta3.ProviderProto.MsgCreateProvider.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAttributesFieldBuilder();
+          getInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1275,11 +1283,14 @@ public final class ProviderProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hostUri_ = hostUri_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.info_ = infoBuilder_ == null
               ? info_
               : infoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1888,8 +1899,10 @@ public final class ProviderProto {
         } else {
           infoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (info_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2518,6 +2531,7 @@ public final class ProviderProto {
               com.akash.provider.v1beta3.ProviderProto.MsgUpdateProvider.class, com.akash.provider.v1beta3.ProviderProto.MsgUpdateProvider.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -2645,7 +2659,7 @@ public final class ProviderProto {
      */
     @java.lang.Override
     public boolean hasInfo() {
-      return info_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.provider.v1beta3.ProviderInfo info = 4 [json_name = "info", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "info", (.gogoproto.moretags) = "yaml:&#92;"info&#92;""];</code>
@@ -2686,7 +2700,7 @@ public final class ProviderProto {
       for (int i = 0; i < attributes_.size(); i++) {
         output.writeMessage(3, attributes_.get(i));
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getInfo());
       }
       getUnknownFields().writeTo(output);
@@ -2708,7 +2722,7 @@ public final class ProviderProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, attributes_.get(i));
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getInfo());
       }
@@ -2884,13 +2898,20 @@ public final class ProviderProto {
 
       // Construct using com.akash.provider.v1beta3.ProviderProto.MsgUpdateProvider.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAttributesFieldBuilder();
+          getInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2962,11 +2983,14 @@ public final class ProviderProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hostUri_ = hostUri_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.info_ = infoBuilder_ == null
               ? info_
               : infoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3575,8 +3599,10 @@ public final class ProviderProto {
         } else {
           infoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (info_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5170,6 +5196,7 @@ public final class ProviderProto {
               com.akash.provider.v1beta3.ProviderProto.Provider.class, com.akash.provider.v1beta3.ProviderProto.Provider.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -5297,7 +5324,7 @@ public final class ProviderProto {
      */
     @java.lang.Override
     public boolean hasInfo() {
-      return info_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.provider.v1beta3.ProviderInfo info = 4 [json_name = "info", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "info", (.gogoproto.moretags) = "yaml:&#92;"info&#92;""];</code>
@@ -5338,7 +5365,7 @@ public final class ProviderProto {
       for (int i = 0; i < attributes_.size(); i++) {
         output.writeMessage(3, attributes_.get(i));
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getInfo());
       }
       getUnknownFields().writeTo(output);
@@ -5360,7 +5387,7 @@ public final class ProviderProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, attributes_.get(i));
       }
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getInfo());
       }
@@ -5536,13 +5563,20 @@ public final class ProviderProto {
 
       // Construct using com.akash.provider.v1beta3.ProviderProto.Provider.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAttributesFieldBuilder();
+          getInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5614,11 +5648,14 @@ public final class ProviderProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hostUri_ = hostUri_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.info_ = infoBuilder_ == null
               ? info_
               : infoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6227,8 +6264,10 @@ public final class ProviderProto {
         } else {
           infoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (info_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

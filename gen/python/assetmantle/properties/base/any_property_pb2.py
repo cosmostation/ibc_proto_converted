@@ -16,15 +16,14 @@ from assetmantle.properties.base import mesa_property_pb2 as assetmantle_dot_pro
 from assetmantle.properties.base import meta_property_pb2 as assetmantle_dot_properties_dot_base_dot_meta__property__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.assetmantle/properties/base/any_property.proto\x12\"assetmantle.schema.properties.base\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/properties/base/mesa_property.proto\x1a/assetmantle/properties/base/meta_property.proto\"\xcd\x01\n\x0b\x41nyProperty\x12W\n\rmesa_property\x18\x01 \x01(\x0b\x32\x30.assetmantle.schema.properties.base.MesaPropertyH\x00R\x0cmesaProperty\x12W\n\rmeta_property\x18\x02 \x01(\x0b\x32\x30.assetmantle.schema.properties.base.MetaPropertyH\x00R\x0cmetaProperty:\x04\x88\xa0\x1f\x00\x42\x06\n\x04implB\xe6\x01\n&com.assetmantle.schema.properties.baseB\x10\x41nyPropertyProtoP\x01\xa2\x02\x04\x41SPB\xaa\x02\"Assetmantle.Schema.Properties.Base\xca\x02\"Assetmantle\\Schema\\Properties\\Base\xe2\x02.Assetmantle\\Schema\\Properties\\Base\\GPBMetadata\xea\x02%Assetmantle::Schema::Properties::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.assetmantle/properties/base/any_property.proto\x12\"assetmantle.schema.properties.base\x1a\x14gogoproto/gogo.proto\x1a/assetmantle/properties/base/mesa_property.proto\x1a/assetmantle/properties/base/meta_property.proto\"\xcd\x01\n\x0b\x41nyProperty\x12W\n\rmesa_property\x18\x01 \x01(\x0b\x32\x30.assetmantle.schema.properties.base.MesaPropertyH\x00R\x0cmesaProperty\x12W\n\rmeta_property\x18\x02 \x01(\x0b\x32\x30.assetmantle.schema.properties.base.MetaPropertyH\x00R\x0cmetaProperty:\x04\x88\xa0\x1f\x00\x42\x06\n\x04implB\xe4\x01\n&com.assetmantle.schema.properties.baseB\x10\x41nyPropertyProto\xa2\x02\x04\x41SPB\xaa\x02\"Assetmantle.Schema.Properties.Base\xca\x02\"Assetmantle\\Schema\\Properties\\Base\xe2\x02.Assetmantle\\Schema\\Properties\\Base\\GPBMetadata\xea\x02%Assetmantle::Schema::Properties::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.properties.base.any_property_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n&com.assetmantle.schema.properties.baseB\020AnyPropertyProtoP\001\242\002\004ASPB\252\002\"Assetmantle.Schema.Properties.Base\312\002\"Assetmantle\\Schema\\Properties\\Base\342\002.Assetmantle\\Schema\\Properties\\Base\\GPBMetadata\352\002%Assetmantle::Schema::Properties::Base'
+  DESCRIPTOR._serialized_options = b'\n&com.assetmantle.schema.properties.baseB\020AnyPropertyProto\242\002\004ASPB\252\002\"Assetmantle.Schema.Properties.Base\312\002\"Assetmantle\\Schema\\Properties\\Base\342\002.Assetmantle\\Schema\\Properties\\Base\\GPBMetadata\352\002%Assetmantle::Schema::Properties::Base'
   _ANYPROPERTY._options = None
   _ANYPROPERTY._serialized_options = b'\210\240\037\000'
   _globals['_ANYPROPERTY']._serialized_start=207

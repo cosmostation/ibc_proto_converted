@@ -864,6 +864,7 @@ public final class QueryProto {
               com.cosmos.params.v1beta1.QueryProto.QueryParamsResponse.class, com.cosmos.params.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAM_FIELD_NUMBER = 1;
     private com.cosmos.params.v1beta1.ParamsProto.ParamChange param_;
     /**
@@ -876,7 +877,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParam() {
-      return param_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -916,7 +917,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (param_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParam());
       }
       getUnknownFields().writeTo(output);
@@ -928,7 +929,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (param_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParam());
       }
@@ -1090,13 +1091,19 @@ public final class QueryProto {
 
       // Construct using com.cosmos.params.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1140,11 +1147,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cosmos.params.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.param_ = paramBuilder_ == null
               ? param_
               : paramBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1330,8 +1340,10 @@ public final class QueryProto {
         } else {
           paramBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (param_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

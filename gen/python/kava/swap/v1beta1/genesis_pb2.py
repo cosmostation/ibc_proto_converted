@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from kava.swap.v1beta1 import swap_pb2 as kava_dot_swap_dot_v1beta1_dot_swap__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkava/swap/v1beta1/genesis.proto\x12\x11kava.swap.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1ckava/swap/v1beta1/swap.proto\"\xf9\x01\n\x0cGenesisState\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.kava.swap.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12U\n\x0cpool_records\x18\x02 \x03(\x0b\x32\x1d.kava.swap.v1beta1.PoolRecordB\x13\xc8\xde\x1f\x00\xaa\xdf\x1f\x0bPoolRecordsR\x0bpoolRecords\x12Y\n\rshare_records\x18\x03 \x03(\x0b\x32\x1e.kava.swap.v1beta1.ShareRecordB\x14\xc8\xde\x1f\x00\xaa\xdf\x1f\x0cShareRecordsR\x0cshareRecordsB\xb3\x01\n\x15\x63om.kava.swap.v1beta1B\x0cGenesisProtoP\x01Z&github.com/kava-labs/kava/x/swap/types\xa2\x02\x03KSX\xaa\x02\x11Kava.Swap.V1beta1\xca\x02\x11Kava\\Swap\\V1beta1\xe2\x02\x1dKava\\Swap\\V1beta1\\GPBMetadata\xea\x02\x13Kava::Swap::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkava/swap/v1beta1/genesis.proto\x12\x11kava.swap.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1ckava/swap/v1beta1/swap.proto\"\xf9\x01\n\x0cGenesisState\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.kava.swap.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12U\n\x0cpool_records\x18\x02 \x03(\x0b\x32\x1d.kava.swap.v1beta1.PoolRecordB\x13\xc8\xde\x1f\x00\xaa\xdf\x1f\x0bPoolRecordsR\x0bpoolRecords\x12Y\n\rshare_records\x18\x03 \x03(\x0b\x32\x1e.kava.swap.v1beta1.ShareRecordB\x14\xc8\xde\x1f\x00\xaa\xdf\x1f\x0cShareRecordsR\x0cshareRecordsB\xb1\x01\n\x15\x63om.kava.swap.v1beta1B\x0cGenesisProtoZ&github.com/kava-labs/kava/x/swap/types\xa2\x02\x03KSX\xaa\x02\x11Kava.Swap.V1beta1\xca\x02\x11Kava\\Swap\\V1beta1\xe2\x02\x1dKava\\Swap\\V1beta1\\GPBMetadata\xea\x02\x13Kava::Swap::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.swap.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.kava.swap.v1beta1B\014GenesisProtoP\001Z&github.com/kava-labs/kava/x/swap/types\242\002\003KSX\252\002\021Kava.Swap.V1beta1\312\002\021Kava\\Swap\\V1beta1\342\002\035Kava\\Swap\\V1beta1\\GPBMetadata\352\002\023Kava::Swap::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\025com.kava.swap.v1beta1B\014GenesisProtoZ&github.com/kava-labs/kava/x/swap/types\242\002\003KSX\252\002\021Kava.Swap.V1beta1\312\002\021Kava\\Swap\\V1beta1\342\002\035Kava\\Swap\\V1beta1\\GPBMetadata\352\002\023Kava::Swap::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['pool_records']._options = None

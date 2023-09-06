@@ -118,6 +118,7 @@ public final class TxProto {
               com.panacea.did.v2.TxProto.MsgCreateDID.class, com.panacea.did.v2.TxProto.MsgCreateDID.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object did_ = "";
@@ -165,7 +166,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDocument() {
-      return document_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.did.v2.DIDDocument document = 2 [json_name = "document"];</code>
@@ -289,7 +290,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(did_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, did_);
       }
-      if (document_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDocument());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(verificationMethodId_)) {
@@ -313,7 +314,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(did_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, did_);
       }
-      if (document_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDocument());
       }
@@ -501,13 +502,19 @@ public final class TxProto {
 
       // Construct using com.panacea.did.v2.TxProto.MsgCreateDID.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDocumentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -558,10 +565,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.did_ = did_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.document_ = documentBuilder_ == null
               ? document_
               : documentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.verificationMethodId_ = verificationMethodId_;
@@ -572,6 +581,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.fromAddress_ = fromAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -847,8 +857,10 @@ public final class TxProto {
         } else {
           documentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (document_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1648,6 +1660,7 @@ public final class TxProto {
               com.panacea.did.v2.TxProto.MsgUpdateDID.class, com.panacea.did.v2.TxProto.MsgUpdateDID.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object did_ = "";
@@ -1695,7 +1708,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDocument() {
-      return document_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.did.v2.DIDDocument document = 2 [json_name = "document"];</code>
@@ -1819,7 +1832,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(did_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, did_);
       }
-      if (document_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDocument());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(verificationMethodId_)) {
@@ -1843,7 +1856,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(did_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, did_);
       }
-      if (document_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDocument());
       }
@@ -2031,13 +2044,19 @@ public final class TxProto {
 
       // Construct using com.panacea.did.v2.TxProto.MsgUpdateDID.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDocumentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2088,10 +2107,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.did_ = did_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.document_ = documentBuilder_ == null
               ? document_
               : documentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.verificationMethodId_ = verificationMethodId_;
@@ -2102,6 +2123,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.fromAddress_ = fromAddress_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2377,8 +2399,10 @@ public final class TxProto {
         } else {
           documentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (document_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

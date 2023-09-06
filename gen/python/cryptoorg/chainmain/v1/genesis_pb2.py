@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$cryptoorg/chainmain/v1/genesis.proto\x12\x16\x63hainmain.chainmain.v1\"\x0e\n\x0cGenesisStateB\xde\x01\n\x1a\x63om.chainmain.chainmain.v1B\x0cGenesisProtoP\x01Z8github.com/crypto-org-chain/chain-main/x/chainmain/types\xa2\x02\x03\x43\x43X\xaa\x02\x16\x43hainmain.Chainmain.V1\xca\x02\x16\x43hainmain\\Chainmain\\V1\xe2\x02\"Chainmain\\Chainmain\\V1\\GPBMetadata\xea\x02\x18\x43hainmain::Chainmain::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$cryptoorg/chainmain/v1/genesis.proto\x12\x16\x63hainmain.chainmain.v1\"\x0e\n\x0cGenesisStateB\xdc\x01\n\x1a\x63om.chainmain.chainmain.v1B\x0cGenesisProtoZ8github.com/crypto-org-chain/chain-main/x/chainmain/types\xa2\x02\x03\x43\x43X\xaa\x02\x16\x43hainmain.Chainmain.V1\xca\x02\x16\x43hainmain\\Chainmain\\V1\xe2\x02\"Chainmain\\Chainmain\\V1\\GPBMetadata\xea\x02\x18\x43hainmain::Chainmain::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cryptoorg.chainmain.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.chainmain.chainmain.v1B\014GenesisProtoP\001Z8github.com/crypto-org-chain/chain-main/x/chainmain/types\242\002\003CCX\252\002\026Chainmain.Chainmain.V1\312\002\026Chainmain\\Chainmain\\V1\342\002\"Chainmain\\Chainmain\\V1\\GPBMetadata\352\002\030Chainmain::Chainmain::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.chainmain.chainmain.v1B\014GenesisProtoZ8github.com/crypto-org-chain/chain-main/x/chainmain/types\242\002\003CCX\252\002\026Chainmain.Chainmain.V1\312\002\026Chainmain\\Chainmain\\V1\342\002\"Chainmain\\Chainmain\\V1\\GPBMetadata\352\002\030Chainmain::Chainmain::V1'
   _globals['_GENESISSTATE']._serialized_start=64
   _globals['_GENESISSTATE']._serialized_end=78
 # @@protoc_insertion_point(module_scope)

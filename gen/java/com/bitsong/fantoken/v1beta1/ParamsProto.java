@@ -102,6 +102,7 @@ public final class ParamsProto {
               com.bitsong.fantoken.v1beta1.ParamsProto.Params.class, com.bitsong.fantoken.v1beta1.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ISSUE_FEE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin issueFee_;
     /**
@@ -110,7 +111,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasIssueFee() {
-      return issueFee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
@@ -136,7 +137,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMintFee() {
-      return mintFee_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin mint_fee = 2 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
@@ -162,7 +163,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasBurnFee() {
-      return burnFee_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin burn_fee = 3 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
@@ -194,13 +195,13 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (issueFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getIssueFee());
       }
-      if (mintFee_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getMintFee());
       }
-      if (burnFee_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getBurnFee());
       }
       getUnknownFields().writeTo(output);
@@ -212,15 +213,15 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (issueFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIssueFee());
       }
-      if (mintFee_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMintFee());
       }
-      if (burnFee_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBurnFee());
       }
@@ -400,13 +401,21 @@ public final class ParamsProto {
 
       // Construct using com.bitsong.fantoken.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIssueFeeFieldBuilder();
+          getMintFeeFieldBuilder();
+          getBurnFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,21 +469,26 @@ public final class ParamsProto {
 
       private void buildPartial0(com.bitsong.fantoken.v1beta1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.issueFee_ = issueFeeBuilder_ == null
               ? issueFee_
               : issueFeeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.mintFee_ = mintFeeBuilder_ == null
               ? mintFee_
               : mintFeeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.burnFee_ = burnFeeBuilder_ == null
               ? burnFee_
               : burnFeeBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -660,8 +674,10 @@ public final class ParamsProto {
         } else {
           issueFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (issueFee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -779,8 +795,10 @@ public final class ParamsProto {
         } else {
           mintFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (mintFee_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -898,8 +916,10 @@ public final class ParamsProto {
         } else {
           burnFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (burnFee_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

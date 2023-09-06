@@ -19,15 +19,14 @@ from lum_network.airdrop import claim_pb2 as lum__network_dot_airdrop_dot_claim_
 from lum_network.airdrop import params_pb2 as lum__network_dot_airdrop_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!lum-network/airdrop/genesis.proto\x12\x13lum.network.airdrop\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1flum-network/airdrop/claim.proto\x1a lum-network/airdrop/params.proto\"\xb7\x02\n\x0cGenesisState\x12v\n\x16module_account_balance\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB%\xc8\xde\x1f\x00\xf2\xde\x1f\x1dyaml:\"module_account_balance\"R\x14moduleAccountBalance\x12J\n\x06params\x18\x02 \x01(\x0b\x32\x1b.lum.network.airdrop.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06params\x12\x63\n\rclaim_records\x18\x03 \x03(\x0b\x32 .lum.network.airdrop.ClaimRecordB\x1c\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"claim_records\"R\x0c\x63laimRecordsB\xc3\x01\n\x17\x63om.lum.network.airdropB\x0cGenesisProtoP\x01Z,github.com/lum-network/chain/x/airdrop/types\xa2\x02\x03LNA\xaa\x02\x13Lum.Network.Airdrop\xca\x02\x13Lum\\Network\\Airdrop\xe2\x02\x1fLum\\Network\\Airdrop\\GPBMetadata\xea\x02\x15Lum::Network::Airdropb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!lum-network/airdrop/genesis.proto\x12\x13lum.network.airdrop\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1flum-network/airdrop/claim.proto\x1a lum-network/airdrop/params.proto\"\xb7\x02\n\x0cGenesisState\x12v\n\x16module_account_balance\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB%\xc8\xde\x1f\x00\xf2\xde\x1f\x1dyaml:\"module_account_balance\"R\x14moduleAccountBalance\x12J\n\x06params\x18\x02 \x01(\x0b\x32\x1b.lum.network.airdrop.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06params\x12\x63\n\rclaim_records\x18\x03 \x03(\x0b\x32 .lum.network.airdrop.ClaimRecordB\x1c\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"claim_records\"R\x0c\x63laimRecordsB\xc1\x01\n\x17\x63om.lum.network.airdropB\x0cGenesisProtoZ,github.com/lum-network/chain/x/airdrop/types\xa2\x02\x03LNA\xaa\x02\x13Lum.Network.Airdrop\xca\x02\x13Lum\\Network\\Airdrop\xe2\x02\x1fLum\\Network\\Airdrop\\GPBMetadata\xea\x02\x15Lum::Network::Airdropb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.airdrop.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.lum.network.airdropB\014GenesisProtoP\001Z,github.com/lum-network/chain/x/airdrop/types\242\002\003LNA\252\002\023Lum.Network.Airdrop\312\002\023Lum\\Network\\Airdrop\342\002\037Lum\\Network\\Airdrop\\GPBMetadata\352\002\025Lum::Network::Airdrop'
+  DESCRIPTOR._serialized_options = b'\n\027com.lum.network.airdropB\014GenesisProtoZ,github.com/lum-network/chain/x/airdrop/types\242\002\003LNA\252\002\023Lum.Network.Airdrop\312\002\023Lum\\Network\\Airdrop\342\002\037Lum\\Network\\Airdrop\\GPBMetadata\352\002\025Lum::Network::Airdrop'
   _GENESISSTATE.fields_by_name['module_account_balance']._options = None
   _GENESISSTATE.fields_by_name['module_account_balance']._serialized_options = b'\310\336\037\000\362\336\037\035yaml:\"module_account_balance\"'
   _GENESISSTATE.fields_by_name['params']._options = None

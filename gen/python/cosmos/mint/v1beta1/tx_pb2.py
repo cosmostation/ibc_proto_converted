@@ -18,15 +18,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63osmos/mint/v1beta1/tx.proto\x12\x13\x63osmos.mint.v1beta1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x11\x61mino/amino.proto\x1a\x1e\x63osmos/mint/v1beta1/mint.proto\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\xbf\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12>\n\x06params\x18\x02 \x01(\x0b\x32\x1b.cosmos.mint.v1beta1.ParamsB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06params:4\x82\xe7\xb0*\tauthority\x8a\xe7\xb0*!cosmos-sdk/x/mint/MsgUpdateParams\"\x19\n\x17MsgUpdateParamsResponse2p\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.cosmos.mint.v1beta1.MsgUpdateParams\x1a,.cosmos.mint.v1beta1.MsgUpdateParamsResponse\x1a\x05\x80\xe7\xb0*\x01\x42\xbb\x01\n\x17\x63om.cosmos.mint.v1beta1B\x07TxProtoP\x01Z)github.com/cosmos/cosmos-sdk/x/mint/types\xa2\x02\x03\x43MX\xaa\x02\x13\x43osmos.Mint.V1beta1\xca\x02\x13\x43osmos\\Mint\\V1beta1\xe2\x02\x1f\x43osmos\\Mint\\V1beta1\\GPBMetadata\xea\x02\x15\x43osmos::Mint::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63osmos/mint/v1beta1/tx.proto\x12\x13\x63osmos.mint.v1beta1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x11\x61mino/amino.proto\x1a\x1e\x63osmos/mint/v1beta1/mint.proto\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\xbf\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12>\n\x06params\x18\x02 \x01(\x0b\x32\x1b.cosmos.mint.v1beta1.ParamsB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06params:4\x82\xe7\xb0*\tauthority\x8a\xe7\xb0*!cosmos-sdk/x/mint/MsgUpdateParams\"\x19\n\x17MsgUpdateParamsResponse2p\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.cosmos.mint.v1beta1.MsgUpdateParams\x1a,.cosmos.mint.v1beta1.MsgUpdateParamsResponse\x1a\x05\x80\xe7\xb0*\x01\x42\xb9\x01\n\x17\x63om.cosmos.mint.v1beta1B\x07TxProtoZ)github.com/cosmos/cosmos-sdk/x/mint/types\xa2\x02\x03\x43MX\xaa\x02\x13\x43osmos.Mint.V1beta1\xca\x02\x13\x43osmos\\Mint\\V1beta1\xe2\x02\x1f\x43osmos\\Mint\\V1beta1\\GPBMetadata\xea\x02\x15\x43osmos::Mint::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.mint.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.cosmos.mint.v1beta1B\007TxProtoP\001Z)github.com/cosmos/cosmos-sdk/x/mint/types\242\002\003CMX\252\002\023Cosmos.Mint.V1beta1\312\002\023Cosmos\\Mint\\V1beta1\342\002\037Cosmos\\Mint\\V1beta1\\GPBMetadata\352\002\025Cosmos::Mint::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.cosmos.mint.v1beta1B\007TxProtoZ)github.com/cosmos/cosmos-sdk/x/mint/types\242\002\003CMX\252\002\023Cosmos.Mint.V1beta1\312\002\023Cosmos\\Mint\\V1beta1\342\002\037Cosmos\\Mint\\V1beta1\\GPBMetadata\352\002\025Cosmos::Mint::V1beta1'
   _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
   _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGUPDATEPARAMS.fields_by_name['params']._options = None

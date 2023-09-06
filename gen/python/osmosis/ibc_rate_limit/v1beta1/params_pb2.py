@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+osmosis/ibc-rate-limit/v1beta1/params.proto\x12\x1cosmosis.ibcratelimit.v1beta1\x1a\x14gogoproto/gogo.proto\"P\n\x06Params\x12\x46\n\x10\x63ontract_address\x18\x01 \x01(\tB\x1b\xf2\xde\x1f\x17yaml:\"contract_address\"R\x0f\x63ontractAddressB\xfd\x01\n com.osmosis.ibcratelimit.v1beta1B\x0bParamsProtoP\x01Z:github.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/types\xa2\x02\x03OIX\xaa\x02\x1cOsmosis.Ibcratelimit.V1beta1\xca\x02\x1cOsmosis\\Ibcratelimit\\V1beta1\xe2\x02(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Ibcratelimit::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+osmosis/ibc-rate-limit/v1beta1/params.proto\x12\x1cosmosis.ibcratelimit.v1beta1\x1a\x14gogoproto/gogo.proto\"P\n\x06Params\x12\x46\n\x10\x63ontract_address\x18\x01 \x01(\tB\x1b\xf2\xde\x1f\x17yaml:\"contract_address\"R\x0f\x63ontractAddressB\xfb\x01\n com.osmosis.ibcratelimit.v1beta1B\x0bParamsProtoZ:github.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/types\xa2\x02\x03OIX\xaa\x02\x1cOsmosis.Ibcratelimit.V1beta1\xca\x02\x1cOsmosis\\Ibcratelimit\\V1beta1\xe2\x02(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Ibcratelimit::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.ibc_rate_limit.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.osmosis.ibcratelimit.v1beta1B\013ParamsProtoP\001Z:github.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/types\242\002\003OIX\252\002\034Osmosis.Ibcratelimit.V1beta1\312\002\034Osmosis\\Ibcratelimit\\V1beta1\342\002(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\352\002\036Osmosis::Ibcratelimit::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n com.osmosis.ibcratelimit.v1beta1B\013ParamsProtoZ:github.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/types\242\002\003OIX\252\002\034Osmosis.Ibcratelimit.V1beta1\312\002\034Osmosis\\Ibcratelimit\\V1beta1\342\002(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\352\002\036Osmosis::Ibcratelimit::V1beta1'
   _PARAMS.fields_by_name['contract_address']._options = None
   _PARAMS.fields_by_name['contract_address']._serialized_options = b'\362\336\037\027yaml:\"contract_address\"'
   _globals['_PARAMS']._serialized_start=99

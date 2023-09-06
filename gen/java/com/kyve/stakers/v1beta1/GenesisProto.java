@@ -318,6 +318,7 @@ public final class GenesisProto {
               com.kyve.stakers.v1beta1.GenesisProto.GenesisState.class, com.kyve.stakers.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.kyve.stakers.v1beta1.ParamsProto.Params params_;
     /**
@@ -330,7 +331,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -551,7 +552,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasQueueStateCommission() {
-      return queueStateCommission_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -650,7 +651,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasQueueStateLeave() {
-      return queueStateLeave_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -690,7 +691,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < stakerList_.size(); i++) {
@@ -702,13 +703,13 @@ public final class GenesisProto {
       for (int i = 0; i < commissionChangeEntries_.size(); i++) {
         output.writeMessage(4, commissionChangeEntries_.get(i));
       }
-      if (queueStateCommission_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getQueueStateCommission());
       }
       for (int i = 0; i < leavePoolEntries_.size(); i++) {
         output.writeMessage(6, leavePoolEntries_.get(i));
       }
-      if (queueStateLeave_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(7, getQueueStateLeave());
       }
       getUnknownFields().writeTo(output);
@@ -720,7 +721,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -736,7 +737,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, commissionChangeEntries_.get(i));
       }
-      if (queueStateCommission_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getQueueStateCommission());
       }
@@ -744,7 +745,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, leavePoolEntries_.get(i));
       }
-      if (queueStateLeave_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getQueueStateLeave());
       }
@@ -948,13 +949,25 @@ public final class GenesisProto {
 
       // Construct using com.kyve.stakers.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getStakerListFieldBuilder();
+          getValaccountListFieldBuilder();
+          getCommissionChangeEntriesFieldBuilder();
+          getQueueStateCommissionFieldBuilder();
+          getLeavePoolEntriesFieldBuilder();
+          getQueueStateLeaveFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1076,21 +1089,26 @@ public final class GenesisProto {
 
       private void buildPartial0(com.kyve.stakers.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.queueStateCommission_ = queueStateCommissionBuilder_ == null
               ? queueStateCommission_
               : queueStateCommissionBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.queueStateLeave_ = queueStateLeaveBuilder_ == null
               ? queueStateLeave_
               : queueStateLeaveBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1452,8 +1470,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2543,8 +2563,10 @@ public final class GenesisProto {
         } else {
           queueStateCommissionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (queueStateCommission_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3010,8 +3032,10 @@ public final class GenesisProto {
         } else {
           queueStateLeaveBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (queueStateLeave_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n-likechain/likenft/v1/classes_by_account.proto\x12\x14likechain.likenft.v1\x1a\x14gogoproto/gogo.proto\"I\n\x10\x43lassesByAccount\x12\x18\n\x07\x61\x63\x63ount\x18\x01 \x01(\tR\x07\x61\x63\x63ount\x12\x1b\n\tclass_ids\x18\x02 \x03(\tR\x08\x63lassIds\"\x8e\x01\n\x1b\x43lassesByAccountStoreRecord\x12R\n\x0b\x61\x63\x63_address\x18\x01 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\naccAddress\x12\x1b\n\tclass_ids\x18\x02 \x03(\tR\x08\x63lassIdsB\xda\x01\n\x18\x63om.likechain.likenft.v1B\x15\x43lassesByAccountProtoP\x01Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n-likechain/likenft/v1/classes_by_account.proto\x12\x14likechain.likenft.v1\x1a\x14gogoproto/gogo.proto\"I\n\x10\x43lassesByAccount\x12\x18\n\x07\x61\x63\x63ount\x18\x01 \x01(\tR\x07\x61\x63\x63ount\x12\x1b\n\tclass_ids\x18\x02 \x03(\tR\x08\x63lassIds\"\x8e\x01\n\x1b\x43lassesByAccountStoreRecord\x12R\n\x0b\x61\x63\x63_address\x18\x01 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\naccAddress\x12\x1b\n\tclass_ids\x18\x02 \x03(\tR\x08\x63lassIdsB\xd8\x01\n\x18\x63om.likechain.likenft.v1B\x15\x43lassesByAccountProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\xa2\x02\x03LLX\xaa\x02\x14Likechain.Likenft.V1\xca\x02\x14Likechain\\Likenft\\V1\xe2\x02 Likechain\\Likenft\\V1\\GPBMetadata\xea\x02\x16Likechain::Likenft::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'likechain.likenft.v1.classes_by_account_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\025ClassesByAccountProtoP\001Z5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.likechain.likenft.v1B\025ClassesByAccountProtoZ5github.com/likecoin/likecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Likechain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Likechain::Likenft::V1'
   _CLASSESBYACCOUNTSTORERECORD.fields_by_name['acc_address']._options = None
   _CLASSESBYACCOUNTSTORERECORD.fields_by_name['acc_address']._serialized_options = b'\372\336\037-github.com/cosmos/cosmos-sdk/types.AccAddress'
   _globals['_CLASSESBYACCOUNT']._serialized_start=93

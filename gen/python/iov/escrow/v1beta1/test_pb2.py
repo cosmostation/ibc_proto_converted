@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1diov/escrow/v1beta1/test.proto\x12\x1astarnamed.x.escrow.v1beta1\x1a\x14gogoproto/gogo.proto\"\x99\x01\n\nTestObject\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12G\n\x05owner\x18\x02 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x05owner\x12\x32\n\x15num_allowed_transfers\x18\x03 \x01(\x03R\x13numAllowedTransfers\"\x94\x01\n\x19TestTimeConstrainedObject\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12G\n\x05owner\x18\x02 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x05owner\x12\x1e\n\nexpiration\x18\x03 \x01(\x04R\nexpirationB\xe7\x01\n\x1e\x63om.starnamed.x.escrow.v1beta1B\tTestProtoP\x01Z+github.com/iov-one/starnamed/x/escrow/types\xa2\x02\x03SXE\xaa\x02\x1aStarnamed.X.Escrow.V1beta1\xca\x02\x1aStarnamed\\X\\Escrow\\V1beta1\xe2\x02&Starnamed\\X\\Escrow\\V1beta1\\GPBMetadata\xea\x02\x1dStarnamed::X::Escrow::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1diov/escrow/v1beta1/test.proto\x12\x1astarnamed.x.escrow.v1beta1\x1a\x14gogoproto/gogo.proto\"\x99\x01\n\nTestObject\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12G\n\x05owner\x18\x02 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x05owner\x12\x32\n\x15num_allowed_transfers\x18\x03 \x01(\x03R\x13numAllowedTransfers\"\x94\x01\n\x19TestTimeConstrainedObject\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12G\n\x05owner\x18\x02 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x05owner\x12\x1e\n\nexpiration\x18\x03 \x01(\x04R\nexpirationB\xe5\x01\n\x1e\x63om.starnamed.x.escrow.v1beta1B\tTestProtoZ+github.com/iov-one/starnamed/x/escrow/types\xa2\x02\x03SXE\xaa\x02\x1aStarnamed.X.Escrow.V1beta1\xca\x02\x1aStarnamed\\X\\Escrow\\V1beta1\xe2\x02&Starnamed\\X\\Escrow\\V1beta1\\GPBMetadata\xea\x02\x1dStarnamed::X::Escrow::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'iov.escrow.v1beta1.test_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.starnamed.x.escrow.v1beta1B\tTestProtoP\001Z+github.com/iov-one/starnamed/x/escrow/types\242\002\003SXE\252\002\032Starnamed.X.Escrow.V1beta1\312\002\032Starnamed\\X\\Escrow\\V1beta1\342\002&Starnamed\\X\\Escrow\\V1beta1\\GPBMetadata\352\002\035Starnamed::X::Escrow::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\036com.starnamed.x.escrow.v1beta1B\tTestProtoZ+github.com/iov-one/starnamed/x/escrow/types\242\002\003SXE\252\002\032Starnamed.X.Escrow.V1beta1\312\002\032Starnamed\\X\\Escrow\\V1beta1\342\002&Starnamed\\X\\Escrow\\V1beta1\\GPBMetadata\352\002\035Starnamed::X::Escrow::V1beta1\310\341\036\000'
   _TESTOBJECT.fields_by_name['owner']._options = None
   _TESTOBJECT.fields_by_name['owner']._serialized_options = b'\372\336\037-github.com/cosmos/cosmos-sdk/types.AccAddress'
   _TESTTIMECONSTRAINEDOBJECT.fields_by_name['owner']._options = None

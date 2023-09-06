@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from akash.audit.v1beta2 import audit_pb2 as akash_dot_audit_dot_v1beta2_dot_audit__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!akash/audit/v1beta2/genesis.proto\x12\x13\x61kash.audit.v1beta2\x1a\x14gogoproto/gogo.proto\x1a\x1f\x61kash/audit/v1beta2/audit.proto\"\x7f\n\x0cGenesisState\x12o\n\nattributes\x18\x01 \x03(\x0b\x32&.akash.audit.v1beta2.AuditedAttributesB\'\xc8\xde\x1f\x00\xea\xde\x1f\nattributes\xf2\xde\x1f\x11yaml:\"attributes\"R\nattributesB\xcf\x01\n\x17\x63om.akash.audit.v1beta2B\x0cGenesisProtoP\x01Z8github.com/akash-network/akash-api/go/node/audit/v1beta2\xa2\x02\x03\x41\x41X\xaa\x02\x13\x41kash.Audit.V1beta2\xca\x02\x13\x41kash\\Audit\\V1beta2\xe2\x02\x1f\x41kash\\Audit\\V1beta2\\GPBMetadata\xea\x02\x15\x41kash::Audit::V1beta2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!akash/audit/v1beta2/genesis.proto\x12\x13\x61kash.audit.v1beta2\x1a\x14gogoproto/gogo.proto\x1a\x1f\x61kash/audit/v1beta2/audit.proto\"\x7f\n\x0cGenesisState\x12o\n\nattributes\x18\x01 \x03(\x0b\x32&.akash.audit.v1beta2.AuditedAttributesB\'\xc8\xde\x1f\x00\xea\xde\x1f\nattributes\xf2\xde\x1f\x11yaml:\"attributes\"R\nattributesB\xcd\x01\n\x17\x63om.akash.audit.v1beta2B\x0cGenesisProtoZ8github.com/akash-network/akash-api/go/node/audit/v1beta2\xa2\x02\x03\x41\x41X\xaa\x02\x13\x41kash.Audit.V1beta2\xca\x02\x13\x41kash\\Audit\\V1beta2\xe2\x02\x1f\x41kash\\Audit\\V1beta2\\GPBMetadata\xea\x02\x15\x41kash::Audit::V1beta2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.audit.v1beta2.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.akash.audit.v1beta2B\014GenesisProtoP\001Z8github.com/akash-network/akash-api/go/node/audit/v1beta2\242\002\003AAX\252\002\023Akash.Audit.V1beta2\312\002\023Akash\\Audit\\V1beta2\342\002\037Akash\\Audit\\V1beta2\\GPBMetadata\352\002\025Akash::Audit::V1beta2'
+  DESCRIPTOR._serialized_options = b'\n\027com.akash.audit.v1beta2B\014GenesisProtoZ8github.com/akash-network/akash-api/go/node/audit/v1beta2\242\002\003AAX\252\002\023Akash.Audit.V1beta2\312\002\023Akash\\Audit\\V1beta2\342\002\037Akash\\Audit\\V1beta2\\GPBMetadata\352\002\025Akash::Audit::V1beta2'
   _GENESISSTATE.fields_by_name['attributes']._options = None
   _GENESISSTATE.fields_by_name['attributes']._serialized_options = b'\310\336\037\000\352\336\037\nattributes\362\336\037\021yaml:\"attributes\"'
   _globals['_GENESISSTATE']._serialized_start=113

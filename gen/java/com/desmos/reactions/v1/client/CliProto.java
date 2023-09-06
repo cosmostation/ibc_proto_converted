@@ -112,6 +112,7 @@ public final class CliProto {
               com.desmos.reactions.v1.client.CliProto.SetReactionsParamsJSON.class, com.desmos.reactions.v1.client.CliProto.SetReactionsParamsJSON.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REGISTERED_REACTION_PARAMS_FIELD_NUMBER = 1;
     private com.desmos.reactions.v1.ModelsProto.RegisteredReactionValueParams registeredReactionParams_;
     /**
@@ -124,7 +125,7 @@ public final class CliProto {
      */
     @java.lang.Override
     public boolean hasRegisteredReactionParams() {
-      return registeredReactionParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -162,7 +163,7 @@ public final class CliProto {
      */
     @java.lang.Override
     public boolean hasFreeTextParams() {
-      return freeTextParams_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -202,10 +203,10 @@ public final class CliProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (registeredReactionParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRegisteredReactionParams());
       }
-      if (freeTextParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getFreeTextParams());
       }
       getUnknownFields().writeTo(output);
@@ -217,11 +218,11 @@ public final class CliProto {
       if (size != -1) return size;
 
       size = 0;
-      if (registeredReactionParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRegisteredReactionParams());
       }
-      if (freeTextParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFreeTextParams());
       }
@@ -393,13 +394,20 @@ public final class CliProto {
 
       // Construct using com.desmos.reactions.v1.client.CliProto.SetReactionsParamsJSON.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRegisteredReactionParamsFieldBuilder();
+          getFreeTextParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -448,16 +456,20 @@ public final class CliProto {
 
       private void buildPartial0(com.desmos.reactions.v1.client.CliProto.SetReactionsParamsJSON result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.registeredReactionParams_ = registeredReactionParamsBuilder_ == null
               ? registeredReactionParams_
               : registeredReactionParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.freeTextParams_ = freeTextParamsBuilder_ == null
               ? freeTextParams_
               : freeTextParamsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -653,8 +665,10 @@ public final class CliProto {
         } else {
           registeredReactionParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (registeredReactionParams_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -808,8 +822,10 @@ public final class CliProto {
         } else {
           freeTextParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (freeTextParams_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

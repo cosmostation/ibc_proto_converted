@@ -16,15 +16,14 @@ from sommelier.cellarfees.v1 import params_pb2 as sommelier_dot_cellarfees_dot_v
 from sommelier.cellarfees.v1 import cellarfees_pb2 as sommelier_dot_cellarfees_dot_v1_dot_cellarfees__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%sommelier/cellarfees/v1/genesis.proto\x12\rcellarfees.v1\x1a\x14gogoproto/gogo.proto\x1a$sommelier/cellarfees/v1/params.proto\x1a(sommelier/cellarfees/v1/cellarfees.proto\"\x85\x02\n\x0cGenesisState\x12\x33\n\x06params\x18\x01 \x01(\x0b\x32\x15.cellarfees.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12Y\n\x14\x66\x65\x65_accrual_counters\x18\x02 \x01(\x0b\x32!.cellarfees.v1.FeeAccrualCountersB\x04\xc8\xde\x1f\x00R\x12\x66\x65\x65\x41\x63\x63rualCounters\x12\x65\n\x17last_reward_supply_peak\x18\x03 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x14lastRewardSupplyPeakB\xaa\x01\n\x11\x63om.cellarfees.v1B\x0cGenesisProtoP\x01Z2github.com/peggyjv/sommelier/v4/x/cellarfees/types\xa2\x02\x03\x43XX\xaa\x02\rCellarfees.V1\xca\x02\rCellarfees\\V1\xe2\x02\x19\x43\x65llarfees\\V1\\GPBMetadata\xea\x02\x0e\x43\x65llarfees::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%sommelier/cellarfees/v1/genesis.proto\x12\rcellarfees.v1\x1a\x14gogoproto/gogo.proto\x1a$sommelier/cellarfees/v1/params.proto\x1a(sommelier/cellarfees/v1/cellarfees.proto\"\x85\x02\n\x0cGenesisState\x12\x33\n\x06params\x18\x01 \x01(\x0b\x32\x15.cellarfees.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12Y\n\x14\x66\x65\x65_accrual_counters\x18\x02 \x01(\x0b\x32!.cellarfees.v1.FeeAccrualCountersB\x04\xc8\xde\x1f\x00R\x12\x66\x65\x65\x41\x63\x63rualCounters\x12\x65\n\x17last_reward_supply_peak\x18\x03 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x14lastRewardSupplyPeakB\xa8\x01\n\x11\x63om.cellarfees.v1B\x0cGenesisProtoZ2github.com/peggyjv/sommelier/v4/x/cellarfees/types\xa2\x02\x03\x43XX\xaa\x02\rCellarfees.V1\xca\x02\rCellarfees\\V1\xe2\x02\x19\x43\x65llarfees\\V1\\GPBMetadata\xea\x02\x0e\x43\x65llarfees::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.cellarfees.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\021com.cellarfees.v1B\014GenesisProtoP\001Z2github.com/peggyjv/sommelier/v4/x/cellarfees/types\242\002\003CXX\252\002\rCellarfees.V1\312\002\rCellarfees\\V1\342\002\031Cellarfees\\V1\\GPBMetadata\352\002\016Cellarfees::V1'
+  DESCRIPTOR._serialized_options = b'\n\021com.cellarfees.v1B\014GenesisProtoZ2github.com/peggyjv/sommelier/v4/x/cellarfees/types\242\002\003CXX\252\002\rCellarfees.V1\312\002\rCellarfees\\V1\342\002\031Cellarfees\\V1\\GPBMetadata\352\002\016Cellarfees::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['fee_accrual_counters']._options = None

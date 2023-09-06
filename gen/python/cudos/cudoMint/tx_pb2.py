@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63udos/cudoMint/tx.proto\x12\x0e\x63udos.cudoMint2\x05\n\x03MsgB\xab\x01\n\x12\x63om.cudos.cudoMintB\x07TxProtoP\x01Z3github.com/CudoVentures/cudos-node/x/cudoMint/types\xa2\x02\x03\x43\x43X\xaa\x02\x0e\x43udos.CudoMint\xca\x02\x0e\x43udos\\CudoMint\xe2\x02\x1a\x43udos\\CudoMint\\GPBMetadata\xea\x02\x0f\x43udos::CudoMintb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63udos/cudoMint/tx.proto\x12\x0e\x63udos.cudoMint2\x05\n\x03MsgB\xa9\x01\n\x12\x63om.cudos.cudoMintB\x07TxProtoZ3github.com/CudoVentures/cudos-node/x/cudoMint/types\xa2\x02\x03\x43\x43X\xaa\x02\x0e\x43udos.CudoMint\xca\x02\x0e\x43udos\\CudoMint\xe2\x02\x1a\x43udos\\CudoMint\\GPBMetadata\xea\x02\x0f\x43udos::CudoMintb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cudos.cudoMint.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.cudos.cudoMintB\007TxProtoP\001Z3github.com/CudoVentures/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMetadata\352\002\017Cudos::CudoMint'
+  DESCRIPTOR._serialized_options = b'\n\022com.cudos.cudoMintB\007TxProtoZ3github.com/CudoVentures/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMetadata\352\002\017Cudos::CudoMint'
   _globals['_MSG']._serialized_start=43
   _globals['_MSG']._serialized_end=48
 # @@protoc_insertion_point(module_scope)

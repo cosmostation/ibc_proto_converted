@@ -15,15 +15,14 @@ from panacea.oracle.v2alpha1 import oracle_pb2 as panacea_dot_oracle_dot_v2alpha
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#panacea/oracle/v2alpha1/query.proto\x12\x17panacea.oracle.v2alpha1\x1a$panacea/oracle/v2alpha1/oracle.proto\x1a\x1cgoogle/api/annotations.proto\".\n\x12QueryOracleRequest\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"N\n\x13QueryOracleResponse\x12\x37\n\x06oracle\x18\x01 \x01(\x0b\x32\x1f.panacea.oracle.v2alpha1.OracleR\x06oracle2\x96\x01\n\x05Query\x12\x8c\x01\n\x06Oracle\x12+.panacea.oracle.v2alpha1.QueryOracleRequest\x1a,.panacea.oracle.v2alpha1.QueryOracleResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/panacea/oracle/v2alpha1/oracleB\xdb\x01\n\x1b\x63om.panacea.oracle.v2alpha1B\nQueryProtoP\x01Z2github.com/medibloc/panacea-core/v2/x/oracle/types\xa2\x02\x03POX\xaa\x02\x17Panacea.Oracle.V2alpha1\xca\x02\x17Panacea\\Oracle\\V2alpha1\xe2\x02#Panacea\\Oracle\\V2alpha1\\GPBMetadata\xea\x02\x19Panacea::Oracle::V2alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#panacea/oracle/v2alpha1/query.proto\x12\x17panacea.oracle.v2alpha1\x1a$panacea/oracle/v2alpha1/oracle.proto\x1a\x1cgoogle/api/annotations.proto\".\n\x12QueryOracleRequest\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\"N\n\x13QueryOracleResponse\x12\x37\n\x06oracle\x18\x01 \x01(\x0b\x32\x1f.panacea.oracle.v2alpha1.OracleR\x06oracle2\x96\x01\n\x05Query\x12\x8c\x01\n\x06Oracle\x12+.panacea.oracle.v2alpha1.QueryOracleRequest\x1a,.panacea.oracle.v2alpha1.QueryOracleResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/panacea/oracle/v2alpha1/oracleB\xd9\x01\n\x1b\x63om.panacea.oracle.v2alpha1B\nQueryProtoZ2github.com/medibloc/panacea-core/v2/x/oracle/types\xa2\x02\x03POX\xaa\x02\x17Panacea.Oracle.V2alpha1\xca\x02\x17Panacea\\Oracle\\V2alpha1\xe2\x02#Panacea\\Oracle\\V2alpha1\\GPBMetadata\xea\x02\x19Panacea::Oracle::V2alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'panacea.oracle.v2alpha1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.panacea.oracle.v2alpha1B\nQueryProtoP\001Z2github.com/medibloc/panacea-core/v2/x/oracle/types\242\002\003POX\252\002\027Panacea.Oracle.V2alpha1\312\002\027Panacea\\Oracle\\V2alpha1\342\002#Panacea\\Oracle\\V2alpha1\\GPBMetadata\352\002\031Panacea::Oracle::V2alpha1'
+  DESCRIPTOR._serialized_options = b'\n\033com.panacea.oracle.v2alpha1B\nQueryProtoZ2github.com/medibloc/panacea-core/v2/x/oracle/types\242\002\003POX\252\002\027Panacea.Oracle.V2alpha1\312\002\027Panacea\\Oracle\\V2alpha1\342\002#Panacea\\Oracle\\V2alpha1\\GPBMetadata\352\002\031Panacea::Oracle::V2alpha1'
   _QUERY.methods_by_name['Oracle']._options = None
   _QUERY.methods_by_name['Oracle']._serialized_options = b'\202\323\344\223\002!\022\037/panacea/oracle/v2alpha1/oracle'
   _globals['_QUERYORACLEREQUEST']._serialized_start=132

@@ -110,6 +110,7 @@ public final class StorageProto {
               com.akash.base.v1beta3.StorageProto.Storage.class, com.akash.base.v1beta3.StorageProto.Storage.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -157,7 +158,7 @@ public final class StorageProto {
      */
     @java.lang.Override
     public boolean hasQuantity() {
-      return quantity_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.base.v1beta3.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
@@ -233,7 +234,7 @@ public final class StorageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (quantity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getQuantity());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -251,7 +252,7 @@ public final class StorageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (quantity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getQuantity());
       }
@@ -427,13 +428,20 @@ public final class StorageProto {
 
       // Construct using com.akash.base.v1beta3.StorageProto.Storage.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getQuantityFieldBuilder();
+          getAttributesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -501,11 +509,14 @@ public final class StorageProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.quantity_ = quantityBuilder_ == null
               ? quantity_
               : quantityBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -792,8 +803,10 @@ public final class StorageProto {
         } else {
           quantityBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (quantity_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

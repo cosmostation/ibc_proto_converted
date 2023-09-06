@@ -74,7 +74,7 @@ proto.pstake.liquidstakeibc.v1beta1.Deposit.toObject = function(includeInstance,
   var f, obj = {
     chainId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     amount: (f = msg.getAmount()) && proto.cosmos.base.v1beta1.Coin.toObject(includeInstance, f),
-    epoch: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    epoch: jspb.Message.getFieldWithDefault(msg, 3, 0),
     state: jspb.Message.getFieldWithDefault(msg, 4, 0),
     ibcSequenceId: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
@@ -123,7 +123,7 @@ proto.pstake.liquidstakeibc.v1beta1.Deposit.deserializeBinaryFromReader = functi
       msg.setAmount(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setEpoch(value);
       break;
     case 4:
@@ -179,8 +179,8 @@ proto.pstake.liquidstakeibc.v1beta1.Deposit.serializeBinaryToWriter = function(m
     );
   }
   f = message.getEpoch();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt64(
       3,
       f
     );
@@ -268,20 +268,20 @@ proto.pstake.liquidstakeibc.v1beta1.Deposit.prototype.hasAmount = function() {
 
 
 /**
- * optional string epoch = 3;
- * @return {string}
+ * optional int64 epoch = 3;
+ * @return {number}
  */
 proto.pstake.liquidstakeibc.v1beta1.Deposit.prototype.getEpoch = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.pstake.liquidstakeibc.v1beta1.Deposit} returns this
  */
 proto.pstake.liquidstakeibc.v1beta1.Deposit.prototype.setEpoch = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 

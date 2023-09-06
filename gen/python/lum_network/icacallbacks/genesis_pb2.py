@@ -16,15 +16,14 @@ from lum_network.icacallbacks import params_pb2 as lum__network_dot_icacallbacks
 from lum_network.icacallbacks import callback_data_pb2 as lum__network_dot_icacallbacks_dot_callback__data__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&lum-network/icacallbacks/genesis.proto\x12\x18lum.network.icacallbacks\x1a\x14gogoproto/gogo.proto\x1a%lum-network/icacallbacks/params.proto\x1a,lum-network/icacallbacks/callback_data.proto\"\xc3\x01\n\x0cGenesisState\x12>\n\x06params\x18\x01 \x01(\x0b\x32 .lum.network.icacallbacks.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x17\n\x07port_id\x18\x02 \x01(\tR\x06portId\x12Z\n\x12\x63\x61llback_data_list\x18\x03 \x03(\x0b\x32&.lum.network.icacallbacks.CallbackDataB\x04\xc8\xde\x1f\x00R\x10\x63\x61llbackDataListB\xe1\x01\n\x1c\x63om.lum.network.icacallbacksB\x0cGenesisProtoP\x01Z1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&lum-network/icacallbacks/genesis.proto\x12\x18lum.network.icacallbacks\x1a\x14gogoproto/gogo.proto\x1a%lum-network/icacallbacks/params.proto\x1a,lum-network/icacallbacks/callback_data.proto\"\xc3\x01\n\x0cGenesisState\x12>\n\x06params\x18\x01 \x01(\x0b\x32 .lum.network.icacallbacks.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x17\n\x07port_id\x18\x02 \x01(\tR\x06portId\x12Z\n\x12\x63\x61llback_data_list\x18\x03 \x03(\x0b\x32&.lum.network.icacallbacks.CallbackDataB\x04\xc8\xde\x1f\x00R\x10\x63\x61llbackDataListB\xdf\x01\n\x1c\x63om.lum.network.icacallbacksB\x0cGenesisProtoZ1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.icacallbacks.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\014GenesisProtoP\001Z1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
+  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\014GenesisProtoZ1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['callback_data_list']._options = None

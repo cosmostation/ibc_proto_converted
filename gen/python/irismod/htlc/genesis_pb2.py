@@ -16,15 +16,14 @@ from irismod.htlc import htlc_pb2 as irismod_dot_htlc_dot_htlc__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1airismod/htlc/genesis.proto\x12\x0cirismod.htlc\x1a\x14gogoproto/gogo.proto\x1a\x17irismod/htlc/htlc.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa3\x02\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.irismod.htlc.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12.\n\x05htlcs\x18\x02 \x03(\x0b\x32\x12.irismod.htlc.HTLCB\x04\xc8\xde\x1f\x00R\x05htlcs\x12;\n\x08supplies\x18\x03 \x03(\x0b\x32\x19.irismod.htlc.AssetSupplyB\x04\xc8\xde\x1f\x00R\x08supplies\x12r\n\x13previous_block_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB&\xc8\xde\x1f\x00\xf2\xde\x1f\x1ayaml:\"previous_block_time\"\x90\xdf\x1f\x01R\x11previousBlockTimeB\xa0\x01\n\x10\x63om.irismod.htlcB\x0cGenesisProtoP\x01Z-github.com/irisnet/irismod/modules/htlc/types\xa2\x02\x03IHX\xaa\x02\x0cIrismod.Htlc\xca\x02\x0cIrismod\\Htlc\xe2\x02\x18Irismod\\Htlc\\GPBMetadata\xea\x02\rIrismod::Htlcb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1airismod/htlc/genesis.proto\x12\x0cirismod.htlc\x1a\x14gogoproto/gogo.proto\x1a\x17irismod/htlc/htlc.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa3\x02\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.irismod.htlc.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12.\n\x05htlcs\x18\x02 \x03(\x0b\x32\x12.irismod.htlc.HTLCB\x04\xc8\xde\x1f\x00R\x05htlcs\x12;\n\x08supplies\x18\x03 \x03(\x0b\x32\x19.irismod.htlc.AssetSupplyB\x04\xc8\xde\x1f\x00R\x08supplies\x12r\n\x13previous_block_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB&\xc8\xde\x1f\x00\xf2\xde\x1f\x1ayaml:\"previous_block_time\"\x90\xdf\x1f\x01R\x11previousBlockTimeB\x9e\x01\n\x10\x63om.irismod.htlcB\x0cGenesisProtoZ-github.com/irisnet/irismod/modules/htlc/types\xa2\x02\x03IHX\xaa\x02\x0cIrismod.Htlc\xca\x02\x0cIrismod\\Htlc\xe2\x02\x18Irismod\\Htlc\\GPBMetadata\xea\x02\rIrismod::Htlcb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.htlc.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.irismod.htlcB\014GenesisProtoP\001Z-github.com/irisnet/irismod/modules/htlc/types\242\002\003IHX\252\002\014Irismod.Htlc\312\002\014Irismod\\Htlc\342\002\030Irismod\\Htlc\\GPBMetadata\352\002\rIrismod::Htlc'
+  DESCRIPTOR._serialized_options = b'\n\020com.irismod.htlcB\014GenesisProtoZ-github.com/irisnet/irismod/modules/htlc/types\242\002\003IHX\252\002\014Irismod.Htlc\312\002\014Irismod\\Htlc\342\002\030Irismod\\Htlc\\GPBMetadata\352\002\rIrismod::Htlc'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['htlcs']._options = None

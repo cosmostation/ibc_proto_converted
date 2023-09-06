@@ -16,15 +16,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.ids.base import identity_id_pb2 as assetmantle_dot_ids_dot_base_dot_identity__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/splits/transactions/wrap/message.proto\x12,assetmantle.modules.splits.transactions.wrap\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a&assetmantle/ids/base/identity_id.proto\"\xc3\x01\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x41\n\x08\x66rom_i_d\x18\x02 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x06\x66romID\x12\x61\n\x05\x63oins\x18\x03 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oinsB\x96\x02\n0com.assetmantle.modules.splits.transactions.wrapB\x0cMessageProtoP\x01\xa2\x02\x05\x41MSTW\xaa\x02,Assetmantle.Modules.Splits.Transactions.Wrap\xca\x02,Assetmantle\\Modules\\Splits\\Transactions\\Wrap\xe2\x02\x38\x41ssetmantle\\Modules\\Splits\\Transactions\\Wrap\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Splits::Transactions::Wrapb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/splits/transactions/wrap/message.proto\x12,assetmantle.modules.splits.transactions.wrap\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a&assetmantle/ids/base/identity_id.proto\"\xc3\x01\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x41\n\x08\x66rom_i_d\x18\x02 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x06\x66romID\x12\x61\n\x05\x63oins\x18\x03 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oinsB\x94\x02\n0com.assetmantle.modules.splits.transactions.wrapB\x0cMessageProto\xa2\x02\x05\x41MSTW\xaa\x02,Assetmantle.Modules.Splits.Transactions.Wrap\xca\x02,Assetmantle\\Modules\\Splits\\Transactions\\Wrap\xe2\x02\x38\x41ssetmantle\\Modules\\Splits\\Transactions\\Wrap\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Splits::Transactions::Wrapb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.splits.transactions.wrap.message_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.splits.transactions.wrapB\014MessageProtoP\001\242\002\005AMSTW\252\002,Assetmantle.Modules.Splits.Transactions.Wrap\312\002,Assetmantle\\Modules\\Splits\\Transactions\\Wrap\342\0028Assetmantle\\Modules\\Splits\\Transactions\\Wrap\\GPBMetadata\352\0020Assetmantle::Modules::Splits::Transactions::Wrap'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.splits.transactions.wrapB\014MessageProto\242\002\005AMSTW\252\002,Assetmantle.Modules.Splits.Transactions.Wrap\312\002,Assetmantle\\Modules\\Splits\\Transactions\\Wrap\342\0028Assetmantle\\Modules\\Splits\\Transactions\\Wrap\\GPBMetadata\352\0020Assetmantle::Modules::Splits::Transactions::Wrap'
   _MESSAGE.fields_by_name['coins']._options = None
   _MESSAGE.fields_by_name['coins']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _globals['_MESSAGE']._serialized_start=195

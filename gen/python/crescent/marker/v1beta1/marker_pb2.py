@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$crescent/marker/v1beta1/marker.proto\x12\x17\x63rescent.marker.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x08\n\x06ParamsB\xe4\x01\n\x1b\x63om.crescent.marker.v1beta1B\x0bMarkerProtoP\x01Z6github.com/crescent-network/crescent/v5/x/marker/types\xa2\x02\x03\x43MX\xaa\x02\x17\x43rescent.Marker.V1beta1\xca\x02\x17\x43rescent\\Marker\\V1beta1\xe2\x02#Crescent\\Marker\\V1beta1\\GPBMetadata\xea\x02\x19\x43rescent::Marker::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$crescent/marker/v1beta1/marker.proto\x12\x17\x63rescent.marker.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x08\n\x06ParamsB\xe2\x01\n\x1b\x63om.crescent.marker.v1beta1B\x0bMarkerProtoZ6github.com/crescent-network/crescent/v5/x/marker/types\xa2\x02\x03\x43MX\xaa\x02\x17\x43rescent.Marker.V1beta1\xca\x02\x17\x43rescent\\Marker\\V1beta1\xe2\x02#Crescent\\Marker\\V1beta1\\GPBMetadata\xea\x02\x19\x43rescent::Marker::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'crescent.marker.v1beta1.marker_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.crescent.marker.v1beta1B\013MarkerProtoP\001Z6github.com/crescent-network/crescent/v5/x/marker/types\242\002\003CMX\252\002\027Crescent.Marker.V1beta1\312\002\027Crescent\\Marker\\V1beta1\342\002#Crescent\\Marker\\V1beta1\\GPBMetadata\352\002\031Crescent::Marker::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\033com.crescent.marker.v1beta1B\013MarkerProtoZ6github.com/crescent-network/crescent/v5/x/marker/types\242\002\003CMX\252\002\027Crescent.Marker.V1beta1\312\002\027Crescent\\Marker\\V1beta1\342\002#Crescent\\Marker\\V1beta1\\GPBMetadata\352\002\031Crescent::Marker::V1beta1\310\341\036\000'
   _globals['_PARAMS']._serialized_start=120
   _globals['_PARAMS']._serialized_end=128
 # @@protoc_insertion_point(module_scope)

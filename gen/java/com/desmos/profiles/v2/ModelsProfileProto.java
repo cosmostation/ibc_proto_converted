@@ -202,6 +202,7 @@ public final class ModelsProfileProto {
               com.desmos.profiles.v2.ModelsProfileProto.Profile.class, com.desmos.profiles.v2.ModelsProfileProto.Profile.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     private com.google.protobuf.Any account_;
     /**
@@ -214,7 +215,7 @@ public final class ModelsProfileProto {
      */
     @java.lang.Override
     public boolean hasAccount() {
-      return account_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -393,7 +394,7 @@ public final class ModelsProfileProto {
      */
     @java.lang.Override
     public boolean hasPictures() {
-      return pictures_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -431,7 +432,7 @@ public final class ModelsProfileProto {
      */
     @java.lang.Override
     public boolean hasCreationDate() {
-      return creationDate_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -471,7 +472,7 @@ public final class ModelsProfileProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dtag_)) {
@@ -483,10 +484,10 @@ public final class ModelsProfileProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bio_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bio_);
       }
-      if (pictures_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getPictures());
       }
-      if (creationDate_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(6, getCreationDate());
       }
       getUnknownFields().writeTo(output);
@@ -498,7 +499,7 @@ public final class ModelsProfileProto {
       if (size != -1) return size;
 
       size = 0;
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAccount());
       }
@@ -511,11 +512,11 @@ public final class ModelsProfileProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bio_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bio_);
       }
-      if (pictures_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPictures());
       }
-      if (creationDate_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCreationDate());
       }
@@ -708,13 +709,21 @@ public final class ModelsProfileProto {
 
       // Construct using com.desmos.profiles.v2.ModelsProfileProto.Profile.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccountFieldBuilder();
+          getPicturesFieldBuilder();
+          getCreationDateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -771,10 +780,12 @@ public final class ModelsProfileProto {
 
       private void buildPartial0(com.desmos.profiles.v2.ModelsProfileProto.Profile result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.account_ = accountBuilder_ == null
               ? account_
               : accountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dtag_ = dtag_;
@@ -789,12 +800,15 @@ public final class ModelsProfileProto {
           result.pictures_ = picturesBuilder_ == null
               ? pictures_
               : picturesBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.creationDate_ = creationDateBuilder_ == null
               ? creationDate_
               : creationDateBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1030,8 +1044,10 @@ public final class ModelsProfileProto {
         } else {
           accountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (account_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1461,8 +1477,10 @@ public final class ModelsProfileProto {
         } else {
           picturesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (pictures_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1616,8 +1634,10 @@ public final class ModelsProfileProto {
         } else {
           creationDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (creationDate_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

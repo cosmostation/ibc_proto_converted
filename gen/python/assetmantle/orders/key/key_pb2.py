@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import order_id_pb2 as assetmantle_dot_ids_dot_base_dot_order__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n assetmantle/orders/key/key.proto\x12\x1e\x61ssetmantle.modules.orders.key\x1a#assetmantle/ids/base/order_id.proto\"G\n\x03Key\x12@\n\torder_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.OrderIDR\x07orderIDB\xca\x01\n\"com.assetmantle.modules.orders.keyB\x08KeyProtoP\x01\xa2\x02\x04\x41MOK\xaa\x02\x1e\x41ssetmantle.Modules.Orders.Key\xca\x02\x1e\x41ssetmantle\\Modules\\Orders\\Key\xe2\x02*Assetmantle\\Modules\\Orders\\Key\\GPBMetadata\xea\x02!Assetmantle::Modules::Orders::Keyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n assetmantle/orders/key/key.proto\x12\x1e\x61ssetmantle.modules.orders.key\x1a#assetmantle/ids/base/order_id.proto\"G\n\x03Key\x12@\n\torder_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.OrderIDR\x07orderIDB\xc8\x01\n\"com.assetmantle.modules.orders.keyB\x08KeyProto\xa2\x02\x04\x41MOK\xaa\x02\x1e\x41ssetmantle.Modules.Orders.Key\xca\x02\x1e\x41ssetmantle\\Modules\\Orders\\Key\xe2\x02*Assetmantle\\Modules\\Orders\\Key\\GPBMetadata\xea\x02!Assetmantle::Modules::Orders::Keyb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.key.key_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\"com.assetmantle.modules.orders.keyB\010KeyProtoP\001\242\002\004AMOK\252\002\036Assetmantle.Modules.Orders.Key\312\002\036Assetmantle\\Modules\\Orders\\Key\342\002*Assetmantle\\Modules\\Orders\\Key\\GPBMetadata\352\002!Assetmantle::Modules::Orders::Key'
+  DESCRIPTOR._serialized_options = b'\n\"com.assetmantle.modules.orders.keyB\010KeyProto\242\002\004AMOK\252\002\036Assetmantle.Modules.Orders.Key\312\002\036Assetmantle\\Modules\\Orders\\Key\342\002*Assetmantle\\Modules\\Orders\\Key\\GPBMetadata\352\002!Assetmantle::Modules::Orders::Key'
   _globals['_KEY']._serialized_start=105
   _globals['_KEY']._serialized_end=176
 # @@protoc_insertion_point(module_scope)

@@ -16,15 +16,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkava/community/v1beta1/tx.proto\x12\x16kava.community.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\xb9\x01\n\x14MsgFundCommunityPool\x12\x63\n\x06\x61mount\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mount\x12\x36\n\tdepositor\x18\x02 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tdepositor:\x04\x88\xa0\x1f\x00\"\x1e\n\x1cMsgFundCommunityPoolResponse2~\n\x03Msg\x12w\n\x11\x46undCommunityPool\x12,.kava.community.v1beta1.MsgFundCommunityPool\x1a\x34.kava.community.v1beta1.MsgFundCommunityPoolResponseB\xd0\x01\n\x1a\x63om.kava.community.v1beta1B\x07TxProtoP\x01Z+github.com/kava-labs/kava/x/community/types\xa2\x02\x03KCX\xaa\x02\x16Kava.Community.V1beta1\xca\x02\x16Kava\\Community\\V1beta1\xe2\x02\"Kava\\Community\\V1beta1\\GPBMetadata\xea\x02\x18Kava::Community::V1beta1\xa8\xe2\x1e\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkava/community/v1beta1/tx.proto\x12\x16kava.community.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\xb9\x01\n\x14MsgFundCommunityPool\x12\x63\n\x06\x61mount\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06\x61mount\x12\x36\n\tdepositor\x18\x02 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tdepositor:\x04\x88\xa0\x1f\x00\"\x1e\n\x1cMsgFundCommunityPoolResponse2~\n\x03Msg\x12w\n\x11\x46undCommunityPool\x12,.kava.community.v1beta1.MsgFundCommunityPool\x1a\x34.kava.community.v1beta1.MsgFundCommunityPoolResponseB\xce\x01\n\x1a\x63om.kava.community.v1beta1B\x07TxProtoZ+github.com/kava-labs/kava/x/community/types\xa2\x02\x03KCX\xaa\x02\x16Kava.Community.V1beta1\xca\x02\x16Kava\\Community\\V1beta1\xe2\x02\"Kava\\Community\\V1beta1\\GPBMetadata\xea\x02\x18Kava::Community::V1beta1\xa8\xe2\x1e\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.community.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.kava.community.v1beta1B\007TxProtoP\001Z+github.com/kava-labs/kava/x/community/types\242\002\003KCX\252\002\026Kava.Community.V1beta1\312\002\026Kava\\Community\\V1beta1\342\002\"Kava\\Community\\V1beta1\\GPBMetadata\352\002\030Kava::Community::V1beta1\250\342\036\001'
+  DESCRIPTOR._serialized_options = b'\n\032com.kava.community.v1beta1B\007TxProtoZ+github.com/kava-labs/kava/x/community/types\242\002\003KCX\252\002\026Kava.Community.V1beta1\312\002\026Kava\\Community\\V1beta1\342\002\"Kava\\Community\\V1beta1\\GPBMetadata\352\002\030Kava::Community::V1beta1\250\342\036\001'
   _MSGFUNDCOMMUNITYPOOL.fields_by_name['amount']._options = None
   _MSGFUNDCOMMUNITYPOOL.fields_by_name['amount']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _MSGFUNDCOMMUNITYPOOL.fields_by_name['depositor']._options = None

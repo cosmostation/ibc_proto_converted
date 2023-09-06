@@ -2747,6 +2747,7 @@ public final class CallbacksProto {
               com.lum.network.millions.CallbacksProto.RedelegateCallback.class, com.lum.network.millions.CallbacksProto.RedelegateCallback.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -2766,7 +2767,7 @@ public final class CallbacksProto {
      */
     @java.lang.Override
     public boolean hasSplitDelegation() {
-      return splitDelegation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
@@ -2801,7 +2802,7 @@ public final class CallbacksProto {
       if (poolId_ != 0L) {
         output.writeUInt64(1, poolId_);
       }
-      if (splitDelegation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getSplitDelegation());
       }
       getUnknownFields().writeTo(output);
@@ -2817,7 +2818,7 @@ public final class CallbacksProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, poolId_);
       }
-      if (splitDelegation_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSplitDelegation());
       }
@@ -2980,13 +2981,19 @@ public final class CallbacksProto {
 
       // Construct using com.lum.network.millions.CallbacksProto.RedelegateCallback.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSplitDelegationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3034,11 +3041,14 @@ public final class CallbacksProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.poolId_ = poolId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.splitDelegation_ = splitDelegationBuilder_ == null
               ? splitDelegation_
               : splitDelegationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3244,8 +3254,10 @@ public final class CallbacksProto {
         } else {
           splitDelegationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (splitDelegation_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

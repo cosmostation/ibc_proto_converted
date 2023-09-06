@@ -3534,7 +3534,8 @@ public final class ProtorevProto {
 
     public static final int ROUTE_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList route_;
+    private com.google.protobuf.Internal.LongList route_ =
+        emptyLongList();
     /**
      * <pre>
      * route is the route that was used (pool ids along the arbitrage route)
@@ -3860,17 +3861,16 @@ public final class ProtorevProto {
         } else {
           result.profits_ = profitsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          route_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.route_ = route_;
       }
 
       private void buildPartial0(com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.numberOfTrades_ = numberOfTrades_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          route_.makeImmutable();
+          result.route_ = route_;
         }
       }
 
@@ -3952,7 +3952,8 @@ public final class ProtorevProto {
         if (!other.route_.isEmpty()) {
           if (route_.isEmpty()) {
             route_ = other.route_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            route_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureRouteIsMutable();
             route_.addAll(other.route_);
@@ -4447,10 +4448,10 @@ public final class ProtorevProto {
 
       private com.google.protobuf.Internal.LongList route_ = emptyLongList();
       private void ensureRouteIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          route_ = mutableCopy(route_);
-          bitField0_ |= 0x00000004;
+        if (!route_.isModifiable()) {
+          route_ = makeMutableCopy(route_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -4462,8 +4463,8 @@ public final class ProtorevProto {
        */
       public java.util.List<java.lang.Long>
           getRouteList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(route_) : route_;
+        route_.makeImmutable();
+        return route_;
       }
       /**
        * <pre>
@@ -4503,6 +4504,7 @@ public final class ProtorevProto {
 
         ensureRouteIsMutable();
         route_.setLong(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4519,6 +4521,7 @@ public final class ProtorevProto {
 
         ensureRouteIsMutable();
         route_.addLong(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4536,6 +4539,7 @@ public final class ProtorevProto {
         ensureRouteIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, route_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

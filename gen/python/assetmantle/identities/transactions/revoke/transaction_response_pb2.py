@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nEassetmantle/identities/transactions/revoke/transaction_response.proto\x12\x32\x61ssetmantle.modules.identities.transactions.revoke\"\x15\n\x13TransactionResponseB\xc0\x02\n6com.assetmantle.modules.identities.transactions.revokeB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MITR\xaa\x02\x32\x41ssetmantle.Modules.Identities.Transactions.Revoke\xca\x02\x32\x41ssetmantle\\Modules\\Identities\\Transactions\\Revoke\xe2\x02>Assetmantle\\Modules\\Identities\\Transactions\\Revoke\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Identities::Transactions::Revokeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nEassetmantle/identities/transactions/revoke/transaction_response.proto\x12\x32\x61ssetmantle.modules.identities.transactions.revoke\"\x15\n\x13TransactionResponseB\xbe\x02\n6com.assetmantle.modules.identities.transactions.revokeB\x18TransactionResponseProto\xa2\x02\x05\x41MITR\xaa\x02\x32\x41ssetmantle.Modules.Identities.Transactions.Revoke\xca\x02\x32\x41ssetmantle\\Modules\\Identities\\Transactions\\Revoke\xe2\x02>Assetmantle\\Modules\\Identities\\Transactions\\Revoke\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Identities::Transactions::Revokeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.revoke.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.identities.transactions.revokeB\030TransactionResponseProtoP\001\242\002\005AMITR\252\0022Assetmantle.Modules.Identities.Transactions.Revoke\312\0022Assetmantle\\Modules\\Identities\\Transactions\\Revoke\342\002>Assetmantle\\Modules\\Identities\\Transactions\\Revoke\\GPBMetadata\352\0026Assetmantle::Modules::Identities::Transactions::Revoke'
+  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.identities.transactions.revokeB\030TransactionResponseProto\242\002\005AMITR\252\0022Assetmantle.Modules.Identities.Transactions.Revoke\312\0022Assetmantle\\Modules\\Identities\\Transactions\\Revoke\342\002>Assetmantle\\Modules\\Identities\\Transactions\\Revoke\\GPBMetadata\352\0026Assetmantle::Modules::Identities::Transactions::Revoke'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=125
   _globals['_TRANSACTIONRESPONSE']._serialized_end=146
 # @@protoc_insertion_point(module_scope)

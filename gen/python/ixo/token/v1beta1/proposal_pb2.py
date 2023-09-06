@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from ixo.token.v1beta1 import token_pb2 as ixo_dot_token_dot_v1beta1_dot_token__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ixo/token/v1beta1/proposal.proto\x12\x11ixo.token.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1dixo/token/v1beta1/token.proto\"K\n\x15SetTokenContractCodes\x12\x32\n\x15ixo1155_contract_code\x18\x01 \x01(\x04R\x13ixo1155ContractCodeB\xc3\x01\n\x15\x63om.ixo.token.v1beta1B\rProposalProtoP\x01Z5github.com/ixofoundation/ixo-blockchain/x/token/types\xa2\x02\x03ITX\xaa\x02\x11Ixo.Token.V1beta1\xca\x02\x11Ixo\\Token\\V1beta1\xe2\x02\x1dIxo\\Token\\V1beta1\\GPBMetadata\xea\x02\x13Ixo::Token::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ixo/token/v1beta1/proposal.proto\x12\x11ixo.token.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1dixo/token/v1beta1/token.proto\"K\n\x15SetTokenContractCodes\x12\x32\n\x15ixo1155_contract_code\x18\x01 \x01(\x04R\x13ixo1155ContractCodeB\xc1\x01\n\x15\x63om.ixo.token.v1beta1B\rProposalProtoZ5github.com/ixofoundation/ixo-blockchain/x/token/types\xa2\x02\x03ITX\xaa\x02\x11Ixo.Token.V1beta1\xca\x02\x11Ixo\\Token\\V1beta1\xe2\x02\x1dIxo\\Token\\V1beta1\\GPBMetadata\xea\x02\x13Ixo::Token::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ixo.token.v1beta1.proposal_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.ixo.token.v1beta1B\rProposalProtoP\001Z5github.com/ixofoundation/ixo-blockchain/x/token/types\242\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\Token\\V1beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMetadata\352\002\023Ixo::Token::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\025com.ixo.token.v1beta1B\rProposalProtoZ5github.com/ixofoundation/ixo-blockchain/x/token/types\242\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\Token\\V1beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMetadata\352\002\023Ixo::Token::V1beta1'
   _globals['_SETTOKENCONTRACTCODES']._serialized_start=108
   _globals['_SETTOKENCONTRACTCODES']._serialized_end=183
 # @@protoc_insertion_point(module_scope)

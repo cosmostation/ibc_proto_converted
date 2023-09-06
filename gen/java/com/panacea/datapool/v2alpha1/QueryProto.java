@@ -557,6 +557,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryPoolResponse.class, com.panacea.datapool.v2alpha1.QueryProto.QueryPoolResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_FIELD_NUMBER = 1;
     private com.panacea.datapool.v2alpha1.PoolProto.Pool pool_;
     /**
@@ -565,7 +566,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPool() {
-      return pool_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datapool.v2alpha1.Pool pool = 1 [json_name = "pool"];</code>
@@ -597,7 +598,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPool());
       }
       getUnknownFields().writeTo(output);
@@ -609,7 +610,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPool());
       }
@@ -771,13 +772,19 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryPoolResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -821,11 +828,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.QueryProto.QueryPoolResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pool_ = poolBuilder_ == null
               ? pool_
               : poolBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -991,8 +1001,10 @@ public final class QueryProto {
         } else {
           poolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pool_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1570,6 +1582,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryDataPoolParamsResponse.class, com.panacea.datapool.v2alpha1.QueryProto.QueryDataPoolParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.panacea.datapool.v2alpha1.GenesisProto.Params params_;
     /**
@@ -1578,7 +1591,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datapool.v2alpha1.Params params = 1 [json_name = "params"];</code>
@@ -1610,7 +1623,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1622,7 +1635,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1784,13 +1797,19 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryDataPoolParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1834,11 +1853,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.QueryProto.QueryDataPoolParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2004,8 +2026,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3155,6 +3179,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryDataCertsRequest.class, com.panacea.datapool.v2alpha1.QueryProto.QueryDataCertsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -3185,7 +3210,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
@@ -3223,7 +3248,7 @@ public final class QueryProto {
       if (round_ != 0L) {
         output.writeUInt64(2, round_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3243,7 +3268,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, round_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -3415,13 +3440,19 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryDataCertsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3473,11 +3504,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.round_ = round_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3723,8 +3757,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3922,6 +3958,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryDataCertsResponse.class, com.panacea.datapool.v2alpha1.QueryProto.QueryDataCertsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_CERTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataCert> dataCerts_;
@@ -3971,7 +4008,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4006,7 +4043,7 @@ public final class QueryProto {
       for (int i = 0; i < dataCerts_.size(); i++) {
         output.writeMessage(1, dataCerts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4022,7 +4059,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, dataCerts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4190,13 +4227,20 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryDataCertsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataCertsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4260,11 +4304,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.QueryProto.QueryDataCertsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4709,8 +4756,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5514,6 +5563,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptResponse.class, com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_PASS_REDEEM_RECEIPT_FIELD_NUMBER = 1;
     private com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt dataPassRedeemReceipt_;
     /**
@@ -5522,7 +5572,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDataPassRedeemReceipt() {
-      return dataPassRedeemReceipt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipt = 1 [json_name = "dataPassRedeemReceipt", (.gogoproto.nullable) = false];</code>
@@ -5554,7 +5604,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataPassRedeemReceipt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDataPassRedeemReceipt());
       }
       getUnknownFields().writeTo(output);
@@ -5566,7 +5616,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (dataPassRedeemReceipt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataPassRedeemReceipt());
       }
@@ -5728,13 +5778,19 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataPassRedeemReceiptFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5778,11 +5834,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataPassRedeemReceipt_ = dataPassRedeemReceiptBuilder_ == null
               ? dataPassRedeemReceipt_
               : dataPassRedeemReceiptBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5948,8 +6007,10 @@ public final class QueryProto {
         } else {
           dataPassRedeemReceiptBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (dataPassRedeemReceipt_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6128,6 +6189,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptsRequest.class, com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -6147,7 +6209,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -6182,7 +6244,7 @@ public final class QueryProto {
       if (poolId_ != 0L) {
         output.writeUInt64(1, poolId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6198,7 +6260,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, poolId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6365,13 +6427,19 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6419,11 +6487,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.poolId_ = poolId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6629,8 +6700,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6828,6 +6901,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptsResponse.class, com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_PASS_REDEEM_RECEIPTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> dataPassRedeemReceipts_;
@@ -6877,7 +6951,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -6912,7 +6986,7 @@ public final class QueryProto {
       for (int i = 0; i < dataPassRedeemReceipts_.size(); i++) {
         output.writeMessage(1, dataPassRedeemReceipts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6928,7 +7002,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, dataPassRedeemReceipts_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -7096,13 +7170,20 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataPassRedeemReceiptsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7166,11 +7247,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemReceiptsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7615,8 +7699,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8422,6 +8508,7 @@ public final class QueryProto {
               com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemHistoryResponse.class, com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemHistoryResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_PASS_REDEEM_HISTORIES_FIELD_NUMBER = 1;
     private com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory dataPassRedeemHistories_;
     /**
@@ -8430,7 +8517,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDataPassRedeemHistories() {
-      return dataPassRedeemHistories_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 1 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
@@ -8462,7 +8549,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataPassRedeemHistories_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDataPassRedeemHistories());
       }
       getUnknownFields().writeTo(output);
@@ -8474,7 +8561,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (dataPassRedeemHistories_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataPassRedeemHistories());
       }
@@ -8636,13 +8723,19 @@ public final class QueryProto {
 
       // Construct using com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemHistoryResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataPassRedeemHistoriesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8686,11 +8779,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.QueryProto.QueryDataPassRedeemHistoryResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataPassRedeemHistories_ = dataPassRedeemHistoriesBuilder_ == null
               ? dataPassRedeemHistories_
               : dataPassRedeemHistoriesBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8856,8 +8952,10 @@ public final class QueryProto {
         } else {
           dataPassRedeemHistoriesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (dataPassRedeemHistories_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

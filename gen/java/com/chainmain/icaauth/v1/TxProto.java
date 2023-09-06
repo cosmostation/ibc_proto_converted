@@ -1540,6 +1540,7 @@ public final class TxProto {
               com.chainmain.icaauth.v1.TxProto.MsgSubmitTx.class, com.chainmain.icaauth.v1.TxProto.MsgSubmitTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -1707,7 +1708,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTimeoutDuration() {
-      return timeoutDuration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1756,7 +1757,7 @@ public final class TxProto {
       for (int i = 0; i < msgs_.size(); i++) {
         output.writeMessage(3, msgs_.get(i));
       }
-      if (timeoutDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getTimeoutDuration());
       }
       getUnknownFields().writeTo(output);
@@ -1778,7 +1779,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, msgs_.get(i));
       }
-      if (timeoutDuration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTimeoutDuration());
       }
@@ -1954,13 +1955,20 @@ public final class TxProto {
 
       // Construct using com.chainmain.icaauth.v1.TxProto.MsgSubmitTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMsgsFieldBuilder();
+          getTimeoutDurationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2032,11 +2040,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.connectionId_ = connectionId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timeoutDuration_ = timeoutDurationBuilder_ == null
               ? timeoutDuration_
               : timeoutDurationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2777,8 +2788,10 @@ public final class TxProto {
         } else {
           timeoutDurationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (timeoutDuration_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

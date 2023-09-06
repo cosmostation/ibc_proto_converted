@@ -17,15 +17,14 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from em.inflation.v1 import inflation_pb2 as em_dot_inflation_dot_v1_dot_inflation__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x65m/inflation/v1/query.proto\x12\x0f\x65m.inflation.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1f\x65m/inflation/v1/inflation.proto\"\x17\n\x15QueryInflationRequest\"e\n\x16QueryInflationResponse\x12K\n\x05state\x18\x01 \x01(\x0b\x32\x1f.em.inflation.v1.InflationStateB\x14\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"state\"R\x05state2\x8b\x01\n\x05Query\x12\x81\x01\n\tInflation\x12&.em.inflation.v1.QueryInflationRequest\x1a\'.em.inflation.v1.QueryInflationResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/e-money/inflation/v1/stateB\xaf\x01\n\x13\x63om.em.inflation.v1B\nQueryProtoP\x01Z.github.com/e-money/em-ledger/x/inflation/types\xa2\x02\x03\x45IX\xaa\x02\x0f\x45m.Inflation.V1\xca\x02\x0f\x45m\\Inflation\\V1\xe2\x02\x1b\x45m\\Inflation\\V1\\GPBMetadata\xea\x02\x11\x45m::Inflation::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x65m/inflation/v1/query.proto\x12\x0f\x65m.inflation.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1f\x65m/inflation/v1/inflation.proto\"\x17\n\x15QueryInflationRequest\"e\n\x16QueryInflationResponse\x12K\n\x05state\x18\x01 \x01(\x0b\x32\x1f.em.inflation.v1.InflationStateB\x14\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"state\"R\x05state2\x8b\x01\n\x05Query\x12\x81\x01\n\tInflation\x12&.em.inflation.v1.QueryInflationRequest\x1a\'.em.inflation.v1.QueryInflationResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/e-money/inflation/v1/stateB\xad\x01\n\x13\x63om.em.inflation.v1B\nQueryProtoZ.github.com/e-money/em-ledger/x/inflation/types\xa2\x02\x03\x45IX\xaa\x02\x0f\x45m.Inflation.V1\xca\x02\x0f\x45m\\Inflation\\V1\xe2\x02\x1b\x45m\\Inflation\\V1\\GPBMetadata\xea\x02\x11\x45m::Inflation::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'em.inflation.v1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\023com.em.inflation.v1B\nQueryProtoP\001Z.github.com/e-money/em-ledger/x/inflation/types\242\002\003EIX\252\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V1\342\002\033Em\\Inflation\\V1\\GPBMetadata\352\002\021Em::Inflation::V1'
+  DESCRIPTOR._serialized_options = b'\n\023com.em.inflation.v1B\nQueryProtoZ.github.com/e-money/em-ledger/x/inflation/types\242\002\003EIX\252\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V1\342\002\033Em\\Inflation\\V1\\GPBMetadata\352\002\021Em::Inflation::V1'
   _QUERYINFLATIONRESPONSE.fields_by_name['state']._options = None
   _QUERYINFLATIONRESPONSE.fields_by_name['state']._serialized_options = b'\310\336\037\000\362\336\037\014yaml:\"state\"'
   _QUERY.methods_by_name['Inflation']._options = None

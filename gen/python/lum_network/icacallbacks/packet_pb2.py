@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%lum-network/icacallbacks/packet.proto\x12\x18lum.network.icacallbacks\"_\n\x16IcacallbacksPacketData\x12;\n\x07no_data\x18\x01 \x01(\x0b\x32 .lum.network.icacallbacks.NoDataH\x00R\x06noDataB\x08\n\x06packet\"\x08\n\x06NoDataB\xe0\x01\n\x1c\x63om.lum.network.icacallbacksB\x0bPacketProtoP\x01Z1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%lum-network/icacallbacks/packet.proto\x12\x18lum.network.icacallbacks\"_\n\x16IcacallbacksPacketData\x12;\n\x07no_data\x18\x01 \x01(\x0b\x32 .lum.network.icacallbacks.NoDataH\x00R\x06noDataB\x08\n\x06packet\"\x08\n\x06NoDataB\xde\x01\n\x1c\x63om.lum.network.icacallbacksB\x0bPacketProtoZ1github.com/lum-network/chain/x/icacallbacks/types\xa2\x02\x03LNI\xaa\x02\x18Lum.Network.Icacallbacks\xca\x02\x18Lum\\Network\\Icacallbacks\xe2\x02$Lum\\Network\\Icacallbacks\\GPBMetadata\xea\x02\x1aLum::Network::Icacallbacksb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.icacallbacks.packet_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\013PacketProtoP\001Z1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
+  DESCRIPTOR._serialized_options = b'\n\034com.lum.network.icacallbacksB\013PacketProtoZ1github.com/lum-network/chain/x/icacallbacks/types\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum\\Network\\Icacallbacks\342\002$Lum\\Network\\Icacallbacks\\GPBMetadata\352\002\032Lum::Network::Icacallbacks'
   _globals['_ICACALLBACKSPACKETDATA']._serialized_start=67
   _globals['_ICACALLBACKSPACKETDATA']._serialized_end=162
   _globals['_NODATA']._serialized_start=164

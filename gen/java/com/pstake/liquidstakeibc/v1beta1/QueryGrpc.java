@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: pstake/liquidstakeibc/v1beta1/query.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryGrpc {
 
   private QueryGrpc() {}
 
-  public static final String SERVICE_NAME = "pstake.liquidstakeibc.v1beta1.Query";
+  public static final java.lang.String SERVICE_NAME = "pstake.liquidstakeibc.v1beta1.Query";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsRequest,
@@ -142,6 +142,37 @@ public final class QueryGrpc {
     return getDepositsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse> getLSMDepositsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "LSMDeposits",
+      requestType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.class,
+      responseType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse> getLSMDepositsMethod() {
+    io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse> getLSMDepositsMethod;
+    if ((getLSMDepositsMethod = QueryGrpc.getLSMDepositsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getLSMDepositsMethod = QueryGrpc.getLSMDepositsMethod) == null) {
+          QueryGrpc.getLSMDepositsMethod = getLSMDepositsMethod =
+              io.grpc.MethodDescriptor.<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LSMDeposits"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("LSMDeposits"))
+              .build();
+        }
+      }
+    }
+    return getLSMDepositsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest,
       com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsResponse> getUnbondingsMethod;
 
@@ -171,6 +202,37 @@ public final class QueryGrpc {
       }
     }
     return getUnbondingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse> getUnbondingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Unbonding",
+      requestType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.class,
+      responseType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse> getUnbondingMethod() {
+    io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse> getUnbondingMethod;
+    if ((getUnbondingMethod = QueryGrpc.getUnbondingMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getUnbondingMethod = QueryGrpc.getUnbondingMethod) == null) {
+          QueryGrpc.getUnbondingMethod = getUnbondingMethod =
+              io.grpc.MethodDescriptor.<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Unbonding"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Unbonding"))
+              .build();
+        }
+      }
+    }
+    return getUnbondingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUserUnbondingsRequest,
@@ -233,6 +295,68 @@ public final class QueryGrpc {
       }
     }
     return getValidatorUnbondingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse> getDepositAccountBalanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DepositAccountBalance",
+      requestType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.class,
+      responseType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse> getDepositAccountBalanceMethod() {
+    io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse> getDepositAccountBalanceMethod;
+    if ((getDepositAccountBalanceMethod = QueryGrpc.getDepositAccountBalanceMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getDepositAccountBalanceMethod = QueryGrpc.getDepositAccountBalanceMethod) == null) {
+          QueryGrpc.getDepositAccountBalanceMethod = getDepositAccountBalanceMethod =
+              io.grpc.MethodDescriptor.<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DepositAccountBalance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("DepositAccountBalance"))
+              .build();
+        }
+      }
+    }
+    return getDepositAccountBalanceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse> getExchangeRateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExchangeRate",
+      requestType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.class,
+      responseType = com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest,
+      com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse> getExchangeRateMethod() {
+    io.grpc.MethodDescriptor<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse> getExchangeRateMethod;
+    if ((getExchangeRateMethod = QueryGrpc.getExchangeRateMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getExchangeRateMethod = QueryGrpc.getExchangeRateMethod) == null) {
+          QueryGrpc.getExchangeRateMethod = getExchangeRateMethod =
+              io.grpc.MethodDescriptor.<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExchangeRate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("ExchangeRate"))
+              .build();
+        }
+      }
+    }
+    return getExchangeRateMethod;
   }
 
   /**
@@ -328,12 +452,32 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * Queries for all the deposits for a host chain.
+     * </pre>
+     */
+    default void lSMDeposits(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLSMDepositsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Queries all unbondings for a host chain.
      * </pre>
      */
     default void unbondings(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest request,
         io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnbondingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries an unbonding for a host chain.
+     * </pre>
+     */
+    default void unbonding(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnbondingMethod(), responseObserver);
     }
 
     /**
@@ -354,6 +498,26 @@ public final class QueryGrpc {
     default void validatorUnbondings(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest request,
         io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidatorUnbondingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries for a host chain deposit account balance.
+     * </pre>
+     */
+    default void depositAccountBalance(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDepositAccountBalanceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries for a host chain exchange rate between the host token and the stk token.
+     * </pre>
+     */
+    default void exchangeRate(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExchangeRateMethod(), responseObserver);
     }
   }
 
@@ -436,6 +600,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * Queries for all the deposits for a host chain.
+     * </pre>
+     */
+    public void lSMDeposits(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getLSMDepositsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Queries all unbondings for a host chain.
      * </pre>
      */
@@ -443,6 +618,17 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUnbondingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries an unbonding for a host chain.
+     * </pre>
+     */
+    public void unbonding(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUnbondingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -465,6 +651,28 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getValidatorUnbondingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries for a host chain deposit account balance.
+     * </pre>
+     */
+    public void depositAccountBalance(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDepositAccountBalanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries for a host chain exchange rate between the host token and the stk token.
+     * </pre>
+     */
+    public void exchangeRate(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest request,
+        io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getExchangeRateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -529,12 +737,32 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * Queries for all the deposits for a host chain.
+     * </pre>
+     */
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse lSMDeposits(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getLSMDepositsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Queries all unbondings for a host chain.
      * </pre>
      */
     public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsResponse unbondings(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUnbondingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Queries an unbonding for a host chain.
+     * </pre>
+     */
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse unbonding(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUnbondingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -555,6 +783,26 @@ public final class QueryGrpc {
     public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingResponse validatorUnbondings(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getValidatorUnbondingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Queries for a host chain deposit account balance.
+     * </pre>
+     */
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse depositAccountBalance(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDepositAccountBalanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Queries for a host chain exchange rate between the host token and the stk token.
+     * </pre>
+     */
+    public com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse exchangeRate(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExchangeRateMethod(), getCallOptions(), request);
     }
   }
 
@@ -623,6 +871,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * Queries for all the deposits for a host chain.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse> lSMDeposits(
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getLSMDepositsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Queries all unbondings for a host chain.
      * </pre>
      */
@@ -630,6 +889,17 @@ public final class QueryGrpc {
         com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUnbondingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Queries an unbonding for a host chain.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse> unbonding(
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUnbondingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -653,15 +923,41 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getValidatorUnbondingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Queries for a host chain deposit account balance.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse> depositAccountBalance(
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDepositAccountBalanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Queries for a host chain exchange rate between the host token and the stk token.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse> exchangeRate(
+        com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getExchangeRateMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PARAMS = 0;
   private static final int METHODID_HOST_CHAIN = 1;
   private static final int METHODID_HOST_CHAINS = 2;
   private static final int METHODID_DEPOSITS = 3;
-  private static final int METHODID_UNBONDINGS = 4;
-  private static final int METHODID_USER_UNBONDINGS = 5;
-  private static final int METHODID_VALIDATOR_UNBONDINGS = 6;
+  private static final int METHODID_LSMDEPOSITS = 4;
+  private static final int METHODID_UNBONDINGS = 5;
+  private static final int METHODID_UNBONDING = 6;
+  private static final int METHODID_USER_UNBONDINGS = 7;
+  private static final int METHODID_VALIDATOR_UNBONDINGS = 8;
+  private static final int METHODID_DEPOSIT_ACCOUNT_BALANCE = 9;
+  private static final int METHODID_EXCHANGE_RATE = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -696,9 +992,17 @@ public final class QueryGrpc {
           serviceImpl.deposits((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsRequest) request,
               (io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsResponse>) responseObserver);
           break;
+        case METHODID_LSMDEPOSITS:
+          serviceImpl.lSMDeposits((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest) request,
+              (io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse>) responseObserver);
+          break;
         case METHODID_UNBONDINGS:
           serviceImpl.unbondings((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest) request,
               (io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsResponse>) responseObserver);
+          break;
+        case METHODID_UNBONDING:
+          serviceImpl.unbonding((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest) request,
+              (io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse>) responseObserver);
           break;
         case METHODID_USER_UNBONDINGS:
           serviceImpl.userUnbondings((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUserUnbondingsRequest) request,
@@ -707,6 +1011,14 @@ public final class QueryGrpc {
         case METHODID_VALIDATOR_UNBONDINGS:
           serviceImpl.validatorUnbondings((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest) request,
               (io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingResponse>) responseObserver);
+          break;
+        case METHODID_DEPOSIT_ACCOUNT_BALANCE:
+          serviceImpl.depositAccountBalance((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest) request,
+              (io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse>) responseObserver);
+          break;
+        case METHODID_EXCHANGE_RATE:
+          serviceImpl.exchangeRate((com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest) request,
+              (io.grpc.stub.StreamObserver<com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -755,12 +1067,26 @@ public final class QueryGrpc {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositsResponse>(
                 service, METHODID_DEPOSITS)))
         .addMethod(
+          getLSMDepositsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsRequest,
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryLSMDepositsResponse>(
+                service, METHODID_LSMDEPOSITS)))
+        .addMethod(
           getUnbondingsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsRequest,
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingsResponse>(
                 service, METHODID_UNBONDINGS)))
+        .addMethod(
+          getUnbondingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingRequest,
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse>(
+                service, METHODID_UNBONDING)))
         .addMethod(
           getUserUnbondingsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -775,6 +1101,20 @@ public final class QueryGrpc {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingRequest,
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryValidatorUnbondingResponse>(
                 service, METHODID_VALIDATOR_UNBONDINGS)))
+        .addMethod(
+          getDepositAccountBalanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceRequest,
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse>(
+                service, METHODID_DEPOSIT_ACCOUNT_BALANCE)))
+        .addMethod(
+          getExchangeRateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateRequest,
+              com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryExchangeRateResponse>(
+                service, METHODID_EXCHANGE_RATE)))
         .build();
   }
 
@@ -801,9 +1141,9 @@ public final class QueryGrpc {
   private static final class QueryMethodDescriptorSupplier
       extends QueryBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    QueryMethodDescriptorSupplier(String methodName) {
+    QueryMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -827,9 +1167,13 @@ public final class QueryGrpc {
               .addMethod(getHostChainMethod())
               .addMethod(getHostChainsMethod())
               .addMethod(getDepositsMethod())
+              .addMethod(getLSMDepositsMethod())
               .addMethod(getUnbondingsMethod())
+              .addMethod(getUnbondingMethod())
               .addMethod(getUserUnbondingsMethod())
               .addMethod(getValidatorUnbondingsMethod())
+              .addMethod(getDepositAccountBalanceMethod())
+              .addMethod(getExchangeRateMethod())
               .build();
         }
       }

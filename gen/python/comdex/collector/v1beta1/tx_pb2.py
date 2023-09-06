@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!comdex/collector/v1beta1/tx.proto\x12\x18\x63omdex.collector.v1beta12\x05\n\x03MsgB\xde\x01\n\x1c\x63om.comdex.collector.v1beta1B\x07TxProtoP\x01Z3github.com/comdex-official/comdex/x/collector/types\xa2\x02\x03\x43\x43X\xaa\x02\x18\x43omdex.Collector.V1beta1\xca\x02\x18\x43omdex\\Collector\\V1beta1\xe2\x02$Comdex\\Collector\\V1beta1\\GPBMetadata\xea\x02\x1a\x43omdex::Collector::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!comdex/collector/v1beta1/tx.proto\x12\x18\x63omdex.collector.v1beta12\x05\n\x03MsgB\xdc\x01\n\x1c\x63om.comdex.collector.v1beta1B\x07TxProtoZ3github.com/comdex-official/comdex/x/collector/types\xa2\x02\x03\x43\x43X\xaa\x02\x18\x43omdex.Collector.V1beta1\xca\x02\x18\x43omdex\\Collector\\V1beta1\xe2\x02$Comdex\\Collector\\V1beta1\\GPBMetadata\xea\x02\x1a\x43omdex::Collector::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.collector.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.comdex.collector.v1beta1B\007TxProtoP\001Z3github.com/comdex-official/comdex/x/collector/types\242\002\003CCX\252\002\030Comdex.Collector.V1beta1\312\002\030Comdex\\Collector\\V1beta1\342\002$Comdex\\Collector\\V1beta1\\GPBMetadata\352\002\032Comdex::Collector::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\034com.comdex.collector.v1beta1B\007TxProtoZ3github.com/comdex-official/comdex/x/collector/types\242\002\003CCX\252\002\030Comdex.Collector.V1beta1\312\002\030Comdex\\Collector\\V1beta1\342\002$Comdex\\Collector\\V1beta1\\GPBMetadata\352\002\032Comdex::Collector::V1beta1'
   _globals['_MSG']._serialized_start=63
   _globals['_MSG']._serialized_end=68
 # @@protoc_insertion_point(module_scope)

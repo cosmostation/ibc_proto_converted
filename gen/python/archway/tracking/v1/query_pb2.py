@@ -22,7 +22,6 @@ _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'archway.tracking.v1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'\n\027com.archway.tracking.v1B\nQueryProtoZ3github.com/archway-network/archway/x/tracking/types\242\002\003ATX\252\002\023Archway.Tracking.V1\312\002\023Archway\\Tracking\\V1\342\002\037Archway\\Tracking\\V1\\GPBMetadata\352\002\025Archway::Tracking::V1'
   _QUERYBLOCKGASTRACKINGRESPONSE.fields_by_name['block']._options = None

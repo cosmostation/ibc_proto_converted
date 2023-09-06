@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$ethermint/types/v1/dynamic_fee.proto\x12\x12\x65thermint.types.v1\x1a\x14gogoproto/gogo.proto\"{\n\x1b\x45xtensionOptionDynamicFeeTx\x12\\\n\x12max_priority_price\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x10maxPriorityPriceB\xb5\x01\n\x16\x63om.ethermint.types.v1B\x0f\x44ynamicFeeProtoP\x01Z github.com/evmos/evmos/v13/types\xa2\x02\x03\x45TX\xaa\x02\x12\x45thermint.Types.V1\xca\x02\x12\x45thermint\\Types\\V1\xe2\x02\x1e\x45thermint\\Types\\V1\\GPBMetadata\xea\x02\x14\x45thermint::Types::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$ethermint/types/v1/dynamic_fee.proto\x12\x12\x65thermint.types.v1\x1a\x14gogoproto/gogo.proto\"{\n\x1b\x45xtensionOptionDynamicFeeTx\x12\\\n\x12max_priority_price\x18\x01 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x10maxPriorityPriceB\xb3\x01\n\x16\x63om.ethermint.types.v1B\x0f\x44ynamicFeeProtoZ github.com/evmos/evmos/v13/types\xa2\x02\x03\x45TX\xaa\x02\x12\x45thermint.Types.V1\xca\x02\x12\x45thermint\\Types\\V1\xe2\x02\x1e\x45thermint\\Types\\V1\\GPBMetadata\xea\x02\x14\x45thermint::Types::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ethermint.types.v1.dynamic_fee_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.ethermint.types.v1B\017DynamicFeeProtoP\001Z github.com/evmos/evmos/v13/types\242\002\003ETX\252\002\022Ethermint.Types.V1\312\002\022Ethermint\\Types\\V1\342\002\036Ethermint\\Types\\V1\\GPBMetadata\352\002\024Ethermint::Types::V1'
+  DESCRIPTOR._serialized_options = b'\n\026com.ethermint.types.v1B\017DynamicFeeProtoZ github.com/evmos/evmos/v13/types\242\002\003ETX\252\002\022Ethermint.Types.V1\312\002\022Ethermint\\Types\\V1\342\002\036Ethermint\\Types\\V1\\GPBMetadata\352\002\024Ethermint::Types::V1'
   _EXTENSIONOPTIONDYNAMICFEETX.fields_by_name['max_priority_price']._options = None
   _EXTENSIONOPTIONDYNAMICFEETX.fields_by_name['max_priority_price']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _globals['_EXTENSIONOPTIONDYNAMICFEETX']._serialized_start=82

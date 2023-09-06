@@ -93,6 +93,7 @@ public final class GenesisProto {
               com.sentinel.subscription.v2.GenesisProto.GenesisSubscription.class, com.sentinel.subscription.v2.GenesisProto.GenesisSubscription.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIPTION_FIELD_NUMBER = 1;
     private com.google.protobuf.Any subscription_;
     /**
@@ -101,7 +102,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSubscription() {
-      return subscription_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any subscription = 1 [json_name = "subscription"];</code>
@@ -174,7 +175,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (subscription_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSubscription());
       }
       for (int i = 0; i < allocations_.size(); i++) {
@@ -189,7 +190,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (subscription_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubscription());
       }
@@ -357,13 +358,20 @@ public final class GenesisProto {
 
       // Construct using com.sentinel.subscription.v2.GenesisProto.GenesisSubscription.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriptionFieldBuilder();
+          getAllocationsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -427,11 +435,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.GenesisProto.GenesisSubscription result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subscription_ = subscriptionBuilder_ == null
               ? subscription_
               : subscriptionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -636,8 +647,10 @@ public final class GenesisProto {
         } else {
           subscriptionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (subscription_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1071,6 +1084,7 @@ public final class GenesisProto {
               com.sentinel.subscription.v2.GenesisProto.GenesisState.class, com.sentinel.subscription.v2.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIPTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.sentinel.subscription.v2.GenesisProto.GenesisSubscription> subscriptions_;
@@ -1120,7 +1134,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.sentinel.subscription.v2.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1155,7 +1169,7 @@ public final class GenesisProto {
       for (int i = 0; i < subscriptions_.size(); i++) {
         output.writeMessage(1, subscriptions_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1171,7 +1185,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subscriptions_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -1335,13 +1349,20 @@ public final class GenesisProto {
 
       // Construct using com.sentinel.subscription.v2.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriptionsFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1405,11 +1426,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1854,8 +1878,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

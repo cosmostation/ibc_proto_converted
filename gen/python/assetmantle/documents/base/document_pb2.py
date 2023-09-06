@@ -17,15 +17,14 @@ from assetmantle.qualified.base import immutables_pb2 as assetmantle_dot_qualifi
 from assetmantle.qualified.base import mutables_pb2 as assetmantle_dot_qualified_dot_base_dot_mutables__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/documents/base/document.proto\x12!assetmantle.schema.documents.base\x1a\x14gogoproto/gogo.proto\x1a,assetmantle/ids/base/classification_id.proto\x1a+assetmantle/qualified/base/immutables.proto\x1a)assetmantle/qualified/base/mutables.proto\"\x85\x02\n\x08\x44ocument\x12[\n\x12\x63lassification_i_d\x18\x01 \x01(\x0b\x32-.assetmantle.schema.ids.base.ClassificationIDR\x10\x63lassificationID\x12M\n\nimmutables\x18\x02 \x01(\x0b\x32-.assetmantle.schema.qualified.base.ImmutablesR\nimmutables\x12G\n\x08mutables\x18\x03 \x01(\x0b\x32+.assetmantle.schema.qualified.base.MutablesR\x08mutables:\x04\x88\xa0\x1f\x00\x42\xde\x01\n%com.assetmantle.schema.documents.baseB\rDocumentProtoP\x01\xa2\x02\x04\x41SDB\xaa\x02!Assetmantle.Schema.Documents.Base\xca\x02!Assetmantle\\Schema\\Documents\\Base\xe2\x02-Assetmantle\\Schema\\Documents\\Base\\GPBMetadata\xea\x02$Assetmantle::Schema::Documents::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/documents/base/document.proto\x12!assetmantle.schema.documents.base\x1a\x14gogoproto/gogo.proto\x1a,assetmantle/ids/base/classification_id.proto\x1a+assetmantle/qualified/base/immutables.proto\x1a)assetmantle/qualified/base/mutables.proto\"\x85\x02\n\x08\x44ocument\x12[\n\x12\x63lassification_i_d\x18\x01 \x01(\x0b\x32-.assetmantle.schema.ids.base.ClassificationIDR\x10\x63lassificationID\x12M\n\nimmutables\x18\x02 \x01(\x0b\x32-.assetmantle.schema.qualified.base.ImmutablesR\nimmutables\x12G\n\x08mutables\x18\x03 \x01(\x0b\x32+.assetmantle.schema.qualified.base.MutablesR\x08mutables:\x04\x88\xa0\x1f\x00\x42\xdc\x01\n%com.assetmantle.schema.documents.baseB\rDocumentProto\xa2\x02\x04\x41SDB\xaa\x02!Assetmantle.Schema.Documents.Base\xca\x02!Assetmantle\\Schema\\Documents\\Base\xe2\x02-Assetmantle\\Schema\\Documents\\Base\\GPBMetadata\xea\x02$Assetmantle::Schema::Documents::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.documents.base.document_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n%com.assetmantle.schema.documents.baseB\rDocumentProtoP\001\242\002\004ASDB\252\002!Assetmantle.Schema.Documents.Base\312\002!Assetmantle\\Schema\\Documents\\Base\342\002-Assetmantle\\Schema\\Documents\\Base\\GPBMetadata\352\002$Assetmantle::Schema::Documents::Base'
+  DESCRIPTOR._serialized_options = b'\n%com.assetmantle.schema.documents.baseB\rDocumentProto\242\002\004ASDB\252\002!Assetmantle.Schema.Documents.Base\312\002!Assetmantle\\Schema\\Documents\\Base\342\002-Assetmantle\\Schema\\Documents\\Base\\GPBMetadata\352\002$Assetmantle::Schema::Documents::Base'
   _DOCUMENT._options = None
   _DOCUMENT._serialized_options = b'\210\240\037\000'
   _globals['_DOCUMENT']._serialized_start=237

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15gravity/v1/pool.proto\x12\ngravity.v1\x1a\x14gogoproto/gogo.proto\"\x19\n\x05IDSet\x12\x10\n\x03ids\x18\x01 \x03(\x04R\x03ids\"\x8b\x01\n\tBatchFees\x12\x14\n\x05token\x18\x01 \x01(\tR\x05token\x12M\n\ntotal_fees\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\ttotalFees\x12\x19\n\x08tx_count\x18\x03 \x01(\x04R\x07txCount\"\xa6\x01\n\x17\x45ventWithdrawalReceived\x12\'\n\x0f\x62ridge_contract\x18\x01 \x01(\tR\x0e\x62ridgeContract\x12&\n\x0f\x62ridge_chain_id\x18\x02 \x01(\tR\rbridgeChainId\x12$\n\x0eoutgoing_tx_id\x18\x03 \x01(\tR\x0coutgoingTxId\x12\x14\n\x05nonce\x18\x04 \x01(\tR\x05nonce\"\x95\x01\n\x15\x45ventWithdrawCanceled\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12\x13\n\x05tx_id\x18\x02 \x01(\tR\x04txId\x12\'\n\x0f\x62ridge_contract\x18\x03 \x01(\tR\x0e\x62ridgeContract\x12&\n\x0f\x62ridge_chain_id\x18\x04 \x01(\tR\rbridgeChainIdB\xa5\x01\n\x0e\x63om.gravity.v1B\tPoolProtoP\x01Z?github.com/Gravity-Bridge/Gravity-Bridge/module/x/gravity/types\xa2\x02\x03GXX\xaa\x02\nGravity.V1\xca\x02\nGravity\\V1\xe2\x02\x16Gravity\\V1\\GPBMetadata\xea\x02\x0bGravity::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15gravity/v1/pool.proto\x12\ngravity.v1\x1a\x14gogoproto/gogo.proto\"\x19\n\x05IDSet\x12\x10\n\x03ids\x18\x01 \x03(\x04R\x03ids\"\x8b\x01\n\tBatchFees\x12\x14\n\x05token\x18\x01 \x01(\tR\x05token\x12M\n\ntotal_fees\x18\x02 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\ttotalFees\x12\x19\n\x08tx_count\x18\x03 \x01(\x04R\x07txCount\"\xa6\x01\n\x17\x45ventWithdrawalReceived\x12\'\n\x0f\x62ridge_contract\x18\x01 \x01(\tR\x0e\x62ridgeContract\x12&\n\x0f\x62ridge_chain_id\x18\x02 \x01(\tR\rbridgeChainId\x12$\n\x0eoutgoing_tx_id\x18\x03 \x01(\tR\x0coutgoingTxId\x12\x14\n\x05nonce\x18\x04 \x01(\tR\x05nonce\"\x95\x01\n\x15\x45ventWithdrawCanceled\x12\x16\n\x06sender\x18\x01 \x01(\tR\x06sender\x12\x13\n\x05tx_id\x18\x02 \x01(\tR\x04txId\x12\'\n\x0f\x62ridge_contract\x18\x03 \x01(\tR\x0e\x62ridgeContract\x12&\n\x0f\x62ridge_chain_id\x18\x04 \x01(\tR\rbridgeChainIdB\xa3\x01\n\x0e\x63om.gravity.v1B\tPoolProtoZ?github.com/Gravity-Bridge/Gravity-Bridge/module/x/gravity/types\xa2\x02\x03GXX\xaa\x02\nGravity.V1\xca\x02\nGravity\\V1\xe2\x02\x16Gravity\\V1\\GPBMetadata\xea\x02\x0bGravity::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'gravity.v1.pool_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\016com.gravity.v1B\tPoolProtoP\001Z?github.com/Gravity-Bridge/Gravity-Bridge/module/x/gravity/types\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\V1\342\002\026Gravity\\V1\\GPBMetadata\352\002\013Gravity::V1'
+  DESCRIPTOR._serialized_options = b'\n\016com.gravity.v1B\tPoolProtoZ?github.com/Gravity-Bridge/Gravity-Bridge/module/x/gravity/types\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\V1\342\002\026Gravity\\V1\\GPBMetadata\352\002\013Gravity::V1'
   _BATCHFEES.fields_by_name['total_fees']._options = None
   _BATCHFEES.fields_by_name['total_fees']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _globals['_IDSET']._serialized_start=59

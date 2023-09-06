@@ -265,6 +265,7 @@ public final class AttestationProto {
               com.injective.peggy.v1.AttestationProto.Attestation.class, com.injective.peggy.v1.AttestationProto.Attestation.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OBSERVED_FIELD_NUMBER = 1;
     private boolean observed_ = false;
     /**
@@ -332,7 +333,7 @@ public final class AttestationProto {
      */
     @java.lang.Override
     public boolean hasClaim() {
-      return claim_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any claim = 4 [json_name = "claim"];</code>
@@ -373,7 +374,7 @@ public final class AttestationProto {
       if (height_ != 0L) {
         output.writeUInt64(3, height_);
       }
-      if (claim_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getClaim());
       }
       getUnknownFields().writeTo(output);
@@ -401,7 +402,7 @@ public final class AttestationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, height_);
       }
-      if (claim_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getClaim());
       }
@@ -593,13 +594,19 @@ public final class AttestationProto {
 
       // Construct using com.injective.peggy.v1.AttestationProto.Attestation.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClaimFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -657,11 +664,14 @@ public final class AttestationProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.height_ = height_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.claim_ = claimBuilder_ == null
               ? claim_
               : claimBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1034,8 +1044,10 @@ public final class AttestationProto {
         } else {
           claimBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (claim_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

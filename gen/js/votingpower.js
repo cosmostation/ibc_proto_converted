@@ -1,4 +1,4 @@
-// source: pstake/lspersistence/v1beta1/liquidstaking.proto
+// source: crescent/liquidstaking/v1beta1/liquidstaking.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lspersistence.v1beta1.VotingPower');
+goog.provide('proto.crescent.liquidstaking.v1beta1.VotingPower');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.pstake.lspersistence.v1beta1.VotingPower = function(opt_data) {
+proto.crescent.liquidstaking.v1beta1.VotingPower = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.pstake.lspersistence.v1beta1.VotingPower, jspb.Message);
+goog.inherits(proto.crescent.liquidstaking.v1beta1.VotingPower, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.pstake.lspersistence.v1beta1.VotingPower.displayName = 'proto.pstake.lspersistence.v1beta1.VotingPower';
+  proto.crescent.liquidstaking.v1beta1.VotingPower.displayName = 'proto.crescent.liquidstaking.v1beta1.VotingPower';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.toObject = function(opt_includeInstance) {
-  return proto.pstake.lspersistence.v1beta1.VotingPower.toObject(opt_includeInstance, this);
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.toObject = function(opt_includeInstance) {
+  return proto.crescent.liquidstaking.v1beta1.VotingPower.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.pstake.lspersistence.v1beta1.VotingPower.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.pstake.lspersistence.v1beta1.VotingPower} msg The msg instance to transform.
+ * @param {!proto.crescent.liquidstaking.v1beta1.VotingPower} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.toObject = function(includeInstance, msg) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.toObject = function(includeInstance, msg) {
   var f, obj = {
     voter: jspb.Message.getFieldWithDefault(msg, 1, ""),
     stakingVotingPower: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -87,23 +87,23 @@ proto.pstake.lspersistence.v1beta1.VotingPower.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.pstake.lspersistence.v1beta1.VotingPower}
+ * @return {!proto.crescent.liquidstaking.v1beta1.VotingPower}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.deserializeBinary = function(bytes) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.pstake.lspersistence.v1beta1.VotingPower;
-  return proto.pstake.lspersistence.v1beta1.VotingPower.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.crescent.liquidstaking.v1beta1.VotingPower;
+  return proto.crescent.liquidstaking.v1beta1.VotingPower.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.pstake.lspersistence.v1beta1.VotingPower} msg The message object to deserialize into.
+ * @param {!proto.crescent.liquidstaking.v1beta1.VotingPower} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.pstake.lspersistence.v1beta1.VotingPower}
+ * @return {!proto.crescent.liquidstaking.v1beta1.VotingPower}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.deserializeBinaryFromReader = function(msg, reader) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -139,9 +139,9 @@ proto.pstake.lspersistence.v1beta1.VotingPower.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.serializeBinary = function() {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.pstake.lspersistence.v1beta1.VotingPower.serializeBinaryToWriter(this, writer);
+  proto.crescent.liquidstaking.v1beta1.VotingPower.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -149,11 +149,11 @@ proto.pstake.lspersistence.v1beta1.VotingPower.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.pstake.lspersistence.v1beta1.VotingPower} message
+ * @param {!proto.crescent.liquidstaking.v1beta1.VotingPower} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.serializeBinaryToWriter = function(message, writer) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getVoter();
   if (f.length > 0) {
@@ -190,16 +190,16 @@ proto.pstake.lspersistence.v1beta1.VotingPower.serializeBinaryToWriter = functio
  * optional string voter = 1;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.getVoter = function() {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.getVoter = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.VotingPower} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.VotingPower} returns this
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.setVoter = function(value) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.setVoter = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -208,16 +208,16 @@ proto.pstake.lspersistence.v1beta1.VotingPower.prototype.setVoter = function(val
  * optional string staking_voting_power = 2;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.getStakingVotingPower = function() {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.getStakingVotingPower = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.VotingPower} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.VotingPower} returns this
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.setStakingVotingPower = function(value) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.setStakingVotingPower = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -226,16 +226,16 @@ proto.pstake.lspersistence.v1beta1.VotingPower.prototype.setStakingVotingPower =
  * optional string liquid_staking_voting_power = 3;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.getLiquidStakingVotingPower = function() {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.getLiquidStakingVotingPower = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.VotingPower} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.VotingPower} returns this
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.setLiquidStakingVotingPower = function(value) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.setLiquidStakingVotingPower = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -244,16 +244,16 @@ proto.pstake.lspersistence.v1beta1.VotingPower.prototype.setLiquidStakingVotingP
  * optional string validator_voting_power = 4;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.getValidatorVotingPower = function() {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.getValidatorVotingPower = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.VotingPower} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.VotingPower} returns this
  */
-proto.pstake.lspersistence.v1beta1.VotingPower.prototype.setValidatorVotingPower = function(value) {
+proto.crescent.liquidstaking.v1beta1.VotingPower.prototype.setValidatorVotingPower = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 

@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63\x61nto/govshuttle/v1/tx.proto\x12\x13\x63\x61nto.govshuttle.v12\x05\n\x03MsgB\xc6\x01\n\x17\x63om.canto.govshuttle.v1B\x07TxProtoP\x01Z4github.com/Canto-Network/Canto/v6/x/govshuttle/types\xa2\x02\x03\x43GX\xaa\x02\x13\x43\x61nto.Govshuttle.V1\xca\x02\x13\x43\x61nto\\Govshuttle\\V1\xe2\x02\x1f\x43\x61nto\\Govshuttle\\V1\\GPBMetadata\xea\x02\x15\x43\x61nto::Govshuttle::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63\x61nto/govshuttle/v1/tx.proto\x12\x13\x63\x61nto.govshuttle.v12\x05\n\x03MsgB\xc4\x01\n\x17\x63om.canto.govshuttle.v1B\x07TxProtoZ4github.com/Canto-Network/Canto/v6/x/govshuttle/types\xa2\x02\x03\x43GX\xaa\x02\x13\x43\x61nto.Govshuttle.V1\xca\x02\x13\x43\x61nto\\Govshuttle\\V1\xe2\x02\x1f\x43\x61nto\\Govshuttle\\V1\\GPBMetadata\xea\x02\x15\x43\x61nto::Govshuttle::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.govshuttle.v1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.canto.govshuttle.v1B\007TxProtoP\001Z4github.com/Canto-Network/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Canto::Govshuttle::V1'
+  DESCRIPTOR._serialized_options = b'\n\027com.canto.govshuttle.v1B\007TxProtoZ4github.com/Canto-Network/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Canto::Govshuttle::V1'
   _globals['_MSG']._serialized_start=53
   _globals['_MSG']._serialized_end=58
 # @@protoc_insertion_point(module_scope)

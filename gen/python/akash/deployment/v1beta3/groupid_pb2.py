@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&akash/deployment/v1beta3/groupid.proto\x12\x18\x61kash.deployment.v1beta3\x1a\x14gogoproto/gogo.proto\"\xae\x01\n\x07GroupID\x12/\n\x05owner\x18\x01 \x01(\tB\x19\xea\xde\x1f\x05owner\xf2\xde\x1f\x0cyaml:\"owner\"R\x05owner\x12\x33\n\x04\x64seq\x18\x02 \x01(\x04\x42\x1f\xe2\xde\x1f\x04\x44Seq\xea\xde\x1f\x04\x64seq\xf2\xde\x1f\x0byaml:\"dseq\"R\x04\x64seq\x12\x33\n\x04gseq\x18\x03 \x01(\rB\x1f\xe2\xde\x1f\x04GSeq\xea\xde\x1f\x04gseq\xf2\xde\x1f\x0byaml:\"gseq\"R\x04gseq:\x08\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xed\x01\n\x1c\x63om.akash.deployment.v1beta3B\x0cGroupidProtoP\x01Z=github.com/akash-network/akash-api/go/node/deployment/v1beta3\xa2\x02\x03\x41\x44X\xaa\x02\x18\x41kash.Deployment.V1beta3\xca\x02\x18\x41kash\\Deployment\\V1beta3\xe2\x02$Akash\\Deployment\\V1beta3\\GPBMetadata\xea\x02\x1a\x41kash::Deployment::V1beta3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&akash/deployment/v1beta3/groupid.proto\x12\x18\x61kash.deployment.v1beta3\x1a\x14gogoproto/gogo.proto\"\xae\x01\n\x07GroupID\x12/\n\x05owner\x18\x01 \x01(\tB\x19\xea\xde\x1f\x05owner\xf2\xde\x1f\x0cyaml:\"owner\"R\x05owner\x12\x33\n\x04\x64seq\x18\x02 \x01(\x04\x42\x1f\xe2\xde\x1f\x04\x44Seq\xea\xde\x1f\x04\x64seq\xf2\xde\x1f\x0byaml:\"dseq\"R\x04\x64seq\x12\x33\n\x04gseq\x18\x03 \x01(\rB\x1f\xe2\xde\x1f\x04GSeq\xea\xde\x1f\x04gseq\xf2\xde\x1f\x0byaml:\"gseq\"R\x04gseq:\x08\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xeb\x01\n\x1c\x63om.akash.deployment.v1beta3B\x0cGroupidProtoZ=github.com/akash-network/akash-api/go/node/deployment/v1beta3\xa2\x02\x03\x41\x44X\xaa\x02\x18\x41kash.Deployment.V1beta3\xca\x02\x18\x41kash\\Deployment\\V1beta3\xe2\x02$Akash\\Deployment\\V1beta3\\GPBMetadata\xea\x02\x1a\x41kash::Deployment::V1beta3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.deployment.v1beta3.groupid_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.akash.deployment.v1beta3B\014GroupidProtoP\001Z=github.com/akash-network/akash-api/go/node/deployment/v1beta3\242\002\003ADX\252\002\030Akash.Deployment.V1beta3\312\002\030Akash\\Deployment\\V1beta3\342\002$Akash\\Deployment\\V1beta3\\GPBMetadata\352\002\032Akash::Deployment::V1beta3'
+  DESCRIPTOR._serialized_options = b'\n\034com.akash.deployment.v1beta3B\014GroupidProtoZ=github.com/akash-network/akash-api/go/node/deployment/v1beta3\242\002\003ADX\252\002\030Akash.Deployment.V1beta3\312\002\030Akash\\Deployment\\V1beta3\342\002$Akash\\Deployment\\V1beta3\\GPBMetadata\352\002\032Akash::Deployment::V1beta3'
   _GROUPID.fields_by_name['owner']._options = None
   _GROUPID.fields_by_name['owner']._serialized_options = b'\352\336\037\005owner\362\336\037\014yaml:\"owner\"'
   _GROUPID.fields_by_name['dseq']._options = None

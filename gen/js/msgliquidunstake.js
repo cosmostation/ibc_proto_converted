@@ -1,4 +1,4 @@
-// source: pstake/lspersistence/v1beta1/tx.proto
+// source: pstake/liquidstakeibc/v1beta1/msgs.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake');
+goog.provide('proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -28,16 +28,16 @@ goog.require('proto.cosmos.base.v1beta1.Coin');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake = function(opt_data) {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake, jspb.Message);
+goog.inherits(proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.displayName = 'proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake';
+  proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.displayName = 'proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake';
 }
 
 
@@ -55,8 +55,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.toObject = function(opt_includeInstance) {
-  return proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.toObject(opt_includeInstance, this);
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.toObject = function(opt_includeInstance) {
+  return proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.toObject(opt_includeInstance, this);
 };
 
 
@@ -65,11 +65,11 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake} msg The msg instance to transform.
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.toObject = function(includeInstance, msg) {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.toObject = function(includeInstance, msg) {
   var f, obj = {
     delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
     amount: (f = msg.getAmount()) && proto.cosmos.base.v1beta1.Coin.toObject(includeInstance, f)
@@ -86,23 +86,23 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.toObject = function(includeI
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake}
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake}
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.deserializeBinary = function(bytes) {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake;
-  return proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake;
+  return proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake} msg The message object to deserialize into.
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake}
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake}
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.deserializeBinaryFromReader = function(msg, reader) {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -131,9 +131,9 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.serializeBinary = function() {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.serializeBinaryToWriter(this, writer);
+  proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -141,11 +141,11 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake} message
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.serializeBinaryToWriter = function(message, writer) {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDelegatorAddress();
   if (f.length > 0) {
@@ -169,16 +169,16 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.serializeBinaryToWriter = fu
  * optional string delegator_address = 1;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.getDelegatorAddress = function() {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.getDelegatorAddress = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake} returns this
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake} returns this
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.setDelegatorAddress = function(value) {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.setDelegatorAddress = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -187,7 +187,7 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.setDelegatorAddres
  * optional cosmos.base.v1beta1.Coin amount = 2;
  * @return {?proto.cosmos.base.v1beta1.Coin}
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.getAmount = function() {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.getAmount = function() {
   return /** @type{?proto.cosmos.base.v1beta1.Coin} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.base.v1beta1.Coin, 2));
 };
@@ -195,18 +195,18 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.getAmount = functi
 
 /**
  * @param {?proto.cosmos.base.v1beta1.Coin|undefined} value
- * @return {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake} returns this
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake} returns this
 */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.setAmount = function(value) {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.setAmount = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake} returns this
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake} returns this
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.clearAmount = function() {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.clearAmount = function() {
   return this.setAmount(undefined);
 };
 
@@ -215,7 +215,7 @@ proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.clearAmount = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.pstake.lspersistence.v1beta1.MsgLiquidUnstake.prototype.hasAmount = function() {
+proto.pstake.liquidstakeibc.v1beta1.MsgLiquidUnstake.prototype.hasAmount = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 

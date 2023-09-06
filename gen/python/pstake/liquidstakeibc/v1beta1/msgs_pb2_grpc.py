@@ -30,6 +30,11 @@ class MsgStub(object):
                 request_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStake.SerializeToString,
                 response_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeResponse.FromString,
                 )
+        self.LiquidStakeLSM = channel.unary_unary(
+                '/pstake.liquidstakeibc.v1beta1.Msg/LiquidStakeLSM',
+                request_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeLSM.SerializeToString,
+                response_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeLSMResponse.FromString,
+                )
         self.LiquidUnstake = channel.unary_unary(
                 '/pstake.liquidstakeibc.v1beta1.Msg/LiquidUnstake',
                 request_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidUnstake.SerializeToString,
@@ -39,6 +44,11 @@ class MsgStub(object):
                 '/pstake.liquidstakeibc.v1beta1.Msg/Redeem',
                 request_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgRedeem.SerializeToString,
                 response_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgRedeemResponse.FromString,
+                )
+        self.UpdateParams = channel.unary_unary(
+                '/pstake.liquidstakeibc.v1beta1.Msg/UpdateParams',
+                request_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgUpdateParams.SerializeToString,
+                response_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgUpdateParamsResponse.FromString,
                 )
 
 
@@ -64,6 +74,12 @@ class MsgServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def LiquidStakeLSM(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def LiquidUnstake(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -71,6 +87,12 @@ class MsgServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Redeem(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def UpdateParams(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -94,6 +116,11 @@ def add_MsgServicer_to_server(servicer, server):
                     request_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStake.FromString,
                     response_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeResponse.SerializeToString,
             ),
+            'LiquidStakeLSM': grpc.unary_unary_rpc_method_handler(
+                    servicer.LiquidStakeLSM,
+                    request_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeLSM.FromString,
+                    response_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeLSMResponse.SerializeToString,
+            ),
             'LiquidUnstake': grpc.unary_unary_rpc_method_handler(
                     servicer.LiquidUnstake,
                     request_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidUnstake.FromString,
@@ -103,6 +130,11 @@ def add_MsgServicer_to_server(servicer, server):
                     servicer.Redeem,
                     request_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgRedeem.FromString,
                     response_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgRedeemResponse.SerializeToString,
+            ),
+            'UpdateParams': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateParams,
+                    request_deserializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgUpdateParams.FromString,
+                    response_serializer=pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgUpdateParamsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -167,6 +199,23 @@ class Msg(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
+    def LiquidStakeLSM(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/pstake.liquidstakeibc.v1beta1.Msg/LiquidStakeLSM',
+            pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeLSM.SerializeToString,
+            pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgLiquidStakeLSMResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
     def LiquidUnstake(request,
             target,
             options=(),
@@ -197,5 +246,22 @@ class Msg(object):
         return grpc.experimental.unary_unary(request, target, '/pstake.liquidstakeibc.v1beta1.Msg/Redeem',
             pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgRedeem.SerializeToString,
             pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgRedeemResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def UpdateParams(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/pstake.liquidstakeibc.v1beta1.Msg/UpdateParams',
+            pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgUpdateParams.SerializeToString,
+            pstake_dot_liquidstakeibc_dot_v1beta1_dot_msgs__pb2.MsgUpdateParamsResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

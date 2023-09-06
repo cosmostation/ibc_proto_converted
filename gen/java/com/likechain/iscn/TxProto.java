@@ -114,7 +114,7 @@ public final class TxProto {
       recordNotes_ = "";
       contentFingerprints_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      stakeholders_ = java.util.Collections.emptyList();
+      stakeholders_ = emptyList(com.google.protobuf.ByteString.class);
       contentMetadata_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -224,7 +224,8 @@ public final class TxProto {
 
     public static final int STAKEHOLDERS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> stakeholders_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> stakeholders_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * Here, `IscnInput` is JSON encoded bytes
@@ -512,7 +513,7 @@ public final class TxProto {
         recordNotes_ = "";
         contentFingerprints_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
-        stakeholders_ = java.util.Collections.emptyList();
+        stakeholders_ = emptyList(com.google.protobuf.ByteString.class);
         contentMetadata_ = com.google.protobuf.ByteString.EMPTY;
         return this;
       }
@@ -540,18 +541,9 @@ public final class TxProto {
       @java.lang.Override
       public com.likechain.iscn.TxProto.IscnRecord buildPartial() {
         com.likechain.iscn.TxProto.IscnRecord result = new com.likechain.iscn.TxProto.IscnRecord(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.likechain.iscn.TxProto.IscnRecord result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          stakeholders_ = java.util.Collections.unmodifiableList(stakeholders_);
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.stakeholders_ = stakeholders_;
       }
 
       private void buildPartial0(com.likechain.iscn.TxProto.IscnRecord result) {
@@ -562,6 +554,10 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           contentFingerprints_.makeImmutable();
           result.contentFingerprints_ = contentFingerprints_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          stakeholders_.makeImmutable();
+          result.stakeholders_ = stakeholders_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.contentMetadata_ = contentMetadata_;
@@ -630,7 +626,8 @@ public final class TxProto {
         if (!other.stakeholders_.isEmpty()) {
           if (stakeholders_.isEmpty()) {
             stakeholders_ = other.stakeholders_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            stakeholders_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureStakeholdersIsMutable();
             stakeholders_.addAll(other.stakeholders_);
@@ -908,12 +905,12 @@ public final class TxProto {
         return this;
       }
 
-      private java.util.List<com.google.protobuf.ByteString> stakeholders_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> stakeholders_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureStakeholdersIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          stakeholders_ = new java.util.ArrayList<com.google.protobuf.ByteString>(stakeholders_);
-          bitField0_ |= 0x00000004;
+        if (!stakeholders_.isModifiable()) {
+          stakeholders_ = makeMutableCopy(stakeholders_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -925,8 +922,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getStakeholdersList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(stakeholders_) : stakeholders_;
+        stakeholders_.makeImmutable();
+        return stakeholders_;
       }
       /**
        * <pre>
@@ -966,6 +963,7 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureStakeholdersIsMutable();
         stakeholders_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -982,6 +980,7 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureStakeholdersIsMutable();
         stakeholders_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -999,6 +998,7 @@ public final class TxProto {
         ensureStakeholdersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, stakeholders_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1011,7 +1011,7 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearStakeholders() {
-        stakeholders_ = java.util.Collections.emptyList();
+        stakeholders_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -1185,6 +1185,7 @@ public final class TxProto {
               com.likechain.iscn.TxProto.MsgCreateIscnRecord.class, com.likechain.iscn.TxProto.MsgCreateIscnRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -1232,7 +1233,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return record_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.likechain.iscn.IscnRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
@@ -1278,7 +1279,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
       }
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getRecord());
       }
       if (nonce_ != 0L) {
@@ -1296,7 +1297,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
       }
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecord());
       }
@@ -1467,13 +1468,19 @@ public final class TxProto {
 
       // Construct using com.likechain.iscn.TxProto.MsgCreateIscnRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1522,14 +1529,17 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.from_ = from_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.nonce_ = nonce_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1785,8 +1795,10 @@ public final class TxProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (record_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2713,6 +2725,7 @@ public final class TxProto {
               com.likechain.iscn.TxProto.MsgUpdateIscnRecord.class, com.likechain.iscn.TxProto.MsgUpdateIscnRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -2799,7 +2812,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return record_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.likechain.iscn.IscnRecord record = 3 [json_name = "record", (.gogoproto.nullable) = false];</code>
@@ -2837,7 +2850,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iscnId_);
       }
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getRecord());
       }
       getUnknownFields().writeTo(output);
@@ -2855,7 +2868,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iscnId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iscnId_);
       }
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRecord());
       }
@@ -3021,13 +3034,19 @@ public final class TxProto {
 
       // Construct using com.likechain.iscn.TxProto.MsgUpdateIscnRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3079,11 +3098,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.iscnId_ = iscnId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3413,8 +3435,10 @@ public final class TxProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (record_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

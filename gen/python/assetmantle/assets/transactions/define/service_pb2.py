@@ -16,15 +16,14 @@ from assetmantle.assets.transactions.define import message_pb2 as assetmantle_do
 from assetmantle.assets.transactions.define import transaction_response_pb2 as assetmantle_dot_assets_dot_transactions_dot_define_dot_transaction__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4assetmantle/assets/transactions/define/service.proto\x12.assetmantle.modules.assets.transactions.define\x1a\x1cgoogle/api/annotations.proto\x1a\x34\x61ssetmantle/assets/transactions/define/message.proto\x1a\x41\x61ssetmantle/assets/transactions/define/transaction_response.proto2\xb1\x01\n\x07Service\x12\xa5\x01\n\x06Handle\x12\x37.assetmantle.modules.assets.transactions.define.Message\x1a\x43.assetmantle.modules.assets.transactions.define.TransactionResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/mantle/assets/defineB\xa0\x02\n2com.assetmantle.modules.assets.transactions.defineB\x0cServiceProtoP\x01\xa2\x02\x05\x41MATD\xaa\x02.Assetmantle.Modules.Assets.Transactions.Define\xca\x02.Assetmantle\\Modules\\Assets\\Transactions\\Define\xe2\x02:Assetmantle\\Modules\\Assets\\Transactions\\Define\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Assets::Transactions::Defineb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4assetmantle/assets/transactions/define/service.proto\x12.assetmantle.modules.assets.transactions.define\x1a\x1cgoogle/api/annotations.proto\x1a\x34\x61ssetmantle/assets/transactions/define/message.proto\x1a\x41\x61ssetmantle/assets/transactions/define/transaction_response.proto2\xb1\x01\n\x07Service\x12\xa5\x01\n\x06Handle\x12\x37.assetmantle.modules.assets.transactions.define.Message\x1a\x43.assetmantle.modules.assets.transactions.define.TransactionResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/mantle/assets/defineB\x9e\x02\n2com.assetmantle.modules.assets.transactions.defineB\x0cServiceProto\xa2\x02\x05\x41MATD\xaa\x02.Assetmantle.Modules.Assets.Transactions.Define\xca\x02.Assetmantle\\Modules\\Assets\\Transactions\\Define\xe2\x02:Assetmantle\\Modules\\Assets\\Transactions\\Define\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Assets::Transactions::Defineb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.assets.transactions.define.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.assets.transactions.defineB\014ServiceProtoP\001\242\002\005AMATD\252\002.Assetmantle.Modules.Assets.Transactions.Define\312\002.Assetmantle\\Modules\\Assets\\Transactions\\Define\342\002:Assetmantle\\Modules\\Assets\\Transactions\\Define\\GPBMetadata\352\0022Assetmantle::Modules::Assets::Transactions::Define'
+  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.assets.transactions.defineB\014ServiceProto\242\002\005AMATD\252\002.Assetmantle.Modules.Assets.Transactions.Define\312\002.Assetmantle\\Modules\\Assets\\Transactions\\Define\342\002:Assetmantle\\Modules\\Assets\\Transactions\\Define\\GPBMetadata\352\0022Assetmantle::Modules::Assets::Transactions::Define'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\027\"\025/mantle/assets/define'
   _globals['_SERVICE']._serialized_start=256

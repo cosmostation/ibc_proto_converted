@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: desmos/subspaces/v3/query.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryGrpc {
 
   private QueryGrpc() {}
 
-  public static final String SERVICE_NAME = "desmos.subspaces.v3.Query";
+  public static final java.lang.String SERVICE_NAME = "desmos.subspaces.v3.Query";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.desmos.subspaces.v3.QueryProto.QuerySubspacesRequest,
@@ -1064,9 +1064,9 @@ public final class QueryGrpc {
   private static final class QueryMethodDescriptorSupplier
       extends QueryBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    QueryMethodDescriptorSupplier(String methodName) {
+    QueryMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

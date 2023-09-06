@@ -1868,6 +1868,7 @@ public final class TypesProto {
               com.cosmwasm.wasm.v1.TypesProto.Params.class, com.cosmwasm.wasm.v1.TypesProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CODE_UPLOAD_ACCESS_FIELD_NUMBER = 1;
     private com.cosmwasm.wasm.v1.TypesProto.AccessConfig codeUploadAccess_;
     /**
@@ -1876,7 +1877,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasCodeUploadAccess() {
-      return codeUploadAccess_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmwasm.wasm.v1.AccessConfig code_upload_access = 1 [json_name = "codeUploadAccess", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"code_upload_access&#92;""];</code>
@@ -1926,7 +1927,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (codeUploadAccess_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCodeUploadAccess());
       }
       if (instantiateDefaultPermission_ != com.cosmwasm.wasm.v1.TypesProto.AccessType.ACCESS_TYPE_UNSPECIFIED.getNumber()) {
@@ -1941,7 +1942,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (codeUploadAccess_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCodeUploadAccess());
       }
@@ -2110,13 +2111,19 @@ public final class TypesProto {
 
       // Construct using com.cosmwasm.wasm.v1.TypesProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCodeUploadAccessFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2161,14 +2168,17 @@ public final class TypesProto {
 
       private void buildPartial0(com.cosmwasm.wasm.v1.TypesProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.codeUploadAccess_ = codeUploadAccessBuilder_ == null
               ? codeUploadAccess_
               : codeUploadAccessBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.instantiateDefaultPermission_ = instantiateDefaultPermission_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2342,8 +2352,10 @@ public final class TypesProto {
         } else {
           codeUploadAccessBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (codeUploadAccess_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2613,6 +2625,7 @@ public final class TypesProto {
               com.cosmwasm.wasm.v1.TypesProto.CodeInfo.class, com.cosmwasm.wasm.v1.TypesProto.CodeInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CODE_HASH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString codeHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -2687,7 +2700,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasInstantiateConfig() {
-      return instantiateConfig_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2733,7 +2746,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, creator_);
       }
-      if (instantiateConfig_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getInstantiateConfig());
       }
       getUnknownFields().writeTo(output);
@@ -2752,7 +2765,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, creator_);
       }
-      if (instantiateConfig_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getInstantiateConfig());
       }
@@ -2922,13 +2935,19 @@ public final class TypesProto {
 
       // Construct using com.cosmwasm.wasm.v1.TypesProto.CodeInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInstantiateConfigFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2980,11 +2999,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.creator_ = creator_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.instantiateConfig_ = instantiateConfigBuilder_ == null
               ? instantiateConfig_
               : instantiateConfigBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3324,8 +3346,10 @@ public final class TypesProto {
         } else {
           instantiateConfigBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (instantiateConfig_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3648,6 +3672,7 @@ public final class TypesProto {
               com.cosmwasm.wasm.v1.TypesProto.ContractInfo.class, com.cosmwasm.wasm.v1.TypesProto.ContractInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CODE_ID_FIELD_NUMBER = 1;
     private long codeId_ = 0L;
     /**
@@ -3818,7 +3843,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasCreated() {
-      return created_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3900,7 +3925,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasExtension() {
-      return extension_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -3954,13 +3979,13 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, label_);
       }
-      if (created_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getCreated());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcPortId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, ibcPortId_);
       }
-      if (extension_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getExtension());
       }
       getUnknownFields().writeTo(output);
@@ -3985,14 +4010,14 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, label_);
       }
-      if (created_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCreated());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcPortId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, ibcPortId_);
       }
-      if (extension_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getExtension());
       }
@@ -4184,13 +4209,20 @@ public final class TypesProto {
 
       // Construct using com.cosmwasm.wasm.v1.TypesProto.ContractInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCreatedFieldBuilder();
+          getExtensionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4256,10 +4288,12 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.label_ = label_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.created_ = createdBuilder_ == null
               ? created_
               : createdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.ibcPortId_ = ibcPortId_;
@@ -4268,7 +4302,9 @@ public final class TypesProto {
           result.extension_ = extensionBuilder_ == null
               ? extension_
               : extensionBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4842,8 +4878,10 @@ public final class TypesProto {
         } else {
           createdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (created_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5082,8 +5120,10 @@ public final class TypesProto {
         } else {
           extensionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (extension_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5317,6 +5357,7 @@ public final class TypesProto {
               com.cosmwasm.wasm.v1.TypesProto.ContractCodeHistoryEntry.class, com.cosmwasm.wasm.v1.TypesProto.ContractCodeHistoryEntry.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OPERATION_FIELD_NUMBER = 1;
     private int operation_ = 0;
     /**
@@ -5362,7 +5403,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasUpdated() {
-      return updated_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5419,7 +5460,7 @@ public final class TypesProto {
       if (codeId_ != 0L) {
         output.writeUInt64(2, codeId_);
       }
-      if (updated_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getUpdated());
       }
       if (!msg_.isEmpty()) {
@@ -5442,7 +5483,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, codeId_);
       }
-      if (updated_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdated());
       }
@@ -5620,13 +5661,19 @@ public final class TypesProto {
 
       // Construct using com.cosmwasm.wasm.v1.TypesProto.ContractCodeHistoryEntry.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUpdatedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5679,14 +5726,17 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.codeId_ = codeId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.updated_ = updatedBuilder_ == null
               ? updated_
               : updatedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.msg_ = msg_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5993,8 +6043,10 @@ public final class TypesProto {
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (updated_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

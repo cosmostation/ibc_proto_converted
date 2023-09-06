@@ -16,15 +16,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ethermint/types/v1/account.proto\x12\x12\x65thermint.types.v1\x1a\x1e\x63osmos/auth/v1beta1/auth.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\xe5\x01\n\nEthAccount\x12`\n\x0c\x62\x61se_account\x18\x01 \x01(\x0b\x32 .cosmos.auth.v1beta1.BaseAccountB\x1b\xd0\xde\x1f\x01\xf2\xde\x1f\x13yaml:\"base_account\"R\x0b\x62\x61seAccount\x12\x31\n\tcode_hash\x18\x02 \x01(\tB\x14\xf2\xde\x1f\x10yaml:\"code_hash\"R\x08\x63odeHash:B\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\xca\xb4-2github.com/cosmos/cosmos-sdk/x/auth/types.AccountIB\xb2\x01\n\x16\x63om.ethermint.types.v1B\x0c\x41\x63\x63ountProtoP\x01Z github.com/evmos/evmos/v13/types\xa2\x02\x03\x45TX\xaa\x02\x12\x45thermint.Types.V1\xca\x02\x12\x45thermint\\Types\\V1\xe2\x02\x1e\x45thermint\\Types\\V1\\GPBMetadata\xea\x02\x14\x45thermint::Types::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ethermint/types/v1/account.proto\x12\x12\x65thermint.types.v1\x1a\x1e\x63osmos/auth/v1beta1/auth.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\xe5\x01\n\nEthAccount\x12`\n\x0c\x62\x61se_account\x18\x01 \x01(\x0b\x32 .cosmos.auth.v1beta1.BaseAccountB\x1b\xd0\xde\x1f\x01\xf2\xde\x1f\x13yaml:\"base_account\"R\x0b\x62\x61seAccount\x12\x31\n\tcode_hash\x18\x02 \x01(\tB\x14\xf2\xde\x1f\x10yaml:\"code_hash\"R\x08\x63odeHash:B\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x00\xca\xb4-2github.com/cosmos/cosmos-sdk/x/auth/types.AccountIB\xb0\x01\n\x16\x63om.ethermint.types.v1B\x0c\x41\x63\x63ountProtoZ github.com/evmos/evmos/v13/types\xa2\x02\x03\x45TX\xaa\x02\x12\x45thermint.Types.V1\xca\x02\x12\x45thermint\\Types\\V1\xe2\x02\x1e\x45thermint\\Types\\V1\\GPBMetadata\xea\x02\x14\x45thermint::Types::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ethermint.types.v1.account_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.ethermint.types.v1B\014AccountProtoP\001Z github.com/evmos/evmos/v13/types\242\002\003ETX\252\002\022Ethermint.Types.V1\312\002\022Ethermint\\Types\\V1\342\002\036Ethermint\\Types\\V1\\GPBMetadata\352\002\024Ethermint::Types::V1'
+  DESCRIPTOR._serialized_options = b'\n\026com.ethermint.types.v1B\014AccountProtoZ github.com/evmos/evmos/v13/types\242\002\003ETX\252\002\022Ethermint.Types.V1\312\002\022Ethermint\\Types\\V1\342\002\036Ethermint\\Types\\V1\\GPBMetadata\352\002\024Ethermint::Types::V1'
   _ETHACCOUNT.fields_by_name['base_account']._options = None
   _ETHACCOUNT.fields_by_name['base_account']._serialized_options = b'\320\336\037\001\362\336\037\023yaml:\"base_account\"'
   _ETHACCOUNT.fields_by_name['code_hash']._options = None

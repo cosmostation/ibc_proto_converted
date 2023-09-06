@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from lum_network.millions import prize_batch_pb2 as lum__network_dot_millions_dot_prize__batch__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)lum-network/millions/prize_strategy.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\x1a&lum-network/millions/prize_batch.proto\"\\\n\rPrizeStrategy\x12K\n\rprize_batches\x18\x01 \x03(\x0b\x32 .lum.network.millions.PrizeBatchB\x04\xc8\xde\x1f\x00R\x0cprizeBatchesB\xcf\x01\n\x18\x63om.lum.network.millionsB\x12PrizeStrategyProtoP\x01Z-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)lum-network/millions/prize_strategy.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\x1a&lum-network/millions/prize_batch.proto\"\\\n\rPrizeStrategy\x12K\n\rprize_batches\x18\x01 \x03(\x0b\x32 .lum.network.millions.PrizeBatchB\x04\xc8\xde\x1f\x00R\x0cprizeBatchesB\xcd\x01\n\x18\x63om.lum.network.millionsB\x12PrizeStrategyProtoZ-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.millions.prize_strategy_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\022PrizeStrategyProtoP\001Z-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
+  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\022PrizeStrategyProtoZ-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
   _PRIZESTRATEGY.fields_by_name['prize_batches']._options = None
   _PRIZESTRATEGY.fields_by_name['prize_batches']._serialized_options = b'\310\336\037\000'
   _globals['_PRIZESTRATEGY']._serialized_start=129

@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from quicksilver.mint.v1beta1 import mint_pb2 as quicksilver_dot_mint_dot_v1beta1_dot_mint__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&quicksilver/mint/v1beta1/genesis.proto\x12\x18quicksilver.mint.v1beta1\x1a\x14gogoproto/gogo.proto\x1a#quicksilver/mint/v1beta1/mint.proto\"\xea\x01\n\x0cGenesisState\x12>\n\x06minter\x18\x01 \x01(\x0b\x32 .quicksilver.mint.v1beta1.MinterB\x04\xc8\xde\x1f\x00R\x06minter\x12>\n\x06params\x18\x02 \x01(\x0b\x32 .quicksilver.mint.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12Z\n\x17reduction_started_epoch\x18\x03 \x01(\x03\x42\"\xf2\xde\x1f\x1eyaml:\"reduction_started_epoch\"R\x15reductionStartedEpochB\xe3\x01\n\x1c\x63om.quicksilver.mint.v1beta1B\x0cGenesisProtoP\x01Z3github.com/ingenuity-build/quicksilver/x/mint/types\xa2\x02\x03QMX\xaa\x02\x18Quicksilver.Mint.V1beta1\xca\x02\x18Quicksilver\\Mint\\V1beta1\xe2\x02$Quicksilver\\Mint\\V1beta1\\GPBMetadata\xea\x02\x1aQuicksilver::Mint::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&quicksilver/mint/v1beta1/genesis.proto\x12\x18quicksilver.mint.v1beta1\x1a\x14gogoproto/gogo.proto\x1a#quicksilver/mint/v1beta1/mint.proto\"\xea\x01\n\x0cGenesisState\x12>\n\x06minter\x18\x01 \x01(\x0b\x32 .quicksilver.mint.v1beta1.MinterB\x04\xc8\xde\x1f\x00R\x06minter\x12>\n\x06params\x18\x02 \x01(\x0b\x32 .quicksilver.mint.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12Z\n\x17reduction_started_epoch\x18\x03 \x01(\x03\x42\"\xf2\xde\x1f\x1eyaml:\"reduction_started_epoch\"R\x15reductionStartedEpochB\xe1\x01\n\x1c\x63om.quicksilver.mint.v1beta1B\x0cGenesisProtoZ3github.com/ingenuity-build/quicksilver/x/mint/types\xa2\x02\x03QMX\xaa\x02\x18Quicksilver.Mint.V1beta1\xca\x02\x18Quicksilver\\Mint\\V1beta1\xe2\x02$Quicksilver\\Mint\\V1beta1\\GPBMetadata\xea\x02\x1aQuicksilver::Mint::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'quicksilver.mint.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.quicksilver.mint.v1beta1B\014GenesisProtoP\001Z3github.com/ingenuity-build/quicksilver/x/mint/types\242\002\003QMX\252\002\030Quicksilver.Mint.V1beta1\312\002\030Quicksilver\\Mint\\V1beta1\342\002$Quicksilver\\Mint\\V1beta1\\GPBMetadata\352\002\032Quicksilver::Mint::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\034com.quicksilver.mint.v1beta1B\014GenesisProtoZ3github.com/ingenuity-build/quicksilver/x/mint/types\242\002\003QMX\252\002\030Quicksilver.Mint.V1beta1\312\002\030Quicksilver\\Mint\\V1beta1\342\002$Quicksilver\\Mint\\V1beta1\\GPBMetadata\352\002\032Quicksilver::Mint::V1beta1'
   _GENESISSTATE.fields_by_name['minter']._options = None
   _GENESISSTATE.fields_by_name['minter']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['params']._options = None

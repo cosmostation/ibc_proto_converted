@@ -254,7 +254,8 @@ public final class ParamsProto {
 
     public static final int AUTHORIZED_TICK_SPACING_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList authorizedTickSpacing_;
+    private com.google.protobuf.Internal.LongList authorizedTickSpacing_ =
+        emptyLongList();
     /**
      * <pre>
      * authorized_tick_spacing is an array of uint64s that represents the tick
@@ -853,11 +854,6 @@ public final class ParamsProto {
       }
 
       private void buildPartialRepeatedFields(com.osmosis.concentratedliquidity.ParamsProto.Params result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          authorizedTickSpacing_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.authorizedTickSpacing_ = authorizedTickSpacing_;
         if (authorizedUptimesBuilder_ == null) {
           if (((bitField0_ & 0x00000010) != 0)) {
             authorizedUptimes_ = java.util.Collections.unmodifiableList(authorizedUptimes_);
@@ -871,6 +867,10 @@ public final class ParamsProto {
 
       private void buildPartial0(com.osmosis.concentratedliquidity.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          authorizedTickSpacing_.makeImmutable();
+          result.authorizedTickSpacing_ = authorizedTickSpacing_;
+        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           authorizedSpreadFactors_.makeImmutable();
           result.authorizedSpreadFactors_ = authorizedSpreadFactors_;
@@ -934,7 +934,8 @@ public final class ParamsProto {
         if (!other.authorizedTickSpacing_.isEmpty()) {
           if (authorizedTickSpacing_.isEmpty()) {
             authorizedTickSpacing_ = other.authorizedTickSpacing_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            authorizedTickSpacing_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureAuthorizedTickSpacingIsMutable();
             authorizedTickSpacing_.addAll(other.authorizedTickSpacing_);
@@ -1091,10 +1092,10 @@ public final class ParamsProto {
 
       private com.google.protobuf.Internal.LongList authorizedTickSpacing_ = emptyLongList();
       private void ensureAuthorizedTickSpacingIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          authorizedTickSpacing_ = mutableCopy(authorizedTickSpacing_);
-          bitField0_ |= 0x00000001;
+        if (!authorizedTickSpacing_.isModifiable()) {
+          authorizedTickSpacing_ = makeMutableCopy(authorizedTickSpacing_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -1109,8 +1110,8 @@ public final class ParamsProto {
        */
       public java.util.List<java.lang.Long>
           getAuthorizedTickSpacingList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(authorizedTickSpacing_) : authorizedTickSpacing_;
+        authorizedTickSpacing_.makeImmutable();
+        return authorizedTickSpacing_;
       }
       /**
        * <pre>
@@ -1159,6 +1160,7 @@ public final class ParamsProto {
 
         ensureAuthorizedTickSpacingIsMutable();
         authorizedTickSpacing_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1178,6 +1180,7 @@ public final class ParamsProto {
 
         ensureAuthorizedTickSpacingIsMutable();
         authorizedTickSpacing_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1198,6 +1201,7 @@ public final class ParamsProto {
         ensureAuthorizedTickSpacingIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, authorizedTickSpacing_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

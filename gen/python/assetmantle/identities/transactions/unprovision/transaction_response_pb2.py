@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nJassetmantle/identities/transactions/unprovision/transaction_response.proto\x12\x37\x61ssetmantle.modules.identities.transactions.unprovision\"\x15\n\x13TransactionResponseB\xd9\x02\n;com.assetmantle.modules.identities.transactions.unprovisionB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MITU\xaa\x02\x37\x41ssetmantle.Modules.Identities.Transactions.Unprovision\xca\x02\x37\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\xe2\x02\x43\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\xea\x02;Assetmantle::Modules::Identities::Transactions::Unprovisionb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nJassetmantle/identities/transactions/unprovision/transaction_response.proto\x12\x37\x61ssetmantle.modules.identities.transactions.unprovision\"\x15\n\x13TransactionResponseB\xd7\x02\n;com.assetmantle.modules.identities.transactions.unprovisionB\x18TransactionResponseProto\xa2\x02\x05\x41MITU\xaa\x02\x37\x41ssetmantle.Modules.Identities.Transactions.Unprovision\xca\x02\x37\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\xe2\x02\x43\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\xea\x02;Assetmantle::Modules::Identities::Transactions::Unprovisionb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.unprovision.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n;com.assetmantle.modules.identities.transactions.unprovisionB\030TransactionResponseProtoP\001\242\002\005AMITU\252\0027Assetmantle.Modules.Identities.Transactions.Unprovision\312\0027Assetmantle\\Modules\\Identities\\Transactions\\Unprovision\342\002CAssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\352\002;Assetmantle::Modules::Identities::Transactions::Unprovision'
+  DESCRIPTOR._serialized_options = b'\n;com.assetmantle.modules.identities.transactions.unprovisionB\030TransactionResponseProto\242\002\005AMITU\252\0027Assetmantle.Modules.Identities.Transactions.Unprovision\312\0027Assetmantle\\Modules\\Identities\\Transactions\\Unprovision\342\002CAssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\352\002;Assetmantle::Modules::Identities::Transactions::Unprovision'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=135
   _globals['_TRANSACTIONRESPONSE']._serialized_end=156
 # @@protoc_insertion_point(module_scope)

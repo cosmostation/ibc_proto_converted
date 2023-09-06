@@ -16,15 +16,14 @@ from assetmantle.orders.transactions.revoke import message_pb2 as assetmantle_do
 from assetmantle.orders.transactions.revoke import transaction_response_pb2 as assetmantle_dot_orders_dot_transactions_dot_revoke_dot_transaction__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4assetmantle/orders/transactions/revoke/service.proto\x12.assetmantle.modules.orders.transactions.revoke\x1a\x1cgoogle/api/annotations.proto\x1a\x34\x61ssetmantle/orders/transactions/revoke/message.proto\x1a\x41\x61ssetmantle/orders/transactions/revoke/transaction_response.proto2\xb1\x01\n\x07Service\x12\xa5\x01\n\x06Handle\x12\x37.assetmantle.modules.orders.transactions.revoke.Message\x1a\x43.assetmantle.modules.orders.transactions.revoke.TransactionResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/mantle/orders/revokeB\xa0\x02\n2com.assetmantle.modules.orders.transactions.revokeB\x0cServiceProtoP\x01\xa2\x02\x05\x41MOTR\xaa\x02.Assetmantle.Modules.Orders.Transactions.Revoke\xca\x02.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\xe2\x02:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Orders::Transactions::Revokeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4assetmantle/orders/transactions/revoke/service.proto\x12.assetmantle.modules.orders.transactions.revoke\x1a\x1cgoogle/api/annotations.proto\x1a\x34\x61ssetmantle/orders/transactions/revoke/message.proto\x1a\x41\x61ssetmantle/orders/transactions/revoke/transaction_response.proto2\xb1\x01\n\x07Service\x12\xa5\x01\n\x06Handle\x12\x37.assetmantle.modules.orders.transactions.revoke.Message\x1a\x43.assetmantle.modules.orders.transactions.revoke.TransactionResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x15/mantle/orders/revokeB\x9e\x02\n2com.assetmantle.modules.orders.transactions.revokeB\x0cServiceProto\xa2\x02\x05\x41MOTR\xaa\x02.Assetmantle.Modules.Orders.Transactions.Revoke\xca\x02.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\xe2\x02:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Orders::Transactions::Revokeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.revoke.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.orders.transactions.revokeB\014ServiceProtoP\001\242\002\005AMOTR\252\002.Assetmantle.Modules.Orders.Transactions.Revoke\312\002.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\342\002:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\352\0022Assetmantle::Modules::Orders::Transactions::Revoke'
+  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.orders.transactions.revokeB\014ServiceProto\242\002\005AMOTR\252\002.Assetmantle.Modules.Orders.Transactions.Revoke\312\002.Assetmantle\\Modules\\Orders\\Transactions\\Revoke\342\002:Assetmantle\\Modules\\Orders\\Transactions\\Revoke\\GPBMetadata\352\0022Assetmantle::Modules::Orders::Transactions::Revoke'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\027\"\025/mantle/orders/revoke'
   _globals['_SERVICE']._serialized_start=256

@@ -16,15 +16,14 @@ from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(lum-network/millions/draw_schedule.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa0\x01\n\x0c\x44rawSchedule\x12L\n\x0finitial_draw_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\rinitialDrawAt\x12\x42\n\ndraw_delta\x18\x02 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\tdrawDeltaB\xce\x01\n\x18\x63om.lum.network.millionsB\x11\x44rawScheduleProtoP\x01Z-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(lum-network/millions/draw_schedule.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa0\x01\n\x0c\x44rawSchedule\x12L\n\x0finitial_draw_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\rinitialDrawAt\x12\x42\n\ndraw_delta\x18\x02 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\tdrawDeltaB\xcc\x01\n\x18\x63om.lum.network.millionsB\x11\x44rawScheduleProtoZ-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.millions.draw_schedule_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\021DrawScheduleProtoP\001Z-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
+  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\021DrawScheduleProtoZ-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
   _DRAWSCHEDULE.fields_by_name['initial_draw_at']._options = None
   _DRAWSCHEDULE.fields_by_name['initial_draw_at']._serialized_options = b'\310\336\037\000\220\337\037\001'
   _DRAWSCHEDULE.fields_by_name['draw_delta']._options = None

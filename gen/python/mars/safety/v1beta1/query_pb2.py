@@ -16,15 +16,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fmars/safety/v1beta1/query.proto\x12\x13mars.safety.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\"\x16\n\x14QueryBalancesRequest\"\x80\x01\n\x15QueryBalancesResponse\x12g\n\x08\x62\x61lances\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x08\x62\x61lances2\x92\x01\n\x05Query\x12\x88\x01\n\x08\x42\x61lances\x12).mars.safety.v1beta1.QueryBalancesRequest\x1a*.mars.safety.v1beta1.QueryBalancesResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/mars/safety/v1beta1/balancesB\xc0\x01\n\x17\x63om.mars.safety.v1beta1B\nQueryProtoP\x01Z+github.com/mars-protocol/hub/x/safety/types\xa2\x02\x03MSX\xaa\x02\x13Mars.Safety.V1beta1\xca\x02\x13Mars\\Safety\\V1beta1\xe2\x02\x1fMars\\Safety\\V1beta1\\GPBMetadata\xea\x02\x15Mars::Safety::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fmars/safety/v1beta1/query.proto\x12\x13mars.safety.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\"\x16\n\x14QueryBalancesRequest\"\x80\x01\n\x15QueryBalancesResponse\x12g\n\x08\x62\x61lances\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x08\x62\x61lances2\x92\x01\n\x05Query\x12\x88\x01\n\x08\x42\x61lances\x12).mars.safety.v1beta1.QueryBalancesRequest\x1a*.mars.safety.v1beta1.QueryBalancesResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/mars/safety/v1beta1/balancesB\xbe\x01\n\x17\x63om.mars.safety.v1beta1B\nQueryProtoZ+github.com/mars-protocol/hub/x/safety/types\xa2\x02\x03MSX\xaa\x02\x13Mars.Safety.V1beta1\xca\x02\x13Mars\\Safety\\V1beta1\xe2\x02\x1fMars\\Safety\\V1beta1\\GPBMetadata\xea\x02\x15Mars::Safety::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'mars.safety.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.mars.safety.v1beta1B\nQueryProtoP\001Z+github.com/mars-protocol/hub/x/safety/types\242\002\003MSX\252\002\023Mars.Safety.V1beta1\312\002\023Mars\\Safety\\V1beta1\342\002\037Mars\\Safety\\V1beta1\\GPBMetadata\352\002\025Mars::Safety::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.mars.safety.v1beta1B\nQueryProtoZ+github.com/mars-protocol/hub/x/safety/types\242\002\003MSX\252\002\023Mars.Safety.V1beta1\312\002\023Mars\\Safety\\V1beta1\342\002\037Mars\\Safety\\V1beta1\\GPBMetadata\352\002\025Mars::Safety::V1beta1'
   _QUERYBALANCESRESPONSE.fields_by_name['balances']._options = None
   _QUERYBALANCESRESPONSE.fields_by_name['balances']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _QUERY.methods_by_name['Balances']._options = None

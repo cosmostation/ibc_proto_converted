@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19neutron/cron/params.proto\x12\x0cneutron.cron\x1a\x14gogoproto/gogo.proto\"O\n\x06Params\x12)\n\x10security_address\x18\x01 \x01(\tR\x0fsecurityAddress\x12\x14\n\x05limit\x18\x02 \x01(\x04R\x05limit:\x04\x98\xa0\x1f\x00\x42\x9d\x01\n\x10\x63om.neutron.cronB\x0bParamsProtoP\x01Z+github.com/neutron-org/neutron/x/cron/types\xa2\x02\x03NCX\xaa\x02\x0cNeutron.Cron\xca\x02\x0cNeutron\\Cron\xe2\x02\x18Neutron\\Cron\\GPBMetadata\xea\x02\rNeutron::Cronb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19neutron/cron/params.proto\x12\x0cneutron.cron\x1a\x14gogoproto/gogo.proto\"O\n\x06Params\x12)\n\x10security_address\x18\x01 \x01(\tR\x0fsecurityAddress\x12\x14\n\x05limit\x18\x02 \x01(\x04R\x05limit:\x04\x98\xa0\x1f\x00\x42\x9b\x01\n\x10\x63om.neutron.cronB\x0bParamsProtoZ+github.com/neutron-org/neutron/x/cron/types\xa2\x02\x03NCX\xaa\x02\x0cNeutron.Cron\xca\x02\x0cNeutron\\Cron\xe2\x02\x18Neutron\\Cron\\GPBMetadata\xea\x02\rNeutron::Cronb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.cron.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.neutron.cronB\013ParamsProtoP\001Z+github.com/neutron-org/neutron/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeutron::Cron'
+  DESCRIPTOR._serialized_options = b'\n\020com.neutron.cronB\013ParamsProtoZ+github.com/neutron-org/neutron/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeutron::Cron'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=65

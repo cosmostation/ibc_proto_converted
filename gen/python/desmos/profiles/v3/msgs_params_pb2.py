@@ -17,15 +17,14 @@ from cosmos.msg.v1 import msg_pb2 as cosmos_dot_msg_dot_v1_dot_msg__pb2
 from desmos.profiles.v3 import models_params_pb2 as desmos_dot_profiles_dot_v3_dot_models__params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$desmos/profiles/v3/msgs_params.proto\x12\x12\x64\x65smos.profiles.v3\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x17\x63osmos/msg/v1/msg.proto\x1a&desmos/profiles/v3/models_params.proto\"\x93\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x38\n\x06params\x18\x02 \x01(\x0b\x32\x1a.desmos.profiles.v3.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponseB\xc6\x01\n\x16\x63om.desmos.profiles.v3B\x0fMsgsParamsProtoP\x01Z1github.com/desmos-labs/desmos/v5/x/profiles/types\xa2\x02\x03\x44PX\xaa\x02\x12\x44\x65smos.Profiles.V3\xca\x02\x12\x44\x65smos\\Profiles\\V3\xe2\x02\x1e\x44\x65smos\\Profiles\\V3\\GPBMetadata\xea\x02\x14\x44\x65smos::Profiles::V3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$desmos/profiles/v3/msgs_params.proto\x12\x12\x64\x65smos.profiles.v3\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x17\x63osmos/msg/v1/msg.proto\x1a&desmos/profiles/v3/models_params.proto\"\x93\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x38\n\x06params\x18\x02 \x01(\x0b\x32\x1a.desmos.profiles.v3.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponseB\xc4\x01\n\x16\x63om.desmos.profiles.v3B\x0fMsgsParamsProtoZ1github.com/desmos-labs/desmos/v5/x/profiles/types\xa2\x02\x03\x44PX\xaa\x02\x12\x44\x65smos.Profiles.V3\xca\x02\x12\x44\x65smos\\Profiles\\V3\xe2\x02\x1e\x44\x65smos\\Profiles\\V3\\GPBMetadata\xea\x02\x14\x44\x65smos::Profiles::V3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'desmos.profiles.v3.msgs_params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.desmos.profiles.v3B\017MsgsParamsProtoP\001Z1github.com/desmos-labs/desmos/v5/x/profiles/types\242\002\003DPX\252\002\022Desmos.Profiles.V3\312\002\022Desmos\\Profiles\\V3\342\002\036Desmos\\Profiles\\V3\\GPBMetadata\352\002\024Desmos::Profiles::V3'
+  DESCRIPTOR._serialized_options = b'\n\026com.desmos.profiles.v3B\017MsgsParamsProtoZ1github.com/desmos-labs/desmos/v5/x/profiles/types\242\002\003DPX\252\002\022Desmos.Profiles.V3\312\002\022Desmos\\Profiles\\V3\342\002\036Desmos\\Profiles\\V3\\GPBMetadata\352\002\024Desmos::Profiles::V3'
   _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
   _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGUPDATEPARAMS.fields_by_name['params']._options = None

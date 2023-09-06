@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import identity_id_pb2 as assetmantle_dot_ids_dot_base_dot_identity__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDassetmantle/identities/transactions/issue/transaction_response.proto\x12\x31\x61ssetmantle.modules.identities.transactions.issue\x1a&assetmantle/ids/base/identity_id.proto\"`\n\x13TransactionResponse\x12I\n\x0cidentity_i_d\x18\x01 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\nidentityIDB\xbb\x02\n5com.assetmantle.modules.identities.transactions.issueB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MITI\xaa\x02\x31\x41ssetmantle.Modules.Identities.Transactions.Issue\xca\x02\x31\x41ssetmantle\\Modules\\Identities\\Transactions\\Issue\xe2\x02=Assetmantle\\Modules\\Identities\\Transactions\\Issue\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Identities::Transactions::Issueb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDassetmantle/identities/transactions/issue/transaction_response.proto\x12\x31\x61ssetmantle.modules.identities.transactions.issue\x1a&assetmantle/ids/base/identity_id.proto\"`\n\x13TransactionResponse\x12I\n\x0cidentity_i_d\x18\x01 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\nidentityIDB\xb9\x02\n5com.assetmantle.modules.identities.transactions.issueB\x18TransactionResponseProto\xa2\x02\x05\x41MITI\xaa\x02\x31\x41ssetmantle.Modules.Identities.Transactions.Issue\xca\x02\x31\x41ssetmantle\\Modules\\Identities\\Transactions\\Issue\xe2\x02=Assetmantle\\Modules\\Identities\\Transactions\\Issue\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Identities::Transactions::Issueb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.issue.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.identities.transactions.issueB\030TransactionResponseProtoP\001\242\002\005AMITI\252\0021Assetmantle.Modules.Identities.Transactions.Issue\312\0021Assetmantle\\Modules\\Identities\\Transactions\\Issue\342\002=Assetmantle\\Modules\\Identities\\Transactions\\Issue\\GPBMetadata\352\0025Assetmantle::Modules::Identities::Transactions::Issue'
+  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.identities.transactions.issueB\030TransactionResponseProto\242\002\005AMITI\252\0021Assetmantle.Modules.Identities.Transactions.Issue\312\0021Assetmantle\\Modules\\Identities\\Transactions\\Issue\342\002=Assetmantle\\Modules\\Identities\\Transactions\\Issue\\GPBMetadata\352\0025Assetmantle::Modules::Identities::Transactions::Issue'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=163
   _globals['_TRANSACTIONRESPONSE']._serialized_end=259
 # @@protoc_insertion_point(module_scope)

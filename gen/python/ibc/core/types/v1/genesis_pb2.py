@@ -17,15 +17,14 @@ from ibc.core.connection.v1 import genesis_pb2 as ibc_dot_core_dot_connection_do
 from ibc.core.channel.v1 import genesis_pb2 as ibc_dot_core_dot_channel_dot_v1_dot_genesis__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fibc/core/types/v1/genesis.proto\x12\x11ibc.core.types.v1\x1a\x14gogoproto/gogo.proto\x1a ibc/core/client/v1/genesis.proto\x1a$ibc/core/connection/v1/genesis.proto\x1a!ibc/core/channel/v1/genesis.proto\"\x8a\x02\n\x0cGenesisState\x12M\n\x0e\x63lient_genesis\x18\x01 \x01(\x0b\x32 .ibc.core.client.v1.GenesisStateB\x04\xc8\xde\x1f\x00R\rclientGenesis\x12Y\n\x12\x63onnection_genesis\x18\x02 \x01(\x0b\x32$.ibc.core.connection.v1.GenesisStateB\x04\xc8\xde\x1f\x00R\x11\x63onnectionGenesis\x12P\n\x0f\x63hannel_genesis\x18\x03 \x01(\x0b\x32!.ibc.core.channel.v1.GenesisStateB\x04\xc8\xde\x1f\x00R\x0e\x63hannelGenesisB\xbc\x01\n\x15\x63om.ibc.core.types.v1B\x0cGenesisProtoP\x01Z.github.com/cosmos/ibc-go/v7/modules/core/types\xa2\x02\x03ICT\xaa\x02\x11Ibc.Core.Types.V1\xca\x02\x11Ibc\\Core\\Types\\V1\xe2\x02\x1dIbc\\Core\\Types\\V1\\GPBMetadata\xea\x02\x14Ibc::Core::Types::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fibc/core/types/v1/genesis.proto\x12\x11ibc.core.types.v1\x1a\x14gogoproto/gogo.proto\x1a ibc/core/client/v1/genesis.proto\x1a$ibc/core/connection/v1/genesis.proto\x1a!ibc/core/channel/v1/genesis.proto\"\x8a\x02\n\x0cGenesisState\x12M\n\x0e\x63lient_genesis\x18\x01 \x01(\x0b\x32 .ibc.core.client.v1.GenesisStateB\x04\xc8\xde\x1f\x00R\rclientGenesis\x12Y\n\x12\x63onnection_genesis\x18\x02 \x01(\x0b\x32$.ibc.core.connection.v1.GenesisStateB\x04\xc8\xde\x1f\x00R\x11\x63onnectionGenesis\x12P\n\x0f\x63hannel_genesis\x18\x03 \x01(\x0b\x32!.ibc.core.channel.v1.GenesisStateB\x04\xc8\xde\x1f\x00R\x0e\x63hannelGenesisB\xba\x01\n\x15\x63om.ibc.core.types.v1B\x0cGenesisProtoZ.github.com/cosmos/ibc-go/v7/modules/core/types\xa2\x02\x03ICT\xaa\x02\x11Ibc.Core.Types.V1\xca\x02\x11Ibc\\Core\\Types\\V1\xe2\x02\x1dIbc\\Core\\Types\\V1\\GPBMetadata\xea\x02\x14Ibc::Core::Types::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ibc.core.types.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.ibc.core.types.v1B\014GenesisProtoP\001Z.github.com/cosmos/ibc-go/v7/modules/core/types\242\002\003ICT\252\002\021Ibc.Core.Types.V1\312\002\021Ibc\\Core\\Types\\V1\342\002\035Ibc\\Core\\Types\\V1\\GPBMetadata\352\002\024Ibc::Core::Types::V1'
+  DESCRIPTOR._serialized_options = b'\n\025com.ibc.core.types.v1B\014GenesisProtoZ.github.com/cosmos/ibc-go/v7/modules/core/types\242\002\003ICT\252\002\021Ibc.Core.Types.V1\312\002\021Ibc\\Core\\Types\\V1\342\002\035Ibc\\Core\\Types\\V1\\GPBMetadata\352\002\024Ibc::Core::Types::V1'
   _GENESISSTATE.fields_by_name['client_genesis']._options = None
   _GENESISSTATE.fields_by_name['client_genesis']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['connection_genesis']._options = None

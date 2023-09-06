@@ -14938,6 +14938,7 @@ public final class GenesisProto {
               com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -15046,7 +15047,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasUnbonding() {
-      return unbonding_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.ledger.Unbonding unbonding = 5 [json_name = "unbonding"];</code>
@@ -15090,7 +15091,7 @@ public final class GenesisProto {
       if (sequence_ != 0) {
         output.writeUInt32(4, sequence_);
       }
-      if (unbonding_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getUnbonding());
       }
       getUnknownFields().writeTo(output);
@@ -15116,7 +15117,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, sequence_);
       }
-      if (unbonding_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getUnbonding());
       }
@@ -15290,13 +15291,19 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.ledger.GenesisProto.GenesisPoolUnbonding.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnbondingFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15356,11 +15363,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.sequence_ = sequence_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.unbonding_ = unbondingBuilder_ == null
               ? unbonding_
               : unbondingBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15770,8 +15780,10 @@ public final class GenesisProto {
         } else {
           unbondingBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (unbonding_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15953,6 +15965,7 @@ public final class GenesisProto {
               com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.class, com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SHOTID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object shotId_ = "";
@@ -16000,7 +16013,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSnapshot() {
-      return snapshot_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.ledger.BondSnapshot snapshot = 2 [json_name = "snapshot"];</code>
@@ -16035,7 +16048,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shotId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, shotId_);
       }
-      if (snapshot_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getSnapshot());
       }
       getUnknownFields().writeTo(output);
@@ -16050,7 +16063,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shotId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, shotId_);
       }
-      if (snapshot_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSnapshot());
       }
@@ -16212,13 +16225,19 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.ledger.GenesisProto.GenesisSnapshot.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSnapshotFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -16266,11 +16285,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.shotId_ = shotId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.snapshot_ = snapshotBuilder_ == null
               ? snapshot_
               : snapshotBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16518,8 +16540,10 @@ public final class GenesisProto {
         } else {
           snapshotBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (snapshot_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

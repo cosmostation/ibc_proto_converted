@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from irismod.coinswap import coinswap_pb2 as irismod_dot_coinswap_dot_coinswap__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1eirismod/coinswap/genesis.proto\x12\x10irismod.coinswap\x1a\x14gogoproto/gogo.proto\x1a\x1firismod/coinswap/coinswap.proto\"\xd6\x01\n\x0cGenesisState\x12\x36\n\x06params\x18\x01 \x01(\x0b\x32\x18.irismod.coinswap.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12@\n\x0estandard_denom\x18\x02 \x01(\tB\x19\xf2\xde\x1f\x15yaml:\"standard_denom\"R\rstandardDenom\x12\x30\n\x04pool\x18\x03 \x03(\x0b\x32\x16.irismod.coinswap.PoolB\x04\xc8\xde\x1f\x00R\x04pool\x12\x1a\n\x08sequence\x18\x04 \x01(\x04R\x08sequenceB\xb8\x01\n\x14\x63om.irismod.coinswapB\x0cGenesisProtoP\x01Z1github.com/irisnet/irismod/modules/coinswap/types\xa2\x02\x03ICX\xaa\x02\x10Irismod.Coinswap\xca\x02\x10Irismod\\Coinswap\xe2\x02\x1cIrismod\\Coinswap\\GPBMetadata\xea\x02\x11Irismod::Coinswapb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1eirismod/coinswap/genesis.proto\x12\x10irismod.coinswap\x1a\x14gogoproto/gogo.proto\x1a\x1firismod/coinswap/coinswap.proto\"\xd6\x01\n\x0cGenesisState\x12\x36\n\x06params\x18\x01 \x01(\x0b\x32\x18.irismod.coinswap.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12@\n\x0estandard_denom\x18\x02 \x01(\tB\x19\xf2\xde\x1f\x15yaml:\"standard_denom\"R\rstandardDenom\x12\x30\n\x04pool\x18\x03 \x03(\x0b\x32\x16.irismod.coinswap.PoolB\x04\xc8\xde\x1f\x00R\x04pool\x12\x1a\n\x08sequence\x18\x04 \x01(\x04R\x08sequenceB\xb6\x01\n\x14\x63om.irismod.coinswapB\x0cGenesisProtoZ1github.com/irisnet/irismod/modules/coinswap/types\xa2\x02\x03ICX\xaa\x02\x10Irismod.Coinswap\xca\x02\x10Irismod\\Coinswap\xe2\x02\x1cIrismod\\Coinswap\\GPBMetadata\xea\x02\x11Irismod::Coinswapb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.coinswap.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.irismod.coinswapB\014GenesisProtoP\001Z1github.com/irisnet/irismod/modules/coinswap/types\242\002\003ICX\252\002\020Irismod.Coinswap\312\002\020Irismod\\Coinswap\342\002\034Irismod\\Coinswap\\GPBMetadata\352\002\021Irismod::Coinswap'
+  DESCRIPTOR._serialized_options = b'\n\024com.irismod.coinswapB\014GenesisProtoZ1github.com/irisnet/irismod/modules/coinswap/types\242\002\003ICX\252\002\020Irismod.Coinswap\312\002\020Irismod\\Coinswap\342\002\034Irismod\\Coinswap\\GPBMetadata\352\002\021Irismod::Coinswap'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['standard_denom']._options = None

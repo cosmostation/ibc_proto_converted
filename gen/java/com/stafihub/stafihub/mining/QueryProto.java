@@ -489,6 +489,7 @@ public final class QueryProto {
               com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.mining.ParamsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1617,6 +1629,7 @@ public final class QueryProto {
               com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKEPOOL_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.mining.ModelsProto.StakePool stakePool_;
     /**
@@ -1625,7 +1638,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStakePool() {
-      return stakePool_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
@@ -1657,7 +1670,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (stakePool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStakePool());
       }
       getUnknownFields().writeTo(output);
@@ -1669,7 +1682,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (stakePool_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStakePool());
       }
@@ -1827,13 +1840,19 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakePoolFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1877,11 +1896,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.stakePool_ = stakePoolBuilder_ == null
               ? stakePool_
               : stakePoolBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2047,8 +2069,10 @@ public final class QueryProto {
         } else {
           stakePoolBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (stakePool_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6749,6 +6773,7 @@ public final class QueryProto {
               com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKERECORD_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord stakeRecord_;
     /**
@@ -6757,7 +6782,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStakeRecord() {
-      return stakeRecord_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
@@ -6789,7 +6814,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (stakeRecord_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStakeRecord());
       }
       getUnknownFields().writeTo(output);
@@ -6801,7 +6826,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (stakeRecord_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStakeRecord());
       }
@@ -6959,13 +6984,19 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakeRecordFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7009,11 +7040,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.stakeRecord_ = stakeRecordBuilder_ == null
               ? stakeRecord_
               : stakeRecordBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7179,8 +7213,10 @@ public final class QueryProto {
         } else {
           stakeRecordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (stakeRecord_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

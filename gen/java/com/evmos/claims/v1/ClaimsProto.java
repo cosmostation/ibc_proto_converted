@@ -1237,7 +1237,8 @@ public final class ClaimsProto {
 
     public static final int ACTIONS_COMPLETED_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.BooleanList actionsCompleted_;
+    private com.google.protobuf.Internal.BooleanList actionsCompleted_ =
+        emptyBooleanList();
     /**
      * <pre>
      * actions_completed is a slice that describes which actions were completed
@@ -1535,18 +1536,9 @@ public final class ClaimsProto {
       @java.lang.Override
       public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress buildPartial() {
         com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress result = new com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          actionsCompleted_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.actionsCompleted_ = actionsCompleted_;
       }
 
       private void buildPartial0(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress result) {
@@ -1556,6 +1548,10 @@ public final class ClaimsProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.initialClaimableAmount_ = initialClaimableAmount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          actionsCompleted_.makeImmutable();
+          result.actionsCompleted_ = actionsCompleted_;
         }
       }
 
@@ -1616,7 +1612,8 @@ public final class ClaimsProto {
         if (!other.actionsCompleted_.isEmpty()) {
           if (actionsCompleted_.isEmpty()) {
             actionsCompleted_ = other.actionsCompleted_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            actionsCompleted_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureActionsCompletedIsMutable();
             actionsCompleted_.addAll(other.actionsCompleted_);
@@ -1668,7 +1665,8 @@ public final class ClaimsProto {
               case 26: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
-                ensureActionsCompletedIsMutable();
+                int alloc = length > 4096 ? 4096 : length;
+                ensureActionsCompletedIsMutable(alloc / 1);
                 while (input.getBytesUntilLimit() > 0) {
                   actionsCompleted_.addBoolean(input.readBool());
                 }
@@ -1878,10 +1876,16 @@ public final class ClaimsProto {
 
       private com.google.protobuf.Internal.BooleanList actionsCompleted_ = emptyBooleanList();
       private void ensureActionsCompletedIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          actionsCompleted_ = mutableCopy(actionsCompleted_);
-          bitField0_ |= 0x00000004;
+        if (!actionsCompleted_.isModifiable()) {
+          actionsCompleted_ = makeMutableCopy(actionsCompleted_);
         }
+        bitField0_ |= 0x00000004;
+      }
+      private void ensureActionsCompletedIsMutable(int capacity) {
+        if (!actionsCompleted_.isModifiable()) {
+          actionsCompleted_ = makeMutableCopy(actionsCompleted_, capacity);
+        }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1893,8 +1897,8 @@ public final class ClaimsProto {
        */
       public java.util.List<java.lang.Boolean>
           getActionsCompletedList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(actionsCompleted_) : actionsCompleted_;
+        actionsCompleted_.makeImmutable();
+        return actionsCompleted_;
       }
       /**
        * <pre>
@@ -1934,6 +1938,7 @@ public final class ClaimsProto {
 
         ensureActionsCompletedIsMutable();
         actionsCompleted_.setBoolean(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1950,6 +1955,7 @@ public final class ClaimsProto {
 
         ensureActionsCompletedIsMutable();
         actionsCompleted_.addBoolean(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1967,6 +1973,7 @@ public final class ClaimsProto {
         ensureActionsCompletedIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, actionsCompleted_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2192,7 +2199,8 @@ public final class ClaimsProto {
 
     public static final int ACTIONS_COMPLETED_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.BooleanList actionsCompleted_;
+    private com.google.protobuf.Internal.BooleanList actionsCompleted_ =
+        emptyBooleanList();
     /**
      * <pre>
      * actions_completed is a slice that describes which actions were completed
@@ -2479,24 +2487,19 @@ public final class ClaimsProto {
       @java.lang.Override
       public com.evmos.claims.v1.ClaimsProto.ClaimsRecord buildPartial() {
         com.evmos.claims.v1.ClaimsProto.ClaimsRecord result = new com.evmos.claims.v1.ClaimsProto.ClaimsRecord(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.evmos.claims.v1.ClaimsProto.ClaimsRecord result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          actionsCompleted_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.actionsCompleted_ = actionsCompleted_;
       }
 
       private void buildPartial0(com.evmos.claims.v1.ClaimsProto.ClaimsRecord result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.initialClaimableAmount_ = initialClaimableAmount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          actionsCompleted_.makeImmutable();
+          result.actionsCompleted_ = actionsCompleted_;
         }
       }
 
@@ -2552,7 +2555,8 @@ public final class ClaimsProto {
         if (!other.actionsCompleted_.isEmpty()) {
           if (actionsCompleted_.isEmpty()) {
             actionsCompleted_ = other.actionsCompleted_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            actionsCompleted_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureActionsCompletedIsMutable();
             actionsCompleted_.addAll(other.actionsCompleted_);
@@ -2599,7 +2603,8 @@ public final class ClaimsProto {
               case 18: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
-                ensureActionsCompletedIsMutable();
+                int alloc = length > 4096 ? 4096 : length;
+                ensureActionsCompletedIsMutable(alloc / 1);
                 while (input.getBytesUntilLimit() > 0) {
                   actionsCompleted_.addBoolean(input.readBool());
                 }
@@ -2717,10 +2722,16 @@ public final class ClaimsProto {
 
       private com.google.protobuf.Internal.BooleanList actionsCompleted_ = emptyBooleanList();
       private void ensureActionsCompletedIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          actionsCompleted_ = mutableCopy(actionsCompleted_);
-          bitField0_ |= 0x00000002;
+        if (!actionsCompleted_.isModifiable()) {
+          actionsCompleted_ = makeMutableCopy(actionsCompleted_);
         }
+        bitField0_ |= 0x00000002;
+      }
+      private void ensureActionsCompletedIsMutable(int capacity) {
+        if (!actionsCompleted_.isModifiable()) {
+          actionsCompleted_ = makeMutableCopy(actionsCompleted_, capacity);
+        }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -2732,8 +2743,8 @@ public final class ClaimsProto {
        */
       public java.util.List<java.lang.Boolean>
           getActionsCompletedList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(actionsCompleted_) : actionsCompleted_;
+        actionsCompleted_.makeImmutable();
+        return actionsCompleted_;
       }
       /**
        * <pre>
@@ -2773,6 +2784,7 @@ public final class ClaimsProto {
 
         ensureActionsCompletedIsMutable();
         actionsCompleted_.setBoolean(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2789,6 +2801,7 @@ public final class ClaimsProto {
 
         ensureActionsCompletedIsMutable();
         actionsCompleted_.addBoolean(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2806,6 +2819,7 @@ public final class ClaimsProto {
         ensureActionsCompletedIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, actionsCompleted_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

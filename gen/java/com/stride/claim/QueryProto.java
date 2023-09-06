@@ -2068,6 +2068,7 @@ public final class QueryProto {
               com.stride.claim.QueryProto.ClaimMetadata.class, com.stride.claim.QueryProto.ClaimMetadata.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AIRDROP_IDENTIFIER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object airdropIdentifier_ = "";
@@ -2154,7 +2155,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCurrentRoundStart() {
-      return currentRoundStart_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp current_round_start = 3 [json_name = "currentRoundStart", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_round_start&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2180,7 +2181,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCurrentRoundEnd() {
-      return currentRoundEnd_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp current_round_end = 4 [json_name = "currentRoundEnd", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_round_end&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2218,10 +2219,10 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentRound_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, currentRound_);
       }
-      if (currentRoundStart_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCurrentRoundStart());
       }
-      if (currentRoundEnd_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getCurrentRoundEnd());
       }
       getUnknownFields().writeTo(output);
@@ -2239,11 +2240,11 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentRound_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, currentRound_);
       }
-      if (currentRoundStart_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCurrentRoundStart());
       }
-      if (currentRoundEnd_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCurrentRoundEnd());
       }
@@ -2418,13 +2419,20 @@ public final class QueryProto {
 
       // Construct using com.stride.claim.QueryProto.ClaimMetadata.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCurrentRoundStartFieldBuilder();
+          getCurrentRoundEndFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2481,16 +2489,20 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.currentRound_ = currentRound_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.currentRoundStart_ = currentRoundStartBuilder_ == null
               ? currentRoundStart_
               : currentRoundStartBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.currentRoundEnd_ = currentRoundEndBuilder_ == null
               ? currentRoundEnd_
               : currentRoundEndBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2830,8 +2842,10 @@ public final class QueryProto {
         } else {
           currentRoundStartBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (currentRoundStart_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2949,8 +2963,10 @@ public final class QueryProto {
         } else {
           currentRoundEndBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (currentRoundEnd_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6181,6 +6197,7 @@ public final class QueryProto {
               com.stride.claim.QueryProto.QueryParamsResponse.class, com.stride.claim.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stride.claim.ParamsProto.Params params_;
     /**
@@ -6193,7 +6210,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6233,7 +6250,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -6245,7 +6262,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -6407,13 +6424,19 @@ public final class QueryProto {
 
       // Construct using com.stride.claim.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6457,11 +6480,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stride.claim.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6647,8 +6673,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7533,6 +7561,7 @@ public final class QueryProto {
               com.stride.claim.QueryProto.QueryClaimRecordResponse.class, com.stride.claim.QueryProto.QueryClaimRecordResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLAIM_RECORD_FIELD_NUMBER = 1;
     private com.stride.claim.ClaimProto.ClaimRecord claimRecord_;
     /**
@@ -7541,7 +7570,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasClaimRecord() {
-      return claimRecord_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stride.claim.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_record&#92;""];</code>
@@ -7573,7 +7602,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (claimRecord_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getClaimRecord());
       }
       getUnknownFields().writeTo(output);
@@ -7585,7 +7614,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (claimRecord_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClaimRecord());
       }
@@ -7743,13 +7772,19 @@ public final class QueryProto {
 
       // Construct using com.stride.claim.QueryProto.QueryClaimRecordResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClaimRecordFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7793,11 +7828,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stride.claim.QueryProto.QueryClaimRecordResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.claimRecord_ = claimRecordBuilder_ == null
               ? claimRecord_
               : claimRecordBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7963,8 +8001,10 @@ public final class QueryProto {
         } else {
           claimRecordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (claimRecord_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

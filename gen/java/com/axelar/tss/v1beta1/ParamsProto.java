@@ -179,6 +179,7 @@ public final class ParamsProto {
               com.axelar.tss.v1beta1.ParamsProto.Params.class, com.axelar.tss.v1beta1.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int KEY_REQUIREMENTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement> keyRequirements_;
@@ -281,7 +282,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMaxMissedBlocksPerWindow() {
-      return maxMissedBlocksPerWindow_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold max_missed_blocks_per_window = 4 [json_name = "maxMissedBlocksPerWindow", (.gogoproto.nullable) = false];</code>
@@ -318,7 +319,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasExternalMultisigThreshold() {
-      return externalMultisigThreshold_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold external_multisig_threshold = 6 [json_name = "externalMultisigThreshold", (.gogoproto.nullable) = false];</code>
@@ -392,13 +393,13 @@ public final class ParamsProto {
       if (heartbeatPeriodInBlocks_ != 0L) {
         output.writeInt64(3, heartbeatPeriodInBlocks_);
       }
-      if (maxMissedBlocksPerWindow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getMaxMissedBlocksPerWindow());
       }
       if (unbondingLockingKeyRotationCount_ != 0L) {
         output.writeInt64(5, unbondingLockingKeyRotationCount_);
       }
-      if (externalMultisigThreshold_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getExternalMultisigThreshold());
       }
       if (maxSignQueueSize_ != 0L) {
@@ -431,7 +432,7 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, heartbeatPeriodInBlocks_);
       }
-      if (maxMissedBlocksPerWindow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMaxMissedBlocksPerWindow());
       }
@@ -439,7 +440,7 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, unbondingLockingKeyRotationCount_);
       }
-      if (externalMultisigThreshold_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getExternalMultisigThreshold());
       }
@@ -658,13 +659,21 @@ public final class ParamsProto {
 
       // Construct using com.axelar.tss.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getKeyRequirementsFieldBuilder();
+          getMaxMissedBlocksPerWindowFieldBuilder();
+          getExternalMultisigThresholdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -745,10 +754,12 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.heartbeatPeriodInBlocks_ = heartbeatPeriodInBlocks_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.maxMissedBlocksPerWindow_ = maxMissedBlocksPerWindowBuilder_ == null
               ? maxMissedBlocksPerWindow_
               : maxMissedBlocksPerWindowBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.unbondingLockingKeyRotationCount_ = unbondingLockingKeyRotationCount_;
@@ -757,6 +768,7 @@ public final class ParamsProto {
           result.externalMultisigThreshold_ = externalMultisigThresholdBuilder_ == null
               ? externalMultisigThreshold_
               : externalMultisigThresholdBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.maxSignQueueSize_ = maxSignQueueSize_;
@@ -767,6 +779,7 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.tssSignedBlocksWindow_ = tssSignedBlocksWindow_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1438,8 +1451,10 @@ public final class ParamsProto {
         } else {
           maxMissedBlocksPerWindowBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (maxMissedBlocksPerWindow_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1589,8 +1604,10 @@ public final class ParamsProto {
         } else {
           externalMultisigThresholdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (externalMultisigThreshold_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

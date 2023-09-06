@@ -480,6 +480,7 @@ public final class QueryProto {
               com.kava.pricefeed.v1beta1.QueryProto.QueryParamsResponse.class, com.kava.pricefeed.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.kava.pricefeed.v1beta1.StoreProto.Params params_;
     /**
@@ -488,7 +489,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.pricefeed.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -520,7 +521,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -532,7 +533,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -695,13 +696,19 @@ public final class QueryProto {
 
       // Construct using com.kava.pricefeed.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -745,11 +752,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.pricefeed.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -915,8 +925,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1649,6 +1661,7 @@ public final class QueryProto {
               com.kava.pricefeed.v1beta1.QueryProto.QueryPriceResponse.class, com.kava.pricefeed.v1beta1.QueryProto.QueryPriceResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PRICE_FIELD_NUMBER = 1;
     private com.kava.pricefeed.v1beta1.QueryProto.CurrentPriceResponse price_;
     /**
@@ -1657,7 +1670,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return price_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.pricefeed.v1beta1.CurrentPriceResponse price = 1 [json_name = "price", (.gogoproto.nullable) = false];</code>
@@ -1689,7 +1702,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPrice());
       }
       getUnknownFields().writeTo(output);
@@ -1701,7 +1714,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPrice());
       }
@@ -1863,13 +1876,19 @@ public final class QueryProto {
 
       // Construct using com.kava.pricefeed.v1beta1.QueryProto.QueryPriceResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPriceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1913,11 +1932,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.pricefeed.v1beta1.QueryProto.QueryPriceResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2083,8 +2105,10 @@ public final class QueryProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (price_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7404,6 +7428,7 @@ public final class QueryProto {
               com.kava.pricefeed.v1beta1.QueryProto.PostedPriceResponse.class, com.kava.pricefeed.v1beta1.QueryProto.PostedPriceResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -7529,7 +7554,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasExpiry() {
-      return expiry_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expiry = 4 [json_name = "expiry", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -7570,7 +7595,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, price_);
       }
-      if (expiry_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getExpiry());
       }
       getUnknownFields().writeTo(output);
@@ -7591,7 +7616,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, price_);
       }
-      if (expiry_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExpiry());
       }
@@ -7765,13 +7790,19 @@ public final class QueryProto {
 
       // Construct using com.kava.pricefeed.v1beta1.QueryProto.PostedPriceResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpiryFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7827,11 +7858,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.price_ = price_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.expiry_ = expiryBuilder_ == null
               ? expiry_
               : expiryBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8243,8 +8277,10 @@ public final class QueryProto {
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (expiry_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

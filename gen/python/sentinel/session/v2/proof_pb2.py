@@ -16,15 +16,14 @@ from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb
 from sentinel.types.v1 import bandwidth_pb2 as sentinel_dot_types_dot_v1_dot_bandwidth__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fsentinel/session/v2/proof.proto\x12\x13sentinel.session.v2\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a!sentinel/types/v1/bandwidth.proto\"\xa2\x01\n\x05Proof\x12\x16\n\x02id\x18\x01 \x01(\x04\x42\x06\xe2\xde\x1f\x02IDR\x02id\x12@\n\tbandwidth\x18\x02 \x01(\x0b\x32\x1c.sentinel.types.v1.BandwidthB\x04\xc8\xde\x1f\x00R\tbandwidth\x12?\n\x08\x64uration\x18\x03 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\x08\x64urationB\xcd\x01\n\x17\x63om.sentinel.session.v2B\nProofProtoP\x01Z0github.com/sentinel-official/hub/x/session/types\xa2\x02\x03SSX\xaa\x02\x13Sentinel.Session.V2\xca\x02\x13Sentinel\\Session\\V2\xe2\x02\x1fSentinel\\Session\\V2\\GPBMetadata\xea\x02\x15Sentinel::Session::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fsentinel/session/v2/proof.proto\x12\x13sentinel.session.v2\x1a\x14gogoproto/gogo.proto\x1a\x1egoogle/protobuf/duration.proto\x1a!sentinel/types/v1/bandwidth.proto\"\xa2\x01\n\x05Proof\x12\x16\n\x02id\x18\x01 \x01(\x04\x42\x06\xe2\xde\x1f\x02IDR\x02id\x12@\n\tbandwidth\x18\x02 \x01(\x0b\x32\x1c.sentinel.types.v1.BandwidthB\x04\xc8\xde\x1f\x00R\tbandwidth\x12?\n\x08\x64uration\x18\x03 \x01(\x0b\x32\x19.google.protobuf.DurationB\x08\xc8\xde\x1f\x00\x98\xdf\x1f\x01R\x08\x64urationB\xcb\x01\n\x17\x63om.sentinel.session.v2B\nProofProtoZ0github.com/sentinel-official/hub/x/session/types\xa2\x02\x03SSX\xaa\x02\x13Sentinel.Session.V2\xca\x02\x13Sentinel\\Session\\V2\xe2\x02\x1fSentinel\\Session\\V2\\GPBMetadata\xea\x02\x15Sentinel::Session::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.session.v2.proof_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.session.v2B\nProofProtoP\001Z0github.com/sentinel-official/hub/x/session/types\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.session.v2B\nProofProtoZ0github.com/sentinel-official/hub/x/session/types\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000'
   _PROOF.fields_by_name['id']._options = None
   _PROOF.fields_by_name['id']._serialized_options = b'\342\336\037\002ID'
   _PROOF.fields_by_name['bandwidth']._options = None

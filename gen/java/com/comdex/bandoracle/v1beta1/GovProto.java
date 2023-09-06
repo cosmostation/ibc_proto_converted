@@ -94,6 +94,7 @@ public final class GovProto {
               com.comdex.bandoracle.v1beta1.GovProto.FetchPriceProposal.class, com.comdex.bandoracle.v1beta1.GovProto.FetchPriceProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -180,7 +181,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasFetchPrice() {
-      return fetchPrice_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.bandoracle.v1beta1.MsgFetchPriceData FetchPrice = 3 [json_name = "FetchPrice", (.gogoproto.nullable) = false];</code>
@@ -218,7 +219,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (fetchPrice_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getFetchPrice());
       }
       getUnknownFields().writeTo(output);
@@ -236,7 +237,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (fetchPrice_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFetchPrice());
       }
@@ -402,13 +403,19 @@ public final class GovProto {
 
       // Construct using com.comdex.bandoracle.v1beta1.GovProto.FetchPriceProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFetchPriceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,11 +467,14 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.fetchPrice_ = fetchPriceBuilder_ == null
               ? fetchPrice_
               : fetchPriceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -794,8 +804,10 @@ public final class GovProto {
         } else {
           fetchPriceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (fetchPrice_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

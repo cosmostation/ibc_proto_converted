@@ -208,6 +208,50 @@ public final class GenesisProto {
      */
     com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UserUnbondingOrBuilder getUserUnbondingsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding> 
+        getValidatorUnbondingsList();
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding getValidatorUnbondings(int index);
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    int getValidatorUnbondingsCount();
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    java.util.List<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder> 
+        getValidatorUnbondingsOrBuilderList();
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder getValidatorUnbondingsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -230,6 +274,7 @@ public final class GenesisProto {
       deposits_ = java.util.Collections.emptyList();
       unbondings_ = java.util.Collections.emptyList();
       userUnbondings_ = java.util.Collections.emptyList();
+      validatorUnbondings_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -252,6 +297,7 @@ public final class GenesisProto {
               com.pstake.liquidstakeibc.v1beta1.GenesisProto.GenesisState.class, com.pstake.liquidstakeibc.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.pstake.liquidstakeibc.v1beta1.ParamsProto.Params params_;
     /**
@@ -260,7 +306,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pstake.liquidstakeibc.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -522,6 +568,67 @@ public final class GenesisProto {
       return userUnbondings_.get(index);
     }
 
+    public static final int VALIDATOR_UNBONDINGS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding> validatorUnbondings_;
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding> getValidatorUnbondingsList() {
+      return validatorUnbondings_;
+    }
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder> 
+        getValidatorUnbondingsOrBuilderList() {
+      return validatorUnbondings_;
+    }
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    @java.lang.Override
+    public int getValidatorUnbondingsCount() {
+      return validatorUnbondings_.size();
+    }
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding getValidatorUnbondings(int index) {
+      return validatorUnbondings_.get(index);
+    }
+    /**
+     * <pre>
+     * validator unbondings
+     * </pre>
+     *
+     * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+     */
+    @java.lang.Override
+    public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder getValidatorUnbondingsOrBuilder(
+        int index) {
+      return validatorUnbondings_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -536,7 +643,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < hostChains_.size(); i++) {
@@ -551,6 +658,9 @@ public final class GenesisProto {
       for (int i = 0; i < userUnbondings_.size(); i++) {
         output.writeMessage(5, userUnbondings_.get(i));
       }
+      for (int i = 0; i < validatorUnbondings_.size(); i++) {
+        output.writeMessage(6, validatorUnbondings_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -560,7 +670,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -579,6 +689,10 @@ public final class GenesisProto {
       for (int i = 0; i < userUnbondings_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, userUnbondings_.get(i));
+      }
+      for (int i = 0; i < validatorUnbondings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, validatorUnbondings_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -608,6 +722,8 @@ public final class GenesisProto {
           .equals(other.getUnbondingsList())) return false;
       if (!getUserUnbondingsList()
           .equals(other.getUserUnbondingsList())) return false;
+      if (!getValidatorUnbondingsList()
+          .equals(other.getValidatorUnbondingsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -638,6 +754,10 @@ public final class GenesisProto {
       if (getUserUnbondingsCount() > 0) {
         hash = (37 * hash) + USER_UNBONDINGS_FIELD_NUMBER;
         hash = (53 * hash) + getUserUnbondingsList().hashCode();
+      }
+      if (getValidatorUnbondingsCount() > 0) {
+        hash = (37 * hash) + VALIDATOR_UNBONDINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getValidatorUnbondingsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -762,13 +882,24 @@ public final class GenesisProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getHostChainsFieldBuilder();
+          getDepositsFieldBuilder();
+          getUnbondingsFieldBuilder();
+          getUserUnbondingsFieldBuilder();
+          getValidatorUnbondingsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -807,6 +938,13 @@ public final class GenesisProto {
           userUnbondingsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (validatorUnbondingsBuilder_ == null) {
+          validatorUnbondings_ = java.util.Collections.emptyList();
+        } else {
+          validatorUnbondings_ = null;
+          validatorUnbondingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -876,15 +1014,27 @@ public final class GenesisProto {
         } else {
           result.userUnbondings_ = userUnbondingsBuilder_.build();
         }
+        if (validatorUnbondingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            validatorUnbondings_ = java.util.Collections.unmodifiableList(validatorUnbondings_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.validatorUnbondings_ = validatorUnbondings_;
+        } else {
+          result.validatorUnbondings_ = validatorUnbondingsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1038,6 +1188,32 @@ public final class GenesisProto {
             }
           }
         }
+        if (validatorUnbondingsBuilder_ == null) {
+          if (!other.validatorUnbondings_.isEmpty()) {
+            if (validatorUnbondings_.isEmpty()) {
+              validatorUnbondings_ = other.validatorUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureValidatorUnbondingsIsMutable();
+              validatorUnbondings_.addAll(other.validatorUnbondings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.validatorUnbondings_.isEmpty()) {
+            if (validatorUnbondingsBuilder_.isEmpty()) {
+              validatorUnbondingsBuilder_.dispose();
+              validatorUnbondingsBuilder_ = null;
+              validatorUnbondings_ = other.validatorUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              validatorUnbondingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValidatorUnbondingsFieldBuilder() : null;
+            } else {
+              validatorUnbondingsBuilder_.addAllMessages(other.validatorUnbondings_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1123,6 +1299,19 @@ public final class GenesisProto {
                 }
                 break;
               } // case 42
+              case 50: {
+                com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding m =
+                    input.readMessage(
+                        com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.parser(),
+                        extensionRegistry);
+                if (validatorUnbondingsBuilder_ == null) {
+                  ensureValidatorUnbondingsIsMutable();
+                  validatorUnbondings_.add(m);
+                } else {
+                  validatorUnbondingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1206,8 +1395,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2506,6 +2697,318 @@ public final class GenesisProto {
         }
         return userUnbondingsBuilder_;
       }
+
+      private java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding> validatorUnbondings_ =
+        java.util.Collections.emptyList();
+      private void ensureValidatorUnbondingsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          validatorUnbondings_ = new java.util.ArrayList<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding>(validatorUnbondings_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder> validatorUnbondingsBuilder_;
+
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding> getValidatorUnbondingsList() {
+        if (validatorUnbondingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(validatorUnbondings_);
+        } else {
+          return validatorUnbondingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public int getValidatorUnbondingsCount() {
+        if (validatorUnbondingsBuilder_ == null) {
+          return validatorUnbondings_.size();
+        } else {
+          return validatorUnbondingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding getValidatorUnbondings(int index) {
+        if (validatorUnbondingsBuilder_ == null) {
+          return validatorUnbondings_.get(index);
+        } else {
+          return validatorUnbondingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder setValidatorUnbondings(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding value) {
+        if (validatorUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorUnbondingsIsMutable();
+          validatorUnbondings_.set(index, value);
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder setValidatorUnbondings(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder builderForValue) {
+        if (validatorUnbondingsBuilder_ == null) {
+          ensureValidatorUnbondingsIsMutable();
+          validatorUnbondings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder addValidatorUnbondings(com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding value) {
+        if (validatorUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorUnbondingsIsMutable();
+          validatorUnbondings_.add(value);
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder addValidatorUnbondings(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding value) {
+        if (validatorUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorUnbondingsIsMutable();
+          validatorUnbondings_.add(index, value);
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder addValidatorUnbondings(
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder builderForValue) {
+        if (validatorUnbondingsBuilder_ == null) {
+          ensureValidatorUnbondingsIsMutable();
+          validatorUnbondings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder addValidatorUnbondings(
+          int index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder builderForValue) {
+        if (validatorUnbondingsBuilder_ == null) {
+          ensureValidatorUnbondingsIsMutable();
+          validatorUnbondings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder addAllValidatorUnbondings(
+          java.lang.Iterable<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding> values) {
+        if (validatorUnbondingsBuilder_ == null) {
+          ensureValidatorUnbondingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, validatorUnbondings_);
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder clearValidatorUnbondings() {
+        if (validatorUnbondingsBuilder_ == null) {
+          validatorUnbondings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public Builder removeValidatorUnbondings(int index) {
+        if (validatorUnbondingsBuilder_ == null) {
+          ensureValidatorUnbondingsIsMutable();
+          validatorUnbondings_.remove(index);
+          onChanged();
+        } else {
+          validatorUnbondingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder getValidatorUnbondingsBuilder(
+          int index) {
+        return getValidatorUnbondingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder getValidatorUnbondingsOrBuilder(
+          int index) {
+        if (validatorUnbondingsBuilder_ == null) {
+          return validatorUnbondings_.get(index);  } else {
+          return validatorUnbondingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public java.util.List<? extends com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder> 
+           getValidatorUnbondingsOrBuilderList() {
+        if (validatorUnbondingsBuilder_ != null) {
+          return validatorUnbondingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(validatorUnbondings_);
+        }
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder addValidatorUnbondingsBuilder() {
+        return getValidatorUnbondingsFieldBuilder().addBuilder(
+            com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder addValidatorUnbondingsBuilder(
+          int index) {
+        return getValidatorUnbondingsFieldBuilder().addBuilder(
+            index, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * validator unbondings
+       * </pre>
+       *
+       * <code>repeated .pstake.liquidstakeibc.v1beta1.ValidatorUnbonding validator_unbondings = 6 [json_name = "validatorUnbondings"];</code>
+       */
+      public java.util.List<com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder> 
+           getValidatorUnbondingsBuilderList() {
+        return getValidatorUnbondingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder> 
+          getValidatorUnbondingsFieldBuilder() {
+        if (validatorUnbondingsBuilder_ == null) {
+          validatorUnbondingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbondingOrBuilder>(
+                  validatorUnbondings_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          validatorUnbondings_ = null;
+        }
+        return validatorUnbondingsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2588,7 +3091,7 @@ public final class GenesisProto {
       "proto\022\035pstake.liquidstakeibc.v1beta1\032\024go" +
       "goproto/gogo.proto\032*pstake/liquidstakeib" +
       "c/v1beta1/params.proto\0322pstake/liquidsta" +
-      "keibc/v1beta1/liquidstakeibc.proto\"\203\003\n\014G" +
+      "keibc/v1beta1/liquidstakeibc.proto\"\351\003\n\014G" +
       "enesisState\022C\n\006params\030\001 \001(\0132%.pstake.liq" +
       "uidstakeibc.v1beta1.ParamsB\004\310\336\037\000R\006params" +
       "\022I\n\013host_chains\030\002 \003(\0132(.pstake.liquidsta" +
@@ -2598,14 +3101,17 @@ public final class GenesisProto {
       "\003(\0132(.pstake.liquidstakeibc.v1beta1.Unbo" +
       "ndingR\nunbondings\022U\n\017user_unbondings\030\005 \003" +
       "(\0132,.pstake.liquidstakeibc.v1beta1.UserU" +
-      "nbondingR\016userUnbondingsB\210\002\n!com.pstake." +
-      "liquidstakeibc.v1beta1B\014GenesisProtoZAgi" +
-      "thub.com/persistenceOne/pstake-native/v2" +
-      "/x/liquidstakeibc/types\242\002\003PLX\252\002\035Pstake.L" +
-      "iquidstakeibc.V1beta1\312\002\035Pstake\\Liquidsta" +
-      "keibc\\V1beta1\342\002)Pstake\\Liquidstakeibc\\V1" +
-      "beta1\\GPBMetadata\352\002\037Pstake::Liquidstakei" +
-      "bc::V1beta1b\006proto3"
+      "nbondingR\016userUnbondings\022d\n\024validator_un" +
+      "bondings\030\006 \003(\01321.pstake.liquidstakeibc.v" +
+      "1beta1.ValidatorUnbondingR\023validatorUnbo" +
+      "ndingsB\210\002\n!com.pstake.liquidstakeibc.v1b" +
+      "eta1B\014GenesisProtoZAgithub.com/persisten" +
+      "ceOne/pstake-native/v2/x/liquidstakeibc/" +
+      "types\242\002\003PLX\252\002\035Pstake.Liquidstakeibc.V1be" +
+      "ta1\312\002\035Pstake\\Liquidstakeibc\\V1beta1\342\002)Ps" +
+      "take\\Liquidstakeibc\\V1beta1\\GPBMetadata\352" +
+      "\002\037Pstake::Liquidstakeibc::V1beta1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2619,7 +3125,7 @@ public final class GenesisProto {
     internal_static_pstake_liquidstakeibc_v1beta1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_pstake_liquidstakeibc_v1beta1_GenesisState_descriptor,
-        new java.lang.String[] { "Params", "HostChains", "Deposits", "Unbondings", "UserUnbondings", });
+        new java.lang.String[] { "Params", "HostChains", "Deposits", "Unbondings", "UserUnbondings", "ValidatorUnbondings", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.nullable);

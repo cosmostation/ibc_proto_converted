@@ -16,15 +16,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x63udos/marketplace/nft.proto\x12\"cudoventures.cudosnode.marketplace\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xc2\x01\n\x03Nft\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12\x18\n\x07tokenId\x18\x02 \x01(\tR\x07tokenId\x12\x18\n\x07\x64\x65nomId\x18\x03 \x01(\tR\x07\x64\x65nomId\x12\x61\n\x05price\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05price\x12\x14\n\x05owner\x18\x05 \x01(\tR\x05ownerB\x94\x02\n&com.cudoventures.cudosnode.marketplaceB\x08NftProtoP\x01Z6github.com/CudoVentures/cudos-node/x/marketplace/types\xa2\x02\x03\x43\x43M\xaa\x02\"Cudoventures.Cudosnode.Marketplace\xca\x02\"Cudoventures\\Cudosnode\\Marketplace\xe2\x02.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\xea\x02$Cudoventures::Cudosnode::Marketplaceb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x63udos/marketplace/nft.proto\x12\"cudoventures.cudosnode.marketplace\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xc2\x01\n\x03Nft\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12\x18\n\x07tokenId\x18\x02 \x01(\tR\x07tokenId\x12\x18\n\x07\x64\x65nomId\x18\x03 \x01(\tR\x07\x64\x65nomId\x12\x61\n\x05price\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05price\x12\x14\n\x05owner\x18\x05 \x01(\tR\x05ownerB\x92\x02\n&com.cudoventures.cudosnode.marketplaceB\x08NftProtoZ6github.com/CudoVentures/cudos-node/x/marketplace/types\xa2\x02\x03\x43\x43M\xaa\x02\"Cudoventures.Cudosnode.Marketplace\xca\x02\"Cudoventures\\Cudosnode\\Marketplace\xe2\x02.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\xea\x02$Cudoventures::Cudosnode::Marketplaceb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cudos.marketplace.nft_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n&com.cudoventures.cudosnode.marketplaceB\010NftProtoP\001Z6github.com/CudoVentures/cudos-node/x/marketplace/types\242\002\003CCM\252\002\"Cudoventures.Cudosnode.Marketplace\312\002\"Cudoventures\\Cudosnode\\Marketplace\342\002.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\352\002$Cudoventures::Cudosnode::Marketplace'
+  DESCRIPTOR._serialized_options = b'\n&com.cudoventures.cudosnode.marketplaceB\010NftProtoZ6github.com/CudoVentures/cudos-node/x/marketplace/types\242\002\003CCM\252\002\"Cudoventures.Cudosnode.Marketplace\312\002\"Cudoventures\\Cudosnode\\Marketplace\342\002.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\352\002$Cudoventures::Cudosnode::Marketplace'
   _NFT.fields_by_name['price']._options = None
   _NFT.fields_by_name['price']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _globals['_NFT']._serialized_start=149

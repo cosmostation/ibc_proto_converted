@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from stride.autopilot import params_pb2 as stride_dot_autopilot_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estride/autopilot/genesis.proto\x12\x10stride.autopilot\x1a\x14gogoproto/gogo.proto\x1a\x1dstride/autopilot/params.proto\"W\n\x0cGenesisState\x12G\n\x06params\x18\x01 \x01(\x0b\x32\x18.stride.autopilot.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xb9\x01\n\x14\x63om.stride.autopilotB\x0cGenesisProtoP\x01Z2github.com/Stride-Labs/stride/v9/x/autopilot/types\xa2\x02\x03SAX\xaa\x02\x10Stride.Autopilot\xca\x02\x10Stride\\Autopilot\xe2\x02\x1cStride\\Autopilot\\GPBMetadata\xea\x02\x11Stride::Autopilotb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estride/autopilot/genesis.proto\x12\x10stride.autopilot\x1a\x14gogoproto/gogo.proto\x1a\x1dstride/autopilot/params.proto\"W\n\x0cGenesisState\x12G\n\x06params\x18\x01 \x01(\x0b\x32\x18.stride.autopilot.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xb7\x01\n\x14\x63om.stride.autopilotB\x0cGenesisProtoZ2github.com/Stride-Labs/stride/v9/x/autopilot/types\xa2\x02\x03SAX\xaa\x02\x10Stride.Autopilot\xca\x02\x10Stride\\Autopilot\xe2\x02\x1cStride\\Autopilot\\GPBMetadata\xea\x02\x11Stride::Autopilotb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stride.autopilot.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.stride.autopilotB\014GenesisProtoP\001Z2github.com/Stride-Labs/stride/v9/x/autopilot/types\242\002\003SAX\252\002\020Stride.Autopilot\312\002\020Stride\\Autopilot\342\002\034Stride\\Autopilot\\GPBMetadata\352\002\021Stride::Autopilot'
+  DESCRIPTOR._serialized_options = b'\n\024com.stride.autopilotB\014GenesisProtoZ2github.com/Stride-Labs/stride/v9/x/autopilot/types\242\002\003SAX\252\002\020Stride.Autopilot\312\002\020Stride\\Autopilot\342\002\034Stride\\Autopilot\\GPBMetadata\352\002\021Stride::Autopilot'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000\362\336\037\ryaml:\"params\"'
   _globals['_GENESISSTATE']._serialized_start=105

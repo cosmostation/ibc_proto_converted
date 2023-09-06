@@ -113,6 +113,7 @@ public final class OfferProto {
               com.likechain.likenft.v1.OfferProto.Offer.class, com.likechain.likenft.v1.OfferProto.Offer.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -249,7 +250,7 @@ public final class OfferProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return expiration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -293,7 +294,7 @@ public final class OfferProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (expiration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getExpiration());
       }
       getUnknownFields().writeTo(output);
@@ -318,7 +319,7 @@ public final class OfferProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (expiration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -493,13 +494,19 @@ public final class OfferProto {
 
       // Construct using com.likechain.likenft.v1.OfferProto.Offer.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpirationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -559,11 +566,14 @@ public final class OfferProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1015,8 +1025,10 @@ public final class OfferProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (expiration_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1224,6 +1236,7 @@ public final class OfferProto {
               com.likechain.likenft.v1.OfferProto.OfferStoreRecord.class, com.likechain.likenft.v1.OfferProto.OfferStoreRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -1332,7 +1345,7 @@ public final class OfferProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return expiration_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1376,7 +1389,7 @@ public final class OfferProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (expiration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getExpiration());
       }
       getUnknownFields().writeTo(output);
@@ -1402,7 +1415,7 @@ public final class OfferProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (expiration_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -1577,13 +1590,19 @@ public final class OfferProto {
 
       // Construct using com.likechain.likenft.v1.OfferProto.OfferStoreRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpirationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1643,11 +1662,14 @@ public final class OfferProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2057,8 +2079,10 @@ public final class OfferProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (expiration_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

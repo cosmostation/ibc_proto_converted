@@ -84,6 +84,7 @@ public final class LocalhostProto {
               com.ibc.lightclients.localhost.v2.LocalhostProto.ClientState.class, com.ibc.lightclients.localhost.v2.LocalhostProto.ClientState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LATEST_HEIGHT_FIELD_NUMBER = 1;
     private com.ibc.core.client.v1.ClientProto.Height latestHeight_;
     /**
@@ -96,7 +97,7 @@ public final class LocalhostProto {
      */
     @java.lang.Override
     public boolean hasLatestHeight() {
-      return latestHeight_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -136,7 +137,7 @@ public final class LocalhostProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (latestHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getLatestHeight());
       }
       getUnknownFields().writeTo(output);
@@ -148,7 +149,7 @@ public final class LocalhostProto {
       if (size != -1) return size;
 
       size = 0;
-      if (latestHeight_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLatestHeight());
       }
@@ -310,13 +311,19 @@ public final class LocalhostProto {
 
       // Construct using com.ibc.lightclients.localhost.v2.LocalhostProto.ClientState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLatestHeightFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -360,11 +367,14 @@ public final class LocalhostProto {
 
       private void buildPartial0(com.ibc.lightclients.localhost.v2.LocalhostProto.ClientState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.latestHeight_ = latestHeightBuilder_ == null
               ? latestHeight_
               : latestHeightBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -550,8 +560,10 @@ public final class LocalhostProto {
         } else {
           latestHeightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (latestHeight_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

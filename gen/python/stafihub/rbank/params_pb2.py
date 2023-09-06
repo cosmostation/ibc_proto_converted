@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bstafihub/rbank/params.proto\x12\x17stafihub.stafihub.rbank\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xd4\x01\n\x1b\x63om.stafihub.stafihub.rbankB\x0bParamsProtoP\x01Z*github.com/stafihub/stafihub/x/rbank/types\xa2\x02\x03SSR\xaa\x02\x17Stafihub.Stafihub.Rbank\xca\x02\x17Stafihub\\Stafihub\\Rbank\xe2\x02#Stafihub\\Stafihub\\Rbank\\GPBMetadata\xea\x02\x19Stafihub::Stafihub::Rbankb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bstafihub/rbank/params.proto\x12\x17stafihub.stafihub.rbank\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xd2\x01\n\x1b\x63om.stafihub.stafihub.rbankB\x0bParamsProtoZ*github.com/stafihub/stafihub/x/rbank/types\xa2\x02\x03SSR\xaa\x02\x17Stafihub.Stafihub.Rbank\xca\x02\x17Stafihub\\Stafihub\\Rbank\xe2\x02#Stafihub\\Stafihub\\Rbank\\GPBMetadata\xea\x02\x19Stafihub::Stafihub::Rbankb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.rbank.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.stafihub.stafihub.rbankB\013ParamsProtoP\001Z*github.com/stafihub/stafihub/x/rbank/types\242\002\003SSR\252\002\027Stafihub.Stafihub.Rbank\312\002\027Stafihub\\Stafihub\\Rbank\342\002#Stafihub\\Stafihub\\Rbank\\GPBMetadata\352\002\031Stafihub::Stafihub::Rbank'
+  DESCRIPTOR._serialized_options = b'\n\033com.stafihub.stafihub.rbankB\013ParamsProtoZ*github.com/stafihub/stafihub/x/rbank/types\242\002\003SSR\252\002\027Stafihub.Stafihub.Rbank\312\002\027Stafihub\\Stafihub\\Rbank\342\002#Stafihub\\Stafihub\\Rbank\\GPBMetadata\352\002\031Stafihub::Stafihub::Rbank'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=78

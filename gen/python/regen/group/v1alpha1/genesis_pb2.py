@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from regen.group.v1alpha1 import types_pb2 as regen_dot_group_dot_v1alpha1_dot_types__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"regen/group/v1alpha1/genesis.proto\x12\x14regen.group.v1alpha1\x1a\x14gogoproto/gogo.proto\x1a regen/group/v1alpha1/types.proto\"\xba\x03\n\x0cGenesisState\x12\x1b\n\tgroup_seq\x18\x01 \x01(\x04R\x08groupSeq\x12\x37\n\x06groups\x18\x02 \x03(\x0b\x32\x1f.regen.group.v1alpha1.GroupInfoR\x06groups\x12\x46\n\rgroup_members\x18\x03 \x03(\x0b\x32!.regen.group.v1alpha1.GroupMemberR\x0cgroupMembers\x12*\n\x11group_account_seq\x18\x04 \x01(\x04R\x0fgroupAccountSeq\x12M\n\x0egroup_accounts\x18\x05 \x03(\x0b\x32&.regen.group.v1alpha1.GroupAccountInfoR\rgroupAccounts\x12!\n\x0cproposal_seq\x18\x06 \x01(\x04R\x0bproposalSeq\x12<\n\tproposals\x18\x07 \x03(\x0b\x32\x1e.regen.group.v1alpha1.ProposalR\tproposals\x12\x30\n\x05votes\x18\x08 \x03(\x0b\x32\x1a.regen.group.v1alpha1.VoteR\x05votesB\xc9\x01\n\x18\x63om.regen.group.v1alpha1B\x0cGenesisProtoP\x01Z-github.com/regen-network/regen-ledger/x/group\xa2\x02\x03RGX\xaa\x02\x14Regen.Group.V1alpha1\xca\x02\x14Regen\\Group\\V1alpha1\xe2\x02 Regen\\Group\\V1alpha1\\GPBMetadata\xea\x02\x16Regen::Group::V1alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"regen/group/v1alpha1/genesis.proto\x12\x14regen.group.v1alpha1\x1a\x14gogoproto/gogo.proto\x1a regen/group/v1alpha1/types.proto\"\xba\x03\n\x0cGenesisState\x12\x1b\n\tgroup_seq\x18\x01 \x01(\x04R\x08groupSeq\x12\x37\n\x06groups\x18\x02 \x03(\x0b\x32\x1f.regen.group.v1alpha1.GroupInfoR\x06groups\x12\x46\n\rgroup_members\x18\x03 \x03(\x0b\x32!.regen.group.v1alpha1.GroupMemberR\x0cgroupMembers\x12*\n\x11group_account_seq\x18\x04 \x01(\x04R\x0fgroupAccountSeq\x12M\n\x0egroup_accounts\x18\x05 \x03(\x0b\x32&.regen.group.v1alpha1.GroupAccountInfoR\rgroupAccounts\x12!\n\x0cproposal_seq\x18\x06 \x01(\x04R\x0bproposalSeq\x12<\n\tproposals\x18\x07 \x03(\x0b\x32\x1e.regen.group.v1alpha1.ProposalR\tproposals\x12\x30\n\x05votes\x18\x08 \x03(\x0b\x32\x1a.regen.group.v1alpha1.VoteR\x05votesB\xc7\x01\n\x18\x63om.regen.group.v1alpha1B\x0cGenesisProtoZ-github.com/regen-network/regen-ledger/x/group\xa2\x02\x03RGX\xaa\x02\x14Regen.Group.V1alpha1\xca\x02\x14Regen\\Group\\V1alpha1\xe2\x02 Regen\\Group\\V1alpha1\\GPBMetadata\xea\x02\x16Regen::Group::V1alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'regen.group.v1alpha1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.regen.group.v1alpha1B\014GenesisProtoP\001Z-github.com/regen-network/regen-ledger/x/group\242\002\003RGX\252\002\024Regen.Group.V1alpha1\312\002\024Regen\\Group\\V1alpha1\342\002 Regen\\Group\\V1alpha1\\GPBMetadata\352\002\026Regen::Group::V1alpha1'
+  DESCRIPTOR._serialized_options = b'\n\030com.regen.group.v1alpha1B\014GenesisProtoZ-github.com/regen-network/regen-ledger/x/group\242\002\003RGX\252\002\024Regen.Group.V1alpha1\312\002\024Regen\\Group\\V1alpha1\342\002 Regen\\Group\\V1alpha1\\GPBMetadata\352\002\026Regen::Group::V1alpha1'
   _globals['_GENESISSTATE']._serialized_start=117
   _globals['_GENESISSTATE']._serialized_end=559
 # @@protoc_insertion_point(module_scope)

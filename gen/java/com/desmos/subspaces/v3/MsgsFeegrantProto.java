@@ -143,6 +143,7 @@ public final class MsgsFeegrantProto {
               com.desmos.subspaces.v3.MsgsFeegrantProto.MsgGrantAllowance.class, com.desmos.subspaces.v3.MsgsFeegrantProto.MsgGrantAllowance.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -217,7 +218,7 @@ public final class MsgsFeegrantProto {
      */
     @java.lang.Override
     public boolean hasGrantee() {
-      return grantee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -255,7 +256,7 @@ public final class MsgsFeegrantProto {
      */
     @java.lang.Override
     public boolean hasAllowance() {
-      return allowance_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -301,10 +302,10 @@ public final class MsgsFeegrantProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, granter_);
       }
-      if (grantee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getGrantee());
       }
-      if (allowance_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getAllowance());
       }
       getUnknownFields().writeTo(output);
@@ -323,11 +324,11 @@ public final class MsgsFeegrantProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, granter_);
       }
-      if (grantee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getGrantee());
       }
-      if (allowance_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAllowance());
       }
@@ -508,13 +509,20 @@ public final class MsgsFeegrantProto {
 
       // Construct using com.desmos.subspaces.v3.MsgsFeegrantProto.MsgGrantAllowance.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGranteeFieldBuilder();
+          getAllowanceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -571,16 +579,20 @@ public final class MsgsFeegrantProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.granter_ = granter_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.grantee_ = granteeBuilder_ == null
               ? grantee_
               : granteeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.allowance_ = allowanceBuilder_ == null
               ? allowance_
               : allowanceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -930,8 +942,10 @@ public final class MsgsFeegrantProto {
         } else {
           granteeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (grantee_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1085,8 +1099,10 @@ public final class MsgsFeegrantProto {
         } else {
           allowanceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (allowance_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1726,6 +1742,7 @@ public final class MsgsFeegrantProto {
               com.desmos.subspaces.v3.MsgsFeegrantProto.MsgRevokeAllowance.class, com.desmos.subspaces.v3.MsgsFeegrantProto.MsgRevokeAllowance.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -1800,7 +1817,7 @@ public final class MsgsFeegrantProto {
      */
     @java.lang.Override
     public boolean hasGrantee() {
-      return grantee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1846,7 +1863,7 @@ public final class MsgsFeegrantProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, granter_);
       }
-      if (grantee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getGrantee());
       }
       getUnknownFields().writeTo(output);
@@ -1865,7 +1882,7 @@ public final class MsgsFeegrantProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, granter_);
       }
-      if (grantee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getGrantee());
       }
@@ -2037,13 +2054,19 @@ public final class MsgsFeegrantProto {
 
       // Construct using com.desmos.subspaces.v3.MsgsFeegrantProto.MsgRevokeAllowance.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGranteeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2095,11 +2118,14 @@ public final class MsgsFeegrantProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.granter_ = granter_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.grantee_ = granteeBuilder_ == null
               ? grantee_
               : granteeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2439,8 +2465,10 @@ public final class MsgsFeegrantProto {
         } else {
           granteeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (grantee_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

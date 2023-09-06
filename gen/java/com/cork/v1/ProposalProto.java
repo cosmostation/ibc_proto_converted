@@ -94,6 +94,7 @@ public final class ProposalProto {
               com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.class, com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -180,7 +181,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasCellarIds() {
-      return cellarIds_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
@@ -218,7 +219,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (cellarIds_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCellarIds());
       }
       getUnknownFields().writeTo(output);
@@ -236,7 +237,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (cellarIds_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCellarIds());
       }
@@ -402,13 +403,19 @@ public final class ProposalProto {
 
       // Construct using com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCellarIdsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,11 +467,14 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.cellarIds_ = cellarIdsBuilder_ == null
               ? cellarIds_
               : cellarIdsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -794,8 +804,10 @@ public final class ProposalProto {
         } else {
           cellarIdsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (cellarIds_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2060,6 +2072,7 @@ public final class ProposalProto {
               com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.class, com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -2146,7 +2159,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasCellarIds() {
-      return cellarIds_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
@@ -2184,7 +2197,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (cellarIds_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCellarIds());
       }
       getUnknownFields().writeTo(output);
@@ -2202,7 +2215,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (cellarIds_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCellarIds());
       }
@@ -2368,13 +2381,19 @@ public final class ProposalProto {
 
       // Construct using com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCellarIdsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2426,11 +2445,14 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.cellarIds_ = cellarIdsBuilder_ == null
               ? cellarIds_
               : cellarIdsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2760,8 +2782,10 @@ public final class ProposalProto {
         } else {
           cellarIdsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (cellarIds_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

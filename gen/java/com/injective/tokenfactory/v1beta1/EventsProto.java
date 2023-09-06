@@ -781,6 +781,7 @@ public final class EventsProto {
               com.injective.tokenfactory.v1beta1.EventsProto.EventMintTFDenom.class, com.injective.tokenfactory.v1beta1.EventsProto.EventMintTFDenom.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECIPIENT_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recipientAddress_ = "";
@@ -828,7 +829,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -863,7 +864,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipientAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recipientAddress_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -878,7 +879,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipientAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recipientAddress_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -1040,13 +1041,19 @@ public final class EventsProto {
 
       // Construct using com.injective.tokenfactory.v1beta1.EventsProto.EventMintTFDenom.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1094,11 +1101,14 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recipientAddress_ = recipientAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1346,8 +1356,10 @@ public final class EventsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1529,6 +1541,7 @@ public final class EventsProto {
               com.injective.tokenfactory.v1beta1.EventsProto.EventBurnTFDenom.class, com.injective.tokenfactory.v1beta1.EventsProto.EventBurnTFDenom.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BURNER_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object burnerAddress_ = "";
@@ -1576,7 +1589,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -1611,7 +1624,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnerAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, burnerAddress_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -1626,7 +1639,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnerAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, burnerAddress_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -1788,13 +1801,19 @@ public final class EventsProto {
 
       // Construct using com.injective.tokenfactory.v1beta1.EventsProto.EventBurnTFDenom.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1842,11 +1861,14 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.burnerAddress_ = burnerAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2094,8 +2116,10 @@ public final class EventsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2977,6 +3001,7 @@ public final class EventsProto {
               com.injective.tokenfactory.v1beta1.EventsProto.EventSetTFDenomMetadata.class, com.injective.tokenfactory.v1beta1.EventsProto.EventSetTFDenomMetadata.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -3024,7 +3049,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return metadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.bank.v1beta1.Metadata metadata = 2 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
@@ -3059,7 +3084,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
       }
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -3074,7 +3099,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
       }
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMetadata());
       }
@@ -3236,13 +3261,19 @@ public final class EventsProto {
 
       // Construct using com.injective.tokenfactory.v1beta1.EventsProto.EventSetTFDenomMetadata.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3290,11 +3321,14 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3542,8 +3576,10 @@ public final class EventsProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (metadata_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

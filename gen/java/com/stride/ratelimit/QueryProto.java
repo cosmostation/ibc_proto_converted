@@ -1947,6 +1947,7 @@ public final class QueryProto {
               com.stride.ratelimit.QueryProto.QueryRateLimitResponse.class, com.stride.ratelimit.QueryProto.QueryRateLimitResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RATE_LIMIT_FIELD_NUMBER = 1;
     private com.stride.ratelimit.RatelimitProto.RateLimit rateLimit_;
     /**
@@ -1955,7 +1956,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRateLimit() {
-      return rateLimit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stride.ratelimit.RateLimit rate_limit = 1 [json_name = "rateLimit"];</code>
@@ -1987,7 +1988,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (rateLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRateLimit());
       }
       getUnknownFields().writeTo(output);
@@ -1999,7 +2000,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (rateLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRateLimit());
       }
@@ -2157,13 +2158,19 @@ public final class QueryProto {
 
       // Construct using com.stride.ratelimit.QueryProto.QueryRateLimitResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRateLimitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2207,11 +2214,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.stride.ratelimit.QueryProto.QueryRateLimitResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.rateLimit_ = rateLimitBuilder_ == null
               ? rateLimit_
               : rateLimitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2377,8 +2387,10 @@ public final class QueryProto {
         } else {
           rateLimitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (rateLimit_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

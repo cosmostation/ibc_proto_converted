@@ -216,6 +216,7 @@ public final class GenesisProto {
               com.kava.cdp.v1beta1.GenesisProto.GenesisState.class, com.kava.cdp.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.kava.cdp.v1beta1.GenesisProto.Params params_;
     /**
@@ -228,7 +229,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -521,7 +522,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < cdps_.size(); i++) {
@@ -554,7 +555,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -779,13 +780,23 @@ public final class GenesisProto {
 
       // Construct using com.kava.cdp.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getCdpsFieldBuilder();
+          getDepositsFieldBuilder();
+          getPreviousAccumulationTimesFieldBuilder();
+          getTotalPrincipalsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -900,10 +911,12 @@ public final class GenesisProto {
 
       private void buildPartial0(com.kava.cdp.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.startingCdpId_ = startingCdpId_;
@@ -914,6 +927,7 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.govDenom_ = govDenom_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1283,8 +1297,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2707,6 +2723,7 @@ public final class GenesisProto {
               com.kava.cdp.v1beta1.GenesisProto.Params.class, com.kava.cdp.v1beta1.GenesisProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLATERAL_PARAMS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kava.cdp.v1beta1.GenesisProto.CollateralParam> collateralParams_;
@@ -2756,7 +2773,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDebtParam() {
-      return debtParam_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.cdp.v1beta1.DebtParam debt_param = 2 [json_name = "debtParam", (.gogoproto.nullable) = false];</code>
@@ -2782,7 +2799,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasGlobalDebtLimit() {
-      return globalDebtLimit_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin global_debt_limit = 3 [json_name = "globalDebtLimit", (.gogoproto.nullable) = false];</code>
@@ -2984,10 +3001,10 @@ public final class GenesisProto {
       for (int i = 0; i < collateralParams_.size(); i++) {
         output.writeMessage(1, collateralParams_.get(i));
       }
-      if (debtParam_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDebtParam());
       }
-      if (globalDebtLimit_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getGlobalDebtLimit());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(surplusAuctionThreshold_)) {
@@ -3018,11 +3035,11 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, collateralParams_.get(i));
       }
-      if (debtParam_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDebtParam());
       }
-      if (globalDebtLimit_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getGlobalDebtLimit());
       }
@@ -3236,13 +3253,21 @@ public final class GenesisProto {
 
       // Construct using com.kava.cdp.v1beta1.GenesisProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollateralParamsFieldBuilder();
+          getDebtParamFieldBuilder();
+          getGlobalDebtLimitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3316,15 +3341,18 @@ public final class GenesisProto {
 
       private void buildPartial0(com.kava.cdp.v1beta1.GenesisProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.debtParam_ = debtParamBuilder_ == null
               ? debtParam_
               : debtParamBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.globalDebtLimit_ = globalDebtLimitBuilder_ == null
               ? globalDebtLimit_
               : globalDebtLimitBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.surplusAuctionThreshold_ = surplusAuctionThreshold_;
@@ -3341,6 +3369,7 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.circuitBreaker_ = circuitBreaker_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3843,8 +3872,10 @@ public final class GenesisProto {
         } else {
           debtParamBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (debtParam_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3962,8 +3993,10 @@ public final class GenesisProto {
         } else {
           globalDebtLimitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (globalDebtLimit_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5603,6 +5636,7 @@ public final class GenesisProto {
               com.kava.cdp.v1beta1.GenesisProto.CollateralParam.class, com.kava.cdp.v1beta1.GenesisProto.CollateralParam.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -5728,7 +5762,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDebtLimit() {
-      return debtLimit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin debt_limit = 4 [json_name = "debtLimit", (.gogoproto.nullable) = false];</code>
@@ -6081,7 +6115,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationRatio_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, liquidationRatio_);
       }
-      if (debtLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getDebtLimit());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stabilityFee_)) {
@@ -6126,7 +6160,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationRatio_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, liquidationRatio_);
       }
-      if (debtLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDebtLimit());
       }
@@ -6356,13 +6390,19 @@ public final class GenesisProto {
 
       // Construct using com.kava.cdp.v1beta1.GenesisProto.CollateralParam.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDebtLimitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6426,10 +6466,12 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.liquidationRatio_ = liquidationRatio_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.debtLimit_ = debtLimitBuilder_ == null
               ? debtLimit_
               : debtLimitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.stabilityFee_ = stabilityFee_;
@@ -6455,6 +6497,7 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.conversionFactor_ = conversionFactor_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6946,8 +6989,10 @@ public final class GenesisProto {
         } else {
           debtLimitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (debtLimit_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7722,6 +7767,7 @@ public final class GenesisProto {
               com.kava.cdp.v1beta1.GenesisProto.GenesisAccumulationTime.class, com.kava.cdp.v1beta1.GenesisProto.GenesisAccumulationTime.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLATERAL_TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collateralType_ = "";
@@ -7769,7 +7815,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPreviousAccumulationTime() {
-      return previousAccumulationTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp previous_accumulation_time = 2 [json_name = "previousAccumulationTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -7843,7 +7889,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, collateralType_);
       }
-      if (previousAccumulationTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPreviousAccumulationTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(interestFactor_)) {
@@ -7861,7 +7907,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, collateralType_);
       }
-      if (previousAccumulationTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPreviousAccumulationTime());
       }
@@ -8034,13 +8080,19 @@ public final class GenesisProto {
 
       // Construct using com.kava.cdp.v1beta1.GenesisProto.GenesisAccumulationTime.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPreviousAccumulationTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8089,14 +8141,17 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collateralType_ = collateralType_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.previousAccumulationTime_ = previousAccumulationTimeBuilder_ == null
               ? previousAccumulationTime_
               : previousAccumulationTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.interestFactor_ = interestFactor_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8354,8 +8409,10 @@ public final class GenesisProto {
         } else {
           previousAccumulationTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (previousAccumulationTime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

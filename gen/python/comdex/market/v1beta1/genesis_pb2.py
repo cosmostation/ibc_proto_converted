@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from comdex.market.v1beta1 import market_pb2 as comdex_dot_market_dot_v1beta1_dot_market__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#comdex/market/v1beta1/genesis.proto\x12\x15\x63omdex.market.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"comdex/market/v1beta1/market.proto\"\x95\x01\n\x0cGenesisState\x12\x84\x01\n\x15time_weighted_average\x18\x01 \x03(\x0b\x32*.comdex.market.v1beta1.TimeWeightedAverageB$\xc8\xde\x1f\x00\xf2\xde\x1f\x1cyaml:\"time_weighted_average\"R\x13timeWeightedAverageB\xd9\x01\n\x19\x63om.comdex.market.v1beta1B\x0cGenesisProtoP\x01Z0github.com/comdex-official/comdex/x/market/types\xa2\x02\x03\x43MX\xaa\x02\x15\x43omdex.Market.V1beta1\xca\x02\x15\x43omdex\\Market\\V1beta1\xe2\x02!Comdex\\Market\\V1beta1\\GPBMetadata\xea\x02\x17\x43omdex::Market::V1beta1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#comdex/market/v1beta1/genesis.proto\x12\x15\x63omdex.market.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"comdex/market/v1beta1/market.proto\"\x95\x01\n\x0cGenesisState\x12\x84\x01\n\x15time_weighted_average\x18\x01 \x03(\x0b\x32*.comdex.market.v1beta1.TimeWeightedAverageB$\xc8\xde\x1f\x00\xf2\xde\x1f\x1cyaml:\"time_weighted_average\"R\x13timeWeightedAverageB\xd7\x01\n\x19\x63om.comdex.market.v1beta1B\x0cGenesisProtoZ0github.com/comdex-official/comdex/x/market/types\xa2\x02\x03\x43MX\xaa\x02\x15\x43omdex.Market.V1beta1\xca\x02\x15\x43omdex\\Market\\V1beta1\xe2\x02!Comdex\\Market\\V1beta1\\GPBMetadata\xea\x02\x17\x43omdex::Market::V1beta1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.market.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.comdex.market.v1beta1B\014GenesisProtoP\001Z0github.com/comdex-official/comdex/x/market/types\242\002\003CMX\252\002\025Comdex.Market.V1beta1\312\002\025Comdex\\Market\\V1beta1\342\002!Comdex\\Market\\V1beta1\\GPBMetadata\352\002\027Comdex::Market::V1beta1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\031com.comdex.market.v1beta1B\014GenesisProtoZ0github.com/comdex-official/comdex/x/market/types\242\002\003CMX\252\002\025Comdex.Market.V1beta1\312\002\025Comdex\\Market\\V1beta1\342\002!Comdex\\Market\\V1beta1\\GPBMetadata\352\002\027Comdex::Market::V1beta1\310\341\036\000\250\342\036\000'
   _GENESISSTATE.fields_by_name['time_weighted_average']._options = None
   _GENESISSTATE.fields_by_name['time_weighted_average']._serialized_options = b'\310\336\037\000\362\336\037\034yaml:\"time_weighted_average\"'
   _globals['_GENESISSTATE']._serialized_start=121

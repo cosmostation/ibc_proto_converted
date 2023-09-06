@@ -2064,6 +2064,7 @@ public final class TypesProto {
               com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.class, com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.Builder.class);
     }
 
+    private int bitField0_;
     public static final int THRESHOLD_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object threshold_ = "";
@@ -2124,7 +2125,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTimeout() {
-      return timeout_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2169,7 +2170,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, threshold_);
       }
-      if (timeout_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getTimeout());
       }
       getUnknownFields().writeTo(output);
@@ -2184,7 +2185,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, threshold_);
       }
-      if (timeout_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTimeout());
       }
@@ -2350,13 +2351,19 @@ public final class TypesProto {
 
       // Construct using com.regen.group.v1alpha1.TypesProto.ThresholdDecisionPolicy.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimeoutFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2404,11 +2411,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.threshold_ = threshold_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.timeout_ = timeoutBuilder_ == null
               ? timeout_
               : timeoutBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2701,8 +2711,10 @@ public final class TypesProto {
         } else {
           timeoutBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (timeout_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3991,6 +4003,7 @@ public final class TypesProto {
               com.regen.group.v1alpha1.TypesProto.GroupMember.class, com.regen.group.v1alpha1.TypesProto.GroupMember.Builder.class);
     }
 
+    private int bitField0_;
     public static final int GROUP_ID_FIELD_NUMBER = 1;
     private long groupId_ = 0L;
     /**
@@ -4018,7 +4031,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasMember() {
-      return member_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4061,7 +4074,7 @@ public final class TypesProto {
       if (groupId_ != 0L) {
         output.writeUInt64(1, groupId_);
       }
-      if (member_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getMember());
       }
       getUnknownFields().writeTo(output);
@@ -4077,7 +4090,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, groupId_);
       }
-      if (member_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMember());
       }
@@ -4244,13 +4257,19 @@ public final class TypesProto {
 
       // Construct using com.regen.group.v1alpha1.TypesProto.GroupMember.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMemberFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4298,11 +4317,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.groupId_ = groupId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.member_ = memberBuilder_ == null
               ? member_
               : memberBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4540,8 +4562,10 @@ public final class TypesProto {
         } else {
           memberBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (member_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4828,6 +4852,7 @@ public final class TypesProto {
               com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.class, com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -4980,7 +5005,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasDecisionPolicy() {
-      return decisionPolicy_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5051,7 +5076,7 @@ public final class TypesProto {
       if (version_ != 0L) {
         output.writeUInt64(5, version_);
       }
-      if (decisionPolicy_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getDecisionPolicy());
       }
       if (!derivationKey_.isEmpty()) {
@@ -5084,7 +5109,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(5, version_);
       }
-      if (decisionPolicy_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDecisionPolicy());
       }
@@ -5276,13 +5301,19 @@ public final class TypesProto {
 
       // Construct using com.regen.group.v1alpha1.TypesProto.GroupAccountInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDecisionPolicyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5347,14 +5378,17 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.version_ = version_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.decisionPolicy_ = decisionPolicyBuilder_ == null
               ? decisionPolicy_
               : decisionPolicyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.derivationKey_ = derivationKey_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5911,8 +5945,10 @@ public final class TypesProto {
         } else {
           decisionPolicyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (decisionPolicy_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6923,6 +6959,7 @@ public final class TypesProto {
       // @@protoc_insertion_point(enum_scope:regen.group.v1alpha1.Proposal.ExecutorResult)
     }
 
+    private int bitField0_;
     public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
     private long proposalId_ = 0L;
     /**
@@ -7065,7 +7102,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSubmittedAt() {
-      return submittedAt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -7189,7 +7226,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasVoteState() {
-      return voteState_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -7229,7 +7266,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTimeout() {
-      return timeout_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -7372,7 +7409,7 @@ public final class TypesProto {
       for (int i = 0; i < proposers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, proposers_.getRaw(i));
       }
-      if (submittedAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getSubmittedAt());
       }
       if (groupVersion_ != 0L) {
@@ -7387,10 +7424,10 @@ public final class TypesProto {
       if (result_ != com.regen.group.v1alpha1.TypesProto.Proposal.Result.RESULT_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, result_);
       }
-      if (voteState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(10, getVoteState());
       }
-      if (timeout_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(11, getTimeout());
       }
       if (executorResult_ != com.regen.group.v1alpha1.TypesProto.Proposal.ExecutorResult.EXECUTOR_RESULT_UNSPECIFIED.getNumber()) {
@@ -7427,7 +7464,7 @@ public final class TypesProto {
         size += dataSize;
         size += 1 * getProposersList().size();
       }
-      if (submittedAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSubmittedAt());
       }
@@ -7447,11 +7484,11 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, result_);
       }
-      if (voteState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getVoteState());
       }
-      if (timeout_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getTimeout());
       }
@@ -7686,13 +7723,22 @@ public final class TypesProto {
 
       // Construct using com.regen.group.v1alpha1.TypesProto.Proposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubmittedAtFieldBuilder();
+          getVoteStateFieldBuilder();
+          getTimeoutFieldBuilder();
+          getMsgsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7789,10 +7835,12 @@ public final class TypesProto {
           proposers_.makeImmutable();
           result.proposers_ = proposers_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.submittedAt_ = submittedAtBuilder_ == null
               ? submittedAt_
               : submittedAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.groupVersion_ = groupVersion_;
@@ -7810,15 +7858,18 @@ public final class TypesProto {
           result.voteState_ = voteStateBuilder_ == null
               ? voteState_
               : voteStateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.timeout_ = timeoutBuilder_ == null
               ? timeout_
               : timeoutBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.executorResult_ = executorResult_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8472,8 +8523,10 @@ public final class TypesProto {
         } else {
           submittedAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (submittedAt_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8872,8 +8925,10 @@ public final class TypesProto {
         } else {
           voteStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (voteState_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9037,8 +9092,10 @@ public final class TypesProto {
         } else {
           timeoutBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        if (timeout_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10842,6 +10899,7 @@ public final class TypesProto {
               com.regen.group.v1alpha1.TypesProto.Vote.class, com.regen.group.v1alpha1.TypesProto.Vote.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
     private long proposalId_ = 0L;
     /**
@@ -10957,7 +11015,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSubmittedAt() {
-      return submittedAt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -11009,7 +11067,7 @@ public final class TypesProto {
       if (!metadata_.isEmpty()) {
         output.writeBytes(4, metadata_);
       }
-      if (submittedAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getSubmittedAt());
       }
       getUnknownFields().writeTo(output);
@@ -11036,7 +11094,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, metadata_);
       }
-      if (submittedAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSubmittedAt());
       }
@@ -11214,13 +11272,19 @@ public final class TypesProto {
 
       // Construct using com.regen.group.v1alpha1.TypesProto.Vote.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubmittedAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11280,11 +11344,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.metadata_ = metadata_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.submittedAt_ = submittedAtBuilder_ == null
               ? submittedAt_
               : submittedAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11757,8 +11824,10 @@ public final class TypesProto {
         } else {
           submittedAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (submittedAt_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

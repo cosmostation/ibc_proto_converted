@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from axelar.reward.v1beta1 import params_pb2 as axelar_dot_reward_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!axelar/reward/v1beta1/query.proto\x12\x15\x61xelar.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"axelar/reward/v1beta1/params.proto\"\x16\n\x14InflationRateRequest\"n\n\x15InflationRateResponse\x12U\n\x0einflation_rate\x18\x01 \x01(\x0c\x42.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\rinflationRate\"\x0f\n\rParamsRequest\"M\n\x0eParamsResponse\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.axelar.reward.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xd6\x01\n\x19\x63om.axelar.reward.v1beta1B\nQueryProtoP\x01Z3github.com/axelarnetwork/axelar-core/x/reward/types\xa2\x02\x03\x41RX\xaa\x02\x15\x41xelar.Reward.V1beta1\xca\x02\x15\x41xelar\\Reward\\V1beta1\xe2\x02!Axelar\\Reward\\V1beta1\\GPBMetadata\xea\x02\x17\x41xelar::Reward::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!axelar/reward/v1beta1/query.proto\x12\x15\x61xelar.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"axelar/reward/v1beta1/params.proto\"\x16\n\x14InflationRateRequest\"n\n\x15InflationRateResponse\x12U\n\x0einflation_rate\x18\x01 \x01(\x0c\x42.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\rinflationRate\"\x0f\n\rParamsRequest\"M\n\x0eParamsResponse\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.axelar.reward.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xd4\x01\n\x19\x63om.axelar.reward.v1beta1B\nQueryProtoZ3github.com/axelarnetwork/axelar-core/x/reward/types\xa2\x02\x03\x41RX\xaa\x02\x15\x41xelar.Reward.V1beta1\xca\x02\x15\x41xelar\\Reward\\V1beta1\xe2\x02!Axelar\\Reward\\V1beta1\\GPBMetadata\xea\x02\x17\x41xelar::Reward::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.reward.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.axelar.reward.v1beta1B\nQueryProtoP\001Z3github.com/axelarnetwork/axelar-core/x/reward/types\242\002\003ARX\252\002\025Axelar.Reward.V1beta1\312\002\025Axelar\\Reward\\V1beta1\342\002!Axelar\\Reward\\V1beta1\\GPBMetadata\352\002\027Axelar::Reward::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\031com.axelar.reward.v1beta1B\nQueryProtoZ3github.com/axelarnetwork/axelar-core/x/reward/types\242\002\003ARX\252\002\025Axelar.Reward.V1beta1\312\002\025Axelar\\Reward\\V1beta1\342\002!Axelar\\Reward\\V1beta1\\GPBMetadata\352\002\027Axelar::Reward::V1beta1\310\341\036\000'
   _INFLATIONRATERESPONSE.fields_by_name['inflation_rate']._options = None
   _INFLATIONRATERESPONSE.fields_by_name['inflation_rate']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Dec'
   _PARAMSRESPONSE.fields_by_name['params']._options = None

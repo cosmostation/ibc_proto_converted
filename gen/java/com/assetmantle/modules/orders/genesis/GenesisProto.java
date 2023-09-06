@@ -93,6 +93,7 @@ public final class GenesisProto {
               com.assetmantle.modules.orders.genesis.GenesisProto.Genesis.class, com.assetmantle.modules.orders.genesis.GenesisProto.Genesis.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MAPPABLES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.assetmantle.modules.orders.mappable.MappableProto.Mappable> mappables_;
@@ -142,7 +143,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParameterList() {
-      return parameterList_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.parameters.base.ParameterList parameter_list = 2 [json_name = "parameterList"];</code>
@@ -177,7 +178,7 @@ public final class GenesisProto {
       for (int i = 0; i < mappables_.size(); i++) {
         output.writeMessage(1, mappables_.get(i));
       }
-      if (parameterList_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getParameterList());
       }
       getUnknownFields().writeTo(output);
@@ -193,7 +194,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, mappables_.get(i));
       }
-      if (parameterList_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParameterList());
       }
@@ -357,13 +358,20 @@ public final class GenesisProto {
 
       // Construct using com.assetmantle.modules.orders.genesis.GenesisProto.Genesis.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMappablesFieldBuilder();
+          getParameterListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -427,11 +435,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.assetmantle.modules.orders.genesis.GenesisProto.Genesis result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.parameterList_ = parameterListBuilder_ == null
               ? parameterList_
               : parameterListBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -876,8 +887,10 @@ public final class GenesisProto {
         } else {
           parameterListBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (parameterList_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

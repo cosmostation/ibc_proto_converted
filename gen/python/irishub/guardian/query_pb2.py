@@ -17,15 +17,14 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_query_dot_v1beta1_dot_pagination__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cirishub/guardian/query.proto\x12\x10irishub.guardian\x1a\x14gogoproto/gogo.proto\x1a\x1firishub/guardian/guardian.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\"\\\n\x12QuerySupersRequest\x12\x46\n\npagination\x18\x01 \x01(\x0b\x32&.cosmos.base.query.v1beta1.PageRequestR\npagination\"\x95\x01\n\x13QuerySupersResponse\x12\x35\n\x06supers\x18\x01 \x03(\x0b\x32\x17.irishub.guardian.SuperB\x04\xc8\xde\x1f\x00R\x06supers\x12G\n\npagination\x18\x02 \x01(\x0b\x32\'.cosmos.base.query.v1beta1.PageResponseR\npagination2\x80\x01\n\x05Query\x12w\n\x06Supers\x12$.irishub.guardian.QuerySupersRequest\x1a%.irishub.guardian.QuerySupersResponse\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/irishub/guardian/supersB\xb6\x01\n\x14\x63om.irishub.guardianB\nQueryProtoP\x01Z1github.com/irisnet/irishub/modules/guardian/types\xa2\x02\x03IGX\xaa\x02\x10Irishub.Guardian\xca\x02\x10Irishub\\Guardian\xe2\x02\x1cIrishub\\Guardian\\GPBMetadata\xea\x02\x11Irishub::Guardianb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cirishub/guardian/query.proto\x12\x10irishub.guardian\x1a\x14gogoproto/gogo.proto\x1a\x1firishub/guardian/guardian.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\"\\\n\x12QuerySupersRequest\x12\x46\n\npagination\x18\x01 \x01(\x0b\x32&.cosmos.base.query.v1beta1.PageRequestR\npagination\"\x95\x01\n\x13QuerySupersResponse\x12\x35\n\x06supers\x18\x01 \x03(\x0b\x32\x17.irishub.guardian.SuperB\x04\xc8\xde\x1f\x00R\x06supers\x12G\n\npagination\x18\x02 \x01(\x0b\x32\'.cosmos.base.query.v1beta1.PageResponseR\npagination2\x80\x01\n\x05Query\x12w\n\x06Supers\x12$.irishub.guardian.QuerySupersRequest\x1a%.irishub.guardian.QuerySupersResponse\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/irishub/guardian/supersB\xb4\x01\n\x14\x63om.irishub.guardianB\nQueryProtoZ1github.com/irisnet/irishub/modules/guardian/types\xa2\x02\x03IGX\xaa\x02\x10Irishub.Guardian\xca\x02\x10Irishub\\Guardian\xe2\x02\x1cIrishub\\Guardian\\GPBMetadata\xea\x02\x11Irishub::Guardianb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irishub.guardian.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.irishub.guardianB\nQueryProtoP\001Z1github.com/irisnet/irishub/modules/guardian/types\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishub\\Guardian\\GPBMetadata\352\002\021Irishub::Guardian'
+  DESCRIPTOR._serialized_options = b'\n\024com.irishub.guardianB\nQueryProtoZ1github.com/irisnet/irishub/modules/guardian/types\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishub\\Guardian\\GPBMetadata\352\002\021Irishub::Guardian'
   _QUERYSUPERSRESPONSE.fields_by_name['supers']._options = None
   _QUERYSUPERSRESPONSE.fields_by_name['supers']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Supers']._options = None

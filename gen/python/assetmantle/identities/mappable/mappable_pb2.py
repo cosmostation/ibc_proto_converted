@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.documents.base import document_pb2 as assetmantle_dot_documents_dot_base_dot_document__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.assetmantle/identities/mappable/mappable.proto\x12\'assetmantle.modules.identities.mappable\x1a)assetmantle/documents/base/document.proto\"S\n\x08Mappable\x12G\n\x08identity\x18\x01 \x01(\x0b\x32+.assetmantle.schema.documents.base.DocumentR\x08identityB\xfc\x01\n+com.assetmantle.modules.identities.mappableB\rMappableProtoP\x01\xa2\x02\x04\x41MIM\xaa\x02\'Assetmantle.Modules.Identities.Mappable\xca\x02\'Assetmantle\\Modules\\Identities\\Mappable\xe2\x02\x33\x41ssetmantle\\Modules\\Identities\\Mappable\\GPBMetadata\xea\x02*Assetmantle::Modules::Identities::Mappableb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.assetmantle/identities/mappable/mappable.proto\x12\'assetmantle.modules.identities.mappable\x1a)assetmantle/documents/base/document.proto\"S\n\x08Mappable\x12G\n\x08identity\x18\x01 \x01(\x0b\x32+.assetmantle.schema.documents.base.DocumentR\x08identityB\xfa\x01\n+com.assetmantle.modules.identities.mappableB\rMappableProto\xa2\x02\x04\x41MIM\xaa\x02\'Assetmantle.Modules.Identities.Mappable\xca\x02\'Assetmantle\\Modules\\Identities\\Mappable\xe2\x02\x33\x41ssetmantle\\Modules\\Identities\\Mappable\\GPBMetadata\xea\x02*Assetmantle::Modules::Identities::Mappableb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.mappable.mappable_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n+com.assetmantle.modules.identities.mappableB\rMappableProtoP\001\242\002\004AMIM\252\002\'Assetmantle.Modules.Identities.Mappable\312\002\'Assetmantle\\Modules\\Identities\\Mappable\342\0023Assetmantle\\Modules\\Identities\\Mappable\\GPBMetadata\352\002*Assetmantle::Modules::Identities::Mappable'
+  DESCRIPTOR._serialized_options = b'\n+com.assetmantle.modules.identities.mappableB\rMappableProto\242\002\004AMIM\252\002\'Assetmantle.Modules.Identities.Mappable\312\002\'Assetmantle\\Modules\\Identities\\Mappable\342\0023Assetmantle\\Modules\\Identities\\Mappable\\GPBMetadata\352\002*Assetmantle::Modules::Identities::Mappable'
   _globals['_MAPPABLE']._serialized_start=134
   _globals['_MAPPABLE']._serialized_end=217
 # @@protoc_insertion_point(module_scope)

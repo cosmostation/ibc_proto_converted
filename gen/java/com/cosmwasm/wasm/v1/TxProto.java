@@ -119,6 +119,7 @@ public final class TxProto {
               com.cosmwasm.wasm.v1.TxProto.MsgStoreCode.class, com.cosmwasm.wasm.v1.TxProto.MsgStoreCode.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -194,7 +195,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInstantiatePermission() {
-      return instantiatePermission_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -242,7 +243,7 @@ public final class TxProto {
       if (!wasmByteCode_.isEmpty()) {
         output.writeBytes(2, wasmByteCode_);
       }
-      if (instantiatePermission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getInstantiatePermission());
       }
       getUnknownFields().writeTo(output);
@@ -261,7 +262,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, wasmByteCode_);
       }
-      if (instantiatePermission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getInstantiatePermission());
       }
@@ -431,13 +432,19 @@ public final class TxProto {
 
       // Construct using com.cosmwasm.wasm.v1.TxProto.MsgStoreCode.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInstantiatePermissionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -489,11 +496,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.wasmByteCode_ = wasmByteCode_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.instantiatePermission_ = instantiatePermissionBuilder_ == null
               ? instantiatePermission_
               : instantiatePermissionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -838,8 +848,10 @@ public final class TxProto {
         } else {
           instantiatePermissionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (instantiatePermission_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

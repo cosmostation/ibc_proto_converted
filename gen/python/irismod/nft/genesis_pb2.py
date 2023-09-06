@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from irismod.nft import nft_pb2 as irismod_dot_nft_dot_nft__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19irismod/nft/genesis.proto\x12\x0birismod.nft\x1a\x14gogoproto/gogo.proto\x1a\x15irismod/nft/nft.proto\"O\n\x0cGenesisState\x12?\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32\x17.irismod.nft.CollectionB\x04\xc8\xde\x1f\x00R\x0b\x63ollectionsB\x9a\x01\n\x0f\x63om.irismod.nftB\x0cGenesisProtoP\x01Z,github.com/irisnet/irismod/modules/nft/types\xa2\x02\x03INX\xaa\x02\x0bIrismod.Nft\xca\x02\x0bIrismod\\Nft\xe2\x02\x17Irismod\\Nft\\GPBMetadata\xea\x02\x0cIrismod::Nftb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19irismod/nft/genesis.proto\x12\x0birismod.nft\x1a\x14gogoproto/gogo.proto\x1a\x15irismod/nft/nft.proto\"O\n\x0cGenesisState\x12?\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32\x17.irismod.nft.CollectionB\x04\xc8\xde\x1f\x00R\x0b\x63ollectionsB\x98\x01\n\x0f\x63om.irismod.nftB\x0cGenesisProtoZ,github.com/irisnet/irismod/modules/nft/types\xa2\x02\x03INX\xaa\x02\x0bIrismod.Nft\xca\x02\x0bIrismod\\Nft\xe2\x02\x17Irismod\\Nft\\GPBMetadata\xea\x02\x0cIrismod::Nftb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.nft.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\017com.irismod.nftB\014GenesisProtoP\001Z,github.com/irisnet/irismod/modules/nft/types\242\002\003INX\252\002\013Irismod.Nft\312\002\013Irismod\\Nft\342\002\027Irismod\\Nft\\GPBMetadata\352\002\014Irismod::Nft'
+  DESCRIPTOR._serialized_options = b'\n\017com.irismod.nftB\014GenesisProtoZ,github.com/irisnet/irismod/modules/nft/types\242\002\003INX\252\002\013Irismod.Nft\312\002\013Irismod\\Nft\342\002\027Irismod\\Nft\\GPBMetadata\352\002\014Irismod::Nft'
   _GENESISSTATE.fields_by_name['collections']._options = None
   _GENESISSTATE.fields_by_name['collections']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=87

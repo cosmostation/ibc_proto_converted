@@ -1,4 +1,4 @@
-// source: pstake/lspersistence/v1beta1/liquidstaking.proto
+// source: crescent/liquidstaking/v1beta1/liquidstaking.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lspersistence.v1beta1.WhitelistedValidator');
+goog.provide('proto.crescent.liquidstaking.v1beta1.WhitelistedValidator');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator = function(opt_data) {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.pstake.lspersistence.v1beta1.WhitelistedValidator, jspb.Message);
+goog.inherits(proto.crescent.liquidstaking.v1beta1.WhitelistedValidator, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.pstake.lspersistence.v1beta1.WhitelistedValidator.displayName = 'proto.pstake.lspersistence.v1beta1.WhitelistedValidator';
+  proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.displayName = 'proto.crescent.liquidstaking.v1beta1.WhitelistedValidator';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.toObject = function(opt_includeInstance) {
-  return proto.pstake.lspersistence.v1beta1.WhitelistedValidator.toObject(opt_includeInstance, this);
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.prototype.toObject = function(opt_includeInstance) {
+  return proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.toObject = fun
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.pstake.lspersistence.v1beta1.WhitelistedValidator} msg The msg instance to transform.
+ * @param {!proto.crescent.liquidstaking.v1beta1.WhitelistedValidator} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.toObject = function(includeInstance, msg) {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.toObject = function(includeInstance, msg) {
   var f, obj = {
     validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
     targetWeight: jspb.Message.getFieldWithDefault(msg, 2, "")
@@ -85,23 +85,23 @@ proto.pstake.lspersistence.v1beta1.WhitelistedValidator.toObject = function(incl
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.pstake.lspersistence.v1beta1.WhitelistedValidator}
+ * @return {!proto.crescent.liquidstaking.v1beta1.WhitelistedValidator}
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.deserializeBinary = function(bytes) {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.pstake.lspersistence.v1beta1.WhitelistedValidator;
-  return proto.pstake.lspersistence.v1beta1.WhitelistedValidator.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.crescent.liquidstaking.v1beta1.WhitelistedValidator;
+  return proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.pstake.lspersistence.v1beta1.WhitelistedValidator} msg The message object to deserialize into.
+ * @param {!proto.crescent.liquidstaking.v1beta1.WhitelistedValidator} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.pstake.lspersistence.v1beta1.WhitelistedValidator}
+ * @return {!proto.crescent.liquidstaking.v1beta1.WhitelistedValidator}
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.deserializeBinaryFromReader = function(msg, reader) {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -129,9 +129,9 @@ proto.pstake.lspersistence.v1beta1.WhitelistedValidator.deserializeBinaryFromRea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.serializeBinary = function() {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.pstake.lspersistence.v1beta1.WhitelistedValidator.serializeBinaryToWriter(this, writer);
+  proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -139,11 +139,11 @@ proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.serializeBinar
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.pstake.lspersistence.v1beta1.WhitelistedValidator} message
+ * @param {!proto.crescent.liquidstaking.v1beta1.WhitelistedValidator} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.serializeBinaryToWriter = function(message, writer) {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValidatorAddress();
   if (f.length > 0) {
@@ -166,16 +166,16 @@ proto.pstake.lspersistence.v1beta1.WhitelistedValidator.serializeBinaryToWriter 
  * optional string validator_address = 1;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.getValidatorAddress = function() {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.prototype.getValidatorAddress = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.WhitelistedValidator} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.WhitelistedValidator} returns this
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.setValidatorAddress = function(value) {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.prototype.setValidatorAddress = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -184,16 +184,16 @@ proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.setValidatorAd
  * optional string target_weight = 2;
  * @return {string}
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.getTargetWeight = function() {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.prototype.getTargetWeight = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.pstake.lspersistence.v1beta1.WhitelistedValidator} returns this
+ * @return {!proto.crescent.liquidstaking.v1beta1.WhitelistedValidator} returns this
  */
-proto.pstake.lspersistence.v1beta1.WhitelistedValidator.prototype.setTargetWeight = function(value) {
+proto.crescent.liquidstaking.v1beta1.WhitelistedValidator.prototype.setTargetWeight = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 

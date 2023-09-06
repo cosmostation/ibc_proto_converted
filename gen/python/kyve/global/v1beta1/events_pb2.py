@@ -16,15 +16,14 @@ import importlib
 kyve_dot_global_dot_v1beta1_dot_global__pb2 = importlib.import_module('kyve.global.v1beta1.global_pb2')
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kyve/global/v1beta1/events.proto\x12\x13kyve.global.v1beta1\x1a\x14gogoproto/gogo.proto\x1a kyve/global/v1beta1/global.proto\"\xb1\x01\n\x11\x45ventUpdateParams\x12@\n\nold_params\x18\x01 \x01(\x0b\x32\x1b.kyve.global.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\toldParams\x12@\n\nnew_params\x18\x02 \x01(\x0b\x32\x1b.kyve.global.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\tnewParams\x12\x18\n\x07payload\x18\x03 \x01(\tR\x07payloadB\xc3\x01\n\x17\x63om.kyve.global.v1beta1B\x0b\x45ventsProtoP\x01Z+github.com/KYVENetwork/chain/x/global/types\xa2\x02\x03KGX\xaa\x02\x13Kyve.Global.V1beta1\xca\x02\x14Kyve\\Global_\\V1beta1\xe2\x02 Kyve\\Global_\\V1beta1\\GPBMetadata\xea\x02\x15Kyve::Global::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n kyve/global/v1beta1/events.proto\x12\x13kyve.global.v1beta1\x1a\x14gogoproto/gogo.proto\x1a kyve/global/v1beta1/global.proto\"\xb1\x01\n\x11\x45ventUpdateParams\x12@\n\nold_params\x18\x01 \x01(\x0b\x32\x1b.kyve.global.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\toldParams\x12@\n\nnew_params\x18\x02 \x01(\x0b\x32\x1b.kyve.global.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\tnewParams\x12\x18\n\x07payload\x18\x03 \x01(\tR\x07payloadB\xc1\x01\n\x17\x63om.kyve.global.v1beta1B\x0b\x45ventsProtoZ+github.com/KYVENetwork/chain/x/global/types\xa2\x02\x03KGX\xaa\x02\x13Kyve.Global.V1beta1\xca\x02\x14Kyve\\Global_\\V1beta1\xe2\x02 Kyve\\Global_\\V1beta1\\GPBMetadata\xea\x02\x15Kyve::Global::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kyve.global.v1beta1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.kyve.global.v1beta1B\013EventsProtoP\001Z+github.com/KYVENetwork/chain/x/global/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002\024Kyve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1beta1\\GPBMetadata\352\002\025Kyve::Global::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.kyve.global.v1beta1B\013EventsProtoZ+github.com/KYVENetwork/chain/x/global/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002\024Kyve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1beta1\\GPBMetadata\352\002\025Kyve::Global::V1beta1'
   _EVENTUPDATEPARAMS.fields_by_name['old_params']._options = None
   _EVENTUPDATEPARAMS.fields_by_name['old_params']._serialized_options = b'\310\336\037\000'
   _EVENTUPDATEPARAMS.fields_by_name['new_params']._options = None

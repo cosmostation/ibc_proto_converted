@@ -489,6 +489,7 @@ public final class QueryProto {
               com.comdex.collector.v1beta1.QueryProto.QueryParamsResponse.class, com.comdex.collector.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.comdex.collector.v1beta1.ParamsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.collector.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.collector.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1147,6 +1159,7 @@ public final class QueryProto {
               com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppRequest.class, com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -1166,7 +1179,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -1201,7 +1214,7 @@ public final class QueryProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1217,7 +1230,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1380,13 +1393,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1434,11 +1453,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1644,8 +1666,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1839,6 +1863,7 @@ public final class QueryProto {
               com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppResponse.class, com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTORLOOKUP_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.collector.v1beta1.CollectorProto.CollectorLookupTableData> collectorLookup_;
@@ -1888,7 +1913,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -1923,7 +1948,7 @@ public final class QueryProto {
       for (int i = 0; i < collectorLookup_.size(); i++) {
         output.writeMessage(1, collectorLookup_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1939,7 +1964,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, collectorLookup_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2103,13 +2128,20 @@ public final class QueryProto {
 
       // Construct using com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectorLookupFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2173,11 +2205,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2622,8 +2657,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3342,6 +3379,7 @@ public final class QueryProto {
               com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppAndAssetResponse.class, com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppAndAssetResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTORLOOKUP_FIELD_NUMBER = 1;
     private com.comdex.collector.v1beta1.CollectorProto.CollectorLookupTableData collectorLookup_;
     /**
@@ -3350,7 +3388,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCollectorLookup() {
-      return collectorLookup_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.collector.v1beta1.CollectorLookupTableData collectorLookup = 1 [json_name = "collectorLookup", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"collectorLookup&#92;""];</code>
@@ -3382,7 +3420,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (collectorLookup_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCollectorLookup());
       }
       getUnknownFields().writeTo(output);
@@ -3394,7 +3432,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (collectorLookup_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCollectorLookup());
       }
@@ -3552,13 +3590,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppAndAssetResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectorLookupFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3602,11 +3646,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.collector.v1beta1.QueryProto.QueryCollectorLookupByAppAndAssetResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collectorLookup_ = collectorLookupBuilder_ == null
               ? collectorLookup_
               : collectorLookupBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3772,8 +3819,10 @@ public final class QueryProto {
         } else {
           collectorLookupBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (collectorLookup_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4492,6 +4541,7 @@ public final class QueryProto {
               com.comdex.collector.v1beta1.QueryProto.QueryCollectorDataByAppAndAssetResponse.class, com.comdex.collector.v1beta1.QueryProto.QueryCollectorDataByAppAndAssetResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTORDATA_FIELD_NUMBER = 1;
     private com.comdex.collector.v1beta1.CollectorProto.CollectorData collectorData_;
     /**
@@ -4500,7 +4550,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCollectorData() {
-      return collectorData_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.collector.v1beta1.CollectorData collectorData = 1 [json_name = "collectorData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"collectorData&#92;""];</code>
@@ -4532,7 +4582,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (collectorData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCollectorData());
       }
       getUnknownFields().writeTo(output);
@@ -4544,7 +4594,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (collectorData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCollectorData());
       }
@@ -4702,13 +4752,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.collector.v1beta1.QueryProto.QueryCollectorDataByAppAndAssetResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectorDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4752,11 +4808,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.collector.v1beta1.QueryProto.QueryCollectorDataByAppAndAssetResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collectorData_ = collectorDataBuilder_ == null
               ? collectorData_
               : collectorDataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4922,8 +4981,10 @@ public final class QueryProto {
         } else {
           collectorDataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (collectorData_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5642,6 +5703,7 @@ public final class QueryProto {
               com.comdex.collector.v1beta1.QueryProto.QueryAuctionMappingForAppAndAssetResponse.class, com.comdex.collector.v1beta1.QueryProto.QueryAuctionMappingForAppAndAssetResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ASSETIDTOAUCTIONLOOKUPTABLE_FIELD_NUMBER = 1;
     private com.comdex.collector.v1beta1.CollectorProto.AppAssetIdToAuctionLookupTable assetIdToAuctionLookupTable_;
     /**
@@ -5650,7 +5712,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAssetIdToAuctionLookupTable() {
-      return assetIdToAuctionLookupTable_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.collector.v1beta1.AppAssetIdToAuctionLookupTable assetIdToAuctionLookupTable = 1 [json_name = "assetIdToAuctionLookupTable", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetIdToAuctionLookupTable&#92;""];</code>
@@ -5682,7 +5744,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (assetIdToAuctionLookupTable_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAssetIdToAuctionLookupTable());
       }
       getUnknownFields().writeTo(output);
@@ -5694,7 +5756,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (assetIdToAuctionLookupTable_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAssetIdToAuctionLookupTable());
       }
@@ -5852,13 +5914,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.collector.v1beta1.QueryProto.QueryAuctionMappingForAppAndAssetResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetIdToAuctionLookupTableFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5902,11 +5970,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.collector.v1beta1.QueryProto.QueryAuctionMappingForAppAndAssetResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.assetIdToAuctionLookupTable_ = assetIdToAuctionLookupTableBuilder_ == null
               ? assetIdToAuctionLookupTable_
               : assetIdToAuctionLookupTableBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6072,8 +6143,10 @@ public final class QueryProto {
         } else {
           assetIdToAuctionLookupTableBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (assetIdToAuctionLookupTable_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6792,6 +6865,7 @@ public final class QueryProto {
               com.comdex.collector.v1beta1.QueryProto.QueryNetFeeCollectedForAppAndAssetResponse.class, com.comdex.collector.v1beta1.QueryProto.QueryNetFeeCollectedForAppAndAssetResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ASSETIDTOFEECOLLECTED_FIELD_NUMBER = 1;
     private com.comdex.collector.v1beta1.CollectorProto.AppAssetIdToFeeCollectedData assetIdToFeeCollected_;
     /**
@@ -6800,7 +6874,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAssetIdToFeeCollected() {
-      return assetIdToFeeCollected_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.collector.v1beta1.AppAssetIdToFeeCollectedData assetIdToFeeCollected = 1 [json_name = "assetIdToFeeCollected", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetIdToFeeCollected&#92;""];</code>
@@ -6832,7 +6906,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (assetIdToFeeCollected_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAssetIdToFeeCollected());
       }
       getUnknownFields().writeTo(output);
@@ -6844,7 +6918,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (assetIdToFeeCollected_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAssetIdToFeeCollected());
       }
@@ -7002,13 +7076,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.collector.v1beta1.QueryProto.QueryNetFeeCollectedForAppAndAssetResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetIdToFeeCollectedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7052,11 +7132,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.collector.v1beta1.QueryProto.QueryNetFeeCollectedForAppAndAssetResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.assetIdToFeeCollected_ = assetIdToFeeCollectedBuilder_ == null
               ? assetIdToFeeCollected_
               : assetIdToFeeCollectedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7222,8 +7305,10 @@ public final class QueryProto {
         } else {
           assetIdToFeeCollectedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (assetIdToFeeCollected_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

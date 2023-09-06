@@ -16,15 +16,14 @@ from assetmantle.ids.base import asset_id_pb2 as assetmantle_dot_ids_dot_base_do
 from assetmantle.ids.base import coin_id_pb2 as assetmantle_dot_ids_dot_base_dot_coin__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/ids/base/any_ownable_id.proto\x12\x1b\x61ssetmantle.schema.ids.base\x1a\x14gogoproto/gogo.proto\x1a#assetmantle/ids/base/asset_id.proto\x1a\"assetmantle/ids/base/coin_id.proto\"\xa1\x01\n\x0c\x41nyOwnableID\x12\x42\n\tasset_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.AssetIDH\x00R\x07\x61ssetID\x12?\n\x08\x63oin_i_d\x18\x02 \x01(\x0b\x32#.assetmantle.schema.ids.base.CoinIDH\x00R\x06\x63oinID:\x04\x88\xa0\x1f\x00\x42\x06\n\x04implB\xc4\x01\n\x1f\x63om.assetmantle.schema.ids.baseB\x11\x41nyOwnableIdProtoP\x01\xa2\x02\x04\x41SIB\xaa\x02\x1b\x41ssetmantle.Schema.Ids.Base\xca\x02\x1b\x41ssetmantle\\Schema\\Ids\\Base\xe2\x02\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\xea\x02\x1e\x41ssetmantle::Schema::Ids::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/ids/base/any_ownable_id.proto\x12\x1b\x61ssetmantle.schema.ids.base\x1a\x14gogoproto/gogo.proto\x1a#assetmantle/ids/base/asset_id.proto\x1a\"assetmantle/ids/base/coin_id.proto\"\xa1\x01\n\x0c\x41nyOwnableID\x12\x42\n\tasset_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.AssetIDH\x00R\x07\x61ssetID\x12?\n\x08\x63oin_i_d\x18\x02 \x01(\x0b\x32#.assetmantle.schema.ids.base.CoinIDH\x00R\x06\x63oinID:\x04\x88\xa0\x1f\x00\x42\x06\n\x04implB\xc2\x01\n\x1f\x63om.assetmantle.schema.ids.baseB\x11\x41nyOwnableIdProto\xa2\x02\x04\x41SIB\xaa\x02\x1b\x41ssetmantle.Schema.Ids.Base\xca\x02\x1b\x41ssetmantle\\Schema\\Ids\\Base\xe2\x02\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\xea\x02\x1e\x41ssetmantle::Schema::Ids::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.ids.base.any_ownable_id_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\037com.assetmantle.schema.ids.baseB\021AnyOwnableIdProtoP\001\242\002\004ASIB\252\002\033Assetmantle.Schema.Ids.Base\312\002\033Assetmantle\\Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\352\002\036Assetmantle::Schema::Ids::Base'
+  DESCRIPTOR._serialized_options = b'\n\037com.assetmantle.schema.ids.baseB\021AnyOwnableIdProto\242\002\004ASIB\252\002\033Assetmantle.Schema.Ids.Base\312\002\033Assetmantle\\Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\352\002\036Assetmantle::Schema::Ids::Base'
   _ANYOWNABLEID._options = None
   _ANYOWNABLEID._serialized_options = b'\210\240\037\000'
   _globals['_ANYOWNABLEID']._serialized_start=170

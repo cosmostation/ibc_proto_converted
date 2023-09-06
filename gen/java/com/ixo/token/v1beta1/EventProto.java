@@ -72,6 +72,7 @@ public final class EventProto {
               com.ixo.token.v1beta1.EventProto.TokenCreatedEvent.class, com.ixo.token.v1beta1.EventProto.TokenCreatedEvent.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOKEN_FIELD_NUMBER = 1;
     private com.ixo.token.v1beta1.TokenProto.Token token_;
     /**
@@ -80,7 +81,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasToken() {
-      return token_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.token.v1beta1.Token token = 1 [json_name = "token"];</code>
@@ -112,7 +113,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getToken());
       }
       getUnknownFields().writeTo(output);
@@ -124,7 +125,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getToken());
       }
@@ -286,13 +287,19 @@ public final class EventProto {
 
       // Construct using com.ixo.token.v1beta1.EventProto.TokenCreatedEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -336,11 +343,14 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.token.v1beta1.EventProto.TokenCreatedEvent result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.token_ = tokenBuilder_ == null
               ? token_
               : tokenBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -506,8 +516,10 @@ public final class EventProto {
         } else {
           tokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (token_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -680,6 +692,7 @@ public final class EventProto {
               com.ixo.token.v1beta1.EventProto.TokenUpdatedEvent.class, com.ixo.token.v1beta1.EventProto.TokenUpdatedEvent.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOKEN_FIELD_NUMBER = 1;
     private com.ixo.token.v1beta1.TokenProto.Token token_;
     /**
@@ -688,7 +701,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasToken() {
-      return token_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.token.v1beta1.Token token = 1 [json_name = "token"];</code>
@@ -720,7 +733,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getToken());
       }
       getUnknownFields().writeTo(output);
@@ -732,7 +745,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (token_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getToken());
       }
@@ -894,13 +907,19 @@ public final class EventProto {
 
       // Construct using com.ixo.token.v1beta1.EventProto.TokenUpdatedEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -944,11 +963,14 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.token.v1beta1.EventProto.TokenUpdatedEvent result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.token_ = tokenBuilder_ == null
               ? token_
               : tokenBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1114,8 +1136,10 @@ public final class EventProto {
         } else {
           tokenBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (token_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1364,6 +1388,7 @@ public final class EventProto {
               com.ixo.token.v1beta1.EventProto.TokenMintedEvent.class, com.ixo.token.v1beta1.EventProto.TokenMintedEvent.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contractAddress_ = "";
@@ -1552,7 +1577,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasTokenProperties() {
-      return tokenProperties_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.token.v1beta1.TokenProperties tokenProperties = 5 [json_name = "tokenProperties"];</code>
@@ -1596,7 +1621,7 @@ public final class EventProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, amount_);
       }
-      if (tokenProperties_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getTokenProperties());
       }
       getUnknownFields().writeTo(output);
@@ -1620,7 +1645,7 @@ public final class EventProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, amount_);
       }
-      if (tokenProperties_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTokenProperties());
       }
@@ -1798,13 +1823,19 @@ public final class EventProto {
 
       // Construct using com.ixo.token.v1beta1.EventProto.TokenMintedEvent.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenPropertiesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1864,11 +1895,14 @@ public final class EventProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.amount_ = amount_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.tokenProperties_ = tokenPropertiesBuilder_ == null
               ? tokenProperties_
               : tokenPropertiesBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2422,8 +2456,10 @@ public final class EventProto {
         } else {
           tokenPropertiesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (tokenProperties_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

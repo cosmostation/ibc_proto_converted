@@ -2016,6 +2016,7 @@ public final class FarmingProto {
               com.crescent.farming.v1beta1.FarmingProto.BasePlan.class, com.crescent.farming.v1beta1.FarmingProto.BasePlan.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -2279,7 +2280,7 @@ public final class FarmingProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2317,7 +2318,7 @@ public final class FarmingProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return endTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2370,7 +2371,7 @@ public final class FarmingProto {
      */
     @java.lang.Override
     public boolean hasLastDistributionTime() {
-      return lastDistributionTime_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -2489,16 +2490,16 @@ public final class FarmingProto {
       for (int i = 0; i < stakingCoinWeights_.size(); i++) {
         output.writeMessage(6, stakingCoinWeights_.get(i));
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getEndTime());
       }
       if (terminated_ != false) {
         output.writeBool(9, terminated_);
       }
-      if (lastDistributionTime_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(10, getLastDistributionTime());
       }
       for (int i = 0; i < distributedCoins_.size(); i++) {
@@ -2534,11 +2535,11 @@ public final class FarmingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, stakingCoinWeights_.get(i));
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getStartTime());
       }
-      if (endTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getEndTime());
       }
@@ -2546,7 +2547,7 @@ public final class FarmingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, terminated_);
       }
-      if (lastDistributionTime_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLastDistributionTime());
       }
@@ -2770,13 +2771,23 @@ public final class FarmingProto {
 
       // Construct using com.crescent.farming.v1beta1.FarmingProto.BasePlan.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakingCoinWeightsFieldBuilder();
+          getStartTimeFieldBuilder();
+          getEndTimeFieldBuilder();
+          getLastDistributionTimeFieldBuilder();
+          getDistributedCoinsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2887,15 +2898,18 @@ public final class FarmingProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.terminationAddress_ = terminationAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.terminated_ = terminated_;
@@ -2904,7 +2918,9 @@ public final class FarmingProto {
           result.lastDistributionTime_ = lastDistributionTimeBuilder_ == null
               ? lastDistributionTime_
               : lastDistributionTimeBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3967,8 +3983,10 @@ public final class FarmingProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4122,8 +4140,10 @@ public final class FarmingProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (endTime_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4321,8 +4341,10 @@ public final class FarmingProto {
         } else {
           lastDistributionTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (lastDistributionTime_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4869,6 +4891,7 @@ public final class FarmingProto {
               com.crescent.farming.v1beta1.FarmingProto.FixedAmountPlan.class, com.crescent.farming.v1beta1.FarmingProto.FixedAmountPlan.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_PLAN_FIELD_NUMBER = 1;
     private com.crescent.farming.v1beta1.FarmingProto.BasePlan basePlan_;
     /**
@@ -4877,7 +4900,7 @@ public final class FarmingProto {
      */
     @java.lang.Override
     public boolean hasBasePlan() {
-      return basePlan_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.farming.v1beta1.BasePlan base_plan = 1 [json_name = "basePlan", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_plan&#92;""];</code>
@@ -4970,7 +4993,7 @@ public final class FarmingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (basePlan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBasePlan());
       }
       for (int i = 0; i < epochAmount_.size(); i++) {
@@ -4985,7 +5008,7 @@ public final class FarmingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (basePlan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBasePlan());
       }
@@ -5158,13 +5181,20 @@ public final class FarmingProto {
 
       // Construct using com.crescent.farming.v1beta1.FarmingProto.FixedAmountPlan.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBasePlanFieldBuilder();
+          getEpochAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5228,11 +5258,14 @@ public final class FarmingProto {
 
       private void buildPartial0(com.crescent.farming.v1beta1.FarmingProto.FixedAmountPlan result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.basePlan_ = basePlanBuilder_ == null
               ? basePlan_
               : basePlanBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5437,8 +5470,10 @@ public final class FarmingProto {
         } else {
           basePlanBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (basePlan_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5945,6 +5980,7 @@ public final class FarmingProto {
               com.crescent.farming.v1beta1.FarmingProto.RatioPlan.class, com.crescent.farming.v1beta1.FarmingProto.RatioPlan.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_PLAN_FIELD_NUMBER = 1;
     private com.crescent.farming.v1beta1.FarmingProto.BasePlan basePlan_;
     /**
@@ -5953,7 +5989,7 @@ public final class FarmingProto {
      */
     @java.lang.Override
     public boolean hasBasePlan() {
-      return basePlan_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.crescent.farming.v1beta1.BasePlan base_plan = 1 [json_name = "basePlan", (.gogoproto.embed) = true, (.gogoproto.moretags) = "yaml:&#92;"base_plan&#92;""];</code>
@@ -6032,7 +6068,7 @@ public final class FarmingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (basePlan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBasePlan());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochRatio_)) {
@@ -6047,7 +6083,7 @@ public final class FarmingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (basePlan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBasePlan());
       }
@@ -6217,13 +6253,19 @@ public final class FarmingProto {
 
       // Construct using com.crescent.farming.v1beta1.FarmingProto.RatioPlan.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBasePlanFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6268,14 +6310,17 @@ public final class FarmingProto {
 
       private void buildPartial0(com.crescent.farming.v1beta1.FarmingProto.RatioPlan result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.basePlan_ = basePlanBuilder_ == null
               ? basePlan_
               : basePlanBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.epochRatio_ = epochRatio_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6451,8 +6496,10 @@ public final class FarmingProto {
         } else {
           basePlanBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (basePlan_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&lum-network/millions/prize_batch.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\"\xa6\x01\n\nPrizeBatch\x12!\n\x0cpool_percent\x18\x01 \x01(\x04R\x0bpoolPercent\x12\x1a\n\x08quantity\x18\x02 \x01(\x04R\x08quantity\x12Y\n\x10\x64raw_probability\x18\x03 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0f\x64rawProbabilityB\xcc\x01\n\x18\x63om.lum.network.millionsB\x0fPrizeBatchProtoP\x01Z-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&lum-network/millions/prize_batch.proto\x12\x14lum.network.millions\x1a\x14gogoproto/gogo.proto\"\xa6\x01\n\nPrizeBatch\x12!\n\x0cpool_percent\x18\x01 \x01(\x04R\x0bpoolPercent\x12\x1a\n\x08quantity\x18\x02 \x01(\x04R\x08quantity\x12Y\n\x10\x64raw_probability\x18\x03 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x0f\x64rawProbabilityB\xca\x01\n\x18\x63om.lum.network.millionsB\x0fPrizeBatchProtoZ-github.com/lum-network/chain/x/millions/types\xa2\x02\x03LNM\xaa\x02\x14Lum.Network.Millions\xca\x02\x14Lum\\Network\\Millions\xe2\x02 Lum\\Network\\Millions\\GPBMetadata\xea\x02\x16Lum::Network::Millionsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.millions.prize_batch_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\017PrizeBatchProtoP\001Z-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
+  DESCRIPTOR._serialized_options = b'\n\030com.lum.network.millionsB\017PrizeBatchProtoZ-github.com/lum-network/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum::Network::Millions'
   _PRIZEBATCH.fields_by_name['draw_probability']._options = None
   _PRIZEBATCH.fields_by_name['draw_probability']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Dec'
   _globals['_PRIZEBATCH']._serialized_start=87

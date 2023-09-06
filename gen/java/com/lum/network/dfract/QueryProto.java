@@ -1761,6 +1761,7 @@ public final class QueryProto {
               com.lum.network.dfract.QueryProto.QueryParamsResponse.class, com.lum.network.dfract.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.lum.network.dfract.ParamsProto.Params params_;
     /**
@@ -1769,7 +1770,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1801,7 +1802,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1813,7 +1814,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1971,13 +1972,19 @@ public final class QueryProto {
 
       // Construct using com.lum.network.dfract.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2021,11 +2028,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.dfract.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2191,8 +2201,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2925,6 +2937,7 @@ public final class QueryProto {
               com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.class, com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -2933,7 +2946,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -2983,7 +2996,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       if (type_ != com.lum.network.dfract.QueryProto.DepositsQueryType.PENDING_WITHDRAWAL.getNumber()) {
@@ -2998,7 +3011,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -3163,13 +3176,19 @@ public final class QueryProto {
 
       // Construct using com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3214,14 +3233,17 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.type_ = type_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3395,8 +3417,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3648,6 +3672,7 @@ public final class QueryProto {
               com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.class, com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSITS_PENDING_WITHDRAWAL_FIELD_NUMBER = 1;
     private com.lum.network.dfract.DepositProto.Deposit depositsPendingWithdrawal_;
     /**
@@ -3656,7 +3681,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDepositsPendingWithdrawal() {
-      return depositsPendingWithdrawal_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
@@ -3682,7 +3707,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDepositsPendingMint() {
-      return depositsPendingMint_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
@@ -3708,7 +3733,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDepositsMinted() {
-      return depositsMinted_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
@@ -3740,13 +3765,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (depositsPendingWithdrawal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDepositsPendingWithdrawal());
       }
-      if (depositsPendingMint_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getDepositsPendingMint());
       }
-      if (depositsMinted_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getDepositsMinted());
       }
       getUnknownFields().writeTo(output);
@@ -3758,15 +3783,15 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (depositsPendingWithdrawal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDepositsPendingWithdrawal());
       }
-      if (depositsPendingMint_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDepositsPendingMint());
       }
-      if (depositsMinted_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDepositsMinted());
       }
@@ -3942,13 +3967,21 @@ public final class QueryProto {
 
       // Construct using com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositsPendingWithdrawalFieldBuilder();
+          getDepositsPendingMintFieldBuilder();
+          getDepositsMintedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4002,21 +4035,26 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.depositsPendingWithdrawal_ = depositsPendingWithdrawalBuilder_ == null
               ? depositsPendingWithdrawal_
               : depositsPendingWithdrawalBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.depositsPendingMint_ = depositsPendingMintBuilder_ == null
               ? depositsPendingMint_
               : depositsPendingMintBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.depositsMinted_ = depositsMintedBuilder_ == null
               ? depositsMinted_
               : depositsMintedBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4202,8 +4240,10 @@ public final class QueryProto {
         } else {
           depositsPendingWithdrawalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (depositsPendingWithdrawal_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4321,8 +4361,10 @@ public final class QueryProto {
         } else {
           depositsPendingMintBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (depositsPendingMint_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4440,8 +4482,10 @@ public final class QueryProto {
         } else {
           depositsMintedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (depositsMinted_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4635,6 +4679,7 @@ public final class QueryProto {
               com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.class, com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSITS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.lum.network.dfract.DepositProto.Deposit> deposits_;
@@ -4684,7 +4729,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4719,7 +4764,7 @@ public final class QueryProto {
       for (int i = 0; i < deposits_.size(); i++) {
         output.writeMessage(1, deposits_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4735,7 +4780,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, deposits_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4899,13 +4944,20 @@ public final class QueryProto {
 
       // Construct using com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4969,11 +5021,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5418,8 +5473,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

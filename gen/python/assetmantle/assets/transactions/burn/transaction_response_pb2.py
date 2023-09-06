@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/assets/transactions/burn/transaction_response.proto\x12,assetmantle.modules.assets.transactions.burn\"\x15\n\x13TransactionResponseB\xa2\x02\n0com.assetmantle.modules.assets.transactions.burnB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MATB\xaa\x02,Assetmantle.Modules.Assets.Transactions.Burn\xca\x02,Assetmantle\\Modules\\Assets\\Transactions\\Burn\xe2\x02\x38\x41ssetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Assets::Transactions::Burnb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/assets/transactions/burn/transaction_response.proto\x12,assetmantle.modules.assets.transactions.burn\"\x15\n\x13TransactionResponseB\xa0\x02\n0com.assetmantle.modules.assets.transactions.burnB\x18TransactionResponseProto\xa2\x02\x05\x41MATB\xaa\x02,Assetmantle.Modules.Assets.Transactions.Burn\xca\x02,Assetmantle\\Modules\\Assets\\Transactions\\Burn\xe2\x02\x38\x41ssetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Assets::Transactions::Burnb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.assets.transactions.burn.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.assets.transactions.burnB\030TransactionResponseProtoP\001\242\002\005AMATB\252\002,Assetmantle.Modules.Assets.Transactions.Burn\312\002,Assetmantle\\Modules\\Assets\\Transactions\\Burn\342\0028Assetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\352\0020Assetmantle::Modules::Assets::Transactions::Burn'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.assets.transactions.burnB\030TransactionResponseProto\242\002\005AMATB\252\002,Assetmantle.Modules.Assets.Transactions.Burn\312\002,Assetmantle\\Modules\\Assets\\Transactions\\Burn\342\0028Assetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\352\0020Assetmantle::Modules::Assets::Transactions::Burn'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=113
   _globals['_TRANSACTIONRESPONSE']._serialized_end=134
 # @@protoc_insertion_point(module_scope)

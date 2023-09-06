@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from likechain.iscn import iscnid_pb2 as likechain_dot_iscn_dot_iscnid__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1alikechain/iscn/store.proto\x12\x0elikechain.iscn\x1a\x14gogoproto/gogo.proto\x1a\x1blikechain/iscn/iscnid.proto\"\x88\x01\n\x0bStoreRecord\x12\x35\n\x07iscn_id\x18\x01 \x01(\x0b\x32\x16.likechain.iscn.IscnIdB\x04\xc8\xde\x1f\x00R\x06iscnId\x12\x1b\n\tcid_bytes\x18\x02 \x01(\x0cR\x08\x63idBytes\x12%\n\x04\x64\x61ta\x18\x03 \x01(\x0c\x42\x11\xc8\xde\x1f\x00\xda\xde\x1f\tIscnInputR\x04\x64\x61ta\"h\n\x0f\x43ontentIdRecord\x12.\n\x13owner_address_bytes\x18\x01 \x01(\x0cR\x11ownerAddressBytes\x12%\n\x0elatest_version\x18\x02 \x01(\x04R\rlatestVersionB\xad\x01\n\x12\x63om.likechain.iscnB\nStoreProtoP\x01Z2github.com/likecoin/likecoin-chain/v4/x/iscn/types\xa2\x02\x03LIX\xaa\x02\x0eLikechain.Iscn\xca\x02\x0eLikechain\\Iscn\xe2\x02\x1aLikechain\\Iscn\\GPBMetadata\xea\x02\x0fLikechain::Iscnb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1alikechain/iscn/store.proto\x12\x0elikechain.iscn\x1a\x14gogoproto/gogo.proto\x1a\x1blikechain/iscn/iscnid.proto\"\x88\x01\n\x0bStoreRecord\x12\x35\n\x07iscn_id\x18\x01 \x01(\x0b\x32\x16.likechain.iscn.IscnIdB\x04\xc8\xde\x1f\x00R\x06iscnId\x12\x1b\n\tcid_bytes\x18\x02 \x01(\x0cR\x08\x63idBytes\x12%\n\x04\x64\x61ta\x18\x03 \x01(\x0c\x42\x11\xc8\xde\x1f\x00\xda\xde\x1f\tIscnInputR\x04\x64\x61ta\"h\n\x0f\x43ontentIdRecord\x12.\n\x13owner_address_bytes\x18\x01 \x01(\x0cR\x11ownerAddressBytes\x12%\n\x0elatest_version\x18\x02 \x01(\x04R\rlatestVersionB\xab\x01\n\x12\x63om.likechain.iscnB\nStoreProtoZ2github.com/likecoin/likecoin-chain/v4/x/iscn/types\xa2\x02\x03LIX\xaa\x02\x0eLikechain.Iscn\xca\x02\x0eLikechain\\Iscn\xe2\x02\x1aLikechain\\Iscn\\GPBMetadata\xea\x02\x0fLikechain::Iscnb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'likechain.iscn.store_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.likechain.iscnB\nStoreProtoP\001Z2github.com/likecoin/likecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Likechain::Iscn'
+  DESCRIPTOR._serialized_options = b'\n\022com.likechain.iscnB\nStoreProtoZ2github.com/likecoin/likecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Likechain::Iscn'
   _STORERECORD.fields_by_name['iscn_id']._options = None
   _STORERECORD.fields_by_name['iscn_id']._serialized_options = b'\310\336\037\000'
   _STORERECORD.fields_by_name['data']._options = None

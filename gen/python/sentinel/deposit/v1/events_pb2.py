@@ -15,15 +15,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n sentinel/deposit/v1/events.proto\x12\x13sentinel.deposit.v1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\xab\x01\n\x08\x45ventAdd\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12q\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB@\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"coins\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins\"\xb0\x01\n\rEventSubtract\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12q\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB@\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"coins\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oinsB\xce\x01\n\x17\x63om.sentinel.deposit.v1B\x0b\x45ventsProtoP\x01Z0github.com/sentinel-official/hub/x/deposit/types\xa2\x02\x03SDX\xaa\x02\x13Sentinel.Deposit.V1\xca\x02\x13Sentinel\\Deposit\\V1\xe2\x02\x1fSentinel\\Deposit\\V1\\GPBMetadata\xea\x02\x15Sentinel::Deposit::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n sentinel/deposit/v1/events.proto\x12\x13sentinel.deposit.v1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\xab\x01\n\x08\x45ventAdd\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12q\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB@\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"coins\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins\"\xb0\x01\n\rEventSubtract\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12q\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB@\xc8\xde\x1f\x00\xf2\xde\x1f\x0cyaml:\"coins\"\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oinsB\xcc\x01\n\x17\x63om.sentinel.deposit.v1B\x0b\x45ventsProtoZ0github.com/sentinel-official/hub/x/deposit/types\xa2\x02\x03SDX\xaa\x02\x13Sentinel.Deposit.V1\xca\x02\x13Sentinel\\Deposit\\V1\xe2\x02\x1fSentinel\\Deposit\\V1\\GPBMetadata\xea\x02\x15Sentinel::Deposit::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.deposit.v1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.deposit.v1B\013EventsProtoP\001Z0github.com/sentinel-official/hub/x/deposit/types\242\002\003SDX\252\002\023Sentinel.Deposit.V1\312\002\023Sentinel\\Deposit\\V1\342\002\037Sentinel\\Deposit\\V1\\GPBMetadata\352\002\025Sentinel::Deposit::V1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.deposit.v1B\013EventsProtoZ0github.com/sentinel-official/hub/x/deposit/types\242\002\003SDX\252\002\023Sentinel.Deposit.V1\312\002\023Sentinel\\Deposit\\V1\342\002\037Sentinel\\Deposit\\V1\\GPBMetadata\352\002\025Sentinel::Deposit::V1\310\341\036\000\250\342\036\000'
   _EVENTADD.fields_by_name['address']._options = None
   _EVENTADD.fields_by_name['address']._serialized_options = b'\362\336\037\016yaml:\"address\"'
   _EVENTADD.fields_by_name['coins']._options = None

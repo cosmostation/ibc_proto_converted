@@ -151,6 +151,7 @@ public final class TxProto {
               com.cosmos.gov.v1beta1.TxProto.MsgSubmitProposal.class, com.cosmos.gov.v1beta1.TxProto.MsgSubmitProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTENT_FIELD_NUMBER = 1;
     private com.google.protobuf.Any content_;
     /**
@@ -163,7 +164,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return content_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -311,7 +312,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getContent());
       }
       for (int i = 0; i < initialDeposit_.size(); i++) {
@@ -329,7 +330,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContent());
       }
@@ -509,13 +510,20 @@ public final class TxProto {
 
       // Construct using com.cosmos.gov.v1beta1.TxProto.MsgSubmitProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContentFieldBuilder();
+          getInitialDepositFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -580,14 +588,17 @@ public final class TxProto {
 
       private void buildPartial0(com.cosmos.gov.v1beta1.TxProto.MsgSubmitProposal result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.proposer_ = proposer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -822,8 +833,10 @@ public final class TxProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (content_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

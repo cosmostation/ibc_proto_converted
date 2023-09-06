@@ -207,6 +207,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.Any.class, com.payload.PayloadProto.Any.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CALLTX_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.CallTx callTx_;
     /**
@@ -215,7 +216,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasCallTx() {
-      return callTx_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
@@ -241,7 +242,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasSendTx() {
-      return sendTx_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
@@ -267,7 +268,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasNameTx() {
-      return nameTx_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
@@ -293,7 +294,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasPermsTx() {
-      return permsTx_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
@@ -319,7 +320,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasGovTx() {
-      return govTx_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
@@ -345,7 +346,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasBondTx() {
-      return bondTx_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
@@ -371,7 +372,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasUnbondTx() {
-      return unbondTx_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
@@ -397,7 +398,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasBatchTx() {
-      return batchTx_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
@@ -423,7 +424,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasProposalTx() {
-      return proposalTx_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
@@ -449,7 +450,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasIdentifyTx() {
-      return identifyTx_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
@@ -481,34 +482,34 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (callTx_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCallTx());
       }
-      if (sendTx_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getSendTx());
       }
-      if (nameTx_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getNameTx());
       }
-      if (permsTx_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getPermsTx());
       }
-      if (govTx_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(5, getGovTx());
       }
-      if (bondTx_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(6, getBondTx());
       }
-      if (unbondTx_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeMessage(7, getUnbondTx());
       }
-      if (batchTx_ != null) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeMessage(8, getBatchTx());
       }
-      if (proposalTx_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(9, getProposalTx());
       }
-      if (identifyTx_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeMessage(10, getIdentifyTx());
       }
       getUnknownFields().writeTo(output);
@@ -520,43 +521,43 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (callTx_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCallTx());
       }
-      if (sendTx_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSendTx());
       }
-      if (nameTx_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getNameTx());
       }
-      if (permsTx_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPermsTx());
       }
-      if (govTx_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getGovTx());
       }
-      if (bondTx_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getBondTx());
       }
-      if (unbondTx_ != null) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getUnbondTx());
       }
-      if (batchTx_ != null) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getBatchTx());
       }
-      if (proposalTx_ != null) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getProposalTx());
       }
-      if (identifyTx_ != null) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getIdentifyTx());
       }
@@ -799,13 +800,28 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.Any.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCallTxFieldBuilder();
+          getSendTxFieldBuilder();
+          getNameTxFieldBuilder();
+          getPermsTxFieldBuilder();
+          getGovTxFieldBuilder();
+          getBondTxFieldBuilder();
+          getUnbondTxFieldBuilder();
+          getBatchTxFieldBuilder();
+          getProposalTxFieldBuilder();
+          getIdentifyTxFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -894,56 +910,68 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.Any result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.callTx_ = callTxBuilder_ == null
               ? callTx_
               : callTxBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sendTx_ = sendTxBuilder_ == null
               ? sendTx_
               : sendTxBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.nameTx_ = nameTxBuilder_ == null
               ? nameTx_
               : nameTxBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.permsTx_ = permsTxBuilder_ == null
               ? permsTx_
               : permsTxBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.govTx_ = govTxBuilder_ == null
               ? govTx_
               : govTxBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.bondTx_ = bondTxBuilder_ == null
               ? bondTx_
               : bondTxBuilder_.build();
+          to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.unbondTx_ = unbondTxBuilder_ == null
               ? unbondTx_
               : unbondTxBuilder_.build();
+          to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.batchTx_ = batchTxBuilder_ == null
               ? batchTx_
               : batchTxBuilder_.build();
+          to_bitField0_ |= 0x00000080;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.proposalTx_ = proposalTxBuilder_ == null
               ? proposalTx_
               : proposalTxBuilder_.build();
+          to_bitField0_ |= 0x00000100;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.identifyTx_ = identifyTxBuilder_ == null
               ? identifyTx_
               : identifyTxBuilder_.build();
+          to_bitField0_ |= 0x00000200;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1199,8 +1227,10 @@ public final class PayloadProto {
         } else {
           callTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (callTx_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1318,8 +1348,10 @@ public final class PayloadProto {
         } else {
           sendTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (sendTx_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1437,8 +1469,10 @@ public final class PayloadProto {
         } else {
           nameTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (nameTx_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1556,8 +1590,10 @@ public final class PayloadProto {
         } else {
           permsTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (permsTx_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1675,8 +1711,10 @@ public final class PayloadProto {
         } else {
           govTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (govTx_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1794,8 +1832,10 @@ public final class PayloadProto {
         } else {
           bondTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (bondTx_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1913,8 +1953,10 @@ public final class PayloadProto {
         } else {
           unbondTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (unbondTx_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2032,8 +2074,10 @@ public final class PayloadProto {
         } else {
           batchTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (batchTx_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2151,8 +2195,10 @@ public final class PayloadProto {
         } else {
           proposalTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (proposalTx_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2270,8 +2316,10 @@ public final class PayloadProto {
         } else {
           identifyTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (identifyTx_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3855,6 +3903,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.CallTx.class, com.payload.PayloadProto.CallTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.TxInput input_;
     /**
@@ -3867,7 +3916,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return input_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4058,7 +4107,7 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInput());
       }
       if (!address_.isEmpty()) {
@@ -4091,7 +4140,7 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInput());
       }
@@ -4314,13 +4363,20 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.CallTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputFieldBuilder();
+          getContractMetaFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4390,10 +4446,12 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.CallTx result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.address_ = address_;
@@ -4413,6 +4471,7 @@ public final class PayloadProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.gasPrice_ = gasPrice_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4685,8 +4744,10 @@ public final class PayloadProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (input_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7503,6 +7564,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.PermsTx.class, com.payload.PayloadProto.PermsTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.TxInput input_;
     /**
@@ -7515,7 +7577,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return input_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -7553,7 +7615,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasPermArgs() {
-      return permArgs_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -7593,10 +7655,10 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInput());
       }
-      if (permArgs_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getPermArgs());
       }
       getUnknownFields().writeTo(output);
@@ -7608,11 +7670,11 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInput());
       }
-      if (permArgs_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPermArgs());
       }
@@ -7783,13 +7845,20 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.PermsTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputFieldBuilder();
+          getPermArgsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7838,16 +7907,20 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.PermsTx result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.permArgs_ = permArgsBuilder_ == null
               ? permArgs_
               : permArgsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8043,8 +8116,10 @@ public final class PayloadProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (input_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8198,8 +8273,10 @@ public final class PayloadProto {
         } else {
           permArgsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (permArgs_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8452,6 +8529,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.NameTx.class, com.payload.PayloadProto.NameTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.TxInput input_;
     /**
@@ -8464,7 +8542,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return input_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -8613,7 +8691,7 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInput());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -8634,7 +8712,7 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInput());
       }
@@ -8819,13 +8897,19 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.NameTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8872,10 +8956,12 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.NameTx result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.name_ = name_;
@@ -8886,6 +8972,7 @@ public final class PayloadProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.fee_ = fee_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9099,8 +9186,10 @@ public final class PayloadProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (input_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9525,6 +9614,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.BondTx.class, com.payload.PayloadProto.BondTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.TxInput input_;
     /**
@@ -9537,7 +9627,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return input_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -9577,7 +9667,7 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInput());
       }
       getUnknownFields().writeTo(output);
@@ -9589,7 +9679,7 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInput());
       }
@@ -9747,13 +9837,19 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.BondTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9797,11 +9893,14 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.BondTx result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9987,8 +10086,10 @@ public final class PayloadProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (input_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10200,6 +10301,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.UnbondTx.class, com.payload.PayloadProto.UnbondTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.TxInput input_;
     /**
@@ -10208,7 +10310,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return input_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
@@ -10238,7 +10340,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasOutput() {
-      return output_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -10278,10 +10380,10 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInput());
       }
-      if (output_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getOutput());
       }
       getUnknownFields().writeTo(output);
@@ -10293,11 +10395,11 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInput());
       }
-      if (output_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOutput());
       }
@@ -10464,13 +10566,20 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.UnbondTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputFieldBuilder();
+          getOutputFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10519,16 +10628,20 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.UnbondTx result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.output_ = outputBuilder_ == null
               ? output_
               : outputBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10704,8 +10817,10 @@ public final class PayloadProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (input_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10843,8 +10958,10 @@ public final class PayloadProto {
         } else {
           outputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (output_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12213,6 +12330,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.ProposalTx.class, com.payload.PayloadProto.ProposalTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.TxInput input_;
     /**
@@ -12221,7 +12339,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return input_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
@@ -12269,7 +12387,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasProposal() {
-      return proposal_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
@@ -12301,7 +12419,7 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInput());
       }
       if (votingWeight_ != 0L) {
@@ -12310,7 +12428,7 @@ public final class PayloadProto {
       if (!proposalHash_.isEmpty()) {
         output.writeBytes(3, proposalHash_);
       }
-      if (proposal_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getProposal());
       }
       getUnknownFields().writeTo(output);
@@ -12322,7 +12440,7 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (input_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInput());
       }
@@ -12334,7 +12452,7 @@ public final class PayloadProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, proposalHash_);
       }
-      if (proposal_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProposal());
       }
@@ -12510,13 +12628,20 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.ProposalTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputFieldBuilder();
+          getProposalFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12567,10 +12692,12 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.ProposalTx result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.votingWeight_ = votingWeight_;
@@ -12582,7 +12709,9 @@ public final class PayloadProto {
           result.proposal_ = proposalBuilder_ == null
               ? proposal_
               : proposalBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12774,8 +12903,10 @@ public final class PayloadProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (input_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12957,8 +13088,10 @@ public final class PayloadProto {
         } else {
           proposalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (proposal_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13184,6 +13317,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.IdentifyTx.class, com.payload.PayloadProto.IdentifyTx.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INPUTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.payload.PayloadProto.TxInput> inputs_;
@@ -13257,7 +13391,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasNode() {
-      return node_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -13300,7 +13434,7 @@ public final class PayloadProto {
       for (int i = 0; i < inputs_.size(); i++) {
         output.writeMessage(1, inputs_.get(i));
       }
-      if (node_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getNode());
       }
       getUnknownFields().writeTo(output);
@@ -13316,7 +13450,7 @@ public final class PayloadProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, inputs_.get(i));
       }
-      if (node_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNode());
       }
@@ -13480,13 +13614,20 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.IdentifyTx.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputsFieldBuilder();
+          getNodeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13550,11 +13691,14 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.IdentifyTx result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.node_ = nodeBuilder_ == null
               ? node_
               : nodeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14091,8 +14235,10 @@ public final class PayloadProto {
         } else {
           nodeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (node_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -16009,6 +16155,7 @@ public final class PayloadProto {
               com.payload.PayloadProto.Proposal.class, com.payload.PayloadProto.Proposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -16095,7 +16242,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasBatchTx() {
-      return batchTx_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
@@ -16133,7 +16280,7 @@ public final class PayloadProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (batchTx_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getBatchTx());
       }
       getUnknownFields().writeTo(output);
@@ -16151,7 +16298,7 @@ public final class PayloadProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (batchTx_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBatchTx());
       }
@@ -16317,13 +16464,19 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.Proposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBatchTxFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -16375,11 +16528,14 @@ public final class PayloadProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.batchTx_ = batchTxBuilder_ == null
               ? batchTx_
               : batchTxBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16709,8 +16865,10 @@ public final class PayloadProto {
         } else {
           batchTxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (batchTx_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17048,6 +17206,7 @@ public final class PayloadProto {
       // @@protoc_insertion_point(enum_scope:payload.Ballot.ProposalState)
     }
 
+    private int bitField0_;
     public static final int PROPOSAL_FIELD_NUMBER = 1;
     private com.payload.PayloadProto.Proposal proposal_;
     /**
@@ -17056,7 +17215,7 @@ public final class PayloadProto {
      */
     @java.lang.Override
     public boolean hasProposal() {
-      return proposal_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
@@ -17158,7 +17317,7 @@ public final class PayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (proposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getProposal());
       }
       if (!finalizingTx_.isEmpty()) {
@@ -17179,7 +17338,7 @@ public final class PayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (proposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProposal());
       }
@@ -17362,13 +17521,20 @@ public final class PayloadProto {
 
       // Construct using com.payload.PayloadProto.Ballot.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProposalFieldBuilder();
+          getVotesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17434,10 +17600,12 @@ public final class PayloadProto {
 
       private void buildPartial0(com.payload.PayloadProto.Ballot result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proposal_ = proposalBuilder_ == null
               ? proposal_
               : proposalBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.finalizingTx_ = finalizingTx_;
@@ -17445,6 +17613,7 @@ public final class PayloadProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.proposalState_ = proposalState_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17665,8 +17834,10 @@ public final class PayloadProto {
         } else {
           proposalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (proposal_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

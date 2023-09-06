@@ -1428,6 +1428,7 @@ public final class Bep3Proto {
               com.kava.bep3.v1beta1.Bep3Proto.AssetParam.class, com.kava.bep3.v1beta1.Bep3Proto.AssetParam.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -1502,7 +1503,7 @@ public final class Bep3Proto {
      */
     @java.lang.Override
     public boolean hasSupplyLimit() {
-      return supplyLimit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1749,7 +1750,7 @@ public final class Bep3Proto {
       if (coinId_ != 0L) {
         output.writeInt64(2, coinId_);
       }
-      if (supplyLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getSupplyLimit());
       }
       if (active_ != false) {
@@ -1789,7 +1790,7 @@ public final class Bep3Proto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, coinId_);
       }
-      if (supplyLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSupplyLimit());
       }
@@ -2016,13 +2017,19 @@ public final class Bep3Proto {
 
       // Construct using com.kava.bep3.v1beta1.Bep3Proto.AssetParam.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSupplyLimitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2081,10 +2088,12 @@ public final class Bep3Proto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.coinId_ = coinId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.supplyLimit_ = supplyLimitBuilder_ == null
               ? supplyLimit_
               : supplyLimitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.active_ = active_;
@@ -2107,6 +2116,7 @@ public final class Bep3Proto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.maxBlockLock_ = maxBlockLock_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2508,8 +2518,10 @@ public final class Bep3Proto {
         } else {
           supplyLimitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (supplyLimit_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3214,6 +3226,7 @@ public final class Bep3Proto {
               com.kava.bep3.v1beta1.Bep3Proto.SupplyLimit.class, com.kava.bep3.v1beta1.Bep3Proto.SupplyLimit.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LIMIT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object limit_ = "";
@@ -3288,7 +3301,7 @@ public final class Bep3Proto {
      */
     @java.lang.Override
     public boolean hasTimePeriod() {
-      return timePeriod_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3381,7 +3394,7 @@ public final class Bep3Proto {
       if (timeLimited_ != false) {
         output.writeBool(2, timeLimited_);
       }
-      if (timePeriod_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getTimePeriod());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeBasedLimit_)) {
@@ -3403,7 +3416,7 @@ public final class Bep3Proto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, timeLimited_);
       }
-      if (timePeriod_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimePeriod());
       }
@@ -3581,13 +3594,19 @@ public final class Bep3Proto {
 
       // Construct using com.kava.bep3.v1beta1.Bep3Proto.SupplyLimit.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimePeriodFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3640,14 +3659,17 @@ public final class Bep3Proto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.timeLimited_ = timeLimited_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timePeriod_ = timePeriodBuilder_ == null
               ? timePeriod_
               : timePeriodBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timeBasedLimit_ = timeBasedLimit_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3997,8 +4019,10 @@ public final class Bep3Proto {
         } else {
           timePeriodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (timePeriod_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6602,6 +6626,7 @@ public final class Bep3Proto {
               com.kava.bep3.v1beta1.Bep3Proto.AssetSupply.class, com.kava.bep3.v1beta1.Bep3Proto.AssetSupply.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INCOMING_SUPPLY_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin incomingSupply_;
     /**
@@ -6614,7 +6639,7 @@ public final class Bep3Proto {
      */
     @java.lang.Override
     public boolean hasIncomingSupply() {
-      return incomingSupply_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6652,7 +6677,7 @@ public final class Bep3Proto {
      */
     @java.lang.Override
     public boolean hasOutgoingSupply() {
-      return outgoingSupply_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -6690,7 +6715,7 @@ public final class Bep3Proto {
      */
     @java.lang.Override
     public boolean hasCurrentSupply() {
-      return currentSupply_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -6728,7 +6753,7 @@ public final class Bep3Proto {
      */
     @java.lang.Override
     public boolean hasTimeLimitedCurrentSupply() {
-      return timeLimitedCurrentSupply_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -6766,7 +6791,7 @@ public final class Bep3Proto {
      */
     @java.lang.Override
     public boolean hasTimeElapsed() {
-      return timeElapsed_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -6806,19 +6831,19 @@ public final class Bep3Proto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (incomingSupply_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getIncomingSupply());
       }
-      if (outgoingSupply_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getOutgoingSupply());
       }
-      if (currentSupply_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getCurrentSupply());
       }
-      if (timeLimitedCurrentSupply_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getTimeLimitedCurrentSupply());
       }
-      if (timeElapsed_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(5, getTimeElapsed());
       }
       getUnknownFields().writeTo(output);
@@ -6830,23 +6855,23 @@ public final class Bep3Proto {
       if (size != -1) return size;
 
       size = 0;
-      if (incomingSupply_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIncomingSupply());
       }
-      if (outgoingSupply_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOutgoingSupply());
       }
-      if (currentSupply_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCurrentSupply());
       }
-      if (timeLimitedCurrentSupply_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTimeLimitedCurrentSupply());
       }
-      if (timeElapsed_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTimeElapsed());
       }
@@ -7044,13 +7069,23 @@ public final class Bep3Proto {
 
       // Construct using com.kava.bep3.v1beta1.Bep3Proto.AssetSupply.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIncomingSupplyFieldBuilder();
+          getOutgoingSupplyFieldBuilder();
+          getCurrentSupplyFieldBuilder();
+          getTimeLimitedCurrentSupplyFieldBuilder();
+          getTimeElapsedFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7114,31 +7149,38 @@ public final class Bep3Proto {
 
       private void buildPartial0(com.kava.bep3.v1beta1.Bep3Proto.AssetSupply result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.incomingSupply_ = incomingSupplyBuilder_ == null
               ? incomingSupply_
               : incomingSupplyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.outgoingSupply_ = outgoingSupplyBuilder_ == null
               ? outgoingSupply_
               : outgoingSupplyBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.currentSupply_ = currentSupplyBuilder_ == null
               ? currentSupply_
               : currentSupplyBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timeLimitedCurrentSupply_ = timeLimitedCurrentSupplyBuilder_ == null
               ? timeLimitedCurrentSupply_
               : timeLimitedCurrentSupplyBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.timeElapsed_ = timeElapsedBuilder_ == null
               ? timeElapsed_
               : timeElapsedBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7364,8 +7406,10 @@ public final class Bep3Proto {
         } else {
           incomingSupplyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (incomingSupply_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7519,8 +7563,10 @@ public final class Bep3Proto {
         } else {
           outgoingSupplyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (outgoingSupply_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7674,8 +7720,10 @@ public final class Bep3Proto {
         } else {
           currentSupplyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (currentSupply_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7829,8 +7877,10 @@ public final class Bep3Proto {
         } else {
           timeLimitedCurrentSupplyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (timeLimitedCurrentSupply_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7984,8 +8034,10 @@ public final class Bep3Proto {
         } else {
           timeElapsedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (timeElapsed_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

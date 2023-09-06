@@ -15,15 +15,14 @@ from ethermint.evm.v1 import evm_pb2 as ethermint_dot_evm_dot_v1_dot_evm__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x65thermint/evm/v1/genesis.proto\x12\x10\x65thermint.evm.v1\x1a\x1a\x65thermint/evm/v1/evm.proto\x1a\x14gogoproto/gogo.proto\"\x8a\x01\n\x0cGenesisState\x12\x42\n\x08\x61\x63\x63ounts\x18\x01 \x03(\x0b\x32 .ethermint.evm.v1.GenesisAccountB\x04\xc8\xde\x1f\x00R\x08\x61\x63\x63ounts\x12\x36\n\x06params\x18\x02 \x01(\x0b\x32\x18.ethermint.evm.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"\x82\x01\n\x0eGenesisAccount\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x12\n\x04\x63ode\x18\x02 \x01(\tR\x04\x63ode\x12\x42\n\x07storage\x18\x03 \x03(\x0b\x32\x17.ethermint.evm.v1.StateB\x0f\xc8\xde\x1f\x00\xaa\xdf\x1f\x07StorageR\x07storageB\xae\x01\n\x14\x63om.ethermint.evm.v1B\x0cGenesisProtoP\x01Z&github.com/evmos/evmos/v13/x/evm/types\xa2\x02\x03\x45\x45X\xaa\x02\x10\x45thermint.Evm.V1\xca\x02\x10\x45thermint\\Evm\\V1\xe2\x02\x1c\x45thermint\\Evm\\V1\\GPBMetadata\xea\x02\x12\x45thermint::Evm::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x65thermint/evm/v1/genesis.proto\x12\x10\x65thermint.evm.v1\x1a\x1a\x65thermint/evm/v1/evm.proto\x1a\x14gogoproto/gogo.proto\"\x8a\x01\n\x0cGenesisState\x12\x42\n\x08\x61\x63\x63ounts\x18\x01 \x03(\x0b\x32 .ethermint.evm.v1.GenesisAccountB\x04\xc8\xde\x1f\x00R\x08\x61\x63\x63ounts\x12\x36\n\x06params\x18\x02 \x01(\x0b\x32\x18.ethermint.evm.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\"\x82\x01\n\x0eGenesisAccount\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x12\n\x04\x63ode\x18\x02 \x01(\tR\x04\x63ode\x12\x42\n\x07storage\x18\x03 \x03(\x0b\x32\x17.ethermint.evm.v1.StateB\x0f\xc8\xde\x1f\x00\xaa\xdf\x1f\x07StorageR\x07storageB\xac\x01\n\x14\x63om.ethermint.evm.v1B\x0cGenesisProtoZ&github.com/evmos/evmos/v13/x/evm/types\xa2\x02\x03\x45\x45X\xaa\x02\x10\x45thermint.Evm.V1\xca\x02\x10\x45thermint\\Evm\\V1\xe2\x02\x1c\x45thermint\\Evm\\V1\\GPBMetadata\xea\x02\x12\x45thermint::Evm::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ethermint.evm.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.ethermint.evm.v1B\014GenesisProtoP\001Z&github.com/evmos/evmos/v13/x/evm/types\242\002\003EEX\252\002\020Ethermint.Evm.V1\312\002\020Ethermint\\Evm\\V1\342\002\034Ethermint\\Evm\\V1\\GPBMetadata\352\002\022Ethermint::Evm::V1'
+  DESCRIPTOR._serialized_options = b'\n\024com.ethermint.evm.v1B\014GenesisProtoZ&github.com/evmos/evmos/v13/x/evm/types\242\002\003EEX\252\002\020Ethermint.Evm.V1\312\002\020Ethermint\\Evm\\V1\342\002\034Ethermint\\Evm\\V1\\GPBMetadata\352\002\022Ethermint::Evm::V1'
   _GENESISSTATE.fields_by_name['accounts']._options = None
   _GENESISSTATE.fields_by_name['accounts']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['params']._options = None

@@ -81,6 +81,7 @@ public final class ClassRevealQueueProto {
               com.likechain.likenft.v1.ClassRevealQueueProto.ClassRevealQueueEntry.class, com.likechain.likenft.v1.ClassRevealQueueProto.ClassRevealQueueEntry.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REVEAL_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp revealTime_;
     /**
@@ -89,7 +90,7 @@ public final class ClassRevealQueueProto {
      */
     @java.lang.Override
     public boolean hasRevealTime() {
-      return revealTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp reveal_time = 1 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -160,7 +161,7 @@ public final class ClassRevealQueueProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (revealTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRevealTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
@@ -175,7 +176,7 @@ public final class ClassRevealQueueProto {
       if (size != -1) return size;
 
       size = 0;
-      if (revealTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRevealTime());
       }
@@ -340,13 +341,19 @@ public final class ClassRevealQueueProto {
 
       // Construct using com.likechain.likenft.v1.ClassRevealQueueProto.ClassRevealQueueEntry.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRevealTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -391,14 +398,17 @@ public final class ClassRevealQueueProto {
 
       private void buildPartial0(com.likechain.likenft.v1.ClassRevealQueueProto.ClassRevealQueueEntry result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.revealTime_ = revealTimeBuilder_ == null
               ? revealTime_
               : revealTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.classId_ = classId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -574,8 +584,10 @@ public final class ClassRevealQueueProto {
         } else {
           revealTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (revealTime_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

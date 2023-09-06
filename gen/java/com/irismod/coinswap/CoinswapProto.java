@@ -85,6 +85,7 @@ public final class CoinswapProto {
               com.irismod.coinswap.CoinswapProto.Input.class, com.irismod.coinswap.CoinswapProto.Input.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -132,7 +133,7 @@ public final class CoinswapProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
@@ -167,7 +168,7 @@ public final class CoinswapProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -182,7 +183,7 @@ public final class CoinswapProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCoin());
       }
@@ -348,13 +349,19 @@ public final class CoinswapProto {
 
       // Construct using com.irismod.coinswap.CoinswapProto.Input.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -402,11 +409,14 @@ public final class CoinswapProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -654,8 +664,10 @@ public final class CoinswapProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -841,6 +853,7 @@ public final class CoinswapProto {
               com.irismod.coinswap.CoinswapProto.Output.class, com.irismod.coinswap.CoinswapProto.Output.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -888,7 +901,7 @@ public final class CoinswapProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false];</code>
@@ -923,7 +936,7 @@ public final class CoinswapProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -938,7 +951,7 @@ public final class CoinswapProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCoin());
       }
@@ -1104,13 +1117,19 @@ public final class CoinswapProto {
 
       // Construct using com.irismod.coinswap.CoinswapProto.Output.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1158,11 +1177,14 @@ public final class CoinswapProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1410,8 +1432,10 @@ public final class CoinswapProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2872,6 +2896,7 @@ public final class CoinswapProto {
               com.irismod.coinswap.CoinswapProto.Params.class, com.irismod.coinswap.CoinswapProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin fee_;
     /**
@@ -2880,7 +2905,7 @@ public final class CoinswapProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return fee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin fee = 1 [json_name = "fee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
@@ -2912,7 +2937,7 @@ public final class CoinswapProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFee());
       }
       getUnknownFields().writeTo(output);
@@ -2924,7 +2949,7 @@ public final class CoinswapProto {
       if (size != -1) return size;
 
       size = 0;
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFee());
       }
@@ -3086,13 +3111,19 @@ public final class CoinswapProto {
 
       // Construct using com.irismod.coinswap.CoinswapProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3136,11 +3167,14 @@ public final class CoinswapProto {
 
       private void buildPartial0(com.irismod.coinswap.CoinswapProto.Params result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3306,8 +3340,10 @@ public final class CoinswapProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (fee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

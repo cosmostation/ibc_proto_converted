@@ -15,15 +15,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from sommelier.auction.v1 import auction_pb2 as sommelier_dot_auction_dot_v1_dot_auction__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#sommelier/auction/v1/proposal.proto\x12\nauction.v1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\"sommelier/auction/v1/auction.proto\"\x93\x01\n\x16SetTokenPricesProposal\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12\x41\n\x0ctoken_prices\x18\x03 \x03(\x0b\x32\x1e.auction.v1.ProposedTokenPriceR\x0btokenPrices\"\xb8\x01\n!SetTokenPricesProposalWithDeposit\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12\x41\n\x0ctoken_prices\x18\x03 \x03(\x0b\x32\x1e.auction.v1.ProposedTokenPriceR\x0btokenPrices\x12\x18\n\x07\x64\x65posit\x18\x04 \x01(\tR\x07\x64\x65positB\x99\x01\n\x0e\x63om.auction.v1B\rProposalProtoP\x01Z/github.com/peggyjv/sommelier/v4/x/auction/types\xa2\x02\x03\x41XX\xaa\x02\nAuction.V1\xca\x02\nAuction\\V1\xe2\x02\x16\x41uction\\V1\\GPBMetadata\xea\x02\x0b\x41uction::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#sommelier/auction/v1/proposal.proto\x12\nauction.v1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\"sommelier/auction/v1/auction.proto\"\x93\x01\n\x16SetTokenPricesProposal\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12\x41\n\x0ctoken_prices\x18\x03 \x03(\x0b\x32\x1e.auction.v1.ProposedTokenPriceR\x0btokenPrices\"\xb8\x01\n!SetTokenPricesProposalWithDeposit\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12\x41\n\x0ctoken_prices\x18\x03 \x03(\x0b\x32\x1e.auction.v1.ProposedTokenPriceR\x0btokenPrices\x12\x18\n\x07\x64\x65posit\x18\x04 \x01(\tR\x07\x64\x65positB\x97\x01\n\x0e\x63om.auction.v1B\rProposalProtoZ/github.com/peggyjv/sommelier/v4/x/auction/types\xa2\x02\x03\x41XX\xaa\x02\nAuction.V1\xca\x02\nAuction\\V1\xe2\x02\x16\x41uction\\V1\\GPBMetadata\xea\x02\x0b\x41uction::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sommelier.auction.v1.proposal_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\016com.auction.v1B\rProposalProtoP\001Z/github.com/peggyjv/sommelier/v4/x/auction/types\242\002\003AXX\252\002\nAuction.V1\312\002\nAuction\\V1\342\002\026Auction\\V1\\GPBMetadata\352\002\013Auction::V1'
+  DESCRIPTOR._serialized_options = b'\n\016com.auction.v1B\rProposalProtoZ/github.com/peggyjv/sommelier/v4/x/auction/types\242\002\003AXX\252\002\nAuction.V1\312\002\nAuction\\V1\342\002\026Auction\\V1\\GPBMetadata\352\002\013Auction::V1'
   _globals['_SETTOKENPRICESPROPOSAL']._serialized_start=115
   _globals['_SETTOKENPRICESPROPOSAL']._serialized_end=262
   _globals['_SETTOKENPRICESPROPOSALWITHDEPOSIT']._serialized_start=265

@@ -15,15 +15,14 @@ from irishub.mint import mint_pb2 as irishub_dot_mint_dot_mint__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1airishub/mint/genesis.proto\x12\x0cirishub.mint\x1a\x17irishub/mint/mint.proto\x1a\x14gogoproto/gogo.proto\"v\n\x0cGenesisState\x12\x32\n\x06minter\x18\x01 \x01(\x0b\x32\x14.irishub.mint.MinterB\x04\xc8\xde\x1f\x00R\x06minter\x12\x32\n\x06params\x18\x02 \x01(\x0b\x32\x14.irishub.mint.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xa0\x01\n\x10\x63om.irishub.mintB\x0cGenesisProtoP\x01Z-github.com/irisnet/irishub/modules/mint/types\xa2\x02\x03IMX\xaa\x02\x0cIrishub.Mint\xca\x02\x0cIrishub\\Mint\xe2\x02\x18Irishub\\Mint\\GPBMetadata\xea\x02\rIrishub::Mintb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1airishub/mint/genesis.proto\x12\x0cirishub.mint\x1a\x17irishub/mint/mint.proto\x1a\x14gogoproto/gogo.proto\"v\n\x0cGenesisState\x12\x32\n\x06minter\x18\x01 \x01(\x0b\x32\x14.irishub.mint.MinterB\x04\xc8\xde\x1f\x00R\x06minter\x12\x32\n\x06params\x18\x02 \x01(\x0b\x32\x14.irishub.mint.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\x9e\x01\n\x10\x63om.irishub.mintB\x0cGenesisProtoZ-github.com/irisnet/irishub/modules/mint/types\xa2\x02\x03IMX\xaa\x02\x0cIrishub.Mint\xca\x02\x0cIrishub\\Mint\xe2\x02\x18Irishub\\Mint\\GPBMetadata\xea\x02\rIrishub::Mintb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irishub.mint.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.irishub.mintB\014GenesisProtoP\001Z-github.com/irisnet/irishub/modules/mint/types\242\002\003IMX\252\002\014Irishub.Mint\312\002\014Irishub\\Mint\342\002\030Irishub\\Mint\\GPBMetadata\352\002\rIrishub::Mint'
+  DESCRIPTOR._serialized_options = b'\n\020com.irishub.mintB\014GenesisProtoZ-github.com/irisnet/irishub/modules/mint/types\242\002\003IMX\252\002\014Irishub.Mint\312\002\014Irishub\\Mint\342\002\030Irishub\\Mint\\GPBMetadata\352\002\rIrishub::Mint'
   _GENESISSTATE.fields_by_name['minter']._options = None
   _GENESISSTATE.fields_by_name['minter']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['params']._options = None

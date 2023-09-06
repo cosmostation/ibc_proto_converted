@@ -2296,6 +2296,7 @@ public final class ShieldProto {
               com.shentu.shield.v1alpha1.ShieldProto.Purchase.class, com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PURCHASE_ID_FIELD_NUMBER = 1;
     private long purchaseId_ = 0L;
     /**
@@ -2323,7 +2324,7 @@ public final class ShieldProto {
      */
     @java.lang.Override
     public boolean hasProtectionEndTime() {
-      return protectionEndTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2361,7 +2362,7 @@ public final class ShieldProto {
      */
     @java.lang.Override
     public boolean hasDeletionTime() {
-      return deletionTime_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2559,10 +2560,10 @@ public final class ShieldProto {
       if (purchaseId_ != 0L) {
         output.writeUInt64(1, purchaseId_);
       }
-      if (protectionEndTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getProtectionEndTime());
       }
-      if (deletionTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getDeletionTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
@@ -2587,11 +2588,11 @@ public final class ShieldProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, purchaseId_);
       }
-      if (protectionEndTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProtectionEndTime());
       }
-      if (deletionTime_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDeletionTime());
       }
@@ -2791,13 +2792,21 @@ public final class ShieldProto {
 
       // Construct using com.shentu.shield.v1alpha1.ShieldProto.Purchase.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProtectionEndTimeFieldBuilder();
+          getDeletionTimeFieldBuilder();
+          getServiceFeesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2872,15 +2881,18 @@ public final class ShieldProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.purchaseId_ = purchaseId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.protectionEndTime_ = protectionEndTimeBuilder_ == null
               ? protectionEndTime_
               : protectionEndTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.deletionTime_ = deletionTimeBuilder_ == null
               ? deletionTime_
               : deletionTimeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.description_ = description_;
@@ -2888,6 +2900,7 @@ public final class ShieldProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.shield_ = shield_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3194,8 +3207,10 @@ public final class ShieldProto {
         } else {
           protectionEndTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (protectionEndTime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3349,8 +3364,10 @@ public final class ShieldProto {
         } else {
           deletionTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (deletionTime_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8587,6 +8604,7 @@ public final class ShieldProto {
               com.shentu.shield.v1alpha1.ShieldProto.Withdraw.class, com.shentu.shield.v1alpha1.ShieldProto.Withdraw.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -8693,7 +8711,7 @@ public final class ShieldProto {
      */
     @java.lang.Override
     public boolean hasCompletionTime() {
-      return completionTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -8739,7 +8757,7 @@ public final class ShieldProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_);
       }
-      if (completionTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCompletionTime());
       }
       getUnknownFields().writeTo(output);
@@ -8757,7 +8775,7 @@ public final class ShieldProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount_);
       }
-      if (completionTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCompletionTime());
       }
@@ -8927,13 +8945,19 @@ public final class ShieldProto {
 
       // Construct using com.shentu.shield.v1alpha1.ShieldProto.Withdraw.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCompletionTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8985,11 +9009,14 @@ public final class ShieldProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amount_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9379,8 +9406,10 @@ public final class ShieldProto {
         } else {
           completionTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (completionTime_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11276,6 +11305,7 @@ public final class ShieldProto {
               com.shentu.shield.v1alpha1.ShieldProto.LastUpdateTime.class, com.shentu.shield.v1alpha1.ShieldProto.LastUpdateTime.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp time_;
     /**
@@ -11284,7 +11314,7 @@ public final class ShieldProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return time_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp time = 1 [json_name = "time", (.gogoproto.moretags) = "yaml:&#92;"time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -11316,7 +11346,7 @@ public final class ShieldProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (time_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTime());
       }
       getUnknownFields().writeTo(output);
@@ -11328,7 +11358,7 @@ public final class ShieldProto {
       if (size != -1) return size;
 
       size = 0;
-      if (time_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTime());
       }
@@ -11486,13 +11516,19 @@ public final class ShieldProto {
 
       // Construct using com.shentu.shield.v1alpha1.ShieldProto.LastUpdateTime.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11536,11 +11572,14 @@ public final class ShieldProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.ShieldProto.LastUpdateTime result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11706,8 +11745,10 @@ public final class ShieldProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (time_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

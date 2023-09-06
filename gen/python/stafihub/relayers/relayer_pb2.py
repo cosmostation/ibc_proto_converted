@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fstafihub/relayers/relayer.proto\x12\x1astafihub.stafihub.relayers\"K\n\x07Relayer\x12\x14\n\x05\x61rena\x18\x01 \x01(\tR\x05\x61rena\x12\x14\n\x05\x64\x65nom\x18\x02 \x01(\tR\x05\x64\x65nom\x12\x14\n\x05\x61\x64\x64rs\x18\x03 \x03(\tR\x05\x61\x64\x64rs\"M\n\tThreshold\x12\x14\n\x05\x61rena\x18\x01 \x01(\tR\x05\x61rena\x12\x14\n\x05\x64\x65nom\x18\x02 \x01(\tR\x05\x64\x65nom\x12\x14\n\x05value\x18\x03 \x01(\rR\x05valueB\xe7\x01\n\x1e\x63om.stafihub.stafihub.relayersB\x0cRelayerProtoP\x01Z-github.com/stafihub/stafihub/x/relayers/types\xa2\x02\x03SSR\xaa\x02\x1aStafihub.Stafihub.Relayers\xca\x02\x1aStafihub\\Stafihub\\Relayers\xe2\x02&Stafihub\\Stafihub\\Relayers\\GPBMetadata\xea\x02\x1cStafihub::Stafihub::Relayersb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fstafihub/relayers/relayer.proto\x12\x1astafihub.stafihub.relayers\"K\n\x07Relayer\x12\x14\n\x05\x61rena\x18\x01 \x01(\tR\x05\x61rena\x12\x14\n\x05\x64\x65nom\x18\x02 \x01(\tR\x05\x64\x65nom\x12\x14\n\x05\x61\x64\x64rs\x18\x03 \x03(\tR\x05\x61\x64\x64rs\"M\n\tThreshold\x12\x14\n\x05\x61rena\x18\x01 \x01(\tR\x05\x61rena\x12\x14\n\x05\x64\x65nom\x18\x02 \x01(\tR\x05\x64\x65nom\x12\x14\n\x05value\x18\x03 \x01(\rR\x05valueB\xe5\x01\n\x1e\x63om.stafihub.stafihub.relayersB\x0cRelayerProtoZ-github.com/stafihub/stafihub/x/relayers/types\xa2\x02\x03SSR\xaa\x02\x1aStafihub.Stafihub.Relayers\xca\x02\x1aStafihub\\Stafihub\\Relayers\xe2\x02&Stafihub\\Stafihub\\Relayers\\GPBMetadata\xea\x02\x1cStafihub::Stafihub::Relayersb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.relayers.relayer_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.stafihub.stafihub.relayersB\014RelayerProtoP\001Z-github.com/stafihub/stafihub/x/relayers/types\242\002\003SSR\252\002\032Stafihub.Stafihub.Relayers\312\002\032Stafihub\\Stafihub\\Relayers\342\002&Stafihub\\Stafihub\\Relayers\\GPBMetadata\352\002\034Stafihub::Stafihub::Relayers'
+  DESCRIPTOR._serialized_options = b'\n\036com.stafihub.stafihub.relayersB\014RelayerProtoZ-github.com/stafihub/stafihub/x/relayers/types\242\002\003SSR\252\002\032Stafihub.Stafihub.Relayers\312\002\032Stafihub\\Stafihub\\Relayers\342\002&Stafihub\\Stafihub\\Relayers\\GPBMetadata\352\002\034Stafihub::Stafihub::Relayers'
   _globals['_RELAYER']._serialized_start=63
   _globals['_RELAYER']._serialized_end=138
   _globals['_THRESHOLD']._serialized_start=140

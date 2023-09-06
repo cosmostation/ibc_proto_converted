@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos.msg.v1 import msg_pb2 as cosmos_dot_msg_dot_v1_dot_msg__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x63oreum/nft/v1beta1/tx.proto\x12\x12\x63oreum.nft.v1beta1\x1a\x17\x63osmos/msg/v1/msg.proto\"u\n\x07MsgSend\x12\x19\n\x08\x63lass_id\x18\x01 \x01(\tR\x07\x63lassId\x12\x0e\n\x02id\x18\x02 \x01(\tR\x02id\x12\x16\n\x06sender\x18\x03 \x01(\tR\x06sender\x12\x1a\n\x08receiver\x18\x04 \x01(\tR\x08receiver:\x0b\x82\xe7\xb0*\x06sender\"\x11\n\x0fMsgSendResponse2O\n\x03Msg\x12H\n\x04Send\x12\x1b.coreum.nft.v1beta1.MsgSend\x1a#.coreum.nft.v1beta1.MsgSendResponseB\xb5\x01\n\x16\x63om.coreum.nft.v1beta1B\x07TxProtoP\x01Z(github.com/CoreumFoundation/coreum/x/nft\xa2\x02\x03\x43NX\xaa\x02\x12\x43oreum.Nft.V1beta1\xca\x02\x12\x43oreum\\Nft\\V1beta1\xe2\x02\x1e\x43oreum\\Nft\\V1beta1\\GPBMetadata\xea\x02\x14\x43oreum::Nft::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x63oreum/nft/v1beta1/tx.proto\x12\x12\x63oreum.nft.v1beta1\x1a\x17\x63osmos/msg/v1/msg.proto\"u\n\x07MsgSend\x12\x19\n\x08\x63lass_id\x18\x01 \x01(\tR\x07\x63lassId\x12\x0e\n\x02id\x18\x02 \x01(\tR\x02id\x12\x16\n\x06sender\x18\x03 \x01(\tR\x06sender\x12\x1a\n\x08receiver\x18\x04 \x01(\tR\x08receiver:\x0b\x82\xe7\xb0*\x06sender\"\x11\n\x0fMsgSendResponse2O\n\x03Msg\x12H\n\x04Send\x12\x1b.coreum.nft.v1beta1.MsgSend\x1a#.coreum.nft.v1beta1.MsgSendResponseB\xb3\x01\n\x16\x63om.coreum.nft.v1beta1B\x07TxProtoZ(github.com/CoreumFoundation/coreum/x/nft\xa2\x02\x03\x43NX\xaa\x02\x12\x43oreum.Nft.V1beta1\xca\x02\x12\x43oreum\\Nft\\V1beta1\xe2\x02\x1e\x43oreum\\Nft\\V1beta1\\GPBMetadata\xea\x02\x14\x43oreum::Nft::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'coreum.nft.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.coreum.nft.v1beta1B\007TxProtoP\001Z(github.com/CoreumFoundation/coreum/x/nft\242\002\003CNX\252\002\022Coreum.Nft.V1beta1\312\002\022Coreum\\Nft\\V1beta1\342\002\036Coreum\\Nft\\V1beta1\\GPBMetadata\352\002\024Coreum::Nft::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\026com.coreum.nft.v1beta1B\007TxProtoZ(github.com/CoreumFoundation/coreum/x/nft\242\002\003CNX\252\002\022Coreum.Nft.V1beta1\312\002\022Coreum\\Nft\\V1beta1\342\002\036Coreum\\Nft\\V1beta1\\GPBMetadata\352\002\024Coreum::Nft::V1beta1'
   _MSGSEND._options = None
   _MSGSEND._serialized_options = b'\202\347\260*\006sender'
   _globals['_MSGSEND']._serialized_start=76

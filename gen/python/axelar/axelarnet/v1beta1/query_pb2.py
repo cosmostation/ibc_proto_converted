@@ -17,15 +17,14 @@ from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_quer
 from axelar.nexus.v1beta1 import query_pb2 as axelar_dot_nexus_dot_v1beta1_dot_query__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$axelar/axelarnet/v1beta1/query.proto\x12\x18\x61xelar.axelarnet.v1beta1\x1a\x14gogoproto/gogo.proto\x1a$axelar/axelarnet/v1beta1/types.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a axelar/nexus/v1beta1/query.proto\" \n\x1ePendingIBCTransferCountRequest\"\xec\x01\n\x1fPendingIBCTransferCountResponse\x12\x83\x01\n\x12transfers_by_chain\x18\x01 \x03(\x0b\x32O.axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse.TransfersByChainEntryB\x04\xc8\xde\x1f\x00R\x10transfersByChain\x1a\x43\n\x15TransfersByChainEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\rR\x05value:\x02\x38\x01\x42\xe8\x01\n\x1c\x63om.axelar.axelarnet.v1beta1B\nQueryProtoP\x01Z6github.com/axelarnetwork/axelar-core/x/axelarnet/types\xa2\x02\x03\x41\x41X\xaa\x02\x18\x41xelar.Axelarnet.V1beta1\xca\x02\x18\x41xelar\\Axelarnet\\V1beta1\xe2\x02$Axelar\\Axelarnet\\V1beta1\\GPBMetadata\xea\x02\x1a\x41xelar::Axelarnet::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$axelar/axelarnet/v1beta1/query.proto\x12\x18\x61xelar.axelarnet.v1beta1\x1a\x14gogoproto/gogo.proto\x1a$axelar/axelarnet/v1beta1/types.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a axelar/nexus/v1beta1/query.proto\" \n\x1ePendingIBCTransferCountRequest\"\xec\x01\n\x1fPendingIBCTransferCountResponse\x12\x83\x01\n\x12transfers_by_chain\x18\x01 \x03(\x0b\x32O.axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse.TransfersByChainEntryB\x04\xc8\xde\x1f\x00R\x10transfersByChain\x1a\x43\n\x15TransfersByChainEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\rR\x05value:\x02\x38\x01\x42\xe6\x01\n\x1c\x63om.axelar.axelarnet.v1beta1B\nQueryProtoZ6github.com/axelarnetwork/axelar-core/x/axelarnet/types\xa2\x02\x03\x41\x41X\xaa\x02\x18\x41xelar.Axelarnet.V1beta1\xca\x02\x18\x41xelar\\Axelarnet\\V1beta1\xe2\x02$Axelar\\Axelarnet\\V1beta1\\GPBMetadata\xea\x02\x1a\x41xelar::Axelarnet::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.axelarnet.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.axelar.axelarnet.v1beta1B\nQueryProtoP\001Z6github.com/axelarnetwork/axelar-core/x/axelarnet/types\242\002\003AAX\252\002\030Axelar.Axelarnet.V1beta1\312\002\030Axelar\\Axelarnet\\V1beta1\342\002$Axelar\\Axelarnet\\V1beta1\\GPBMetadata\352\002\032Axelar::Axelarnet::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\034com.axelar.axelarnet.v1beta1B\nQueryProtoZ6github.com/axelarnetwork/axelar-core/x/axelarnet/types\242\002\003AAX\252\002\030Axelar.Axelarnet.V1beta1\312\002\030Axelar\\Axelarnet\\V1beta1\342\002$Axelar\\Axelarnet\\V1beta1\\GPBMetadata\352\002\032Axelar::Axelarnet::V1beta1\310\341\036\000'
   _PENDINGIBCTRANSFERCOUNTRESPONSE_TRANSFERSBYCHAINENTRY._options = None
   _PENDINGIBCTRANSFERCOUNTRESPONSE_TRANSFERSBYCHAINENTRY._serialized_options = b'8\001'
   _PENDINGIBCTRANSFERCOUNTRESPONSE.fields_by_name['transfers_by_chain']._options = None

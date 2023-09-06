@@ -270,6 +270,7 @@ public final class StakersProto {
               com.kyve.query.v1beta1.StakersProto.QueryStakersRequest.class, com.kyve.query.v1beta1.StakersProto.QueryStakersRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -282,7 +283,7 @@ public final class StakersProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -395,7 +396,7 @@ public final class StakersProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       if (status_ != com.kyve.query.v1beta1.StakersProto.StakerStatus.STAKER_STATUS_UNSPECIFIED.getNumber()) {
@@ -413,7 +414,7 @@ public final class StakersProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -589,13 +590,19 @@ public final class StakersProto {
 
       // Construct using com.kyve.query.v1beta1.StakersProto.QueryStakersRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -641,10 +648,12 @@ public final class StakersProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.StakersProto.QueryStakersRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.status_ = status_;
@@ -652,6 +661,7 @@ public final class StakersProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.search_ = search_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -855,8 +865,10 @@ public final class StakersProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1267,6 +1279,7 @@ public final class StakersProto {
               com.kyve.query.v1beta1.StakersProto.QueryStakersResponse.class, com.kyve.query.v1beta1.StakersProto.QueryStakersResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kyve.query.v1beta1.QueryProto.FullStaker> stakers_;
@@ -1340,7 +1353,7 @@ public final class StakersProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1383,7 +1396,7 @@ public final class StakersProto {
       for (int i = 0; i < stakers_.size(); i++) {
         output.writeMessage(1, stakers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1399,7 +1412,7 @@ public final class StakersProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, stakers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1567,13 +1580,20 @@ public final class StakersProto {
 
       // Construct using com.kyve.query.v1beta1.StakersProto.QueryStakersResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakersFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1637,11 +1657,14 @@ public final class StakersProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.StakersProto.QueryStakersResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2178,8 +2201,10 @@ public final class StakersProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2976,6 +3001,7 @@ public final class StakersProto {
               com.kyve.query.v1beta1.StakersProto.QueryStakerResponse.class, com.kyve.query.v1beta1.StakersProto.QueryStakerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKER_FIELD_NUMBER = 1;
     private com.kyve.query.v1beta1.QueryProto.FullStaker staker_;
     /**
@@ -2988,7 +3014,7 @@ public final class StakersProto {
      */
     @java.lang.Override
     public boolean hasStaker() {
-      return staker_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3028,7 +3054,7 @@ public final class StakersProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (staker_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStaker());
       }
       getUnknownFields().writeTo(output);
@@ -3040,7 +3066,7 @@ public final class StakersProto {
       if (size != -1) return size;
 
       size = 0;
-      if (staker_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStaker());
       }
@@ -3202,13 +3228,19 @@ public final class StakersProto {
 
       // Construct using com.kyve.query.v1beta1.StakersProto.QueryStakerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3252,11 +3284,14 @@ public final class StakersProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.StakersProto.QueryStakerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.staker_ = stakerBuilder_ == null
               ? staker_
               : stakerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3442,8 +3477,10 @@ public final class StakersProto {
         } else {
           stakerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (staker_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5078,6 +5115,7 @@ public final class StakersProto {
               com.kyve.query.v1beta1.StakersProto.StakerPoolResponse.class, com.kyve.query.v1beta1.StakersProto.StakerPoolResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKER_FIELD_NUMBER = 1;
     private com.kyve.query.v1beta1.QueryProto.FullStaker staker_;
     /**
@@ -5090,7 +5128,7 @@ public final class StakersProto {
      */
     @java.lang.Override
     public boolean hasStaker() {
-      return staker_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5128,7 +5166,7 @@ public final class StakersProto {
      */
     @java.lang.Override
     public boolean hasValaccount() {
-      return valaccount_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5168,10 +5206,10 @@ public final class StakersProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (staker_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStaker());
       }
-      if (valaccount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getValaccount());
       }
       getUnknownFields().writeTo(output);
@@ -5183,11 +5221,11 @@ public final class StakersProto {
       if (size != -1) return size;
 
       size = 0;
-      if (staker_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStaker());
       }
-      if (valaccount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValaccount());
       }
@@ -5358,13 +5396,20 @@ public final class StakersProto {
 
       // Construct using com.kyve.query.v1beta1.StakersProto.StakerPoolResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakerFieldBuilder();
+          getValaccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5413,16 +5458,20 @@ public final class StakersProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.StakersProto.StakerPoolResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.staker_ = stakerBuilder_ == null
               ? staker_
               : stakerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.valaccount_ = valaccountBuilder_ == null
               ? valaccount_
               : valaccountBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5618,8 +5667,10 @@ public final class StakersProto {
         } else {
           stakerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (staker_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5773,8 +5824,10 @@ public final class StakersProto {
         } else {
           valaccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (valaccount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5975,6 +6028,7 @@ public final class StakersProto {
               com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountRequest.class, com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -5987,7 +6041,7 @@ public final class StakersProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6027,7 +6081,7 @@ public final class StakersProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6039,7 +6093,7 @@ public final class StakersProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -6201,13 +6255,19 @@ public final class StakersProto {
 
       // Construct using com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6251,11 +6311,14 @@ public final class StakersProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6441,8 +6504,10 @@ public final class StakersProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6688,6 +6753,7 @@ public final class StakersProto {
               com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountResponse.class, com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STAKERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kyve.query.v1beta1.QueryProto.FullStaker> stakers_;
@@ -6761,7 +6827,7 @@ public final class StakersProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6804,7 +6870,7 @@ public final class StakersProto {
       for (int i = 0; i < stakers_.size(); i++) {
         output.writeMessage(1, stakers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6820,7 +6886,7 @@ public final class StakersProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, stakers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6988,13 +7054,20 @@ public final class StakersProto {
 
       // Construct using com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStakersFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7058,11 +7131,14 @@ public final class StakersProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.StakersProto.QueryStakersByPoolCountResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7599,8 +7675,10 @@ public final class StakersProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -958,6 +958,7 @@ public final class ListeningProto {
               com.cosmos.store.v1beta1.ListeningProto.BlockMetadata.class, com.cosmos.store.v1beta1.ListeningProto.BlockMetadata.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RESPONSE_COMMIT_FIELD_NUMBER = 6;
     private com.tendermint.abci.TypesProto.ResponseCommit responseCommit_;
     /**
@@ -966,7 +967,7 @@ public final class ListeningProto {
      */
     @java.lang.Override
     public boolean hasResponseCommit() {
-      return responseCommit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.tendermint.abci.ResponseCommit response_commit = 6 [json_name = "responseCommit"];</code>
@@ -992,7 +993,7 @@ public final class ListeningProto {
      */
     @java.lang.Override
     public boolean hasRequestFinalizeBlock() {
-      return requestFinalizeBlock_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.tendermint.abci.RequestFinalizeBlock request_finalize_block = 7 [json_name = "requestFinalizeBlock"];</code>
@@ -1022,7 +1023,7 @@ public final class ListeningProto {
      */
     @java.lang.Override
     public boolean hasResponseFinalizeBlock() {
-      return responseFinalizeBlock_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1062,13 +1063,13 @@ public final class ListeningProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (responseCommit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getResponseCommit());
       }
-      if (requestFinalizeBlock_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getRequestFinalizeBlock());
       }
-      if (responseFinalizeBlock_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(8, getResponseFinalizeBlock());
       }
       getUnknownFields().writeTo(output);
@@ -1080,15 +1081,15 @@ public final class ListeningProto {
       if (size != -1) return size;
 
       size = 0;
-      if (responseCommit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getResponseCommit());
       }
-      if (requestFinalizeBlock_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getRequestFinalizeBlock());
       }
-      if (responseFinalizeBlock_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getResponseFinalizeBlock());
       }
@@ -1269,13 +1270,21 @@ public final class ListeningProto {
 
       // Construct using com.cosmos.store.v1beta1.ListeningProto.BlockMetadata.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResponseCommitFieldBuilder();
+          getRequestFinalizeBlockFieldBuilder();
+          getResponseFinalizeBlockFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1329,21 +1338,26 @@ public final class ListeningProto {
 
       private void buildPartial0(com.cosmos.store.v1beta1.ListeningProto.BlockMetadata result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.responseCommit_ = responseCommitBuilder_ == null
               ? responseCommit_
               : responseCommitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.requestFinalizeBlock_ = requestFinalizeBlockBuilder_ == null
               ? requestFinalizeBlock_
               : requestFinalizeBlockBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.responseFinalizeBlock_ = responseFinalizeBlockBuilder_ == null
               ? responseFinalizeBlock_
               : responseFinalizeBlockBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1529,8 +1543,10 @@ public final class ListeningProto {
         } else {
           responseCommitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (responseCommit_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1648,8 +1664,10 @@ public final class ListeningProto {
         } else {
           requestFinalizeBlockBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (requestFinalizeBlock_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1787,8 +1805,10 @@ public final class ListeningProto {
         } else {
           responseFinalizeBlockBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (responseFinalizeBlock_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

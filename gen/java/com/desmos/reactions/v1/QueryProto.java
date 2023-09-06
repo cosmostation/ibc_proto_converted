@@ -127,6 +127,7 @@ public final class QueryProto {
               com.desmos.reactions.v1.QueryProto.QueryReactionsRequest.class, com.desmos.reactions.v1.QueryProto.QueryReactionsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -218,7 +219,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -267,7 +268,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, user_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -290,7 +291,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, user_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPagination());
       }
@@ -466,13 +467,19 @@ public final class QueryProto {
 
       // Construct using com.desmos.reactions.v1.QueryProto.QueryReactionsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -528,11 +535,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.user_ = user_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -929,8 +939,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1145,6 +1157,7 @@ public final class QueryProto {
               com.desmos.reactions.v1.QueryProto.QueryReactionsResponse.class, com.desmos.reactions.v1.QueryProto.QueryReactionsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REACTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.reactions.v1.ModelsProto.Reaction> reactions_;
@@ -1194,7 +1207,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -1229,7 +1242,7 @@ public final class QueryProto {
       for (int i = 0; i < reactions_.size(); i++) {
         output.writeMessage(1, reactions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1245,7 +1258,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, reactions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1414,13 +1427,20 @@ public final class QueryProto {
 
       // Construct using com.desmos.reactions.v1.QueryProto.QueryReactionsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getReactionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1484,11 +1504,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.desmos.reactions.v1.QueryProto.QueryReactionsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1933,8 +1956,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2800,6 +2825,7 @@ public final class QueryProto {
               com.desmos.reactions.v1.QueryProto.QueryReactionResponse.class, com.desmos.reactions.v1.QueryProto.QueryReactionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REACTION_FIELD_NUMBER = 1;
     private com.desmos.reactions.v1.ModelsProto.Reaction reaction_;
     /**
@@ -2808,7 +2834,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasReaction() {
-      return reaction_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.desmos.reactions.v1.Reaction reaction = 1 [json_name = "reaction", (.gogoproto.nullable) = false];</code>
@@ -2840,7 +2866,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (reaction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getReaction());
       }
       getUnknownFields().writeTo(output);
@@ -2852,7 +2878,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (reaction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReaction());
       }
@@ -3015,13 +3041,19 @@ public final class QueryProto {
 
       // Construct using com.desmos.reactions.v1.QueryProto.QueryReactionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getReactionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3065,11 +3097,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.desmos.reactions.v1.QueryProto.QueryReactionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reaction_ = reactionBuilder_ == null
               ? reaction_
               : reactionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3235,8 +3270,10 @@ public final class QueryProto {
         } else {
           reactionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (reaction_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3432,6 +3469,7 @@ public final class QueryProto {
               com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionsRequest.class, com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -3459,7 +3497,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3502,7 +3540,7 @@ public final class QueryProto {
       if (subspaceId_ != 0L) {
         output.writeUInt64(1, subspaceId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3518,7 +3556,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, subspaceId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -3686,13 +3724,19 @@ public final class QueryProto {
 
       // Construct using com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3740,11 +3784,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subspaceId_ = subspaceId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3982,8 +4029,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4198,6 +4247,7 @@ public final class QueryProto {
               com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionsResponse.class, com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REGISTERED_REACTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.reactions.v1.ModelsProto.RegisteredReaction> registeredReactions_;
@@ -4247,7 +4297,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4282,7 +4332,7 @@ public final class QueryProto {
       for (int i = 0; i < registeredReactions_.size(); i++) {
         output.writeMessage(1, registeredReactions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4298,7 +4348,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, registeredReactions_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4467,13 +4517,20 @@ public final class QueryProto {
 
       // Construct using com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRegisteredReactionsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4537,11 +4594,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4986,8 +5046,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5760,6 +5822,7 @@ public final class QueryProto {
               com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionResponse.class, com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REGISTERED_REACTION_FIELD_NUMBER = 1;
     private com.desmos.reactions.v1.ModelsProto.RegisteredReaction registeredReaction_;
     /**
@@ -5768,7 +5831,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRegisteredReaction() {
-      return registeredReaction_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.desmos.reactions.v1.RegisteredReaction registered_reaction = 1 [json_name = "registeredReaction", (.gogoproto.nullable) = false];</code>
@@ -5800,7 +5863,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (registeredReaction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRegisteredReaction());
       }
       getUnknownFields().writeTo(output);
@@ -5812,7 +5875,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (registeredReaction_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRegisteredReaction());
       }
@@ -5975,13 +6038,19 @@ public final class QueryProto {
 
       // Construct using com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRegisteredReactionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6025,11 +6094,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.desmos.reactions.v1.QueryProto.QueryRegisteredReactionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.registeredReaction_ = registeredReactionBuilder_ == null
               ? registeredReaction_
               : registeredReactionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6195,8 +6267,10 @@ public final class QueryProto {
         } else {
           registeredReactionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (registeredReaction_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6877,6 +6951,7 @@ public final class QueryProto {
               com.desmos.reactions.v1.QueryProto.QueryReactionsParamsResponse.class, com.desmos.reactions.v1.QueryProto.QueryReactionsParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.desmos.reactions.v1.ModelsProto.SubspaceReactionsParams params_;
     /**
@@ -6885,7 +6960,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.desmos.reactions.v1.SubspaceReactionsParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -6917,7 +6992,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -6929,7 +7004,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -7092,13 +7167,19 @@ public final class QueryProto {
 
       // Construct using com.desmos.reactions.v1.QueryProto.QueryReactionsParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7142,11 +7223,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.desmos.reactions.v1.QueryProto.QueryReactionsParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7312,8 +7396,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

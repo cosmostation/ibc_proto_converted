@@ -753,6 +753,7 @@ public final class MintProto {
               com.stargaze.mint.v1beta1.MintProto.Params.class, com.stargaze.mint.v1beta1.MintProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MINT_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object mintDenom_ = "";
@@ -812,7 +813,7 @@ public final class MintProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return startTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -964,7 +965,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintDenom_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getStartTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialAnnualProvisions_)) {
@@ -988,7 +989,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintDenom_);
       }
-      if (startTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getStartTime());
       }
@@ -1177,13 +1178,19 @@ public final class MintProto {
 
       // Construct using com.stargaze.mint.v1beta1.MintProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1234,10 +1241,12 @@ public final class MintProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.mintDenom_ = mintDenom_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.initialAnnualProvisions_ = initialAnnualProvisions_;
@@ -1248,6 +1257,7 @@ public final class MintProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.blocksPerYear_ = blocksPerYear_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1563,8 +1573,10 @@ public final class MintProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (startTime_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

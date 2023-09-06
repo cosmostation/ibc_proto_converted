@@ -16,15 +16,14 @@ from sentinel.session.v2 import params_pb2 as sentinel_dot_session_dot_v2_dot_pa
 from sentinel.session.v2 import session_pb2 as sentinel_dot_session_dot_v2_dot_session__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!sentinel/session/v2/genesis.proto\x12\x13sentinel.session.v2\x1a\x14gogoproto/gogo.proto\x1a sentinel/session/v2/params.proto\x1a!sentinel/session/v2/session.proto\"\x89\x01\n\x0cGenesisState\x12>\n\x08sessions\x18\x01 \x03(\x0b\x32\x1c.sentinel.session.v2.SessionB\x04\xc8\xde\x1f\x00R\x08sessions\x12\x39\n\x06params\x18\x02 \x01(\x0b\x32\x1b.sentinel.session.v2.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xcf\x01\n\x17\x63om.sentinel.session.v2B\x0cGenesisProtoP\x01Z0github.com/sentinel-official/hub/x/session/types\xa2\x02\x03SSX\xaa\x02\x13Sentinel.Session.V2\xca\x02\x13Sentinel\\Session\\V2\xe2\x02\x1fSentinel\\Session\\V2\\GPBMetadata\xea\x02\x15Sentinel::Session::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!sentinel/session/v2/genesis.proto\x12\x13sentinel.session.v2\x1a\x14gogoproto/gogo.proto\x1a sentinel/session/v2/params.proto\x1a!sentinel/session/v2/session.proto\"\x89\x01\n\x0cGenesisState\x12>\n\x08sessions\x18\x01 \x03(\x0b\x32\x1c.sentinel.session.v2.SessionB\x04\xc8\xde\x1f\x00R\x08sessions\x12\x39\n\x06params\x18\x02 \x01(\x0b\x32\x1b.sentinel.session.v2.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xcd\x01\n\x17\x63om.sentinel.session.v2B\x0cGenesisProtoZ0github.com/sentinel-official/hub/x/session/types\xa2\x02\x03SSX\xaa\x02\x13Sentinel.Session.V2\xca\x02\x13Sentinel\\Session\\V2\xe2\x02\x1fSentinel\\Session\\V2\\GPBMetadata\xea\x02\x15Sentinel::Session::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.session.v2.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.session.v2B\014GenesisProtoP\001Z0github.com/sentinel-official/hub/x/session/types\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.session.v2B\014GenesisProtoZ0github.com/sentinel-official/hub/x/session/types\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMetadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000'
   _GENESISSTATE.fields_by_name['sessions']._options = None
   _GENESISSTATE.fields_by_name['sessions']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['params']._options = None

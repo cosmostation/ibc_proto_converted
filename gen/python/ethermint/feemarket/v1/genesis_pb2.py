@@ -15,15 +15,14 @@ from ethermint.feemarket.v1 import feemarket_pb2 as ethermint_dot_feemarket_dot_
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$ethermint/feemarket/v1/genesis.proto\x12\x16\x65thermint.feemarket.v1\x1a&ethermint/feemarket/v1/feemarket.proto\x1a\x14gogoproto/gogo.proto\"y\n\x0cGenesisState\x12<\n\x06params\x18\x01 \x01(\x0b\x32\x1e.ethermint.feemarket.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x1b\n\tblock_gas\x18\x03 \x01(\x04R\x08\x62lockGasJ\x04\x08\x02\x10\x03R\x08\x62\x61se_feeB\xd2\x01\n\x1a\x63om.ethermint.feemarket.v1B\x0cGenesisProtoP\x01Z,github.com/evmos/evmos/v13/x/feemarket/types\xa2\x02\x03\x45\x46X\xaa\x02\x16\x45thermint.Feemarket.V1\xca\x02\x16\x45thermint\\Feemarket\\V1\xe2\x02\"Ethermint\\Feemarket\\V1\\GPBMetadata\xea\x02\x18\x45thermint::Feemarket::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$ethermint/feemarket/v1/genesis.proto\x12\x16\x65thermint.feemarket.v1\x1a&ethermint/feemarket/v1/feemarket.proto\x1a\x14gogoproto/gogo.proto\"y\n\x0cGenesisState\x12<\n\x06params\x18\x01 \x01(\x0b\x32\x1e.ethermint.feemarket.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x1b\n\tblock_gas\x18\x03 \x01(\x04R\x08\x62lockGasJ\x04\x08\x02\x10\x03R\x08\x62\x61se_feeB\xd0\x01\n\x1a\x63om.ethermint.feemarket.v1B\x0cGenesisProtoZ,github.com/evmos/evmos/v13/x/feemarket/types\xa2\x02\x03\x45\x46X\xaa\x02\x16\x45thermint.Feemarket.V1\xca\x02\x16\x45thermint\\Feemarket\\V1\xe2\x02\"Ethermint\\Feemarket\\V1\\GPBMetadata\xea\x02\x18\x45thermint::Feemarket::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ethermint.feemarket.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.ethermint.feemarket.v1B\014GenesisProtoP\001Z,github.com/evmos/evmos/v13/x/feemarket/types\242\002\003EFX\252\002\026Ethermint.Feemarket.V1\312\002\026Ethermint\\Feemarket\\V1\342\002\"Ethermint\\Feemarket\\V1\\GPBMetadata\352\002\030Ethermint::Feemarket::V1'
+  DESCRIPTOR._serialized_options = b'\n\032com.ethermint.feemarket.v1B\014GenesisProtoZ,github.com/evmos/evmos/v13/x/feemarket/types\242\002\003EFX\252\002\026Ethermint.Feemarket.V1\312\002\026Ethermint\\Feemarket\\V1\342\002\"Ethermint\\Feemarket\\V1\\GPBMetadata\352\002\030Ethermint::Feemarket::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=126

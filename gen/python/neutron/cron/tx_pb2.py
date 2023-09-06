@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15neutron/cron/tx.proto\x12\x0cneutron.cron2\x05\n\x03MsgB\x99\x01\n\x10\x63om.neutron.cronB\x07TxProtoP\x01Z+github.com/neutron-org/neutron/x/cron/types\xa2\x02\x03NCX\xaa\x02\x0cNeutron.Cron\xca\x02\x0cNeutron\\Cron\xe2\x02\x18Neutron\\Cron\\GPBMetadata\xea\x02\rNeutron::Cronb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15neutron/cron/tx.proto\x12\x0cneutron.cron2\x05\n\x03MsgB\x97\x01\n\x10\x63om.neutron.cronB\x07TxProtoZ+github.com/neutron-org/neutron/x/cron/types\xa2\x02\x03NCX\xaa\x02\x0cNeutron.Cron\xca\x02\x0cNeutron\\Cron\xe2\x02\x18Neutron\\Cron\\GPBMetadata\xea\x02\rNeutron::Cronb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.cron.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.neutron.cronB\007TxProtoP\001Z+github.com/neutron-org/neutron/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeutron::Cron'
+  DESCRIPTOR._serialized_options = b'\n\020com.neutron.cronB\007TxProtoZ+github.com/neutron-org/neutron/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeutron::Cron'
   _globals['_MSG']._serialized_start=39
   _globals['_MSG']._serialized_end=44
 # @@protoc_insertion_point(module_scope)

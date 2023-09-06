@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/orders/transactions/take/transaction_response.proto\x12,assetmantle.modules.orders.transactions.take\"\x15\n\x13TransactionResponseB\xa2\x02\n0com.assetmantle.modules.orders.transactions.takeB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MOTT\xaa\x02,Assetmantle.Modules.Orders.Transactions.Take\xca\x02,Assetmantle\\Modules\\Orders\\Transactions\\Take\xe2\x02\x38\x41ssetmantle\\Modules\\Orders\\Transactions\\Take\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Orders::Transactions::Takeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/orders/transactions/take/transaction_response.proto\x12,assetmantle.modules.orders.transactions.take\"\x15\n\x13TransactionResponseB\xa0\x02\n0com.assetmantle.modules.orders.transactions.takeB\x18TransactionResponseProto\xa2\x02\x05\x41MOTT\xaa\x02,Assetmantle.Modules.Orders.Transactions.Take\xca\x02,Assetmantle\\Modules\\Orders\\Transactions\\Take\xe2\x02\x38\x41ssetmantle\\Modules\\Orders\\Transactions\\Take\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Orders::Transactions::Takeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.take.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.orders.transactions.takeB\030TransactionResponseProtoP\001\242\002\005AMOTT\252\002,Assetmantle.Modules.Orders.Transactions.Take\312\002,Assetmantle\\Modules\\Orders\\Transactions\\Take\342\0028Assetmantle\\Modules\\Orders\\Transactions\\Take\\GPBMetadata\352\0020Assetmantle::Modules::Orders::Transactions::Take'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.orders.transactions.takeB\030TransactionResponseProto\242\002\005AMOTT\252\002,Assetmantle.Modules.Orders.Transactions.Take\312\002,Assetmantle\\Modules\\Orders\\Transactions\\Take\342\0028Assetmantle\\Modules\\Orders\\Transactions\\Take\\GPBMetadata\352\0020Assetmantle::Modules::Orders::Transactions::Take'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=113
   _globals['_TRANSACTIONRESPONSE']._serialized_end=134
 # @@protoc_insertion_point(module_scope)

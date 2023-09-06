@@ -2200,7 +2200,8 @@ public final class GovProto {
 
     public static final int IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList ids_;
+    private com.google.protobuf.Internal.LongList ids_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
      * @return A list containing the ids.
@@ -2513,18 +2514,9 @@ public final class GovProto {
       @java.lang.Override
       public com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal buildPartial() {
         com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal result = new com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          ids_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.ids_ = ids_;
       }
 
       private void buildPartial0(com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal result) {
@@ -2534,6 +2526,10 @@ public final class GovProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          ids_.makeImmutable();
+          result.ids_ = ids_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isOverwrite_ = isOverwrite_;
@@ -2597,7 +2593,8 @@ public final class GovProto {
         if (!other.ids_.isEmpty()) {
           if (ids_.isEmpty()) {
             ids_ = other.ids_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            ids_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureIdsIsMutable();
             ids_.addAll(other.ids_);
@@ -2827,10 +2824,10 @@ public final class GovProto {
 
       private com.google.protobuf.Internal.LongList ids_ = emptyLongList();
       private void ensureIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          ids_ = mutableCopy(ids_);
-          bitField0_ |= 0x00000004;
+        if (!ids_.isModifiable()) {
+          ids_ = makeMutableCopy(ids_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
@@ -2838,8 +2835,8 @@ public final class GovProto {
        */
       public java.util.List<java.lang.Long>
           getIdsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(ids_) : ids_;
+        ids_.makeImmutable();
+        return ids_;
       }
       /**
        * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
@@ -2867,6 +2864,7 @@ public final class GovProto {
 
         ensureIdsIsMutable();
         ids_.setLong(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2879,6 +2877,7 @@ public final class GovProto {
 
         ensureIdsIsMutable();
         ids_.addLong(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2892,6 +2891,7 @@ public final class GovProto {
         ensureIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, ids_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

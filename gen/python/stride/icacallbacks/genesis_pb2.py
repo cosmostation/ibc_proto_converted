@@ -16,15 +16,14 @@ from stride.icacallbacks import params_pb2 as stride_dot_icacallbacks_dot_params
 from stride.icacallbacks import callback_data_pb2 as stride_dot_icacallbacks_dot_callback__data__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!stride/icacallbacks/genesis.proto\x12\x13stride.icacallbacks\x1a\x14gogoproto/gogo.proto\x1a stride/icacallbacks/params.proto\x1a\'stride/icacallbacks/callback_data.proto\"\xb9\x01\n\x0cGenesisState\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.stride.icacallbacks.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x17\n\x07port_id\x18\x02 \x01(\tR\x06portId\x12U\n\x12\x63\x61llback_data_list\x18\x03 \x03(\x0b\x32!.stride.icacallbacks.CallbackDataB\x04\xc8\xde\x1f\x00R\x10\x63\x61llbackDataListB\xcb\x01\n\x17\x63om.stride.icacallbacksB\x0cGenesisProtoP\x01Z5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\xa2\x02\x03SIX\xaa\x02\x13Stride.Icacallbacks\xca\x02\x13Stride\\Icacallbacks\xe2\x02\x1fStride\\Icacallbacks\\GPBMetadata\xea\x02\x14Stride::Icacallbacksb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!stride/icacallbacks/genesis.proto\x12\x13stride.icacallbacks\x1a\x14gogoproto/gogo.proto\x1a stride/icacallbacks/params.proto\x1a\'stride/icacallbacks/callback_data.proto\"\xb9\x01\n\x0cGenesisState\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.stride.icacallbacks.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x17\n\x07port_id\x18\x02 \x01(\tR\x06portId\x12U\n\x12\x63\x61llback_data_list\x18\x03 \x03(\x0b\x32!.stride.icacallbacks.CallbackDataB\x04\xc8\xde\x1f\x00R\x10\x63\x61llbackDataListB\xc9\x01\n\x17\x63om.stride.icacallbacksB\x0cGenesisProtoZ5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\xa2\x02\x03SIX\xaa\x02\x13Stride.Icacallbacks\xca\x02\x13Stride\\Icacallbacks\xe2\x02\x1fStride\\Icacallbacks\\GPBMetadata\xea\x02\x14Stride::Icacallbacksb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stride.icacallbacks.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.stride.icacallbacksB\014GenesisProtoP\001Z5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\242\002\003SIX\252\002\023Stride.Icacallbacks\312\002\023Stride\\Icacallbacks\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024Stride::Icacallbacks'
+  DESCRIPTOR._serialized_options = b'\n\027com.stride.icacallbacksB\014GenesisProtoZ5github.com/Stride-Labs/stride/v9/x/icacallbacks/types\242\002\003SIX\252\002\023Stride.Icacallbacks\312\002\023Stride\\Icacallbacks\342\002\037Stride\\Icacallbacks\\GPBMetadata\352\002\024Stride::Icacallbacks'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['callback_data_list']._options = None

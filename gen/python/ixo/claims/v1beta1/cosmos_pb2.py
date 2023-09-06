@@ -16,15 +16,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fixo/claims/v1beta1/cosmos.proto\x12\x12ixo.claims.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x8e\x01\n\x05Input\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x61\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x01\"\x8f\x01\n\x06Output\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x61\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x01\x42\xc7\x01\n\x16\x63om.ixo.claims.v1beta1B\x0b\x43osmosProtoP\x01Z6github.com/ixofoundation/ixo-blockchain/x/claims/types\xa2\x02\x03ICX\xaa\x02\x12Ixo.Claims.V1beta1\xca\x02\x12Ixo\\Claims\\V1beta1\xe2\x02\x1eIxo\\Claims\\V1beta1\\GPBMetadata\xea\x02\x14Ixo::Claims::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fixo/claims/v1beta1/cosmos.proto\x12\x12ixo.claims.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x8e\x01\n\x05Input\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x61\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x01\"\x8f\x01\n\x06Output\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x61\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oins:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x01\x42\xc5\x01\n\x16\x63om.ixo.claims.v1beta1B\x0b\x43osmosProtoZ6github.com/ixofoundation/ixo-blockchain/x/claims/types\xa2\x02\x03ICX\xaa\x02\x12Ixo.Claims.V1beta1\xca\x02\x12Ixo\\Claims\\V1beta1\xe2\x02\x1eIxo\\Claims\\V1beta1\\GPBMetadata\xea\x02\x14Ixo::Claims::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ixo.claims.v1beta1.cosmos_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.ixo.claims.v1beta1B\013CosmosProtoP\001Z6github.com/ixofoundation/ixo-blockchain/x/claims/types\242\002\003ICX\252\002\022Ixo.Claims.V1beta1\312\002\022Ixo\\Claims\\V1beta1\342\002\036Ixo\\Claims\\V1beta1\\GPBMetadata\352\002\024Ixo::Claims::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\026com.ixo.claims.v1beta1B\013CosmosProtoZ6github.com/ixofoundation/ixo-blockchain/x/claims/types\242\002\003ICX\252\002\022Ixo.Claims.V1beta1\312\002\022Ixo\\Claims\\V1beta1\342\002\036Ixo\\Claims\\V1beta1\\GPBMetadata\352\002\024Ixo::Claims::V1beta1'
   _INPUT.fields_by_name['coins']._options = None
   _INPUT.fields_by_name['coins']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _INPUT._options = None

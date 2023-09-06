@@ -168,6 +168,7 @@ public final class ProposalProto {
               com.cosmwasm.wasm.v1.ProposalProto.StoreCodeProposal.class, com.cosmwasm.wasm.v1.ProposalProto.StoreCodeProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -336,7 +337,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasInstantiatePermission() {
-      return instantiatePermission_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -403,7 +404,7 @@ public final class ProposalProto {
       if (!wasmByteCode_.isEmpty()) {
         output.writeBytes(4, wasmByteCode_);
       }
-      if (instantiatePermission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getInstantiatePermission());
       }
       if (unpinCode_ != false) {
@@ -431,7 +432,7 @@ public final class ProposalProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, wasmByteCode_);
       }
-      if (instantiatePermission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getInstantiatePermission());
       }
@@ -618,13 +619,19 @@ public final class ProposalProto {
 
       // Construct using com.cosmwasm.wasm.v1.ProposalProto.StoreCodeProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInstantiatePermissionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -685,14 +692,17 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.wasmByteCode_ = wasmByteCode_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.instantiatePermission_ = instantiatePermissionBuilder_ == null
               ? instantiatePermission_
               : instantiatePermissionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.unpinCode_ = unpinCode_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1244,8 +1254,10 @@ public final class ProposalProto {
         } else {
           instantiatePermissionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (instantiatePermission_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9696,7 +9708,8 @@ public final class ProposalProto {
 
     public static final int CODE_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList codeIds_;
+    private com.google.protobuf.Internal.LongList codeIds_ =
+        emptyLongList();
     /**
      * <pre>
      * CodeIDs references the new WASM codes
@@ -9997,18 +10010,9 @@ public final class ProposalProto {
       @java.lang.Override
       public com.cosmwasm.wasm.v1.ProposalProto.PinCodesProposal buildPartial() {
         com.cosmwasm.wasm.v1.ProposalProto.PinCodesProposal result = new com.cosmwasm.wasm.v1.ProposalProto.PinCodesProposal(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.cosmwasm.wasm.v1.ProposalProto.PinCodesProposal result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          codeIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.codeIds_ = codeIds_;
       }
 
       private void buildPartial0(com.cosmwasm.wasm.v1.ProposalProto.PinCodesProposal result) {
@@ -10018,6 +10022,10 @@ public final class ProposalProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          codeIds_.makeImmutable();
+          result.codeIds_ = codeIds_;
         }
       }
 
@@ -10078,7 +10086,8 @@ public final class ProposalProto {
         if (!other.codeIds_.isEmpty()) {
           if (codeIds_.isEmpty()) {
             codeIds_ = other.codeIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            codeIds_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureCodeIdsIsMutable();
             codeIds_.addAll(other.codeIds_);
@@ -10340,10 +10349,10 @@ public final class ProposalProto {
 
       private com.google.protobuf.Internal.LongList codeIds_ = emptyLongList();
       private void ensureCodeIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          codeIds_ = mutableCopy(codeIds_);
-          bitField0_ |= 0x00000004;
+        if (!codeIds_.isModifiable()) {
+          codeIds_ = makeMutableCopy(codeIds_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -10355,8 +10364,8 @@ public final class ProposalProto {
        */
       public java.util.List<java.lang.Long>
           getCodeIdsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(codeIds_) : codeIds_;
+        codeIds_.makeImmutable();
+        return codeIds_;
       }
       /**
        * <pre>
@@ -10396,6 +10405,7 @@ public final class ProposalProto {
 
         ensureCodeIdsIsMutable();
         codeIds_.setLong(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10412,6 +10422,7 @@ public final class ProposalProto {
 
         ensureCodeIdsIsMutable();
         codeIds_.addLong(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10429,6 +10440,7 @@ public final class ProposalProto {
         ensureCodeIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, codeIds_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10722,7 +10734,8 @@ public final class ProposalProto {
 
     public static final int CODE_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList codeIds_;
+    private com.google.protobuf.Internal.LongList codeIds_ =
+        emptyLongList();
     /**
      * <pre>
      * CodeIDs references the WASM codes
@@ -11023,18 +11036,9 @@ public final class ProposalProto {
       @java.lang.Override
       public com.cosmwasm.wasm.v1.ProposalProto.UnpinCodesProposal buildPartial() {
         com.cosmwasm.wasm.v1.ProposalProto.UnpinCodesProposal result = new com.cosmwasm.wasm.v1.ProposalProto.UnpinCodesProposal(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.cosmwasm.wasm.v1.ProposalProto.UnpinCodesProposal result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          codeIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.codeIds_ = codeIds_;
       }
 
       private void buildPartial0(com.cosmwasm.wasm.v1.ProposalProto.UnpinCodesProposal result) {
@@ -11044,6 +11048,10 @@ public final class ProposalProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          codeIds_.makeImmutable();
+          result.codeIds_ = codeIds_;
         }
       }
 
@@ -11104,7 +11112,8 @@ public final class ProposalProto {
         if (!other.codeIds_.isEmpty()) {
           if (codeIds_.isEmpty()) {
             codeIds_ = other.codeIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            codeIds_.makeImmutable();
+            bitField0_ |= 0x00000004;
           } else {
             ensureCodeIdsIsMutable();
             codeIds_.addAll(other.codeIds_);
@@ -11366,10 +11375,10 @@ public final class ProposalProto {
 
       private com.google.protobuf.Internal.LongList codeIds_ = emptyLongList();
       private void ensureCodeIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          codeIds_ = mutableCopy(codeIds_);
-          bitField0_ |= 0x00000004;
+        if (!codeIds_.isModifiable()) {
+          codeIds_ = makeMutableCopy(codeIds_);
         }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -11381,8 +11390,8 @@ public final class ProposalProto {
        */
       public java.util.List<java.lang.Long>
           getCodeIdsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(codeIds_) : codeIds_;
+        codeIds_.makeImmutable();
+        return codeIds_;
       }
       /**
        * <pre>
@@ -11422,6 +11431,7 @@ public final class ProposalProto {
 
         ensureCodeIdsIsMutable();
         codeIds_.setLong(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11438,6 +11448,7 @@ public final class ProposalProto {
 
         ensureCodeIdsIsMutable();
         codeIds_.addLong(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11455,6 +11466,7 @@ public final class ProposalProto {
         ensureCodeIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, codeIds_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11617,6 +11629,7 @@ public final class ProposalProto {
               com.cosmwasm.wasm.v1.ProposalProto.AccessConfigUpdate.class, com.cosmwasm.wasm.v1.ProposalProto.AccessConfigUpdate.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CODE_ID_FIELD_NUMBER = 1;
     private long codeId_ = 0L;
     /**
@@ -11644,7 +11657,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasInstantiatePermission() {
-      return instantiatePermission_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -11687,7 +11700,7 @@ public final class ProposalProto {
       if (codeId_ != 0L) {
         output.writeUInt64(1, codeId_);
       }
-      if (instantiatePermission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getInstantiatePermission());
       }
       getUnknownFields().writeTo(output);
@@ -11703,7 +11716,7 @@ public final class ProposalProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, codeId_);
       }
-      if (instantiatePermission_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInstantiatePermission());
       }
@@ -11871,13 +11884,19 @@ public final class ProposalProto {
 
       // Construct using com.cosmwasm.wasm.v1.ProposalProto.AccessConfigUpdate.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInstantiatePermissionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11925,11 +11944,14 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.codeId_ = codeId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.instantiatePermission_ = instantiatePermissionBuilder_ == null
               ? instantiatePermission_
               : instantiatePermissionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12167,8 +12189,10 @@ public final class ProposalProto {
         } else {
           instantiatePermissionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (instantiatePermission_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n0injective/crypto/v1beta1/ethsecp256k1/keys.proto\x12%injective.crypto.v1beta1.ethsecp256k1\x1a\x14gogoproto/gogo.proto\" \n\x06PubKey\x12\x10\n\x03key\x18\x01 \x01(\x0cR\x03key:\x04\x98\xa0\x1f\x00\"\x1b\n\x07PrivKey\x12\x10\n\x03key\x18\x01 \x01(\x0cR\x03keyB\xbb\x02\n)com.injective.crypto.v1beta1.ethsecp256k1B\tKeysProtoP\x01ZKgithub.com/InjectiveLabs/injective-core/injective-chain/crypto/ethsecp256k1\xa2\x02\x04ICVE\xaa\x02%Injective.Crypto.V1beta1.Ethsecp256k1\xca\x02%Injective\\Crypto\\V1beta1\\Ethsecp256k1\xe2\x02\x31Injective\\Crypto\\V1beta1\\Ethsecp256k1\\GPBMetadata\xea\x02(Injective::Crypto::V1beta1::Ethsecp256k1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n0injective/crypto/v1beta1/ethsecp256k1/keys.proto\x12%injective.crypto.v1beta1.ethsecp256k1\x1a\x14gogoproto/gogo.proto\" \n\x06PubKey\x12\x10\n\x03key\x18\x01 \x01(\x0cR\x03key:\x04\x98\xa0\x1f\x00\"\x1b\n\x07PrivKey\x12\x10\n\x03key\x18\x01 \x01(\x0cR\x03keyB\xb9\x02\n)com.injective.crypto.v1beta1.ethsecp256k1B\tKeysProtoZKgithub.com/InjectiveLabs/injective-core/injective-chain/crypto/ethsecp256k1\xa2\x02\x04ICVE\xaa\x02%Injective.Crypto.V1beta1.Ethsecp256k1\xca\x02%Injective\\Crypto\\V1beta1\\Ethsecp256k1\xe2\x02\x31Injective\\Crypto\\V1beta1\\Ethsecp256k1\\GPBMetadata\xea\x02(Injective::Crypto::V1beta1::Ethsecp256k1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'injective.crypto.v1beta1.ethsecp256k1.keys_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n)com.injective.crypto.v1beta1.ethsecp256k1B\tKeysProtoP\001ZKgithub.com/InjectiveLabs/injective-core/injective-chain/crypto/ethsecp256k1\242\002\004ICVE\252\002%Injective.Crypto.V1beta1.Ethsecp256k1\312\002%Injective\\Crypto\\V1beta1\\Ethsecp256k1\342\0021Injective\\Crypto\\V1beta1\\Ethsecp256k1\\GPBMetadata\352\002(Injective::Crypto::V1beta1::Ethsecp256k1'
+  DESCRIPTOR._serialized_options = b'\n)com.injective.crypto.v1beta1.ethsecp256k1B\tKeysProtoZKgithub.com/InjectiveLabs/injective-core/injective-chain/crypto/ethsecp256k1\242\002\004ICVE\252\002%Injective.Crypto.V1beta1.Ethsecp256k1\312\002%Injective\\Crypto\\V1beta1\\Ethsecp256k1\342\0021Injective\\Crypto\\V1beta1\\Ethsecp256k1\\GPBMetadata\352\002(Injective::Crypto::V1beta1::Ethsecp256k1'
   _PUBKEY._options = None
   _PUBKEY._serialized_options = b'\230\240\037\000'
   _globals['_PUBKEY']._serialized_start=113

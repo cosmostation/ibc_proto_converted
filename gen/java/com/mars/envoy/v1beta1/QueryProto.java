@@ -677,6 +677,7 @@ public final class QueryProto {
               com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     private com.mars.envoy.v1beta1.QueryProto.AccountInfo account_;
     /**
@@ -685,7 +686,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAccount() {
-      return account_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
@@ -717,7 +718,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAccount());
       }
       getUnknownFields().writeTo(output);
@@ -729,7 +730,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (account_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAccount());
       }
@@ -891,13 +892,19 @@ public final class QueryProto {
 
       // Construct using com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -941,11 +948,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.account_ = accountBuilder_ == null
               ? account_
               : accountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1111,8 +1121,10 @@ public final class QueryProto {
         } else {
           accountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (account_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2509,6 +2521,7 @@ public final class QueryProto {
               com.mars.envoy.v1beta1.QueryProto.AccountInfo.class, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTROLLER_FIELD_NUMBER = 1;
     private com.mars.envoy.v1beta1.QueryProto.ChainInfo controller_;
     /**
@@ -2517,7 +2530,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasController() {
-      return controller_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
@@ -2543,7 +2556,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasHost() {
-      return host_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
@@ -2614,10 +2627,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (controller_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getController());
       }
-      if (host_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getHost());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
@@ -2632,11 +2645,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (controller_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getController());
       }
-      if (host_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHost());
       }
@@ -2815,13 +2828,20 @@ public final class QueryProto {
 
       // Construct using com.mars.envoy.v1beta1.QueryProto.AccountInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getControllerFieldBuilder();
+          getHostFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2871,19 +2891,23 @@ public final class QueryProto {
 
       private void buildPartial0(com.mars.envoy.v1beta1.QueryProto.AccountInfo result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.controller_ = controllerBuilder_ == null
               ? controller_
               : controllerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.host_ = hostBuilder_ == null
               ? host_
               : hostBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.address_ = address_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3069,8 +3093,10 @@ public final class QueryProto {
         } else {
           controllerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (controller_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3188,8 +3214,10 @@ public final class QueryProto {
         } else {
           hostBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (host_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

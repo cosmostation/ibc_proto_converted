@@ -373,6 +373,7 @@ public final class HostZoneProto {
               com.stride.stakeibc.HostZoneProto.HostZone.class, com.stride.stakeibc.HostZoneProto.HostZone.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -619,7 +620,7 @@ public final class HostZoneProto {
      */
     @java.lang.Override
     public boolean hasWithdrawalAccount() {
-      return withdrawalAccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stride.stakeibc.ICAAccount withdrawal_account = 5 [json_name = "withdrawalAccount"];</code>
@@ -645,7 +646,7 @@ public final class HostZoneProto {
      */
     @java.lang.Override
     public boolean hasFeeAccount() {
-      return feeAccount_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.stride.stakeibc.ICAAccount fee_account = 6 [json_name = "feeAccount"];</code>
@@ -671,7 +672,7 @@ public final class HostZoneProto {
      */
     @java.lang.Override
     public boolean hasDelegationAccount() {
-      return delegationAccount_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.stride.stakeibc.ICAAccount delegation_account = 7 [json_name = "delegationAccount"];</code>
@@ -697,7 +698,7 @@ public final class HostZoneProto {
      */
     @java.lang.Override
     public boolean hasRedemptionAccount() {
-      return redemptionAccount_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.stride.stakeibc.ICAAccount redemption_account = 16 [json_name = "redemptionAccount"];</code>
@@ -1113,13 +1114,13 @@ public final class HostZoneProto {
       for (int i = 0; i < blacklistedValidators_.size(); i++) {
         output.writeMessage(4, blacklistedValidators_.get(i));
       }
-      if (withdrawalAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getWithdrawalAccount());
       }
-      if (feeAccount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getFeeAccount());
       }
-      if (delegationAccount_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(7, getDelegationAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcDenom_)) {
@@ -1143,7 +1144,7 @@ public final class HostZoneProto {
       if (unbondingFrequency_ != 0L) {
         output.writeUInt64(14, unbondingFrequency_);
       }
-      if (redemptionAccount_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(16, getRedemptionAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bech32Prefix_)) {
@@ -1184,15 +1185,15 @@ public final class HostZoneProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, blacklistedValidators_.get(i));
       }
-      if (withdrawalAccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getWithdrawalAccount());
       }
-      if (feeAccount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getFeeAccount());
       }
-      if (delegationAccount_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getDelegationAccount());
       }
@@ -1218,7 +1219,7 @@ public final class HostZoneProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(14, unbondingFrequency_);
       }
-      if (redemptionAccount_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getRedemptionAccount());
       }
@@ -1493,13 +1494,24 @@ public final class HostZoneProto {
 
       // Construct using com.stride.stakeibc.HostZoneProto.HostZone.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValidatorsFieldBuilder();
+          getBlacklistedValidatorsFieldBuilder();
+          getWithdrawalAccountFieldBuilder();
+          getFeeAccountFieldBuilder();
+          getDelegationAccountFieldBuilder();
+          getRedemptionAccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1620,25 +1632,30 @@ public final class HostZoneProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.transferChannelId_ = transferChannelId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.withdrawalAccount_ = withdrawalAccountBuilder_ == null
               ? withdrawalAccount_
               : withdrawalAccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.feeAccount_ = feeAccountBuilder_ == null
               ? feeAccount_
               : feeAccountBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.delegationAccount_ = delegationAccountBuilder_ == null
               ? delegationAccount_
               : delegationAccountBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.redemptionAccount_ = redemptionAccountBuilder_ == null
               ? redemptionAccount_
               : redemptionAccountBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.ibcDenom_ = ibcDenom_;
@@ -1670,6 +1687,7 @@ public final class HostZoneProto {
         if (((from_bitField0_ & 0x00080000) != 0)) {
           result.maxRedemptionRate_ = maxRedemptionRate_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2847,8 +2865,10 @@ public final class HostZoneProto {
         } else {
           withdrawalAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (withdrawalAccount_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2966,8 +2986,10 @@ public final class HostZoneProto {
         } else {
           feeAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (feeAccount_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3085,8 +3107,10 @@ public final class HostZoneProto {
         } else {
           delegationAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (delegationAccount_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3204,8 +3228,10 @@ public final class HostZoneProto {
         } else {
           redemptionAccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (redemptionAccount_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**

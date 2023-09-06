@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: cudos/cudoMint/tx.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgGrpc {
 
   private MsgGrpc() {}
 
-  public static final String SERVICE_NAME = "cudos.cudoMint.Msg";
+  public static final java.lang.String SERVICE_NAME = "cudos.cudoMint.Msg";
 
   // Static method descriptors that strictly reflect the proto.
   /**
@@ -206,9 +206,9 @@ public final class MsgGrpc {
   private static final class MsgMethodDescriptorSupplier
       extends MsgBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MsgMethodDescriptorSupplier(String methodName) {
+    MsgMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

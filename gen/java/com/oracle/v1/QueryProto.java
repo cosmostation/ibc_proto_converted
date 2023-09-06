@@ -2795,6 +2795,7 @@ public final class QueryProto {
               com.oracle.v1.QueryProto.QueryDataSourceResponse.class, com.oracle.v1.QueryProto.QueryDataSourceResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_SOURCE_FIELD_NUMBER = 1;
     private com.oracle.v1.OracleProto.DataSource dataSource_;
     /**
@@ -2807,7 +2808,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDataSource() {
-      return dataSource_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2847,7 +2848,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataSource_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDataSource());
       }
       getUnknownFields().writeTo(output);
@@ -2859,7 +2860,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (dataSource_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataSource());
       }
@@ -3021,13 +3022,19 @@ public final class QueryProto {
 
       // Construct using com.oracle.v1.QueryProto.QueryDataSourceResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataSourceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3071,11 +3078,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.oracle.v1.QueryProto.QueryDataSourceResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSource_ = dataSourceBuilder_ == null
               ? dataSource_
               : dataSourceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3261,8 +3271,10 @@ public final class QueryProto {
         } else {
           dataSourceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (dataSource_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3971,6 +3983,7 @@ public final class QueryProto {
               com.oracle.v1.QueryProto.QueryOracleScriptResponse.class, com.oracle.v1.QueryProto.QueryOracleScriptResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORACLE_SCRIPT_FIELD_NUMBER = 1;
     private com.oracle.v1.OracleProto.OracleScript oracleScript_;
     /**
@@ -3983,7 +3996,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOracleScript() {
-      return oracleScript_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4023,7 +4036,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (oracleScript_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOracleScript());
       }
       getUnknownFields().writeTo(output);
@@ -4035,7 +4048,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (oracleScript_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOracleScript());
       }
@@ -4198,13 +4211,19 @@ public final class QueryProto {
 
       // Construct using com.oracle.v1.QueryProto.QueryOracleScriptResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOracleScriptFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4248,11 +4267,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.oracle.v1.QueryProto.QueryOracleScriptResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.oracleScript_ = oracleScriptBuilder_ == null
               ? oracleScript_
               : oracleScriptBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4438,8 +4460,10 @@ public final class QueryProto {
         } else {
           oracleScriptBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (oracleScript_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5222,6 +5246,7 @@ public final class QueryProto {
               com.oracle.v1.QueryProto.QueryRequestResponse.class, com.oracle.v1.QueryProto.QueryRequestResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REQUEST_FIELD_NUMBER = 1;
     private com.oracle.v1.OracleProto.Request request_;
     /**
@@ -5234,7 +5259,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5338,7 +5363,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return result_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5378,13 +5403,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRequest());
       }
       for (int i = 0; i < reports_.size(); i++) {
         output.writeMessage(2, reports_.get(i));
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -5396,7 +5421,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRequest());
       }
@@ -5404,7 +5429,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, reports_.get(i));
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getResult());
       }
@@ -5581,13 +5606,21 @@ public final class QueryProto {
 
       // Construct using com.oracle.v1.QueryProto.QueryRequestResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+          getReportsFieldBuilder();
+          getResultFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5656,16 +5689,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.oracle.v1.QueryProto.QueryRequestResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5900,8 +5937,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6385,8 +6424,10 @@ public final class QueryProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (result_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7191,7 +7232,8 @@ public final class QueryProto {
 
     public static final int REQUEST_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList requestIds_;
+    private com.google.protobuf.Internal.LongList requestIds_ =
+        emptyLongList();
     /**
      * <pre>
      * RequestIDs is a list of pending request IDs assigned to the given validator
@@ -7470,22 +7512,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.oracle.v1.QueryProto.QueryPendingRequestsResponse buildPartial() {
         com.oracle.v1.QueryProto.QueryPendingRequestsResponse result = new com.oracle.v1.QueryProto.QueryPendingRequestsResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.oracle.v1.QueryProto.QueryPendingRequestsResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          requestIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.requestIds_ = requestIds_;
-      }
-
       private void buildPartial0(com.oracle.v1.QueryProto.QueryPendingRequestsResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          requestIds_.makeImmutable();
+          result.requestIds_ = requestIds_;
+        }
       }
 
       @java.lang.Override
@@ -7535,7 +7572,8 @@ public final class QueryProto {
         if (!other.requestIds_.isEmpty()) {
           if (requestIds_.isEmpty()) {
             requestIds_ = other.requestIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            requestIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureRequestIdsIsMutable();
             requestIds_.addAll(other.requestIds_);
@@ -7603,10 +7641,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList requestIds_ = emptyLongList();
       private void ensureRequestIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          requestIds_ = mutableCopy(requestIds_);
-          bitField0_ |= 0x00000001;
+        if (!requestIds_.isModifiable()) {
+          requestIds_ = makeMutableCopy(requestIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -7618,8 +7656,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getRequestIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(requestIds_) : requestIds_;
+        requestIds_.makeImmutable();
+        return requestIds_;
       }
       /**
        * <pre>
@@ -7659,6 +7697,7 @@ public final class QueryProto {
 
         ensureRequestIdsIsMutable();
         requestIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7675,6 +7714,7 @@ public final class QueryProto {
 
         ensureRequestIdsIsMutable();
         requestIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7692,6 +7732,7 @@ public final class QueryProto {
         ensureRequestIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, requestIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8248,6 +8289,7 @@ public final class QueryProto {
               com.oracle.v1.QueryProto.QueryParamsResponse.class, com.oracle.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.oracle.v1.OracleProto.Params params_;
     /**
@@ -8260,7 +8302,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -8300,7 +8342,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -8312,7 +8354,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -8474,13 +8516,19 @@ public final class QueryProto {
 
       // Construct using com.oracle.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8524,11 +8572,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.oracle.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8714,8 +8765,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9512,6 +9565,7 @@ public final class QueryProto {
               com.oracle.v1.QueryProto.QueryValidatorResponse.class, com.oracle.v1.QueryProto.QueryValidatorResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
     private com.oracle.v1.OracleProto.ValidatorStatus status_;
     /**
@@ -9524,7 +9578,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStatus() {
-      return status_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -9564,7 +9618,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (status_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getStatus());
       }
       getUnknownFields().writeTo(output);
@@ -9576,7 +9630,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (status_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStatus());
       }
@@ -9738,13 +9792,19 @@ public final class QueryProto {
 
       // Construct using com.oracle.v1.QueryProto.QueryValidatorResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStatusFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9788,11 +9848,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.oracle.v1.QueryProto.QueryValidatorResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.status_ = statusBuilder_ == null
               ? status_
               : statusBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9978,8 +10041,10 @@ public final class QueryProto {
         } else {
           statusBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (status_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14953,6 +15018,7 @@ public final class QueryProto {
               com.oracle.v1.QueryProto.QueryRequestSearchResponse.class, com.oracle.v1.QueryProto.QueryRequestSearchResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REQUEST_FIELD_NUMBER = 1;
     private com.oracle.v1.QueryProto.QueryRequestResponse request_;
     /**
@@ -14965,7 +15031,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -15005,7 +15071,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -15017,7 +15083,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRequest());
       }
@@ -15180,13 +15246,19 @@ public final class QueryProto {
 
       // Construct using com.oracle.v1.QueryProto.QueryRequestSearchResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15230,11 +15302,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.oracle.v1.QueryProto.QueryRequestSearchResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15420,8 +15495,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

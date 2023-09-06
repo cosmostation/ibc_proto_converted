@@ -1752,6 +1752,7 @@ public final class QueryProto {
               com.kava.committee.v1beta1.QueryProto.QueryCommitteeResponse.class, com.kava.committee.v1beta1.QueryProto.QueryCommitteeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COMMITTEE_FIELD_NUMBER = 1;
     private com.google.protobuf.Any committee_;
     /**
@@ -1760,7 +1761,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCommittee() {
-      return committee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any committee = 1 [json_name = "committee", (.cosmos_proto.accepts_interface) = "Committee"];</code>
@@ -1792,7 +1793,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (committee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCommittee());
       }
       getUnknownFields().writeTo(output);
@@ -1804,7 +1805,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (committee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCommittee());
       }
@@ -1966,13 +1967,19 @@ public final class QueryProto {
 
       // Construct using com.kava.committee.v1beta1.QueryProto.QueryCommitteeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCommitteeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2016,11 +2023,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.committee.v1beta1.QueryProto.QueryCommitteeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.committee_ = committeeBuilder_ == null
               ? committee_
               : committeeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2186,8 +2196,10 @@ public final class QueryProto {
         } else {
           committeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (committee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4147,6 +4159,7 @@ public final class QueryProto {
               com.kava.committee.v1beta1.QueryProto.QueryProposalResponse.class, com.kava.committee.v1beta1.QueryProto.QueryProposalResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PUB_PROPOSAL_FIELD_NUMBER = 1;
     private com.google.protobuf.Any pubProposal_;
     /**
@@ -4155,7 +4168,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPubProposal() {
-      return pubProposal_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any pub_proposal = 1 [json_name = "pubProposal", (.gogoproto.customname) = "PubProposal", (.cosmos_proto.accepts_interface) = "cosmos.gov.v1beta1.Content"];</code>
@@ -4203,7 +4216,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDeadline() {
-      return deadline_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp deadline = 4 [json_name = "deadline", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -4235,7 +4248,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pubProposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPubProposal());
       }
       if (id_ != 0L) {
@@ -4244,7 +4257,7 @@ public final class QueryProto {
       if (committeeId_ != 0L) {
         output.writeUInt64(3, committeeId_);
       }
-      if (deadline_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getDeadline());
       }
       getUnknownFields().writeTo(output);
@@ -4256,7 +4269,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pubProposal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPubProposal());
       }
@@ -4268,7 +4281,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, committeeId_);
       }
-      if (deadline_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDeadline());
       }
@@ -4449,13 +4462,20 @@ public final class QueryProto {
 
       // Construct using com.kava.committee.v1beta1.QueryProto.QueryProposalResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPubProposalFieldBuilder();
+          getDeadlineFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4506,10 +4526,12 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.committee.v1beta1.QueryProto.QueryProposalResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pubProposal_ = pubProposalBuilder_ == null
               ? pubProposal_
               : pubProposalBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
@@ -4521,7 +4543,9 @@ public final class QueryProto {
           result.deadline_ = deadlineBuilder_ == null
               ? deadline_
               : deadlineBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4713,8 +4737,10 @@ public final class QueryProto {
         } else {
           pubProposalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pubProposal_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4896,8 +4922,10 @@ public final class QueryProto {
         } else {
           deadlineBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (deadline_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5966,6 +5994,7 @@ public final class QueryProto {
               com.kava.committee.v1beta1.QueryProto.QueryVotesRequest.class, com.kava.committee.v1beta1.QueryProto.QueryVotesRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
     private long proposalId_ = 0L;
     /**
@@ -5985,7 +6014,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -6020,7 +6049,7 @@ public final class QueryProto {
       if (proposalId_ != 0L) {
         output.writeUInt64(1, proposalId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6036,7 +6065,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, proposalId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6203,13 +6232,19 @@ public final class QueryProto {
 
       // Construct using com.kava.committee.v1beta1.QueryProto.QueryVotesRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6257,11 +6292,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proposalId_ = proposalId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6467,8 +6505,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6698,6 +6738,7 @@ public final class QueryProto {
               com.kava.committee.v1beta1.QueryProto.QueryVotesResponse.class, com.kava.committee.v1beta1.QueryProto.QueryVotesResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VOTES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kava.committee.v1beta1.QueryProto.QueryVoteResponse> votes_;
@@ -6771,7 +6812,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6814,7 +6855,7 @@ public final class QueryProto {
       for (int i = 0; i < votes_.size(); i++) {
         output.writeMessage(1, votes_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6830,7 +6871,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, votes_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6998,13 +7039,20 @@ public final class QueryProto {
 
       // Construct using com.kava.committee.v1beta1.QueryProto.QueryVotesResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVotesFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7068,11 +7116,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.committee.v1beta1.QueryProto.QueryVotesResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7609,8 +7660,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

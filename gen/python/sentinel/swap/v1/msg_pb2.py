@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1asentinel/swap/v1/msg.proto\x12\x10sentinel.swap.v1\x1a\x14gogoproto/gogo.proto\"\xa1\x01\n\x0eMsgSwapRequest\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x17\n\x07tx_hash\x18\x02 \x01(\x0cR\x06txHash\x12\x1a\n\x08receiver\x18\x03 \x01(\tR\x08receiver\x12\x46\n\x06\x61mount\x18\x04 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x06\x61mount\"\x11\n\x0fMsgSwapResponse2\\\n\nMsgService\x12N\n\x07MsgSwap\x12 .sentinel.swap.v1.MsgSwapRequest\x1a!.sentinel.swap.v1.MsgSwapResponseB\xb9\x01\n\x14\x63om.sentinel.swap.v1B\x08MsgProtoP\x01Z-github.com/sentinel-official/hub/x/swap/types\xa2\x02\x03SSX\xaa\x02\x10Sentinel.Swap.V1\xca\x02\x10Sentinel\\Swap\\V1\xe2\x02\x1cSentinel\\Swap\\V1\\GPBMetadata\xea\x02\x12Sentinel::Swap::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1asentinel/swap/v1/msg.proto\x12\x10sentinel.swap.v1\x1a\x14gogoproto/gogo.proto\"\xa1\x01\n\x0eMsgSwapRequest\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x17\n\x07tx_hash\x18\x02 \x01(\x0cR\x06txHash\x12\x1a\n\x08receiver\x18\x03 \x01(\tR\x08receiver\x12\x46\n\x06\x61mount\x18\x04 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x06\x61mount\"\x11\n\x0fMsgSwapResponse2\\\n\nMsgService\x12N\n\x07MsgSwap\x12 .sentinel.swap.v1.MsgSwapRequest\x1a!.sentinel.swap.v1.MsgSwapResponseB\xb7\x01\n\x14\x63om.sentinel.swap.v1B\x08MsgProtoZ-github.com/sentinel-official/hub/x/swap/types\xa2\x02\x03SSX\xaa\x02\x10Sentinel.Swap.V1\xca\x02\x10Sentinel\\Swap\\V1\xe2\x02\x1cSentinel\\Swap\\V1\\GPBMetadata\xea\x02\x12Sentinel::Swap::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.swap.v1.msg_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.swap.v1B\010MsgProtoP\001Z-github.com/sentinel-official/hub/x/swap/types\242\002\003SSX\252\002\020Sentinel.Swap.V1\312\002\020Sentinel\\Swap\\V1\342\002\034Sentinel\\Swap\\V1\\GPBMetadata\352\002\022Sentinel::Swap::V1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.swap.v1B\010MsgProtoZ-github.com/sentinel-official/hub/x/swap/types\242\002\003SSX\252\002\020Sentinel.Swap.V1\312\002\020Sentinel\\Swap\\V1\342\002\034Sentinel\\Swap\\V1\\GPBMetadata\352\002\022Sentinel::Swap::V1\310\341\036\000\250\342\036\000'
   _MSGSWAPREQUEST.fields_by_name['amount']._options = None
   _MSGSWAPREQUEST.fields_by_name['amount']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _globals['_MSGSWAPREQUEST']._serialized_start=71

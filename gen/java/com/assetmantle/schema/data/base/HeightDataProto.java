@@ -68,6 +68,7 @@ public final class HeightDataProto {
               com.assetmantle.schema.data.base.HeightDataProto.HeightData.class, com.assetmantle.schema.data.base.HeightDataProto.HeightData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     private com.assetmantle.schema.types.base.HeightProto.Height value_;
     /**
@@ -76,7 +77,7 @@ public final class HeightDataProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return value_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.types.base.Height value = 1 [json_name = "value"];</code>
@@ -108,7 +109,7 @@ public final class HeightDataProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getValue());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class HeightDataProto {
       if (size != -1) return size;
 
       size = 0;
-      if (value_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValue());
       }
@@ -278,13 +279,19 @@ public final class HeightDataProto {
 
       // Construct using com.assetmantle.schema.data.base.HeightDataProto.HeightData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValueFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class HeightDataProto {
 
       private void buildPartial0(com.assetmantle.schema.data.base.HeightDataProto.HeightData result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class HeightDataProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (value_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

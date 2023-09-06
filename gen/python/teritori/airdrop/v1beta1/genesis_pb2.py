@@ -20,15 +20,14 @@ from teritori.airdrop.v1beta1 import allocation_pb2 as teritori_dot_airdrop_dot_
 from teritori.airdrop.v1beta1 import params_pb2 as teritori_dot_airdrop_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&teritori/airdrop/v1beta1/genesis.proto\x12\x18teritori.airdrop.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a!cosmos/bank/v1beta1/genesis.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a)teritori/airdrop/v1beta1/allocation.proto\x1a%teritori/airdrop/v1beta1/params.proto\"\xa3\x01\n\x0cGenesisState\x12>\n\x06params\x18\x01 \x01(\x0b\x32 .teritori.airdrop.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12S\n\x0b\x61llocations\x18\x02 \x03(\x0b\x32+.teritori.airdrop.v1beta1.AirdropAllocationB\x04\xc8\xde\x1f\x00R\x0b\x61llocationsB\xe2\x01\n\x1c\x63om.teritori.airdrop.v1beta1B\x0cGenesisProtoP\x01Z2github.com/TERITORI/teritori-chain/x/airdrop/types\xa2\x02\x03TAX\xaa\x02\x18Teritori.Airdrop.V1beta1\xca\x02\x18Teritori\\Airdrop\\V1beta1\xe2\x02$Teritori\\Airdrop\\V1beta1\\GPBMetadata\xea\x02\x1aTeritori::Airdrop::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&teritori/airdrop/v1beta1/genesis.proto\x12\x18teritori.airdrop.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a!cosmos/bank/v1beta1/genesis.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a)teritori/airdrop/v1beta1/allocation.proto\x1a%teritori/airdrop/v1beta1/params.proto\"\xa3\x01\n\x0cGenesisState\x12>\n\x06params\x18\x01 \x01(\x0b\x32 .teritori.airdrop.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12S\n\x0b\x61llocations\x18\x02 \x03(\x0b\x32+.teritori.airdrop.v1beta1.AirdropAllocationB\x04\xc8\xde\x1f\x00R\x0b\x61llocationsB\xe0\x01\n\x1c\x63om.teritori.airdrop.v1beta1B\x0cGenesisProtoZ2github.com/TERITORI/teritori-chain/x/airdrop/types\xa2\x02\x03TAX\xaa\x02\x18Teritori.Airdrop.V1beta1\xca\x02\x18Teritori\\Airdrop\\V1beta1\xe2\x02$Teritori\\Airdrop\\V1beta1\\GPBMetadata\xea\x02\x1aTeritori::Airdrop::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'teritori.airdrop.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.teritori.airdrop.v1beta1B\014GenesisProtoP\001Z2github.com/TERITORI/teritori-chain/x/airdrop/types\242\002\003TAX\252\002\030Teritori.Airdrop.V1beta1\312\002\030Teritori\\Airdrop\\V1beta1\342\002$Teritori\\Airdrop\\V1beta1\\GPBMetadata\352\002\032Teritori::Airdrop::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\034com.teritori.airdrop.v1beta1B\014GenesisProtoZ2github.com/TERITORI/teritori-chain/x/airdrop/types\242\002\003TAX\252\002\030Teritori.Airdrop.V1beta1\312\002\030Teritori\\Airdrop\\V1beta1\342\002$Teritori\\Airdrop\\V1beta1\\GPBMetadata\352\002\032Teritori::Airdrop::V1beta1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['allocations']._options = None

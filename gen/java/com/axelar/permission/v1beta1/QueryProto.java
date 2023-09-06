@@ -480,6 +480,7 @@ public final class QueryProto {
               com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.class, com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int GOVERNANCE_KEY_FIELD_NUMBER = 1;
     private com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey governanceKey_;
     /**
@@ -488,7 +489,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasGovernanceKey() {
-      return governanceKey_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
@@ -520,7 +521,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (governanceKey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getGovernanceKey());
       }
       getUnknownFields().writeTo(output);
@@ -532,7 +533,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (governanceKey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGovernanceKey());
       }
@@ -695,13 +696,19 @@ public final class QueryProto {
 
       // Construct using com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGovernanceKeyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -745,11 +752,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.governanceKey_ = governanceKeyBuilder_ == null
               ? governanceKey_
               : governanceKeyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -915,8 +925,10 @@ public final class QueryProto {
         } else {
           governanceKeyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (governanceKey_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

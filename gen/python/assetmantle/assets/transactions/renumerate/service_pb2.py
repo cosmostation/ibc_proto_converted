@@ -16,15 +16,14 @@ from assetmantle.assets.transactions.renumerate import message_pb2 as assetmantl
 from assetmantle.assets.transactions.renumerate import transaction_response_pb2 as assetmantle_dot_assets_dot_transactions_dot_renumerate_dot_transaction__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8assetmantle/assets/transactions/renumerate/service.proto\x12\x32\x61ssetmantle.modules.assets.transactions.renumerate\x1a\x1cgoogle/api/annotations.proto\x1a\x38\x61ssetmantle/assets/transactions/renumerate/message.proto\x1a\x45\x61ssetmantle/assets/transactions/renumerate/transaction_response.proto2\xbd\x01\n\x07Service\x12\xb1\x01\n\x06Handle\x12;.assetmantle.modules.assets.transactions.renumerate.Message\x1aG.assetmantle.modules.assets.transactions.renumerate.TransactionResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/mantle/assets/renumerateB\xb4\x02\n6com.assetmantle.modules.assets.transactions.renumerateB\x0cServiceProtoP\x01\xa2\x02\x05\x41MATR\xaa\x02\x32\x41ssetmantle.Modules.Assets.Transactions.Renumerate\xca\x02\x32\x41ssetmantle\\Modules\\Assets\\Transactions\\Renumerate\xe2\x02>Assetmantle\\Modules\\Assets\\Transactions\\Renumerate\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Assets::Transactions::Renumerateb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8assetmantle/assets/transactions/renumerate/service.proto\x12\x32\x61ssetmantle.modules.assets.transactions.renumerate\x1a\x1cgoogle/api/annotations.proto\x1a\x38\x61ssetmantle/assets/transactions/renumerate/message.proto\x1a\x45\x61ssetmantle/assets/transactions/renumerate/transaction_response.proto2\xbd\x01\n\x07Service\x12\xb1\x01\n\x06Handle\x12;.assetmantle.modules.assets.transactions.renumerate.Message\x1aG.assetmantle.modules.assets.transactions.renumerate.TransactionResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/mantle/assets/renumerateB\xb2\x02\n6com.assetmantle.modules.assets.transactions.renumerateB\x0cServiceProto\xa2\x02\x05\x41MATR\xaa\x02\x32\x41ssetmantle.Modules.Assets.Transactions.Renumerate\xca\x02\x32\x41ssetmantle\\Modules\\Assets\\Transactions\\Renumerate\xe2\x02>Assetmantle\\Modules\\Assets\\Transactions\\Renumerate\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Assets::Transactions::Renumerateb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.assets.transactions.renumerate.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.assets.transactions.renumerateB\014ServiceProtoP\001\242\002\005AMATR\252\0022Assetmantle.Modules.Assets.Transactions.Renumerate\312\0022Assetmantle\\Modules\\Assets\\Transactions\\Renumerate\342\002>Assetmantle\\Modules\\Assets\\Transactions\\Renumerate\\GPBMetadata\352\0026Assetmantle::Modules::Assets::Transactions::Renumerate'
+  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.assets.transactions.renumerateB\014ServiceProto\242\002\005AMATR\252\0022Assetmantle.Modules.Assets.Transactions.Renumerate\312\0022Assetmantle\\Modules\\Assets\\Transactions\\Renumerate\342\002>Assetmantle\\Modules\\Assets\\Transactions\\Renumerate\\GPBMetadata\352\0026Assetmantle::Modules::Assets::Transactions::Renumerate'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\033\"\031/mantle/assets/renumerate'
   _globals['_SERVICE']._serialized_start=272

@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$noble/tokenfactory/blacklisted.proto\x12\x12noble.tokenfactory\"+\n\x0b\x42lacklisted\x12\x1c\n\taddressBz\x18\x01 \x01(\x0cR\taddressBzB\xcf\x01\n\x16\x63om.noble.tokenfactoryB\x10\x42lacklistedProtoP\x01Z:github.com/strangelove-ventures/noble/x/tokenfactory/types\xa2\x02\x03NTX\xaa\x02\x12Noble.Tokenfactory\xca\x02\x12Noble\\Tokenfactory\xe2\x02\x1eNoble\\Tokenfactory\\GPBMetadata\xea\x02\x13Noble::Tokenfactoryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$noble/tokenfactory/blacklisted.proto\x12\x12noble.tokenfactory\"+\n\x0b\x42lacklisted\x12\x1c\n\taddressBz\x18\x01 \x01(\x0cR\taddressBzB\xcd\x01\n\x16\x63om.noble.tokenfactoryB\x10\x42lacklistedProtoZ:github.com/strangelove-ventures/noble/x/tokenfactory/types\xa2\x02\x03NTX\xaa\x02\x12Noble.Tokenfactory\xca\x02\x12Noble\\Tokenfactory\xe2\x02\x1eNoble\\Tokenfactory\\GPBMetadata\xea\x02\x13Noble::Tokenfactoryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'noble.tokenfactory.blacklisted_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.noble.tokenfactoryB\020BlacklistedProtoP\001Z:github.com/strangelove-ventures/noble/x/tokenfactory/types\242\002\003NTX\252\002\022Noble.Tokenfactory\312\002\022Noble\\Tokenfactory\342\002\036Noble\\Tokenfactory\\GPBMetadata\352\002\023Noble::Tokenfactory'
+  DESCRIPTOR._serialized_options = b'\n\026com.noble.tokenfactoryB\020BlacklistedProtoZ:github.com/strangelove-ventures/noble/x/tokenfactory/types\242\002\003NTX\252\002\022Noble.Tokenfactory\312\002\022Noble\\Tokenfactory\342\002\036Noble\\Tokenfactory\\GPBMetadata\352\002\023Noble::Tokenfactory'
   _globals['_BLACKLISTED']._serialized_start=60
   _globals['_BLACKLISTED']._serialized_end=103
 # @@protoc_insertion_point(module_scope)

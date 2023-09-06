@@ -106,6 +106,7 @@ public final class ClientProto {
               com.ibc.core.client.v1.ClientProto.IdentifiedClientState.class, com.ibc.core.client.v1.ClientProto.IdentifiedClientState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLIENT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object clientId_ = "";
@@ -165,7 +166,7 @@ public final class ClientProto {
      */
     @java.lang.Override
     public boolean hasClientState() {
-      return clientState_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -208,7 +209,7 @@ public final class ClientProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientId_);
       }
-      if (clientState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getClientState());
       }
       getUnknownFields().writeTo(output);
@@ -223,7 +224,7 @@ public final class ClientProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clientId_);
       }
-      if (clientState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getClientState());
       }
@@ -390,13 +391,19 @@ public final class ClientProto {
 
       // Construct using com.ibc.core.client.v1.ClientProto.IdentifiedClientState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClientStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -444,11 +451,14 @@ public final class ClientProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.clientId_ = clientId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.clientState_ = clientStateBuilder_ == null
               ? clientState_
               : clientStateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -736,8 +746,10 @@ public final class ClientProto {
         } else {
           clientStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (clientState_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -966,6 +978,7 @@ public final class ClientProto {
               com.ibc.core.client.v1.ClientProto.ConsensusStateWithHeight.class, com.ibc.core.client.v1.ClientProto.ConsensusStateWithHeight.Builder.class);
     }
 
+    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private com.ibc.core.client.v1.ClientProto.Height height_;
     /**
@@ -978,7 +991,7 @@ public final class ClientProto {
      */
     @java.lang.Override
     public boolean hasHeight() {
-      return height_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1016,7 +1029,7 @@ public final class ClientProto {
      */
     @java.lang.Override
     public boolean hasConsensusState() {
-      return consensusState_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1056,10 +1069,10 @@ public final class ClientProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (height_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getHeight());
       }
-      if (consensusState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getConsensusState());
       }
       getUnknownFields().writeTo(output);
@@ -1071,11 +1084,11 @@ public final class ClientProto {
       if (size != -1) return size;
 
       size = 0;
-      if (height_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHeight());
       }
-      if (consensusState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getConsensusState());
       }
@@ -1247,13 +1260,20 @@ public final class ClientProto {
 
       // Construct using com.ibc.core.client.v1.ClientProto.ConsensusStateWithHeight.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHeightFieldBuilder();
+          getConsensusStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1302,16 +1322,20 @@ public final class ClientProto {
 
       private void buildPartial0(com.ibc.core.client.v1.ClientProto.ConsensusStateWithHeight result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = heightBuilder_ == null
               ? height_
               : heightBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.consensusState_ = consensusStateBuilder_ == null
               ? consensusState_
               : consensusStateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1507,8 +1531,10 @@ public final class ClientProto {
         } else {
           heightBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (height_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1662,8 +1688,10 @@ public final class ClientProto {
         } else {
           consensusStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (consensusState_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4172,6 +4200,7 @@ public final class ClientProto {
               com.ibc.core.client.v1.ClientProto.UpgradeProposal.class, com.ibc.core.client.v1.ClientProto.UpgradeProposal.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -4258,7 +4287,7 @@ public final class ClientProto {
      */
     @java.lang.Override
     public boolean hasPlan() {
-      return plan_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.upgrade.v1beta1.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
@@ -4293,7 +4322,7 @@ public final class ClientProto {
      */
     @java.lang.Override
     public boolean hasUpgradedClientState() {
-      return upgradedClientState_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -4349,10 +4378,10 @@ public final class ClientProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPlan());
       }
-      if (upgradedClientState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getUpgradedClientState());
       }
       getUnknownFields().writeTo(output);
@@ -4370,11 +4399,11 @@ public final class ClientProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPlan());
       }
-      if (upgradedClientState_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getUpgradedClientState());
       }
@@ -4554,13 +4583,20 @@ public final class ClientProto {
 
       // Construct using com.ibc.core.client.v1.ClientProto.UpgradeProposal.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlanFieldBuilder();
+          getUpgradedClientStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4617,16 +4653,20 @@ public final class ClientProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.plan_ = planBuilder_ == null
               ? plan_
               : planBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.upgradedClientState_ = upgradedClientStateBuilder_ == null
               ? upgradedClientState_
               : upgradedClientStateBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4966,8 +5006,10 @@ public final class ClientProto {
         } else {
           planBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (plan_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5130,8 +5172,10 @@ public final class ClientProto {
         } else {
           upgradedClientStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (upgradedClientState_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

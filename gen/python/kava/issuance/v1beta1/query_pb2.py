@@ -16,15 +16,14 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from kava.issuance.v1beta1 import genesis_pb2 as kava_dot_issuance_dot_v1beta1_dot_genesis__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!kava/issuance/v1beta1/query.proto\x12\x15kava.issuance.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a#kava/issuance/v1beta1/genesis.proto\"\x14\n\x12QueryParamsRequest\"R\n\x13QueryParamsResponse\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.kava.issuance.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x90\x01\n\x05Query\x12\x86\x01\n\x06Params\x12).kava.issuance.v1beta1.QueryParamsRequest\x1a*.kava.issuance.v1beta1.QueryParamsResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/kava/issuance/v1beta1/paramsB\xc9\x01\n\x19\x63om.kava.issuance.v1beta1B\nQueryProtoP\x01Z*github.com/kava-labs/kava/x/issuance/types\xa2\x02\x03KIX\xaa\x02\x15Kava.Issuance.V1beta1\xca\x02\x15Kava\\Issuance\\V1beta1\xe2\x02!Kava\\Issuance\\V1beta1\\GPBMetadata\xea\x02\x17Kava::Issuance::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!kava/issuance/v1beta1/query.proto\x12\x15kava.issuance.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a#kava/issuance/v1beta1/genesis.proto\"\x14\n\x12QueryParamsRequest\"R\n\x13QueryParamsResponse\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.kava.issuance.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x90\x01\n\x05Query\x12\x86\x01\n\x06Params\x12).kava.issuance.v1beta1.QueryParamsRequest\x1a*.kava.issuance.v1beta1.QueryParamsResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/kava/issuance/v1beta1/paramsB\xc7\x01\n\x19\x63om.kava.issuance.v1beta1B\nQueryProtoZ*github.com/kava-labs/kava/x/issuance/types\xa2\x02\x03KIX\xaa\x02\x15Kava.Issuance.V1beta1\xca\x02\x15Kava\\Issuance\\V1beta1\xe2\x02!Kava\\Issuance\\V1beta1\\GPBMetadata\xea\x02\x17Kava::Issuance::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.issuance.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.kava.issuance.v1beta1B\nQueryProtoP\001Z*github.com/kava-labs/kava/x/issuance/types\242\002\003KIX\252\002\025Kava.Issuance.V1beta1\312\002\025Kava\\Issuance\\V1beta1\342\002!Kava\\Issuance\\V1beta1\\GPBMetadata\352\002\027Kava::Issuance::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\031com.kava.issuance.v1beta1B\nQueryProtoZ*github.com/kava-labs/kava/x/issuance/types\242\002\003KIX\252\002\025Kava.Issuance.V1beta1\312\002\025Kava\\Issuance\\V1beta1\342\002!Kava\\Issuance\\V1beta1\\GPBMetadata\352\002\027Kava::Issuance::V1beta1'
   _QUERYPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Params']._options = None

@@ -81,6 +81,7 @@ public final class NftDataProto {
               com.likechain.likenft.v1.NftDataProto.NFTData.class, com.likechain.likenft.v1.NftDataProto.NFTData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -100,7 +101,7 @@ public final class NftDataProto {
      */
     @java.lang.Override
     public boolean hasClassParent() {
-      return classParent_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
@@ -146,7 +147,7 @@ public final class NftDataProto {
       if (!metadata_.isEmpty()) {
         output.writeBytes(1, metadata_);
       }
-      if (classParent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getClassParent());
       }
       if (toBeRevealed_ != false) {
@@ -165,7 +166,7 @@ public final class NftDataProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, metadata_);
       }
-      if (classParent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getClassParent());
       }
@@ -336,13 +337,19 @@ public final class NftDataProto {
 
       // Construct using com.likechain.likenft.v1.NftDataProto.NFTData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClassParentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -391,14 +398,17 @@ public final class NftDataProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.metadata_ = metadata_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.classParent_ = classParentBuilder_ == null
               ? classParent_
               : classParentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.toBeRevealed_ = toBeRevealed_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -612,8 +622,10 @@ public final class NftDataProto {
         } else {
           classParentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (classParent_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

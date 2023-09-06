@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from regen.data.v1alpha2 import types_pb2 as regen_dot_data_dot_v1alpha2_dot_types__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n regen/data/v1alpha2/events.proto\x12\x13regen.data.v1alpha2\x1a\x1fregen/data/v1alpha2/types.proto\"#\n\x0f\x45ventAnchorData\x12\x10\n\x03iri\x18\x01 \x01(\tR\x03iri\";\n\rEventSignData\x12\x10\n\x03iri\x18\x01 \x01(\tR\x03iri\x12\x18\n\x07signers\x18\x02 \x03(\tR\x07signers\"%\n\x11\x45ventStoreRawData\x12\x10\n\x03iri\x18\x01 \x01(\tR\x03iriB\xc2\x01\n\x17\x63om.regen.data.v1alpha2B\x0b\x45ventsProtoP\x01Z,github.com/regen-network/regen-ledger/x/data\xa2\x02\x03RDX\xaa\x02\x13Regen.Data.V1alpha2\xca\x02\x13Regen\\Data\\V1alpha2\xe2\x02\x1fRegen\\Data\\V1alpha2\\GPBMetadata\xea\x02\x15Regen::Data::V1alpha2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n regen/data/v1alpha2/events.proto\x12\x13regen.data.v1alpha2\x1a\x1fregen/data/v1alpha2/types.proto\"#\n\x0f\x45ventAnchorData\x12\x10\n\x03iri\x18\x01 \x01(\tR\x03iri\";\n\rEventSignData\x12\x10\n\x03iri\x18\x01 \x01(\tR\x03iri\x12\x18\n\x07signers\x18\x02 \x03(\tR\x07signers\"%\n\x11\x45ventStoreRawData\x12\x10\n\x03iri\x18\x01 \x01(\tR\x03iriB\xc0\x01\n\x17\x63om.regen.data.v1alpha2B\x0b\x45ventsProtoZ,github.com/regen-network/regen-ledger/x/data\xa2\x02\x03RDX\xaa\x02\x13Regen.Data.V1alpha2\xca\x02\x13Regen\\Data\\V1alpha2\xe2\x02\x1fRegen\\Data\\V1alpha2\\GPBMetadata\xea\x02\x15Regen::Data::V1alpha2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'regen.data.v1alpha2.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.regen.data.v1alpha2B\013EventsProtoP\001Z,github.com/regen-network/regen-ledger/x/data\242\002\003RDX\252\002\023Regen.Data.V1alpha2\312\002\023Regen\\Data\\V1alpha2\342\002\037Regen\\Data\\V1alpha2\\GPBMetadata\352\002\025Regen::Data::V1alpha2'
+  DESCRIPTOR._serialized_options = b'\n\027com.regen.data.v1alpha2B\013EventsProtoZ,github.com/regen-network/regen-ledger/x/data\242\002\003RDX\252\002\023Regen.Data.V1alpha2\312\002\023Regen\\Data\\V1alpha2\342\002\037Regen\\Data\\V1alpha2\\GPBMetadata\352\002\025Regen::Data::V1alpha2'
   _globals['_EVENTANCHORDATA']._serialized_start=90
   _globals['_EVENTANCHORDATA']._serialized_end=125
   _globals['_EVENTSIGNDATA']._serialized_start=127

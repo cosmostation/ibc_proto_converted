@@ -17,15 +17,14 @@ from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_quer
 from canto.govshuttle.v1 import govshuttle_pb2 as canto_dot_govshuttle_dot_v1_dot_govshuttle__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63\x61nto/govshuttle/v1/query.proto\x12\x13\x63\x61nto.govshuttle.v1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a$canto/govshuttle/v1/govshuttle.proto\"\x14\n\x12QueryParamsRequest\"P\n\x13QueryParamsResponse\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.canto.govshuttle.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x86\x01\n\x05Query\x12}\n\x06Params\x12\'.canto.govshuttle.v1.QueryParamsRequest\x1a(.canto.govshuttle.v1.QueryParamsResponse\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/canto/govshuttle/paramsB\xc9\x01\n\x17\x63om.canto.govshuttle.v1B\nQueryProtoP\x01Z4github.com/Canto-Network/Canto/v6/x/govshuttle/types\xa2\x02\x03\x43GX\xaa\x02\x13\x43\x61nto.Govshuttle.V1\xca\x02\x13\x43\x61nto\\Govshuttle\\V1\xe2\x02\x1f\x43\x61nto\\Govshuttle\\V1\\GPBMetadata\xea\x02\x15\x43\x61nto::Govshuttle::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63\x61nto/govshuttle/v1/query.proto\x12\x13\x63\x61nto.govshuttle.v1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a$canto/govshuttle/v1/govshuttle.proto\"\x14\n\x12QueryParamsRequest\"P\n\x13QueryParamsResponse\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.canto.govshuttle.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x86\x01\n\x05Query\x12}\n\x06Params\x12\'.canto.govshuttle.v1.QueryParamsRequest\x1a(.canto.govshuttle.v1.QueryParamsResponse\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/canto/govshuttle/paramsB\xc7\x01\n\x17\x63om.canto.govshuttle.v1B\nQueryProtoZ4github.com/Canto-Network/Canto/v6/x/govshuttle/types\xa2\x02\x03\x43GX\xaa\x02\x13\x43\x61nto.Govshuttle.V1\xca\x02\x13\x43\x61nto\\Govshuttle\\V1\xe2\x02\x1f\x43\x61nto\\Govshuttle\\V1\\GPBMetadata\xea\x02\x15\x43\x61nto::Govshuttle::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.govshuttle.v1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.canto.govshuttle.v1B\nQueryProtoP\001Z4github.com/Canto-Network/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Canto::Govshuttle::V1'
+  DESCRIPTOR._serialized_options = b'\n\027com.canto.govshuttle.v1B\nQueryProtoZ4github.com/Canto-Network/Canto/v6/x/govshuttle/types\242\002\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Govshuttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMetadata\352\002\025Canto::Govshuttle::V1'
   _QUERYPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Params']._options = None

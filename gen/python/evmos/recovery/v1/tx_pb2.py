@@ -17,15 +17,14 @@ from evmos.recovery.v1 import genesis_pb2 as evmos_dot_recovery_dot_v1_dot_genes
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x65vmos/recovery/v1/tx.proto\x12\x11\x65vmos.recovery.v1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1f\x65vmos/recovery/v1/genesis.proto\x1a\x14gogoproto/gogo.proto\"\x92\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x37\n\x06params\x18\x02 \x01(\x0b\x32\x19.evmos.recovery.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponse2e\n\x03Msg\x12^\n\x0cUpdateParams\x12\".evmos.recovery.v1.MsgUpdateParams\x1a*.evmos.recovery.v1.MsgUpdateParamsResponseB\xb3\x01\n\x15\x63om.evmos.recovery.v1B\x07TxProtoP\x01Z+github.com/evmos/evmos/v13/x/recovery/types\xa2\x02\x03\x45RX\xaa\x02\x11\x45vmos.Recovery.V1\xca\x02\x11\x45vmos\\Recovery\\V1\xe2\x02\x1d\x45vmos\\Recovery\\V1\\GPBMetadata\xea\x02\x13\x45vmos::Recovery::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x65vmos/recovery/v1/tx.proto\x12\x11\x65vmos.recovery.v1\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1f\x65vmos/recovery/v1/genesis.proto\x1a\x14gogoproto/gogo.proto\"\x92\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12\x37\n\x06params\x18\x02 \x01(\x0b\x32\x19.evmos.recovery.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params:\x0e\x82\xe7\xb0*\tauthority\"\x19\n\x17MsgUpdateParamsResponse2e\n\x03Msg\x12^\n\x0cUpdateParams\x12\".evmos.recovery.v1.MsgUpdateParams\x1a*.evmos.recovery.v1.MsgUpdateParamsResponseB\xb1\x01\n\x15\x63om.evmos.recovery.v1B\x07TxProtoZ+github.com/evmos/evmos/v13/x/recovery/types\xa2\x02\x03\x45RX\xaa\x02\x11\x45vmos.Recovery.V1\xca\x02\x11\x45vmos\\Recovery\\V1\xe2\x02\x1d\x45vmos\\Recovery\\V1\\GPBMetadata\xea\x02\x13\x45vmos::Recovery::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'evmos.recovery.v1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.evmos.recovery.v1B\007TxProtoP\001Z+github.com/evmos/evmos/v13/x/recovery/types\242\002\003ERX\252\002\021Evmos.Recovery.V1\312\002\021Evmos\\Recovery\\V1\342\002\035Evmos\\Recovery\\V1\\GPBMetadata\352\002\023Evmos::Recovery::V1'
+  DESCRIPTOR._serialized_options = b'\n\025com.evmos.recovery.v1B\007TxProtoZ+github.com/evmos/evmos/v13/x/recovery/types\242\002\003ERX\252\002\021Evmos.Recovery.V1\312\002\021Evmos\\Recovery\\V1\342\002\035Evmos\\Recovery\\V1\\GPBMetadata\352\002\023Evmos::Recovery::V1'
   _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
   _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGUPDATEPARAMS.fields_by_name['params']._options = None

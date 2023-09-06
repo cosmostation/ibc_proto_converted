@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!onomyprotocol/dao/v1/params.proto\x12\x14onomyprotocol.dao.v1\x1a\x14gogoproto/gogo.proto\"\xbb\x03\n\x06Params\x12W\n\x16withdraw_reward_period\x18\x01 \x01(\x03\x42!\xf2\xde\x1f\x1dyaml:\"withdraw_reward_period\"R\x14withdrawRewardPeriod\x12_\n\tpool_rate\x18\x02 \x01(\x0c\x42\x42\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x10yaml:\"pool_rate\"R\x08poolRate\x12v\n\x11max_proposal_rate\x18\x03 \x01(\x0c\x42J\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x18yaml:\"max_proposal_rate\"R\x0fmaxProposalRate\x12y\n\x12max_val_commission\x18\x04 \x01(\x0c\x42K\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x19yaml:\"max_val_commission\"R\x10maxValCommission:\x04\x98\xa0\x1f\x00\x42\xc5\x01\n\x18\x63om.onomyprotocol.dao.v1B\x0bParamsProtoP\x01Z*github.com/onomyprotocol/onomy/x/dao/types\xa2\x02\x03ODX\xaa\x02\x14Onomyprotocol.Dao.V1\xca\x02\x14Onomyprotocol\\Dao\\V1\xe2\x02 Onomyprotocol\\Dao\\V1\\GPBMetadata\xea\x02\x16Onomyprotocol::Dao::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!onomyprotocol/dao/v1/params.proto\x12\x14onomyprotocol.dao.v1\x1a\x14gogoproto/gogo.proto\"\xbb\x03\n\x06Params\x12W\n\x16withdraw_reward_period\x18\x01 \x01(\x03\x42!\xf2\xde\x1f\x1dyaml:\"withdraw_reward_period\"R\x14withdrawRewardPeriod\x12_\n\tpool_rate\x18\x02 \x01(\x0c\x42\x42\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x10yaml:\"pool_rate\"R\x08poolRate\x12v\n\x11max_proposal_rate\x18\x03 \x01(\x0c\x42J\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x18yaml:\"max_proposal_rate\"R\x0fmaxProposalRate\x12y\n\x12max_val_commission\x18\x04 \x01(\x0c\x42K\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x19yaml:\"max_val_commission\"R\x10maxValCommission:\x04\x98\xa0\x1f\x00\x42\xc3\x01\n\x18\x63om.onomyprotocol.dao.v1B\x0bParamsProtoZ*github.com/onomyprotocol/onomy/x/dao/types\xa2\x02\x03ODX\xaa\x02\x14Onomyprotocol.Dao.V1\xca\x02\x14Onomyprotocol\\Dao\\V1\xe2\x02 Onomyprotocol\\Dao\\V1\\GPBMetadata\xea\x02\x16Onomyprotocol::Dao::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'onomyprotocol.dao.v1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.onomyprotocol.dao.v1B\013ParamsProtoP\001Z*github.com/onomyprotocol/onomy/x/dao/types\242\002\003ODX\252\002\024Onomyprotocol.Dao.V1\312\002\024Onomyprotocol\\Dao\\V1\342\002 Onomyprotocol\\Dao\\V1\\GPBMetadata\352\002\026Onomyprotocol::Dao::V1'
+  DESCRIPTOR._serialized_options = b'\n\030com.onomyprotocol.dao.v1B\013ParamsProtoZ*github.com/onomyprotocol/onomy/x/dao/types\242\002\003ODX\252\002\024Onomyprotocol.Dao.V1\312\002\024Onomyprotocol\\Dao\\V1\342\002 Onomyprotocol\\Dao\\V1\\GPBMetadata\352\002\026Onomyprotocol::Dao::V1'
   _PARAMS.fields_by_name['withdraw_reward_period']._options = None
   _PARAMS.fields_by_name['withdraw_reward_period']._serialized_options = b'\362\336\037\035yaml:\"withdraw_reward_period\"'
   _PARAMS.fields_by_name['pool_rate']._options = None

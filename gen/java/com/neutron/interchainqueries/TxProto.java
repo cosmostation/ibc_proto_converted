@@ -2338,6 +2338,7 @@ public final class TxProto {
               com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.class, com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.Builder.class);
     }
 
+    private int bitField0_;
     public static final int QUERY_ID_FIELD_NUMBER = 1;
     private long queryId_ = 0L;
     /**
@@ -2445,7 +2446,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return result_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
@@ -2486,7 +2487,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clientId_);
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -2508,7 +2509,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clientId_);
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getResult());
       }
@@ -2679,13 +2680,19 @@ public final class TxProto {
 
       // Construct using com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResultFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2741,11 +2748,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.clientId_ = clientId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3140,8 +3150,10 @@ public final class TxProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (result_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3353,6 +3365,7 @@ public final class TxProto {
               com.neutron.interchainqueries.TxProto.QueryResult.class, com.neutron.interchainqueries.TxProto.QueryResult.Builder.class);
     }
 
+    private int bitField0_;
     public static final int KV_RESULTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.neutron.interchainqueries.TxProto.StorageValue> kvResults_;
@@ -3402,7 +3415,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBlock() {
-      return block_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
@@ -3470,7 +3483,7 @@ public final class TxProto {
       for (int i = 0; i < kvResults_.size(); i++) {
         output.writeMessage(1, kvResults_.get(i));
       }
-      if (block_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getBlock());
       }
       if (height_ != 0L) {
@@ -3495,7 +3508,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, kvResults_.get(i));
       }
-      if (block_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBlock());
       }
@@ -3686,13 +3699,20 @@ public final class TxProto {
 
       // Construct using com.neutron.interchainqueries.TxProto.QueryResult.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getKvResultsFieldBuilder();
+          getBlockFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3759,10 +3779,12 @@ public final class TxProto {
 
       private void buildPartial0(com.neutron.interchainqueries.TxProto.QueryResult result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.block_ = blockBuilder_ == null
               ? block_
               : blockBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.height_ = height_;
@@ -3773,6 +3795,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.allowKvCallbacks_ = allowKvCallbacks_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4241,8 +4264,10 @@ public final class TxProto {
         } else {
           blockBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (block_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4565,6 +4590,7 @@ public final class TxProto {
               com.neutron.interchainqueries.TxProto.StorageValue.class, com.neutron.interchainqueries.TxProto.StorageValue.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STORAGE_PREFIX_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object storagePrefix_ = "";
@@ -4655,7 +4681,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return proof_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4706,7 +4732,7 @@ public final class TxProto {
       if (!value_.isEmpty()) {
         output.writeBytes(3, value_);
       }
-      if (proof_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getProof());
       }
       getUnknownFields().writeTo(output);
@@ -4729,7 +4755,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, value_);
       }
-      if (proof_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProof());
       }
@@ -4899,13 +4925,19 @@ public final class TxProto {
 
       // Construct using com.neutron.interchainqueries.TxProto.StorageValue.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProofFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4961,11 +4993,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.value_ = value_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5362,8 +5397,10 @@ public final class TxProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (proof_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5612,6 +5649,7 @@ public final class TxProto {
               com.neutron.interchainqueries.TxProto.Block.class, com.neutron.interchainqueries.TxProto.Block.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NEXT_BLOCK_HEADER_FIELD_NUMBER = 1;
     private com.google.protobuf.Any nextBlockHeader_;
     /**
@@ -5626,7 +5664,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasNextBlockHeader() {
-      return nextBlockHeader_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5668,7 +5706,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasHeader() {
-      return header_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5702,7 +5740,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return tx_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
@@ -5734,13 +5772,13 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (nextBlockHeader_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getNextBlockHeader());
       }
-      if (header_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getHeader());
       }
-      if (tx_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getTx());
       }
       getUnknownFields().writeTo(output);
@@ -5752,15 +5790,15 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (nextBlockHeader_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getNextBlockHeader());
       }
-      if (header_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHeader());
       }
-      if (tx_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTx());
       }
@@ -5936,13 +5974,21 @@ public final class TxProto {
 
       // Construct using com.neutron.interchainqueries.TxProto.Block.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNextBlockHeaderFieldBuilder();
+          getHeaderFieldBuilder();
+          getTxFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5996,21 +6042,26 @@ public final class TxProto {
 
       private void buildPartial0(com.neutron.interchainqueries.TxProto.Block result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.nextBlockHeader_ = nextBlockHeaderBuilder_ == null
               ? nextBlockHeader_
               : nextBlockHeaderBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.header_ = headerBuilder_ == null
               ? header_
               : headerBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6226,8 +6277,10 @@ public final class TxProto {
         } else {
           nextBlockHeaderBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (nextBlockHeader_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6389,8 +6442,10 @@ public final class TxProto {
         } else {
           headerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (header_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6524,8 +6579,10 @@ public final class TxProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (tx_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6765,6 +6822,7 @@ public final class TxProto {
               com.neutron.interchainqueries.TxProto.TxValue.class, com.neutron.interchainqueries.TxProto.TxValue.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RESPONSE_FIELD_NUMBER = 1;
     private com.tendermint.abci.TypesProto.ResponseDeliverTx response_;
     /**
@@ -6773,7 +6831,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasResponse() {
-      return response_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
@@ -6804,7 +6862,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDeliveryProof() {
-      return deliveryProof_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -6845,7 +6903,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInclusionProof() {
-      return inclusionProof_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -6902,13 +6960,13 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (response_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getResponse());
       }
-      if (deliveryProof_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getDeliveryProof());
       }
-      if (inclusionProof_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getInclusionProof());
       }
       if (!data_.isEmpty()) {
@@ -6923,15 +6981,15 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (response_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getResponse());
       }
-      if (deliveryProof_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDeliveryProof());
       }
-      if (inclusionProof_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInclusionProof());
       }
@@ -7115,13 +7173,21 @@ public final class TxProto {
 
       // Construct using com.neutron.interchainqueries.TxProto.TxValue.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+          getDeliveryProofFieldBuilder();
+          getInclusionProofFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7176,24 +7242,29 @@ public final class TxProto {
 
       private void buildPartial0(com.neutron.interchainqueries.TxProto.TxValue result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.response_ = responseBuilder_ == null
               ? response_
               : responseBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.deliveryProof_ = deliveryProofBuilder_ == null
               ? deliveryProof_
               : deliveryProofBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.inclusionProof_ = inclusionProofBuilder_ == null
               ? inclusionProof_
               : inclusionProofBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.data_ = data_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7387,8 +7458,10 @@ public final class TxProto {
         } else {
           responseBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (response_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7531,8 +7604,10 @@ public final class TxProto {
         } else {
           deliveryProofBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (deliveryProof_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7695,8 +7770,10 @@ public final class TxProto {
         } else {
           inclusionProofBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (inclusionProof_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

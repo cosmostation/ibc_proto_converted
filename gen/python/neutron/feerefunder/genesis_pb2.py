@@ -16,15 +16,14 @@ from neutron.feerefunder import params_pb2 as neutron_dot_feerefunder_dot_params
 from neutron.feerefunder import fee_pb2 as neutron_dot_feerefunder_dot_fee__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!neutron/feerefunder/genesis.proto\x12\x13neutron.feerefunder\x1a\x14gogoproto/gogo.proto\x1a neutron/feerefunder/params.proto\x1a\x1dneutron/feerefunder/fee.proto\"\x8a\x01\n\x0cGenesisState\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.neutron.feerefunder.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12?\n\tfee_infos\x18\x02 \x03(\x0b\x32\x1c.neutron.feerefunder.FeeInfoB\x04\xc8\xde\x1f\x00R\x08\x66\x65\x65Infos\"\x93\x01\n\x07\x46\x65\x65Info\x12\x14\n\x05payer\x18\x01 \x01(\tR\x05payer\x12@\n\tpacket_id\x18\x02 \x01(\x0b\x32\x1d.neutron.feerefunder.PacketIDB\x04\xc8\xde\x1f\x00R\x08packetId\x12\x30\n\x03\x66\x65\x65\x18\x03 \x01(\x0b\x32\x18.neutron.feerefunder.FeeB\x04\xc8\xde\x1f\x00R\x03\x66\x65\x65\x42\xc8\x01\n\x17\x63om.neutron.feerefunderB\x0cGenesisProtoP\x01Z2github.com/neutron-org/neutron/x/feerefunder/types\xa2\x02\x03NFX\xaa\x02\x13Neutron.Feerefunder\xca\x02\x13Neutron\\Feerefunder\xe2\x02\x1fNeutron\\Feerefunder\\GPBMetadata\xea\x02\x14Neutron::Feerefunderb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!neutron/feerefunder/genesis.proto\x12\x13neutron.feerefunder\x1a\x14gogoproto/gogo.proto\x1a neutron/feerefunder/params.proto\x1a\x1dneutron/feerefunder/fee.proto\"\x8a\x01\n\x0cGenesisState\x12\x39\n\x06params\x18\x01 \x01(\x0b\x32\x1b.neutron.feerefunder.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12?\n\tfee_infos\x18\x02 \x03(\x0b\x32\x1c.neutron.feerefunder.FeeInfoB\x04\xc8\xde\x1f\x00R\x08\x66\x65\x65Infos\"\x93\x01\n\x07\x46\x65\x65Info\x12\x14\n\x05payer\x18\x01 \x01(\tR\x05payer\x12@\n\tpacket_id\x18\x02 \x01(\x0b\x32\x1d.neutron.feerefunder.PacketIDB\x04\xc8\xde\x1f\x00R\x08packetId\x12\x30\n\x03\x66\x65\x65\x18\x03 \x01(\x0b\x32\x18.neutron.feerefunder.FeeB\x04\xc8\xde\x1f\x00R\x03\x66\x65\x65\x42\xc6\x01\n\x17\x63om.neutron.feerefunderB\x0cGenesisProtoZ2github.com/neutron-org/neutron/x/feerefunder/types\xa2\x02\x03NFX\xaa\x02\x13Neutron.Feerefunder\xca\x02\x13Neutron\\Feerefunder\xe2\x02\x1fNeutron\\Feerefunder\\GPBMetadata\xea\x02\x14Neutron::Feerefunderb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'neutron.feerefunder.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.neutron.feerefunderB\014GenesisProtoP\001Z2github.com/neutron-org/neutron/x/feerefunder/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Feerefunder\342\002\037Neutron\\Feerefunder\\GPBMetadata\352\002\024Neutron::Feerefunder'
+  DESCRIPTOR._serialized_options = b'\n\027com.neutron.feerefunderB\014GenesisProtoZ2github.com/neutron-org/neutron/x/feerefunder/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Feerefunder\342\002\037Neutron\\Feerefunder\\GPBMetadata\352\002\024Neutron::Feerefunder'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['fee_infos']._options = None

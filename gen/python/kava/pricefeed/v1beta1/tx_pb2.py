@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkava/pricefeed/v1beta1/tx.proto\x12\x16kava.pricefeed.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xd7\x01\n\x0cMsgPostPrice\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12)\n\tmarket_id\x18\x02 \x01(\tB\x0c\xe2\xde\x1f\x08MarketIDR\x08marketId\x12\x44\n\x05price\x18\x03 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x05price\x12<\n\x06\x65xpiry\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\x06\x65xpiry:\x04\x88\xa0\x1f\x00\"\x16\n\x14MsgPostPriceResponse2f\n\x03Msg\x12_\n\tPostPrice\x12$.kava.pricefeed.v1beta1.MsgPostPrice\x1a,.kava.pricefeed.v1beta1.MsgPostPriceResponseB\xd4\x01\n\x1a\x63om.kava.pricefeed.v1beta1B\x07TxProtoP\x01Z+github.com/kava-labs/kava/x/pricefeed/types\xa2\x02\x03KPX\xaa\x02\x16Kava.Pricefeed.V1beta1\xca\x02\x16Kava\\Pricefeed\\V1beta1\xe2\x02\"Kava\\Pricefeed\\V1beta1\\GPBMetadata\xea\x02\x18Kava::Pricefeed::V1beta1\xe0\xe1\x1e\x01\xa8\xe2\x1e\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fkava/pricefeed/v1beta1/tx.proto\x12\x16kava.pricefeed.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xd7\x01\n\x0cMsgPostPrice\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12)\n\tmarket_id\x18\x02 \x01(\tB\x0c\xe2\xde\x1f\x08MarketIDR\x08marketId\x12\x44\n\x05price\x18\x03 \x01(\tB.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.DecR\x05price\x12<\n\x06\x65xpiry\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01R\x06\x65xpiry:\x04\x88\xa0\x1f\x00\"\x16\n\x14MsgPostPriceResponse2f\n\x03Msg\x12_\n\tPostPrice\x12$.kava.pricefeed.v1beta1.MsgPostPrice\x1a,.kava.pricefeed.v1beta1.MsgPostPriceResponseB\xd2\x01\n\x1a\x63om.kava.pricefeed.v1beta1B\x07TxProtoZ+github.com/kava-labs/kava/x/pricefeed/types\xa2\x02\x03KPX\xaa\x02\x16Kava.Pricefeed.V1beta1\xca\x02\x16Kava\\Pricefeed\\V1beta1\xe2\x02\"Kava\\Pricefeed\\V1beta1\\GPBMetadata\xea\x02\x18Kava::Pricefeed::V1beta1\xe0\xe1\x1e\x01\xa8\xe2\x1e\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.pricefeed.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.kava.pricefeed.v1beta1B\007TxProtoP\001Z+github.com/kava-labs/kava/x/pricefeed/types\242\002\003KPX\252\002\026Kava.Pricefeed.V1beta1\312\002\026Kava\\Pricefeed\\V1beta1\342\002\"Kava\\Pricefeed\\V1beta1\\GPBMetadata\352\002\030Kava::Pricefeed::V1beta1\340\341\036\001\250\342\036\001'
+  DESCRIPTOR._serialized_options = b'\n\032com.kava.pricefeed.v1beta1B\007TxProtoZ+github.com/kava-labs/kava/x/pricefeed/types\242\002\003KPX\252\002\026Kava.Pricefeed.V1beta1\312\002\026Kava\\Pricefeed\\V1beta1\342\002\"Kava\\Pricefeed\\V1beta1\\GPBMetadata\352\002\030Kava::Pricefeed::V1beta1\340\341\036\001\250\342\036\001'
   _MSGPOSTPRICE.fields_by_name['market_id']._options = None
   _MSGPOSTPRICE.fields_by_name['market_id']._serialized_options = b'\342\336\037\010MarketID'
   _MSGPOSTPRICE.fields_by_name['price']._options = None

@@ -1,4 +1,4 @@
-// source: pstake/lspersistence/v1beta1/query.proto
+// source: crescent/liquidstaking/v1beta1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest');
+goog.provide('proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest = function(opt_data) {
+proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest, jspb.Message);
+goog.inherits(proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.displayName = 'proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest';
+  proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.displayName = 'proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.toObject(opt_includeInstance, this);
+proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.prototype.toObje
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest} msg The msg instance to transform.
+ * @param {!proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.toObject = function(includeInstance, msg) {
+proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -84,23 +84,23 @@ proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.toObject = funct
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest}
+ * @return {!proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest}
  */
-proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.deserializeBinary = function(bytes) {
+proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest;
-  return proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest;
+  return proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest} msg The message object to deserialize into.
+ * @param {!proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest}
+ * @return {!proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest}
  */
-proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.deserializeBinar
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.prototype.serializeBinary = function() {
+proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.serializeBinaryToWriter(this, writer);
+  proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.prototype.serial
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest} message
+ * @param {!proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.crescent.liquidstaking.v1beta1.QueryLiquidValidatorsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 

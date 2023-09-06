@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#axelar/snapshot/v1beta1/types.proto\x12\x17\x61xelar.snapshot.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\"\xc4\x01\n\x10ProxiedValidator\x12O\n\tvalidator\x18\x01 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.ValAddressR\tvalidator\x12G\n\x05proxy\x18\x02 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x05proxy\x12\x16\n\x06\x61\x63tive\x18\x03 \x01(\x08R\x06\x61\x63tiveB\xe2\x01\n\x1b\x63om.axelar.snapshot.v1beta1B\nTypesProtoP\x01Z5github.com/axelarnetwork/axelar-core/x/snapshot/types\xa2\x02\x03\x41SX\xaa\x02\x17\x41xelar.Snapshot.V1beta1\xca\x02\x17\x41xelar\\Snapshot\\V1beta1\xe2\x02#Axelar\\Snapshot\\V1beta1\\GPBMetadata\xea\x02\x19\x41xelar::Snapshot::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#axelar/snapshot/v1beta1/types.proto\x12\x17\x61xelar.snapshot.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\"\xc4\x01\n\x10ProxiedValidator\x12O\n\tvalidator\x18\x01 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.ValAddressR\tvalidator\x12G\n\x05proxy\x18\x02 \x01(\x0c\x42\x31\xfa\xde\x1f-github.com/cosmos/cosmos-sdk/types.AccAddressR\x05proxy\x12\x16\n\x06\x61\x63tive\x18\x03 \x01(\x08R\x06\x61\x63tiveB\xe0\x01\n\x1b\x63om.axelar.snapshot.v1beta1B\nTypesProtoZ5github.com/axelarnetwork/axelar-core/x/snapshot/types\xa2\x02\x03\x41SX\xaa\x02\x17\x41xelar.Snapshot.V1beta1\xca\x02\x17\x41xelar\\Snapshot\\V1beta1\xe2\x02#Axelar\\Snapshot\\V1beta1\\GPBMetadata\xea\x02\x19\x41xelar::Snapshot::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.snapshot.v1beta1.types_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.axelar.snapshot.v1beta1B\nTypesProtoP\001Z5github.com/axelarnetwork/axelar-core/x/snapshot/types\242\002\003ASX\252\002\027Axelar.Snapshot.V1beta1\312\002\027Axelar\\Snapshot\\V1beta1\342\002#Axelar\\Snapshot\\V1beta1\\GPBMetadata\352\002\031Axelar::Snapshot::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\033com.axelar.snapshot.v1beta1B\nTypesProtoZ5github.com/axelarnetwork/axelar-core/x/snapshot/types\242\002\003ASX\252\002\027Axelar.Snapshot.V1beta1\312\002\027Axelar\\Snapshot\\V1beta1\342\002#Axelar\\Snapshot\\V1beta1\\GPBMetadata\352\002\031Axelar::Snapshot::V1beta1\310\341\036\000'
   _PROXIEDVALIDATOR.fields_by_name['validator']._options = None
   _PROXIEDVALIDATOR.fields_by_name['validator']._serialized_options = b'\372\336\037-github.com/cosmos/cosmos-sdk/types.ValAddress'
   _PROXIEDVALIDATOR.fields_by_name['proxy']._options = None

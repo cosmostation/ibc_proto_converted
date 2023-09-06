@@ -84,6 +84,7 @@ public final class QueryProto {
               com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesRequest.class, com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -96,7 +97,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -136,7 +137,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -148,7 +149,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -310,13 +311,19 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -360,11 +367,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -550,8 +560,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -779,6 +791,7 @@ public final class QueryProto {
               com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesResponse.class, com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CURRENCIES_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.treasury.TreasuryProto.Currencies currencies_;
     /**
@@ -791,7 +804,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCurrencies() {
-      return currencies_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -829,7 +842,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -869,10 +882,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (currencies_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCurrencies());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -884,11 +897,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (currencies_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCurrencies());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1059,13 +1072,20 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCurrenciesFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1114,16 +1134,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.treasury.QueryProto.QueryCurrenciesResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.currencies_ = currenciesBuilder_ == null
               ? currencies_
               : currenciesBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1319,8 +1343,10 @@ public final class QueryProto {
         } else {
           currenciesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (currencies_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1474,8 +1500,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2272,6 +2300,7 @@ public final class QueryProto {
               com.rizonworld.rizon.treasury.QueryProto.QueryCurrencyResponse.class, com.rizonworld.rizon.treasury.QueryProto.QueryCurrencyResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CURRENCY_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.treasury.TreasuryProto.Currency currency_;
     /**
@@ -2284,7 +2313,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCurrency() {
-      return currency_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2324,7 +2353,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (currency_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCurrency());
       }
       getUnknownFields().writeTo(output);
@@ -2336,7 +2365,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (currency_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCurrency());
       }
@@ -2498,13 +2527,19 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.treasury.QueryProto.QueryCurrencyResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCurrencyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2548,11 +2583,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.treasury.QueryProto.QueryCurrencyResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.currency_ = currencyBuilder_ == null
               ? currency_
               : currencyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2738,8 +2776,10 @@ public final class QueryProto {
         } else {
           currencyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (currency_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3345,6 +3385,7 @@ public final class QueryProto {
               com.rizonworld.rizon.treasury.QueryProto.QueryMaxResponse.class, com.rizonworld.rizon.treasury.QueryProto.QueryMaxResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MAX_ATOLO_SUPPLY_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.treasury.TreasuryProto.MaxAtoloSupply maxAtoloSupply_;
     /**
@@ -3357,7 +3398,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMaxAtoloSupply() {
-      return maxAtoloSupply_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3397,7 +3438,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (maxAtoloSupply_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMaxAtoloSupply());
       }
       getUnknownFields().writeTo(output);
@@ -3409,7 +3450,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (maxAtoloSupply_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMaxAtoloSupply());
       }
@@ -3571,13 +3612,19 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.treasury.QueryProto.QueryMaxResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMaxAtoloSupplyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3621,11 +3668,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.treasury.QueryProto.QueryMaxResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.maxAtoloSupply_ = maxAtoloSupplyBuilder_ == null
               ? maxAtoloSupply_
               : maxAtoloSupplyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3811,8 +3861,10 @@ public final class QueryProto {
         } else {
           maxAtoloSupplyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (maxAtoloSupply_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4418,6 +4470,7 @@ public final class QueryProto {
               com.rizonworld.rizon.treasury.QueryProto.QueryParamsResponse.class, com.rizonworld.rizon.treasury.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.treasury.ParamsProto.Params params_;
     /**
@@ -4430,7 +4483,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4470,7 +4523,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -4482,7 +4535,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -4644,13 +4697,19 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.treasury.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4694,11 +4753,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.treasury.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4884,8 +4946,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

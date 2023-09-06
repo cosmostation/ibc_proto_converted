@@ -2837,6 +2837,7 @@ public final class QueryProto {
               com.injective.exchange.v1beta1.QueryProto.SubaccountOrderbookMetadataWithMarket.class, com.injective.exchange.v1beta1.QueryProto.SubaccountOrderbookMetadataWithMarket.Builder.class);
     }
 
+    private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.SubaccountOrderbookMetadata metadata_;
     /**
@@ -2845,7 +2846,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return metadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.SubaccountOrderbookMetadata metadata = 1 [json_name = "metadata"];</code>
@@ -2927,7 +2928,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMetadata());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
@@ -2945,7 +2946,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (metadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMetadata());
       }
@@ -3119,13 +3120,19 @@ public final class QueryProto {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.SubaccountOrderbookMetadataWithMarket.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMetadataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3171,10 +3178,12 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.SubaccountOrderbookMetadataWithMarket result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.marketId_ = marketId_;
@@ -3182,6 +3191,7 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.isBuy_ = isBuy_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3365,8 +3375,10 @@ public final class QueryProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (metadata_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4051,6 +4063,7 @@ public final class QueryProto {
               com.injective.exchange.v1beta1.QueryProto.QueryExchangeParamsResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryExchangeParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.Params params_;
     /**
@@ -4059,7 +4072,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -4091,7 +4104,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -4103,7 +4116,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -4266,13 +4279,19 @@ public final class QueryProto {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryExchangeParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4316,11 +4335,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryExchangeParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4486,8 +4508,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4674,6 +4698,7 @@ public final class QueryProto {
               com.injective.exchange.v1beta1.QueryProto.QuerySubaccountDepositsRequest.class, com.injective.exchange.v1beta1.QueryProto.QuerySubaccountDepositsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBACCOUNT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object subaccountId_ = "";
@@ -4721,7 +4746,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSubaccount() {
-      return subaccount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.Subaccount subaccount = 2 [json_name = "subaccount", (.gogoproto.nullable) = true];</code>
@@ -4756,7 +4781,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subaccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subaccountId_);
       }
-      if (subaccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getSubaccount());
       }
       getUnknownFields().writeTo(output);
@@ -4771,7 +4796,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subaccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subaccountId_);
       }
-      if (subaccount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSubaccount());
       }
@@ -4938,13 +4963,19 @@ public final class QueryProto {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QuerySubaccountDepositsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubaccountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4992,11 +5023,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subaccountId_ = subaccountId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.subaccount_ = subaccountBuilder_ == null
               ? subaccount_
               : subaccountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5244,8 +5278,10 @@ public final class QueryProto {
         } else {
           subaccountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (subaccount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11669,6 +11705,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryAggregateMarketVolumeResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryAggregateMarketVolumeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VOLUME_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.VolumeRecord volume_;
     /**
@@ -11677,7 +11714,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasVolume() {
-      return volume_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.VolumeRecord volume = 1 [json_name = "volume", (.gogoproto.nullable) = false];</code>
@@ -11709,7 +11746,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (volume_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getVolume());
       }
       getUnknownFields().writeTo(output);
@@ -11721,7 +11758,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (volume_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVolume());
       }
@@ -11884,13 +11921,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryAggregateMarketVolumeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVolumeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11934,11 +11977,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryAggregateMarketVolumeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.volume_ = volumeBuilder_ == null
               ? volume_
               : volumeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12104,8 +12150,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           volumeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (volume_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17058,6 +17106,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QuerySubaccountDepositResponse.class, com.injective.exchange.v1beta1.QueryProto.QuerySubaccountDepositResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSITS_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.Deposit deposits_;
     /**
@@ -17066,7 +17115,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasDeposits() {
-      return deposits_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.Deposit deposits = 1 [json_name = "deposits"];</code>
@@ -17098,7 +17147,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (deposits_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDeposits());
       }
       getUnknownFields().writeTo(output);
@@ -17110,7 +17159,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (deposits_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeposits());
       }
@@ -17273,13 +17322,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QuerySubaccountDepositResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17323,11 +17378,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QuerySubaccountDepositResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.deposits_ = depositsBuilder_ == null
               ? deposits_
               : depositsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17493,8 +17551,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           depositsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (deposits_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -19938,6 +19998,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QuerySpotMarketResponse.class, com.injective.exchange.v1beta1.QueryProto.QuerySpotMarketResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.SpotMarket market_;
     /**
@@ -19946,7 +20007,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return market_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.SpotMarket market = 1 [json_name = "market"];</code>
@@ -19978,7 +20039,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMarket());
       }
       getUnknownFields().writeTo(output);
@@ -19990,7 +20051,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
@@ -20153,13 +20214,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QuerySpotMarketResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMarketFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -20203,11 +20270,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QuerySpotMarketResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20373,8 +20443,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (market_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -22811,6 +22883,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.FullSpotMarket.class, com.injective.exchange.v1beta1.QueryProto.FullSpotMarket.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.SpotMarket market_;
     /**
@@ -22819,7 +22892,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return market_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.SpotMarket market = 1 [json_name = "market"];</code>
@@ -22850,7 +22923,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMidPriceAndTob() {
-      return midPriceAndTob_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -22892,10 +22965,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMarket());
       }
-      if (midPriceAndTob_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getMidPriceAndTob());
       }
       getUnknownFields().writeTo(output);
@@ -22907,11 +22980,11 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
-      if (midPriceAndTob_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMidPriceAndTob());
       }
@@ -23078,13 +23151,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.FullSpotMarket.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMarketFieldBuilder();
+          getMidPriceAndTobFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -23133,16 +23213,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.FullSpotMarket result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.midPriceAndTob_ = midPriceAndTobBuilder_ == null
               ? midPriceAndTob_
               : midPriceAndTobBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23318,8 +23402,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (market_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -23462,8 +23548,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           midPriceAndTobBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (midPriceAndTob_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -26123,6 +26211,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryFullSpotMarketResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryFullSpotMarketResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.QueryProto.FullSpotMarket market_;
     /**
@@ -26131,7 +26220,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return market_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.FullSpotMarket market = 1 [json_name = "market"];</code>
@@ -26163,7 +26252,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMarket());
       }
       getUnknownFields().writeTo(output);
@@ -26175,7 +26264,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
@@ -26338,13 +26427,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryFullSpotMarketResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMarketFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -26388,11 +26483,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryFullSpotMarketResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -26558,8 +26656,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (market_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -48940,6 +49040,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.PerpetualMarketState.class, com.injective.exchange.v1beta1.QueryProto.PerpetualMarketState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.PerpetualMarketInfo marketInfo_;
     /**
@@ -48948,7 +49049,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMarketInfo() {
-      return marketInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.PerpetualMarketInfo market_info = 1 [json_name = "marketInfo"];</code>
@@ -48974,7 +49075,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasFundingInfo() {
-      return fundingInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.PerpetualMarketFunding funding_info = 2 [json_name = "fundingInfo"];</code>
@@ -49006,10 +49107,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (marketInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMarketInfo());
       }
-      if (fundingInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getFundingInfo());
       }
       getUnknownFields().writeTo(output);
@@ -49021,11 +49122,11 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (marketInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarketInfo());
       }
-      if (fundingInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFundingInfo());
       }
@@ -49192,13 +49293,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.PerpetualMarketState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMarketInfoFieldBuilder();
+          getFundingInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -49247,16 +49355,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.PerpetualMarketState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketInfo_ = marketInfoBuilder_ == null
               ? marketInfo_
               : marketInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fundingInfo_ = fundingInfoBuilder_ == null
               ? fundingInfo_
               : fundingInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -49432,8 +49544,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           marketInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (marketInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -49551,8 +49665,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           fundingInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (fundingInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -49796,6 +49912,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.FullDerivativeMarket.class, com.injective.exchange.v1beta1.QueryProto.FullDerivativeMarket.Builder.class);
     }
 
+    private int bitField0_;
     private int infoCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object info_;
@@ -49846,7 +49963,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return market_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeMarket market = 1 [json_name = "market"];</code>
@@ -49978,7 +50095,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMidPriceAndTob() {
-      return midPriceAndTob_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -50020,7 +50137,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMarket());
       }
       if (infoCase_ == 2) {
@@ -50032,7 +50149,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(markPrice_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, markPrice_);
       }
-      if (midPriceAndTob_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getMidPriceAndTob());
       }
       getUnknownFields().writeTo(output);
@@ -50044,7 +50161,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
@@ -50059,7 +50176,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(markPrice_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, markPrice_);
       }
-      if (midPriceAndTob_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMidPriceAndTob());
       }
@@ -50255,13 +50372,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.FullDerivativeMarket.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMarketFieldBuilder();
+          getMidPriceAndTobFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -50320,10 +50444,12 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.FullDerivativeMarket result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.markPrice_ = markPrice_;
@@ -50332,7 +50458,9 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
           result.midPriceAndTob_ = midPriceAndTobBuilder_ == null
               ? midPriceAndTob_
               : midPriceAndTobBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.injective.exchange.v1beta1.QueryProto.FullDerivativeMarket result) {
@@ -50573,8 +50701,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (market_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -51073,8 +51203,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           midPriceAndTobBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (midPriceAndTob_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -52658,6 +52790,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryDerivativeMarketResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryDerivativeMarketResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.QueryProto.FullDerivativeMarket market_;
     /**
@@ -52666,7 +52799,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return market_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.FullDerivativeMarket market = 1 [json_name = "market"];</code>
@@ -52698,7 +52831,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMarket());
       }
       getUnknownFields().writeTo(output);
@@ -52710,7 +52843,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (market_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
@@ -52873,13 +53006,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryDerivativeMarketResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMarketFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -52923,11 +53062,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryDerivativeMarketResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -53093,8 +53235,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (market_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -58546,6 +58690,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QuerySubaccountPositionInMarketResponse.class, com.injective.exchange.v1beta1.QueryProto.QuerySubaccountPositionInMarketResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.Position state_;
     /**
@@ -58554,7 +58699,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasState() {
-      return state_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.Position state = 1 [json_name = "state", (.gogoproto.nullable) = true];</code>
@@ -58586,7 +58731,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -58598,7 +58743,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -58761,13 +58906,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QuerySubaccountPositionInMarketResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -58811,11 +58962,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QuerySubaccountPositionInMarketResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -58981,8 +59135,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (state_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -60077,6 +60233,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QuerySubaccountEffectivePositionInMarketResponse.class, com.injective.exchange.v1beta1.QueryProto.QuerySubaccountEffectivePositionInMarketResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.QueryProto.EffectivePosition state_;
     /**
@@ -60085,7 +60242,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasState() {
-      return state_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.EffectivePosition state = 1 [json_name = "state", (.gogoproto.nullable) = true];</code>
@@ -60117,7 +60274,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -60129,7 +60286,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -60292,13 +60449,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QuerySubaccountEffectivePositionInMarketResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -60342,11 +60505,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QuerySubaccountEffectivePositionInMarketResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -60512,8 +60678,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (state_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -61249,6 +61417,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketInfoResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.PerpetualMarketInfo info_;
     /**
@@ -61257,7 +61426,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasInfo() {
-      return info_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.PerpetualMarketInfo info = 1 [json_name = "info", (.gogoproto.nullable) = false];</code>
@@ -61289,7 +61458,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInfo());
       }
       getUnknownFields().writeTo(output);
@@ -61301,7 +61470,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInfo());
       }
@@ -61464,13 +61633,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -61514,11 +61689,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketInfoResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.info_ = infoBuilder_ == null
               ? info_
               : infoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -61684,8 +61862,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           infoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (info_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -62421,6 +62601,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryExpiryFuturesMarketInfoResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryExpiryFuturesMarketInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.ExpiryFuturesMarketInfo info_;
     /**
@@ -62429,7 +62610,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasInfo() {
-      return info_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.ExpiryFuturesMarketInfo info = 1 [json_name = "info", (.gogoproto.nullable) = false];</code>
@@ -62461,7 +62642,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInfo());
       }
       getUnknownFields().writeTo(output);
@@ -62473,7 +62654,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (info_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInfo());
       }
@@ -62636,13 +62817,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryExpiryFuturesMarketInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -62686,11 +62873,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryExpiryFuturesMarketInfoResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.info_ = infoBuilder_ == null
               ? info_
               : infoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -62856,8 +63046,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           infoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (info_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -63593,6 +63785,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketFundingResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketFundingResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.PerpetualMarketFunding state_;
     /**
@@ -63601,7 +63794,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasState() {
-      return state_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.PerpetualMarketFunding state = 1 [json_name = "state", (.gogoproto.nullable) = false];</code>
@@ -63633,7 +63826,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -63645,7 +63838,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -63808,13 +64001,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketFundingResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -63858,11 +64057,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryPerpetualMarketFundingResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -64028,8 +64230,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (state_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -65888,6 +66092,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryModuleStateResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryModuleStateResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.GenesisProto.GenesisState state_;
     /**
@@ -65896,7 +66101,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasState() {
-      return state_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.GenesisState state = 1 [json_name = "state"];</code>
@@ -65928,7 +66133,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -65940,7 +66145,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -66103,13 +66308,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryModuleStateResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -66153,11 +66364,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryModuleStateResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -66323,8 +66537,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (state_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -69521,6 +69737,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryTradeRewardCampaignResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryTradeRewardCampaignResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TRADING_REWARD_CAMPAIGN_INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.TradingRewardCampaignInfo tradingRewardCampaignInfo_;
     /**
@@ -69529,7 +69746,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasTradingRewardCampaignInfo() {
-      return tradingRewardCampaignInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.TradingRewardCampaignInfo trading_reward_campaign_info = 1 [json_name = "tradingRewardCampaignInfo"];</code>
@@ -69719,7 +69936,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (tradingRewardCampaignInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTradingRewardCampaignInfo());
       }
       for (int i = 0; i < tradingRewardPoolCampaignSchedule_.size(); i++) {
@@ -69743,7 +69960,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (tradingRewardCampaignInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTradingRewardCampaignInfo());
       }
@@ -69947,13 +70164,21 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryTradeRewardCampaignResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTradingRewardCampaignInfoFieldBuilder();
+          getTradingRewardPoolCampaignScheduleFieldBuilder();
+          getPendingTradingRewardPoolCampaignScheduleFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -70036,10 +70261,12 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryTradeRewardCampaignResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tradingRewardCampaignInfo_ = tradingRewardCampaignInfoBuilder_ == null
               ? tradingRewardCampaignInfo_
               : tradingRewardCampaignInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.totalTradeRewardPoints_ = totalTradeRewardPoints_;
@@ -70048,6 +70275,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
           pendingTotalTradeRewardPoints_.makeImmutable();
           result.pendingTotalTradeRewardPoints_ = pendingTotalTradeRewardPoints_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -70317,8 +70545,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           tradingRewardCampaignInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (tradingRewardCampaignInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -73822,6 +74052,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryFeeDiscountAccountInfoResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryFeeDiscountAccountInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TIER_LEVEL_FIELD_NUMBER = 1;
     private long tierLevel_ = 0L;
     /**
@@ -73841,7 +74072,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasAccountInfo() {
-      return accountInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.FeeDiscountTierInfo account_info = 2 [json_name = "accountInfo"];</code>
@@ -73867,7 +74098,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasAccountTtl() {
-      return accountTtl_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.FeeDiscountTierTTL account_ttl = 3 [json_name = "accountTtl"];</code>
@@ -73902,10 +74133,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (tierLevel_ != 0L) {
         output.writeUInt64(1, tierLevel_);
       }
-      if (accountInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getAccountInfo());
       }
-      if (accountTtl_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getAccountTtl());
       }
       getUnknownFields().writeTo(output);
@@ -73921,11 +74152,11 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, tierLevel_);
       }
-      if (accountInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAccountInfo());
       }
-      if (accountTtl_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAccountTtl());
       }
@@ -74102,13 +74333,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryFeeDiscountAccountInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccountInfoFieldBuilder();
+          getAccountTtlFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -74161,16 +74399,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tierLevel_ = tierLevel_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.accountInfo_ = accountInfoBuilder_ == null
               ? accountInfo_
               : accountInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.accountTtl_ = accountTtlBuilder_ == null
               ? accountTtl_
               : accountTtlBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -74386,8 +74628,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           accountInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (accountInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -74505,8 +74749,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           accountTtlBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (accountTtl_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -75087,6 +75333,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryFeeDiscountScheduleResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryFeeDiscountScheduleResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEE_DISCOUNT_SCHEDULE_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.FeeDiscountSchedule feeDiscountSchedule_;
     /**
@@ -75095,7 +75342,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasFeeDiscountSchedule() {
-      return feeDiscountSchedule_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.FeeDiscountSchedule fee_discount_schedule = 1 [json_name = "feeDiscountSchedule"];</code>
@@ -75127,7 +75374,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (feeDiscountSchedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFeeDiscountSchedule());
       }
       getUnknownFields().writeTo(output);
@@ -75139,7 +75386,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (feeDiscountSchedule_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFeeDiscountSchedule());
       }
@@ -75302,13 +75549,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryFeeDiscountScheduleResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeeDiscountScheduleFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -75352,11 +75605,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       private void buildPartial0(com.injective.exchange.v1beta1.QueryProto.QueryFeeDiscountScheduleResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feeDiscountSchedule_ = feeDiscountScheduleBuilder_ == null
               ? feeDiscountSchedule_
               : feeDiscountScheduleBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -75522,8 +75778,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           feeDiscountScheduleBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (feeDiscountSchedule_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -87455,6 +87713,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryMarketVolatilityRequest.class, com.injective.exchange.v1beta1.QueryProto.QueryMarketVolatilityRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -87502,7 +87761,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasTradeHistoryOptions() {
-      return tradeHistoryOptions_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.exchange.v1beta1.TradeHistoryOptions trade_history_options = 2 [json_name = "tradeHistoryOptions"];</code>
@@ -87537,7 +87796,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, marketId_);
       }
-      if (tradeHistoryOptions_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getTradeHistoryOptions());
       }
       getUnknownFields().writeTo(output);
@@ -87552,7 +87811,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, marketId_);
       }
-      if (tradeHistoryOptions_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTradeHistoryOptions());
       }
@@ -87719,13 +87978,19 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryMarketVolatilityRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTradeHistoryOptionsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -87773,11 +88038,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketId_ = marketId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tradeHistoryOptions_ = tradeHistoryOptionsBuilder_ == null
               ? tradeHistoryOptions_
               : tradeHistoryOptionsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -88025,8 +88293,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           tradeHistoryOptionsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (tradeHistoryOptions_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -88238,6 +88508,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
               com.injective.exchange.v1beta1.QueryProto.QueryMarketVolatilityResponse.class, com.injective.exchange.v1beta1.QueryProto.QueryMarketVolatilityResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VOLATILITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object volatility_ = "";
@@ -88285,7 +88556,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
      */
     @java.lang.Override
     public boolean hasHistoryMetadata() {
-      return historyMetadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.MetadataStatistics history_metadata = 2 [json_name = "historyMetadata"];</code>
@@ -88361,7 +88632,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volatility_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, volatility_);
       }
-      if (historyMetadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getHistoryMetadata());
       }
       for (int i = 0; i < rawHistory_.size(); i++) {
@@ -88379,7 +88650,7 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volatility_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, volatility_);
       }
-      if (historyMetadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHistoryMetadata());
       }
@@ -88556,13 +88827,20 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
 
       // Construct using com.injective.exchange.v1beta1.QueryProto.QueryMarketVolatilityResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHistoryMetadataFieldBuilder();
+          getRawHistoryFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -88630,11 +88908,14 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.volatility_ = volatility_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.historyMetadata_ = historyMetadataBuilder_ == null
               ? historyMetadata_
               : historyMetadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -88921,8 +89202,10 @@ com.injective.exchange.v1beta1.ExchangeProto.Deposit defaultValue) {
         } else {
           historyMetadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (historyMetadata_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

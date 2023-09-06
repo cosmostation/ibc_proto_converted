@@ -256,6 +256,7 @@ public final class PoolProto {
               com.osmosis.concentratedliquidity.v1beta1.PoolProto.Pool.class, com.osmosis.concentratedliquidity.v1beta1.PoolProto.Pool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -670,7 +671,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasLastLiquidityUpdate() {
-      return lastLiquidityUpdate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -748,7 +749,7 @@ public final class PoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spreadFactor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, spreadFactor_);
       }
-      if (lastLiquidityUpdate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(13, getLastLiquidityUpdate());
       }
       getUnknownFields().writeTo(output);
@@ -800,7 +801,7 @@ public final class PoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spreadFactor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, spreadFactor_);
       }
-      if (lastLiquidityUpdate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getLastLiquidityUpdate());
       }
@@ -1010,13 +1011,19 @@ public final class PoolProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.PoolProto.Pool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLastLiquidityUpdateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1108,11 +1115,14 @@ public final class PoolProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.spreadFactor_ = spreadFactor_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.lastLiquidityUpdate_ = lastLiquidityUpdateBuilder_ == null
               ? lastLiquidityUpdate_
               : lastLiquidityUpdateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2234,8 +2244,10 @@ public final class PoolProto {
         } else {
           lastLiquidityUpdateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00001000;
-        onChanged();
+        if (lastLiquidityUpdate_ != null) {
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
         return this;
       }
       /**

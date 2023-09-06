@@ -388,6 +388,7 @@ public final class GenesisProto {
               com.injective.oracle.v1beta1.GenesisProto.GenesisState.class, com.injective.oracle.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.OracleProto.Params params_;
     /**
@@ -400,7 +401,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -676,7 +677,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasBandIbcParams() {
-      return bandIbcParams_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.BandIBCParams band_ibc_params = 8 [json_name = "bandIbcParams", (.gogoproto.nullable) = false];</code>
@@ -935,7 +936,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < bandRelayers_.size(); i++) {
@@ -956,7 +957,7 @@ public final class GenesisProto {
       for (int i = 0; i < bandIbcOracleRequests_.size(); i++) {
         output.writeMessage(7, bandIbcOracleRequests_.get(i));
       }
-      if (bandIbcParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getBandIbcParams());
       }
       if (bandIbcLatestClientId_ != 0L) {
@@ -989,7 +990,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1021,7 +1022,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, bandIbcOracleRequests_.get(i));
       }
-      if (bandIbcParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getBandIbcParams());
       }
@@ -1296,13 +1297,30 @@ public final class GenesisProto {
 
       // Construct using com.injective.oracle.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getBandPriceStatesFieldBuilder();
+          getPriceFeedPriceStatesFieldBuilder();
+          getCoinbasePriceStatesFieldBuilder();
+          getBandIbcPriceStatesFieldBuilder();
+          getBandIbcOracleRequestsFieldBuilder();
+          getBandIbcParamsFieldBuilder();
+          getCalldataRecordsFieldBuilder();
+          getChainlinkPriceStatesFieldBuilder();
+          getHistoricalPriceRecordsFieldBuilder();
+          getProviderStatesFieldBuilder();
+          getPythPriceStatesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1519,10 +1537,12 @@ public final class GenesisProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           bandRelayers_.makeImmutable();
@@ -1532,6 +1552,7 @@ public final class GenesisProto {
           result.bandIbcParams_ = bandIbcParamsBuilder_ == null
               ? bandIbcParams_
               : bandIbcParamsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.bandIbcLatestClientId_ = bandIbcLatestClientId_;
@@ -1539,6 +1560,7 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.bandIbcLatestRequestId_ = bandIbcLatestRequestId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2156,8 +2178,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3602,8 +3626,10 @@ public final class GenesisProto {
         } else {
           bandIbcParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (bandIbcParams_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**

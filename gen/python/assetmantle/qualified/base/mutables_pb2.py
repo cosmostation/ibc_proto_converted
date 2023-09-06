@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.lists.base import property_list_pb2 as assetmantle_dot_lists_dot_base_dot_property__list__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/qualified/base/mutables.proto\x12!assetmantle.schema.qualified.base\x1a\x14gogoproto/gogo.proto\x1a*assetmantle/lists/base/property_list.proto\"b\n\x08Mutables\x12P\n\rproperty_list\x18\x01 \x01(\x0b\x32+.assetmantle.schema.lists.base.PropertyListR\x0cpropertyList:\x04\x88\xa0\x1f\x00\x42\xde\x01\n%com.assetmantle.schema.qualified.baseB\rMutablesProtoP\x01\xa2\x02\x04\x41SQB\xaa\x02!Assetmantle.Schema.Qualified.Base\xca\x02!Assetmantle\\Schema\\Qualified\\Base\xe2\x02-Assetmantle\\Schema\\Qualified\\Base\\GPBMetadata\xea\x02$Assetmantle::Schema::Qualified::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)assetmantle/qualified/base/mutables.proto\x12!assetmantle.schema.qualified.base\x1a\x14gogoproto/gogo.proto\x1a*assetmantle/lists/base/property_list.proto\"b\n\x08Mutables\x12P\n\rproperty_list\x18\x01 \x01(\x0b\x32+.assetmantle.schema.lists.base.PropertyListR\x0cpropertyList:\x04\x88\xa0\x1f\x00\x42\xdc\x01\n%com.assetmantle.schema.qualified.baseB\rMutablesProto\xa2\x02\x04\x41SQB\xaa\x02!Assetmantle.Schema.Qualified.Base\xca\x02!Assetmantle\\Schema\\Qualified\\Base\xe2\x02-Assetmantle\\Schema\\Qualified\\Base\\GPBMetadata\xea\x02$Assetmantle::Schema::Qualified::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.qualified.base.mutables_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n%com.assetmantle.schema.qualified.baseB\rMutablesProtoP\001\242\002\004ASQB\252\002!Assetmantle.Schema.Qualified.Base\312\002!Assetmantle\\Schema\\Qualified\\Base\342\002-Assetmantle\\Schema\\Qualified\\Base\\GPBMetadata\352\002$Assetmantle::Schema::Qualified::Base'
+  DESCRIPTOR._serialized_options = b'\n%com.assetmantle.schema.qualified.baseB\rMutablesProto\242\002\004ASQB\252\002!Assetmantle.Schema.Qualified.Base\312\002!Assetmantle\\Schema\\Qualified\\Base\342\002-Assetmantle\\Schema\\Qualified\\Base\\GPBMetadata\352\002$Assetmantle::Schema::Qualified::Base'
   _MUTABLES._options = None
   _MUTABLES._serialized_options = b'\210\240\037\000'
   _globals['_MUTABLES']._serialized_start=146

@@ -2022,6 +2022,7 @@ public final class FeeProto {
               com.ibc.applications.fee.v1.FeeProto.PacketFee.class, com.ibc.applications.fee.v1.FeeProto.PacketFee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEE_FIELD_NUMBER = 1;
     private com.ibc.applications.fee.v1.FeeProto.Fee fee_;
     /**
@@ -2034,7 +2035,7 @@ public final class FeeProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return fee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2174,7 +2175,7 @@ public final class FeeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFee());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refundAddress_)) {
@@ -2192,7 +2193,7 @@ public final class FeeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFee());
       }
@@ -2375,13 +2376,19 @@ public final class FeeProto {
 
       // Construct using com.ibc.applications.fee.v1.FeeProto.PacketFee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2428,10 +2435,12 @@ public final class FeeProto {
 
       private void buildPartial0(com.ibc.applications.fee.v1.FeeProto.PacketFee result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.refundAddress_ = refundAddress_;
@@ -2440,6 +2449,7 @@ public final class FeeProto {
           relayers_.makeImmutable();
           result.relayers_ = relayers_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2651,8 +2661,10 @@ public final class FeeProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (fee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4039,6 +4051,7 @@ public final class FeeProto {
               com.ibc.applications.fee.v1.FeeProto.IdentifiedPacketFees.class, com.ibc.applications.fee.v1.FeeProto.IdentifiedPacketFees.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PACKET_ID_FIELD_NUMBER = 1;
     private com.ibc.core.channel.v1.ChannelProto.PacketId packetId_;
     /**
@@ -4051,7 +4064,7 @@ public final class FeeProto {
      */
     @java.lang.Override
     public boolean hasPacketId() {
-      return packetId_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4152,7 +4165,7 @@ public final class FeeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (packetId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPacketId());
       }
       for (int i = 0; i < packetFees_.size(); i++) {
@@ -4167,7 +4180,7 @@ public final class FeeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (packetId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPacketId());
       }
@@ -4339,13 +4352,20 @@ public final class FeeProto {
 
       // Construct using com.ibc.applications.fee.v1.FeeProto.IdentifiedPacketFees.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPacketIdFieldBuilder();
+          getPacketFeesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4409,11 +4429,14 @@ public final class FeeProto {
 
       private void buildPartial0(com.ibc.applications.fee.v1.FeeProto.IdentifiedPacketFees result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.packetId_ = packetIdBuilder_ == null
               ? packetId_
               : packetIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4638,8 +4661,10 @@ public final class FeeProto {
         } else {
           packetIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (packetId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

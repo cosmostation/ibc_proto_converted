@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%axelar/tss/tofnd/v1beta1/common.proto\x12\x18\x61xelar.tss.tofnd.v1beta1\x1a\x14gogoproto/gogo.proto\"F\n\x12KeyPresenceRequest\x12\x17\n\x07key_uid\x18\x01 \x01(\tR\x06keyUid\x12\x17\n\x07pub_key\x18\x02 \x01(\x0cR\x06pubKey\"\xd3\x01\n\x13KeyPresenceResponse\x12R\n\x08response\x18\x01 \x01(\x0e\x32\x36.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.ResponseR\x08response\"h\n\x08Response\x12\x18\n\x14RESPONSE_UNSPECIFIED\x10\x00\x12\x14\n\x10RESPONSE_PRESENT\x10\x01\x12\x13\n\x0fRESPONSE_ABSENT\x10\x02\x12\x11\n\rRESPONSE_FAIL\x10\x03\x1a\x04\x88\xa3\x1e\x00\x42\xe0\x01\n\x1c\x63om.axelar.tss.tofnd.v1beta1B\x0b\x43ommonProtoP\x01Z0github.com/axelarnetwork/axelar-core/x/tss/tofnd\xa2\x02\x03\x41TT\xaa\x02\x18\x41xelar.Tss.Tofnd.V1beta1\xca\x02\x18\x41xelar\\Tss\\Tofnd\\V1beta1\xe2\x02$Axelar\\Tss\\Tofnd\\V1beta1\\GPBMetadata\xea\x02\x1b\x41xelar::Tss::Tofnd::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%axelar/tss/tofnd/v1beta1/common.proto\x12\x18\x61xelar.tss.tofnd.v1beta1\x1a\x14gogoproto/gogo.proto\"F\n\x12KeyPresenceRequest\x12\x17\n\x07key_uid\x18\x01 \x01(\tR\x06keyUid\x12\x17\n\x07pub_key\x18\x02 \x01(\x0cR\x06pubKey\"\xd3\x01\n\x13KeyPresenceResponse\x12R\n\x08response\x18\x01 \x01(\x0e\x32\x36.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.ResponseR\x08response\"h\n\x08Response\x12\x18\n\x14RESPONSE_UNSPECIFIED\x10\x00\x12\x14\n\x10RESPONSE_PRESENT\x10\x01\x12\x13\n\x0fRESPONSE_ABSENT\x10\x02\x12\x11\n\rRESPONSE_FAIL\x10\x03\x1a\x04\x88\xa3\x1e\x00\x42\xde\x01\n\x1c\x63om.axelar.tss.tofnd.v1beta1B\x0b\x43ommonProtoZ0github.com/axelarnetwork/axelar-core/x/tss/tofnd\xa2\x02\x03\x41TT\xaa\x02\x18\x41xelar.Tss.Tofnd.V1beta1\xca\x02\x18\x41xelar\\Tss\\Tofnd\\V1beta1\xe2\x02$Axelar\\Tss\\Tofnd\\V1beta1\\GPBMetadata\xea\x02\x1b\x41xelar::Tss::Tofnd::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.tss.tofnd.v1beta1.common_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.axelar.tss.tofnd.v1beta1B\013CommonProtoP\001Z0github.com/axelarnetwork/axelar-core/x/tss/tofnd\242\002\003ATT\252\002\030Axelar.Tss.Tofnd.V1beta1\312\002\030Axelar\\Tss\\Tofnd\\V1beta1\342\002$Axelar\\Tss\\Tofnd\\V1beta1\\GPBMetadata\352\002\033Axelar::Tss::Tofnd::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\034com.axelar.tss.tofnd.v1beta1B\013CommonProtoZ0github.com/axelarnetwork/axelar-core/x/tss/tofnd\242\002\003ATT\252\002\030Axelar.Tss.Tofnd.V1beta1\312\002\030Axelar\\Tss\\Tofnd\\V1beta1\342\002$Axelar\\Tss\\Tofnd\\V1beta1\\GPBMetadata\352\002\033Axelar::Tss::Tofnd::V1beta1'
   _KEYPRESENCERESPONSE_RESPONSE._options = None
   _KEYPRESENCERESPONSE_RESPONSE._serialized_options = b'\210\243\036\000'
   _globals['_KEYPRESENCEREQUEST']._serialized_start=89

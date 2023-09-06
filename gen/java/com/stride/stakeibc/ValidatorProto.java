@@ -738,6 +738,7 @@ public final class ValidatorProto {
               com.stride.stakeibc.ValidatorProto.Validator.class, com.stride.stakeibc.ValidatorProto.Validator.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -874,7 +875,7 @@ public final class ValidatorProto {
      */
     @java.lang.Override
     public boolean hasInternalExchangeRate() {
-      return internalExchangeRate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stride.stakeibc.ValidatorExchangeRate internal_exchange_rate = 7 [json_name = "internalExchangeRate"];</code>
@@ -918,7 +919,7 @@ public final class ValidatorProto {
       if (weight_ != 0L) {
         output.writeUInt64(6, weight_);
       }
-      if (internalExchangeRate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getInternalExchangeRate());
       }
       getUnknownFields().writeTo(output);
@@ -943,7 +944,7 @@ public final class ValidatorProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(6, weight_);
       }
-      if (internalExchangeRate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getInternalExchangeRate());
       }
@@ -1118,13 +1119,19 @@ public final class ValidatorProto {
 
       // Construct using com.stride.stakeibc.ValidatorProto.Validator.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInternalExchangeRateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1184,11 +1191,14 @@ public final class ValidatorProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.weight_ = weight_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.internalExchangeRate_ = internalExchangeRateBuilder_ == null
               ? internalExchangeRate_
               : internalExchangeRateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1640,8 +1650,10 @@ public final class ValidatorProto {
         } else {
           internalExchangeRateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (internalExchangeRate_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

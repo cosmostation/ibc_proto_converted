@@ -253,6 +253,7 @@ public final class GenesisProto {
               com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.class, com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEALS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.panacea.datadeal.v2alpha2.DealProto.Deal> deals_;
@@ -559,7 +560,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -615,7 +616,7 @@ public final class GenesisProto {
       for (int i = 0; i < dealQueueElements_.size(); i++) {
         output.writeMessage(8, dealQueueElements_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(9, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -659,7 +660,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, dealQueueElements_.get(i));
       }
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getParams());
       }
@@ -868,13 +869,26 @@ public final class GenesisProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDealsFieldBuilder();
+          getDataSalesFieldBuilder();
+          getDataVerificationVotesFieldBuilder();
+          getDataDeliveryVotesFieldBuilder();
+          getDataVerificationQueueElementsFieldBuilder();
+          getDataDeliveryQueueElementsFieldBuilder();
+          getDealQueueElementsFieldBuilder();
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1038,11 +1052,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.nextDealNumber_ = nextDealNumber_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3201,8 +3218,10 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3879,6 +3898,7 @@ public final class GenesisProto {
               com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_HASH_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataHash_ = "";
@@ -3937,7 +3957,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingEndTime() {
-      return votingEndTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -3975,7 +3995,7 @@ public final class GenesisProto {
       if (dealId_ != 0L) {
         output.writeUInt64(2, dealId_);
       }
-      if (votingEndTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getVotingEndTime());
       }
       getUnknownFields().writeTo(output);
@@ -3994,7 +4014,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, dealId_);
       }
-      if (votingEndTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVotingEndTime());
       }
@@ -4165,13 +4185,19 @@ public final class GenesisProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVotingEndTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4223,11 +4249,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dealId_ = dealId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.votingEndTime_ = votingEndTimeBuilder_ == null
               ? votingEndTime_
               : votingEndTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4515,8 +4544,10 @@ public final class GenesisProto {
         } else {
           votingEndTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (votingEndTime_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4708,6 +4739,7 @@ public final class GenesisProto {
               com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_HASH_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataHash_ = "";
@@ -4766,7 +4798,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingEndTime() {
-      return votingEndTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -4804,7 +4836,7 @@ public final class GenesisProto {
       if (dealId_ != 0L) {
         output.writeUInt64(2, dealId_);
       }
-      if (votingEndTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getVotingEndTime());
       }
       getUnknownFields().writeTo(output);
@@ -4823,7 +4855,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, dealId_);
       }
-      if (votingEndTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVotingEndTime());
       }
@@ -4994,13 +5026,19 @@ public final class GenesisProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVotingEndTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5052,11 +5090,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dealId_ = dealId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.votingEndTime_ = votingEndTimeBuilder_ == null
               ? votingEndTime_
               : votingEndTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5344,8 +5385,10 @@ public final class GenesisProto {
         } else {
           votingEndTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (votingEndTime_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

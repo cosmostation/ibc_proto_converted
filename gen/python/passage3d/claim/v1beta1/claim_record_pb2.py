@@ -16,15 +16,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from cosmos.bank.v1beta1 import genesis_pb2 as cosmos_dot_bank_dot_v1beta1_dot_genesis__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*passage3d/claim/v1beta1/claim_record.proto\x12\x17passage3d.claim.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a!cosmos/bank/v1beta1/genesis.proto\"\xea\x01\n\x0b\x43laimRecord\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12\x65\n\x10\x63laimable_amount\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x1f\xc8\xde\x1f\x00\xf2\xde\x1f\x17yaml:\"claimable_amount\"R\x0f\x63laimableAmount\x12\x46\n\x10\x61\x63tion_completed\x18\x04 \x03(\x08\x42\x1b\xf2\xde\x1f\x17yaml:\"action_completed\"R\x0f\x61\x63tionCompletedB\xd9\x01\n\x1b\x63om.passage3d.claim.v1beta1B\x10\x43laimRecordProtoP\x01Z*github.com/envadiv/passage3d/x/claim/types\xa2\x02\x03PCX\xaa\x02\x17Passage3d.Claim.V1beta1\xca\x02\x17Passage3d\\Claim\\V1beta1\xe2\x02#Passage3d\\Claim\\V1beta1\\GPBMetadata\xea\x02\x19Passage3d::Claim::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*passage3d/claim/v1beta1/claim_record.proto\x12\x17passage3d.claim.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a!cosmos/bank/v1beta1/genesis.proto\"\xea\x01\n\x0b\x43laimRecord\x12,\n\x07\x61\x64\x64ress\x18\x01 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"R\x07\x61\x64\x64ress\x12\x65\n\x10\x63laimable_amount\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x1f\xc8\xde\x1f\x00\xf2\xde\x1f\x17yaml:\"claimable_amount\"R\x0f\x63laimableAmount\x12\x46\n\x10\x61\x63tion_completed\x18\x04 \x03(\x08\x42\x1b\xf2\xde\x1f\x17yaml:\"action_completed\"R\x0f\x61\x63tionCompletedB\xd7\x01\n\x1b\x63om.passage3d.claim.v1beta1B\x10\x43laimRecordProtoZ*github.com/envadiv/passage3d/x/claim/types\xa2\x02\x03PCX\xaa\x02\x17Passage3d.Claim.V1beta1\xca\x02\x17Passage3d\\Claim\\V1beta1\xe2\x02#Passage3d\\Claim\\V1beta1\\GPBMetadata\xea\x02\x19Passage3d::Claim::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'passage3d.claim.v1beta1.claim_record_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.passage3d.claim.v1beta1B\020ClaimRecordProtoP\001Z*github.com/envadiv/passage3d/x/claim/types\242\002\003PCX\252\002\027Passage3d.Claim.V1beta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#Passage3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Passage3d::Claim::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\033com.passage3d.claim.v1beta1B\020ClaimRecordProtoZ*github.com/envadiv/passage3d/x/claim/types\242\002\003PCX\252\002\027Passage3d.Claim.V1beta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#Passage3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Passage3d::Claim::V1beta1'
   _CLAIMRECORD.fields_by_name['address']._options = None
   _CLAIMRECORD.fields_by_name['address']._serialized_options = b'\362\336\037\016yaml:\"address\"'
   _CLAIMRECORD.fields_by_name['claimable_amount']._options = None

@@ -68,6 +68,7 @@ public final class TransactionResponseProto {
               com.assetmantle.modules.identities.transactions.nub.TransactionResponseProto.TransactionResponse.class, com.assetmantle.modules.identities.transactions.nub.TransactionResponseProto.TransactionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NUB_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.IdentityIdProto.IdentityID nubID_;
     /**
@@ -76,7 +77,7 @@ public final class TransactionResponseProto {
      */
     @java.lang.Override
     public boolean hasNubID() {
-      return nubID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID nub_i_d = 1 [json_name = "nubID"];</code>
@@ -108,7 +109,7 @@ public final class TransactionResponseProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (nubID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getNubID());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class TransactionResponseProto {
       if (size != -1) return size;
 
       size = 0;
-      if (nubID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getNubID());
       }
@@ -278,13 +279,19 @@ public final class TransactionResponseProto {
 
       // Construct using com.assetmantle.modules.identities.transactions.nub.TransactionResponseProto.TransactionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNubIDFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class TransactionResponseProto {
 
       private void buildPartial0(com.assetmantle.modules.identities.transactions.nub.TransactionResponseProto.TransactionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.nubID_ = nubIDBuilder_ == null
               ? nubID_
               : nubIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class TransactionResponseProto {
         } else {
           nubIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (nubID_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

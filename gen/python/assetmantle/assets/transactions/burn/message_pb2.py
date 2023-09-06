@@ -15,15 +15,14 @@ from assetmantle.ids.base import asset_id_pb2 as assetmantle_dot_ids_dot_base_do
 from assetmantle.ids.base import identity_id_pb2 as assetmantle_dot_ids_dot_base_dot_identity__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/assets/transactions/burn/message.proto\x12,assetmantle.modules.assets.transactions.burn\x1a#assetmantle/ids/base/asset_id.proto\x1a&assetmantle/ids/base/identity_id.proto\"\xa2\x01\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x41\n\x08\x66rom_i_d\x18\x02 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x06\x66romID\x12@\n\tasset_i_d\x18\x03 \x01(\x0b\x32$.assetmantle.schema.ids.base.AssetIDR\x07\x61ssetIDB\x96\x02\n0com.assetmantle.modules.assets.transactions.burnB\x0cMessageProtoP\x01\xa2\x02\x05\x41MATB\xaa\x02,Assetmantle.Modules.Assets.Transactions.Burn\xca\x02,Assetmantle\\Modules\\Assets\\Transactions\\Burn\xe2\x02\x38\x41ssetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Assets::Transactions::Burnb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/assets/transactions/burn/message.proto\x12,assetmantle.modules.assets.transactions.burn\x1a#assetmantle/ids/base/asset_id.proto\x1a&assetmantle/ids/base/identity_id.proto\"\xa2\x01\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x41\n\x08\x66rom_i_d\x18\x02 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x06\x66romID\x12@\n\tasset_i_d\x18\x03 \x01(\x0b\x32$.assetmantle.schema.ids.base.AssetIDR\x07\x61ssetIDB\x94\x02\n0com.assetmantle.modules.assets.transactions.burnB\x0cMessageProto\xa2\x02\x05\x41MATB\xaa\x02,Assetmantle.Modules.Assets.Transactions.Burn\xca\x02,Assetmantle\\Modules\\Assets\\Transactions\\Burn\xe2\x02\x38\x41ssetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Assets::Transactions::Burnb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.assets.transactions.burn.message_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.assets.transactions.burnB\014MessageProtoP\001\242\002\005AMATB\252\002,Assetmantle.Modules.Assets.Transactions.Burn\312\002,Assetmantle\\Modules\\Assets\\Transactions\\Burn\342\0028Assetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\352\0020Assetmantle::Modules::Assets::Transactions::Burn'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.assets.transactions.burnB\014MessageProto\242\002\005AMATB\252\002,Assetmantle.Modules.Assets.Transactions.Burn\312\002,Assetmantle\\Modules\\Assets\\Transactions\\Burn\342\0028Assetmantle\\Modules\\Assets\\Transactions\\Burn\\GPBMetadata\352\0020Assetmantle::Modules::Assets::Transactions::Burn'
   _globals['_MESSAGE']._serialized_start=178
   _globals['_MESSAGE']._serialized_end=340
 # @@protoc_insertion_point(module_scope)

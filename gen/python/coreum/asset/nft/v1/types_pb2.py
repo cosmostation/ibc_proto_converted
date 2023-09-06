@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63oreum/asset/nft/v1/types.proto\x12\x13\x63oreum.asset.nft.v1\x1a\x14gogoproto/gogo.proto\"\x1f\n\tDataBytes\x12\x12\n\x04\x44\x61ta\x18\x01 \x01(\x0cR\x04\x44\x61taB\xce\x01\n\x17\x63om.coreum.asset.nft.v1B\nTypesProtoP\x01Z4github.com/CoreumFoundation/coreum/x/asset/nft/types\xa2\x02\x03\x43\x41N\xaa\x02\x13\x43oreum.Asset.Nft.V1\xca\x02\x13\x43oreum\\Asset\\Nft\\V1\xe2\x02\x1f\x43oreum\\Asset\\Nft\\V1\\GPBMetadata\xea\x02\x16\x43oreum::Asset::Nft::V1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63oreum/asset/nft/v1/types.proto\x12\x13\x63oreum.asset.nft.v1\x1a\x14gogoproto/gogo.proto\"\x1f\n\tDataBytes\x12\x12\n\x04\x44\x61ta\x18\x01 \x01(\x0cR\x04\x44\x61taB\xcc\x01\n\x17\x63om.coreum.asset.nft.v1B\nTypesProtoZ4github.com/CoreumFoundation/coreum/x/asset/nft/types\xa2\x02\x03\x43\x41N\xaa\x02\x13\x43oreum.Asset.Nft.V1\xca\x02\x13\x43oreum\\Asset\\Nft\\V1\xe2\x02\x1f\x43oreum\\Asset\\Nft\\V1\\GPBMetadata\xea\x02\x16\x43oreum::Asset::Nft::V1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'coreum.asset.nft.v1.types_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.coreum.asset.nft.v1B\nTypesProtoP\001Z4github.com/CoreumFoundation/coreum/x/asset/nft/types\242\002\003CAN\252\002\023Coreum.Asset.Nft.V1\312\002\023Coreum\\Asset\\Nft\\V1\342\002\037Coreum\\Asset\\Nft\\V1\\GPBMetadata\352\002\026Coreum::Asset::Nft::V1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\027com.coreum.asset.nft.v1B\nTypesProtoZ4github.com/CoreumFoundation/coreum/x/asset/nft/types\242\002\003CAN\252\002\023Coreum.Asset.Nft.V1\312\002\023Coreum\\Asset\\Nft\\V1\342\002\037Coreum\\Asset\\Nft\\V1\\GPBMetadata\352\002\026Coreum::Asset::Nft::V1\310\341\036\000'
   _globals['_DATABYTES']._serialized_start=78
   _globals['_DATABYTES']._serialized_end=109
 # @@protoc_insertion_point(module_scope)

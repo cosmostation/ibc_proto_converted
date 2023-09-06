@@ -163,6 +163,7 @@ public final class TxProto {
               com.kava.swap.v1beta1.TxProto.MsgDeposit.class, com.kava.swap.v1beta1.TxProto.MsgDeposit.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSITOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object depositor_ = "";
@@ -222,7 +223,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTokenA() {
-      return tokenA_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -260,7 +261,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTokenB() {
-      return tokenB_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -365,10 +366,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, depositor_);
       }
-      if (tokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getTokenA());
       }
-      if (tokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getTokenB());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slippage_)) {
@@ -389,11 +390,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, depositor_);
       }
-      if (tokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTokenA());
       }
-      if (tokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTokenB());
       }
@@ -584,13 +585,20 @@ public final class TxProto {
 
       // Construct using com.kava.swap.v1beta1.TxProto.MsgDeposit.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenAFieldBuilder();
+          getTokenBFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -645,15 +653,18 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.depositor_ = depositor_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokenA_ = tokenABuilder_ == null
               ? tokenA_
               : tokenABuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tokenB_ = tokenBBuilder_ == null
               ? tokenB_
               : tokenBBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.slippage_ = slippage_;
@@ -661,6 +672,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.deadline_ = deadline_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -976,8 +988,10 @@ public final class TxProto {
         } else {
           tokenABuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (tokenA_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1131,8 +1145,10 @@ public final class TxProto {
         } else {
           tokenBBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (tokenB_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1953,6 +1969,7 @@ public final class TxProto {
               com.kava.swap.v1beta1.TxProto.MsgWithdraw.class, com.kava.swap.v1beta1.TxProto.MsgWithdraw.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -2059,7 +2076,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinTokenA() {
-      return minTokenA_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2097,7 +2114,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinTokenB() {
-      return minTokenB_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2158,10 +2175,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shares_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shares_);
       }
-      if (minTokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getMinTokenA());
       }
-      if (minTokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getMinTokenB());
       }
       if (deadline_ != 0L) {
@@ -2182,11 +2199,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shares_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shares_);
       }
-      if (minTokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMinTokenA());
       }
-      if (minTokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMinTokenB());
       }
@@ -2374,13 +2391,20 @@ public final class TxProto {
 
       // Construct using com.kava.swap.v1beta1.TxProto.MsgWithdraw.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinTokenAFieldBuilder();
+          getMinTokenBFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2438,19 +2462,23 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.shares_ = shares_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minTokenA_ = minTokenABuilder_ == null
               ? minTokenA_
               : minTokenABuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.minTokenB_ = minTokenBBuilder_ == null
               ? minTokenB_
               : minTokenBBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.deadline_ = deadline_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2858,8 +2886,10 @@ public final class TxProto {
         } else {
           minTokenABuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (minTokenA_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3013,8 +3043,10 @@ public final class TxProto {
         } else {
           minTokenBBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (minTokenB_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3743,6 +3775,7 @@ public final class TxProto {
               com.kava.swap.v1beta1.TxProto.MsgSwapExactForTokens.class, com.kava.swap.v1beta1.TxProto.MsgSwapExactForTokens.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REQUESTER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object requester_ = "";
@@ -3802,7 +3835,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExactTokenA() {
-      return exactTokenA_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3840,7 +3873,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTokenB() {
-      return tokenB_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -3945,10 +3978,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requester_);
       }
-      if (exactTokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getExactTokenA());
       }
-      if (tokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getTokenB());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slippage_)) {
@@ -3969,11 +4002,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requester_);
       }
-      if (exactTokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExactTokenA());
       }
-      if (tokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTokenB());
       }
@@ -4164,13 +4197,20 @@ public final class TxProto {
 
       // Construct using com.kava.swap.v1beta1.TxProto.MsgSwapExactForTokens.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExactTokenAFieldBuilder();
+          getTokenBFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4225,15 +4265,18 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.requester_ = requester_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.exactTokenA_ = exactTokenABuilder_ == null
               ? exactTokenA_
               : exactTokenABuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tokenB_ = tokenBBuilder_ == null
               ? tokenB_
               : tokenBBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.slippage_ = slippage_;
@@ -4241,6 +4284,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.deadline_ = deadline_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4556,8 +4600,10 @@ public final class TxProto {
         } else {
           exactTokenABuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (exactTokenA_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4711,8 +4757,10 @@ public final class TxProto {
         } else {
           tokenBBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (tokenB_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5536,6 +5584,7 @@ public final class TxProto {
               com.kava.swap.v1beta1.TxProto.MsgSwapForExactTokens.class, com.kava.swap.v1beta1.TxProto.MsgSwapForExactTokens.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REQUESTER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object requester_ = "";
@@ -5595,7 +5644,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTokenA() {
-      return tokenA_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5633,7 +5682,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExactTokenB() {
-      return exactTokenB_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5738,10 +5787,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requester_);
       }
-      if (tokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getTokenA());
       }
-      if (exactTokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getExactTokenB());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slippage_)) {
@@ -5762,11 +5811,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requester_);
       }
-      if (tokenA_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTokenA());
       }
-      if (exactTokenB_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getExactTokenB());
       }
@@ -5958,13 +6007,20 @@ public final class TxProto {
 
       // Construct using com.kava.swap.v1beta1.TxProto.MsgSwapForExactTokens.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenAFieldBuilder();
+          getExactTokenBFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6019,15 +6075,18 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.requester_ = requester_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokenA_ = tokenABuilder_ == null
               ? tokenA_
               : tokenABuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.exactTokenB_ = exactTokenBBuilder_ == null
               ? exactTokenB_
               : exactTokenBBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.slippage_ = slippage_;
@@ -6035,6 +6094,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.deadline_ = deadline_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6350,8 +6410,10 @@ public final class TxProto {
         } else {
           tokenABuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (tokenA_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6505,8 +6567,10 @@ public final class TxProto {
         } else {
           exactTokenBBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (exactTokenB_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

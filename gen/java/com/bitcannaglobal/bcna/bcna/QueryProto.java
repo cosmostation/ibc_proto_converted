@@ -489,6 +489,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryParamsResponse.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.bitcannaglobal.bcna.bcna.ParamsProto.Params params_;
     /**
@@ -501,7 +502,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -541,7 +542,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -553,7 +554,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -715,13 +716,19 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,11 +772,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -955,8 +965,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1693,6 +1705,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidByBcnaidResponse.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidByBcnaidResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BITCANNAID_FIELD_NUMBER = 1;
     private com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid bitcannaid_;
     /**
@@ -1701,7 +1714,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBitcannaid() {
-      return bitcannaid_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.bitcannaglobal.bcna.bcna.Bitcannaid Bitcannaid = 1 [json_name = "Bitcannaid", (.gogoproto.nullable) = true];</code>
@@ -1733,7 +1746,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (bitcannaid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBitcannaid());
       }
       getUnknownFields().writeTo(output);
@@ -1745,7 +1758,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (bitcannaid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBitcannaid());
       }
@@ -1903,13 +1916,19 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidByBcnaidResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBitcannaidFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1953,11 +1972,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidByBcnaidResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bitcannaid_ = bitcannaidBuilder_ == null
               ? bitcannaid_
               : bitcannaidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2123,8 +2145,10 @@ public final class QueryProto {
         } else {
           bitcannaidBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (bitcannaid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2770,6 +2794,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BITCANNAID_FIELD_NUMBER = 1;
     private com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid bitcannaid_;
     /**
@@ -2778,7 +2803,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBitcannaid() {
-      return bitcannaid_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.bitcannaglobal.bcna.bcna.Bitcannaid Bitcannaid = 1 [json_name = "Bitcannaid", (.gogoproto.nullable) = false];</code>
@@ -2810,7 +2835,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (bitcannaid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBitcannaid());
       }
       getUnknownFields().writeTo(output);
@@ -2822,7 +2847,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (bitcannaid_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBitcannaid());
       }
@@ -2980,13 +3005,19 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBitcannaidFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3030,11 +3061,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetBitcannaidResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bitcannaid_ = bitcannaidBuilder_ == null
               ? bitcannaid_
               : bitcannaidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3200,8 +3234,10 @@ public final class QueryProto {
         } else {
           bitcannaidBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (bitcannaid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3370,6 +3406,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidRequest.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -3378,7 +3415,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -3410,7 +3447,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3422,7 +3459,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -3580,13 +3617,19 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3630,11 +3673,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3800,8 +3846,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3995,6 +4043,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidResponse.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BITCANNAID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid> bitcannaid_;
@@ -4044,7 +4093,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4079,7 +4128,7 @@ public final class QueryProto {
       for (int i = 0; i < bitcannaid_.size(); i++) {
         output.writeMessage(1, bitcannaid_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4095,7 +4144,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, bitcannaid_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4259,13 +4308,20 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBitcannaidFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4329,11 +4385,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllBitcannaidResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4778,8 +4837,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5425,6 +5486,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetSupplychainResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUPPLYCHAIN_FIELD_NUMBER = 1;
     private com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain supplychain_;
     /**
@@ -5433,7 +5495,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSupplychain() {
-      return supplychain_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.bitcannaglobal.bcna.bcna.Supplychain Supplychain = 1 [json_name = "Supplychain", (.gogoproto.nullable) = false];</code>
@@ -5465,7 +5527,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (supplychain_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSupplychain());
       }
       getUnknownFields().writeTo(output);
@@ -5477,7 +5539,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (supplychain_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSupplychain());
       }
@@ -5635,13 +5697,19 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetSupplychainResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSupplychainFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5685,11 +5753,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryGetSupplychainResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.supplychain_ = supplychainBuilder_ == null
               ? supplychain_
               : supplychainBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5855,8 +5926,10 @@ public final class QueryProto {
         } else {
           supplychainBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (supplychain_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6025,6 +6098,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainRequest.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -6033,7 +6107,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -6065,7 +6139,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6077,7 +6151,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -6235,13 +6309,19 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6285,11 +6365,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6455,8 +6538,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6650,6 +6735,7 @@ public final class QueryProto {
               com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainResponse.class, com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUPPLYCHAIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain> supplychain_;
@@ -6699,7 +6785,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -6734,7 +6820,7 @@ public final class QueryProto {
       for (int i = 0; i < supplychain_.size(); i++) {
         output.writeMessage(1, supplychain_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6750,7 +6836,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, supplychain_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6914,13 +7000,20 @@ public final class QueryProto {
 
       // Construct using com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSupplychainFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6984,11 +7077,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.bitcannaglobal.bcna.bcna.QueryProto.QueryAllSupplychainResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7433,8 +7529,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

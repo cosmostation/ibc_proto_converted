@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&comdex/bandoracle/v1beta1/packet.proto\x12\x19\x63omdex.bandoracle.v1beta1\"]\n\x14\x42\x61ndoraclePacketData\x12;\n\x06noData\x18\x01 \x01(\x0b\x32!.comdex.bandoracle.v1beta1.NoDataH\x00R\x06noDataB\x08\n\x06packet\"\x08\n\x06NoDataB\xe8\x01\n\x1d\x63om.comdex.bandoracle.v1beta1B\x0bPacketProtoP\x01Z4github.com/comdex-official/comdex/x/bandoracle/types\xa2\x02\x03\x43\x42X\xaa\x02\x19\x43omdex.Bandoracle.V1beta1\xca\x02\x19\x43omdex\\Bandoracle\\V1beta1\xe2\x02%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\xea\x02\x1b\x43omdex::Bandoracle::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&comdex/bandoracle/v1beta1/packet.proto\x12\x19\x63omdex.bandoracle.v1beta1\"]\n\x14\x42\x61ndoraclePacketData\x12;\n\x06noData\x18\x01 \x01(\x0b\x32!.comdex.bandoracle.v1beta1.NoDataH\x00R\x06noDataB\x08\n\x06packet\"\x08\n\x06NoDataB\xe6\x01\n\x1d\x63om.comdex.bandoracle.v1beta1B\x0bPacketProtoZ4github.com/comdex-official/comdex/x/bandoracle/types\xa2\x02\x03\x43\x42X\xaa\x02\x19\x43omdex.Bandoracle.V1beta1\xca\x02\x19\x43omdex\\Bandoracle\\V1beta1\xe2\x02%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\xea\x02\x1b\x43omdex::Bandoracle::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.bandoracle.v1beta1.packet_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.comdex.bandoracle.v1beta1B\013PacketProtoP\001Z4github.com/comdex-official/comdex/x/bandoracle/types\242\002\003CBX\252\002\031Comdex.Bandoracle.V1beta1\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\352\002\033Comdex::Bandoracle::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\035com.comdex.bandoracle.v1beta1B\013PacketProtoZ4github.com/comdex-official/comdex/x/bandoracle/types\242\002\003CBX\252\002\031Comdex.Bandoracle.V1beta1\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%Comdex\\Bandoracle\\V1beta1\\GPBMetadata\352\002\033Comdex::Bandoracle::V1beta1'
   _globals['_BANDORACLEPACKETDATA']._serialized_start=69
   _globals['_BANDORACLEPACKETDATA']._serialized_end=162
   _globals['_NODATA']._serialized_start=164

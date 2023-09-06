@@ -134,6 +134,7 @@ public final class TxProto {
               com.cosmos.circuit.v1.TxProto.MsgAuthorizeCircuitBreaker.class, com.cosmos.circuit.v1.TxProto.MsgAuthorizeCircuitBreaker.Builder.class);
     }
 
+    private int bitField0_;
     public static final int GRANTER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object granter_ = "";
@@ -244,7 +245,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPermissions() {
-      return permissions_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -294,7 +295,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, grantee_);
       }
-      if (permissions_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPermissions());
       }
       getUnknownFields().writeTo(output);
@@ -312,7 +313,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, grantee_);
       }
-      if (permissions_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPermissions());
       }
@@ -482,13 +483,19 @@ public final class TxProto {
 
       // Construct using com.cosmos.circuit.v1.TxProto.MsgAuthorizeCircuitBreaker.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPermissionsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -540,11 +547,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.grantee_ = grantee_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.permissions_ = permissionsBuilder_ == null
               ? permissions_
               : permissionsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -949,8 +959,10 @@ public final class TxProto {
         } else {
           permissionsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (permissions_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

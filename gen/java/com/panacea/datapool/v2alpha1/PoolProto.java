@@ -284,6 +284,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue);
               com.panacea.datapool.v2alpha1.PoolProto.Pool.class, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -353,7 +354,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue);
      */
     @java.lang.Override
     public boolean hasPoolParams() {
-      return poolParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
@@ -491,7 +492,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue);
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return deposit_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -740,7 +741,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       if (round_ != 0L) {
         output.writeUInt64(3, round_);
       }
-      if (poolParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getPoolParams());
       }
       if (curNumData_ != 0L) {
@@ -755,7 +756,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, curator_);
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(9, getDeposit());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftContractAddr_)) {
@@ -793,7 +794,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, round_);
       }
-      if (poolParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPoolParams());
       }
@@ -811,7 +812,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, curator_);
       }
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getDeposit());
       }
@@ -1075,13 +1076,20 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
       // Construct using com.panacea.datapool.v2alpha1.PoolProto.Pool.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPoolParamsFieldBuilder();
+          getDepositFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1150,10 +1158,12 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.round_ = round_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.poolParams_ = poolParamsBuilder_ == null
               ? poolParams_
               : poolParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.curNumData_ = curNumData_;
@@ -1171,6 +1181,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.nftContractAddr_ = nftContractAddr_;
@@ -1185,6 +1196,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.curatorCommissionRate_ = curatorCommissionRate_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1598,8 +1610,10 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         } else {
           poolParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (poolParams_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1969,8 +1983,10 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (deposit_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2553,6 +2569,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
               com.panacea.datapool.v2alpha1.PoolProto.DataCert.class, com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder.class);
     }
 
+    private int bitField0_;
     public static final int UNSIGNED_CERT_FIELD_NUMBER = 1;
     private com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert unsignedCert_;
     /**
@@ -2565,7 +2582,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
      */
     @java.lang.Override
     public boolean hasUnsignedCert() {
-      return unsignedCert_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2620,7 +2637,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (unsignedCert_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getUnsignedCert());
       }
       if (!signature_.isEmpty()) {
@@ -2635,7 +2652,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (unsignedCert_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUnsignedCert());
       }
@@ -2805,13 +2822,19 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
       // Construct using com.panacea.datapool.v2alpha1.PoolProto.DataCert.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnsignedCertFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2856,14 +2879,17 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.DataCert result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.unsignedCert_ = unsignedCertBuilder_ == null
               ? unsignedCert_
               : unsignedCertBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signature_ = signature_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3057,8 +3083,10 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         } else {
           unsignedCertBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (unsignedCert_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5326,6 +5354,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
               com.panacea.datapool.v2alpha1.PoolProto.PoolParams.class, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATA_SCHEMA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList dataSchema_ =
@@ -5421,7 +5450,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
      */
     @java.lang.Override
     public boolean hasNftPrice() {
-      return nftPrice_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5576,7 +5605,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       if (maxNftSupply_ != 0L) {
         output.writeUInt64(3, maxNftSupply_);
       }
-      if (nftPrice_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getNftPrice());
       }
       for (int i = 0; i < trustedOracles_.size(); i++) {
@@ -5610,7 +5639,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, maxNftSupply_);
       }
-      if (nftPrice_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getNftPrice());
       }
@@ -5816,13 +5845,19 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
       // Construct using com.panacea.datapool.v2alpha1.PoolProto.PoolParams.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNftPriceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5884,10 +5919,12 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxNftSupply_ = maxNftSupply_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.nftPrice_ = nftPriceBuilder_ == null
               ? nftPrice_
               : nftPriceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           trustedOracles_.makeImmutable();
@@ -5897,6 +5934,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
           trustedDataIssuers_.makeImmutable();
           result.trustedDataIssuers_ = trustedDataIssuers_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6381,8 +6419,10 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         } else {
           nftPriceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (nftPrice_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6882,7 +6922,8 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
     public static final int POOL_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList poolIds_;
+    private com.google.protobuf.Internal.LongList poolIds_ =
+        emptyLongList();
     /**
      * <pre>
      * Execute information for pool reward distribution
@@ -7160,22 +7201,17 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       @java.lang.Override
       public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution buildPartial() {
         com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution result = new com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          poolIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.poolIds_ = poolIds_;
-      }
-
       private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          poolIds_.makeImmutable();
+          result.poolIds_ = poolIds_;
+        }
       }
 
       @java.lang.Override
@@ -7225,7 +7261,8 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (!other.poolIds_.isEmpty()) {
           if (poolIds_.isEmpty()) {
             poolIds_ = other.poolIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            poolIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensurePoolIdsIsMutable();
             poolIds_.addAll(other.poolIds_);
@@ -7293,10 +7330,10 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
       private com.google.protobuf.Internal.LongList poolIds_ = emptyLongList();
       private void ensurePoolIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          poolIds_ = mutableCopy(poolIds_);
-          bitField0_ |= 0x00000001;
+        if (!poolIds_.isModifiable()) {
+          poolIds_ = makeMutableCopy(poolIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -7308,8 +7345,8 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
        */
       public java.util.List<java.lang.Long>
           getPoolIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(poolIds_) : poolIds_;
+        poolIds_.makeImmutable();
+        return poolIds_;
       }
       /**
        * <pre>
@@ -7349,6 +7386,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
         ensurePoolIdsIsMutable();
         poolIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7365,6 +7403,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
         ensurePoolIdsIsMutable();
         poolIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7382,6 +7421,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         ensurePoolIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, poolIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7569,7 +7609,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
     }
     private SalesHistory() {
       sellerAddress_ = "";
-      dataHashes_ = java.util.Collections.emptyList();
+      dataHashes_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -7592,6 +7632,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
               com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.class, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -7671,7 +7712,8 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
     public static final int DATA_HASHES_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> dataHashes_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> dataHashes_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
      * @return A list containing the dataHashes.
@@ -7709,7 +7751,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
      */
     @java.lang.Override
     public boolean hasPaidCoin() {
-      return paidCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -7761,7 +7803,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       for (int i = 0; i < dataHashes_.size(); i++) {
         output.writeBytes(4, dataHashes_.get(i));
       }
-      if (paidCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getPaidCoin());
       }
       getUnknownFields().writeTo(output);
@@ -7793,7 +7835,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         size += dataSize;
         size += 1 * getDataHashesList().size();
       }
-      if (paidCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPaidCoin());
       }
@@ -7975,13 +8017,19 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
 
       // Construct using com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaidCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7990,7 +8038,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         poolId_ = 0L;
         round_ = 0L;
         sellerAddress_ = "";
-        dataHashes_ = java.util.Collections.emptyList();
+        dataHashes_ = emptyList(com.google.protobuf.ByteString.class);
         paidCoin_ = null;
         if (paidCoinBuilder_ != null) {
           paidCoinBuilder_.dispose();
@@ -8022,18 +8070,9 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
       @java.lang.Override
       public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory buildPartial() {
         com.panacea.datapool.v2alpha1.PoolProto.SalesHistory result = new com.panacea.datapool.v2alpha1.PoolProto.SalesHistory(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.panacea.datapool.v2alpha1.PoolProto.SalesHistory result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          dataHashes_ = java.util.Collections.unmodifiableList(dataHashes_);
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.dataHashes_ = dataHashes_;
       }
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.SalesHistory result) {
@@ -8047,11 +8086,18 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.sellerAddress_ = sellerAddress_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          dataHashes_.makeImmutable();
+          result.dataHashes_ = dataHashes_;
+        }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.paidCoin_ = paidCoinBuilder_ == null
               ? paidCoin_
               : paidCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8112,7 +8158,8 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (!other.dataHashes_.isEmpty()) {
           if (dataHashes_.isEmpty()) {
             dataHashes_ = other.dataHashes_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            dataHashes_.makeImmutable();
+            bitField0_ |= 0x00000008;
           } else {
             ensureDataHashesIsMutable();
             dataHashes_.addAll(other.dataHashes_);
@@ -8373,12 +8420,12 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         return this;
       }
 
-      private java.util.List<com.google.protobuf.ByteString> dataHashes_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> dataHashes_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureDataHashesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          dataHashes_ = new java.util.ArrayList<com.google.protobuf.ByteString>(dataHashes_);
-          bitField0_ |= 0x00000008;
+        if (!dataHashes_.isModifiable()) {
+          dataHashes_ = makeMutableCopy(dataHashes_);
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
@@ -8386,8 +8433,8 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getDataHashesList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(dataHashes_) : dataHashes_;
+        dataHashes_.makeImmutable();
+        return dataHashes_;
       }
       /**
        * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
@@ -8415,6 +8462,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         ensureDataHashesIsMutable();
         dataHashes_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8427,6 +8475,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         ensureDataHashesIsMutable();
         dataHashes_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8440,6 +8489,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         ensureDataHashesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, dataHashes_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8448,7 +8498,7 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearDataHashes() {
-        dataHashes_ = java.util.Collections.emptyList();
+        dataHashes_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
@@ -8540,8 +8590,10 @@ com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
         } else {
           paidCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (paidCoin_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

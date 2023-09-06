@@ -15,15 +15,14 @@ from cudos.marketplace import royalty_pb2 as cudos_dot_marketplace_dot_royalty__
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"cudos/marketplace/collection.proto\x12\"cudoventures.cudosnode.marketplace\x1a\x1f\x63udos/marketplace/royalty.proto\x1a\x14gogoproto/gogo.proto\"\x9e\x02\n\nCollection\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12\x18\n\x07\x64\x65nomId\x18\x02 \x01(\tR\x07\x64\x65nomId\x12W\n\rmintRoyalties\x18\x03 \x03(\x0b\x32+.cudoventures.cudosnode.marketplace.RoyaltyB\x04\xc8\xde\x1f\x00R\rmintRoyalties\x12[\n\x0fresaleRoyalties\x18\x04 \x03(\x0b\x32+.cudoventures.cudosnode.marketplace.RoyaltyB\x04\xc8\xde\x1f\x00R\x0fresaleRoyalties\x12\x1a\n\x08verified\x18\x05 \x01(\x08R\x08verified\x12\x14\n\x05owner\x18\x06 \x01(\tR\x05ownerB\x9b\x02\n&com.cudoventures.cudosnode.marketplaceB\x0f\x43ollectionProtoP\x01Z6github.com/CudoVentures/cudos-node/x/marketplace/types\xa2\x02\x03\x43\x43M\xaa\x02\"Cudoventures.Cudosnode.Marketplace\xca\x02\"Cudoventures\\Cudosnode\\Marketplace\xe2\x02.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\xea\x02$Cudoventures::Cudosnode::Marketplaceb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"cudos/marketplace/collection.proto\x12\"cudoventures.cudosnode.marketplace\x1a\x1f\x63udos/marketplace/royalty.proto\x1a\x14gogoproto/gogo.proto\"\x9e\x02\n\nCollection\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02id\x12\x18\n\x07\x64\x65nomId\x18\x02 \x01(\tR\x07\x64\x65nomId\x12W\n\rmintRoyalties\x18\x03 \x03(\x0b\x32+.cudoventures.cudosnode.marketplace.RoyaltyB\x04\xc8\xde\x1f\x00R\rmintRoyalties\x12[\n\x0fresaleRoyalties\x18\x04 \x03(\x0b\x32+.cudoventures.cudosnode.marketplace.RoyaltyB\x04\xc8\xde\x1f\x00R\x0fresaleRoyalties\x12\x1a\n\x08verified\x18\x05 \x01(\x08R\x08verified\x12\x14\n\x05owner\x18\x06 \x01(\tR\x05ownerB\x99\x02\n&com.cudoventures.cudosnode.marketplaceB\x0f\x43ollectionProtoZ6github.com/CudoVentures/cudos-node/x/marketplace/types\xa2\x02\x03\x43\x43M\xaa\x02\"Cudoventures.Cudosnode.Marketplace\xca\x02\"Cudoventures\\Cudosnode\\Marketplace\xe2\x02.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\xea\x02$Cudoventures::Cudosnode::Marketplaceb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cudos.marketplace.collection_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n&com.cudoventures.cudosnode.marketplaceB\017CollectionProtoP\001Z6github.com/CudoVentures/cudos-node/x/marketplace/types\242\002\003CCM\252\002\"Cudoventures.Cudosnode.Marketplace\312\002\"Cudoventures\\Cudosnode\\Marketplace\342\002.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\352\002$Cudoventures::Cudosnode::Marketplace'
+  DESCRIPTOR._serialized_options = b'\n&com.cudoventures.cudosnode.marketplaceB\017CollectionProtoZ6github.com/CudoVentures/cudos-node/x/marketplace/types\242\002\003CCM\252\002\"Cudoventures.Cudosnode.Marketplace\312\002\"Cudoventures\\Cudosnode\\Marketplace\342\002.Cudoventures\\Cudosnode\\Marketplace\\GPBMetadata\352\002$Cudoventures::Cudosnode::Marketplace'
   _COLLECTION.fields_by_name['mintRoyalties']._options = None
   _COLLECTION.fields_by_name['mintRoyalties']._serialized_options = b'\310\336\037\000'
   _COLLECTION.fields_by_name['resaleRoyalties']._options = None

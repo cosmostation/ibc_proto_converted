@@ -144,6 +144,7 @@ public final class NodeProto {
               com.sentinel.node.v1.NodeProto.Node.class, com.sentinel.node.v1.NodeProto.Node.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -328,7 +329,7 @@ public final class NodeProto {
      */
     @java.lang.Override
     public boolean hasStatusAt() {
-      return statusAt_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp status_at = 6 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -375,7 +376,7 @@ public final class NodeProto {
       if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, status_);
       }
-      if (statusAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getStatusAt());
       }
       getUnknownFields().writeTo(output);
@@ -404,7 +405,7 @@ public final class NodeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, status_);
       }
-      if (statusAt_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getStatusAt());
       }
@@ -583,13 +584,20 @@ public final class NodeProto {
 
       // Construct using com.sentinel.node.v1.NodeProto.Node.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPriceFieldBuilder();
+          getStatusAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -669,11 +677,14 @@ public final class NodeProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.status_ = status_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.statusAt_ = statusAtBuilder_ == null
               ? statusAt_
               : statusAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1425,8 +1436,10 @@ public final class NodeProto {
         } else {
           statusAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (statusAt_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**

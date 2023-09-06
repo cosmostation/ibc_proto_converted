@@ -15,15 +15,14 @@ from irismod.random import random_pb2 as irismod_dot_random_dot_random__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cirismod/random/genesis.proto\x12\x0eirismod.random\x1a\x1birismod/random/random.proto\x1a\x14gogoproto/gogo.proto\"\xe9\x01\n\x0cGenesisState\x12u\n\x17pending_random_requests\x18\x01 \x03(\x0b\x32\x37.irismod.random.GenesisState.PendingRandomRequestsEntryB\x04\xc8\xde\x1f\x00R\x15pendingRandomRequests\x1a\x62\n\x1aPendingRandomRequestsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12.\n\x05value\x18\x02 \x01(\x0b\x32\x18.irismod.random.RequestsR\x05value:\x02\x38\x01\"E\n\x08Requests\x12\x39\n\x08requests\x18\x01 \x03(\x0b\x32\x17.irismod.random.RequestB\x04\xc8\xde\x1f\x00R\x08requestsB\xac\x01\n\x12\x63om.irismod.randomB\x0cGenesisProtoP\x01Z/github.com/irisnet/irismod/modules/random/types\xa2\x02\x03IRX\xaa\x02\x0eIrismod.Random\xca\x02\x0eIrismod\\Random\xe2\x02\x1aIrismod\\Random\\GPBMetadata\xea\x02\x0fIrismod::Randomb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cirismod/random/genesis.proto\x12\x0eirismod.random\x1a\x1birismod/random/random.proto\x1a\x14gogoproto/gogo.proto\"\xe9\x01\n\x0cGenesisState\x12u\n\x17pending_random_requests\x18\x01 \x03(\x0b\x32\x37.irismod.random.GenesisState.PendingRandomRequestsEntryB\x04\xc8\xde\x1f\x00R\x15pendingRandomRequests\x1a\x62\n\x1aPendingRandomRequestsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12.\n\x05value\x18\x02 \x01(\x0b\x32\x18.irismod.random.RequestsR\x05value:\x02\x38\x01\"E\n\x08Requests\x12\x39\n\x08requests\x18\x01 \x03(\x0b\x32\x17.irismod.random.RequestB\x04\xc8\xde\x1f\x00R\x08requestsB\xaa\x01\n\x12\x63om.irismod.randomB\x0cGenesisProtoZ/github.com/irisnet/irismod/modules/random/types\xa2\x02\x03IRX\xaa\x02\x0eIrismod.Random\xca\x02\x0eIrismod\\Random\xe2\x02\x1aIrismod\\Random\\GPBMetadata\xea\x02\x0fIrismod::Randomb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'irismod.random.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.irismod.randomB\014GenesisProtoP\001Z/github.com/irisnet/irismod/modules/random/types\242\002\003IRX\252\002\016Irismod.Random\312\002\016Irismod\\Random\342\002\032Irismod\\Random\\GPBMetadata\352\002\017Irismod::Random'
+  DESCRIPTOR._serialized_options = b'\n\022com.irismod.randomB\014GenesisProtoZ/github.com/irisnet/irismod/modules/random/types\242\002\003IRX\252\002\016Irismod.Random\312\002\016Irismod\\Random\342\002\032Irismod\\Random\\GPBMetadata\352\002\017Irismod::Random'
   _GENESISSTATE_PENDINGRANDOMREQUESTSENTRY._options = None
   _GENESISSTATE_PENDINGRANDOMREQUESTSENTRY._serialized_options = b'8\001'
   _GENESISSTATE.fields_by_name['pending_random_requests']._options = None

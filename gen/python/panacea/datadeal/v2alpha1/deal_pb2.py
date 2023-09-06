@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$panacea/datadeal/v2alpha1/deal.proto\x12\x19panacea.datadeal.v2alpha1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xb1\x02\n\x04\x44\x65\x61l\x12\x17\n\x07\x64\x65\x61l_id\x18\x01 \x01(\x04R\x06\x64\x65\x61lId\x12!\n\x0c\x64\x65\x61l_address\x18\x02 \x01(\tR\x0b\x64\x65\x61lAddress\x12\x1f\n\x0b\x64\x61ta_schema\x18\x03 \x03(\tR\ndataSchema\x12\x31\n\x06\x62udget\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinR\x06\x62udget\x12\'\n\x0ftrusted_oracles\x18\x05 \x03(\tR\x0etrustedOracles\x12 \n\x0cmax_num_data\x18\x06 \x01(\x04R\nmaxNumData\x12 \n\x0c\x63ur_num_data\x18\x07 \x01(\x04R\ncurNumData\x12\x14\n\x05owner\x18\x08 \x01(\tR\x05owner\x12\x16\n\x06status\x18\t \x01(\tR\x06statusB\xe6\x01\n\x1d\x63om.panacea.datadeal.v2alpha1B\tDealProtoP\x01Z4github.com/medibloc/panacea-core/v2/x/datadeal/types\xa2\x02\x03PDX\xaa\x02\x19Panacea.Datadeal.V2alpha1\xca\x02\x19Panacea\\Datadeal\\V2alpha1\xe2\x02%Panacea\\Datadeal\\V2alpha1\\GPBMetadata\xea\x02\x1bPanacea::Datadeal::V2alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$panacea/datadeal/v2alpha1/deal.proto\x12\x19panacea.datadeal.v2alpha1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\xb1\x02\n\x04\x44\x65\x61l\x12\x17\n\x07\x64\x65\x61l_id\x18\x01 \x01(\x04R\x06\x64\x65\x61lId\x12!\n\x0c\x64\x65\x61l_address\x18\x02 \x01(\tR\x0b\x64\x65\x61lAddress\x12\x1f\n\x0b\x64\x61ta_schema\x18\x03 \x03(\tR\ndataSchema\x12\x31\n\x06\x62udget\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinR\x06\x62udget\x12\'\n\x0ftrusted_oracles\x18\x05 \x03(\tR\x0etrustedOracles\x12 \n\x0cmax_num_data\x18\x06 \x01(\x04R\nmaxNumData\x12 \n\x0c\x63ur_num_data\x18\x07 \x01(\x04R\ncurNumData\x12\x14\n\x05owner\x18\x08 \x01(\tR\x05owner\x12\x16\n\x06status\x18\t \x01(\tR\x06statusB\xe4\x01\n\x1d\x63om.panacea.datadeal.v2alpha1B\tDealProtoZ4github.com/medibloc/panacea-core/v2/x/datadeal/types\xa2\x02\x03PDX\xaa\x02\x19Panacea.Datadeal.V2alpha1\xca\x02\x19Panacea\\Datadeal\\V2alpha1\xe2\x02%Panacea\\Datadeal\\V2alpha1\\GPBMetadata\xea\x02\x1bPanacea::Datadeal::V2alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'panacea.datadeal.v2alpha1.deal_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.panacea.datadeal.v2alpha1B\tDealProtoP\001Z4github.com/medibloc/panacea-core/v2/x/datadeal/types\242\002\003PDX\252\002\031Panacea.Datadeal.V2alpha1\312\002\031Panacea\\Datadeal\\V2alpha1\342\002%Panacea\\Datadeal\\V2alpha1\\GPBMetadata\352\002\033Panacea::Datadeal::V2alpha1'
+  DESCRIPTOR._serialized_options = b'\n\035com.panacea.datadeal.v2alpha1B\tDealProtoZ4github.com/medibloc/panacea-core/v2/x/datadeal/types\242\002\003PDX\252\002\031Panacea.Datadeal.V2alpha1\312\002\031Panacea\\Datadeal\\V2alpha1\342\002%Panacea\\Datadeal\\V2alpha1\\GPBMetadata\352\002\033Panacea::Datadeal::V2alpha1'
   _globals['_DEAL']._serialized_start=122
   _globals['_DEAL']._serialized_end=427
 # @@protoc_insertion_point(module_scope)

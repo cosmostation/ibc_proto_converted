@@ -1,4 +1,4 @@
-// source: persistence/oracle/v1beta1/query.proto
+// source: pstake/liquidstakeibc/v1beta1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.persistence.oracle.v1beta1.QueryExchangeRateResponse');
+goog.provide('proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse = function(opt_data) {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.persistence.oracle.v1beta1.QueryExchangeRateResponse, jspb.Message);
+goog.inherits(proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.displayName = 'proto.persistence.oracle.v1beta1.QueryExchangeRateResponse';
+  proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.displayName = 'proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.toObject(opt_includeInstance, this);
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,13 +64,13 @@ proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.prototype.toObject = 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.persistence.oracle.v1beta1.QueryExchangeRateResponse} msg The msg instance to transform.
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.toObject = function(includeInstance, msg) {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    exchangeRate: jspb.Message.getFieldWithDefault(msg, 1, "")
+    rate: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -84,23 +84,23 @@ proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.toObject = function(i
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.persistence.oracle.v1beta1.QueryExchangeRateResponse}
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse}
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.deserializeBinary = function(bytes) {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.persistence.oracle.v1beta1.QueryExchangeRateResponse;
-  return proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse;
+  return proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.persistence.oracle.v1beta1.QueryExchangeRateResponse} msg The message object to deserialize into.
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.persistence.oracle.v1beta1.QueryExchangeRateResponse}
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse}
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -109,7 +109,7 @@ proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.deserializeBinaryFrom
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setExchangeRate(value);
+      msg.setRate(value);
       break;
     default:
       reader.skipField();
@@ -124,9 +124,9 @@ proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.deserializeBinaryFrom
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.prototype.serializeBinary = function() {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.serializeBinaryToWriter(this, writer);
+  proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -134,13 +134,13 @@ proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.prototype.serializeBi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.persistence.oracle.v1beta1.QueryExchangeRateResponse} message
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.serializeBinaryToWriter = function(message, writer) {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getExchangeRate();
+  f = message.getRate();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -151,19 +151,19 @@ proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.serializeBinaryToWrit
 
 
 /**
- * optional string exchange_rate = 1;
+ * optional string rate = 1;
  * @return {string}
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.prototype.getExchangeRate = function() {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.prototype.getRate = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.persistence.oracle.v1beta1.QueryExchangeRateResponse} returns this
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse} returns this
  */
-proto.persistence.oracle.v1beta1.QueryExchangeRateResponse.prototype.setExchangeRate = function(value) {
+proto.pstake.liquidstakeibc.v1beta1.QueryExchangeRateResponse.prototype.setRate = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 

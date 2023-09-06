@@ -18,15 +18,14 @@ from amino import amino_pb2 as amino_dot_amino__pb2
 from cosmos.auth.v1beta1 import auth_pb2 as cosmos_dot_auth_dot_v1beta1_dot_auth__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63osmos/auth/v1beta1/tx.proto\x12\x13\x63osmos.auth.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x11\x61mino/amino.proto\x1a\x1e\x63osmos/auth/v1beta1/auth.proto\"\xbf\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12>\n\x06params\x18\x02 \x01(\x0b\x32\x1b.cosmos.auth.v1beta1.ParamsB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06params:4\x82\xe7\xb0*\tauthority\x8a\xe7\xb0*!cosmos-sdk/x/auth/MsgUpdateParams\"\x19\n\x17MsgUpdateParamsResponse2p\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.cosmos.auth.v1beta1.MsgUpdateParams\x1a,.cosmos.auth.v1beta1.MsgUpdateParamsResponse\x1a\x05\x80\xe7\xb0*\x01\x42\xbb\x01\n\x17\x63om.cosmos.auth.v1beta1B\x07TxProtoP\x01Z)github.com/cosmos/cosmos-sdk/x/auth/types\xa2\x02\x03\x43\x41X\xaa\x02\x13\x43osmos.Auth.V1beta1\xca\x02\x13\x43osmos\\Auth\\V1beta1\xe2\x02\x1f\x43osmos\\Auth\\V1beta1\\GPBMetadata\xea\x02\x15\x43osmos::Auth::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63osmos/auth/v1beta1/tx.proto\x12\x13\x63osmos.auth.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x17\x63osmos/msg/v1/msg.proto\x1a\x11\x61mino/amino.proto\x1a\x1e\x63osmos/auth/v1beta1/auth.proto\"\xbf\x01\n\x0fMsgUpdateParams\x12\x36\n\tauthority\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\tauthority\x12>\n\x06params\x18\x02 \x01(\x0b\x32\x1b.cosmos.auth.v1beta1.ParamsB\t\xc8\xde\x1f\x00\xa8\xe7\xb0*\x01R\x06params:4\x82\xe7\xb0*\tauthority\x8a\xe7\xb0*!cosmos-sdk/x/auth/MsgUpdateParams\"\x19\n\x17MsgUpdateParamsResponse2p\n\x03Msg\x12\x62\n\x0cUpdateParams\x12$.cosmos.auth.v1beta1.MsgUpdateParams\x1a,.cosmos.auth.v1beta1.MsgUpdateParamsResponse\x1a\x05\x80\xe7\xb0*\x01\x42\xb9\x01\n\x17\x63om.cosmos.auth.v1beta1B\x07TxProtoZ)github.com/cosmos/cosmos-sdk/x/auth/types\xa2\x02\x03\x43\x41X\xaa\x02\x13\x43osmos.Auth.V1beta1\xca\x02\x13\x43osmos\\Auth\\V1beta1\xe2\x02\x1f\x43osmos\\Auth\\V1beta1\\GPBMetadata\xea\x02\x15\x43osmos::Auth::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.auth.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.cosmos.auth.v1beta1B\007TxProtoP\001Z)github.com/cosmos/cosmos-sdk/x/auth/types\242\002\003CAX\252\002\023Cosmos.Auth.V1beta1\312\002\023Cosmos\\Auth\\V1beta1\342\002\037Cosmos\\Auth\\V1beta1\\GPBMetadata\352\002\025Cosmos::Auth::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\027com.cosmos.auth.v1beta1B\007TxProtoZ)github.com/cosmos/cosmos-sdk/x/auth/types\242\002\003CAX\252\002\023Cosmos.Auth.V1beta1\312\002\023Cosmos\\Auth\\V1beta1\342\002\037Cosmos\\Auth\\V1beta1\\GPBMetadata\352\002\025Cosmos::Auth::V1beta1'
   _MSGUPDATEPARAMS.fields_by_name['authority']._options = None
   _MSGUPDATEPARAMS.fields_by_name['authority']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _MSGUPDATEPARAMS.fields_by_name['params']._options = None

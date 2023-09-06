@@ -1735,6 +1735,7 @@ public final class GenesisProto {
               com.secret.compute.v1beta1.GenesisProto.Code.class, com.secret.compute.v1beta1.GenesisProto.Code.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CODE_ID_FIELD_NUMBER = 1;
     private long codeId_ = 0L;
     /**
@@ -1754,7 +1755,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasCodeInfo() {
-      return codeInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
@@ -1800,7 +1801,7 @@ public final class GenesisProto {
       if (codeId_ != 0L) {
         output.writeUInt64(1, codeId_);
       }
-      if (codeInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getCodeInfo());
       }
       if (!codeBytes_.isEmpty()) {
@@ -1819,7 +1820,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, codeId_);
       }
-      if (codeInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCodeInfo());
       }
@@ -1994,13 +1995,19 @@ public final class GenesisProto {
 
       // Construct using com.secret.compute.v1beta1.GenesisProto.Code.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCodeInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2049,14 +2056,17 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.codeId_ = codeId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.codeInfo_ = codeInfoBuilder_ == null
               ? codeInfo_
               : codeInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.codeBytes_ = codeBytes_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2270,8 +2280,10 @@ public final class GenesisProto {
         } else {
           codeInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (codeInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2523,6 +2535,7 @@ public final class GenesisProto {
               com.secret.compute.v1beta1.GenesisProto.Contract.class, com.secret.compute.v1beta1.GenesisProto.Contract.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString contractAddress_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -2542,7 +2555,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasContractInfo() {
-      return contractInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
@@ -2609,7 +2622,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasContractCustomInfo() {
-      return contractCustomInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
@@ -2644,13 +2657,13 @@ public final class GenesisProto {
       if (!contractAddress_.isEmpty()) {
         output.writeBytes(1, contractAddress_);
       }
-      if (contractInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getContractInfo());
       }
       for (int i = 0; i < contractState_.size(); i++) {
         output.writeMessage(3, contractState_.get(i));
       }
-      if (contractCustomInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getContractCustomInfo());
       }
       getUnknownFields().writeTo(output);
@@ -2666,7 +2679,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, contractAddress_);
       }
-      if (contractInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContractInfo());
       }
@@ -2674,7 +2687,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, contractState_.get(i));
       }
-      if (contractCustomInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getContractCustomInfo());
       }
@@ -2855,13 +2868,21 @@ public final class GenesisProto {
 
       // Construct using com.secret.compute.v1beta1.GenesisProto.Contract.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContractInfoFieldBuilder();
+          getContractStateFieldBuilder();
+          getContractCustomInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2934,16 +2955,20 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractAddress_ = contractAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractInfo_ = contractInfoBuilder_ == null
               ? contractInfo_
               : contractInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.contractCustomInfo_ = contractCustomInfoBuilder_ == null
               ? contractCustomInfo_
               : contractCustomInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3198,8 +3223,10 @@ public final class GenesisProto {
         } else {
           contractInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (contractInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3557,8 +3584,10 @@ public final class GenesisProto {
         } else {
           contractCustomInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (contractCustomInfo_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

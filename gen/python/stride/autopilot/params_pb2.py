@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dstride/autopilot/params.proto\x12\x10stride.autopilot\x1a\x14gogoproto/gogo.proto\"Z\n\x06Params\x12\'\n\x0fstakeibc_active\x18\x01 \x01(\x08R\x0estakeibcActive\x12!\n\x0c\x63laim_active\x18\x02 \x01(\x08R\x0b\x63laimActive:\x04\x98\xa0\x1f\x00\x42\xb8\x01\n\x14\x63om.stride.autopilotB\x0bParamsProtoP\x01Z2github.com/Stride-Labs/stride/v9/x/autopilot/types\xa2\x02\x03SAX\xaa\x02\x10Stride.Autopilot\xca\x02\x10Stride\\Autopilot\xe2\x02\x1cStride\\Autopilot\\GPBMetadata\xea\x02\x11Stride::Autopilotb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dstride/autopilot/params.proto\x12\x10stride.autopilot\x1a\x14gogoproto/gogo.proto\"Z\n\x06Params\x12\'\n\x0fstakeibc_active\x18\x01 \x01(\x08R\x0estakeibcActive\x12!\n\x0c\x63laim_active\x18\x02 \x01(\x08R\x0b\x63laimActive:\x04\x98\xa0\x1f\x00\x42\xb6\x01\n\x14\x63om.stride.autopilotB\x0bParamsProtoZ2github.com/Stride-Labs/stride/v9/x/autopilot/types\xa2\x02\x03SAX\xaa\x02\x10Stride.Autopilot\xca\x02\x10Stride\\Autopilot\xe2\x02\x1cStride\\Autopilot\\GPBMetadata\xea\x02\x11Stride::Autopilotb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stride.autopilot.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.stride.autopilotB\013ParamsProtoP\001Z2github.com/Stride-Labs/stride/v9/x/autopilot/types\242\002\003SAX\252\002\020Stride.Autopilot\312\002\020Stride\\Autopilot\342\002\034Stride\\Autopilot\\GPBMetadata\352\002\021Stride::Autopilot'
+  DESCRIPTOR._serialized_options = b'\n\024com.stride.autopilotB\013ParamsProtoZ2github.com/Stride-Labs/stride/v9/x/autopilot/types\242\002\003SAX\252\002\020Stride.Autopilot\312\002\020Stride\\Autopilot\342\002\034Stride\\Autopilot\\GPBMetadata\352\002\021Stride::Autopilot'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=73

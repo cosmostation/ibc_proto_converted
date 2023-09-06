@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.types.base import parameter_pb2 as assetmantle_dot_types_dot_base_dot_parameter__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+assetmantle/lists/base/parameter_list.proto\x12\"assetmantle.schema.parameters.base\x1a\x14gogoproto/gogo.proto\x1a&assetmantle/types/base/parameter.proto\"d\n\rParameterList\x12M\n\nparameters\x18\x01 \x03(\x0b\x32-.assetmantle.schema.parameters.base.ParameterR\nparameters:\x04\x88\xa0\x1f\x00\x42\xe8\x01\n&com.assetmantle.schema.parameters.baseB\x12ParameterListProtoP\x01\xa2\x02\x04\x41SPB\xaa\x02\"Assetmantle.Schema.Parameters.Base\xca\x02\"Assetmantle\\Schema\\Parameters\\Base\xe2\x02.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\xea\x02%Assetmantle::Schema::Parameters::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+assetmantle/lists/base/parameter_list.proto\x12\"assetmantle.schema.parameters.base\x1a\x14gogoproto/gogo.proto\x1a&assetmantle/types/base/parameter.proto\"d\n\rParameterList\x12M\n\nparameters\x18\x01 \x03(\x0b\x32-.assetmantle.schema.parameters.base.ParameterR\nparameters:\x04\x88\xa0\x1f\x00\x42\xe6\x01\n&com.assetmantle.schema.parameters.baseB\x12ParameterListProto\xa2\x02\x04\x41SPB\xaa\x02\"Assetmantle.Schema.Parameters.Base\xca\x02\"Assetmantle\\Schema\\Parameters\\Base\xe2\x02.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\xea\x02%Assetmantle::Schema::Parameters::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.lists.base.parameter_list_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n&com.assetmantle.schema.parameters.baseB\022ParameterListProtoP\001\242\002\004ASPB\252\002\"Assetmantle.Schema.Parameters.Base\312\002\"Assetmantle\\Schema\\Parameters\\Base\342\002.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\352\002%Assetmantle::Schema::Parameters::Base'
+  DESCRIPTOR._serialized_options = b'\n&com.assetmantle.schema.parameters.baseB\022ParameterListProto\242\002\004ASPB\252\002\"Assetmantle.Schema.Parameters.Base\312\002\"Assetmantle\\Schema\\Parameters\\Base\342\002.Assetmantle\\Schema\\Parameters\\Base\\GPBMetadata\352\002%Assetmantle::Schema::Parameters::Base'
   _PARAMETERLIST._options = None
   _PARAMETERLIST._serialized_options = b'\210\240\037\000'
   _globals['_PARAMETERLIST']._serialized_start=145

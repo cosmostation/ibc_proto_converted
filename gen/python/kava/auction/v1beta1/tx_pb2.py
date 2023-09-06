@@ -15,15 +15,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dkava/auction/v1beta1/tx.proto\x12\x14kava.auction.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\x87\x01\n\x0bMsgPlaceBid\x12\x1d\n\nauction_id\x18\x01 \x01(\x04R\tauctionId\x12\x16\n\x06\x62idder\x18\x02 \x01(\tR\x06\x62idder\x12\x37\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x15\n\x13MsgPlaceBidResponse2_\n\x03Msg\x12X\n\x08PlaceBid\x12!.kava.auction.v1beta1.MsgPlaceBid\x1a).kava.auction.v1beta1.MsgPlaceBidResponseB\xc0\x01\n\x18\x63om.kava.auction.v1beta1B\x07TxProtoP\x01Z)github.com/kava-labs/kava/x/auction/types\xa2\x02\x03KAX\xaa\x02\x14Kava.Auction.V1beta1\xca\x02\x14Kava\\Auction\\V1beta1\xe2\x02 Kava\\Auction\\V1beta1\\GPBMetadata\xea\x02\x16Kava::Auction::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dkava/auction/v1beta1/tx.proto\x12\x14kava.auction.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\x87\x01\n\x0bMsgPlaceBid\x12\x1d\n\nauction_id\x18\x01 \x01(\x04R\tauctionId\x12\x16\n\x06\x62idder\x18\x02 \x01(\tR\x06\x62idder\x12\x37\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\"\x15\n\x13MsgPlaceBidResponse2_\n\x03Msg\x12X\n\x08PlaceBid\x12!.kava.auction.v1beta1.MsgPlaceBid\x1a).kava.auction.v1beta1.MsgPlaceBidResponseB\xbe\x01\n\x18\x63om.kava.auction.v1beta1B\x07TxProtoZ)github.com/kava-labs/kava/x/auction/types\xa2\x02\x03KAX\xaa\x02\x14Kava.Auction.V1beta1\xca\x02\x14Kava\\Auction\\V1beta1\xe2\x02 Kava\\Auction\\V1beta1\\GPBMetadata\xea\x02\x16Kava::Auction::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'kava.auction.v1beta1.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.kava.auction.v1beta1B\007TxProtoP\001Z)github.com/kava-labs/kava/x/auction/types\242\002\003KAX\252\002\024Kava.Auction.V1beta1\312\002\024Kava\\Auction\\V1beta1\342\002 Kava\\Auction\\V1beta1\\GPBMetadata\352\002\026Kava::Auction::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\030com.kava.auction.v1beta1B\007TxProtoZ)github.com/kava-labs/kava/x/auction/types\242\002\003KAX\252\002\024Kava.Auction.V1beta1\312\002\024Kava\\Auction\\V1beta1\342\002 Kava\\Auction\\V1beta1\\GPBMetadata\352\002\026Kava::Auction::V1beta1'
   _MSGPLACEBID.fields_by_name['amount']._options = None
   _MSGPLACEBID.fields_by_name['amount']._serialized_options = b'\310\336\037\000'
   _MSGPLACEBID._options = None

@@ -1,4 +1,4 @@
-// source: pstake/lspersistence/v1beta1/liquidstaking.proto
+// source: crescent/liquidstaking/v1beta1/liquidstaking.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,12 +11,12 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lspersistence.v1beta1.ValidatorStatus');
+goog.provide('proto.crescent.liquidstaking.v1beta1.ValidatorStatus');
 
 /**
  * @enum {number}
  */
-proto.pstake.lspersistence.v1beta1.ValidatorStatus = {
+proto.crescent.liquidstaking.v1beta1.ValidatorStatus = {
   VALIDATOR_STATUS_UNSPECIFIED: 0,
   VALIDATOR_STATUS_ACTIVE: 1,
   VALIDATOR_STATUS_INACTIVE: 2

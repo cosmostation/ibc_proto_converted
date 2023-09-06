@@ -16,15 +16,14 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from axelar.vote.v1beta1 import tx_pb2 as axelar_dot_vote_dot_v1beta1_dot_tx__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!axelar/vote/v1beta1/service.proto\x12\x13\x61xelar.vote.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1c\x61xelar/vote/v1beta1/tx.proto2w\n\nMsgService\x12i\n\x04Vote\x12 .axelar.vote.v1beta1.VoteRequest\x1a!.axelar.vote.v1beta1.VoteResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/axelar/vote/vote:\x01*B\xcc\x01\n\x17\x63om.axelar.vote.v1beta1B\x0cServiceProtoP\x01Z1github.com/axelarnetwork/axelar-core/x/vote/types\xa2\x02\x03\x41VX\xaa\x02\x13\x41xelar.Vote.V1beta1\xca\x02\x13\x41xelar\\Vote\\V1beta1\xe2\x02\x1f\x41xelar\\Vote\\V1beta1\\GPBMetadata\xea\x02\x15\x41xelar::Vote::V1beta1\xc0\xe3\x1e\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!axelar/vote/v1beta1/service.proto\x12\x13\x61xelar.vote.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1c\x61xelar/vote/v1beta1/tx.proto2w\n\nMsgService\x12i\n\x04Vote\x12 .axelar.vote.v1beta1.VoteRequest\x1a!.axelar.vote.v1beta1.VoteResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/axelar/vote/vote:\x01*B\xca\x01\n\x17\x63om.axelar.vote.v1beta1B\x0cServiceProtoZ1github.com/axelarnetwork/axelar-core/x/vote/types\xa2\x02\x03\x41VX\xaa\x02\x13\x41xelar.Vote.V1beta1\xca\x02\x13\x41xelar\\Vote\\V1beta1\xe2\x02\x1f\x41xelar\\Vote\\V1beta1\\GPBMetadata\xea\x02\x15\x41xelar::Vote::V1beta1\xc0\xe3\x1e\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.vote.v1beta1.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.axelar.vote.v1beta1B\014ServiceProtoP\001Z1github.com/axelarnetwork/axelar-core/x/vote/types\242\002\003AVX\252\002\023Axelar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1beta1\342\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002\025Axelar::Vote::V1beta1\300\343\036\001'
+  DESCRIPTOR._serialized_options = b'\n\027com.axelar.vote.v1beta1B\014ServiceProtoZ1github.com/axelarnetwork/axelar-core/x/vote/types\242\002\003AVX\252\002\023Axelar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1beta1\342\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002\025Axelar::Vote::V1beta1\300\343\036\001'
   _MSGSERVICE.methods_by_name['Vote']._options = None
   _MSGSERVICE.methods_by_name['Vote']._serialized_options = b'\202\323\344\223\002\026\"\021/axelar/vote/vote:\001*'
   _globals['_MSGSERVICE']._serialized_start=140

@@ -16,15 +16,14 @@ from rizon.treasury import params_pb2 as rizon_dot_treasury_dot_params__pb2
 from rizon.treasury import treasury_pb2 as rizon_dot_treasury_dot_treasury__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1crizon/treasury/genesis.proto\x12\x19rizonworld.rizon.treasury\x1a\x14gogoproto/gogo.proto\x1a\x1brizon/treasury/params.proto\x1a\x1drizon/treasury/treasury.proto\"\x8c\x01\n\x0cGenesisState\x12?\n\x06params\x18\x01 \x01(\x0b\x32!.rizonworld.rizon.treasury.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12;\n\x03seq\x18\x02 \x01(\x0b\x32#.rizonworld.rizon.treasury.SequenceB\x04\xc8\xde\x1f\x00R\x03seqB\xe2\x01\n\x1d\x63om.rizonworld.rizon.treasuryB\x0cGenesisProtoP\x01Z-github.com/rizon-world/rizon/x/treasury/types\xa2\x02\x03RRT\xaa\x02\x19Rizonworld.Rizon.Treasury\xca\x02\x19Rizonworld\\Rizon\\Treasury\xe2\x02%Rizonworld\\Rizon\\Treasury\\GPBMetadata\xea\x02\x1bRizonworld::Rizon::Treasuryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1crizon/treasury/genesis.proto\x12\x19rizonworld.rizon.treasury\x1a\x14gogoproto/gogo.proto\x1a\x1brizon/treasury/params.proto\x1a\x1drizon/treasury/treasury.proto\"\x8c\x01\n\x0cGenesisState\x12?\n\x06params\x18\x01 \x01(\x0b\x32!.rizonworld.rizon.treasury.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12;\n\x03seq\x18\x02 \x01(\x0b\x32#.rizonworld.rizon.treasury.SequenceB\x04\xc8\xde\x1f\x00R\x03seqB\xe0\x01\n\x1d\x63om.rizonworld.rizon.treasuryB\x0cGenesisProtoZ-github.com/rizon-world/rizon/x/treasury/types\xa2\x02\x03RRT\xaa\x02\x19Rizonworld.Rizon.Treasury\xca\x02\x19Rizonworld\\Rizon\\Treasury\xe2\x02%Rizonworld\\Rizon\\Treasury\\GPBMetadata\xea\x02\x1bRizonworld::Rizon::Treasuryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'rizon.treasury.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\035com.rizonworld.rizon.treasuryB\014GenesisProtoP\001Z-github.com/rizon-world/rizon/x/treasury/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Treasury\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizonworld\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizonworld::Rizon::Treasury'
+  DESCRIPTOR._serialized_options = b'\n\035com.rizonworld.rizon.treasuryB\014GenesisProtoZ-github.com/rizon-world/rizon/x/treasury/types\242\002\003RRT\252\002\031Rizonworld.Rizon.Treasury\312\002\031Rizonworld\\Rizon\\Treasury\342\002%Rizonworld\\Rizon\\Treasury\\GPBMetadata\352\002\033Rizonworld::Rizon::Treasury'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['seq']._options = None

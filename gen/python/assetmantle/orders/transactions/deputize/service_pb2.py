@@ -16,15 +16,14 @@ from assetmantle.orders.transactions.deputize import message_pb2 as assetmantle_
 from assetmantle.orders.transactions.deputize import transaction_response_pb2 as assetmantle_dot_orders_dot_transactions_dot_deputize_dot_transaction__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n6assetmantle/orders/transactions/deputize/service.proto\x12\x30\x61ssetmantle.modules.orders.transactions.deputize\x1a\x1cgoogle/api/annotations.proto\x1a\x36\x61ssetmantle/orders/transactions/deputize/message.proto\x1a\x43\x61ssetmantle/orders/transactions/deputize/transaction_response.proto2\xb7\x01\n\x07Service\x12\xab\x01\n\x06Handle\x12\x39.assetmantle.modules.orders.transactions.deputize.Message\x1a\x45.assetmantle.modules.orders.transactions.deputize.TransactionResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x17/mantle/orders/deputizeB\xaa\x02\n4com.assetmantle.modules.orders.transactions.deputizeB\x0cServiceProtoP\x01\xa2\x02\x05\x41MOTD\xaa\x02\x30\x41ssetmantle.Modules.Orders.Transactions.Deputize\xca\x02\x30\x41ssetmantle\\Modules\\Orders\\Transactions\\Deputize\xe2\x02<Assetmantle\\Modules\\Orders\\Transactions\\Deputize\\GPBMetadata\xea\x02\x34\x41ssetmantle::Modules::Orders::Transactions::Deputizeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n6assetmantle/orders/transactions/deputize/service.proto\x12\x30\x61ssetmantle.modules.orders.transactions.deputize\x1a\x1cgoogle/api/annotations.proto\x1a\x36\x61ssetmantle/orders/transactions/deputize/message.proto\x1a\x43\x61ssetmantle/orders/transactions/deputize/transaction_response.proto2\xb7\x01\n\x07Service\x12\xab\x01\n\x06Handle\x12\x39.assetmantle.modules.orders.transactions.deputize.Message\x1a\x45.assetmantle.modules.orders.transactions.deputize.TransactionResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x17/mantle/orders/deputizeB\xa8\x02\n4com.assetmantle.modules.orders.transactions.deputizeB\x0cServiceProto\xa2\x02\x05\x41MOTD\xaa\x02\x30\x41ssetmantle.Modules.Orders.Transactions.Deputize\xca\x02\x30\x41ssetmantle\\Modules\\Orders\\Transactions\\Deputize\xe2\x02<Assetmantle\\Modules\\Orders\\Transactions\\Deputize\\GPBMetadata\xea\x02\x34\x41ssetmantle::Modules::Orders::Transactions::Deputizeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.deputize.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n4com.assetmantle.modules.orders.transactions.deputizeB\014ServiceProtoP\001\242\002\005AMOTD\252\0020Assetmantle.Modules.Orders.Transactions.Deputize\312\0020Assetmantle\\Modules\\Orders\\Transactions\\Deputize\342\002<Assetmantle\\Modules\\Orders\\Transactions\\Deputize\\GPBMetadata\352\0024Assetmantle::Modules::Orders::Transactions::Deputize'
+  DESCRIPTOR._serialized_options = b'\n4com.assetmantle.modules.orders.transactions.deputizeB\014ServiceProto\242\002\005AMOTD\252\0020Assetmantle.Modules.Orders.Transactions.Deputize\312\0020Assetmantle\\Modules\\Orders\\Transactions\\Deputize\342\002<Assetmantle\\Modules\\Orders\\Transactions\\Deputize\\GPBMetadata\352\0024Assetmantle::Modules::Orders::Transactions::Deputize'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\031\"\027/mantle/orders/deputize'
   _globals['_SERVICE']._serialized_start=264

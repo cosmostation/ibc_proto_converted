@@ -16,15 +16,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from canto.recovery.v1 import genesis_pb2 as canto_dot_recovery_dot_v1_dot_genesis__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x63\x61nto/recovery/v1/query.proto\x12\x11\x63\x61nto.recovery.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x14gogoproto/gogo.proto\x1a\x1f\x63\x61nto/recovery/v1/genesis.proto\"\x14\n\x12QueryParamsRequest\"N\n\x13QueryParamsResponse\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.canto.recovery.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x83\x01\n\x05Query\x12z\n\x06Params\x12%.canto.recovery.v1.QueryParamsRequest\x1a&.canto.recovery.v1.QueryParamsResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/canto/recovery/v1/paramsB\xbd\x01\n\x15\x63om.canto.recovery.v1B\nQueryProtoP\x01Z2github.com/Canto-Network/Canto/v6/x/recovery/types\xa2\x02\x03\x43RX\xaa\x02\x11\x43\x61nto.Recovery.V1\xca\x02\x11\x43\x61nto\\Recovery\\V1\xe2\x02\x1d\x43\x61nto\\Recovery\\V1\\GPBMetadata\xea\x02\x13\x43\x61nto::Recovery::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x63\x61nto/recovery/v1/query.proto\x12\x11\x63\x61nto.recovery.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x14gogoproto/gogo.proto\x1a\x1f\x63\x61nto/recovery/v1/genesis.proto\"\x14\n\x12QueryParamsRequest\"N\n\x13QueryParamsResponse\x12\x37\n\x06params\x18\x01 \x01(\x0b\x32\x19.canto.recovery.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x83\x01\n\x05Query\x12z\n\x06Params\x12%.canto.recovery.v1.QueryParamsRequest\x1a&.canto.recovery.v1.QueryParamsResponse\"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/canto/recovery/v1/paramsB\xbb\x01\n\x15\x63om.canto.recovery.v1B\nQueryProtoZ2github.com/Canto-Network/Canto/v6/x/recovery/types\xa2\x02\x03\x43RX\xaa\x02\x11\x43\x61nto.Recovery.V1\xca\x02\x11\x43\x61nto\\Recovery\\V1\xe2\x02\x1d\x43\x61nto\\Recovery\\V1\\GPBMetadata\xea\x02\x13\x43\x61nto::Recovery::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.recovery.v1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.canto.recovery.v1B\nQueryProtoP\001Z2github.com/Canto-Network/Canto/v6/x/recovery/types\242\002\003CRX\252\002\021Canto.Recovery.V1\312\002\021Canto\\Recovery\\V1\342\002\035Canto\\Recovery\\V1\\GPBMetadata\352\002\023Canto::Recovery::V1'
+  DESCRIPTOR._serialized_options = b'\n\025com.canto.recovery.v1B\nQueryProtoZ2github.com/Canto-Network/Canto/v6/x/recovery/types\242\002\003CRX\252\002\021Canto.Recovery.V1\312\002\021Canto\\Recovery\\V1\342\002\035Canto\\Recovery\\V1\\GPBMetadata\352\002\023Canto::Recovery::V1'
   _QUERYPARAMSRESPONSE.fields_by_name['params']._options = None
   _QUERYPARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Params']._options = None

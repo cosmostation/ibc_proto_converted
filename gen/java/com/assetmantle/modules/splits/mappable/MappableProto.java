@@ -68,6 +68,7 @@ public final class MappableProto {
               com.assetmantle.modules.splits.mappable.MappableProto.Mappable.class, com.assetmantle.modules.splits.mappable.MappableProto.Mappable.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SPLIT_FIELD_NUMBER = 1;
     private com.assetmantle.schema.types.base.SplitProto.Split split_;
     /**
@@ -76,7 +77,7 @@ public final class MappableProto {
      */
     @java.lang.Override
     public boolean hasSplit() {
-      return split_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.types.base.Split split = 1 [json_name = "split"];</code>
@@ -108,7 +109,7 @@ public final class MappableProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (split_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSplit());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class MappableProto {
       if (size != -1) return size;
 
       size = 0;
-      if (split_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSplit());
       }
@@ -278,13 +279,19 @@ public final class MappableProto {
 
       // Construct using com.assetmantle.modules.splits.mappable.MappableProto.Mappable.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSplitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class MappableProto {
 
       private void buildPartial0(com.assetmantle.modules.splits.mappable.MappableProto.Mappable result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.split_ = splitBuilder_ == null
               ? split_
               : splitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class MappableProto {
         } else {
           splitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (split_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

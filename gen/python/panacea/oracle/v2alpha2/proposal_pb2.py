@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&panacea/oracle/v2alpha2/proposal.proto\x12\x17panacea.oracle.v2alpha2\x1a\x14gogoproto/gogo.proto\"A\n\x04Plan\x12\x1b\n\tunique_id\x18\x01 \x01(\tR\x08uniqueId\x12\x16\n\x06height\x18\x02 \x01(\x03R\x06height:\x04\xe8\xa0\x1f\x01\"\x8e\x01\n\x15OracleUpgradeProposal\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12\x37\n\x04plan\x18\x03 \x01(\x0b\x32\x1d.panacea.oracle.v2alpha2.PlanB\x04\xc8\xde\x1f\x00R\x04plan:\x04\xe8\xa0\x1f\x01\x42\xe2\x01\n\x1b\x63om.panacea.oracle.v2alpha2B\rProposalProtoP\x01Z2github.com/medibloc/panacea-core/v2/x/oracle/types\xa2\x02\x03POX\xaa\x02\x17Panacea.Oracle.V2alpha2\xca\x02\x17Panacea\\Oracle\\V2alpha2\xe2\x02#Panacea\\Oracle\\V2alpha2\\GPBMetadata\xea\x02\x19Panacea::Oracle::V2alpha2\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&panacea/oracle/v2alpha2/proposal.proto\x12\x17panacea.oracle.v2alpha2\x1a\x14gogoproto/gogo.proto\"A\n\x04Plan\x12\x1b\n\tunique_id\x18\x01 \x01(\tR\x08uniqueId\x12\x16\n\x06height\x18\x02 \x01(\x03R\x06height:\x04\xe8\xa0\x1f\x01\"\x8e\x01\n\x15OracleUpgradeProposal\x12\x14\n\x05title\x18\x01 \x01(\tR\x05title\x12 \n\x0b\x64\x65scription\x18\x02 \x01(\tR\x0b\x64\x65scription\x12\x37\n\x04plan\x18\x03 \x01(\x0b\x32\x1d.panacea.oracle.v2alpha2.PlanB\x04\xc8\xde\x1f\x00R\x04plan:\x04\xe8\xa0\x1f\x01\x42\xe0\x01\n\x1b\x63om.panacea.oracle.v2alpha2B\rProposalProtoZ2github.com/medibloc/panacea-core/v2/x/oracle/types\xa2\x02\x03POX\xaa\x02\x17Panacea.Oracle.V2alpha2\xca\x02\x17Panacea\\Oracle\\V2alpha2\xe2\x02#Panacea\\Oracle\\V2alpha2\\GPBMetadata\xea\x02\x19Panacea::Oracle::V2alpha2\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'panacea.oracle.v2alpha2.proposal_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.panacea.oracle.v2alpha2B\rProposalProtoP\001Z2github.com/medibloc/panacea-core/v2/x/oracle/types\242\002\003POX\252\002\027Panacea.Oracle.V2alpha2\312\002\027Panacea\\Oracle\\V2alpha2\342\002#Panacea\\Oracle\\V2alpha2\\GPBMetadata\352\002\031Panacea::Oracle::V2alpha2\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\033com.panacea.oracle.v2alpha2B\rProposalProtoZ2github.com/medibloc/panacea-core/v2/x/oracle/types\242\002\003POX\252\002\027Panacea.Oracle.V2alpha2\312\002\027Panacea\\Oracle\\V2alpha2\342\002#Panacea\\Oracle\\V2alpha2\\GPBMetadata\352\002\031Panacea::Oracle::V2alpha2\310\341\036\000'
   _PLAN._options = None
   _PLAN._serialized_options = b'\350\240\037\001'
   _ORACLEUPGRADEPROPOSAL.fields_by_name['plan']._options = None

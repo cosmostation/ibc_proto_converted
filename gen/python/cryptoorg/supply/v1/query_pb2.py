@@ -16,15 +16,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63ryptoorg/supply/v1/query.proto\x12\x13\x63hainmain.supply.v1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\"\x0f\n\rSupplyRequest\"u\n\x0eSupplyResponse\x12\x63\n\x06supply\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06supply2\x86\x02\n\x05Query\x12z\n\x0bTotalSupply\x12\".chainmain.supply.v1.SupplyRequest\x1a#.chainmain.supply.v1.SupplyResponse\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/chainmain/supply/v1/total\x12|\n\x0cLiquidSupply\x12\".chainmain.supply.v1.SupplyRequest\x1a#.chainmain.supply.v1.SupplyResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/chainmain/supply/v1/liquid\x1a\x03\x88\x02\x01\x42\xca\x01\n\x17\x63om.chainmain.supply.v1B\nQueryProtoP\x01Z5github.com/crypto-org-chain/chain-main/x/supply/types\xa2\x02\x03\x43SX\xaa\x02\x13\x43hainmain.Supply.V1\xca\x02\x13\x43hainmain\\Supply\\V1\xe2\x02\x1f\x43hainmain\\Supply\\V1\\GPBMetadata\xea\x02\x15\x43hainmain::Supply::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63ryptoorg/supply/v1/query.proto\x12\x13\x63hainmain.supply.v1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\"\x0f\n\rSupplyRequest\"u\n\x0eSupplyResponse\x12\x63\n\x06supply\x18\x01 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x06supply2\x86\x02\n\x05Query\x12z\n\x0bTotalSupply\x12\".chainmain.supply.v1.SupplyRequest\x1a#.chainmain.supply.v1.SupplyResponse\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/chainmain/supply/v1/total\x12|\n\x0cLiquidSupply\x12\".chainmain.supply.v1.SupplyRequest\x1a#.chainmain.supply.v1.SupplyResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/chainmain/supply/v1/liquid\x1a\x03\x88\x02\x01\x42\xc8\x01\n\x17\x63om.chainmain.supply.v1B\nQueryProtoZ5github.com/crypto-org-chain/chain-main/x/supply/types\xa2\x02\x03\x43SX\xaa\x02\x13\x43hainmain.Supply.V1\xca\x02\x13\x43hainmain\\Supply\\V1\xe2\x02\x1f\x43hainmain\\Supply\\V1\\GPBMetadata\xea\x02\x15\x43hainmain::Supply::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cryptoorg.supply.v1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.chainmain.supply.v1B\nQueryProtoP\001Z5github.com/crypto-org-chain/chain-main/x/supply/types\242\002\003CSX\252\002\023Chainmain.Supply.V1\312\002\023Chainmain\\Supply\\V1\342\002\037Chainmain\\Supply\\V1\\GPBMetadata\352\002\025Chainmain::Supply::V1'
+  DESCRIPTOR._serialized_options = b'\n\027com.chainmain.supply.v1B\nQueryProtoZ5github.com/crypto-org-chain/chain-main/x/supply/types\242\002\003CSX\252\002\023Chainmain.Supply.V1\312\002\023Chainmain\\Supply\\V1\342\002\037Chainmain\\Supply\\V1\\GPBMetadata\352\002\025Chainmain::Supply::V1'
   _SUPPLYRESPONSE.fields_by_name['supply']._options = None
   _SUPPLYRESPONSE.fields_by_name['supply']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _QUERY._options = None

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cshentu/burrow/registry.proto\x12\x08registry\x1a\x14gogoproto/gogo.proto\"\xa0\x02\n\x0cNodeIdentity\x12\x18\n\x07Moniker\x18\x01 \x01(\tR\x07Moniker\x12&\n\x0eNetworkAddress\x18\x02 \x01(\tR\x0eNetworkAddress\x12`\n\x10TendermintNodeID\x18\x03 \x01(\x0c\x42\x34\xc8\xde\x1f\x00\xda\xde\x1f,github.com/hyperledger/burrow/crypto.AddressR\x10TendermintNodeID\x12\x66\n\x12ValidatorPublicKey\x18\x04 \x01(\x0c\x42\x36\xc8\xde\x1f\x00\xda\xde\x1f.github.com/hyperledger/burrow/crypto.PublicKeyR\x12ValidatorPublicKey:\x04\x98\xa0\x1f\x00\x42\xa7\x01\n\x0c\x63om.registryB\rRegistryProtoP\x01Z0github.com/hyperledger/burrow/execution/registry\xa2\x02\x03RXX\xaa\x02\x08Registry\xca\x02\x08Registry\xe2\x02\x14Registry\\GPBMetadata\xea\x02\x08Registry\xc8\xe2\x1e\x01\xd0\xe2\x1e\x01\xd8\xe2\x1e\x01\xe0\xe2\x1e\x01\xc0\xe3\x1e\x01\xc8\xe3\x1e\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cshentu/burrow/registry.proto\x12\x08registry\x1a\x14gogoproto/gogo.proto\"\xa0\x02\n\x0cNodeIdentity\x12\x18\n\x07Moniker\x18\x01 \x01(\tR\x07Moniker\x12&\n\x0eNetworkAddress\x18\x02 \x01(\tR\x0eNetworkAddress\x12`\n\x10TendermintNodeID\x18\x03 \x01(\x0c\x42\x34\xc8\xde\x1f\x00\xda\xde\x1f,github.com/hyperledger/burrow/crypto.AddressR\x10TendermintNodeID\x12\x66\n\x12ValidatorPublicKey\x18\x04 \x01(\x0c\x42\x36\xc8\xde\x1f\x00\xda\xde\x1f.github.com/hyperledger/burrow/crypto.PublicKeyR\x12ValidatorPublicKey:\x04\x98\xa0\x1f\x00\x42\xa5\x01\n\x0c\x63om.registryB\rRegistryProtoZ0github.com/hyperledger/burrow/execution/registry\xa2\x02\x03RXX\xaa\x02\x08Registry\xca\x02\x08Registry\xe2\x02\x14Registry\\GPBMetadata\xea\x02\x08Registry\xc8\xe2\x1e\x01\xd0\xe2\x1e\x01\xd8\xe2\x1e\x01\xe0\xe2\x1e\x01\xc0\xe3\x1e\x01\xc8\xe3\x1e\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'shentu.burrow.registry_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\014com.registryB\rRegistryProtoP\001Z0github.com/hyperledger/burrow/execution/registry\242\002\003RXX\252\002\010Registry\312\002\010Registry\342\002\024Registry\\GPBMetadata\352\002\010Registry\310\342\036\001\320\342\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001'
+  DESCRIPTOR._serialized_options = b'\n\014com.registryB\rRegistryProtoZ0github.com/hyperledger/burrow/execution/registry\242\002\003RXX\252\002\010Registry\312\002\010Registry\342\002\024Registry\\GPBMetadata\352\002\010Registry\310\342\036\001\320\342\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001'
   _NODEIDENTITY.fields_by_name['TendermintNodeID']._options = None
   _NODEIDENTITY.fields_by_name['TendermintNodeID']._serialized_options = b'\310\336\037\000\332\336\037,github.com/hyperledger/burrow/crypto.Address'
   _NODEIDENTITY.fields_by_name['ValidatorPublicKey']._options = None

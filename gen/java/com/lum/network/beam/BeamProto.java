@@ -6330,6 +6330,7 @@ public final class BeamProto {
 
     }
 
+    private int bitField0_;
     public static final int ORDER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object orderId_ = "";
@@ -6611,7 +6612,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasRatings() {
-      return ratings_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamMerchantReview.BeamMerchantReviewRating ratings = 8 [json_name = "ratings"];</code>
@@ -6676,7 +6677,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return content_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamMerchantReview.BeamMerchantReviewContent content = 10 [json_name = "content"];</code>
@@ -6729,13 +6730,13 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, timestamp_);
       }
-      if (ratings_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(8, getRatings());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, title_);
       }
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(10, getContent());
       }
       getUnknownFields().writeTo(output);
@@ -6768,14 +6769,14 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, timestamp_);
       }
-      if (ratings_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getRatings());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, title_);
       }
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getContent());
       }
@@ -6974,13 +6975,20 @@ public final class BeamProto {
 
       // Construct using com.lum.network.beam.BeamProto.BeamMerchantReview.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRatingsFieldBuilder();
+          getContentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7058,10 +7066,12 @@ public final class BeamProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.timestamp_ = timestamp_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.ratings_ = ratingsBuilder_ == null
               ? ratings_
               : ratingsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.title_ = title_;
@@ -7070,7 +7080,9 @@ public final class BeamProto {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7830,8 +7842,10 @@ public final class BeamProto {
         } else {
           ratingsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (ratings_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8021,8 +8035,10 @@ public final class BeamProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000200;
-        onChanged();
+        if (content_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11114,6 +11130,7 @@ public final class BeamProto {
 
       }
 
+      private int bitField0_;
       public static final int NAME_FIELD_NUMBER = 1;
       @SuppressWarnings("serial")
       private volatile java.lang.Object name_ = "";
@@ -11237,7 +11254,7 @@ public final class BeamProto {
        */
       @java.lang.Override
       public boolean hasIds() {
-        return ids_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.lum.network.beam.BeamProductReview.BeamProduct.BeamProductIds ids = 4 [json_name = "ids"];</code>
@@ -11278,7 +11295,7 @@ public final class BeamProto {
         for (int i = 0; i < urls_.size(); i++) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, urls_.getRaw(i));
         }
-        if (ids_ != null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           output.writeMessage(4, getIds());
         }
         getUnknownFields().writeTo(output);
@@ -11304,7 +11321,7 @@ public final class BeamProto {
           size += dataSize;
           size += 1 * getUrlsList().size();
         }
-        if (ids_ != null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, getIds());
         }
@@ -11476,13 +11493,19 @@ public final class BeamProto {
 
         // Construct using com.lum.network.beam.BeamProto.BeamProductReview.BeamProduct.newBuilder()
         private Builder() {
-
+          maybeForceBuilderInitialization();
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getIdsFieldBuilder();
+          }
         }
         @java.lang.Override
         public Builder clear() {
@@ -11540,11 +11563,14 @@ public final class BeamProto {
             urls_.makeImmutable();
             result.urls_ = urls_;
           }
+          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000008) != 0)) {
             result.ids_ = idsBuilder_ == null
                 ? ids_
                 : idsBuilder_.build();
+            to_bitField0_ |= 0x00000001;
           }
+          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -12001,8 +12027,10 @@ public final class BeamProto {
           } else {
             idsBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000008;
-          onChanged();
+          if (ids_ != null) {
+            bitField0_ |= 0x00000008;
+            onChanged();
+          }
           return this;
         }
         /**
@@ -12117,6 +12145,7 @@ public final class BeamProto {
 
     }
 
+    private int bitField0_;
     public static final int ORDER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object orderId_ = "";
@@ -12359,7 +12388,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasRatings() {
-      return ratings_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamProductReview.BeamProductReviewRating ratings = 7 [json_name = "ratings"];</code>
@@ -12424,7 +12453,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return content_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamProductReview.BeamProductReviewContent content = 9 [json_name = "content"];</code>
@@ -12556,13 +12585,13 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, timestamp_);
       }
-      if (ratings_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(7, getRatings());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, title_);
       }
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(9, getContent());
       }
       for (int i = 0; i < medias_.size(); i++) {
@@ -12598,14 +12627,14 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, timestamp_);
       }
-      if (ratings_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getRatings());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, title_);
       }
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getContent());
       }
@@ -12820,13 +12849,22 @@ public final class BeamProto {
 
       // Construct using com.lum.network.beam.BeamProto.BeamProductReview.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRatingsFieldBuilder();
+          getContentFieldBuilder();
+          getMediasFieldBuilder();
+          getProductsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12936,10 +12974,12 @@ public final class BeamProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.timestamp_ = timestamp_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.ratings_ = ratingsBuilder_ == null
               ? ratings_
               : ratingsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.title_ = title_;
@@ -12948,7 +12988,9 @@ public final class BeamProto {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13704,8 +13746,10 @@ public final class BeamProto {
         } else {
           ratingsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (ratings_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13895,8 +13939,10 @@ public final class BeamProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (content_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14615,6 +14661,7 @@ public final class BeamProto {
               com.lum.network.beam.BeamProto.BeamData.class, com.lum.network.beam.BeamProto.BeamData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REWARD_FIELD_NUMBER = 1;
     private com.lum.network.beam.BeamProto.BeamReward reward_;
     /**
@@ -14623,7 +14670,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasReward() {
-      return reward_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamReward reward = 1 [json_name = "reward"];</code>
@@ -14649,7 +14696,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasVerifier() {
-      return verifier_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamVerifier verifier = 2 [json_name = "verifier"];</code>
@@ -14675,7 +14722,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasReviewer() {
-      return reviewer_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamReviewer reviewer = 3 [json_name = "reviewer"];</code>
@@ -14701,7 +14748,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasMerchantReview() {
-      return merchantReview_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamMerchantReview merchant_review = 4 [json_name = "merchantReview"];</code>
@@ -14774,16 +14821,16 @@ public final class BeamProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getReward());
       }
-      if (verifier_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getVerifier());
       }
-      if (reviewer_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getReviewer());
       }
-      if (merchantReview_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getMerchantReview());
       }
       for (int i = 0; i < productsReviews_.size(); i++) {
@@ -14798,19 +14845,19 @@ public final class BeamProto {
       if (size != -1) return size;
 
       size = 0;
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReward());
       }
-      if (verifier_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getVerifier());
       }
-      if (reviewer_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getReviewer());
       }
-      if (merchantReview_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMerchantReview());
       }
@@ -15005,13 +15052,23 @@ public final class BeamProto {
 
       // Construct using com.lum.network.beam.BeamProto.BeamData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardFieldBuilder();
+          getVerifierFieldBuilder();
+          getReviewerFieldBuilder();
+          getMerchantReviewFieldBuilder();
+          getProductsReviewsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15090,26 +15147,32 @@ public final class BeamProto {
 
       private void buildPartial0(com.lum.network.beam.BeamProto.BeamData result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reward_ = rewardBuilder_ == null
               ? reward_
               : rewardBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.verifier_ = verifierBuilder_ == null
               ? verifier_
               : verifierBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.reviewer_ = reviewerBuilder_ == null
               ? reviewer_
               : reviewerBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.merchantReview_ = merchantReviewBuilder_ == null
               ? merchantReview_
               : merchantReviewBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15344,8 +15407,10 @@ public final class BeamProto {
         } else {
           rewardBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (reward_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15463,8 +15528,10 @@ public final class BeamProto {
         } else {
           verifierBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (verifier_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15582,8 +15649,10 @@ public final class BeamProto {
         } else {
           reviewerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (reviewer_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15701,8 +15770,10 @@ public final class BeamProto {
         } else {
           merchantReviewBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (merchantReview_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -16276,6 +16347,7 @@ public final class BeamProto {
               com.lum.network.beam.BeamProto.Beam.class, com.lum.network.beam.BeamProto.Beam.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CREATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creatorAddress_ = "";
@@ -16362,7 +16434,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return amount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -16595,7 +16667,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return data_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.lum.network.beam.BeamData data = 12 [json_name = "data"];</code>
@@ -16643,7 +16715,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return createdAt_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 15 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -16669,7 +16741,7 @@ public final class BeamProto {
      */
     @java.lang.Override
     public boolean hasClosedAt() {
-      return closedAt_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp closed_at = 16 [json_name = "closedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -16707,7 +16779,7 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getAmount());
       }
       if (status_ != com.lum.network.beam.BeamProto.BeamState.UNSPECIFIED.getNumber()) {
@@ -16734,7 +16806,7 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, schema_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(12, getData());
       }
       if (claimExpiresAtBlock_ != 0) {
@@ -16743,10 +16815,10 @@ public final class BeamProto {
       if (closesAtBlock_ != 0) {
         output.writeInt32(14, closesAtBlock_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(15, getCreatedAt());
       }
-      if (closedAt_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(16, getClosedAt());
       }
       getUnknownFields().writeTo(output);
@@ -16764,7 +16836,7 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
-      if (amount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -16796,7 +16868,7 @@ public final class BeamProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, schema_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getData());
       }
@@ -16808,11 +16880,11 @@ public final class BeamProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(14, closesAtBlock_);
       }
-      if (createdAt_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getCreatedAt());
       }
-      if (closedAt_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getClosedAt());
       }
@@ -17047,13 +17119,22 @@ public final class BeamProto {
 
       // Construct using com.lum.network.beam.BeamProto.Beam.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+          getDataFieldBuilder();
+          getCreatedAtFieldBuilder();
+          getClosedAtFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17130,10 +17211,12 @@ public final class BeamProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.status_ = status_;
@@ -17163,6 +17246,7 @@ public final class BeamProto {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.claimExpiresAtBlock_ = claimExpiresAtBlock_;
@@ -17174,12 +17258,15 @@ public final class BeamProto {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.closedAt_ = closedAtBuilder_ == null
               ? closedAt_
               : closedAtBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17627,8 +17714,10 @@ public final class BeamProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (amount_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -18183,8 +18272,10 @@ public final class BeamProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000800;
-        onChanged();
+        if (data_ != null) {
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -18366,8 +18457,10 @@ public final class BeamProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00004000;
-        onChanged();
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -18485,8 +18578,10 @@ public final class BeamProto {
         } else {
           closedAtBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00008000;
-        onChanged();
+        if (closedAt_ != null) {
+          bitField0_ |= 0x00008000;
+          onChanged();
+        }
         return this;
       }
       /**

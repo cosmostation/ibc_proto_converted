@@ -975,6 +975,7 @@ public final class AuthzProto {
 
     }
 
+    private int bitField0_;
     private int validatorsCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object validators_;
@@ -1030,7 +1031,7 @@ public final class AuthzProto {
      */
     @java.lang.Override
     public boolean hasMaxTokens() {
-      return maxTokens_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1187,7 +1188,7 @@ public final class AuthzProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (maxTokens_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMaxTokens());
       }
       if (validatorsCase_ == 2) {
@@ -1208,7 +1209,7 @@ public final class AuthzProto {
       if (size != -1) return size;
 
       size = 0;
-      if (maxTokens_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMaxTokens());
       }
@@ -1412,13 +1413,19 @@ public final class AuthzProto {
 
       // Construct using com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMaxTokensFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1472,14 +1479,17 @@ public final class AuthzProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.maxTokens_ = maxTokensBuilder_ == null
               ? maxTokens_
               : maxTokensBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.authorizationType_ = authorizationType_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization result) {
@@ -1733,8 +1743,10 @@ public final class AuthzProto {
         } else {
           maxTokensBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (maxTokens_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

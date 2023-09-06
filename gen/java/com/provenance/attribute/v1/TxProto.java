@@ -179,6 +179,7 @@ public final class TxProto {
               com.provenance.attribute.v1.TxProto.MsgAddAttributeRequest.class, com.provenance.attribute.v1.TxProto.MsgAddAttributeRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -373,7 +374,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExpirationDate() {
-      return expirationDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -428,7 +429,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, owner_);
       }
-      if (expirationDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getExpirationDate());
       }
       getUnknownFields().writeTo(output);
@@ -457,7 +458,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, owner_);
       }
-      if (expirationDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getExpirationDate());
       }
@@ -639,13 +640,19 @@ public final class TxProto {
 
       // Construct using com.provenance.attribute.v1.TxProto.MsgAddAttributeRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpirationDateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -709,11 +716,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.owner_ = owner_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.expirationDate_ = expirationDateBuilder_ == null
               ? expirationDate_
               : expirationDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1338,8 +1348,10 @@ public final class TxProto {
         } else {
           expirationDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (expirationDate_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3859,6 +3871,7 @@ public final class TxProto {
               com.provenance.attribute.v1.TxProto.MsgUpdateAttributeExpirationRequest.class, com.provenance.attribute.v1.TxProto.MsgUpdateAttributeExpirationRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -3933,7 +3946,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExpirationDate() {
-      return expirationDate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4073,7 +4086,7 @@ public final class TxProto {
       if (!value_.isEmpty()) {
         output.writeBytes(2, value_);
       }
-      if (expirationDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getExpirationDate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
@@ -4098,7 +4111,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, value_);
       }
-      if (expirationDate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getExpirationDate());
       }
@@ -4283,13 +4296,19 @@ public final class TxProto {
 
       // Construct using com.provenance.attribute.v1.TxProto.MsgUpdateAttributeExpirationRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpirationDateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4343,10 +4362,12 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.value_ = value_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.expirationDate_ = expirationDateBuilder_ == null
               ? expirationDate_
               : expirationDateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.account_ = account_;
@@ -4354,6 +4375,7 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.owner_ = owner_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4713,8 +4735,10 @@ public final class TxProto {
         } else {
           expirationDateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (expirationDate_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

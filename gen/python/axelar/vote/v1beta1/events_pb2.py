@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n axelar/vote/v1beta1/events.proto\x12\x13\x61xelar.vote.v1beta1\x1a\x14gogoproto/gogo.proto\"w\n\x05Voted\x12\x16\n\x06module\x18\x01 \x01(\tR\x06module\x12\x16\n\x06\x61\x63tion\x18\x02 \x01(\tR\x06\x61\x63tion\x12\x12\n\x04poll\x18\x03 \x01(\tR\x04poll\x12\x14\n\x05voter\x18\x04 \x01(\tR\x05voter\x12\x14\n\x05state\x18\x05 \x01(\tR\x05stateB\xcb\x01\n\x17\x63om.axelar.vote.v1beta1B\x0b\x45ventsProtoP\x01Z1github.com/axelarnetwork/axelar-core/x/vote/types\xa2\x02\x03\x41VX\xaa\x02\x13\x41xelar.Vote.V1beta1\xca\x02\x13\x41xelar\\Vote\\V1beta1\xe2\x02\x1f\x41xelar\\Vote\\V1beta1\\GPBMetadata\xea\x02\x15\x41xelar::Vote::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n axelar/vote/v1beta1/events.proto\x12\x13\x61xelar.vote.v1beta1\x1a\x14gogoproto/gogo.proto\"w\n\x05Voted\x12\x16\n\x06module\x18\x01 \x01(\tR\x06module\x12\x16\n\x06\x61\x63tion\x18\x02 \x01(\tR\x06\x61\x63tion\x12\x12\n\x04poll\x18\x03 \x01(\tR\x04poll\x12\x14\n\x05voter\x18\x04 \x01(\tR\x05voter\x12\x14\n\x05state\x18\x05 \x01(\tR\x05stateB\xc9\x01\n\x17\x63om.axelar.vote.v1beta1B\x0b\x45ventsProtoZ1github.com/axelarnetwork/axelar-core/x/vote/types\xa2\x02\x03\x41VX\xaa\x02\x13\x41xelar.Vote.V1beta1\xca\x02\x13\x41xelar\\Vote\\V1beta1\xe2\x02\x1f\x41xelar\\Vote\\V1beta1\\GPBMetadata\xea\x02\x15\x41xelar::Vote::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.vote.v1beta1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.axelar.vote.v1beta1B\013EventsProtoP\001Z1github.com/axelarnetwork/axelar-core/x/vote/types\242\002\003AVX\252\002\023Axelar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1beta1\342\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002\025Axelar::Vote::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\027com.axelar.vote.v1beta1B\013EventsProtoZ1github.com/axelarnetwork/axelar-core/x/vote/types\242\002\003AVX\252\002\023Axelar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1beta1\342\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002\025Axelar::Vote::V1beta1\310\341\036\000'
   _globals['_VOTED']._serialized_start=79
   _globals['_VOTED']._serialized_end=198
 # @@protoc_insertion_point(module_scope)

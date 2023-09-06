@@ -16,15 +16,14 @@ from sentinel.node.v2 import node_pb2 as sentinel_dot_node_dot_v2_dot_node__pb2
 from sentinel.node.v2 import params_pb2 as sentinel_dot_node_dot_v2_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1esentinel/node/v2/genesis.proto\x12\x10sentinel.node.v2\x1a\x14gogoproto/gogo.proto\x1a\x1bsentinel/node/v2/node.proto\x1a\x1dsentinel/node/v2/params.proto\"z\n\x0cGenesisState\x12\x32\n\x05nodes\x18\x01 \x03(\x0b\x32\x16.sentinel.node.v2.NodeB\x04\xc8\xde\x1f\x00R\x05nodes\x12\x36\n\x06params\x18\x02 \x01(\x0b\x32\x18.sentinel.node.v2.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xbd\x01\n\x14\x63om.sentinel.node.v2B\x0cGenesisProtoP\x01Z-github.com/sentinel-official/hub/x/node/types\xa2\x02\x03SNX\xaa\x02\x10Sentinel.Node.V2\xca\x02\x10Sentinel\\Node\\V2\xe2\x02\x1cSentinel\\Node\\V2\\GPBMetadata\xea\x02\x12Sentinel::Node::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1esentinel/node/v2/genesis.proto\x12\x10sentinel.node.v2\x1a\x14gogoproto/gogo.proto\x1a\x1bsentinel/node/v2/node.proto\x1a\x1dsentinel/node/v2/params.proto\"z\n\x0cGenesisState\x12\x32\n\x05nodes\x18\x01 \x03(\x0b\x32\x16.sentinel.node.v2.NodeB\x04\xc8\xde\x1f\x00R\x05nodes\x12\x36\n\x06params\x18\x02 \x01(\x0b\x32\x18.sentinel.node.v2.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xbb\x01\n\x14\x63om.sentinel.node.v2B\x0cGenesisProtoZ-github.com/sentinel-official/hub/x/node/types\xa2\x02\x03SNX\xaa\x02\x10Sentinel.Node.V2\xca\x02\x10Sentinel\\Node\\V2\xe2\x02\x1cSentinel\\Node\\V2\\GPBMetadata\xea\x02\x12Sentinel::Node::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.node.v2.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.node.v2B\014GenesisProtoP\001Z-github.com/sentinel-official/hub/x/node/types\242\002\003SNX\252\002\020Sentinel.Node.V2\312\002\020Sentinel\\Node\\V2\342\002\034Sentinel\\Node\\V2\\GPBMetadata\352\002\022Sentinel::Node::V2\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.node.v2B\014GenesisProtoZ-github.com/sentinel-official/hub/x/node/types\242\002\003SNX\252\002\020Sentinel.Node.V2\312\002\020Sentinel\\Node\\V2\342\002\034Sentinel\\Node\\V2\\GPBMetadata\352\002\022Sentinel::Node::V2\310\341\036\000\250\342\036\000'
   _GENESISSTATE.fields_by_name['nodes']._options = None
   _GENESISSTATE.fields_by_name['nodes']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['params']._options = None

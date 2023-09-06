@@ -72,6 +72,7 @@ public final class GroupProto {
               com.akash.deployment.v1beta1.GroupProto.MsgCloseGroup.class, com.akash.deployment.v1beta1.GroupProto.MsgCloseGroup.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.GroupProto.GroupID id_;
     /**
@@ -80,7 +81,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return id_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.deployment.v1beta1.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -112,7 +113,7 @@ public final class GroupProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -124,7 +125,7 @@ public final class GroupProto {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -286,13 +287,19 @@ public final class GroupProto {
 
       // Construct using com.akash.deployment.v1beta1.GroupProto.MsgCloseGroup.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -336,11 +343,14 @@ public final class GroupProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.GroupProto.MsgCloseGroup result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -506,8 +516,10 @@ public final class GroupProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (id_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1085,6 +1097,7 @@ public final class GroupProto {
               com.akash.deployment.v1beta1.GroupProto.MsgPauseGroup.class, com.akash.deployment.v1beta1.GroupProto.MsgPauseGroup.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.GroupProto.GroupID id_;
     /**
@@ -1093,7 +1106,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return id_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.deployment.v1beta1.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -1125,7 +1138,7 @@ public final class GroupProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -1137,7 +1150,7 @@ public final class GroupProto {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -1299,13 +1312,19 @@ public final class GroupProto {
 
       // Construct using com.akash.deployment.v1beta1.GroupProto.MsgPauseGroup.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1349,11 +1368,14 @@ public final class GroupProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.GroupProto.MsgPauseGroup result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1519,8 +1541,10 @@ public final class GroupProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (id_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2098,6 +2122,7 @@ public final class GroupProto {
               com.akash.deployment.v1beta1.GroupProto.MsgStartGroup.class, com.akash.deployment.v1beta1.GroupProto.MsgStartGroup.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.GroupProto.GroupID id_;
     /**
@@ -2106,7 +2131,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return id_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.deployment.v1beta1.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -2138,7 +2163,7 @@ public final class GroupProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -2150,7 +2175,7 @@ public final class GroupProto {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -2312,13 +2337,19 @@ public final class GroupProto {
 
       // Construct using com.akash.deployment.v1beta1.GroupProto.MsgStartGroup.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIdFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2362,11 +2393,14 @@ public final class GroupProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.GroupProto.MsgStartGroup result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2532,8 +2566,10 @@ public final class GroupProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (id_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3854,6 +3890,7 @@ public final class GroupProto {
               com.akash.deployment.v1beta1.GroupProto.GroupSpec.class, com.akash.deployment.v1beta1.GroupProto.GroupSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -3901,7 +3938,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasRequirements() {
-      return requirements_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.base.v1beta1.PlacementRequirements requirements = 2 [json_name = "requirements", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "requirements", (.gogoproto.moretags) = "yaml:&#92;"requirements&#92;""];</code>
@@ -3977,7 +4014,7 @@ public final class GroupProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (requirements_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getRequirements());
       }
       for (int i = 0; i < resources_.size(); i++) {
@@ -3995,7 +4032,7 @@ public final class GroupProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (requirements_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRequirements());
       }
@@ -4171,13 +4208,20 @@ public final class GroupProto {
 
       // Construct using com.akash.deployment.v1beta1.GroupProto.GroupSpec.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequirementsFieldBuilder();
+          getResourcesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4245,11 +4289,14 @@ public final class GroupProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.requirements_ = requirementsBuilder_ == null
               ? requirements_
               : requirementsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4536,8 +4583,10 @@ public final class GroupProto {
         } else {
           requirementsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (requirements_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5162,6 +5211,7 @@ public final class GroupProto {
       // @@protoc_insertion_point(enum_scope:akash.deployment.v1beta1.Group.State)
     }
 
+    private int bitField0_;
     public static final int GROUP_ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.GroupProto.GroupID groupId_;
     /**
@@ -5170,7 +5220,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasGroupId() {
-      return groupId_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.deployment.v1beta1.GroupID group_id = 1 [json_name = "groupId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "GroupID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -5214,7 +5264,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasGroupSpec() {
-      return groupSpec_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.akash.deployment.v1beta1.GroupSpec group_spec = 3 [json_name = "groupSpec", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spec", (.gogoproto.moretags) = "yaml:&#92;"spec&#92;""];</code>
@@ -5257,13 +5307,13 @@ public final class GroupProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (groupId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getGroupId());
       }
       if (state_ != com.akash.deployment.v1beta1.GroupProto.Group.State.invalid.getNumber()) {
         output.writeEnum(2, state_);
       }
-      if (groupSpec_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getGroupSpec());
       }
       if (createdAt_ != 0L) {
@@ -5278,7 +5328,7 @@ public final class GroupProto {
       if (size != -1) return size;
 
       size = 0;
-      if (groupId_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGroupId());
       }
@@ -5286,7 +5336,7 @@ public final class GroupProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, state_);
       }
-      if (groupSpec_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getGroupSpec());
       }
@@ -5469,13 +5519,20 @@ public final class GroupProto {
 
       // Construct using com.akash.deployment.v1beta1.GroupProto.Group.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGroupIdFieldBuilder();
+          getGroupSpecFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5526,10 +5583,12 @@ public final class GroupProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.GroupProto.Group result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.groupId_ = groupIdBuilder_ == null
               ? groupId_
               : groupIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = state_;
@@ -5538,10 +5597,12 @@ public final class GroupProto {
           result.groupSpec_ = groupSpecBuilder_ == null
               ? groupSpec_
               : groupSpecBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.createdAt_ = createdAt_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5733,8 +5794,10 @@ public final class GroupProto {
         } else {
           groupIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (groupId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5905,8 +5968,10 @@ public final class GroupProto {
         } else {
           groupSpecBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (groupSpec_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6132,6 +6197,7 @@ public final class GroupProto {
               com.akash.deployment.v1beta1.GroupProto.Resource.class, com.akash.deployment.v1beta1.GroupProto.Resource.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RESOURCES_FIELD_NUMBER = 1;
     private com.akash.base.v1beta1.ResourceProto.ResourceUnits resources_;
     /**
@@ -6140,7 +6206,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasResources() {
-      return resources_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.akash.base.v1beta1.ResourceUnits resources = 1 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "unit", (.gogoproto.moretags) = "yaml:&#92;"unit&#92;""];</code>
@@ -6177,7 +6243,7 @@ public final class GroupProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return price_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
@@ -6209,13 +6275,13 @@ public final class GroupProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (resources_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getResources());
       }
       if (count_ != 0) {
         output.writeUInt32(2, count_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getPrice());
       }
       getUnknownFields().writeTo(output);
@@ -6227,7 +6293,7 @@ public final class GroupProto {
       if (size != -1) return size;
 
       size = 0;
-      if (resources_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getResources());
       }
@@ -6235,7 +6301,7 @@ public final class GroupProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, count_);
       }
-      if (price_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrice());
       }
@@ -6410,13 +6476,20 @@ public final class GroupProto {
 
       // Construct using com.akash.deployment.v1beta1.GroupProto.Resource.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResourcesFieldBuilder();
+          getPriceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6466,10 +6539,12 @@ public final class GroupProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.GroupProto.Resource result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.resources_ = resourcesBuilder_ == null
               ? resources_
               : resourcesBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.count_ = count_;
@@ -6478,7 +6553,9 @@ public final class GroupProto {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6662,8 +6739,10 @@ public final class GroupProto {
         } else {
           resourcesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (resources_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6813,8 +6892,10 @@ public final class GroupProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (price_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -1973,6 +1973,7 @@ public final class CertProto {
               com.shentu.cert.v1alpha1.CertProto.Certificate.class, com.shentu.cert.v1alpha1.CertProto.Certificate.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CERTIFICATE_ID_FIELD_NUMBER = 1;
     private long certificateId_ = 0L;
     /**
@@ -1992,7 +1993,7 @@ public final class CertProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return content_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
@@ -2018,7 +2019,7 @@ public final class CertProto {
      */
     @java.lang.Override
     public boolean hasCompilationContent() {
-      return compilationContent_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.shentu.cert.v1alpha1.CompilationContent compilation_content = 3 [json_name = "compilationContent", (.gogoproto.moretags) = "yaml:&#92;"compilation_content&#92;""];</code>
@@ -2131,10 +2132,10 @@ public final class CertProto {
       if (certificateId_ != 0L) {
         output.writeUInt64(1, certificateId_);
       }
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getContent());
       }
-      if (compilationContent_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getCompilationContent());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
@@ -2156,11 +2157,11 @@ public final class CertProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, certificateId_);
       }
-      if (content_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContent());
       }
-      if (compilationContent_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCompilationContent());
       }
@@ -2346,13 +2347,20 @@ public final class CertProto {
 
       // Construct using com.shentu.cert.v1alpha1.CertProto.Certificate.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContentFieldBuilder();
+          getCompilationContentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2407,15 +2415,18 @@ public final class CertProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.certificateId_ = certificateId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.compilationContent_ = compilationContentBuilder_ == null
               ? compilationContent_
               : compilationContentBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.description_ = description_;
@@ -2423,6 +2434,7 @@ public final class CertProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.certifier_ = certifier_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2658,8 +2670,10 @@ public final class CertProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (content_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2777,8 +2791,10 @@ public final class CertProto {
         } else {
           compilationContentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (compilationContent_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7680,6 +7696,7 @@ public final class CertProto {
               com.shentu.cert.v1alpha1.CertProto.Platform.class, com.shentu.cert.v1alpha1.CertProto.Platform.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALIDATOR_PUBKEY_FIELD_NUMBER = 1;
     private com.google.protobuf.Any validatorPubkey_;
     /**
@@ -7688,7 +7705,7 @@ public final class CertProto {
      */
     @java.lang.Override
     public boolean hasValidatorPubkey() {
-      return validatorPubkey_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Any validator_pubkey = 1 [json_name = "validatorPubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
@@ -7759,7 +7776,7 @@ public final class CertProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (validatorPubkey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getValidatorPubkey());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
@@ -7774,7 +7791,7 @@ public final class CertProto {
       if (size != -1) return size;
 
       size = 0;
-      if (validatorPubkey_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValidatorPubkey());
       }
@@ -7943,13 +7960,19 @@ public final class CertProto {
 
       // Construct using com.shentu.cert.v1alpha1.CertProto.Platform.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValidatorPubkeyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7994,14 +8017,17 @@ public final class CertProto {
 
       private void buildPartial0(com.shentu.cert.v1alpha1.CertProto.Platform result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.validatorPubkey_ = validatorPubkeyBuilder_ == null
               ? validatorPubkey_
               : validatorPubkeyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8177,8 +8203,10 @@ public final class CertProto {
         } else {
           validatorPubkeyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (validatorPubkey_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

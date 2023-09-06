@@ -15,15 +15,14 @@ from assetmantle.ids.base import identity_id_pb2 as assetmantle_dot_ids_dot_base
 from assetmantle.ids.base import any_ownable_id_pb2 as assetmantle_dot_ids_dot_base_dot_any__ownable__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/splits/transactions/send/message.proto\x12,assetmantle.modules.splits.transactions.send\x1a&assetmantle/ids/base/identity_id.proto\x1a)assetmantle/ids/base/any_ownable_id.proto\"\x80\x02\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x41\n\x08\x66rom_i_d\x18\x02 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x06\x66romID\x12=\n\x06to_i_d\x18\x03 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x04toID\x12I\n\x0bownable_i_d\x18\x04 \x01(\x0b\x32).assetmantle.schema.ids.base.AnyOwnableIDR\townableID\x12\x14\n\x05value\x18\x05 \x01(\tR\x05valueB\x96\x02\n0com.assetmantle.modules.splits.transactions.sendB\x0cMessageProtoP\x01\xa2\x02\x05\x41MSTS\xaa\x02,Assetmantle.Modules.Splits.Transactions.Send\xca\x02,Assetmantle\\Modules\\Splits\\Transactions\\Send\xe2\x02\x38\x41ssetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Splits::Transactions::Sendb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/splits/transactions/send/message.proto\x12,assetmantle.modules.splits.transactions.send\x1a&assetmantle/ids/base/identity_id.proto\x1a)assetmantle/ids/base/any_ownable_id.proto\"\x80\x02\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x41\n\x08\x66rom_i_d\x18\x02 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x06\x66romID\x12=\n\x06to_i_d\x18\x03 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\x04toID\x12I\n\x0bownable_i_d\x18\x04 \x01(\x0b\x32).assetmantle.schema.ids.base.AnyOwnableIDR\townableID\x12\x14\n\x05value\x18\x05 \x01(\tR\x05valueB\x94\x02\n0com.assetmantle.modules.splits.transactions.sendB\x0cMessageProto\xa2\x02\x05\x41MSTS\xaa\x02,Assetmantle.Modules.Splits.Transactions.Send\xca\x02,Assetmantle\\Modules\\Splits\\Transactions\\Send\xe2\x02\x38\x41ssetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Splits::Transactions::Sendb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.splits.transactions.send.message_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.splits.transactions.sendB\014MessageProtoP\001\242\002\005AMSTS\252\002,Assetmantle.Modules.Splits.Transactions.Send\312\002,Assetmantle\\Modules\\Splits\\Transactions\\Send\342\0028Assetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\352\0020Assetmantle::Modules::Splits::Transactions::Send'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.splits.transactions.sendB\014MessageProto\242\002\005AMSTS\252\002,Assetmantle.Modules.Splits.Transactions.Send\312\002,Assetmantle\\Modules\\Splits\\Transactions\\Send\342\0028Assetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\352\0020Assetmantle::Modules::Splits::Transactions::Send'
   _globals['_MESSAGE']._serialized_start=184
   _globals['_MESSAGE']._serialized_end=440
 # @@protoc_insertion_point(module_scope)

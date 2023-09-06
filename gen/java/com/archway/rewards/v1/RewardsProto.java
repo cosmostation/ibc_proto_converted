@@ -155,6 +155,7 @@ public final class RewardsProto {
               com.archway.rewards.v1.RewardsProto.Params.class, com.archway.rewards.v1.RewardsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INFLATION_REWARDS_RATIO_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object inflationRewardsRatio_ = "";
@@ -287,7 +288,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasMinPriceOfGas() {
-      return minPriceOfGas_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -344,7 +345,7 @@ public final class RewardsProto {
       if (maxWithdrawRecords_ != 0L) {
         output.writeUInt64(3, maxWithdrawRecords_);
       }
-      if (minPriceOfGas_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getMinPriceOfGas());
       }
       getUnknownFields().writeTo(output);
@@ -366,7 +367,7 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, maxWithdrawRecords_);
       }
-      if (minPriceOfGas_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMinPriceOfGas());
       }
@@ -541,13 +542,19 @@ public final class RewardsProto {
 
       // Construct using com.archway.rewards.v1.RewardsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinPriceOfGasFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -603,11 +610,14 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxWithdrawRecords_ = maxWithdrawRecords_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.minPriceOfGas_ = minPriceOfGasBuilder_ == null
               ? minPriceOfGas_
               : minPriceOfGasBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1087,8 +1097,10 @@ public final class RewardsProto {
         } else {
           minPriceOfGasBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (minPriceOfGas_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2328,6 +2340,7 @@ public final class RewardsProto {
               com.archway.rewards.v1.RewardsProto.BlockRewards.class, com.archway.rewards.v1.RewardsProto.BlockRewards.Builder.class);
     }
 
+    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -2355,7 +2368,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasInflationRewards() {
-      return inflationRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2414,7 +2427,7 @@ public final class RewardsProto {
       if (height_ != 0L) {
         output.writeInt64(1, height_);
       }
-      if (inflationRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getInflationRewards());
       }
       if (maxGas_ != 0L) {
@@ -2433,7 +2446,7 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, height_);
       }
-      if (inflationRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInflationRewards());
       }
@@ -2609,13 +2622,19 @@ public final class RewardsProto {
 
       // Construct using com.archway.rewards.v1.RewardsProto.BlockRewards.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInflationRewardsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2664,14 +2683,17 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = height_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.inflationRewards_ = inflationRewardsBuilder_ == null
               ? inflationRewards_
               : inflationRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxGas_ = maxGas_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2917,8 +2939,10 @@ public final class RewardsProto {
         } else {
           inflationRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (inflationRewards_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4350,6 +4374,7 @@ public final class RewardsProto {
               com.archway.rewards.v1.RewardsProto.RewardsRecord.class, com.archway.rewards.v1.RewardsProto.RewardsRecord.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -4500,7 +4525,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasCalculatedTime() {
-      return calculatedTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4552,7 +4577,7 @@ public final class RewardsProto {
       if (calculatedHeight_ != 0L) {
         output.writeInt64(4, calculatedHeight_);
       }
-      if (calculatedTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getCalculatedTime());
       }
       getUnknownFields().writeTo(output);
@@ -4579,7 +4604,7 @@ public final class RewardsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, calculatedHeight_);
       }
-      if (calculatedTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCalculatedTime());
       }
@@ -4766,13 +4791,20 @@ public final class RewardsProto {
 
       // Construct using com.archway.rewards.v1.RewardsProto.RewardsRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardsFieldBuilder();
+          getCalculatedTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4848,11 +4880,14 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.calculatedHeight_ = calculatedHeight_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.calculatedTime_ = calculatedTimeBuilder_ == null
               ? calculatedTime_
               : calculatedTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5595,8 +5630,10 @@ public final class RewardsProto {
         } else {
           calculatedTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (calculatedTime_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5818,6 +5855,7 @@ public final class RewardsProto {
               com.archway.rewards.v1.RewardsProto.FlatFee.class, com.archway.rewards.v1.RewardsProto.FlatFee.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contractAddress_ = "";
@@ -5877,7 +5915,7 @@ public final class RewardsProto {
      */
     @java.lang.Override
     public boolean hasFlatFee() {
-      return flatFee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5920,7 +5958,7 @@ public final class RewardsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
       }
-      if (flatFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getFlatFee());
       }
       getUnknownFields().writeTo(output);
@@ -5935,7 +5973,7 @@ public final class RewardsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
       }
-      if (flatFee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFlatFee());
       }
@@ -6101,13 +6139,19 @@ public final class RewardsProto {
 
       // Construct using com.archway.rewards.v1.RewardsProto.FlatFee.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFlatFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6155,11 +6199,14 @@ public final class RewardsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractAddress_ = contractAddress_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.flatFee_ = flatFeeBuilder_ == null
               ? flatFee_
               : flatFeeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6447,8 +6494,10 @@ public final class RewardsProto {
         } else {
           flatFeeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (flatFee_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

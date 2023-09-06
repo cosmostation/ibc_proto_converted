@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from noble.tariff import params_pb2 as noble_dot_tariff_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1anoble/tariff/genesis.proto\x12\x0cnoble.tariff\x1a\x14gogoproto/gogo.proto\x1a\x19noble/tariff/params.proto\"B\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.noble.tariff.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xa7\x01\n\x10\x63om.noble.tariffB\x0cGenesisProtoP\x01Z4github.com/strangelove-ventures/noble/x/tariff/types\xa2\x02\x03NTX\xaa\x02\x0cNoble.Tariff\xca\x02\x0cNoble\\Tariff\xe2\x02\x18Noble\\Tariff\\GPBMetadata\xea\x02\rNoble::Tariffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1anoble/tariff/genesis.proto\x12\x0cnoble.tariff\x1a\x14gogoproto/gogo.proto\x1a\x19noble/tariff/params.proto\"B\n\x0cGenesisState\x12\x32\n\x06params\x18\x01 \x01(\x0b\x32\x14.noble.tariff.ParamsB\x04\xc8\xde\x1f\x00R\x06paramsB\xa5\x01\n\x10\x63om.noble.tariffB\x0cGenesisProtoZ4github.com/strangelove-ventures/noble/x/tariff/types\xa2\x02\x03NTX\xaa\x02\x0cNoble.Tariff\xca\x02\x0cNoble\\Tariff\xe2\x02\x18Noble\\Tariff\\GPBMetadata\xea\x02\rNoble::Tariffb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'noble.tariff.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\020com.noble.tariffB\014GenesisProtoP\001Z4github.com/strangelove-ventures/noble/x/tariff/types\242\002\003NTX\252\002\014Noble.Tariff\312\002\014Noble\\Tariff\342\002\030Noble\\Tariff\\GPBMetadata\352\002\rNoble::Tariff'
+  DESCRIPTOR._serialized_options = b'\n\020com.noble.tariffB\014GenesisProtoZ4github.com/strangelove-ventures/noble/x/tariff/types\242\002\003NTX\252\002\014Noble.Tariff\312\002\014Noble\\Tariff\342\002\030Noble\\Tariff\\GPBMetadata\352\002\rNoble::Tariff'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISSTATE']._serialized_start=93

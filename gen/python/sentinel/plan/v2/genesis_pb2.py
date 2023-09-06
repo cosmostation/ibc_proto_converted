@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from sentinel.plan.v2 import plan_pb2 as sentinel_dot_plan_dot_v2_dot_plan__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1esentinel/plan/v2/genesis.proto\x12\x10sentinel.plan.v2\x1a\x14gogoproto/gogo.proto\x1a\x1bsentinel/plan/v2/plan.proto\"U\n\x0bGenesisPlan\x12\x30\n\x04plan\x18\x01 \x01(\x0b\x32\x16.sentinel.plan.v2.PlanB\x04\xc8\xde\x1f\x00R\x04plan\x12\x14\n\x05nodes\x18\x02 \x03(\tR\x05nodesB\xbd\x01\n\x14\x63om.sentinel.plan.v2B\x0cGenesisProtoP\x01Z-github.com/sentinel-official/hub/x/plan/types\xa2\x02\x03SPX\xaa\x02\x10Sentinel.Plan.V2\xca\x02\x10Sentinel\\Plan\\V2\xe2\x02\x1cSentinel\\Plan\\V2\\GPBMetadata\xea\x02\x12Sentinel::Plan::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1esentinel/plan/v2/genesis.proto\x12\x10sentinel.plan.v2\x1a\x14gogoproto/gogo.proto\x1a\x1bsentinel/plan/v2/plan.proto\"U\n\x0bGenesisPlan\x12\x30\n\x04plan\x18\x01 \x01(\x0b\x32\x16.sentinel.plan.v2.PlanB\x04\xc8\xde\x1f\x00R\x04plan\x12\x14\n\x05nodes\x18\x02 \x03(\tR\x05nodesB\xbb\x01\n\x14\x63om.sentinel.plan.v2B\x0cGenesisProtoZ-github.com/sentinel-official/hub/x/plan/types\xa2\x02\x03SPX\xaa\x02\x10Sentinel.Plan.V2\xca\x02\x10Sentinel\\Plan\\V2\xe2\x02\x1cSentinel\\Plan\\V2\\GPBMetadata\xea\x02\x12Sentinel::Plan::V2\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.plan.v2.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.plan.v2B\014GenesisProtoP\001Z-github.com/sentinel-official/hub/x/plan/types\242\002\003SPX\252\002\020Sentinel.Plan.V2\312\002\020Sentinel\\Plan\\V2\342\002\034Sentinel\\Plan\\V2\\GPBMetadata\352\002\022Sentinel::Plan::V2\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.plan.v2B\014GenesisProtoZ-github.com/sentinel-official/hub/x/plan/types\242\002\003SPX\252\002\020Sentinel.Plan.V2\312\002\020Sentinel\\Plan\\V2\342\002\034Sentinel\\Plan\\V2\\GPBMetadata\352\002\022Sentinel::Plan::V2\310\341\036\000\250\342\036\000'
   _GENESISPLAN.fields_by_name['plan']._options = None
   _GENESISPLAN.fields_by_name['plan']._serialized_options = b'\310\336\037\000'
   _globals['_GENESISPLAN']._serialized_start=103

@@ -477,6 +477,7 @@ public final class QueryProto {
               com.ixo.entity.v1beta1.QueryProto.QueryParamsResponse.class, com.ixo.entity.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.ixo.entity.v1beta1.EntityProto.Params params_;
     /**
@@ -489,7 +490,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -529,7 +530,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -541,7 +542,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -699,13 +700,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.entity.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -749,11 +756,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -939,8 +949,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1692,6 +1704,7 @@ public final class QueryProto {
               com.ixo.entity.v1beta1.QueryProto.QueryEntityResponse.class, com.ixo.entity.v1beta1.QueryProto.QueryEntityResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ENTITY_FIELD_NUMBER = 1;
     private com.ixo.entity.v1beta1.EntityProto.Entity entity_;
     /**
@@ -1700,7 +1713,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEntity() {
-      return entity_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.entity.v1beta1.Entity entity = 1 [json_name = "entity", (.gogoproto.nullable) = false];</code>
@@ -1726,7 +1739,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasIidDocument() {
-      return iidDocument_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 2 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
@@ -1758,10 +1771,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (entity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getEntity());
       }
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getIidDocument());
       }
       getUnknownFields().writeTo(output);
@@ -1773,11 +1786,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (entity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEntity());
       }
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getIidDocument());
       }
@@ -1944,13 +1957,20 @@ public final class QueryProto {
 
       // Construct using com.ixo.entity.v1beta1.QueryProto.QueryEntityResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntityFieldBuilder();
+          getIidDocumentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1999,16 +2019,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.QueryProto.QueryEntityResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entity_ = entityBuilder_ == null
               ? entity_
               : entityBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.iidDocument_ = iidDocumentBuilder_ == null
               ? iidDocument_
               : iidDocumentBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2184,8 +2208,10 @@ public final class QueryProto {
         } else {
           entityBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (entity_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2303,8 +2329,10 @@ public final class QueryProto {
         } else {
           iidDocumentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (iidDocument_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3025,6 +3053,7 @@ public final class QueryProto {
               com.ixo.entity.v1beta1.QueryProto.QueryEntityMetadataResponse.class, com.ixo.entity.v1beta1.QueryProto.QueryEntityMetadataResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ENTITY_FIELD_NUMBER = 1;
     private com.ixo.entity.v1beta1.EntityProto.Entity entity_;
     /**
@@ -3033,7 +3062,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEntity() {
-      return entity_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.entity.v1beta1.Entity entity = 1 [json_name = "entity", (.gogoproto.nullable) = false];</code>
@@ -3065,7 +3094,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (entity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getEntity());
       }
       getUnknownFields().writeTo(output);
@@ -3077,7 +3106,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (entity_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEntity());
       }
@@ -3235,13 +3264,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.entity.v1beta1.QueryProto.QueryEntityMetadataResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntityFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3285,11 +3320,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.QueryProto.QueryEntityMetadataResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entity_ = entityBuilder_ == null
               ? entity_
               : entityBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3455,8 +3493,10 @@ public final class QueryProto {
         } else {
           entityBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (entity_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4177,6 +4217,7 @@ public final class QueryProto {
               com.ixo.entity.v1beta1.QueryProto.QueryEntityIidDocumentResponse.class, com.ixo.entity.v1beta1.QueryProto.QueryEntityIidDocumentResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int IIDDOCUMENT_FIELD_NUMBER = 1;
     private com.ixo.iid.v1beta1.IidProto.IidDocument iidDocument_;
     /**
@@ -4185,7 +4226,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasIidDocument() {
-      return iidDocument_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
@@ -4217,7 +4258,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getIidDocument());
       }
       getUnknownFields().writeTo(output);
@@ -4229,7 +4270,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (iidDocument_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIidDocument());
       }
@@ -4387,13 +4428,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.entity.v1beta1.QueryProto.QueryEntityIidDocumentResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIidDocumentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4437,11 +4484,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.QueryProto.QueryEntityIidDocumentResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.iidDocument_ = iidDocumentBuilder_ == null
               ? iidDocument_
               : iidDocumentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4607,8 +4657,10 @@ public final class QueryProto {
         } else {
           iidDocumentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (iidDocument_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5821,6 +5873,7 @@ public final class QueryProto {
               com.ixo.entity.v1beta1.QueryProto.QueryEntityListRequest.class, com.ixo.entity.v1beta1.QueryProto.QueryEntityListRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -5834,7 +5887,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5876,7 +5929,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5888,7 +5941,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -6046,13 +6099,19 @@ public final class QueryProto {
 
       // Construct using com.ixo.entity.v1beta1.QueryProto.QueryEntityListRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6096,11 +6155,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.QueryProto.QueryEntityListRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6291,8 +6353,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6506,6 +6570,7 @@ public final class QueryProto {
               com.ixo.entity.v1beta1.QueryProto.QueryEntityListResponse.class, com.ixo.entity.v1beta1.QueryProto.QueryEntityListResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ENTITIES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.ixo.entity.v1beta1.EntityProto.Entity> entities_;
@@ -6555,7 +6620,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -6590,7 +6655,7 @@ public final class QueryProto {
       for (int i = 0; i < entities_.size(); i++) {
         output.writeMessage(1, entities_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6606,7 +6671,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, entities_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6770,13 +6835,20 @@ public final class QueryProto {
 
       // Construct using com.ixo.entity.v1beta1.QueryProto.QueryEntityListResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntitiesFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6840,11 +6912,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.QueryProto.QueryEntityListResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7289,8 +7364,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

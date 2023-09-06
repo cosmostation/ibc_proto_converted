@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAassetmantle/orders/transactions/cancel/transaction_response.proto\x12.assetmantle.modules.orders.transactions.cancel\"\x15\n\x13TransactionResponseB\xac\x02\n2com.assetmantle.modules.orders.transactions.cancelB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MOTC\xaa\x02.Assetmantle.Modules.Orders.Transactions.Cancel\xca\x02.Assetmantle\\Modules\\Orders\\Transactions\\Cancel\xe2\x02:Assetmantle\\Modules\\Orders\\Transactions\\Cancel\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Orders::Transactions::Cancelb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAassetmantle/orders/transactions/cancel/transaction_response.proto\x12.assetmantle.modules.orders.transactions.cancel\"\x15\n\x13TransactionResponseB\xaa\x02\n2com.assetmantle.modules.orders.transactions.cancelB\x18TransactionResponseProto\xa2\x02\x05\x41MOTC\xaa\x02.Assetmantle.Modules.Orders.Transactions.Cancel\xca\x02.Assetmantle\\Modules\\Orders\\Transactions\\Cancel\xe2\x02:Assetmantle\\Modules\\Orders\\Transactions\\Cancel\\GPBMetadata\xea\x02\x32\x41ssetmantle::Modules::Orders::Transactions::Cancelb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.cancel.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.orders.transactions.cancelB\030TransactionResponseProtoP\001\242\002\005AMOTC\252\002.Assetmantle.Modules.Orders.Transactions.Cancel\312\002.Assetmantle\\Modules\\Orders\\Transactions\\Cancel\342\002:Assetmantle\\Modules\\Orders\\Transactions\\Cancel\\GPBMetadata\352\0022Assetmantle::Modules::Orders::Transactions::Cancel'
+  DESCRIPTOR._serialized_options = b'\n2com.assetmantle.modules.orders.transactions.cancelB\030TransactionResponseProto\242\002\005AMOTC\252\002.Assetmantle.Modules.Orders.Transactions.Cancel\312\002.Assetmantle\\Modules\\Orders\\Transactions\\Cancel\342\002:Assetmantle\\Modules\\Orders\\Transactions\\Cancel\\GPBMetadata\352\0022Assetmantle::Modules::Orders::Transactions::Cancel'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=117
   _globals['_TRANSACTIONRESPONSE']._serialized_end=138
 # @@protoc_insertion_point(module_scope)

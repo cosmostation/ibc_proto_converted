@@ -70,7 +70,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.prototype.toObject = fu
  */
 proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    hostDenom: jspb.Message.getFieldWithDefault(msg, 1, "")
+    chainId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -109,7 +109,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.deserializeBinaryFromRe
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setHostDenom(value);
+      msg.setChainId(value);
       break;
     default:
       reader.skipField();
@@ -140,7 +140,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.prototype.serializeBina
  */
 proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getHostDenom();
+  f = message.getChainId();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -151,10 +151,10 @@ proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.serializeBinaryToWriter
 
 
 /**
- * optional string host_denom = 1;
+ * optional string chain_id = 1;
  * @return {string}
  */
-proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.prototype.getHostDenom = function() {
+proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -163,7 +163,7 @@ proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.prototype.getHostDenom 
  * @param {string} value
  * @return {!proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest} returns this
  */
-proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.prototype.setHostDenom = function(value) {
+proto.pstake.liquidstakeibc.v1beta1.QueryDepositsRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 

@@ -16,6 +16,7 @@ goog.provide('proto.pstake.liquidstakeibc.v1beta1.HostChain');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.pstake.liquidstakeibc.v1beta1.HostChainFlags');
 goog.require('proto.pstake.liquidstakeibc.v1beta1.HostChainLSParams');
 goog.require('proto.pstake.liquidstakeibc.v1beta1.ICAAccount');
 goog.require('proto.pstake.liquidstakeibc.v1beta1.Validator');
@@ -90,11 +91,13 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.toObject = function(includeInstanc
     rewardsAccount: (f = msg.getRewardsAccount()) && proto.pstake.liquidstakeibc.v1beta1.ICAAccount.toObject(includeInstance, f),
     validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
     proto.pstake.liquidstakeibc.v1beta1.Validator.toObject, includeInstance),
-    minimumDeposit: jspb.Message.getFieldWithDefault(msg, 11, ""),
-    cValue: jspb.Message.getFieldWithDefault(msg, 12, ""),
-    nextValsetHash: msg.getNextValsetHash_asB64(),
-    unbondingFactor: jspb.Message.getFieldWithDefault(msg, 14, 0),
-    active: jspb.Message.getBooleanFieldWithDefault(msg, 15, false)
+    minimumDeposit: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    cValue: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    lastCValue: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    unbondingFactor: jspb.Message.getFieldWithDefault(msg, 13, 0),
+    active: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
+    autoCompoundFactor: jspb.Message.getFieldWithDefault(msg, 15, ""),
+    flags: (f = msg.getFlags()) && proto.pstake.liquidstakeibc.v1beta1.HostChainFlags.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -171,25 +174,34 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.deserializeBinaryFromReader = func
       reader.readMessage(value,proto.pstake.liquidstakeibc.v1beta1.Validator.deserializeBinaryFromReader);
       msg.addValidators(value);
       break;
-    case 11:
+    case 10:
       var value = /** @type {string} */ (reader.readString());
       msg.setMinimumDeposit(value);
       break;
-    case 12:
+    case 11:
       var value = /** @type {string} */ (reader.readString());
       msg.setCValue(value);
       break;
-    case 13:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setNextValsetHash(value);
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLastCValue(value);
       break;
-    case 14:
+    case 13:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setUnbondingFactor(value);
       break;
-    case 15:
+    case 14:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setActive(value);
+      break;
+    case 15:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAutoCompoundFactor(value);
+      break;
+    case 16:
+      var value = new proto.pstake.liquidstakeibc.v1beta1.HostChainFlags;
+      reader.readMessage(value,proto.pstake.liquidstakeibc.v1beta1.HostChainFlags.deserializeBinaryFromReader);
+      msg.setFlags(value);
       break;
     default:
       reader.skipField();
@@ -290,36 +302,51 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.serializeBinaryToWriter = function
   f = message.getMinimumDeposit();
   if (f.length > 0) {
     writer.writeString(
-      11,
+      10,
       f
     );
   }
   f = message.getCValue();
   if (f.length > 0) {
     writer.writeString(
-      12,
+      11,
       f
     );
   }
-  f = message.getNextValsetHash_asU8();
+  f = message.getLastCValue();
   if (f.length > 0) {
-    writer.writeBytes(
-      13,
+    writer.writeString(
+      12,
       f
     );
   }
   f = message.getUnbondingFactor();
   if (f !== 0) {
     writer.writeInt64(
-      14,
+      13,
       f
     );
   }
   f = message.getActive();
   if (f) {
     writer.writeBool(
+      14,
+      f
+    );
+  }
+  f = message.getAutoCompoundFactor();
+  if (f.length > 0) {
+    writer.writeString(
       15,
       f
+    );
+  }
+  f = message.getFlags();
+  if (f != null) {
+    writer.writeMessage(
+      16,
+      f,
+      proto.pstake.liquidstakeibc.v1beta1.HostChainFlags.serializeBinaryToWriter
     );
   }
 };
@@ -565,11 +592,11 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.clearValidatorsList = fu
 
 
 /**
- * optional string minimum_deposit = 11;
+ * optional string minimum_deposit = 10;
  * @return {string}
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getMinimumDeposit = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
 
@@ -578,16 +605,16 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getMinimumDeposit = func
  * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setMinimumDeposit = function(value) {
-  return jspb.Message.setProto3StringField(this, 11, value);
+  return jspb.Message.setProto3StringField(this, 10, value);
 };
 
 
 /**
- * optional string c_value = 12;
+ * optional string c_value = 11;
  * @return {string}
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getCValue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
 
 
@@ -596,58 +623,34 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getCValue = function() {
  * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setCValue = function(value) {
+  return jspb.Message.setProto3StringField(this, 11, value);
+};
+
+
+/**
+ * optional string last_c_value = 12;
+ * @return {string}
+ */
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getLastCValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
+ */
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setLastCValue = function(value) {
   return jspb.Message.setProto3StringField(this, 12, value);
 };
 
 
 /**
- * optional bytes next_valset_hash = 13;
- * @return {string}
- */
-proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getNextValsetHash = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
-};
-
-
-/**
- * optional bytes next_valset_hash = 13;
- * This is a type-conversion wrapper around `getNextValsetHash()`
- * @return {string}
- */
-proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getNextValsetHash_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getNextValsetHash()));
-};
-
-
-/**
- * optional bytes next_valset_hash = 13;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getNextValsetHash()`
- * @return {!Uint8Array}
- */
-proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getNextValsetHash_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getNextValsetHash()));
-};
-
-
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
- */
-proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setNextValsetHash = function(value) {
-  return jspb.Message.setProto3BytesField(this, 13, value);
-};
-
-
-/**
- * optional int64 unbonding_factor = 14;
+ * optional int64 unbonding_factor = 13;
  * @return {number}
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getUnbondingFactor = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 14, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 13, 0));
 };
 
 
@@ -656,16 +659,16 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getUnbondingFactor = fun
  * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setUnbondingFactor = function(value) {
-  return jspb.Message.setProto3IntField(this, 14, value);
+  return jspb.Message.setProto3IntField(this, 13, value);
 };
 
 
 /**
- * optional bool active = 15;
+ * optional bool active = 14;
  * @return {boolean}
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getActive = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 14, false));
 };
 
 
@@ -674,7 +677,62 @@ proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getActive = function() {
  * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
  */
 proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setActive = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 15, value);
+  return jspb.Message.setProto3BooleanField(this, 14, value);
+};
+
+
+/**
+ * optional string auto_compound_factor = 15;
+ * @return {string}
+ */
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getAutoCompoundFactor = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
+ */
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setAutoCompoundFactor = function(value) {
+  return jspb.Message.setProto3StringField(this, 15, value);
+};
+
+
+/**
+ * optional HostChainFlags flags = 16;
+ * @return {?proto.pstake.liquidstakeibc.v1beta1.HostChainFlags}
+ */
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.getFlags = function() {
+  return /** @type{?proto.pstake.liquidstakeibc.v1beta1.HostChainFlags} */ (
+    jspb.Message.getWrapperField(this, proto.pstake.liquidstakeibc.v1beta1.HostChainFlags, 16));
+};
+
+
+/**
+ * @param {?proto.pstake.liquidstakeibc.v1beta1.HostChainFlags|undefined} value
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
+*/
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.setFlags = function(value) {
+  return jspb.Message.setWrapperField(this, 16, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.HostChain} returns this
+ */
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.clearFlags = function() {
+  return this.setFlags(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.pstake.liquidstakeibc.v1beta1.HostChain.prototype.hasFlags = function() {
+  return jspb.Message.getField(this, 16) != null;
 };
 
 

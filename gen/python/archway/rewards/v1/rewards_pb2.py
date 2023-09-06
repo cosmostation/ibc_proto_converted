@@ -22,7 +22,6 @@ _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'archway.rewards.v1.rewards_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'\n\026com.archway.rewards.v1B\014RewardsProtoZ2github.com/archway-network/archway/x/rewards/types\242\002\003ARX\252\002\022Archway.Rewards.V1\312\002\022Archway\\Rewards\\V1\342\002\036Archway\\Rewards\\V1\\GPBMetadata\352\002\024Archway::Rewards::V1'
   _PARAMS.fields_by_name['inflation_rewards_ratio']._options = None

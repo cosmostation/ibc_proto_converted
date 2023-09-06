@@ -16,15 +16,14 @@ from assetmantle.identities.transactions.mutate import message_pb2 as assetmantl
 from assetmantle.identities.transactions.mutate import transaction_response_pb2 as assetmantle_dot_identities_dot_transactions_dot_mutate_dot_transaction__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8assetmantle/identities/transactions/mutate/service.proto\x12\x32\x61ssetmantle.modules.identities.transactions.mutate\x1a\x1cgoogle/api/annotations.proto\x1a\x38\x61ssetmantle/identities/transactions/mutate/message.proto\x1a\x45\x61ssetmantle/identities/transactions/mutate/transaction_response.proto2\xbd\x01\n\x07Service\x12\xb1\x01\n\x06Handle\x12;.assetmantle.modules.identities.transactions.mutate.Message\x1aG.assetmantle.modules.identities.transactions.mutate.TransactionResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/mantle/identities/mutateB\xb4\x02\n6com.assetmantle.modules.identities.transactions.mutateB\x0cServiceProtoP\x01\xa2\x02\x05\x41MITM\xaa\x02\x32\x41ssetmantle.Modules.Identities.Transactions.Mutate\xca\x02\x32\x41ssetmantle\\Modules\\Identities\\Transactions\\Mutate\xe2\x02>Assetmantle\\Modules\\Identities\\Transactions\\Mutate\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Identities::Transactions::Mutateb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8assetmantle/identities/transactions/mutate/service.proto\x12\x32\x61ssetmantle.modules.identities.transactions.mutate\x1a\x1cgoogle/api/annotations.proto\x1a\x38\x61ssetmantle/identities/transactions/mutate/message.proto\x1a\x45\x61ssetmantle/identities/transactions/mutate/transaction_response.proto2\xbd\x01\n\x07Service\x12\xb1\x01\n\x06Handle\x12;.assetmantle.modules.identities.transactions.mutate.Message\x1aG.assetmantle.modules.identities.transactions.mutate.TransactionResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x19/mantle/identities/mutateB\xb2\x02\n6com.assetmantle.modules.identities.transactions.mutateB\x0cServiceProto\xa2\x02\x05\x41MITM\xaa\x02\x32\x41ssetmantle.Modules.Identities.Transactions.Mutate\xca\x02\x32\x41ssetmantle\\Modules\\Identities\\Transactions\\Mutate\xe2\x02>Assetmantle\\Modules\\Identities\\Transactions\\Mutate\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Identities::Transactions::Mutateb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.mutate.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.identities.transactions.mutateB\014ServiceProtoP\001\242\002\005AMITM\252\0022Assetmantle.Modules.Identities.Transactions.Mutate\312\0022Assetmantle\\Modules\\Identities\\Transactions\\Mutate\342\002>Assetmantle\\Modules\\Identities\\Transactions\\Mutate\\GPBMetadata\352\0026Assetmantle::Modules::Identities::Transactions::Mutate'
+  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.identities.transactions.mutateB\014ServiceProto\242\002\005AMITM\252\0022Assetmantle.Modules.Identities.Transactions.Mutate\312\0022Assetmantle\\Modules\\Identities\\Transactions\\Mutate\342\002>Assetmantle\\Modules\\Identities\\Transactions\\Mutate\\GPBMetadata\352\0026Assetmantle::Modules::Identities::Transactions::Mutate'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\033\"\031/mantle/identities/mutate'
   _globals['_SERVICE']._serialized_start=272

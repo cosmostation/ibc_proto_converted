@@ -54,7 +54,7 @@ public final class MultisigProto {
       super(builder);
     }
     private MultiSignature() {
-      signatures_ = java.util.Collections.emptyList();
+      signatures_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -79,7 +79,8 @@ public final class MultisigProto {
 
     public static final int SIGNATURES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> signatures_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <code>repeated bytes signatures = 1 [json_name = "signatures"];</code>
      * @return A list containing the signatures.
@@ -309,7 +310,7 @@ public final class MultisigProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        signatures_ = java.util.Collections.emptyList();
+        signatures_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -336,22 +337,17 @@ public final class MultisigProto {
       @java.lang.Override
       public com.cosmos.crypto.multisig.v1beta1.MultisigProto.MultiSignature buildPartial() {
         com.cosmos.crypto.multisig.v1beta1.MultisigProto.MultiSignature result = new com.cosmos.crypto.multisig.v1beta1.MultisigProto.MultiSignature(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.cosmos.crypto.multisig.v1beta1.MultisigProto.MultiSignature result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          signatures_ = java.util.Collections.unmodifiableList(signatures_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.signatures_ = signatures_;
-      }
-
       private void buildPartial0(com.cosmos.crypto.multisig.v1beta1.MultisigProto.MultiSignature result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          signatures_.makeImmutable();
+          result.signatures_ = signatures_;
+        }
       }
 
       @java.lang.Override
@@ -401,7 +397,8 @@ public final class MultisigProto {
         if (!other.signatures_.isEmpty()) {
           if (signatures_.isEmpty()) {
             signatures_ = other.signatures_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            signatures_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureSignaturesIsMutable();
             signatures_.addAll(other.signatures_);
@@ -457,12 +454,12 @@ public final class MultisigProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.ByteString> signatures_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureSignaturesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          signatures_ = new java.util.ArrayList<com.google.protobuf.ByteString>(signatures_);
-          bitField0_ |= 0x00000001;
+        if (!signatures_.isModifiable()) {
+          signatures_ = makeMutableCopy(signatures_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes signatures = 1 [json_name = "signatures"];</code>
@@ -470,8 +467,8 @@ public final class MultisigProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getSignaturesList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(signatures_) : signatures_;
+        signatures_.makeImmutable();
+        return signatures_;
       }
       /**
        * <code>repeated bytes signatures = 1 [json_name = "signatures"];</code>
@@ -499,6 +496,7 @@ public final class MultisigProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -511,6 +509,7 @@ public final class MultisigProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -524,6 +523,7 @@ public final class MultisigProto {
         ensureSignaturesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, signatures_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -532,7 +532,7 @@ public final class MultisigProto {
        * @return This builder for chaining.
        */
       public Builder clearSignatures() {
-        signatures_ = java.util.Collections.emptyList();
+        signatures_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;

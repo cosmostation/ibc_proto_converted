@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'comdex/liquidation/v1beta1/params.proto\x12\x1a\x63omdex.liquidation.v1beta1\">\n\x06Params\x12\x34\n\x16liquidation_batch_size\x18\x01 \x01(\x04R\x14liquidationBatchSizeB\xee\x01\n\x1e\x63om.comdex.liquidation.v1beta1B\x0bParamsProtoP\x01Z5github.com/comdex-official/comdex/x/liquidation/types\xa2\x02\x03\x43LX\xaa\x02\x1a\x43omdex.Liquidation.V1beta1\xca\x02\x1a\x43omdex\\Liquidation\\V1beta1\xe2\x02&Comdex\\Liquidation\\V1beta1\\GPBMetadata\xea\x02\x1c\x43omdex::Liquidation::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'comdex/liquidation/v1beta1/params.proto\x12\x1a\x63omdex.liquidation.v1beta1\">\n\x06Params\x12\x34\n\x16liquidation_batch_size\x18\x01 \x01(\x04R\x14liquidationBatchSizeB\xec\x01\n\x1e\x63om.comdex.liquidation.v1beta1B\x0bParamsProtoZ5github.com/comdex-official/comdex/x/liquidation/types\xa2\x02\x03\x43LX\xaa\x02\x1a\x43omdex.Liquidation.V1beta1\xca\x02\x1a\x43omdex\\Liquidation\\V1beta1\xe2\x02&Comdex\\Liquidation\\V1beta1\\GPBMetadata\xea\x02\x1c\x43omdex::Liquidation::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.liquidation.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.comdex.liquidation.v1beta1B\013ParamsProtoP\001Z5github.com/comdex-official/comdex/x/liquidation/types\242\002\003CLX\252\002\032Comdex.Liquidation.V1beta1\312\002\032Comdex\\Liquidation\\V1beta1\342\002&Comdex\\Liquidation\\V1beta1\\GPBMetadata\352\002\034Comdex::Liquidation::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\036com.comdex.liquidation.v1beta1B\013ParamsProtoZ5github.com/comdex-official/comdex/x/liquidation/types\242\002\003CLX\252\002\032Comdex.Liquidation.V1beta1\312\002\032Comdex\\Liquidation\\V1beta1\342\002&Comdex\\Liquidation\\V1beta1\\GPBMetadata\352\002\034Comdex::Liquidation::V1beta1'
   _globals['_PARAMS']._serialized_start=71
   _globals['_PARAMS']._serialized_end=133
 # @@protoc_insertion_point(module_scope)

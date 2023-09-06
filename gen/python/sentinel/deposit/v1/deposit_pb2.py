@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!sentinel/deposit/v1/deposit.proto\x12\x13sentinel.deposit.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x86\x01\n\x07\x44\x65posit\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x61\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oinsB\xcf\x01\n\x17\x63om.sentinel.deposit.v1B\x0c\x44\x65positProtoP\x01Z0github.com/sentinel-official/hub/x/deposit/types\xa2\x02\x03SDX\xaa\x02\x13Sentinel.Deposit.V1\xca\x02\x13Sentinel\\Deposit\\V1\xe2\x02\x1fSentinel\\Deposit\\V1\\GPBMetadata\xea\x02\x15Sentinel::Deposit::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!sentinel/deposit/v1/deposit.proto\x12\x13sentinel.deposit.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"\x86\x01\n\x07\x44\x65posit\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12\x61\n\x05\x63oins\x18\x02 \x03(\x0b\x32\x19.cosmos.base.v1beta1.CoinB0\xc8\xde\x1f\x00\xaa\xdf\x1f(github.com/cosmos/cosmos-sdk/types.CoinsR\x05\x63oinsB\xcd\x01\n\x17\x63om.sentinel.deposit.v1B\x0c\x44\x65positProtoZ0github.com/sentinel-official/hub/x/deposit/types\xa2\x02\x03SDX\xaa\x02\x13Sentinel.Deposit.V1\xca\x02\x13Sentinel\\Deposit\\V1\xe2\x02\x1fSentinel\\Deposit\\V1\\GPBMetadata\xea\x02\x15Sentinel::Deposit::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.deposit.v1.deposit_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.deposit.v1B\014DepositProtoP\001Z0github.com/sentinel-official/hub/x/deposit/types\242\002\003SDX\252\002\023Sentinel.Deposit.V1\312\002\023Sentinel\\Deposit\\V1\342\002\037Sentinel\\Deposit\\V1\\GPBMetadata\352\002\025Sentinel::Deposit::V1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\027com.sentinel.deposit.v1B\014DepositProtoZ0github.com/sentinel-official/hub/x/deposit/types\242\002\003SDX\252\002\023Sentinel.Deposit.V1\312\002\023Sentinel\\Deposit\\V1\342\002\037Sentinel\\Deposit\\V1\\GPBMetadata\352\002\025Sentinel::Deposit::V1\310\341\036\000\250\342\036\000'
   _DEPOSIT.fields_by_name['coins']._options = None
   _DEPOSIT.fields_by_name['coins']._serialized_options = b'\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types.Coins'
   _globals['_DEPOSIT']._serialized_start=113

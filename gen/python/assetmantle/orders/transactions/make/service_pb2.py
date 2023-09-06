@@ -16,15 +16,14 @@ from assetmantle.orders.transactions.make import message_pb2 as assetmantle_dot_
 from assetmantle.orders.transactions.make import transaction_response_pb2 as assetmantle_dot_orders_dot_transactions_dot_make_dot_transaction__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/orders/transactions/make/service.proto\x12,assetmantle.modules.orders.transactions.make\x1a\x1cgoogle/api/annotations.proto\x1a\x32\x61ssetmantle/orders/transactions/make/message.proto\x1a?assetmantle/orders/transactions/make/transaction_response.proto2\xab\x01\n\x07Service\x12\x9f\x01\n\x06Handle\x12\x35.assetmantle.modules.orders.transactions.make.Message\x1a\x41.assetmantle.modules.orders.transactions.make.TransactionResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/mantle/orders/makeB\x96\x02\n0com.assetmantle.modules.orders.transactions.makeB\x0cServiceProtoP\x01\xa2\x02\x05\x41MOTM\xaa\x02,Assetmantle.Modules.Orders.Transactions.Make\xca\x02,Assetmantle\\Modules\\Orders\\Transactions\\Make\xe2\x02\x38\x41ssetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Orders::Transactions::Makeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2assetmantle/orders/transactions/make/service.proto\x12,assetmantle.modules.orders.transactions.make\x1a\x1cgoogle/api/annotations.proto\x1a\x32\x61ssetmantle/orders/transactions/make/message.proto\x1a?assetmantle/orders/transactions/make/transaction_response.proto2\xab\x01\n\x07Service\x12\x9f\x01\n\x06Handle\x12\x35.assetmantle.modules.orders.transactions.make.Message\x1a\x41.assetmantle.modules.orders.transactions.make.TransactionResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x13/mantle/orders/makeB\x94\x02\n0com.assetmantle.modules.orders.transactions.makeB\x0cServiceProto\xa2\x02\x05\x41MOTM\xaa\x02,Assetmantle.Modules.Orders.Transactions.Make\xca\x02,Assetmantle\\Modules\\Orders\\Transactions\\Make\xe2\x02\x38\x41ssetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Orders::Transactions::Makeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.transactions.make.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.orders.transactions.makeB\014ServiceProtoP\001\242\002\005AMOTM\252\002,Assetmantle.Modules.Orders.Transactions.Make\312\002,Assetmantle\\Modules\\Orders\\Transactions\\Make\342\0028Assetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\352\0020Assetmantle::Modules::Orders::Transactions::Make'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.orders.transactions.makeB\014ServiceProto\242\002\005AMOTM\252\002,Assetmantle.Modules.Orders.Transactions.Make\312\002,Assetmantle\\Modules\\Orders\\Transactions\\Make\342\0028Assetmantle\\Modules\\Orders\\Transactions\\Make\\GPBMetadata\352\0020Assetmantle::Modules::Orders::Transactions::Make'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\025\"\023/mantle/orders/make'
   _globals['_SERVICE']._serialized_start=248

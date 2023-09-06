@@ -15,15 +15,14 @@ from canto.erc20.v1 import erc20_pb2 as canto_dot_erc20_dot_v1_dot_erc20__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63\x61nto/erc20/v1/genesis.proto\x12\x0e\x63\x61nto.erc20.v1\x1a\x1a\x63\x61nto/erc20/v1/erc20.proto\x1a\x14gogoproto/gogo.proto\"\x86\x01\n\x0cGenesisState\x12\x34\n\x06params\x18\x01 \x01(\x0b\x32\x16.canto.erc20.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12@\n\x0btoken_pairs\x18\x02 \x03(\x0b\x32\x19.canto.erc20.v1.TokenPairB\x04\xc8\xde\x1f\x00R\ntokenPairs\"f\n\x06Params\x12!\n\x0c\x65nable_erc20\x18\x01 \x01(\x08R\x0b\x65nableErc20\x12\x39\n\x0f\x65nable_evm_hook\x18\x02 \x01(\x08\x42\x11\xe2\xde\x1f\rEnableEVMHookR\renableEvmHookB\xad\x01\n\x12\x63om.canto.erc20.v1B\x0cGenesisProtoP\x01Z/github.com/Canto-Network/Canto/v6/x/erc20/types\xa2\x02\x03\x43\x45X\xaa\x02\x0e\x43\x61nto.Erc20.V1\xca\x02\x0e\x43\x61nto\\Erc20\\V1\xe2\x02\x1a\x43\x61nto\\Erc20\\V1\\GPBMetadata\xea\x02\x10\x43\x61nto::Erc20::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x63\x61nto/erc20/v1/genesis.proto\x12\x0e\x63\x61nto.erc20.v1\x1a\x1a\x63\x61nto/erc20/v1/erc20.proto\x1a\x14gogoproto/gogo.proto\"\x86\x01\n\x0cGenesisState\x12\x34\n\x06params\x18\x01 \x01(\x0b\x32\x16.canto.erc20.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12@\n\x0btoken_pairs\x18\x02 \x03(\x0b\x32\x19.canto.erc20.v1.TokenPairB\x04\xc8\xde\x1f\x00R\ntokenPairs\"f\n\x06Params\x12!\n\x0c\x65nable_erc20\x18\x01 \x01(\x08R\x0b\x65nableErc20\x12\x39\n\x0f\x65nable_evm_hook\x18\x02 \x01(\x08\x42\x11\xe2\xde\x1f\rEnableEVMHookR\renableEvmHookB\xab\x01\n\x12\x63om.canto.erc20.v1B\x0cGenesisProtoZ/github.com/Canto-Network/Canto/v6/x/erc20/types\xa2\x02\x03\x43\x45X\xaa\x02\x0e\x43\x61nto.Erc20.V1\xca\x02\x0e\x43\x61nto\\Erc20\\V1\xe2\x02\x1a\x43\x61nto\\Erc20\\V1\\GPBMetadata\xea\x02\x10\x43\x61nto::Erc20::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'canto.erc20.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.canto.erc20.v1B\014GenesisProtoP\001Z/github.com/Canto-Network/Canto/v6/x/erc20/types\242\002\003CEX\252\002\016Canto.Erc20.V1\312\002\016Canto\\Erc20\\V1\342\002\032Canto\\Erc20\\V1\\GPBMetadata\352\002\020Canto::Erc20::V1'
+  DESCRIPTOR._serialized_options = b'\n\022com.canto.erc20.v1B\014GenesisProtoZ/github.com/Canto-Network/Canto/v6/x/erc20/types\242\002\003CEX\252\002\016Canto.Erc20.V1\312\002\016Canto\\Erc20\\V1\342\002\032Canto\\Erc20\\V1\\GPBMetadata\352\002\020Canto::Erc20::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['token_pairs']._options = None

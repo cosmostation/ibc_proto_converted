@@ -9,6 +9,7 @@ var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
 var cosmos_msg_v1_msg_pb = require('../../../cosmos/msg/v1/msg_pb.js');
 var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');
 var pstake_liquidstakeibc_v1beta1_liquidstakeibc_pb = require('../../../pstake/liquidstakeibc/v1beta1/liquidstakeibc_pb.js');
+var pstake_liquidstakeibc_v1beta1_params_pb = require('../../../pstake/liquidstakeibc/v1beta1/params_pb.js');
 
 function serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStake(arg) {
   if (!(arg instanceof pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStake)) {
@@ -19,6 +20,28 @@ function serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStake(arg) {
 
 function deserialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStake(buffer_arg) {
   return pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStake.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSM(arg) {
+  if (!(arg instanceof pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStakeLSM)) {
+    throw new Error('Expected argument of type pstake.liquidstakeibc.v1beta1.MsgLiquidStakeLSM');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSM(buffer_arg) {
+  return pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStakeLSM.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSMResponse(arg) {
+  if (!(arg instanceof pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStakeLSMResponse)) {
+    throw new Error('Expected argument of type pstake.liquidstakeibc.v1beta1.MsgLiquidStakeLSMResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSMResponse(buffer_arg) {
+  return pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStakeLSMResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeResponse(arg) {
@@ -120,6 +143,28 @@ function deserialize_pstake_liquidstakeibc_v1beta1_MsgUpdateHostChainResponse(bu
   return pstake_liquidstakeibc_v1beta1_msgs_pb.MsgUpdateHostChainResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParams(arg) {
+  if (!(arg instanceof pstake_liquidstakeibc_v1beta1_msgs_pb.MsgUpdateParams)) {
+    throw new Error('Expected argument of type pstake.liquidstakeibc.v1beta1.MsgUpdateParams');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParams(buffer_arg) {
+  return pstake_liquidstakeibc_v1beta1_msgs_pb.MsgUpdateParams.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParamsResponse(arg) {
+  if (!(arg instanceof pstake_liquidstakeibc_v1beta1_msgs_pb.MsgUpdateParamsResponse)) {
+    throw new Error('Expected argument of type pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParamsResponse(buffer_arg) {
+  return pstake_liquidstakeibc_v1beta1_msgs_pb.MsgUpdateParamsResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 
 // Msg defines the liquidstakeibc services.
 var MsgService = exports.MsgService = {
@@ -156,6 +201,17 @@ var MsgService = exports.MsgService = {
     responseSerialize: serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeResponse,
     responseDeserialize: deserialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeResponse,
   },
+  liquidStakeLSM: {
+    path: '/pstake.liquidstakeibc.v1beta1.Msg/LiquidStakeLSM',
+    requestStream: false,
+    responseStream: false,
+    requestType: pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStakeLSM,
+    responseType: pstake_liquidstakeibc_v1beta1_msgs_pb.MsgLiquidStakeLSMResponse,
+    requestSerialize: serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSM,
+    requestDeserialize: deserialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSM,
+    responseSerialize: serialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSMResponse,
+    responseDeserialize: deserialize_pstake_liquidstakeibc_v1beta1_MsgLiquidStakeLSMResponse,
+  },
   liquidUnstake: {
     path: '/pstake.liquidstakeibc.v1beta1.Msg/LiquidUnstake',
     requestStream: false,
@@ -177,6 +233,17 @@ var MsgService = exports.MsgService = {
     requestDeserialize: deserialize_pstake_liquidstakeibc_v1beta1_MsgRedeem,
     responseSerialize: serialize_pstake_liquidstakeibc_v1beta1_MsgRedeemResponse,
     responseDeserialize: deserialize_pstake_liquidstakeibc_v1beta1_MsgRedeemResponse,
+  },
+  updateParams: {
+    path: '/pstake.liquidstakeibc.v1beta1.Msg/UpdateParams',
+    requestStream: false,
+    responseStream: false,
+    requestType: pstake_liquidstakeibc_v1beta1_msgs_pb.MsgUpdateParams,
+    responseType: pstake_liquidstakeibc_v1beta1_msgs_pb.MsgUpdateParamsResponse,
+    requestSerialize: serialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParams,
+    requestDeserialize: deserialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParams,
+    responseSerialize: serialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParamsResponse,
+    responseDeserialize: deserialize_pstake_liquidstakeibc_v1beta1_MsgUpdateParamsResponse,
   },
 };
 

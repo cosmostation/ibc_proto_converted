@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from provenance.attribute.v1 import attribute_pb2 as provenance_dot_attribute_dot_v1_dot_attribute__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%provenance/attribute/v1/genesis.proto\x12\x17provenance.attribute.v1\x1a\x14gogoproto/gogo.proto\x1a\'provenance/attribute/v1/attribute.proto\"\xa1\x01\n\x0cGenesisState\x12=\n\x06params\x18\x01 \x01(\x0b\x32\x1f.provenance.attribute.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12H\n\nattributes\x18\x02 \x03(\x0b\x32\".provenance.attribute.v1.AttributeB\x04\xc8\xde\x1f\x00R\nattributes:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xe0\x01\n\x1b\x63om.provenance.attribute.v1B\x0cGenesisProtoP\x01Z5github.com/provenance-io/provenance/x/attribute/types\xa2\x02\x03PAX\xaa\x02\x17Provenance.Attribute.V1\xca\x02\x17Provenance\\Attribute\\V1\xe2\x02#Provenance\\Attribute\\V1\\GPBMetadata\xea\x02\x19Provenance::Attribute::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%provenance/attribute/v1/genesis.proto\x12\x17provenance.attribute.v1\x1a\x14gogoproto/gogo.proto\x1a\'provenance/attribute/v1/attribute.proto\"\xa1\x01\n\x0cGenesisState\x12=\n\x06params\x18\x01 \x01(\x0b\x32\x1f.provenance.attribute.v1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12H\n\nattributes\x18\x02 \x03(\x0b\x32\".provenance.attribute.v1.AttributeB\x04\xc8\xde\x1f\x00R\nattributes:\x08\x88\xa0\x1f\x00\xe8\xa0\x1f\x00\x42\xe0\x01\n\x1b\x63om.provenance.attribute.v1B\x0cGenesisProtoP\x00Z5github.com/provenance-io/provenance/x/attribute/types\xa2\x02\x03PAX\xaa\x02\x17Provenance.Attribute.V1\xca\x02\x17Provenance\\Attribute\\V1\xe2\x02#Provenance\\Attribute\\V1\\GPBMetadata\xea\x02\x19Provenance::Attribute::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'provenance.attribute.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\033com.provenance.attribute.v1B\014GenesisProtoP\001Z5github.com/provenance-io/provenance/x/attribute/types\242\002\003PAX\252\002\027Provenance.Attribute.V1\312\002\027Provenance\\Attribute\\V1\342\002#Provenance\\Attribute\\V1\\GPBMetadata\352\002\031Provenance::Attribute::V1'
+  DESCRIPTOR._serialized_options = b'\n\033com.provenance.attribute.v1B\014GenesisProtoP\000Z5github.com/provenance-io/provenance/x/attribute/types\242\002\003PAX\252\002\027Provenance.Attribute.V1\312\002\027Provenance\\Attribute\\V1\342\002#Provenance\\Attribute\\V1\\GPBMetadata\352\002\031Provenance::Attribute::V1'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['attributes']._options = None

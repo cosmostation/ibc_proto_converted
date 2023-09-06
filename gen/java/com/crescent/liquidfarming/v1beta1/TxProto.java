@@ -91,6 +91,7 @@ public final class TxProto {
               com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -149,7 +150,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasFarmingCoin() {
-      return farmingCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin farming_coin = 3 [json_name = "farmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -187,7 +188,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmer_);
       }
-      if (farmingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getFarmingCoin());
       }
       getUnknownFields().writeTo(output);
@@ -206,7 +207,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmer_);
       }
-      if (farmingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFarmingCoin());
       }
@@ -377,13 +378,19 @@ public final class TxProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidFarm.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFarmingCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -435,11 +442,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.farmer_ = farmer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.farmingCoin_ = farmingCoinBuilder_ == null
               ? farmingCoin_
               : farmingCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -727,8 +737,10 @@ public final class TxProto {
         } else {
           farmingCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (farmingCoin_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1325,6 +1337,7 @@ public final class TxProto {
               com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -1383,7 +1396,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasUnfarmingCoin() {
-      return unfarmingCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1421,7 +1434,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmer_);
       }
-      if (unfarmingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getUnfarmingCoin());
       }
       getUnknownFields().writeTo(output);
@@ -1440,7 +1453,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmer_);
       }
-      if (unfarmingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUnfarmingCoin());
       }
@@ -1611,13 +1624,19 @@ public final class TxProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarm.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnfarmingCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1669,11 +1688,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.farmer_ = farmer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.unfarmingCoin_ = unfarmingCoinBuilder_ == null
               ? unfarmingCoin_
               : unfarmingCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1961,8 +1983,10 @@ public final class TxProto {
         } else {
           unfarmingCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (unfarmingCoin_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2559,6 +2583,7 @@ public final class TxProto {
               com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.Builder.class);
     }
 
+    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -2617,7 +2642,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasUnfarmingCoin() {
-      return unfarmingCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin unfarming_coin = 3 [json_name = "unfarmingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2655,7 +2680,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmer_);
       }
-      if (unfarmingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getUnfarmingCoin());
       }
       getUnknownFields().writeTo(output);
@@ -2674,7 +2699,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmer_);
       }
-      if (unfarmingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUnfarmingCoin());
       }
@@ -2845,13 +2870,19 @@ public final class TxProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgLiquidUnfarmAndWithdraw.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUnfarmingCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2903,11 +2934,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.farmer_ = farmer_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.unfarmingCoin_ = unfarmingCoinBuilder_ == null
               ? unfarmingCoin_
               : unfarmingCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3195,8 +3229,10 @@ public final class TxProto {
         } else {
           unfarmingCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (unfarmingCoin_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3799,6 +3835,7 @@ public final class TxProto {
               com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.class, com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.Builder.class);
     }
 
+    private int bitField0_;
     public static final int AUCTION_ID_FIELD_NUMBER = 1;
     private long auctionId_ = 0L;
     /**
@@ -3868,7 +3905,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBiddingCoin() {
-      return biddingCoin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin bidding_coin = 4 [json_name = "biddingCoin", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -3909,7 +3946,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bidder_);
       }
-      if (biddingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getBiddingCoin());
       }
       getUnknownFields().writeTo(output);
@@ -3932,7 +3969,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bidder_);
       }
-      if (biddingCoin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBiddingCoin());
       }
@@ -4108,13 +4145,19 @@ public final class TxProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.TxProto.MsgPlaceBid.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBiddingCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4170,11 +4213,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.bidder_ = bidder_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.biddingCoin_ = biddingCoinBuilder_ == null
               ? biddingCoin_
               : biddingCoinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4502,8 +4548,10 @@ public final class TxProto {
         } else {
           biddingCoinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (biddingCoin_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

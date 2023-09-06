@@ -80,7 +80,8 @@ proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain.toObject = function(inc
     portId: jspb.Message.getFieldWithDefault(msg, 8, ""),
     hostDenom: jspb.Message.getFieldWithDefault(msg, 9, ""),
     minimumDeposit: jspb.Message.getFieldWithDefault(msg, 10, ""),
-    unbondingFactor: jspb.Message.getFieldWithDefault(msg, 11, 0)
+    unbondingFactor: jspb.Message.getFieldWithDefault(msg, 11, 0),
+    autoCompoundFactor: jspb.Message.getFieldWithDefault(msg, 12, 0)
   };
 
   if (includeInstance) {
@@ -160,6 +161,10 @@ proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain.deserializeBinaryFromRe
     case 11:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setUnbondingFactor(value);
+      break;
+    case 12:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setAutoCompoundFactor(value);
       break;
     default:
       reader.skipField();
@@ -264,6 +269,13 @@ proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain.serializeBinaryToWriter
   if (f !== 0) {
     writer.writeInt64(
       11,
+      f
+    );
+  }
+  f = message.getAutoCompoundFactor();
+  if (f !== 0) {
+    writer.writeInt64(
+      12,
       f
     );
   }
@@ -465,6 +477,24 @@ proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain.prototype.getUnbondingF
  */
 proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain.prototype.setUnbondingFactor = function(value) {
   return jspb.Message.setProto3IntField(this, 11, value);
+};
+
+
+/**
+ * optional int64 auto_compound_factor = 12;
+ * @return {number}
+ */
+proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain.prototype.getAutoCompoundFactor = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain} returns this
+ */
+proto.pstake.liquidstakeibc.v1beta1.MsgRegisterHostChain.prototype.setAutoCompoundFactor = function(value) {
+  return jspb.Message.setProto3IntField(this, 12, value);
 };
 
 

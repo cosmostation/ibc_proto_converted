@@ -16,15 +16,14 @@ from axelar.reward.v1beta1 import params_pb2 as axelar_dot_reward_dot_v1beta1_do
 from axelar.reward.v1beta1 import types_pb2 as axelar_dot_reward_dot_v1beta1_dot_types__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#axelar/reward/v1beta1/genesis.proto\x12\x15\x61xelar.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"axelar/reward/v1beta1/params.proto\x1a!axelar/reward/v1beta1/types.proto\"\x84\x01\n\x0cGenesisState\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.axelar.reward.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x37\n\x05pools\x18\x02 \x03(\x0b\x32\x1b.axelar.reward.v1beta1.PoolB\x04\xc8\xde\x1f\x00R\x05poolsB\xd8\x01\n\x19\x63om.axelar.reward.v1beta1B\x0cGenesisProtoP\x01Z3github.com/axelarnetwork/axelar-core/x/reward/types\xa2\x02\x03\x41RX\xaa\x02\x15\x41xelar.Reward.V1beta1\xca\x02\x15\x41xelar\\Reward\\V1beta1\xe2\x02!Axelar\\Reward\\V1beta1\\GPBMetadata\xea\x02\x17\x41xelar::Reward::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#axelar/reward/v1beta1/genesis.proto\x12\x15\x61xelar.reward.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\"axelar/reward/v1beta1/params.proto\x1a!axelar/reward/v1beta1/types.proto\"\x84\x01\n\x0cGenesisState\x12;\n\x06params\x18\x01 \x01(\x0b\x32\x1d.axelar.reward.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params\x12\x37\n\x05pools\x18\x02 \x03(\x0b\x32\x1b.axelar.reward.v1beta1.PoolB\x04\xc8\xde\x1f\x00R\x05poolsB\xd6\x01\n\x19\x63om.axelar.reward.v1beta1B\x0cGenesisProtoZ3github.com/axelarnetwork/axelar-core/x/reward/types\xa2\x02\x03\x41RX\xaa\x02\x15\x41xelar.Reward.V1beta1\xca\x02\x15\x41xelar\\Reward\\V1beta1\xe2\x02!Axelar\\Reward\\V1beta1\\GPBMetadata\xea\x02\x17\x41xelar::Reward::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'axelar.reward.v1beta1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.axelar.reward.v1beta1B\014GenesisProtoP\001Z3github.com/axelarnetwork/axelar-core/x/reward/types\242\002\003ARX\252\002\025Axelar.Reward.V1beta1\312\002\025Axelar\\Reward\\V1beta1\342\002!Axelar\\Reward\\V1beta1\\GPBMetadata\352\002\027Axelar::Reward::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\031com.axelar.reward.v1beta1B\014GenesisProtoZ3github.com/axelarnetwork/axelar-core/x/reward/types\242\002\003ARX\252\002\025Axelar.Reward.V1beta1\312\002\025Axelar\\Reward\\V1beta1\342\002!Axelar\\Reward\\V1beta1\\GPBMetadata\352\002\027Axelar::Reward::V1beta1\310\341\036\000'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _GENESISSTATE.fields_by_name['pools']._options = None

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos.app.v1alpha1 import module_pb2 as cosmos_dot_app_dot_v1alpha1_dot_module__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'cosmos/orm/module/v1alpha1/module.proto\x12\x1a\x63osmos.orm.module.v1alpha1\x1a cosmos/app/v1alpha1/module.proto\"\"\n\x06Module:\x18\xba\xc0\x96\xda\x01\x12\n\x10\x63osmossdk.io/ormB\xb8\x01\n\x1e\x63om.cosmos.orm.module.v1alpha1B\x0bModuleProtoP\x01\xa2\x02\x03\x43OM\xaa\x02\x1a\x43osmos.Orm.Module.V1alpha1\xca\x02\x1a\x43osmos\\Orm\\Module\\V1alpha1\xe2\x02&Cosmos\\Orm\\Module\\V1alpha1\\GPBMetadata\xea\x02\x1d\x43osmos::Orm::Module::V1alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'cosmos/orm/module/v1alpha1/module.proto\x12\x1a\x63osmos.orm.module.v1alpha1\x1a cosmos/app/v1alpha1/module.proto\"\"\n\x06Module:\x18\xba\xc0\x96\xda\x01\x12\n\x10\x63osmossdk.io/ormB\xb6\x01\n\x1e\x63om.cosmos.orm.module.v1alpha1B\x0bModuleProto\xa2\x02\x03\x43OM\xaa\x02\x1a\x43osmos.Orm.Module.V1alpha1\xca\x02\x1a\x43osmos\\Orm\\Module\\V1alpha1\xe2\x02&Cosmos\\Orm\\Module\\V1alpha1\\GPBMetadata\xea\x02\x1d\x43osmos::Orm::Module::V1alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.orm.module.v1alpha1.module_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.cosmos.orm.module.v1alpha1B\013ModuleProtoP\001\242\002\003COM\252\002\032Cosmos.Orm.Module.V1alpha1\312\002\032Cosmos\\Orm\\Module\\V1alpha1\342\002&Cosmos\\Orm\\Module\\V1alpha1\\GPBMetadata\352\002\035Cosmos::Orm::Module::V1alpha1'
+  DESCRIPTOR._serialized_options = b'\n\036com.cosmos.orm.module.v1alpha1B\013ModuleProto\242\002\003COM\252\002\032Cosmos.Orm.Module.V1alpha1\312\002\032Cosmos\\Orm\\Module\\V1alpha1\342\002&Cosmos\\Orm\\Module\\V1alpha1\\GPBMetadata\352\002\035Cosmos::Orm::Module::V1alpha1'
   _MODULE._options = None
   _MODULE._serialized_options = b'\272\300\226\332\001\022\n\020cosmossdk.io/orm'
   _globals['_MODULE']._serialized_start=105

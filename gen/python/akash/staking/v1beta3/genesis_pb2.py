@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from akash.staking.v1beta3 import params_pb2 as akash_dot_staking_dot_v1beta3_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#akash/staking/v1beta3/genesis.proto\x12\x15\x61kash.staking.v1beta3\x1a\x14gogoproto/gogo.proto\x1a\"akash/staking/v1beta3/params.proto\"f\n\x0cGenesisState\x12V\n\x06params\x18\x01 \x01(\x0b\x32\x1d.akash.staking.v1beta3.ParamsB\x1f\xc8\xde\x1f\x00\xea\xde\x1f\x06params\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xdb\x01\n\x19\x63om.akash.staking.v1beta3B\x0cGenesisProtoP\x01Z:github.com/akash-network/akash-api/go/node/staking/v1beta3\xa2\x02\x03\x41SX\xaa\x02\x15\x41kash.Staking.V1beta3\xca\x02\x15\x41kash\\Staking\\V1beta3\xe2\x02!Akash\\Staking\\V1beta3\\GPBMetadata\xea\x02\x17\x41kash::Staking::V1beta3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#akash/staking/v1beta3/genesis.proto\x12\x15\x61kash.staking.v1beta3\x1a\x14gogoproto/gogo.proto\x1a\"akash/staking/v1beta3/params.proto\"f\n\x0cGenesisState\x12V\n\x06params\x18\x01 \x01(\x0b\x32\x1d.akash.staking.v1beta3.ParamsB\x1f\xc8\xde\x1f\x00\xea\xde\x1f\x06params\xf2\xde\x1f\ryaml:\"params\"R\x06paramsB\xd9\x01\n\x19\x63om.akash.staking.v1beta3B\x0cGenesisProtoZ:github.com/akash-network/akash-api/go/node/staking/v1beta3\xa2\x02\x03\x41SX\xaa\x02\x15\x41kash.Staking.V1beta3\xca\x02\x15\x41kash\\Staking\\V1beta3\xe2\x02!Akash\\Staking\\V1beta3\\GPBMetadata\xea\x02\x17\x41kash::Staking::V1beta3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.staking.v1beta3.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.akash.staking.v1beta3B\014GenesisProtoP\001Z:github.com/akash-network/akash-api/go/node/staking/v1beta3\242\002\003ASX\252\002\025Akash.Staking.V1beta3\312\002\025Akash\\Staking\\V1beta3\342\002!Akash\\Staking\\V1beta3\\GPBMetadata\352\002\027Akash::Staking::V1beta3'
+  DESCRIPTOR._serialized_options = b'\n\031com.akash.staking.v1beta3B\014GenesisProtoZ:github.com/akash-network/akash-api/go/node/staking/v1beta3\242\002\003ASX\252\002\025Akash.Staking.V1beta3\312\002\025Akash\\Staking\\V1beta3\342\002!Akash\\Staking\\V1beta3\\GPBMetadata\352\002\027Akash::Staking::V1beta3'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000\352\336\037\006params\362\336\037\ryaml:\"params\"'
   _globals['_GENESISSTATE']._serialized_start=120

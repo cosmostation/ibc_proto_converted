@@ -389,6 +389,7 @@ public final class ModelsAppLinksProto {
               com.desmos.profiles.v1beta1.ModelsAppLinksProto.ApplicationLink.class, com.desmos.profiles.v1beta1.ModelsAppLinksProto.ApplicationLink.Builder.class);
     }
 
+    private int bitField0_;
     public static final int USER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object user_ = "";
@@ -448,7 +449,7 @@ public final class ModelsAppLinksProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return data_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -512,7 +513,7 @@ public final class ModelsAppLinksProto {
      */
     @java.lang.Override
     public boolean hasOracleRequest() {
-      return oracleRequest_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -551,7 +552,7 @@ public final class ModelsAppLinksProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return result_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -591,7 +592,7 @@ public final class ModelsAppLinksProto {
      */
     @java.lang.Override
     public boolean hasCreationTime() {
-      return creationTime_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -634,19 +635,19 @@ public final class ModelsAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, user_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getData());
       }
       if (state_ != com.desmos.profiles.v1beta1.ModelsAppLinksProto.ApplicationLinkState.APPLICATION_LINK_STATE_INITIALIZED_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, state_);
       }
-      if (oracleRequest_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getOracleRequest());
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(5, getResult());
       }
-      if (creationTime_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(6, getCreationTime());
       }
       getUnknownFields().writeTo(output);
@@ -661,7 +662,7 @@ public final class ModelsAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, user_);
       }
-      if (data_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getData());
       }
@@ -669,15 +670,15 @@ public final class ModelsAppLinksProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, state_);
       }
-      if (oracleRequest_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOracleRequest());
       }
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getResult());
       }
-      if (creationTime_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCreationTime());
       }
@@ -873,13 +874,22 @@ public final class ModelsAppLinksProto {
 
       // Construct using com.desmos.profiles.v1beta1.ModelsAppLinksProto.ApplicationLink.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataFieldBuilder();
+          getOracleRequestFieldBuilder();
+          getResultFieldBuilder();
+          getCreationTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -943,10 +953,12 @@ public final class ModelsAppLinksProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.user_ = user_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.state_ = state_;
@@ -955,17 +967,21 @@ public final class ModelsAppLinksProto {
           result.oracleRequest_ = oracleRequestBuilder_ == null
               ? oracleRequest_
               : oracleRequestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.creationTime_ = creationTimeBuilder_ == null
               ? creationTime_
               : creationTimeBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1291,8 +1307,10 @@ public final class ModelsAppLinksProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (data_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1519,8 +1537,10 @@ public final class ModelsAppLinksProto {
         } else {
           oracleRequestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (oracleRequest_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1679,8 +1699,10 @@ public final class ModelsAppLinksProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (result_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1838,8 +1860,10 @@ public final class ModelsAppLinksProto {
         } else {
           creationTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (creationTime_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3655,6 +3679,7 @@ public final class ModelsAppLinksProto {
 
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -3697,7 +3722,7 @@ public final class ModelsAppLinksProto {
      */
     @java.lang.Override
     public boolean hasCallData() {
-      return callData_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3790,7 +3815,7 @@ public final class ModelsAppLinksProto {
       if (oracleScriptId_ != 0L) {
         output.writeUInt64(2, oracleScriptId_);
       }
-      if (callData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getCallData());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
@@ -3813,7 +3838,7 @@ public final class ModelsAppLinksProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, oracleScriptId_);
       }
-      if (callData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCallData());
       }
@@ -3993,13 +4018,19 @@ public final class ModelsAppLinksProto {
 
       // Construct using com.desmos.profiles.v1beta1.ModelsAppLinksProto.OracleRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCallDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4052,14 +4083,17 @@ public final class ModelsAppLinksProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.oracleScriptId_ = oracleScriptId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.callData_ = callDataBuilder_ == null
               ? callData_
               : callDataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.clientId_ = clientId_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4359,8 +4393,10 @@ public final class ModelsAppLinksProto {
         } else {
           callDataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (callData_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

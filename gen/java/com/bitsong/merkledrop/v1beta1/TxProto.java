@@ -142,6 +142,7 @@ public final class TxProto {
               com.bitsong.merkledrop.v1beta1.TxProto.MsgCreate.class, com.bitsong.merkledrop.v1beta1.TxProto.MsgCreate.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -278,7 +279,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return coin_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -330,7 +331,7 @@ public final class TxProto {
       if (endHeight_ != 0L) {
         output.writeInt64(4, endHeight_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -356,7 +357,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, endHeight_);
       }
-      if (coin_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCoin());
       }
@@ -532,13 +533,19 @@ public final class TxProto {
 
       // Construct using com.bitsong.merkledrop.v1beta1.TxProto.MsgCreate.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCoinFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -598,11 +605,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.endHeight_ = endHeight_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1096,8 +1106,10 @@ public final class TxProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (coin_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**

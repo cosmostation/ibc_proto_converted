@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import order_id_pb2 as assetmantle_dot_ids_dot_base_dot_order__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4assetmantle/orders/queries/order/query_request.proto\x12(assetmantle.modules.orders.queries.order\x1a#assetmantle/ids/base/order_id.proto\"P\n\x0cQueryRequest\x12@\n\torder_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.OrderIDR\x07orderIDB\x87\x02\n,com.assetmantle.modules.orders.queries.orderB\x11QueryRequestProtoP\x01\xa2\x02\x05\x41MOQO\xaa\x02(Assetmantle.Modules.Orders.Queries.Order\xca\x02(Assetmantle\\Modules\\Orders\\Queries\\Order\xe2\x02\x34\x41ssetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\xea\x02,Assetmantle::Modules::Orders::Queries::Orderb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4assetmantle/orders/queries/order/query_request.proto\x12(assetmantle.modules.orders.queries.order\x1a#assetmantle/ids/base/order_id.proto\"P\n\x0cQueryRequest\x12@\n\torder_i_d\x18\x01 \x01(\x0b\x32$.assetmantle.schema.ids.base.OrderIDR\x07orderIDB\x85\x02\n,com.assetmantle.modules.orders.queries.orderB\x11QueryRequestProto\xa2\x02\x05\x41MOQO\xaa\x02(Assetmantle.Modules.Orders.Queries.Order\xca\x02(Assetmantle\\Modules\\Orders\\Queries\\Order\xe2\x02\x34\x41ssetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\xea\x02,Assetmantle::Modules::Orders::Queries::Orderb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.orders.queries.order.query_request_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n,com.assetmantle.modules.orders.queries.orderB\021QueryRequestProtoP\001\242\002\005AMOQO\252\002(Assetmantle.Modules.Orders.Queries.Order\312\002(Assetmantle\\Modules\\Orders\\Queries\\Order\342\0024Assetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\352\002,Assetmantle::Modules::Orders::Queries::Order'
+  DESCRIPTOR._serialized_options = b'\n,com.assetmantle.modules.orders.queries.orderB\021QueryRequestProto\242\002\005AMOQO\252\002(Assetmantle.Modules.Orders.Queries.Order\312\002(Assetmantle\\Modules\\Orders\\Queries\\Order\342\0024Assetmantle\\Modules\\Orders\\Queries\\Order\\GPBMetadata\352\002,Assetmantle::Modules::Orders::Queries::Order'
   _globals['_QUERYREQUEST']._serialized_start=135
   _globals['_QUERYREQUEST']._serialized_end=215
 # @@protoc_insertion_point(module_scope)

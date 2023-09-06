@@ -421,6 +421,7 @@ public final class TypesProto {
               com.starnamed.x.configuration.v1beta1.TypesProto.Config.class, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONFIGURER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object configurer_ = "";
@@ -675,7 +676,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasDomainRenewalPeriod() {
-      return domainRenewalPeriod_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -731,7 +732,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasDomainGracePeriod() {
-      return domainGracePeriod_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -770,7 +771,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasAccountRenewalPeriod() {
-      return accountRenewalPeriod_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -826,7 +827,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasAccountGracePeriod() {
-      return accountGracePeriod_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1026,7 +1027,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasEscrowMaxPeriod() {
-      return escrowMaxPeriod_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1081,22 +1082,22 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validResource_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, validResource_);
       }
-      if (domainRenewalPeriod_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getDomainRenewalPeriod());
       }
       if (domainRenewalCountMax_ != 0) {
         output.writeUInt32(7, domainRenewalCountMax_);
       }
-      if (domainGracePeriod_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getDomainGracePeriod());
       }
-      if (accountRenewalPeriod_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(9, getAccountRenewalPeriod());
       }
       if (accountRenewalCountMax_ != 0) {
         output.writeUInt32(10, accountRenewalCountMax_);
       }
-      if (accountGracePeriod_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(11, getAccountGracePeriod());
       }
       if (resourcesMax_ != 0) {
@@ -1117,7 +1118,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowCommission_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, escrowCommission_);
       }
-      if (escrowMaxPeriod_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(18, getEscrowMaxPeriod());
       }
       getUnknownFields().writeTo(output);
@@ -1144,7 +1145,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validResource_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, validResource_);
       }
-      if (domainRenewalPeriod_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDomainRenewalPeriod());
       }
@@ -1152,11 +1153,11 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, domainRenewalCountMax_);
       }
-      if (domainGracePeriod_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getDomainGracePeriod());
       }
-      if (accountRenewalPeriod_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getAccountRenewalPeriod());
       }
@@ -1164,7 +1165,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, accountRenewalCountMax_);
       }
-      if (accountGracePeriod_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getAccountGracePeriod());
       }
@@ -1190,7 +1191,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowCommission_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, escrowCommission_);
       }
-      if (escrowMaxPeriod_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getEscrowMaxPeriod());
       }
@@ -1442,13 +1443,23 @@ public final class TypesProto {
 
       // Construct using com.starnamed.x.configuration.v1beta1.TypesProto.Config.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDomainRenewalPeriodFieldBuilder();
+          getDomainGracePeriodFieldBuilder();
+          getAccountRenewalPeriodFieldBuilder();
+          getAccountGracePeriodFieldBuilder();
+          getEscrowMaxPeriodFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1540,10 +1551,12 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.validResource_ = validResource_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.domainRenewalPeriod_ = domainRenewalPeriodBuilder_ == null
               ? domainRenewalPeriod_
               : domainRenewalPeriodBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.domainRenewalCountMax_ = domainRenewalCountMax_;
@@ -1552,11 +1565,13 @@ public final class TypesProto {
           result.domainGracePeriod_ = domainGracePeriodBuilder_ == null
               ? domainGracePeriod_
               : domainGracePeriodBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.accountRenewalPeriod_ = accountRenewalPeriodBuilder_ == null
               ? accountRenewalPeriod_
               : accountRenewalPeriodBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.accountRenewalCountMax_ = accountRenewalCountMax_;
@@ -1565,6 +1580,7 @@ public final class TypesProto {
           result.accountGracePeriod_ = accountGracePeriodBuilder_ == null
               ? accountGracePeriod_
               : accountGracePeriodBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.resourcesMax_ = resourcesMax_;
@@ -1588,7 +1604,9 @@ public final class TypesProto {
           result.escrowMaxPeriod_ = escrowMaxPeriodBuilder_ == null
               ? escrowMaxPeriod_
               : escrowMaxPeriodBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2412,8 +2430,10 @@ public final class TypesProto {
         } else {
           domainRenewalPeriodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (domainRenewalPeriod_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2618,8 +2638,10 @@ public final class TypesProto {
         } else {
           domainGracePeriodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (domainGracePeriod_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2778,8 +2800,10 @@ public final class TypesProto {
         } else {
           accountRenewalPeriodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (accountRenewalPeriod_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2984,8 +3008,10 @@ public final class TypesProto {
         } else {
           accountGracePeriodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
-        onChanged();
+        if (accountGracePeriod_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3521,8 +3547,10 @@ public final class TypesProto {
         } else {
           escrowMaxPeriodBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00020000;
-        onChanged();
+        if (escrowMaxPeriod_ != null) {
+          bitField0_ |= 0x00020000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8875,6 +8903,7 @@ public final class TypesProto {
               com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.class, com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private com.starnamed.x.configuration.v1beta1.TypesProto.Config config_;
     /**
@@ -8883,7 +8912,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return config_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
@@ -8909,7 +8938,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasFees() {
-      return fees_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
@@ -8941,10 +8970,10 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getConfig());
       }
-      if (fees_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getFees());
       }
       getUnknownFields().writeTo(output);
@@ -8956,11 +8985,11 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConfig());
       }
-      if (fees_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFees());
       }
@@ -9131,13 +9160,20 @@ public final class TypesProto {
 
       // Construct using com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getConfigFieldBuilder();
+          getFeesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9186,16 +9222,20 @@ public final class TypesProto {
 
       private void buildPartial0(com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fees_ = feesBuilder_ == null
               ? fees_
               : feesBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9371,8 +9411,10 @@ public final class TypesProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (config_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9490,8 +9532,10 @@ public final class TypesProto {
         } else {
           feesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (fees_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

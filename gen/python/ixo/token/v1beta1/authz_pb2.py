@@ -17,15 +17,14 @@ from ixo.token.v1beta1 import token_pb2 as ixo_dot_token_dot_v1beta1_dot_token__
 from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dixo/token/v1beta1/authz.proto\x12\x11ixo.token.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19ixo/iid/v1beta1/iid.proto\x1a\x1dixo/token/v1beta1/token.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\x84\x01\n\x11MintAuthorization\x12\x16\n\x06minter\x18\x01 \x01(\tR\x06minter\x12\x44\n\x0b\x63onstraints\x18\x02 \x03(\x0b\x32\".ixo.token.v1beta1.MintConstraintsR\x0b\x63onstraints:\x11\xca\xb4-\rAuthorization\"\x8b\x02\n\x0fMintConstraints\x12)\n\x10\x63ontract_address\x18\x01 \x01(\tR\x0f\x63ontractAddress\x12G\n\x06\x61mount\x18\x02 \x01(\tB/\xc8\xde\x1f\x00\xda\xde\x1f\'github.com/cosmos/cosmos-sdk/types.UintR\x06\x61mount\x12\x12\n\x04name\x18\x03 \x01(\tR\x04name\x12\x14\n\x05index\x18\x04 \x01(\tR\x05index\x12\x1e\n\ncollection\x18\x05 \x01(\tR\ncollection\x12:\n\ttokenData\x18\x06 \x03(\x0b\x32\x1c.ixo.token.v1beta1.TokenDataR\ttokenDataB\xc0\x01\n\x15\x63om.ixo.token.v1beta1B\nAuthzProtoP\x01Z5github.com/ixofoundation/ixo-blockchain/x/token/types\xa2\x02\x03ITX\xaa\x02\x11Ixo.Token.V1beta1\xca\x02\x11Ixo\\Token\\V1beta1\xe2\x02\x1dIxo\\Token\\V1beta1\\GPBMetadata\xea\x02\x13Ixo::Token::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dixo/token/v1beta1/authz.proto\x12\x11ixo.token.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19ixo/iid/v1beta1/iid.proto\x1a\x1dixo/token/v1beta1/token.proto\x1a\x19\x63osmos_proto/cosmos.proto\"\x84\x01\n\x11MintAuthorization\x12\x16\n\x06minter\x18\x01 \x01(\tR\x06minter\x12\x44\n\x0b\x63onstraints\x18\x02 \x03(\x0b\x32\".ixo.token.v1beta1.MintConstraintsR\x0b\x63onstraints:\x11\xca\xb4-\rAuthorization\"\x8b\x02\n\x0fMintConstraints\x12)\n\x10\x63ontract_address\x18\x01 \x01(\tR\x0f\x63ontractAddress\x12G\n\x06\x61mount\x18\x02 \x01(\tB/\xc8\xde\x1f\x00\xda\xde\x1f\'github.com/cosmos/cosmos-sdk/types.UintR\x06\x61mount\x12\x12\n\x04name\x18\x03 \x01(\tR\x04name\x12\x14\n\x05index\x18\x04 \x01(\tR\x05index\x12\x1e\n\ncollection\x18\x05 \x01(\tR\ncollection\x12:\n\ttokenData\x18\x06 \x03(\x0b\x32\x1c.ixo.token.v1beta1.TokenDataR\ttokenDataB\xbe\x01\n\x15\x63om.ixo.token.v1beta1B\nAuthzProtoZ5github.com/ixofoundation/ixo-blockchain/x/token/types\xa2\x02\x03ITX\xaa\x02\x11Ixo.Token.V1beta1\xca\x02\x11Ixo\\Token\\V1beta1\xe2\x02\x1dIxo\\Token\\V1beta1\\GPBMetadata\xea\x02\x13Ixo::Token::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ixo.token.v1beta1.authz_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025com.ixo.token.v1beta1B\nAuthzProtoP\001Z5github.com/ixofoundation/ixo-blockchain/x/token/types\242\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\Token\\V1beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMetadata\352\002\023Ixo::Token::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\025com.ixo.token.v1beta1B\nAuthzProtoZ5github.com/ixofoundation/ixo-blockchain/x/token/types\242\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\Token\\V1beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMetadata\352\002\023Ixo::Token::V1beta1'
   _MINTAUTHORIZATION._options = None
   _MINTAUTHORIZATION._serialized_options = b'\312\264-\rAuthorization'
   _MINTCONSTRAINTS.fields_by_name['amount']._options = None

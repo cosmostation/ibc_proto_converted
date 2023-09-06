@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fosmosis/incentives/params.proto\x12\x12osmosis.incentives\x1a\x14gogoproto/gogo.proto\"a\n\x06Params\x12W\n\x16\x64istr_epoch_identifier\x18\x01 \x01(\tB!\xf2\xde\x1f\x1dyaml:\"distr_epoch_identifier\"R\x14\x64istrEpochIdentifierB\xc6\x01\n\x16\x63om.osmosis.incentivesB\x0bParamsProtoP\x01Z6github.com/osmosis-labs/osmosis/v15/x/incentives/types\xa2\x02\x03OIX\xaa\x02\x12Osmosis.Incentives\xca\x02\x12Osmosis\\Incentives\xe2\x02\x1eOsmosis\\Incentives\\GPBMetadata\xea\x02\x13Osmosis::Incentivesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fosmosis/incentives/params.proto\x12\x12osmosis.incentives\x1a\x14gogoproto/gogo.proto\"a\n\x06Params\x12W\n\x16\x64istr_epoch_identifier\x18\x01 \x01(\tB!\xf2\xde\x1f\x1dyaml:\"distr_epoch_identifier\"R\x14\x64istrEpochIdentifierB\xc4\x01\n\x16\x63om.osmosis.incentivesB\x0bParamsProtoZ6github.com/osmosis-labs/osmosis/v15/x/incentives/types\xa2\x02\x03OIX\xaa\x02\x12Osmosis.Incentives\xca\x02\x12Osmosis\\Incentives\xe2\x02\x1eOsmosis\\Incentives\\GPBMetadata\xea\x02\x13Osmosis::Incentivesb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.incentives.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.osmosis.incentivesB\013ParamsProtoP\001Z6github.com/osmosis-labs/osmosis/v15/x/incentives/types\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022Osmosis\\Incentives\342\002\036Osmosis\\Incentives\\GPBMetadata\352\002\023Osmosis::Incentives'
+  DESCRIPTOR._serialized_options = b'\n\026com.osmosis.incentivesB\013ParamsProtoZ6github.com/osmosis-labs/osmosis/v15/x/incentives/types\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022Osmosis\\Incentives\342\002\036Osmosis\\Incentives\\GPBMetadata\352\002\023Osmosis::Incentives'
   _PARAMS.fields_by_name['distr_epoch_identifier']._options = None
   _PARAMS.fields_by_name['distr_epoch_identifier']._serialized_options = b'\362\336\037\035yaml:\"distr_epoch_identifier\"'
   _globals['_PARAMS']._serialized_start=77

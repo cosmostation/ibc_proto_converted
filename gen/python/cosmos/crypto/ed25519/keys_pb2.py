@@ -15,15 +15,14 @@ from amino import amino_pb2 as amino_dot_amino__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n cosmos/crypto/ed25519/keys.proto\x12\x15\x63osmos.crypto.ed25519\x1a\x11\x61mino/amino.proto\x1a\x14gogoproto/gogo.proto\"i\n\x06PubKey\x12.\n\x03key\x18\x01 \x01(\x0c\x42\x1c\xfa\xde\x1f\x18\x63rypto/ed25519.PublicKeyR\x03key:/\x98\xa0\x1f\x00\x8a\xe7\xb0*\x18tendermint/PubKeyEd25519\x92\xe7\xb0*\tkey_field\"h\n\x07PrivKey\x12/\n\x03key\x18\x01 \x01(\x0c\x42\x1d\xfa\xde\x1f\x19\x63rypto/ed25519.PrivateKeyR\x03key:,\x8a\xe7\xb0*\x19tendermint/PrivKeyEd25519\x92\xe7\xb0*\tkey_fieldB\xce\x01\n\x19\x63om.cosmos.crypto.ed25519B\tKeysProtoP\x01Z0github.com/cosmos/cosmos-sdk/crypto/keys/ed25519\xa2\x02\x03\x43\x43\x45\xaa\x02\x15\x43osmos.Crypto.Ed25519\xca\x02\x15\x43osmos\\Crypto\\Ed25519\xe2\x02!Cosmos\\Crypto\\Ed25519\\GPBMetadata\xea\x02\x17\x43osmos::Crypto::Ed25519b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n cosmos/crypto/ed25519/keys.proto\x12\x15\x63osmos.crypto.ed25519\x1a\x11\x61mino/amino.proto\x1a\x14gogoproto/gogo.proto\"i\n\x06PubKey\x12.\n\x03key\x18\x01 \x01(\x0c\x42\x1c\xfa\xde\x1f\x18\x63rypto/ed25519.PublicKeyR\x03key:/\x98\xa0\x1f\x00\x8a\xe7\xb0*\x18tendermint/PubKeyEd25519\x92\xe7\xb0*\tkey_field\"h\n\x07PrivKey\x12/\n\x03key\x18\x01 \x01(\x0c\x42\x1d\xfa\xde\x1f\x19\x63rypto/ed25519.PrivateKeyR\x03key:,\x8a\xe7\xb0*\x19tendermint/PrivKeyEd25519\x92\xe7\xb0*\tkey_fieldB\xcc\x01\n\x19\x63om.cosmos.crypto.ed25519B\tKeysProtoZ0github.com/cosmos/cosmos-sdk/crypto/keys/ed25519\xa2\x02\x03\x43\x43\x45\xaa\x02\x15\x43osmos.Crypto.Ed25519\xca\x02\x15\x43osmos\\Crypto\\Ed25519\xe2\x02!Cosmos\\Crypto\\Ed25519\\GPBMetadata\xea\x02\x17\x43osmos::Crypto::Ed25519b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'cosmos.crypto.ed25519.keys_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\031com.cosmos.crypto.ed25519B\tKeysProtoP\001Z0github.com/cosmos/cosmos-sdk/crypto/keys/ed25519\242\002\003CCE\252\002\025Cosmos.Crypto.Ed25519\312\002\025Cosmos\\Crypto\\Ed25519\342\002!Cosmos\\Crypto\\Ed25519\\GPBMetadata\352\002\027Cosmos::Crypto::Ed25519'
+  DESCRIPTOR._serialized_options = b'\n\031com.cosmos.crypto.ed25519B\tKeysProtoZ0github.com/cosmos/cosmos-sdk/crypto/keys/ed25519\242\002\003CCE\252\002\025Cosmos.Crypto.Ed25519\312\002\025Cosmos\\Crypto\\Ed25519\342\002!Cosmos\\Crypto\\Ed25519\\GPBMetadata\352\002\027Cosmos::Crypto::Ed25519'
   _PUBKEY.fields_by_name['key']._options = None
   _PUBKEY.fields_by_name['key']._serialized_options = b'\372\336\037\030crypto/ed25519.PublicKey'
   _PUBKEY._options = None

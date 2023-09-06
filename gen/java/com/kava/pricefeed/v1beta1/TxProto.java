@@ -119,6 +119,7 @@ public final class TxProto {
               com.kava.pricefeed.v1beta1.TxProto.MsgPostPrice.class, com.kava.pricefeed.v1beta1.TxProto.MsgPostPrice.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -252,7 +253,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExpiry() {
-      return expiry_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp expiry = 4 [json_name = "expiry", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -293,7 +294,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, price_);
       }
-      if (expiry_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getExpiry());
       }
       getUnknownFields().writeTo(output);
@@ -314,7 +315,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, price_);
       }
-      if (expiry_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExpiry());
       }
@@ -488,13 +489,19 @@ public final class TxProto {
 
       // Construct using com.kava.pricefeed.v1beta1.TxProto.MsgPostPrice.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExpiryFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -550,11 +557,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.price_ = price_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.expiry_ = expiryBuilder_ == null
               ? expiry_
               : expiryBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -986,8 +996,10 @@ public final class TxProto {
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (expiry_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

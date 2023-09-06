@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cstafihub/mining/params.proto\x12\x18stafihub.stafihub.mining\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xda\x01\n\x1c\x63om.stafihub.stafihub.miningB\x0bParamsProtoP\x01Z+github.com/stafihub/stafihub/x/mining/types\xa2\x02\x03SSM\xaa\x02\x18Stafihub.Stafihub.Mining\xca\x02\x18Stafihub\\Stafihub\\Mining\xe2\x02$Stafihub\\Stafihub\\Mining\\GPBMetadata\xea\x02\x1aStafihub::Stafihub::Miningb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cstafihub/mining/params.proto\x12\x18stafihub.stafihub.mining\x1a\x14gogoproto/gogo.proto\"\x0e\n\x06Params:\x04\x98\xa0\x1f\x00\x42\xd8\x01\n\x1c\x63om.stafihub.stafihub.miningB\x0bParamsProtoZ+github.com/stafihub/stafihub/x/mining/types\xa2\x02\x03SSM\xaa\x02\x18Stafihub.Stafihub.Mining\xca\x02\x18Stafihub\\Stafihub\\Mining\xe2\x02$Stafihub\\Stafihub\\Mining\\GPBMetadata\xea\x02\x1aStafihub::Stafihub::Miningb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.mining.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.stafihub.stafihub.miningB\013ParamsProtoP\001Z+github.com/stafihub/stafihub/x/mining/types\242\002\003SSM\252\002\030Stafihub.Stafihub.Mining\312\002\030Stafihub\\Stafihub\\Mining\342\002$Stafihub\\Stafihub\\Mining\\GPBMetadata\352\002\032Stafihub::Stafihub::Mining'
+  DESCRIPTOR._serialized_options = b'\n\034com.stafihub.stafihub.miningB\013ParamsProtoZ+github.com/stafihub/stafihub/x/mining/types\242\002\003SSM\252\002\030Stafihub.Stafihub.Mining\312\002\030Stafihub\\Stafihub\\Mining\342\002$Stafihub\\Stafihub\\Mining\\GPBMetadata\352\002\032Stafihub::Stafihub::Mining'
   _PARAMS._options = None
   _PARAMS._serialized_options = b'\230\240\037\000'
   _globals['_PARAMS']._serialized_start=80

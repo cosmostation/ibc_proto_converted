@@ -17,15 +17,14 @@ from cosmos.base.query.v1beta1 import pagination_pb2 as cosmos_dot_base_dot_quer
 from osmosis.ibc_rate_limit.v1beta1 import params_pb2 as osmosis_dot_ibc__rate__limit_dot_v1beta1_dot_params__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*osmosis/ibc-rate-limit/v1beta1/query.proto\x12\x1cosmosis.ibcratelimit.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a+osmosis/ibc-rate-limit/v1beta1/params.proto\"\x0f\n\rParamsRequest\"T\n\x0eParamsResponse\x12\x42\n\x06params\x18\x01 \x01(\x0b\x32$.osmosis.ibcratelimit.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x9d\x01\n\x05Query\x12\x93\x01\n\x06Params\x12+.osmosis.ibcratelimit.v1beta1.ParamsRequest\x1a,.osmosis.ibcratelimit.v1beta1.ParamsResponse\".\x82\xd3\xe4\x93\x02(\x12&/osmosis/ibc-rate-limit/v1beta1/paramsB\x88\x02\n com.osmosis.ibcratelimit.v1beta1B\nQueryProtoP\x01ZFgithub.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/client/queryproto\xa2\x02\x03OIX\xaa\x02\x1cOsmosis.Ibcratelimit.V1beta1\xca\x02\x1cOsmosis\\Ibcratelimit\\V1beta1\xe2\x02(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Ibcratelimit::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*osmosis/ibc-rate-limit/v1beta1/query.proto\x12\x1cosmosis.ibcratelimit.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1cgoogle/api/annotations.proto\x1a*cosmos/base/query/v1beta1/pagination.proto\x1a+osmosis/ibc-rate-limit/v1beta1/params.proto\"\x0f\n\rParamsRequest\"T\n\x0eParamsResponse\x12\x42\n\x06params\x18\x01 \x01(\x0b\x32$.osmosis.ibcratelimit.v1beta1.ParamsB\x04\xc8\xde\x1f\x00R\x06params2\x9d\x01\n\x05Query\x12\x93\x01\n\x06Params\x12+.osmosis.ibcratelimit.v1beta1.ParamsRequest\x1a,.osmosis.ibcratelimit.v1beta1.ParamsResponse\".\x82\xd3\xe4\x93\x02(\x12&/osmosis/ibc-rate-limit/v1beta1/paramsB\x86\x02\n com.osmosis.ibcratelimit.v1beta1B\nQueryProtoZFgithub.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/client/queryproto\xa2\x02\x03OIX\xaa\x02\x1cOsmosis.Ibcratelimit.V1beta1\xca\x02\x1cOsmosis\\Ibcratelimit\\V1beta1\xe2\x02(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\xea\x02\x1eOsmosis::Ibcratelimit::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.ibc_rate_limit.v1beta1.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n com.osmosis.ibcratelimit.v1beta1B\nQueryProtoP\001ZFgithub.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/client/queryproto\242\002\003OIX\252\002\034Osmosis.Ibcratelimit.V1beta1\312\002\034Osmosis\\Ibcratelimit\\V1beta1\342\002(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\352\002\036Osmosis::Ibcratelimit::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n com.osmosis.ibcratelimit.v1beta1B\nQueryProtoZFgithub.com/osmosis-labs/osmosis/v15/x/ibc-rate-limit/client/queryproto\242\002\003OIX\252\002\034Osmosis.Ibcratelimit.V1beta1\312\002\034Osmosis\\Ibcratelimit\\V1beta1\342\002(Osmosis\\Ibcratelimit\\V1beta1\\GPBMetadata\352\002\036Osmosis::Ibcratelimit::V1beta1'
   _PARAMSRESPONSE.fields_by_name['params']._options = None
   _PARAMSRESPONSE.fields_by_name['params']._serialized_options = b'\310\336\037\000'
   _QUERY.methods_by_name['Params']._options = None

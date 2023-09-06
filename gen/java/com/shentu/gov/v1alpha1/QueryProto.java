@@ -1147,6 +1147,7 @@ public final class QueryProto {
               com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.class, com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VOTING_PARAMS_FIELD_NUMBER = 1;
     private com.cosmos.gov.v1beta1.GovProto.VotingParams votingParams_;
     /**
@@ -1159,7 +1160,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasVotingParams() {
-      return votingParams_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1197,7 +1198,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDepositParams() {
-      return depositParams_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1235,7 +1236,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTallyParams() {
-      return tallyParams_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1273,7 +1274,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCustomParams() {
-      return customParams_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1313,16 +1314,16 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (votingParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getVotingParams());
       }
-      if (depositParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getDepositParams());
       }
-      if (tallyParams_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getTallyParams());
       }
-      if (customParams_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getCustomParams());
       }
       getUnknownFields().writeTo(output);
@@ -1334,19 +1335,19 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (votingParams_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVotingParams());
       }
-      if (depositParams_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDepositParams());
       }
-      if (tallyParams_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTallyParams());
       }
-      if (customParams_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCustomParams());
       }
@@ -1535,13 +1536,22 @@ public final class QueryProto {
 
       // Construct using com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVotingParamsFieldBuilder();
+          getDepositParamsFieldBuilder();
+          getTallyParamsFieldBuilder();
+          getCustomParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1600,26 +1610,32 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.votingParams_ = votingParamsBuilder_ == null
               ? votingParams_
               : votingParamsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.depositParams_ = depositParamsBuilder_ == null
               ? depositParams_
               : depositParamsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tallyParams_ = tallyParamsBuilder_ == null
               ? tallyParams_
               : tallyParamsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.customParams_ = customParamsBuilder_ == null
               ? customParams_
               : customParamsBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1835,8 +1851,10 @@ public final class QueryProto {
         } else {
           votingParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (votingParams_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1990,8 +2008,10 @@ public final class QueryProto {
         } else {
           depositParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (depositParams_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2145,8 +2165,10 @@ public final class QueryProto {
         } else {
           tallyParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (tallyParams_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2300,8 +2322,10 @@ public final class QueryProto {
         } else {
           customParamsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (customParams_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

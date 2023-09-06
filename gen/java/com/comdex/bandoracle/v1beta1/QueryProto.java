@@ -465,6 +465,7 @@ public final class QueryProto {
               com.comdex.bandoracle.v1beta1.QueryProto.QueryParamsResponse.class, com.comdex.bandoracle.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.comdex.bandoracle.v1beta1.ParamsProto.Params params_;
     /**
@@ -473,7 +474,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.bandoracle.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
@@ -505,7 +506,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -517,7 +518,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -675,13 +676,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.bandoracle.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -725,11 +732,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.bandoracle.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -895,8 +905,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1542,6 +1554,7 @@ public final class QueryProto {
               com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceResponse.class, com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RESULT_FIELD_NUMBER = 1;
     private com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result_;
     /**
@@ -1550,7 +1563,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return result_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.bandoracle.v1beta1.FetchPriceResult result = 1 [json_name = "result"];</code>
@@ -1582,7 +1595,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -1594,7 +1607,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (result_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getResult());
       }
@@ -1752,13 +1765,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getResultFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1802,11 +1821,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1972,8 +1994,10 @@ public final class QueryProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (result_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3413,6 +3437,7 @@ public final class QueryProto {
               com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceDataResponse.class, com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceDataResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MSGFETCHPRICEDATA_FIELD_NUMBER = 1;
     private com.comdex.bandoracle.v1beta1.TxProto.MsgFetchPriceData msgFetchPriceData_;
     /**
@@ -3421,7 +3446,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMsgFetchPriceData() {
-      return msgFetchPriceData_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.bandoracle.v1beta1.MsgFetchPriceData msgFetchPriceData = 1 [json_name = "msgFetchPriceData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"msgFetchPriceData&#92;""];</code>
@@ -3453,7 +3478,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (msgFetchPriceData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMsgFetchPriceData());
       }
       getUnknownFields().writeTo(output);
@@ -3465,7 +3490,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (msgFetchPriceData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMsgFetchPriceData());
       }
@@ -3623,13 +3648,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceDataResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMsgFetchPriceDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3673,11 +3704,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.bandoracle.v1beta1.QueryProto.QueryFetchPriceDataResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.msgFetchPriceData_ = msgFetchPriceDataBuilder_ == null
               ? msgFetchPriceData_
               : msgFetchPriceDataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3843,8 +3877,10 @@ public final class QueryProto {
         } else {
           msgFetchPriceDataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (msgFetchPriceData_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4410,6 +4446,7 @@ public final class QueryProto {
               com.comdex.bandoracle.v1beta1.QueryProto.QueryDiscardDataResponse.class, com.comdex.bandoracle.v1beta1.QueryProto.QueryDiscardDataResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DISCARDDATA_FIELD_NUMBER = 1;
     private com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData discardData_;
     /**
@@ -4418,7 +4455,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDiscardData() {
-      return discardData_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.bandoracle.v1beta1.DiscardData discardData = 1 [json_name = "discardData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"discardData&#92;""];</code>
@@ -4450,7 +4487,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (discardData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDiscardData());
       }
       getUnknownFields().writeTo(output);
@@ -4462,7 +4499,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (discardData_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDiscardData());
       }
@@ -4620,13 +4657,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.bandoracle.v1beta1.QueryProto.QueryDiscardDataResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDiscardDataFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4670,11 +4713,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.bandoracle.v1beta1.QueryProto.QueryDiscardDataResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.discardData_ = discardDataBuilder_ == null
               ? discardData_
               : discardDataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4840,8 +4886,10 @@ public final class QueryProto {
         } else {
           discardDataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (discardData_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

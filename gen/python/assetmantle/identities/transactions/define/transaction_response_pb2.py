@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import classification_id_pb2 as assetmantle_dot_ids_dot_base_dot_classification__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nEassetmantle/identities/transactions/define/transaction_response.proto\x12\x32\x61ssetmantle.modules.identities.transactions.define\x1a,assetmantle/ids/base/classification_id.proto\"r\n\x13TransactionResponse\x12[\n\x12\x63lassification_i_d\x18\x01 \x01(\x0b\x32-.assetmantle.schema.ids.base.ClassificationIDR\x10\x63lassificationIDB\xc0\x02\n6com.assetmantle.modules.identities.transactions.defineB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MITD\xaa\x02\x32\x41ssetmantle.Modules.Identities.Transactions.Define\xca\x02\x32\x41ssetmantle\\Modules\\Identities\\Transactions\\Define\xe2\x02>Assetmantle\\Modules\\Identities\\Transactions\\Define\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Identities::Transactions::Defineb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nEassetmantle/identities/transactions/define/transaction_response.proto\x12\x32\x61ssetmantle.modules.identities.transactions.define\x1a,assetmantle/ids/base/classification_id.proto\"r\n\x13TransactionResponse\x12[\n\x12\x63lassification_i_d\x18\x01 \x01(\x0b\x32-.assetmantle.schema.ids.base.ClassificationIDR\x10\x63lassificationIDB\xbe\x02\n6com.assetmantle.modules.identities.transactions.defineB\x18TransactionResponseProto\xa2\x02\x05\x41MITD\xaa\x02\x32\x41ssetmantle.Modules.Identities.Transactions.Define\xca\x02\x32\x41ssetmantle\\Modules\\Identities\\Transactions\\Define\xe2\x02>Assetmantle\\Modules\\Identities\\Transactions\\Define\\GPBMetadata\xea\x02\x36\x41ssetmantle::Modules::Identities::Transactions::Defineb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.define.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.identities.transactions.defineB\030TransactionResponseProtoP\001\242\002\005AMITD\252\0022Assetmantle.Modules.Identities.Transactions.Define\312\0022Assetmantle\\Modules\\Identities\\Transactions\\Define\342\002>Assetmantle\\Modules\\Identities\\Transactions\\Define\\GPBMetadata\352\0026Assetmantle::Modules::Identities::Transactions::Define'
+  DESCRIPTOR._serialized_options = b'\n6com.assetmantle.modules.identities.transactions.defineB\030TransactionResponseProto\242\002\005AMITD\252\0022Assetmantle.Modules.Identities.Transactions.Define\312\0022Assetmantle\\Modules\\Identities\\Transactions\\Define\342\002>Assetmantle\\Modules\\Identities\\Transactions\\Define\\GPBMetadata\352\0026Assetmantle::Modules::Identities::Transactions::Define'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=171
   _globals['_TRANSACTIONRESPONSE']._serialized_end=285
 # @@protoc_insertion_point(module_scope)

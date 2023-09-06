@@ -545,6 +545,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKER_INFO_FIELD_NUMBER = 1;
     private com.comdex.locker.v1beta1.LockerProto.Locker lockerInfo_;
     /**
@@ -553,7 +554,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLockerInfo() {
-      return lockerInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.locker.v1beta1.Locker locker_info = 1 [json_name = "lockerInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_info&#92;""];</code>
@@ -585,7 +586,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (lockerInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getLockerInfo());
       }
       getUnknownFields().writeTo(output);
@@ -597,7 +598,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (lockerInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLockerInfo());
       }
@@ -755,13 +756,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLockerInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -805,11 +812,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lockerInfo_ = lockerInfoBuilder_ == null
               ? lockerInfo_
               : lockerInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -975,8 +985,10 @@ public final class QueryProto {
         } else {
           lockerInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (lockerInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1157,6 +1169,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -1187,7 +1200,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -1225,7 +1238,7 @@ public final class QueryProto {
       if (assetId_ != 0L) {
         output.writeUInt64(2, assetId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1245,7 +1258,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, assetId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -1413,13 +1426,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1471,11 +1490,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.assetId_ = assetId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1721,8 +1743,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1909,9 +1933,11 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList lockerIds_;
+    private com.google.protobuf.Internal.LongList lockerIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
      * @return A list containing the lockerIds.
@@ -1946,7 +1972,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -1986,7 +2012,7 @@ public final class QueryProto {
       for (int i = 0; i < lockerIds_.size(); i++) {
         output.writeUInt64NoTag(lockerIds_.getLong(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2012,7 +2038,7 @@ public final class QueryProto {
         }
         lockerIdsMemoizedSerializedSize = dataSize;
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2176,13 +2202,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2220,27 +2252,25 @@ public final class QueryProto {
       @java.lang.Override
       public com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse buildPartial() {
         com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse result = new com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.lockerIds_ = lockerIds_;
-      }
-
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockersByAppToAssetIDResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          lockerIds_.makeImmutable();
+          result.lockerIds_ = lockerIds_;
+        }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2290,7 +2320,8 @@ public final class QueryProto {
         if (!other.lockerIds_.isEmpty()) {
           if (lockerIds_.isEmpty()) {
             lockerIds_ = other.lockerIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            lockerIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureLockerIdsIsMutable();
             lockerIds_.addAll(other.lockerIds_);
@@ -2368,10 +2399,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList lockerIds_ = emptyLongList();
       private void ensureLockerIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_ = mutableCopy(lockerIds_);
-          bitField0_ |= 0x00000001;
+        if (!lockerIds_.isModifiable()) {
+          lockerIds_ = makeMutableCopy(lockerIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -2379,8 +2410,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getLockerIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(lockerIds_) : lockerIds_;
+        lockerIds_.makeImmutable();
+        return lockerIds_;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -2408,6 +2439,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2420,6 +2452,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2433,6 +2466,7 @@ public final class QueryProto {
         ensureLockerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, lockerIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2513,8 +2547,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2689,6 +2725,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -2708,7 +2745,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -2743,7 +2780,7 @@ public final class QueryProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2759,7 +2796,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2922,13 +2959,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2976,11 +3019,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3186,8 +3232,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3374,9 +3422,11 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList lockerIds_;
+    private com.google.protobuf.Internal.LongList lockerIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
      * @return A list containing the lockerIds.
@@ -3411,7 +3461,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -3451,7 +3501,7 @@ public final class QueryProto {
       for (int i = 0; i < lockerIds_.size(); i++) {
         output.writeUInt64NoTag(lockerIds_.getLong(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3477,7 +3527,7 @@ public final class QueryProto {
         }
         lockerIdsMemoizedSerializedSize = dataSize;
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3641,13 +3691,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3685,27 +3741,25 @@ public final class QueryProto {
       @java.lang.Override
       public com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse buildPartial() {
         com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse result = new com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.lockerIds_ = lockerIds_;
-      }
-
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockerInfoByAppIDResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          lockerIds_.makeImmutable();
+          result.lockerIds_ = lockerIds_;
+        }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3755,7 +3809,8 @@ public final class QueryProto {
         if (!other.lockerIds_.isEmpty()) {
           if (lockerIds_.isEmpty()) {
             lockerIds_ = other.lockerIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            lockerIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureLockerIdsIsMutable();
             lockerIds_.addAll(other.lockerIds_);
@@ -3833,10 +3888,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList lockerIds_ = emptyLongList();
       private void ensureLockerIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_ = mutableCopy(lockerIds_);
-          bitField0_ |= 0x00000001;
+        if (!lockerIds_.isModifiable()) {
+          lockerIds_ = makeMutableCopy(lockerIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -3844,8 +3899,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getLockerIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(lockerIds_) : lockerIds_;
+        lockerIds_.makeImmutable();
+        return lockerIds_;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -3873,6 +3928,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3885,6 +3941,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3898,6 +3955,7 @@ public final class QueryProto {
         ensureLockerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, lockerIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3978,8 +4036,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5194,6 +5254,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -5252,7 +5313,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -5290,7 +5351,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5309,7 +5370,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -5476,13 +5537,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5534,11 +5601,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.owner_ = owner_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5826,8 +5896,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6014,9 +6086,11 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList lockerIds_;
+    private com.google.protobuf.Internal.LongList lockerIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
      * @return A list containing the lockerIds.
@@ -6051,7 +6125,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -6091,7 +6165,7 @@ public final class QueryProto {
       for (int i = 0; i < lockerIds_.size(); i++) {
         output.writeUInt64NoTag(lockerIds_.getLong(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6117,7 +6191,7 @@ public final class QueryProto {
         }
         lockerIdsMemoizedSerializedSize = dataSize;
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6281,13 +6355,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6325,27 +6405,25 @@ public final class QueryProto {
       @java.lang.Override
       public com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse buildPartial() {
         com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse result = new com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.lockerIds_ = lockerIds_;
-      }
-
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppIDbyOwnerResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          lockerIds_.makeImmutable();
+          result.lockerIds_ = lockerIds_;
+        }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6395,7 +6473,8 @@ public final class QueryProto {
         if (!other.lockerIds_.isEmpty()) {
           if (lockerIds_.isEmpty()) {
             lockerIds_ = other.lockerIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            lockerIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureLockerIdsIsMutable();
             lockerIds_.addAll(other.lockerIds_);
@@ -6473,10 +6552,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList lockerIds_ = emptyLongList();
       private void ensureLockerIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_ = mutableCopy(lockerIds_);
-          bitField0_ |= 0x00000001;
+        if (!lockerIds_.isModifiable()) {
+          lockerIds_ = makeMutableCopy(lockerIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -6484,8 +6563,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getLockerIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(lockerIds_) : lockerIds_;
+        lockerIds_.makeImmutable();
+        return lockerIds_;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -6513,6 +6592,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6525,6 +6605,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6538,6 +6619,7 @@ public final class QueryProto {
         ensureLockerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, lockerIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6618,8 +6700,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6801,6 +6885,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -6848,7 +6933,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -6883,7 +6968,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6898,7 +6983,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -7060,13 +7145,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7114,11 +7205,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.owner_ = owner_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7366,8 +7460,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7554,9 +7650,11 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList lockerIds_;
+    private com.google.protobuf.Internal.LongList lockerIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
      * @return A list containing the lockerIds.
@@ -7591,7 +7689,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -7631,7 +7729,7 @@ public final class QueryProto {
       for (int i = 0; i < lockerIds_.size(); i++) {
         output.writeUInt64NoTag(lockerIds_.getLong(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -7657,7 +7755,7 @@ public final class QueryProto {
         }
         lockerIdsMemoizedSerializedSize = dataSize;
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -7821,13 +7919,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7865,27 +7969,25 @@ public final class QueryProto {
       @java.lang.Override
       public com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse buildPartial() {
         com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse result = new com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.lockerIds_ = lockerIds_;
-      }
-
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerOfAllAppsByOwnerResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          lockerIds_.makeImmutable();
+          result.lockerIds_ = lockerIds_;
+        }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7935,7 +8037,8 @@ public final class QueryProto {
         if (!other.lockerIds_.isEmpty()) {
           if (lockerIds_.isEmpty()) {
             lockerIds_ = other.lockerIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            lockerIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureLockerIdsIsMutable();
             lockerIds_.addAll(other.lockerIds_);
@@ -8013,10 +8116,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList lockerIds_ = emptyLongList();
       private void ensureLockerIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          lockerIds_ = mutableCopy(lockerIds_);
-          bitField0_ |= 0x00000001;
+        if (!lockerIds_.isModifiable()) {
+          lockerIds_ = makeMutableCopy(lockerIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -8024,8 +8127,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getLockerIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(lockerIds_) : lockerIds_;
+        lockerIds_.makeImmutable();
+        return lockerIds_;
       }
       /**
        * <code>repeated uint64 locker_ids = 1 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"locker_ids&#92;""];</code>
@@ -8053,6 +8156,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8065,6 +8169,7 @@ public final class QueryProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8078,6 +8183,7 @@ public final class QueryProto {
         ensureLockerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, lockerIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8158,8 +8264,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8353,6 +8461,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryOwnerTxDetailsLockerOfAppByOwnerByAssetRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryOwnerTxDetailsLockerOfAppByOwnerByAssetRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -8422,7 +8531,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 4 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -8463,7 +8572,7 @@ public final class QueryProto {
       if (assetId_ != 0L) {
         output.writeUInt64(3, assetId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -8486,7 +8595,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, assetId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPagination());
       }
@@ -8658,13 +8767,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryOwnerTxDetailsLockerOfAppByOwnerByAssetRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8720,11 +8835,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.assetId_ = assetId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9052,8 +9170,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9247,6 +9367,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryOwnerTxDetailsLockerOfAppByOwnerByAssetResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryOwnerTxDetailsLockerOfAppByOwnerByAssetResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int USER_TX_DATA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.locker.v1beta1.LockerProto.UserTxData> userTxData_;
@@ -9296,7 +9417,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -9331,7 +9452,7 @@ public final class QueryProto {
       for (int i = 0; i < userTxData_.size(); i++) {
         output.writeMessage(1, userTxData_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -9347,7 +9468,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, userTxData_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -9511,13 +9632,20 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryOwnerTxDetailsLockerOfAppByOwnerByAssetResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUserTxDataFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9581,11 +9709,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryOwnerTxDetailsLockerOfAppByOwnerByAssetResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10030,8 +10161,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10913,6 +11046,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppToAssetIDbyOwnerResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppToAssetIDbyOwnerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKER_INFO_FIELD_NUMBER = 1;
     private com.comdex.locker.v1beta1.LockerProto.Locker lockerInfo_;
     /**
@@ -10921,7 +11055,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLockerInfo() {
-      return lockerInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.locker.v1beta1.Locker locker_info = 1 [json_name = "lockerInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_info&#92;""];</code>
@@ -10947,7 +11081,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -10979,10 +11113,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (lockerInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getLockerInfo());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -10994,11 +11128,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (lockerInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLockerInfo());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -11165,13 +11299,20 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppToAssetIDbyOwnerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLockerInfoFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11220,16 +11361,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryOwnerLockerByAppToAssetIDbyOwnerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lockerInfo_ = lockerInfoBuilder_ == null
               ? lockerInfo_
               : lockerInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11405,8 +11550,10 @@ public final class QueryProto {
         } else {
           lockerInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (lockerInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11524,8 +11671,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11713,6 +11862,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerByAppByOwnerRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerByAppByOwnerRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -11771,7 +11921,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -11809,7 +11959,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -11828,7 +11978,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -11995,13 +12145,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerByAppByOwnerRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12053,11 +12209,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.owner_ = owner_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12345,8 +12504,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12540,6 +12701,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerByAppByOwnerResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerByAppByOwnerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKER_INFO_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.locker.v1beta1.LockerProto.Locker> lockerInfo_;
@@ -12589,7 +12751,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -12624,7 +12786,7 @@ public final class QueryProto {
       for (int i = 0; i < lockerInfo_.size(); i++) {
         output.writeMessage(1, lockerInfo_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -12640,7 +12802,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, lockerInfo_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -12804,13 +12966,20 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerByAppByOwnerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLockerInfoFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12874,11 +13043,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockerByAppByOwnerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13323,8 +13495,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15003,6 +15177,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerCountByAppToAssetIDResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerCountByAppToAssetIDResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOTAL_COUNT_FIELD_NUMBER = 1;
     private long totalCount_ = 0L;
     /**
@@ -15022,7 +15197,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -15057,7 +15232,7 @@ public final class QueryProto {
       if (totalCount_ != 0L) {
         output.writeUInt64(1, totalCount_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -15073,7 +15248,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, totalCount_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -15236,13 +15411,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerCountByAppToAssetIDResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15290,11 +15471,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.totalCount_ = totalCount_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15500,8 +15684,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15676,6 +15862,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -15695,7 +15882,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -15730,7 +15917,7 @@ public final class QueryProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -15746,7 +15933,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -15909,13 +16096,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15963,11 +16156,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16173,8 +16369,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -16361,9 +16559,11 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ASSET_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList assetIds_;
+    private com.google.protobuf.Internal.LongList assetIds_ =
+        emptyLongList();
     /**
      * <code>repeated uint64 asset_ids = 1 [json_name = "assetIds"];</code>
      * @return A list containing the assetIds.
@@ -16398,7 +16598,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -16438,7 +16638,7 @@ public final class QueryProto {
       for (int i = 0; i < assetIds_.size(); i++) {
         output.writeUInt64NoTag(assetIds_.getLong(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -16464,7 +16664,7 @@ public final class QueryProto {
         }
         assetIdsMemoizedSerializedSize = dataSize;
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -16628,13 +16828,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -16672,27 +16878,25 @@ public final class QueryProto {
       @java.lang.Override
       public com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse buildPartial() {
         com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse result = new com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          assetIds_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.assetIds_ = assetIds_;
-      }
-
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetIDsByAppIDResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          assetIds_.makeImmutable();
+          result.assetIds_ = assetIds_;
+        }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16742,7 +16946,8 @@ public final class QueryProto {
         if (!other.assetIds_.isEmpty()) {
           if (assetIds_.isEmpty()) {
             assetIds_ = other.assetIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            assetIds_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureAssetIdsIsMutable();
             assetIds_.addAll(other.assetIds_);
@@ -16820,10 +17025,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList assetIds_ = emptyLongList();
       private void ensureAssetIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          assetIds_ = mutableCopy(assetIds_);
-          bitField0_ |= 0x00000001;
+        if (!assetIds_.isModifiable()) {
+          assetIds_ = makeMutableCopy(assetIds_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 asset_ids = 1 [json_name = "assetIds"];</code>
@@ -16831,8 +17036,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getAssetIdsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(assetIds_) : assetIds_;
+        assetIds_.makeImmutable();
+        return assetIds_;
       }
       /**
        * <code>repeated uint64 asset_ids = 1 [json_name = "assetIds"];</code>
@@ -16860,6 +17065,7 @@ public final class QueryProto {
 
         ensureAssetIdsIsMutable();
         assetIds_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16872,6 +17078,7 @@ public final class QueryProto {
 
         ensureAssetIdsIsMutable();
         assetIds_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16885,6 +17092,7 @@ public final class QueryProto {
         ensureAssetIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, assetIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16965,8 +17173,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17135,6 +17345,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -17143,7 +17354,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -17175,7 +17386,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -17187,7 +17398,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -17345,13 +17556,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17395,11 +17612,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17565,8 +17785,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17760,6 +17982,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PRODUCT_TO_ALL_ASSET_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.locker.v1beta1.QueryProto.AppToAllAsset> productToAllAsset_;
@@ -17809,7 +18032,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -17844,7 +18067,7 @@ public final class QueryProto {
       for (int i = 0; i < productToAllAsset_.size(); i++) {
         output.writeMessage(1, productToAllAsset_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -17860,7 +18083,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, productToAllAsset_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -18024,13 +18247,20 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProductToAllAssetFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -18094,11 +18324,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryWhiteListedAssetByAllAppsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18543,8 +18776,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -19574,6 +19809,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -19593,7 +19829,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -19628,7 +19864,7 @@ public final class QueryProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -19644,7 +19880,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -19807,13 +20043,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -19861,11 +20103,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20071,8 +20316,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -20266,6 +20513,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOKEN_TO_LOCKER_MAPPING_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.locker.v1beta1.LockerProto.LockerLookupTableData> tokenToLockerMapping_;
@@ -20315,7 +20563,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -20350,7 +20598,7 @@ public final class QueryProto {
       for (int i = 0; i < tokenToLockerMapping_.size(); i++) {
         output.writeMessage(1, tokenToLockerMapping_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -20366,7 +20614,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, tokenToLockerMapping_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -20530,13 +20778,20 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenToLockerMappingFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -20600,11 +20855,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21049,8 +21307,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -21769,6 +22029,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppAndAssetIDResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppAndAssetIDResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOKEN_TO_LOCKER_MAPPING_FIELD_NUMBER = 1;
     private com.comdex.locker.v1beta1.LockerProto.LockerLookupTableData tokenToLockerMapping_;
     /**
@@ -21777,7 +22038,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTokenToLockerMapping() {
-      return tokenToLockerMapping_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.locker.v1beta1.LockerLookupTableData token_to_locker_mapping = 1 [json_name = "tokenToLockerMapping", (.gogoproto.moretags) = "yaml:&#92;"token_to_locker_mapping&#92;""];</code>
@@ -21809,7 +22070,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (tokenToLockerMapping_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTokenToLockerMapping());
       }
       getUnknownFields().writeTo(output);
@@ -21821,7 +22082,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (tokenToLockerMapping_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenToLockerMapping());
       }
@@ -21979,13 +22240,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppAndAssetIDResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenToLockerMappingFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -22029,11 +22296,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockerLookupTableByAppAndAssetIDResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenToLockerMapping_ = tokenToLockerMappingBuilder_ == null
               ? tokenToLockerMapping_
               : tokenToLockerMappingBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22199,8 +22469,10 @@ public final class QueryProto {
         } else {
           tokenToLockerMappingBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (tokenToLockerMapping_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -22375,6 +22647,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalDepositedByAppRequest.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalDepositedByAppRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -22394,7 +22667,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -22429,7 +22702,7 @@ public final class QueryProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -22445,7 +22718,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -22608,13 +22881,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalDepositedByAppRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -22662,11 +22941,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22872,8 +23154,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -23067,6 +23351,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalDepositedByAppResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalDepositedByAppResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCKED_DEPOSITED_AMOUNT_DATA_MAP_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.locker.v1beta1.LockerProto.LockedDepositedAmountDataMap> lockedDepositedAmountDataMap_;
@@ -23116,7 +23401,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
@@ -23151,7 +23436,7 @@ public final class QueryProto {
       for (int i = 0; i < lockedDepositedAmountDataMap_.size(); i++) {
         output.writeMessage(1, lockedDepositedAmountDataMap_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -23167,7 +23452,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, lockedDepositedAmountDataMap_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -23331,13 +23616,20 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalDepositedByAppResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLockedDepositedAmountDataMapFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -23401,11 +23693,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalDepositedByAppResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23850,8 +24145,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -24570,6 +24867,7 @@ public final class QueryProto {
               com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalRewardsByAssetAppWiseResponse.class, com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalRewardsByAssetAppWiseResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOTAL_REWARDS_FIELD_NUMBER = 1;
     private com.comdex.locker.v1beta1.LockerProto.LockerTotalRewardsByAssetAppWise totalRewards_;
     /**
@@ -24578,7 +24876,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTotalRewards() {
-      return totalRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.comdex.locker.v1beta1.LockerTotalRewardsByAssetAppWise total_rewards = 1 [json_name = "totalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_rewards&#92;""];</code>
@@ -24610,7 +24908,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTotalRewards());
       }
       getUnknownFields().writeTo(output);
@@ -24622,7 +24920,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTotalRewards());
       }
@@ -24780,13 +25078,19 @@ public final class QueryProto {
 
       // Construct using com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalRewardsByAssetAppWiseResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalRewardsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -24830,11 +25134,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.locker.v1beta1.QueryProto.QueryLockerTotalRewardsByAssetAppWiseResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.totalRewards_ = totalRewardsBuilder_ == null
               ? totalRewards_
               : totalRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -25000,8 +25307,10 @@ public final class QueryProto {
         } else {
           totalRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (totalRewards_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

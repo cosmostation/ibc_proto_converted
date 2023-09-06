@@ -16,15 +16,14 @@ from akash.base.v1beta3 import attribute_pb2 as akash_dot_base_dot_v1beta3_dot_a
 from akash.base.v1beta3 import resourcevalue_pb2 as akash_dot_base_dot_v1beta3_dot_resourcevalue__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n akash/base/v1beta3/storage.proto\x12\x12\x61kash.base.v1beta3\x1a\x14gogoproto/gogo.proto\x1a\"akash/base/v1beta3/attribute.proto\x1a&akash/base/v1beta3/resourcevalue.proto\"\xa3\x02\n\x07Storage\x12+\n\x04name\x18\x01 \x01(\tB\x17\xea\xde\x1f\x04name\xf2\xde\x1f\x0byaml:\"name\"R\x04name\x12Z\n\x08quantity\x18\x02 \x01(\x0b\x32!.akash.base.v1beta3.ResourceValueB\x1b\xc8\xde\x1f\x00\xea\xde\x1f\x04size\xf2\xde\x1f\x0byaml:\"size\"R\x08quantity\x12\x88\x01\n\nattributes\x18\x03 \x03(\x0b\x32\x1d.akash.base.v1beta3.AttributeBI\xc8\xde\x1f\x00\xea\xde\x1f\x14\x61ttributes,omitempty\xf2\xde\x1f\x1byaml:\"attributes,omitempty\"\xaa\xdf\x1f\nAttributesR\nattributes:\x04\xe8\xa0\x1f\x01\x42\xca\x01\n\x16\x63om.akash.base.v1beta3B\x0cStorageProtoP\x01Z8github.com/akash-network/akash-api/go/node/types/v1beta3\xa2\x02\x03\x41\x42X\xaa\x02\x12\x41kash.Base.V1beta3\xca\x02\x12\x41kash\\Base\\V1beta3\xe2\x02\x1e\x41kash\\Base\\V1beta3\\GPBMetadata\xea\x02\x14\x41kash::Base::V1beta3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n akash/base/v1beta3/storage.proto\x12\x12\x61kash.base.v1beta3\x1a\x14gogoproto/gogo.proto\x1a\"akash/base/v1beta3/attribute.proto\x1a&akash/base/v1beta3/resourcevalue.proto\"\xa3\x02\n\x07Storage\x12+\n\x04name\x18\x01 \x01(\tB\x17\xea\xde\x1f\x04name\xf2\xde\x1f\x0byaml:\"name\"R\x04name\x12Z\n\x08quantity\x18\x02 \x01(\x0b\x32!.akash.base.v1beta3.ResourceValueB\x1b\xc8\xde\x1f\x00\xea\xde\x1f\x04size\xf2\xde\x1f\x0byaml:\"size\"R\x08quantity\x12\x88\x01\n\nattributes\x18\x03 \x03(\x0b\x32\x1d.akash.base.v1beta3.AttributeBI\xc8\xde\x1f\x00\xea\xde\x1f\x14\x61ttributes,omitempty\xf2\xde\x1f\x1byaml:\"attributes,omitempty\"\xaa\xdf\x1f\nAttributesR\nattributes:\x04\xe8\xa0\x1f\x01\x42\xc8\x01\n\x16\x63om.akash.base.v1beta3B\x0cStorageProtoZ8github.com/akash-network/akash-api/go/node/types/v1beta3\xa2\x02\x03\x41\x42X\xaa\x02\x12\x41kash.Base.V1beta3\xca\x02\x12\x41kash\\Base\\V1beta3\xe2\x02\x1e\x41kash\\Base\\V1beta3\\GPBMetadata\xea\x02\x14\x41kash::Base::V1beta3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.base.v1beta3.storage_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.akash.base.v1beta3B\014StorageProtoP\001Z8github.com/akash-network/akash-api/go/node/types/v1beta3\242\002\003ABX\252\002\022Akash.Base.V1beta3\312\002\022Akash\\Base\\V1beta3\342\002\036Akash\\Base\\V1beta3\\GPBMetadata\352\002\024Akash::Base::V1beta3'
+  DESCRIPTOR._serialized_options = b'\n\026com.akash.base.v1beta3B\014StorageProtoZ8github.com/akash-network/akash-api/go/node/types/v1beta3\242\002\003ABX\252\002\022Akash.Base.V1beta3\312\002\022Akash\\Base\\V1beta3\342\002\036Akash\\Base\\V1beta3\\GPBMetadata\352\002\024Akash::Base::V1beta3'
   _STORAGE.fields_by_name['name']._options = None
   _STORAGE.fields_by_name['name']._serialized_options = b'\352\336\037\004name\362\336\037\013yaml:\"name\"'
   _STORAGE.fields_by_name['quantity']._options = None

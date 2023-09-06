@@ -1323,6 +1323,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denomId_ = "";
@@ -1413,7 +1414,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1459,7 +1460,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1477,7 +1478,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -1647,13 +1648,19 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1705,11 +1712,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.owner_ = owner_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2059,8 +2069,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2264,6 +2276,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     private com.cudosnode.cudosnode.nft.NftProto.Owner owner_;
     /**
@@ -2272,7 +2285,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOwner() {
-      return owner_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudosnode.cudosnode.nft.Owner owner = 1 [json_name = "owner"];</code>
@@ -2298,7 +2311,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -2330,10 +2343,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (owner_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getOwner());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2345,11 +2358,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (owner_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOwner());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2520,13 +2533,20 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOwnerFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2575,16 +2595,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryOwnerResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.owner_ = ownerBuilder_ == null
               ? owner_
               : ownerBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2760,8 +2784,10 @@ public final class QueryProto {
         } else {
           ownerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (owner_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2879,8 +2905,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3078,6 +3106,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denomId_ = "";
@@ -3129,7 +3158,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3172,7 +3201,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3187,7 +3216,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3353,13 +3382,19 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3407,11 +3442,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denomId_ = denomId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3679,8 +3717,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3884,6 +3924,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLECTION_FIELD_NUMBER = 1;
     private com.cudosnode.cudosnode.nft.NftProto.Collection collection_;
     /**
@@ -3892,7 +3933,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCollection() {
-      return collection_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudosnode.cudosnode.nft.Collection collection = 1 [json_name = "collection"];</code>
@@ -3918,7 +3959,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -3950,10 +3991,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (collection_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCollection());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3965,11 +4006,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (collection_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCollection());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4140,13 +4181,20 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollectionFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4195,16 +4243,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryCollectionResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collection_ = collectionBuilder_ == null
               ? collection_
               : collectionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4380,8 +4432,10 @@ public final class QueryProto {
         } else {
           collectionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (collection_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4499,8 +4553,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6649,6 +6705,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
     /**
@@ -6657,7 +6714,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDenom() {
-      return denom_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
@@ -6689,7 +6746,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDenom());
       }
       getUnknownFields().writeTo(output);
@@ -6701,7 +6758,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDenom());
       }
@@ -6863,13 +6920,19 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDenomFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6913,11 +6976,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denomBuilder_ == null
               ? denom_
               : denomBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7083,8 +7149,10 @@ public final class QueryProto {
         } else {
           denomBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (denom_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8377,6 +8445,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
     /**
@@ -8385,7 +8454,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDenom() {
-      return denom_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
@@ -8417,7 +8486,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDenom());
       }
       getUnknownFields().writeTo(output);
@@ -8429,7 +8498,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDenom());
       }
@@ -8591,13 +8660,19 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDenomFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -8641,11 +8716,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomByNameResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denomBuilder_ == null
               ? denom_
               : denomBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8811,8 +8889,10 @@ public final class QueryProto {
         } else {
           denomBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (denom_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -8985,6 +9065,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     private com.cudosnode.cudosnode.nft.NftProto.Denom denom_;
     /**
@@ -8993,7 +9074,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDenom() {
-      return denom_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudosnode.cudosnode.nft.Denom denom = 1 [json_name = "denom"];</code>
@@ -9025,7 +9106,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDenom());
       }
       getUnknownFields().writeTo(output);
@@ -9037,7 +9118,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (denom_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDenom());
       }
@@ -9199,13 +9280,19 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDenomFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9249,11 +9336,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomBySymbolResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denomBuilder_ == null
               ? denom_
               : denomBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9419,8 +9509,10 @@ public final class QueryProto {
         } else {
           denomBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (denom_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9605,6 +9697,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -9617,7 +9710,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -9657,7 +9750,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -9669,7 +9762,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -9831,13 +9924,19 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9881,11 +9980,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10071,8 +10173,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10286,6 +10390,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DENOMS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cudosnode.cudosnode.nft.NftProto.Denom> denoms_;
@@ -10335,7 +10440,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -10370,7 +10475,7 @@ public final class QueryProto {
       for (int i = 0; i < denoms_.size(); i++) {
         output.writeMessage(1, denoms_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -10386,7 +10491,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, denoms_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -10554,13 +10659,20 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDenomsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10624,11 +10736,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryDenomsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11073,8 +11188,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11955,6 +12072,7 @@ public final class QueryProto {
               com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.class, com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NFT_FIELD_NUMBER = 1;
     private com.cudosnode.cudosnode.nft.NftProto.BaseNFT nft_;
     /**
@@ -11963,7 +12081,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasNft() {
-      return nft_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cudosnode.cudosnode.nft.BaseNFT nft = 1 [json_name = "nft", (.gogoproto.customname) = "NFT"];</code>
@@ -11995,7 +12113,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (nft_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getNft());
       }
       getUnknownFields().writeTo(output);
@@ -12007,7 +12125,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (nft_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getNft());
       }
@@ -12169,13 +12287,19 @@ public final class QueryProto {
 
       // Construct using com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNftFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12219,11 +12343,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.cudosnode.cudosnode.nft.QueryProto.QueryNFTResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.nft_ = nftBuilder_ == null
               ? nft_
               : nftBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12389,8 +12516,10 @@ public final class QueryProto {
         } else {
           nftBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (nft_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

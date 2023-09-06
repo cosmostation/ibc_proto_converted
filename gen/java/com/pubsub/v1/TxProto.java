@@ -1178,6 +1178,7 @@ public final class TxProto {
               com.pubsub.v1.TxProto.MsgAddSubscriberRequest.class, com.pubsub.v1.TxProto.MsgAddSubscriberRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIBER_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.Subscriber subscriber_;
     /**
@@ -1186,7 +1187,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSubscriber() {
-      return subscriber_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
@@ -1257,7 +1258,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (subscriber_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSubscriber());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -1272,7 +1273,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (subscriber_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubscriber());
       }
@@ -1437,13 +1438,19 @@ public final class TxProto {
 
       // Construct using com.pubsub.v1.TxProto.MsgAddSubscriberRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriberFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1488,14 +1495,17 @@ public final class TxProto {
 
       private void buildPartial0(com.pubsub.v1.TxProto.MsgAddSubscriberRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subscriber_ = subscriberBuilder_ == null
               ? subscriber_
               : subscriberBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1671,8 +1681,10 @@ public final class TxProto {
         } else {
           subscriberBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (subscriber_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3420,6 +3432,7 @@ public final class TxProto {
               com.pubsub.v1.TxProto.MsgAddPublisherIntentRequest.class, com.pubsub.v1.TxProto.MsgAddPublisherIntentRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PUBLISHER_INTENT_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.PublisherIntent publisherIntent_;
     /**
@@ -3428,7 +3441,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPublisherIntent() {
-      return publisherIntent_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
@@ -3499,7 +3512,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (publisherIntent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPublisherIntent());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -3514,7 +3527,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (publisherIntent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPublisherIntent());
       }
@@ -3679,13 +3692,19 @@ public final class TxProto {
 
       // Construct using com.pubsub.v1.TxProto.MsgAddPublisherIntentRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPublisherIntentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3730,14 +3749,17 @@ public final class TxProto {
 
       private void buildPartial0(com.pubsub.v1.TxProto.MsgAddPublisherIntentRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.publisherIntent_ = publisherIntentBuilder_ == null
               ? publisherIntent_
               : publisherIntentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3913,8 +3935,10 @@ public final class TxProto {
         } else {
           publisherIntentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (publisherIntent_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5810,6 +5834,7 @@ public final class TxProto {
               com.pubsub.v1.TxProto.MsgAddSubscriberIntentRequest.class, com.pubsub.v1.TxProto.MsgAddSubscriberIntentRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SUBSCRIBER_INTENT_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.SubscriberIntent subscriberIntent_;
     /**
@@ -5818,7 +5843,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSubscriberIntent() {
-      return subscriberIntent_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
@@ -5889,7 +5914,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (subscriberIntent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSubscriberIntent());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -5904,7 +5929,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (subscriberIntent_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubscriberIntent());
       }
@@ -6069,13 +6094,19 @@ public final class TxProto {
 
       // Construct using com.pubsub.v1.TxProto.MsgAddSubscriberIntentRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubscriberIntentFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6120,14 +6151,17 @@ public final class TxProto {
 
       private void buildPartial0(com.pubsub.v1.TxProto.MsgAddSubscriberIntentRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subscriberIntent_ = subscriberIntentBuilder_ == null
               ? subscriberIntent_
               : subscriberIntentBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signer_ = signer_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6303,8 +6337,10 @@ public final class TxProto {
         } else {
           subscriberIntentBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (subscriberIntent_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

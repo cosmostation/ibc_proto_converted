@@ -1464,7 +1464,7 @@ public final class TypesProto {
       }
       private Info() {
         participant_ = com.google.protobuf.ByteString.EMPTY;
-        data_ = java.util.Collections.emptyList();
+        data_ = emptyList(com.google.protobuf.ByteString.class);
       }
 
       @java.lang.Override
@@ -1500,7 +1500,8 @@ public final class TypesProto {
 
       public static final int DATA_FIELD_NUMBER = 2;
       @SuppressWarnings("serial")
-      private java.util.List<com.google.protobuf.ByteString> data_;
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> data_ =
+          emptyList(com.google.protobuf.ByteString.class);
       /**
        * <code>repeated bytes data = 2 [json_name = "data"];</code>
        * @return A list containing the data.
@@ -1736,7 +1737,7 @@ public final class TypesProto {
           super.clear();
           bitField0_ = 0;
           participant_ = com.google.protobuf.ByteString.EMPTY;
-          data_ = java.util.Collections.emptyList();
+          data_ = emptyList(com.google.protobuf.ByteString.class);
           return this;
         }
 
@@ -1763,24 +1764,19 @@ public final class TypesProto {
         @java.lang.Override
         public com.axelar.tss.v1beta1.TypesProto.MultisigInfo.Info buildPartial() {
           com.axelar.tss.v1beta1.TypesProto.MultisigInfo.Info result = new com.axelar.tss.v1beta1.TypesProto.MultisigInfo.Info(this);
-          buildPartialRepeatedFields(result);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
-        }
-
-        private void buildPartialRepeatedFields(com.axelar.tss.v1beta1.TypesProto.MultisigInfo.Info result) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            data_ = java.util.Collections.unmodifiableList(data_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.data_ = data_;
         }
 
         private void buildPartial0(com.axelar.tss.v1beta1.TypesProto.MultisigInfo.Info result) {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.participant_ = participant_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            data_.makeImmutable();
+            result.data_ = data_;
           }
         }
 
@@ -1834,7 +1830,8 @@ public final class TypesProto {
           if (!other.data_.isEmpty()) {
             if (data_.isEmpty()) {
               data_ = other.data_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              data_.makeImmutable();
+              bitField0_ |= 0x00000002;
             } else {
               ensureDataIsMutable();
               data_.addAll(other.data_);
@@ -1927,12 +1924,12 @@ public final class TypesProto {
           return this;
         }
 
-        private java.util.List<com.google.protobuf.ByteString> data_ = java.util.Collections.emptyList();
+        private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> data_ = emptyList(com.google.protobuf.ByteString.class);
         private void ensureDataIsMutable() {
-          if (!((bitField0_ & 0x00000002) != 0)) {
-            data_ = new java.util.ArrayList<com.google.protobuf.ByteString>(data_);
-            bitField0_ |= 0x00000002;
+          if (!data_.isModifiable()) {
+            data_ = makeMutableCopy(data_);
           }
+          bitField0_ |= 0x00000002;
         }
         /**
          * <code>repeated bytes data = 2 [json_name = "data"];</code>
@@ -1940,8 +1937,8 @@ public final class TypesProto {
          */
         public java.util.List<com.google.protobuf.ByteString>
             getDataList() {
-          return ((bitField0_ & 0x00000002) != 0) ?
-                   java.util.Collections.unmodifiableList(data_) : data_;
+          data_.makeImmutable();
+          return data_;
         }
         /**
          * <code>repeated bytes data = 2 [json_name = "data"];</code>
@@ -1969,6 +1966,7 @@ public final class TypesProto {
           if (value == null) { throw new NullPointerException(); }
           ensureDataIsMutable();
           data_.set(index, value);
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -1981,6 +1979,7 @@ public final class TypesProto {
           if (value == null) { throw new NullPointerException(); }
           ensureDataIsMutable();
           data_.add(value);
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -1994,6 +1993,7 @@ public final class TypesProto {
           ensureDataIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
               values, data_);
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -2002,7 +2002,7 @@ public final class TypesProto {
          * @return This builder for chaining.
          */
         public Builder clearData() {
-          data_ = java.util.Collections.emptyList();
+          data_ = emptyList(com.google.protobuf.ByteString.class);
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;

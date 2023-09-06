@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$noble/fiattokenfactory/minters.proto\x12\x16noble.fiattokenfactory\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"b\n\x07Minters\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12=\n\tallowance\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\tallowanceB\xe3\x01\n\x1a\x63om.noble.fiattokenfactoryB\x0cMintersProtoP\x01Z>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\xa2\x02\x03NFX\xaa\x02\x16Noble.Fiattokenfactory\xca\x02\x16Noble\\Fiattokenfactory\xe2\x02\"Noble\\Fiattokenfactory\\GPBMetadata\xea\x02\x17Noble::Fiattokenfactoryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$noble/fiattokenfactory/minters.proto\x12\x16noble.fiattokenfactory\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"b\n\x07Minters\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress\x12=\n\tallowance\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\tallowanceB\xe1\x01\n\x1a\x63om.noble.fiattokenfactoryB\x0cMintersProtoZ>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\xa2\x02\x03NFX\xaa\x02\x16Noble.Fiattokenfactory\xca\x02\x16Noble\\Fiattokenfactory\xe2\x02\"Noble\\Fiattokenfactory\\GPBMetadata\xea\x02\x17Noble::Fiattokenfactoryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'noble.fiattokenfactory.minters_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.noble.fiattokenfactoryB\014MintersProtoP\001Z>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble.Fiattokenfactory\312\002\026Noble\\Fiattokenfactory\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352\002\027Noble::Fiattokenfactory'
+  DESCRIPTOR._serialized_options = b'\n\032com.noble.fiattokenfactoryB\014MintersProtoZ>github.com/strangelove-ventures/noble/x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble.Fiattokenfactory\312\002\026Noble\\Fiattokenfactory\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352\002\027Noble::Fiattokenfactory'
   _MINTERS.fields_by_name['allowance']._options = None
   _MINTERS.fields_by_name['allowance']._serialized_options = b'\310\336\037\000'
   _globals['_MINTERS']._serialized_start=118

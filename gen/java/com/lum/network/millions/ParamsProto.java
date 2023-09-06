@@ -223,6 +223,7 @@ public final class ParamsProto {
               com.lum.network.millions.ParamsProto.Params.class, com.lum.network.millions.ParamsProto.Params.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MIN_DEPOSIT_AMOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object minDepositAmount_ = "";
@@ -312,7 +313,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMinDrawScheduleDelta() {
-      return minDrawScheduleDelta_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -350,7 +351,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMaxDrawScheduleDelta() {
-      return maxDrawScheduleDelta_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -388,7 +389,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasPrizeExpirationDelta() {
-      return prizeExpirationDelta_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -473,7 +474,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMinDepositDrawDelta() {
-      return minDepositDrawDelta_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -522,19 +523,19 @@ public final class ParamsProto {
       if (maxPrizeBatchQuantity_ != 0L) {
         output.writeUInt64(3, maxPrizeBatchQuantity_);
       }
-      if (minDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getMinDrawScheduleDelta());
       }
-      if (maxDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getMaxDrawScheduleDelta());
       }
-      if (prizeExpirationDelta_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(6, getPrizeExpirationDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, feesStakers_);
       }
-      if (minDepositDrawDelta_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(8, getMinDepositDrawDelta());
       }
       getUnknownFields().writeTo(output);
@@ -557,22 +558,22 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, maxPrizeBatchQuantity_);
       }
-      if (minDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMinDrawScheduleDelta());
       }
-      if (maxDrawScheduleDelta_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMaxDrawScheduleDelta());
       }
-      if (prizeExpirationDelta_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getPrizeExpirationDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, feesStakers_);
       }
-      if (minDepositDrawDelta_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getMinDepositDrawDelta());
       }
@@ -775,13 +776,22 @@ public final class ParamsProto {
 
       // Construct using com.lum.network.millions.ParamsProto.Params.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMinDrawScheduleDeltaFieldBuilder();
+          getMaxDrawScheduleDeltaFieldBuilder();
+          getPrizeExpirationDeltaFieldBuilder();
+          getMinDepositDrawDeltaFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -853,20 +863,24 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxPrizeBatchQuantity_ = maxPrizeBatchQuantity_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.minDrawScheduleDelta_ = minDrawScheduleDeltaBuilder_ == null
               ? minDrawScheduleDelta_
               : minDrawScheduleDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maxDrawScheduleDelta_ = maxDrawScheduleDeltaBuilder_ == null
               ? maxDrawScheduleDelta_
               : maxDrawScheduleDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.prizeExpirationDelta_ = prizeExpirationDeltaBuilder_ == null
               ? prizeExpirationDelta_
               : prizeExpirationDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.feesStakers_ = feesStakers_;
@@ -875,7 +889,9 @@ public final class ParamsProto {
           result.minDepositDrawDelta_ = minDepositDrawDeltaBuilder_ == null
               ? minDepositDrawDelta_
               : minDepositDrawDeltaBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1307,8 +1323,10 @@ public final class ParamsProto {
         } else {
           minDrawScheduleDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (minDrawScheduleDelta_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1462,8 +1480,10 @@ public final class ParamsProto {
         } else {
           maxDrawScheduleDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (maxDrawScheduleDelta_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1617,8 +1637,10 @@ public final class ParamsProto {
         } else {
           prizeExpirationDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (prizeExpirationDelta_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1864,8 +1886,10 @@ public final class ParamsProto {
         } else {
           minDepositDrawDeltaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+        if (minDepositDrawDelta_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         return this;
       }
       /**

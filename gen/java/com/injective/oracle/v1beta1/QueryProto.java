@@ -620,6 +620,7 @@ public final class QueryProto {
               com.injective.oracle.v1beta1.QueryProto.QueryPythPriceResponse.class, com.injective.oracle.v1beta1.QueryProto.QueryPythPriceResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PRICE_STATE_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.OracleProto.PythPriceState priceState_;
     /**
@@ -628,7 +629,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPriceState() {
-      return priceState_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.PythPriceState price_state = 1 [json_name = "priceState"];</code>
@@ -660,7 +661,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (priceState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPriceState());
       }
       getUnknownFields().writeTo(output);
@@ -672,7 +673,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (priceState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPriceState());
       }
@@ -830,13 +831,19 @@ public final class QueryProto {
 
       // Construct using com.injective.oracle.v1beta1.QueryProto.QueryPythPriceResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPriceStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -880,11 +887,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.QueryProto.QueryPythPriceResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.priceState_ = priceStateBuilder_ == null
               ? priceState_
               : priceStateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1050,8 +1060,10 @@ public final class QueryProto {
         } else {
           priceStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (priceState_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1632,6 +1644,7 @@ public final class QueryProto {
               com.injective.oracle.v1beta1.QueryProto.QueryParamsResponse.class, com.injective.oracle.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.OracleProto.Params params_;
     /**
@@ -1640,7 +1653,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1672,7 +1685,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1684,7 +1697,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1847,13 +1860,19 @@ public final class QueryProto {
 
       // Construct using com.injective.oracle.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1897,11 +1916,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2067,8 +2089,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9982,6 +10006,7 @@ public final class QueryProto {
               com.injective.oracle.v1beta1.QueryProto.QueryProviderPriceStateResponse.class, com.injective.oracle.v1beta1.QueryProto.QueryProviderPriceStateResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PRICE_STATE_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.OracleProto.PriceState priceState_;
     /**
@@ -9990,7 +10015,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPriceState() {
-      return priceState_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.PriceState price_state = 1 [json_name = "priceState"];</code>
@@ -10022,7 +10047,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (priceState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPriceState());
       }
       getUnknownFields().writeTo(output);
@@ -10034,7 +10059,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (priceState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPriceState());
       }
@@ -10197,13 +10222,19 @@ public final class QueryProto {
 
       // Construct using com.injective.oracle.v1beta1.QueryProto.QueryProviderPriceStateResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPriceStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10247,11 +10278,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.QueryProto.QueryProviderPriceStateResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.priceState_ = priceStateBuilder_ == null
               ? priceState_
               : priceStateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10417,8 +10451,10 @@ public final class QueryProto {
         } else {
           priceStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (priceState_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10999,6 +11035,7 @@ public final class QueryProto {
               com.injective.oracle.v1beta1.QueryProto.QueryModuleStateResponse.class, com.injective.oracle.v1beta1.QueryProto.QueryModuleStateResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.GenesisProto.GenesisState state_;
     /**
@@ -11007,7 +11044,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasState() {
-      return state_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.GenesisState state = 1 [json_name = "state"];</code>
@@ -11039,7 +11076,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -11051,7 +11088,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -11214,13 +11251,19 @@ public final class QueryProto {
 
       // Construct using com.injective.oracle.v1beta1.QueryProto.QueryModuleStateResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11264,11 +11307,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.QueryProto.QueryModuleStateResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11434,8 +11480,10 @@ public final class QueryProto {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (state_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -13781,6 +13829,7 @@ public final class QueryProto {
               com.injective.oracle.v1beta1.QueryProto.QueryOracleVolatilityRequest.class, com.injective.oracle.v1beta1.QueryProto.QueryOracleVolatilityRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BASE_INFO_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.OracleProto.OracleInfo baseInfo_;
     /**
@@ -13789,7 +13838,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBaseInfo() {
-      return baseInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.OracleInfo base_info = 1 [json_name = "baseInfo"];</code>
@@ -13815,7 +13864,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasQuoteInfo() {
-      return quoteInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.OracleInfo quote_info = 2 [json_name = "quoteInfo"];</code>
@@ -13841,7 +13890,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOracleHistoryOptions() {
-      return oracleHistoryOptions_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.OracleHistoryOptions oracle_history_options = 3 [json_name = "oracleHistoryOptions"];</code>
@@ -13873,13 +13922,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (baseInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBaseInfo());
       }
-      if (quoteInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getQuoteInfo());
       }
-      if (oracleHistoryOptions_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getOracleHistoryOptions());
       }
       getUnknownFields().writeTo(output);
@@ -13891,15 +13940,15 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (baseInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseInfo());
       }
-      if (quoteInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getQuoteInfo());
       }
-      if (oracleHistoryOptions_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getOracleHistoryOptions());
       }
@@ -14080,13 +14129,21 @@ public final class QueryProto {
 
       // Construct using com.injective.oracle.v1beta1.QueryProto.QueryOracleVolatilityRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBaseInfoFieldBuilder();
+          getQuoteInfoFieldBuilder();
+          getOracleHistoryOptionsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14140,21 +14197,26 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.QueryProto.QueryOracleVolatilityRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseInfo_ = baseInfoBuilder_ == null
               ? baseInfo_
               : baseInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.quoteInfo_ = quoteInfoBuilder_ == null
               ? quoteInfo_
               : quoteInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.oracleHistoryOptions_ = oracleHistoryOptionsBuilder_ == null
               ? oracleHistoryOptions_
               : oracleHistoryOptionsBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14340,8 +14402,10 @@ public final class QueryProto {
         } else {
           baseInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (baseInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14459,8 +14523,10 @@ public final class QueryProto {
         } else {
           quoteInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (quoteInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14578,8 +14644,10 @@ public final class QueryProto {
         } else {
           oracleHistoryOptionsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (oracleHistoryOptions_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14791,6 +14859,7 @@ public final class QueryProto {
               com.injective.oracle.v1beta1.QueryProto.QueryOracleVolatilityResponse.class, com.injective.oracle.v1beta1.QueryProto.QueryOracleVolatilityResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VOLATILITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object volatility_ = "";
@@ -14838,7 +14907,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasHistoryMetadata() {
-      return historyMetadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.MetadataStatistics history_metadata = 2 [json_name = "historyMetadata"];</code>
@@ -14914,7 +14983,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volatility_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, volatility_);
       }
-      if (historyMetadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getHistoryMetadata());
       }
       for (int i = 0; i < rawHistory_.size(); i++) {
@@ -14932,7 +15001,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(volatility_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, volatility_);
       }
-      if (historyMetadata_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHistoryMetadata());
       }
@@ -15109,13 +15178,20 @@ public final class QueryProto {
 
       // Construct using com.injective.oracle.v1beta1.QueryProto.QueryOracleVolatilityResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHistoryMetadataFieldBuilder();
+          getRawHistoryFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15183,11 +15259,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.volatility_ = volatility_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.historyMetadata_ = historyMetadataBuilder_ == null
               ? historyMetadata_
               : historyMetadataBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15474,8 +15553,10 @@ public final class QueryProto {
         } else {
           historyMetadataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (historyMetadata_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -20507,6 +20588,7 @@ public final class QueryProto {
               com.injective.oracle.v1beta1.QueryProto.QueryOraclePriceResponse.class, com.injective.oracle.v1beta1.QueryProto.QueryOraclePriceResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PRICE_PAIR_STATE_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.QueryProto.PricePairState pricePairState_;
     /**
@@ -20515,7 +20597,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPricePairState() {
-      return pricePairState_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.injective.oracle.v1beta1.PricePairState price_pair_state = 1 [json_name = "pricePairState"];</code>
@@ -20547,7 +20629,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pricePairState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPricePairState());
       }
       getUnknownFields().writeTo(output);
@@ -20559,7 +20641,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pricePairState_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPricePairState());
       }
@@ -20722,13 +20804,19 @@ public final class QueryProto {
 
       // Construct using com.injective.oracle.v1beta1.QueryProto.QueryOraclePriceResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPricePairStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -20772,11 +20860,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.QueryProto.QueryOraclePriceResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pricePairState_ = pricePairStateBuilder_ == null
               ? pricePairState_
               : pricePairStateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20942,8 +21033,10 @@ public final class QueryProto {
         } else {
           pricePairStateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pricePairState_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

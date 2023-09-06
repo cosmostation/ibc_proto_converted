@@ -1,4 +1,4 @@
-// source: pstake/lspersistence/v1beta1/tx.proto
+// source: pstake/liquidstakeibc/v1beta1/msgs.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse');
+goog.provide('proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse = function(opt_data) {
+proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse, jspb.Message);
+goog.inherits(proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.displayName = 'proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse';
+  proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.displayName = 'proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.toObject(opt_includeInstance, this);
+proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.prototype.toObject = 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse} msg The msg instance to transform.
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.toObject = function(includeInstance, msg) {
+proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -84,23 +84,23 @@ proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.toObject = function(i
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse}
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse}
  */
-proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.deserializeBinary = function(bytes) {
+proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse;
-  return proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse;
+  return proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse} msg The message object to deserialize into.
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse}
+ * @return {!proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse}
  */
-proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.deserializeBinaryFrom
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.prototype.serializeBinary = function() {
+proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.serializeBinaryToWriter(this, writer);
+  proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.prototype.serializeBi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse} message
+ * @param {!proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.pstake.lspersistence.v1beta1.MsgUpdateParamsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.pstake.liquidstakeibc.v1beta1.MsgUpdateParamsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 

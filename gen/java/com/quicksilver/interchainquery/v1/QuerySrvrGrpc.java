@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: quicksilver/interchainquery/v1/query.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QuerySrvrGrpc {
 
   private QuerySrvrGrpc() {}
 
-  public static final String SERVICE_NAME = "quicksilver.interchainquery.v1.QuerySrvr";
+  public static final java.lang.String SERVICE_NAME = "quicksilver.interchainquery.v1.QuerySrvr";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest,
@@ -291,9 +291,9 @@ public final class QuerySrvrGrpc {
   private static final class QuerySrvrMethodDescriptorSupplier
       extends QuerySrvrBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    QuerySrvrMethodDescriptorSupplier(String methodName) {
+    QuerySrvrMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

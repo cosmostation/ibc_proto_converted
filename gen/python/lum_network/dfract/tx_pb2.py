@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1blum-network/dfract/tx.proto\x12\x12lum.network.dfract\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"r\n\nMsgDeposit\x12+\n\x11\x64\x65positor_address\x18\x01 \x01(\tR\x10\x64\x65positorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount\"\x14\n\x12MsgDepositResponse2X\n\x03Msg\x12Q\n\x07\x44\x65posit\x12\x1e.lum.network.dfract.MsgDeposit\x1a&.lum.network.dfract.MsgDepositResponseB\xb8\x01\n\x16\x63om.lum.network.dfractB\x07TxProtoP\x01Z+github.com/lum-network/chain/x/dfract/types\xa2\x02\x03LND\xaa\x02\x12Lum.Network.Dfract\xca\x02\x12Lum\\Network\\Dfract\xe2\x02\x1eLum\\Network\\Dfract\\GPBMetadata\xea\x02\x14Lum::Network::Dfractb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1blum-network/dfract/tx.proto\x12\x12lum.network.dfract\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"r\n\nMsgDeposit\x12+\n\x11\x64\x65positor_address\x18\x01 \x01(\tR\x10\x64\x65positorAddress\x12\x37\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00R\x06\x61mount\"\x14\n\x12MsgDepositResponse2X\n\x03Msg\x12Q\n\x07\x44\x65posit\x12\x1e.lum.network.dfract.MsgDeposit\x1a&.lum.network.dfract.MsgDepositResponseB\xb6\x01\n\x16\x63om.lum.network.dfractB\x07TxProtoZ+github.com/lum-network/chain/x/dfract/types\xa2\x02\x03LND\xaa\x02\x12Lum.Network.Dfract\xca\x02\x12Lum\\Network\\Dfract\xe2\x02\x1eLum\\Network\\Dfract\\GPBMetadata\xea\x02\x14Lum::Network::Dfractb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'lum_network.dfract.tx_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.lum.network.dfractB\007TxProtoP\001Z+github.com/lum-network/chain/x/dfract/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024Lum::Network::Dfract'
+  DESCRIPTOR._serialized_options = b'\n\026com.lum.network.dfractB\007TxProtoZ+github.com/lum-network/chain/x/dfract/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022Lum\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\GPBMetadata\352\002\024Lum::Network::Dfract'
   _MSGDEPOSIT.fields_by_name['amount']._options = None
   _MSGDEPOSIT.fields_by_name['amount']._serialized_options = b'\310\336\037\000'
   _globals['_MSGDEPOSIT']._serialized_start=105

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bshentu/burrow/balance.proto\x12\x07\x62\x61lance\x1a\x14gogoproto/gogo.proto\"M\n\x07\x42\x61lance\x12\x1c\n\x04Type\x18\x01 \x01(\rB\x08\xfa\xde\x1f\x04TypeR\x04Type\x12\x16\n\x06\x41mount\x18\x02 \x01(\x04R\x06\x41mount:\x0c\x98\xa0\x1f\x00\x90\xa2\x1f\x00\x98\xa2\x1f\x00\x42\x9a\x01\n\x0b\x63om.balanceB\x0c\x42\x61lanceProtoP\x01Z)github.com/hyperledger/burrow/acm/balance\xa2\x02\x03\x42XX\xaa\x02\x07\x42\x61lance\xca\x02\x07\x42\x61lance\xe2\x02\x13\x42\x61lance\\GPBMetadata\xea\x02\x07\x42\x61lance\xc8\xe2\x1e\x01\xd0\xe2\x1e\x01\xd8\xe2\x1e\x01\xe0\xe2\x1e\x01\xc0\xe3\x1e\x01\xc8\xe3\x1e\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bshentu/burrow/balance.proto\x12\x07\x62\x61lance\x1a\x14gogoproto/gogo.proto\"M\n\x07\x42\x61lance\x12\x1c\n\x04Type\x18\x01 \x01(\rB\x08\xfa\xde\x1f\x04TypeR\x04Type\x12\x16\n\x06\x41mount\x18\x02 \x01(\x04R\x06\x41mount:\x0c\x98\xa0\x1f\x00\x90\xa2\x1f\x00\x98\xa2\x1f\x00\x42\x98\x01\n\x0b\x63om.balanceB\x0c\x42\x61lanceProtoZ)github.com/hyperledger/burrow/acm/balance\xa2\x02\x03\x42XX\xaa\x02\x07\x42\x61lance\xca\x02\x07\x42\x61lance\xe2\x02\x13\x42\x61lance\\GPBMetadata\xea\x02\x07\x42\x61lance\xc8\xe2\x1e\x01\xd0\xe2\x1e\x01\xd8\xe2\x1e\x01\xe0\xe2\x1e\x01\xc0\xe3\x1e\x01\xc8\xe3\x1e\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'shentu.burrow.balance_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\013com.balanceB\014BalanceProtoP\001Z)github.com/hyperledger/burrow/acm/balance\242\002\003BXX\252\002\007Balance\312\002\007Balance\342\002\023Balance\\GPBMetadata\352\002\007Balance\310\342\036\001\320\342\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001'
+  DESCRIPTOR._serialized_options = b'\n\013com.balanceB\014BalanceProtoZ)github.com/hyperledger/burrow/acm/balance\242\002\003BXX\252\002\007Balance\312\002\007Balance\342\002\023Balance\\GPBMetadata\352\002\007Balance\310\342\036\001\320\342\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001'
   _BALANCE.fields_by_name['Type']._options = None
   _BALANCE.fields_by_name['Type']._serialized_options = b'\372\336\037\004Type'
   _BALANCE._options = None

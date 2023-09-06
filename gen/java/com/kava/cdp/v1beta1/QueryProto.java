@@ -477,6 +477,7 @@ public final class QueryProto {
               com.kava.cdp.v1beta1.QueryProto.QueryParamsResponse.class, com.kava.cdp.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.kava.cdp.v1beta1.GenesisProto.Params params_;
     /**
@@ -485,7 +486,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.cdp.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -517,7 +518,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -529,7 +530,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -691,13 +692,19 @@ public final class QueryProto {
 
       // Construct using com.kava.cdp.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -741,11 +748,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.cdp.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -911,8 +921,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2988,6 +3000,7 @@ public final class QueryProto {
               com.kava.cdp.v1beta1.QueryProto.QueryCdpResponse.class, com.kava.cdp.v1beta1.QueryProto.QueryCdpResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CDP_FIELD_NUMBER = 1;
     private com.kava.cdp.v1beta1.QueryProto.CDPResponse cdp_;
     /**
@@ -2996,7 +3009,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCdp() {
-      return cdp_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.kava.cdp.v1beta1.CDPResponse cdp = 1 [json_name = "cdp", (.gogoproto.nullable) = false];</code>
@@ -3028,7 +3041,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (cdp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getCdp());
       }
       getUnknownFields().writeTo(output);
@@ -3040,7 +3053,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (cdp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCdp());
       }
@@ -3202,13 +3215,19 @@ public final class QueryProto {
 
       // Construct using com.kava.cdp.v1beta1.QueryProto.QueryCdpResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCdpFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3252,11 +3271,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.cdp.v1beta1.QueryProto.QueryCdpResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cdp_ = cdpBuilder_ == null
               ? cdp_
               : cdpBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3422,8 +3444,10 @@ public final class QueryProto {
         } else {
           cdpBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (cdp_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3649,6 +3673,7 @@ public final class QueryProto {
               com.kava.cdp.v1beta1.QueryProto.QueryCdpsRequest.class, com.kava.cdp.v1beta1.QueryProto.QueryCdpsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COLLATERAL_TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collateralType_ = "";
@@ -3793,7 +3818,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 5 [json_name = "pagination"];</code>
@@ -3837,7 +3862,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ratio_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ratio_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3862,7 +3887,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ratio_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ratio_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPagination());
       }
@@ -4041,13 +4066,19 @@ public final class QueryProto {
 
       // Construct using com.kava.cdp.v1beta1.QueryProto.QueryCdpsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4107,11 +4138,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.ratio_ = ratio_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4583,8 +4617,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4782,6 +4818,7 @@ public final class QueryProto {
               com.kava.cdp.v1beta1.QueryProto.QueryCdpsResponse.class, com.kava.cdp.v1beta1.QueryProto.QueryCdpsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CDPS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kava.cdp.v1beta1.QueryProto.CDPResponse> cdps_;
@@ -4831,7 +4868,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4866,7 +4903,7 @@ public final class QueryProto {
       for (int i = 0; i < cdps_.size(); i++) {
         output.writeMessage(1, cdps_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4882,7 +4919,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, cdps_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -5050,13 +5087,20 @@ public final class QueryProto {
 
       // Construct using com.kava.cdp.v1beta1.QueryProto.QueryCdpsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCdpsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5120,11 +5164,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.kava.cdp.v1beta1.QueryProto.QueryCdpsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5569,8 +5616,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10059,6 +10108,7 @@ public final class QueryProto {
               com.kava.cdp.v1beta1.QueryProto.CDPResponse.class, com.kava.cdp.v1beta1.QueryProto.CDPResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -10156,7 +10206,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return collateral_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 4 [json_name = "collateral", (.gogoproto.nullable) = false];</code>
@@ -10182,7 +10232,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPrincipal() {
-      return principal_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin principal = 5 [json_name = "principal", (.gogoproto.nullable) = false];</code>
@@ -10208,7 +10258,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAccumulatedFees() {
-      return accumulatedFees_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin accumulated_fees = 6 [json_name = "accumulatedFees", (.gogoproto.nullable) = false];</code>
@@ -10234,7 +10284,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFeesUpdated() {
-      return feesUpdated_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp fees_updated = 7 [json_name = "feesUpdated", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -10299,7 +10349,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCollateralValue() {
-      return collateralValue_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral_value = 9 [json_name = "collateralValue", (.gogoproto.nullable) = false];</code>
@@ -10379,22 +10429,22 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
-      if (collateral_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getCollateral());
       }
-      if (principal_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getPrincipal());
       }
-      if (accumulatedFees_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(6, getAccumulatedFees());
       }
-      if (feesUpdated_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(7, getFeesUpdated());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(interestFactor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, interestFactor_);
       }
-      if (collateralValue_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(9, getCollateralValue());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralizationRatio_)) {
@@ -10419,26 +10469,26 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
-      if (collateral_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCollateral());
       }
-      if (principal_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPrincipal());
       }
-      if (accumulatedFees_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAccumulatedFees());
       }
-      if (feesUpdated_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getFeesUpdated());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(interestFactor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, interestFactor_);
       }
-      if (collateralValue_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getCollateralValue());
       }
@@ -10660,13 +10710,23 @@ public final class QueryProto {
 
       // Construct using com.kava.cdp.v1beta1.QueryProto.CDPResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCollateralFieldBuilder();
+          getPrincipalFieldBuilder();
+          getAccumulatedFeesFieldBuilder();
+          getFeesUpdatedFieldBuilder();
+          getCollateralValueFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10744,25 +10804,30 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.type_ = type_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.principal_ = principalBuilder_ == null
               ? principal_
               : principalBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.accumulatedFees_ = accumulatedFeesBuilder_ == null
               ? accumulatedFees_
               : accumulatedFeesBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.feesUpdated_ = feesUpdatedBuilder_ == null
               ? feesUpdated_
               : feesUpdatedBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.interestFactor_ = interestFactor_;
@@ -10771,10 +10836,12 @@ public final class QueryProto {
           result.collateralValue_ = collateralValueBuilder_ == null
               ? collateralValue_
               : collateralValueBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.collateralizationRatio_ = collateralizationRatio_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11204,8 +11271,10 @@ public final class QueryProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (collateral_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11323,8 +11392,10 @@ public final class QueryProto {
         } else {
           principalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (principal_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11442,8 +11513,10 @@ public final class QueryProto {
         } else {
           accumulatedFeesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (accumulatedFees_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11561,8 +11634,10 @@ public final class QueryProto {
         } else {
           feesUpdatedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (feesUpdated_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11752,8 +11827,10 @@ public final class QueryProto {
         } else {
           collateralValueBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+        if (collateralValue_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         return this;
       }
       /**

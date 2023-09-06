@@ -15,15 +15,14 @@ from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%bitsong/fantoken/v1beta1/params.proto\x12\x18\x62itsong.fantoken.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\x82\x02\n\x06Params\x12P\n\tissue_fee\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x18\xc8\xde\x1f\x00\xf2\xde\x1f\x10yaml:\"issue_fee\"R\x08issueFee\x12M\n\x08mint_fee\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x17\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"mint_fee\"R\x07mintFee\x12M\n\x08\x62urn_fee\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x17\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"burn_fee\"R\x07\x62urnFee:\x08\x98\xa0\x1f\x00\xe8\xa0\x1f\x01\x42\xe9\x01\n\x1c\x63om.bitsong.fantoken.v1beta1B\x0bParamsProtoP\x01Z6github.com/bitsongofficial/go-bitsong/x/fantoken/types\xa2\x02\x03\x42\x46X\xaa\x02\x18\x42itsong.Fantoken.V1beta1\xca\x02\x18\x42itsong\\Fantoken\\V1beta1\xe2\x02$Bitsong\\Fantoken\\V1beta1\\GPBMetadata\xea\x02\x1a\x42itsong::Fantoken::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%bitsong/fantoken/v1beta1/params.proto\x12\x18\x62itsong.fantoken.v1beta1\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x14gogoproto/gogo.proto\"\x82\x02\n\x06Params\x12P\n\tissue_fee\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x18\xc8\xde\x1f\x00\xf2\xde\x1f\x10yaml:\"issue_fee\"R\x08issueFee\x12M\n\x08mint_fee\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x17\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"mint_fee\"R\x07mintFee\x12M\n\x08\x62urn_fee\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x17\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"burn_fee\"R\x07\x62urnFee:\x08\x98\xa0\x1f\x00\xe8\xa0\x1f\x01\x42\xe7\x01\n\x1c\x63om.bitsong.fantoken.v1beta1B\x0bParamsProtoZ6github.com/bitsongofficial/go-bitsong/x/fantoken/types\xa2\x02\x03\x42\x46X\xaa\x02\x18\x42itsong.Fantoken.V1beta1\xca\x02\x18\x42itsong\\Fantoken\\V1beta1\xe2\x02$Bitsong\\Fantoken\\V1beta1\\GPBMetadata\xea\x02\x1a\x42itsong::Fantoken::V1beta1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'bitsong.fantoken.v1beta1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\034com.bitsong.fantoken.v1beta1B\013ParamsProtoP\001Z6github.com/bitsongofficial/go-bitsong/x/fantoken/types\242\002\003BFX\252\002\030Bitsong.Fantoken.V1beta1\312\002\030Bitsong\\Fantoken\\V1beta1\342\002$Bitsong\\Fantoken\\V1beta1\\GPBMetadata\352\002\032Bitsong::Fantoken::V1beta1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\034com.bitsong.fantoken.v1beta1B\013ParamsProtoZ6github.com/bitsongofficial/go-bitsong/x/fantoken/types\242\002\003BFX\252\002\030Bitsong.Fantoken.V1beta1\312\002\030Bitsong\\Fantoken\\V1beta1\342\002$Bitsong\\Fantoken\\V1beta1\\GPBMetadata\352\002\032Bitsong::Fantoken::V1beta1\310\341\036\000'
   _PARAMS.fields_by_name['issue_fee']._options = None
   _PARAMS.fields_by_name['issue_fee']._serialized_options = b'\310\336\037\000\362\336\037\020yaml:\"issue_fee\"'
   _PARAMS.fields_by_name['mint_fee']._options = None

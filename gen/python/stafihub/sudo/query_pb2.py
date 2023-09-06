@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19stafihub/sudo/query.proto\x12\x16stafihub.stafihub.sudo\x1a\x1cgoogle/api/annotations.proto\"\x13\n\x11QueryAdminRequest\".\n\x12QueryAdminResponse\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress2\x8f\x01\n\x05Query\x12\x85\x01\n\x05\x41\x64min\x12).stafihub.stafihub.sudo.QueryAdminRequest\x1a*.stafihub.stafihub.sudo.QueryAdminResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/stafihub/stafihub/sudo/adminB\xcd\x01\n\x1a\x63om.stafihub.stafihub.sudoB\nQueryProtoP\x01Z)github.com/stafihub/stafihub/x/sudo/types\xa2\x02\x03SSS\xaa\x02\x16Stafihub.Stafihub.Sudo\xca\x02\x16Stafihub\\Stafihub\\Sudo\xe2\x02\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Sudob\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19stafihub/sudo/query.proto\x12\x16stafihub.stafihub.sudo\x1a\x1cgoogle/api/annotations.proto\"\x13\n\x11QueryAdminRequest\".\n\x12QueryAdminResponse\x12\x18\n\x07\x61\x64\x64ress\x18\x01 \x01(\tR\x07\x61\x64\x64ress2\x8f\x01\n\x05Query\x12\x85\x01\n\x05\x41\x64min\x12).stafihub.stafihub.sudo.QueryAdminRequest\x1a*.stafihub.stafihub.sudo.QueryAdminResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/stafihub/stafihub/sudo/adminB\xcb\x01\n\x1a\x63om.stafihub.stafihub.sudoB\nQueryProtoZ)github.com/stafihub/stafihub/x/sudo/types\xa2\x02\x03SSS\xaa\x02\x16Stafihub.Stafihub.Sudo\xca\x02\x16Stafihub\\Stafihub\\Sudo\xe2\x02\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Sudob\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.sudo.query_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.sudoB\nQueryProtoP\001Z)github.com/stafihub/stafihub/x/sudo/types\242\002\003SSS\252\002\026Stafihub.Stafihub.Sudo\312\002\026Stafihub\\Stafihub\\Sudo\342\002\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\352\002\030Stafihub::Stafihub::Sudo'
+  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.sudoB\nQueryProtoZ)github.com/stafihub/stafihub/x/sudo/types\242\002\003SSS\252\002\026Stafihub.Stafihub.Sudo\312\002\026Stafihub\\Stafihub\\Sudo\342\002\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\352\002\030Stafihub::Stafihub::Sudo'
   _QUERY.methods_by_name['Admin']._options = None
   _QUERY.methods_by_name['Admin']._serialized_options = b'\202\323\344\223\002\037\022\035/stafihub/stafihub/sudo/admin'
   _globals['_QUERYADMINREQUEST']._serialized_start=83

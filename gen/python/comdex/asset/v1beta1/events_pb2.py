@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!comdex/asset/v1beta1/events.proto\x12\x14\x63omdex.asset.v1beta1\"\x1e\n\x0c\x45ventAddPair\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02idB\xca\x01\n\x18\x63om.comdex.asset.v1beta1B\x0b\x45ventsProtoP\x01Z/github.com/comdex-official/comdex/x/asset/types\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43omdex.Asset.V1beta1\xca\x02\x14\x43omdex\\Asset\\V1beta1\xe2\x02 Comdex\\Asset\\V1beta1\\GPBMetadata\xea\x02\x16\x43omdex::Asset::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!comdex/asset/v1beta1/events.proto\x12\x14\x63omdex.asset.v1beta1\"\x1e\n\x0c\x45ventAddPair\x12\x0e\n\x02id\x18\x01 \x01(\x04R\x02idB\xc8\x01\n\x18\x63om.comdex.asset.v1beta1B\x0b\x45ventsProtoZ/github.com/comdex-official/comdex/x/asset/types\xa2\x02\x03\x43\x41X\xaa\x02\x14\x43omdex.Asset.V1beta1\xca\x02\x14\x43omdex\\Asset\\V1beta1\xe2\x02 Comdex\\Asset\\V1beta1\\GPBMetadata\xea\x02\x16\x43omdex::Asset::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comdex.asset.v1beta1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\030com.comdex.asset.v1beta1B\013EventsProtoP\001Z/github.com/comdex-official/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::Asset::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\030com.comdex.asset.v1beta1B\013EventsProtoZ/github.com/comdex-official/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::Asset::V1beta1'
   _globals['_EVENTADDPAIR']._serialized_start=59
   _globals['_EVENTADDPAIR']._serialized_end=89
 # @@protoc_insertion_point(module_scope)

@@ -998,6 +998,7 @@ public final class IncentiveProto {
               com.umee.incentive.v1.IncentiveProto.IncentiveProgram.class, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private int iD_ = 0;
     /**
@@ -1131,7 +1132,7 @@ public final class IncentiveProto {
      */
     @java.lang.Override
     public boolean hasTotalRewards() {
-      return totalRewards_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1177,7 +1178,7 @@ public final class IncentiveProto {
      */
     @java.lang.Override
     public boolean hasRemainingRewards() {
-      return remainingRewards_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1240,10 +1241,10 @@ public final class IncentiveProto {
       if (funded_ != false) {
         output.writeBool(5, funded_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(6, getTotalRewards());
       }
-      if (remainingRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(7, getRemainingRewards());
       }
       getUnknownFields().writeTo(output);
@@ -1274,11 +1275,11 @@ public final class IncentiveProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, funded_);
       }
-      if (totalRewards_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTotalRewards());
       }
-      if (remainingRewards_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getRemainingRewards());
       }
@@ -1473,13 +1474,20 @@ public final class IncentiveProto {
 
       // Construct using com.umee.incentive.v1.IncentiveProto.IncentiveProgram.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalRewardsFieldBuilder();
+          getRemainingRewardsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1548,16 +1556,20 @@ public final class IncentiveProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.funded_ = funded_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.totalRewards_ = totalRewardsBuilder_ == null
               ? totalRewards_
               : totalRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.remainingRewards_ = remainingRewardsBuilder_ == null
               ? remainingRewards_
               : remainingRewardsBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2107,8 +2119,10 @@ public final class IncentiveProto {
         } else {
           totalRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (totalRewards_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2290,8 +2304,10 @@ public final class IncentiveProto {
         } else {
           remainingRewardsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+        if (remainingRewards_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         return this;
       }
       /**

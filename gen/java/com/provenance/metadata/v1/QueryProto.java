@@ -516,6 +516,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.QueryParamsResponse.class, com.provenance.metadata.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.Params params_;
     /**
@@ -528,7 +529,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -566,7 +567,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -606,10 +607,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -621,11 +622,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -796,13 +797,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -851,16 +859,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1056,8 +1068,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1211,8 +1225,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2698,6 +2714,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopeResponse.class, com.provenance.metadata.v1.QueryProto.ScopeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.QueryProto.ScopeWrapper scope_;
     /**
@@ -2710,7 +2727,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScope() {
-      return scope_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2870,7 +2887,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2910,7 +2927,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getScope());
       }
       for (int i = 0; i < sessions_.size(); i++) {
@@ -2919,7 +2936,7 @@ public final class QueryProto {
       for (int i = 0; i < records_.size(); i++) {
         output.writeMessage(3, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -2931,7 +2948,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScope());
       }
@@ -2943,7 +2960,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -3126,13 +3143,22 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopeFieldBuilder();
+          getSessionsFieldBuilder();
+          getRecordsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3217,16 +3243,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scope_ = scopeBuilder_ == null
               ? scope_
               : scopeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3500,8 +3530,10 @@ public final class QueryProto {
         } else {
           scopeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (scope_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4279,8 +4311,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4535,6 +4569,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopeWrapper.class, com.provenance.metadata.v1.QueryProto.ScopeWrapper.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ScopeProto.Scope scope_;
     /**
@@ -4547,7 +4582,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScope() {
-      return scope_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4585,7 +4620,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScopeIdInfo() {
-      return scopeIdInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -4623,7 +4658,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScopeSpecIdInfo() {
-      return scopeSpecIdInfo_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -4663,13 +4698,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getScope());
       }
-      if (scopeIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getScopeIdInfo());
       }
-      if (scopeSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getScopeSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -4681,15 +4716,15 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScope());
       }
-      if (scopeIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getScopeIdInfo());
       }
-      if (scopeSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getScopeSpecIdInfo());
       }
@@ -4869,13 +4904,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopeWrapper.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopeFieldBuilder();
+          getScopeIdInfoFieldBuilder();
+          getScopeSpecIdInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4929,21 +4972,26 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopeWrapper result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scope_ = scopeBuilder_ == null
               ? scope_
               : scopeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.scopeIdInfo_ = scopeIdInfoBuilder_ == null
               ? scopeIdInfo_
               : scopeIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.scopeSpecIdInfo_ = scopeSpecIdInfoBuilder_ == null
               ? scopeSpecIdInfo_
               : scopeSpecIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5149,8 +5197,10 @@ public final class QueryProto {
         } else {
           scopeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (scope_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5304,8 +5354,10 @@ public final class QueryProto {
         } else {
           scopeIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (scopeIdInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5459,8 +5511,10 @@ public final class QueryProto {
         } else {
           scopeSpecIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (scopeSpecIdInfo_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5661,6 +5715,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopesAllRequest.class, com.provenance.metadata.v1.QueryProto.ScopesAllRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 99;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -5673,7 +5728,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -5713,7 +5768,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5725,7 +5780,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -5887,13 +5942,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopesAllRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5937,11 +5998,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopesAllRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6127,8 +6191,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6401,6 +6467,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopesAllResponse.class, com.provenance.metadata.v1.QueryProto.ScopesAllResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.QueryProto.ScopeWrapper> scopes_;
@@ -6474,7 +6541,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -6512,7 +6579,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -6555,10 +6622,10 @@ public final class QueryProto {
       for (int i = 0; i < scopes_.size(); i++) {
         output.writeMessage(1, scopes_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6574,11 +6641,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, scopes_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -6755,13 +6822,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopesAllResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopesFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6830,16 +6905,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopesAllResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7386,8 +7465,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7541,8 +7622,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -9221,6 +9304,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.SessionsResponse.class, com.provenance.metadata.v1.QueryProto.SessionsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.QueryProto.ScopeWrapper scope_;
     /**
@@ -9233,7 +9317,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScope() {
-      return scope_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -9393,7 +9477,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -9433,7 +9517,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getScope());
       }
       for (int i = 0; i < sessions_.size(); i++) {
@@ -9442,7 +9526,7 @@ public final class QueryProto {
       for (int i = 0; i < records_.size(); i++) {
         output.writeMessage(3, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -9454,7 +9538,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScope());
       }
@@ -9466,7 +9550,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -9649,13 +9733,22 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.SessionsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopeFieldBuilder();
+          getSessionsFieldBuilder();
+          getRecordsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -9740,16 +9833,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.SessionsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scope_ = scopeBuilder_ == null
               ? scope_
               : scopeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10023,8 +10120,10 @@ public final class QueryProto {
         } else {
           scopeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (scope_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10802,8 +10901,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11058,6 +11159,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.SessionWrapper.class, com.provenance.metadata.v1.QueryProto.SessionWrapper.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SESSION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ScopeProto.Session session_;
     /**
@@ -11070,7 +11172,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSession() {
-      return session_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -11108,7 +11210,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSessionIdInfo() {
-      return sessionIdInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -11146,7 +11248,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasContractSpecIdInfo() {
-      return contractSpecIdInfo_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -11186,13 +11288,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (session_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSession());
       }
-      if (sessionIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getSessionIdInfo());
       }
-      if (contractSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getContractSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -11204,15 +11306,15 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (session_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSession());
       }
-      if (sessionIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSessionIdInfo());
       }
-      if (contractSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getContractSpecIdInfo());
       }
@@ -11392,13 +11494,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.SessionWrapper.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSessionFieldBuilder();
+          getSessionIdInfoFieldBuilder();
+          getContractSpecIdInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -11452,21 +11562,26 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.SessionWrapper result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.session_ = sessionBuilder_ == null
               ? session_
               : sessionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sessionIdInfo_ = sessionIdInfoBuilder_ == null
               ? sessionIdInfo_
               : sessionIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.contractSpecIdInfo_ = contractSpecIdInfoBuilder_ == null
               ? contractSpecIdInfo_
               : contractSpecIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11672,8 +11787,10 @@ public final class QueryProto {
         } else {
           sessionBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (session_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11827,8 +11944,10 @@ public final class QueryProto {
         } else {
           sessionIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (sessionIdInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -11982,8 +12101,10 @@ public final class QueryProto {
         } else {
           contractSpecIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (contractSpecIdInfo_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12184,6 +12305,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.SessionsAllRequest.class, com.provenance.metadata.v1.QueryProto.SessionsAllRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 99;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -12196,7 +12318,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -12236,7 +12358,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -12248,7 +12370,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -12410,13 +12532,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.SessionsAllRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12460,11 +12588,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.SessionsAllRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12650,8 +12781,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -12924,6 +13057,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.SessionsAllResponse.class, com.provenance.metadata.v1.QueryProto.SessionsAllResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SESSIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.QueryProto.SessionWrapper> sessions_;
@@ -12997,7 +13131,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -13035,7 +13169,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -13078,10 +13212,10 @@ public final class QueryProto {
       for (int i = 0; i < sessions_.size(); i++) {
         output.writeMessage(1, sessions_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -13097,11 +13231,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, sessions_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -13278,13 +13412,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.SessionsAllResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSessionsFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -13353,16 +13495,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.SessionsAllResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13909,8 +14055,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14064,8 +14212,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15744,6 +15894,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordsResponse.class, com.provenance.metadata.v1.QueryProto.RecordsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.QueryProto.ScopeWrapper scope_;
     /**
@@ -15756,7 +15907,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScope() {
-      return scope_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -15916,7 +16067,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -15956,7 +16107,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getScope());
       }
       for (int i = 0; i < sessions_.size(); i++) {
@@ -15965,7 +16116,7 @@ public final class QueryProto {
       for (int i = 0; i < records_.size(); i++) {
         output.writeMessage(3, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -15977,7 +16128,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (scope_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScope());
       }
@@ -15989,7 +16140,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -16172,13 +16323,22 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopeFieldBuilder();
+          getSessionsFieldBuilder();
+          getRecordsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -16263,16 +16423,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scope_ = scopeBuilder_ == null
               ? scope_
               : scopeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16546,8 +16710,10 @@ public final class QueryProto {
         } else {
           scopeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (scope_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17325,8 +17491,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -17581,6 +17749,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordWrapper.class, com.provenance.metadata.v1.QueryProto.RecordWrapper.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECORD_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ScopeProto.Record record_;
     /**
@@ -17593,7 +17762,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return record_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -17631,7 +17800,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRecordIdInfo() {
-      return recordIdInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -17669,7 +17838,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRecordSpecIdInfo() {
-      return recordSpecIdInfo_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -17709,13 +17878,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRecord());
       }
-      if (recordIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getRecordIdInfo());
       }
-      if (recordSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getRecordSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -17727,15 +17896,15 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (record_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRecord());
       }
-      if (recordIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecordIdInfo());
       }
-      if (recordSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRecordSpecIdInfo());
       }
@@ -17915,13 +18084,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordWrapper.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordFieldBuilder();
+          getRecordIdInfoFieldBuilder();
+          getRecordSpecIdInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17975,21 +18152,26 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordWrapper result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recordIdInfo_ = recordIdInfoBuilder_ == null
               ? recordIdInfo_
               : recordIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.recordSpecIdInfo_ = recordSpecIdInfoBuilder_ == null
               ? recordSpecIdInfo_
               : recordSpecIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18195,8 +18377,10 @@ public final class QueryProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (record_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -18350,8 +18534,10 @@ public final class QueryProto {
         } else {
           recordIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (recordIdInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -18505,8 +18691,10 @@ public final class QueryProto {
         } else {
           recordSpecIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (recordSpecIdInfo_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -18707,6 +18895,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordsAllRequest.class, com.provenance.metadata.v1.QueryProto.RecordsAllRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 99;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -18719,7 +18908,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -18759,7 +18948,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -18771,7 +18960,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -18933,13 +19122,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordsAllRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -18983,11 +19178,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordsAllRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -19173,8 +19371,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -19447,6 +19647,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordsAllResponse.class, com.provenance.metadata.v1.QueryProto.RecordsAllResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECORDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.QueryProto.RecordWrapper> records_;
@@ -19520,7 +19721,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -19558,7 +19759,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -19601,10 +19802,10 @@ public final class QueryProto {
       for (int i = 0; i < records_.size(); i++) {
         output.writeMessage(1, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -19620,11 +19821,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, records_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -19801,13 +20002,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordsAllResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordsFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -19876,16 +20085,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordsAllResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20432,8 +20645,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -20587,8 +20802,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -20802,6 +21019,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OwnershipRequest.class, com.provenance.metadata.v1.QueryProto.OwnershipRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -20853,7 +21071,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -20896,7 +21114,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -20911,7 +21129,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -21077,13 +21295,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OwnershipRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -21131,11 +21355,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21403,8 +21630,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -21675,6 +21904,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OwnershipResponse.class, com.provenance.metadata.v1.QueryProto.OwnershipResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_UUIDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList scopeUuids_ =
@@ -21740,7 +21970,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -21778,7 +22008,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -21821,10 +22051,10 @@ public final class QueryProto {
       for (int i = 0; i < scopeUuids_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeUuids_.getRaw(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -21844,11 +22074,11 @@ public final class QueryProto {
         size += dataSize;
         size += 1 * getScopeUuidsList().size();
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -22025,13 +22255,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OwnershipResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -22086,16 +22323,20 @@ public final class QueryProto {
           scopeUuids_.makeImmutable();
           result.scopeUuids_ = scopeUuids_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22454,8 +22695,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -22609,8 +22852,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -22824,6 +23069,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ValueOwnershipRequest.class, com.provenance.metadata.v1.QueryProto.ValueOwnershipRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -22875,7 +23121,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -22918,7 +23164,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -22933,7 +23179,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -23099,13 +23345,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ValueOwnershipRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -23153,11 +23405,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23425,8 +23680,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -23697,6 +23954,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ValueOwnershipResponse.class, com.provenance.metadata.v1.QueryProto.ValueOwnershipResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_UUIDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList scopeUuids_ =
@@ -23762,7 +24020,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -23800,7 +24058,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -23843,10 +24101,10 @@ public final class QueryProto {
       for (int i = 0; i < scopeUuids_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopeUuids_.getRaw(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -23866,11 +24124,11 @@ public final class QueryProto {
         size += dataSize;
         size += 1 * getScopeUuidsList().size();
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -24047,13 +24305,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ValueOwnershipResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -24108,16 +24373,20 @@ public final class QueryProto {
           scopeUuids_.makeImmutable();
           result.scopeUuids_ = scopeUuids_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -24476,8 +24745,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -24631,8 +24902,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -25751,6 +26024,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopeSpecificationResponse.class, com.provenance.metadata.v1.QueryProto.ScopeSpecificationResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.QueryProto.ScopeSpecificationWrapper scopeSpecification_;
     /**
@@ -25763,7 +26037,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScopeSpecification() {
-      return scopeSpecification_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -25923,7 +26197,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -25963,7 +26237,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (scopeSpecification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getScopeSpecification());
       }
       for (int i = 0; i < contractSpecs_.size(); i++) {
@@ -25972,7 +26246,7 @@ public final class QueryProto {
       for (int i = 0; i < recordSpecs_.size(); i++) {
         output.writeMessage(3, recordSpecs_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -25984,7 +26258,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (scopeSpecification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScopeSpecification());
       }
@@ -25996,7 +26270,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, recordSpecs_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -26179,13 +26453,22 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopeSpecificationResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopeSpecificationFieldBuilder();
+          getContractSpecsFieldBuilder();
+          getRecordSpecsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -26270,16 +26553,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopeSpecificationResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scopeSpecification_ = scopeSpecificationBuilder_ == null
               ? scopeSpecification_
               : scopeSpecificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -26553,8 +26840,10 @@ public final class QueryProto {
         } else {
           scopeSpecificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (scopeSpecification_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -27332,8 +27621,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -27561,6 +27852,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopeSpecificationWrapper.class, com.provenance.metadata.v1.QueryProto.ScopeSpecificationWrapper.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.SpecificationProto.ScopeSpecification specification_;
     /**
@@ -27573,7 +27865,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSpecification() {
-      return specification_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -27611,7 +27903,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasScopeSpecIdInfo() {
-      return scopeSpecIdInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -27651,10 +27943,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (specification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSpecification());
       }
-      if (scopeSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getScopeSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -27666,11 +27958,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (specification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpecification());
       }
-      if (scopeSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getScopeSpecIdInfo());
       }
@@ -27841,13 +28133,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopeSpecificationWrapper.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSpecificationFieldBuilder();
+          getScopeSpecIdInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -27896,16 +28195,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopeSpecificationWrapper result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specification_ = specificationBuilder_ == null
               ? specification_
               : specificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.scopeSpecIdInfo_ = scopeSpecIdInfoBuilder_ == null
               ? scopeSpecIdInfo_
               : scopeSpecIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -28101,8 +28404,10 @@ public final class QueryProto {
         } else {
           specificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (specification_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -28256,8 +28561,10 @@ public final class QueryProto {
         } else {
           scopeSpecIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (scopeSpecIdInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -28458,6 +28765,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllRequest.class, com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 99;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -28470,7 +28778,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -28510,7 +28818,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -28522,7 +28830,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -28684,13 +28992,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -28734,11 +29048,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -28924,8 +29241,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -29198,6 +29517,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllResponse.class, com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SCOPE_SPECIFICATIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.QueryProto.ScopeSpecificationWrapper> scopeSpecifications_;
@@ -29271,7 +29591,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -29309,7 +29629,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -29352,10 +29672,10 @@ public final class QueryProto {
       for (int i = 0; i < scopeSpecifications_.size(); i++) {
         output.writeMessage(1, scopeSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -29371,11 +29691,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, scopeSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -29552,13 +29872,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getScopeSpecificationsFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -29627,16 +29955,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ScopeSpecificationsAllResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -30183,8 +30515,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -30338,8 +30672,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -31338,6 +31674,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ContractSpecificationResponse.class, com.provenance.metadata.v1.QueryProto.ContractSpecificationResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.QueryProto.ContractSpecificationWrapper contractSpecification_;
     /**
@@ -31350,7 +31687,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasContractSpecification() {
-      return contractSpecification_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -31454,7 +31791,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -31494,13 +31831,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (contractSpecification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getContractSpecification());
       }
       for (int i = 0; i < recordSpecifications_.size(); i++) {
         output.writeMessage(3, recordSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -31512,7 +31849,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (contractSpecification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContractSpecification());
       }
@@ -31520,7 +31857,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, recordSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -31697,13 +32034,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ContractSpecificationResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContractSpecificationFieldBuilder();
+          getRecordSpecificationsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -31772,16 +32117,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ContractSpecificationResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractSpecification_ = contractSpecificationBuilder_ == null
               ? contractSpecification_
               : contractSpecificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -32016,8 +32365,10 @@ public final class QueryProto {
         } else {
           contractSpecificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (contractSpecification_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -32501,8 +32852,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -32730,6 +33083,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ContractSpecificationWrapper.class, com.provenance.metadata.v1.QueryProto.ContractSpecificationWrapper.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.SpecificationProto.ContractSpecification specification_;
     /**
@@ -32742,7 +33096,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSpecification() {
-      return specification_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -32780,7 +33134,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasContractSpecIdInfo() {
-      return contractSpecIdInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -32820,10 +33174,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (specification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSpecification());
       }
-      if (contractSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getContractSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -32835,11 +33189,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (specification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpecification());
       }
-      if (contractSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContractSpecIdInfo());
       }
@@ -33010,13 +33364,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ContractSpecificationWrapper.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSpecificationFieldBuilder();
+          getContractSpecIdInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -33065,16 +33426,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ContractSpecificationWrapper result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specification_ = specificationBuilder_ == null
               ? specification_
               : specificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractSpecIdInfo_ = contractSpecIdInfoBuilder_ == null
               ? contractSpecIdInfo_
               : contractSpecIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -33270,8 +33635,10 @@ public final class QueryProto {
         } else {
           specificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (specification_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -33425,8 +33792,10 @@ public final class QueryProto {
         } else {
           contractSpecIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (contractSpecIdInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -33627,6 +33996,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllRequest.class, com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 99;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -33639,7 +34009,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -33679,7 +34049,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -33691,7 +34061,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -33853,13 +34223,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -33903,11 +34279,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -34093,8 +34472,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -34367,6 +34748,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllResponse.class, com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTRACT_SPECIFICATIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.QueryProto.ContractSpecificationWrapper> contractSpecifications_;
@@ -34440,7 +34822,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -34478,7 +34860,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -34521,10 +34903,10 @@ public final class QueryProto {
       for (int i = 0; i < contractSpecifications_.size(); i++) {
         output.writeMessage(1, contractSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -34540,11 +34922,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, contractSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -34721,13 +35103,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContractSpecificationsFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -34796,16 +35186,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.ContractSpecificationsAllResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -35352,8 +35746,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -35507,8 +35903,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -36422,6 +36820,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordSpecificationsForContractSpecificationResponse.class, com.provenance.metadata.v1.QueryProto.RecordSpecificationsForContractSpecificationResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECORD_SPECIFICATIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.QueryProto.RecordSpecificationWrapper> recordSpecifications_;
@@ -36589,7 +36988,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -36638,7 +37037,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contractSpecificationAddr_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -36660,7 +37059,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecificationAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contractSpecificationAddr_);
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -36837,13 +37236,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordSpecificationsForContractSpecificationResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordSpecificationsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -36915,11 +37321,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.contractSpecificationAddr_ = contractSpecificationAddr_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -37660,8 +38069,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -38714,6 +39125,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordSpecificationResponse.class, com.provenance.metadata.v1.QueryProto.RecordSpecificationResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECORD_SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.QueryProto.RecordSpecificationWrapper recordSpecification_;
     /**
@@ -38726,7 +39138,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRecordSpecification() {
-      return recordSpecification_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -38764,7 +39176,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -38804,10 +39216,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (recordSpecification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getRecordSpecification());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -38819,11 +39231,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (recordSpecification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRecordSpecification());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -38994,13 +39406,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordSpecificationResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordSpecificationFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -39049,16 +39468,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordSpecificationResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recordSpecification_ = recordSpecificationBuilder_ == null
               ? recordSpecification_
               : recordSpecificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -39254,8 +39677,10 @@ public final class QueryProto {
         } else {
           recordSpecificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (recordSpecification_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -39409,8 +39834,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -39638,6 +40065,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordSpecificationWrapper.class, com.provenance.metadata.v1.QueryProto.RecordSpecificationWrapper.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.SpecificationProto.RecordSpecification specification_;
     /**
@@ -39650,7 +40078,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSpecification() {
-      return specification_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -39688,7 +40116,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRecordSpecIdInfo() {
-      return recordSpecIdInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -39728,10 +40156,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (specification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSpecification());
       }
-      if (recordSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getRecordSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -39743,11 +40171,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (specification_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpecification());
       }
-      if (recordSpecIdInfo_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecordSpecIdInfo());
       }
@@ -39918,13 +40346,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordSpecificationWrapper.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSpecificationFieldBuilder();
+          getRecordSpecIdInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -39973,16 +40408,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordSpecificationWrapper result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specification_ = specificationBuilder_ == null
               ? specification_
               : specificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recordSpecIdInfo_ = recordSpecIdInfoBuilder_ == null
               ? recordSpecIdInfo_
               : recordSpecIdInfoBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -40178,8 +40617,10 @@ public final class QueryProto {
         } else {
           specificationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (specification_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -40333,8 +40774,10 @@ public final class QueryProto {
         } else {
           recordSpecIdInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (recordSpecIdInfo_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -40535,6 +40978,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllRequest.class, com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 99;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -40547,7 +40991,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -40587,7 +41031,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -40599,7 +41043,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -40761,13 +41205,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -40811,11 +41261,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -41001,8 +41454,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -41275,6 +41730,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllResponse.class, com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int RECORD_SPECIFICATIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.QueryProto.RecordSpecificationWrapper> recordSpecifications_;
@@ -41348,7 +41804,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -41386,7 +41842,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -41429,10 +41885,10 @@ public final class QueryProto {
       for (int i = 0; i < recordSpecifications_.size(); i++) {
         output.writeMessage(1, recordSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -41448,11 +41904,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, recordSpecifications_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -41629,13 +42085,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecordSpecificationsFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -41704,16 +42168,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.RecordSpecificationsAllResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -42260,8 +42728,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -42415,8 +42885,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -43049,6 +43521,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OSLocatorParamsResponse.class, com.provenance.metadata.v1.QueryProto.OSLocatorParamsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams params_;
     /**
@@ -43061,7 +43534,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return params_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -43099,7 +43572,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -43139,10 +43612,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getParams());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -43154,11 +43627,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (params_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -43329,13 +43802,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OSLocatorParamsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParamsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -43384,16 +43864,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.OSLocatorParamsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -43589,8 +44073,10 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (params_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -43744,8 +44230,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -44521,6 +45009,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OSLocatorResponse.class, com.provenance.metadata.v1.QueryProto.OSLocatorResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCATOR_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator locator_;
     /**
@@ -44529,7 +45018,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLocator() {
-      return locator_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.provenance.metadata.v1.ObjectStoreLocator locator = 1 [json_name = "locator"];</code>
@@ -44559,7 +45048,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -44599,10 +45088,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (locator_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getLocator());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -44614,11 +45103,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (locator_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocator());
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -44789,13 +45278,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OSLocatorResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLocatorFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -44844,16 +45340,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.OSLocatorResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.locator_ = locatorBuilder_ == null
               ? locator_
               : locatorBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -45029,8 +45529,10 @@ public final class QueryProto {
         } else {
           locatorBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (locator_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -45168,8 +45670,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -45383,6 +45887,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OSLocatorsByURIRequest.class, com.provenance.metadata.v1.QueryProto.OSLocatorsByURIRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int URI_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object uri_ = "";
@@ -45434,7 +45939,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -45477,7 +45982,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uri_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -45492,7 +45997,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uri_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -45658,13 +46163,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OSLocatorsByURIRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -45712,11 +46223,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.uri_ = uri_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -45984,8 +46498,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -46238,6 +46754,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OSLocatorsByURIResponse.class, com.provenance.metadata.v1.QueryProto.OSLocatorsByURIResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCATORS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> locators_;
@@ -46291,7 +46808,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -46329,7 +46846,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -46372,10 +46889,10 @@ public final class QueryProto {
       for (int i = 0; i < locators_.size(); i++) {
         output.writeMessage(1, locators_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -46391,11 +46908,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, locators_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -46572,13 +47089,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OSLocatorsByURIResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLocatorsFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -46647,16 +47172,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.OSLocatorsByURIResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -47131,8 +47660,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -47286,8 +47817,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -48073,6 +48606,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OSLocatorsByScopeResponse.class, com.provenance.metadata.v1.QueryProto.OSLocatorsByScopeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCATORS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> locators_;
@@ -48126,7 +48660,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -48169,7 +48703,7 @@ public final class QueryProto {
       for (int i = 0; i < locators_.size(); i++) {
         output.writeMessage(1, locators_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -48185,7 +48719,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, locators_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
@@ -48353,13 +48887,20 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OSLocatorsByScopeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLocatorsFieldBuilder();
+          getRequestFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -48423,11 +48964,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.OSLocatorsByScopeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -48892,8 +49436,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -49094,6 +49640,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OSAllLocatorsRequest.class, com.provenance.metadata.v1.QueryProto.OSAllLocatorsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 99;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -49106,7 +49653,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -49146,7 +49693,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -49158,7 +49705,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -49320,13 +49867,19 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OSAllLocatorsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -49370,11 +49923,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.OSAllLocatorsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -49560,8 +50116,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -49814,6 +50372,7 @@ public final class QueryProto {
               com.provenance.metadata.v1.QueryProto.OSAllLocatorsResponse.class, com.provenance.metadata.v1.QueryProto.OSAllLocatorsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCATORS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> locators_;
@@ -49867,7 +50426,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return request_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -49905,7 +50464,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -49948,10 +50507,10 @@ public final class QueryProto {
       for (int i = 0; i < locators_.size(); i++) {
         output.writeMessage(1, locators_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(99, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -49967,11 +50526,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, locators_.get(i));
       }
-      if (request_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(98, getRequest());
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getPagination());
       }
@@ -50148,13 +50707,21 @@ public final class QueryProto {
 
       // Construct using com.provenance.metadata.v1.QueryProto.OSAllLocatorsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLocatorsFieldBuilder();
+          getRequestFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -50223,16 +50790,20 @@ public final class QueryProto {
 
       private void buildPartial0(com.provenance.metadata.v1.QueryProto.OSAllLocatorsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -50707,8 +51278,10 @@ public final class QueryProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (request_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -50862,8 +51435,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

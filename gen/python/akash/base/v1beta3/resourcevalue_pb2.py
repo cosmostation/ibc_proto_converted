@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&akash/base/v1beta3/resourcevalue.proto\x12\x12\x61kash.base.v1beta3\x1a\x14gogoproto/gogo.proto\"W\n\rResourceValue\x12@\n\x03val\x18\x01 \x01(\x0c\x42.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x03val:\x04\xe8\xa0\x1f\x01\x42\xd0\x01\n\x16\x63om.akash.base.v1beta3B\x12ResourcevalueProtoP\x01Z8github.com/akash-network/akash-api/go/node/types/v1beta3\xa2\x02\x03\x41\x42X\xaa\x02\x12\x41kash.Base.V1beta3\xca\x02\x12\x41kash\\Base\\V1beta3\xe2\x02\x1e\x41kash\\Base\\V1beta3\\GPBMetadata\xea\x02\x14\x41kash::Base::V1beta3b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&akash/base/v1beta3/resourcevalue.proto\x12\x12\x61kash.base.v1beta3\x1a\x14gogoproto/gogo.proto\"W\n\rResourceValue\x12@\n\x03val\x18\x01 \x01(\x0c\x42.\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.IntR\x03val:\x04\xe8\xa0\x1f\x01\x42\xce\x01\n\x16\x63om.akash.base.v1beta3B\x12ResourcevalueProtoZ8github.com/akash-network/akash-api/go/node/types/v1beta3\xa2\x02\x03\x41\x42X\xaa\x02\x12\x41kash.Base.V1beta3\xca\x02\x12\x41kash\\Base\\V1beta3\xe2\x02\x1e\x41kash\\Base\\V1beta3\\GPBMetadata\xea\x02\x14\x41kash::Base::V1beta3b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'akash.base.v1beta3.resourcevalue_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.akash.base.v1beta3B\022ResourcevalueProtoP\001Z8github.com/akash-network/akash-api/go/node/types/v1beta3\242\002\003ABX\252\002\022Akash.Base.V1beta3\312\002\022Akash\\Base\\V1beta3\342\002\036Akash\\Base\\V1beta3\\GPBMetadata\352\002\024Akash::Base::V1beta3'
+  DESCRIPTOR._serialized_options = b'\n\026com.akash.base.v1beta3B\022ResourcevalueProtoZ8github.com/akash-network/akash-api/go/node/types/v1beta3\242\002\003ABX\252\002\022Akash.Base.V1beta3\312\002\022Akash\\Base\\V1beta3\342\002\036Akash\\Base\\V1beta3\\GPBMetadata\352\002\024Akash::Base::V1beta3'
   _RESOURCEVALUE.fields_by_name['val']._options = None
   _RESOURCEVALUE.fields_by_name['val']._serialized_options = b'\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types.Int'
   _RESOURCEVALUE._options = None

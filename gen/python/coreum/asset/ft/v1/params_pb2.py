@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63oreum/asset/ft/v1/params.proto\x12\x12\x63oreum.asset.ft.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"Z\n\x06Params\x12P\n\tissue_fee\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x18\xc8\xde\x1f\x00\xf2\xde\x1f\x10yaml:\"issue_fee\"R\x08issueFeeB\xc5\x01\n\x16\x63om.coreum.asset.ft.v1B\x0bParamsProtoP\x01Z3github.com/CoreumFoundation/coreum/x/asset/ft/types\xa2\x02\x03\x43\x41\x46\xaa\x02\x12\x43oreum.Asset.Ft.V1\xca\x02\x12\x43oreum\\Asset\\Ft\\V1\xe2\x02\x1e\x43oreum\\Asset\\Ft\\V1\\GPBMetadata\xea\x02\x15\x43oreum::Asset::Ft::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x63oreum/asset/ft/v1/params.proto\x12\x12\x63oreum.asset.ft.v1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"Z\n\x06Params\x12P\n\tissue_fee\x18\x01 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x18\xc8\xde\x1f\x00\xf2\xde\x1f\x10yaml:\"issue_fee\"R\x08issueFeeB\xc3\x01\n\x16\x63om.coreum.asset.ft.v1B\x0bParamsProtoZ3github.com/CoreumFoundation/coreum/x/asset/ft/types\xa2\x02\x03\x43\x41\x46\xaa\x02\x12\x43oreum.Asset.Ft.V1\xca\x02\x12\x43oreum\\Asset\\Ft\\V1\xe2\x02\x1e\x43oreum\\Asset\\Ft\\V1\\GPBMetadata\xea\x02\x15\x43oreum::Asset::Ft::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'coreum.asset.ft.v1.params_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026com.coreum.asset.ft.v1B\013ParamsProtoP\001Z3github.com/CoreumFoundation/coreum/x/asset/ft/types\242\002\003CAF\252\002\022Coreum.Asset.Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1\342\002\036Coreum\\Asset\\Ft\\V1\\GPBMetadata\352\002\025Coreum::Asset::Ft::V1'
+  DESCRIPTOR._serialized_options = b'\n\026com.coreum.asset.ft.v1B\013ParamsProtoZ3github.com/CoreumFoundation/coreum/x/asset/ft/types\242\002\003CAF\252\002\022Coreum.Asset.Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1\342\002\036Coreum\\Asset\\Ft\\V1\\GPBMetadata\352\002\025Coreum::Asset::Ft::V1'
   _PARAMS.fields_by_name['issue_fee']._options = None
   _PARAMS.fields_by_name['issue_fee']._serialized_options = b'\310\336\037\000\362\336\037\020yaml:\"issue_fee\"'
   _globals['_PARAMS']._serialized_start=109

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"assetmantle/ids/base/hash_id.proto\x12\x1b\x61ssetmantle.schema.ids.base\x1a\x14gogoproto/gogo.proto\"*\n\x06HashID\x12\x1a\n\ti_d_bytes\x18\x01 \x01(\x0cR\x07iDBytes:\x04\x88\xa0\x1f\x00\x42\xbe\x01\n\x1f\x63om.assetmantle.schema.ids.baseB\x0bHashIdProtoP\x01\xa2\x02\x04\x41SIB\xaa\x02\x1b\x41ssetmantle.Schema.Ids.Base\xca\x02\x1b\x41ssetmantle\\Schema\\Ids\\Base\xe2\x02\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\xea\x02\x1e\x41ssetmantle::Schema::Ids::Baseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"assetmantle/ids/base/hash_id.proto\x12\x1b\x61ssetmantle.schema.ids.base\x1a\x14gogoproto/gogo.proto\"*\n\x06HashID\x12\x1a\n\ti_d_bytes\x18\x01 \x01(\x0cR\x07iDBytes:\x04\x88\xa0\x1f\x00\x42\xbc\x01\n\x1f\x63om.assetmantle.schema.ids.baseB\x0bHashIdProto\xa2\x02\x04\x41SIB\xaa\x02\x1b\x41ssetmantle.Schema.Ids.Base\xca\x02\x1b\x41ssetmantle\\Schema\\Ids\\Base\xe2\x02\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\xea\x02\x1e\x41ssetmantle::Schema::Ids::Baseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.ids.base.hash_id_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\037com.assetmantle.schema.ids.baseB\013HashIdProtoP\001\242\002\004ASIB\252\002\033Assetmantle.Schema.Ids.Base\312\002\033Assetmantle\\Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\352\002\036Assetmantle::Schema::Ids::Base'
+  DESCRIPTOR._serialized_options = b'\n\037com.assetmantle.schema.ids.baseB\013HashIdProto\242\002\004ASIB\252\002\033Assetmantle.Schema.Ids.Base\312\002\033Assetmantle\\Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids\\Base\\GPBMetadata\352\002\036Assetmantle::Schema::Ids::Base'
   _HASHID._options = None
   _HASHID._serialized_options = b'\210\240\037\000'
   _globals['_HASHID']._serialized_start=89

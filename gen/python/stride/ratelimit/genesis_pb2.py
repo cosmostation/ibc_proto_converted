@@ -16,15 +16,14 @@ from stride.ratelimit import params_pb2 as stride_dot_ratelimit_dot_params__pb2
 from stride.ratelimit import ratelimit_pb2 as stride_dot_ratelimit_dot_ratelimit__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estride/ratelimit/genesis.proto\x12\x10stride.ratelimit\x1a\x14gogoproto/gogo.proto\x1a\x1dstride/ratelimit/params.proto\x1a stride/ratelimit/ratelimit.proto\"\xb1\x01\n\x0cGenesisState\x12G\n\x06params\x18\x01 \x01(\x0b\x32\x18.stride.ratelimit.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06params\x12X\n\x0brate_limits\x18\x02 \x03(\x0b\x32\x1b.stride.ratelimit.RateLimitB\x1a\xc8\xde\x1f\x00\xf2\xde\x1f\x12yaml:\"rate_limits\"R\nrateLimitsB\xb9\x01\n\x14\x63om.stride.ratelimitB\x0cGenesisProtoP\x01Z2github.com/Stride-Labs/stride/v9/x/ratelimit/types\xa2\x02\x03SRX\xaa\x02\x10Stride.Ratelimit\xca\x02\x10Stride\\Ratelimit\xe2\x02\x1cStride\\Ratelimit\\GPBMetadata\xea\x02\x11Stride::Ratelimitb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1estride/ratelimit/genesis.proto\x12\x10stride.ratelimit\x1a\x14gogoproto/gogo.proto\x1a\x1dstride/ratelimit/params.proto\x1a stride/ratelimit/ratelimit.proto\"\xb1\x01\n\x0cGenesisState\x12G\n\x06params\x18\x01 \x01(\x0b\x32\x18.stride.ratelimit.ParamsB\x15\xc8\xde\x1f\x00\xf2\xde\x1f\ryaml:\"params\"R\x06params\x12X\n\x0brate_limits\x18\x02 \x03(\x0b\x32\x1b.stride.ratelimit.RateLimitB\x1a\xc8\xde\x1f\x00\xf2\xde\x1f\x12yaml:\"rate_limits\"R\nrateLimitsB\xb7\x01\n\x14\x63om.stride.ratelimitB\x0cGenesisProtoZ2github.com/Stride-Labs/stride/v9/x/ratelimit/types\xa2\x02\x03SRX\xaa\x02\x10Stride.Ratelimit\xca\x02\x10Stride\\Ratelimit\xe2\x02\x1cStride\\Ratelimit\\GPBMetadata\xea\x02\x11Stride::Ratelimitb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stride.ratelimit.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.stride.ratelimitB\014GenesisProtoP\001Z2github.com/Stride-Labs/stride/v9/x/ratelimit/types\242\002\003SRX\252\002\020Stride.Ratelimit\312\002\020Stride\\Ratelimit\342\002\034Stride\\Ratelimit\\GPBMetadata\352\002\021Stride::Ratelimit'
+  DESCRIPTOR._serialized_options = b'\n\024com.stride.ratelimitB\014GenesisProtoZ2github.com/Stride-Labs/stride/v9/x/ratelimit/types\242\002\003SRX\252\002\020Stride.Ratelimit\312\002\020Stride\\Ratelimit\342\002\034Stride\\Ratelimit\\GPBMetadata\352\002\021Stride::Ratelimit'
   _GENESISSTATE.fields_by_name['params']._options = None
   _GENESISSTATE.fields_by_name['params']._serialized_options = b'\310\336\037\000\362\336\037\ryaml:\"params\"'
   _GENESISSTATE.fields_by_name['rate_limits']._options = None

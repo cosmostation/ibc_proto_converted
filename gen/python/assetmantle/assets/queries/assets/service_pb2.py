@@ -16,15 +16,14 @@ from assetmantle.assets.queries.assets import query_request_pb2 as assetmantle_d
 from assetmantle.assets.queries.assets import query_response_pb2 as assetmantle_dot_assets_dot_queries_dot_assets_dot_query__response__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n/assetmantle/assets/queries/assets/service.proto\x12)assetmantle.modules.assets.queries.assets\x1a\x1cgoogle/api/annotations.proto\x1a\x35\x61ssetmantle/assets/queries/assets/query_request.proto\x1a\x36\x61ssetmantle/assets/queries/assets/query_response.proto2\xae\x01\n\x07Service\x12\xa2\x01\n\x06Handle\x12\x37.assetmantle.modules.assets.queries.assets.QueryRequest\x1a\x38.assetmantle.modules.assets.queries.assets.QueryResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/mantle/assets/v1beta1/assetsB\x87\x02\n-com.assetmantle.modules.assets.queries.assetsB\x0cServiceProtoP\x01\xa2\x02\x05\x41MAQA\xaa\x02)Assetmantle.Modules.Assets.Queries.Assets\xca\x02)Assetmantle\\Modules\\Assets\\Queries\\Assets\xe2\x02\x35\x41ssetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\xea\x02-Assetmantle::Modules::Assets::Queries::Assetsb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n/assetmantle/assets/queries/assets/service.proto\x12)assetmantle.modules.assets.queries.assets\x1a\x1cgoogle/api/annotations.proto\x1a\x35\x61ssetmantle/assets/queries/assets/query_request.proto\x1a\x36\x61ssetmantle/assets/queries/assets/query_response.proto2\xae\x01\n\x07Service\x12\xa2\x01\n\x06Handle\x12\x37.assetmantle.modules.assets.queries.assets.QueryRequest\x1a\x38.assetmantle.modules.assets.queries.assets.QueryResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/mantle/assets/v1beta1/assetsB\x85\x02\n-com.assetmantle.modules.assets.queries.assetsB\x0cServiceProto\xa2\x02\x05\x41MAQA\xaa\x02)Assetmantle.Modules.Assets.Queries.Assets\xca\x02)Assetmantle\\Modules\\Assets\\Queries\\Assets\xe2\x02\x35\x41ssetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\xea\x02-Assetmantle::Modules::Assets::Queries::Assetsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.assets.queries.assets.service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n-com.assetmantle.modules.assets.queries.assetsB\014ServiceProtoP\001\242\002\005AMAQA\252\002)Assetmantle.Modules.Assets.Queries.Assets\312\002)Assetmantle\\Modules\\Assets\\Queries\\Assets\342\0025Assetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\352\002-Assetmantle::Modules::Assets::Queries::Assets'
+  DESCRIPTOR._serialized_options = b'\n-com.assetmantle.modules.assets.queries.assetsB\014ServiceProto\242\002\005AMAQA\252\002)Assetmantle.Modules.Assets.Queries.Assets\312\002)Assetmantle\\Modules\\Assets\\Queries\\Assets\342\0025Assetmantle\\Modules\\Assets\\Queries\\Assets\\GPBMetadata\352\002-Assetmantle::Modules::Assets::Queries::Assets'
   _SERVICE.methods_by_name['Handle']._options = None
   _SERVICE.methods_by_name['Handle']._serialized_options = b'\202\323\344\223\002\037\022\035/mantle/assets/v1beta1/assets'
   _globals['_SERVICE']._serialized_start=236

@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from assetmantle.ids.base import identity_id_pb2 as assetmantle_dot_ids_dot_base_dot_identity__id__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n=assetmantle/identities/transactions/unprovision/message.proto\x12\x37\x61ssetmantle.modules.identities.transactions.unprovision\x1a&assetmantle/ids/base/identity_id.proto\"x\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x0e\n\x02to\x18\x02 \x01(\tR\x02to\x12I\n\x0cidentity_i_d\x18\x03 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\nidentityIDB\xcd\x02\n;com.assetmantle.modules.identities.transactions.unprovisionB\x0cMessageProtoP\x01\xa2\x02\x05\x41MITU\xaa\x02\x37\x41ssetmantle.Modules.Identities.Transactions.Unprovision\xca\x02\x37\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\xe2\x02\x43\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\xea\x02;Assetmantle::Modules::Identities::Transactions::Unprovisionb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n=assetmantle/identities/transactions/unprovision/message.proto\x12\x37\x61ssetmantle.modules.identities.transactions.unprovision\x1a&assetmantle/ids/base/identity_id.proto\"x\n\x07Message\x12\x12\n\x04\x66rom\x18\x01 \x01(\tR\x04\x66rom\x12\x0e\n\x02to\x18\x02 \x01(\tR\x02to\x12I\n\x0cidentity_i_d\x18\x03 \x01(\x0b\x32\'.assetmantle.schema.ids.base.IdentityIDR\nidentityIDB\xcb\x02\n;com.assetmantle.modules.identities.transactions.unprovisionB\x0cMessageProto\xa2\x02\x05\x41MITU\xaa\x02\x37\x41ssetmantle.Modules.Identities.Transactions.Unprovision\xca\x02\x37\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\xe2\x02\x43\x41ssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\xea\x02;Assetmantle::Modules::Identities::Transactions::Unprovisionb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.transactions.unprovision.message_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n;com.assetmantle.modules.identities.transactions.unprovisionB\014MessageProtoP\001\242\002\005AMITU\252\0027Assetmantle.Modules.Identities.Transactions.Unprovision\312\0027Assetmantle\\Modules\\Identities\\Transactions\\Unprovision\342\002CAssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\352\002;Assetmantle::Modules::Identities::Transactions::Unprovision'
+  DESCRIPTOR._serialized_options = b'\n;com.assetmantle.modules.identities.transactions.unprovisionB\014MessageProto\242\002\005AMITU\252\0027Assetmantle.Modules.Identities.Transactions.Unprovision\312\0027Assetmantle\\Modules\\Identities\\Transactions\\Unprovision\342\002CAssetmantle\\Modules\\Identities\\Transactions\\Unprovision\\GPBMetadata\352\002;Assetmantle::Modules::Identities::Transactions::Unprovision'
   _globals['_MESSAGE']._serialized_start=162
   _globals['_MESSAGE']._serialized_end=282
 # @@protoc_insertion_point(module_scope)

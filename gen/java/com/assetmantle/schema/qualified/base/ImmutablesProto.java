@@ -68,6 +68,7 @@ public final class ImmutablesProto {
               com.assetmantle.schema.qualified.base.ImmutablesProto.Immutables.class, com.assetmantle.schema.qualified.base.ImmutablesProto.Immutables.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PROPERTY_LIST_FIELD_NUMBER = 1;
     private com.assetmantle.schema.lists.base.PropertyListProto.PropertyList propertyList_;
     /**
@@ -76,7 +77,7 @@ public final class ImmutablesProto {
      */
     @java.lang.Override
     public boolean hasPropertyList() {
-      return propertyList_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.lists.base.PropertyList property_list = 1 [json_name = "propertyList"];</code>
@@ -108,7 +109,7 @@ public final class ImmutablesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (propertyList_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPropertyList());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class ImmutablesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (propertyList_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPropertyList());
       }
@@ -278,13 +279,19 @@ public final class ImmutablesProto {
 
       // Construct using com.assetmantle.schema.qualified.base.ImmutablesProto.Immutables.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPropertyListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class ImmutablesProto {
 
       private void buildPartial0(com.assetmantle.schema.qualified.base.ImmutablesProto.Immutables result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.propertyList_ = propertyListBuilder_ == null
               ? propertyList_
               : propertyListBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class ImmutablesProto {
         } else {
           propertyListBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (propertyList_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

@@ -80,6 +80,7 @@ public final class GenesisProto {
               com.em.inflation.v1.GenesisProto.GenesisState.class, com.em.inflation.v1.GenesisProto.GenesisState.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ASSETS_FIELD_NUMBER = 1;
     private com.em.inflation.v1.InflationProto.InflationState assets_;
     /**
@@ -92,7 +93,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasAssets() {
-      return assets_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -132,7 +133,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (assets_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getAssets());
       }
       getUnknownFields().writeTo(output);
@@ -144,7 +145,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (assets_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAssets());
       }
@@ -302,13 +303,19 @@ public final class GenesisProto {
 
       // Construct using com.em.inflation.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -352,11 +359,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.em.inflation.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.assets_ = assetsBuilder_ == null
               ? assets_
               : assetsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -542,8 +552,10 @@ public final class GenesisProto {
         } else {
           assetsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (assets_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

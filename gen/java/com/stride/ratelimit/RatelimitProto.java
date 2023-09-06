@@ -2527,6 +2527,7 @@ public final class RatelimitProto {
               com.stride.ratelimit.RatelimitProto.RateLimit.class, com.stride.ratelimit.RatelimitProto.RateLimit.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PATH_FIELD_NUMBER = 1;
     private com.stride.ratelimit.RatelimitProto.Path path_;
     /**
@@ -2535,7 +2536,7 @@ public final class RatelimitProto {
      */
     @java.lang.Override
     public boolean hasPath() {
-      return path_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.stride.ratelimit.Path path = 1 [json_name = "path"];</code>
@@ -2561,7 +2562,7 @@ public final class RatelimitProto {
      */
     @java.lang.Override
     public boolean hasQuota() {
-      return quota_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.stride.ratelimit.Quota quota = 2 [json_name = "quota"];</code>
@@ -2587,7 +2588,7 @@ public final class RatelimitProto {
      */
     @java.lang.Override
     public boolean hasFlow() {
-      return flow_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.stride.ratelimit.Flow flow = 3 [json_name = "flow"];</code>
@@ -2619,13 +2620,13 @@ public final class RatelimitProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (path_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPath());
       }
-      if (quota_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getQuota());
       }
-      if (flow_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getFlow());
       }
       getUnknownFields().writeTo(output);
@@ -2637,15 +2638,15 @@ public final class RatelimitProto {
       if (size != -1) return size;
 
       size = 0;
-      if (path_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPath());
       }
-      if (quota_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getQuota());
       }
-      if (flow_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFlow());
       }
@@ -2821,13 +2822,21 @@ public final class RatelimitProto {
 
       // Construct using com.stride.ratelimit.RatelimitProto.RateLimit.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPathFieldBuilder();
+          getQuotaFieldBuilder();
+          getFlowFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2881,21 +2890,26 @@ public final class RatelimitProto {
 
       private void buildPartial0(com.stride.ratelimit.RatelimitProto.RateLimit result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.path_ = pathBuilder_ == null
               ? path_
               : pathBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.quota_ = quotaBuilder_ == null
               ? quota_
               : quotaBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.flow_ = flowBuilder_ == null
               ? flow_
               : flowBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3081,8 +3095,10 @@ public final class RatelimitProto {
         } else {
           pathBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (path_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3200,8 +3216,10 @@ public final class RatelimitProto {
         } else {
           quotaBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (quota_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3319,8 +3337,10 @@ public final class RatelimitProto {
         } else {
           flowBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (flow_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

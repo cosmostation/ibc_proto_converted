@@ -1609,6 +1609,7 @@ public final class QueryProto {
               com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.class, com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration time_;
     /**
@@ -1621,7 +1622,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return time_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1661,7 +1662,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (time_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTime());
       }
       getUnknownFields().writeTo(output);
@@ -1673,7 +1674,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (time_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTime());
       }
@@ -1836,13 +1837,19 @@ public final class QueryProto {
 
       // Construct using com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1886,11 +1893,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2076,8 +2086,10 @@ public final class QueryProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (time_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2865,6 +2877,7 @@ public final class QueryProto {
               com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int BALANCE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
     /**
@@ -2873,7 +2886,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return balance_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
@@ -2905,7 +2918,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (balance_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getBalance());
       }
       getUnknownFields().writeTo(output);
@@ -2917,7 +2930,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (balance_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBalance());
       }
@@ -3080,13 +3093,19 @@ public final class QueryProto {
 
       // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBalanceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3130,11 +3149,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3300,8 +3322,10 @@ public final class QueryProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (balance_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3508,6 +3532,7 @@ public final class QueryProto {
               com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALIDATOR_ADDR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddr_ = "";
@@ -3567,7 +3592,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -3610,7 +3635,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddr_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3625,7 +3650,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddr_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3792,13 +3817,19 @@ public final class QueryProto {
 
       // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3846,11 +3877,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.validatorAddr_ = validatorAddr_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4138,8 +4172,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4386,6 +4422,7 @@ public final class QueryProto {
               com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ENTRIES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry> entries_;
@@ -4459,7 +4496,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4502,7 +4539,7 @@ public final class QueryProto {
       for (int i = 0; i < entries_.size(); i++) {
         output.writeMessage(1, entries_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4518,7 +4555,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, entries_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4687,13 +4724,20 @@ public final class QueryProto {
 
       // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntriesFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4757,11 +4801,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5298,8 +5345,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6087,6 +6136,7 @@ public final class QueryProto {
               com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REWARD_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.DecCoin reward_;
     /**
@@ -6095,7 +6145,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasReward() {
-      return reward_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
@@ -6127,7 +6177,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getReward());
       }
       getUnknownFields().writeTo(output);
@@ -6139,7 +6189,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReward());
       }
@@ -6302,13 +6352,19 @@ public final class QueryProto {
 
       // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -6352,11 +6408,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reward_ = rewardBuilder_ == null
               ? reward_
               : rewardBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6522,8 +6581,10 @@ public final class QueryProto {
         } else {
           rewardBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (reward_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -7295,6 +7356,7 @@ public final class QueryProto {
               com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int REWARD_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.DecCoin reward_;
     /**
@@ -7303,7 +7365,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasReward() {
-      return reward_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
@@ -7335,7 +7397,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getReward());
       }
       getUnknownFields().writeTo(output);
@@ -7347,7 +7409,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (reward_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReward());
       }
@@ -7510,13 +7572,19 @@ public final class QueryProto {
 
       // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7560,11 +7628,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reward_ = rewardBuilder_ == null
               ? reward_
               : rewardBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7730,8 +7801,10 @@ public final class QueryProto {
         } else {
           rewardBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (reward_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

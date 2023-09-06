@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from assetmantle.identities.mappable import mappable_pb2 as assetmantle_dot_identities_dot_mappable_dot_mappable__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n>assetmantle/identities/queries/identities/query_response.proto\x12\x31\x61ssetmantle.modules.identities.queries.identities\x1a\x14gogoproto/gogo.proto\x1a.assetmantle/identities/mappable/mappable.proto\"\\\n\rQueryResponse\x12\x45\n\x04list\x18\x01 \x03(\x0b\x32\x31.assetmantle.modules.identities.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\xb5\x02\n5com.assetmantle.modules.identities.queries.identitiesB\x12QueryResponseProtoP\x01\xa2\x02\x05\x41MIQI\xaa\x02\x31\x41ssetmantle.Modules.Identities.Queries.Identities\xca\x02\x31\x41ssetmantle\\Modules\\Identities\\Queries\\Identities\xe2\x02=Assetmantle\\Modules\\Identities\\Queries\\Identities\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Identities::Queries::Identitiesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n>assetmantle/identities/queries/identities/query_response.proto\x12\x31\x61ssetmantle.modules.identities.queries.identities\x1a\x14gogoproto/gogo.proto\x1a.assetmantle/identities/mappable/mappable.proto\"\\\n\rQueryResponse\x12\x45\n\x04list\x18\x01 \x03(\x0b\x32\x31.assetmantle.modules.identities.mappable.MappableR\x04list:\x04\x88\xa0\x1f\x00\x42\xb3\x02\n5com.assetmantle.modules.identities.queries.identitiesB\x12QueryResponseProto\xa2\x02\x05\x41MIQI\xaa\x02\x31\x41ssetmantle.Modules.Identities.Queries.Identities\xca\x02\x31\x41ssetmantle\\Modules\\Identities\\Queries\\Identities\xe2\x02=Assetmantle\\Modules\\Identities\\Queries\\Identities\\GPBMetadata\xea\x02\x35\x41ssetmantle::Modules::Identities::Queries::Identitiesb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.identities.queries.identities.query_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.identities.queries.identitiesB\022QueryResponseProtoP\001\242\002\005AMIQI\252\0021Assetmantle.Modules.Identities.Queries.Identities\312\0021Assetmantle\\Modules\\Identities\\Queries\\Identities\342\002=Assetmantle\\Modules\\Identities\\Queries\\Identities\\GPBMetadata\352\0025Assetmantle::Modules::Identities::Queries::Identities'
+  DESCRIPTOR._serialized_options = b'\n5com.assetmantle.modules.identities.queries.identitiesB\022QueryResponseProto\242\002\005AMIQI\252\0021Assetmantle.Modules.Identities.Queries.Identities\312\0021Assetmantle\\Modules\\Identities\\Queries\\Identities\342\002=Assetmantle\\Modules\\Identities\\Queries\\Identities\\GPBMetadata\352\0025Assetmantle::Modules::Identities::Queries::Identities'
   _QUERYRESPONSE._options = None
   _QUERYRESPONSE._serialized_options = b'\210\240\037\000'
   _globals['_QUERYRESPONSE']._serialized_start=187

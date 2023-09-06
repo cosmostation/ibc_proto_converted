@@ -17,15 +17,14 @@ from amino import amino_pb2 as amino_dot_amino__pb2
 from osmosis.txfees.v1beta1 import feetoken_pb2 as osmosis_dot_txfees_dot_v1beta1_dot_feetoken__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n osmosis/txfees/v1beta1/gov.proto\x12\x16osmosis.txfees.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x11\x61mino/amino.proto\x1a%osmosis/txfees/v1beta1/feetoken.proto\"\xa4\x02\n\x16UpdateFeeTokenProposal\x12&\n\x05title\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"title\"R\x05title\x12\x38\n\x0b\x64\x65scription\x18\x02 \x01(\tB\x16\xf2\xde\x1f\x12yaml:\"description\"R\x0b\x64\x65scription\x12Y\n\tfeetokens\x18\x03 \x03(\x0b\x32 .osmosis.txfees.v1beta1.FeeTokenB\x19\xc8\xde\x1f\x00\xf2\xde\x1f\x11yaml:\"fee_tokens\"R\tfeetokens:M\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x01\xca\xb4-\x1a\x63osmos.gov.v1beta1.Content\x8a\xe7\xb0*\x1eosmosis/UpdateFeeTokenProposalB\xd4\x01\n\x1a\x63om.osmosis.txfees.v1beta1B\x08GovProtoP\x01Z2github.com/osmosis-labs/osmosis/v15/x/txfees/types\xa2\x02\x03OTX\xaa\x02\x16Osmosis.Txfees.V1beta1\xca\x02\x16Osmosis\\Txfees\\V1beta1\xe2\x02\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\xea\x02\x18Osmosis::Txfees::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n osmosis/txfees/v1beta1/gov.proto\x12\x16osmosis.txfees.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x11\x61mino/amino.proto\x1a%osmosis/txfees/v1beta1/feetoken.proto\"\xa4\x02\n\x16UpdateFeeTokenProposal\x12&\n\x05title\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"title\"R\x05title\x12\x38\n\x0b\x64\x65scription\x18\x02 \x01(\tB\x16\xf2\xde\x1f\x12yaml:\"description\"R\x0b\x64\x65scription\x12Y\n\tfeetokens\x18\x03 \x03(\x0b\x32 .osmosis.txfees.v1beta1.FeeTokenB\x19\xc8\xde\x1f\x00\xf2\xde\x1f\x11yaml:\"fee_tokens\"R\tfeetokens:M\x88\xa0\x1f\x00\x98\xa0\x1f\x00\xe8\xa0\x1f\x01\xca\xb4-\x1a\x63osmos.gov.v1beta1.Content\x8a\xe7\xb0*\x1eosmosis/UpdateFeeTokenProposalB\xd2\x01\n\x1a\x63om.osmosis.txfees.v1beta1B\x08GovProtoZ2github.com/osmosis-labs/osmosis/v15/x/txfees/types\xa2\x02\x03OTX\xaa\x02\x16Osmosis.Txfees.V1beta1\xca\x02\x16Osmosis\\Txfees\\V1beta1\xe2\x02\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\xea\x02\x18Osmosis::Txfees::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.txfees.v1beta1.gov_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.osmosis.txfees.v1beta1B\010GovProtoP\001Z2github.com/osmosis-labs/osmosis/v15/x/txfees/types\242\002\003OTX\252\002\026Osmosis.Txfees.V1beta1\312\002\026Osmosis\\Txfees\\V1beta1\342\002\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\352\002\030Osmosis::Txfees::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\032com.osmosis.txfees.v1beta1B\010GovProtoZ2github.com/osmosis-labs/osmosis/v15/x/txfees/types\242\002\003OTX\252\002\026Osmosis.Txfees.V1beta1\312\002\026Osmosis\\Txfees\\V1beta1\342\002\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\352\002\030Osmosis::Txfees::V1beta1'
   _UPDATEFEETOKENPROPOSAL.fields_by_name['title']._options = None
   _UPDATEFEETOKENPROPOSAL.fields_by_name['title']._serialized_options = b'\362\336\037\014yaml:\"title\"'
   _UPDATEFEETOKENPROPOSAL.fields_by_name['description']._options = None

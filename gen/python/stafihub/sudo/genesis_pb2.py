@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bstafihub/sudo/genesis.proto\x12\x16stafihub.stafihub.sudo\x1a\x14gogoproto/gogo.proto\"6\n\x0cGenesisState\x12&\n\x05\x61\x64min\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"admin\"R\x05\x61\x64minB\xcf\x01\n\x1a\x63om.stafihub.stafihub.sudoB\x0cGenesisProtoP\x01Z)github.com/stafihub/stafihub/x/sudo/types\xa2\x02\x03SSS\xaa\x02\x16Stafihub.Stafihub.Sudo\xca\x02\x16Stafihub\\Stafihub\\Sudo\xe2\x02\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Sudob\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bstafihub/sudo/genesis.proto\x12\x16stafihub.stafihub.sudo\x1a\x14gogoproto/gogo.proto\"6\n\x0cGenesisState\x12&\n\x05\x61\x64min\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"admin\"R\x05\x61\x64minB\xcd\x01\n\x1a\x63om.stafihub.stafihub.sudoB\x0cGenesisProtoZ)github.com/stafihub/stafihub/x/sudo/types\xa2\x02\x03SSS\xaa\x02\x16Stafihub.Stafihub.Sudo\xca\x02\x16Stafihub\\Stafihub\\Sudo\xe2\x02\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\xea\x02\x18Stafihub::Stafihub::Sudob\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.sudo.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.sudoB\014GenesisProtoP\001Z)github.com/stafihub/stafihub/x/sudo/types\242\002\003SSS\252\002\026Stafihub.Stafihub.Sudo\312\002\026Stafihub\\Stafihub\\Sudo\342\002\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\352\002\030Stafihub::Stafihub::Sudo'
+  DESCRIPTOR._serialized_options = b'\n\032com.stafihub.stafihub.sudoB\014GenesisProtoZ)github.com/stafihub/stafihub/x/sudo/types\242\002\003SSS\252\002\026Stafihub.Stafihub.Sudo\312\002\026Stafihub\\Stafihub\\Sudo\342\002\"Stafihub\\Stafihub\\Sudo\\GPBMetadata\352\002\030Stafihub::Stafihub::Sudo'
   _GENESISSTATE.fields_by_name['admin']._options = None
   _GENESISSTATE.fields_by_name['admin']._serialized_options = b'\362\336\037\014yaml:\"admin\"'
   _globals['_GENESISSTATE']._serialized_start=77

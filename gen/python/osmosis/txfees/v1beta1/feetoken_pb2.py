@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%osmosis/txfees/v1beta1/feetoken.proto\x12\x16osmosis.txfees.v1beta1\x1a\x14gogoproto/gogo.proto\"d\n\x08\x46\x65\x65Token\x12&\n\x05\x64\x65nom\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"denom\"R\x05\x64\x65nom\x12*\n\x06poolID\x18\x02 \x01(\x04\x42\x12\xf2\xde\x1f\x0eyaml:\"pool_id\"R\x06poolID:\x04\xe8\xa0\x1f\x01\x42\xd9\x01\n\x1a\x63om.osmosis.txfees.v1beta1B\rFeetokenProtoP\x01Z2github.com/osmosis-labs/osmosis/v15/x/txfees/types\xa2\x02\x03OTX\xaa\x02\x16Osmosis.Txfees.V1beta1\xca\x02\x16Osmosis\\Txfees\\V1beta1\xe2\x02\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\xea\x02\x18Osmosis::Txfees::V1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%osmosis/txfees/v1beta1/feetoken.proto\x12\x16osmosis.txfees.v1beta1\x1a\x14gogoproto/gogo.proto\"d\n\x08\x46\x65\x65Token\x12&\n\x05\x64\x65nom\x18\x01 \x01(\tB\x10\xf2\xde\x1f\x0cyaml:\"denom\"R\x05\x64\x65nom\x12*\n\x06poolID\x18\x02 \x01(\x04\x42\x12\xf2\xde\x1f\x0eyaml:\"pool_id\"R\x06poolID:\x04\xe8\xa0\x1f\x01\x42\xd7\x01\n\x1a\x63om.osmosis.txfees.v1beta1B\rFeetokenProtoZ2github.com/osmosis-labs/osmosis/v15/x/txfees/types\xa2\x02\x03OTX\xaa\x02\x16Osmosis.Txfees.V1beta1\xca\x02\x16Osmosis\\Txfees\\V1beta1\xe2\x02\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\xea\x02\x18Osmosis::Txfees::V1beta1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'osmosis.txfees.v1beta1.feetoken_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\032com.osmosis.txfees.v1beta1B\rFeetokenProtoP\001Z2github.com/osmosis-labs/osmosis/v15/x/txfees/types\242\002\003OTX\252\002\026Osmosis.Txfees.V1beta1\312\002\026Osmosis\\Txfees\\V1beta1\342\002\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\352\002\030Osmosis::Txfees::V1beta1'
+  DESCRIPTOR._serialized_options = b'\n\032com.osmosis.txfees.v1beta1B\rFeetokenProtoZ2github.com/osmosis-labs/osmosis/v15/x/txfees/types\242\002\003OTX\252\002\026Osmosis.Txfees.V1beta1\312\002\026Osmosis\\Txfees\\V1beta1\342\002\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\352\002\030Osmosis::Txfees::V1beta1'
   _FEETOKEN.fields_by_name['denom']._options = None
   _FEETOKEN.fields_by_name['denom']._serialized_options = b'\362\336\037\014yaml:\"denom\"'
   _FEETOKEN.fields_by_name['poolID']._options = None

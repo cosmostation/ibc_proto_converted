@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from stafihub.relayers import relayer_pb2 as stafihub_dot_relayers_dot_relayer__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fstafihub/relayers/genesis.proto\x12\x1astafihub.stafihub.relayers\x1a\x14gogoproto/gogo.proto\x1a\x1fstafihub/relayers/relayer.proto\"\xca\x01\n\x0cGenesisState\x12X\n\x08relayers\x18\x01 \x03(\x0b\x32#.stafihub.stafihub.relayers.RelayerB\x17\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"relayers\"R\x08relayers\x12`\n\nthresholds\x18\x02 \x03(\x0b\x32%.stafihub.stafihub.relayers.ThresholdB\x19\xc8\xde\x1f\x00\xf2\xde\x1f\x11yaml:\"thresholds\"R\nthresholdsB\xe7\x01\n\x1e\x63om.stafihub.stafihub.relayersB\x0cGenesisProtoP\x01Z-github.com/stafihub/stafihub/x/relayers/types\xa2\x02\x03SSR\xaa\x02\x1aStafihub.Stafihub.Relayers\xca\x02\x1aStafihub\\Stafihub\\Relayers\xe2\x02&Stafihub\\Stafihub\\Relayers\\GPBMetadata\xea\x02\x1cStafihub::Stafihub::Relayersb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1fstafihub/relayers/genesis.proto\x12\x1astafihub.stafihub.relayers\x1a\x14gogoproto/gogo.proto\x1a\x1fstafihub/relayers/relayer.proto\"\xca\x01\n\x0cGenesisState\x12X\n\x08relayers\x18\x01 \x03(\x0b\x32#.stafihub.stafihub.relayers.RelayerB\x17\xc8\xde\x1f\x00\xf2\xde\x1f\x0fyaml:\"relayers\"R\x08relayers\x12`\n\nthresholds\x18\x02 \x03(\x0b\x32%.stafihub.stafihub.relayers.ThresholdB\x19\xc8\xde\x1f\x00\xf2\xde\x1f\x11yaml:\"thresholds\"R\nthresholdsB\xe5\x01\n\x1e\x63om.stafihub.stafihub.relayersB\x0cGenesisProtoZ-github.com/stafihub/stafihub/x/relayers/types\xa2\x02\x03SSR\xaa\x02\x1aStafihub.Stafihub.Relayers\xca\x02\x1aStafihub\\Stafihub\\Relayers\xe2\x02&Stafihub\\Stafihub\\Relayers\\GPBMetadata\xea\x02\x1cStafihub::Stafihub::Relayersb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'stafihub.relayers.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\036com.stafihub.stafihub.relayersB\014GenesisProtoP\001Z-github.com/stafihub/stafihub/x/relayers/types\242\002\003SSR\252\002\032Stafihub.Stafihub.Relayers\312\002\032Stafihub\\Stafihub\\Relayers\342\002&Stafihub\\Stafihub\\Relayers\\GPBMetadata\352\002\034Stafihub::Stafihub::Relayers'
+  DESCRIPTOR._serialized_options = b'\n\036com.stafihub.stafihub.relayersB\014GenesisProtoZ-github.com/stafihub/stafihub/x/relayers/types\242\002\003SSR\252\002\032Stafihub.Stafihub.Relayers\312\002\032Stafihub\\Stafihub\\Relayers\342\002&Stafihub\\Stafihub\\Relayers\\GPBMetadata\352\002\034Stafihub::Stafihub::Relayers'
   _GENESISSTATE.fields_by_name['relayers']._options = None
   _GENESISSTATE.fields_by_name['relayers']._serialized_options = b'\310\336\037\000\362\336\037\017yaml:\"relayers\"'
   _GENESISSTATE.fields_by_name['thresholds']._options = None

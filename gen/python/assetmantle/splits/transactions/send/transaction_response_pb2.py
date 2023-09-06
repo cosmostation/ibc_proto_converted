@@ -13,15 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/splits/transactions/send/transaction_response.proto\x12,assetmantle.modules.splits.transactions.send\"\x15\n\x13TransactionResponseB\xa2\x02\n0com.assetmantle.modules.splits.transactions.sendB\x18TransactionResponseProtoP\x01\xa2\x02\x05\x41MSTS\xaa\x02,Assetmantle.Modules.Splits.Transactions.Send\xca\x02,Assetmantle\\Modules\\Splits\\Transactions\\Send\xe2\x02\x38\x41ssetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Splits::Transactions::Sendb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n?assetmantle/splits/transactions/send/transaction_response.proto\x12,assetmantle.modules.splits.transactions.send\"\x15\n\x13TransactionResponseB\xa0\x02\n0com.assetmantle.modules.splits.transactions.sendB\x18TransactionResponseProto\xa2\x02\x05\x41MSTS\xaa\x02,Assetmantle.Modules.Splits.Transactions.Send\xca\x02,Assetmantle\\Modules\\Splits\\Transactions\\Send\xe2\x02\x38\x41ssetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\xea\x02\x30\x41ssetmantle::Modules::Splits::Transactions::Sendb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'assetmantle.splits.transactions.send.transaction_response_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.splits.transactions.sendB\030TransactionResponseProtoP\001\242\002\005AMSTS\252\002,Assetmantle.Modules.Splits.Transactions.Send\312\002,Assetmantle\\Modules\\Splits\\Transactions\\Send\342\0028Assetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\352\0020Assetmantle::Modules::Splits::Transactions::Send'
+  DESCRIPTOR._serialized_options = b'\n0com.assetmantle.modules.splits.transactions.sendB\030TransactionResponseProto\242\002\005AMSTS\252\002,Assetmantle.Modules.Splits.Transactions.Send\312\002,Assetmantle\\Modules\\Splits\\Transactions\\Send\342\0028Assetmantle\\Modules\\Splits\\Transactions\\Send\\GPBMetadata\352\0020Assetmantle::Modules::Splits::Transactions::Send'
   _globals['_TRANSACTIONRESPONSE']._serialized_start=113
   _globals['_TRANSACTIONRESPONSE']._serialized_end=134
 # @@protoc_insertion_point(module_scope)

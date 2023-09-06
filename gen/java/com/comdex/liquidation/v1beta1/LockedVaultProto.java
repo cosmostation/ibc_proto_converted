@@ -275,6 +275,7 @@ public final class LockedVaultProto {
               com.comdex.liquidation.v1beta1.LockedVaultProto.LockedVault.class, com.comdex.liquidation.v1beta1.LockedVaultProto.LockedVault.Builder.class);
     }
 
+    private int bitField0_;
     private int kindCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object kind_;
@@ -711,7 +712,7 @@ public final class LockedVaultProto {
      */
     @java.lang.Override
     public boolean hasLiquidationTimestamp() {
-      return liquidationTimestamp_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp liquidation_timestamp = 15 [json_name = "liquidationTimestamp", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LiquidationTimestamp", (.gogoproto.moretags) = "yaml:&#92;"liquidation_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -892,7 +893,7 @@ public final class LockedVaultProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralToBeAuctioned_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, collateralToBeAuctioned_);
       }
-      if (liquidationTimestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(15, getLiquidationTimestamp());
       }
       for (int i = 0; i < selloffHistory_.size(); i++) {
@@ -961,7 +962,7 @@ public final class LockedVaultProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralToBeAuctioned_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, collateralToBeAuctioned_);
       }
-      if (liquidationTimestamp_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getLiquidationTimestamp());
       }
@@ -1223,13 +1224,19 @@ public final class LockedVaultProto {
 
       // Construct using com.comdex.liquidation.v1beta1.LockedVaultProto.LockedVault.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLiquidationTimestampFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1338,10 +1345,12 @@ public final class LockedVaultProto {
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.collateralToBeAuctioned_ = collateralToBeAuctioned_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.liquidationTimestamp_ = liquidationTimestampBuilder_ == null
               ? liquidationTimestamp_
               : liquidationTimestampBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
           selloffHistory_.makeImmutable();
@@ -1350,6 +1359,7 @@ public final class LockedVaultProto {
         if (((from_bitField0_ & 0x00010000) != 0)) {
           result.interestAccumulated_ = interestAccumulated_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.comdex.liquidation.v1beta1.LockedVaultProto.LockedVault result) {
@@ -2502,8 +2512,10 @@ public final class LockedVaultProto {
         } else {
           liquidationTimestampBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00004000;
-        onChanged();
+        if (liquidationTimestamp_ != null) {
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3022,6 +3034,7 @@ public final class LockedVaultProto {
               com.comdex.liquidation.v1beta1.LockedVaultProto.BorrowMetaData.class, com.comdex.liquidation.v1beta1.LockedVaultProto.BorrowMetaData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LENDING_ID_FIELD_NUMBER = 1;
     private long lendingId_ = 0L;
     /**
@@ -3091,7 +3104,7 @@ public final class LockedVaultProto {
      */
     @java.lang.Override
     public boolean hasBridgedAssetAmount() {
-      return bridgedAssetAmount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin bridged_asset_amount = 4 [json_name = "bridgedAssetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bridged_asset_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -3132,7 +3145,7 @@ public final class LockedVaultProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stableBorrowRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, stableBorrowRate_);
       }
-      if (bridgedAssetAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(4, getBridgedAssetAmount());
       }
       getUnknownFields().writeTo(output);
@@ -3155,7 +3168,7 @@ public final class LockedVaultProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stableBorrowRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, stableBorrowRate_);
       }
-      if (bridgedAssetAmount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBridgedAssetAmount());
       }
@@ -3327,13 +3340,19 @@ public final class LockedVaultProto {
 
       // Construct using com.comdex.liquidation.v1beta1.LockedVaultProto.BorrowMetaData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBridgedAssetAmountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3389,11 +3408,14 @@ public final class LockedVaultProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.stableBorrowRate_ = stableBorrowRate_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.bridgedAssetAmount_ = bridgedAssetAmountBuilder_ == null
               ? bridgedAssetAmount_
               : bridgedAssetAmountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3721,8 +3743,10 @@ public final class LockedVaultProto {
         } else {
           bridgedAssetAmountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (bridgedAssetAmount_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**

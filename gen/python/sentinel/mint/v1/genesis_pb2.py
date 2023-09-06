@@ -15,15 +15,14 @@ from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from sentinel.mint.v1 import inflation_pb2 as sentinel_dot_mint_dot_v1_dot_inflation__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1esentinel/mint/v1/genesis.proto\x12\x10sentinel.mint.v1\x1a\x14gogoproto/gogo.proto\x1a sentinel/mint/v1/inflation.proto\"f\n\x0cGenesisState\x12V\n\ninflations\x18\x01 \x03(\x0b\x32\x1b.sentinel.mint.v1.InflationB\x19\xc8\xde\x1f\x00\xf2\xde\x1f\x11yaml:\"inflations\"R\ninflationsB\xbd\x01\n\x14\x63om.sentinel.mint.v1B\x0cGenesisProtoP\x01Z-github.com/sentinel-official/hub/x/mint/types\xa2\x02\x03SMX\xaa\x02\x10Sentinel.Mint.V1\xca\x02\x10Sentinel\\Mint\\V1\xe2\x02\x1cSentinel\\Mint\\V1\\GPBMetadata\xea\x02\x12Sentinel::Mint::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1esentinel/mint/v1/genesis.proto\x12\x10sentinel.mint.v1\x1a\x14gogoproto/gogo.proto\x1a sentinel/mint/v1/inflation.proto\"f\n\x0cGenesisState\x12V\n\ninflations\x18\x01 \x03(\x0b\x32\x1b.sentinel.mint.v1.InflationB\x19\xc8\xde\x1f\x00\xf2\xde\x1f\x11yaml:\"inflations\"R\ninflationsB\xbb\x01\n\x14\x63om.sentinel.mint.v1B\x0cGenesisProtoZ-github.com/sentinel-official/hub/x/mint/types\xa2\x02\x03SMX\xaa\x02\x10Sentinel.Mint.V1\xca\x02\x10Sentinel\\Mint\\V1\xe2\x02\x1cSentinel\\Mint\\V1\\GPBMetadata\xea\x02\x12Sentinel::Mint::V1\xc8\xe1\x1e\x00\xa8\xe2\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'sentinel.mint.v1.genesis_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.mint.v1B\014GenesisProtoP\001Z-github.com/sentinel-official/hub/x/mint/types\242\002\003SMX\252\002\020Sentinel.Mint.V1\312\002\020Sentinel\\Mint\\V1\342\002\034Sentinel\\Mint\\V1\\GPBMetadata\352\002\022Sentinel::Mint::V1\310\341\036\000\250\342\036\000'
+  DESCRIPTOR._serialized_options = b'\n\024com.sentinel.mint.v1B\014GenesisProtoZ-github.com/sentinel-official/hub/x/mint/types\242\002\003SMX\252\002\020Sentinel.Mint.V1\312\002\020Sentinel\\Mint\\V1\342\002\034Sentinel\\Mint\\V1\\GPBMetadata\352\002\022Sentinel::Mint::V1\310\341\036\000\250\342\036\000'
   _GENESISSTATE.fields_by_name['inflations']._options = None
   _GENESISSTATE.fields_by_name['inflations']._serialized_options = b'\310\336\037\000\362\336\037\021yaml:\"inflations\"'
   _globals['_GENESISSTATE']._serialized_start=108

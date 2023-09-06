@@ -106,6 +106,7 @@ public final class MessageProto {
               com.assetmantle.modules.splits.transactions.wrap.MessageProto.Message.class, com.assetmantle.modules.splits.transactions.wrap.MessageProto.Message.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -153,7 +154,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasFromID() {
-      return fromID_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID from_i_d = 2 [json_name = "fromID"];</code>
@@ -229,7 +230,7 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
       }
-      if (fromID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getFromID());
       }
       for (int i = 0; i < coins_.size(); i++) {
@@ -247,7 +248,7 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
       }
-      if (fromID_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFromID());
       }
@@ -419,13 +420,20 @@ public final class MessageProto {
 
       // Construct using com.assetmantle.modules.splits.transactions.wrap.MessageProto.Message.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFromIDFieldBuilder();
+          getCoinsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -493,11 +501,14 @@ public final class MessageProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.from_ = from_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fromID_ = fromIDBuilder_ == null
               ? fromID_
               : fromIDBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -784,8 +795,10 @@ public final class MessageProto {
         } else {
           fromIDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (fromID_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

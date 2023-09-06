@@ -727,7 +727,7 @@ public final class QueryProto {
       super(builder);
     }
     private ChainMaintainersResponse() {
-      maintainers_ = java.util.Collections.emptyList();
+      maintainers_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -752,7 +752,8 @@ public final class QueryProto {
 
     public static final int MAINTAINERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> maintainers_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> maintainers_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <code>repeated bytes maintainers = 1 [json_name = "maintainers", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
      * @return A list containing the maintainers.
@@ -976,7 +977,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        maintainers_ = java.util.Collections.emptyList();
+        maintainers_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -1003,22 +1004,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.axelar.nexus.v1beta1.QueryProto.ChainMaintainersResponse buildPartial() {
         com.axelar.nexus.v1beta1.QueryProto.ChainMaintainersResponse result = new com.axelar.nexus.v1beta1.QueryProto.ChainMaintainersResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.axelar.nexus.v1beta1.QueryProto.ChainMaintainersResponse result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          maintainers_ = java.util.Collections.unmodifiableList(maintainers_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.maintainers_ = maintainers_;
-      }
-
       private void buildPartial0(com.axelar.nexus.v1beta1.QueryProto.ChainMaintainersResponse result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          maintainers_.makeImmutable();
+          result.maintainers_ = maintainers_;
+        }
       }
 
       @java.lang.Override
@@ -1068,7 +1064,8 @@ public final class QueryProto {
         if (!other.maintainers_.isEmpty()) {
           if (maintainers_.isEmpty()) {
             maintainers_ = other.maintainers_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            maintainers_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureMaintainersIsMutable();
             maintainers_.addAll(other.maintainers_);
@@ -1124,12 +1121,12 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.ByteString> maintainers_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> maintainers_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureMaintainersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          maintainers_ = new java.util.ArrayList<com.google.protobuf.ByteString>(maintainers_);
-          bitField0_ |= 0x00000001;
+        if (!maintainers_.isModifiable()) {
+          maintainers_ = makeMutableCopy(maintainers_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes maintainers = 1 [json_name = "maintainers", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
@@ -1137,8 +1134,8 @@ public final class QueryProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getMaintainersList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(maintainers_) : maintainers_;
+        maintainers_.makeImmutable();
+        return maintainers_;
       }
       /**
        * <code>repeated bytes maintainers = 1 [json_name = "maintainers", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
@@ -1166,6 +1163,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         ensureMaintainersIsMutable();
         maintainers_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1178,6 +1176,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         ensureMaintainersIsMutable();
         maintainers_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1191,6 +1190,7 @@ public final class QueryProto {
         ensureMaintainersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, maintainers_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1199,7 +1199,7 @@ public final class QueryProto {
        * @return This builder for chaining.
        */
       public Builder clearMaintainers() {
-        maintainers_ = java.util.Collections.emptyList();
+        maintainers_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -2762,6 +2762,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.TransfersForChainRequest.class, com.axelar.nexus.v1beta1.QueryProto.TransfersForChainRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CHAIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chain_ = "";
@@ -2827,7 +2828,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
@@ -2865,7 +2866,7 @@ public final class QueryProto {
       if (state_ != com.axelar.nexus.exported.v1beta1.TypesProto.TransferState.TRANSFER_STATE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2884,7 +2885,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, state_);
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -3054,13 +3055,19 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.TransfersForChainRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3112,11 +3119,14 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = state_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3425,8 +3435,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3620,6 +3632,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.TransfersForChainResponse.class, com.axelar.nexus.v1beta1.QueryProto.TransfersForChainResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TRANSFERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.axelar.nexus.exported.v1beta1.TypesProto.CrossChainTransfer> transfers_;
@@ -3669,7 +3682,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -3704,7 +3717,7 @@ public final class QueryProto {
       for (int i = 0; i < transfers_.size(); i++) {
         output.writeMessage(1, transfers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3720,7 +3733,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, transfers_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3884,13 +3897,20 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.TransfersForChainResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTransfersFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -3954,11 +3974,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.nexus.v1beta1.QueryProto.TransfersForChainResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4403,8 +4426,10 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -5283,6 +5308,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.FeeInfoResponse.class, com.axelar.nexus.v1beta1.QueryProto.FeeInfoResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEE_INFO_FIELD_NUMBER = 1;
     private com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo feeInfo_;
     /**
@@ -5291,7 +5317,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFeeInfo() {
-      return feeInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 1 [json_name = "feeInfo"];</code>
@@ -5323,7 +5349,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (feeInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFeeInfo());
       }
       getUnknownFields().writeTo(output);
@@ -5335,7 +5361,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (feeInfo_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFeeInfo());
       }
@@ -5493,13 +5519,19 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.FeeInfoResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeeInfoFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -5543,11 +5575,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.nexus.v1beta1.QueryProto.FeeInfoResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feeInfo_ = feeInfoBuilder_ == null
               ? feeInfo_
               : feeInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5713,8 +5748,10 @@ public final class QueryProto {
         } else {
           feeInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (feeInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -6741,6 +6778,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.TransferFeeResponse.class, com.axelar.nexus.v1beta1.QueryProto.TransferFeeResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin fee_;
     /**
@@ -6749,7 +6787,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return fee_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
@@ -6781,7 +6819,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getFee());
       }
       getUnknownFields().writeTo(output);
@@ -6793,7 +6831,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (fee_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFee());
       }
@@ -6951,13 +6989,19 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.TransferFeeResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -7001,11 +7045,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.nexus.v1beta1.QueryProto.TransferFeeResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7171,8 +7218,10 @@ public final class QueryProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (fee_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -10220,6 +10269,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.ChainStateResponse.class, com.axelar.nexus.v1beta1.QueryProto.ChainStateResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.axelar.nexus.v1beta1.TypesProto.ChainState state_;
     /**
@@ -10228,7 +10278,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasState() {
-      return state_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.axelar.nexus.v1beta1.ChainState state = 1 [json_name = "state", (.gogoproto.nullable) = false];</code>
@@ -10260,7 +10310,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -10272,7 +10322,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (state_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -10430,13 +10480,19 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.ChainStateResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -10480,11 +10536,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.nexus.v1beta1.QueryProto.ChainStateResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10650,8 +10709,10 @@ public final class QueryProto {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (state_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14120,6 +14181,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.TransferRateLimitResponse.class, com.axelar.nexus.v1beta1.QueryProto.TransferRateLimitResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TRANSFER_RATE_LIMIT_FIELD_NUMBER = 1;
     private com.axelar.nexus.v1beta1.QueryProto.TransferRateLimit transferRateLimit_;
     /**
@@ -14128,7 +14190,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTransferRateLimit() {
-      return transferRateLimit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.axelar.nexus.v1beta1.TransferRateLimit transfer_rate_limit = 1 [json_name = "transferRateLimit"];</code>
@@ -14160,7 +14222,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (transferRateLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTransferRateLimit());
       }
       getUnknownFields().writeTo(output);
@@ -14172,7 +14234,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (transferRateLimit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTransferRateLimit());
       }
@@ -14330,13 +14392,19 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.TransferRateLimitResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTransferRateLimitFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14380,11 +14448,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.nexus.v1beta1.QueryProto.TransferRateLimitResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.transferRateLimit_ = transferRateLimitBuilder_ == null
               ? transferRateLimit_
               : transferRateLimitBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14550,8 +14621,10 @@ public final class QueryProto {
         } else {
           transferRateLimitBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (transferRateLimit_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -14768,6 +14841,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.TransferRateLimit.class, com.axelar.nexus.v1beta1.QueryProto.TransferRateLimit.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LIMIT_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString limit_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -14787,7 +14861,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasWindow() {
-      return window_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Duration window = 2 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -14839,7 +14913,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTimeLeft() {
-      return timeLeft_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -14882,7 +14956,7 @@ public final class QueryProto {
       if (!limit_.isEmpty()) {
         output.writeBytes(1, limit_);
       }
-      if (window_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getWindow());
       }
       if (!incoming_.isEmpty()) {
@@ -14891,7 +14965,7 @@ public final class QueryProto {
       if (!outgoing_.isEmpty()) {
         output.writeBytes(4, outgoing_);
       }
-      if (timeLeft_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(5, getTimeLeft());
       }
       getUnknownFields().writeTo(output);
@@ -14907,7 +14981,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, limit_);
       }
-      if (window_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getWindow());
       }
@@ -14919,7 +14993,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, outgoing_);
       }
-      if (timeLeft_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTimeLeft());
       }
@@ -15098,13 +15172,20 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.TransferRateLimit.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getWindowFieldBuilder();
+          getTimeLeftFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15159,10 +15240,12 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.limit_ = limit_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.window_ = windowBuilder_ == null
               ? window_
               : windowBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.incoming_ = incoming_;
@@ -15174,7 +15257,9 @@ public final class QueryProto {
           result.timeLeft_ = timeLeftBuilder_ == null
               ? timeLeft_
               : timeLeftBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15406,8 +15491,10 @@ public final class QueryProto {
         } else {
           windowBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (window_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -15609,8 +15696,10 @@ public final class QueryProto {
         } else {
           timeLeftBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (timeLeft_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -16347,6 +16436,7 @@ public final class QueryProto {
               com.axelar.nexus.v1beta1.QueryProto.MessageResponse.class, com.axelar.nexus.v1beta1.QueryProto.MessageResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MESSAGE_FIELD_NUMBER = 1;
     private com.axelar.nexus.exported.v1beta1.TypesProto.GeneralMessage message_;
     /**
@@ -16355,7 +16445,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMessage() {
-      return message_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.axelar.nexus.exported.v1beta1.GeneralMessage message = 1 [json_name = "message", (.gogoproto.nullable) = false];</code>
@@ -16387,7 +16477,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (message_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getMessage());
       }
       getUnknownFields().writeTo(output);
@@ -16399,7 +16489,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (message_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMessage());
       }
@@ -16557,13 +16647,19 @@ public final class QueryProto {
 
       // Construct using com.axelar.nexus.v1beta1.QueryProto.MessageResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMessageFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -16607,11 +16703,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.nexus.v1beta1.QueryProto.MessageResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.message_ = messageBuilder_ == null
               ? message_
               : messageBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16777,8 +16876,10 @@ public final class QueryProto {
         } else {
           messageBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (message_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

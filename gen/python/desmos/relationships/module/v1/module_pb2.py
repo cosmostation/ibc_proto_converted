@@ -14,15 +14,14 @@ _sym_db = _symbol_database.Default()
 from cosmos.app.v1alpha1 import module_pb2 as cosmos_dot_app_dot_v1alpha1_dot_module__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+desmos/relationships/module/v1/module.proto\x12\x1e\x64\x65smos.relationships.module.v1\x1a cosmos/app/v1alpha1/module.proto\"?\n\x06Module:5\xba\xc0\x96\xda\x01/\n-github.com/desmos-labs/desmos/x/relationshipsB\xcc\x01\n\"com.desmos.relationships.module.v1B\x0bModuleProtoP\x01\xa2\x02\x03\x44RM\xaa\x02\x1e\x44\x65smos.Relationships.Module.V1\xca\x02\x1e\x44\x65smos\\Relationships\\Module\\V1\xe2\x02*Desmos\\Relationships\\Module\\V1\\GPBMetadata\xea\x02!Desmos::Relationships::Module::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n+desmos/relationships/module/v1/module.proto\x12\x1e\x64\x65smos.relationships.module.v1\x1a cosmos/app/v1alpha1/module.proto\"?\n\x06Module:5\xba\xc0\x96\xda\x01/\n-github.com/desmos-labs/desmos/x/relationshipsB\xca\x01\n\"com.desmos.relationships.module.v1B\x0bModuleProto\xa2\x02\x03\x44RM\xaa\x02\x1e\x44\x65smos.Relationships.Module.V1\xca\x02\x1e\x44\x65smos\\Relationships\\Module\\V1\xe2\x02*Desmos\\Relationships\\Module\\V1\\GPBMetadata\xea\x02!Desmos::Relationships::Module::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'desmos.relationships.module.v1.module_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\"com.desmos.relationships.module.v1B\013ModuleProtoP\001\242\002\003DRM\252\002\036Desmos.Relationships.Module.V1\312\002\036Desmos\\Relationships\\Module\\V1\342\002*Desmos\\Relationships\\Module\\V1\\GPBMetadata\352\002!Desmos::Relationships::Module::V1'
+  DESCRIPTOR._serialized_options = b'\n\"com.desmos.relationships.module.v1B\013ModuleProto\242\002\003DRM\252\002\036Desmos.Relationships.Module.V1\312\002\036Desmos\\Relationships\\Module\\V1\342\002*Desmos\\Relationships\\Module\\V1\\GPBMetadata\352\002!Desmos::Relationships::Module::V1'
   _MODULE._options = None
   _MODULE._serialized_options = b'\272\300\226\332\001/\n-github.com/desmos-labs/desmos/x/relationships'
   _globals['_MODULE']._serialized_start=113

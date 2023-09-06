@@ -68,6 +68,7 @@ public final class QuerierProto {
               com.sentinel.deposit.v1.QuerierProto.QueryDepositsRequest.class, com.sentinel.deposit.v1.QuerierProto.QueryDepositsRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -76,7 +77,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -108,7 +109,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -120,7 +121,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -278,13 +279,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.deposit.v1.QuerierProto.QueryDepositsRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -328,11 +335,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.deposit.v1.QuerierProto.QueryDepositsRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -498,8 +508,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1245,6 +1257,7 @@ public final class QuerierProto {
               com.sentinel.deposit.v1.QuerierProto.QueryDepositsResponse.class, com.sentinel.deposit.v1.QuerierProto.QueryDepositsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSITS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.sentinel.deposit.v1.DepositProto.Deposit> deposits_;
@@ -1294,7 +1307,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return pagination_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -1329,7 +1342,7 @@ public final class QuerierProto {
       for (int i = 0; i < deposits_.size(); i++) {
         output.writeMessage(1, deposits_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1345,7 +1358,7 @@ public final class QuerierProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, deposits_.get(i));
       }
-      if (pagination_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1509,13 +1522,20 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.deposit.v1.QuerierProto.QueryDepositsResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositsFieldBuilder();
+          getPaginationFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1579,11 +1599,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.deposit.v1.QuerierProto.QueryDepositsResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2028,8 +2051,10 @@ public final class QuerierProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (pagination_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2198,6 +2223,7 @@ public final class QuerierProto {
               com.sentinel.deposit.v1.QuerierProto.QueryDepositResponse.class, com.sentinel.deposit.v1.QuerierProto.QueryDepositResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DEPOSIT_FIELD_NUMBER = 1;
     private com.sentinel.deposit.v1.DepositProto.Deposit deposit_;
     /**
@@ -2206,7 +2232,7 @@ public final class QuerierProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return deposit_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.sentinel.deposit.v1.Deposit deposit = 1 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
@@ -2238,7 +2264,7 @@ public final class QuerierProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getDeposit());
       }
       getUnknownFields().writeTo(output);
@@ -2250,7 +2276,7 @@ public final class QuerierProto {
       if (size != -1) return size;
 
       size = 0;
-      if (deposit_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeposit());
       }
@@ -2408,13 +2434,19 @@ public final class QuerierProto {
 
       // Construct using com.sentinel.deposit.v1.QuerierProto.QueryDepositResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDepositFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2458,11 +2490,14 @@ public final class QuerierProto {
 
       private void buildPartial0(com.sentinel.deposit.v1.QuerierProto.QueryDepositResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2628,8 +2663,10 @@ public final class QuerierProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (deposit_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**

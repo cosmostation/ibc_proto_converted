@@ -15,15 +15,14 @@ from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bumee/oracle/v1/events.proto\x12\x0eumee.oracle.v1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\x86\x01\n\x18\x45ventDelegateFeedConsent\x12\x34\n\x08operator\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x08operator\x12\x34\n\x08\x64\x65legate\x18\x02 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x08\x64\x65legate\"x\n\x0e\x45ventSetFxRate\x12\x14\n\x05\x64\x65nom\x18\x01 \x01(\tR\x05\x64\x65nom\x12P\n\x04rate\x18\x02 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\x04rateB\xaf\x01\n\x12\x63om.umee.oracle.v1B\x0b\x45ventsProtoP\x01Z.github.com/umee-network/umee/v5/x/oracle/types\xa2\x02\x03UOX\xaa\x02\x0eUmee.Oracle.V1\xca\x02\x0eUmee\\Oracle\\V1\xe2\x02\x1aUmee\\Oracle\\V1\\GPBMetadata\xea\x02\x10Umee::Oracle::V1\xc8\xe1\x1e\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bumee/oracle/v1/events.proto\x12\x0eumee.oracle.v1\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x14gogoproto/gogo.proto\"\x86\x01\n\x18\x45ventDelegateFeedConsent\x12\x34\n\x08operator\x18\x01 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x08operator\x12\x34\n\x08\x64\x65legate\x18\x02 \x01(\tB\x18\xd2\xb4-\x14\x63osmos.AddressStringR\x08\x64\x65legate\"x\n\x0e\x45ventSetFxRate\x12\x14\n\x05\x64\x65nom\x18\x01 \x01(\tR\x05\x64\x65nom\x12P\n\x04rate\x18\x02 \x01(\tB<\xc8\xde\x1f\x00\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xd2\xb4-\ncosmos.DecR\x04rateB\xad\x01\n\x12\x63om.umee.oracle.v1B\x0b\x45ventsProtoZ.github.com/umee-network/umee/v5/x/oracle/types\xa2\x02\x03UOX\xaa\x02\x0eUmee.Oracle.V1\xca\x02\x0eUmee\\Oracle\\V1\xe2\x02\x1aUmee\\Oracle\\V1\\GPBMetadata\xea\x02\x10Umee::Oracle::V1\xc8\xe1\x1e\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'umee.oracle.v1.events_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022com.umee.oracle.v1B\013EventsProtoP\001Z.github.com/umee-network/umee/v5/x/oracle/types\242\002\003UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Oracle\\V1\342\002\032Umee\\Oracle\\V1\\GPBMetadata\352\002\020Umee::Oracle::V1\310\341\036\000'
+  DESCRIPTOR._serialized_options = b'\n\022com.umee.oracle.v1B\013EventsProtoZ.github.com/umee-network/umee/v5/x/oracle/types\242\002\003UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Oracle\\V1\342\002\032Umee\\Oracle\\V1\\GPBMetadata\352\002\020Umee::Oracle::V1\310\341\036\000'
   _EVENTDELEGATEFEEDCONSENT.fields_by_name['operator']._options = None
   _EVENTDELEGATEFEEDCONSENT.fields_by_name['operator']._serialized_options = b'\322\264-\024cosmos.AddressString'
   _EVENTDELEGATEFEEDCONSENT.fields_by_name['delegate']._options = None

@@ -95,6 +95,7 @@ public final class GenesisProto {
               com.sentinel.plan.v2.GenesisProto.GenesisPlan.class, com.sentinel.plan.v2.GenesisProto.GenesisPlan.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PLAN_FIELD_NUMBER = 1;
     private com.sentinel.plan.v2.PlanProto.Plan plan_;
     /**
@@ -103,7 +104,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPlan() {
-      return plan_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
@@ -172,7 +173,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPlan());
       }
       for (int i = 0; i < nodes_.size(); i++) {
@@ -187,7 +188,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (plan_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPlan());
       }
@@ -359,13 +360,19 @@ public final class GenesisProto {
 
       // Construct using com.sentinel.plan.v2.GenesisProto.GenesisPlan.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlanFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -411,15 +418,18 @@ public final class GenesisProto {
 
       private void buildPartial0(com.sentinel.plan.v2.GenesisProto.GenesisPlan result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.plan_ = planBuilder_ == null
               ? plan_
               : planBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           nodes_.makeImmutable();
           result.nodes_ = nodes_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -601,8 +611,10 @@ public final class GenesisProto {
         } else {
           planBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (plan_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
