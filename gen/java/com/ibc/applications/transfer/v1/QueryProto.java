@@ -683,7 +683,6 @@ public final class QueryProto {
               com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse.class, com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DENOM_TRACE_FIELD_NUMBER = 1;
     private com.ibc.applications.transfer.v1.TransferProto.DenomTrace denomTrace_;
     /**
@@ -696,7 +695,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDenomTrace() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return denomTrace_ != null;
     }
     /**
      * <pre>
@@ -736,7 +735,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (denomTrace_ != null) {
         output.writeMessage(1, getDenomTrace());
       }
       getUnknownFields().writeTo(output);
@@ -748,7 +747,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (denomTrace_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDenomTrace());
       }
@@ -911,19 +910,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDenomTraceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -967,14 +960,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denomTrace_ = denomTraceBuilder_ == null
               ? denomTrace_
               : denomTraceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1160,10 +1150,8 @@ public final class QueryProto {
         } else {
           denomTraceBuilder_.mergeFrom(value);
         }
-        if (denomTrace_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1365,7 +1353,6 @@ public final class QueryProto {
               com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest.class, com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -1378,7 +1365,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -1418,7 +1405,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1430,7 +1417,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -1593,19 +1580,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1649,14 +1630,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1842,10 +1820,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2092,7 +2068,6 @@ public final class QueryProto {
               com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse.class, com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DENOM_TRACES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.ibc.applications.transfer.v1.TransferProto.DenomTrace> denomTraces_;
@@ -2166,7 +2141,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -2209,7 +2184,7 @@ public final class QueryProto {
       for (int i = 0; i < denomTraces_.size(); i++) {
         output.writeMessage(1, denomTraces_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2225,7 +2200,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, denomTraces_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2394,20 +2369,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDenomTracesFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2471,14 +2439,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3015,10 +2980,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3624,7 +3587,6 @@ public final class QueryProto {
               com.ibc.applications.transfer.v1.QueryProto.QueryParamsResponse.class, com.ibc.applications.transfer.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.ibc.applications.transfer.v1.TransferProto.Params params_;
     /**
@@ -3637,7 +3599,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -3677,7 +3639,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -3689,7 +3651,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -3851,19 +3813,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.applications.transfer.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3907,14 +3863,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.applications.transfer.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4100,10 +4053,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7424,7 +7375,6 @@ public final class QueryProto {
               com.ibc.applications.transfer.v1.QueryProto.QueryTotalEscrowForDenomResponse.class, com.ibc.applications.transfer.v1.QueryProto.QueryTotalEscrowForDenomResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
     /**
@@ -7433,7 +7383,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -7465,7 +7415,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(1, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -7477,7 +7427,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAmount());
       }
@@ -7639,19 +7589,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.applications.transfer.v1.QueryProto.QueryTotalEscrowForDenomResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7695,14 +7639,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.applications.transfer.v1.QueryProto.QueryTotalEscrowForDenomResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7868,10 +7809,8 @@ public final class QueryProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

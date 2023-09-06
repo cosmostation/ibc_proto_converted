@@ -90,8 +90,7 @@ public final class TypesProto {
 
     public static final int ELEMS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList elems_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList elems_;
     /**
      * <code>repeated uint64 elems = 2 [json_name = "elems"];</code>
      * @return A list containing the elems.
@@ -366,19 +365,24 @@ public final class TypesProto {
       @java.lang.Override
       public com.tendermint.libs.bits.TypesProto.BitArray buildPartial() {
         com.tendermint.libs.bits.TypesProto.BitArray result = new com.tendermint.libs.bits.TypesProto.BitArray(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tendermint.libs.bits.TypesProto.BitArray result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          elems_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.elems_ = elems_;
       }
 
       private void buildPartial0(com.tendermint.libs.bits.TypesProto.BitArray result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bits_ = bits_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          elems_.makeImmutable();
-          result.elems_ = elems_;
         }
       }
 
@@ -432,8 +436,7 @@ public final class TypesProto {
         if (!other.elems_.isEmpty()) {
           if (elems_.isEmpty()) {
             elems_ = other.elems_;
-            elems_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureElemsIsMutable();
             elems_.addAll(other.elems_);
@@ -538,10 +541,10 @@ public final class TypesProto {
 
       private com.google.protobuf.Internal.LongList elems_ = emptyLongList();
       private void ensureElemsIsMutable() {
-        if (!elems_.isModifiable()) {
-          elems_ = makeMutableCopy(elems_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          elems_ = mutableCopy(elems_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 elems = 2 [json_name = "elems"];</code>
@@ -549,8 +552,8 @@ public final class TypesProto {
        */
       public java.util.List<java.lang.Long>
           getElemsList() {
-        elems_.makeImmutable();
-        return elems_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(elems_) : elems_;
       }
       /**
        * <code>repeated uint64 elems = 2 [json_name = "elems"];</code>
@@ -578,7 +581,6 @@ public final class TypesProto {
 
         ensureElemsIsMutable();
         elems_.setLong(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -591,7 +593,6 @@ public final class TypesProto {
 
         ensureElemsIsMutable();
         elems_.addLong(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -605,7 +606,6 @@ public final class TypesProto {
         ensureElemsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, elems_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

@@ -174,7 +174,6 @@ public final class IncentiveRecordProto {
               com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.class, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -298,7 +297,7 @@ public final class IncentiveRecordProto {
      */
     @java.lang.Override
     public boolean hasIncentiveRecordBody() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return incentiveRecordBody_ != null;
     }
     /**
      * <pre>
@@ -338,7 +337,7 @@ public final class IncentiveRecordProto {
      */
     @java.lang.Override
     public boolean hasMinUptime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return minUptime_ != null;
     }
     /**
      * <pre>
@@ -391,10 +390,10 @@ public final class IncentiveRecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentiveCreatorAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, incentiveCreatorAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (incentiveRecordBody_ != null) {
         output.writeMessage(4, getIncentiveRecordBody());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (minUptime_ != null) {
         output.writeMessage(5, getMinUptime());
       }
       getUnknownFields().writeTo(output);
@@ -416,11 +415,11 @@ public final class IncentiveRecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentiveCreatorAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, incentiveCreatorAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (incentiveRecordBody_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getIncentiveRecordBody());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (minUptime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMinUptime());
       }
@@ -607,20 +606,13 @@ public final class IncentiveRecordProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIncentiveRecordBodyFieldBuilder();
-          getMinUptimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -681,20 +673,16 @@ public final class IncentiveRecordProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.incentiveCreatorAddr_ = incentiveCreatorAddr_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.incentiveRecordBody_ = incentiveRecordBodyBuilder_ == null
               ? incentiveRecordBody_
               : incentiveRecordBodyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.minUptime_ = minUptimeBuilder_ == null
               ? minUptime_
               : minUptimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1149,10 +1137,8 @@ public final class IncentiveRecordProto {
         } else {
           incentiveRecordBodyBuilder_.mergeFrom(value);
         }
-        if (incentiveRecordBody_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1316,10 +1302,8 @@ public final class IncentiveRecordProto {
         } else {
           minUptimeBuilder_.mergeFrom(value);
         }
-        if (minUptime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1571,7 +1555,6 @@ public final class IncentiveRecordProto {
               com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.class, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REMAINING_AMOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object remainingAmount_ = "";
@@ -1678,7 +1661,7 @@ public final class IncentiveRecordProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -1724,7 +1707,7 @@ public final class IncentiveRecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emissionRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, emissionRate_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(3, getStartTime());
       }
       getUnknownFields().writeTo(output);
@@ -1742,7 +1725,7 @@ public final class IncentiveRecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emissionRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, emissionRate_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStartTime());
       }
@@ -1913,19 +1896,13 @@ public final class IncentiveRecordProto {
 
       // Construct using com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1977,14 +1954,11 @@ public final class IncentiveRecordProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.emissionRate_ = emissionRate_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2374,10 +2348,8 @@ public final class IncentiveRecordProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

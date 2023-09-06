@@ -683,7 +683,6 @@ public final class IidProto {
               com.ixo.iid.v1beta1.IidProto.IidDocument.class, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTEXT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.ixo.iid.v1beta1.TypesProto.Context> context_;
@@ -1521,7 +1520,7 @@ public final class IidProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <pre>
@@ -1608,7 +1607,7 @@ public final class IidProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alsoKnownAs_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, alsoKnownAs_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(16, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -1702,7 +1701,7 @@ public final class IidProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alsoKnownAs_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, alsoKnownAs_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getMetadata());
       }
@@ -1946,26 +1945,13 @@ public final class IidProto {
 
       // Construct using com.ixo.iid.v1beta1.IidProto.IidDocument.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContextFieldBuilder();
-          getVerificationMethodFieldBuilder();
-          getServiceFieldBuilder();
-          getLinkedResourceFieldBuilder();
-          getLinkedClaimFieldBuilder();
-          getAccordedRightFieldBuilder();
-          getLinkedEntityFieldBuilder();
-          getMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2169,14 +2155,11 @@ public final class IidProto {
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.alsoKnownAs_ = alsoKnownAs_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5896,10 +5879,8 @@ public final class IidProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00008000;
-          onChanged();
-        }
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**

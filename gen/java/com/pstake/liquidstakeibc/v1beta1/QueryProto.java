@@ -465,7 +465,6 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.pstake.liquidstakeibc.v1beta1.ParamsProto.Params params_;
     /**
@@ -474,7 +473,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.pstake.liquidstakeibc.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -506,7 +505,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -518,7 +517,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -676,19 +675,13 @@ public final class QueryProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -732,14 +725,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -905,10 +895,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1629,7 +1617,6 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HOST_CHAIN_FIELD_NUMBER = 1;
     private com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.HostChain hostChain_;
     /**
@@ -1638,7 +1625,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasHostChain() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return hostChain_ != null;
     }
     /**
      * <code>.pstake.liquidstakeibc.v1beta1.HostChain host_chain = 1 [json_name = "hostChain", (.gogoproto.nullable) = false];</code>
@@ -1670,7 +1657,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (hostChain_ != null) {
         output.writeMessage(1, getHostChain());
       }
       getUnknownFields().writeTo(output);
@@ -1682,7 +1669,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (hostChain_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHostChain());
       }
@@ -1840,19 +1827,13 @@ public final class QueryProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHostChainFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1896,14 +1877,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryHostChainResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.hostChain_ = hostChainBuilder_ == null
               ? hostChain_
               : hostChainBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2069,10 +2047,8 @@ public final class QueryProto {
         } else {
           hostChainBuilder_.mergeFrom(value);
         }
-        if (hostChain_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8047,7 +8023,6 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int UNBONDING_FIELD_NUMBER = 1;
     private com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding unbonding_;
     /**
@@ -8056,7 +8031,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasUnbonding() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return unbonding_ != null;
     }
     /**
      * <code>.pstake.liquidstakeibc.v1beta1.Unbonding unbonding = 1 [json_name = "unbonding"];</code>
@@ -8088,7 +8063,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (unbonding_ != null) {
         output.writeMessage(1, getUnbonding());
       }
       getUnknownFields().writeTo(output);
@@ -8100,7 +8075,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (unbonding_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUnbonding());
       }
@@ -8258,19 +8233,13 @@ public final class QueryProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUnbondingFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8314,14 +8283,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryUnbondingResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.unbonding_ = unbondingBuilder_ == null
               ? unbonding_
               : unbondingBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8487,10 +8453,8 @@ public final class QueryProto {
         } else {
           unbondingBuilder_.mergeFrom(value);
         }
-        if (unbonding_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11879,7 +11843,6 @@ public final class QueryProto {
               com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.class, com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BALANCE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
     /**
@@ -11888,7 +11851,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return balance_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
@@ -11920,7 +11883,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         output.writeMessage(1, getBalance());
       }
       getUnknownFields().writeTo(output);
@@ -11932,7 +11895,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBalance());
       }
@@ -12090,19 +12053,13 @@ public final class QueryProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBalanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12146,14 +12103,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pstake.liquidstakeibc.v1beta1.QueryProto.QueryDepositAccountBalanceResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12319,10 +12273,8 @@ public final class QueryProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        if (balance_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

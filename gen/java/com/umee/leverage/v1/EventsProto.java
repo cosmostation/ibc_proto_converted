@@ -132,7 +132,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventSupply.class, com.umee.leverage.v1.EventsProto.EventSupply.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUPPLIER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object supplier_ = "";
@@ -192,7 +191,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <pre>
@@ -230,7 +229,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasUtoken() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return utoken_ != null;
     }
     /**
      * <pre>
@@ -273,10 +272,10 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, supplier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(2, getAsset());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (utoken_ != null) {
         output.writeMessage(3, getUtoken());
       }
       getUnknownFields().writeTo(output);
@@ -291,11 +290,11 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, supplier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAsset());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (utoken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUtoken());
       }
@@ -470,20 +469,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventSupply.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-          getUtokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -536,20 +528,16 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.supplier_ = supplier_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.utoken_ = utokenBuilder_ == null
               ? utoken_
               : utokenBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -847,10 +835,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1004,10 +990,8 @@ public final class EventsProto {
         } else {
           utokenBuilder_.mergeFrom(value);
         }
-        if (utoken_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1256,7 +1240,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventWithdraw.class, com.umee.leverage.v1.EventsProto.EventWithdraw.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUPPLIER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object supplier_ = "";
@@ -1316,7 +1299,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasUtoken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return utoken_ != null;
     }
     /**
      * <pre>
@@ -1354,7 +1337,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return asset_ != null;
     }
     /**
      * <pre>
@@ -1397,10 +1380,10 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, supplier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (utoken_ != null) {
         output.writeMessage(2, getUtoken());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(3, getAsset());
       }
       getUnknownFields().writeTo(output);
@@ -1415,11 +1398,11 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(supplier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, supplier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (utoken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUtoken());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAsset());
       }
@@ -1594,20 +1577,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventWithdraw.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUtokenFieldBuilder();
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1660,20 +1636,16 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.supplier_ = supplier_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.utoken_ = utokenBuilder_ == null
               ? utoken_
               : utokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1971,10 +1943,8 @@ public final class EventsProto {
         } else {
           utokenBuilder_.mergeFrom(value);
         }
-        if (utoken_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2128,10 +2098,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2353,7 +2321,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventCollaterize.class, com.umee.leverage.v1.EventsProto.EventCollaterize.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BORROWER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object borrower_ = "";
@@ -2413,7 +2380,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasUtoken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return utoken_ != null;
     }
     /**
      * <pre>
@@ -2456,7 +2423,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (utoken_ != null) {
         output.writeMessage(2, getUtoken());
       }
       getUnknownFields().writeTo(output);
@@ -2471,7 +2438,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (utoken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUtoken());
       }
@@ -2637,19 +2604,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventCollaterize.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUtokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2697,14 +2658,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.borrower_ = borrower_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.utoken_ = utokenBuilder_ == null
               ? utoken_
               : utokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2992,10 +2950,8 @@ public final class EventsProto {
         } else {
           utokenBuilder_.mergeFrom(value);
         }
-        if (utoken_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3217,7 +3173,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventDecollaterize.class, com.umee.leverage.v1.EventsProto.EventDecollaterize.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BORROWER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object borrower_ = "";
@@ -3277,7 +3232,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasUtoken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return utoken_ != null;
     }
     /**
      * <pre>
@@ -3320,7 +3275,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (utoken_ != null) {
         output.writeMessage(2, getUtoken());
       }
       getUnknownFields().writeTo(output);
@@ -3335,7 +3290,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (utoken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUtoken());
       }
@@ -3501,19 +3456,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventDecollaterize.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUtokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3561,14 +3510,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.borrower_ = borrower_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.utoken_ = utokenBuilder_ == null
               ? utoken_
               : utokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3856,10 +3802,8 @@ public final class EventsProto {
         } else {
           utokenBuilder_.mergeFrom(value);
         }
-        if (utoken_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4081,7 +4025,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventBorrow.class, com.umee.leverage.v1.EventsProto.EventBorrow.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BORROWER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object borrower_ = "";
@@ -4141,7 +4084,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <pre>
@@ -4184,7 +4127,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(2, getAsset());
       }
       getUnknownFields().writeTo(output);
@@ -4199,7 +4142,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAsset());
       }
@@ -4365,19 +4308,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventBorrow.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4425,14 +4362,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.borrower_ = borrower_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4720,10 +4654,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4945,7 +4877,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventRepay.class, com.umee.leverage.v1.EventsProto.EventRepay.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BORROWER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object borrower_ = "";
@@ -5005,7 +4936,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasRepaid() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return repaid_ != null;
     }
     /**
      * <pre>
@@ -5048,7 +4979,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (repaid_ != null) {
         output.writeMessage(2, getRepaid());
       }
       getUnknownFields().writeTo(output);
@@ -5063,7 +4994,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (repaid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRepaid());
       }
@@ -5229,19 +5160,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventRepay.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRepaidFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5289,14 +5214,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.borrower_ = borrower_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.repaid_ = repaidBuilder_ == null
               ? repaid_
               : repaidBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5584,10 +5506,8 @@ public final class EventsProto {
         } else {
           repaidBuilder_.mergeFrom(value);
         }
-        if (repaid_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5830,7 +5750,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventLiquidate.class, com.umee.leverage.v1.EventsProto.EventLiquidate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LIQUIDATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object liquidator_ = "";
@@ -5937,7 +5856,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasLiquidated() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return liquidated_ != null;
     }
     /**
      * <pre>
@@ -5983,7 +5902,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (liquidated_ != null) {
         output.writeMessage(3, getLiquidated());
       }
       getUnknownFields().writeTo(output);
@@ -6001,7 +5920,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (liquidated_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLiquidated());
       }
@@ -6171,19 +6090,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventLiquidate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLiquidatedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6235,14 +6148,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.borrower_ = borrower_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.liquidated_ = liquidatedBuilder_ == null
               ? liquidated_
               : liquidatedBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6632,10 +6542,8 @@ public final class EventsProto {
         } else {
           liquidatedBuilder_.mergeFrom(value);
         }
-        if (liquidated_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8188,7 +8096,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventRepayBadDebt.class, com.umee.leverage.v1.EventsProto.EventRepayBadDebt.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BORROWER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object borrower_ = "";
@@ -8248,7 +8155,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <pre>
@@ -8291,7 +8198,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(2, getAsset());
       }
       getUnknownFields().writeTo(output);
@@ -8306,7 +8213,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAsset());
       }
@@ -8473,19 +8380,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventRepayBadDebt.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8533,14 +8434,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.borrower_ = borrower_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8828,10 +8726,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -9108,7 +9004,6 @@ public final class EventsProto {
               com.umee.leverage.v1.EventsProto.EventReservesExhausted.class, com.umee.leverage.v1.EventsProto.EventReservesExhausted.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BORROWER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object borrower_ = "";
@@ -9168,7 +9063,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasOutstandingDebt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return outstandingDebt_ != null;
     }
     /**
      * <pre>
@@ -9206,7 +9101,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasModuleBalance() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return moduleBalance_ != null;
     }
     /**
      * <pre>
@@ -9244,7 +9139,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasReserves() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return reserves_ != null;
     }
     /**
      * <pre>
@@ -9287,13 +9182,13 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (outstandingDebt_ != null) {
         output.writeMessage(2, getOutstandingDebt());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (moduleBalance_ != null) {
         output.writeMessage(3, getModuleBalance());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (reserves_ != null) {
         output.writeMessage(4, getReserves());
       }
       getUnknownFields().writeTo(output);
@@ -9308,15 +9203,15 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(borrower_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, borrower_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (outstandingDebt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOutstandingDebt());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (moduleBalance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getModuleBalance());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (reserves_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getReserves());
       }
@@ -9501,21 +9396,13 @@ public final class EventsProto {
 
       // Construct using com.umee.leverage.v1.EventsProto.EventReservesExhausted.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOutstandingDebtFieldBuilder();
-          getModuleBalanceFieldBuilder();
-          getReservesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9573,26 +9460,21 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.borrower_ = borrower_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.outstandingDebt_ = outstandingDebtBuilder_ == null
               ? outstandingDebt_
               : outstandingDebtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.moduleBalance_ = moduleBalanceBuilder_ == null
               ? moduleBalance_
               : moduleBalanceBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.reserves_ = reservesBuilder_ == null
               ? reserves_
               : reservesBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9900,10 +9782,8 @@ public final class EventsProto {
         } else {
           outstandingDebtBuilder_.mergeFrom(value);
         }
-        if (outstandingDebt_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -10057,10 +9937,8 @@ public final class EventsProto {
         } else {
           moduleBalanceBuilder_.mergeFrom(value);
         }
-        if (moduleBalance_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10214,10 +10092,8 @@ public final class EventsProto {
         } else {
           reservesBuilder_.mergeFrom(value);
         }
-        if (reserves_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

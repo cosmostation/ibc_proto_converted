@@ -174,7 +174,6 @@ public final class SpecProto {
               com.spec.SpecProto.TemplateAccount.class, com.spec.SpecProto.TemplateAccount.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -233,7 +232,7 @@ public final class SpecProto {
      */
     @java.lang.Override
     public boolean hasPublicKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publicKey_ != null;
     }
     /**
      * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
@@ -397,7 +396,7 @@ public final class SpecProto {
       if (!address_.isEmpty()) {
         output.writeBytes(2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         output.writeMessage(3, getPublicKey());
       }
       for (int i = 0; i < amounts_.size(); i++) {
@@ -428,7 +427,7 @@ public final class SpecProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPublicKey());
       }
@@ -640,20 +639,13 @@ public final class SpecProto {
 
       // Construct using com.spec.SpecProto.TemplateAccount.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublicKeyFieldBuilder();
-          getAmountsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -730,12 +722,10 @@ public final class SpecProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.publicKey_ = publicKeyBuilder_ == null
               ? publicKey_
               : publicKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           permissions_.makeImmutable();
@@ -748,7 +738,6 @@ public final class SpecProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.code_ = code_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1115,10 +1104,8 @@ public final class SpecProto {
         } else {
           publicKeyBuilder_.mergeFrom(value);
         }
-        if (publicKey_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

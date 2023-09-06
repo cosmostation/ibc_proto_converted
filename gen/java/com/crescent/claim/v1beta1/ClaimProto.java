@@ -373,7 +373,6 @@ public final class ClaimProto {
               com.crescent.claim.v1beta1.ClaimProto.Airdrop.class, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -528,7 +527,7 @@ public final class ClaimProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -566,7 +565,7 @@ public final class ClaimProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endTime_ != null;
     }
     /**
      * <pre>
@@ -620,10 +619,10 @@ public final class ClaimProto {
       for (int i = 0; i < conditions_.size(); i++) {
         output.writeEnumNoTag(conditions_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(4, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         output.writeMessage(5, getEndTime());
       }
       getUnknownFields().writeTo(output);
@@ -654,11 +653,11 @@ public final class ClaimProto {
             .computeUInt32SizeNoTag(dataSize);
         }conditionsMemoizedSerializedSize = dataSize;
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getEndTime());
       }
@@ -843,20 +842,13 @@ public final class ClaimProto {
 
       // Construct using com.crescent.claim.v1beta1.ClaimProto.Airdrop.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-          getEndTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -924,20 +916,16 @@ public final class ClaimProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sourceAddress_ = sourceAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1507,10 +1495,8 @@ public final class ClaimProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1664,10 +1650,8 @@ public final class ClaimProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

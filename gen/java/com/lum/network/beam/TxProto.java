@@ -160,7 +160,6 @@ public final class TxProto {
               com.lum.network.beam.TxProto.MsgOpenBeam.class, com.lum.network.beam.TxProto.MsgOpenBeam.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -286,7 +285,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = true];</code>
@@ -351,7 +350,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return data_ != null;
     }
     /**
      * <code>.lum.network.beam.BeamData data = 6 [json_name = "data", (.gogoproto.nullable) = true];</code>
@@ -453,13 +452,13 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secret_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(4, getAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, schema_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         output.writeMessage(6, getData());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimAddress_)) {
@@ -489,14 +488,14 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secret_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, schema_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getData());
       }
@@ -702,20 +701,13 @@ public final class TxProto {
 
       // Construct using com.lum.network.beam.TxProto.MsgOpenBeam.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -780,12 +772,10 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.secret_ = secret_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.schema_ = schema_;
@@ -794,7 +784,6 @@ public final class TxProto {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.claimAddress_ = claimAddress_;
@@ -805,7 +794,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.closesAtBlock_ = closesAtBlock_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1263,10 +1251,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1456,10 +1442,8 @@ public final class TxProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1861,7 +1845,6 @@ public final class TxProto {
               com.lum.network.beam.TxProto.MsgUpdateBeam.class, com.lum.network.beam.TxProto.MsgUpdateBeam.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -1948,7 +1931,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = true];</code>
@@ -2042,7 +2025,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return data_ != null;
     }
     /**
      * <code>.lum.network.beam.BeamData data = 7 [json_name = "data", (.gogoproto.nullable) = true];</code>
@@ -2141,7 +2124,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updaterAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, updaterAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       if (status_ != com.lum.network.beam.BeamProto.BeamState.UNSPECIFIED.getNumber()) {
@@ -2153,7 +2136,7 @@ public final class TxProto {
       if (hideContent_ != false) {
         output.writeBool(6, hideContent_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         output.writeMessage(7, getData());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimAddress_)) {
@@ -2180,7 +2163,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updaterAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, updaterAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -2195,7 +2178,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, hideContent_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getData());
       }
@@ -2405,20 +2388,13 @@ public final class TxProto {
 
       // Construct using com.lum.network.beam.TxProto.MsgUpdateBeam.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2481,12 +2457,10 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.updaterAddress_ = updaterAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.status_ = status_;
@@ -2501,7 +2475,6 @@ public final class TxProto {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.claimAddress_ = claimAddress_;
@@ -2512,7 +2485,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.closesAtBlock_ = closesAtBlock_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2904,10 +2876,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3182,10 +3152,8 @@ public final class TxProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**

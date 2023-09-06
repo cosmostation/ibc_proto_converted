@@ -72,7 +72,6 @@ public final class ParamsProto {
               com.akash.deployment.v1beta1.ParamsProto.Params.class, com.akash.deployment.v1beta1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPLOYMENT_MIN_DEPOSIT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin deploymentMinDeposit_;
     /**
@@ -81,7 +80,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasDeploymentMinDeposit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return deploymentMinDeposit_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deployment_min_deposit = 1 [json_name = "deploymentMinDeposit", (.gogoproto.nullable) = false, (.gogoproto.customname) = "DeploymentMinDeposit", (.gogoproto.jsontag) = "deployment_min_deposit", (.gogoproto.moretags) = "yaml:&#92;"deployment_min_deposit&#92;""];</code>
@@ -113,7 +112,7 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deploymentMinDeposit_ != null) {
         output.writeMessage(1, getDeploymentMinDeposit());
       }
       getUnknownFields().writeTo(output);
@@ -125,7 +124,7 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deploymentMinDeposit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeploymentMinDeposit());
       }
@@ -287,19 +286,13 @@ public final class ParamsProto {
 
       // Construct using com.akash.deployment.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDeploymentMinDepositFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -343,14 +336,11 @@ public final class ParamsProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.deploymentMinDeposit_ = deploymentMinDepositBuilder_ == null
               ? deploymentMinDeposit_
               : deploymentMinDepositBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -516,10 +506,8 @@ public final class ParamsProto {
         } else {
           deploymentMinDepositBuilder_.mergeFrom(value);
         }
-        if (deploymentMinDeposit_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

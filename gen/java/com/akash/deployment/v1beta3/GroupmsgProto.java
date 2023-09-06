@@ -72,7 +72,6 @@ public final class GroupmsgProto {
               com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
     /**
@@ -81,7 +80,7 @@ public final class GroupmsgProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -113,7 +112,7 @@ public final class GroupmsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -125,7 +124,7 @@ public final class GroupmsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -287,19 +286,13 @@ public final class GroupmsgProto {
 
       // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -343,14 +336,11 @@ public final class GroupmsgProto {
 
       private void buildPartial0(com.akash.deployment.v1beta3.GroupmsgProto.MsgCloseGroup result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -516,10 +506,8 @@ public final class GroupmsgProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1097,7 +1085,6 @@ public final class GroupmsgProto {
               com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
     /**
@@ -1106,7 +1093,7 @@ public final class GroupmsgProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -1138,7 +1125,7 @@ public final class GroupmsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -1150,7 +1137,7 @@ public final class GroupmsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -1312,19 +1299,13 @@ public final class GroupmsgProto {
 
       // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1368,14 +1349,11 @@ public final class GroupmsgProto {
 
       private void buildPartial0(com.akash.deployment.v1beta3.GroupmsgProto.MsgPauseGroup result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1541,10 +1519,8 @@ public final class GroupmsgProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2122,7 +2098,6 @@ public final class GroupmsgProto {
               com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.class, com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta3.GroupidProto.GroupID id_;
     /**
@@ -2131,7 +2106,7 @@ public final class GroupmsgProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta3.GroupID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -2163,7 +2138,7 @@ public final class GroupmsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -2175,7 +2150,7 @@ public final class GroupmsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -2337,19 +2312,13 @@ public final class GroupmsgProto {
 
       // Construct using com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2393,14 +2362,11 @@ public final class GroupmsgProto {
 
       private void buildPartial0(com.akash.deployment.v1beta3.GroupmsgProto.MsgStartGroup result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2566,10 +2532,8 @@ public final class GroupmsgProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

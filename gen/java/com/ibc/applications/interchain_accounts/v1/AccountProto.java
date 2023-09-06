@@ -85,7 +85,6 @@ public final class AccountProto {
               com.ibc.applications.interchain_accounts.v1.AccountProto.InterchainAccount.class, com.ibc.applications.interchain_accounts.v1.AccountProto.InterchainAccount.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.auth.v1beta1.AuthProto.BaseAccount baseAccount_;
     /**
@@ -94,7 +93,7 @@ public final class AccountProto {
      */
     @java.lang.Override
     public boolean hasBaseAccount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseAccount_ != null;
     }
     /**
      * <code>.cosmos.auth.v1beta1.BaseAccount base_account = 1 [json_name = "baseAccount", (.gogoproto.embed) = true];</code>
@@ -165,7 +164,7 @@ public final class AccountProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAccount_ != null) {
         output.writeMessage(1, getBaseAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountOwner_)) {
@@ -180,7 +179,7 @@ public final class AccountProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAccount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAccount());
       }
@@ -349,19 +348,13 @@ public final class AccountProto {
 
       // Construct using com.ibc.applications.interchain_accounts.v1.AccountProto.InterchainAccount.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseAccountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -406,17 +399,14 @@ public final class AccountProto {
 
       private void buildPartial0(com.ibc.applications.interchain_accounts.v1.AccountProto.InterchainAccount result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAccount_ = baseAccountBuilder_ == null
               ? baseAccount_
               : baseAccountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.accountOwner_ = accountOwner_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -592,10 +582,8 @@ public final class AccountProto {
         } else {
           baseAccountBuilder_.mergeFrom(value);
         }
-        if (baseAccount_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

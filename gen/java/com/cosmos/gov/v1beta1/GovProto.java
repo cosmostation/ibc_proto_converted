@@ -3389,7 +3389,6 @@ public final class GovProto {
               com.cosmos.gov.v1beta1.GovProto.Proposal.class, com.cosmos.gov.v1beta1.GovProto.Proposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
     private long proposalId_ = 0L;
     /**
@@ -3417,7 +3416,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return content_ != null;
     }
     /**
      * <pre>
@@ -3483,7 +3482,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasFinalTallyResult() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return finalTallyResult_ != null;
     }
     /**
      * <pre>
@@ -3525,7 +3524,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasSubmitTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return submitTime_ != null;
     }
     /**
      * <pre>
@@ -3563,7 +3562,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasDepositEndTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return depositEndTime_ != null;
     }
     /**
      * <pre>
@@ -3662,7 +3661,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasVotingStartTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return votingStartTime_ != null;
     }
     /**
      * <pre>
@@ -3700,7 +3699,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasVotingEndTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return votingEndTime_ != null;
     }
     /**
      * <pre>
@@ -3743,28 +3742,28 @@ public final class GovProto {
       if (proposalId_ != 0L) {
         output.writeUInt64(1, proposalId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         output.writeMessage(2, getContent());
       }
       if (status_ != com.cosmos.gov.v1beta1.GovProto.ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (finalTallyResult_ != null) {
         output.writeMessage(4, getFinalTallyResult());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (submitTime_ != null) {
         output.writeMessage(5, getSubmitTime());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (depositEndTime_ != null) {
         output.writeMessage(6, getDepositEndTime());
       }
       for (int i = 0; i < totalDeposit_.size(); i++) {
         output.writeMessage(7, totalDeposit_.get(i));
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (votingStartTime_ != null) {
         output.writeMessage(8, getVotingStartTime());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (votingEndTime_ != null) {
         output.writeMessage(9, getVotingEndTime());
       }
       getUnknownFields().writeTo(output);
@@ -3780,7 +3779,7 @@ public final class GovProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, proposalId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContent());
       }
@@ -3788,15 +3787,15 @@ public final class GovProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (finalTallyResult_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getFinalTallyResult());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (submitTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSubmitTime());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (depositEndTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDepositEndTime());
       }
@@ -3804,11 +3803,11 @@ public final class GovProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, totalDeposit_.get(i));
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (votingStartTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getVotingStartTime());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (votingEndTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getVotingEndTime());
       }
@@ -4029,25 +4028,13 @@ public final class GovProto {
 
       // Construct using com.cosmos.gov.v1beta1.GovProto.Proposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContentFieldBuilder();
-          getFinalTallyResultFieldBuilder();
-          getSubmitTimeFieldBuilder();
-          getDepositEndTimeFieldBuilder();
-          getTotalDepositFieldBuilder();
-          getVotingStartTimeFieldBuilder();
-          getVotingEndTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4141,12 +4128,10 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proposalId_ = proposalId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.status_ = status_;
@@ -4155,33 +4140,27 @@ public final class GovProto {
           result.finalTallyResult_ = finalTallyResultBuilder_ == null
               ? finalTallyResult_
               : finalTallyResultBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.submitTime_ = submitTimeBuilder_ == null
               ? submitTime_
               : submitTimeBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.depositEndTime_ = depositEndTimeBuilder_ == null
               ? depositEndTime_
               : depositEndTimeBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.votingStartTime_ = votingStartTimeBuilder_ == null
               ? votingStartTime_
               : votingStartTimeBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.votingEndTime_ = votingEndTimeBuilder_ == null
               ? votingEndTime_
               : votingEndTimeBuilder_.build();
-          to_bitField0_ |= 0x00000020;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4516,10 +4495,8 @@ public final class GovProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        if (content_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4756,10 +4733,8 @@ public final class GovProto {
         } else {
           finalTallyResultBuilder_.mergeFrom(value);
         }
-        if (finalTallyResult_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4921,10 +4896,8 @@ public final class GovProto {
         } else {
           submitTimeBuilder_.mergeFrom(value);
         }
-        if (submitTime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5078,10 +5051,8 @@ public final class GovProto {
         } else {
           depositEndTimeBuilder_.mergeFrom(value);
         }
-        if (depositEndTime_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5547,10 +5518,8 @@ public final class GovProto {
         } else {
           votingStartTimeBuilder_.mergeFrom(value);
         }
-        if (votingStartTime_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -5704,10 +5673,8 @@ public final class GovProto {
         } else {
           votingEndTimeBuilder_.mergeFrom(value);
         }
-        if (votingEndTime_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -8518,7 +8485,6 @@ public final class GovProto {
               com.cosmos.gov.v1beta1.GovProto.DepositParams.class, com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MIN_DEPOSIT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> minDeposit_;
@@ -8593,7 +8559,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasMaxDepositPeriod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return maxDepositPeriod_ != null;
     }
     /**
      * <pre>
@@ -8638,7 +8604,7 @@ public final class GovProto {
       for (int i = 0; i < minDeposit_.size(); i++) {
         output.writeMessage(1, minDeposit_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxDepositPeriod_ != null) {
         output.writeMessage(2, getMaxDepositPeriod());
       }
       getUnknownFields().writeTo(output);
@@ -8654,7 +8620,7 @@ public final class GovProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, minDeposit_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxDepositPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMaxDepositPeriod());
       }
@@ -8822,20 +8788,13 @@ public final class GovProto {
 
       // Construct using com.cosmos.gov.v1beta1.GovProto.DepositParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMinDepositFieldBuilder();
-          getMaxDepositPeriodFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8899,14 +8858,11 @@ public final class GovProto {
 
       private void buildPartial0(com.cosmos.gov.v1beta1.GovProto.DepositParams result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maxDepositPeriod_ = maxDepositPeriodBuilder_ == null
               ? maxDepositPeriod_
               : maxDepositPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9448,10 +9404,8 @@ public final class GovProto {
         } else {
           maxDepositPeriodBuilder_.mergeFrom(value);
         }
-        if (maxDepositPeriod_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -9656,7 +9610,6 @@ public final class GovProto {
               com.cosmos.gov.v1beta1.GovProto.VotingParams.class, com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VOTING_PERIOD_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration votingPeriod_;
     /**
@@ -9669,7 +9622,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasVotingPeriod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return votingPeriod_ != null;
     }
     /**
      * <pre>
@@ -9709,7 +9662,7 @@ public final class GovProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingPeriod_ != null) {
         output.writeMessage(1, getVotingPeriod());
       }
       getUnknownFields().writeTo(output);
@@ -9721,7 +9674,7 @@ public final class GovProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVotingPeriod());
       }
@@ -9883,19 +9836,13 @@ public final class GovProto {
 
       // Construct using com.cosmos.gov.v1beta1.GovProto.VotingParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVotingPeriodFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9939,14 +9886,11 @@ public final class GovProto {
 
       private void buildPartial0(com.cosmos.gov.v1beta1.GovProto.VotingParams result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.votingPeriod_ = votingPeriodBuilder_ == null
               ? votingPeriod_
               : votingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10132,10 +10076,8 @@ public final class GovProto {
         } else {
           votingPeriodBuilder_.mergeFrom(value);
         }
-        if (votingPeriod_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

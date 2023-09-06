@@ -480,7 +480,6 @@ public final class QueryProto {
               com.injective.auction.v1beta1.QueryProto.QueryAuctionParamsResponse.class, com.injective.auction.v1beta1.QueryProto.QueryAuctionParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.auction.v1beta1.AuctionProto.Params params_;
     /**
@@ -489,7 +488,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.injective.auction.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -521,7 +520,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -533,7 +532,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -696,19 +695,13 @@ public final class QueryProto {
 
       // Construct using com.injective.auction.v1beta1.QueryProto.QueryAuctionParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -752,14 +745,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.auction.v1beta1.QueryProto.QueryAuctionParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -925,10 +915,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3374,7 +3362,6 @@ public final class QueryProto {
               com.injective.auction.v1beta1.QueryProto.QueryModuleStateResponse.class, com.injective.auction.v1beta1.QueryProto.QueryModuleStateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.auction.v1beta1.GenesisProto.GenesisState state_;
     /**
@@ -3383,7 +3370,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return state_ != null;
     }
     /**
      * <code>.injective.auction.v1beta1.GenesisState state = 1 [json_name = "state"];</code>
@@ -3415,7 +3402,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -3427,7 +3414,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -3590,19 +3577,13 @@ public final class QueryProto {
 
       // Construct using com.injective.auction.v1beta1.QueryProto.QueryModuleStateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3646,14 +3627,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.auction.v1beta1.QueryProto.QueryModuleStateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3819,10 +3797,8 @@ public final class QueryProto {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        if (state_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

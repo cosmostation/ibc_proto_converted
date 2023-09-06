@@ -87,7 +87,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.class, com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FILTERS_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.OrderProto.OrderFilters filters_;
     /**
@@ -96,7 +95,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFilters() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return filters_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
@@ -122,7 +121,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -154,10 +153,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filters_ != null) {
         output.writeMessage(1, getFilters());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -169,11 +168,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filters_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFilters());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -344,20 +343,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFiltersFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -406,20 +398,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrdersRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.filters_ = filtersBuilder_ == null
               ? filters_
               : filtersBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -595,10 +583,8 @@ public final class QueryProto {
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-        if (filters_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -716,10 +702,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -917,7 +901,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.class, com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORDERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.akash.market.v1beta2.OrderProto.Order> orders_;
@@ -967,7 +950,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -1002,7 +985,7 @@ public final class QueryProto {
       for (int i = 0; i < orders_.size(); i++) {
         output.writeMessage(1, orders_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1018,7 +1001,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, orders_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1186,20 +1169,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrdersFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1263,14 +1239,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrdersResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1715,10 +1688,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1891,7 +1862,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryOrderRequest.class, com.akash.market.v1beta2.QueryProto.QueryOrderRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.OrderProto.OrderID id_;
     /**
@@ -1900,7 +1870,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
@@ -1932,7 +1902,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -1944,7 +1914,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -2106,19 +2076,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryOrderRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2162,14 +2126,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrderRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2335,10 +2296,8 @@ public final class QueryProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2511,7 +2470,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryOrderResponse.class, com.akash.market.v1beta2.QueryProto.QueryOrderResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORDER_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.OrderProto.Order order_;
     /**
@@ -2520,7 +2478,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return order_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
@@ -2552,7 +2510,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (order_ != null) {
         output.writeMessage(1, getOrder());
       }
       getUnknownFields().writeTo(output);
@@ -2564,7 +2522,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (order_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOrder());
       }
@@ -2726,19 +2684,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryOrderResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2782,14 +2734,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrderResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.order_ = orderBuilder_ == null
               ? order_
               : orderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2955,10 +2904,8 @@ public final class QueryProto {
         } else {
           orderBuilder_.mergeFrom(value);
         }
-        if (order_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3146,7 +3093,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryBidsRequest.class, com.akash.market.v1beta2.QueryProto.QueryBidsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FILTERS_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.BidProto.BidFilters filters_;
     /**
@@ -3155,7 +3101,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFilters() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return filters_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
@@ -3181,7 +3127,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -3213,10 +3159,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filters_ != null) {
         output.writeMessage(1, getFilters());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3228,11 +3174,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filters_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFilters());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3403,20 +3349,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryBidsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFiltersFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3465,20 +3404,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidsRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.filters_ = filtersBuilder_ == null
               ? filters_
               : filtersBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3654,10 +3589,8 @@ public final class QueryProto {
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-        if (filters_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3775,10 +3708,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3976,7 +3907,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryBidsResponse.class, com.akash.market.v1beta2.QueryProto.QueryBidsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BIDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.akash.market.v1beta2.QueryProto.QueryBidResponse> bids_;
@@ -4026,7 +3956,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4061,7 +3991,7 @@ public final class QueryProto {
       for (int i = 0; i < bids_.size(); i++) {
         output.writeMessage(1, bids_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4077,7 +4007,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, bids_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4245,20 +4175,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryBidsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBidsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4322,14 +4245,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4774,10 +4694,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4950,7 +4868,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryBidRequest.class, com.akash.market.v1beta2.QueryProto.QueryBidRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.BidProto.BidID id_;
     /**
@@ -4959,7 +4876,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
@@ -4991,7 +4908,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -5003,7 +4920,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -5165,19 +5082,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryBidRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5221,14 +5132,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5394,10 +5302,8 @@ public final class QueryProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5585,7 +5491,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryBidResponse.class, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.BidProto.Bid bid_;
     /**
@@ -5594,7 +5499,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBid() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bid_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
@@ -5620,7 +5525,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEscrowAccount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return escrowAccount_ != null;
     }
     /**
      * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
@@ -5652,10 +5557,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bid_ != null) {
         output.writeMessage(1, getBid());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (escrowAccount_ != null) {
         output.writeMessage(2, getEscrowAccount());
       }
       getUnknownFields().writeTo(output);
@@ -5667,11 +5572,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBid());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (escrowAccount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEscrowAccount());
       }
@@ -5842,20 +5747,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryBidResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBidFieldBuilder();
-          getEscrowAccountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5904,20 +5802,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bid_ = bidBuilder_ == null
               ? bid_
               : bidBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.escrowAccount_ = escrowAccountBuilder_ == null
               ? escrowAccount_
               : escrowAccountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6093,10 +5987,8 @@ public final class QueryProto {
         } else {
           bidBuilder_.mergeFrom(value);
         }
-        if (bid_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6214,10 +6106,8 @@ public final class QueryProto {
         } else {
           escrowAccountBuilder_.mergeFrom(value);
         }
-        if (escrowAccount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6405,7 +6295,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.class, com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FILTERS_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.LeaseProto.LeaseFilters filters_;
     /**
@@ -6414,7 +6303,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFilters() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return filters_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
@@ -6440,7 +6329,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -6472,10 +6361,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filters_ != null) {
         output.writeMessage(1, getFilters());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -6487,11 +6376,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filters_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFilters());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -6662,20 +6551,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFiltersFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6724,20 +6606,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeasesRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.filters_ = filtersBuilder_ == null
               ? filters_
               : filtersBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6913,10 +6791,8 @@ public final class QueryProto {
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-        if (filters_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7034,10 +6910,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7235,7 +7109,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.class, com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LEASES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse> leases_;
@@ -7285,7 +7158,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -7320,7 +7193,7 @@ public final class QueryProto {
       for (int i = 0; i < leases_.size(); i++) {
         output.writeMessage(1, leases_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -7336,7 +7209,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, leases_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -7504,20 +7377,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLeasesFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7581,14 +7447,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeasesResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8033,10 +7896,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8209,7 +8070,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.class, com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.LeaseProto.LeaseID id_;
     /**
@@ -8218,7 +8078,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
@@ -8250,7 +8110,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -8262,7 +8122,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -8424,19 +8284,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8480,14 +8334,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeaseRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8653,10 +8504,8 @@ public final class QueryProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8844,7 +8693,6 @@ public final class QueryProto {
               com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.class, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LEASE_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.LeaseProto.Lease lease_;
     /**
@@ -8853,7 +8701,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLease() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lease_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
@@ -8879,7 +8727,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEscrowPayment() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return escrowPayment_ != null;
     }
     /**
      * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
@@ -8911,10 +8759,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lease_ != null) {
         output.writeMessage(1, getLease());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (escrowPayment_ != null) {
         output.writeMessage(2, getEscrowPayment());
       }
       getUnknownFields().writeTo(output);
@@ -8926,11 +8774,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lease_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLease());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (escrowPayment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEscrowPayment());
       }
@@ -9101,20 +8949,13 @@ public final class QueryProto {
 
       // Construct using com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLeaseFieldBuilder();
-          getEscrowPaymentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9163,20 +9004,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeaseResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lease_ = leaseBuilder_ == null
               ? lease_
               : leaseBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.escrowPayment_ = escrowPaymentBuilder_ == null
               ? escrowPayment_
               : escrowPaymentBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9352,10 +9189,8 @@ public final class QueryProto {
         } else {
           leaseBuilder_.mergeFrom(value);
         }
-        if (lease_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9473,10 +9308,8 @@ public final class QueryProto {
         } else {
           escrowPaymentBuilder_.mergeFrom(value);
         }
-        if (escrowPayment_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

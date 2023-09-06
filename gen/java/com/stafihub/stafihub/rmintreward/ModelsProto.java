@@ -6583,8 +6583,7 @@ public final class ModelsProto {
 
     public static final int ACTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList acts_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList acts_;
     /**
      * <code>repeated uint64 acts = 1 [json_name = "acts"];</code>
      * @return A list containing the acts.
@@ -6846,17 +6845,22 @@ public final class ModelsProto {
       @java.lang.Override
       public com.stafihub.stafihub.rmintreward.ModelsProto.Acts buildPartial() {
         com.stafihub.stafihub.rmintreward.ModelsProto.Acts result = new com.stafihub.stafihub.rmintreward.ModelsProto.Acts(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.rmintreward.ModelsProto.Acts result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          acts_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.acts_ = acts_;
+      }
+
       private void buildPartial0(com.stafihub.stafihub.rmintreward.ModelsProto.Acts result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          acts_.makeImmutable();
-          result.acts_ = acts_;
-        }
       }
 
       @java.lang.Override
@@ -6906,8 +6910,7 @@ public final class ModelsProto {
         if (!other.acts_.isEmpty()) {
           if (acts_.isEmpty()) {
             acts_ = other.acts_;
-            acts_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureActsIsMutable();
             acts_.addAll(other.acts_);
@@ -6975,10 +6978,10 @@ public final class ModelsProto {
 
       private com.google.protobuf.Internal.LongList acts_ = emptyLongList();
       private void ensureActsIsMutable() {
-        if (!acts_.isModifiable()) {
-          acts_ = makeMutableCopy(acts_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          acts_ = mutableCopy(acts_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 acts = 1 [json_name = "acts"];</code>
@@ -6986,8 +6989,8 @@ public final class ModelsProto {
        */
       public java.util.List<java.lang.Long>
           getActsList() {
-        acts_.makeImmutable();
-        return acts_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(acts_) : acts_;
       }
       /**
        * <code>repeated uint64 acts = 1 [json_name = "acts"];</code>
@@ -7015,7 +7018,6 @@ public final class ModelsProto {
 
         ensureActsIsMutable();
         acts_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7028,7 +7030,6 @@ public final class ModelsProto {
 
         ensureActsIsMutable();
         acts_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7042,7 +7043,6 @@ public final class ModelsProto {
         ensureActsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, acts_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

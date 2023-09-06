@@ -83,7 +83,6 @@ public final class SplitIdProto {
               com.assetmantle.schema.ids.base.SplitIdProto.SplitID.class, com.assetmantle.schema.ids.base.SplitIdProto.SplitID.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.IdentityIdProto.IdentityID ownerID_;
     /**
@@ -92,7 +91,7 @@ public final class SplitIdProto {
      */
     @java.lang.Override
     public boolean hasOwnerID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ownerID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID owner_i_d = 1 [json_name = "ownerID"];</code>
@@ -118,7 +117,7 @@ public final class SplitIdProto {
      */
     @java.lang.Override
     public boolean hasOwnableID() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ownableID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.AnyOwnableID ownable_i_d = 2 [json_name = "ownableID"];</code>
@@ -150,10 +149,10 @@ public final class SplitIdProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ownerID_ != null) {
         output.writeMessage(1, getOwnerID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (ownableID_ != null) {
         output.writeMessage(2, getOwnableID());
       }
       getUnknownFields().writeTo(output);
@@ -165,11 +164,11 @@ public final class SplitIdProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ownerID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOwnerID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (ownableID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOwnableID());
       }
@@ -336,20 +335,13 @@ public final class SplitIdProto {
 
       // Construct using com.assetmantle.schema.ids.base.SplitIdProto.SplitID.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOwnerIDFieldBuilder();
-          getOwnableIDFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -398,20 +390,16 @@ public final class SplitIdProto {
 
       private void buildPartial0(com.assetmantle.schema.ids.base.SplitIdProto.SplitID result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.ownerID_ = ownerIDBuilder_ == null
               ? ownerID_
               : ownerIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.ownableID_ = ownableIDBuilder_ == null
               ? ownableID_
               : ownableIDBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -587,10 +575,8 @@ public final class SplitIdProto {
         } else {
           ownerIDBuilder_.mergeFrom(value);
         }
-        if (ownerID_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -708,10 +694,8 @@ public final class SplitIdProto {
         } else {
           ownableIDBuilder_.mergeFrom(value);
         }
-        if (ownableID_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

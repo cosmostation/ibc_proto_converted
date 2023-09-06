@@ -5331,7 +5331,6 @@ public final class OracleProto {
               com.umee.oracle.v1.OracleProto.AvgCounter.class, com.umee.oracle.v1.OracleProto.AvgCounter.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sum_ = "";
@@ -5406,7 +5405,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasStart() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return start_ != null;
     }
     /**
      * <pre>
@@ -5452,7 +5451,7 @@ public final class OracleProto {
       if (num_ != 0) {
         output.writeUInt32(2, num_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         output.writeMessage(3, getStart());
       }
       getUnknownFields().writeTo(output);
@@ -5471,7 +5470,7 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, num_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStart());
       }
@@ -5642,19 +5641,13 @@ public final class OracleProto {
 
       // Construct using com.umee.oracle.v1.OracleProto.AvgCounter.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5706,14 +5699,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.num_ = num_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.start_ = startBuilder_ == null
               ? start_
               : startBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6053,10 +6043,8 @@ public final class OracleProto {
         } else {
           startBuilder_.mergeFrom(value);
         }
-        if (start_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

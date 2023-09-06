@@ -149,7 +149,6 @@ public final class AuctionProto {
               com.kava.auction.v1beta1.AuctionProto.BaseAuction.class, com.kava.auction.v1beta1.AuctionProto.BaseAuction.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -208,7 +207,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasLot() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lot_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin lot = 3 [json_name = "lot", (.gogoproto.nullable) = false];</code>
@@ -245,7 +244,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasBid() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return bid_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin bid = 5 [json_name = "bid", (.gogoproto.nullable) = false];</code>
@@ -282,7 +281,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return endTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -308,7 +307,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasMaxEndTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return maxEndTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp max_end_time = 8 [json_name = "maxEndTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -346,22 +345,22 @@ public final class AuctionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initiator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, initiator_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lot_ != null) {
         output.writeMessage(3, getLot());
       }
       if (!bidder_.isEmpty()) {
         output.writeBytes(4, bidder_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bid_ != null) {
         output.writeMessage(5, getBid());
       }
       if (hasReceivedBids_ != false) {
         output.writeBool(6, hasReceivedBids_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (endTime_ != null) {
         output.writeMessage(7, getEndTime());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (maxEndTime_ != null) {
         output.writeMessage(8, getMaxEndTime());
       }
       getUnknownFields().writeTo(output);
@@ -380,7 +379,7 @@ public final class AuctionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initiator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, initiator_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lot_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLot());
       }
@@ -388,7 +387,7 @@ public final class AuctionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, bidder_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getBid());
       }
@@ -396,11 +395,11 @@ public final class AuctionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, hasReceivedBids_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getEndTime());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (maxEndTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getMaxEndTime());
       }
@@ -607,22 +606,13 @@ public final class AuctionProto {
 
       // Construct using com.kava.auction.v1beta1.AuctionProto.BaseAuction.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLotFieldBuilder();
-          getBidFieldBuilder();
-          getEndTimeFieldBuilder();
-          getMaxEndTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -691,12 +681,10 @@ public final class AuctionProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.initiator_ = initiator_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.lot_ = lotBuilder_ == null
               ? lot_
               : lotBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.bidder_ = bidder_;
@@ -705,7 +693,6 @@ public final class AuctionProto {
           result.bid_ = bidBuilder_ == null
               ? bid_
               : bidBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.hasReceivedBids_ = hasReceivedBids_;
@@ -714,15 +701,12 @@ public final class AuctionProto {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.maxEndTime_ = maxEndTimeBuilder_ == null
               ? maxEndTime_
               : maxEndTimeBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1056,10 +1040,8 @@ public final class AuctionProto {
         } else {
           lotBuilder_.mergeFrom(value);
         }
-        if (lot_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1209,10 +1191,8 @@ public final class AuctionProto {
         } else {
           bidBuilder_.mergeFrom(value);
         }
-        if (bid_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1362,10 +1342,8 @@ public final class AuctionProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1483,10 +1461,8 @@ public final class AuctionProto {
         } else {
           maxEndTimeBuilder_.mergeFrom(value);
         }
-        if (maxEndTime_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -1660,7 +1636,6 @@ public final class AuctionProto {
               com.kava.auction.v1beta1.AuctionProto.SurplusAuction.class, com.kava.auction.v1beta1.AuctionProto.SurplusAuction.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_AUCTION_FIELD_NUMBER = 1;
     private com.kava.auction.v1beta1.AuctionProto.BaseAuction baseAuction_;
     /**
@@ -1669,7 +1644,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasBaseAuction() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseAuction_ != null;
     }
     /**
      * <code>.kava.auction.v1beta1.BaseAuction base_auction = 1 [json_name = "baseAuction", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -1701,7 +1676,7 @@ public final class AuctionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAuction_ != null) {
         output.writeMessage(1, getBaseAuction());
       }
       getUnknownFields().writeTo(output);
@@ -1713,7 +1688,7 @@ public final class AuctionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAuction_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAuction());
       }
@@ -1876,19 +1851,13 @@ public final class AuctionProto {
 
       // Construct using com.kava.auction.v1beta1.AuctionProto.SurplusAuction.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseAuctionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1932,14 +1901,11 @@ public final class AuctionProto {
 
       private void buildPartial0(com.kava.auction.v1beta1.AuctionProto.SurplusAuction result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAuction_ = baseAuctionBuilder_ == null
               ? baseAuction_
               : baseAuctionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2105,10 +2071,8 @@ public final class AuctionProto {
         } else {
           baseAuctionBuilder_.mergeFrom(value);
         }
-        if (baseAuction_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2298,7 +2262,6 @@ public final class AuctionProto {
               com.kava.auction.v1beta1.AuctionProto.DebtAuction.class, com.kava.auction.v1beta1.AuctionProto.DebtAuction.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_AUCTION_FIELD_NUMBER = 1;
     private com.kava.auction.v1beta1.AuctionProto.BaseAuction baseAuction_;
     /**
@@ -2307,7 +2270,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasBaseAuction() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseAuction_ != null;
     }
     /**
      * <code>.kava.auction.v1beta1.BaseAuction base_auction = 1 [json_name = "baseAuction", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -2333,7 +2296,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasCorrespondingDebt() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return correspondingDebt_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin corresponding_debt = 2 [json_name = "correspondingDebt", (.gogoproto.nullable) = false];</code>
@@ -2365,10 +2328,10 @@ public final class AuctionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAuction_ != null) {
         output.writeMessage(1, getBaseAuction());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (correspondingDebt_ != null) {
         output.writeMessage(2, getCorrespondingDebt());
       }
       getUnknownFields().writeTo(output);
@@ -2380,11 +2343,11 @@ public final class AuctionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAuction_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAuction());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (correspondingDebt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCorrespondingDebt());
       }
@@ -2557,20 +2520,13 @@ public final class AuctionProto {
 
       // Construct using com.kava.auction.v1beta1.AuctionProto.DebtAuction.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseAuctionFieldBuilder();
-          getCorrespondingDebtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2619,20 +2575,16 @@ public final class AuctionProto {
 
       private void buildPartial0(com.kava.auction.v1beta1.AuctionProto.DebtAuction result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAuction_ = baseAuctionBuilder_ == null
               ? baseAuction_
               : baseAuctionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.correspondingDebt_ = correspondingDebtBuilder_ == null
               ? correspondingDebt_
               : correspondingDebtBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2808,10 +2760,8 @@ public final class AuctionProto {
         } else {
           baseAuctionBuilder_.mergeFrom(value);
         }
-        if (baseAuction_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2929,10 +2879,8 @@ public final class AuctionProto {
         } else {
           correspondingDebtBuilder_.mergeFrom(value);
         }
-        if (correspondingDebt_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3154,7 +3102,6 @@ public final class AuctionProto {
               com.kava.auction.v1beta1.AuctionProto.CollateralAuction.class, com.kava.auction.v1beta1.AuctionProto.CollateralAuction.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_AUCTION_FIELD_NUMBER = 1;
     private com.kava.auction.v1beta1.AuctionProto.BaseAuction baseAuction_;
     /**
@@ -3163,7 +3110,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasBaseAuction() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseAuction_ != null;
     }
     /**
      * <code>.kava.auction.v1beta1.BaseAuction base_auction = 1 [json_name = "baseAuction", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -3189,7 +3136,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasCorrespondingDebt() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return correspondingDebt_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin corresponding_debt = 2 [json_name = "correspondingDebt", (.gogoproto.nullable) = false];</code>
@@ -3215,7 +3162,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasMaxBid() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return maxBid_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin max_bid = 3 [json_name = "maxBid", (.gogoproto.nullable) = false];</code>
@@ -3241,7 +3188,7 @@ public final class AuctionProto {
      */
     @java.lang.Override
     public boolean hasLotReturns() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return lotReturns_ != null;
     }
     /**
      * <code>.kava.auction.v1beta1.WeightedAddresses lot_returns = 4 [json_name = "lotReturns", (.gogoproto.nullable) = false];</code>
@@ -3273,16 +3220,16 @@ public final class AuctionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAuction_ != null) {
         output.writeMessage(1, getBaseAuction());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (correspondingDebt_ != null) {
         output.writeMessage(2, getCorrespondingDebt());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (maxBid_ != null) {
         output.writeMessage(3, getMaxBid());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (lotReturns_ != null) {
         output.writeMessage(4, getLotReturns());
       }
       getUnknownFields().writeTo(output);
@@ -3294,19 +3241,19 @@ public final class AuctionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAuction_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAuction());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (correspondingDebt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCorrespondingDebt());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (maxBid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMaxBid());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (lotReturns_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLotReturns());
       }
@@ -3499,22 +3446,13 @@ public final class AuctionProto {
 
       // Construct using com.kava.auction.v1beta1.AuctionProto.CollateralAuction.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseAuctionFieldBuilder();
-          getCorrespondingDebtFieldBuilder();
-          getMaxBidFieldBuilder();
-          getLotReturnsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3573,32 +3511,26 @@ public final class AuctionProto {
 
       private void buildPartial0(com.kava.auction.v1beta1.AuctionProto.CollateralAuction result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAuction_ = baseAuctionBuilder_ == null
               ? baseAuction_
               : baseAuctionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.correspondingDebt_ = correspondingDebtBuilder_ == null
               ? correspondingDebt_
               : correspondingDebtBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.maxBid_ = maxBidBuilder_ == null
               ? maxBid_
               : maxBidBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.lotReturns_ = lotReturnsBuilder_ == null
               ? lotReturns_
               : lotReturnsBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3794,10 +3726,8 @@ public final class AuctionProto {
         } else {
           baseAuctionBuilder_.mergeFrom(value);
         }
-        if (baseAuction_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3915,10 +3845,8 @@ public final class AuctionProto {
         } else {
           correspondingDebtBuilder_.mergeFrom(value);
         }
-        if (correspondingDebt_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4036,10 +3964,8 @@ public final class AuctionProto {
         } else {
           maxBidBuilder_.mergeFrom(value);
         }
-        if (maxBid_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4157,10 +4083,8 @@ public final class AuctionProto {
         } else {
           lotReturnsBuilder_.mergeFrom(value);
         }
-        if (lotReturns_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4330,8 +4254,8 @@ public final class AuctionProto {
       super(builder);
     }
     private WeightedAddresses() {
-      addresses_ = emptyList(com.google.protobuf.ByteString.class);
-      weights_ = emptyList(com.google.protobuf.ByteString.class);
+      addresses_ = java.util.Collections.emptyList();
+      weights_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4356,8 +4280,7 @@ public final class AuctionProto {
 
     public static final int ADDRESSES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> addresses_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> addresses_;
     /**
      * <code>repeated bytes addresses = 1 [json_name = "addresses", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
      * @return A list containing the addresses.
@@ -4385,8 +4308,7 @@ public final class AuctionProto {
 
     public static final int WEIGHTS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> weights_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> weights_;
     /**
      * <code>repeated bytes weights = 2 [json_name = "weights", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
      * @return A list containing the weights.
@@ -4632,8 +4554,8 @@ public final class AuctionProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        addresses_ = emptyList(com.google.protobuf.ByteString.class);
-        weights_ = emptyList(com.google.protobuf.ByteString.class);
+        addresses_ = java.util.Collections.emptyList();
+        weights_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -4660,21 +4582,27 @@ public final class AuctionProto {
       @java.lang.Override
       public com.kava.auction.v1beta1.AuctionProto.WeightedAddresses buildPartial() {
         com.kava.auction.v1beta1.AuctionProto.WeightedAddresses result = new com.kava.auction.v1beta1.AuctionProto.WeightedAddresses(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.kava.auction.v1beta1.AuctionProto.WeightedAddresses result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          addresses_ = java.util.Collections.unmodifiableList(addresses_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.addresses_ = addresses_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          weights_ = java.util.Collections.unmodifiableList(weights_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.weights_ = weights_;
+      }
+
       private void buildPartial0(com.kava.auction.v1beta1.AuctionProto.WeightedAddresses result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          addresses_.makeImmutable();
-          result.addresses_ = addresses_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          weights_.makeImmutable();
-          result.weights_ = weights_;
-        }
       }
 
       @java.lang.Override
@@ -4724,8 +4652,7 @@ public final class AuctionProto {
         if (!other.addresses_.isEmpty()) {
           if (addresses_.isEmpty()) {
             addresses_ = other.addresses_;
-            addresses_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAddressesIsMutable();
             addresses_.addAll(other.addresses_);
@@ -4735,8 +4662,7 @@ public final class AuctionProto {
         if (!other.weights_.isEmpty()) {
           if (weights_.isEmpty()) {
             weights_ = other.weights_;
-            weights_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureWeightsIsMutable();
             weights_.addAll(other.weights_);
@@ -4798,12 +4724,12 @@ public final class AuctionProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> addresses_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> addresses_ = java.util.Collections.emptyList();
       private void ensureAddressesIsMutable() {
-        if (!addresses_.isModifiable()) {
-          addresses_ = makeMutableCopy(addresses_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          addresses_ = new java.util.ArrayList<com.google.protobuf.ByteString>(addresses_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes addresses = 1 [json_name = "addresses", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
@@ -4811,8 +4737,8 @@ public final class AuctionProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getAddressesList() {
-        addresses_.makeImmutable();
-        return addresses_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(addresses_) : addresses_;
       }
       /**
        * <code>repeated bytes addresses = 1 [json_name = "addresses", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress", (.cosmos_proto.scalar) = "cosmos.AddressBytes"];</code>
@@ -4840,7 +4766,6 @@ public final class AuctionProto {
         if (value == null) { throw new NullPointerException(); }
         ensureAddressesIsMutable();
         addresses_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4853,7 +4778,6 @@ public final class AuctionProto {
         if (value == null) { throw new NullPointerException(); }
         ensureAddressesIsMutable();
         addresses_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4867,7 +4791,6 @@ public final class AuctionProto {
         ensureAddressesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, addresses_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4876,18 +4799,18 @@ public final class AuctionProto {
        * @return This builder for chaining.
        */
       public Builder clearAddresses() {
-        addresses_ = emptyList(com.google.protobuf.ByteString.class);
+        addresses_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> weights_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> weights_ = java.util.Collections.emptyList();
       private void ensureWeightsIsMutable() {
-        if (!weights_.isModifiable()) {
-          weights_ = makeMutableCopy(weights_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          weights_ = new java.util.ArrayList<com.google.protobuf.ByteString>(weights_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated bytes weights = 2 [json_name = "weights", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
@@ -4895,8 +4818,8 @@ public final class AuctionProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getWeightsList() {
-        weights_.makeImmutable();
-        return weights_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(weights_) : weights_;
       }
       /**
        * <code>repeated bytes weights = 2 [json_name = "weights", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
@@ -4924,7 +4847,6 @@ public final class AuctionProto {
         if (value == null) { throw new NullPointerException(); }
         ensureWeightsIsMutable();
         weights_.set(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4937,7 +4859,6 @@ public final class AuctionProto {
         if (value == null) { throw new NullPointerException(); }
         ensureWeightsIsMutable();
         weights_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4951,7 +4872,6 @@ public final class AuctionProto {
         ensureWeightsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, weights_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4960,7 +4880,7 @@ public final class AuctionProto {
        * @return This builder for chaining.
        */
       public Builder clearWeights() {
-        weights_ = emptyList(com.google.protobuf.ByteString.class);
+        weights_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;

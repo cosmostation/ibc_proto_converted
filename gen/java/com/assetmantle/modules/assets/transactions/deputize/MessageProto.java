@@ -162,7 +162,6 @@ public final class MessageProto {
               com.assetmantle.modules.assets.transactions.deputize.MessageProto.Message.class, com.assetmantle.modules.assets.transactions.deputize.MessageProto.Message.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -210,7 +209,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasFromID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fromID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID from_i_d = 2 [json_name = "fromID"];</code>
@@ -236,7 +235,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasToID() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return toID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID to_i_d = 3 [json_name = "toID"];</code>
@@ -262,7 +261,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasClassificationID() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return classificationID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.ClassificationID classification_i_d = 4 [json_name = "classificationID"];</code>
@@ -288,7 +287,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasMaintainedProperties() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return maintainedProperties_ != null;
     }
     /**
      * <code>.assetmantle.schema.lists.base.PropertyList maintained_properties = 5 [json_name = "maintainedProperties"];</code>
@@ -389,16 +388,16 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fromID_ != null) {
         output.writeMessage(2, getFromID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (toID_ != null) {
         output.writeMessage(3, getToID());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (classificationID_ != null) {
         output.writeMessage(4, getClassificationID());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (maintainedProperties_ != null) {
         output.writeMessage(5, getMaintainedProperties());
       }
       if (canMintAsset_ != false) {
@@ -431,19 +430,19 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fromID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFromID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (toID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getToID());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (classificationID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getClassificationID());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (maintainedProperties_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMaintainedProperties());
       }
@@ -686,22 +685,13 @@ public final class MessageProto {
 
       // Construct using com.assetmantle.modules.assets.transactions.deputize.MessageProto.Message.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFromIDFieldBuilder();
-          getToIDFieldBuilder();
-          getClassificationIDFieldBuilder();
-          getMaintainedPropertiesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -770,30 +760,25 @@ public final class MessageProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.from_ = from_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fromID_ = fromIDBuilder_ == null
               ? fromID_
               : fromIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.toID_ = toIDBuilder_ == null
               ? toID_
               : toIDBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.classificationID_ = classificationIDBuilder_ == null
               ? classificationID_
               : classificationIDBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maintainedProperties_ = maintainedPropertiesBuilder_ == null
               ? maintainedProperties_
               : maintainedPropertiesBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.canMintAsset_ = canMintAsset_;
@@ -813,7 +798,6 @@ public final class MessageProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.canMutateMaintainer_ = canMutateMaintainer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1139,10 +1123,8 @@ public final class MessageProto {
         } else {
           fromIDBuilder_.mergeFrom(value);
         }
-        if (fromID_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1260,10 +1242,8 @@ public final class MessageProto {
         } else {
           toIDBuilder_.mergeFrom(value);
         }
-        if (toID_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1381,10 +1361,8 @@ public final class MessageProto {
         } else {
           classificationIDBuilder_.mergeFrom(value);
         }
-        if (classificationID_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1502,10 +1480,8 @@ public final class MessageProto {
         } else {
           maintainedPropertiesBuilder_.mergeFrom(value);
         }
-        if (maintainedProperties_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

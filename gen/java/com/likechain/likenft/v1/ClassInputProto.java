@@ -140,7 +140,6 @@ public final class ClassInputProto {
               com.likechain.likenft.v1.ClassInputProto.ClassInput.class, com.likechain.likenft.v1.ClassInputProto.ClassInput.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -355,7 +354,7 @@ public final class ClassInputProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return config_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.ClassConfig config = 7 [json_name = "config", (.gogoproto.nullable) = false];</code>
@@ -405,7 +404,7 @@ public final class ClassInputProto {
       if (!metadata_.isEmpty()) {
         output.writeBytes(6, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         output.writeMessage(7, getConfig());
       }
       getUnknownFields().writeTo(output);
@@ -436,7 +435,7 @@ public final class ClassInputProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(6, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getConfig());
       }
@@ -618,19 +617,13 @@ public final class ClassInputProto {
 
       // Construct using com.likechain.likenft.v1.ClassInputProto.ClassInput.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -698,14 +691,11 @@ public final class ClassInputProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.metadata_ = metadata_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1321,10 +1311,8 @@ public final class ClassInputProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        if (config_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**

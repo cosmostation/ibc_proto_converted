@@ -167,7 +167,6 @@ public final class MessageProto {
               com.assetmantle.modules.orders.transactions.modify.MessageProto.Message.class, com.assetmantle.modules.orders.transactions.modify.MessageProto.Message.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -215,7 +214,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasFromID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fromID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID from_i_d = 2 [json_name = "fromID"];</code>
@@ -241,7 +240,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasOrderID() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return orderID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.OrderID order_i_d = 3 [json_name = "orderID"];</code>
@@ -345,7 +344,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasExpiresIn() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return expiresIn_ != null;
     }
     /**
      * <code>.assetmantle.schema.types.base.Height expires_in = 6 [json_name = "expiresIn"];</code>
@@ -371,7 +370,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasMutableMetaProperties() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return mutableMetaProperties_ != null;
     }
     /**
      * <code>.assetmantle.schema.lists.base.PropertyList mutable_meta_properties = 7 [json_name = "mutableMetaProperties"];</code>
@@ -397,7 +396,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasMutableProperties() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return mutableProperties_ != null;
     }
     /**
      * <code>.assetmantle.schema.lists.base.PropertyList mutable_properties = 8 [json_name = "mutableProperties"];</code>
@@ -432,10 +431,10 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fromID_ != null) {
         output.writeMessage(2, getFromID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (orderID_ != null) {
         output.writeMessage(3, getOrderID());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(makerOwnableSplit_)) {
@@ -444,13 +443,13 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(takerOwnableSplit_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, takerOwnableSplit_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (expiresIn_ != null) {
         output.writeMessage(6, getExpiresIn());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (mutableMetaProperties_ != null) {
         output.writeMessage(7, getMutableMetaProperties());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (mutableProperties_ != null) {
         output.writeMessage(8, getMutableProperties());
       }
       getUnknownFields().writeTo(output);
@@ -465,11 +464,11 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fromID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFromID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (orderID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getOrderID());
       }
@@ -479,15 +478,15 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(takerOwnableSplit_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, takerOwnableSplit_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (expiresIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getExpiresIn());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (mutableMetaProperties_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getMutableMetaProperties());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (mutableProperties_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getMutableProperties());
       }
@@ -693,23 +692,13 @@ public final class MessageProto {
 
       // Construct using com.assetmantle.modules.orders.transactions.modify.MessageProto.Message.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFromIDFieldBuilder();
-          getOrderIDFieldBuilder();
-          getExpiresInFieldBuilder();
-          getMutableMetaPropertiesFieldBuilder();
-          getMutablePropertiesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -779,18 +768,15 @@ public final class MessageProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.from_ = from_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fromID_ = fromIDBuilder_ == null
               ? fromID_
               : fromIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.orderID_ = orderIDBuilder_ == null
               ? orderID_
               : orderIDBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.makerOwnableSplit_ = makerOwnableSplit_;
@@ -802,21 +788,17 @@ public final class MessageProto {
           result.expiresIn_ = expiresInBuilder_ == null
               ? expiresIn_
               : expiresInBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.mutableMetaProperties_ = mutableMetaPropertiesBuilder_ == null
               ? mutableMetaProperties_
               : mutableMetaPropertiesBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.mutableProperties_ = mutablePropertiesBuilder_ == null
               ? mutableProperties_
               : mutablePropertiesBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1124,10 +1106,8 @@ public final class MessageProto {
         } else {
           fromIDBuilder_.mergeFrom(value);
         }
-        if (fromID_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1245,10 +1225,8 @@ public final class MessageProto {
         } else {
           orderIDBuilder_.mergeFrom(value);
         }
-        if (orderID_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1510,10 +1488,8 @@ public final class MessageProto {
         } else {
           expiresInBuilder_.mergeFrom(value);
         }
-        if (expiresIn_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1631,10 +1607,8 @@ public final class MessageProto {
         } else {
           mutableMetaPropertiesBuilder_.mergeFrom(value);
         }
-        if (mutableMetaProperties_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1752,10 +1726,8 @@ public final class MessageProto {
         } else {
           mutablePropertiesBuilder_.mergeFrom(value);
         }
-        if (mutableProperties_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**

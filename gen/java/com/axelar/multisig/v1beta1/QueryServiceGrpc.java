@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: axelar/multisig/v1beta1/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryServiceGrpc {
 
   private QueryServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "axelar.multisig.v1beta1.QueryService";
+  public static final String SERVICE_NAME = "axelar.multisig.v1beta1.QueryService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.axelar.multisig.v1beta1.QueryProto.KeyIDRequest,
@@ -566,9 +566,9 @@ public final class QueryServiceGrpc {
   private static final class QueryServiceMethodDescriptorSupplier
       extends QueryServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    QueryServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    QueryServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

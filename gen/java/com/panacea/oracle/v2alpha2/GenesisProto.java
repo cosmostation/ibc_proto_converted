@@ -187,7 +187,6 @@ public final class GenesisProto {
               com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.class, com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> oracles_;
@@ -319,7 +318,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -345,7 +344,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasOracleUpgradeInfo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return oracleUpgradeInfo_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
@@ -427,10 +426,10 @@ public final class GenesisProto {
       for (int i = 0; i < oracleRegistrationVotes_.size(); i++) {
         output.writeMessage(3, oracleRegistrationVotes_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(4, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (oracleUpgradeInfo_ != null) {
         output.writeMessage(5, getOracleUpgradeInfo());
       }
       for (int i = 0; i < oracleRegistrationVoteQueueElements_.size(); i++) {
@@ -457,11 +456,11 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, oracleRegistrationVotes_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (oracleUpgradeInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getOracleUpgradeInfo());
       }
@@ -660,24 +659,13 @@ public final class GenesisProto {
 
       // Construct using com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOraclesFieldBuilder();
-          getOracleRegistrationsFieldBuilder();
-          getOracleRegistrationVotesFieldBuilder();
-          getParamsFieldBuilder();
-          getOracleUpgradeInfoFieldBuilder();
-          getOracleRegistrationVoteQueueElementsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -794,20 +782,16 @@ public final class GenesisProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.oracleUpgradeInfo_ = oracleUpgradeInfoBuilder_ == null
               ? oracleUpgradeInfo_
               : oracleUpgradeInfoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1859,10 +1843,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1980,10 +1962,8 @@ public final class GenesisProto {
         } else {
           oracleUpgradeInfoBuilder_.mergeFrom(value);
         }
-        if (oracleUpgradeInfo_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2499,7 +2479,6 @@ public final class GenesisProto {
               com.panacea.oracle.v2alpha2.GenesisProto.Params.class, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLE_PUBLIC_KEY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object oraclePublicKey_ = "";
@@ -2700,7 +2679,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVoteParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return voteParams_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
@@ -2726,7 +2705,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSlashParams() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return slashParams_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
@@ -2770,10 +2749,10 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracleCommissionRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oracleCommissionRate_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (voteParams_ != null) {
         output.writeMessage(5, getVoteParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (slashParams_ != null) {
         output.writeMessage(6, getSlashParams());
       }
       getUnknownFields().writeTo(output);
@@ -2797,11 +2776,11 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracleCommissionRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oracleCommissionRate_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (voteParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getVoteParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (slashParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSlashParams());
       }
@@ -2988,20 +2967,13 @@ public final class GenesisProto {
 
       // Construct using com.panacea.oracle.v2alpha2.GenesisProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVoteParamsFieldBuilder();
-          getSlashParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3066,20 +3038,16 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.oracleCommissionRate_ = oracleCommissionRate_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.voteParams_ = voteParamsBuilder_ == null
               ? voteParams_
               : voteParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.slashParams_ = slashParamsBuilder_ == null
               ? slashParams_
               : slashParamsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3673,10 +3641,8 @@ public final class GenesisProto {
         } else {
           voteParamsBuilder_.mergeFrom(value);
         }
-        if (voteParams_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3794,10 +3760,8 @@ public final class GenesisProto {
         } else {
           slashParamsBuilder_.mergeFrom(value);
         }
-        if (slashParams_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -3998,7 +3962,6 @@ public final class GenesisProto {
               com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.class, com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VOTING_PERIOD_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration votingPeriod_;
     /**
@@ -4007,7 +3970,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingPeriod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return votingPeriod_ != null;
     }
     /**
      * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -4033,7 +3996,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasJailPeriod() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return jailPeriod_ != null;
     }
     /**
      * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -4104,10 +4067,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingPeriod_ != null) {
         output.writeMessage(1, getVotingPeriod());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (jailPeriod_ != null) {
         output.writeMessage(2, getJailPeriod());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
@@ -4122,11 +4085,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVotingPeriod());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (jailPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getJailPeriod());
       }
@@ -4304,20 +4267,13 @@ public final class GenesisProto {
 
       // Construct using com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVotingPeriodFieldBuilder();
-          getJailPeriodFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4367,23 +4323,19 @@ public final class GenesisProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.GenesisProto.VoteParams result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.votingPeriod_ = votingPeriodBuilder_ == null
               ? votingPeriod_
               : votingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.jailPeriod_ = jailPeriodBuilder_ == null
               ? jailPeriod_
               : jailPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.threshold_ = threshold_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4569,10 +4521,8 @@ public final class GenesisProto {
         } else {
           votingPeriodBuilder_.mergeFrom(value);
         }
-        if (votingPeriod_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4690,10 +4640,8 @@ public final class GenesisProto {
         } else {
           jailPeriodBuilder_.mergeFrom(value);
         }
-        if (jailPeriod_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5666,7 +5614,6 @@ public final class GenesisProto {
               com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.class, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder.class);
     }
 
-    private int bitField0_;
     public static final int UNIQUE_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object uniqueId_ = "";
@@ -5725,7 +5672,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingEndTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return votingEndTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -5763,7 +5710,7 @@ public final class GenesisProto {
       if (!address_.isEmpty()) {
         output.writeBytes(2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingEndTime_ != null) {
         output.writeMessage(3, getVotingEndTime());
       }
       getUnknownFields().writeTo(output);
@@ -5782,7 +5729,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingEndTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVotingEndTime());
       }
@@ -5952,19 +5899,13 @@ public final class GenesisProto {
 
       // Construct using com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVotingEndTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6016,14 +5957,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.votingEndTime_ = votingEndTimeBuilder_ == null
               ? votingEndTime_
               : votingEndTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6311,10 +6249,8 @@ public final class GenesisProto {
         } else {
           votingEndTimeBuilder_.mergeFrom(value);
         }
-        if (votingEndTime_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

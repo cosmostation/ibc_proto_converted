@@ -99,7 +99,6 @@ public final class TxProto {
               com.cosmos.authz.v1beta1.TxProto.MsgGrant.class, com.cosmos.authz.v1beta1.TxProto.MsgGrant.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GRANTER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object granter_ = "";
@@ -186,7 +185,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasGrant() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return grant_ != null;
     }
     /**
      * <code>.cosmos.authz.v1beta1.Grant grant = 3 [json_name = "grant", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -224,7 +223,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         output.writeMessage(3, getGrant());
       }
       getUnknownFields().writeTo(output);
@@ -242,7 +241,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getGrant());
       }
@@ -413,19 +412,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.authz.v1beta1.TxProto.MsgGrant.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGrantFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -477,14 +470,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.grantee_ = grantee_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.grant_ = grantBuilder_ == null
               ? grant_
               : grantBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -814,10 +804,8 @@ public final class TxProto {
         } else {
           grantBuilder_.mergeFrom(value);
         }
-        if (grant_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -970,7 +958,7 @@ public final class TxProto {
       super(builder);
     }
     private MsgExecResponse() {
-      results_ = emptyList(com.google.protobuf.ByteString.class);
+      results_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -995,8 +983,7 @@ public final class TxProto {
 
     public static final int RESULTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> results_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> results_;
     /**
      * <code>repeated bytes results = 1 [json_name = "results"];</code>
      * @return A list containing the results.
@@ -1224,7 +1211,7 @@ public final class TxProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        results_ = emptyList(com.google.protobuf.ByteString.class);
+        results_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -1251,17 +1238,22 @@ public final class TxProto {
       @java.lang.Override
       public com.cosmos.authz.v1beta1.TxProto.MsgExecResponse buildPartial() {
         com.cosmos.authz.v1beta1.TxProto.MsgExecResponse result = new com.cosmos.authz.v1beta1.TxProto.MsgExecResponse(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.cosmos.authz.v1beta1.TxProto.MsgExecResponse result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          results_ = java.util.Collections.unmodifiableList(results_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.results_ = results_;
+      }
+
       private void buildPartial0(com.cosmos.authz.v1beta1.TxProto.MsgExecResponse result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          results_.makeImmutable();
-          result.results_ = results_;
-        }
       }
 
       @java.lang.Override
@@ -1311,8 +1303,7 @@ public final class TxProto {
         if (!other.results_.isEmpty()) {
           if (results_.isEmpty()) {
             results_ = other.results_;
-            results_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureResultsIsMutable();
             results_.addAll(other.results_);
@@ -1368,12 +1359,12 @@ public final class TxProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> results_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> results_ = java.util.Collections.emptyList();
       private void ensureResultsIsMutable() {
-        if (!results_.isModifiable()) {
-          results_ = makeMutableCopy(results_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          results_ = new java.util.ArrayList<com.google.protobuf.ByteString>(results_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes results = 1 [json_name = "results"];</code>
@@ -1381,8 +1372,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getResultsList() {
-        results_.makeImmutable();
-        return results_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(results_) : results_;
       }
       /**
        * <code>repeated bytes results = 1 [json_name = "results"];</code>
@@ -1410,7 +1401,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureResultsIsMutable();
         results_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1423,7 +1413,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureResultsIsMutable();
         results_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1437,7 +1426,6 @@ public final class TxProto {
         ensureResultsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, results_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1446,7 +1434,7 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearResults() {
-        results_ = emptyList(com.google.protobuf.ByteString.class);
+        results_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;

@@ -187,7 +187,6 @@ public final class LendProto {
               com.comdex.lend.v1beta1.LendProto.LendAsset.class, com.comdex.lend.v1beta1.LendProto.LendAsset.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LENDING_ID_FIELD_NUMBER = 1;
     private long lendingId_ = 0L;
     /**
@@ -268,7 +267,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasAmountIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amountIn_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount_in = 5 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -294,7 +293,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasLendingTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return lendingTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp lending_time = 6 [json_name = "lendingTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lending_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -409,7 +408,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasLastInteractionTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return lastInteractionTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_interaction_time = 10 [json_name = "lastInteractionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_interaction_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -531,10 +530,10 @@ public final class LendProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         output.writeMessage(5, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (lendingTime_ != null) {
         output.writeMessage(6, getLendingTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(availableToBorrow_)) {
@@ -546,7 +545,7 @@ public final class LendProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalIndex_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, globalIndex_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lastInteractionTime_ != null) {
         output.writeMessage(10, getLastInteractionTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cpoolName_)) {
@@ -579,11 +578,11 @@ public final class LendProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (lendingTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLendingTime());
       }
@@ -597,7 +596,7 @@ public final class LendProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalIndex_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, globalIndex_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lastInteractionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLastInteractionTime());
       }
@@ -819,21 +818,13 @@ public final class LendProto {
 
       // Construct using com.comdex.lend.v1beta1.LendProto.LendAsset.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountInFieldBuilder();
-          getLendingTimeFieldBuilder();
-          getLastInteractionTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -908,18 +899,15 @@ public final class LendProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.owner_ = owner_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.amountIn_ = amountInBuilder_ == null
               ? amountIn_
               : amountInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.lendingTime_ = lendingTimeBuilder_ == null
               ? lendingTime_
               : lendingTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.availableToBorrow_ = availableToBorrow_;
@@ -934,7 +922,6 @@ public final class LendProto {
           result.lastInteractionTime_ = lastInteractionTimeBuilder_ == null
               ? lastInteractionTime_
               : lastInteractionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.cpoolName_ = cpoolName_;
@@ -942,7 +929,6 @@ public final class LendProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.totalRewards_ = totalRewards_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1378,10 +1364,8 @@ public final class LendProto {
         } else {
           amountInBuilder_.mergeFrom(value);
         }
-        if (amountIn_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1499,10 +1483,8 @@ public final class LendProto {
         } else {
           lendingTimeBuilder_.mergeFrom(value);
         }
-        if (lendingTime_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1796,10 +1778,8 @@ public final class LendProto {
         } else {
           lastInteractionTimeBuilder_.mergeFrom(value);
         }
-        if (lastInteractionTime_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2267,7 +2247,6 @@ public final class LendProto {
               com.comdex.lend.v1beta1.LendProto.BorrowAsset.class, com.comdex.lend.v1beta1.LendProto.BorrowAsset.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BORROWING_ID_FIELD_NUMBER = 1;
     private long borrowingId_ = 0L;
     /**
@@ -2320,7 +2299,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasAmountIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amountIn_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount_in = 5 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2346,7 +2325,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasAmountOut() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return amountOut_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount_out = 6 [json_name = "amountOut", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount_out&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2372,7 +2351,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasBridgedAssetAmount() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return bridgedAssetAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin bridged_asset_amount = 7 [json_name = "bridgedAssetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bridged_asset_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2398,7 +2377,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasBorrowingTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return borrowingTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp borrowing_time = 8 [json_name = "borrowingTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"borrowing_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2580,7 +2559,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasLastInteractionTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return lastInteractionTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_interaction_time = 13 [json_name = "lastInteractionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_interaction_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2674,16 +2653,16 @@ public final class LendProto {
       if (pairId_ != 0L) {
         output.writeUInt64(4, pairId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         output.writeMessage(5, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amountOut_ != null) {
         output.writeMessage(6, getAmountOut());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (bridgedAssetAmount_ != null) {
         output.writeMessage(7, getBridgedAssetAmount());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (borrowingTime_ != null) {
         output.writeMessage(8, getBorrowingTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stableBorrowRate_)) {
@@ -2698,7 +2677,7 @@ public final class LendProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveGlobalIndex_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, reserveGlobalIndex_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (lastInteractionTime_ != null) {
         output.writeMessage(13, getLastInteractionTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cpoolName_)) {
@@ -2732,19 +2711,19 @@ public final class LendProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, pairId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amountOut_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAmountOut());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (bridgedAssetAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getBridgedAssetAmount());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (borrowingTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getBorrowingTime());
       }
@@ -2760,7 +2739,7 @@ public final class LendProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveGlobalIndex_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, reserveGlobalIndex_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (lastInteractionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getLastInteractionTime());
       }
@@ -3006,23 +2985,13 @@ public final class LendProto {
 
       // Construct using com.comdex.lend.v1beta1.LendProto.BorrowAsset.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountInFieldBuilder();
-          getAmountOutFieldBuilder();
-          getBridgedAssetAmountFieldBuilder();
-          getBorrowingTimeFieldBuilder();
-          getLastInteractionTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3108,30 +3077,25 @@ public final class LendProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.pairId_ = pairId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.amountIn_ = amountInBuilder_ == null
               ? amountIn_
               : amountInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.amountOut_ = amountOutBuilder_ == null
               ? amountOut_
               : amountOutBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.bridgedAssetAmount_ = bridgedAssetAmountBuilder_ == null
               ? bridgedAssetAmount_
               : bridgedAssetAmountBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.borrowingTime_ = borrowingTimeBuilder_ == null
               ? borrowingTime_
               : borrowingTimeBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.stableBorrowRate_ = stableBorrowRate_;
@@ -3149,7 +3113,6 @@ public final class LendProto {
           result.lastInteractionTime_ = lastInteractionTimeBuilder_ == null
               ? lastInteractionTime_
               : lastInteractionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.cpoolName_ = cpoolName_;
@@ -3157,7 +3120,6 @@ public final class LendProto {
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.isLiquidated_ = isLiquidated_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3581,10 +3543,8 @@ public final class LendProto {
         } else {
           amountInBuilder_.mergeFrom(value);
         }
-        if (amountIn_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3702,10 +3662,8 @@ public final class LendProto {
         } else {
           amountOutBuilder_.mergeFrom(value);
         }
-        if (amountOut_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -3823,10 +3781,8 @@ public final class LendProto {
         } else {
           bridgedAssetAmountBuilder_.mergeFrom(value);
         }
-        if (bridgedAssetAmount_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3944,10 +3900,8 @@ public final class LendProto {
         } else {
           borrowingTimeBuilder_.mergeFrom(value);
         }
-        if (borrowingTime_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -4353,10 +4307,8 @@ public final class LendProto {
         } else {
           lastInteractionTimeBuilder_.mergeFrom(value);
         }
-        if (lastInteractionTime_ != null) {
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -5879,8 +5831,7 @@ public final class LendProto {
 
     public static final int BORROW_ID_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList borrowId_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList borrowId_;
     /**
      * <code>repeated uint64 borrow_id = 4 [json_name = "borrowId", (.gogoproto.moretags) = "yaml:&#92;"borrow_id&#92;""];</code>
      * @return A list containing the borrowId.
@@ -6179,9 +6130,18 @@ public final class LendProto {
       @java.lang.Override
       public com.comdex.lend.v1beta1.LendProto.UserAssetLendBorrowMapping buildPartial() {
         com.comdex.lend.v1beta1.LendProto.UserAssetLendBorrowMapping result = new com.comdex.lend.v1beta1.LendProto.UserAssetLendBorrowMapping(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.lend.v1beta1.LendProto.UserAssetLendBorrowMapping result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          borrowId_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.borrowId_ = borrowId_;
       }
 
       private void buildPartial0(com.comdex.lend.v1beta1.LendProto.UserAssetLendBorrowMapping result) {
@@ -6194,10 +6154,6 @@ public final class LendProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.poolId_ = poolId_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          borrowId_.makeImmutable();
-          result.borrowId_ = borrowId_;
         }
       }
 
@@ -6259,8 +6215,7 @@ public final class LendProto {
         if (!other.borrowId_.isEmpty()) {
           if (borrowId_.isEmpty()) {
             borrowId_ = other.borrowId_;
-            borrowId_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureBorrowIdIsMutable();
             borrowId_.addAll(other.borrowId_);
@@ -6491,10 +6446,10 @@ public final class LendProto {
 
       private com.google.protobuf.Internal.LongList borrowId_ = emptyLongList();
       private void ensureBorrowIdIsMutable() {
-        if (!borrowId_.isModifiable()) {
-          borrowId_ = makeMutableCopy(borrowId_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          borrowId_ = mutableCopy(borrowId_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated uint64 borrow_id = 4 [json_name = "borrowId", (.gogoproto.moretags) = "yaml:&#92;"borrow_id&#92;""];</code>
@@ -6502,8 +6457,8 @@ public final class LendProto {
        */
       public java.util.List<java.lang.Long>
           getBorrowIdList() {
-        borrowId_.makeImmutable();
-        return borrowId_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(borrowId_) : borrowId_;
       }
       /**
        * <code>repeated uint64 borrow_id = 4 [json_name = "borrowId", (.gogoproto.moretags) = "yaml:&#92;"borrow_id&#92;""];</code>
@@ -6531,7 +6486,6 @@ public final class LendProto {
 
         ensureBorrowIdIsMutable();
         borrowId_.setLong(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6544,7 +6498,6 @@ public final class LendProto {
 
         ensureBorrowIdIsMutable();
         borrowId_.addLong(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6558,7 +6511,6 @@ public final class LendProto {
         ensureBorrowIdIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, borrowId_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8289,8 +8241,7 @@ public final class LendProto {
 
     public static final int PAIR_ID_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList pairId_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList pairId_;
     /**
      * <code>repeated uint64 pair_id = 3 [json_name = "pairId", (.gogoproto.customname) = "PairID", (.gogoproto.moretags) = "yaml:&#92;"pair_id&#92;""];</code>
      * @return A list containing the pairId.
@@ -8578,9 +8529,18 @@ public final class LendProto {
       @java.lang.Override
       public com.comdex.lend.v1beta1.LendProto.AssetToPairMapping buildPartial() {
         com.comdex.lend.v1beta1.LendProto.AssetToPairMapping result = new com.comdex.lend.v1beta1.LendProto.AssetToPairMapping(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.lend.v1beta1.LendProto.AssetToPairMapping result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          pairId_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.pairId_ = pairId_;
       }
 
       private void buildPartial0(com.comdex.lend.v1beta1.LendProto.AssetToPairMapping result) {
@@ -8590,10 +8550,6 @@ public final class LendProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.assetId_ = assetId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          pairId_.makeImmutable();
-          result.pairId_ = pairId_;
         }
       }
 
@@ -8650,8 +8606,7 @@ public final class LendProto {
         if (!other.pairId_.isEmpty()) {
           if (pairId_.isEmpty()) {
             pairId_ = other.pairId_;
-            pairId_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensurePairIdIsMutable();
             pairId_.addAll(other.pairId_);
@@ -8793,10 +8748,10 @@ public final class LendProto {
 
       private com.google.protobuf.Internal.LongList pairId_ = emptyLongList();
       private void ensurePairIdIsMutable() {
-        if (!pairId_.isModifiable()) {
-          pairId_ = makeMutableCopy(pairId_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          pairId_ = mutableCopy(pairId_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 pair_id = 3 [json_name = "pairId", (.gogoproto.customname) = "PairID", (.gogoproto.moretags) = "yaml:&#92;"pair_id&#92;""];</code>
@@ -8804,8 +8759,8 @@ public final class LendProto {
        */
       public java.util.List<java.lang.Long>
           getPairIdList() {
-        pairId_.makeImmutable();
-        return pairId_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(pairId_) : pairId_;
       }
       /**
        * <code>repeated uint64 pair_id = 3 [json_name = "pairId", (.gogoproto.customname) = "PairID", (.gogoproto.moretags) = "yaml:&#92;"pair_id&#92;""];</code>
@@ -8833,7 +8788,6 @@ public final class LendProto {
 
         ensurePairIdIsMutable();
         pairId_.setLong(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8846,7 +8800,6 @@ public final class LendProto {
 
         ensurePairIdIsMutable();
         pairId_.addLong(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8860,7 +8813,6 @@ public final class LendProto {
         ensurePairIdIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, pairId_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9157,8 +9109,7 @@ public final class LendProto {
 
     public static final int LEND_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList lendIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList lendIds_;
     /**
      * <code>repeated uint64 lend_ids = 3 [json_name = "lendIds", (.gogoproto.moretags) = "yaml:&#92;"lend_ids&#92;""];</code>
      * @return A list containing the lendIds.
@@ -9187,8 +9138,7 @@ public final class LendProto {
 
     public static final int BORROW_IDS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList borrowIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList borrowIds_;
     /**
      * <code>repeated uint64 borrow_ids = 4 [json_name = "borrowIds", (.gogoproto.moretags) = "yaml:&#92;"borrow_ids&#92;""];</code>
      * @return A list containing the borrowIds.
@@ -9908,9 +9858,23 @@ public final class LendProto {
       @java.lang.Override
       public com.comdex.lend.v1beta1.LendProto.PoolAssetLBMapping buildPartial() {
         com.comdex.lend.v1beta1.LendProto.PoolAssetLBMapping result = new com.comdex.lend.v1beta1.LendProto.PoolAssetLBMapping(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.lend.v1beta1.LendProto.PoolAssetLBMapping result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          lendIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.lendIds_ = lendIds_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          borrowIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.borrowIds_ = borrowIds_;
       }
 
       private void buildPartial0(com.comdex.lend.v1beta1.LendProto.PoolAssetLBMapping result) {
@@ -9920,14 +9884,6 @@ public final class LendProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.assetId_ = assetId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          lendIds_.makeImmutable();
-          result.lendIds_ = lendIds_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          borrowIds_.makeImmutable();
-          result.borrowIds_ = borrowIds_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalBorrowed_ = totalBorrowed_;
@@ -10008,8 +9964,7 @@ public final class LendProto {
         if (!other.lendIds_.isEmpty()) {
           if (lendIds_.isEmpty()) {
             lendIds_ = other.lendIds_;
-            lendIds_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLendIdsIsMutable();
             lendIds_.addAll(other.lendIds_);
@@ -10019,8 +9974,7 @@ public final class LendProto {
         if (!other.borrowIds_.isEmpty()) {
           if (borrowIds_.isEmpty()) {
             borrowIds_ = other.borrowIds_;
-            borrowIds_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureBorrowIdsIsMutable();
             borrowIds_.addAll(other.borrowIds_);
@@ -10258,10 +10212,10 @@ public final class LendProto {
 
       private com.google.protobuf.Internal.LongList lendIds_ = emptyLongList();
       private void ensureLendIdsIsMutable() {
-        if (!lendIds_.isModifiable()) {
-          lendIds_ = makeMutableCopy(lendIds_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          lendIds_ = mutableCopy(lendIds_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 lend_ids = 3 [json_name = "lendIds", (.gogoproto.moretags) = "yaml:&#92;"lend_ids&#92;""];</code>
@@ -10269,8 +10223,8 @@ public final class LendProto {
        */
       public java.util.List<java.lang.Long>
           getLendIdsList() {
-        lendIds_.makeImmutable();
-        return lendIds_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(lendIds_) : lendIds_;
       }
       /**
        * <code>repeated uint64 lend_ids = 3 [json_name = "lendIds", (.gogoproto.moretags) = "yaml:&#92;"lend_ids&#92;""];</code>
@@ -10298,7 +10252,6 @@ public final class LendProto {
 
         ensureLendIdsIsMutable();
         lendIds_.setLong(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10311,7 +10264,6 @@ public final class LendProto {
 
         ensureLendIdsIsMutable();
         lendIds_.addLong(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10325,7 +10277,6 @@ public final class LendProto {
         ensureLendIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, lendIds_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10342,10 +10293,10 @@ public final class LendProto {
 
       private com.google.protobuf.Internal.LongList borrowIds_ = emptyLongList();
       private void ensureBorrowIdsIsMutable() {
-        if (!borrowIds_.isModifiable()) {
-          borrowIds_ = makeMutableCopy(borrowIds_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          borrowIds_ = mutableCopy(borrowIds_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated uint64 borrow_ids = 4 [json_name = "borrowIds", (.gogoproto.moretags) = "yaml:&#92;"borrow_ids&#92;""];</code>
@@ -10353,8 +10304,8 @@ public final class LendProto {
        */
       public java.util.List<java.lang.Long>
           getBorrowIdsList() {
-        borrowIds_.makeImmutable();
-        return borrowIds_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(borrowIds_) : borrowIds_;
       }
       /**
        * <code>repeated uint64 borrow_ids = 4 [json_name = "borrowIds", (.gogoproto.moretags) = "yaml:&#92;"borrow_ids&#92;""];</code>
@@ -10382,7 +10333,6 @@ public final class LendProto {
 
         ensureBorrowIdsIsMutable();
         borrowIds_.setLong(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -10395,7 +10345,6 @@ public final class LendProto {
 
         ensureBorrowIdsIsMutable();
         borrowIds_.addLong(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -10409,7 +10358,6 @@ public final class LendProto {
         ensureBorrowIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, borrowIds_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -17629,7 +17577,6 @@ public final class LendProto {
               com.comdex.lend.v1beta1.LendProto.ModuleBalanceStats.class, com.comdex.lend.v1beta1.LendProto.ModuleBalanceStats.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ASSET_ID_FIELD_NUMBER = 1;
     private long assetId_ = 0L;
     /**
@@ -17649,7 +17596,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return balance_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -17684,7 +17631,7 @@ public final class LendProto {
       if (assetId_ != 0L) {
         output.writeUInt64(1, assetId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         output.writeMessage(2, getBalance());
       }
       getUnknownFields().writeTo(output);
@@ -17700,7 +17647,7 @@ public final class LendProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, assetId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBalance());
       }
@@ -17863,19 +17810,13 @@ public final class LendProto {
 
       // Construct using com.comdex.lend.v1beta1.LendProto.ModuleBalanceStats.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBalanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -17923,14 +17864,11 @@ public final class LendProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.assetId_ = assetId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18136,10 +18074,8 @@ public final class LendProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        if (balance_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -19912,7 +19848,6 @@ public final class LendProto {
               com.comdex.lend.v1beta1.LendProto.FundModBal.class, com.comdex.lend.v1beta1.LendProto.FundModBal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ASSET_ID_FIELD_NUMBER = 1;
     private long assetId_ = 0L;
     /**
@@ -19943,7 +19878,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasAmountIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amountIn_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount_in = 3 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -19969,7 +19904,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasDepositTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return depositTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp deposit_time = 4 [json_name = "depositTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -20046,10 +19981,10 @@ public final class LendProto {
       if (poolId_ != 0L) {
         output.writeUInt64(2, poolId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         output.writeMessage(3, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (depositTime_ != null) {
         output.writeMessage(4, getDepositTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funder_)) {
@@ -20072,11 +20007,11 @@ public final class LendProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, poolId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (depositTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDepositTime());
       }
@@ -20260,20 +20195,13 @@ public final class LendProto {
 
       // Construct using com.comdex.lend.v1beta1.LendProto.FundModBal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountInFieldBuilder();
-          getDepositTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20331,23 +20259,19 @@ public final class LendProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolId_ = poolId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amountIn_ = amountInBuilder_ == null
               ? amountIn_
               : amountInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.depositTime_ = depositTimeBuilder_ == null
               ? depositTime_
               : depositTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.funder_ = funder_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20613,10 +20537,8 @@ public final class LendProto {
         } else {
           amountInBuilder_.mergeFrom(value);
         }
-        if (amountIn_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -20734,10 +20656,8 @@ public final class LendProto {
         } else {
           depositTimeBuilder_.mergeFrom(value);
         }
-        if (depositTime_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -21012,7 +20932,6 @@ public final class LendProto {
               com.comdex.lend.v1beta1.LendProto.FundReserveBal.class, com.comdex.lend.v1beta1.LendProto.FundReserveBal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ASSET_ID_FIELD_NUMBER = 1;
     private long assetId_ = 0L;
     /**
@@ -21032,7 +20951,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasAmountIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amountIn_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount_in = 2 [json_name = "amountIn", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount_in&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -21058,7 +20977,7 @@ public final class LendProto {
      */
     @java.lang.Override
     public boolean hasDepositTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return depositTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp deposit_time = 3 [json_name = "depositTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -21132,10 +21051,10 @@ public final class LendProto {
       if (assetId_ != 0L) {
         output.writeUInt64(1, assetId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         output.writeMessage(2, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (depositTime_ != null) {
         output.writeMessage(3, getDepositTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funder_)) {
@@ -21154,11 +21073,11 @@ public final class LendProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, assetId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amountIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmountIn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (depositTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDepositTime());
       }
@@ -21337,20 +21256,13 @@ public final class LendProto {
 
       // Construct using com.comdex.lend.v1beta1.LendProto.FundReserveBal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountInFieldBuilder();
-          getDepositTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -21404,23 +21316,19 @@ public final class LendProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.assetId_ = assetId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amountIn_ = amountInBuilder_ == null
               ? amountIn_
               : amountInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.depositTime_ = depositTimeBuilder_ == null
               ? depositTime_
               : depositTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.funder_ = funder_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21646,10 +21554,8 @@ public final class LendProto {
         } else {
           amountInBuilder_.mergeFrom(value);
         }
-        if (amountIn_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21767,10 +21673,8 @@ public final class LendProto {
         } else {
           depositTimeBuilder_.mergeFrom(value);
         }
-        if (depositTime_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

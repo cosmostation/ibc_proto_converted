@@ -162,7 +162,6 @@ public final class ModuleSudoMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountIn.class, com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountIn.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -214,7 +213,7 @@ public final class ModuleSudoMsgProto {
      */
     @java.lang.Override
     public boolean hasTokenIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tokenIn_ != null;
     }
     /**
      * <pre>
@@ -400,7 +399,7 @@ public final class ModuleSudoMsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenIn_ != null) {
         output.writeMessage(2, getTokenIn());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOutDenom_)) {
@@ -424,7 +423,7 @@ public final class ModuleSudoMsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTokenIn());
       }
@@ -611,19 +610,13 @@ public final class ModuleSudoMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountIn.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenInFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -674,12 +667,10 @@ public final class ModuleSudoMsgProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokenIn_ = tokenInBuilder_ == null
               ? tokenIn_
               : tokenInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tokenOutDenom_ = tokenOutDenom_;
@@ -690,7 +681,6 @@ public final class ModuleSudoMsgProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.swapFee_ = swapFee_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -988,10 +978,8 @@ public final class ModuleSudoMsgProto {
         } else {
           tokenInBuilder_.mergeFrom(value);
         }
-        if (tokenIn_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1472,7 +1460,6 @@ public final class ModuleSudoMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountInSudoMsg.class, com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountInSudoMsg.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SWAP_EXACT_AMOUNT_IN_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountIn swapExactAmountIn_;
     /**
@@ -1486,7 +1473,7 @@ public final class ModuleSudoMsgProto {
      */
     @java.lang.Override
     public boolean hasSwapExactAmountIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return swapExactAmountIn_ != null;
     }
     /**
      * <pre>
@@ -1528,7 +1515,7 @@ public final class ModuleSudoMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (swapExactAmountIn_ != null) {
         output.writeMessage(1, getSwapExactAmountIn());
       }
       getUnknownFields().writeTo(output);
@@ -1540,7 +1527,7 @@ public final class ModuleSudoMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (swapExactAmountIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSwapExactAmountIn());
       }
@@ -1698,19 +1685,13 @@ public final class ModuleSudoMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountInSudoMsg.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSwapExactAmountInFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1754,14 +1735,11 @@ public final class ModuleSudoMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountInSudoMsg result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.swapExactAmountIn_ = swapExactAmountInBuilder_ == null
               ? swapExactAmountIn_
               : swapExactAmountInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1952,10 +1930,8 @@ public final class ModuleSudoMsgProto {
         } else {
           swapExactAmountInBuilder_.mergeFrom(value);
         }
-        if (swapExactAmountIn_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2826,7 +2802,6 @@ public final class ModuleSudoMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOut.class, com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOut.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -2878,7 +2853,7 @@ public final class ModuleSudoMsgProto {
      */
     @java.lang.Override
     public boolean hasTokenOut() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tokenOut_ != null;
     }
     /**
      * <pre>
@@ -3064,7 +3039,7 @@ public final class ModuleSudoMsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenOut_ != null) {
         output.writeMessage(2, getTokenOut());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenInDenom_)) {
@@ -3088,7 +3063,7 @@ public final class ModuleSudoMsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenOut_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTokenOut());
       }
@@ -3275,19 +3250,13 @@ public final class ModuleSudoMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOut.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenOutFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3338,12 +3307,10 @@ public final class ModuleSudoMsgProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokenOut_ = tokenOutBuilder_ == null
               ? tokenOut_
               : tokenOutBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tokenInDenom_ = tokenInDenom_;
@@ -3354,7 +3321,6 @@ public final class ModuleSudoMsgProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.swapFee_ = swapFee_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3652,10 +3618,8 @@ public final class ModuleSudoMsgProto {
         } else {
           tokenOutBuilder_.mergeFrom(value);
         }
-        if (tokenOut_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4136,7 +4100,6 @@ public final class ModuleSudoMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOutSudoMsg.class, com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOutSudoMsg.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SWAP_EXACT_AMOUNT_OUT_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOut swapExactAmountOut_;
     /**
@@ -4150,7 +4113,7 @@ public final class ModuleSudoMsgProto {
      */
     @java.lang.Override
     public boolean hasSwapExactAmountOut() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return swapExactAmountOut_ != null;
     }
     /**
      * <pre>
@@ -4192,7 +4155,7 @@ public final class ModuleSudoMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (swapExactAmountOut_ != null) {
         output.writeMessage(1, getSwapExactAmountOut());
       }
       getUnknownFields().writeTo(output);
@@ -4204,7 +4167,7 @@ public final class ModuleSudoMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (swapExactAmountOut_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSwapExactAmountOut());
       }
@@ -4362,19 +4325,13 @@ public final class ModuleSudoMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOutSudoMsg.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSwapExactAmountOutFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4418,14 +4375,11 @@ public final class ModuleSudoMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleSudoMsgProto.SwapExactAmountOutSudoMsg result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.swapExactAmountOut_ = swapExactAmountOutBuilder_ == null
               ? swapExactAmountOut_
               : swapExactAmountOutBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4616,10 +4570,8 @@ public final class ModuleSudoMsgProto {
         } else {
           swapExactAmountOutBuilder_.mergeFrom(value);
         }
-        if (swapExactAmountOut_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

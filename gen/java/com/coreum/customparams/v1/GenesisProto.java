@@ -84,7 +84,6 @@ public final class GenesisProto {
               com.coreum.customparams.v1.GenesisProto.GenesisState.class, com.coreum.customparams.v1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STAKING_PARAMS_FIELD_NUMBER = 1;
     private com.coreum.customparams.v1.ParamsProto.StakingParams stakingParams_;
     /**
@@ -97,7 +96,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasStakingParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return stakingParams_ != null;
     }
     /**
      * <pre>
@@ -137,7 +136,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (stakingParams_ != null) {
         output.writeMessage(1, getStakingParams());
       }
       getUnknownFields().writeTo(output);
@@ -149,7 +148,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (stakingParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStakingParams());
       }
@@ -311,19 +310,13 @@ public final class GenesisProto {
 
       // Construct using com.coreum.customparams.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStakingParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -367,14 +360,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.coreum.customparams.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.stakingParams_ = stakingParamsBuilder_ == null
               ? stakingParams_
               : stakingParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -560,10 +550,8 @@ public final class GenesisProto {
         } else {
           stakingParamsBuilder_.mergeFrom(value);
         }
-        if (stakingParams_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

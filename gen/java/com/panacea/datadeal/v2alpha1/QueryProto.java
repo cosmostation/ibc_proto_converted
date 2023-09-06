@@ -557,7 +557,6 @@ public final class QueryProto {
               com.panacea.datadeal.v2alpha1.QueryProto.QueryDealResponse.class, com.panacea.datadeal.v2alpha1.QueryProto.QueryDealResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEAL_FIELD_NUMBER = 1;
     private com.panacea.datadeal.v2alpha1.DealProto.Deal deal_;
     /**
@@ -566,7 +565,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDeal() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return deal_ != null;
     }
     /**
      * <code>.panacea.datadeal.v2alpha1.Deal deal = 1 [json_name = "deal"];</code>
@@ -598,7 +597,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deal_ != null) {
         output.writeMessage(1, getDeal());
       }
       getUnknownFields().writeTo(output);
@@ -610,7 +609,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deal_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeal());
       }
@@ -772,19 +771,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.QueryProto.QueryDealResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDealFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -828,14 +821,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.QueryProto.QueryDealResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.deal_ = dealBuilder_ == null
               ? deal_
               : dealBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1001,10 +991,8 @@ public final class QueryProto {
         } else {
           dealBuilder_.mergeFrom(value);
         }
-        if (deal_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1177,7 +1165,6 @@ public final class QueryProto {
               com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsRequest.class, com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -1186,7 +1173,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -1218,7 +1205,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1230,7 +1217,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -1392,19 +1379,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1448,14 +1429,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1621,10 +1599,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1822,7 +1798,6 @@ public final class QueryProto {
               com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsResponse.class, com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEALS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.panacea.datadeal.v2alpha1.DealProto.Deal> deals_;
@@ -1872,7 +1847,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -1907,7 +1882,7 @@ public final class QueryProto {
       for (int i = 0; i < deals_.size(); i++) {
         output.writeMessage(1, deals_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1923,7 +1898,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, deals_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2091,20 +2066,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDealsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2168,14 +2136,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.QueryProto.QueryDealsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2620,10 +2585,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3429,7 +3392,6 @@ public final class QueryProto {
               com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertResponse.class, com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATA_CERT_FIELD_NUMBER = 1;
     private com.panacea.datadeal.v2alpha1.TxProto.DataCert dataCert_;
     /**
@@ -3438,7 +3400,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDataCert() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return dataCert_ != null;
     }
     /**
      * <code>.panacea.datadeal.v2alpha1.DataCert data_cert = 1 [json_name = "dataCert"];</code>
@@ -3470,7 +3432,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dataCert_ != null) {
         output.writeMessage(1, getDataCert());
       }
       getUnknownFields().writeTo(output);
@@ -3482,7 +3444,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dataCert_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataCert());
       }
@@ -3644,19 +3606,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataCertFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3700,14 +3656,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataCert_ = dataCertBuilder_ == null
               ? dataCert_
               : dataCertBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3873,10 +3826,8 @@ public final class QueryProto {
         } else {
           dataCertBuilder_.mergeFrom(value);
         }
-        if (dataCert_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4055,7 +4006,6 @@ public final class QueryProto {
               com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertsRequest.class, com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEAL_ID_FIELD_NUMBER = 1;
     private long dealId_ = 0L;
     /**
@@ -4075,7 +4025,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -4110,7 +4060,7 @@ public final class QueryProto {
       if (dealId_ != 0L) {
         output.writeUInt64(1, dealId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4126,7 +4076,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, dealId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -4293,19 +4243,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4353,14 +4297,11 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dealId_ = dealId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4566,10 +4507,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4767,7 +4706,6 @@ public final class QueryProto {
               com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertsResponse.class, com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATA_CERTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.panacea.datadeal.v2alpha1.TxProto.DataCert> dataCerts_;
@@ -4817,7 +4755,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -4852,7 +4790,7 @@ public final class QueryProto {
       for (int i = 0; i < dataCerts_.size(); i++) {
         output.writeMessage(1, dataCerts_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -4868,7 +4806,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, dataCerts_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -5036,20 +4974,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataCertsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5113,14 +5044,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.datadeal.v2alpha1.QueryProto.QueryDataCertsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5565,10 +5493,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

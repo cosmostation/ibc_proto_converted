@@ -1446,7 +1446,6 @@ public final class MarkerProto {
               com.provenance.marker.v1.MarkerProto.MarkerAccount.class, com.provenance.marker.v1.MarkerProto.MarkerAccount.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.auth.v1beta1.AuthProto.BaseAccount baseAccount_;
     /**
@@ -1459,7 +1458,7 @@ public final class MarkerProto {
      */
     @java.lang.Override
     public boolean hasBaseAccount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseAccount_ != null;
     }
     /**
      * <pre>
@@ -1858,7 +1857,7 @@ public final class MarkerProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAccount_ != null) {
         output.writeMessage(1, getBaseAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(manager_)) {
@@ -1900,7 +1899,7 @@ public final class MarkerProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseAccount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseAccount());
       }
@@ -2148,20 +2147,13 @@ public final class MarkerProto {
 
       // Construct using com.provenance.marker.v1.MarkerProto.MarkerAccount.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseAccountFieldBuilder();
-          getAccessControlFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2235,12 +2227,10 @@ public final class MarkerProto {
 
       private void buildPartial0(com.provenance.marker.v1.MarkerProto.MarkerAccount result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseAccount_ = baseAccountBuilder_ == null
               ? baseAccount_
               : baseAccountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.manager_ = manager_;
@@ -2270,7 +2260,6 @@ public final class MarkerProto {
           requiredAttributes_.makeImmutable();
           result.requiredAttributes_ = requiredAttributes_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2581,10 +2570,8 @@ public final class MarkerProto {
         } else {
           baseAccountBuilder_.mergeFrom(value);
         }
-        if (baseAccount_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5129,7 +5116,6 @@ public final class MarkerProto {
               com.provenance.marker.v1.MarkerProto.EventMarkerAddAccess.class, com.provenance.marker.v1.MarkerProto.EventMarkerAddAccess.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACCESS_FIELD_NUMBER = 1;
     private com.provenance.marker.v1.MarkerProto.EventMarkerAccess access_;
     /**
@@ -5138,7 +5124,7 @@ public final class MarkerProto {
      */
     @java.lang.Override
     public boolean hasAccess() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return access_ != null;
     }
     /**
      * <code>.provenance.marker.v1.EventMarkerAccess access = 1 [json_name = "access", (.gogoproto.nullable) = false];</code>
@@ -5248,7 +5234,7 @@ public final class MarkerProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (access_ != null) {
         output.writeMessage(1, getAccess());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
@@ -5266,7 +5252,7 @@ public final class MarkerProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (access_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAccess());
       }
@@ -5442,19 +5428,13 @@ public final class MarkerProto {
 
       // Construct using com.provenance.marker.v1.MarkerProto.EventMarkerAddAccess.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAccessFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5500,12 +5480,10 @@ public final class MarkerProto {
 
       private void buildPartial0(com.provenance.marker.v1.MarkerProto.EventMarkerAddAccess result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.access_ = accessBuilder_ == null
               ? access_
               : accessBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.denom_ = denom_;
@@ -5513,7 +5491,6 @@ public final class MarkerProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.administrator_ = administrator_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5699,10 +5676,8 @@ public final class MarkerProto {
         } else {
           accessBuilder_.mergeFrom(value);
         }
-        if (access_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

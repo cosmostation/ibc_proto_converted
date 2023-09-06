@@ -2537,7 +2537,6 @@ public final class ProposalProto {
               com.crescent.farming.v1beta1.ProposalProto.AddPlanRequest.class, com.crescent.farming.v1beta1.ProposalProto.AddPlanRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -2756,7 +2755,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -2794,7 +2793,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endTime_ != null;
     }
     /**
      * <pre>
@@ -2954,10 +2953,10 @@ public final class ProposalProto {
       for (int i = 0; i < stakingCoinWeights_.size(); i++) {
         output.writeMessage(4, stakingCoinWeights_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(5, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         output.writeMessage(6, getEndTime());
       }
       for (int i = 0; i < epochAmount_.size(); i++) {
@@ -2988,11 +2987,11 @@ public final class ProposalProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, stakingCoinWeights_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getEndTime());
       }
@@ -3198,22 +3197,13 @@ public final class ProposalProto {
 
       // Construct using com.crescent.farming.v1beta1.ProposalProto.AddPlanRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStakingCoinWeightsFieldBuilder();
-          getStartTimeFieldBuilder();
-          getEndTimeFieldBuilder();
-          getEpochAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3311,23 +3301,19 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.terminationAddress_ = terminationAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.epochRatio_ = epochRatio_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4239,10 +4225,8 @@ public final class ProposalProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4396,10 +4380,8 @@ public final class ProposalProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5219,7 +5201,6 @@ public final class ProposalProto {
               com.crescent.farming.v1beta1.ProposalProto.ModifyPlanRequest.class, com.crescent.farming.v1beta1.ProposalProto.ModifyPlanRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PLAN_ID_FIELD_NUMBER = 1;
     private long planId_ = 0L;
     /**
@@ -5453,7 +5434,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -5491,7 +5472,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endTime_ != null;
     }
     /**
      * <pre>
@@ -5654,10 +5635,10 @@ public final class ProposalProto {
       for (int i = 0; i < stakingCoinWeights_.size(); i++) {
         output.writeMessage(5, stakingCoinWeights_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(6, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         output.writeMessage(7, getEndTime());
       }
       for (int i = 0; i < epochAmount_.size(); i++) {
@@ -5692,11 +5673,11 @@ public final class ProposalProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, stakingCoinWeights_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getEndTime());
       }
@@ -5907,22 +5888,13 @@ public final class ProposalProto {
 
       // Construct using com.crescent.farming.v1beta1.ProposalProto.ModifyPlanRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStakingCoinWeightsFieldBuilder();
-          getStartTimeFieldBuilder();
-          getEndTimeFieldBuilder();
-          getEpochAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6024,23 +5996,19 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.terminationAddress_ = terminationAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.epochRatio_ = epochRatio_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7004,10 +6972,8 @@ public final class ProposalProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -7161,10 +7127,8 @@ public final class ProposalProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**

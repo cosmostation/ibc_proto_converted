@@ -2009,7 +2009,6 @@ public final class QueryProto {
               com.axelar.evm.v1beta1.QueryProto.BatchedCommandsResponse.class, com.axelar.evm.v1beta1.QueryProto.BatchedCommandsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -2268,7 +2267,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proof_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.Proof proof = 9 [json_name = "proof"];</code>
@@ -2321,7 +2320,7 @@ public final class QueryProto {
       for (int i = 0; i < commandIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, commandIds_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(9, getProof());
       }
       getUnknownFields().writeTo(output);
@@ -2360,7 +2359,7 @@ public final class QueryProto {
         size += dataSize;
         size += 1 * getCommandIdsList().size();
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getProof());
       }
@@ -2547,19 +2546,13 @@ public final class QueryProto {
 
       // Construct using com.axelar.evm.v1beta1.QueryProto.BatchedCommandsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2633,14 +2626,11 @@ public final class QueryProto {
           commandIds_.makeImmutable();
           result.commandIds_ = commandIds_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3404,10 +3394,8 @@ public final class QueryProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -7242,7 +7230,6 @@ public final class QueryProto {
               com.axelar.evm.v1beta1.QueryProto.DepositStateRequest.class, com.axelar.evm.v1beta1.QueryProto.DepositStateRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chain_ = "";
@@ -7290,7 +7277,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.QueryDepositStateParams params = 2 [json_name = "params"];</code>
@@ -7325,7 +7312,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -7340,7 +7327,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -7502,19 +7489,13 @@ public final class QueryProto {
 
       // Construct using com.axelar.evm.v1beta1.QueryProto.DepositStateRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7562,14 +7543,11 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.chain_ = chain_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7817,10 +7795,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -9198,7 +9174,6 @@ public final class QueryProto {
               com.axelar.evm.v1beta1.QueryProto.EventResponse.class, com.axelar.evm.v1beta1.QueryProto.EventResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EVENT_FIELD_NUMBER = 1;
     private com.axelar.evm.v1beta1.TypesProto.Event event_;
     /**
@@ -9207,7 +9182,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEvent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return event_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.Event event = 1 [json_name = "event"];</code>
@@ -9239,7 +9214,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (event_ != null) {
         output.writeMessage(1, getEvent());
       }
       getUnknownFields().writeTo(output);
@@ -9251,7 +9226,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (event_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEvent());
       }
@@ -9409,19 +9384,13 @@ public final class QueryProto {
 
       // Construct using com.axelar.evm.v1beta1.QueryProto.EventResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEventFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9465,14 +9434,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.axelar.evm.v1beta1.QueryProto.EventResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.event_ = eventBuilder_ == null
               ? event_
               : eventBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9638,10 +9604,8 @@ public final class QueryProto {
         } else {
           eventBuilder_.mergeFrom(value);
         }
-        if (event_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16479,7 +16443,6 @@ java.lang.String defaultValue) {
               com.axelar.evm.v1beta1.QueryProto.BurnerInfoResponse.class, com.axelar.evm.v1beta1.QueryProto.BurnerInfoResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chain_ = "";
@@ -16527,7 +16490,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public boolean hasBurnerInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return burnerInfo_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.BurnerInfo burner_info = 2 [json_name = "burnerInfo"];</code>
@@ -16562,7 +16525,7 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (burnerInfo_ != null) {
         output.writeMessage(2, getBurnerInfo());
       }
       getUnknownFields().writeTo(output);
@@ -16577,7 +16540,7 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (burnerInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBurnerInfo());
       }
@@ -16739,19 +16702,13 @@ java.lang.String defaultValue) {
 
       // Construct using com.axelar.evm.v1beta1.QueryProto.BurnerInfoResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBurnerInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16799,14 +16756,11 @@ java.lang.String defaultValue) {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.chain_ = chain_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.burnerInfo_ = burnerInfoBuilder_ == null
               ? burnerInfo_
               : burnerInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17054,10 +17008,8 @@ java.lang.String defaultValue) {
         } else {
           burnerInfoBuilder_.mergeFrom(value);
         }
-        if (burnerInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -24020,7 +23972,6 @@ java.lang.String defaultValue) {
               com.axelar.evm.v1beta1.QueryProto.TokenInfoResponse.class, com.axelar.evm.v1beta1.QueryProto.TokenInfoResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ASSET_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object asset_ = "";
@@ -24068,7 +24019,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public boolean hasDetails() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return details_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.TokenDetails details = 2 [json_name = "details", (.gogoproto.nullable) = false];</code>
@@ -24203,7 +24154,7 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, asset_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (details_ != null) {
         output.writeMessage(2, getDetails());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
@@ -24230,7 +24181,7 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, asset_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (details_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDetails());
       }
@@ -24424,19 +24375,13 @@ java.lang.String defaultValue) {
 
       // Construct using com.axelar.evm.v1beta1.QueryProto.TokenInfoResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDetailsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -24488,12 +24433,10 @@ java.lang.String defaultValue) {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.asset_ = asset_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.details_ = detailsBuilder_ == null
               ? details_
               : detailsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.address_ = address_;
@@ -24507,7 +24450,6 @@ java.lang.String defaultValue) {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.burnerCodeHash_ = burnerCodeHash_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -24791,10 +24733,8 @@ java.lang.String defaultValue) {
         } else {
           detailsBuilder_.mergeFrom(value);
         }
-        if (details_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

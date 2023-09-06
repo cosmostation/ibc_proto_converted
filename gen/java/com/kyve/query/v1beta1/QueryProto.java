@@ -1799,7 +1799,6 @@ public final class QueryProto {
               com.kyve.query.v1beta1.QueryProto.FullStaker.class, com.kyve.query.v1beta1.QueryProto.FullStaker.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -1859,7 +1858,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <pre>
@@ -2035,7 +2034,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(2, getMetadata());
       }
       if (selfDelegation_ != 0L) {
@@ -2065,7 +2064,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMetadata());
       }
@@ -2279,20 +2278,13 @@ public final class QueryProto {
 
       // Construct using com.kyve.query.v1beta1.QueryProto.FullStaker.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-          getPoolsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2364,12 +2356,10 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.selfDelegation_ = selfDelegation_;
@@ -2383,7 +2373,6 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.delegatorCount_ = delegatorCount_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2742,10 +2731,8 @@ public final class QueryProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3617,7 +3604,6 @@ public final class QueryProto {
               com.kyve.query.v1beta1.QueryProto.StakerMetadata.class, com.kyve.query.v1beta1.QueryProto.StakerMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COMMISSION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object commission_ = "";
@@ -3922,7 +3908,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPendingCommissionChange() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pendingCommissionChange_ != null;
     }
     /**
      * <pre>
@@ -3988,7 +3974,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, details_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pendingCommissionChange_ != null) {
         output.writeMessage(7, getPendingCommissionChange());
       }
       getUnknownFields().writeTo(output);
@@ -4018,7 +4004,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, details_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pendingCommissionChange_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getPendingCommissionChange());
       }
@@ -4204,19 +4190,13 @@ public final class QueryProto {
 
       // Construct using com.kyve.query.v1beta1.QueryProto.StakerMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPendingCommissionChangeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4284,14 +4264,11 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.details_ = details_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.pendingCommissionChange_ = pendingCommissionChangeBuilder_ == null
               ? pendingCommissionChange_
               : pendingCommissionChangeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5124,10 +5101,8 @@ public final class QueryProto {
         } else {
           pendingCommissionChangeBuilder_.mergeFrom(value);
         }
-        if (pendingCommissionChange_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -6112,7 +6087,6 @@ public final class QueryProto {
               com.kyve.query.v1beta1.QueryProto.PoolMembership.class, com.kyve.query.v1beta1.QueryProto.PoolMembership.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_FIELD_NUMBER = 1;
     private com.kyve.query.v1beta1.QueryProto.BasicPool pool_;
     /**
@@ -6125,7 +6099,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPool() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pool_ != null;
     }
     /**
      * <pre>
@@ -6268,7 +6242,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pool_ != null) {
         output.writeMessage(1, getPool());
       }
       if (points_ != 0L) {
@@ -6292,7 +6266,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPool());
       }
@@ -6489,19 +6463,13 @@ public final class QueryProto {
 
       // Construct using com.kyve.query.v1beta1.QueryProto.PoolMembership.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6549,12 +6517,10 @@ public final class QueryProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.QueryProto.PoolMembership result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pool_ = poolBuilder_ == null
               ? pool_
               : poolBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.points_ = points_;
@@ -6568,7 +6534,6 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.balance_ = balance_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6788,10 +6753,8 @@ public final class QueryProto {
         } else {
           poolBuilder_.mergeFrom(value);
         }
-        if (pool_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

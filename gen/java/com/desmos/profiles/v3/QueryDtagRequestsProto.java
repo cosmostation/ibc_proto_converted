@@ -108,7 +108,6 @@ public final class QueryDtagRequestsProto {
               com.desmos.profiles.v3.QueryDtagRequestsProto.QueryIncomingDTagTransferRequestsRequest.class, com.desmos.profiles.v3.QueryDtagRequestsProto.QueryIncomingDTagTransferRequestsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECEIVER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object receiver_ = "";
@@ -170,7 +169,7 @@ public final class QueryDtagRequestsProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -213,7 +212,7 @@ public final class QueryDtagRequestsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, receiver_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -228,7 +227,7 @@ public final class QueryDtagRequestsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, receiver_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -395,19 +394,13 @@ public final class QueryDtagRequestsProto {
 
       // Construct using com.desmos.profiles.v3.QueryDtagRequestsProto.QueryIncomingDTagTransferRequestsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -455,14 +448,11 @@ public final class QueryDtagRequestsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.receiver_ = receiver_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -755,10 +745,8 @@ public final class QueryDtagRequestsProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1010,7 +998,6 @@ public final class QueryDtagRequestsProto {
               com.desmos.profiles.v3.QueryDtagRequestsProto.QueryIncomingDTagTransferRequestsResponse.class, com.desmos.profiles.v3.QueryDtagRequestsProto.QueryIncomingDTagTransferRequestsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REQUESTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.profiles.v3.ModelsDtagRequestsProto.DTagTransferRequest> requests_;
@@ -1089,7 +1076,7 @@ public final class QueryDtagRequestsProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -1132,7 +1119,7 @@ public final class QueryDtagRequestsProto {
       for (int i = 0; i < requests_.size(); i++) {
         output.writeMessage(1, requests_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1148,7 +1135,7 @@ public final class QueryDtagRequestsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, requests_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1317,20 +1304,13 @@ public final class QueryDtagRequestsProto {
 
       // Construct using com.desmos.profiles.v3.QueryDtagRequestsProto.QueryIncomingDTagTransferRequestsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRequestsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1394,14 +1374,11 @@ public final class QueryDtagRequestsProto {
 
       private void buildPartial0(com.desmos.profiles.v3.QueryDtagRequestsProto.QueryIncomingDTagTransferRequestsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1956,10 +1933,8 @@ public final class QueryDtagRequestsProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

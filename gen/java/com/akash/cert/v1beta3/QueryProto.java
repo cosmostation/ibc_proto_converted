@@ -85,7 +85,6 @@ public final class QueryProto {
               com.akash.cert.v1beta3.QueryProto.CertificateResponse.class, com.akash.cert.v1beta3.QueryProto.CertificateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CERTIFICATE_FIELD_NUMBER = 1;
     private com.akash.cert.v1beta3.CertProto.Certificate certificate_;
     /**
@@ -94,7 +93,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCertificate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return certificate_ != null;
     }
     /**
      * <code>.akash.cert.v1beta3.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
@@ -165,7 +164,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (certificate_ != null) {
         output.writeMessage(1, getCertificate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serial_)) {
@@ -180,7 +179,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (certificate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCertificate());
       }
@@ -349,19 +348,13 @@ public final class QueryProto {
 
       // Construct using com.akash.cert.v1beta3.QueryProto.CertificateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCertificateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -406,17 +399,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.cert.v1beta3.QueryProto.CertificateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.certificate_ = certificateBuilder_ == null
               ? certificate_
               : certificateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.serial_ = serial_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -592,10 +582,8 @@ public final class QueryProto {
         } else {
           certificateBuilder_.mergeFrom(value);
         }
-        if (certificate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -855,7 +843,6 @@ public final class QueryProto {
               com.akash.cert.v1beta3.QueryProto.QueryCertificatesRequest.class, com.akash.cert.v1beta3.QueryProto.QueryCertificatesRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FILTER_FIELD_NUMBER = 1;
     private com.akash.cert.v1beta3.CertProto.CertificateFilter filter_;
     /**
@@ -864,7 +851,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFilter() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return filter_ != null;
     }
     /**
      * <code>.akash.cert.v1beta3.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
@@ -890,7 +877,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
@@ -922,10 +909,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filter_ != null) {
         output.writeMessage(1, getFilter());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -937,11 +924,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFilter());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1112,20 +1099,13 @@ public final class QueryProto {
 
       // Construct using com.akash.cert.v1beta3.QueryProto.QueryCertificatesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFilterFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1174,20 +1154,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.cert.v1beta3.QueryProto.QueryCertificatesRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.filter_ = filterBuilder_ == null
               ? filter_
               : filterBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1363,10 +1339,8 @@ public final class QueryProto {
         } else {
           filterBuilder_.mergeFrom(value);
         }
-        if (filter_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1484,10 +1458,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1685,7 +1657,6 @@ public final class QueryProto {
               com.akash.cert.v1beta3.QueryProto.QueryCertificatesResponse.class, com.akash.cert.v1beta3.QueryProto.QueryCertificatesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CERTIFICATES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.akash.cert.v1beta3.QueryProto.CertificateResponse> certificates_;
@@ -1735,7 +1706,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -1770,7 +1741,7 @@ public final class QueryProto {
       for (int i = 0; i < certificates_.size(); i++) {
         output.writeMessage(1, certificates_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1786,7 +1757,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, certificates_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1954,20 +1925,13 @@ public final class QueryProto {
 
       // Construct using com.akash.cert.v1beta3.QueryProto.QueryCertificatesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCertificatesFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2031,14 +1995,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.akash.cert.v1beta3.QueryProto.QueryCertificatesResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2483,10 +2444,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

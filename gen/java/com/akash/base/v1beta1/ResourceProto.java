@@ -97,7 +97,6 @@ public final class ResourceProto {
               com.akash.base.v1beta1.ResourceProto.CPU.class, com.akash.base.v1beta1.ResourceProto.CPU.Builder.class);
     }
 
-    private int bitField0_;
     public static final int UNITS_FIELD_NUMBER = 1;
     private com.akash.base.v1beta1.ResourcevalueProto.ResourceValue units_;
     /**
@@ -106,7 +105,7 @@ public final class ResourceProto {
      */
     @java.lang.Override
     public boolean hasUnits() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return units_ != null;
     }
     /**
      * <code>.akash.base.v1beta1.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
@@ -179,7 +178,7 @@ public final class ResourceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (units_ != null) {
         output.writeMessage(1, getUnits());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -194,7 +193,7 @@ public final class ResourceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (units_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUnits());
       }
@@ -366,20 +365,13 @@ public final class ResourceProto {
 
       // Construct using com.akash.base.v1beta1.ResourceProto.CPU.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUnitsFieldBuilder();
-          getAttributesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -443,14 +435,11 @@ public final class ResourceProto {
 
       private void buildPartial0(com.akash.base.v1beta1.ResourceProto.CPU result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.units_ = unitsBuilder_ == null
               ? units_
               : unitsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -655,10 +644,8 @@ public final class ResourceProto {
         } else {
           unitsBuilder_.mergeFrom(value);
         }
-        if (units_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1096,7 +1083,6 @@ public final class ResourceProto {
               com.akash.base.v1beta1.ResourceProto.Memory.class, com.akash.base.v1beta1.ResourceProto.Memory.Builder.class);
     }
 
-    private int bitField0_;
     public static final int QUANTITY_FIELD_NUMBER = 1;
     private com.akash.base.v1beta1.ResourcevalueProto.ResourceValue quantity_;
     /**
@@ -1105,7 +1091,7 @@ public final class ResourceProto {
      */
     @java.lang.Override
     public boolean hasQuantity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return quantity_ != null;
     }
     /**
      * <code>.akash.base.v1beta1.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
@@ -1178,7 +1164,7 @@ public final class ResourceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quantity_ != null) {
         output.writeMessage(1, getQuantity());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -1193,7 +1179,7 @@ public final class ResourceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quantity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getQuantity());
       }
@@ -1365,20 +1351,13 @@ public final class ResourceProto {
 
       // Construct using com.akash.base.v1beta1.ResourceProto.Memory.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getQuantityFieldBuilder();
-          getAttributesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1442,14 +1421,11 @@ public final class ResourceProto {
 
       private void buildPartial0(com.akash.base.v1beta1.ResourceProto.Memory result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.quantity_ = quantityBuilder_ == null
               ? quantity_
               : quantityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1654,10 +1630,8 @@ public final class ResourceProto {
         } else {
           quantityBuilder_.mergeFrom(value);
         }
-        if (quantity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2095,7 +2069,6 @@ public final class ResourceProto {
               com.akash.base.v1beta1.ResourceProto.Storage.class, com.akash.base.v1beta1.ResourceProto.Storage.Builder.class);
     }
 
-    private int bitField0_;
     public static final int QUANTITY_FIELD_NUMBER = 1;
     private com.akash.base.v1beta1.ResourcevalueProto.ResourceValue quantity_;
     /**
@@ -2104,7 +2077,7 @@ public final class ResourceProto {
      */
     @java.lang.Override
     public boolean hasQuantity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return quantity_ != null;
     }
     /**
      * <code>.akash.base.v1beta1.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
@@ -2177,7 +2150,7 @@ public final class ResourceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quantity_ != null) {
         output.writeMessage(1, getQuantity());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -2192,7 +2165,7 @@ public final class ResourceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quantity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getQuantity());
       }
@@ -2364,20 +2337,13 @@ public final class ResourceProto {
 
       // Construct using com.akash.base.v1beta1.ResourceProto.Storage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getQuantityFieldBuilder();
-          getAttributesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2441,14 +2407,11 @@ public final class ResourceProto {
 
       private void buildPartial0(com.akash.base.v1beta1.ResourceProto.Storage result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.quantity_ = quantityBuilder_ == null
               ? quantity_
               : quantityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2653,10 +2616,8 @@ public final class ResourceProto {
         } else {
           quantityBuilder_.mergeFrom(value);
         }
-        if (quantity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3125,7 +3086,6 @@ public final class ResourceProto {
               com.akash.base.v1beta1.ResourceProto.ResourceUnits.class, com.akash.base.v1beta1.ResourceProto.ResourceUnits.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CPU_FIELD_NUMBER = 1;
     private com.akash.base.v1beta1.ResourceProto.CPU cpu_;
     /**
@@ -3134,7 +3094,7 @@ public final class ResourceProto {
      */
     @java.lang.Override
     public boolean hasCpu() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return cpu_ != null;
     }
     /**
      * <code>.akash.base.v1beta1.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
@@ -3160,7 +3120,7 @@ public final class ResourceProto {
      */
     @java.lang.Override
     public boolean hasMemory() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return memory_ != null;
     }
     /**
      * <code>.akash.base.v1beta1.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
@@ -3186,7 +3146,7 @@ public final class ResourceProto {
      */
     @java.lang.Override
     public boolean hasStorage() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return storage_ != null;
     }
     /**
      * <code>.akash.base.v1beta1.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;""];</code>
@@ -3259,13 +3219,13 @@ public final class ResourceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (cpu_ != null) {
         output.writeMessage(1, getCpu());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (memory_ != null) {
         output.writeMessage(2, getMemory());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (storage_ != null) {
         output.writeMessage(3, getStorage());
       }
       for (int i = 0; i < endpoints_.size(); i++) {
@@ -3280,15 +3240,15 @@ public final class ResourceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (cpu_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCpu());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (memory_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMemory());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (storage_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStorage());
       }
@@ -3479,22 +3439,13 @@ public final class ResourceProto {
 
       // Construct using com.akash.base.v1beta1.ResourceProto.ResourceUnits.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCpuFieldBuilder();
-          getMemoryFieldBuilder();
-          getStorageFieldBuilder();
-          getEndpointsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3568,26 +3519,21 @@ public final class ResourceProto {
 
       private void buildPartial0(com.akash.base.v1beta1.ResourceProto.ResourceUnits result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cpu_ = cpuBuilder_ == null
               ? cpu_
               : cpuBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.memory_ = memoryBuilder_ == null
               ? memory_
               : memoryBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.storage_ = storageBuilder_ == null
               ? storage_
               : storageBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3812,10 +3758,8 @@ public final class ResourceProto {
         } else {
           cpuBuilder_.mergeFrom(value);
         }
-        if (cpu_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3933,10 +3877,8 @@ public final class ResourceProto {
         } else {
           memoryBuilder_.mergeFrom(value);
         }
-        if (memory_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4054,10 +3996,8 @@ public final class ResourceProto {
         } else {
           storageBuilder_.mergeFrom(value);
         }
-        if (storage_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

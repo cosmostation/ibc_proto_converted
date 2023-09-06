@@ -215,7 +215,6 @@ public final class EvmProto {
               com.ethermint.evm.v1.EvmProto.Params.class, com.ethermint.evm.v1.EvmProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EVM_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object evmDenom_ = "";
@@ -297,8 +296,7 @@ public final class EvmProto {
 
     public static final int EXTRA_EIPS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList extraEips_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList extraEips_;
     /**
      * <pre>
      * extra_eips defines the additional EIPs for the vm.Config
@@ -349,7 +347,7 @@ public final class EvmProto {
      */
     @java.lang.Override
     public boolean hasChainConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return chainConfig_ != null;
     }
     /**
      * <pre>
@@ -479,7 +477,7 @@ public final class EvmProto {
       for (int i = 0; i < extraEips_.size(); i++) {
         output.writeInt64NoTag(extraEips_.getLong(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (chainConfig_ != null) {
         output.writeMessage(5, getChainConfig());
       }
       if (allowUnprotectedTxs_ != false) {
@@ -522,7 +520,7 @@ public final class EvmProto {
         }
         extraEipsMemoizedSerializedSize = dataSize;
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (chainConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getChainConfig());
       }
@@ -727,19 +725,13 @@ public final class EvmProto {
 
       // Construct using com.ethermint.evm.v1.EvmProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getChainConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -783,9 +775,18 @@ public final class EvmProto {
       @java.lang.Override
       public com.ethermint.evm.v1.EvmProto.Params buildPartial() {
         com.ethermint.evm.v1.EvmProto.Params result = new com.ethermint.evm.v1.EvmProto.Params(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ethermint.evm.v1.EvmProto.Params result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          extraEips_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.extraEips_ = extraEips_;
       }
 
       private void buildPartial0(com.ethermint.evm.v1.EvmProto.Params result) {
@@ -799,16 +800,10 @@ public final class EvmProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.enableCall_ = enableCall_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          extraEips_.makeImmutable();
-          result.extraEips_ = extraEips_;
-        }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.chainConfig_ = chainConfigBuilder_ == null
               ? chainConfig_
               : chainConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.allowUnprotectedTxs_ = allowUnprotectedTxs_;
@@ -817,7 +812,6 @@ public final class EvmProto {
           activePrecompiles_.makeImmutable();
           result.activePrecompiles_ = activePrecompiles_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -878,8 +872,7 @@ public final class EvmProto {
         if (!other.extraEips_.isEmpty()) {
           if (extraEips_.isEmpty()) {
             extraEips_ = other.extraEips_;
-            extraEips_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureExtraEipsIsMutable();
             extraEips_.addAll(other.extraEips_);
@@ -1181,10 +1174,10 @@ public final class EvmProto {
 
       private com.google.protobuf.Internal.LongList extraEips_ = emptyLongList();
       private void ensureExtraEipsIsMutable() {
-        if (!extraEips_.isModifiable()) {
-          extraEips_ = makeMutableCopy(extraEips_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          extraEips_ = mutableCopy(extraEips_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -1196,8 +1189,8 @@ public final class EvmProto {
        */
       public java.util.List<java.lang.Long>
           getExtraEipsList() {
-        extraEips_.makeImmutable();
-        return extraEips_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(extraEips_) : extraEips_;
       }
       /**
        * <pre>
@@ -1237,7 +1230,6 @@ public final class EvmProto {
 
         ensureExtraEipsIsMutable();
         extraEips_.setLong(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1254,7 +1246,6 @@ public final class EvmProto {
 
         ensureExtraEipsIsMutable();
         extraEips_.addLong(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1272,7 +1263,6 @@ public final class EvmProto {
         ensureExtraEipsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, extraEips_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1377,10 +1367,8 @@ public final class EvmProto {
         } else {
           chainConfigBuilder_.mergeFrom(value);
         }
-        if (chainConfig_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -9283,7 +9271,6 @@ public final class EvmProto {
               com.ethermint.evm.v1.EvmProto.TxResult.class, com.ethermint.evm.v1.EvmProto.TxResult.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contractAddress_ = "";
@@ -9363,7 +9350,7 @@ public final class EvmProto {
      */
     @java.lang.Override
     public boolean hasTxLogs() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return txLogs_ != null;
     }
     /**
      * <pre>
@@ -9456,7 +9443,7 @@ public final class EvmProto {
       if (!bloom_.isEmpty()) {
         output.writeBytes(2, bloom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (txLogs_ != null) {
         output.writeMessage(3, getTxLogs());
       }
       if (!ret_.isEmpty()) {
@@ -9484,7 +9471,7 @@ public final class EvmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, bloom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (txLogs_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTxLogs());
       }
@@ -9680,19 +9667,13 @@ public final class EvmProto {
 
       // Construct using com.ethermint.evm.v1.EvmProto.TxResult.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxLogsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9747,12 +9728,10 @@ public final class EvmProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bloom_ = bloom_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.txLogs_ = txLogsBuilder_ == null
               ? txLogs_
               : txLogsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.ret_ = ret_;
@@ -9763,7 +9742,6 @@ public final class EvmProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.gasUsed_ = gasUsed_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10142,10 +10120,8 @@ public final class EvmProto {
         } else {
           txLogsBuilder_.mergeFrom(value);
         }
-        if (txLogs_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -11495,7 +11471,6 @@ public final class EvmProto {
               com.ethermint.evm.v1.EvmProto.TraceConfig.class, com.ethermint.evm.v1.EvmProto.TraceConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TRACER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object tracer_ = "";
@@ -11679,7 +11654,7 @@ public final class EvmProto {
      */
     @java.lang.Override
     public boolean hasOverrides() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return overrides_ != null;
     }
     /**
      * <pre>
@@ -11817,7 +11792,7 @@ public final class EvmProto {
       if (limit_ != 0) {
         output.writeInt32(9, limit_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (overrides_ != null) {
         output.writeMessage(10, getOverrides());
       }
       if (enableMemory_ != false) {
@@ -11864,7 +11839,7 @@ public final class EvmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, limit_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (overrides_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getOverrides());
       }
@@ -12083,19 +12058,13 @@ public final class EvmProto {
 
       // Construct using com.ethermint.evm.v1.EvmProto.TraceConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOverridesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12170,12 +12139,10 @@ public final class EvmProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.limit_ = limit_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.overrides_ = overridesBuilder_ == null
               ? overrides_
               : overridesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.enableMemory_ = enableMemory_;
@@ -12186,7 +12153,6 @@ public final class EvmProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.tracerJsonConfig_ = tracerJsonConfig_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12867,10 +12833,8 @@ public final class EvmProto {
         } else {
           overridesBuilder_.mergeFrom(value);
         }
-        if (overrides_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**

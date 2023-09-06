@@ -407,7 +407,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.HistoricalInfo.class, com.cosmos.staking.v1beta1.StakingProto.HistoricalInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEADER_FIELD_NUMBER = 1;
     private com.tendermint.types.TypesProto.Header header_;
     /**
@@ -416,7 +415,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasHeader() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return header_ != null;
     }
     /**
      * <code>.tendermint.types.Header header = 1 [json_name = "header", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -489,7 +488,7 @@ public final class StakingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (header_ != null) {
         output.writeMessage(1, getHeader());
       }
       for (int i = 0; i < valset_.size(); i++) {
@@ -504,7 +503,7 @@ public final class StakingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (header_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHeader());
       }
@@ -679,20 +678,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.HistoricalInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHeaderFieldBuilder();
-          getValsetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -756,14 +748,11 @@ public final class StakingProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.StakingProto.HistoricalInfo result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.header_ = headerBuilder_ == null
               ? header_
               : headerBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -968,10 +957,8 @@ public final class StakingProto {
         } else {
           headerBuilder_.mergeFrom(value);
         }
-        if (header_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2389,7 +2376,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.Commission.class, com.cosmos.staking.v1beta1.StakingProto.Commission.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COMMISSION_RATES_FIELD_NUMBER = 1;
     private com.cosmos.staking.v1beta1.StakingProto.CommissionRates commissionRates_;
     /**
@@ -2402,7 +2388,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasCommissionRates() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return commissionRates_ != null;
     }
     /**
      * <pre>
@@ -2440,7 +2426,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return updateTime_ != null;
     }
     /**
      * <pre>
@@ -2480,10 +2466,10 @@ public final class StakingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (commissionRates_ != null) {
         output.writeMessage(1, getCommissionRates());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (updateTime_ != null) {
         output.writeMessage(2, getUpdateTime());
       }
       getUnknownFields().writeTo(output);
@@ -2495,11 +2481,11 @@ public final class StakingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (commissionRates_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCommissionRates());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (updateTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateTime());
       }
@@ -2670,20 +2656,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.Commission.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCommissionRatesFieldBuilder();
-          getUpdateTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2732,20 +2711,16 @@ public final class StakingProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.StakingProto.Commission result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.commissionRates_ = commissionRatesBuilder_ == null
               ? commissionRates_
               : commissionRatesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.updateTime_ = updateTimeBuilder_ == null
               ? updateTime_
               : updateTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2941,10 +2916,8 @@ public final class StakingProto {
         } else {
           commissionRatesBuilder_.mergeFrom(value);
         }
-        if (commissionRates_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3098,10 +3071,8 @@ public final class StakingProto {
         } else {
           updateTimeBuilder_.mergeFrom(value);
         }
-        if (updateTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4890,7 +4861,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.Validator.class, com.cosmos.staking.v1beta1.StakingProto.Validator.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object operatorAddress_ = "";
@@ -4950,7 +4920,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasConsensusPubkey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return consensusPubkey_ != null;
     }
     /**
      * <pre>
@@ -5123,7 +5093,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return description_ != null;
     }
     /**
      * <pre>
@@ -5176,7 +5146,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasUnbondingTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return unbondingTime_ != null;
     }
     /**
      * <pre>
@@ -5214,7 +5184,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasCommission() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return commission_ != null;
     }
     /**
      * <pre>
@@ -5308,8 +5278,7 @@ public final class StakingProto {
 
     public static final int UNBONDING_IDS_FIELD_NUMBER = 13;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList unbondingIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList unbondingIds_;
     /**
      * <pre>
      * list of unbonding ids, each uniquely identifing an unbonding of this validator
@@ -5366,7 +5335,7 @@ public final class StakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusPubkey_ != null) {
         output.writeMessage(2, getConsensusPubkey());
       }
       if (jailed_ != false) {
@@ -5381,16 +5350,16 @@ public final class StakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorShares_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, delegatorShares_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (description_ != null) {
         output.writeMessage(7, getDescription());
       }
       if (unbondingHeight_ != 0L) {
         output.writeInt64(8, unbondingHeight_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (unbondingTime_ != null) {
         output.writeMessage(9, getUnbondingTime());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (commission_ != null) {
         output.writeMessage(10, getCommission());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minSelfDelegation_)) {
@@ -5418,7 +5387,7 @@ public final class StakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusPubkey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getConsensusPubkey());
       }
@@ -5436,7 +5405,7 @@ public final class StakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorShares_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, delegatorShares_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (description_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getDescription());
       }
@@ -5444,11 +5413,11 @@ public final class StakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, unbondingHeight_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (unbondingTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getUnbondingTime());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (commission_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getCommission());
       }
@@ -5705,22 +5674,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.Validator.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConsensusPubkeyFieldBuilder();
-          getDescriptionFieldBuilder();
-          getUnbondingTimeFieldBuilder();
-          getCommissionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5781,9 +5741,18 @@ public final class StakingProto {
       @java.lang.Override
       public com.cosmos.staking.v1beta1.StakingProto.Validator buildPartial() {
         com.cosmos.staking.v1beta1.StakingProto.Validator result = new com.cosmos.staking.v1beta1.StakingProto.Validator(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cosmos.staking.v1beta1.StakingProto.Validator result) {
+        if (((bitField0_ & 0x00001000) != 0)) {
+          unbondingIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.unbondingIds_ = unbondingIds_;
       }
 
       private void buildPartial0(com.cosmos.staking.v1beta1.StakingProto.Validator result) {
@@ -5791,12 +5760,10 @@ public final class StakingProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.operatorAddress_ = operatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.consensusPubkey_ = consensusPubkeyBuilder_ == null
               ? consensusPubkey_
               : consensusPubkeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.jailed_ = jailed_;
@@ -5814,7 +5781,6 @@ public final class StakingProto {
           result.description_ = descriptionBuilder_ == null
               ? description_
               : descriptionBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.unbondingHeight_ = unbondingHeight_;
@@ -5823,13 +5789,11 @@ public final class StakingProto {
           result.unbondingTime_ = unbondingTimeBuilder_ == null
               ? unbondingTime_
               : unbondingTimeBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.commission_ = commissionBuilder_ == null
               ? commission_
               : commissionBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.minSelfDelegation_ = minSelfDelegation_;
@@ -5837,11 +5801,6 @@ public final class StakingProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.unbondingOnHoldRefCount_ = unbondingOnHoldRefCount_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
-          unbondingIds_.makeImmutable();
-          result.unbondingIds_ = unbondingIds_;
-        }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5935,8 +5894,7 @@ public final class StakingProto {
         if (!other.unbondingIds_.isEmpty()) {
           if (unbondingIds_.isEmpty()) {
             unbondingIds_ = other.unbondingIds_;
-            unbondingIds_.makeImmutable();
-            bitField0_ |= 0x00001000;
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureUnbondingIdsIsMutable();
             unbondingIds_.addAll(other.unbondingIds_);
@@ -6248,10 +6206,8 @@ public final class StakingProto {
         } else {
           consensusPubkeyBuilder_.mergeFrom(value);
         }
-        if (consensusPubkey_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6706,10 +6662,8 @@ public final class StakingProto {
         } else {
           descriptionBuilder_.mergeFrom(value);
         }
-        if (description_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -6907,10 +6861,8 @@ public final class StakingProto {
         } else {
           unbondingTimeBuilder_.mergeFrom(value);
         }
-        if (unbondingTime_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -7064,10 +7016,8 @@ public final class StakingProto {
         } else {
           commissionBuilder_.mergeFrom(value);
         }
-        if (commission_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -7283,10 +7233,10 @@ public final class StakingProto {
 
       private com.google.protobuf.Internal.LongList unbondingIds_ = emptyLongList();
       private void ensureUnbondingIdsIsMutable() {
-        if (!unbondingIds_.isModifiable()) {
-          unbondingIds_ = makeMutableCopy(unbondingIds_);
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          unbondingIds_ = mutableCopy(unbondingIds_);
+          bitField0_ |= 0x00001000;
         }
-        bitField0_ |= 0x00001000;
       }
       /**
        * <pre>
@@ -7298,8 +7248,8 @@ public final class StakingProto {
        */
       public java.util.List<java.lang.Long>
           getUnbondingIdsList() {
-        unbondingIds_.makeImmutable();
-        return unbondingIds_;
+        return ((bitField0_ & 0x00001000) != 0) ?
+                 java.util.Collections.unmodifiableList(unbondingIds_) : unbondingIds_;
       }
       /**
        * <pre>
@@ -7339,7 +7289,6 @@ public final class StakingProto {
 
         ensureUnbondingIdsIsMutable();
         unbondingIds_.setLong(index, value);
-        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -7356,7 +7305,6 @@ public final class StakingProto {
 
         ensureUnbondingIdsIsMutable();
         unbondingIds_.addLong(value);
-        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -7374,7 +7322,6 @@ public final class StakingProto {
         ensureUnbondingIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, unbondingIds_);
-        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -13618,7 +13565,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.class, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATION_HEIGHT_FIELD_NUMBER = 1;
     private long creationHeight_ = 0L;
     /**
@@ -13646,7 +13592,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasCompletionTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return completionTime_ != null;
     }
     /**
      * <pre>
@@ -13813,7 +13759,7 @@ public final class StakingProto {
       if (creationHeight_ != 0L) {
         output.writeInt64(1, creationHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         output.writeMessage(2, getCompletionTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialBalance_)) {
@@ -13841,7 +13787,7 @@ public final class StakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, creationHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCompletionTime());
       }
@@ -14040,19 +13986,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCompletionTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14104,12 +14044,10 @@ public final class StakingProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.creationHeight_ = creationHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.initialBalance_ = initialBalance_;
@@ -14123,7 +14061,6 @@ public final class StakingProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.unbondingOnHoldRefCount_ = unbondingOnHoldRefCount_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14397,10 +14334,8 @@ public final class StakingProto {
         } else {
           completionTimeBuilder_.mergeFrom(value);
         }
-        if (completionTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -14945,7 +14880,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.RedelegationEntry.class, com.cosmos.staking.v1beta1.StakingProto.RedelegationEntry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATION_HEIGHT_FIELD_NUMBER = 1;
     private long creationHeight_ = 0L;
     /**
@@ -14973,7 +14907,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasCompletionTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return completionTime_ != null;
     }
     /**
      * <pre>
@@ -15140,7 +15074,7 @@ public final class StakingProto {
       if (creationHeight_ != 0L) {
         output.writeInt64(1, creationHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         output.writeMessage(2, getCompletionTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialBalance_)) {
@@ -15168,7 +15102,7 @@ public final class StakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, creationHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCompletionTime());
       }
@@ -15367,19 +15301,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.RedelegationEntry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCompletionTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15431,12 +15359,10 @@ public final class StakingProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.creationHeight_ = creationHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.initialBalance_ = initialBalance_;
@@ -15450,7 +15376,6 @@ public final class StakingProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.unbondingOnHoldRefCount_ = unbondingOnHoldRefCount_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15724,10 +15649,8 @@ public final class StakingProto {
         } else {
           completionTimeBuilder_.mergeFrom(value);
         }
-        if (completionTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -17728,7 +17651,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.Params.class, com.cosmos.staking.v1beta1.StakingProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int UNBONDING_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration unbondingTime_;
     /**
@@ -17741,7 +17663,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasUnbondingTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return unbondingTime_ != null;
     }
     /**
      * <pre>
@@ -17920,7 +17842,7 @@ public final class StakingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (unbondingTime_ != null) {
         output.writeMessage(1, getUnbondingTime());
       }
       if (maxValidators_ != 0) {
@@ -17947,7 +17869,7 @@ public final class StakingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (unbondingTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUnbondingTime());
       }
@@ -18147,19 +18069,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUnbondingTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18208,12 +18124,10 @@ public final class StakingProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.StakingProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.unbondingTime_ = unbondingTimeBuilder_ == null
               ? unbondingTime_
               : unbondingTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maxValidators_ = maxValidators_;
@@ -18230,7 +18144,6 @@ public final class StakingProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.minCommissionRate_ = minCommissionRate_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18460,10 +18373,8 @@ public final class StakingProto {
         } else {
           unbondingTimeBuilder_.mergeFrom(value);
         }
-        if (unbondingTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -18984,7 +18895,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.DelegationResponse.class, com.cosmos.staking.v1beta1.StakingProto.DelegationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATION_FIELD_NUMBER = 1;
     private com.cosmos.staking.v1beta1.StakingProto.Delegation delegation_;
     /**
@@ -18993,7 +18903,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasDelegation() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return delegation_ != null;
     }
     /**
      * <code>.cosmos.staking.v1beta1.Delegation delegation = 1 [json_name = "delegation", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -19019,7 +18929,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return balance_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -19051,10 +18961,10 @@ public final class StakingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (delegation_ != null) {
         output.writeMessage(1, getDelegation());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (balance_ != null) {
         output.writeMessage(2, getBalance());
       }
       getUnknownFields().writeTo(output);
@@ -19066,11 +18976,11 @@ public final class StakingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (delegation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDelegation());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (balance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBalance());
       }
@@ -19242,20 +19152,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.DelegationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDelegationFieldBuilder();
-          getBalanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -19304,20 +19207,16 @@ public final class StakingProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.StakingProto.DelegationResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.delegation_ = delegationBuilder_ == null
               ? delegation_
               : delegationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -19493,10 +19392,8 @@ public final class StakingProto {
         } else {
           delegationBuilder_.mergeFrom(value);
         }
-        if (delegation_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -19614,10 +19511,8 @@ public final class StakingProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        if (balance_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -19805,7 +19700,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.RedelegationEntryResponse.class, com.cosmos.staking.v1beta1.StakingProto.RedelegationEntryResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REDELEGATION_ENTRY_FIELD_NUMBER = 1;
     private com.cosmos.staking.v1beta1.StakingProto.RedelegationEntry redelegationEntry_;
     /**
@@ -19814,7 +19708,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasRedelegationEntry() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return redelegationEntry_ != null;
     }
     /**
      * <code>.cosmos.staking.v1beta1.RedelegationEntry redelegation_entry = 1 [json_name = "redelegationEntry", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -19885,7 +19779,7 @@ public final class StakingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (redelegationEntry_ != null) {
         output.writeMessage(1, getRedelegationEntry());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(balance_)) {
@@ -19900,7 +19794,7 @@ public final class StakingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (redelegationEntry_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRedelegationEntry());
       }
@@ -20071,19 +19965,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.RedelegationEntryResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRedelegationEntryFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20128,17 +20016,14 @@ public final class StakingProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.StakingProto.RedelegationEntryResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.redelegationEntry_ = redelegationEntryBuilder_ == null
               ? redelegationEntry_
               : redelegationEntryBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.balance_ = balance_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20314,10 +20199,8 @@ public final class StakingProto {
         } else {
           redelegationEntryBuilder_.mergeFrom(value);
         }
-        if (redelegationEntry_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -20589,7 +20472,6 @@ public final class StakingProto {
               com.cosmos.staking.v1beta1.StakingProto.RedelegationResponse.class, com.cosmos.staking.v1beta1.StakingProto.RedelegationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REDELEGATION_FIELD_NUMBER = 1;
     private com.cosmos.staking.v1beta1.StakingProto.Redelegation redelegation_;
     /**
@@ -20598,7 +20480,7 @@ public final class StakingProto {
      */
     @java.lang.Override
     public boolean hasRedelegation() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return redelegation_ != null;
     }
     /**
      * <code>.cosmos.staking.v1beta1.Redelegation redelegation = 1 [json_name = "redelegation", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -20671,7 +20553,7 @@ public final class StakingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (redelegation_ != null) {
         output.writeMessage(1, getRedelegation());
       }
       for (int i = 0; i < entries_.size(); i++) {
@@ -20686,7 +20568,7 @@ public final class StakingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (redelegation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRedelegation());
       }
@@ -20860,20 +20742,13 @@ public final class StakingProto {
 
       // Construct using com.cosmos.staking.v1beta1.StakingProto.RedelegationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRedelegationFieldBuilder();
-          getEntriesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20937,14 +20812,11 @@ public final class StakingProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.StakingProto.RedelegationResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.redelegation_ = redelegationBuilder_ == null
               ? redelegation_
               : redelegationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21149,10 +21021,8 @@ public final class StakingProto {
         } else {
           redelegationBuilder_.mergeFrom(value);
         }
-        if (redelegation_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

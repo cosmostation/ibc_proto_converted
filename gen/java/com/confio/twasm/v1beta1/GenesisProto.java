@@ -337,7 +337,6 @@ public final class GenesisProto {
               com.confio.twasm.v1beta1.GenesisProto.GenesisState.class, com.confio.twasm.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.cosmwasm.wasm.v1.TypesProto.Params params_;
     /**
@@ -350,7 +349,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -679,8 +678,7 @@ public final class GenesisProto {
 
     public static final int PINNED_CODE_IDS_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList pinnedCodeIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList pinnedCodeIds_;
     /**
      * <pre>
      * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
@@ -734,7 +732,7 @@ public final class GenesisProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < codes_.size(); i++) {
@@ -768,7 +766,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1000,23 +998,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.twasm.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getCodesFieldBuilder();
-          getContractsFieldBuilder();
-          getSequencesFieldBuilder();
-          getGenMsgsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1127,26 +1115,24 @@ public final class GenesisProto {
         } else {
           result.genMsgs_ = genMsgsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000040) != 0)) {
+          pinnedCodeIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.pinnedCodeIds_ = pinnedCodeIds_;
       }
 
       private void buildPartial0(com.confio.twasm.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           privilegedContractAddresses_.makeImmutable();
           result.privilegedContractAddresses_ = privilegedContractAddresses_;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          pinnedCodeIds_.makeImmutable();
-          result.pinnedCodeIds_ = pinnedCodeIds_;
-        }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1313,8 +1299,7 @@ public final class GenesisProto {
         if (!other.pinnedCodeIds_.isEmpty()) {
           if (pinnedCodeIds_.isEmpty()) {
             pinnedCodeIds_ = other.pinnedCodeIds_;
-            pinnedCodeIds_.makeImmutable();
-            bitField0_ |= 0x00000040;
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensurePinnedCodeIdsIsMutable();
             pinnedCodeIds_.addAll(other.pinnedCodeIds_);
@@ -1531,10 +1516,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3008,10 +2991,10 @@ public final class GenesisProto {
 
       private com.google.protobuf.Internal.LongList pinnedCodeIds_ = emptyLongList();
       private void ensurePinnedCodeIdsIsMutable() {
-        if (!pinnedCodeIds_.isModifiable()) {
-          pinnedCodeIds_ = makeMutableCopy(pinnedCodeIds_);
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          pinnedCodeIds_ = mutableCopy(pinnedCodeIds_);
+          bitField0_ |= 0x00000040;
         }
-        bitField0_ |= 0x00000040;
       }
       /**
        * <pre>
@@ -3023,8 +3006,8 @@ public final class GenesisProto {
        */
       public java.util.List<java.lang.Long>
           getPinnedCodeIdsList() {
-        pinnedCodeIds_.makeImmutable();
-        return pinnedCodeIds_;
+        return ((bitField0_ & 0x00000040) != 0) ?
+                 java.util.Collections.unmodifiableList(pinnedCodeIds_) : pinnedCodeIds_;
       }
       /**
        * <pre>
@@ -3064,7 +3047,6 @@ public final class GenesisProto {
 
         ensurePinnedCodeIdsIsMutable();
         pinnedCodeIds_.setLong(index, value);
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3081,7 +3063,6 @@ public final class GenesisProto {
 
         ensurePinnedCodeIdsIsMutable();
         pinnedCodeIds_.addLong(value);
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3099,7 +3080,6 @@ public final class GenesisProto {
         ensurePinnedCodeIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, pinnedCodeIds_);
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3284,7 +3264,6 @@ public final class GenesisProto {
               com.confio.twasm.v1beta1.GenesisProto.Contract.class, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder.class);
     }
 
-    private int bitField0_;
     private int contractStateCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object contractState_;
@@ -3374,7 +3353,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasContractInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return contractInfo_ != null;
     }
     /**
      * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
@@ -3471,7 +3450,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractInfo_ != null) {
         output.writeMessage(2, getContractInfo());
       }
       if (contractStateCase_ == 3) {
@@ -3492,7 +3471,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContractInfo());
       }
@@ -3691,19 +3670,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.twasm.v1beta1.GenesisProto.Contract.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContractInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3760,14 +3733,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractAddress_ = contractAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractInfo_ = contractInfoBuilder_ == null
               ? contractInfo_
               : contractInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.confio.twasm.v1beta1.GenesisProto.Contract result) {
@@ -4070,10 +4040,8 @@ public final class GenesisProto {
         } else {
           contractInfoBuilder_.mergeFrom(value);
         }
-        if (contractInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -668,7 +668,6 @@ public final class QueryProfileProto {
               com.desmos.profiles.v3.QueryProfileProto.QueryProfileResponse.class, com.desmos.profiles.v3.QueryProfileProto.QueryProfileResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROFILE_FIELD_NUMBER = 1;
     private com.google.protobuf.Any profile_;
     /**
@@ -677,7 +676,7 @@ public final class QueryProfileProto {
      */
     @java.lang.Override
     public boolean hasProfile() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return profile_ != null;
     }
     /**
      * <code>.google.protobuf.Any profile = 1 [json_name = "profile", (.cosmos_proto.accepts_interface) = "cosmos.auth.v1beta1.AccountI"];</code>
@@ -709,7 +708,7 @@ public final class QueryProfileProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (profile_ != null) {
         output.writeMessage(1, getProfile());
       }
       getUnknownFields().writeTo(output);
@@ -721,7 +720,7 @@ public final class QueryProfileProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (profile_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProfile());
       }
@@ -883,19 +882,13 @@ public final class QueryProfileProto {
 
       // Construct using com.desmos.profiles.v3.QueryProfileProto.QueryProfileResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProfileFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -939,14 +932,11 @@ public final class QueryProfileProto {
 
       private void buildPartial0(com.desmos.profiles.v3.QueryProfileProto.QueryProfileResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.profile_ = profileBuilder_ == null
               ? profile_
               : profileBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1112,10 +1102,8 @@ public final class QueryProfileProto {
         } else {
           profileBuilder_.mergeFrom(value);
         }
-        if (profile_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -175,7 +175,6 @@ public final class ProposalsProto {
               com.provenance.marker.v1.ProposalsProto.AddMarkerProposal.class, com.provenance.marker.v1.ProposalsProto.AddMarkerProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -262,7 +261,7 @@ public final class ProposalsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -438,7 +437,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(manager_)) {
@@ -474,7 +473,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -696,20 +695,13 @@ public final class ProposalsProto {
 
       // Construct using com.provenance.marker.v1.ProposalsProto.AddMarkerProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-          getAccessListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -786,12 +778,10 @@ public final class ProposalsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.manager_ = manager_;
@@ -808,7 +798,6 @@ public final class ProposalsProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.allowGovernanceControl_ = allowGovernanceControl_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1219,10 +1208,8 @@ public final class ProposalsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1925,7 +1912,6 @@ public final class ProposalsProto {
               com.provenance.marker.v1.ProposalsProto.SupplyIncreaseProposal.class, com.provenance.marker.v1.ProposalsProto.SupplyIncreaseProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -2012,7 +1998,7 @@ public final class ProposalsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2097,7 +2083,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetAddress_)) {
@@ -2118,7 +2104,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -2296,19 +2282,13 @@ public final class ProposalsProto {
 
       // Construct using com.provenance.marker.v1.ProposalsProto.SupplyIncreaseProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2361,17 +2341,14 @@ public final class ProposalsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.targetAddress_ = targetAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2711,10 +2688,8 @@ public final class ProposalsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3006,7 +2981,6 @@ public final class ProposalsProto {
               com.provenance.marker.v1.ProposalsProto.SupplyDecreaseProposal.class, com.provenance.marker.v1.ProposalsProto.SupplyDecreaseProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -3093,7 +3067,7 @@ public final class ProposalsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -3131,7 +3105,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -3149,7 +3123,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -3320,19 +3294,13 @@ public final class ProposalsProto {
 
       // Construct using com.provenance.marker.v1.ProposalsProto.SupplyDecreaseProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3384,14 +3352,11 @@ public final class ProposalsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3721,10 +3686,8 @@ public final class ProposalsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8574,7 +8537,6 @@ public final class ProposalsProto {
               com.provenance.marker.v1.ProposalsProto.SetDenomMetadataProposal.class, com.provenance.marker.v1.ProposalsProto.SetDenomMetadataProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -8661,7 +8623,7 @@ public final class ProposalsProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/x/bank/types.Metadata"];</code>
@@ -8699,7 +8661,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(3, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -8717,7 +8679,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMetadata());
       }
@@ -8887,19 +8849,13 @@ public final class ProposalsProto {
 
       // Construct using com.provenance.marker.v1.ProposalsProto.SetDenomMetadataProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8951,14 +8907,11 @@ public final class ProposalsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9288,10 +9241,8 @@ public final class ProposalsProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

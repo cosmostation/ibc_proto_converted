@@ -68,7 +68,6 @@ public final class QueryRequestProto {
               com.assetmantle.modules.metas.queries.meta.QueryRequestProto.QueryRequest.class, com.assetmantle.modules.metas.queries.meta.QueryRequestProto.QueryRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATA_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.DataIdProto.DataID dataID_;
     /**
@@ -77,7 +76,7 @@ public final class QueryRequestProto {
      */
     @java.lang.Override
     public boolean hasDataID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return dataID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.DataID data_i_d = 1 [json_name = "dataID"];</code>
@@ -109,7 +108,7 @@ public final class QueryRequestProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dataID_ != null) {
         output.writeMessage(1, getDataID());
       }
       getUnknownFields().writeTo(output);
@@ -121,7 +120,7 @@ public final class QueryRequestProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dataID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataID());
       }
@@ -279,19 +278,13 @@ public final class QueryRequestProto {
 
       // Construct using com.assetmantle.modules.metas.queries.meta.QueryRequestProto.QueryRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataIDFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -335,14 +328,11 @@ public final class QueryRequestProto {
 
       private void buildPartial0(com.assetmantle.modules.metas.queries.meta.QueryRequestProto.QueryRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataID_ = dataIDBuilder_ == null
               ? dataID_
               : dataIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -508,10 +498,8 @@ public final class QueryRequestProto {
         } else {
           dataIDBuilder_.mergeFrom(value);
         }
-        if (dataID_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

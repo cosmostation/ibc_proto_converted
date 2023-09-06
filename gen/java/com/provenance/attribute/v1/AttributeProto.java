@@ -908,7 +908,6 @@ public final class AttributeProto {
               com.provenance.attribute.v1.AttributeProto.Attribute.class, com.provenance.attribute.v1.AttributeProto.Attribute.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -1056,7 +1055,7 @@ public final class AttributeProto {
      */
     @java.lang.Override
     public boolean hasExpirationDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expirationDate_ != null;
     }
     /**
      * <pre>
@@ -1108,7 +1107,7 @@ public final class AttributeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expirationDate_ != null) {
         output.writeMessage(5, getExpirationDate());
       }
       getUnknownFields().writeTo(output);
@@ -1134,7 +1133,7 @@ public final class AttributeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expirationDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpirationDate());
       }
@@ -1311,19 +1310,13 @@ public final class AttributeProto {
 
       // Construct using com.provenance.attribute.v1.AttributeProto.Attribute.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1383,14 +1376,11 @@ public final class AttributeProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expirationDate_ = expirationDateBuilder_ == null
               ? expirationDate_
               : expirationDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1913,10 +1903,8 @@ public final class AttributeProto {
         } else {
           expirationDateBuilder_.mergeFrom(value);
         }
-        if (expirationDate_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

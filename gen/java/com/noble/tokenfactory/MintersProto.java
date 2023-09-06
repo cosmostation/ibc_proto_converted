@@ -81,7 +81,6 @@ public final class MintersProto {
               com.noble.tokenfactory.MintersProto.Minters.class, com.noble.tokenfactory.MintersProto.Minters.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -129,7 +128,7 @@ public final class MintersProto {
      */
     @java.lang.Override
     public boolean hasAllowance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return allowance_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin allowance = 2 [json_name = "allowance", (.gogoproto.nullable) = false];</code>
@@ -164,7 +163,7 @@ public final class MintersProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (allowance_ != null) {
         output.writeMessage(2, getAllowance());
       }
       getUnknownFields().writeTo(output);
@@ -179,7 +178,7 @@ public final class MintersProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (allowance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAllowance());
       }
@@ -341,19 +340,13 @@ public final class MintersProto {
 
       // Construct using com.noble.tokenfactory.MintersProto.Minters.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAllowanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -401,14 +394,11 @@ public final class MintersProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.allowance_ = allowanceBuilder_ == null
               ? allowance_
               : allowanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -656,10 +646,8 @@ public final class MintersProto {
         } else {
           allowanceBuilder_.mergeFrom(value);
         }
-        if (allowance_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

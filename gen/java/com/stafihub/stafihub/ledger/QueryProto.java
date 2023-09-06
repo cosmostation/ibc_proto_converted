@@ -620,7 +620,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetExchangeRateResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetExchangeRateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EXCHANGERATE_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.ExchangeRate exchangeRate_;
     /**
@@ -629,7 +628,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasExchangeRate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return exchangeRate_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.ExchangeRate exchangeRate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
@@ -661,7 +660,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (exchangeRate_ != null) {
         output.writeMessage(1, getExchangeRate());
       }
       getUnknownFields().writeTo(output);
@@ -673,7 +672,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (exchangeRate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getExchangeRate());
       }
@@ -831,19 +830,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetExchangeRateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExchangeRateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -887,14 +880,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetExchangeRateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.exchangeRate_ = exchangeRateBuilder_ == null
               ? exchangeRate_
               : exchangeRateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1060,10 +1050,8 @@ public final class QueryProto {
         } else {
           exchangeRateBuilder_.mergeFrom(value);
         }
-        if (exchangeRate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3035,7 +3023,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetEraExchangeRateResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetEraExchangeRateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ERAEXCHANGERATE_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.EraExchangeRate eraExchangeRate_;
     /**
@@ -3044,7 +3031,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEraExchangeRate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return eraExchangeRate_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.EraExchangeRate eraExchangeRate = 1 [json_name = "eraExchangeRate", (.gogoproto.nullable) = false];</code>
@@ -3076,7 +3063,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (eraExchangeRate_ != null) {
         output.writeMessage(1, getEraExchangeRate());
       }
       getUnknownFields().writeTo(output);
@@ -3088,7 +3075,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (eraExchangeRate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEraExchangeRate());
       }
@@ -3246,19 +3233,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetEraExchangeRateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEraExchangeRateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3302,14 +3283,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetEraExchangeRateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.eraExchangeRate_ = eraExchangeRateBuilder_ == null
               ? eraExchangeRate_
               : eraExchangeRateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3475,10 +3453,8 @@ public final class QueryProto {
         } else {
           eraExchangeRateBuilder_.mergeFrom(value);
         }
-        if (eraExchangeRate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6851,7 +6827,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetPoolDetailResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetPoolDetailResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DETAIL_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.PoolDetail detail_;
     /**
@@ -6860,7 +6835,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDetail() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return detail_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.PoolDetail detail = 1 [json_name = "detail", (.gogoproto.nullable) = false];</code>
@@ -6892,7 +6867,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (detail_ != null) {
         output.writeMessage(1, getDetail());
       }
       getUnknownFields().writeTo(output);
@@ -6904,7 +6879,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (detail_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDetail());
       }
@@ -7062,19 +7037,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetPoolDetailResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDetailFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7118,14 +7087,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetPoolDetailResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.detail_ = detailBuilder_ == null
               ? detail_
               : detailBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7291,10 +7257,8 @@ public final class QueryProto {
         } else {
           detailBuilder_.mergeFrom(value);
         }
-        if (detail_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12266,7 +12230,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetUnbondRelayFeeResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetUnbondRelayFeeResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEE_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.UnbondRelayFee fee_;
     /**
@@ -12275,7 +12238,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fee_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.UnbondRelayFee fee = 1 [json_name = "fee", (.gogoproto.nullable) = false];</code>
@@ -12307,7 +12270,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         output.writeMessage(1, getFee());
       }
       getUnknownFields().writeTo(output);
@@ -12319,7 +12282,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFee());
       }
@@ -12477,19 +12440,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetUnbondRelayFeeResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12533,14 +12490,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetUnbondRelayFeeResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12706,10 +12660,8 @@ public final class QueryProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        if (fee_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -15710,7 +15662,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetBondPipelineResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetBondPipelineResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PIPELINE_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.BondPipeline pipeline_;
     /**
@@ -15719,7 +15670,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPipeline() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pipeline_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.BondPipeline pipeline = 1 [json_name = "pipeline", (.gogoproto.nullable) = false];</code>
@@ -15751,7 +15702,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pipeline_ != null) {
         output.writeMessage(1, getPipeline());
       }
       getUnknownFields().writeTo(output);
@@ -15763,7 +15714,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pipeline_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPipeline());
       }
@@ -15921,19 +15872,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetBondPipelineResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPipelineFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15977,14 +15922,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetBondPipelineResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pipeline_ = pipelineBuilder_ == null
               ? pipeline_
               : pipelineBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16150,10 +16092,8 @@ public final class QueryProto {
         } else {
           pipelineBuilder_.mergeFrom(value);
         }
-        if (pipeline_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -18116,7 +18056,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetSnapshotResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetSnapshotResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SHOT_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.BondSnapshot shot_;
     /**
@@ -18125,7 +18064,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasShot() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return shot_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.BondSnapshot shot = 1 [json_name = "shot", (.gogoproto.nullable) = false];</code>
@@ -18157,7 +18096,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shot_ != null) {
         output.writeMessage(1, getShot());
       }
       getUnknownFields().writeTo(output);
@@ -18169,7 +18108,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shot_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getShot());
       }
@@ -18327,19 +18266,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetSnapshotResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getShotFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18383,14 +18316,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetSnapshotResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.shot_ = shotBuilder_ == null
               ? shot_
               : shotBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18556,10 +18486,8 @@ public final class QueryProto {
         } else {
           shotBuilder_.mergeFrom(value);
         }
-        if (shot_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -20604,7 +20532,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetBondRecordResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetBondRecordResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BONDRECORD_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.BondRecord bondRecord_;
     /**
@@ -20613,7 +20540,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBondRecord() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bondRecord_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.BondRecord bondRecord = 1 [json_name = "bondRecord", (.gogoproto.nullable) = false];</code>
@@ -20645,7 +20572,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bondRecord_ != null) {
         output.writeMessage(1, getBondRecord());
       }
       getUnknownFields().writeTo(output);
@@ -20657,7 +20584,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bondRecord_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBondRecord());
       }
@@ -20815,19 +20742,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetBondRecordResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBondRecordFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20871,14 +20792,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetBondRecordResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bondRecord_ = bondRecordBuilder_ == null
               ? bondRecord_
               : bondRecordBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21044,10 +20962,8 @@ public final class QueryProto {
         } else {
           bondRecordBuilder_.mergeFrom(value);
         }
-        if (bondRecord_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -22241,7 +22157,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetSignatureResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetSignatureResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SIGNATURE_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.Signature signature_;
     /**
@@ -22250,7 +22165,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSignature() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return signature_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.Signature signature = 1 [json_name = "signature", (.gogoproto.nullable) = false];</code>
@@ -22282,7 +22197,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signature_ != null) {
         output.writeMessage(1, getSignature());
       }
       getUnknownFields().writeTo(output);
@@ -22294,7 +22209,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signature_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSignature());
       }
@@ -22452,19 +22367,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetSignatureResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSignatureFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -22508,14 +22417,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetSignatureResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.signature_ = signatureBuilder_ == null
               ? signature_
               : signatureBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22681,10 +22587,8 @@ public final class QueryProto {
         } else {
           signatureBuilder_.mergeFrom(value);
         }
-        if (signature_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -23405,7 +23309,6 @@ public final class QueryProto {
               com.stafihub.stafihub.ledger.QueryProto.QueryGetRParamsResponse.class, com.stafihub.stafihub.ledger.QueryProto.QueryGetRParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RPARAMS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.ledger.LedgerProto.RParams rParams_;
     /**
@@ -23414,7 +23317,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return rParams_ != null;
     }
     /**
      * <code>.stafihub.stafihub.ledger.RParams rParams = 1 [json_name = "rParams", (.gogoproto.nullable) = false];</code>
@@ -23446,7 +23349,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rParams_ != null) {
         output.writeMessage(1, getRParams());
       }
       getUnknownFields().writeTo(output);
@@ -23458,7 +23361,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRParams());
       }
@@ -23616,19 +23519,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.ledger.QueryProto.QueryGetRParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -23672,14 +23569,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.ledger.QueryProto.QueryGetRParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.rParams_ = rParamsBuilder_ == null
               ? rParams_
               : rParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23845,10 +23739,8 @@ public final class QueryProto {
         } else {
           rParamsBuilder_.mergeFrom(value);
         }
-        if (rParams_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

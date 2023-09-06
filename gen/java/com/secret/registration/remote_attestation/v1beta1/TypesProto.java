@@ -2359,7 +2359,6 @@ public final class TypesProto {
               com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private long version_ = 0L;
     /**
@@ -2390,7 +2389,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasReportBody() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return reportBody_ != null;
     }
     /**
      * <code>.secret.registration.remote_attestation.v1beta1.QuoteReportBody report_body = 3 [json_name = "reportBody"];</code>
@@ -2428,7 +2427,7 @@ public final class TypesProto {
       if (signType_ != 0L) {
         output.writeUInt64(2, signType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (reportBody_ != null) {
         output.writeMessage(3, getReportBody());
       }
       getUnknownFields().writeTo(output);
@@ -2448,7 +2447,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, signType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (reportBody_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getReportBody());
       }
@@ -2616,19 +2615,13 @@ public final class TypesProto {
 
       // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.QuoteReportData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getReportBodyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2680,14 +2673,11 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signType_ = signType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.reportBody_ = reportBodyBuilder_ == null
               ? reportBody_
               : reportBodyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2933,10 +2923,8 @@ public final class TypesProto {
         } else {
           reportBodyBuilder_.mergeFrom(value);
         }
-        if (reportBody_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4497,7 +4485,6 @@ public final class TypesProto {
               com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.class, com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SGX_EPID_GROUP_FLAGS_FIELD_NUMBER = 1;
     private int sgxEpidGroupFlags_ = 0;
     /**
@@ -4678,7 +4665,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSgxEc256SignatureT() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return sgxEc256SignatureT_ != null;
     }
     /**
      * <code>.secret.registration.remote_attestation.v1beta1.SGXEC256Signature sgx_ec256_signature_t = 9 [json_name = "sgxEc256SignatureT"];</code>
@@ -4734,7 +4721,7 @@ public final class TypesProto {
       if (gid_ != 0) {
         output.writeUInt32(8, gid_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sgxEc256SignatureT_ != null) {
         output.writeMessage(9, getSgxEc256SignatureT());
       }
       getUnknownFields().writeTo(output);
@@ -4775,7 +4762,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, gid_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sgxEc256SignatureT_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getSgxEc256SignatureT());
       }
@@ -4965,19 +4952,13 @@ public final class TypesProto {
 
       // Construct using com.secret.registration.remote_attestation.v1beta1.TypesProto.PlatformInfoBlob.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSgxEc256SignatureTFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5053,14 +5034,11 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.gid_ = gid_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.sgxEc256SignatureT_ = sgxEc256SignatureTBuilder_ == null
               ? sgxEc256SignatureT_
               : sgxEc256SignatureTBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5672,10 +5650,8 @@ public final class TypesProto {
         } else {
           sgxEc256SignatureTBuilder_.mergeFrom(value);
         }
-        if (sgxEc256SignatureT_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**

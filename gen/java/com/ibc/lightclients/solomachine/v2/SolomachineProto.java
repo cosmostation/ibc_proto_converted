@@ -369,7 +369,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.ClientState.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.ClientState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SEQUENCE_FIELD_NUMBER = 1;
     private long sequence_ = 0L;
     /**
@@ -408,7 +407,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasConsensusState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return consensusState_ != null;
     }
     /**
      * <code>.ibc.lightclients.solomachine.v2.ConsensusState consensus_state = 3 [json_name = "consensusState"];</code>
@@ -462,7 +461,7 @@ public final class SolomachineProto {
       if (isFrozen_ != false) {
         output.writeBool(2, isFrozen_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusState_ != null) {
         output.writeMessage(3, getConsensusState());
       }
       if (allowUpdateAfterProposal_ != false) {
@@ -485,7 +484,7 @@ public final class SolomachineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, isFrozen_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getConsensusState());
       }
@@ -667,19 +666,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.ClientState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConsensusStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -732,17 +725,14 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.isFrozen_ = isFrozen_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.consensusState_ = consensusStateBuilder_ == null
               ? consensusState_
               : consensusStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.allowUpdateAfterProposal_ = allowUpdateAfterProposal_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1020,10 +1010,8 @@ public final class SolomachineProto {
         } else {
           consensusStateBuilder_.mergeFrom(value);
         }
-        if (consensusState_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1288,7 +1276,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.ConsensusState.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.ConsensusState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.Any publicKey_;
     /**
@@ -1301,7 +1288,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasPublicKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publicKey_ != null;
     }
     /**
      * <pre>
@@ -1403,7 +1390,7 @@ public final class SolomachineProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         output.writeMessage(1, getPublicKey());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diversifier_)) {
@@ -1421,7 +1408,7 @@ public final class SolomachineProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPublicKey());
       }
@@ -1601,19 +1588,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.ConsensusState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublicKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1659,12 +1640,10 @@ public final class SolomachineProto {
 
       private void buildPartial0(com.ibc.lightclients.solomachine.v2.SolomachineProto.ConsensusState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.publicKey_ = publicKeyBuilder_ == null
               ? publicKey_
               : publicKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.diversifier_ = diversifier_;
@@ -1672,7 +1651,6 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timestamp_ = timestamp_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1876,10 +1854,8 @@ public final class SolomachineProto {
         } else {
           publicKeyBuilder_.mergeFrom(value);
         }
-        if (publicKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2238,7 +2214,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.Header.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.Header.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SEQUENCE_FIELD_NUMBER = 1;
     private long sequence_ = 0L;
     /**
@@ -2284,7 +2259,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasNewPublicKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return newPublicKey_ != null;
     }
     /**
      * <code>.google.protobuf.Any new_public_key = 4 [json_name = "newPublicKey"];</code>
@@ -2364,7 +2339,7 @@ public final class SolomachineProto {
       if (!signature_.isEmpty()) {
         output.writeBytes(3, signature_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newPublicKey_ != null) {
         output.writeMessage(4, getNewPublicKey());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newDiversifier_)) {
@@ -2391,7 +2366,7 @@ public final class SolomachineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, signature_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newPublicKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getNewPublicKey());
       }
@@ -2574,19 +2549,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.Header.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNewPublicKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2643,17 +2612,14 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signature_ = signature_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.newPublicKey_ = newPublicKeyBuilder_ == null
               ? newPublicKey_
               : newPublicKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.newDiversifier_ = newDiversifier_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2961,10 +2927,8 @@ public final class SolomachineProto {
         } else {
           newPublicKeyBuilder_.mergeFrom(value);
         }
-        if (newPublicKey_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3244,7 +3208,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.Misbehaviour.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.Misbehaviour.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLIENT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object clientId_ = "";
@@ -3303,7 +3266,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasSignatureOne() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return signatureOne_ != null;
     }
     /**
      * <code>.ibc.lightclients.solomachine.v2.SignatureAndData signature_one = 3 [json_name = "signatureOne"];</code>
@@ -3329,7 +3292,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasSignatureTwo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return signatureTwo_ != null;
     }
     /**
      * <code>.ibc.lightclients.solomachine.v2.SignatureAndData signature_two = 4 [json_name = "signatureTwo"];</code>
@@ -3367,10 +3330,10 @@ public final class SolomachineProto {
       if (sequence_ != 0L) {
         output.writeUInt64(2, sequence_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signatureOne_ != null) {
         output.writeMessage(3, getSignatureOne());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signatureTwo_ != null) {
         output.writeMessage(4, getSignatureTwo());
       }
       getUnknownFields().writeTo(output);
@@ -3389,11 +3352,11 @@ public final class SolomachineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, sequence_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signatureOne_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSignatureOne());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signatureTwo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSignatureTwo());
       }
@@ -3574,20 +3537,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.Misbehaviour.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSignatureOneFieldBuilder();
-          getSignatureTwoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3644,20 +3600,16 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sequence_ = sequence_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signatureOne_ = signatureOneBuilder_ == null
               ? signatureOne_
               : signatureOneBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.signatureTwo_ = signatureTwoBuilder_ == null
               ? signatureTwo_
               : signatureTwoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3955,10 +3907,8 @@ public final class SolomachineProto {
         } else {
           signatureOneBuilder_.mergeFrom(value);
         }
-        if (signatureOne_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4076,10 +4026,8 @@ public final class SolomachineProto {
         } else {
           signatureTwoBuilder_.mergeFrom(value);
         }
-        if (signatureTwo_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6523,7 +6471,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.HeaderData.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.HeaderData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NEW_PUB_KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.Any newPubKey_;
     /**
@@ -6536,7 +6483,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasNewPubKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return newPubKey_ != null;
     }
     /**
      * <pre>
@@ -6623,7 +6570,7 @@ public final class SolomachineProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newPubKey_ != null) {
         output.writeMessage(1, getNewPubKey());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newDiversifier_)) {
@@ -6638,7 +6585,7 @@ public final class SolomachineProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newPubKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getNewPubKey());
       }
@@ -6807,19 +6754,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.HeaderData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNewPubKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6864,17 +6805,14 @@ public final class SolomachineProto {
 
       private void buildPartial0(com.ibc.lightclients.solomachine.v2.SolomachineProto.HeaderData result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.newPubKey_ = newPubKeyBuilder_ == null
               ? newPubKey_
               : newPubKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.newDiversifier_ = newDiversifier_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7070,10 +7008,8 @@ public final class SolomachineProto {
         } else {
           newPubKeyBuilder_.mergeFrom(value);
         }
-        if (newPubKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7361,7 +7297,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.ClientStateData.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.ClientStateData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString path_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -7381,7 +7316,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasClientState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return clientState_ != null;
     }
     /**
      * <code>.google.protobuf.Any client_state = 2 [json_name = "clientState"];</code>
@@ -7416,7 +7351,7 @@ public final class SolomachineProto {
       if (!path_.isEmpty()) {
         output.writeBytes(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (clientState_ != null) {
         output.writeMessage(2, getClientState());
       }
       getUnknownFields().writeTo(output);
@@ -7432,7 +7367,7 @@ public final class SolomachineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (clientState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getClientState());
       }
@@ -7598,19 +7533,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.ClientStateData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClientStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7658,14 +7587,11 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.path_ = path_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.clientState_ = clientStateBuilder_ == null
               ? clientState_
               : clientStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7871,10 +7797,8 @@ public final class SolomachineProto {
         } else {
           clientStateBuilder_.mergeFrom(value);
         }
-        if (clientState_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8055,7 +7979,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.ConsensusStateData.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.ConsensusStateData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString path_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -8075,7 +7998,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasConsensusState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return consensusState_ != null;
     }
     /**
      * <code>.google.protobuf.Any consensus_state = 2 [json_name = "consensusState"];</code>
@@ -8110,7 +8033,7 @@ public final class SolomachineProto {
       if (!path_.isEmpty()) {
         output.writeBytes(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusState_ != null) {
         output.writeMessage(2, getConsensusState());
       }
       getUnknownFields().writeTo(output);
@@ -8126,7 +8049,7 @@ public final class SolomachineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getConsensusState());
       }
@@ -8293,19 +8216,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.ConsensusStateData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConsensusStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8353,14 +8270,11 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.path_ = path_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.consensusState_ = consensusStateBuilder_ == null
               ? consensusState_
               : consensusStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8566,10 +8480,8 @@ public final class SolomachineProto {
         } else {
           consensusStateBuilder_.mergeFrom(value);
         }
-        if (consensusState_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8750,7 +8662,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.ConnectionStateData.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.ConnectionStateData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString path_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -8770,7 +8681,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasConnection() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return connection_ != null;
     }
     /**
      * <code>.ibc.core.connection.v1.ConnectionEnd connection = 2 [json_name = "connection"];</code>
@@ -8805,7 +8716,7 @@ public final class SolomachineProto {
       if (!path_.isEmpty()) {
         output.writeBytes(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (connection_ != null) {
         output.writeMessage(2, getConnection());
       }
       getUnknownFields().writeTo(output);
@@ -8821,7 +8732,7 @@ public final class SolomachineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (connection_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getConnection());
       }
@@ -8988,19 +8899,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.ConnectionStateData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConnectionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9048,14 +8953,11 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.path_ = path_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.connection_ = connectionBuilder_ == null
               ? connection_
               : connectionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9261,10 +9163,8 @@ public final class SolomachineProto {
         } else {
           connectionBuilder_.mergeFrom(value);
         }
-        if (connection_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -9445,7 +9345,6 @@ public final class SolomachineProto {
               com.ibc.lightclients.solomachine.v2.SolomachineProto.ChannelStateData.class, com.ibc.lightclients.solomachine.v2.SolomachineProto.ChannelStateData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PATH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString path_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -9465,7 +9364,7 @@ public final class SolomachineProto {
      */
     @java.lang.Override
     public boolean hasChannel() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return channel_ != null;
     }
     /**
      * <code>.ibc.core.channel.v1.Channel channel = 2 [json_name = "channel"];</code>
@@ -9500,7 +9399,7 @@ public final class SolomachineProto {
       if (!path_.isEmpty()) {
         output.writeBytes(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (channel_ != null) {
         output.writeMessage(2, getChannel());
       }
       getUnknownFields().writeTo(output);
@@ -9516,7 +9415,7 @@ public final class SolomachineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, path_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (channel_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getChannel());
       }
@@ -9683,19 +9582,13 @@ public final class SolomachineProto {
 
       // Construct using com.ibc.lightclients.solomachine.v2.SolomachineProto.ChannelStateData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getChannelFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9743,14 +9636,11 @@ public final class SolomachineProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.path_ = path_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.channel_ = channelBuilder_ == null
               ? channel_
               : channelBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9956,10 +9846,8 @@ public final class SolomachineProto {
         } else {
           channelBuilder_.mergeFrom(value);
         }
-        if (channel_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

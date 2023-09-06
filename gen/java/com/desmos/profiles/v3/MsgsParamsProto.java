@@ -115,7 +115,6 @@ public final class MsgsParamsProto {
               com.desmos.profiles.v3.MsgsParamsProto.MsgUpdateParams.class, com.desmos.profiles.v3.MsgsParamsProto.MsgUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -179,7 +178,7 @@ public final class MsgsParamsProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -226,7 +225,7 @@ public final class MsgsParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -241,7 +240,7 @@ public final class MsgsParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -409,19 +408,13 @@ public final class MsgsParamsProto {
 
       // Construct using com.desmos.profiles.v3.MsgsParamsProto.MsgUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -469,14 +462,11 @@ public final class MsgsParamsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -779,10 +769,8 @@ public final class MsgsParamsProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

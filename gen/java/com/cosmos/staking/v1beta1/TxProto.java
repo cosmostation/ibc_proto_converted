@@ -172,7 +172,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgCreateValidator.class, com.cosmos.staking.v1beta1.TxProto.MsgCreateValidator.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
     private com.cosmos.staking.v1beta1.StakingProto.Description description_;
     /**
@@ -181,7 +180,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return description_ != null;
     }
     /**
      * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -207,7 +206,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCommission() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return commission_ != null;
     }
     /**
      * <code>.cosmos.staking.v1beta1.CommissionRates commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -366,7 +365,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPubkey() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return pubkey_ != null;
     }
     /**
      * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
@@ -392,7 +391,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return value_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin value = 7 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -424,10 +423,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (description_ != null) {
         output.writeMessage(1, getDescription());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (commission_ != null) {
         output.writeMessage(2, getCommission());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minSelfDelegation_)) {
@@ -439,10 +438,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (pubkey_ != null) {
         output.writeMessage(6, getPubkey());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (value_ != null) {
         output.writeMessage(7, getValue());
       }
       getUnknownFields().writeTo(output);
@@ -454,11 +453,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (description_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDescription());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (commission_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCommission());
       }
@@ -471,11 +470,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (pubkey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getPubkey());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getValue());
       }
@@ -676,22 +675,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgCreateValidator.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDescriptionFieldBuilder();
-          getCommissionFieldBuilder();
-          getPubkeyFieldBuilder();
-          getValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -753,18 +743,15 @@ public final class TxProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.TxProto.MsgCreateValidator result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.description_ = descriptionBuilder_ == null
               ? description_
               : descriptionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.commission_ = commissionBuilder_ == null
               ? commission_
               : commissionBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minSelfDelegation_ = minSelfDelegation_;
@@ -779,15 +766,12 @@ public final class TxProto {
           result.pubkey_ = pubkeyBuilder_ == null
               ? pubkey_
               : pubkeyBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1013,10 +997,8 @@ public final class TxProto {
         } else {
           descriptionBuilder_.mergeFrom(value);
         }
-        if (description_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1134,10 +1116,8 @@ public final class TxProto {
         } else {
           commissionBuilder_.mergeFrom(value);
         }
-        if (commission_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1511,10 +1491,8 @@ public final class TxProto {
         } else {
           pubkeyBuilder_.mergeFrom(value);
         }
-        if (pubkey_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1632,10 +1610,8 @@ public final class TxProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        if (value_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2266,7 +2242,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.class, com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
     private com.cosmos.staking.v1beta1.StakingProto.Description description_;
     /**
@@ -2275,7 +2250,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return description_ != null;
     }
     /**
      * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2438,7 +2413,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (description_ != null) {
         output.writeMessage(1, getDescription());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
@@ -2459,7 +2434,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (description_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDescription());
       }
@@ -2642,19 +2617,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDescriptionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2701,12 +2670,10 @@ public final class TxProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.TxProto.MsgEditValidator result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.description_ = descriptionBuilder_ == null
               ? description_
               : descriptionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorAddress_ = validatorAddress_;
@@ -2717,7 +2684,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.minSelfDelegation_ = minSelfDelegation_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2913,10 +2879,8 @@ public final class TxProto {
         } else {
           descriptionBuilder_.mergeFrom(value);
         }
-        if (description_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3772,7 +3736,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgDelegate.class, com.cosmos.staking.v1beta1.TxProto.MsgDelegate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorAddress_ = "";
@@ -3859,7 +3822,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -3897,7 +3860,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -3915,7 +3878,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -4086,19 +4049,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgDelegate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4150,14 +4107,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4487,10 +4441,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5108,7 +5060,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgBeginRedelegate.class, com.cosmos.staking.v1beta1.TxProto.MsgBeginRedelegate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorAddress_ = "";
@@ -5234,7 +5185,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -5275,7 +5226,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorDstAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, validatorDstAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(4, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -5296,7 +5247,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorDstAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, validatorDstAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAmount());
       }
@@ -5471,19 +5422,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgBeginRedelegate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5539,14 +5484,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.validatorDstAddress_ = validatorDstAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5958,10 +5900,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6134,7 +6074,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgBeginRedelegateResponse.class, com.cosmos.staking.v1beta1.TxProto.MsgBeginRedelegateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COMPLETION_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp completionTime_;
     /**
@@ -6143,7 +6082,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCompletionTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return completionTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
@@ -6175,7 +6114,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         output.writeMessage(1, getCompletionTime());
       }
       getUnknownFields().writeTo(output);
@@ -6187,7 +6126,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCompletionTime());
       }
@@ -6349,19 +6288,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgBeginRedelegateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCompletionTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6405,14 +6338,11 @@ public final class TxProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.TxProto.MsgBeginRedelegateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6578,10 +6508,8 @@ public final class TxProto {
         } else {
           completionTimeBuilder_.mergeFrom(value);
         }
-        if (completionTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6781,7 +6709,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgUndelegate.class, com.cosmos.staking.v1beta1.TxProto.MsgUndelegate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorAddress_ = "";
@@ -6868,7 +6795,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -6906,7 +6833,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -6924,7 +6851,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -7095,19 +7022,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgUndelegate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7159,14 +7080,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7496,10 +7414,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -7705,7 +7621,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgUndelegateResponse.class, com.cosmos.staking.v1beta1.TxProto.MsgUndelegateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COMPLETION_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp completionTime_;
     /**
@@ -7714,7 +7629,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCompletionTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return completionTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
@@ -7746,7 +7661,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return amount_ != null;
     }
     /**
      * <pre>
@@ -7790,10 +7705,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         output.writeMessage(1, getCompletionTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -7805,11 +7720,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCompletionTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -7980,20 +7895,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgUndelegateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCompletionTimeFieldBuilder();
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8042,20 +7950,16 @@ public final class TxProto {
 
       private void buildPartial0(com.cosmos.staking.v1beta1.TxProto.MsgUndelegateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8231,10 +8135,8 @@ public final class TxProto {
         } else {
           completionTimeBuilder_.mergeFrom(value);
         }
-        if (completionTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8382,10 +8284,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8632,7 +8532,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgCancelUnbondingDelegation.class, com.cosmos.staking.v1beta1.TxProto.MsgCancelUnbondingDelegation.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorAddress_ = "";
@@ -8723,7 +8622,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <pre>
@@ -8784,7 +8683,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       if (creationHeight_ != 0L) {
@@ -8805,7 +8704,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -8986,19 +8885,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgCancelUnbondingDelegation.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9051,17 +8944,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.creationHeight_ = creationHeight_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9419,10 +9309,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10105,7 +9993,6 @@ public final class TxProto {
               com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.class, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -10167,7 +10054,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -10214,7 +10101,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -10229,7 +10116,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -10397,19 +10284,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10457,14 +10338,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10762,10 +10640,8 @@ public final class TxProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

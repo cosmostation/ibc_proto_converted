@@ -72,7 +72,6 @@ public final class QueryProto {
               com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -81,7 +80,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -113,7 +112,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -125,7 +124,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -287,19 +286,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -343,14 +336,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -516,10 +506,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -717,7 +705,6 @@ public final class QueryProto {
               com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> oracles_;
@@ -767,7 +754,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -802,7 +789,7 @@ public final class QueryProto {
       for (int i = 0; i < oracles_.size(); i++) {
         output.writeMessage(1, oracles_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -818,7 +805,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, oracles_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -986,20 +973,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOraclesFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1063,14 +1043,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1515,10 +1492,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2251,7 +2226,6 @@ public final class QueryProto {
               com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLE_FIELD_NUMBER = 1;
     private com.panacea.oracle.v2alpha2.OracleProto.Oracle oracle_;
     /**
@@ -2260,7 +2234,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOracle() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return oracle_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
@@ -2292,7 +2266,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracle_ != null) {
         output.writeMessage(1, getOracle());
       }
       getUnknownFields().writeTo(output);
@@ -2304,7 +2278,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOracle());
       }
@@ -2466,19 +2440,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOracleFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2522,14 +2490,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.oracle_ = oracleBuilder_ == null
               ? oracle_
               : oracleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2695,10 +2660,8 @@ public final class QueryProto {
         } else {
           oracleBuilder_.mergeFrom(value);
         }
-        if (oracle_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3579,7 +3542,6 @@ public final class QueryProto {
               com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLE_REGISTRATION_FIELD_NUMBER = 1;
     private com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration oracleRegistration_;
     /**
@@ -3588,7 +3550,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOracleRegistration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return oracleRegistration_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
@@ -3620,7 +3582,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleRegistration_ != null) {
         output.writeMessage(1, getOracleRegistration());
       }
       getUnknownFields().writeTo(output);
@@ -3632,7 +3594,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleRegistration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOracleRegistration());
       }
@@ -3794,19 +3756,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOracleRegistrationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3850,14 +3806,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.oracleRegistration_ = oracleRegistrationBuilder_ == null
               ? oracleRegistration_
               : oracleRegistrationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4023,10 +3976,8 @@ public final class QueryProto {
         } else {
           oracleRegistrationBuilder_.mergeFrom(value);
         }
-        if (oracleRegistration_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5055,7 +5006,6 @@ public final class QueryProto {
               com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLE_REGISTRATION_VOTE_FIELD_NUMBER = 1;
     private com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote oracleRegistrationVote_;
     /**
@@ -5064,7 +5014,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOracleRegistrationVote() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return oracleRegistrationVote_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
@@ -5096,7 +5046,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleRegistrationVote_ != null) {
         output.writeMessage(1, getOracleRegistrationVote());
       }
       getUnknownFields().writeTo(output);
@@ -5108,7 +5058,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleRegistrationVote_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOracleRegistrationVote());
       }
@@ -5270,19 +5220,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOracleRegistrationVoteFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5326,14 +5270,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.oracleRegistrationVote_ = oracleRegistrationVoteBuilder_ == null
               ? oracleRegistrationVote_
               : oracleRegistrationVoteBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5499,10 +5440,8 @@ public final class QueryProto {
         } else {
           oracleRegistrationVoteBuilder_.mergeFrom(value);
         }
-        if (oracleRegistrationVote_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6080,7 +6019,6 @@ public final class QueryProto {
               com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.panacea.oracle.v2alpha2.GenesisProto.Params params_;
     /**
@@ -6089,7 +6027,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
@@ -6121,7 +6059,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -6133,7 +6071,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -6295,19 +6233,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6351,14 +6283,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6524,10 +6453,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7105,7 +7032,6 @@ public final class QueryProto {
               com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLE_UPGRADE_INFO_FIELD_NUMBER = 1;
     private com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo oracleUpgradeInfo_;
     /**
@@ -7114,7 +7040,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasOracleUpgradeInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return oracleUpgradeInfo_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
@@ -7146,7 +7072,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleUpgradeInfo_ != null) {
         output.writeMessage(1, getOracleUpgradeInfo());
       }
       getUnknownFields().writeTo(output);
@@ -7158,7 +7084,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleUpgradeInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOracleUpgradeInfo());
       }
@@ -7320,19 +7246,13 @@ public final class QueryProto {
 
       // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOracleUpgradeInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7376,14 +7296,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.oracleUpgradeInfo_ = oracleUpgradeInfoBuilder_ == null
               ? oracleUpgradeInfo_
               : oracleUpgradeInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7549,10 +7466,8 @@ public final class QueryProto {
         } else {
           oracleUpgradeInfoBuilder_.mergeFrom(value);
         }
-        if (oracleUpgradeInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

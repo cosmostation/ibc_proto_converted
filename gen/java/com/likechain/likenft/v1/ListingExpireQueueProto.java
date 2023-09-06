@@ -75,7 +75,6 @@ public final class ListingExpireQueueProto {
               com.likechain.likenft.v1.ListingExpireQueueProto.ListingExpireQueueEntry.class, com.likechain.likenft.v1.ListingExpireQueueProto.ListingExpireQueueEntry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EXPIRE_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp expireTime_;
     /**
@@ -84,7 +83,7 @@ public final class ListingExpireQueueProto {
      */
     @java.lang.Override
     public boolean hasExpireTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expireTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expire_time = 1 [json_name = "expireTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -127,7 +126,7 @@ public final class ListingExpireQueueProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expireTime_ != null) {
         output.writeMessage(1, getExpireTime());
       }
       if (!listingKey_.isEmpty()) {
@@ -142,7 +141,7 @@ public final class ListingExpireQueueProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expireTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getExpireTime());
       }
@@ -308,19 +307,13 @@ public final class ListingExpireQueueProto {
 
       // Construct using com.likechain.likenft.v1.ListingExpireQueueProto.ListingExpireQueueEntry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpireTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -365,17 +358,14 @@ public final class ListingExpireQueueProto {
 
       private void buildPartial0(com.likechain.likenft.v1.ListingExpireQueueProto.ListingExpireQueueEntry result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.expireTime_ = expireTimeBuilder_ == null
               ? expireTime_
               : expireTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.listingKey_ = listingKey_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -549,10 +539,8 @@ public final class ListingExpireQueueProto {
         } else {
           expireTimeBuilder_.mergeFrom(value);
         }
-        if (expireTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -3572,7 +3572,6 @@ public final class BundlesProto {
               com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.class, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -3880,7 +3879,7 @@ public final class BundlesProto {
      */
     @java.lang.Override
     public boolean hasFinalizedAt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return finalizedAt_ != null;
     }
     /**
      * <pre>
@@ -4024,7 +4023,7 @@ public final class BundlesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, dataHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (finalizedAt_ != null) {
         output.writeMessage(10, getFinalizedAt());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromKey_)) {
@@ -4076,7 +4075,7 @@ public final class BundlesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, dataHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (finalizedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getFinalizedAt());
       }
@@ -4302,19 +4301,13 @@ public final class BundlesProto {
 
       // Construct using com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFinalizedAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4397,12 +4390,10 @@ public final class BundlesProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.dataHash_ = dataHash_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.finalizedAt_ = finalizedAtBuilder_ == null
               ? finalizedAt_
               : finalizedAtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.fromKey_ = fromKey_;
@@ -4413,7 +4404,6 @@ public final class BundlesProto {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.compressionId_ = compressionId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5343,10 +5333,8 @@ public final class BundlesProto {
         } else {
           finalizedAtBuilder_.mergeFrom(value);
         }
-        if (finalizedAt_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**

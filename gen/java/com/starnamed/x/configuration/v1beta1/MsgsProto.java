@@ -105,7 +105,6 @@ public final class MsgsProto {
               com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.class, com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SIGNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object signer_ = "";
@@ -165,7 +164,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasNewConfiguration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return newConfiguration_ != null;
     }
     /**
      * <pre>
@@ -208,7 +207,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newConfiguration_ != null) {
         output.writeMessage(2, getNewConfiguration());
       }
       getUnknownFields().writeTo(output);
@@ -223,7 +222,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newConfiguration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNewConfiguration());
       }
@@ -389,19 +388,13 @@ public final class MsgsProto {
 
       // Construct using com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNewConfigurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -449,14 +442,11 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.signer_ = signer_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.newConfiguration_ = newConfigurationBuilder_ == null
               ? newConfiguration_
               : newConfigurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -744,10 +734,8 @@ public final class MsgsProto {
         } else {
           newConfigurationBuilder_.mergeFrom(value);
         }
-        if (newConfiguration_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -950,7 +938,6 @@ public final class MsgsProto {
               com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.class, com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEES_FIELD_NUMBER = 1;
     private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
     /**
@@ -959,7 +946,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasFees() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fees_ != null;
     }
     /**
      * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
@@ -1030,7 +1017,7 @@ public final class MsgsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fees_ != null) {
         output.writeMessage(1, getFees());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurer_)) {
@@ -1045,7 +1032,7 @@ public final class MsgsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fees_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFees());
       }
@@ -1215,19 +1202,13 @@ public final class MsgsProto {
 
       // Construct using com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1272,17 +1253,14 @@ public final class MsgsProto {
 
       private void buildPartial0(com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.fees_ = feesBuilder_ == null
               ? fees_
               : feesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.configurer_ = configurer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1458,10 +1436,8 @@ public final class MsgsProto {
         } else {
           feesBuilder_.mergeFrom(value);
         }
-        if (fees_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

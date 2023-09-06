@@ -1659,7 +1659,6 @@ public final class QueryProto {
               com.em.buyback.v1.QueryProto.QueryBuybackTimeResponse.class, com.em.buyback.v1.QueryProto.QueryBuybackTimeResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LAST_RUN_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp lastRun_;
     /**
@@ -1668,7 +1667,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLastRun() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lastRun_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_run = 1 [json_name = "lastRun", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastRunTime", (.gogoproto.moretags) = "yaml:&#92;"last_run&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1694,7 +1693,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasNextRun() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return nextRun_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp next_run = 2 [json_name = "nextRun", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NextRunTime", (.gogoproto.moretags) = "yaml:&#92;"next_run&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1726,10 +1725,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastRun_ != null) {
         output.writeMessage(1, getLastRun());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (nextRun_ != null) {
         output.writeMessage(2, getNextRun());
       }
       getUnknownFields().writeTo(output);
@@ -1741,11 +1740,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastRun_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLastRun());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (nextRun_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNextRun());
       }
@@ -1912,20 +1911,13 @@ public final class QueryProto {
 
       // Construct using com.em.buyback.v1.QueryProto.QueryBuybackTimeResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLastRunFieldBuilder();
-          getNextRunFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1974,20 +1966,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.em.buyback.v1.QueryProto.QueryBuybackTimeResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lastRun_ = lastRunBuilder_ == null
               ? lastRun_
               : lastRunBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.nextRun_ = nextRunBuilder_ == null
               ? nextRun_
               : nextRunBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2163,10 +2151,8 @@ public final class QueryProto {
         } else {
           lastRunBuilder_.mergeFrom(value);
         }
-        if (lastRun_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2284,10 +2270,8 @@ public final class QueryProto {
         } else {
           nextRunBuilder_.mergeFrom(value);
         }
-        if (nextRun_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

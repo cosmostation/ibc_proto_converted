@@ -115,7 +115,6 @@ public final class MsgfeesProto {
               com.provenance.msgfees.v1.MsgfeesProto.Params.class, com.provenance.msgfees.v1.MsgfeesProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FLOOR_GAS_PRICE_FIELD_NUMBER = 2;
     private com.cosmos.base.v1beta1.CoinProto.Coin floorGasPrice_;
     /**
@@ -128,7 +127,7 @@ public final class MsgfeesProto {
      */
     @java.lang.Override
     public boolean hasFloorGasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return floorGasPrice_ != null;
     }
     /**
      * <pre>
@@ -230,7 +229,7 @@ public final class MsgfeesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (floorGasPrice_ != null) {
         output.writeMessage(2, getFloorGasPrice());
       }
       if (nhashPerUsdMil_ != 0L) {
@@ -248,7 +247,7 @@ public final class MsgfeesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (floorGasPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFloorGasPrice());
       }
@@ -426,19 +425,13 @@ public final class MsgfeesProto {
 
       // Construct using com.provenance.msgfees.v1.MsgfeesProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFloorGasPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -484,12 +477,10 @@ public final class MsgfeesProto {
 
       private void buildPartial0(com.provenance.msgfees.v1.MsgfeesProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.floorGasPrice_ = floorGasPriceBuilder_ == null
               ? floorGasPrice_
               : floorGasPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.nhashPerUsdMil_ = nhashPerUsdMil_;
@@ -497,7 +488,6 @@ public final class MsgfeesProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.conversionFeeDenom_ = conversionFeeDenom_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -701,10 +691,8 @@ public final class MsgfeesProto {
         } else {
           floorGasPriceBuilder_.mergeFrom(value);
         }
-        if (floorGasPrice_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1090,7 +1078,6 @@ public final class MsgfeesProto {
               com.provenance.msgfees.v1.MsgfeesProto.MsgFee.class, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MSG_TYPE_URL_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object msgTypeUrl_ = "";
@@ -1142,7 +1129,7 @@ public final class MsgfeesProto {
      */
     @java.lang.Override
     public boolean hasAdditionalFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return additionalFee_ != null;
     }
     /**
      * <pre>
@@ -1247,7 +1234,7 @@ public final class MsgfeesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgTypeUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msgTypeUrl_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (additionalFee_ != null) {
         output.writeMessage(2, getAdditionalFee());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
@@ -1268,7 +1255,7 @@ public final class MsgfeesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgTypeUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msgTypeUrl_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (additionalFee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAdditionalFee());
       }
@@ -1454,19 +1441,13 @@ public final class MsgfeesProto {
 
       // Construct using com.provenance.msgfees.v1.MsgfeesProto.MsgFee.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAdditionalFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1516,12 +1497,10 @@ public final class MsgfeesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.msgTypeUrl_ = msgTypeUrl_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.additionalFee_ = additionalFeeBuilder_ == null
               ? additionalFee_
               : additionalFeeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.recipient_ = recipient_;
@@ -1529,7 +1508,6 @@ public final class MsgfeesProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.recipientBasisPoints_ = recipientBasisPoints_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1815,10 +1793,8 @@ public final class MsgfeesProto {
         } else {
           additionalFeeBuilder_.mergeFrom(value);
         }
-        if (additionalFee_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

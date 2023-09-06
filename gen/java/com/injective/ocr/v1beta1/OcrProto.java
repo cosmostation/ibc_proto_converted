@@ -1080,7 +1080,6 @@ public final class OcrProto {
               com.injective.ocr.v1beta1.OcrProto.FeedConfig.class, com.injective.ocr.v1beta1.OcrProto.FeedConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SIGNERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList signers_ =
@@ -1266,7 +1265,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasModuleParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return moduleParams_ != null;
     }
     /**
      * <pre>
@@ -1324,7 +1323,7 @@ public final class OcrProto {
       if (!offchainConfig_.isEmpty()) {
         output.writeBytes(6, offchainConfig_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (moduleParams_ != null) {
         output.writeMessage(7, getModuleParams());
       }
       getUnknownFields().writeTo(output);
@@ -1368,7 +1367,7 @@ public final class OcrProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(6, offchainConfig_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (moduleParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getModuleParams());
       }
@@ -1555,19 +1554,13 @@ public final class OcrProto {
 
       // Construct using com.injective.ocr.v1beta1.OcrProto.FeedConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getModuleParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1639,14 +1632,11 @@ public final class OcrProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.offchainConfig_ = offchainConfig_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.moduleParams_ = moduleParamsBuilder_ == null
               ? moduleParams_
               : moduleParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2384,10 +2374,8 @@ public final class OcrProto {
         } else {
           moduleParamsBuilder_.mergeFrom(value);
         }
-        if (moduleParams_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -7021,7 +7009,6 @@ public final class OcrProto {
               com.injective.ocr.v1beta1.OcrProto.SetConfigProposal.class, com.injective.ocr.v1beta1.OcrProto.SetConfigProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -7108,7 +7095,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return config_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.FeedConfig config = 3 [json_name = "config"];</code>
@@ -7146,7 +7133,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         output.writeMessage(3, getConfig());
       }
       getUnknownFields().writeTo(output);
@@ -7164,7 +7151,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getConfig());
       }
@@ -7330,19 +7317,13 @@ public final class OcrProto {
 
       // Construct using com.injective.ocr.v1beta1.OcrProto.SetConfigProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7394,14 +7375,11 @@ public final class OcrProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7731,10 +7709,8 @@ public final class OcrProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        if (config_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -11859,8 +11835,7 @@ public final class OcrProto {
 
     public static final int COUNTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList counts_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList counts_;
     /**
      * <code>repeated uint32 counts = 1 [json_name = "counts"];</code>
      * @return A list containing the counts.
@@ -12122,17 +12097,22 @@ public final class OcrProto {
       @java.lang.Override
       public com.injective.ocr.v1beta1.OcrProto.OracleObservationsCounts buildPartial() {
         com.injective.ocr.v1beta1.OcrProto.OracleObservationsCounts result = new com.injective.ocr.v1beta1.OcrProto.OracleObservationsCounts(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.injective.ocr.v1beta1.OcrProto.OracleObservationsCounts result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          counts_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.counts_ = counts_;
+      }
+
       private void buildPartial0(com.injective.ocr.v1beta1.OcrProto.OracleObservationsCounts result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          counts_.makeImmutable();
-          result.counts_ = counts_;
-        }
       }
 
       @java.lang.Override
@@ -12182,8 +12162,7 @@ public final class OcrProto {
         if (!other.counts_.isEmpty()) {
           if (counts_.isEmpty()) {
             counts_ = other.counts_;
-            counts_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureCountsIsMutable();
             counts_.addAll(other.counts_);
@@ -12251,10 +12230,10 @@ public final class OcrProto {
 
       private com.google.protobuf.Internal.IntList counts_ = emptyIntList();
       private void ensureCountsIsMutable() {
-        if (!counts_.isModifiable()) {
-          counts_ = makeMutableCopy(counts_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          counts_ = mutableCopy(counts_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint32 counts = 1 [json_name = "counts"];</code>
@@ -12262,8 +12241,8 @@ public final class OcrProto {
        */
       public java.util.List<java.lang.Integer>
           getCountsList() {
-        counts_.makeImmutable();
-        return counts_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(counts_) : counts_;
       }
       /**
        * <code>repeated uint32 counts = 1 [json_name = "counts"];</code>
@@ -12291,7 +12270,6 @@ public final class OcrProto {
 
         ensureCountsIsMutable();
         counts_.setInt(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -12304,7 +12282,6 @@ public final class OcrProto {
 
         ensureCountsIsMutable();
         counts_.addInt(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -12318,7 +12295,6 @@ public final class OcrProto {
         ensureCountsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, counts_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16905,7 +16881,6 @@ public final class OcrProto {
               com.injective.ocr.v1beta1.OcrProto.EventOraclePaid.class, com.injective.ocr.v1beta1.OcrProto.EventOraclePaid.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TRANSMITTER_ADDR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object transmitterAddr_ = "";
@@ -16992,7 +16967,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -17030,7 +17005,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payeeAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, payeeAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -17048,7 +17023,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payeeAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, payeeAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -17214,19 +17189,13 @@ public final class OcrProto {
 
       // Construct using com.injective.ocr.v1beta1.OcrProto.EventOraclePaid.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -17278,14 +17247,11 @@ public final class OcrProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.payeeAddr_ = payeeAddr_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17615,10 +17581,8 @@ public final class OcrProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -17813,7 +17777,6 @@ public final class OcrProto {
               com.injective.ocr.v1beta1.OcrProto.EventAnswerUpdated.class, com.injective.ocr.v1beta1.OcrProto.EventAnswerUpdated.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CURRENT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object current_ = "";
@@ -17900,7 +17863,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasUpdatedAt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 3 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -17938,7 +17901,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roundId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roundId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (updatedAt_ != null) {
         output.writeMessage(3, getUpdatedAt());
       }
       getUnknownFields().writeTo(output);
@@ -17956,7 +17919,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roundId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roundId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (updatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdatedAt());
       }
@@ -18122,19 +18085,13 @@ public final class OcrProto {
 
       // Construct using com.injective.ocr.v1beta1.OcrProto.EventAnswerUpdated.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUpdatedAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18186,14 +18143,11 @@ public final class OcrProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.roundId_ = roundId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.updatedAt_ = updatedAtBuilder_ == null
               ? updatedAt_
               : updatedAtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18523,10 +18477,8 @@ public final class OcrProto {
         } else {
           updatedAtBuilder_.mergeFrom(value);
         }
-        if (updatedAt_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -18729,7 +18681,6 @@ public final class OcrProto {
               com.injective.ocr.v1beta1.OcrProto.EventNewRound.class, com.injective.ocr.v1beta1.OcrProto.EventNewRound.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ROUND_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object roundId_ = "";
@@ -18824,7 +18775,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasStartedAt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp started_at = 3 [json_name = "startedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -18862,7 +18813,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startedBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, startedBy_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startedAt_ != null) {
         output.writeMessage(3, getStartedAt());
       }
       getUnknownFields().writeTo(output);
@@ -18880,7 +18831,7 @@ public final class OcrProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startedBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, startedBy_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStartedAt());
       }
@@ -19046,19 +18997,13 @@ public final class OcrProto {
 
       // Construct using com.injective.ocr.v1beta1.OcrProto.EventNewRound.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartedAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -19110,14 +19055,11 @@ public final class OcrProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startedBy_ = startedBy_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.startedAt_ = startedAtBuilder_ == null
               ? startedAt_
               : startedAtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -19467,10 +19409,8 @@ public final class OcrProto {
         } else {
           startedAtBuilder_.mergeFrom(value);
         }
-        if (startedAt_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -20281,7 +20221,6 @@ public final class OcrProto {
               com.injective.ocr.v1beta1.OcrProto.EventNewTransmission.class, com.injective.ocr.v1beta1.OcrProto.EventNewTransmission.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEED_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object feedId_ = "";
@@ -20488,7 +20427,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasEpochAndRound() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return epochAndRound_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.EpochAndRound epoch_and_round = 9 [json_name = "epochAndRound"];</code>
@@ -20544,7 +20483,7 @@ public final class OcrProto {
       if (!configDigest_.isEmpty()) {
         output.writeBytes(8, configDigest_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochAndRound_ != null) {
         output.writeMessage(9, getEpochAndRound());
       }
       getUnknownFields().writeTo(output);
@@ -20589,7 +20528,7 @@ public final class OcrProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(8, configDigest_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochAndRound_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getEpochAndRound());
       }
@@ -20782,19 +20721,13 @@ public final class OcrProto {
 
       // Construct using com.injective.ocr.v1beta1.OcrProto.EventNewTransmission.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEpochAndRoundFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20872,14 +20805,11 @@ public final class OcrProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.configDigest_ = configDigest_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.epochAndRound_ = epochAndRoundBuilder_ == null
               ? epochAndRound_
               : epochAndRoundBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21578,10 +21508,8 @@ public final class OcrProto {
         } else {
           epochAndRoundBuilder_.mergeFrom(value);
         }
-        if (epochAndRound_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -21787,7 +21715,6 @@ public final class OcrProto {
               com.injective.ocr.v1beta1.OcrProto.EventConfigSet.class, com.injective.ocr.v1beta1.OcrProto.EventConfigSet.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONFIG_DIGEST_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString configDigest_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -21827,7 +21754,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return config_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.FeedConfig config = 3 [json_name = "config"];</code>
@@ -21853,7 +21780,7 @@ public final class OcrProto {
      */
     @java.lang.Override
     public boolean hasConfigInfo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return configInfo_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.FeedConfigInfo config_info = 4 [json_name = "configInfo"];</code>
@@ -21891,10 +21818,10 @@ public final class OcrProto {
       if (previousConfigBlockNumber_ != 0L) {
         output.writeInt64(2, previousConfigBlockNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         output.writeMessage(3, getConfig());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (configInfo_ != null) {
         output.writeMessage(4, getConfigInfo());
       }
       getUnknownFields().writeTo(output);
@@ -21914,11 +21841,11 @@ public final class OcrProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, previousConfigBlockNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getConfig());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (configInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getConfigInfo());
       }
@@ -22094,20 +22021,13 @@ public final class OcrProto {
 
       // Construct using com.injective.ocr.v1beta1.OcrProto.EventConfigSet.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-          getConfigInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -22164,20 +22084,16 @@ public final class OcrProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.previousConfigBlockNumber_ = previousConfigBlockNumber_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.configInfo_ = configInfoBuilder_ == null
               ? configInfo_
               : configInfoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22460,10 +22376,8 @@ public final class OcrProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        if (config_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -22581,10 +22495,8 @@ public final class OcrProto {
         } else {
           configInfoBuilder_.mergeFrom(value);
         }
-        if (configInfo_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

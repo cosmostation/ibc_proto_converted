@@ -132,7 +132,6 @@ public final class TxProto {
               com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.class, com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CURATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object curator_ = "";
@@ -192,7 +191,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return deposit_ != null;
     }
     /**
      * <pre>
@@ -230,7 +229,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPoolParams() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return poolParams_ != null;
     }
     /**
      * <pre>
@@ -273,10 +272,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, curator_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deposit_ != null) {
         output.writeMessage(2, getDeposit());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (poolParams_ != null) {
         output.writeMessage(3, getPoolParams());
       }
       getUnknownFields().writeTo(output);
@@ -291,11 +290,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, curator_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deposit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDeposit());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (poolParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPoolParams());
       }
@@ -470,20 +469,13 @@ public final class TxProto {
 
       // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgCreatePool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDepositFieldBuilder();
-          getPoolParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -536,20 +528,16 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.curator_ = curator_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.poolParams_ = poolParamsBuilder_ == null
               ? poolParams_
               : poolParamsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -847,10 +835,8 @@ public final class TxProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        if (deposit_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1004,10 +990,8 @@ public final class TxProto {
         } else {
           poolParamsBuilder_.mergeFrom(value);
         }
-        if (poolParams_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1900,7 +1884,6 @@ public final class TxProto {
               com.panacea.datapool.v2alpha1.TxProto.MsgSellData.class, com.panacea.datapool.v2alpha1.TxProto.MsgSellData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CERT_FIELD_NUMBER = 1;
     private com.panacea.datapool.v2alpha1.PoolProto.DataCert cert_;
     /**
@@ -1913,7 +1896,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCert() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return cert_ != null;
     }
     /**
      * <pre>
@@ -2000,7 +1983,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (cert_ != null) {
         output.writeMessage(1, getCert());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
@@ -2015,7 +1998,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (cert_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCert());
       }
@@ -2184,19 +2167,13 @@ public final class TxProto {
 
       // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgSellData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCertFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2241,17 +2218,14 @@ public final class TxProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgSellData result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cert_ = certBuilder_ == null
               ? cert_
               : certBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.seller_ = seller_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2447,10 +2421,8 @@ public final class TxProto {
         } else {
           certBuilder_.mergeFrom(value);
         }
-        if (cert_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3169,7 +3141,6 @@ public final class TxProto {
               com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.class, com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -3200,7 +3171,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPayment() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return payment_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment"];</code>
@@ -3285,7 +3256,7 @@ public final class TxProto {
       if (round_ != 0L) {
         output.writeUInt64(2, round_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (payment_ != null) {
         output.writeMessage(3, getPayment());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
@@ -3308,7 +3279,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, round_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (payment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPayment());
       }
@@ -3487,19 +3458,13 @@ public final class TxProto {
 
       // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgBuyDataPass.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaymentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3552,17 +3517,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.round_ = round_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.payment_ = paymentBuilder_ == null
               ? payment_
               : paymentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.buyer_ = buyer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3818,10 +3780,8 @@ public final class TxProto {
         } else {
           paymentBuilder_.mergeFrom(value);
         }
-        if (payment_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5532,7 +5492,6 @@ public final class TxProto {
               com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.class, com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECEIPT_FIELD_NUMBER = 1;
     private com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt receipt_;
     /**
@@ -5541,7 +5500,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasReceipt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return receipt_ != null;
     }
     /**
      * <code>.panacea.datapool.v2alpha1.DataPassRedeemReceipt receipt = 1 [json_name = "receipt"];</code>
@@ -5573,7 +5532,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (receipt_ != null) {
         output.writeMessage(1, getReceipt());
       }
       getUnknownFields().writeTo(output);
@@ -5585,7 +5544,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (receipt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReceipt());
       }
@@ -5747,19 +5706,13 @@ public final class TxProto {
 
       // Construct using com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getReceiptFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5803,14 +5756,11 @@ public final class TxProto {
 
       private void buildPartial0(com.panacea.datapool.v2alpha1.TxProto.MsgRedeemDataPassResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.receipt_ = receiptBuilder_ == null
               ? receipt_
               : receiptBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5976,10 +5926,8 @@ public final class TxProto {
         } else {
           receiptBuilder_.mergeFrom(value);
         }
-        if (receipt_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

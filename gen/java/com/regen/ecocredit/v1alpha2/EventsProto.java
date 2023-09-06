@@ -7539,7 +7539,6 @@ public final class EventsProto {
               com.regen.ecocredit.v1alpha2.EventsProto.EventSell.class, com.regen.ecocredit.v1alpha2.EventsProto.EventSell.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORDER_ID_FIELD_NUMBER = 1;
     private long orderId_ = 0L;
     /**
@@ -7663,7 +7662,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAskPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return askPrice_ != null;
     }
     /**
      * <pre>
@@ -7733,7 +7732,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (askPrice_ != null) {
         output.writeMessage(4, getAskPrice());
       }
       if (disableAutoRetire_ != false) {
@@ -7758,7 +7757,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (askPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAskPrice());
       }
@@ -7942,19 +7941,13 @@ public final class EventsProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventSell.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAskPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8011,17 +8004,14 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.quantity_ = quantity_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.askPrice_ = askPriceBuilder_ == null
               ? askPrice_
               : askPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.disableAutoRetire_ = disableAutoRetire_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8481,10 +8471,8 @@ public final class EventsProto {
         } else {
           askPriceBuilder_.mergeFrom(value);
         }
-        if (askPrice_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -8828,7 +8816,6 @@ public final class EventsProto {
               com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.class, com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -8999,7 +8986,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasNewAskPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return newAskPrice_ != null;
     }
     /**
      * <pre>
@@ -9066,7 +9053,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newQuantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newQuantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newAskPrice_ != null) {
         output.writeMessage(5, getNewAskPrice());
       }
       if (disableAutoRetire_ != false) {
@@ -9094,7 +9081,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newQuantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newQuantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newAskPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getNewAskPrice());
       }
@@ -9282,19 +9269,13 @@ public final class EventsProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNewAskPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9355,17 +9336,14 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.newQuantity_ = newQuantity_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.newAskPrice_ = newAskPriceBuilder_ == null
               ? newAskPrice_
               : newAskPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.disableAutoRetire_ = disableAutoRetire_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9922,10 +9900,8 @@ public final class EventsProto {
         } else {
           newAskPriceBuilder_.mergeFrom(value);
         }
-        if (newAskPrice_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -10249,7 +10225,6 @@ public final class EventsProto {
               com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.class, com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BUY_ORDER_ID_FIELD_NUMBER = 1;
     private long buyOrderId_ = 0L;
     /**
@@ -10346,7 +10321,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasBidPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bidPrice_ != null;
     }
     /**
      * <pre>
@@ -10436,7 +10411,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidPrice_ != null) {
         output.writeMessage(4, getBidPrice());
       }
       if (disableAutoRetire_ != false) {
@@ -10465,7 +10440,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBidPrice());
       }
@@ -10659,19 +10634,13 @@ public final class EventsProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBidPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10729,12 +10698,10 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.quantity_ = quantity_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.bidPrice_ = bidPriceBuilder_ == null
               ? bidPrice_
               : bidPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.disableAutoRetire_ = disableAutoRetire_;
@@ -10742,7 +10709,6 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.disablePartialFill_ = disablePartialFill_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11175,10 +11141,8 @@ public final class EventsProto {
         } else {
           bidPriceBuilder_.mergeFrom(value);
         }
-        if (bidPrice_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -11556,7 +11520,6 @@ public final class EventsProto {
               com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.class, com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BUY_ORDER_ID_FIELD_NUMBER = 1;
     private long buyOrderId_ = 0L;
     /**
@@ -11693,7 +11656,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasTotalPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return totalPrice_ != null;
     }
     /**
      * <pre>
@@ -11745,7 +11708,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalPrice_ != null) {
         output.writeMessage(5, getTotalPrice());
       }
       getUnknownFields().writeTo(output);
@@ -11771,7 +11734,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTotalPrice());
       }
@@ -11951,19 +11914,13 @@ public final class EventsProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTotalPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12023,14 +11980,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.quantity_ = quantity_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalPrice_ = totalPriceBuilder_ == null
               ? totalPrice_
               : totalPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12524,10 +12478,8 @@ public final class EventsProto {
         } else {
           totalPriceBuilder_.mergeFrom(value);
         }
-        if (totalPrice_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

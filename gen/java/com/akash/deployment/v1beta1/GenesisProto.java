@@ -97,7 +97,6 @@ public final class GenesisProto {
               com.akash.deployment.v1beta1.GenesisProto.GenesisDeployment.class, com.akash.deployment.v1beta1.GenesisProto.GenesisDeployment.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPLOYMENT_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.DeploymentProto.Deployment deployment_;
     /**
@@ -106,7 +105,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDeployment() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return deployment_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta1.Deployment deployment = 1 [json_name = "deployment", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deployment", (.gogoproto.moretags) = "yaml:&#92;"deployment&#92;""];</code>
@@ -179,7 +178,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deployment_ != null) {
         output.writeMessage(1, getDeployment());
       }
       for (int i = 0; i < groups_.size(); i++) {
@@ -194,7 +193,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deployment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeployment());
       }
@@ -366,20 +365,13 @@ public final class GenesisProto {
 
       // Construct using com.akash.deployment.v1beta1.GenesisProto.GenesisDeployment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDeploymentFieldBuilder();
-          getGroupsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -443,14 +435,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.GenesisProto.GenesisDeployment result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.deployment_ = deploymentBuilder_ == null
               ? deployment_
               : deploymentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -655,10 +644,8 @@ public final class GenesisProto {
         } else {
           deploymentBuilder_.mergeFrom(value);
         }
-        if (deployment_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1096,7 +1083,6 @@ public final class GenesisProto {
               com.akash.deployment.v1beta1.GenesisProto.GenesisState.class, com.akash.deployment.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPLOYMENTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.akash.deployment.v1beta1.GenesisProto.GenesisDeployment> deployments_;
@@ -1146,7 +1132,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "params", (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
@@ -1181,7 +1167,7 @@ public final class GenesisProto {
       for (int i = 0; i < deployments_.size(); i++) {
         output.writeMessage(1, deployments_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1197,7 +1183,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, deployments_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -1365,20 +1351,13 @@ public final class GenesisProto {
 
       // Construct using com.akash.deployment.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDeploymentsFieldBuilder();
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1442,14 +1421,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1894,10 +1870,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -222,7 +222,6 @@ public final class ClassDataProto {
               com.likechain.likenft.v1.ClassDataProto.ClassData.class, com.likechain.likenft.v1.ClassDataProto.ClassData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int METADATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -242,7 +241,7 @@ public final class ClassDataProto {
      */
     @java.lang.Override
     public boolean hasParent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return parent_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.ClassParent parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
@@ -268,7 +267,7 @@ public final class ClassDataProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return config_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.ClassConfig config = 3 [json_name = "config", (.gogoproto.nullable) = false];</code>
@@ -294,7 +293,7 @@ public final class ClassDataProto {
      */
     @java.lang.Override
     public boolean hasBlindBoxState() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return blindBoxState_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.BlindBoxState blind_box_state = 4 [json_name = "blindBoxState", (.gogoproto.nullable) = false];</code>
@@ -329,13 +328,13 @@ public final class ClassDataProto {
       if (!metadata_.isEmpty()) {
         output.writeBytes(1, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (parent_ != null) {
         output.writeMessage(2, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (config_ != null) {
         output.writeMessage(3, getConfig());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (blindBoxState_ != null) {
         output.writeMessage(4, getBlindBoxState());
       }
       getUnknownFields().writeTo(output);
@@ -351,15 +350,15 @@ public final class ClassDataProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (parent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (config_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getConfig());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (blindBoxState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBlindBoxState());
       }
@@ -539,21 +538,13 @@ public final class ClassDataProto {
 
       // Construct using com.likechain.likenft.v1.ClassDataProto.ClassData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParentFieldBuilder();
-          getConfigFieldBuilder();
-          getBlindBoxStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -611,26 +602,21 @@ public final class ClassDataProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.metadata_ = metadata_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.parent_ = parentBuilder_ == null
               ? parent_
               : parentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.blindBoxState_ = blindBoxStateBuilder_ == null
               ? blindBoxState_
               : blindBoxStateBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -856,10 +842,8 @@ public final class ClassDataProto {
         } else {
           parentBuilder_.mergeFrom(value);
         }
-        if (parent_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -977,10 +961,8 @@ public final class ClassDataProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        if (config_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1098,10 +1080,8 @@ public final class ClassDataProto {
         } else {
           blindBoxStateBuilder_.mergeFrom(value);
         }
-        if (blindBoxState_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2181,7 +2161,6 @@ public final class ClassDataProto {
               com.likechain.likenft.v1.ClassDataProto.MintPeriod.class, com.likechain.likenft.v1.ClassDataProto.MintPeriod.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
@@ -2190,7 +2169,7 @@ public final class ClassDataProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -2270,7 +2249,7 @@ public final class ClassDataProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(1, getStartTime());
       }
       for (int i = 0; i < allowedAddresses_.size(); i++) {
@@ -2288,7 +2267,7 @@ public final class ClassDataProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStartTime());
       }
@@ -2469,19 +2448,13 @@ public final class ClassDataProto {
 
       // Construct using com.likechain.likenft.v1.ClassDataProto.MintPeriod.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2528,12 +2501,10 @@ public final class ClassDataProto {
 
       private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.MintPeriod result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           allowedAddresses_.makeImmutable();
@@ -2542,7 +2513,6 @@ public final class ClassDataProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.mintPrice_ = mintPrice_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2732,10 +2702,8 @@ public final class ClassDataProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3059,7 +3027,6 @@ public final class ClassDataProto {
               com.likechain.likenft.v1.ClassDataProto.ClassConfig.class, com.likechain.likenft.v1.ClassDataProto.ClassConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BURNABLE_FIELD_NUMBER = 1;
     private boolean burnable_ = false;
     /**
@@ -3090,7 +3057,7 @@ public final class ClassDataProto {
      */
     @java.lang.Override
     public boolean hasBlindBoxConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blindBoxConfig_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.BlindBoxConfig blind_box_config = 3 [json_name = "blindBoxConfig", (.gogoproto.nullable) = true];</code>
@@ -3128,7 +3095,7 @@ public final class ClassDataProto {
       if (maxSupply_ != 0L) {
         output.writeUInt64(2, maxSupply_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blindBoxConfig_ != null) {
         output.writeMessage(3, getBlindBoxConfig());
       }
       getUnknownFields().writeTo(output);
@@ -3148,7 +3115,7 @@ public final class ClassDataProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, maxSupply_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blindBoxConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBlindBoxConfig());
       }
@@ -3316,19 +3283,13 @@ public final class ClassDataProto {
 
       // Construct using com.likechain.likenft.v1.ClassDataProto.ClassConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBlindBoxConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3380,14 +3341,11 @@ public final class ClassDataProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maxSupply_ = maxSupply_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.blindBoxConfig_ = blindBoxConfigBuilder_ == null
               ? blindBoxConfig_
               : blindBoxConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3633,10 +3591,8 @@ public final class ClassDataProto {
         } else {
           blindBoxConfigBuilder_.mergeFrom(value);
         }
-        if (blindBoxConfig_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3830,7 +3786,6 @@ public final class ClassDataProto {
               com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.class, com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MINT_PERIODS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.likechain.likenft.v1.ClassDataProto.MintPeriod> mintPeriods_;
@@ -3880,7 +3835,7 @@ public final class ClassDataProto {
      */
     @java.lang.Override
     public boolean hasRevealTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return revealTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp reveal_time = 2 [json_name = "revealTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -3915,7 +3870,7 @@ public final class ClassDataProto {
       for (int i = 0; i < mintPeriods_.size(); i++) {
         output.writeMessage(1, mintPeriods_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (revealTime_ != null) {
         output.writeMessage(2, getRevealTime());
       }
       getUnknownFields().writeTo(output);
@@ -3931,7 +3886,7 @@ public final class ClassDataProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, mintPeriods_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (revealTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRevealTime());
       }
@@ -4095,20 +4050,13 @@ public final class ClassDataProto {
 
       // Construct using com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMintPeriodsFieldBuilder();
-          getRevealTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4172,14 +4120,11 @@ public final class ClassDataProto {
 
       private void buildPartial0(com.likechain.likenft.v1.ClassDataProto.BlindBoxConfig result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.revealTime_ = revealTimeBuilder_ == null
               ? revealTime_
               : revealTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4624,10 +4569,8 @@ public final class ClassDataProto {
         } else {
           revealTimeBuilder_.mergeFrom(value);
         }
-        if (revealTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

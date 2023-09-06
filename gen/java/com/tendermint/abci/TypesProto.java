@@ -6203,7 +6203,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.RequestInitChain.class, com.tendermint.abci.TypesProto.RequestInitChain.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp time_;
     /**
@@ -6212,7 +6211,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return time_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -6277,7 +6276,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasConsensusParams() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return consensusParams_ != null;
     }
     /**
      * <code>.tendermint.types.ConsensusParams consensus_params = 3 [json_name = "consensusParams"];</code>
@@ -6372,13 +6371,13 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (time_ != null) {
         output.writeMessage(1, getTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainId_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (consensusParams_ != null) {
         output.writeMessage(3, getConsensusParams());
       }
       for (int i = 0; i < validators_.size(); i++) {
@@ -6399,14 +6398,14 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chainId_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (consensusParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getConsensusParams());
       }
@@ -6604,21 +6603,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.RequestInitChain.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimeFieldBuilder();
-          getConsensusParamsFieldBuilder();
-          getValidatorsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6690,12 +6681,10 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.RequestInitChain result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chainId_ = chainId_;
@@ -6704,7 +6693,6 @@ public final class TypesProto {
           result.consensusParams_ = consensusParamsBuilder_ == null
               ? consensusParams_
               : consensusParamsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.appStateBytes_ = appStateBytes_;
@@ -6712,7 +6700,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.initialHeight_ = initialHeight_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6953,10 +6940,8 @@ public final class TypesProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7146,10 +7131,8 @@ public final class TypesProto {
         } else {
           consensusParamsBuilder_.mergeFrom(value);
         }
-        if (consensusParams_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -9804,7 +9787,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.RequestOfferSnapshot.class, com.tendermint.abci.TypesProto.RequestOfferSnapshot.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SNAPSHOT_FIELD_NUMBER = 1;
     private com.tendermint.abci.TypesProto.Snapshot snapshot_;
     /**
@@ -9817,7 +9799,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSnapshot() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return snapshot_ != null;
     }
     /**
      * <pre>
@@ -9872,7 +9854,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (snapshot_ != null) {
         output.writeMessage(1, getSnapshot());
       }
       if (!appHash_.isEmpty()) {
@@ -9887,7 +9869,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (snapshot_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSnapshot());
       }
@@ -10057,19 +10039,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.RequestOfferSnapshot.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSnapshotFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10114,17 +10090,14 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.RequestOfferSnapshot result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.snapshot_ = snapshotBuilder_ == null
               ? snapshot_
               : snapshotBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.appHash_ = appHash_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10318,10 +10291,8 @@ public final class TypesProto {
         } else {
           snapshotBuilder_.mergeFrom(value);
         }
-        if (snapshot_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11965,7 +11936,7 @@ public final class TypesProto {
       super(builder);
     }
     private RequestPrepareProposal() {
-      txs_ = emptyList(com.google.protobuf.ByteString.class);
+      txs_ = java.util.Collections.emptyList();
       misbehavior_ = java.util.Collections.emptyList();
       nextValidatorsHash_ = com.google.protobuf.ByteString.EMPTY;
       proposerAddress_ = com.google.protobuf.ByteString.EMPTY;
@@ -11991,7 +11962,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.RequestPrepareProposal.class, com.tendermint.abci.TypesProto.RequestPrepareProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MAX_TX_BYTES_FIELD_NUMBER = 1;
     private long maxTxBytes_ = 0L;
     /**
@@ -12009,8 +11979,7 @@ public final class TypesProto {
 
     public static final int TXS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> txs_;
     /**
      * <pre>
      * txs is an array of transactions that will be included in a block,
@@ -12059,7 +12028,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasLocalLastCommit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return localLastCommit_ != null;
     }
     /**
      * <code>.tendermint.abci.ExtendedCommitInfo local_last_commit = 3 [json_name = "localLastCommit", (.gogoproto.nullable) = false];</code>
@@ -12137,7 +12106,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return time_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp time = 6 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -12201,7 +12170,7 @@ public final class TypesProto {
       for (int i = 0; i < txs_.size(); i++) {
         output.writeBytes(2, txs_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (localLastCommit_ != null) {
         output.writeMessage(3, getLocalLastCommit());
       }
       for (int i = 0; i < misbehavior_.size(); i++) {
@@ -12210,7 +12179,7 @@ public final class TypesProto {
       if (height_ != 0L) {
         output.writeInt64(5, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         output.writeMessage(6, getTime());
       }
       if (!nextValidatorsHash_.isEmpty()) {
@@ -12241,7 +12210,7 @@ public final class TypesProto {
         size += dataSize;
         size += 1 * getTxsList().size();
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (localLastCommit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLocalLastCommit());
       }
@@ -12253,7 +12222,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTime());
       }
@@ -12458,28 +12427,20 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.RequestPrepareProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocalLastCommitFieldBuilder();
-          getMisbehaviorFieldBuilder();
-          getTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
         maxTxBytes_ = 0L;
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         localLastCommit_ = null;
         if (localLastCommitBuilder_ != null) {
           localLastCommitBuilder_.dispose();
@@ -12533,6 +12494,11 @@ public final class TypesProto {
       }
 
       private void buildPartialRepeatedFields(com.tendermint.abci.TypesProto.RequestPrepareProposal result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          txs_ = java.util.Collections.unmodifiableList(txs_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.txs_ = txs_;
         if (misbehaviorBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0)) {
             misbehavior_ = java.util.Collections.unmodifiableList(misbehavior_);
@@ -12549,16 +12515,10 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.maxTxBytes_ = maxTxBytes_;
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          txs_.makeImmutable();
-          result.txs_ = txs_;
-        }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.localLastCommit_ = localLastCommitBuilder_ == null
               ? localLastCommit_
               : localLastCommitBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.height_ = height_;
@@ -12567,7 +12527,6 @@ public final class TypesProto {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.nextValidatorsHash_ = nextValidatorsHash_;
@@ -12575,7 +12534,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.proposerAddress_ = proposerAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12628,8 +12586,7 @@ public final class TypesProto {
         if (!other.txs_.isEmpty()) {
           if (txs_.isEmpty()) {
             txs_ = other.txs_;
-            txs_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTxsIsMutable();
             txs_.addAll(other.txs_);
@@ -12817,12 +12774,12 @@ public final class TypesProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> txs_ = java.util.Collections.emptyList();
       private void ensureTxsIsMutable() {
-        if (!txs_.isModifiable()) {
-          txs_ = makeMutableCopy(txs_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          txs_ = new java.util.ArrayList<com.google.protobuf.ByteString>(txs_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -12835,8 +12792,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getTxsList() {
-        txs_.makeImmutable();
-        return txs_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(txs_) : txs_;
       }
       /**
        * <pre>
@@ -12879,7 +12836,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.set(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -12897,7 +12853,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -12916,7 +12871,6 @@ public final class TypesProto {
         ensureTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, txs_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -12930,7 +12884,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearTxs() {
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -13002,10 +12956,8 @@ public final class TypesProto {
         } else {
           localLastCommitBuilder_.mergeFrom(value);
         }
-        if (localLastCommit_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -13395,10 +13347,8 @@ public final class TypesProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -13709,7 +13659,7 @@ public final class TypesProto {
       super(builder);
     }
     private RequestProcessProposal() {
-      txs_ = emptyList(com.google.protobuf.ByteString.class);
+      txs_ = java.util.Collections.emptyList();
       misbehavior_ = java.util.Collections.emptyList();
       hash_ = com.google.protobuf.ByteString.EMPTY;
       nextValidatorsHash_ = com.google.protobuf.ByteString.EMPTY;
@@ -13736,11 +13686,9 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.RequestProcessProposal.class, com.tendermint.abci.TypesProto.RequestProcessProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TXS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> txs_;
     /**
      * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
      * @return A list containing the txs.
@@ -13774,7 +13722,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasProposedLastCommit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proposedLastCommit_ != null;
     }
     /**
      * <code>.tendermint.abci.CommitInfo proposed_last_commit = 2 [json_name = "proposedLastCommit", (.gogoproto.nullable) = false];</code>
@@ -13867,7 +13815,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return time_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp time = 6 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -13928,7 +13876,7 @@ public final class TypesProto {
       for (int i = 0; i < txs_.size(); i++) {
         output.writeBytes(1, txs_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proposedLastCommit_ != null) {
         output.writeMessage(2, getProposedLastCommit());
       }
       for (int i = 0; i < misbehavior_.size(); i++) {
@@ -13940,7 +13888,7 @@ public final class TypesProto {
       if (height_ != 0L) {
         output.writeInt64(5, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         output.writeMessage(6, getTime());
       }
       if (!nextValidatorsHash_.isEmpty()) {
@@ -13967,7 +13915,7 @@ public final class TypesProto {
         size += dataSize;
         size += 1 * getTxsList().size();
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proposedLastCommit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProposedLastCommit());
       }
@@ -13983,7 +13931,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTime());
       }
@@ -14187,27 +14135,19 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.RequestProcessProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProposedLastCommitFieldBuilder();
-          getMisbehaviorFieldBuilder();
-          getTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         proposedLastCommit_ = null;
         if (proposedLastCommitBuilder_ != null) {
           proposedLastCommitBuilder_.dispose();
@@ -14262,6 +14202,11 @@ public final class TypesProto {
       }
 
       private void buildPartialRepeatedFields(com.tendermint.abci.TypesProto.RequestProcessProposal result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          txs_ = java.util.Collections.unmodifiableList(txs_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.txs_ = txs_;
         if (misbehaviorBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             misbehavior_ = java.util.Collections.unmodifiableList(misbehavior_);
@@ -14275,16 +14220,10 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.RequestProcessProposal result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          txs_.makeImmutable();
-          result.txs_ = txs_;
-        }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proposedLastCommit_ = proposedLastCommitBuilder_ == null
               ? proposedLastCommit_
               : proposedLastCommitBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.hash_ = hash_;
@@ -14296,7 +14235,6 @@ public final class TypesProto {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.nextValidatorsHash_ = nextValidatorsHash_;
@@ -14304,7 +14242,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.proposerAddress_ = proposerAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14354,8 +14291,7 @@ public final class TypesProto {
         if (!other.txs_.isEmpty()) {
           if (txs_.isEmpty()) {
             txs_ = other.txs_;
-            txs_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTxsIsMutable();
             txs_.addAll(other.txs_);
@@ -14502,12 +14438,12 @@ public final class TypesProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> txs_ = java.util.Collections.emptyList();
       private void ensureTxsIsMutable() {
-        if (!txs_.isModifiable()) {
-          txs_ = makeMutableCopy(txs_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          txs_ = new java.util.ArrayList<com.google.protobuf.ByteString>(txs_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
@@ -14515,8 +14451,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getTxsList() {
-        txs_.makeImmutable();
-        return txs_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(txs_) : txs_;
       }
       /**
        * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
@@ -14544,7 +14480,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14557,7 +14492,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14571,7 +14505,6 @@ public final class TypesProto {
         ensureTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, txs_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14580,7 +14513,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearTxs() {
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -14652,10 +14585,8 @@ public final class TypesProto {
         } else {
           proposedLastCommitBuilder_.mergeFrom(value);
         }
-        if (proposedLastCommit_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -15089,10 +15020,8 @@ public final class TypesProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -16745,7 +16674,7 @@ public final class TypesProto {
       super(builder);
     }
     private RequestFinalizeBlock() {
-      txs_ = emptyList(com.google.protobuf.ByteString.class);
+      txs_ = java.util.Collections.emptyList();
       misbehavior_ = java.util.Collections.emptyList();
       hash_ = com.google.protobuf.ByteString.EMPTY;
       nextValidatorsHash_ = com.google.protobuf.ByteString.EMPTY;
@@ -16772,11 +16701,9 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.RequestFinalizeBlock.class, com.tendermint.abci.TypesProto.RequestFinalizeBlock.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TXS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> txs_;
     /**
      * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
      * @return A list containing the txs.
@@ -16810,7 +16737,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasDecidedLastCommit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return decidedLastCommit_ != null;
     }
     /**
      * <code>.tendermint.abci.CommitInfo decided_last_commit = 2 [json_name = "decidedLastCommit", (.gogoproto.nullable) = false];</code>
@@ -16903,7 +16830,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return time_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp time = 6 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -16964,7 +16891,7 @@ public final class TypesProto {
       for (int i = 0; i < txs_.size(); i++) {
         output.writeBytes(1, txs_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (decidedLastCommit_ != null) {
         output.writeMessage(2, getDecidedLastCommit());
       }
       for (int i = 0; i < misbehavior_.size(); i++) {
@@ -16976,7 +16903,7 @@ public final class TypesProto {
       if (height_ != 0L) {
         output.writeInt64(5, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         output.writeMessage(6, getTime());
       }
       if (!nextValidatorsHash_.isEmpty()) {
@@ -17003,7 +16930,7 @@ public final class TypesProto {
         size += dataSize;
         size += 1 * getTxsList().size();
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (decidedLastCommit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDecidedLastCommit());
       }
@@ -17019,7 +16946,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTime());
       }
@@ -17223,27 +17150,19 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.RequestFinalizeBlock.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDecidedLastCommitFieldBuilder();
-          getMisbehaviorFieldBuilder();
-          getTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         decidedLastCommit_ = null;
         if (decidedLastCommitBuilder_ != null) {
           decidedLastCommitBuilder_.dispose();
@@ -17298,6 +17217,11 @@ public final class TypesProto {
       }
 
       private void buildPartialRepeatedFields(com.tendermint.abci.TypesProto.RequestFinalizeBlock result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          txs_ = java.util.Collections.unmodifiableList(txs_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.txs_ = txs_;
         if (misbehaviorBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             misbehavior_ = java.util.Collections.unmodifiableList(misbehavior_);
@@ -17311,16 +17235,10 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.RequestFinalizeBlock result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          txs_.makeImmutable();
-          result.txs_ = txs_;
-        }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.decidedLastCommit_ = decidedLastCommitBuilder_ == null
               ? decidedLastCommit_
               : decidedLastCommitBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.hash_ = hash_;
@@ -17332,7 +17250,6 @@ public final class TypesProto {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.nextValidatorsHash_ = nextValidatorsHash_;
@@ -17340,7 +17257,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.proposerAddress_ = proposerAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17390,8 +17306,7 @@ public final class TypesProto {
         if (!other.txs_.isEmpty()) {
           if (txs_.isEmpty()) {
             txs_ = other.txs_;
-            txs_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTxsIsMutable();
             txs_.addAll(other.txs_);
@@ -17538,12 +17453,12 @@ public final class TypesProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> txs_ = java.util.Collections.emptyList();
       private void ensureTxsIsMutable() {
-        if (!txs_.isModifiable()) {
-          txs_ = makeMutableCopy(txs_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          txs_ = new java.util.ArrayList<com.google.protobuf.ByteString>(txs_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
@@ -17551,8 +17466,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getTxsList() {
-        txs_.makeImmutable();
-        return txs_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(txs_) : txs_;
       }
       /**
        * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
@@ -17580,7 +17495,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17593,7 +17507,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17607,7 +17520,6 @@ public final class TypesProto {
         ensureTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, txs_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17616,7 +17528,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearTxs() {
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -17688,10 +17600,8 @@ public final class TypesProto {
         } else {
           decidedLastCommitBuilder_.mergeFrom(value);
         }
-        if (decidedLastCommit_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -18125,10 +18035,8 @@ public final class TypesProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -25328,7 +25236,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.ResponseInitChain.class, com.tendermint.abci.TypesProto.ResponseInitChain.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONSENSUS_PARAMS_FIELD_NUMBER = 1;
     private com.tendermint.types.ParamsProto.ConsensusParams consensusParams_;
     /**
@@ -25337,7 +25244,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasConsensusParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return consensusParams_ != null;
     }
     /**
      * <code>.tendermint.types.ConsensusParams consensus_params = 1 [json_name = "consensusParams"];</code>
@@ -25421,7 +25328,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusParams_ != null) {
         output.writeMessage(1, getConsensusParams());
       }
       for (int i = 0; i < validators_.size(); i++) {
@@ -25439,7 +25346,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConsensusParams());
       }
@@ -25615,20 +25522,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.ResponseInitChain.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConsensusParamsFieldBuilder();
-          getValidatorsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -25693,17 +25593,14 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.ResponseInitChain result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.consensusParams_ = consensusParamsBuilder_ == null
               ? consensusParams_
               : consensusParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.appHash_ = appHash_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -25916,10 +25813,8 @@ public final class TypesProto {
         } else {
           consensusParamsBuilder_.mergeFrom(value);
         }
-        if (consensusParams_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -26447,7 +26342,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.ResponseQuery.class, com.tendermint.abci.TypesProto.ResponseQuery.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CODE_FIELD_NUMBER = 1;
     private int code_ = 0;
     /**
@@ -26594,7 +26488,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasProofOps() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proofOps_ != null;
     }
     /**
      * <code>.tendermint.crypto.ProofOps proof_ops = 8 [json_name = "proofOps"];</code>
@@ -26694,7 +26588,7 @@ public final class TypesProto {
       if (!value_.isEmpty()) {
         output.writeBytes(7, value_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofOps_ != null) {
         output.writeMessage(8, getProofOps());
       }
       if (height_ != 0L) {
@@ -26734,7 +26628,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, value_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofOps_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getProofOps());
       }
@@ -26933,19 +26827,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.ResponseQuery.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofOpsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -27015,12 +26903,10 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.value_ = value_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.proofOps_ = proofOpsBuilder_ == null
               ? proofOps_
               : proofOpsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.height_ = height_;
@@ -27028,7 +26914,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.codespace_ = codespace_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -27576,10 +27461,8 @@ public final class TypesProto {
         } else {
           proofOpsBuilder_.mergeFrom(value);
         }
-        if (proofOps_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -33861,8 +33744,7 @@ public final class TypesProto {
 
     public static final int REFETCH_CHUNKS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList refetchChunks_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList refetchChunks_;
     /**
      * <pre>
      * Chunks to refetch and reapply
@@ -34219,19 +34101,24 @@ public final class TypesProto {
       @java.lang.Override
       public com.tendermint.abci.TypesProto.ResponseApplySnapshotChunk buildPartial() {
         com.tendermint.abci.TypesProto.ResponseApplySnapshotChunk result = new com.tendermint.abci.TypesProto.ResponseApplySnapshotChunk(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tendermint.abci.TypesProto.ResponseApplySnapshotChunk result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          refetchChunks_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.refetchChunks_ = refetchChunks_;
       }
 
       private void buildPartial0(com.tendermint.abci.TypesProto.ResponseApplySnapshotChunk result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          refetchChunks_.makeImmutable();
-          result.refetchChunks_ = refetchChunks_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           rejectSenders_.makeImmutable();
@@ -34289,8 +34176,7 @@ public final class TypesProto {
         if (!other.refetchChunks_.isEmpty()) {
           if (refetchChunks_.isEmpty()) {
             refetchChunks_ = other.refetchChunks_;
-            refetchChunks_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureRefetchChunksIsMutable();
             refetchChunks_.addAll(other.refetchChunks_);
@@ -34432,10 +34318,10 @@ public final class TypesProto {
 
       private com.google.protobuf.Internal.IntList refetchChunks_ = emptyIntList();
       private void ensureRefetchChunksIsMutable() {
-        if (!refetchChunks_.isModifiable()) {
-          refetchChunks_ = makeMutableCopy(refetchChunks_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          refetchChunks_ = mutableCopy(refetchChunks_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -34447,8 +34333,8 @@ public final class TypesProto {
        */
       public java.util.List<java.lang.Integer>
           getRefetchChunksList() {
-        refetchChunks_.makeImmutable();
-        return refetchChunks_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(refetchChunks_) : refetchChunks_;
       }
       /**
        * <pre>
@@ -34488,7 +34374,6 @@ public final class TypesProto {
 
         ensureRefetchChunksIsMutable();
         refetchChunks_.setInt(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -34505,7 +34390,6 @@ public final class TypesProto {
 
         ensureRefetchChunksIsMutable();
         refetchChunks_.addInt(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -34523,7 +34407,6 @@ public final class TypesProto {
         ensureRefetchChunksIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, refetchChunks_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -34786,7 +34669,7 @@ public final class TypesProto {
       super(builder);
     }
     private ResponsePrepareProposal() {
-      txs_ = emptyList(com.google.protobuf.ByteString.class);
+      txs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -34811,8 +34694,7 @@ public final class TypesProto {
 
     public static final int TXS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> txs_;
     /**
      * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
      * @return A list containing the txs.
@@ -35036,7 +34918,7 @@ public final class TypesProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -35063,17 +34945,22 @@ public final class TypesProto {
       @java.lang.Override
       public com.tendermint.abci.TypesProto.ResponsePrepareProposal buildPartial() {
         com.tendermint.abci.TypesProto.ResponsePrepareProposal result = new com.tendermint.abci.TypesProto.ResponsePrepareProposal(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.tendermint.abci.TypesProto.ResponsePrepareProposal result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          txs_ = java.util.Collections.unmodifiableList(txs_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.txs_ = txs_;
+      }
+
       private void buildPartial0(com.tendermint.abci.TypesProto.ResponsePrepareProposal result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          txs_.makeImmutable();
-          result.txs_ = txs_;
-        }
       }
 
       @java.lang.Override
@@ -35123,8 +35010,7 @@ public final class TypesProto {
         if (!other.txs_.isEmpty()) {
           if (txs_.isEmpty()) {
             txs_ = other.txs_;
-            txs_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTxsIsMutable();
             txs_.addAll(other.txs_);
@@ -35180,12 +35066,12 @@ public final class TypesProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txs_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> txs_ = java.util.Collections.emptyList();
       private void ensureTxsIsMutable() {
-        if (!txs_.isModifiable()) {
-          txs_ = makeMutableCopy(txs_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          txs_ = new java.util.ArrayList<com.google.protobuf.ByteString>(txs_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
@@ -35193,8 +35079,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getTxsList() {
-        txs_.makeImmutable();
-        return txs_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(txs_) : txs_;
       }
       /**
        * <code>repeated bytes txs = 1 [json_name = "txs"];</code>
@@ -35222,7 +35108,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -35235,7 +35120,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxsIsMutable();
         txs_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -35249,7 +35133,6 @@ public final class TypesProto {
         ensureTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, txs_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -35258,7 +35141,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearTxs() {
-        txs_ = emptyList(com.google.protobuf.ByteString.class);
+        txs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -37292,7 +37175,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.ResponseFinalizeBlock.class, com.tendermint.abci.TypesProto.ResponseFinalizeBlock.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EVENTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.tendermint.abci.TypesProto.Event> events_;
@@ -37498,7 +37380,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasConsensusParamUpdates() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return consensusParamUpdates_ != null;
     }
     /**
      * <pre>
@@ -37562,7 +37444,7 @@ public final class TypesProto {
       for (int i = 0; i < validatorUpdates_.size(); i++) {
         output.writeMessage(3, validatorUpdates_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusParamUpdates_ != null) {
         output.writeMessage(4, getConsensusParamUpdates());
       }
       if (!appHash_.isEmpty()) {
@@ -37589,7 +37471,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, validatorUpdates_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusParamUpdates_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getConsensusParamUpdates());
       }
@@ -37773,22 +37655,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.ResponseFinalizeBlock.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEventsFieldBuilder();
-          getTxResultsFieldBuilder();
-          getValidatorUpdatesFieldBuilder();
-          getConsensusParamUpdatesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -37885,17 +37758,14 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.ResponseFinalizeBlock result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.consensusParamUpdates_ = consensusParamUpdatesBuilder_ == null
               ? consensusParamUpdates_
               : consensusParamUpdatesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.appHash_ = appHash_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -39178,10 +39048,8 @@ public final class TypesProto {
         } else {
           consensusParamUpdatesBuilder_.mergeFrom(value);
         }
-        if (consensusParamUpdates_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -44771,7 +44639,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.TxResult.class, com.tendermint.abci.TypesProto.TxResult.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -44813,7 +44680,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return result_ != null;
     }
     /**
      * <code>.tendermint.abci.ExecTxResult result = 4 [json_name = "result", (.gogoproto.nullable) = false];</code>
@@ -44854,7 +44721,7 @@ public final class TypesProto {
       if (!tx_.isEmpty()) {
         output.writeBytes(3, tx_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         output.writeMessage(4, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -44878,7 +44745,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, tx_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getResult());
       }
@@ -45055,19 +44922,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.TxResult.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getResultFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -45123,14 +44984,11 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tx_ = tx_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -45416,10 +45274,8 @@ public final class TypesProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -46184,7 +46040,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.ValidatorUpdate.class, com.tendermint.abci.TypesProto.ValidatorUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PUB_KEY_FIELD_NUMBER = 1;
     private com.tendermint.crypto.KeysProto.PublicKey pubKey_;
     /**
@@ -46193,7 +46048,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasPubKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pubKey_ != null;
     }
     /**
      * <code>.tendermint.crypto.PublicKey pub_key = 1 [json_name = "pubKey", (.gogoproto.nullable) = false];</code>
@@ -46236,7 +46091,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         output.writeMessage(1, getPubKey());
       }
       if (power_ != 0L) {
@@ -46251,7 +46106,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPubKey());
       }
@@ -46418,19 +46273,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.ValidatorUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPubKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -46475,17 +46324,14 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.ValidatorUpdate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pubKey_ = pubKeyBuilder_ == null
               ? pubKey_
               : pubKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.power_ = power_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -46659,10 +46505,8 @@ public final class TypesProto {
         } else {
           pubKeyBuilder_.mergeFrom(value);
         }
-        if (pubKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -46875,7 +46719,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.VoteInfo.class, com.tendermint.abci.TypesProto.VoteInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATOR_FIELD_NUMBER = 1;
     private com.tendermint.abci.TypesProto.Validator validator_;
     /**
@@ -46884,7 +46727,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasValidator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validator_ != null;
     }
     /**
      * <code>.tendermint.abci.Validator validator = 1 [json_name = "validator", (.gogoproto.nullable) = false];</code>
@@ -46934,7 +46777,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validator_ != null) {
         output.writeMessage(1, getValidator());
       }
       if (blockIdFlag_ != com.tendermint.types.ValidatorProto.BlockIDFlag.BLOCK_ID_FLAG_UNKNOWN.getNumber()) {
@@ -46949,7 +46792,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValidator());
       }
@@ -47114,19 +46957,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.VoteInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValidatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -47171,17 +47008,14 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.VoteInfo result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.validator_ = validatorBuilder_ == null
               ? validator_
               : validatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.blockIdFlag_ = blockIdFlag_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -47355,10 +47189,8 @@ public final class TypesProto {
         } else {
           validatorBuilder_.mergeFrom(value);
         }
-        if (validator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -47634,7 +47466,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.ExtendedVoteInfo.class, com.tendermint.abci.TypesProto.ExtendedVoteInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATOR_FIELD_NUMBER = 1;
     private com.tendermint.abci.TypesProto.Validator validator_;
     /**
@@ -47647,7 +47478,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasValidator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validator_ != null;
     }
     /**
      * <pre>
@@ -47743,7 +47574,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validator_ != null) {
         output.writeMessage(1, getValidator());
       }
       if (!voteExtension_.isEmpty()) {
@@ -47764,7 +47595,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValidator());
       }
@@ -47945,19 +47776,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.ExtendedVoteInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValidatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -48004,12 +47829,10 @@ public final class TypesProto {
 
       private void buildPartial0(com.tendermint.abci.TypesProto.ExtendedVoteInfo result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.validator_ = validatorBuilder_ == null
               ? validator_
               : validatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.voteExtension_ = voteExtension_;
@@ -48020,7 +47843,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.blockIdFlag_ = blockIdFlag_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -48230,10 +48052,8 @@ public final class TypesProto {
         } else {
           validatorBuilder_.mergeFrom(value);
         }
-        if (validator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -48652,7 +48472,6 @@ public final class TypesProto {
               com.tendermint.abci.TypesProto.Misbehavior.class, com.tendermint.abci.TypesProto.Misbehavior.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_ = 0;
     /**
@@ -48683,7 +48502,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasValidator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validator_ != null;
     }
     /**
      * <pre>
@@ -48736,7 +48555,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return time_ != null;
     }
     /**
      * <pre>
@@ -48796,13 +48615,13 @@ public final class TypesProto {
       if (type_ != com.tendermint.abci.TypesProto.MisbehaviorType.UNKNOWN.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validator_ != null) {
         output.writeMessage(2, getValidator());
       }
       if (height_ != 0L) {
         output.writeInt64(3, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         output.writeMessage(4, getTime());
       }
       if (totalVotingPower_ != 0L) {
@@ -48821,7 +48640,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValidator());
       }
@@ -48829,7 +48648,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTime());
       }
@@ -49013,20 +48832,13 @@ public final class TypesProto {
 
       // Construct using com.tendermint.abci.TypesProto.Misbehavior.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValidatorFieldBuilder();
-          getTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -49081,12 +48893,10 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.type_ = type_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validator_ = validatorBuilder_ == null
               ? validator_
               : validatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.height_ = height_;
@@ -49095,12 +48905,10 @@ public final class TypesProto {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalVotingPower_ = totalVotingPower_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -49373,10 +49181,8 @@ public final class TypesProto {
         } else {
           validatorBuilder_.mergeFrom(value);
         }
-        if (validator_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -49574,10 +49380,8 @@ public final class TypesProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

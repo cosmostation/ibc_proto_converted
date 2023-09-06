@@ -141,7 +141,6 @@ public final class ParamsProto {
               com.passage3d.claim.v1beta1.ParamsProto.Params.class, com.passage3d.claim.v1beta1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AIRDROP_ENABLED_FIELD_NUMBER = 1;
     private boolean airdropEnabled_ = false;
     /**
@@ -165,7 +164,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasAirdropStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return airdropStartTime_ != null;
     }
     /**
      * <pre>
@@ -199,7 +198,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasDurationUntilDecay() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return durationUntilDecay_ != null;
     }
     /**
      * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -225,7 +224,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasDurationOfDecay() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return durationOfDecay_ != null;
     }
     /**
      * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -307,13 +306,13 @@ public final class ParamsProto {
       if (airdropEnabled_ != false) {
         output.writeBool(1, airdropEnabled_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (airdropStartTime_ != null) {
         output.writeMessage(2, getAirdropStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (durationUntilDecay_ != null) {
         output.writeMessage(3, getDurationUntilDecay());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (durationOfDecay_ != null) {
         output.writeMessage(4, getDurationOfDecay());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimDenom_)) {
@@ -332,15 +331,15 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, airdropEnabled_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (airdropStartTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAirdropStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (durationUntilDecay_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDurationUntilDecay());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (durationOfDecay_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDurationOfDecay());
       }
@@ -532,21 +531,13 @@ public final class ParamsProto {
 
       // Construct using com.passage3d.claim.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAirdropStartTimeFieldBuilder();
-          getDurationUntilDecayFieldBuilder();
-          getDurationOfDecayFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -605,29 +596,24 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.airdropEnabled_ = airdropEnabled_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.airdropStartTime_ = airdropStartTimeBuilder_ == null
               ? airdropStartTime_
               : airdropStartTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.durationUntilDecay_ = durationUntilDecayBuilder_ == null
               ? durationUntilDecay_
               : durationUntilDecayBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.durationOfDecay_ = durationOfDecayBuilder_ == null
               ? durationOfDecay_
               : durationOfDecayBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.claimDenom_ = claimDenom_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -883,10 +869,8 @@ public final class ParamsProto {
         } else {
           airdropStartTimeBuilder_.mergeFrom(value);
         }
-        if (airdropStartTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1020,10 +1004,8 @@ public final class ParamsProto {
         } else {
           durationUntilDecayBuilder_.mergeFrom(value);
         }
-        if (durationUntilDecay_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1141,10 +1123,8 @@ public final class ParamsProto {
         } else {
           durationOfDecayBuilder_.mergeFrom(value);
         }
-        if (durationOfDecay_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

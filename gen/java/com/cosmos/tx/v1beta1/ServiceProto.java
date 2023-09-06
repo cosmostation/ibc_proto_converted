@@ -529,7 +529,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.GetTxsEventRequest.class, com.cosmos.tx.v1beta1.ServiceProto.GetTxsEventRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EVENTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList events_ =
@@ -614,7 +613,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -764,7 +763,7 @@ public final class ServiceProto {
       for (int i = 0; i < events_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, events_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       if (orderBy_ != com.cosmos.tx.v1beta1.ServiceProto.OrderBy.ORDER_BY_UNSPECIFIED.getNumber()) {
@@ -796,7 +795,7 @@ public final class ServiceProto {
         size += dataSize;
         size += 1 * getEventsList().size();
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -997,19 +996,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.GetTxsEventRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1063,12 +1056,10 @@ public final class ServiceProto {
           events_.makeImmutable();
           result.events_ = events_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.orderBy_ = orderBy_;
@@ -1082,7 +1073,6 @@ public final class ServiceProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.query_ = query_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1510,10 +1500,8 @@ public final class ServiceProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2080,7 +2068,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.GetTxsEventResponse.class, com.cosmos.tx.v1beta1.ServiceProto.GetTxsEventResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TXS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.tx.v1beta1.TxProto.Tx> txs_;
@@ -2218,7 +2205,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -2283,7 +2270,7 @@ public final class ServiceProto {
       for (int i = 0; i < txResponses_.size(); i++) {
         output.writeMessage(2, txResponses_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(3, getPagination());
       }
       if (total_ != 0L) {
@@ -2306,7 +2293,7 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, txResponses_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -2490,21 +2477,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.GetTxsEventResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxsFieldBuilder();
-          getTxResponsesFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2585,17 +2564,14 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.GetTxsEventResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.total_ = total_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3500,10 +3476,8 @@ public final class ServiceProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4365,7 +4339,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.BroadcastTxResponse.class, com.cosmos.tx.v1beta1.ServiceProto.BroadcastTxResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TX_RESPONSE_FIELD_NUMBER = 1;
     private com.cosmos.base.abci.v1beta1.AbciProto.TxResponse txResponse_;
     /**
@@ -4378,7 +4351,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasTxResponse() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return txResponse_ != null;
     }
     /**
      * <pre>
@@ -4418,7 +4391,7 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (txResponse_ != null) {
         output.writeMessage(1, getTxResponse());
       }
       getUnknownFields().writeTo(output);
@@ -4430,7 +4403,7 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (txResponse_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTxResponse());
       }
@@ -4593,19 +4566,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.BroadcastTxResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxResponseFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4649,14 +4616,11 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.BroadcastTxResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.txResponse_ = txResponseBuilder_ == null
               ? txResponse_
               : txResponseBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4842,10 +4806,8 @@ public final class ServiceProto {
         } else {
           txResponseBuilder_.mergeFrom(value);
         }
-        if (txResponse_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5067,7 +5029,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.SimulateRequest.class, com.cosmos.tx.v1beta1.ServiceProto.SimulateRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TX_FIELD_NUMBER = 1;
     private com.cosmos.tx.v1beta1.TxProto.Tx tx_;
     /**
@@ -5083,7 +5044,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasTx() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tx_ != null;
     }
     /**
      * <pre>
@@ -5144,7 +5105,7 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         output.writeMessage(1, getTx());
       }
       if (!txBytes_.isEmpty()) {
@@ -5159,7 +5120,7 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTx());
       }
@@ -5330,19 +5291,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.SimulateRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5387,17 +5342,14 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.SimulateRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.txBytes_ = txBytes_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5600,10 +5552,8 @@ public final class ServiceProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        if (tx_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5886,7 +5836,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.SimulateResponse.class, com.cosmos.tx.v1beta1.ServiceProto.SimulateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GAS_INFO_FIELD_NUMBER = 1;
     private com.cosmos.base.abci.v1beta1.AbciProto.GasInfo gasInfo_;
     /**
@@ -5899,7 +5848,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasGasInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return gasInfo_ != null;
     }
     /**
      * <pre>
@@ -5937,7 +5886,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return result_ != null;
     }
     /**
      * <pre>
@@ -5977,10 +5926,10 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (gasInfo_ != null) {
         output.writeMessage(1, getGasInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (result_ != null) {
         output.writeMessage(2, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -5992,11 +5941,11 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (gasInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGasInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResult());
       }
@@ -6168,20 +6117,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.SimulateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGasInfoFieldBuilder();
-          getResultFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6230,20 +6172,16 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.SimulateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.gasInfo_ = gasInfoBuilder_ == null
               ? gasInfo_
               : gasInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6439,10 +6377,8 @@ public final class ServiceProto {
         } else {
           gasInfoBuilder_.mergeFrom(value);
         }
-        if (gasInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6596,10 +6532,8 @@ public final class ServiceProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7425,7 +7359,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.GetTxResponse.class, com.cosmos.tx.v1beta1.ServiceProto.GetTxResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TX_FIELD_NUMBER = 1;
     private com.cosmos.tx.v1beta1.TxProto.Tx tx_;
     /**
@@ -7438,7 +7371,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tx_ != null;
     }
     /**
      * <pre>
@@ -7476,7 +7409,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasTxResponse() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return txResponse_ != null;
     }
     /**
      * <pre>
@@ -7516,10 +7449,10 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         output.writeMessage(1, getTx());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (txResponse_ != null) {
         output.writeMessage(2, getTxResponse());
       }
       getUnknownFields().writeTo(output);
@@ -7531,11 +7464,11 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTx());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (txResponse_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTxResponse());
       }
@@ -7706,20 +7639,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.GetTxResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxFieldBuilder();
-          getTxResponseFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7768,20 +7694,16 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.GetTxResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.txResponse_ = txResponseBuilder_ == null
               ? txResponse_
               : txResponseBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7977,10 +7899,8 @@ public final class ServiceProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        if (tx_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8134,10 +8054,8 @@ public final class ServiceProto {
         } else {
           txResponseBuilder_.mergeFrom(value);
         }
-        if (txResponse_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8351,7 +8269,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.GetBlockWithTxsRequest.class, com.cosmos.tx.v1beta1.ServiceProto.GetBlockWithTxsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -8379,7 +8296,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -8422,7 +8339,7 @@ public final class ServiceProto {
       if (height_ != 0L) {
         output.writeInt64(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -8438,7 +8355,7 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -8608,19 +8525,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.GetBlockWithTxsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8668,14 +8579,11 @@ public final class ServiceProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = height_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8913,10 +8821,8 @@ public final class ServiceProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -9195,7 +9101,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.GetBlockWithTxsResponse.class, com.cosmos.tx.v1beta1.ServiceProto.GetBlockWithTxsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TXS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.tx.v1beta1.TxProto.Tx> txs_;
@@ -9265,7 +9170,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasBlockId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blockId_ != null;
     }
     /**
      * <code>.tendermint.types.BlockID block_id = 2 [json_name = "blockId"];</code>
@@ -9291,7 +9196,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasBlock() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return block_ != null;
     }
     /**
      * <code>.tendermint.types.Block block = 3 [json_name = "block"];</code>
@@ -9321,7 +9226,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -9364,13 +9269,13 @@ public final class ServiceProto {
       for (int i = 0; i < txs_.size(); i++) {
         output.writeMessage(1, txs_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockId_ != null) {
         output.writeMessage(2, getBlockId());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (block_ != null) {
         output.writeMessage(3, getBlock());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(4, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -9386,15 +9291,15 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, txs_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBlockId());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (block_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBlock());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPagination());
       }
@@ -9583,22 +9488,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.GetBlockWithTxsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxsFieldBuilder();
-          getBlockIdFieldBuilder();
-          getBlockFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9672,26 +9568,21 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.GetBlockWithTxsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.blockId_ = blockIdBuilder_ == null
               ? blockId_
               : blockIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.block_ = blockBuilder_ == null
               ? block_
               : blockBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10228,10 +10119,8 @@ public final class ServiceProto {
         } else {
           blockIdBuilder_.mergeFrom(value);
         }
-        if (blockId_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -10349,10 +10238,8 @@ public final class ServiceProto {
         } else {
           blockBuilder_.mergeFrom(value);
         }
-        if (block_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10490,10 +10377,8 @@ public final class ServiceProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -11208,7 +11093,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.TxDecodeResponse.class, com.cosmos.tx.v1beta1.ServiceProto.TxDecodeResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TX_FIELD_NUMBER = 1;
     private com.cosmos.tx.v1beta1.TxProto.Tx tx_;
     /**
@@ -11221,7 +11105,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tx_ != null;
     }
     /**
      * <pre>
@@ -11261,7 +11145,7 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         output.writeMessage(1, getTx());
       }
       getUnknownFields().writeTo(output);
@@ -11273,7 +11157,7 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTx());
       }
@@ -11438,19 +11322,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.TxDecodeResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11494,14 +11372,11 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.TxDecodeResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11687,10 +11562,8 @@ public final class ServiceProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        if (tx_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11894,7 +11767,6 @@ public final class ServiceProto {
               com.cosmos.tx.v1beta1.ServiceProto.TxEncodeRequest.class, com.cosmos.tx.v1beta1.ServiceProto.TxEncodeRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TX_FIELD_NUMBER = 1;
     private com.cosmos.tx.v1beta1.TxProto.Tx tx_;
     /**
@@ -11907,7 +11779,7 @@ public final class ServiceProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tx_ != null;
     }
     /**
      * <pre>
@@ -11947,7 +11819,7 @@ public final class ServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         output.writeMessage(1, getTx());
       }
       getUnknownFields().writeTo(output);
@@ -11959,7 +11831,7 @@ public final class ServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTx());
       }
@@ -12124,19 +11996,13 @@ public final class ServiceProto {
 
       // Construct using com.cosmos.tx.v1beta1.ServiceProto.TxEncodeRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12180,14 +12046,11 @@ public final class ServiceProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.ServiceProto.TxEncodeRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12373,10 +12236,8 @@ public final class ServiceProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        if (tx_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

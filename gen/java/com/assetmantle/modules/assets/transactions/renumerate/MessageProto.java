@@ -96,7 +96,6 @@ public final class MessageProto {
               com.assetmantle.modules.assets.transactions.renumerate.MessageProto.Message.class, com.assetmantle.modules.assets.transactions.renumerate.MessageProto.Message.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -144,7 +143,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasFromID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fromID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.IdentityID from_i_d = 2 [json_name = "fromID"];</code>
@@ -170,7 +169,7 @@ public final class MessageProto {
      */
     @java.lang.Override
     public boolean hasAssetID() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return assetID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 3 [json_name = "assetID"];</code>
@@ -205,10 +204,10 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fromID_ != null) {
         output.writeMessage(2, getFromID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (assetID_ != null) {
         output.writeMessage(3, getAssetID());
       }
       getUnknownFields().writeTo(output);
@@ -223,11 +222,11 @@ public final class MessageProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fromID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFromID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (assetID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAssetID());
       }
@@ -398,20 +397,13 @@ public final class MessageProto {
 
       // Construct using com.assetmantle.modules.assets.transactions.renumerate.MessageProto.Message.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFromIDFieldBuilder();
-          getAssetIDFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -464,20 +456,16 @@ public final class MessageProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.from_ = from_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fromID_ = fromIDBuilder_ == null
               ? fromID_
               : fromIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.assetID_ = assetIDBuilder_ == null
               ? assetID_
               : assetIDBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -735,10 +723,8 @@ public final class MessageProto {
         } else {
           fromIDBuilder_.mergeFrom(value);
         }
-        if (fromID_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -856,10 +842,8 @@ public final class MessageProto {
         } else {
           assetIDBuilder_.mergeFrom(value);
         }
-        if (assetID_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

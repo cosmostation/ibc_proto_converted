@@ -13,9 +13,9 @@ plugins:
       out: gen/swift
 
     ## JAVA proto & grpc
-    - plugin: buf.build/protocolbuffers/java:v24.2
+    - plugin: buf.build/protocolbuffers/java:v23.2
       out: gen/java
-    - plugin: buf.build/grpc/java:v1.57.2
+    - plugin: buf.build/grpc/java:v1.55.1
       opt: paths=source_relative
       out: gen/java
 

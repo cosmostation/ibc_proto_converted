@@ -190,7 +190,6 @@ public final class TypesProto {
               com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.class, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -365,7 +364,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasCreditType() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return creditType_ != null;
     }
     /**
      * <pre>
@@ -432,7 +431,7 @@ public final class TypesProto {
       if (!metadata_.isEmpty()) {
         output.writeBytes(4, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creditType_ != null) {
         output.writeMessage(5, getCreditType());
       }
       if (numBatches_ != 0L) {
@@ -465,7 +464,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creditType_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCreditType());
       }
@@ -654,19 +653,13 @@ public final class TypesProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreditTypeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -729,17 +722,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.metadata_ = metadata_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.creditType_ = creditTypeBuilder_ == null
               ? creditType_
               : creditTypeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.numBatches_ = numBatches_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1352,10 +1342,8 @@ public final class TypesProto {
         } else {
           creditTypeBuilder_.mergeFrom(value);
         }
-        if (creditType_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2992,7 +2980,6 @@ public final class TypesProto {
               com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.class, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROJECT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object projectId_ = "";
@@ -3223,7 +3210,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startDate_ != null;
     }
     /**
      * <pre>
@@ -3264,7 +3251,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasEndDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endDate_ != null;
     }
     /**
      * <pre>
@@ -3321,10 +3308,10 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountCancelled_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, amountCancelled_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         output.writeMessage(7, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         output.writeMessage(8, getEndDate());
       }
       getUnknownFields().writeTo(output);
@@ -3352,11 +3339,11 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountCancelled_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, amountCancelled_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getEndDate());
       }
@@ -3547,20 +3534,13 @@ public final class TypesProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartDateFieldBuilder();
-          getEndDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3629,20 +3609,16 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.amountCancelled_ = amountCancelled_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.startDate_ = startDateBuilder_ == null
               ? startDate_
               : startDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.endDate_ = endDateBuilder_ == null
               ? endDate_
               : endDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4338,10 +4314,8 @@ public final class TypesProto {
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-        if (startDate_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -4504,10 +4478,8 @@ public final class TypesProto {
         } else {
           endDateBuilder_.mergeFrom(value);
         }
-        if (endDate_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -8348,7 +8320,6 @@ public final class TypesProto {
               com.regen.ecocredit.v1alpha2.TypesProto.SellOrder.class, com.regen.ecocredit.v1alpha2.TypesProto.SellOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORDER_ID_FIELD_NUMBER = 1;
     private long orderId_ = 0L;
     /**
@@ -8519,7 +8490,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasAskPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return askPrice_ != null;
     }
     /**
      * <pre>
@@ -8592,7 +8563,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (askPrice_ != null) {
         output.writeMessage(5, getAskPrice());
       }
       if (disableAutoRetire_ != false) {
@@ -8620,7 +8591,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, quantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (askPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAskPrice());
       }
@@ -8808,19 +8779,13 @@ public final class TypesProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.TypesProto.SellOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAskPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8881,17 +8846,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.quantity_ = quantity_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.askPrice_ = askPriceBuilder_ == null
               ? askPrice_
               : askPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.disableAutoRetire_ = disableAutoRetire_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9453,10 +9415,8 @@ public final class TypesProto {
         } else {
           askPriceBuilder_.mergeFrom(value);
         }
-        if (askPrice_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -10472,7 +10432,6 @@ public final class TypesProto {
 
     }
 
-    private int bitField0_;
     public static final int BUY_ORDER_ID_FIELD_NUMBER = 1;
     private long buyOrderId_ = 0L;
     /**
@@ -10547,7 +10506,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSelection() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return selection_ != null;
     }
     /**
      * <pre>
@@ -10639,7 +10598,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasBidPrice() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return bidPrice_ != null;
     }
     /**
      * <pre>
@@ -10726,13 +10685,13 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, buyer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (selection_ != null) {
         output.writeMessage(3, getSelection());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, quantity_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bidPrice_ != null) {
         output.writeMessage(5, getBidPrice());
       }
       if (disableAutoRetire_ != false) {
@@ -10757,14 +10716,14 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buyer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, buyer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (selection_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSelection());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, quantity_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bidPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getBidPrice());
       }
@@ -10966,20 +10925,13 @@ public final class TypesProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.TypesProto.BuyOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSelectionFieldBuilder();
-          getBidPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11039,12 +10991,10 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.buyer_ = buyer_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.selection_ = selectionBuilder_ == null
               ? selection_
               : selectionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.quantity_ = quantity_;
@@ -11053,7 +11003,6 @@ public final class TypesProto {
           result.bidPrice_ = bidPriceBuilder_ == null
               ? bidPrice_
               : bidPriceBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.disableAutoRetire_ = disableAutoRetire_;
@@ -11061,7 +11010,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.disablePartialFill_ = disablePartialFill_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11437,10 +11385,8 @@ public final class TypesProto {
         } else {
           selectionBuilder_.mergeFrom(value);
         }
-        if (selection_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -11711,10 +11657,8 @@ public final class TypesProto {
         } else {
           bidPriceBuilder_.mergeFrom(value);
         }
-        if (bidPrice_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -13737,7 +13681,6 @@ public final class TypesProto {
               com.regen.ecocredit.v1alpha2.TypesProto.BasketCriteria.class, com.regen.ecocredit.v1alpha2.TypesProto.BasketCriteria.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FILTER_FIELD_NUMBER = 1;
     private com.regen.ecocredit.v1alpha2.TypesProto.Filter filter_;
     /**
@@ -13751,7 +13694,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasFilter() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return filter_ != null;
     }
     /**
      * <pre>
@@ -13848,7 +13791,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filter_ != null) {
         output.writeMessage(1, getFilter());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multiplier_)) {
@@ -13863,7 +13806,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (filter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFilter());
       }
@@ -14032,19 +13975,13 @@ public final class TypesProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.TypesProto.BasketCriteria.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFilterFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14089,17 +14026,14 @@ public final class TypesProto {
 
       private void buildPartial0(com.regen.ecocredit.v1alpha2.TypesProto.BasketCriteria result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.filter_ = filterBuilder_ == null
               ? filter_
               : filterBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.multiplier_ = multiplier_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14300,10 +14234,8 @@ public final class TypesProto {
         } else {
           filterBuilder_.mergeFrom(value);
         }
-        if (filter_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16866,7 +16798,6 @@ public final class TypesProto {
                 com.regen.ecocredit.v1alpha2.TypesProto.Filter.DateRange.class, com.regen.ecocredit.v1alpha2.TypesProto.Filter.DateRange.Builder.class);
       }
 
-      private int bitField0_;
       public static final int START_DATE_FIELD_NUMBER = 7;
       private com.google.protobuf.Timestamp startDate_;
       /**
@@ -16881,7 +16812,7 @@ public final class TypesProto {
        */
       @java.lang.Override
       public boolean hasStartDate() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return startDate_ != null;
       }
       /**
        * <pre>
@@ -16925,7 +16856,7 @@ public final class TypesProto {
        */
       @java.lang.Override
       public boolean hasEndDate() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return endDate_ != null;
       }
       /**
        * <pre>
@@ -16969,10 +16900,10 @@ public final class TypesProto {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (startDate_ != null) {
           output.writeMessage(7, getStartDate());
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (endDate_ != null) {
           output.writeMessage(8, getEndDate());
         }
         getUnknownFields().writeTo(output);
@@ -16984,11 +16915,11 @@ public final class TypesProto {
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (startDate_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(7, getStartDate());
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (endDate_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(8, getEndDate());
         }
@@ -17159,20 +17090,13 @@ public final class TypesProto {
 
         // Construct using com.regen.ecocredit.v1alpha2.TypesProto.Filter.DateRange.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getStartDateFieldBuilder();
-            getEndDateFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -17221,20 +17145,16 @@ public final class TypesProto {
 
         private void buildPartial0(com.regen.ecocredit.v1alpha2.TypesProto.Filter.DateRange result) {
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.startDate_ = startDateBuilder_ == null
                 ? startDate_
                 : startDateBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.endDate_ = endDateBuilder_ == null
                 ? endDate_
                 : endDateBuilder_.build();
-            to_bitField0_ |= 0x00000002;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -17440,10 +17360,8 @@ public final class TypesProto {
           } else {
             startDateBuilder_.mergeFrom(value);
           }
-          if (startDate_ != null) {
-            bitField0_ |= 0x00000001;
-            onChanged();
-          }
+          bitField0_ |= 0x00000001;
+          onChanged();
           return this;
         }
         /**
@@ -17615,10 +17533,8 @@ public final class TypesProto {
           } else {
             endDateBuilder_.mergeFrom(value);
           }
-          if (endDate_ != null) {
-            bitField0_ |= 0x00000002;
-            onChanged();
-          }
+          bitField0_ |= 0x00000002;
+          onChanged();
           return this;
         }
         /**

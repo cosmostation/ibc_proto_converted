@@ -330,7 +330,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgCreatePost.class, com.desmos.posts.v3.MsgsProto.MsgCreatePost.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -467,7 +466,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasEntities() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return entities_ != null;
     }
     /**
      * <pre>
@@ -782,7 +781,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entities_ != null) {
         output.writeMessage(5, getEntities());
       }
       for (int i = 0; i < tags_.size(); i++) {
@@ -826,7 +825,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entities_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getEntities());
       }
@@ -1062,21 +1061,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgCreatePost.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEntitiesFieldBuilder();
-          getAttachmentsFieldBuilder();
-          getReferencedPostsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1177,12 +1168,10 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.text_ = text_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.entities_ = entitiesBuilder_ == null
               ? entities_
               : entitiesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           tags_.makeImmutable();
@@ -1197,7 +1186,6 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.replySettings_ = replySettings_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1811,10 +1799,8 @@ public final class MsgsProto {
         } else {
           entitiesBuilder_.mergeFrom(value);
         }
-        if (entities_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3005,7 +2991,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgCreatePostResponse.class, com.desmos.posts.v3.MsgsProto.MsgCreatePostResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POST_ID_FIELD_NUMBER = 1;
     private long postId_ = 0L;
     /**
@@ -3033,7 +3018,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasCreationDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return creationDate_ != null;
     }
     /**
      * <pre>
@@ -3076,7 +3061,7 @@ public final class MsgsProto {
       if (postId_ != 0L) {
         output.writeUInt64(1, postId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creationDate_ != null) {
         output.writeMessage(2, getCreationDate());
       }
       getUnknownFields().writeTo(output);
@@ -3092,7 +3077,7 @@ public final class MsgsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, postId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creationDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreationDate());
       }
@@ -3259,19 +3244,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgCreatePostResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreationDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3319,14 +3298,11 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.postId_ = postId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.creationDate_ = creationDateBuilder_ == null
               ? creationDate_
               : creationDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3564,10 +3540,8 @@ public final class MsgsProto {
         } else {
           creationDateBuilder_.mergeFrom(value);
         }
-        if (creationDate_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3882,7 +3856,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgEditPost.class, com.desmos.posts.v3.MsgsProto.MsgEditPost.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -3975,7 +3948,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasEntities() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return entities_ != null;
     }
     /**
      * <pre>
@@ -4130,7 +4103,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, text_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entities_ != null) {
         output.writeMessage(4, getEntities());
       }
       for (int i = 0; i < tags_.size(); i++) {
@@ -4159,7 +4132,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, text_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entities_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEntities());
       }
@@ -4356,19 +4329,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgEditPost.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEntitiesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4427,12 +4394,10 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.text_ = text_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.entities_ = entitiesBuilder_ == null
               ? entities_
               : entitiesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           tags_.makeImmutable();
@@ -4441,7 +4406,6 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.editor_ = editor_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4869,10 +4833,8 @@ public final class MsgsProto {
         } else {
           entitiesBuilder_.mergeFrom(value);
         }
-        if (entities_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5325,7 +5287,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgEditPostResponse.class, com.desmos.posts.v3.MsgsProto.MsgEditPostResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EDIT_DATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp editDate_;
     /**
@@ -5338,7 +5299,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasEditDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return editDate_ != null;
     }
     /**
      * <pre>
@@ -5378,7 +5339,7 @@ public final class MsgsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (editDate_ != null) {
         output.writeMessage(1, getEditDate());
       }
       getUnknownFields().writeTo(output);
@@ -5390,7 +5351,7 @@ public final class MsgsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (editDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEditDate());
       }
@@ -5552,19 +5513,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgEditPostResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEditDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5608,14 +5563,11 @@ public final class MsgsProto {
 
       private void buildPartial0(com.desmos.posts.v3.MsgsProto.MsgEditPostResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.editDate_ = editDateBuilder_ == null
               ? editDate_
               : editDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5801,10 +5753,8 @@ public final class MsgsProto {
         } else {
           editDateBuilder_.mergeFrom(value);
         }
-        if (editDate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7234,7 +7184,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgAddPostAttachment.class, com.desmos.posts.v3.MsgsProto.MsgAddPostAttachment.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -7277,7 +7226,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return content_ != null;
     }
     /**
      * <pre>
@@ -7370,7 +7319,7 @@ public final class MsgsProto {
       if (postId_ != 0L) {
         output.writeUInt64(2, postId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         output.writeMessage(3, getContent());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editor_)) {
@@ -7393,7 +7342,7 @@ public final class MsgsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, postId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getContent());
       }
@@ -7573,19 +7522,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgAddPostAttachment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7638,17 +7581,14 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.postId_ = postId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.editor_ = editor_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7948,10 +7888,8 @@ public final class MsgsProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        if (content_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8254,7 +8192,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgAddPostAttachmentResponse.class, com.desmos.posts.v3.MsgsProto.MsgAddPostAttachmentResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ATTACHMENT_ID_FIELD_NUMBER = 1;
     private int attachmentId_ = 0;
     /**
@@ -8282,7 +8219,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasEditDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return editDate_ != null;
     }
     /**
      * <pre>
@@ -8325,7 +8262,7 @@ public final class MsgsProto {
       if (attachmentId_ != 0) {
         output.writeUInt32(1, attachmentId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (editDate_ != null) {
         output.writeMessage(2, getEditDate());
       }
       getUnknownFields().writeTo(output);
@@ -8341,7 +8278,7 @@ public final class MsgsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, attachmentId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (editDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEditDate());
       }
@@ -8507,19 +8444,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgAddPostAttachmentResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEditDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8567,14 +8498,11 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.attachmentId_ = attachmentId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.editDate_ = editDateBuilder_ == null
               ? editDate_
               : editDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8812,10 +8740,8 @@ public final class MsgsProto {
         } else {
           editDateBuilder_.mergeFrom(value);
         }
-        if (editDate_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -9893,7 +9819,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgRemovePostAttachmentResponse.class, com.desmos.posts.v3.MsgsProto.MsgRemovePostAttachmentResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EDIT_DATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp editDate_;
     /**
@@ -9906,7 +9831,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasEditDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return editDate_ != null;
     }
     /**
      * <pre>
@@ -9946,7 +9871,7 @@ public final class MsgsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (editDate_ != null) {
         output.writeMessage(1, getEditDate());
       }
       getUnknownFields().writeTo(output);
@@ -9958,7 +9883,7 @@ public final class MsgsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (editDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEditDate());
       }
@@ -10121,19 +10046,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgRemovePostAttachmentResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEditDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10177,14 +10096,11 @@ public final class MsgsProto {
 
       private void buildPartial0(com.desmos.posts.v3.MsgsProto.MsgRemovePostAttachmentResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.editDate_ = editDateBuilder_ == null
               ? editDate_
               : editDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10370,10 +10286,8 @@ public final class MsgsProto {
         } else {
           editDateBuilder_.mergeFrom(value);
         }
-        if (editDate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10675,8 +10589,7 @@ public final class MsgsProto {
 
     public static final int ANSWERS_INDEXES_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList answersIndexes_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList answersIndexes_;
     /**
      * <pre>
      * Indexes of the answer inside the ProvidedAnswers array
@@ -11050,9 +10963,18 @@ public final class MsgsProto {
       @java.lang.Override
       public com.desmos.posts.v3.MsgsProto.MsgAnswerPoll buildPartial() {
         com.desmos.posts.v3.MsgsProto.MsgAnswerPoll result = new com.desmos.posts.v3.MsgsProto.MsgAnswerPoll(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.desmos.posts.v3.MsgsProto.MsgAnswerPoll result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          answersIndexes_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.answersIndexes_ = answersIndexes_;
       }
 
       private void buildPartial0(com.desmos.posts.v3.MsgsProto.MsgAnswerPoll result) {
@@ -11065,10 +10987,6 @@ public final class MsgsProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pollId_ = pollId_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          answersIndexes_.makeImmutable();
-          result.answersIndexes_ = answersIndexes_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.signer_ = signer_;
@@ -11131,8 +11049,7 @@ public final class MsgsProto {
         if (!other.answersIndexes_.isEmpty()) {
           if (answersIndexes_.isEmpty()) {
             answersIndexes_ = other.answersIndexes_;
-            answersIndexes_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureAnswersIndexesIsMutable();
             answersIndexes_.addAll(other.answersIndexes_);
@@ -11357,10 +11274,10 @@ public final class MsgsProto {
 
       private com.google.protobuf.Internal.IntList answersIndexes_ = emptyIntList();
       private void ensureAnswersIndexesIsMutable() {
-        if (!answersIndexes_.isModifiable()) {
-          answersIndexes_ = makeMutableCopy(answersIndexes_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          answersIndexes_ = mutableCopy(answersIndexes_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -11372,8 +11289,8 @@ public final class MsgsProto {
        */
       public java.util.List<java.lang.Integer>
           getAnswersIndexesList() {
-        answersIndexes_.makeImmutable();
-        return answersIndexes_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(answersIndexes_) : answersIndexes_;
       }
       /**
        * <pre>
@@ -11413,7 +11330,6 @@ public final class MsgsProto {
 
         ensureAnswersIndexesIsMutable();
         answersIndexes_.setInt(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -11430,7 +11346,6 @@ public final class MsgsProto {
 
         ensureAnswersIndexesIsMutable();
         answersIndexes_.addInt(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -11448,7 +11363,6 @@ public final class MsgsProto {
         ensureAnswersIndexesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, answersIndexes_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -12128,7 +12042,6 @@ public final class MsgsProto {
               com.desmos.posts.v3.MsgsProto.MsgUpdateParams.class, com.desmos.posts.v3.MsgsProto.MsgUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -12192,7 +12105,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -12239,7 +12152,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -12254,7 +12167,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -12422,19 +12335,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.posts.v3.MsgsProto.MsgUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12482,14 +12389,11 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12792,10 +12696,8 @@ public final class MsgsProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

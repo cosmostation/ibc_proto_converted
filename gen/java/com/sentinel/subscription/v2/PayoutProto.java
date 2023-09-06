@@ -121,7 +121,6 @@ public final class PayoutProto {
               com.sentinel.subscription.v2.PayoutProto.Payout.class, com.sentinel.subscription.v2.PayoutProto.Payout.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -230,7 +229,7 @@ public final class PayoutProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return price_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin price = 5 [json_name = "price", (.gogoproto.nullable) = false];</code>
@@ -256,7 +255,7 @@ public final class PayoutProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return timestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 6 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -300,10 +299,10 @@ public final class PayoutProto {
       if (hours_ != 0L) {
         output.writeInt64(4, hours_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         output.writeMessage(5, getPrice());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (timestamp_ != null) {
         output.writeMessage(6, getTimestamp());
       }
       getUnknownFields().writeTo(output);
@@ -329,11 +328,11 @@ public final class PayoutProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, hours_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPrice());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTimestamp());
       }
@@ -518,20 +517,13 @@ public final class PayoutProto {
 
       // Construct using com.sentinel.subscription.v2.PayoutProto.Payout.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceFieldBuilder();
-          getTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -596,20 +588,16 @@ public final class PayoutProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.hours_ = hours_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1029,10 +1017,8 @@ public final class PayoutProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        if (price_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1150,10 +1136,8 @@ public final class PayoutProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        if (timestamp_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

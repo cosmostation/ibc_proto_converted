@@ -179,7 +179,6 @@ public final class ParamsProto {
               com.axelar.evm.v1beta1.ParamsProto.Params.class, com.axelar.evm.v1beta1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chain_ = "";
@@ -351,7 +350,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasVotingThreshold() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return votingThreshold_ != null;
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
@@ -459,7 +458,7 @@ public final class ParamsProto {
       for (int i = 0; i < networks_.size(); i++) {
         output.writeMessage(8, networks_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingThreshold_ != null) {
         output.writeMessage(9, getVotingThreshold());
       }
       if (minVoterCount_ != 0L) {
@@ -512,7 +511,7 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, networks_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getVotingThreshold());
       }
@@ -750,20 +749,13 @@ public final class ParamsProto {
 
       // Construct using com.axelar.evm.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNetworksFieldBuilder();
-          getVotingThresholdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -856,12 +848,10 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.revoteLockingPeriod_ = revoteLockingPeriod_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.votingThreshold_ = votingThresholdBuilder_ == null
               ? votingThreshold_
               : votingThresholdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.minVoterCount_ = minVoterCount_;
@@ -878,7 +868,6 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.transferLimit_ = transferLimit_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1687,10 +1676,8 @@ public final class ParamsProto {
         } else {
           votingThresholdBuilder_.mergeFrom(value);
         }
-        if (votingThreshold_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2034,7 +2021,6 @@ public final class ParamsProto {
               com.axelar.evm.v1beta1.ParamsProto.PendingChain.class, com.axelar.evm.v1beta1.ParamsProto.PendingChain.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.axelar.evm.v1beta1.ParamsProto.Params params_;
     /**
@@ -2043,7 +2029,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -2069,7 +2055,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasChain() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return chain_ != null;
     }
     /**
      * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
@@ -2101,10 +2087,10 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (chain_ != null) {
         output.writeMessage(2, getChain());
       }
       getUnknownFields().writeTo(output);
@@ -2116,11 +2102,11 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (chain_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getChain());
       }
@@ -2287,20 +2273,13 @@ public final class ParamsProto {
 
       // Construct using com.axelar.evm.v1beta1.ParamsProto.PendingChain.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getChainFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2349,20 +2328,16 @@ public final class ParamsProto {
 
       private void buildPartial0(com.axelar.evm.v1beta1.ParamsProto.PendingChain result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chain_ = chainBuilder_ == null
               ? chain_
               : chainBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2538,10 +2513,8 @@ public final class ParamsProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2659,10 +2632,8 @@ public final class ParamsProto {
         } else {
           chainBuilder_.mergeFrom(value);
         }
-        if (chain_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

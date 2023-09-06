@@ -106,7 +106,6 @@ public final class TxProto {
               com.osmosis.lockup.TxProto.MsgLockTokens.class, com.osmosis.lockup.TxProto.MsgLockTokens.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -154,7 +153,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return duration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration duration = 2 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -230,7 +229,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (duration_ != null) {
         output.writeMessage(2, getDuration());
       }
       for (int i = 0; i < coins_.size(); i++) {
@@ -248,7 +247,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (duration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDuration());
       }
@@ -420,20 +419,13 @@ public final class TxProto {
 
       // Construct using com.osmosis.lockup.TxProto.MsgLockTokens.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDurationFieldBuilder();
-          getCoinsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -501,14 +493,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.owner_ = owner_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -795,10 +784,8 @@ public final class TxProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        if (duration_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4722,7 +4709,6 @@ public final class TxProto {
               com.osmosis.lockup.TxProto.MsgExtendLockup.class, com.osmosis.lockup.TxProto.MsgExtendLockup.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -4786,7 +4772,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return duration_ != null;
     }
     /**
      * <pre>
@@ -4834,7 +4820,7 @@ public final class TxProto {
       if (iD_ != 0L) {
         output.writeUInt64(2, iD_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (duration_ != null) {
         output.writeMessage(3, getDuration());
       }
       getUnknownFields().writeTo(output);
@@ -4853,7 +4839,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, iD_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (duration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDuration());
       }
@@ -5025,19 +5011,13 @@ public final class TxProto {
 
       // Construct using com.osmosis.lockup.TxProto.MsgExtendLockup.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5089,14 +5069,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.iD_ = iD_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5409,10 +5386,8 @@ public final class TxProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        if (duration_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

@@ -128,7 +128,6 @@ public final class TxProto {
               com.kava.earn.v1beta1.TxProto.MsgDeposit.class, com.kava.earn.v1beta1.TxProto.MsgDeposit.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPOSITOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object depositor_ = "";
@@ -189,7 +188,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <pre>
@@ -260,7 +259,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, depositor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       if (strategy_ != com.kava.earn.v1beta1.StrategyProto.StrategyType.STRATEGY_TYPE_UNSPECIFIED.getNumber()) {
@@ -278,7 +277,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, depositor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -451,19 +450,13 @@ public final class TxProto {
 
       // Construct using com.kava.earn.v1beta1.TxProto.MsgDeposit.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -512,17 +505,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.depositor_ = depositor_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.strategy_ = strategy_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -823,10 +813,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1092,7 +1080,6 @@ public final class TxProto {
               com.kava.earn.v1beta1.TxProto.MsgDepositResponse.class, com.kava.earn.v1beta1.TxProto.MsgDepositResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SHARES_FIELD_NUMBER = 1;
     private com.kava.earn.v1beta1.VaultProto.VaultShare shares_;
     /**
@@ -1101,7 +1088,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasShares() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return shares_ != null;
     }
     /**
      * <code>.kava.earn.v1beta1.VaultShare shares = 1 [json_name = "shares", (.gogoproto.nullable) = false];</code>
@@ -1133,7 +1120,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shares_ != null) {
         output.writeMessage(1, getShares());
       }
       getUnknownFields().writeTo(output);
@@ -1145,7 +1132,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shares_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getShares());
       }
@@ -1307,19 +1294,13 @@ public final class TxProto {
 
       // Construct using com.kava.earn.v1beta1.TxProto.MsgDepositResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSharesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1363,14 +1344,11 @@ public final class TxProto {
 
       private void buildPartial0(com.kava.earn.v1beta1.TxProto.MsgDepositResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.shares_ = sharesBuilder_ == null
               ? shares_
               : sharesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1536,10 +1514,8 @@ public final class TxProto {
         } else {
           sharesBuilder_.mergeFrom(value);
         }
-        if (shares_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1768,7 +1744,6 @@ public final class TxProto {
               com.kava.earn.v1beta1.TxProto.MsgWithdraw.class, com.kava.earn.v1beta1.TxProto.MsgWithdraw.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -1829,7 +1804,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <pre>
@@ -1900,7 +1875,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       if (strategy_ != com.kava.earn.v1beta1.StrategyProto.StrategyType.STRATEGY_TYPE_UNSPECIFIED.getNumber()) {
@@ -1918,7 +1893,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -2091,19 +2066,13 @@ public final class TxProto {
 
       // Construct using com.kava.earn.v1beta1.TxProto.MsgWithdraw.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2152,17 +2121,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.from_ = from_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.strategy_ = strategy_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2463,10 +2429,8 @@ public final class TxProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2732,7 +2696,6 @@ public final class TxProto {
               com.kava.earn.v1beta1.TxProto.MsgWithdrawResponse.class, com.kava.earn.v1beta1.TxProto.MsgWithdrawResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SHARES_FIELD_NUMBER = 1;
     private com.kava.earn.v1beta1.VaultProto.VaultShare shares_;
     /**
@@ -2741,7 +2704,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasShares() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return shares_ != null;
     }
     /**
      * <code>.kava.earn.v1beta1.VaultShare shares = 1 [json_name = "shares", (.gogoproto.nullable) = false];</code>
@@ -2773,7 +2736,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shares_ != null) {
         output.writeMessage(1, getShares());
       }
       getUnknownFields().writeTo(output);
@@ -2785,7 +2748,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shares_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getShares());
       }
@@ -2947,19 +2910,13 @@ public final class TxProto {
 
       // Construct using com.kava.earn.v1beta1.TxProto.MsgWithdrawResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSharesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3003,14 +2960,11 @@ public final class TxProto {
 
       private void buildPartial0(com.kava.earn.v1beta1.TxProto.MsgWithdrawResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.shares_ = sharesBuilder_ == null
               ? shares_
               : sharesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3176,10 +3130,8 @@ public final class TxProto {
         } else {
           sharesBuilder_.mergeFrom(value);
         }
-        if (shares_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

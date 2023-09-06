@@ -1276,7 +1276,6 @@ public final class BatchProto {
               com.gravity.v1.BatchProto.OutgoingTransferTx.class, com.gravity.v1.BatchProto.OutgoingTransferTx.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -1374,7 +1373,7 @@ public final class BatchProto {
      */
     @java.lang.Override
     public boolean hasErc20Token() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return erc20Token_ != null;
     }
     /**
      * <code>.gravity.v1.ERC20Token erc20_token = 4 [json_name = "erc20Token", (.gogoproto.nullable) = false];</code>
@@ -1400,7 +1399,7 @@ public final class BatchProto {
      */
     @java.lang.Override
     public boolean hasErc20Fee() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return erc20Fee_ != null;
     }
     /**
      * <code>.gravity.v1.ERC20Token erc20_fee = 5 [json_name = "erc20Fee", (.gogoproto.nullable) = false];</code>
@@ -1441,10 +1440,10 @@ public final class BatchProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (erc20Token_ != null) {
         output.writeMessage(4, getErc20Token());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (erc20Fee_ != null) {
         output.writeMessage(5, getErc20Fee());
       }
       getUnknownFields().writeTo(output);
@@ -1466,11 +1465,11 @@ public final class BatchProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (erc20Token_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getErc20Token());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (erc20Fee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getErc20Fee());
       }
@@ -1654,20 +1653,13 @@ public final class BatchProto {
 
       // Construct using com.gravity.v1.BatchProto.OutgoingTransferTx.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getErc20TokenFieldBuilder();
-          getErc20FeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1728,20 +1720,16 @@ public final class BatchProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.destAddress_ = destAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.erc20Token_ = erc20TokenBuilder_ == null
               ? erc20Token_
               : erc20TokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.erc20Fee_ = erc20FeeBuilder_ == null
               ? erc20Fee_
               : erc20FeeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2121,10 +2109,8 @@ public final class BatchProto {
         } else {
           erc20TokenBuilder_.mergeFrom(value);
         }
-        if (erc20Token_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2242,10 +2228,8 @@ public final class BatchProto {
         } else {
           erc20FeeBuilder_.mergeFrom(value);
         }
-        if (erc20Fee_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

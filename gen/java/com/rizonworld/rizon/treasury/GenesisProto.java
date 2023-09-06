@@ -99,7 +99,6 @@ public final class GenesisProto {
               com.rizonworld.rizon.treasury.GenesisProto.GenesisState.class, com.rizonworld.rizon.treasury.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.treasury.ParamsProto.Params params_;
     /**
@@ -112,7 +111,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -146,7 +145,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSeq() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return seq_ != null;
     }
     /**
      * <code>.rizonworld.rizon.treasury.Sequence seq = 2 [json_name = "seq", (.gogoproto.nullable) = false];</code>
@@ -178,10 +177,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (seq_ != null) {
         output.writeMessage(2, getSeq());
       }
       getUnknownFields().writeTo(output);
@@ -193,11 +192,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (seq_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSeq());
       }
@@ -368,20 +367,13 @@ public final class GenesisProto {
 
       // Construct using com.rizonworld.rizon.treasury.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getSeqFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -430,20 +422,16 @@ public final class GenesisProto {
 
       private void buildPartial0(com.rizonworld.rizon.treasury.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.seq_ = seqBuilder_ == null
               ? seq_
               : seqBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -639,10 +627,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -776,10 +762,8 @@ public final class GenesisProto {
         } else {
           seqBuilder_.mergeFrom(value);
         }
-        if (seq_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -124,7 +124,6 @@ public final class MessagesProto {
               com.stride.interchainquery.v1.MessagesProto.MsgSubmitQueryResponse.class, com.stride.interchainquery.v1.MessagesProto.MsgSubmitQueryResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -222,7 +221,7 @@ public final class MessagesProto {
      */
     @java.lang.Override
     public boolean hasProofOps() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proofOps_ != null;
     }
     /**
      * <code>.tendermint.crypto.ProofOps proof_ops = 4 [json_name = "proofOps", (.gogoproto.moretags) = "yaml:&#92;"proof_ops&#92;""];</code>
@@ -313,7 +312,7 @@ public final class MessagesProto {
       if (!result_.isEmpty()) {
         output.writeBytes(3, result_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofOps_ != null) {
         output.writeMessage(4, getProofOps());
       }
       if (height_ != 0L) {
@@ -341,7 +340,7 @@ public final class MessagesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, result_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofOps_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProofOps());
       }
@@ -531,19 +530,13 @@ public final class MessagesProto {
 
       // Construct using com.stride.interchainquery.v1.MessagesProto.MsgSubmitQueryResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofOpsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -601,12 +594,10 @@ public final class MessagesProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.result_ = result_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.proofOps_ = proofOpsBuilder_ == null
               ? proofOps_
               : proofOpsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.height_ = height_;
@@ -614,7 +605,6 @@ public final class MessagesProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.fromAddress_ = fromAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1002,10 +992,8 @@ public final class MessagesProto {
         } else {
           proofOpsBuilder_.mergeFrom(value);
         }
-        if (proofOps_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

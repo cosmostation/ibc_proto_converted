@@ -1774,7 +1774,6 @@ public final class CollectorProto {
               com.comdex.collector.v1beta1.CollectorProto.AppToAssetIdCollectorMapping.class, com.comdex.collector.v1beta1.CollectorProto.AppToAssetIdCollectorMapping.Builder.class);
     }
 
-    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -1805,7 +1804,7 @@ public final class CollectorProto {
      */
     @java.lang.Override
     public boolean hasCollector() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collector_ != null;
     }
     /**
      * <code>.comdex.collector.v1beta1.CollectorData collector = 3 [json_name = "collector", (.gogoproto.moretags) = "yaml:&#92;"collector&#92;""];</code>
@@ -1843,7 +1842,7 @@ public final class CollectorProto {
       if (assetId_ != 0L) {
         output.writeUInt64(2, assetId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collector_ != null) {
         output.writeMessage(3, getCollector());
       }
       getUnknownFields().writeTo(output);
@@ -1863,7 +1862,7 @@ public final class CollectorProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, assetId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collector_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCollector());
       }
@@ -2031,19 +2030,13 @@ public final class CollectorProto {
 
       // Construct using com.comdex.collector.v1beta1.CollectorProto.AppToAssetIdCollectorMapping.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollectorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2095,14 +2088,11 @@ public final class CollectorProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.assetId_ = assetId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.collector_ = collectorBuilder_ == null
               ? collector_
               : collectorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2348,10 +2338,8 @@ public final class CollectorProto {
         } else {
           collectorBuilder_.mergeFrom(value);
         }
-        if (collector_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2622,7 +2610,6 @@ public final class CollectorProto {
               com.comdex.collector.v1beta1.CollectorProto.CollectorLookupTableData.class, com.comdex.collector.v1beta1.CollectorProto.CollectorLookupTableData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -2909,7 +2896,7 @@ public final class CollectorProto {
      */
     @java.lang.Override
     public boolean hasBlockTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blockTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp block_time = 11 [json_name = "blockTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"block_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2971,7 +2958,7 @@ public final class CollectorProto {
       if (blockHeight_ != 0L) {
         output.writeInt64(10, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockTime_ != null) {
         output.writeMessage(11, getBlockTime());
       }
       getUnknownFields().writeTo(output);
@@ -3017,7 +3004,7 @@ public final class CollectorProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(10, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getBlockTime());
       }
@@ -3219,19 +3206,13 @@ public final class CollectorProto {
 
       // Construct using com.comdex.collector.v1beta1.CollectorProto.CollectorLookupTableData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBlockTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3315,14 +3296,11 @@ public final class CollectorProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.blockHeight_ = blockHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.blockTime_ = blockTimeBuilder_ == null
               ? blockTime_
               : blockTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4140,10 +4118,8 @@ public final class CollectorProto {
         } else {
           blockTimeBuilder_.mergeFrom(value);
         }
-        if (blockTime_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -4334,8 +4310,7 @@ public final class CollectorProto {
 
     public static final int ASSET_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList assetIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList assetIds_;
     /**
      * <code>repeated uint64 asset_ids = 2 [json_name = "assetIds", (.gogoproto.moretags) = "yaml:&#92;"asset_ids&#92;""];</code>
      * @return A list containing the assetIds.
@@ -4610,19 +4585,24 @@ public final class CollectorProto {
       @java.lang.Override
       public com.comdex.collector.v1beta1.CollectorProto.AppToDenomsMapping buildPartial() {
         com.comdex.collector.v1beta1.CollectorProto.AppToDenomsMapping result = new com.comdex.collector.v1beta1.CollectorProto.AppToDenomsMapping(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.collector.v1beta1.CollectorProto.AppToDenomsMapping result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          assetIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.assetIds_ = assetIds_;
       }
 
       private void buildPartial0(com.comdex.collector.v1beta1.CollectorProto.AppToDenomsMapping result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          assetIds_.makeImmutable();
-          result.assetIds_ = assetIds_;
         }
       }
 
@@ -4676,8 +4656,7 @@ public final class CollectorProto {
         if (!other.assetIds_.isEmpty()) {
           if (assetIds_.isEmpty()) {
             assetIds_ = other.assetIds_;
-            assetIds_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureAssetIdsIsMutable();
             assetIds_.addAll(other.assetIds_);
@@ -4782,10 +4761,10 @@ public final class CollectorProto {
 
       private com.google.protobuf.Internal.LongList assetIds_ = emptyLongList();
       private void ensureAssetIdsIsMutable() {
-        if (!assetIds_.isModifiable()) {
-          assetIds_ = makeMutableCopy(assetIds_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          assetIds_ = mutableCopy(assetIds_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated uint64 asset_ids = 2 [json_name = "assetIds", (.gogoproto.moretags) = "yaml:&#92;"asset_ids&#92;""];</code>
@@ -4793,8 +4772,8 @@ public final class CollectorProto {
        */
       public java.util.List<java.lang.Long>
           getAssetIdsList() {
-        assetIds_.makeImmutable();
-        return assetIds_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(assetIds_) : assetIds_;
       }
       /**
        * <code>repeated uint64 asset_ids = 2 [json_name = "assetIds", (.gogoproto.moretags) = "yaml:&#92;"asset_ids&#92;""];</code>
@@ -4822,7 +4801,6 @@ public final class CollectorProto {
 
         ensureAssetIdsIsMutable();
         assetIds_.setLong(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4835,7 +4813,6 @@ public final class CollectorProto {
 
         ensureAssetIdsIsMutable();
         assetIds_.addLong(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4849,7 +4826,6 @@ public final class CollectorProto {
         ensureAssetIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, assetIds_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

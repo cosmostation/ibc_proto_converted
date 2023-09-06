@@ -465,7 +465,6 @@ public final class QueryProto {
               com.injective.ocr.v1beta1.QueryProto.QueryParamsResponse.class, com.injective.ocr.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.ocr.v1beta1.OcrProto.Params params_;
     /**
@@ -474,7 +473,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -506,7 +505,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -518,7 +517,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -676,19 +675,13 @@ public final class QueryProto {
 
       // Construct using com.injective.ocr.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -732,14 +725,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.ocr.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -905,10 +895,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1644,7 +1632,6 @@ public final class QueryProto {
               com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigResponse.class, com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEED_CONFIG_INFO_FIELD_NUMBER = 1;
     private com.injective.ocr.v1beta1.OcrProto.FeedConfigInfo feedConfigInfo_;
     /**
@@ -1653,7 +1640,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFeedConfigInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return feedConfigInfo_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.FeedConfigInfo feed_config_info = 1 [json_name = "feedConfigInfo"];</code>
@@ -1679,7 +1666,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFeedConfig() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return feedConfig_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.FeedConfig feed_config = 2 [json_name = "feedConfig"];</code>
@@ -1711,10 +1698,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (feedConfigInfo_ != null) {
         output.writeMessage(1, getFeedConfigInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (feedConfig_ != null) {
         output.writeMessage(2, getFeedConfig());
       }
       getUnknownFields().writeTo(output);
@@ -1726,11 +1713,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (feedConfigInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFeedConfigInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (feedConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFeedConfig());
       }
@@ -1897,20 +1884,13 @@ public final class QueryProto {
 
       // Construct using com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeedConfigInfoFieldBuilder();
-          getFeedConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1959,20 +1939,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feedConfigInfo_ = feedConfigInfoBuilder_ == null
               ? feedConfigInfo_
               : feedConfigInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.feedConfig_ = feedConfigBuilder_ == null
               ? feedConfig_
               : feedConfigBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2148,10 +2124,8 @@ public final class QueryProto {
         } else {
           feedConfigInfoBuilder_.mergeFrom(value);
         }
-        if (feedConfigInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2269,10 +2243,8 @@ public final class QueryProto {
         } else {
           feedConfigBuilder_.mergeFrom(value);
         }
-        if (feedConfig_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3008,7 +2980,6 @@ public final class QueryProto {
               com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigInfoResponse.class, com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigInfoResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEED_CONFIG_INFO_FIELD_NUMBER = 1;
     private com.injective.ocr.v1beta1.OcrProto.FeedConfigInfo feedConfigInfo_;
     /**
@@ -3017,7 +2988,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasFeedConfigInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return feedConfigInfo_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.FeedConfigInfo feed_config_info = 1 [json_name = "feedConfigInfo"];</code>
@@ -3043,7 +3014,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEpochAndRound() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return epochAndRound_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.EpochAndRound epoch_and_round = 2 [json_name = "epochAndRound"];</code>
@@ -3075,10 +3046,10 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (feedConfigInfo_ != null) {
         output.writeMessage(1, getFeedConfigInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (epochAndRound_ != null) {
         output.writeMessage(2, getEpochAndRound());
       }
       getUnknownFields().writeTo(output);
@@ -3090,11 +3061,11 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (feedConfigInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFeedConfigInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (epochAndRound_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEpochAndRound());
       }
@@ -3261,20 +3232,13 @@ public final class QueryProto {
 
       // Construct using com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigInfoResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeedConfigInfoFieldBuilder();
-          getEpochAndRoundFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3323,20 +3287,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.ocr.v1beta1.QueryProto.QueryFeedConfigInfoResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feedConfigInfo_ = feedConfigInfoBuilder_ == null
               ? feedConfigInfo_
               : feedConfigInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.epochAndRound_ = epochAndRoundBuilder_ == null
               ? epochAndRound_
               : epochAndRoundBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3512,10 +3472,8 @@ public final class QueryProto {
         } else {
           feedConfigInfoBuilder_.mergeFrom(value);
         }
-        if (feedConfigInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3633,10 +3591,8 @@ public final class QueryProto {
         } else {
           epochAndRoundBuilder_.mergeFrom(value);
         }
-        if (epochAndRound_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4363,7 +4319,6 @@ public final class QueryProto {
               com.injective.ocr.v1beta1.QueryProto.QueryLatestRoundResponse.class, com.injective.ocr.v1beta1.QueryProto.QueryLatestRoundResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LATEST_ROUND_ID_FIELD_NUMBER = 1;
     private long latestRoundId_ = 0L;
     /**
@@ -4383,7 +4338,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return data_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.Transmission data = 2 [json_name = "data"];</code>
@@ -4418,7 +4373,7 @@ public final class QueryProto {
       if (latestRoundId_ != 0L) {
         output.writeUInt64(1, latestRoundId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         output.writeMessage(2, getData());
       }
       getUnknownFields().writeTo(output);
@@ -4434,7 +4389,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, latestRoundId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getData());
       }
@@ -4597,19 +4552,13 @@ public final class QueryProto {
 
       // Construct using com.injective.ocr.v1beta1.QueryProto.QueryLatestRoundResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4657,14 +4606,11 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.latestRoundId_ = latestRoundId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4870,10 +4816,8 @@ public final class QueryProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5616,7 +5560,6 @@ public final class QueryProto {
               com.injective.ocr.v1beta1.QueryProto.QueryLatestTransmissionDetailsResponse.class, com.injective.ocr.v1beta1.QueryProto.QueryLatestTransmissionDetailsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONFIG_DIGEST_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString configDigest_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -5636,7 +5579,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEpochAndRound() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return epochAndRound_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.EpochAndRound epoch_and_round = 2 [json_name = "epochAndRound"];</code>
@@ -5662,7 +5605,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return data_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.Transmission data = 3 [json_name = "data"];</code>
@@ -5697,10 +5640,10 @@ public final class QueryProto {
       if (!configDigest_.isEmpty()) {
         output.writeBytes(1, configDigest_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochAndRound_ != null) {
         output.writeMessage(2, getEpochAndRound());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         output.writeMessage(3, getData());
       }
       getUnknownFields().writeTo(output);
@@ -5716,11 +5659,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, configDigest_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochAndRound_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEpochAndRound());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getData());
       }
@@ -5891,20 +5834,13 @@ public final class QueryProto {
 
       // Construct using com.injective.ocr.v1beta1.QueryProto.QueryLatestTransmissionDetailsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEpochAndRoundFieldBuilder();
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5957,20 +5893,16 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.configDigest_ = configDigest_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.epochAndRound_ = epochAndRoundBuilder_ == null
               ? epochAndRound_
               : epochAndRoundBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6186,10 +6118,8 @@ public final class QueryProto {
         } else {
           epochAndRoundBuilder_.mergeFrom(value);
         }
-        if (epochAndRound_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6307,10 +6237,8 @@ public final class QueryProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -7031,7 +6959,6 @@ public final class QueryProto {
               com.injective.ocr.v1beta1.QueryProto.QueryOwedAmountResponse.class, com.injective.ocr.v1beta1.QueryProto.QueryOwedAmountResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
     /**
@@ -7040,7 +6967,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -7072,7 +6999,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(1, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -7084,7 +7011,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAmount());
       }
@@ -7242,19 +7169,13 @@ public final class QueryProto {
 
       // Construct using com.injective.ocr.v1beta1.QueryProto.QueryOwedAmountResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7298,14 +7219,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.ocr.v1beta1.QueryProto.QueryOwedAmountResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7471,10 +7389,8 @@ public final class QueryProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8040,7 +7956,6 @@ public final class QueryProto {
               com.injective.ocr.v1beta1.QueryProto.QueryModuleStateResponse.class, com.injective.ocr.v1beta1.QueryProto.QueryModuleStateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.ocr.v1beta1.GenesisProto.GenesisState state_;
     /**
@@ -8049,7 +7964,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return state_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.GenesisState state = 1 [json_name = "state"];</code>
@@ -8081,7 +7996,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -8093,7 +8008,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -8251,19 +8166,13 @@ public final class QueryProto {
 
       // Construct using com.injective.ocr.v1beta1.QueryProto.QueryModuleStateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8307,14 +8216,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.ocr.v1beta1.QueryProto.QueryModuleStateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8480,10 +8386,8 @@ public final class QueryProto {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        if (state_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

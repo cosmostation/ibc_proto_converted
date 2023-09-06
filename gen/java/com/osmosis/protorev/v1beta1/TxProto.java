@@ -2792,7 +2792,6 @@ public final class TxProto {
               com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADMIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object admin_ = "";
@@ -2852,7 +2851,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPoolWeights() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return poolWeights_ != null;
     }
     /**
      * <pre>
@@ -2895,7 +2894,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolWeights_ != null) {
         output.writeMessage(2, getPoolWeights());
       }
       getUnknownFields().writeTo(output);
@@ -2910,7 +2909,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolWeights_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPoolWeights());
       }
@@ -3076,19 +3075,13 @@ public final class TxProto {
 
       // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolWeightsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3136,14 +3129,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.admin_ = admin_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolWeights_ = poolWeightsBuilder_ == null
               ? poolWeights_
               : poolWeightsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3431,10 +3421,8 @@ public final class TxProto {
         } else {
           poolWeightsBuilder_.mergeFrom(value);
         }
-        if (poolWeights_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

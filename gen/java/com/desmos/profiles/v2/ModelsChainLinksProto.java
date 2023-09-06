@@ -190,7 +190,6 @@ public final class ModelsChainLinksProto {
               com.desmos.profiles.v2.ModelsChainLinksProto.ChainLink.class, com.desmos.profiles.v2.ModelsChainLinksProto.ChainLink.Builder.class);
     }
 
-    private int bitField0_;
     public static final int USER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object user_ = "";
@@ -251,7 +250,7 @@ public final class ModelsChainLinksProto {
      */
     @java.lang.Override
     public boolean hasAddress() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return address_ != null;
     }
     /**
      * <pre>
@@ -291,7 +290,7 @@ public final class ModelsChainLinksProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return proof_ != null;
     }
     /**
      * <pre>
@@ -329,7 +328,7 @@ public final class ModelsChainLinksProto {
      */
     @java.lang.Override
     public boolean hasChainConfig() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return chainConfig_ != null;
     }
     /**
      * <pre>
@@ -367,7 +366,7 @@ public final class ModelsChainLinksProto {
      */
     @java.lang.Override
     public boolean hasCreationTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return creationTime_ != null;
     }
     /**
      * <pre>
@@ -410,16 +409,16 @@ public final class ModelsChainLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, user_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (address_ != null) {
         output.writeMessage(2, getAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(3, getProof());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (chainConfig_ != null) {
         output.writeMessage(4, getChainConfig());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (creationTime_ != null) {
         output.writeMessage(5, getCreationTime());
       }
       getUnknownFields().writeTo(output);
@@ -434,19 +433,19 @@ public final class ModelsChainLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, user_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (address_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getProof());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (chainConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getChainConfig());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (creationTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCreationTime());
       }
@@ -640,22 +639,13 @@ public final class ModelsChainLinksProto {
 
       // Construct using com.desmos.profiles.v2.ModelsChainLinksProto.ChainLink.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAddressFieldBuilder();
-          getProofFieldBuilder();
-          getChainConfigFieldBuilder();
-          getCreationTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -718,32 +708,26 @@ public final class ModelsChainLinksProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.user_ = user_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.address_ = addressBuilder_ == null
               ? address_
               : addressBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.chainConfig_ = chainConfigBuilder_ == null
               ? chainConfig_
               : chainConfigBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.creationTime_ = creationTimeBuilder_ == null
               ? creationTime_
               : creationTimeBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1066,10 +1050,8 @@ public final class ModelsChainLinksProto {
         } else {
           addressBuilder_.mergeFrom(value);
         }
-        if (address_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1227,10 +1209,8 @@ public final class ModelsChainLinksProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1384,10 +1364,8 @@ public final class ModelsChainLinksProto {
         } else {
           chainConfigBuilder_.mergeFrom(value);
         }
-        if (chainConfig_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1541,10 +1519,8 @@ public final class ModelsChainLinksProto {
         } else {
           creationTimeBuilder_.mergeFrom(value);
         }
-        if (creationTime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2359,7 +2335,6 @@ public final class ModelsChainLinksProto {
               com.desmos.profiles.v2.ModelsChainLinksProto.Proof.class, com.desmos.profiles.v2.ModelsChainLinksProto.Proof.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PUB_KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.Any pubKey_;
     /**
@@ -2373,7 +2348,7 @@ public final class ModelsChainLinksProto {
      */
     @java.lang.Override
     public boolean hasPubKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pubKey_ != null;
     }
     /**
      * <pre>
@@ -2413,7 +2388,7 @@ public final class ModelsChainLinksProto {
      */
     @java.lang.Override
     public boolean hasSignature() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return signature_ != null;
     }
     /**
      * <pre>
@@ -2502,10 +2477,10 @@ public final class ModelsChainLinksProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         output.writeMessage(1, getPubKey());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signature_ != null) {
         output.writeMessage(2, getSignature());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plainText_)) {
@@ -2520,11 +2495,11 @@ public final class ModelsChainLinksProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPubKey());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signature_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSignature());
       }
@@ -2703,20 +2678,13 @@ public final class ModelsChainLinksProto {
 
       // Construct using com.desmos.profiles.v2.ModelsChainLinksProto.Proof.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPubKeyFieldBuilder();
-          getSignatureFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2766,23 +2734,19 @@ public final class ModelsChainLinksProto {
 
       private void buildPartial0(com.desmos.profiles.v2.ModelsChainLinksProto.Proof result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pubKey_ = pubKeyBuilder_ == null
               ? pubKey_
               : pubKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signature_ = signatureBuilder_ == null
               ? signature_
               : signatureBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.plainText_ = plainText_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2993,10 +2957,8 @@ public final class ModelsChainLinksProto {
         } else {
           pubKeyBuilder_.mergeFrom(value);
         }
-        if (pubKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3154,10 +3116,8 @@ public final class ModelsChainLinksProto {
         } else {
           signatureBuilder_.mergeFrom(value);
         }
-        if (signature_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6313,7 +6273,6 @@ public final class ModelsChainLinksProto {
               com.desmos.profiles.v2.ModelsChainLinksProto.MultiSignatureData.class, com.desmos.profiles.v2.ModelsChainLinksProto.MultiSignatureData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BIT_ARRAY_FIELD_NUMBER = 1;
     private com.cosmos.crypto.multisig.v1beta1.MultisigProto.CompactBitArray bitArray_;
     /**
@@ -6326,7 +6285,7 @@ public final class ModelsChainLinksProto {
      */
     @java.lang.Override
     public boolean hasBitArray() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bitArray_ != null;
     }
     /**
      * <pre>
@@ -6427,7 +6386,7 @@ public final class ModelsChainLinksProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bitArray_ != null) {
         output.writeMessage(1, getBitArray());
       }
       for (int i = 0; i < signatures_.size(); i++) {
@@ -6442,7 +6401,7 @@ public final class ModelsChainLinksProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bitArray_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBitArray());
       }
@@ -6614,20 +6573,13 @@ public final class ModelsChainLinksProto {
 
       // Construct using com.desmos.profiles.v2.ModelsChainLinksProto.MultiSignatureData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBitArrayFieldBuilder();
-          getSignaturesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6691,14 +6643,11 @@ public final class ModelsChainLinksProto {
 
       private void buildPartial0(com.desmos.profiles.v2.ModelsChainLinksProto.MultiSignatureData result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bitArray_ = bitArrayBuilder_ == null
               ? bitArray_
               : bitArrayBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6923,10 +6872,8 @@ public final class ModelsChainLinksProto {
         } else {
           bitArrayBuilder_.mergeFrom(value);
         }
-        if (bitArray_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

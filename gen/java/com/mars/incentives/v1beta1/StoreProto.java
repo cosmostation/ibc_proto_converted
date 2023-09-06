@@ -221,7 +221,6 @@ public final class StoreProto {
               com.mars.incentives.v1beta1.StoreProto.Schedule.class, com.mars.incentives.v1beta1.StoreProto.Schedule.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -249,7 +248,7 @@ public final class StoreProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -287,7 +286,7 @@ public final class StoreProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endTime_ != null;
     }
     /**
      * <pre>
@@ -462,10 +461,10 @@ public final class StoreProto {
       if (id_ != 0L) {
         output.writeUInt64(1, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(2, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         output.writeMessage(3, getEndTime());
       }
       for (int i = 0; i < totalAmount_.size(); i++) {
@@ -487,11 +486,11 @@ public final class StoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEndTime());
       }
@@ -687,22 +686,13 @@ public final class StoreProto {
 
       // Construct using com.mars.incentives.v1beta1.StoreProto.Schedule.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-          getEndTimeFieldBuilder();
-          getTotalAmountFieldBuilder();
-          getReleasedAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -791,20 +781,16 @@ public final class StoreProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1130,10 +1116,8 @@ public final class StoreProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1287,10 +1271,8 @@ public final class StoreProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

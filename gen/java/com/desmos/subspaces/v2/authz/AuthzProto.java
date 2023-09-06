@@ -113,8 +113,7 @@ public final class AuthzProto {
 
     public static final int SUBSPACES_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList subspacesIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList subspacesIds_;
     /**
      * <pre>
      * Ids of the subspaces inside which to grant the permission
@@ -453,17 +452,22 @@ public final class AuthzProto {
       @java.lang.Override
       public com.desmos.subspaces.v2.authz.AuthzProto.GenericSubspaceAuthorization buildPartial() {
         com.desmos.subspaces.v2.authz.AuthzProto.GenericSubspaceAuthorization result = new com.desmos.subspaces.v2.authz.AuthzProto.GenericSubspaceAuthorization(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.desmos.subspaces.v2.authz.AuthzProto.GenericSubspaceAuthorization result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          subspacesIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.subspacesIds_ = subspacesIds_;
+      }
+
       private void buildPartial0(com.desmos.subspaces.v2.authz.AuthzProto.GenericSubspaceAuthorization result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          subspacesIds_.makeImmutable();
-          result.subspacesIds_ = subspacesIds_;
-        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.msg_ = msg_;
         }
@@ -516,8 +520,7 @@ public final class AuthzProto {
         if (!other.subspacesIds_.isEmpty()) {
           if (subspacesIds_.isEmpty()) {
             subspacesIds_ = other.subspacesIds_;
-            subspacesIds_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSubspacesIdsIsMutable();
             subspacesIds_.addAll(other.subspacesIds_);
@@ -595,10 +598,10 @@ public final class AuthzProto {
 
       private com.google.protobuf.Internal.LongList subspacesIds_ = emptyLongList();
       private void ensureSubspacesIdsIsMutable() {
-        if (!subspacesIds_.isModifiable()) {
-          subspacesIds_ = makeMutableCopy(subspacesIds_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subspacesIds_ = mutableCopy(subspacesIds_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -610,8 +613,8 @@ public final class AuthzProto {
        */
       public java.util.List<java.lang.Long>
           getSubspacesIdsList() {
-        subspacesIds_.makeImmutable();
-        return subspacesIds_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(subspacesIds_) : subspacesIds_;
       }
       /**
        * <pre>
@@ -651,7 +654,6 @@ public final class AuthzProto {
 
         ensureSubspacesIdsIsMutable();
         subspacesIds_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -668,7 +670,6 @@ public final class AuthzProto {
 
         ensureSubspacesIdsIsMutable();
         subspacesIds_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -686,7 +687,6 @@ public final class AuthzProto {
         ensureSubspacesIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, subspacesIds_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

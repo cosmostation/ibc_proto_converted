@@ -210,7 +210,6 @@ public final class NftProto {
               com.cosmos.nft.v1beta1.NftProto.Class.class, com.cosmos.nft.v1beta1.NftProto.Class.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -505,7 +504,7 @@ public final class NftProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return data_ != null;
     }
     /**
      * <pre>
@@ -563,7 +562,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, uriHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         output.writeMessage(7, getData());
       }
       getUnknownFields().writeTo(output);
@@ -593,7 +592,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, uriHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getData());
       }
@@ -779,19 +778,13 @@ public final class NftProto {
 
       // Construct using com.cosmos.nft.v1beta1.NftProto.Class.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -859,14 +852,11 @@ public final class NftProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.uriHash_ = uriHash_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1664,10 +1654,8 @@ public final class NftProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1952,7 +1940,6 @@ public final class NftProto {
               com.cosmos.nft.v1beta1.NftProto.NFT.class, com.cosmos.nft.v1beta1.NftProto.NFT.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -2153,7 +2140,7 @@ public final class NftProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return data_ != null;
     }
     /**
      * <pre>
@@ -2205,7 +2192,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uriHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         output.writeMessage(10, getData());
       }
       getUnknownFields().writeTo(output);
@@ -2229,7 +2216,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uriHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getData());
       }
@@ -2407,19 +2394,13 @@ public final class NftProto {
 
       // Construct using com.cosmos.nft.v1beta1.NftProto.NFT.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2479,14 +2460,11 @@ public final class NftProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.uriHash_ = uriHash_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3080,10 +3058,8 @@ public final class NftProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

@@ -88,7 +88,6 @@ public final class AuthzProto {
               com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.class, com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SPEND_LIMIT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin spendLimit_;
     /**
@@ -102,7 +101,7 @@ public final class AuthzProto {
      */
     @java.lang.Override
     public boolean hasSpendLimit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return spendLimit_ != null;
     }
     /**
      * <pre>
@@ -144,7 +143,7 @@ public final class AuthzProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (spendLimit_ != null) {
         output.writeMessage(1, getSpendLimit());
       }
       getUnknownFields().writeTo(output);
@@ -156,7 +155,7 @@ public final class AuthzProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (spendLimit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpendLimit());
       }
@@ -319,19 +318,13 @@ public final class AuthzProto {
 
       // Construct using com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSpendLimitFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -375,14 +368,11 @@ public final class AuthzProto {
 
       private void buildPartial0(com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.spendLimit_ = spendLimitBuilder_ == null
               ? spendLimit_
               : spendLimitBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -573,10 +563,8 @@ public final class AuthzProto {
         } else {
           spendLimitBuilder_.mergeFrom(value);
         }
-        if (spendLimit_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

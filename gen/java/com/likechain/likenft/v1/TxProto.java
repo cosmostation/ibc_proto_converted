@@ -96,7 +96,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgNewClass.class, com.likechain.likenft.v1.TxProto.MsgNewClass.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -144,7 +143,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasParent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return parent_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.ClassParentInput parent = 2 [json_name = "parent", (.gogoproto.nullable) = false];</code>
@@ -170,7 +169,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return input_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.ClassInput input = 3 [json_name = "input", (.gogoproto.nullable) = false];</code>
@@ -205,10 +204,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (parent_ != null) {
         output.writeMessage(2, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (input_ != null) {
         output.writeMessage(3, getInput());
       }
       getUnknownFields().writeTo(output);
@@ -223,11 +222,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (parent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInput());
       }
@@ -398,20 +397,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgNewClass.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParentFieldBuilder();
-          getInputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -464,20 +456,16 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.creator_ = creator_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.parent_ = parentBuilder_ == null
               ? parent_
               : parentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -735,10 +723,8 @@ public final class TxProto {
         } else {
           parentBuilder_.mergeFrom(value);
         }
-        if (parent_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -856,10 +842,8 @@ public final class TxProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        if (input_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1028,7 +1012,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgNewClassResponse.class, com.likechain.likenft.v1.TxProto.MsgNewClassResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_FIELD_NUMBER = 1;
     private com.cosmos.nft.v1beta1.NftProto.Class class__;
     /**
@@ -1037,7 +1020,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasClass_() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return class__ != null;
     }
     /**
      * <code>.cosmos.nft.v1beta1.Class class = 1 [json_name = "class", (.gogoproto.nullable) = false];</code>
@@ -1069,7 +1052,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (class__ != null) {
         output.writeMessage(1, getClass_());
       }
       getUnknownFields().writeTo(output);
@@ -1081,7 +1064,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (class__ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClass_());
       }
@@ -1239,19 +1222,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgNewClassResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClass_FieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1295,14 +1272,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgNewClassResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.class__ = class_Builder_ == null
               ? class__
               : class_Builder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1468,10 +1442,8 @@ public final class TxProto {
         } else {
           class_Builder_.mergeFrom(value);
         }
-        if (class__ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1666,7 +1638,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateClass.class, com.likechain.likenft.v1.TxProto.MsgUpdateClass.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -1753,7 +1724,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return input_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.ClassInput input = 3 [json_name = "input", (.gogoproto.nullable) = false];</code>
@@ -1791,7 +1762,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         output.writeMessage(3, getInput());
       }
       getUnknownFields().writeTo(output);
@@ -1809,7 +1780,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInput());
       }
@@ -1975,19 +1946,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateClass.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2039,14 +2004,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.classId_ = classId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2376,10 +2338,8 @@ public final class TxProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        if (input_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2548,7 +2508,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateClassResponse.class, com.likechain.likenft.v1.TxProto.MsgUpdateClassResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_FIELD_NUMBER = 1;
     private com.cosmos.nft.v1beta1.NftProto.Class class__;
     /**
@@ -2557,7 +2516,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasClass_() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return class__ != null;
     }
     /**
      * <code>.cosmos.nft.v1beta1.Class class = 1 [json_name = "class", (.gogoproto.nullable) = false];</code>
@@ -2589,7 +2548,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (class__ != null) {
         output.writeMessage(1, getClass_());
       }
       getUnknownFields().writeTo(output);
@@ -2601,7 +2560,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (class__ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClass_());
       }
@@ -2759,19 +2718,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateClassResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClass_FieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2815,14 +2768,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgUpdateClassResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.class__ = class_Builder_ == null
               ? class__
               : class_Builder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2988,10 +2938,8 @@ public final class TxProto {
         } else {
           class_Builder_.mergeFrom(value);
         }
-        if (class__ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3199,7 +3147,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgMintNFT.class, com.likechain.likenft.v1.TxProto.MsgMintNFT.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -3325,7 +3272,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return input_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.NFTInput input = 4 [json_name = "input", (.gogoproto.nullable) = true];</code>
@@ -3366,7 +3313,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         output.writeMessage(4, getInput());
       }
       getUnknownFields().writeTo(output);
@@ -3387,7 +3334,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getInput());
       }
@@ -3557,19 +3504,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgMintNFT.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3625,14 +3566,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4044,10 +3982,8 @@ public final class TxProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        if (input_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4216,7 +4152,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgMintNFTResponse.class, com.likechain.likenft.v1.TxProto.MsgMintNFTResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NFT_FIELD_NUMBER = 1;
     private com.cosmos.nft.v1beta1.NftProto.NFT nft_;
     /**
@@ -4225,7 +4160,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasNft() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return nft_ != null;
     }
     /**
      * <code>.cosmos.nft.v1beta1.NFT nft = 1 [json_name = "nft", (.gogoproto.nullable) = false];</code>
@@ -4257,7 +4192,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (nft_ != null) {
         output.writeMessage(1, getNft());
       }
       getUnknownFields().writeTo(output);
@@ -4269,7 +4204,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (nft_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getNft());
       }
@@ -4427,19 +4362,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgMintNFTResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNftFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4483,14 +4412,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgMintNFTResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.nft_ = nftBuilder_ == null
               ? nft_
               : nftBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4656,10 +4582,8 @@ public final class TxProto {
         } else {
           nftBuilder_.mergeFrom(value);
         }
-        if (nft_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6112,7 +6036,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateBlindBoxContent.class, com.likechain.likenft.v1.TxProto.MsgCreateBlindBoxContent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -6238,7 +6161,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return input_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.NFTInput input = 4 [json_name = "input", (.gogoproto.nullable) = false];</code>
@@ -6279,7 +6202,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         output.writeMessage(4, getInput());
       }
       getUnknownFields().writeTo(output);
@@ -6300,7 +6223,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getInput());
       }
@@ -6470,19 +6393,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateBlindBoxContent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6538,14 +6455,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6957,10 +6871,8 @@ public final class TxProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        if (input_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -7129,7 +7041,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateBlindBoxContentResponse.class, com.likechain.likenft.v1.TxProto.MsgCreateBlindBoxContentResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BLIND_BOX_CONTENT_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.BlindBoxContentProto.BlindBoxContent blindBoxContent_;
     /**
@@ -7138,7 +7049,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBlindBoxContent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blindBoxContent_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.BlindBoxContent blind_box_content = 1 [json_name = "blindBoxContent", (.gogoproto.nullable) = false];</code>
@@ -7170,7 +7081,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blindBoxContent_ != null) {
         output.writeMessage(1, getBlindBoxContent());
       }
       getUnknownFields().writeTo(output);
@@ -7182,7 +7093,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blindBoxContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBlindBoxContent());
       }
@@ -7340,19 +7251,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateBlindBoxContentResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBlindBoxContentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7396,14 +7301,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgCreateBlindBoxContentResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blindBoxContent_ = blindBoxContentBuilder_ == null
               ? blindBoxContent_
               : blindBoxContentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7569,10 +7471,8 @@ public final class TxProto {
         } else {
           blindBoxContentBuilder_.mergeFrom(value);
         }
-        if (blindBoxContent_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7780,7 +7680,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateBlindBoxContent.class, com.likechain.likenft.v1.TxProto.MsgUpdateBlindBoxContent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -7906,7 +7805,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return input_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.NFTInput input = 4 [json_name = "input", (.gogoproto.nullable) = false];</code>
@@ -7947,7 +7846,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         output.writeMessage(4, getInput());
       }
       getUnknownFields().writeTo(output);
@@ -7968,7 +7867,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getInput());
       }
@@ -8138,19 +8037,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateBlindBoxContent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8206,14 +8099,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8625,10 +8515,8 @@ public final class TxProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        if (input_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -8797,7 +8685,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateBlindBoxContentResponse.class, com.likechain.likenft.v1.TxProto.MsgUpdateBlindBoxContentResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BLIND_BOX_CONTENT_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.BlindBoxContentProto.BlindBoxContent blindBoxContent_;
     /**
@@ -8806,7 +8693,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBlindBoxContent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blindBoxContent_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.BlindBoxContent blind_box_content = 1 [json_name = "blindBoxContent", (.gogoproto.nullable) = false];</code>
@@ -8838,7 +8725,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blindBoxContent_ != null) {
         output.writeMessage(1, getBlindBoxContent());
       }
       getUnknownFields().writeTo(output);
@@ -8850,7 +8737,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blindBoxContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBlindBoxContent());
       }
@@ -9008,19 +8895,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateBlindBoxContentResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBlindBoxContentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9064,14 +8945,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgUpdateBlindBoxContentResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blindBoxContent_ = blindBoxContentBuilder_ == null
               ? blindBoxContent_
               : blindBoxContentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9237,10 +9115,8 @@ public final class TxProto {
         } else {
           blindBoxContentBuilder_.mergeFrom(value);
         }
-        if (blindBoxContent_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10699,7 +10575,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateOffer.class, com.likechain.likenft.v1.TxProto.MsgCreateOffer.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -10836,7 +10711,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -10880,7 +10755,7 @@ public final class TxProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(5, getExpiration());
       }
       getUnknownFields().writeTo(output);
@@ -10905,7 +10780,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -11080,19 +10955,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateOffer.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11152,14 +11021,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11611,10 +11477,8 @@ public final class TxProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -11783,7 +11647,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateOfferResponse.class, com.likechain.likenft.v1.TxProto.MsgCreateOfferResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OFFER_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.OfferProto.Offer offer_;
     /**
@@ -11792,7 +11655,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasOffer() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return offer_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.Offer offer = 1 [json_name = "offer", (.gogoproto.nullable) = false];</code>
@@ -11824,7 +11687,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (offer_ != null) {
         output.writeMessage(1, getOffer());
       }
       getUnknownFields().writeTo(output);
@@ -11836,7 +11699,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (offer_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOffer());
       }
@@ -11994,19 +11857,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateOfferResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOfferFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12050,14 +11907,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgCreateOfferResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.offer_ = offerBuilder_ == null
               ? offer_
               : offerBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12223,10 +12077,8 @@ public final class TxProto {
         } else {
           offerBuilder_.mergeFrom(value);
         }
-        if (offer_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12440,7 +12292,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateOffer.class, com.likechain.likenft.v1.TxProto.MsgUpdateOffer.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -12577,7 +12428,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -12621,7 +12472,7 @@ public final class TxProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(5, getExpiration());
       }
       getUnknownFields().writeTo(output);
@@ -12646,7 +12497,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -12821,19 +12672,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateOffer.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12893,14 +12738,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13352,10 +13194,8 @@ public final class TxProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -13524,7 +13364,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateOfferResponse.class, com.likechain.likenft.v1.TxProto.MsgUpdateOfferResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OFFER_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.OfferProto.Offer offer_;
     /**
@@ -13533,7 +13372,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasOffer() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return offer_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.Offer offer = 1 [json_name = "offer", (.gogoproto.nullable) = false];</code>
@@ -13565,7 +13404,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (offer_ != null) {
         output.writeMessage(1, getOffer());
       }
       getUnknownFields().writeTo(output);
@@ -13577,7 +13416,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (offer_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOffer());
       }
@@ -13735,19 +13574,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateOfferResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOfferFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13791,14 +13624,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgUpdateOfferResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.offer_ = offerBuilder_ == null
               ? offer_
               : offerBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13964,10 +13794,8 @@ public final class TxProto {
         } else {
           offerBuilder_.mergeFrom(value);
         }
-        if (offer_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -15432,7 +15260,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateListing.class, com.likechain.likenft.v1.TxProto.MsgCreateListing.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -15569,7 +15396,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -15624,7 +15451,7 @@ public final class TxProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(5, getExpiration());
       }
       if (fullPayToRoyalty_ != false) {
@@ -15652,7 +15479,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -15836,19 +15663,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateListing.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15909,17 +15730,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.fullPayToRoyalty_ = fullPayToRoyalty_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16379,10 +16197,8 @@ public final class TxProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -16583,7 +16399,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateListingResponse.class, com.likechain.likenft.v1.TxProto.MsgCreateListingResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LISTING_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.ListingProto.Listing listing_;
     /**
@@ -16592,7 +16407,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasListing() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return listing_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.Listing listing = 1 [json_name = "listing", (.gogoproto.nullable) = false];</code>
@@ -16624,7 +16439,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (listing_ != null) {
         output.writeMessage(1, getListing());
       }
       getUnknownFields().writeTo(output);
@@ -16636,7 +16451,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (listing_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getListing());
       }
@@ -16794,19 +16609,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateListingResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getListingFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16850,14 +16659,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgCreateListingResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.listing_ = listingBuilder_ == null
               ? listing_
               : listingBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17023,10 +16829,8 @@ public final class TxProto {
         } else {
           listingBuilder_.mergeFrom(value);
         }
-        if (listing_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17246,7 +17050,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateListing.class, com.likechain.likenft.v1.TxProto.MsgUpdateListing.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -17383,7 +17186,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -17438,7 +17241,7 @@ public final class TxProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(5, getExpiration());
       }
       if (fullPayToRoyalty_ != false) {
@@ -17466,7 +17269,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -17650,19 +17453,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateListing.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -17723,17 +17520,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.fullPayToRoyalty_ = fullPayToRoyalty_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18193,10 +17987,8 @@ public final class TxProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -18397,7 +18189,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateListingResponse.class, com.likechain.likenft.v1.TxProto.MsgUpdateListingResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LISTING_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.ListingProto.Listing listing_;
     /**
@@ -18406,7 +18197,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasListing() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return listing_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.Listing listing = 1 [json_name = "listing", (.gogoproto.nullable) = false];</code>
@@ -18438,7 +18229,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (listing_ != null) {
         output.writeMessage(1, getListing());
       }
       getUnknownFields().writeTo(output);
@@ -18450,7 +18241,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (listing_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getListing());
       }
@@ -18608,19 +18399,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateListingResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getListingFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18664,14 +18449,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgUpdateListingResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.listing_ = listingBuilder_ == null
               ? listing_
               : listingBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18837,10 +18619,8 @@ public final class TxProto {
         } else {
           listingBuilder_.mergeFrom(value);
         }
-        if (listing_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -23285,7 +23065,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateRoyaltyConfig.class, com.likechain.likenft.v1.TxProto.MsgCreateRoyaltyConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -23372,7 +23151,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRoyaltyConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return royaltyConfig_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.RoyaltyConfigInput royalty_config = 3 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
@@ -23410,7 +23189,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         output.writeMessage(3, getRoyaltyConfig());
       }
       getUnknownFields().writeTo(output);
@@ -23428,7 +23207,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRoyaltyConfig());
       }
@@ -23594,19 +23373,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateRoyaltyConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRoyaltyConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -23658,14 +23431,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.classId_ = classId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.royaltyConfig_ = royaltyConfigBuilder_ == null
               ? royaltyConfig_
               : royaltyConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23995,10 +23765,8 @@ public final class TxProto {
         } else {
           royaltyConfigBuilder_.mergeFrom(value);
         }
-        if (royaltyConfig_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -24167,7 +23935,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgCreateRoyaltyConfigResponse.class, com.likechain.likenft.v1.TxProto.MsgCreateRoyaltyConfigResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ROYALTY_CONFIG_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig royaltyConfig_;
     /**
@@ -24176,7 +23943,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRoyaltyConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return royaltyConfig_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 1 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
@@ -24208,7 +23975,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         output.writeMessage(1, getRoyaltyConfig());
       }
       getUnknownFields().writeTo(output);
@@ -24220,7 +23987,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRoyaltyConfig());
       }
@@ -24378,19 +24145,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgCreateRoyaltyConfigResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRoyaltyConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -24434,14 +24195,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgCreateRoyaltyConfigResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.royaltyConfig_ = royaltyConfigBuilder_ == null
               ? royaltyConfig_
               : royaltyConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -24607,10 +24365,8 @@ public final class TxProto {
         } else {
           royaltyConfigBuilder_.mergeFrom(value);
         }
-        if (royaltyConfig_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -24805,7 +24561,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateRoyaltyConfig.class, com.likechain.likenft.v1.TxProto.MsgUpdateRoyaltyConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -24892,7 +24647,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRoyaltyConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return royaltyConfig_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.RoyaltyConfigInput royalty_config = 3 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
@@ -24930,7 +24685,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         output.writeMessage(3, getRoyaltyConfig());
       }
       getUnknownFields().writeTo(output);
@@ -24948,7 +24703,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRoyaltyConfig());
       }
@@ -25114,19 +24869,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateRoyaltyConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRoyaltyConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -25178,14 +24927,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.classId_ = classId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.royaltyConfig_ = royaltyConfigBuilder_ == null
               ? royaltyConfig_
               : royaltyConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -25515,10 +25261,8 @@ public final class TxProto {
         } else {
           royaltyConfigBuilder_.mergeFrom(value);
         }
-        if (royaltyConfig_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -25687,7 +25431,6 @@ public final class TxProto {
               com.likechain.likenft.v1.TxProto.MsgUpdateRoyaltyConfigResponse.class, com.likechain.likenft.v1.TxProto.MsgUpdateRoyaltyConfigResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ROYALTY_CONFIG_FIELD_NUMBER = 1;
     private com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig royaltyConfig_;
     /**
@@ -25696,7 +25439,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRoyaltyConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return royaltyConfig_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 1 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
@@ -25728,7 +25471,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         output.writeMessage(1, getRoyaltyConfig());
       }
       getUnknownFields().writeTo(output);
@@ -25740,7 +25483,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRoyaltyConfig());
       }
@@ -25898,19 +25641,13 @@ public final class TxProto {
 
       // Construct using com.likechain.likenft.v1.TxProto.MsgUpdateRoyaltyConfigResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRoyaltyConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -25954,14 +25691,11 @@ public final class TxProto {
 
       private void buildPartial0(com.likechain.likenft.v1.TxProto.MsgUpdateRoyaltyConfigResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.royaltyConfig_ = royaltyConfigBuilder_ == null
               ? royaltyConfig_
               : royaltyConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -26127,10 +25861,8 @@ public final class TxProto {
         } else {
           royaltyConfigBuilder_.mergeFrom(value);
         }
-        if (royaltyConfig_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -75,7 +75,6 @@ public final class TxProto {
               com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.class, com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -95,7 +94,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasGovernanceKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return governanceKey_ != null;
     }
     /**
      * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
@@ -130,7 +129,7 @@ public final class TxProto {
       if (!sender_.isEmpty()) {
         output.writeBytes(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (governanceKey_ != null) {
         output.writeMessage(2, getGovernanceKey());
       }
       getUnknownFields().writeTo(output);
@@ -146,7 +145,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (governanceKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getGovernanceKey());
       }
@@ -308,19 +307,13 @@ public final class TxProto {
 
       // Construct using com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGovernanceKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -368,14 +361,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.governanceKey_ = governanceKeyBuilder_ == null
               ? governanceKey_
               : governanceKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -581,10 +571,8 @@ public final class TxProto {
         } else {
           governanceKeyBuilder_.mergeFrom(value);
         }
-        if (governanceKey_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

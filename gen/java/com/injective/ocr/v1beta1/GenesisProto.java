@@ -449,7 +449,6 @@ public final class GenesisProto {
               com.injective.ocr.v1beta1.GenesisProto.GenesisState.class, com.injective.ocr.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.ocr.v1beta1.OcrProto.Params params_;
     /**
@@ -462,7 +461,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -995,7 +994,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < feedConfigs_.size(); i++) {
@@ -1031,7 +1030,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1273,27 +1272,13 @@ public final class GenesisProto {
 
       // Construct using com.injective.ocr.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getFeedConfigsFieldBuilder();
-          getLatestEpochAndRoundsFieldBuilder();
-          getFeedTransmissionsFieldBuilder();
-          getLatestAggregatorRoundIdsFieldBuilder();
-          getRewardPoolsFieldBuilder();
-          getFeedObservationCountsFieldBuilder();
-          getFeedTransmissionCountsFieldBuilder();
-          getPendingPayeeshipsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1469,14 +1454,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.injective.ocr.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1974,10 +1956,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4689,7 +4669,6 @@ public final class GenesisProto {
               com.injective.ocr.v1beta1.GenesisProto.FeedTransmission.class, com.injective.ocr.v1beta1.GenesisProto.FeedTransmission.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEED_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object feedId_ = "";
@@ -4737,7 +4716,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasTransmission() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return transmission_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.Transmission transmission = 2 [json_name = "transmission"];</code>
@@ -4772,7 +4751,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feedId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (transmission_ != null) {
         output.writeMessage(2, getTransmission());
       }
       getUnknownFields().writeTo(output);
@@ -4787,7 +4766,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feedId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (transmission_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTransmission());
       }
@@ -4949,19 +4928,13 @@ public final class GenesisProto {
 
       // Construct using com.injective.ocr.v1beta1.GenesisProto.FeedTransmission.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTransmissionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5009,14 +4982,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feedId_ = feedId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.transmission_ = transmissionBuilder_ == null
               ? transmission_
               : transmissionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5264,10 +5234,8 @@ public final class GenesisProto {
         } else {
           transmissionBuilder_.mergeFrom(value);
         }
-        if (transmission_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5449,7 +5417,6 @@ public final class GenesisProto {
               com.injective.ocr.v1beta1.GenesisProto.FeedEpochAndRound.class, com.injective.ocr.v1beta1.GenesisProto.FeedEpochAndRound.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEED_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object feedId_ = "";
@@ -5497,7 +5464,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEpochAndRound() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return epochAndRound_ != null;
     }
     /**
      * <code>.injective.ocr.v1beta1.EpochAndRound epoch_and_round = 2 [json_name = "epochAndRound"];</code>
@@ -5532,7 +5499,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feedId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochAndRound_ != null) {
         output.writeMessage(2, getEpochAndRound());
       }
       getUnknownFields().writeTo(output);
@@ -5547,7 +5514,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feedId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochAndRound_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEpochAndRound());
       }
@@ -5709,19 +5676,13 @@ public final class GenesisProto {
 
       // Construct using com.injective.ocr.v1beta1.GenesisProto.FeedEpochAndRound.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEpochAndRoundFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5769,14 +5730,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feedId_ = feedId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.epochAndRound_ = epochAndRoundBuilder_ == null
               ? epochAndRound_
               : epochAndRoundBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6024,10 +5982,8 @@ public final class GenesisProto {
         } else {
           epochAndRoundBuilder_.mergeFrom(value);
         }
-        if (epochAndRound_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6834,7 +6790,6 @@ public final class GenesisProto {
               com.injective.ocr.v1beta1.GenesisProto.RewardPool.class, com.injective.ocr.v1beta1.GenesisProto.RewardPool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEED_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object feedId_ = "";
@@ -6882,7 +6837,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -6917,7 +6872,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feedId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -6932,7 +6887,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feedId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -7094,19 +7049,13 @@ public final class GenesisProto {
 
       // Construct using com.injective.ocr.v1beta1.GenesisProto.RewardPool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7154,14 +7103,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feedId_ = feedId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7409,10 +7355,8 @@ public final class GenesisProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

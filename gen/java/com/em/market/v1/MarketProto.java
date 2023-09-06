@@ -1007,7 +1007,6 @@ public final class MarketProto {
               com.em.market.v1.MarketProto.Order.class, com.em.market.v1.MarketProto.Order.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORDER_ID_FIELD_NUMBER = 1;
     private long orderId_ = 0L;
     /**
@@ -1123,7 +1122,7 @@ public final class MarketProto {
      */
     @java.lang.Override
     public boolean hasSource() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return source_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
@@ -1227,7 +1226,7 @@ public final class MarketProto {
      */
     @java.lang.Override
     public boolean hasDestination() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return destination_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin destination = 8 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
@@ -1292,7 +1291,7 @@ public final class MarketProto {
      */
     @java.lang.Override
     public boolean hasCreated() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return created_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created = 10 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1336,7 +1335,7 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clientOrderId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (source_ != null) {
         output.writeMessage(5, getSource());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceRemaining_)) {
@@ -1345,13 +1344,13 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceFilled_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sourceFilled_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (destination_ != null) {
         output.writeMessage(8, getDestination());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFilled_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, destinationFilled_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (created_ != null) {
         output.writeMessage(10, getCreated());
       }
       getUnknownFields().writeTo(output);
@@ -1377,7 +1376,7 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clientOrderId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (source_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSource());
       }
@@ -1387,14 +1386,14 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceFilled_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sourceFilled_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (destination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getDestination());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFilled_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, destinationFilled_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (created_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getCreated());
       }
@@ -1598,21 +1597,13 @@ public final class MarketProto {
 
       // Construct using com.em.market.v1.MarketProto.Order.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSourceFieldBuilder();
-          getDestinationFieldBuilder();
-          getCreatedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1685,12 +1676,10 @@ public final class MarketProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.clientOrderId_ = clientOrderId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.source_ = sourceBuilder_ == null
               ? source_
               : sourceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.sourceRemaining_ = sourceRemaining_;
@@ -1702,7 +1691,6 @@ public final class MarketProto {
           result.destination_ = destinationBuilder_ == null
               ? destination_
               : destinationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.destinationFilled_ = destinationFilled_;
@@ -1711,9 +1699,7 @@ public final class MarketProto {
           result.created_ = createdBuilder_ == null
               ? created_
               : createdBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2194,10 +2180,8 @@ public final class MarketProto {
         } else {
           sourceBuilder_.mergeFrom(value);
         }
-        if (source_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2459,10 +2443,8 @@ public final class MarketProto {
         } else {
           destinationBuilder_.mergeFrom(value);
         }
-        if (destination_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2652,10 +2634,8 @@ public final class MarketProto {
         } else {
           createdBuilder_.mergeFrom(value);
         }
-        if (created_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2852,7 +2832,6 @@ public final class MarketProto {
               com.em.market.v1.MarketProto.ExecutionPlan.class, com.em.market.v1.MarketProto.ExecutionPlan.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PRICE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object price_ = "";
@@ -2900,7 +2879,7 @@ public final class MarketProto {
      */
     @java.lang.Override
     public boolean hasFirstOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return firstOrder_ != null;
     }
     /**
      * <code>.em.market.v1.Order first_order = 2 [json_name = "firstOrder"];</code>
@@ -2926,7 +2905,7 @@ public final class MarketProto {
      */
     @java.lang.Override
     public boolean hasSecondOrder() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return secondOrder_ != null;
     }
     /**
      * <code>.em.market.v1.Order second_order = 3 [json_name = "secondOrder"];</code>
@@ -2961,10 +2940,10 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (firstOrder_ != null) {
         output.writeMessage(2, getFirstOrder());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (secondOrder_ != null) {
         output.writeMessage(3, getSecondOrder());
       }
       getUnknownFields().writeTo(output);
@@ -2979,11 +2958,11 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (firstOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFirstOrder());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (secondOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSecondOrder());
       }
@@ -3154,20 +3133,13 @@ public final class MarketProto {
 
       // Construct using com.em.market.v1.MarketProto.ExecutionPlan.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFirstOrderFieldBuilder();
-          getSecondOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3220,20 +3192,16 @@ public final class MarketProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.firstOrder_ = firstOrderBuilder_ == null
               ? firstOrder_
               : firstOrderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.secondOrder_ = secondOrderBuilder_ == null
               ? secondOrder_
               : secondOrderBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3491,10 +3459,8 @@ public final class MarketProto {
         } else {
           firstOrderBuilder_.mergeFrom(value);
         }
-        if (firstOrder_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3612,10 +3578,8 @@ public final class MarketProto {
         } else {
           secondOrderBuilder_.mergeFrom(value);
         }
-        if (secondOrder_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3823,7 +3787,6 @@ public final class MarketProto {
               com.em.market.v1.MarketProto.MarketData.class, com.em.market.v1.MarketProto.MarketData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SOURCE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object source_ = "";
@@ -3949,7 +3912,7 @@ public final class MarketProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return timestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.stdtime) = true];</code>
@@ -3990,7 +3953,7 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPrice_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lastPrice_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         output.writeMessage(4, getTimestamp());
       }
       getUnknownFields().writeTo(output);
@@ -4011,7 +3974,7 @@ public final class MarketProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPrice_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lastPrice_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTimestamp());
       }
@@ -4181,19 +4144,13 @@ public final class MarketProto {
 
       // Construct using com.em.market.v1.MarketProto.MarketData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4249,14 +4206,11 @@ public final class MarketProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.lastPrice_ = lastPrice_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4668,10 +4622,8 @@ public final class MarketProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        if (timestamp_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

@@ -183,7 +183,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteScopeRequest.class, com.provenance.metadata.v1.TxProto.MsgWriteScopeRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCOPE_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ScopeProto.Scope scope_;
     /**
@@ -196,7 +195,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasScope() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return scope_ != null;
     }
     /**
      * <pre>
@@ -397,7 +396,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scope_ != null) {
         output.writeMessage(1, getScope());
       }
       for (int i = 0; i < signers_.size(); i++) {
@@ -418,7 +417,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scope_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScope());
       }
@@ -608,19 +607,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteScopeRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScopeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -668,12 +661,10 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteScopeRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scope_ = scopeBuilder_ == null
               ? scope_
               : scopeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           signers_.makeImmutable();
@@ -685,7 +676,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.specUuid_ = specUuid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -907,10 +897,8 @@ public final class TxProto {
         } else {
           scopeBuilder_.mergeFrom(value);
         }
-        if (scope_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1477,7 +1465,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteScopeResponse.class, com.provenance.metadata.v1.TxProto.MsgWriteScopeResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCOPE_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.ScopeIdInfo scopeIdInfo_;
     /**
@@ -1490,7 +1477,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasScopeIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return scopeIdInfo_ != null;
     }
     /**
      * <pre>
@@ -1530,7 +1517,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         output.writeMessage(1, getScopeIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -1542,7 +1529,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScopeIdInfo());
       }
@@ -1704,19 +1691,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteScopeResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScopeIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1760,14 +1741,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteScopeResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scopeIdInfo_ = scopeIdInfoBuilder_ == null
               ? scopeIdInfo_
               : scopeIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1953,10 +1931,8 @@ public final class TxProto {
         } else {
           scopeIdInfoBuilder_.mergeFrom(value);
         }
-        if (scopeIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9426,7 +9402,7 @@ public final class TxProto {
       super(builder);
     }
     private MsgUpdateValueOwnersRequest() {
-      scopeIds_ = emptyList(com.google.protobuf.ByteString.class);
+      scopeIds_ = java.util.Collections.emptyList();
       valueOwnerAddress_ = "";
       signers_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
@@ -9454,8 +9430,7 @@ public final class TxProto {
 
     public static final int SCOPE_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> scopeIds_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> scopeIds_;
     /**
      * <pre>
      * scope_ids are the scope metadata addresses of all scopes to be updated.
@@ -9822,7 +9797,7 @@ public final class TxProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        scopeIds_ = emptyList(com.google.protobuf.ByteString.class);
+        scopeIds_ = java.util.Collections.emptyList();
         valueOwnerAddress_ = "";
         signers_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
@@ -9852,17 +9827,22 @@ public final class TxProto {
       @java.lang.Override
       public com.provenance.metadata.v1.TxProto.MsgUpdateValueOwnersRequest buildPartial() {
         com.provenance.metadata.v1.TxProto.MsgUpdateValueOwnersRequest result = new com.provenance.metadata.v1.TxProto.MsgUpdateValueOwnersRequest(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.TxProto.MsgUpdateValueOwnersRequest result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          scopeIds_ = java.util.Collections.unmodifiableList(scopeIds_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.scopeIds_ = scopeIds_;
+      }
+
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgUpdateValueOwnersRequest result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          scopeIds_.makeImmutable();
-          result.scopeIds_ = scopeIds_;
-        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.valueOwnerAddress_ = valueOwnerAddress_;
         }
@@ -9919,8 +9899,7 @@ public final class TxProto {
         if (!other.scopeIds_.isEmpty()) {
           if (scopeIds_.isEmpty()) {
             scopeIds_ = other.scopeIds_;
-            scopeIds_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureScopeIdsIsMutable();
             scopeIds_.addAll(other.scopeIds_);
@@ -10002,12 +9981,12 @@ public final class TxProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> scopeIds_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> scopeIds_ = java.util.Collections.emptyList();
       private void ensureScopeIdsIsMutable() {
-        if (!scopeIds_.isModifiable()) {
-          scopeIds_ = makeMutableCopy(scopeIds_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          scopeIds_ = new java.util.ArrayList<com.google.protobuf.ByteString>(scopeIds_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -10019,8 +9998,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getScopeIdsList() {
-        scopeIds_.makeImmutable();
-        return scopeIds_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(scopeIds_) : scopeIds_;
       }
       /**
        * <pre>
@@ -10060,7 +10039,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureScopeIdsIsMutable();
         scopeIds_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10077,7 +10055,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureScopeIdsIsMutable();
         scopeIds_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10095,7 +10072,6 @@ public final class TxProto {
         ensureScopeIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, scopeIds_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10108,7 +10084,7 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearScopeIds() {
-        scopeIds_ = emptyList(com.google.protobuf.ByteString.class);
+        scopeIds_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -12472,7 +12448,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteSessionRequest.class, com.provenance.metadata.v1.TxProto.MsgWriteSessionRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SESSION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ScopeProto.Session session_;
     /**
@@ -12485,7 +12460,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSession() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return session_ != null;
     }
     /**
      * <pre>
@@ -12581,7 +12556,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSessionIdComponents() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return sessionIdComponents_ != null;
     }
     /**
      * <pre>
@@ -12686,13 +12661,13 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (session_ != null) {
         output.writeMessage(1, getSession());
       }
       for (int i = 0; i < signers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signers_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sessionIdComponents_ != null) {
         output.writeMessage(3, getSessionIdComponents());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(specUuid_)) {
@@ -12707,7 +12682,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (session_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSession());
       }
@@ -12719,7 +12694,7 @@ public final class TxProto {
         size += dataSize;
         size += 1 * getSignersList().size();
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sessionIdComponents_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSessionIdComponents());
       }
@@ -12903,20 +12878,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteSessionRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSessionFieldBuilder();
-          getSessionIdComponentsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12968,12 +12936,10 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteSessionRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.session_ = sessionBuilder_ == null
               ? session_
               : sessionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           signers_.makeImmutable();
@@ -12983,12 +12949,10 @@ public final class TxProto {
           result.sessionIdComponents_ = sessionIdComponentsBuilder_ == null
               ? sessionIdComponents_
               : sessionIdComponentsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.specUuid_ = specUuid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13210,10 +13174,8 @@ public final class TxProto {
         } else {
           sessionBuilder_.mergeFrom(value);
         }
-        if (session_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -13539,10 +13501,8 @@ public final class TxProto {
         } else {
           sessionIdComponentsBuilder_.mergeFrom(value);
         }
-        if (sessionIdComponents_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -15024,7 +14984,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteSessionResponse.class, com.provenance.metadata.v1.TxProto.MsgWriteSessionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SESSION_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.SessionIdInfo sessionIdInfo_;
     /**
@@ -15037,7 +14996,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSessionIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return sessionIdInfo_ != null;
     }
     /**
      * <pre>
@@ -15077,7 +15036,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sessionIdInfo_ != null) {
         output.writeMessage(1, getSessionIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -15089,7 +15048,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sessionIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSessionIdInfo());
       }
@@ -15251,19 +15210,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteSessionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSessionIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15307,14 +15260,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteSessionResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sessionIdInfo_ = sessionIdInfoBuilder_ == null
               ? sessionIdInfo_
               : sessionIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15500,10 +15450,8 @@ public final class TxProto {
         } else {
           sessionIdInfoBuilder_.mergeFrom(value);
         }
-        if (sessionIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -15870,7 +15818,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteRecordRequest.class, com.provenance.metadata.v1.TxProto.MsgWriteRecordRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECORD_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ScopeProto.Record record_;
     /**
@@ -15883,7 +15830,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return record_ != null;
     }
     /**
      * <pre>
@@ -15979,7 +15926,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSessionIdComponents() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return sessionIdComponents_ != null;
     }
     /**
      * <pre>
@@ -16152,13 +16099,13 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         output.writeMessage(1, getRecord());
       }
       for (int i = 0; i < signers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signers_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sessionIdComponents_ != null) {
         output.writeMessage(3, getSessionIdComponents());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecUuid_)) {
@@ -16176,7 +16123,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRecord());
       }
@@ -16188,7 +16135,7 @@ public final class TxProto {
         size += dataSize;
         size += 1 * getSignersList().size();
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sessionIdComponents_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSessionIdComponents());
       }
@@ -16382,21 +16329,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteRecordRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecordFieldBuilder();
-          getSessionIdComponentsFieldBuilder();
-          getPartiesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16468,12 +16407,10 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteRecordRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           signers_.makeImmutable();
@@ -16483,12 +16420,10 @@ public final class TxProto {
           result.sessionIdComponents_ = sessionIdComponentsBuilder_ == null
               ? sessionIdComponents_
               : sessionIdComponentsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.contractSpecUuid_ = contractSpecUuid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16749,10 +16684,8 @@ public final class TxProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        if (record_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17078,10 +17011,8 @@ public final class TxProto {
         } else {
           sessionIdComponentsBuilder_.mergeFrom(value);
         }
-        if (sessionIdComponents_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -17749,7 +17680,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteRecordResponse.class, com.provenance.metadata.v1.TxProto.MsgWriteRecordResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECORD_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.RecordIdInfo recordIdInfo_;
     /**
@@ -17762,7 +17692,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecordIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return recordIdInfo_ != null;
     }
     /**
      * <pre>
@@ -17802,7 +17732,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recordIdInfo_ != null) {
         output.writeMessage(1, getRecordIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -17814,7 +17744,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recordIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRecordIdInfo());
       }
@@ -17976,19 +17906,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteRecordResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecordIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18032,14 +17956,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteRecordResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recordIdInfo_ = recordIdInfoBuilder_ == null
               ? recordIdInfo_
               : recordIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18225,10 +18146,8 @@ public final class TxProto {
         } else {
           recordIdInfoBuilder_.mergeFrom(value);
         }
-        if (recordIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -19607,7 +19526,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationRequest.class, com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.SpecificationProto.ScopeSpecification specification_;
     /**
@@ -19620,7 +19538,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSpecification() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return specification_ != null;
     }
     /**
      * <pre>
@@ -19770,7 +19688,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (specification_ != null) {
         output.writeMessage(1, getSpecification());
       }
       for (int i = 0; i < signers_.size(); i++) {
@@ -19788,7 +19706,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (specification_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpecification());
       }
@@ -19971,19 +19889,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSpecificationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20030,12 +19942,10 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specification_ = specificationBuilder_ == null
               ? specification_
               : specificationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           signers_.makeImmutable();
@@ -20044,7 +19954,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.specUuid_ = specUuid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20256,10 +20165,8 @@ public final class TxProto {
         } else {
           specificationBuilder_.mergeFrom(value);
         }
-        if (specification_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -20724,7 +20631,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationResponse.class, com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCOPE_SPEC_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo scopeSpecIdInfo_;
     /**
@@ -20737,7 +20643,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasScopeSpecIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return scopeSpecIdInfo_ != null;
     }
     /**
      * <pre>
@@ -20777,7 +20683,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeSpecIdInfo_ != null) {
         output.writeMessage(1, getScopeSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -20789,7 +20695,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeSpecIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScopeSpecIdInfo());
       }
@@ -20951,19 +20857,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScopeSpecIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -21007,14 +20907,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteScopeSpecificationResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scopeSpecIdInfo_ = scopeSpecIdInfoBuilder_ == null
               ? scopeSpecIdInfo_
               : scopeSpecIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21200,10 +21097,8 @@ public final class TxProto {
         } else {
           scopeSpecIdInfoBuilder_.mergeFrom(value);
         }
-        if (scopeSpecIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -22602,7 +22497,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationRequest.class, com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.SpecificationProto.ContractSpecification specification_;
     /**
@@ -22615,7 +22509,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSpecification() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return specification_ != null;
     }
     /**
      * <pre>
@@ -22765,7 +22659,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (specification_ != null) {
         output.writeMessage(1, getSpecification());
       }
       for (int i = 0; i < signers_.size(); i++) {
@@ -22783,7 +22677,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (specification_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpecification());
       }
@@ -22966,19 +22860,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSpecificationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -23025,12 +22913,10 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specification_ = specificationBuilder_ == null
               ? specification_
               : specificationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           signers_.makeImmutable();
@@ -23039,7 +22925,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.specUuid_ = specUuid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23251,10 +23136,8 @@ public final class TxProto {
         } else {
           specificationBuilder_.mergeFrom(value);
         }
-        if (specification_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -23722,7 +23605,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationResponse.class, com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTRACT_SPEC_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo contractSpecIdInfo_;
     /**
@@ -23736,7 +23618,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContractSpecIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return contractSpecIdInfo_ != null;
     }
     /**
      * <pre>
@@ -23778,7 +23660,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractSpecIdInfo_ != null) {
         output.writeMessage(1, getContractSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -23790,7 +23672,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractSpecIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContractSpecIdInfo());
       }
@@ -23952,19 +23834,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContractSpecIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -24008,14 +23884,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteContractSpecificationResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractSpecIdInfo_ = contractSpecIdInfoBuilder_ == null
               ? contractSpecIdInfo_
               : contractSpecIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -24206,10 +24079,8 @@ public final class TxProto {
         } else {
           contractSpecIdInfoBuilder_.mergeFrom(value);
         }
-        if (contractSpecIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -28048,7 +27919,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationRequest.class, com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SPECIFICATION_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.SpecificationProto.RecordSpecification specification_;
     /**
@@ -28061,7 +27931,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSpecification() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return specification_ != null;
     }
     /**
      * <pre>
@@ -28211,7 +28081,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (specification_ != null) {
         output.writeMessage(1, getSpecification());
       }
       for (int i = 0; i < signers_.size(); i++) {
@@ -28229,7 +28099,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (specification_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpecification());
       }
@@ -28412,19 +28282,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSpecificationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -28471,12 +28335,10 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.specification_ = specificationBuilder_ == null
               ? specification_
               : specificationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           signers_.makeImmutable();
@@ -28485,7 +28347,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.contractSpecUuid_ = contractSpecUuid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -28697,10 +28558,8 @@ public final class TxProto {
         } else {
           specificationBuilder_.mergeFrom(value);
         }
-        if (specification_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -29168,7 +29027,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationResponse.class, com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECORD_SPEC_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo recordSpecIdInfo_;
     /**
@@ -29182,7 +29040,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecordSpecIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return recordSpecIdInfo_ != null;
     }
     /**
      * <pre>
@@ -29224,7 +29082,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recordSpecIdInfo_ != null) {
         output.writeMessage(1, getRecordSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -29236,7 +29094,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recordSpecIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRecordSpecIdInfo());
       }
@@ -29398,19 +29256,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecordSpecIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -29454,14 +29306,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteRecordSpecificationResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recordSpecIdInfo_ = recordSpecIdInfoBuilder_ == null
               ? recordSpecIdInfo_
               : recordSpecIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -29652,10 +29501,8 @@ public final class TxProto {
         } else {
           recordSpecIdInfoBuilder_.mergeFrom(value);
         }
-        if (recordSpecIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -30984,7 +30831,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgBindOSLocatorRequest.class, com.provenance.metadata.v1.TxProto.MsgBindOSLocatorRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOCATOR_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator locator_;
     /**
@@ -30997,7 +30843,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLocator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return locator_ != null;
     }
     /**
      * <pre>
@@ -31037,7 +30883,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         output.writeMessage(1, getLocator());
       }
       getUnknownFields().writeTo(output);
@@ -31049,7 +30895,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocator());
       }
@@ -31211,19 +31057,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgBindOSLocatorRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -31267,14 +31107,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgBindOSLocatorRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.locator_ = locatorBuilder_ == null
               ? locator_
               : locatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -31460,10 +31297,8 @@ public final class TxProto {
         } else {
           locatorBuilder_.mergeFrom(value);
         }
-        if (locator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -31652,7 +31487,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgBindOSLocatorResponse.class, com.provenance.metadata.v1.TxProto.MsgBindOSLocatorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOCATOR_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator locator_;
     /**
@@ -31661,7 +31495,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLocator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return locator_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.ObjectStoreLocator locator = 1 [json_name = "locator", (.gogoproto.nullable) = false];</code>
@@ -31693,7 +31527,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         output.writeMessage(1, getLocator());
       }
       getUnknownFields().writeTo(output);
@@ -31705,7 +31539,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocator());
       }
@@ -31867,19 +31701,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgBindOSLocatorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -31923,14 +31751,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgBindOSLocatorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.locator_ = locatorBuilder_ == null
               ? locator_
               : locatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -32096,10 +31921,8 @@ public final class TxProto {
         } else {
           locatorBuilder_.mergeFrom(value);
         }
-        if (locator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -32284,7 +32107,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorRequest.class, com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOCATOR_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator locator_;
     /**
@@ -32297,7 +32119,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLocator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return locator_ != null;
     }
     /**
      * <pre>
@@ -32337,7 +32159,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         output.writeMessage(1, getLocator());
       }
       getUnknownFields().writeTo(output);
@@ -32349,7 +32171,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocator());
       }
@@ -32511,19 +32333,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -32567,14 +32383,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.locator_ = locatorBuilder_ == null
               ? locator_
               : locatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -32760,10 +32573,8 @@ public final class TxProto {
         } else {
           locatorBuilder_.mergeFrom(value);
         }
-        if (locator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -32952,7 +32763,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorResponse.class, com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOCATOR_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator locator_;
     /**
@@ -32961,7 +32771,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLocator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return locator_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.ObjectStoreLocator locator = 1 [json_name = "locator", (.gogoproto.nullable) = false];</code>
@@ -32993,7 +32803,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         output.writeMessage(1, getLocator());
       }
       getUnknownFields().writeTo(output);
@@ -33005,7 +32815,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocator());
       }
@@ -33167,19 +32977,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -33223,14 +33027,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgDeleteOSLocatorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.locator_ = locatorBuilder_ == null
               ? locator_
               : locatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -33396,10 +33197,8 @@ public final class TxProto {
         } else {
           locatorBuilder_.mergeFrom(value);
         }
-        if (locator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -33584,7 +33383,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorRequest.class, com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOCATOR_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator locator_;
     /**
@@ -33597,7 +33395,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLocator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return locator_ != null;
     }
     /**
      * <pre>
@@ -33637,7 +33435,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         output.writeMessage(1, getLocator());
       }
       getUnknownFields().writeTo(output);
@@ -33649,7 +33447,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocator());
       }
@@ -33811,19 +33609,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -33867,14 +33659,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.locator_ = locatorBuilder_ == null
               ? locator_
               : locatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -34060,10 +33849,8 @@ public final class TxProto {
         } else {
           locatorBuilder_.mergeFrom(value);
         }
-        if (locator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -34252,7 +34039,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorResponse.class, com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOCATOR_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator locator_;
     /**
@@ -34261,7 +34047,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLocator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return locator_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.ObjectStoreLocator locator = 1 [json_name = "locator", (.gogoproto.nullable) = false];</code>
@@ -34293,7 +34079,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         output.writeMessage(1, getLocator());
       }
       getUnknownFields().writeTo(output);
@@ -34305,7 +34091,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (locator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocator());
       }
@@ -34467,19 +34253,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -34523,14 +34303,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgModifyOSLocatorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.locator_ = locatorBuilder_ == null
               ? locator_
               : locatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -34696,10 +34473,8 @@ public final class TxProto {
         } else {
           locatorBuilder_.mergeFrom(value);
         }
-        if (locator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -36281,7 +36056,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecRequest.class, com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTRACTSPEC_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.p8e.P8eProto.ContractSpec contractspec_;
     /**
@@ -36290,7 +36064,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContractspec() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return contractspec_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.p8e.ContractSpec contractspec = 1 [json_name = "contractspec", (.gogoproto.nullable) = false];</code>
@@ -36359,7 +36133,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractspec_ != null) {
         output.writeMessage(1, getContractspec());
       }
       for (int i = 0; i < signers_.size(); i++) {
@@ -36374,7 +36148,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractspec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContractspec());
       }
@@ -36551,19 +36325,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContractspecFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -36609,18 +36377,15 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractspec_ = contractspecBuilder_ == null
               ? contractspec_
               : contractspecBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           signers_.makeImmutable();
           result.signers_ = signers_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -36802,10 +36567,8 @@ public final class TxProto {
         } else {
           contractspecBuilder_.mergeFrom(value);
         }
-        if (contractspec_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -37115,7 +36878,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecResponse.class, com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTRACT_SPEC_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo contractSpecIdInfo_;
     /**
@@ -37124,7 +36886,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContractSpecIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return contractSpecIdInfo_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 1 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
@@ -37197,7 +36959,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractSpecIdInfo_ != null) {
         output.writeMessage(1, getContractSpecIdInfo());
       }
       for (int i = 0; i < recordSpecIdInfos_.size(); i++) {
@@ -37212,7 +36974,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractSpecIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContractSpecIdInfo());
       }
@@ -37385,20 +37147,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContractSpecIdInfoFieldBuilder();
-          getRecordSpecIdInfosFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -37462,14 +37217,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgWriteP8eContractSpecResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contractSpecIdInfo_ = contractSpecIdInfoBuilder_ == null
               ? contractSpecIdInfo_
               : contractSpecIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -37674,10 +37426,8 @@ public final class TxProto {
         } else {
           contractSpecIdInfoBuilder_.mergeFrom(value);
         }
-        if (contractSpecIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -38173,7 +37923,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgP8eMemorializeContractRequest.class, com.provenance.metadata.v1.TxProto.MsgP8eMemorializeContractRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCOPE_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object scopeId_ = "";
@@ -38299,7 +38048,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecitals() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return recitals_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Recitals recitals = 4 [json_name = "recitals"];</code>
@@ -38325,7 +38074,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContract() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return contract_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.p8e.Contract contract = 5 [json_name = "contract"];</code>
@@ -38351,7 +38100,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSignatures() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return signatures_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.p8e.SignatureSet signatures = 6 [json_name = "signatures"];</code>
@@ -38431,13 +38180,13 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, scopeSpecificationId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recitals_ != null) {
         output.writeMessage(4, getRecitals());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (contract_ != null) {
         output.writeMessage(5, getContract());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (signatures_ != null) {
         output.writeMessage(6, getSignatures());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoker_)) {
@@ -38461,15 +38210,15 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecificationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, scopeSpecificationId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recitals_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRecitals());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (contract_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getContract());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (signatures_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSignatures());
       }
@@ -38669,21 +38418,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgP8eMemorializeContractRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecitalsFieldBuilder();
-          getContractFieldBuilder();
-          getSignaturesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -38750,29 +38491,24 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.scopeSpecificationId_ = scopeSpecificationId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.recitals_ = recitalsBuilder_ == null
               ? recitals_
               : recitalsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.contract_ = contractBuilder_ == null
               ? contract_
               : contractBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.signatures_ = signaturesBuilder_ == null
               ? signatures_
               : signaturesBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.invoker_ = invoker_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -39214,10 +38950,8 @@ public final class TxProto {
         } else {
           recitalsBuilder_.mergeFrom(value);
         }
-        if (recitals_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -39335,10 +39069,8 @@ public final class TxProto {
         } else {
           contractBuilder_.mergeFrom(value);
         }
-        if (contract_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -39456,10 +39188,8 @@ public final class TxProto {
         } else {
           signaturesBuilder_.mergeFrom(value);
         }
-        if (signatures_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -39745,7 +39475,6 @@ public final class TxProto {
               com.provenance.metadata.v1.TxProto.MsgP8eMemorializeContractResponse.class, com.provenance.metadata.v1.TxProto.MsgP8eMemorializeContractResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCOPE_ID_INFO_FIELD_NUMBER = 1;
     private com.provenance.metadata.v1.MetadataProto.ScopeIdInfo scopeIdInfo_;
     /**
@@ -39754,7 +39483,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasScopeIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return scopeIdInfo_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 1 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
@@ -39780,7 +39509,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSessionIdInfo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return sessionIdInfo_ != null;
     }
     /**
      * <code>.provenance.metadata.v1.SessionIdInfo session_id_info = 2 [json_name = "sessionIdInfo", (.gogoproto.moretags) = "yaml:&#92;"session_id_info&#92;""];</code>
@@ -39853,10 +39582,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         output.writeMessage(1, getScopeIdInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sessionIdInfo_ != null) {
         output.writeMessage(2, getSessionIdInfo());
       }
       for (int i = 0; i < recordIdInfos_.size(); i++) {
@@ -39871,11 +39600,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getScopeIdInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sessionIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSessionIdInfo());
       }
@@ -40057,21 +39786,13 @@ public final class TxProto {
 
       // Construct using com.provenance.metadata.v1.TxProto.MsgP8eMemorializeContractResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScopeIdInfoFieldBuilder();
-          getSessionIdInfoFieldBuilder();
-          getRecordIdInfosFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -40140,20 +39861,16 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.metadata.v1.TxProto.MsgP8eMemorializeContractResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.scopeIdInfo_ = scopeIdInfoBuilder_ == null
               ? scopeIdInfo_
               : scopeIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sessionIdInfo_ = sessionIdInfoBuilder_ == null
               ? sessionIdInfo_
               : sessionIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -40368,10 +40085,8 @@ public final class TxProto {
         } else {
           scopeIdInfoBuilder_.mergeFrom(value);
         }
-        if (scopeIdInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -40489,10 +40204,8 @@ public final class TxProto {
         } else {
           sessionIdInfoBuilder_.mergeFrom(value);
         }
-        if (sessionIdInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

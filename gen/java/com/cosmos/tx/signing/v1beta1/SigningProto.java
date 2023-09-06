@@ -2121,7 +2121,6 @@ public final class SigningProto {
                   com.cosmos.tx.signing.v1beta1.SigningProto.SignatureDescriptor.Data.Multi.class, com.cosmos.tx.signing.v1beta1.SigningProto.SignatureDescriptor.Data.Multi.Builder.class);
         }
 
-        private int bitField0_;
         public static final int BITARRAY_FIELD_NUMBER = 1;
         private com.cosmos.crypto.multisig.v1beta1.MultisigProto.CompactBitArray bitarray_;
         /**
@@ -2134,7 +2133,7 @@ public final class SigningProto {
          */
         @java.lang.Override
         public boolean hasBitarray() {
-          return ((bitField0_ & 0x00000001) != 0);
+          return bitarray_ != null;
         }
         /**
          * <pre>
@@ -2235,7 +2234,7 @@ public final class SigningProto {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (bitarray_ != null) {
             output.writeMessage(1, getBitarray());
           }
           for (int i = 0; i < signatures_.size(); i++) {
@@ -2250,7 +2249,7 @@ public final class SigningProto {
           if (size != -1) return size;
 
           size = 0;
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (bitarray_ != null) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(1, getBitarray());
           }
@@ -2422,20 +2421,13 @@ public final class SigningProto {
 
           // Construct using com.cosmos.tx.signing.v1beta1.SigningProto.SignatureDescriptor.Data.Multi.newBuilder()
           private Builder() {
-            maybeForceBuilderInitialization();
+
           }
 
           private Builder(
               com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
             super(parent);
-            maybeForceBuilderInitialization();
-          }
-          private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessageV3
-                    .alwaysUseFieldBuilders) {
-              getBitarrayFieldBuilder();
-              getSignaturesFieldBuilder();
-            }
+
           }
           @java.lang.Override
           public Builder clear() {
@@ -2499,14 +2491,11 @@ public final class SigningProto {
 
           private void buildPartial0(com.cosmos.tx.signing.v1beta1.SigningProto.SignatureDescriptor.Data.Multi result) {
             int from_bitField0_ = bitField0_;
-            int to_bitField0_ = 0;
             if (((from_bitField0_ & 0x00000001) != 0)) {
               result.bitarray_ = bitarrayBuilder_ == null
                   ? bitarray_
                   : bitarrayBuilder_.build();
-              to_bitField0_ |= 0x00000001;
             }
-            result.bitField0_ |= to_bitField0_;
           }
 
           @java.lang.Override
@@ -2731,10 +2720,8 @@ public final class SigningProto {
             } else {
               bitarrayBuilder_.mergeFrom(value);
             }
-            if (bitarray_ != null) {
-              bitField0_ |= 0x00000001;
-              onChanged();
-            }
+            bitField0_ |= 0x00000001;
+            onChanged();
             return this;
           }
           /**
@@ -4133,7 +4120,6 @@ public final class SigningProto {
 
     }
 
-    private int bitField0_;
     public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.Any publicKey_;
     /**
@@ -4146,7 +4132,7 @@ public final class SigningProto {
      */
     @java.lang.Override
     public boolean hasPublicKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publicKey_ != null;
     }
     /**
      * <pre>
@@ -4180,7 +4166,7 @@ public final class SigningProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return data_ != null;
     }
     /**
      * <code>.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data data = 2 [json_name = "data"];</code>
@@ -4229,10 +4215,10 @@ public final class SigningProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         output.writeMessage(1, getPublicKey());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         output.writeMessage(2, getData());
       }
       if (sequence_ != 0L) {
@@ -4247,11 +4233,11 @@ public final class SigningProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPublicKey());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getData());
       }
@@ -4434,20 +4420,13 @@ public final class SigningProto {
 
       // Construct using com.cosmos.tx.signing.v1beta1.SigningProto.SignatureDescriptor.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublicKeyFieldBuilder();
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4497,23 +4476,19 @@ public final class SigningProto {
 
       private void buildPartial0(com.cosmos.tx.signing.v1beta1.SigningProto.SignatureDescriptor result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.publicKey_ = publicKeyBuilder_ == null
               ? publicKey_
               : publicKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.sequence_ = sequence_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4717,10 +4692,8 @@ public final class SigningProto {
         } else {
           publicKeyBuilder_.mergeFrom(value);
         }
-        if (publicKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4854,10 +4827,8 @@ public final class SigningProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

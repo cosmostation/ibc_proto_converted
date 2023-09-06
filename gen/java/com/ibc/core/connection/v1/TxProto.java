@@ -120,7 +120,6 @@ public final class TxProto {
               com.ibc.core.connection.v1.TxProto.MsgConnectionOpenInit.class, com.ibc.core.connection.v1.TxProto.MsgConnectionOpenInit.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLIENT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object clientId_ = "";
@@ -168,7 +167,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCounterparty() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return counterparty_ != null;
     }
     /**
      * <code>.ibc.core.connection.v1.Counterparty counterparty = 2 [json_name = "counterparty", (.gogoproto.nullable) = false];</code>
@@ -194,7 +193,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasVersion() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return version_ != null;
     }
     /**
      * <code>.ibc.core.connection.v1.Version version = 3 [json_name = "version"];</code>
@@ -279,10 +278,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (counterparty_ != null) {
         output.writeMessage(2, getCounterparty());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (version_ != null) {
         output.writeMessage(3, getVersion());
       }
       if (delayPeriod_ != 0L) {
@@ -303,11 +302,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clientId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (counterparty_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCounterparty());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (version_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVersion());
       }
@@ -499,20 +498,13 @@ public final class TxProto {
 
       // Construct using com.ibc.core.connection.v1.TxProto.MsgConnectionOpenInit.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCounterpartyFieldBuilder();
-          getVersionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -567,18 +559,15 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.clientId_ = clientId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.counterparty_ = counterpartyBuilder_ == null
               ? counterparty_
               : counterpartyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.version_ = versionBuilder_ == null
               ? version_
               : versionBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.delayPeriod_ = delayPeriod_;
@@ -586,7 +575,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.signer_ = signer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -862,10 +850,8 @@ public final class TxProto {
         } else {
           counterpartyBuilder_.mergeFrom(value);
         }
-        if (counterparty_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -983,10 +969,8 @@ public final class TxProto {
         } else {
           versionBuilder_.mergeFrom(value);
         }
-        if (version_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1843,7 +1827,6 @@ public final class TxProto {
               com.ibc.core.connection.v1.TxProto.MsgConnectionOpenTry.class, com.ibc.core.connection.v1.TxProto.MsgConnectionOpenTry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLIENT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object clientId_ = "";
@@ -1942,7 +1925,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasClientState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return clientState_ != null;
     }
     /**
      * <code>.google.protobuf.Any client_state = 3 [json_name = "clientState"];</code>
@@ -1968,7 +1951,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCounterparty() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return counterparty_ != null;
     }
     /**
      * <code>.ibc.core.connection.v1.Counterparty counterparty = 4 [json_name = "counterparty", (.gogoproto.nullable) = false];</code>
@@ -2046,7 +2029,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasProofHeight() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return proofHeight_ != null;
     }
     /**
      * <code>.ibc.core.client.v1.Height proof_height = 7 [json_name = "proofHeight", (.gogoproto.nullable) = false];</code>
@@ -2118,7 +2101,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasConsensusHeight() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return consensusHeight_ != null;
     }
     /**
      * <code>.ibc.core.client.v1.Height consensus_height = 11 [json_name = "consensusHeight", (.gogoproto.nullable) = false];</code>
@@ -2210,10 +2193,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousConnectionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, previousConnectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (clientState_ != null) {
         output.writeMessage(3, getClientState());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (counterparty_ != null) {
         output.writeMessage(4, getCounterparty());
       }
       if (delayPeriod_ != 0L) {
@@ -2222,7 +2205,7 @@ public final class TxProto {
       for (int i = 0; i < counterpartyVersions_.size(); i++) {
         output.writeMessage(6, counterpartyVersions_.get(i));
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (proofHeight_ != null) {
         output.writeMessage(7, getProofHeight());
       }
       if (!proofInit_.isEmpty()) {
@@ -2234,7 +2217,7 @@ public final class TxProto {
       if (!proofConsensus_.isEmpty()) {
         output.writeBytes(10, proofConsensus_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (consensusHeight_ != null) {
         output.writeMessage(11, getConsensusHeight());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -2258,11 +2241,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousConnectionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, previousConnectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (clientState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getClientState());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (counterparty_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCounterparty());
       }
@@ -2274,7 +2257,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, counterpartyVersions_.get(i));
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (proofHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getProofHeight());
       }
@@ -2290,7 +2273,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(10, proofConsensus_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (consensusHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getConsensusHeight());
       }
@@ -2526,23 +2509,13 @@ public final class TxProto {
 
       // Construct using com.ibc.core.connection.v1.TxProto.MsgConnectionOpenTry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClientStateFieldBuilder();
-          getCounterpartyFieldBuilder();
-          getCounterpartyVersionsFieldBuilder();
-          getProofHeightFieldBuilder();
-          getConsensusHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2635,18 +2608,15 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.previousConnectionId_ = previousConnectionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.clientState_ = clientStateBuilder_ == null
               ? clientState_
               : clientStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.counterparty_ = counterpartyBuilder_ == null
               ? counterparty_
               : counterpartyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.delayPeriod_ = delayPeriod_;
@@ -2655,7 +2625,6 @@ public final class TxProto {
           result.proofHeight_ = proofHeightBuilder_ == null
               ? proofHeight_
               : proofHeightBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.proofInit_ = proofInit_;
@@ -2670,7 +2639,6 @@ public final class TxProto {
           result.consensusHeight_ = consensusHeightBuilder_ == null
               ? consensusHeight_
               : consensusHeightBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.signer_ = signer_;
@@ -2678,7 +2646,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.hostConsensusStateProof_ = hostConsensusStateProof_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3157,10 +3124,8 @@ public final class TxProto {
         } else {
           clientStateBuilder_.mergeFrom(value);
         }
-        if (clientState_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3278,10 +3243,8 @@ public final class TxProto {
         } else {
           counterpartyBuilder_.mergeFrom(value);
         }
-        if (counterparty_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3671,10 +3634,8 @@ public final class TxProto {
         } else {
           proofHeightBuilder_.mergeFrom(value);
         }
-        if (proofHeight_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3927,10 +3888,8 @@ public final class TxProto {
         } else {
           consensusHeightBuilder_.mergeFrom(value);
         }
-        if (consensusHeight_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -4754,7 +4713,6 @@ public final class TxProto {
               com.ibc.core.connection.v1.TxProto.MsgConnectionOpenAck.class, com.ibc.core.connection.v1.TxProto.MsgConnectionOpenAck.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object connectionId_ = "";
@@ -4841,7 +4799,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasVersion() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return version_ != null;
     }
     /**
      * <code>.ibc.core.connection.v1.Version version = 3 [json_name = "version"];</code>
@@ -4867,7 +4825,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasClientState() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return clientState_ != null;
     }
     /**
      * <code>.google.protobuf.Any client_state = 4 [json_name = "clientState"];</code>
@@ -4893,7 +4851,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasProofHeight() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return proofHeight_ != null;
     }
     /**
      * <code>.ibc.core.client.v1.Height proof_height = 5 [json_name = "proofHeight", (.gogoproto.nullable) = false];</code>
@@ -4965,7 +4923,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasConsensusHeight() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return consensusHeight_ != null;
     }
     /**
      * <code>.ibc.core.client.v1.Height consensus_height = 9 [json_name = "consensusHeight", (.gogoproto.nullable) = false];</code>
@@ -5057,13 +5015,13 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(counterpartyConnectionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, counterpartyConnectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (version_ != null) {
         output.writeMessage(3, getVersion());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (clientState_ != null) {
         output.writeMessage(4, getClientState());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (proofHeight_ != null) {
         output.writeMessage(5, getProofHeight());
       }
       if (!proofTry_.isEmpty()) {
@@ -5075,7 +5033,7 @@ public final class TxProto {
       if (!proofConsensus_.isEmpty()) {
         output.writeBytes(8, proofConsensus_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (consensusHeight_ != null) {
         output.writeMessage(9, getConsensusHeight());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -5099,15 +5057,15 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(counterpartyConnectionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, counterpartyConnectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (version_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVersion());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (clientState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getClientState());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (proofHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getProofHeight());
       }
@@ -5123,7 +5081,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(8, proofConsensus_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (consensusHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getConsensusHeight());
       }
@@ -5348,22 +5306,13 @@ public final class TxProto {
 
       // Construct using com.ibc.core.connection.v1.TxProto.MsgConnectionOpenAck.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVersionFieldBuilder();
-          getClientStateFieldBuilder();
-          getProofHeightFieldBuilder();
-          getConsensusHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5435,24 +5384,20 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.counterpartyConnectionId_ = counterpartyConnectionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.version_ = versionBuilder_ == null
               ? version_
               : versionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.clientState_ = clientStateBuilder_ == null
               ? clientState_
               : clientStateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.proofHeight_ = proofHeightBuilder_ == null
               ? proofHeight_
               : proofHeightBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.proofTry_ = proofTry_;
@@ -5467,7 +5412,6 @@ public final class TxProto {
           result.consensusHeight_ = consensusHeightBuilder_ == null
               ? consensusHeight_
               : consensusHeightBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.signer_ = signer_;
@@ -5475,7 +5419,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.hostConsensusStateProof_ = hostConsensusStateProof_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5877,10 +5820,8 @@ public final class TxProto {
         } else {
           versionBuilder_.mergeFrom(value);
         }
-        if (version_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5998,10 +5939,8 @@ public final class TxProto {
         } else {
           clientStateBuilder_.mergeFrom(value);
         }
-        if (clientState_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6119,10 +6058,8 @@ public final class TxProto {
         } else {
           proofHeightBuilder_.mergeFrom(value);
         }
-        if (proofHeight_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -6375,10 +6312,8 @@ public final class TxProto {
         } else {
           consensusHeightBuilder_.mergeFrom(value);
         }
-        if (consensusHeight_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -7110,7 +7045,6 @@ public final class TxProto {
               com.ibc.core.connection.v1.TxProto.MsgConnectionOpenConfirm.class, com.ibc.core.connection.v1.TxProto.MsgConnectionOpenConfirm.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object connectionId_ = "";
@@ -7173,7 +7107,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasProofHeight() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proofHeight_ != null;
     }
     /**
      * <code>.ibc.core.client.v1.Height proof_height = 3 [json_name = "proofHeight", (.gogoproto.nullable) = false];</code>
@@ -7250,7 +7184,7 @@ public final class TxProto {
       if (!proofAck_.isEmpty()) {
         output.writeBytes(2, proofAck_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofHeight_ != null) {
         output.writeMessage(3, getProofHeight());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -7272,7 +7206,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, proofAck_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getProofHeight());
       }
@@ -7450,19 +7384,13 @@ public final class TxProto {
 
       // Construct using com.ibc.core.connection.v1.TxProto.MsgConnectionOpenConfirm.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7515,17 +7443,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proofAck_ = proofAck_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.proofHeight_ = proofHeightBuilder_ == null
               ? proofHeight_
               : proofHeightBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.signer_ = signer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7835,10 +7760,8 @@ public final class TxProto {
         } else {
           proofHeightBuilder_.mergeFrom(value);
         }
-        if (proofHeight_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

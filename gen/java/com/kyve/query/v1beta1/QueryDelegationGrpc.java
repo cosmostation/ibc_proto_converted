@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: kyve/query/v1beta1/delegation.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryDelegationGrpc {
 
   private QueryDelegationGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "kyve.query.v1beta1.QueryDelegation";
+  public static final String SERVICE_NAME = "kyve.query.v1beta1.QueryDelegation";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.kyve.query.v1beta1.DelegationProto.QueryDelegatorRequest,
@@ -469,9 +469,9 @@ public final class QueryDelegationGrpc {
   private static final class QueryDelegationMethodDescriptorSupplier
       extends QueryDelegationBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    QueryDelegationMethodDescriptorSupplier(java.lang.String methodName) {
+    QueryDelegationMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

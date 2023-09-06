@@ -635,7 +635,6 @@ public final class QueryProto {
               com.irismod.coinswap.QueryProto.QueryLiquidityPoolResponse.class, com.irismod.coinswap.QueryProto.QueryLiquidityPoolResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_FIELD_NUMBER = 1;
     private com.irismod.coinswap.QueryProto.PoolInfo pool_;
     /**
@@ -644,7 +643,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPool() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pool_ != null;
     }
     /**
      * <code>.irismod.coinswap.PoolInfo pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
@@ -676,7 +675,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pool_ != null) {
         output.writeMessage(1, getPool());
       }
       getUnknownFields().writeTo(output);
@@ -688,7 +687,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPool());
       }
@@ -851,19 +850,13 @@ public final class QueryProto {
 
       // Construct using com.irismod.coinswap.QueryProto.QueryLiquidityPoolResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -907,14 +900,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.coinswap.QueryProto.QueryLiquidityPoolResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pool_ = poolBuilder_ == null
               ? pool_
               : poolBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1080,10 +1070,8 @@ public final class QueryProto {
         } else {
           poolBuilder_.mergeFrom(value);
         }
-        if (pool_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1269,7 +1257,6 @@ public final class QueryProto {
               com.irismod.coinswap.QueryProto.QueryLiquidityPoolsRequest.class, com.irismod.coinswap.QueryProto.QueryLiquidityPoolsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -1282,7 +1269,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -1322,7 +1309,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1334,7 +1321,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -1497,19 +1484,13 @@ public final class QueryProto {
 
       // Construct using com.irismod.coinswap.QueryProto.QueryLiquidityPoolsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1553,14 +1534,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.coinswap.QueryProto.QueryLiquidityPoolsRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1746,10 +1724,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1964,7 +1940,6 @@ public final class QueryProto {
               com.irismod.coinswap.QueryProto.QueryLiquidityPoolsResponse.class, com.irismod.coinswap.QueryProto.QueryLiquidityPoolsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOLS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.irismod.coinswap.QueryProto.PoolInfo> pools_;
@@ -2014,7 +1989,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -2049,7 +2024,7 @@ public final class QueryProto {
       for (int i = 0; i < pools_.size(); i++) {
         output.writeMessage(1, pools_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2065,7 +2040,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, pools_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2234,20 +2209,13 @@ public final class QueryProto {
 
       // Construct using com.irismod.coinswap.QueryProto.QueryLiquidityPoolsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2311,14 +2279,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.irismod.coinswap.QueryProto.QueryLiquidityPoolsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2763,10 +2728,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3056,7 +3019,6 @@ public final class QueryProto {
               com.irismod.coinswap.QueryProto.PoolInfo.class, com.irismod.coinswap.QueryProto.PoolInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -3155,7 +3117,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStandard() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return standard_ != null;
     }
     /**
      * <pre>
@@ -3193,7 +3155,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasToken() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return token_ != null;
     }
     /**
      * <pre>
@@ -3231,7 +3193,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLpt() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return lpt_ != null;
     }
     /**
      * <pre>
@@ -3324,13 +3286,13 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, escrowAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (standard_ != null) {
         output.writeMessage(3, getStandard());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (token_ != null) {
         output.writeMessage(4, getToken());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lpt_ != null) {
         output.writeMessage(5, getLpt());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fee_)) {
@@ -3351,15 +3313,15 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, escrowAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (standard_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStandard());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (token_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getToken());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lpt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLpt());
       }
@@ -3550,21 +3512,13 @@ public final class QueryProto {
 
       // Construct using com.irismod.coinswap.QueryProto.PoolInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStandardFieldBuilder();
-          getTokenFieldBuilder();
-          getLptFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3627,29 +3581,24 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.escrowAddress_ = escrowAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.standard_ = standardBuilder_ == null
               ? standard_
               : standardBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.token_ = tokenBuilder_ == null
               ? token_
               : tokenBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.lpt_ = lptBuilder_ == null
               ? lpt_
               : lptBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.fee_ = fee_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4049,10 +3998,8 @@ public final class QueryProto {
         } else {
           standardBuilder_.mergeFrom(value);
         }
-        if (standard_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4206,10 +4153,8 @@ public final class QueryProto {
         } else {
           tokenBuilder_.mergeFrom(value);
         }
-        if (token_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4363,10 +4308,8 @@ public final class QueryProto {
         } else {
           lptBuilder_.mergeFrom(value);
         }
-        if (lpt_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

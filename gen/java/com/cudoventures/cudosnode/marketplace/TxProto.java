@@ -1956,7 +1956,6 @@ public final class TxProto {
               com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -2082,7 +2081,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return price_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2123,7 +2122,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, denomId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         output.writeMessage(4, getPrice());
       }
       getUnknownFields().writeTo(output);
@@ -2144,7 +2143,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, denomId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPrice());
       }
@@ -2314,19 +2313,13 @@ public final class TxProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgPublishNft.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2382,14 +2375,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.denomId_ = denomId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2801,10 +2791,8 @@ public final class TxProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        if (price_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4483,7 +4471,6 @@ public final class TxProto {
               com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -4609,7 +4596,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return price_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -4806,7 +4793,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, recipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         output.writeMessage(4, getPrice());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -4839,7 +4826,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, recipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPrice());
       }
@@ -5037,19 +5024,13 @@ public final class TxProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgMintNft.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5109,12 +5090,10 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.recipient_ = recipient_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.name_ = name_;
@@ -5128,7 +5107,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.uid_ = uid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5580,10 +5558,8 @@ public final class TxProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        if (price_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -14254,7 +14230,6 @@ public final class TxProto {
               com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.class, com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -14313,7 +14288,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return price_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -14351,7 +14326,7 @@ public final class TxProto {
       if (id_ != 0L) {
         output.writeUInt64(2, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         output.writeMessage(4, getPrice());
       }
       getUnknownFields().writeTo(output);
@@ -14370,7 +14345,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPrice());
       }
@@ -14537,19 +14512,13 @@ public final class TxProto {
 
       // Construct using com.cudoventures.cudosnode.marketplace.TxProto.MsgUpdatePrice.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14601,14 +14570,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14896,10 +14862,8 @@ public final class TxProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        if (price_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

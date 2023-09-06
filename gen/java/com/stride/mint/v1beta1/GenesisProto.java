@@ -121,7 +121,6 @@ public final class GenesisProto {
               com.stride.mint.v1beta1.GenesisProto.GenesisState.class, com.stride.mint.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MINTER_FIELD_NUMBER = 1;
     private com.stride.mint.v1beta1.MintProto.Minter minter_;
     /**
@@ -134,7 +133,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasMinter() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return minter_ != null;
     }
     /**
      * <pre>
@@ -172,7 +171,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -227,10 +226,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minter_ != null) {
         output.writeMessage(1, getMinter());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       if (reductionStartedEpoch_ != 0L) {
@@ -245,11 +244,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMinter());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -429,20 +428,13 @@ public final class GenesisProto {
 
       // Construct using com.stride.mint.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMinterFieldBuilder();
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -492,23 +484,19 @@ public final class GenesisProto {
 
       private void buildPartial0(com.stride.mint.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minter_ = minterBuilder_ == null
               ? minter_
               : minterBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.reductionStartedEpoch_ = reductionStartedEpoch_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -712,10 +700,8 @@ public final class GenesisProto {
         } else {
           minterBuilder_.mergeFrom(value);
         }
-        if (minter_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -869,10 +855,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

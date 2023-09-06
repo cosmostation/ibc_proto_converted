@@ -4226,8 +4226,7 @@ public final class TypesProto {
 
     public static final int AMOUNTS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList amounts_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList amounts_;
     /**
      * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
      * @return A list containing the amounts.
@@ -4541,9 +4540,18 @@ public final class TypesProto {
       @java.lang.Override
       public com.gravity.v1.TypesProto.AirdropProposal buildPartial() {
         com.gravity.v1.TypesProto.AirdropProposal result = new com.gravity.v1.TypesProto.AirdropProposal(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.gravity.v1.TypesProto.AirdropProposal result) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          amounts_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.amounts_ = amounts_;
       }
 
       private void buildPartial0(com.gravity.v1.TypesProto.AirdropProposal result) {
@@ -4559,10 +4567,6 @@ public final class TypesProto {
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.recipients_ = recipients_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          amounts_.makeImmutable();
-          result.amounts_ = amounts_;
         }
       }
 
@@ -4631,8 +4635,7 @@ public final class TypesProto {
         if (!other.amounts_.isEmpty()) {
           if (amounts_.isEmpty()) {
             amounts_ = other.amounts_;
-            amounts_.makeImmutable();
-            bitField0_ |= 0x00000010;
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureAmountsIsMutable();
             amounts_.addAll(other.amounts_);
@@ -4968,10 +4971,10 @@ public final class TypesProto {
 
       private com.google.protobuf.Internal.LongList amounts_ = emptyLongList();
       private void ensureAmountsIsMutable() {
-        if (!amounts_.isModifiable()) {
-          amounts_ = makeMutableCopy(amounts_);
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          amounts_ = mutableCopy(amounts_);
+          bitField0_ |= 0x00000010;
         }
-        bitField0_ |= 0x00000010;
       }
       /**
        * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
@@ -4979,8 +4982,8 @@ public final class TypesProto {
        */
       public java.util.List<java.lang.Long>
           getAmountsList() {
-        amounts_.makeImmutable();
-        return amounts_;
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(amounts_) : amounts_;
       }
       /**
        * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
@@ -5008,7 +5011,6 @@ public final class TypesProto {
 
         ensureAmountsIsMutable();
         amounts_.setLong(index, value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5021,7 +5023,6 @@ public final class TypesProto {
 
         ensureAmountsIsMutable();
         amounts_.addLong(value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5035,7 +5036,6 @@ public final class TypesProto {
         ensureAmountsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, amounts_);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5218,7 +5218,6 @@ public final class TypesProto {
               com.gravity.v1.TypesProto.IBCMetadataProposal.class, com.gravity.v1.TypesProto.IBCMetadataProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -5305,7 +5304,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
@@ -5382,7 +5381,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(3, getMetadata());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcDenom_)) {
@@ -5403,7 +5402,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMetadata());
       }
@@ -5588,19 +5587,13 @@ public final class TypesProto {
 
       // Construct using com.gravity.v1.TypesProto.IBCMetadataProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5653,17 +5646,14 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.ibcDenom_ = ibcDenom_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6003,10 +5993,8 @@ public final class TypesProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6316,7 +6304,6 @@ public final class TypesProto {
               com.gravity.v1.TypesProto.PendingIbcAutoForward.class, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FOREIGN_RECEIVER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object foreignReceiver_ = "";
@@ -6376,7 +6363,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasToken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return token_ != null;
     }
     /**
      * <pre>
@@ -6481,7 +6468,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(foreignReceiver_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, foreignReceiver_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (token_ != null) {
         output.writeMessage(2, getToken());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcChannel_)) {
@@ -6502,7 +6489,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(foreignReceiver_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, foreignReceiver_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (token_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getToken());
       }
@@ -6685,19 +6672,13 @@ public final class TypesProto {
 
       // Construct using com.gravity.v1.TypesProto.PendingIbcAutoForward.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6747,12 +6728,10 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.foreignReceiver_ = foreignReceiver_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.token_ = tokenBuilder_ == null
               ? token_
               : tokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.ibcChannel_ = ibcChannel_;
@@ -6760,7 +6739,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.eventNonce_ = eventNonce_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7066,10 +7044,8 @@ public final class TypesProto {
         } else {
           tokenBuilder_.mergeFrom(value);
         }
-        if (token_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

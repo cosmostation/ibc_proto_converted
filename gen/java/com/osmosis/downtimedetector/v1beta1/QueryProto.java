@@ -85,7 +85,6 @@ public final class QueryProto {
               com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.class, com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DOWNTIME_FIELD_NUMBER = 1;
     private int downtime_ = 0;
     /**
@@ -112,7 +111,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasRecovery() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return recovery_ != null;
     }
     /**
      * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -147,7 +146,7 @@ public final class QueryProto {
       if (downtime_ != com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.DURATION_30S.getNumber()) {
         output.writeEnum(1, downtime_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recovery_ != null) {
         output.writeMessage(2, getRecovery());
       }
       getUnknownFields().writeTo(output);
@@ -163,7 +162,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, downtime_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recovery_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecovery());
       }
@@ -329,19 +328,13 @@ public final class QueryProto {
 
       // Construct using com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecoveryFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -389,14 +382,11 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.downtime_ = downtime_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recovery_ = recoveryBuilder_ == null
               ? recovery_
               : recoveryBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -623,10 +613,8 @@ public final class QueryProto {
         } else {
           recoveryBuilder_.mergeFrom(value);
         }
-        if (recovery_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

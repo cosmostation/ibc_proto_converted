@@ -79,7 +79,6 @@ public final class ClaimsProto {
               com.kava.incentive.v1beta1.ClaimsProto.BaseClaim.class, com.kava.incentive.v1beta1.ClaimsProto.BaseClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString owner_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -99,7 +98,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasReward() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return reward_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin reward = 2 [json_name = "reward", (.gogoproto.nullable) = false];</code>
@@ -134,7 +133,7 @@ public final class ClaimsProto {
       if (!owner_.isEmpty()) {
         output.writeBytes(1, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (reward_ != null) {
         output.writeMessage(2, getReward());
       }
       getUnknownFields().writeTo(output);
@@ -150,7 +149,7 @@ public final class ClaimsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (reward_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getReward());
       }
@@ -316,19 +315,13 @@ public final class ClaimsProto {
 
       // Construct using com.kava.incentive.v1beta1.ClaimsProto.BaseClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRewardFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -376,14 +369,11 @@ public final class ClaimsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.owner_ = owner_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.reward_ = rewardBuilder_ == null
               ? reward_
               : rewardBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -589,10 +579,8 @@ public final class ClaimsProto {
         } else {
           rewardBuilder_.mergeFrom(value);
         }
-        if (reward_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4804,7 +4792,6 @@ public final class ClaimsProto {
               com.kava.incentive.v1beta1.ClaimsProto.USDXMintingClaim.class, com.kava.incentive.v1beta1.ClaimsProto.USDXMintingClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_CLAIM_FIELD_NUMBER = 1;
     private com.kava.incentive.v1beta1.ClaimsProto.BaseClaim baseClaim_;
     /**
@@ -4813,7 +4800,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasBaseClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseClaim_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.BaseClaim base_claim = 1 [json_name = "baseClaim", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -4886,7 +4873,7 @@ public final class ClaimsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         output.writeMessage(1, getBaseClaim());
       }
       for (int i = 0; i < rewardIndexes_.size(); i++) {
@@ -4901,7 +4888,7 @@ public final class ClaimsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseClaim());
       }
@@ -5073,20 +5060,13 @@ public final class ClaimsProto {
 
       // Construct using com.kava.incentive.v1beta1.ClaimsProto.USDXMintingClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseClaimFieldBuilder();
-          getRewardIndexesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5150,14 +5130,11 @@ public final class ClaimsProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.ClaimsProto.USDXMintingClaim result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseClaim_ = baseClaimBuilder_ == null
               ? baseClaim_
               : baseClaimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5362,10 +5339,8 @@ public final class ClaimsProto {
         } else {
           baseClaimBuilder_.mergeFrom(value);
         }
-        if (baseClaim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5828,7 +5803,6 @@ public final class ClaimsProto {
               com.kava.incentive.v1beta1.ClaimsProto.HardLiquidityProviderClaim.class, com.kava.incentive.v1beta1.ClaimsProto.HardLiquidityProviderClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_CLAIM_FIELD_NUMBER = 1;
     private com.kava.incentive.v1beta1.ClaimsProto.BaseMultiClaim baseClaim_;
     /**
@@ -5837,7 +5811,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasBaseClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseClaim_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.BaseMultiClaim base_claim = 1 [json_name = "baseClaim", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -5951,7 +5925,7 @@ public final class ClaimsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         output.writeMessage(1, getBaseClaim());
       }
       for (int i = 0; i < supplyRewardIndexes_.size(); i++) {
@@ -5969,7 +5943,7 @@ public final class ClaimsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseClaim());
       }
@@ -6151,21 +6125,13 @@ public final class ClaimsProto {
 
       // Construct using com.kava.incentive.v1beta1.ClaimsProto.HardLiquidityProviderClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseClaimFieldBuilder();
-          getSupplyRewardIndexesFieldBuilder();
-          getBorrowRewardIndexesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6245,14 +6211,11 @@ public final class ClaimsProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.ClaimsProto.HardLiquidityProviderClaim result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseClaim_ = baseClaimBuilder_ == null
               ? baseClaim_
               : baseClaimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6496,10 +6459,8 @@ public final class ClaimsProto {
         } else {
           baseClaimBuilder_.mergeFrom(value);
         }
-        if (baseClaim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7177,7 +7138,6 @@ public final class ClaimsProto {
               com.kava.incentive.v1beta1.ClaimsProto.DelegatorClaim.class, com.kava.incentive.v1beta1.ClaimsProto.DelegatorClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_CLAIM_FIELD_NUMBER = 1;
     private com.kava.incentive.v1beta1.ClaimsProto.BaseMultiClaim baseClaim_;
     /**
@@ -7186,7 +7146,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasBaseClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseClaim_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.BaseMultiClaim base_claim = 1 [json_name = "baseClaim", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -7259,7 +7219,7 @@ public final class ClaimsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         output.writeMessage(1, getBaseClaim());
       }
       for (int i = 0; i < rewardIndexes_.size(); i++) {
@@ -7274,7 +7234,7 @@ public final class ClaimsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseClaim());
       }
@@ -7446,20 +7406,13 @@ public final class ClaimsProto {
 
       // Construct using com.kava.incentive.v1beta1.ClaimsProto.DelegatorClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseClaimFieldBuilder();
-          getRewardIndexesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7523,14 +7476,11 @@ public final class ClaimsProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.ClaimsProto.DelegatorClaim result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseClaim_ = baseClaimBuilder_ == null
               ? baseClaim_
               : baseClaimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7735,10 +7685,8 @@ public final class ClaimsProto {
         } else {
           baseClaimBuilder_.mergeFrom(value);
         }
-        if (baseClaim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8176,7 +8124,6 @@ public final class ClaimsProto {
               com.kava.incentive.v1beta1.ClaimsProto.SwapClaim.class, com.kava.incentive.v1beta1.ClaimsProto.SwapClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_CLAIM_FIELD_NUMBER = 1;
     private com.kava.incentive.v1beta1.ClaimsProto.BaseMultiClaim baseClaim_;
     /**
@@ -8185,7 +8132,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasBaseClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseClaim_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.BaseMultiClaim base_claim = 1 [json_name = "baseClaim", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -8258,7 +8205,7 @@ public final class ClaimsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         output.writeMessage(1, getBaseClaim());
       }
       for (int i = 0; i < rewardIndexes_.size(); i++) {
@@ -8273,7 +8220,7 @@ public final class ClaimsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseClaim());
       }
@@ -8445,20 +8392,13 @@ public final class ClaimsProto {
 
       // Construct using com.kava.incentive.v1beta1.ClaimsProto.SwapClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseClaimFieldBuilder();
-          getRewardIndexesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8522,14 +8462,11 @@ public final class ClaimsProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.ClaimsProto.SwapClaim result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseClaim_ = baseClaimBuilder_ == null
               ? baseClaim_
               : baseClaimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8734,10 +8671,8 @@ public final class ClaimsProto {
         } else {
           baseClaimBuilder_.mergeFrom(value);
         }
-        if (baseClaim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9175,7 +9110,6 @@ public final class ClaimsProto {
               com.kava.incentive.v1beta1.ClaimsProto.SavingsClaim.class, com.kava.incentive.v1beta1.ClaimsProto.SavingsClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_CLAIM_FIELD_NUMBER = 1;
     private com.kava.incentive.v1beta1.ClaimsProto.BaseMultiClaim baseClaim_;
     /**
@@ -9184,7 +9118,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasBaseClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseClaim_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.BaseMultiClaim base_claim = 1 [json_name = "baseClaim", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -9257,7 +9191,7 @@ public final class ClaimsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         output.writeMessage(1, getBaseClaim());
       }
       for (int i = 0; i < rewardIndexes_.size(); i++) {
@@ -9272,7 +9206,7 @@ public final class ClaimsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseClaim());
       }
@@ -9444,20 +9378,13 @@ public final class ClaimsProto {
 
       // Construct using com.kava.incentive.v1beta1.ClaimsProto.SavingsClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseClaimFieldBuilder();
-          getRewardIndexesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9521,14 +9448,11 @@ public final class ClaimsProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.ClaimsProto.SavingsClaim result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseClaim_ = baseClaimBuilder_ == null
               ? baseClaim_
               : baseClaimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9733,10 +9657,8 @@ public final class ClaimsProto {
         } else {
           baseClaimBuilder_.mergeFrom(value);
         }
-        if (baseClaim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10174,7 +10096,6 @@ public final class ClaimsProto {
               com.kava.incentive.v1beta1.ClaimsProto.EarnClaim.class, com.kava.incentive.v1beta1.ClaimsProto.EarnClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_CLAIM_FIELD_NUMBER = 1;
     private com.kava.incentive.v1beta1.ClaimsProto.BaseMultiClaim baseClaim_;
     /**
@@ -10183,7 +10104,7 @@ public final class ClaimsProto {
      */
     @java.lang.Override
     public boolean hasBaseClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseClaim_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.BaseMultiClaim base_claim = 1 [json_name = "baseClaim", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -10256,7 +10177,7 @@ public final class ClaimsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         output.writeMessage(1, getBaseClaim());
       }
       for (int i = 0; i < rewardIndexes_.size(); i++) {
@@ -10271,7 +10192,7 @@ public final class ClaimsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseClaim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseClaim());
       }
@@ -10443,20 +10364,13 @@ public final class ClaimsProto {
 
       // Construct using com.kava.incentive.v1beta1.ClaimsProto.EarnClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseClaimFieldBuilder();
-          getRewardIndexesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10520,14 +10434,11 @@ public final class ClaimsProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.ClaimsProto.EarnClaim result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseClaim_ = baseClaimBuilder_ == null
               ? baseClaim_
               : baseClaimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10732,10 +10643,8 @@ public final class ClaimsProto {
         } else {
           baseClaimBuilder_.mergeFrom(value);
         }
-        if (baseClaim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

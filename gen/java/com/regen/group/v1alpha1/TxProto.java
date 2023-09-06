@@ -6023,7 +6023,6 @@ public final class TxProto {
               com.regen.group.v1alpha1.TxProto.MsgCreateGroupAccount.class, com.regen.group.v1alpha1.TxProto.MsgCreateGroupAccount.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADMIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object admin_ = "";
@@ -6113,7 +6112,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDecisionPolicy() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return decisionPolicy_ != null;
     }
     /**
      * <pre>
@@ -6162,7 +6161,7 @@ public final class TxProto {
       if (!metadata_.isEmpty()) {
         output.writeBytes(3, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (decisionPolicy_ != null) {
         output.writeMessage(4, getDecisionPolicy());
       }
       getUnknownFields().writeTo(output);
@@ -6185,7 +6184,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (decisionPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDecisionPolicy());
       }
@@ -6360,19 +6359,13 @@ public final class TxProto {
 
       // Construct using com.regen.group.v1alpha1.TxProto.MsgCreateGroupAccount.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDecisionPolicyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6428,14 +6421,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.metadata_ = metadata_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.decisionPolicy_ = decisionPolicyBuilder_ == null
               ? decisionPolicy_
               : decisionPolicyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6827,10 +6817,8 @@ public final class TxProto {
         } else {
           decisionPolicyBuilder_.mergeFrom(value);
         }
-        if (decisionPolicy_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9038,7 +9026,6 @@ public final class TxProto {
               com.regen.group.v1alpha1.TxProto.MsgUpdateGroupAccountDecisionPolicy.class, com.regen.group.v1alpha1.TxProto.MsgUpdateGroupAccountDecisionPolicy.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADMIN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object admin_ = "";
@@ -9145,7 +9132,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasDecisionPolicy() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return decisionPolicy_ != null;
     }
     /**
      * <pre>
@@ -9191,7 +9178,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (decisionPolicy_ != null) {
         output.writeMessage(3, getDecisionPolicy());
       }
       getUnknownFields().writeTo(output);
@@ -9209,7 +9196,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (decisionPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDecisionPolicy());
       }
@@ -9379,19 +9366,13 @@ public final class TxProto {
 
       // Construct using com.regen.group.v1alpha1.TxProto.MsgUpdateGroupAccountDecisionPolicy.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDecisionPolicyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9443,14 +9424,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.decisionPolicy_ = decisionPolicyBuilder_ == null
               ? decisionPolicy_
               : decisionPolicyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9840,10 +9818,8 @@ public final class TxProto {
         } else {
           decisionPolicyBuilder_.mergeFrom(value);
         }
-        if (decisionPolicy_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

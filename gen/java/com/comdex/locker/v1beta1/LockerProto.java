@@ -156,7 +156,6 @@ public final class LockerProto {
               com.comdex.locker.v1beta1.LockerProto.Locker.class, com.comdex.locker.v1beta1.LockerProto.Locker.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LOCKER_ID_FIELD_NUMBER = 1;
     private long lockerId_ = 0L;
     /**
@@ -293,7 +292,7 @@ public final class LockerProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 5 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -363,7 +362,7 @@ public final class LockerProto {
      */
     @java.lang.Override
     public boolean hasBlockTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return blockTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp block_time = 10 [json_name = "blockTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"block_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -407,7 +406,7 @@ public final class LockerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(netBalance_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, netBalance_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createdAt_ != null) {
         output.writeMessage(5, getCreatedAt());
       }
       if (assetDepositId_ != 0L) {
@@ -422,7 +421,7 @@ public final class LockerProto {
       if (blockHeight_ != 0L) {
         output.writeInt64(9, blockHeight_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockTime_ != null) {
         output.writeMessage(10, getBlockTime());
       }
       getUnknownFields().writeTo(output);
@@ -447,7 +446,7 @@ public final class LockerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(netBalance_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, netBalance_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCreatedAt());
       }
@@ -467,7 +466,7 @@ public final class LockerProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, blockHeight_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getBlockTime());
       }
@@ -675,20 +674,13 @@ public final class LockerProto {
 
       // Construct using com.comdex.locker.v1beta1.LockerProto.Locker.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreatedAtFieldBuilder();
-          getBlockTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -757,12 +749,10 @@ public final class LockerProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.netBalance_ = netBalance_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.assetDepositId_ = assetDepositId_;
@@ -780,9 +770,7 @@ public final class LockerProto {
           result.blockTime_ = blockTimeBuilder_ == null
               ? blockTime_
               : blockTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1276,10 +1264,8 @@ public final class LockerProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        if (createdAt_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1525,10 +1511,8 @@ public final class LockerProto {
         } else {
           blockTimeBuilder_.mergeFrom(value);
         }
-        if (blockTime_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2885,7 +2869,6 @@ public final class LockerProto {
               com.comdex.locker.v1beta1.LockerProto.UserTxData.class, com.comdex.locker.v1beta1.LockerProto.UserTxData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TX_TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object txType_ = "";
@@ -3011,7 +2994,7 @@ public final class LockerProto {
      */
     @java.lang.Override
     public boolean hasTxTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return txTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp tx_time = 4 [json_name = "txTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -3052,7 +3035,7 @@ public final class LockerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(balance_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, balance_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (txTime_ != null) {
         output.writeMessage(4, getTxTime());
       }
       getUnknownFields().writeTo(output);
@@ -3073,7 +3056,7 @@ public final class LockerProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(balance_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, balance_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (txTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTxTime());
       }
@@ -3243,19 +3226,13 @@ public final class LockerProto {
 
       // Construct using com.comdex.locker.v1beta1.LockerProto.UserTxData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3311,14 +3288,11 @@ public final class LockerProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.balance_ = balance_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.txTime_ = txTimeBuilder_ == null
               ? txTime_
               : txTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3730,10 +3704,8 @@ public final class LockerProto {
         } else {
           txTimeBuilder_.mergeFrom(value);
         }
-        if (txTime_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3954,8 +3926,7 @@ public final class LockerProto {
 
     public static final int LOCKER_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList lockerIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList lockerIds_;
     /**
      * <code>repeated uint64 locker_ids = 3 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"addresses&#92;""];</code>
      * @return A list containing the lockerIds.
@@ -4293,9 +4264,18 @@ public final class LockerProto {
       @java.lang.Override
       public com.comdex.locker.v1beta1.LockerProto.LockerLookupTableData buildPartial() {
         com.comdex.locker.v1beta1.LockerProto.LockerLookupTableData result = new com.comdex.locker.v1beta1.LockerProto.LockerLookupTableData(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.locker.v1beta1.LockerProto.LockerLookupTableData result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          lockerIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.lockerIds_ = lockerIds_;
       }
 
       private void buildPartial0(com.comdex.locker.v1beta1.LockerProto.LockerLookupTableData result) {
@@ -4305,10 +4285,6 @@ public final class LockerProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.assetId_ = assetId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          lockerIds_.makeImmutable();
-          result.lockerIds_ = lockerIds_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.depositedAmount_ = depositedAmount_;
@@ -4368,8 +4344,7 @@ public final class LockerProto {
         if (!other.lockerIds_.isEmpty()) {
           if (lockerIds_.isEmpty()) {
             lockerIds_ = other.lockerIds_;
-            lockerIds_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLockerIdsIsMutable();
             lockerIds_.addAll(other.lockerIds_);
@@ -4521,10 +4496,10 @@ public final class LockerProto {
 
       private com.google.protobuf.Internal.LongList lockerIds_ = emptyLongList();
       private void ensureLockerIdsIsMutable() {
-        if (!lockerIds_.isModifiable()) {
-          lockerIds_ = makeMutableCopy(lockerIds_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          lockerIds_ = mutableCopy(lockerIds_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 locker_ids = 3 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"addresses&#92;""];</code>
@@ -4532,8 +4507,8 @@ public final class LockerProto {
        */
       public java.util.List<java.lang.Long>
           getLockerIdsList() {
-        lockerIds_.makeImmutable();
-        return lockerIds_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(lockerIds_) : lockerIds_;
       }
       /**
        * <code>repeated uint64 locker_ids = 3 [json_name = "lockerIds", (.gogoproto.moretags) = "yaml:&#92;"addresses&#92;""];</code>
@@ -4561,7 +4536,6 @@ public final class LockerProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.setLong(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4574,7 +4548,6 @@ public final class LockerProto {
 
         ensureLockerIdsIsMutable();
         lockerIds_.addLong(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4588,7 +4561,6 @@ public final class LockerProto {
         ensureLockerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, lockerIds_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

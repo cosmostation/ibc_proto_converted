@@ -97,7 +97,6 @@ public final class MemoryProto {
               com.akash.base.v1beta3.MemoryProto.Memory.class, com.akash.base.v1beta3.MemoryProto.Memory.Builder.class);
     }
 
-    private int bitField0_;
     public static final int QUANTITY_FIELD_NUMBER = 1;
     private com.akash.base.v1beta3.ResourcevalueProto.ResourceValue quantity_;
     /**
@@ -106,7 +105,7 @@ public final class MemoryProto {
      */
     @java.lang.Override
     public boolean hasQuantity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return quantity_ != null;
     }
     /**
      * <code>.akash.base.v1beta3.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
@@ -179,7 +178,7 @@ public final class MemoryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quantity_ != null) {
         output.writeMessage(1, getQuantity());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -194,7 +193,7 @@ public final class MemoryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quantity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getQuantity());
       }
@@ -366,20 +365,13 @@ public final class MemoryProto {
 
       // Construct using com.akash.base.v1beta3.MemoryProto.Memory.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getQuantityFieldBuilder();
-          getAttributesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -443,14 +435,11 @@ public final class MemoryProto {
 
       private void buildPartial0(com.akash.base.v1beta3.MemoryProto.Memory result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.quantity_ = quantityBuilder_ == null
               ? quantity_
               : quantityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -655,10 +644,8 @@ public final class MemoryProto {
         } else {
           quantityBuilder_.mergeFrom(value);
         }
-        if (quantity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -117,7 +117,6 @@ public final class ParamsProto {
               com.axelar.multisig.v1beta1.ParamsProto.Params.class, com.axelar.multisig.v1beta1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEYGEN_THRESHOLD_FIELD_NUMBER = 1;
     private com.axelar.utils.v1beta1.ThresholdProto.Threshold keygenThreshold_;
     /**
@@ -126,7 +125,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasKeygenThreshold() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return keygenThreshold_ != null;
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold keygen_threshold = 1 [json_name = "keygenThreshold", (.gogoproto.nullable) = false];</code>
@@ -152,7 +151,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasSigningThreshold() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return signingThreshold_ != null;
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold signing_threshold = 2 [json_name = "signingThreshold", (.gogoproto.nullable) = false];</code>
@@ -239,10 +238,10 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (keygenThreshold_ != null) {
         output.writeMessage(1, getKeygenThreshold());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signingThreshold_ != null) {
         output.writeMessage(2, getSigningThreshold());
       }
       if (keygenTimeout_ != 0L) {
@@ -269,11 +268,11 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (keygenThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getKeygenThreshold());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signingThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSigningThreshold());
       }
@@ -489,20 +488,13 @@ public final class ParamsProto {
 
       // Construct using com.axelar.multisig.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getKeygenThresholdFieldBuilder();
-          getSigningThresholdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -556,18 +548,15 @@ public final class ParamsProto {
 
       private void buildPartial0(com.axelar.multisig.v1beta1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.keygenThreshold_ = keygenThresholdBuilder_ == null
               ? keygenThreshold_
               : keygenThresholdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signingThreshold_ = signingThresholdBuilder_ == null
               ? signingThreshold_
               : signingThresholdBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.keygenTimeout_ = keygenTimeout_;
@@ -584,7 +573,6 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.activeEpochCount_ = activeEpochCount_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -800,10 +788,8 @@ public final class ParamsProto {
         } else {
           keygenThresholdBuilder_.mergeFrom(value);
         }
-        if (keygenThreshold_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -921,10 +907,8 @@ public final class ParamsProto {
         } else {
           signingThresholdBuilder_.mergeFrom(value);
         }
-        if (signingThreshold_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -81,7 +81,6 @@ public final class RoyaltyConfigProto {
               com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -129,7 +128,7 @@ public final class RoyaltyConfigProto {
      */
     @java.lang.Override
     public boolean hasRoyaltyConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return royaltyConfig_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
@@ -164,7 +163,7 @@ public final class RoyaltyConfigProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         output.writeMessage(2, getRoyaltyConfig());
       }
       getUnknownFields().writeTo(output);
@@ -179,7 +178,7 @@ public final class RoyaltyConfigProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (royaltyConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRoyaltyConfig());
       }
@@ -341,19 +340,13 @@ public final class RoyaltyConfigProto {
 
       // Construct using com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRoyaltyConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -401,14 +394,11 @@ public final class RoyaltyConfigProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.classId_ = classId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.royaltyConfig_ = royaltyConfigBuilder_ == null
               ? royaltyConfig_
               : royaltyConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -656,10 +646,8 @@ public final class RoyaltyConfigProto {
         } else {
           royaltyConfigBuilder_.mergeFrom(value);
         }
-        if (royaltyConfig_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

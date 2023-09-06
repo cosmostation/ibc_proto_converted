@@ -159,7 +159,6 @@ public final class GenesisProto {
               com.publicawesome.stargaze.claim.v1beta1.GenesisProto.GenesisState.class, com.publicawesome.stargaze.claim.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MODULE_ACCOUNT_BALANCE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin moduleAccountBalance_;
     /**
@@ -173,7 +172,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasModuleAccountBalance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return moduleAccountBalance_ != null;
     }
     /**
      * <pre>
@@ -213,7 +212,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -314,10 +313,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (moduleAccountBalance_ != null) {
         output.writeMessage(1, getModuleAccountBalance());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       for (int i = 0; i < claimRecords_.size(); i++) {
@@ -332,11 +331,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (moduleAccountBalance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getModuleAccountBalance());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -517,21 +516,13 @@ public final class GenesisProto {
 
       // Construct using com.publicawesome.stargaze.claim.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getModuleAccountBalanceFieldBuilder();
-          getParamsFieldBuilder();
-          getClaimRecordsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -600,20 +591,16 @@ public final class GenesisProto {
 
       private void buildPartial0(com.publicawesome.stargaze.claim.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.moduleAccountBalance_ = moduleAccountBalanceBuilder_ == null
               ? moduleAccountBalance_
               : moduleAccountBalanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -853,10 +840,8 @@ public final class GenesisProto {
         } else {
           moduleAccountBalanceBuilder_.mergeFrom(value);
         }
-        if (moduleAccountBalance_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1014,10 +999,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

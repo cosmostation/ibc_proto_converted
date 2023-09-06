@@ -705,7 +705,6 @@ public final class EventsProto {
               com.bitsong.merkledrop.v1beta1.EventsProto.EventClaim.class, com.bitsong.merkledrop.v1beta1.EventsProto.EventClaim.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MERKLEDROP_ID_FIELD_NUMBER = 1;
     private long merkledropId_ = 0L;
     /**
@@ -736,7 +735,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return coin_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 3 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -774,7 +773,7 @@ public final class EventsProto {
       if (index_ != 0L) {
         output.writeUInt64(2, index_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coin_ != null) {
         output.writeMessage(3, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -794,7 +793,7 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, index_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coin_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCoin());
       }
@@ -962,19 +961,13 @@ public final class EventsProto {
 
       // Construct using com.bitsong.merkledrop.v1beta1.EventsProto.EventClaim.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCoinFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1026,14 +1019,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.index_ = index_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1279,10 +1269,8 @@ public final class EventsProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        if (coin_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1457,7 +1445,6 @@ public final class EventsProto {
               com.bitsong.merkledrop.v1beta1.EventsProto.EventWithdraw.class, com.bitsong.merkledrop.v1beta1.EventsProto.EventWithdraw.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MERKLEDROP_ID_FIELD_NUMBER = 1;
     private long merkledropId_ = 0L;
     /**
@@ -1477,7 +1464,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return coin_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 2 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1512,7 +1499,7 @@ public final class EventsProto {
       if (merkledropId_ != 0L) {
         output.writeUInt64(1, merkledropId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coin_ != null) {
         output.writeMessage(2, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -1528,7 +1515,7 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, merkledropId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coin_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCoin());
       }
@@ -1691,19 +1678,13 @@ public final class EventsProto {
 
       // Construct using com.bitsong.merkledrop.v1beta1.EventsProto.EventWithdraw.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCoinFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1751,14 +1732,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.merkledropId_ = merkledropId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1964,10 +1942,8 @@ public final class EventsProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        if (coin_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

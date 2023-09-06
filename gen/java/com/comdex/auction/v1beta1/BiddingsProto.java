@@ -161,7 +161,6 @@ public final class BiddingsProto {
               com.comdex.auction.v1beta1.BiddingsProto.SurplusBiddings.class, com.comdex.auction.v1beta1.BiddingsProto.SurplusBiddings.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BIDDING_ID_FIELD_NUMBER = 1;
     private long biddingId_ = 0L;
     /**
@@ -231,7 +230,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasAuctionedCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return auctionedCollateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin auctioned_collateral = 4 [json_name = "auctionedCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_collateral&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -296,7 +295,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasBid() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return bid_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -322,7 +321,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasBiddingTimestamp() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return biddingTimestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp bidding_timestamp = 7 [json_name = "biddingTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bidding_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -424,16 +423,16 @@ public final class BiddingsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionStatus_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, auctionStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (auctionedCollateral_ != null) {
         output.writeMessage(4, getAuctionedCollateral());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bidder_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bid_ != null) {
         output.writeMessage(6, getBid());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (biddingTimestamp_ != null) {
         output.writeMessage(7, getBiddingTimestamp());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(biddingStatus_)) {
@@ -465,18 +464,18 @@ public final class BiddingsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionStatus_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, auctionStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (auctionedCollateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAuctionedCollateral());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bidder_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getBid());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (biddingTimestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getBiddingTimestamp());
       }
@@ -695,21 +694,13 @@ public final class BiddingsProto {
 
       // Construct using com.comdex.auction.v1beta1.BiddingsProto.SurplusBiddings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAuctionedCollateralFieldBuilder();
-          getBidFieldBuilder();
-          getBiddingTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -779,12 +770,10 @@ public final class BiddingsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.auctionStatus_ = auctionStatus_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.auctionedCollateral_ = auctionedCollateralBuilder_ == null
               ? auctionedCollateral_
               : auctionedCollateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.bidder_ = bidder_;
@@ -793,13 +782,11 @@ public final class BiddingsProto {
           result.bid_ = bidBuilder_ == null
               ? bid_
               : bidBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.biddingTimestamp_ = biddingTimestampBuilder_ == null
               ? biddingTimestamp_
               : biddingTimestampBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.biddingStatus_ = biddingStatus_;
@@ -810,7 +797,6 @@ public final class BiddingsProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.appId_ = appId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1194,10 +1180,8 @@ public final class BiddingsProto {
         } else {
           auctionedCollateralBuilder_.mergeFrom(value);
         }
-        if (auctionedCollateral_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1387,10 +1371,8 @@ public final class BiddingsProto {
         } else {
           bidBuilder_.mergeFrom(value);
         }
-        if (bid_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1508,10 +1490,8 @@ public final class BiddingsProto {
         } else {
           biddingTimestampBuilder_.mergeFrom(value);
         }
-        if (biddingTimestamp_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1909,7 +1889,6 @@ public final class BiddingsProto {
               com.comdex.auction.v1beta1.BiddingsProto.DebtBiddings.class, com.comdex.auction.v1beta1.BiddingsProto.DebtBiddings.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BIDDING_ID_FIELD_NUMBER = 1;
     private long biddingId_ = 0L;
     /**
@@ -1979,7 +1958,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasOutflowTokens() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return outflowTokens_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin outflow_tokens = 4 [json_name = "outflowTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_tokens&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2044,7 +2023,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasBid() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return bid_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2070,7 +2049,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasBiddingTimestamp() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return biddingTimestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp bidding_timestamp = 7 [json_name = "biddingTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bidding_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2172,16 +2151,16 @@ public final class BiddingsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionStatus_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, auctionStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (outflowTokens_ != null) {
         output.writeMessage(4, getOutflowTokens());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bidder_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bid_ != null) {
         output.writeMessage(6, getBid());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (biddingTimestamp_ != null) {
         output.writeMessage(7, getBiddingTimestamp());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(biddingStatus_)) {
@@ -2213,18 +2192,18 @@ public final class BiddingsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionStatus_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, auctionStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (outflowTokens_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOutflowTokens());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bidder_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (bid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getBid());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (biddingTimestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getBiddingTimestamp());
       }
@@ -2443,21 +2422,13 @@ public final class BiddingsProto {
 
       // Construct using com.comdex.auction.v1beta1.BiddingsProto.DebtBiddings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOutflowTokensFieldBuilder();
-          getBidFieldBuilder();
-          getBiddingTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2527,12 +2498,10 @@ public final class BiddingsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.auctionStatus_ = auctionStatus_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.outflowTokens_ = outflowTokensBuilder_ == null
               ? outflowTokens_
               : outflowTokensBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.bidder_ = bidder_;
@@ -2541,13 +2510,11 @@ public final class BiddingsProto {
           result.bid_ = bidBuilder_ == null
               ? bid_
               : bidBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.biddingTimestamp_ = biddingTimestampBuilder_ == null
               ? biddingTimestamp_
               : biddingTimestampBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.biddingStatus_ = biddingStatus_;
@@ -2558,7 +2525,6 @@ public final class BiddingsProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.appId_ = appId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2942,10 +2908,8 @@ public final class BiddingsProto {
         } else {
           outflowTokensBuilder_.mergeFrom(value);
         }
-        if (outflowTokens_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3135,10 +3099,8 @@ public final class BiddingsProto {
         } else {
           bidBuilder_.mergeFrom(value);
         }
-        if (bid_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -3256,10 +3218,8 @@ public final class BiddingsProto {
         } else {
           biddingTimestampBuilder_.mergeFrom(value);
         }
-        if (biddingTimestamp_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3657,7 +3617,6 @@ public final class BiddingsProto {
               com.comdex.auction.v1beta1.BiddingsProto.DutchBiddings.class, com.comdex.auction.v1beta1.BiddingsProto.DutchBiddings.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BIDDING_ID_FIELD_NUMBER = 1;
     private long biddingId_ = 0L;
     /**
@@ -3727,7 +3686,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasOutflowTokenAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return outflowTokenAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin outflow_token_amount = 4 [json_name = "outflowTokenAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -3753,7 +3712,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasInflowTokenAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return inflowTokenAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin inflow_token_amount = 5 [json_name = "inflowTokenAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -3818,7 +3777,7 @@ public final class BiddingsProto {
      */
     @java.lang.Override
     public boolean hasBiddingTimestamp() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return biddingTimestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp bidding_timestamp = 7 [json_name = "biddingTimestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bidding_timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -3920,16 +3879,16 @@ public final class BiddingsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionStatus_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, auctionStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (outflowTokenAmount_ != null) {
         output.writeMessage(4, getOutflowTokenAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (inflowTokenAmount_ != null) {
         output.writeMessage(5, getInflowTokenAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, bidder_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (biddingTimestamp_ != null) {
         output.writeMessage(7, getBiddingTimestamp());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(biddingStatus_)) {
@@ -3961,18 +3920,18 @@ public final class BiddingsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auctionStatus_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, auctionStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (outflowTokenAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOutflowTokenAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (inflowTokenAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getInflowTokenAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, bidder_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (biddingTimestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getBiddingTimestamp());
       }
@@ -4191,21 +4150,13 @@ public final class BiddingsProto {
 
       // Construct using com.comdex.auction.v1beta1.BiddingsProto.DutchBiddings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOutflowTokenAmountFieldBuilder();
-          getInflowTokenAmountFieldBuilder();
-          getBiddingTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4275,18 +4226,15 @@ public final class BiddingsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.auctionStatus_ = auctionStatus_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.outflowTokenAmount_ = outflowTokenAmountBuilder_ == null
               ? outflowTokenAmount_
               : outflowTokenAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.inflowTokenAmount_ = inflowTokenAmountBuilder_ == null
               ? inflowTokenAmount_
               : inflowTokenAmountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.bidder_ = bidder_;
@@ -4295,7 +4243,6 @@ public final class BiddingsProto {
           result.biddingTimestamp_ = biddingTimestampBuilder_ == null
               ? biddingTimestamp_
               : biddingTimestampBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.biddingStatus_ = biddingStatus_;
@@ -4306,7 +4253,6 @@ public final class BiddingsProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.appId_ = appId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4690,10 +4636,8 @@ public final class BiddingsProto {
         } else {
           outflowTokenAmountBuilder_.mergeFrom(value);
         }
-        if (outflowTokenAmount_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4811,10 +4755,8 @@ public final class BiddingsProto {
         } else {
           inflowTokenAmountBuilder_.mergeFrom(value);
         }
-        if (inflowTokenAmount_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5004,10 +4946,8 @@ public final class BiddingsProto {
         } else {
           biddingTimestampBuilder_.mergeFrom(value);
         }
-        if (biddingTimestamp_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**

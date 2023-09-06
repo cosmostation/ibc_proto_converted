@@ -1276,7 +1276,6 @@ public final class FantokenProto {
               com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.class, com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -1418,7 +1417,7 @@ public final class FantokenProto {
      */
     @java.lang.Override
     public boolean hasMetaData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metaData_ != null;
     }
     /**
      * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
@@ -1459,7 +1458,7 @@ public final class FantokenProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, minter_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metaData_ != null) {
         output.writeMessage(4, getMetaData());
       }
       getUnknownFields().writeTo(output);
@@ -1480,7 +1479,7 @@ public final class FantokenProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, minter_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metaData_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMetaData());
       }
@@ -1654,19 +1653,13 @@ public final class FantokenProto {
 
       // Construct using com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetaDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1722,14 +1715,11 @@ public final class FantokenProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.minter_ = minter_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.metaData_ = metaDataBuilder_ == null
               ? metaData_
               : metaDataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2181,10 +2171,8 @@ public final class FantokenProto {
         } else {
           metaDataBuilder_.mergeFrom(value);
         }
-        if (metaData_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

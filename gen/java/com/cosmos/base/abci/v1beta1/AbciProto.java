@@ -372,7 +372,6 @@ public final class AbciProto {
               com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.class, com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -743,7 +742,7 @@ public final class AbciProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tx_ != null;
     }
     /**
      * <pre>
@@ -950,7 +949,7 @@ public final class AbciProto {
       if (gasUsed_ != 0L) {
         output.writeInt64(10, gasUsed_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         output.writeMessage(11, getTx());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
@@ -1003,7 +1002,7 @@ public final class AbciProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(10, gasUsed_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getTx());
       }
@@ -1228,21 +1227,13 @@ public final class AbciProto {
 
       // Construct using com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLogsFieldBuilder();
-          getTxFieldBuilder();
-          getEventsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1359,17 +1350,14 @@ public final class AbciProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.gasUsed_ = gasUsed_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.timestamp_ = timestamp_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2678,10 +2666,8 @@ public final class AbciProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        if (tx_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -8562,7 +8548,6 @@ public final class AbciProto {
               com.cosmos.base.abci.v1beta1.AbciProto.SimulationResponse.class, com.cosmos.base.abci.v1beta1.AbciProto.SimulationResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GAS_INFO_FIELD_NUMBER = 1;
     private com.cosmos.base.abci.v1beta1.AbciProto.GasInfo gasInfo_;
     /**
@@ -8571,7 +8556,7 @@ public final class AbciProto {
      */
     @java.lang.Override
     public boolean hasGasInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return gasInfo_ != null;
     }
     /**
      * <code>.cosmos.base.abci.v1beta1.GasInfo gas_info = 1 [json_name = "gasInfo", (.gogoproto.nullable) = false, (.gogoproto.embed) = true];</code>
@@ -8597,7 +8582,7 @@ public final class AbciProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return result_ != null;
     }
     /**
      * <code>.cosmos.base.abci.v1beta1.Result result = 2 [json_name = "result"];</code>
@@ -8629,10 +8614,10 @@ public final class AbciProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (gasInfo_ != null) {
         output.writeMessage(1, getGasInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (result_ != null) {
         output.writeMessage(2, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -8644,11 +8629,11 @@ public final class AbciProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (gasInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGasInfo());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResult());
       }
@@ -8820,20 +8805,13 @@ public final class AbciProto {
 
       // Construct using com.cosmos.base.abci.v1beta1.AbciProto.SimulationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGasInfoFieldBuilder();
-          getResultFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8882,20 +8860,16 @@ public final class AbciProto {
 
       private void buildPartial0(com.cosmos.base.abci.v1beta1.AbciProto.SimulationResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.gasInfo_ = gasInfoBuilder_ == null
               ? gasInfo_
               : gasInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9071,10 +9045,8 @@ public final class AbciProto {
         } else {
           gasInfoBuilder_.mergeFrom(value);
         }
-        if (gasInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9192,10 +9164,8 @@ public final class AbciProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -489,7 +489,6 @@ public final class QueryProto {
               com.stafihub.stafihub.rvalidator.QueryProto.QueryParamsResponse.class, com.stafihub.stafihub.rvalidator.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.rvalidator.ParamsProto.Params params_;
     /**
@@ -502,7 +501,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -542,7 +541,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -554,7 +553,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -716,19 +715,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -772,14 +765,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.rvalidator.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -965,10 +955,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3023,7 +3011,6 @@ public final class QueryProto {
               com.stafihub.stafihub.rvalidator.QueryProto.QueryCycleSecondsResponse.class, com.stafihub.stafihub.rvalidator.QueryProto.QueryCycleSecondsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CYCLESECONDS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds cycleSeconds_;
     /**
@@ -3032,7 +3019,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCycleSeconds() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return cycleSeconds_ != null;
     }
     /**
      * <code>.stafihub.stafihub.rvalidator.CycleSeconds cycleSeconds = 1 [json_name = "cycleSeconds"];</code>
@@ -3064,7 +3051,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (cycleSeconds_ != null) {
         output.writeMessage(1, getCycleSeconds());
       }
       getUnknownFields().writeTo(output);
@@ -3076,7 +3063,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (cycleSeconds_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCycleSeconds());
       }
@@ -3234,19 +3221,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.QueryProto.QueryCycleSecondsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCycleSecondsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3290,14 +3271,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.rvalidator.QueryProto.QueryCycleSecondsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.cycleSeconds_ = cycleSecondsBuilder_ == null
               ? cycleSeconds_
               : cycleSecondsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3463,10 +3441,8 @@ public final class QueryProto {
         } else {
           cycleSecondsBuilder_.mergeFrom(value);
         }
-        if (cycleSeconds_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4187,7 +4163,6 @@ public final class QueryProto {
               com.stafihub.stafihub.rvalidator.QueryProto.QueryShuffleSecondsResponse.class, com.stafihub.stafihub.rvalidator.QueryProto.QueryShuffleSecondsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SHUFFLESECONDS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds shuffleSeconds_;
     /**
@@ -4196,7 +4171,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasShuffleSeconds() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return shuffleSeconds_ != null;
     }
     /**
      * <code>.stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSeconds = 1 [json_name = "shuffleSeconds"];</code>
@@ -4228,7 +4203,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shuffleSeconds_ != null) {
         output.writeMessage(1, getShuffleSeconds());
       }
       getUnknownFields().writeTo(output);
@@ -4240,7 +4215,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shuffleSeconds_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getShuffleSeconds());
       }
@@ -4398,19 +4373,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.QueryProto.QueryShuffleSecondsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getShuffleSecondsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4454,14 +4423,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.rvalidator.QueryProto.QueryShuffleSecondsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.shuffleSeconds_ = shuffleSecondsBuilder_ == null
               ? shuffleSeconds_
               : shuffleSecondsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4627,10 +4593,8 @@ public final class QueryProto {
         } else {
           shuffleSecondsBuilder_.mergeFrom(value);
         }
-        if (shuffleSeconds_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5499,7 +5463,6 @@ public final class QueryProto {
               com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestVotedCycleResponse.class, com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestVotedCycleResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LATESTVOTEDCYCLE_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.rvalidator.GenesisProto.Cycle latestVotedCycle_;
     /**
@@ -5508,7 +5471,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLatestVotedCycle() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return latestVotedCycle_ != null;
     }
     /**
      * <code>.stafihub.stafihub.rvalidator.Cycle latestVotedCycle = 1 [json_name = "latestVotedCycle"];</code>
@@ -5540,7 +5503,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (latestVotedCycle_ != null) {
         output.writeMessage(1, getLatestVotedCycle());
       }
       getUnknownFields().writeTo(output);
@@ -5552,7 +5515,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (latestVotedCycle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLatestVotedCycle());
       }
@@ -5710,19 +5673,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestVotedCycleResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLatestVotedCycleFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5766,14 +5723,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestVotedCycleResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.latestVotedCycle_ = latestVotedCycleBuilder_ == null
               ? latestVotedCycle_
               : latestVotedCycleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5939,10 +5893,8 @@ public final class QueryProto {
         } else {
           latestVotedCycleBuilder_.mergeFrom(value);
         }
-        if (latestVotedCycle_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6811,7 +6763,6 @@ public final class QueryProto {
               com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestDealedCycleResponse.class, com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestDealedCycleResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LATESTDEALEDCYCLE_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.rvalidator.GenesisProto.Cycle latestDealedCycle_;
     /**
@@ -6820,7 +6771,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLatestDealedCycle() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return latestDealedCycle_ != null;
     }
     /**
      * <code>.stafihub.stafihub.rvalidator.Cycle latestDealedCycle = 1 [json_name = "latestDealedCycle"];</code>
@@ -6852,7 +6803,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (latestDealedCycle_ != null) {
         output.writeMessage(1, getLatestDealedCycle());
       }
       getUnknownFields().writeTo(output);
@@ -6864,7 +6815,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (latestDealedCycle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLatestDealedCycle());
       }
@@ -7022,19 +6973,13 @@ public final class QueryProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestDealedCycleResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLatestDealedCycleFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7078,14 +7023,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.stafihub.stafihub.rvalidator.QueryProto.QueryLatestDealedCycleResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.latestDealedCycle_ = latestDealedCycleBuilder_ == null
               ? latestDealedCycle_
               : latestDealedCycleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7251,10 +7193,8 @@ public final class QueryProto {
         } else {
           latestDealedCycleBuilder_.mergeFrom(value);
         }
-        if (latestDealedCycle_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

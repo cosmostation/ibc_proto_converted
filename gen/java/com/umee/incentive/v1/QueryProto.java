@@ -480,7 +480,6 @@ public final class QueryProto {
               com.umee.incentive.v1.QueryProto.QueryParamsResponse.class, com.umee.incentive.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.umee.incentive.v1.IncentiveProto.Params params_;
     /**
@@ -489,7 +488,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -521,7 +520,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -533,7 +532,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -696,19 +695,13 @@ public final class QueryProto {
 
       // Construct using com.umee.incentive.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -752,14 +745,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.umee.incentive.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -925,10 +915,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11425,7 +11413,6 @@ public final class QueryProto {
               com.umee.incentive.v1.QueryProto.QueryIncentiveProgramResponse.class, com.umee.incentive.v1.QueryProto.QueryIncentiveProgramResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROGRAM_FIELD_NUMBER = 1;
     private com.umee.incentive.v1.IncentiveProto.IncentiveProgram program_;
     /**
@@ -11434,7 +11421,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProgram() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return program_ != null;
     }
     /**
      * <code>.umee.incentive.v1.IncentiveProgram program = 1 [json_name = "program", (.gogoproto.nullable) = false];</code>
@@ -11466,7 +11453,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (program_ != null) {
         output.writeMessage(1, getProgram());
       }
       getUnknownFields().writeTo(output);
@@ -11478,7 +11465,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (program_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProgram());
       }
@@ -11641,19 +11628,13 @@ public final class QueryProto {
 
       // Construct using com.umee.incentive.v1.QueryProto.QueryIncentiveProgramResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProgramFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11697,14 +11678,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.umee.incentive.v1.QueryProto.QueryIncentiveProgramResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.program_ = programBuilder_ == null
               ? program_
               : programBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11870,10 +11848,8 @@ public final class QueryProto {
         } else {
           programBuilder_.mergeFrom(value);
         }
-        if (program_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12713,7 +12689,6 @@ public final class QueryProto {
               com.umee.incentive.v1.QueryProto.QueryCurrentRatesResponse.class, com.umee.incentive.v1.QueryProto.QueryCurrentRatesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REFERENCE_BOND_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin referenceBond_;
     /**
@@ -12729,7 +12704,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasReferenceBond() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return referenceBond_ != null;
     }
     /**
      * <pre>
@@ -12841,7 +12816,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (referenceBond_ != null) {
         output.writeMessage(1, getReferenceBond());
       }
       for (int i = 0; i < rewards_.size(); i++) {
@@ -12856,7 +12831,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (referenceBond_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReferenceBond());
       }
@@ -13028,20 +13003,13 @@ public final class QueryProto {
 
       // Construct using com.umee.incentive.v1.QueryProto.QueryCurrentRatesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getReferenceBondFieldBuilder();
-          getRewardsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13105,14 +13073,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.umee.incentive.v1.QueryProto.QueryCurrentRatesResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.referenceBond_ = referenceBondBuilder_ == null
               ? referenceBond_
               : referenceBondBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13352,10 +13317,8 @@ public final class QueryProto {
         } else {
           referenceBondBuilder_.mergeFrom(value);
         }
-        if (referenceBond_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

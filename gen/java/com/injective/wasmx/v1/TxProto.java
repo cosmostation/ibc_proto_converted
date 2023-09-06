@@ -5531,7 +5531,6 @@ public final class TxProto {
               com.injective.wasmx.v1.TxProto.MsgUpdateParams.class, com.injective.wasmx.v1.TxProto.MsgUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -5593,7 +5592,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -5640,7 +5639,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -5655,7 +5654,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -5817,19 +5816,13 @@ public final class TxProto {
 
       // Construct using com.injective.wasmx.v1.TxProto.MsgUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5877,14 +5870,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6182,10 +6172,8 @@ public final class TxProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6788,7 +6776,6 @@ public final class TxProto {
               com.injective.wasmx.v1.TxProto.MsgRegisterContract.class, com.injective.wasmx.v1.TxProto.MsgRegisterContract.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -6836,7 +6823,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContractRegistrationRequest() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return contractRegistrationRequest_ != null;
     }
     /**
      * <code>.injective.wasmx.v1.ContractRegistrationRequest contract_registration_request = 2 [json_name = "contractRegistrationRequest", (.gogoproto.nullable) = false];</code>
@@ -6871,7 +6858,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractRegistrationRequest_ != null) {
         output.writeMessage(2, getContractRegistrationRequest());
       }
       getUnknownFields().writeTo(output);
@@ -6886,7 +6873,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractRegistrationRequest_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContractRegistrationRequest());
       }
@@ -7048,19 +7035,13 @@ public final class TxProto {
 
       // Construct using com.injective.wasmx.v1.TxProto.MsgRegisterContract.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContractRegistrationRequestFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7108,14 +7089,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractRegistrationRequest_ = contractRegistrationRequestBuilder_ == null
               ? contractRegistrationRequest_
               : contractRegistrationRequestBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7363,10 +7341,8 @@ public final class TxProto {
         } else {
           contractRegistrationRequestBuilder_.mergeFrom(value);
         }
-        if (contractRegistrationRequest_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

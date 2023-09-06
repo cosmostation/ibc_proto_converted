@@ -1059,7 +1059,6 @@ public final class TypesProto {
       // @@protoc_insertion_point(enum_scope:akash.escrow.v1beta1.Account.State)
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.escrow.v1beta1.TypesProto.AccountID id_;
     /**
@@ -1072,7 +1071,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <pre>
@@ -1183,7 +1182,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return balance_ != null;
     }
     /**
      * <pre>
@@ -1221,7 +1220,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTransferred() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return transferred_ != null;
     }
     /**
      * <pre>
@@ -1276,7 +1275,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
@@ -1285,10 +1284,10 @@ public final class TypesProto {
       if (state_ != com.akash.escrow.v1beta1.TypesProto.Account.State.invalid.getNumber()) {
         output.writeEnum(3, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (balance_ != null) {
         output.writeMessage(4, getBalance());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (transferred_ != null) {
         output.writeMessage(5, getTransferred());
       }
       if (settledAt_ != 0L) {
@@ -1303,7 +1302,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -1314,11 +1313,11 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (balance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBalance());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (transferred_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTransferred());
       }
@@ -1514,21 +1513,13 @@ public final class TypesProto {
 
       // Construct using com.akash.escrow.v1beta1.TypesProto.Account.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-          getBalanceFieldBuilder();
-          getTransferredFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1585,12 +1576,10 @@ public final class TypesProto {
 
       private void buildPartial0(com.akash.escrow.v1beta1.TypesProto.Account result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.owner_ = owner_;
@@ -1602,18 +1591,15 @@ public final class TypesProto {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.transferred_ = transferredBuilder_ == null
               ? transferred_
               : transferredBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.settledAt_ = settledAt_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1845,10 +1831,8 @@ public final class TypesProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2167,10 +2151,8 @@ public final class TypesProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        if (balance_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2324,10 +2306,8 @@ public final class TypesProto {
         } else {
           transferredBuilder_.mergeFrom(value);
         }
-        if (transferred_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2805,7 +2785,6 @@ public final class TypesProto {
       // @@protoc_insertion_point(enum_scope:akash.escrow.v1beta1.Payment.State)
     }
 
-    private int bitField0_;
     public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
     private com.akash.escrow.v1beta1.TypesProto.AccountID accountId_;
     /**
@@ -2814,7 +2793,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasAccountId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return accountId_ != null;
     }
     /**
      * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
@@ -2936,7 +2915,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasRate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return rate_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
@@ -2962,7 +2941,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return balance_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
@@ -2988,7 +2967,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasWithdrawn() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return withdrawn_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
@@ -3020,7 +2999,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (accountId_ != null) {
         output.writeMessage(1, getAccountId());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentId_)) {
@@ -3032,13 +3011,13 @@ public final class TypesProto {
       if (state_ != com.akash.escrow.v1beta1.TypesProto.Payment.State.invalid.getNumber()) {
         output.writeEnum(4, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (rate_ != null) {
         output.writeMessage(5, getRate());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (balance_ != null) {
         output.writeMessage(6, getBalance());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (withdrawn_ != null) {
         output.writeMessage(7, getWithdrawn());
       }
       getUnknownFields().writeTo(output);
@@ -3050,7 +3029,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (accountId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAccountId());
       }
@@ -3064,15 +3043,15 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (rate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getRate());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (balance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getBalance());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (withdrawn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getWithdrawn());
       }
@@ -3272,22 +3251,13 @@ public final class TypesProto {
 
       // Construct using com.akash.escrow.v1beta1.TypesProto.Payment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAccountIdFieldBuilder();
-          getRateFieldBuilder();
-          getBalanceFieldBuilder();
-          getWithdrawnFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3349,12 +3319,10 @@ public final class TypesProto {
 
       private void buildPartial0(com.akash.escrow.v1beta1.TypesProto.Payment result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.accountId_ = accountIdBuilder_ == null
               ? accountId_
               : accountIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.paymentId_ = paymentId_;
@@ -3369,21 +3337,17 @@ public final class TypesProto {
           result.rate_ = rateBuilder_ == null
               ? rate_
               : rateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.withdrawn_ = withdrawnBuilder_ == null
               ? withdrawn_
               : withdrawnBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3607,10 +3571,8 @@ public final class TypesProto {
         } else {
           accountIdBuilder_.mergeFrom(value);
         }
-        if (accountId_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3925,10 +3887,8 @@ public final class TypesProto {
         } else {
           rateBuilder_.mergeFrom(value);
         }
-        if (rate_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4046,10 +4006,8 @@ public final class TypesProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        if (balance_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -4167,10 +4125,8 @@ public final class TypesProto {
         } else {
           withdrawnBuilder_.mergeFrom(value);
         }
-        if (withdrawn_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**

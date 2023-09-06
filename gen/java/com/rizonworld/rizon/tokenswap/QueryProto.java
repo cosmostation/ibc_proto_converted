@@ -680,7 +680,6 @@ public final class QueryProto {
               com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKENSWAP_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap tokenswap_;
     /**
@@ -693,7 +692,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasTokenswap() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tokenswap_ != null;
     }
     /**
      * <pre>
@@ -733,7 +732,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenswap_ != null) {
         output.writeMessage(1, getTokenswap());
       }
       getUnknownFields().writeTo(output);
@@ -745,7 +744,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenswap_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenswap());
       }
@@ -907,19 +906,13 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenswapFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -963,14 +956,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.tokenswap.QueryProto.QueryTokenswapResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenswap_ = tokenswapBuilder_ == null
               ? tokenswap_
               : tokenswapBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1156,10 +1146,8 @@ public final class QueryProto {
         } else {
           tokenswapBuilder_.mergeFrom(value);
         }
-        if (tokenswap_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1765,7 +1753,6 @@ public final class QueryProto {
               com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SWAPPED_AMOUNT_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount swappedAmount_;
     /**
@@ -1778,7 +1765,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSwappedAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return swappedAmount_ != null;
     }
     /**
      * <pre>
@@ -1818,7 +1805,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (swappedAmount_ != null) {
         output.writeMessage(1, getSwappedAmount());
       }
       getUnknownFields().writeTo(output);
@@ -1830,7 +1817,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (swappedAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSwappedAmount());
       }
@@ -1992,19 +1979,13 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSwappedAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2048,14 +2029,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.tokenswap.QueryProto.QuerySwappedAmountResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.swappedAmount_ = swappedAmountBuilder_ == null
               ? swappedAmount_
               : swappedAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2241,10 +2219,8 @@ public final class QueryProto {
         } else {
           swappedAmountBuilder_.mergeFrom(value);
         }
-        if (swappedAmount_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2850,7 +2826,6 @@ public final class QueryProto {
               com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.class, com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.rizonworld.rizon.tokenswap.ParamsProto.Params params_;
     /**
@@ -2863,7 +2838,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -2903,7 +2878,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -2915,7 +2890,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -3077,19 +3052,13 @@ public final class QueryProto {
 
       // Construct using com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3133,14 +3102,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.rizonworld.rizon.tokenswap.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3326,10 +3292,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

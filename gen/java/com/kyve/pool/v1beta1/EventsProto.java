@@ -3761,8 +3761,7 @@ public final class EventsProto {
 
     public static final int AFFECTED_POOLS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList affectedPools_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList affectedPools_;
     /**
      * <pre>
      * affected_pools contains all IDs of pools that will be affected by this runtime upgrade.
@@ -4100,9 +4099,18 @@ public final class EventsProto {
       @java.lang.Override
       public com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeScheduled buildPartial() {
         com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeScheduled result = new com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeScheduled(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeScheduled result) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          affectedPools_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.affectedPools_ = affectedPools_;
       }
 
       private void buildPartial0(com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeScheduled result) {
@@ -4121,10 +4129,6 @@ public final class EventsProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.binaries_ = binaries_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          affectedPools_.makeImmutable();
-          result.affectedPools_ = affectedPools_;
         }
       }
 
@@ -4196,8 +4200,7 @@ public final class EventsProto {
         if (!other.affectedPools_.isEmpty()) {
           if (affectedPools_.isEmpty()) {
             affectedPools_ = other.affectedPools_;
-            affectedPools_.makeImmutable();
-            bitField0_ |= 0x00000020;
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAffectedPoolsIsMutable();
             affectedPools_.addAll(other.affectedPools_);
@@ -4660,10 +4663,10 @@ public final class EventsProto {
 
       private com.google.protobuf.Internal.LongList affectedPools_ = emptyLongList();
       private void ensureAffectedPoolsIsMutable() {
-        if (!affectedPools_.isModifiable()) {
-          affectedPools_ = makeMutableCopy(affectedPools_);
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          affectedPools_ = mutableCopy(affectedPools_);
+          bitField0_ |= 0x00000020;
         }
-        bitField0_ |= 0x00000020;
       }
       /**
        * <pre>
@@ -4675,8 +4678,8 @@ public final class EventsProto {
        */
       public java.util.List<java.lang.Long>
           getAffectedPoolsList() {
-        affectedPools_.makeImmutable();
-        return affectedPools_;
+        return ((bitField0_ & 0x00000020) != 0) ?
+                 java.util.Collections.unmodifiableList(affectedPools_) : affectedPools_;
       }
       /**
        * <pre>
@@ -4716,7 +4719,6 @@ public final class EventsProto {
 
         ensureAffectedPoolsIsMutable();
         affectedPools_.setLong(index, value);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4733,7 +4735,6 @@ public final class EventsProto {
 
         ensureAffectedPoolsIsMutable();
         affectedPools_.addLong(value);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4751,7 +4752,6 @@ public final class EventsProto {
         ensureAffectedPoolsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, affectedPools_);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4980,8 +4980,7 @@ public final class EventsProto {
 
     public static final int AFFECTED_POOLS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList affectedPools_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList affectedPools_;
     /**
      * <pre>
      * affected_pools contains all IDs of pools that are affected by the
@@ -5274,19 +5273,24 @@ public final class EventsProto {
       @java.lang.Override
       public com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeCancelled buildPartial() {
         com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeCancelled result = new com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeCancelled(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeCancelled result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          affectedPools_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.affectedPools_ = affectedPools_;
       }
 
       private void buildPartial0(com.kyve.pool.v1beta1.EventsProto.EventRuntimeUpgradeCancelled result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.runtime_ = runtime_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          affectedPools_.makeImmutable();
-          result.affectedPools_ = affectedPools_;
         }
       }
 
@@ -5342,8 +5346,7 @@ public final class EventsProto {
         if (!other.affectedPools_.isEmpty()) {
           if (affectedPools_.isEmpty()) {
             affectedPools_ = other.affectedPools_;
-            affectedPools_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureAffectedPoolsIsMutable();
             affectedPools_.addAll(other.affectedPools_);
@@ -5508,10 +5511,10 @@ public final class EventsProto {
 
       private com.google.protobuf.Internal.LongList affectedPools_ = emptyLongList();
       private void ensureAffectedPoolsIsMutable() {
-        if (!affectedPools_.isModifiable()) {
-          affectedPools_ = makeMutableCopy(affectedPools_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          affectedPools_ = mutableCopy(affectedPools_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -5524,8 +5527,8 @@ public final class EventsProto {
        */
       public java.util.List<java.lang.Long>
           getAffectedPoolsList() {
-        affectedPools_.makeImmutable();
-        return affectedPools_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(affectedPools_) : affectedPools_;
       }
       /**
        * <pre>
@@ -5568,7 +5571,6 @@ public final class EventsProto {
 
         ensureAffectedPoolsIsMutable();
         affectedPools_.setLong(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5586,7 +5588,6 @@ public final class EventsProto {
 
         ensureAffectedPoolsIsMutable();
         affectedPools_.addLong(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5605,7 +5606,6 @@ public final class EventsProto {
         ensureAffectedPoolsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, affectedPools_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

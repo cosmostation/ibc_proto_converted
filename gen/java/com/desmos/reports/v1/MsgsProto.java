@@ -166,7 +166,6 @@ public final class MsgsProto {
               com.desmos.reports.v1.MsgsProto.MsgCreateReport.class, com.desmos.reports.v1.MsgsProto.MsgCreateReport.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -184,8 +183,7 @@ public final class MsgsProto {
 
     public static final int REASONS_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList reasonsIds_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList reasonsIds_;
     /**
      * <pre>
      * Id of the reason this report has been created for
@@ -330,7 +328,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasTarget() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return target_ != null;
     }
     /**
      * <pre>
@@ -387,7 +385,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reporter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reporter_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (target_ != null) {
         output.writeMessage(5, getTarget());
       }
       getUnknownFields().writeTo(output);
@@ -423,7 +421,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reporter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reporter_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (target_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTarget());
       }
@@ -604,19 +602,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.reports.v1.MsgsProto.MsgCreateReport.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -657,9 +649,18 @@ public final class MsgsProto {
       @java.lang.Override
       public com.desmos.reports.v1.MsgsProto.MsgCreateReport buildPartial() {
         com.desmos.reports.v1.MsgsProto.MsgCreateReport result = new com.desmos.reports.v1.MsgsProto.MsgCreateReport(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.desmos.reports.v1.MsgsProto.MsgCreateReport result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          reasonsIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.reasonsIds_ = reasonsIds_;
       }
 
       private void buildPartial0(com.desmos.reports.v1.MsgsProto.MsgCreateReport result) {
@@ -667,24 +668,17 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subspaceId_ = subspaceId_;
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          reasonsIds_.makeImmutable();
-          result.reasonsIds_ = reasonsIds_;
-        }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.message_ = message_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.reporter_ = reporter_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.target_ = targetBuilder_ == null
               ? target_
               : targetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -737,8 +731,7 @@ public final class MsgsProto {
         if (!other.reasonsIds_.isEmpty()) {
           if (reasonsIds_.isEmpty()) {
             reasonsIds_ = other.reasonsIds_;
-            reasonsIds_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureReasonsIdsIsMutable();
             reasonsIds_.addAll(other.reasonsIds_);
@@ -885,10 +878,10 @@ public final class MsgsProto {
 
       private com.google.protobuf.Internal.IntList reasonsIds_ = emptyIntList();
       private void ensureReasonsIdsIsMutable() {
-        if (!reasonsIds_.isModifiable()) {
-          reasonsIds_ = makeMutableCopy(reasonsIds_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          reasonsIds_ = mutableCopy(reasonsIds_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -900,8 +893,8 @@ public final class MsgsProto {
        */
       public java.util.List<java.lang.Integer>
           getReasonsIdsList() {
-        reasonsIds_.makeImmutable();
-        return reasonsIds_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(reasonsIds_) : reasonsIds_;
       }
       /**
        * <pre>
@@ -941,7 +934,6 @@ public final class MsgsProto {
 
         ensureReasonsIdsIsMutable();
         reasonsIds_.setInt(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -958,7 +950,6 @@ public final class MsgsProto {
 
         ensureReasonsIdsIsMutable();
         reasonsIds_.addInt(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -976,7 +967,6 @@ public final class MsgsProto {
         ensureReasonsIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, reasonsIds_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1265,10 +1255,8 @@ public final class MsgsProto {
         } else {
           targetBuilder_.mergeFrom(value);
         }
-        if (target_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1479,7 +1467,6 @@ public final class MsgsProto {
               com.desmos.reports.v1.MsgsProto.MsgCreateReportResponse.class, com.desmos.reports.v1.MsgsProto.MsgCreateReportResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REPORT_ID_FIELD_NUMBER = 1;
     private long reportId_ = 0L;
     /**
@@ -1507,7 +1494,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasCreationDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return creationDate_ != null;
     }
     /**
      * <pre>
@@ -1550,7 +1537,7 @@ public final class MsgsProto {
       if (reportId_ != 0L) {
         output.writeUInt64(1, reportId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creationDate_ != null) {
         output.writeMessage(2, getCreationDate());
       }
       getUnknownFields().writeTo(output);
@@ -1566,7 +1553,7 @@ public final class MsgsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, reportId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creationDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreationDate());
       }
@@ -1733,19 +1720,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.reports.v1.MsgsProto.MsgCreateReportResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreationDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1793,14 +1774,11 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reportId_ = reportId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.creationDate_ = creationDateBuilder_ == null
               ? creationDate_
               : creationDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2038,10 +2016,8 @@ public final class MsgsProto {
         } else {
           creationDateBuilder_.mergeFrom(value);
         }
-        if (creationDate_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7500,7 +7476,6 @@ public final class MsgsProto {
               com.desmos.reports.v1.MsgsProto.MsgUpdateParams.class, com.desmos.reports.v1.MsgsProto.MsgUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -7564,7 +7539,7 @@ public final class MsgsProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -7611,7 +7586,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -7626,7 +7601,7 @@ public final class MsgsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -7794,19 +7769,13 @@ public final class MsgsProto {
 
       // Construct using com.desmos.reports.v1.MsgsProto.MsgUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7854,14 +7823,11 @@ public final class MsgsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8164,10 +8130,8 @@ public final class MsgsProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

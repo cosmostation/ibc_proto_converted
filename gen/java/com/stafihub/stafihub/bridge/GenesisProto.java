@@ -365,7 +365,6 @@ public final class GenesisProto {
               com.stafihub.stafihub.bridge.GenesisProto.GenesisState.class, com.stafihub.stafihub.bridge.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.bridge.ParamsProto.Params params_;
     /**
@@ -374,7 +373,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -517,8 +516,7 @@ public final class GenesisProto {
 
     public static final int CHAINIDLIST_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList chainIdList_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList chainIdList_;
     /**
      * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
      * @return A list containing the chainIdList.
@@ -701,7 +699,7 @@ public final class GenesisProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < depositCountList_.size(); i++) {
@@ -738,7 +736,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -977,24 +975,13 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.bridge.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getDepositCountListFieldBuilder();
-          getProposalListFieldBuilder();
-          getRelayFeeListFieldBuilder();
-          getResourceIdToDenomListFieldBuilder();
-          getBannedDenomListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1102,6 +1089,11 @@ public final class GenesisProto {
         } else {
           result.relayFeeList_ = relayFeeListBuilder_.build();
         }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          chainIdList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.chainIdList_ = chainIdList_;
         if (resourceIdToDenomListBuilder_ == null) {
           if (((bitField0_ & 0x00000040) != 0)) {
             resourceIdToDenomList_ = java.util.Collections.unmodifiableList(resourceIdToDenomList_);
@@ -1124,21 +1116,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.stafihub.stafihub.bridge.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          chainIdList_.makeImmutable();
-          result.chainIdList_ = chainIdList_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.relayFeeReceiver_ = relayFeeReceiver_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1269,8 +1254,7 @@ public final class GenesisProto {
         if (!other.chainIdList_.isEmpty()) {
           if (chainIdList_.isEmpty()) {
             chainIdList_ = other.chainIdList_;
-            chainIdList_.makeImmutable();
-            bitField0_ |= 0x00000010;
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureChainIdListIsMutable();
             chainIdList_.addAll(other.chainIdList_);
@@ -1536,10 +1520,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2313,10 +2295,10 @@ public final class GenesisProto {
 
       private com.google.protobuf.Internal.IntList chainIdList_ = emptyIntList();
       private void ensureChainIdListIsMutable() {
-        if (!chainIdList_.isModifiable()) {
-          chainIdList_ = makeMutableCopy(chainIdList_);
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          chainIdList_ = mutableCopy(chainIdList_);
+          bitField0_ |= 0x00000010;
         }
-        bitField0_ |= 0x00000010;
       }
       /**
        * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
@@ -2324,8 +2306,8 @@ public final class GenesisProto {
        */
       public java.util.List<java.lang.Integer>
           getChainIdListList() {
-        chainIdList_.makeImmutable();
-        return chainIdList_;
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(chainIdList_) : chainIdList_;
       }
       /**
        * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
@@ -2353,7 +2335,6 @@ public final class GenesisProto {
 
         ensureChainIdListIsMutable();
         chainIdList_.setInt(index, value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2366,7 +2347,6 @@ public final class GenesisProto {
 
         ensureChainIdListIsMutable();
         chainIdList_.addInt(value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2380,7 +2360,6 @@ public final class GenesisProto {
         ensureChainIdListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, chainIdList_);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -3710,7 +3689,6 @@ public final class GenesisProto {
               com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.class, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAINID_FIELD_NUMBER = 1;
     private int chainId_ = 0;
     /**
@@ -3780,7 +3758,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasProposal() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proposal_ != null;
     }
     /**
      * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
@@ -3821,7 +3799,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, resourceId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proposal_ != null) {
         output.writeMessage(4, getProposal());
       }
       getUnknownFields().writeTo(output);
@@ -3844,7 +3822,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, resourceId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proposal_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProposal());
       }
@@ -4015,19 +3993,13 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProposalFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4083,14 +4055,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.resourceId_ = resourceId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.proposal_ = proposalBuilder_ == null
               ? proposal_
               : proposalBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4418,10 +4387,8 @@ public final class GenesisProto {
         } else {
           proposalBuilder_.mergeFrom(value);
         }
-        if (proposal_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4596,7 +4563,6 @@ public final class GenesisProto {
               com.stafihub.stafihub.bridge.GenesisProto.RelayFee.class, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAINID_FIELD_NUMBER = 1;
     private int chainId_ = 0;
     /**
@@ -4616,7 +4582,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return value_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4651,7 +4617,7 @@ public final class GenesisProto {
       if (chainId_ != 0) {
         output.writeUInt32(1, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         output.writeMessage(2, getValue());
       }
       getUnknownFields().writeTo(output);
@@ -4667,7 +4633,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValue());
       }
@@ -4829,19 +4795,13 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.bridge.GenesisProto.RelayFee.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4889,14 +4849,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.chainId_ = chainId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5102,10 +5059,8 @@ public final class GenesisProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        if (value_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

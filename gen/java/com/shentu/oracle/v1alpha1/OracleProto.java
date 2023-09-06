@@ -1354,7 +1354,6 @@ public final class OracleProto {
               com.shentu.oracle.v1alpha1.OracleProto.Task.class, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTRACT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contract_ = "";
@@ -1532,7 +1531,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 6 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expiration&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1738,7 +1737,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(6, getExpiration());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
@@ -1785,7 +1784,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getExpiration());
       }
@@ -2015,21 +2014,13 @@ public final class OracleProto {
 
       // Construct using com.shentu.oracle.v1alpha1.OracleProto.Task.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBountyFieldBuilder();
-          getExpirationFieldBuilder();
-          getResponsesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2130,12 +2121,10 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.creator_ = creator_;
@@ -2152,7 +2141,6 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.status_ = status_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2966,10 +2954,8 @@ public final class OracleProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -6530,7 +6516,6 @@ public final class OracleProto {
               com.shentu.oracle.v1alpha1.OracleProto.TaskParams.class, com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EXPIRATION_DURATION_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration expirationDuration_;
     /**
@@ -6539,7 +6524,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasExpirationDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expirationDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration expiration_duration = 1 [json_name = "expirationDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expiration_duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -6749,7 +6734,7 @@ public final class OracleProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expirationDuration_ != null) {
         output.writeMessage(1, getExpirationDuration());
       }
       if (aggregationWindow_ != 0L) {
@@ -6779,7 +6764,7 @@ public final class OracleProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expirationDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getExpirationDuration());
       }
@@ -6982,19 +6967,13 @@ public final class OracleProto {
 
       // Construct using com.shentu.oracle.v1alpha1.OracleProto.TaskParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7044,12 +7023,10 @@ public final class OracleProto {
 
       private void buildPartial0(com.shentu.oracle.v1alpha1.OracleProto.TaskParams result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.expirationDuration_ = expirationDurationBuilder_ == null
               ? expirationDuration_
               : expirationDurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.aggregationWindow_ = aggregationWindow_;
@@ -7069,7 +7046,6 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.shortcutQuorum_ = shortcutQuorum_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7291,10 +7267,8 @@ public final class OracleProto {
         } else {
           expirationDurationBuilder_.mergeFrom(value);
         }
-        if (expirationDuration_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10509,7 +10483,6 @@ public final class OracleProto {
               com.shentu.oracle.v1alpha1.OracleProto.TxTask.class, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ATX_HASH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString atxHash_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -10609,7 +10582,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasValidTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp valid_time = 4 [json_name = "validTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"valid_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -10635,7 +10608,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expiration&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -10746,10 +10719,10 @@ public final class OracleProto {
       for (int i = 0; i < bounty_.size(); i++) {
         output.writeMessage(3, bounty_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validTime_ != null) {
         output.writeMessage(4, getValidTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(5, getExpiration());
       }
       for (int i = 0; i < responses_.size(); i++) {
@@ -10781,11 +10754,11 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, bounty_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getValidTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -10992,22 +10965,13 @@ public final class OracleProto {
 
       // Construct using com.shentu.oracle.v1alpha1.OracleProto.TxTask.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBountyFieldBuilder();
-          getValidTimeFieldBuilder();
-          getExpirationFieldBuilder();
-          getResponsesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11102,18 +11066,15 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.creator_ = creator_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.validTime_ = validTimeBuilder_ == null
               ? validTime_
               : validTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.score_ = score_;
@@ -11121,7 +11082,6 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.status_ = status_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11753,10 +11713,8 @@ public final class OracleProto {
         } else {
           validTimeBuilder_.mergeFrom(value);
         }
-        if (validTime_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -11874,10 +11832,8 @@ public final class OracleProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

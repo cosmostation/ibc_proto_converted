@@ -222,7 +222,6 @@ public final class ReflectionProto {
               com.cosmos.base.reflection.v2alpha1.ReflectionProto.AppDescriptor.class, com.cosmos.base.reflection.v2alpha1.ReflectionProto.AppDescriptor.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHN_FIELD_NUMBER = 1;
     private com.cosmos.base.reflection.v2alpha1.ReflectionProto.AuthnDescriptor authn_;
     /**
@@ -236,7 +235,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasAuthn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return authn_ != null;
     }
     /**
      * <pre>
@@ -276,7 +275,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasChain() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return chain_ != null;
     }
     /**
      * <pre>
@@ -314,7 +313,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasCodec() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return codec_ != null;
     }
     /**
      * <pre>
@@ -352,7 +351,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasConfiguration() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return configuration_ != null;
     }
     /**
      * <pre>
@@ -390,7 +389,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasQueryServices() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return queryServices_ != null;
     }
     /**
      * <pre>
@@ -428,7 +427,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return tx_ != null;
     }
     /**
      * <pre>
@@ -468,22 +467,22 @@ public final class ReflectionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (authn_ != null) {
         output.writeMessage(1, getAuthn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (chain_ != null) {
         output.writeMessage(2, getChain());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (codec_ != null) {
         output.writeMessage(3, getCodec());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (configuration_ != null) {
         output.writeMessage(4, getConfiguration());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (queryServices_ != null) {
         output.writeMessage(5, getQueryServices());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (tx_ != null) {
         output.writeMessage(6, getTx());
       }
       getUnknownFields().writeTo(output);
@@ -495,27 +494,27 @@ public final class ReflectionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (authn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAuthn());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (chain_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getChain());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (codec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCodec());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (configuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getConfiguration());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (queryServices_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getQueryServices());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (tx_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTx());
       }
@@ -722,24 +721,13 @@ public final class ReflectionProto {
 
       // Construct using com.cosmos.base.reflection.v2alpha1.ReflectionProto.AppDescriptor.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAuthnFieldBuilder();
-          getChainFieldBuilder();
-          getCodecFieldBuilder();
-          getConfigurationFieldBuilder();
-          getQueryServicesFieldBuilder();
-          getTxFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -808,44 +796,36 @@ public final class ReflectionProto {
 
       private void buildPartial0(com.cosmos.base.reflection.v2alpha1.ReflectionProto.AppDescriptor result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authn_ = authnBuilder_ == null
               ? authn_
               : authnBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chain_ = chainBuilder_ == null
               ? chain_
               : chainBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.codec_ = codecBuilder_ == null
               ? codec_
               : codecBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.configuration_ = configurationBuilder_ == null
               ? configuration_
               : configurationBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.queryServices_ = queryServicesBuilder_ == null
               ? queryServices_
               : queryServicesBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
-          to_bitField0_ |= 0x00000020;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1086,10 +1066,8 @@ public final class ReflectionProto {
         } else {
           authnBuilder_.mergeFrom(value);
         }
-        if (authn_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1247,10 +1225,8 @@ public final class ReflectionProto {
         } else {
           chainBuilder_.mergeFrom(value);
         }
-        if (chain_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1404,10 +1380,8 @@ public final class ReflectionProto {
         } else {
           codecBuilder_.mergeFrom(value);
         }
-        if (codec_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1561,10 +1535,8 @@ public final class ReflectionProto {
         } else {
           configurationBuilder_.mergeFrom(value);
         }
-        if (configuration_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1718,10 +1690,8 @@ public final class ReflectionProto {
         } else {
           queryServicesBuilder_.mergeFrom(value);
         }
-        if (queryServices_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1875,10 +1845,8 @@ public final class ReflectionProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        if (tx_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -11390,7 +11358,6 @@ public final class ReflectionProto {
               com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetAuthnDescriptorResponse.class, com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetAuthnDescriptorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHN_FIELD_NUMBER = 1;
     private com.cosmos.base.reflection.v2alpha1.ReflectionProto.AuthnDescriptor authn_;
     /**
@@ -11403,7 +11370,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasAuthn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return authn_ != null;
     }
     /**
      * <pre>
@@ -11443,7 +11410,7 @@ public final class ReflectionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (authn_ != null) {
         output.writeMessage(1, getAuthn());
       }
       getUnknownFields().writeTo(output);
@@ -11455,7 +11422,7 @@ public final class ReflectionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (authn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAuthn());
       }
@@ -11617,19 +11584,13 @@ public final class ReflectionProto {
 
       // Construct using com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetAuthnDescriptorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAuthnFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11673,14 +11634,11 @@ public final class ReflectionProto {
 
       private void buildPartial0(com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetAuthnDescriptorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authn_ = authnBuilder_ == null
               ? authn_
               : authnBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11866,10 +11824,8 @@ public final class ReflectionProto {
         } else {
           authnBuilder_.mergeFrom(value);
         }
-        if (authn_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12475,7 +12431,6 @@ public final class ReflectionProto {
               com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetChainDescriptorResponse.class, com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetChainDescriptorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_FIELD_NUMBER = 1;
     private com.cosmos.base.reflection.v2alpha1.ReflectionProto.ChainDescriptor chain_;
     /**
@@ -12488,7 +12443,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasChain() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return chain_ != null;
     }
     /**
      * <pre>
@@ -12528,7 +12483,7 @@ public final class ReflectionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (chain_ != null) {
         output.writeMessage(1, getChain());
       }
       getUnknownFields().writeTo(output);
@@ -12540,7 +12495,7 @@ public final class ReflectionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (chain_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getChain());
       }
@@ -12702,19 +12657,13 @@ public final class ReflectionProto {
 
       // Construct using com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetChainDescriptorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getChainFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12758,14 +12707,11 @@ public final class ReflectionProto {
 
       private void buildPartial0(com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetChainDescriptorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.chain_ = chainBuilder_ == null
               ? chain_
               : chainBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12951,10 +12897,8 @@ public final class ReflectionProto {
         } else {
           chainBuilder_.mergeFrom(value);
         }
-        if (chain_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -13560,7 +13504,6 @@ public final class ReflectionProto {
               com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetCodecDescriptorResponse.class, com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetCodecDescriptorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CODEC_FIELD_NUMBER = 1;
     private com.cosmos.base.reflection.v2alpha1.ReflectionProto.CodecDescriptor codec_;
     /**
@@ -13573,7 +13516,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasCodec() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return codec_ != null;
     }
     /**
      * <pre>
@@ -13613,7 +13556,7 @@ public final class ReflectionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (codec_ != null) {
         output.writeMessage(1, getCodec());
       }
       getUnknownFields().writeTo(output);
@@ -13625,7 +13568,7 @@ public final class ReflectionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (codec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCodec());
       }
@@ -13787,19 +13730,13 @@ public final class ReflectionProto {
 
       // Construct using com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetCodecDescriptorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCodecFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13843,14 +13780,11 @@ public final class ReflectionProto {
 
       private void buildPartial0(com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetCodecDescriptorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.codec_ = codecBuilder_ == null
               ? codec_
               : codecBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14036,10 +13970,8 @@ public final class ReflectionProto {
         } else {
           codecBuilder_.mergeFrom(value);
         }
-        if (codec_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -14645,7 +14577,6 @@ public final class ReflectionProto {
               com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetConfigurationDescriptorResponse.class, com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetConfigurationDescriptorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private com.cosmos.base.reflection.v2alpha1.ReflectionProto.ConfigurationDescriptor config_;
     /**
@@ -14658,7 +14589,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return config_ != null;
     }
     /**
      * <pre>
@@ -14698,7 +14629,7 @@ public final class ReflectionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         output.writeMessage(1, getConfig());
       }
       getUnknownFields().writeTo(output);
@@ -14710,7 +14641,7 @@ public final class ReflectionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConfig());
       }
@@ -14872,19 +14803,13 @@ public final class ReflectionProto {
 
       // Construct using com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetConfigurationDescriptorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14928,14 +14853,11 @@ public final class ReflectionProto {
 
       private void buildPartial0(com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetConfigurationDescriptorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15121,10 +15043,8 @@ public final class ReflectionProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        if (config_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -15730,7 +15650,6 @@ public final class ReflectionProto {
               com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetQueryServicesDescriptorResponse.class, com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetQueryServicesDescriptorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int QUERIES_FIELD_NUMBER = 1;
     private com.cosmos.base.reflection.v2alpha1.ReflectionProto.QueryServicesDescriptor queries_;
     /**
@@ -15743,7 +15662,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasQueries() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return queries_ != null;
     }
     /**
      * <pre>
@@ -15783,7 +15702,7 @@ public final class ReflectionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (queries_ != null) {
         output.writeMessage(1, getQueries());
       }
       getUnknownFields().writeTo(output);
@@ -15795,7 +15714,7 @@ public final class ReflectionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (queries_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getQueries());
       }
@@ -15957,19 +15876,13 @@ public final class ReflectionProto {
 
       // Construct using com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetQueryServicesDescriptorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getQueriesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16013,14 +15926,11 @@ public final class ReflectionProto {
 
       private void buildPartial0(com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetQueryServicesDescriptorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.queries_ = queriesBuilder_ == null
               ? queries_
               : queriesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16206,10 +16116,8 @@ public final class ReflectionProto {
         } else {
           queriesBuilder_.mergeFrom(value);
         }
-        if (queries_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16818,7 +16726,6 @@ public final class ReflectionProto {
               com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetTxDescriptorResponse.class, com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetTxDescriptorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TX_FIELD_NUMBER = 1;
     private com.cosmos.base.reflection.v2alpha1.ReflectionProto.TxDescriptor tx_;
     /**
@@ -16832,7 +16739,7 @@ public final class ReflectionProto {
      */
     @java.lang.Override
     public boolean hasTx() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tx_ != null;
     }
     /**
      * <pre>
@@ -16874,7 +16781,7 @@ public final class ReflectionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         output.writeMessage(1, getTx());
       }
       getUnknownFields().writeTo(output);
@@ -16886,7 +16793,7 @@ public final class ReflectionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tx_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTx());
       }
@@ -17048,19 +16955,13 @@ public final class ReflectionProto {
 
       // Construct using com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetTxDescriptorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -17104,14 +17005,11 @@ public final class ReflectionProto {
 
       private void buildPartial0(com.cosmos.base.reflection.v2alpha1.ReflectionProto.GetTxDescriptorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tx_ = txBuilder_ == null
               ? tx_
               : txBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17302,10 +17200,8 @@ public final class ReflectionProto {
         } else {
           txBuilder_.mergeFrom(value);
         }
-        if (tx_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -97,7 +97,6 @@ public final class GpuProto {
               com.akash.base.v1beta3.GpuProto.GPU.class, com.akash.base.v1beta3.GpuProto.GPU.Builder.class);
     }
 
-    private int bitField0_;
     public static final int UNITS_FIELD_NUMBER = 1;
     private com.akash.base.v1beta3.ResourcevalueProto.ResourceValue units_;
     /**
@@ -106,7 +105,7 @@ public final class GpuProto {
      */
     @java.lang.Override
     public boolean hasUnits() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return units_ != null;
     }
     /**
      * <code>.akash.base.v1beta3.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
@@ -179,7 +178,7 @@ public final class GpuProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (units_ != null) {
         output.writeMessage(1, getUnits());
       }
       for (int i = 0; i < attributes_.size(); i++) {
@@ -194,7 +193,7 @@ public final class GpuProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (units_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUnits());
       }
@@ -366,20 +365,13 @@ public final class GpuProto {
 
       // Construct using com.akash.base.v1beta3.GpuProto.GPU.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUnitsFieldBuilder();
-          getAttributesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -443,14 +435,11 @@ public final class GpuProto {
 
       private void buildPartial0(com.akash.base.v1beta3.GpuProto.GPU result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.units_ = unitsBuilder_ == null
               ? units_
               : unitsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -655,10 +644,8 @@ public final class GpuProto {
         } else {
           unitsBuilder_.mergeFrom(value);
         }
-        if (units_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

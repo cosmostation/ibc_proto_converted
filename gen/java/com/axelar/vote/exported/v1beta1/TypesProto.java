@@ -312,7 +312,6 @@ public final class TypesProto {
               com.axelar.vote.exported.v1beta1.TypesProto.PollMetadata.class, com.axelar.vote.exported.v1beta1.TypesProto.PollMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EXPIRES_AT_FIELD_NUMBER = 3;
     private long expiresAt_ = 0L;
     /**
@@ -332,7 +331,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return result_ != null;
     }
     /**
      * <code>.google.protobuf.Any result = 4 [json_name = "result", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
@@ -358,7 +357,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasVotingThreshold() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return votingThreshold_ != null;
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 5 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
@@ -485,7 +484,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSnapshot() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return snapshot_ != null;
     }
     /**
      * <code>.axelar.snapshot.exported.v1beta1.Snapshot snapshot = 15 [json_name = "snapshot", (.gogoproto.nullable) = false];</code>
@@ -550,7 +549,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasModuleMetadata() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return moduleMetadata_ != null;
     }
     /**
      * <code>.google.protobuf.Any module_metadata = 17 [json_name = "moduleMetadata", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
@@ -585,10 +584,10 @@ public final class TypesProto {
       if (expiresAt_ != 0L) {
         output.writeInt64(3, expiresAt_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         output.writeMessage(4, getResult());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (votingThreshold_ != null) {
         output.writeMessage(5, getVotingThreshold());
       }
       if (state_ != com.axelar.vote.exported.v1beta1.TypesProto.PollState.POLL_STATE_UNSPECIFIED.getNumber()) {
@@ -609,13 +608,13 @@ public final class TypesProto {
       if (id_ != 0L) {
         output.writeUInt64(13, id_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (snapshot_ != null) {
         output.writeMessage(15, getSnapshot());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, module_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (moduleMetadata_ != null) {
         output.writeMessage(17, getModuleMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -631,11 +630,11 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, expiresAt_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getResult());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (votingThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getVotingThreshold());
       }
@@ -662,14 +661,14 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(13, id_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (snapshot_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getSnapshot());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, module_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (moduleMetadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getModuleMetadata());
       }
@@ -895,22 +894,13 @@ public final class TypesProto {
 
       // Construct using com.axelar.vote.exported.v1beta1.TypesProto.PollMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getResultFieldBuilder();
-          getVotingThresholdFieldBuilder();
-          getSnapshotFieldBuilder();
-          getModuleMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -980,18 +970,15 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.expiresAt_ = expiresAt_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.votingThreshold_ = votingThresholdBuilder_ == null
               ? votingThreshold_
               : votingThresholdBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.state_ = state_;
@@ -1015,7 +1002,6 @@ public final class TypesProto {
           result.snapshot_ = snapshotBuilder_ == null
               ? snapshot_
               : snapshotBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.module_ = module_;
@@ -1024,9 +1010,7 @@ public final class TypesProto {
           result.moduleMetadata_ = moduleMetadataBuilder_ == null
               ? moduleMetadata_
               : moduleMetadataBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1322,10 +1306,8 @@ public final class TypesProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1443,10 +1425,8 @@ public final class TypesProto {
         } else {
           votingThresholdBuilder_.mergeFrom(value);
         }
-        if (votingThreshold_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1817,10 +1797,8 @@ public final class TypesProto {
         } else {
           snapshotBuilder_.mergeFrom(value);
         }
-        if (snapshot_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2010,10 +1988,8 @@ public final class TypesProto {
         } else {
           moduleMetadataBuilder_.mergeFrom(value);
         }
-        if (moduleMetadata_ != null) {
-          bitField0_ |= 0x00000800;
-          onChanged();
-        }
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -2880,7 +2856,7 @@ public final class TypesProto {
       super(builder);
     }
     private PollParticipants() {
-      participants_ = emptyList(com.google.protobuf.ByteString.class);
+      participants_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2916,8 +2892,7 @@ public final class TypesProto {
 
     public static final int PARTICIPANTS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> participants_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> participants_;
     /**
      * <code>repeated bytes participants = 2 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
      * @return A list containing the participants.
@@ -3158,7 +3133,7 @@ public final class TypesProto {
         super.clear();
         bitField0_ = 0;
         pollId_ = 0L;
-        participants_ = emptyList(com.google.protobuf.ByteString.class);
+        participants_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -3185,19 +3160,24 @@ public final class TypesProto {
       @java.lang.Override
       public com.axelar.vote.exported.v1beta1.TypesProto.PollParticipants buildPartial() {
         com.axelar.vote.exported.v1beta1.TypesProto.PollParticipants result = new com.axelar.vote.exported.v1beta1.TypesProto.PollParticipants(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.vote.exported.v1beta1.TypesProto.PollParticipants result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          participants_ = java.util.Collections.unmodifiableList(participants_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.participants_ = participants_;
       }
 
       private void buildPartial0(com.axelar.vote.exported.v1beta1.TypesProto.PollParticipants result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pollId_ = pollId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          participants_.makeImmutable();
-          result.participants_ = participants_;
         }
       }
 
@@ -3251,8 +3231,7 @@ public final class TypesProto {
         if (!other.participants_.isEmpty()) {
           if (participants_.isEmpty()) {
             participants_ = other.participants_;
-            participants_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureParticipantsIsMutable();
             participants_.addAll(other.participants_);
@@ -3345,12 +3324,12 @@ public final class TypesProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> participants_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> participants_ = java.util.Collections.emptyList();
       private void ensureParticipantsIsMutable() {
-        if (!participants_.isModifiable()) {
-          participants_ = makeMutableCopy(participants_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          participants_ = new java.util.ArrayList<com.google.protobuf.ByteString>(participants_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated bytes participants = 2 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
@@ -3358,8 +3337,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getParticipantsList() {
-        participants_.makeImmutable();
-        return participants_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(participants_) : participants_;
       }
       /**
        * <code>repeated bytes participants = 2 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
@@ -3387,7 +3366,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureParticipantsIsMutable();
         participants_.set(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3400,7 +3378,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureParticipantsIsMutable();
         participants_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3414,7 +3391,6 @@ public final class TypesProto {
         ensureParticipantsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, participants_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3423,7 +3399,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearParticipants() {
-        participants_ = emptyList(com.google.protobuf.ByteString.class);
+        participants_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;

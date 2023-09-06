@@ -123,7 +123,6 @@ public final class TxProto {
               com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPool.class, com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -171,7 +170,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPoolParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return poolParams_ != null;
     }
     /**
      * <code>.osmosis.gamm.v1beta1.PoolParams pool_params = 2 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
@@ -286,7 +285,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolParams_ != null) {
         output.writeMessage(2, getPoolParams());
       }
       for (int i = 0; i < poolAssets_.size(); i++) {
@@ -307,7 +306,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPoolParams());
       }
@@ -490,20 +489,13 @@ public final class TxProto {
 
       // Construct using com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolParamsFieldBuilder();
-          getPoolAssetsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -572,17 +564,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolParams_ = poolParamsBuilder_ == null
               ? poolParams_
               : poolParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.futurePoolGovernor_ = futurePoolGovernor_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -879,10 +868,8 @@ public final class TxProto {
         } else {
           poolParamsBuilder_.mergeFrom(value);
         }
-        if (poolParams_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1922,7 +1909,6 @@ public final class TxProto {
               com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition.class, com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -1974,7 +1960,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSharesToMigrate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return sharesToMigrate_ != null;
     }
     /**
      * <pre>
@@ -2078,7 +2064,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sharesToMigrate_ != null) {
         output.writeMessage(2, getSharesToMigrate());
       }
       for (int i = 0; i < tokenOutMins_.size(); i++) {
@@ -2096,7 +2082,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sharesToMigrate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSharesToMigrate());
       }
@@ -2272,20 +2258,13 @@ public final class TxProto {
 
       // Construct using com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSharesToMigrateFieldBuilder();
-          getTokenOutMinsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2353,14 +2332,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sharesToMigrate_ = sharesToMigrateBuilder_ == null
               ? sharesToMigrate_
               : sharesToMigrateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2667,10 +2643,8 @@ public final class TxProto {
         } else {
           sharesToMigrateBuilder_.mergeFrom(value);
         }
-        if (sharesToMigrate_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3206,7 +3180,6 @@ public final class TxProto {
               com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse.class, com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AMOUNT0_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount0_ = "";
@@ -3332,7 +3305,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasJoinTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return joinTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp join_time = 4 [json_name = "joinTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"join_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -3373,7 +3346,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityCreated_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, liquidityCreated_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (joinTime_ != null) {
         output.writeMessage(4, getJoinTime());
       }
       getUnknownFields().writeTo(output);
@@ -3394,7 +3367,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityCreated_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, liquidityCreated_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (joinTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getJoinTime());
       }
@@ -3564,19 +3537,13 @@ public final class TxProto {
 
       // Construct using com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getJoinTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3632,14 +3599,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.liquidityCreated_ = liquidityCreated_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.joinTime_ = joinTimeBuilder_ == null
               ? joinTime_
               : joinTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4051,10 +4015,8 @@ public final class TxProto {
         } else {
           joinTimeBuilder_.mergeFrom(value);
         }
-        if (joinTime_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

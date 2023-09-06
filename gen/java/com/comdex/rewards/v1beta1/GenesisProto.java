@@ -315,7 +315,6 @@ public final class GenesisProto {
               com.comdex.rewards.v1beta1.GenesisProto.GenesisState.class, com.comdex.rewards.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int INTERNAL_REWARDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> internalRewards_;
@@ -523,8 +522,7 @@ public final class GenesisProto {
 
     public static final int APPIDS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList appIDs_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList appIDs_;
     /**
      * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
      * @return A list containing the appIDs.
@@ -682,7 +680,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
@@ -787,7 +785,7 @@ public final class GenesisProto {
       for (int i = 0; i < gaugeByTriggerDuration_.size(); i++) {
         output.writeMessage(9, gaugeByTriggerDuration_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(10, getParams());
       }
       for (int i = 0; i < lendExternalRewards_.size(); i++) {
@@ -848,7 +846,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, gaugeByTriggerDuration_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getParams());
       }
@@ -1074,28 +1072,13 @@ public final class GenesisProto {
 
       // Construct using com.comdex.rewards.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInternalRewardsFieldBuilder();
-          getLockerRewardsTrackerFieldBuilder();
-          getVaultInterestTrackerFieldBuilder();
-          getLockerExternalRewardsFieldBuilder();
-          getVaultExternalRewardsFieldBuilder();
-          getEpochInfoFieldBuilder();
-          getGaugeFieldBuilder();
-          getGaugeByTriggerDurationFieldBuilder();
-          getParamsFieldBuilder();
-          getLendExternalRewardsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1248,6 +1231,11 @@ public final class GenesisProto {
         } else {
           result.vaultExternalRewards_ = vaultExternalRewardsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          appIDs_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.appIDs_ = appIDs_;
         if (epochInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000040) != 0)) {
             epochInfo_ = java.util.Collections.unmodifiableList(epochInfo_);
@@ -1288,18 +1276,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.comdex.rewards.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          appIDs_.makeImmutable();
-          result.appIDs_ = appIDs_;
-        }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1479,8 +1460,7 @@ public final class GenesisProto {
         if (!other.appIDs_.isEmpty()) {
           if (appIDs_.isEmpty()) {
             appIDs_ = other.appIDs_;
-            appIDs_.makeImmutable();
-            bitField0_ |= 0x00000020;
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAppIDsIsMutable();
             appIDs_.addAll(other.appIDs_);
@@ -2979,10 +2959,10 @@ public final class GenesisProto {
 
       private com.google.protobuf.Internal.LongList appIDs_ = emptyLongList();
       private void ensureAppIDsIsMutable() {
-        if (!appIDs_.isModifiable()) {
-          appIDs_ = makeMutableCopy(appIDs_);
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          appIDs_ = mutableCopy(appIDs_);
+          bitField0_ |= 0x00000020;
         }
-        bitField0_ |= 0x00000020;
       }
       /**
        * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
@@ -2990,8 +2970,8 @@ public final class GenesisProto {
        */
       public java.util.List<java.lang.Long>
           getAppIDsList() {
-        appIDs_.makeImmutable();
-        return appIDs_;
+        return ((bitField0_ & 0x00000020) != 0) ?
+                 java.util.Collections.unmodifiableList(appIDs_) : appIDs_;
       }
       /**
        * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
@@ -3019,7 +2999,6 @@ public final class GenesisProto {
 
         ensureAppIDsIsMutable();
         appIDs_.setLong(index, value);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3032,7 +3011,6 @@ public final class GenesisProto {
 
         ensureAppIDsIsMutable();
         appIDs_.addLong(value);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3046,7 +3024,6 @@ public final class GenesisProto {
         ensureAppIDsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, appIDs_);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3847,10 +3824,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**

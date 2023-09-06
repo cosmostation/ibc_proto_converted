@@ -119,7 +119,6 @@ public final class DeploymentProto {
               com.akash.deployment.v1beta1.DeploymentProto.MsgCreateDeployment.class, com.akash.deployment.v1beta1.DeploymentProto.MsgCreateDeployment.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.DeploymentProto.DeploymentID id_;
     /**
@@ -128,7 +127,7 @@ public final class DeploymentProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta1.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -206,7 +205,7 @@ public final class DeploymentProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return deposit_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deposit = 4 [json_name = "deposit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
@@ -238,7 +237,7 @@ public final class DeploymentProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       for (int i = 0; i < groups_.size(); i++) {
@@ -247,7 +246,7 @@ public final class DeploymentProto {
       if (!version_.isEmpty()) {
         output.writeBytes(3, version_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deposit_ != null) {
         output.writeMessage(4, getDeposit());
       }
       getUnknownFields().writeTo(output);
@@ -259,7 +258,7 @@ public final class DeploymentProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -271,7 +270,7 @@ public final class DeploymentProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, version_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deposit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDeposit());
       }
@@ -452,21 +451,13 @@ public final class DeploymentProto {
 
       // Construct using com.akash.deployment.v1beta1.DeploymentProto.MsgCreateDeployment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-          getGroupsFieldBuilder();
-          getDepositFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -536,12 +527,10 @@ public final class DeploymentProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.DeploymentProto.MsgCreateDeployment result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.version_ = version_;
@@ -550,9 +539,7 @@ public final class DeploymentProto {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -775,10 +762,8 @@ public final class DeploymentProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1168,10 +1153,8 @@ public final class DeploymentProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        if (deposit_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1764,7 +1747,6 @@ public final class DeploymentProto {
               com.akash.deployment.v1beta1.DeploymentProto.MsgDepositDeployment.class, com.akash.deployment.v1beta1.DeploymentProto.MsgDepositDeployment.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.DeploymentProto.DeploymentID id_;
     /**
@@ -1773,7 +1755,7 @@ public final class DeploymentProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta1.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -1799,7 +1781,7 @@ public final class DeploymentProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
@@ -1831,10 +1813,10 @@ public final class DeploymentProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -1846,11 +1828,11 @@ public final class DeploymentProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -2021,20 +2003,13 @@ public final class DeploymentProto {
 
       // Construct using com.akash.deployment.v1beta1.DeploymentProto.MsgDepositDeployment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2083,20 +2058,16 @@ public final class DeploymentProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.DeploymentProto.MsgDepositDeployment result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2272,10 +2243,8 @@ public final class DeploymentProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2393,10 +2362,8 @@ public final class DeploymentProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3006,7 +2973,6 @@ public final class DeploymentProto {
               com.akash.deployment.v1beta1.DeploymentProto.MsgUpdateDeployment.class, com.akash.deployment.v1beta1.DeploymentProto.MsgUpdateDeployment.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.DeploymentProto.DeploymentID id_;
     /**
@@ -3015,7 +2981,7 @@ public final class DeploymentProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta1.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -3099,7 +3065,7 @@ public final class DeploymentProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       for (int i = 0; i < groups_.size(); i++) {
@@ -3117,7 +3083,7 @@ public final class DeploymentProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -3297,20 +3263,13 @@ public final class DeploymentProto {
 
       // Construct using com.akash.deployment.v1beta1.DeploymentProto.MsgUpdateDeployment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-          getGroupsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3375,17 +3334,14 @@ public final class DeploymentProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.DeploymentProto.MsgUpdateDeployment result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.version_ = version_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3598,10 +3554,8 @@ public final class DeploymentProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4451,7 +4405,6 @@ public final class DeploymentProto {
               com.akash.deployment.v1beta1.DeploymentProto.MsgCloseDeployment.class, com.akash.deployment.v1beta1.DeploymentProto.MsgCloseDeployment.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.DeploymentProto.DeploymentID id_;
     /**
@@ -4460,7 +4413,7 @@ public final class DeploymentProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta1.DeploymentID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -4492,7 +4445,7 @@ public final class DeploymentProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -4504,7 +4457,7 @@ public final class DeploymentProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -4666,19 +4619,13 @@ public final class DeploymentProto {
 
       // Construct using com.akash.deployment.v1beta1.DeploymentProto.MsgCloseDeployment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4722,14 +4669,11 @@ public final class DeploymentProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.DeploymentProto.MsgCloseDeployment result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4895,10 +4839,8 @@ public final class DeploymentProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6279,7 +6221,6 @@ public final class DeploymentProto {
       // @@protoc_insertion_point(enum_scope:akash.deployment.v1beta1.Deployment.State)
     }
 
-    private int bitField0_;
     public static final int DEPLOYMENT_ID_FIELD_NUMBER = 1;
     private com.akash.deployment.v1beta1.DeploymentProto.DeploymentID deploymentId_;
     /**
@@ -6288,7 +6229,7 @@ public final class DeploymentProto {
      */
     @java.lang.Override
     public boolean hasDeploymentId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return deploymentId_ != null;
     }
     /**
      * <code>.akash.deployment.v1beta1.DeploymentID deployment_id = 1 [json_name = "deploymentId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "DeploymentID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -6360,7 +6301,7 @@ public final class DeploymentProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deploymentId_ != null) {
         output.writeMessage(1, getDeploymentId());
       }
       if (state_ != com.akash.deployment.v1beta1.DeploymentProto.Deployment.State.invalid.getNumber()) {
@@ -6381,7 +6322,7 @@ public final class DeploymentProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deploymentId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeploymentId());
       }
@@ -6567,19 +6508,13 @@ public final class DeploymentProto {
 
       // Construct using com.akash.deployment.v1beta1.DeploymentProto.Deployment.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDeploymentIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6626,12 +6561,10 @@ public final class DeploymentProto {
 
       private void buildPartial0(com.akash.deployment.v1beta1.DeploymentProto.Deployment result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.deploymentId_ = deploymentIdBuilder_ == null
               ? deploymentId_
               : deploymentIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = state_;
@@ -6642,7 +6575,6 @@ public final class DeploymentProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.createdAt_ = createdAt_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6832,10 +6764,8 @@ public final class DeploymentProto {
         } else {
           deploymentIdBuilder_.mergeFrom(value);
         }
-        if (deploymentId_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

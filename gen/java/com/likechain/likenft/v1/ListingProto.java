@@ -119,7 +119,6 @@ public final class ListingProto {
               com.likechain.likenft.v1.ListingProto.Listing.class, com.likechain.likenft.v1.ListingProto.Listing.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -256,7 +255,7 @@ public final class ListingProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -311,7 +310,7 @@ public final class ListingProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(5, getExpiration());
       }
       if (fullPayToRoyalty_ != false) {
@@ -339,7 +338,7 @@ public final class ListingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -523,19 +522,13 @@ public final class ListingProto {
 
       // Construct using com.likechain.likenft.v1.ListingProto.Listing.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -596,17 +589,14 @@ public final class ListingProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.fullPayToRoyalty_ = fullPayToRoyalty_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1066,10 +1056,8 @@ public final class ListingProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1315,7 +1303,6 @@ public final class ListingProto {
               com.likechain.likenft.v1.ListingProto.ListingStoreRecord.class, com.likechain.likenft.v1.ListingProto.ListingStoreRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -1424,7 +1411,7 @@ public final class ListingProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 5 [json_name = "expiration", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1479,7 +1466,7 @@ public final class ListingProto {
       if (price_ != 0L) {
         output.writeUInt64(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(5, getExpiration());
       }
       if (fullPayToRoyalty_ != false) {
@@ -1508,7 +1495,7 @@ public final class ListingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExpiration());
       }
@@ -1692,19 +1679,13 @@ public final class ListingProto {
 
       // Construct using com.likechain.likenft.v1.ListingProto.ListingStoreRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpirationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1765,17 +1746,14 @@ public final class ListingProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.fullPayToRoyalty_ = fullPayToRoyalty_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2193,10 +2171,8 @@ public final class ListingProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

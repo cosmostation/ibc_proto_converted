@@ -2624,7 +2624,6 @@ public final class SuperfluidProto {
               com.osmosis.superfluid.SuperfluidProto.SuperfluidDelegationRecord.class, com.osmosis.superfluid.SuperfluidProto.SuperfluidDelegationRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorAddress_ = "";
@@ -2711,7 +2710,7 @@ public final class SuperfluidProto {
      */
     @java.lang.Override
     public boolean hasDelegationAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return delegationAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin delegation_amount = 3 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2737,7 +2736,7 @@ public final class SuperfluidProto {
      */
     @java.lang.Override
     public boolean hasEquivalentStakedAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return equivalentStakedAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 4 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -2775,10 +2774,10 @@ public final class SuperfluidProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (delegationAmount_ != null) {
         output.writeMessage(3, getDelegationAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (equivalentStakedAmount_ != null) {
         output.writeMessage(4, getEquivalentStakedAmount());
       }
       getUnknownFields().writeTo(output);
@@ -2796,11 +2795,11 @@ public final class SuperfluidProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (delegationAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDelegationAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (equivalentStakedAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEquivalentStakedAmount());
       }
@@ -2980,20 +2979,13 @@ public final class SuperfluidProto {
 
       // Construct using com.osmosis.superfluid.SuperfluidProto.SuperfluidDelegationRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDelegationAmountFieldBuilder();
-          getEquivalentStakedAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3050,20 +3042,16 @@ public final class SuperfluidProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.delegationAmount_ = delegationAmountBuilder_ == null
               ? delegationAmount_
               : delegationAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.equivalentStakedAmount_ = equivalentStakedAmountBuilder_ == null
               ? equivalentStakedAmount_
               : equivalentStakedAmountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3403,10 +3391,8 @@ public final class SuperfluidProto {
         } else {
           delegationAmountBuilder_.mergeFrom(value);
         }
-        if (delegationAmount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3524,10 +3510,8 @@ public final class SuperfluidProto {
         } else {
           equivalentStakedAmountBuilder_.mergeFrom(value);
         }
-        if (equivalentStakedAmount_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4338,8 +4322,7 @@ public final class SuperfluidProto {
 
     public static final int IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList ids_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList ids_;
     /**
      * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
      * @return A list containing the ids.
@@ -4601,17 +4584,22 @@ public final class SuperfluidProto {
       @java.lang.Override
       public com.osmosis.superfluid.SuperfluidProto.UnpoolWhitelistedPools buildPartial() {
         com.osmosis.superfluid.SuperfluidProto.UnpoolWhitelistedPools result = new com.osmosis.superfluid.SuperfluidProto.UnpoolWhitelistedPools(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.osmosis.superfluid.SuperfluidProto.UnpoolWhitelistedPools result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          ids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.ids_ = ids_;
+      }
+
       private void buildPartial0(com.osmosis.superfluid.SuperfluidProto.UnpoolWhitelistedPools result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          ids_.makeImmutable();
-          result.ids_ = ids_;
-        }
       }
 
       @java.lang.Override
@@ -4661,8 +4649,7 @@ public final class SuperfluidProto {
         if (!other.ids_.isEmpty()) {
           if (ids_.isEmpty()) {
             ids_ = other.ids_;
-            ids_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureIdsIsMutable();
             ids_.addAll(other.ids_);
@@ -4730,10 +4717,10 @@ public final class SuperfluidProto {
 
       private com.google.protobuf.Internal.LongList ids_ = emptyLongList();
       private void ensureIdsIsMutable() {
-        if (!ids_.isModifiable()) {
-          ids_ = makeMutableCopy(ids_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ids_ = mutableCopy(ids_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
@@ -4741,8 +4728,8 @@ public final class SuperfluidProto {
        */
       public java.util.List<java.lang.Long>
           getIdsList() {
-        ids_.makeImmutable();
-        return ids_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(ids_) : ids_;
       }
       /**
        * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
@@ -4770,7 +4757,6 @@ public final class SuperfluidProto {
 
         ensureIdsIsMutable();
         ids_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4783,7 +4769,6 @@ public final class SuperfluidProto {
 
         ensureIdsIsMutable();
         ids_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4797,7 +4782,6 @@ public final class SuperfluidProto {
         ensureIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, ids_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

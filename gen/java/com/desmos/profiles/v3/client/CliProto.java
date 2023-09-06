@@ -142,7 +142,6 @@ public final class CliProto {
               com.desmos.profiles.v3.client.CliProto.ChainLinkJSON.class, com.desmos.profiles.v3.client.CliProto.ChainLinkJSON.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private com.google.protobuf.Any address_;
     /**
@@ -156,7 +155,7 @@ public final class CliProto {
      */
     @java.lang.Override
     public boolean hasAddress() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return address_ != null;
     }
     /**
      * <pre>
@@ -196,7 +195,7 @@ public final class CliProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return proof_ != null;
     }
     /**
      * <pre>
@@ -234,7 +233,7 @@ public final class CliProto {
      */
     @java.lang.Override
     public boolean hasChainConfig() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return chainConfig_ != null;
     }
     /**
      * <pre>
@@ -274,13 +273,13 @@ public final class CliProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (address_ != null) {
         output.writeMessage(1, getAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(2, getProof());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (chainConfig_ != null) {
         output.writeMessage(3, getChainConfig());
       }
       getUnknownFields().writeTo(output);
@@ -292,15 +291,15 @@ public final class CliProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (address_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProof());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (chainConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getChainConfig());
       }
@@ -481,21 +480,13 @@ public final class CliProto {
 
       // Construct using com.desmos.profiles.v3.client.CliProto.ChainLinkJSON.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAddressFieldBuilder();
-          getProofFieldBuilder();
-          getChainConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -549,26 +540,21 @@ public final class CliProto {
 
       private void buildPartial0(com.desmos.profiles.v3.client.CliProto.ChainLinkJSON result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = addressBuilder_ == null
               ? address_
               : addressBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.chainConfig_ = chainConfigBuilder_ == null
               ? chainConfig_
               : chainConfigBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -779,10 +765,8 @@ public final class CliProto {
         } else {
           addressBuilder_.mergeFrom(value);
         }
-        if (address_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -940,10 +924,8 @@ public final class CliProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1097,10 +1079,8 @@ public final class CliProto {
         } else {
           chainConfigBuilder_.mergeFrom(value);
         }
-        if (chainConfig_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

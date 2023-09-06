@@ -85,7 +85,6 @@ public final class GenesisProto {
               com.osmosis.twap.v1beta1.GenesisProto.Params.class, com.osmosis.twap.v1beta1.GenesisProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PRUNE_EPOCH_IDENTIFIER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object pruneEpochIdentifier_ = "";
@@ -133,7 +132,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasRecordHistoryKeepPeriod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return recordHistoryKeepPeriod_ != null;
     }
     /**
      * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -168,7 +167,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pruneEpochIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pruneEpochIdentifier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recordHistoryKeepPeriod_ != null) {
         output.writeMessage(2, getRecordHistoryKeepPeriod());
       }
       getUnknownFields().writeTo(output);
@@ -183,7 +182,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pruneEpochIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pruneEpochIdentifier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (recordHistoryKeepPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecordHistoryKeepPeriod());
       }
@@ -349,19 +348,13 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.twap.v1beta1.GenesisProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecordHistoryKeepPeriodFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -409,14 +402,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pruneEpochIdentifier_ = pruneEpochIdentifier_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recordHistoryKeepPeriod_ = recordHistoryKeepPeriodBuilder_ == null
               ? recordHistoryKeepPeriod_
               : recordHistoryKeepPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -664,10 +654,8 @@ public final class GenesisProto {
         } else {
           recordHistoryKeepPeriodBuilder_.mergeFrom(value);
         }
-        if (recordHistoryKeepPeriod_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -897,7 +885,6 @@ public final class GenesisProto {
               com.osmosis.twap.v1beta1.GenesisProto.GenesisState.class, com.osmosis.twap.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TWAPS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord> twaps_;
@@ -971,7 +958,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -1014,7 +1001,7 @@ public final class GenesisProto {
       for (int i = 0; i < twaps_.size(); i++) {
         output.writeMessage(1, twaps_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1030,7 +1017,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, twaps_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -1198,20 +1185,13 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.twap.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTwapsFieldBuilder();
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1275,14 +1255,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.osmosis.twap.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1819,10 +1796,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

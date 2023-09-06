@@ -252,7 +252,6 @@ public final class BalancerPoolProto {
               com.osmosis.gamm.v1beta1.BalancerPoolProto.SmoothWeightChangeParams.class, com.osmosis.gamm.v1beta1.BalancerPoolProto.SmoothWeightChangeParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
@@ -267,7 +266,7 @@ public final class BalancerPoolProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -309,7 +308,7 @@ public final class BalancerPoolProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return duration_ != null;
     }
     /**
      * <pre>
@@ -506,10 +505,10 @@ public final class BalancerPoolProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(1, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (duration_ != null) {
         output.writeMessage(2, getDuration());
       }
       for (int i = 0; i < initialPoolWeights_.size(); i++) {
@@ -527,11 +526,11 @@ public final class BalancerPoolProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (duration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDuration());
       }
@@ -732,22 +731,13 @@ public final class BalancerPoolProto {
 
       // Construct using com.osmosis.gamm.v1beta1.BalancerPoolProto.SmoothWeightChangeParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-          getDurationFieldBuilder();
-          getInitialPoolWeightsFieldBuilder();
-          getTargetPoolWeightsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -832,20 +822,16 @@ public final class BalancerPoolProto {
 
       private void buildPartial0(com.osmosis.gamm.v1beta1.BalancerPoolProto.SmoothWeightChangeParams result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1129,10 +1115,8 @@ public final class BalancerPoolProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1294,10 +1278,8 @@ public final class BalancerPoolProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        if (duration_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2277,7 +2259,6 @@ public final class BalancerPoolProto {
               com.osmosis.gamm.v1beta1.BalancerPoolProto.PoolParams.class, com.osmosis.gamm.v1beta1.BalancerPoolProto.PoolParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SWAP_FEE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object swapFee_ = "";
@@ -2376,7 +2357,7 @@ public final class BalancerPoolProto {
      */
     @java.lang.Override
     public boolean hasSmoothWeightChangeParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return smoothWeightChangeParams_ != null;
     }
     /**
      * <code>.osmosis.gamm.v1beta1.SmoothWeightChangeParams smooth_weight_change_params = 3 [json_name = "smoothWeightChangeParams", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"smooth_weight_change_params&#92;""];</code>
@@ -2414,7 +2395,7 @@ public final class BalancerPoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exitFee_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, exitFee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (smoothWeightChangeParams_ != null) {
         output.writeMessage(3, getSmoothWeightChangeParams());
       }
       getUnknownFields().writeTo(output);
@@ -2432,7 +2413,7 @@ public final class BalancerPoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exitFee_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, exitFee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (smoothWeightChangeParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSmoothWeightChangeParams());
       }
@@ -2605,19 +2586,13 @@ public final class BalancerPoolProto {
 
       // Construct using com.osmosis.gamm.v1beta1.BalancerPoolProto.PoolParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSmoothWeightChangeParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2669,14 +2644,11 @@ public final class BalancerPoolProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.exitFee_ = exitFee_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.smoothWeightChangeParams_ = smoothWeightChangeParamsBuilder_ == null
               ? smoothWeightChangeParams_
               : smoothWeightChangeParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3036,10 +3008,8 @@ public final class BalancerPoolProto {
         } else {
           smoothWeightChangeParamsBuilder_.mergeFrom(value);
         }
-        if (smoothWeightChangeParams_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3251,7 +3221,6 @@ public final class BalancerPoolProto {
               com.osmosis.gamm.v1beta1.BalancerPoolProto.PoolAsset.class, com.osmosis.gamm.v1beta1.BalancerPoolProto.PoolAsset.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKEN_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin token_;
     /**
@@ -3265,7 +3234,7 @@ public final class BalancerPoolProto {
      */
     @java.lang.Override
     public boolean hasToken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return token_ != null;
     }
     /**
      * <pre>
@@ -3354,7 +3323,7 @@ public final class BalancerPoolProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (token_ != null) {
         output.writeMessage(1, getToken());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
@@ -3369,7 +3338,7 @@ public final class BalancerPoolProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (token_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getToken());
       }
@@ -3541,19 +3510,13 @@ public final class BalancerPoolProto {
 
       // Construct using com.osmosis.gamm.v1beta1.BalancerPoolProto.PoolAsset.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3598,17 +3561,14 @@ public final class BalancerPoolProto {
 
       private void buildPartial0(com.osmosis.gamm.v1beta1.BalancerPoolProto.PoolAsset result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.token_ = tokenBuilder_ == null
               ? token_
               : tokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.weight_ = weight_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3809,10 +3769,8 @@ public final class BalancerPoolProto {
         } else {
           tokenBuilder_.mergeFrom(value);
         }
-        if (token_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4247,7 +4205,6 @@ public final class BalancerPoolProto {
               com.osmosis.gamm.v1beta1.BalancerPoolProto.Pool.class, com.osmosis.gamm.v1beta1.BalancerPoolProto.Pool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -4306,7 +4263,7 @@ public final class BalancerPoolProto {
      */
     @java.lang.Override
     public boolean hasPoolParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return poolParams_ != null;
     }
     /**
      * <code>.osmosis.gamm.v1beta1.PoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balancer_pool_params&#92;""];</code>
@@ -4399,7 +4356,7 @@ public final class BalancerPoolProto {
      */
     @java.lang.Override
     public boolean hasTotalShares() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return totalShares_ != null;
     }
     /**
      * <pre>
@@ -4558,13 +4515,13 @@ public final class BalancerPoolProto {
       if (id_ != 0L) {
         output.writeUInt64(2, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolParams_ != null) {
         output.writeMessage(3, getPoolParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(futurePoolGovernor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, futurePoolGovernor_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (totalShares_ != null) {
         output.writeMessage(5, getTotalShares());
       }
       for (int i = 0; i < poolAssets_.size(); i++) {
@@ -4589,14 +4546,14 @@ public final class BalancerPoolProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPoolParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(futurePoolGovernor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, futurePoolGovernor_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (totalShares_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTotalShares());
       }
@@ -4793,21 +4750,13 @@ public final class BalancerPoolProto {
 
       // Construct using com.osmosis.gamm.v1beta1.BalancerPoolProto.Pool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolParamsFieldBuilder();
-          getTotalSharesFieldBuilder();
-          getPoolAssetsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4886,12 +4835,10 @@ public final class BalancerPoolProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.poolParams_ = poolParamsBuilder_ == null
               ? poolParams_
               : poolParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.futurePoolGovernor_ = futurePoolGovernor_;
@@ -4900,12 +4847,10 @@ public final class BalancerPoolProto {
           result.totalShares_ = totalSharesBuilder_ == null
               ? totalShares_
               : totalSharesBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.totalWeight_ = totalWeight_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5262,10 +5207,8 @@ public final class BalancerPoolProto {
         } else {
           poolParamsBuilder_.mergeFrom(value);
         }
-        if (poolParams_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5535,10 +5478,8 @@ public final class BalancerPoolProto {
         } else {
           totalSharesBuilder_.mergeFrom(value);
         }
-        if (totalShares_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

@@ -104,7 +104,6 @@ public final class CommitInfoProto {
               com.cosmos.store.v1beta1.CommitInfoProto.CommitInfo.class, com.cosmos.store.v1beta1.CommitInfoProto.CommitInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private long version_ = 0L;
     /**
@@ -165,7 +164,7 @@ public final class CommitInfoProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return timestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -203,7 +202,7 @@ public final class CommitInfoProto {
       for (int i = 0; i < storeInfos_.size(); i++) {
         output.writeMessage(2, storeInfos_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         output.writeMessage(3, getTimestamp());
       }
       getUnknownFields().writeTo(output);
@@ -223,7 +222,7 @@ public final class CommitInfoProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, storeInfos_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimestamp());
       }
@@ -397,20 +396,13 @@ public final class CommitInfoProto {
 
       // Construct using com.cosmos.store.v1beta1.CommitInfoProto.CommitInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStoreInfosFieldBuilder();
-          getTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -478,14 +470,11 @@ public final class CommitInfoProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.version_ = version_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -970,10 +959,8 @@ public final class CommitInfoProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        if (timestamp_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1160,7 +1147,6 @@ public final class CommitInfoProto {
               com.cosmos.store.v1beta1.CommitInfoProto.StoreInfo.class, com.cosmos.store.v1beta1.CommitInfoProto.StoreInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -1208,7 +1194,7 @@ public final class CommitInfoProto {
      */
     @java.lang.Override
     public boolean hasCommitId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return commitId_ != null;
     }
     /**
      * <code>.cosmos.store.v1beta1.CommitID commit_id = 2 [json_name = "commitId", (.gogoproto.nullable) = false];</code>
@@ -1243,7 +1229,7 @@ public final class CommitInfoProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (commitId_ != null) {
         output.writeMessage(2, getCommitId());
       }
       getUnknownFields().writeTo(output);
@@ -1258,7 +1244,7 @@ public final class CommitInfoProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (commitId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCommitId());
       }
@@ -1425,19 +1411,13 @@ public final class CommitInfoProto {
 
       // Construct using com.cosmos.store.v1beta1.CommitInfoProto.StoreInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCommitIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1485,14 +1465,11 @@ public final class CommitInfoProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.commitId_ = commitIdBuilder_ == null
               ? commitId_
               : commitIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1740,10 +1717,8 @@ public final class CommitInfoProto {
         } else {
           commitIdBuilder_.mergeFrom(value);
         }
-        if (commitId_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

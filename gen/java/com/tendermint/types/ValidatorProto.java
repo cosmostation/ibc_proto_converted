@@ -261,7 +261,6 @@ public final class ValidatorProto {
               com.tendermint.types.ValidatorProto.ValidatorSet.class, com.tendermint.types.ValidatorProto.ValidatorSet.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATORS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.tendermint.types.ValidatorProto.Validator> validators_;
@@ -311,7 +310,7 @@ public final class ValidatorProto {
      */
     @java.lang.Override
     public boolean hasProposer() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proposer_ != null;
     }
     /**
      * <code>.tendermint.types.Validator proposer = 2 [json_name = "proposer"];</code>
@@ -357,7 +356,7 @@ public final class ValidatorProto {
       for (int i = 0; i < validators_.size(); i++) {
         output.writeMessage(1, validators_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proposer_ != null) {
         output.writeMessage(2, getProposer());
       }
       if (totalVotingPower_ != 0L) {
@@ -376,7 +375,7 @@ public final class ValidatorProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, validators_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proposer_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProposer());
       }
@@ -549,20 +548,13 @@ public final class ValidatorProto {
 
       // Construct using com.tendermint.types.ValidatorProto.ValidatorSet.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValidatorsFieldBuilder();
-          getProposerFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -627,17 +619,14 @@ public final class ValidatorProto {
 
       private void buildPartial0(com.tendermint.types.ValidatorProto.ValidatorSet result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proposer_ = proposerBuilder_ == null
               ? proposer_
               : proposerBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.totalVotingPower_ = totalVotingPower_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1090,10 +1079,8 @@ public final class ValidatorProto {
         } else {
           proposerBuilder_.mergeFrom(value);
         }
-        if (proposer_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1313,7 +1300,6 @@ public final class ValidatorProto {
               com.tendermint.types.ValidatorProto.Validator.class, com.tendermint.types.ValidatorProto.Validator.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -1333,7 +1319,7 @@ public final class ValidatorProto {
      */
     @java.lang.Override
     public boolean hasPubKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pubKey_ != null;
     }
     /**
      * <code>.tendermint.crypto.PublicKey pub_key = 2 [json_name = "pubKey", (.gogoproto.nullable) = false];</code>
@@ -1390,7 +1376,7 @@ public final class ValidatorProto {
       if (!address_.isEmpty()) {
         output.writeBytes(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         output.writeMessage(2, getPubKey());
       }
       if (votingPower_ != 0L) {
@@ -1412,7 +1398,7 @@ public final class ValidatorProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPubKey());
       }
@@ -1592,19 +1578,13 @@ public final class ValidatorProto {
 
       // Construct using com.tendermint.types.ValidatorProto.Validator.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPubKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1654,12 +1634,10 @@ public final class ValidatorProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pubKey_ = pubKeyBuilder_ == null
               ? pubKey_
               : pubKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.votingPower_ = votingPower_;
@@ -1667,7 +1645,6 @@ public final class ValidatorProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.proposerPriority_ = proposerPriority_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1889,10 +1866,8 @@ public final class ValidatorProto {
         } else {
           pubKeyBuilder_.mergeFrom(value);
         }
-        if (pubKey_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2131,7 +2106,6 @@ public final class ValidatorProto {
               com.tendermint.types.ValidatorProto.SimpleValidator.class, com.tendermint.types.ValidatorProto.SimpleValidator.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PUB_KEY_FIELD_NUMBER = 1;
     private com.tendermint.crypto.KeysProto.PublicKey pubKey_;
     /**
@@ -2140,7 +2114,7 @@ public final class ValidatorProto {
      */
     @java.lang.Override
     public boolean hasPubKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pubKey_ != null;
     }
     /**
      * <code>.tendermint.crypto.PublicKey pub_key = 1 [json_name = "pubKey"];</code>
@@ -2183,7 +2157,7 @@ public final class ValidatorProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         output.writeMessage(1, getPubKey());
       }
       if (votingPower_ != 0L) {
@@ -2198,7 +2172,7 @@ public final class ValidatorProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPubKey());
       }
@@ -2365,19 +2339,13 @@ public final class ValidatorProto {
 
       // Construct using com.tendermint.types.ValidatorProto.SimpleValidator.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPubKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2422,17 +2390,14 @@ public final class ValidatorProto {
 
       private void buildPartial0(com.tendermint.types.ValidatorProto.SimpleValidator result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pubKey_ = pubKeyBuilder_ == null
               ? pubKey_
               : pubKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.votingPower_ = votingPower_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2606,10 +2571,8 @@ public final class ValidatorProto {
         } else {
           pubKeyBuilder_.mergeFrom(value);
         }
-        if (pubKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

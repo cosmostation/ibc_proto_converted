@@ -3555,7 +3555,6 @@ public final class CertProto {
               com.akash.cert.v1beta3.CertProto.MsgRevokeCertificate.class, com.akash.cert.v1beta3.CertProto.MsgRevokeCertificate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.akash.cert.v1beta3.CertProto.CertificateID id_;
     /**
@@ -3564,7 +3563,7 @@ public final class CertProto {
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return id_ != null;
     }
     /**
      * <code>.akash.cert.v1beta3.CertificateID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -3596,7 +3595,7 @@ public final class CertProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         output.writeMessage(1, getId());
       }
       getUnknownFields().writeTo(output);
@@ -3608,7 +3607,7 @@ public final class CertProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
@@ -3770,19 +3769,13 @@ public final class CertProto {
 
       // Construct using com.akash.cert.v1beta3.CertProto.MsgRevokeCertificate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3826,14 +3819,11 @@ public final class CertProto {
 
       private void buildPartial0(com.akash.cert.v1beta3.CertProto.MsgRevokeCertificate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3999,10 +3989,8 @@ public final class CertProto {
         } else {
           idBuilder_.mergeFrom(value);
         }
-        if (id_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -93,7 +93,6 @@ public final class TxProto {
               com.umee.ugov.v1.TxProto.MsgGovUpdateMinGasPrice.class, com.umee.ugov.v1.TxProto.MsgGovUpdateMinGasPrice.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -149,7 +148,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMinGasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return minGasPrice_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 2 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
@@ -184,7 +183,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minGasPrice_ != null) {
         output.writeMessage(2, getMinGasPrice());
       }
       getUnknownFields().writeTo(output);
@@ -199,7 +198,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minGasPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMinGasPrice());
       }
@@ -365,19 +364,13 @@ public final class TxProto {
 
       // Construct using com.umee.ugov.v1.TxProto.MsgGovUpdateMinGasPrice.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMinGasPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -425,14 +418,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.minGasPrice_ = minGasPriceBuilder_ == null
               ? minGasPrice_
               : minGasPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -700,10 +690,8 @@ public final class TxProto {
         } else {
           minGasPriceBuilder_.mergeFrom(value);
         }
-        if (minGasPrice_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

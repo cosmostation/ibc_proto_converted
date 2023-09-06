@@ -143,7 +143,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.GenesisState.class, com.confio.poe.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     private int setupModeCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object setupMode_;
@@ -198,7 +197,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -327,7 +326,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       if (setupModeCase_ == 2) {
@@ -345,7 +344,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -540,19 +539,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -605,14 +598,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.confio.poe.v1beta1.GenesisProto.GenesisState result) {
@@ -853,10 +843,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2566,7 +2554,7 @@ public final class GenesisProto {
       super(builder);
     }
     private SeedContracts() {
-      genTxs_ = emptyList(com.google.protobuf.ByteString.class);
+      genTxs_ = java.util.Collections.emptyList();
       bootstrapAccountAddress_ = "";
       engagement_ = java.util.Collections.emptyList();
       bondDenom_ = "";
@@ -2596,11 +2584,9 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.SeedContracts.class, com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GEN_TXS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> genTxs_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> genTxs_;
     /**
      * <pre>
      * GenTxs defines the genesis transactions to create a validator.
@@ -2761,7 +2747,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasStakeContractConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return stakeContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
@@ -2787,7 +2773,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasValsetContractConfig() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return valsetContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
@@ -2813,7 +2799,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEngagementContractConfig() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return engagementContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
@@ -2886,7 +2872,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasOversightCommitteeContractConfig() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return oversightCommitteeContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
@@ -2912,7 +2898,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasCommunityPoolContractConfig() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return communityPoolContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
@@ -2938,7 +2924,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasValidatorVotingContractConfig() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return validatorVotingContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
@@ -3038,7 +3024,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasArbiterPoolContractConfig() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return arbiterPoolContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
@@ -3064,7 +3050,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasMixerContractConfig() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return mixerContractConfig_ != null;
     }
     /**
      * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
@@ -3105,25 +3091,25 @@ public final class GenesisProto {
       for (int i = 0; i < engagement_.size(); i++) {
         output.writeMessage(3, engagement_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (stakeContractConfig_ != null) {
         output.writeMessage(4, getStakeContractConfig());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (valsetContractConfig_ != null) {
         output.writeMessage(5, getValsetContractConfig());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (engagementContractConfig_ != null) {
         output.writeMessage(6, getEngagementContractConfig());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, bondDenom_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (oversightCommitteeContractConfig_ != null) {
         output.writeMessage(8, getOversightCommitteeContractConfig());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (communityPoolContractConfig_ != null) {
         output.writeMessage(9, getCommunityPoolContractConfig());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (validatorVotingContractConfig_ != null) {
         output.writeMessage(10, getValidatorVotingContractConfig());
       }
       for (int i = 0; i < oversightCommunityMembers_.size(); i++) {
@@ -3132,10 +3118,10 @@ public final class GenesisProto {
       for (int i = 0; i < arbiterPoolMembers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, arbiterPoolMembers_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (arbiterPoolContractConfig_ != null) {
         output.writeMessage(13, getArbiterPoolContractConfig());
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (mixerContractConfig_ != null) {
         output.writeMessage(14, getMixerContractConfig());
       }
       getUnknownFields().writeTo(output);
@@ -3163,30 +3149,30 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, engagement_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (stakeContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getStakeContractConfig());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (valsetContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getValsetContractConfig());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (engagementContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getEngagementContractConfig());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, bondDenom_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (oversightCommitteeContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getOversightCommitteeContractConfig());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (communityPoolContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getCommunityPoolContractConfig());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (validatorVotingContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getValidatorVotingContractConfig());
       }
@@ -3206,11 +3192,11 @@ public final class GenesisProto {
         size += dataSize;
         size += 1 * getArbiterPoolMembersList().size();
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (arbiterPoolContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getArbiterPoolContractConfig());
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (mixerContractConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getMixerContractConfig());
       }
@@ -3468,33 +3454,19 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.SeedContracts.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEngagementFieldBuilder();
-          getStakeContractConfigFieldBuilder();
-          getValsetContractConfigFieldBuilder();
-          getEngagementContractConfigFieldBuilder();
-          getOversightCommitteeContractConfigFieldBuilder();
-          getCommunityPoolContractConfigFieldBuilder();
-          getValidatorVotingContractConfigFieldBuilder();
-          getArbiterPoolContractConfigFieldBuilder();
-          getMixerContractConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        genTxs_ = emptyList(com.google.protobuf.ByteString.class);
+        genTxs_ = java.util.Collections.emptyList();
         bootstrapAccountAddress_ = "";
         if (engagementBuilder_ == null) {
           engagement_ = java.util.Collections.emptyList();
@@ -3581,6 +3553,11 @@ public final class GenesisProto {
       }
 
       private void buildPartialRepeatedFields(com.confio.poe.v1beta1.GenesisProto.SeedContracts result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          genTxs_ = java.util.Collections.unmodifiableList(genTxs_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.genTxs_ = genTxs_;
         if (engagementBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             engagement_ = java.util.Collections.unmodifiableList(engagement_);
@@ -3594,31 +3571,23 @@ public final class GenesisProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.SeedContracts result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          genTxs_.makeImmutable();
-          result.genTxs_ = genTxs_;
-        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bootstrapAccountAddress_ = bootstrapAccountAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.stakeContractConfig_ = stakeContractConfigBuilder_ == null
               ? stakeContractConfig_
               : stakeContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.valsetContractConfig_ = valsetContractConfigBuilder_ == null
               ? valsetContractConfig_
               : valsetContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.engagementContractConfig_ = engagementContractConfigBuilder_ == null
               ? engagementContractConfig_
               : engagementContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.bondDenom_ = bondDenom_;
@@ -3627,19 +3596,16 @@ public final class GenesisProto {
           result.oversightCommitteeContractConfig_ = oversightCommitteeContractConfigBuilder_ == null
               ? oversightCommitteeContractConfig_
               : oversightCommitteeContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.communityPoolContractConfig_ = communityPoolContractConfigBuilder_ == null
               ? communityPoolContractConfig_
               : communityPoolContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.validatorVotingContractConfig_ = validatorVotingContractConfigBuilder_ == null
               ? validatorVotingContractConfig_
               : validatorVotingContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           oversightCommunityMembers_.makeImmutable();
@@ -3653,15 +3619,12 @@ public final class GenesisProto {
           result.arbiterPoolContractConfig_ = arbiterPoolContractConfigBuilder_ == null
               ? arbiterPoolContractConfig_
               : arbiterPoolContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.mixerContractConfig_ = mixerContractConfigBuilder_ == null
               ? mixerContractConfig_
               : mixerContractConfigBuilder_.build();
-          to_bitField0_ |= 0x00000080;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3711,8 +3674,7 @@ public final class GenesisProto {
         if (!other.genTxs_.isEmpty()) {
           if (genTxs_.isEmpty()) {
             genTxs_ = other.genTxs_;
-            genTxs_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureGenTxsIsMutable();
             genTxs_.addAll(other.genTxs_);
@@ -3939,12 +3901,12 @@ public final class GenesisProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> genTxs_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> genTxs_ = java.util.Collections.emptyList();
       private void ensureGenTxsIsMutable() {
-        if (!genTxs_.isModifiable()) {
-          genTxs_ = makeMutableCopy(genTxs_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          genTxs_ = new java.util.ArrayList<com.google.protobuf.ByteString>(genTxs_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -3956,8 +3918,8 @@ public final class GenesisProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getGenTxsList() {
-        genTxs_.makeImmutable();
-        return genTxs_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(genTxs_) : genTxs_;
       }
       /**
        * <pre>
@@ -3997,7 +3959,6 @@ public final class GenesisProto {
         if (value == null) { throw new NullPointerException(); }
         ensureGenTxsIsMutable();
         genTxs_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4014,7 +3975,6 @@ public final class GenesisProto {
         if (value == null) { throw new NullPointerException(); }
         ensureGenTxsIsMutable();
         genTxs_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4032,7 +3992,6 @@ public final class GenesisProto {
         ensureGenTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, genTxs_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4045,7 +4004,7 @@ public final class GenesisProto {
        * @return This builder for chaining.
        */
       public Builder clearGenTxs() {
-        genTxs_ = emptyList(com.google.protobuf.ByteString.class);
+        genTxs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -4544,10 +4503,8 @@ public final class GenesisProto {
         } else {
           stakeContractConfigBuilder_.mergeFrom(value);
         }
-        if (stakeContractConfig_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4665,10 +4622,8 @@ public final class GenesisProto {
         } else {
           valsetContractConfigBuilder_.mergeFrom(value);
         }
-        if (valsetContractConfig_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4786,10 +4741,8 @@ public final class GenesisProto {
         } else {
           engagementContractConfigBuilder_.mergeFrom(value);
         }
-        if (engagementContractConfig_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -4999,10 +4952,8 @@ public final class GenesisProto {
         } else {
           oversightCommitteeContractConfigBuilder_.mergeFrom(value);
         }
-        if (oversightCommitteeContractConfig_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -5120,10 +5071,8 @@ public final class GenesisProto {
         } else {
           communityPoolContractConfigBuilder_.mergeFrom(value);
         }
-        if (communityPoolContractConfig_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -5241,10 +5190,8 @@ public final class GenesisProto {
         } else {
           validatorVotingContractConfigBuilder_.mergeFrom(value);
         }
-        if (validatorVotingContractConfig_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5584,10 +5531,8 @@ public final class GenesisProto {
         } else {
           arbiterPoolContractConfigBuilder_.mergeFrom(value);
         }
-        if (arbiterPoolContractConfig_ != null) {
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -5705,10 +5650,8 @@ public final class GenesisProto {
         } else {
           mixerContractConfigBuilder_.mergeFrom(value);
         }
-        if (mixerContractConfig_ != null) {
-          bitField0_ |= 0x00002000;
-          onChanged();
-        }
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -6670,7 +6613,6 @@ public final class GenesisProto {
 
     }
 
-    private int bitField0_;
     public static final int SIGMOID_FIELD_NUMBER = 1;
     private com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid sigmoid_;
     /**
@@ -6684,7 +6626,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSigmoid() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return sigmoid_ != null;
     }
     /**
      * <pre>
@@ -6726,7 +6668,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sigmoid_ != null) {
         output.writeMessage(1, getSigmoid());
       }
       getUnknownFields().writeTo(output);
@@ -6738,7 +6680,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sigmoid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSigmoid());
       }
@@ -6901,19 +6843,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSigmoidFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6957,14 +6893,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sigmoid_ = sigmoidBuilder_ == null
               ? sigmoid_
               : sigmoidBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7155,10 +7088,8 @@ public final class GenesisProto {
         } else {
           sigmoidBuilder_.mergeFrom(value);
         }
-        if (sigmoid_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7369,7 +7300,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.class, com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MIN_BOND_FIELD_NUMBER = 1;
     private long minBond_ = 0L;
     /**
@@ -7400,7 +7330,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasUnbondingPeriod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return unbondingPeriod_ != null;
     }
     /**
      * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -7449,7 +7379,7 @@ public final class GenesisProto {
       if (tokensPerPoint_ != 0L) {
         output.writeUInt64(2, tokensPerPoint_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (unbondingPeriod_ != null) {
         output.writeMessage(3, getUnbondingPeriod());
       }
       if (claimAutoreturnLimit_ != 0) {
@@ -7472,7 +7402,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, tokensPerPoint_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (unbondingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUnbondingPeriod());
       }
@@ -7652,19 +7582,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUnbondingPeriodFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7717,17 +7641,14 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokensPerPoint_ = tokensPerPoint_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.unbondingPeriod_ = unbondingPeriodBuilder_ == null
               ? unbondingPeriod_
               : unbondingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.claimAutoreturnLimit_ = claimAutoreturnLimit_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7981,10 +7902,8 @@ public final class GenesisProto {
         } else {
           unbondingPeriodBuilder_.mergeFrom(value);
         }
-        if (unbondingPeriod_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8422,7 +8341,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MIN_POINTS_FIELD_NUMBER = 1;
     private long minPoints_ = 0L;
     /**
@@ -8464,7 +8382,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEpochLength() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return epochLength_ != null;
     }
     /**
      * <pre>
@@ -8502,7 +8420,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEpochReward() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return epochReward_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
@@ -8829,7 +8747,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasOfflineJailDuration() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return offlineJailDuration_ != null;
     }
     /**
      * <pre>
@@ -8879,10 +8797,10 @@ public final class GenesisProto {
       if (maxValidators_ != 0) {
         output.writeUInt32(2, maxValidators_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochLength_ != null) {
         output.writeMessage(3, getEpochLength());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (epochReward_ != null) {
         output.writeMessage(4, getEpochReward());
       }
       if (scaling_ != 0) {
@@ -8909,7 +8827,7 @@ public final class GenesisProto {
       if (verifyValidators_ != false) {
         output.writeBool(12, verifyValidators_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (offlineJailDuration_ != null) {
         output.writeMessage(13, getOfflineJailDuration());
       }
       getUnknownFields().writeTo(output);
@@ -8929,11 +8847,11 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, maxValidators_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochLength_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEpochLength());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (epochReward_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEpochReward());
       }
@@ -8964,7 +8882,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, verifyValidators_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (offlineJailDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getOfflineJailDuration());
       }
@@ -9187,21 +9105,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEpochLengthFieldBuilder();
-          getEpochRewardFieldBuilder();
-          getOfflineJailDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9271,18 +9181,15 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maxValidators_ = maxValidators_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.epochLength_ = epochLengthBuilder_ == null
               ? epochLength_
               : epochLengthBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.epochReward_ = epochRewardBuilder_ == null
               ? epochReward_
               : epochRewardBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.scaling_ = scaling_;
@@ -9312,9 +9219,7 @@ public final class GenesisProto {
           result.offlineJailDuration_ = offlineJailDurationBuilder_ == null
               ? offlineJailDuration_
               : offlineJailDurationBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9699,10 +9604,8 @@ public final class GenesisProto {
         } else {
           epochLengthBuilder_.mergeFrom(value);
         }
-        if (epochLength_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -9844,10 +9747,8 @@ public final class GenesisProto {
         } else {
           epochRewardBuilder_.mergeFrom(value);
         }
-        if (epochReward_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -10628,10 +10529,8 @@ public final class GenesisProto {
         } else {
           offlineJailDurationBuilder_.mergeFrom(value);
         }
-        if (offlineJailDuration_ != null) {
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -10828,7 +10727,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.class, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HALFLIFE_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration halflife_;
     /**
@@ -10837,7 +10735,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasHalflife() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return halflife_ != null;
     }
     /**
      * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -10869,7 +10767,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (halflife_ != null) {
         output.writeMessage(1, getHalflife());
       }
       getUnknownFields().writeTo(output);
@@ -10881,7 +10779,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (halflife_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHalflife());
       }
@@ -11043,19 +10941,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHalflifeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11099,14 +10991,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.halflife_ = halflifeBuilder_ == null
               ? halflife_
               : halflifeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11272,10 +11161,8 @@ public final class GenesisProto {
         } else {
           halflifeBuilder_.mergeFrom(value);
         }
-        if (halflife_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11531,7 +11418,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.class, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -11591,7 +11477,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEscrowAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return escrowAmount_ != null;
     }
     /**
      * <pre>
@@ -11629,7 +11515,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingRules() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return votingRules_ != null;
     }
     /**
      * <pre>
@@ -11721,10 +11607,10 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (escrowAmount_ != null) {
         output.writeMessage(2, getEscrowAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (votingRules_ != null) {
         output.writeMessage(3, getVotingRules());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denyListContractAddress_)) {
@@ -11742,11 +11628,11 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (escrowAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEscrowAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (votingRules_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVotingRules());
       }
@@ -11928,20 +11814,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEscrowAmountFieldBuilder();
-          getVotingRulesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11995,23 +11874,19 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.escrowAmount_ = escrowAmountBuilder_ == null
               ? escrowAmount_
               : escrowAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.votingRules_ = votingRulesBuilder_ == null
               ? votingRules_
               : votingRulesBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.denyListContractAddress_ = denyListContractAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12319,10 +12194,8 @@ public final class GenesisProto {
         } else {
           escrowAmountBuilder_.mergeFrom(value);
         }
-        if (escrowAmount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -12476,10 +12349,8 @@ public final class GenesisProto {
         } else {
           votingRulesBuilder_.mergeFrom(value);
         }
-        if (votingRules_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -12777,7 +12648,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.class, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VOTING_RULES_FIELD_NUMBER = 1;
     private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
     /**
@@ -12790,7 +12660,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingRules() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return votingRules_ != null;
     }
     /**
      * <pre>
@@ -12830,7 +12700,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingRules_ != null) {
         output.writeMessage(1, getVotingRules());
       }
       getUnknownFields().writeTo(output);
@@ -12842,7 +12712,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingRules_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVotingRules());
       }
@@ -13004,19 +12874,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVotingRulesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13060,14 +12924,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.votingRules_ = votingRulesBuilder_ == null
               ? votingRules_
               : votingRulesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13253,10 +13114,8 @@ public final class GenesisProto {
         } else {
           votingRulesBuilder_.mergeFrom(value);
         }
-        if (votingRules_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -13457,7 +13316,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VOTING_RULES_FIELD_NUMBER = 1;
     private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
     /**
@@ -13470,7 +13328,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingRules() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return votingRules_ != null;
     }
     /**
      * <pre>
@@ -13510,7 +13368,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingRules_ != null) {
         output.writeMessage(1, getVotingRules());
       }
       getUnknownFields().writeTo(output);
@@ -13522,7 +13380,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (votingRules_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVotingRules());
       }
@@ -13684,19 +13542,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVotingRulesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13740,14 +13592,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.votingRules_ = votingRulesBuilder_ == null
               ? votingRules_
               : votingRulesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13933,10 +13782,8 @@ public final class GenesisProto {
         } else {
           votingRulesBuilder_.mergeFrom(value);
         }
-        if (votingRules_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16631,7 +16478,6 @@ public final class GenesisProto {
               com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -16691,7 +16537,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEscrowAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return escrowAmount_ != null;
     }
     /**
      * <pre>
@@ -16729,7 +16575,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasVotingRules() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return votingRules_ != null;
     }
     /**
      * <pre>
@@ -16816,7 +16662,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDisputeCost() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return disputeCost_ != null;
     }
     /**
      * <pre>
@@ -16850,7 +16696,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasWaitingPeriod() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return waitingPeriod_ != null;
     }
     /**
      * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -16885,19 +16731,19 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (escrowAmount_ != null) {
         output.writeMessage(2, getEscrowAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (votingRules_ != null) {
         output.writeMessage(3, getVotingRules());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denyListContractAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, denyListContractAddress_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (disputeCost_ != null) {
         output.writeMessage(5, getDisputeCost());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (waitingPeriod_ != null) {
         output.writeMessage(6, getWaitingPeriod());
       }
       getUnknownFields().writeTo(output);
@@ -16912,22 +16758,22 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (escrowAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEscrowAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (votingRules_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVotingRules());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denyListContractAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, denyListContractAddress_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (disputeCost_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDisputeCost());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (waitingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getWaitingPeriod());
       }
@@ -17124,22 +16970,13 @@ public final class GenesisProto {
 
       // Construct using com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEscrowAmountFieldBuilder();
-          getVotingRulesFieldBuilder();
-          getDisputeCostFieldBuilder();
-          getWaitingPeriodFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -17203,18 +17040,15 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.escrowAmount_ = escrowAmountBuilder_ == null
               ? escrowAmount_
               : escrowAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.votingRules_ = votingRulesBuilder_ == null
               ? votingRules_
               : votingRulesBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.denyListContractAddress_ = denyListContractAddress_;
@@ -17223,15 +17057,12 @@ public final class GenesisProto {
           result.disputeCost_ = disputeCostBuilder_ == null
               ? disputeCost_
               : disputeCostBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.waitingPeriod_ = waitingPeriodBuilder_ == null
               ? waitingPeriod_
               : waitingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17559,10 +17390,8 @@ public final class GenesisProto {
         } else {
           escrowAmountBuilder_.mergeFrom(value);
         }
-        if (escrowAmount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -17716,10 +17545,8 @@ public final class GenesisProto {
         } else {
           votingRulesBuilder_.mergeFrom(value);
         }
-        if (votingRules_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -17970,10 +17797,8 @@ public final class GenesisProto {
         } else {
           disputeCostBuilder_.mergeFrom(value);
         }
-        if (disputeCost_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -18107,10 +17932,8 @@ public final class GenesisProto {
         } else {
           waitingPeriodBuilder_.mergeFrom(value);
         }
-        if (waitingPeriod_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

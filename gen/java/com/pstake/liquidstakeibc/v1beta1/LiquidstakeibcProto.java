@@ -415,7 +415,6 @@ public final class LiquidstakeibcProto {
               com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.HostChain.class, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.HostChain.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -522,7 +521,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -701,7 +700,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasDelegationAccount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return delegationAccount_ != null;
     }
     /**
      * <pre>
@@ -739,7 +738,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasRewardsAccount() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return rewardsAccount_ != null;
     }
     /**
      * <pre>
@@ -1056,7 +1055,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasFlags() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return flags_ != null;
     }
     /**
      * <pre>
@@ -1102,7 +1101,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(3, getParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostDenom_)) {
@@ -1114,10 +1113,10 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, portId_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (delegationAccount_ != null) {
         output.writeMessage(7, getDelegationAccount());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (rewardsAccount_ != null) {
         output.writeMessage(8, getRewardsAccount());
       }
       for (int i = 0; i < validators_.size(); i++) {
@@ -1141,7 +1140,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(autoCompoundFactor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, autoCompoundFactor_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (flags_ != null) {
         output.writeMessage(16, getFlags());
       }
       getUnknownFields().writeTo(output);
@@ -1159,7 +1158,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getParams());
       }
@@ -1172,11 +1171,11 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, portId_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (delegationAccount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getDelegationAccount());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (rewardsAccount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getRewardsAccount());
       }
@@ -1204,7 +1203,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(autoCompoundFactor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, autoCompoundFactor_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (flags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getFlags());
       }
@@ -1441,23 +1440,13 @@ public final class LiquidstakeibcProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.HostChain.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getDelegationAccountFieldBuilder();
-          getRewardsAccountFieldBuilder();
-          getValidatorsFieldBuilder();
-          getFlagsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1553,12 +1542,10 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.connectionId_ = connectionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.hostDenom_ = hostDenom_;
@@ -1573,13 +1560,11 @@ public final class LiquidstakeibcProto {
           result.delegationAccount_ = delegationAccountBuilder_ == null
               ? delegationAccount_
               : delegationAccountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.rewardsAccount_ = rewardsAccountBuilder_ == null
               ? rewardsAccount_
               : rewardsAccountBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.minimumDeposit_ = minimumDeposit_;
@@ -1603,9 +1588,7 @@ public final class LiquidstakeibcProto {
           result.flags_ = flagsBuilder_ == null
               ? flags_
               : flagsBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2150,10 +2133,8 @@ public final class LiquidstakeibcProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2583,10 +2564,8 @@ public final class LiquidstakeibcProto {
         } else {
           delegationAccountBuilder_.mergeFrom(value);
         }
-        if (delegationAccount_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2740,10 +2719,8 @@ public final class LiquidstakeibcProto {
         } else {
           rewardsAccountBuilder_.mergeFrom(value);
         }
-        if (rewardsAccount_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -3665,10 +3642,8 @@ public final class LiquidstakeibcProto {
         } else {
           flagsBuilder_.mergeFrom(value);
         }
-        if (flags_ != null) {
-          bitField0_ |= 0x00008000;
-          onChanged();
-        }
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -5660,7 +5635,6 @@ public final class LiquidstakeibcProto {
       // @@protoc_insertion_point(enum_scope:pstake.liquidstakeibc.v1beta1.ICAAccount.ChannelState)
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -5720,7 +5694,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return balance_ != null;
     }
     /**
      * <pre>
@@ -5828,7 +5802,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         output.writeMessage(2, getBalance());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
@@ -5849,7 +5823,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBalance());
       }
@@ -6025,19 +5999,13 @@ public final class LiquidstakeibcProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ICAAccount.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBalanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6087,12 +6055,10 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.owner_ = owner_;
@@ -6100,7 +6066,6 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.channelState_ = channelState_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6406,10 +6371,8 @@ public final class LiquidstakeibcProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        if (balance_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8386,7 +8349,6 @@ public final class LiquidstakeibcProto {
       // @@protoc_insertion_point(enum_scope:pstake.liquidstakeibc.v1beta1.Deposit.DepositState)
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -8442,7 +8404,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -8565,7 +8527,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       if (epoch_ != 0L) {
@@ -8589,7 +8551,7 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -8774,19 +8736,13 @@ public final class LiquidstakeibcProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Deposit.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8837,12 +8793,10 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.chainId_ = chainId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.epoch_ = epoch_;
@@ -8853,7 +8807,6 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.ibcSequenceId_ = ibcSequenceId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9147,10 +9100,8 @@ public final class LiquidstakeibcProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11858,7 +11809,6 @@ public final class LiquidstakeibcProto {
       // @@protoc_insertion_point(enum_scope:pstake.liquidstakeibc.v1beta1.Unbonding.UnbondingState)
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -11933,7 +11883,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasMatureTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return matureTime_ != null;
     }
     /**
      * <pre>
@@ -11971,7 +11921,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasBurnAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return burnAmount_ != null;
     }
     /**
      * <pre>
@@ -12009,7 +11959,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasUnbondAmount() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return unbondAmount_ != null;
     }
     /**
      * <pre>
@@ -12128,13 +12078,13 @@ public final class LiquidstakeibcProto {
       if (epochNumber_ != 0L) {
         output.writeInt64(2, epochNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (matureTime_ != null) {
         output.writeMessage(3, getMatureTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (burnAmount_ != null) {
         output.writeMessage(4, getBurnAmount());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (unbondAmount_ != null) {
         output.writeMessage(5, getUnbondAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcSequenceId_)) {
@@ -12159,15 +12109,15 @@ public final class LiquidstakeibcProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, epochNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (matureTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMatureTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (burnAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBurnAmount());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (unbondAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getUnbondAmount());
       }
@@ -12366,21 +12316,13 @@ public final class LiquidstakeibcProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.Unbonding.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMatureTimeFieldBuilder();
-          getBurnAmountFieldBuilder();
-          getUnbondAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12444,24 +12386,20 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.epochNumber_ = epochNumber_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.matureTime_ = matureTimeBuilder_ == null
               ? matureTime_
               : matureTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.burnAmount_ = burnAmountBuilder_ == null
               ? burnAmount_
               : burnAmountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.unbondAmount_ = unbondAmountBuilder_ == null
               ? unbondAmount_
               : unbondAmountBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.ibcSequenceId_ = ibcSequenceId_;
@@ -12469,7 +12407,6 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.state_ = state_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12847,10 +12784,8 @@ public final class LiquidstakeibcProto {
         } else {
           matureTimeBuilder_.mergeFrom(value);
         }
-        if (matureTime_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -13004,10 +12939,8 @@ public final class LiquidstakeibcProto {
         } else {
           burnAmountBuilder_.mergeFrom(value);
         }
-        if (burnAmount_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -13161,10 +13094,8 @@ public final class LiquidstakeibcProto {
         } else {
           unbondAmountBuilder_.mergeFrom(value);
         }
-        if (unbondAmount_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -13605,7 +13536,6 @@ public final class LiquidstakeibcProto {
               com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UserUnbonding.class, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UserUnbonding.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -13727,7 +13657,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasStkAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return stkAmount_ != null;
     }
     /**
      * <pre>
@@ -13765,7 +13695,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasUnbondAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return unbondAmount_ != null;
     }
     /**
      * <pre>
@@ -13814,10 +13744,10 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (stkAmount_ != null) {
         output.writeMessage(4, getStkAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (unbondAmount_ != null) {
         output.writeMessage(5, getUnbondAmount());
       }
       getUnknownFields().writeTo(output);
@@ -13839,11 +13769,11 @@ public final class LiquidstakeibcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (stkAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getStkAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (unbondAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getUnbondAmount());
       }
@@ -14023,20 +13953,13 @@ public final class LiquidstakeibcProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.UserUnbonding.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStkAmountFieldBuilder();
-          getUnbondAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14097,20 +14020,16 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.stkAmount_ = stkAmountBuilder_ == null
               ? stkAmount_
               : stkAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.unbondAmount_ = unbondAmountBuilder_ == null
               ? unbondAmount_
               : unbondAmountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14562,10 +14481,8 @@ public final class LiquidstakeibcProto {
         } else {
           stkAmountBuilder_.mergeFrom(value);
         }
-        if (stkAmount_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -14719,10 +14636,8 @@ public final class LiquidstakeibcProto {
         } else {
           unbondAmountBuilder_.mergeFrom(value);
         }
-        if (unbondAmount_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -15019,7 +14934,6 @@ public final class LiquidstakeibcProto {
               com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.class, com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -15094,7 +15008,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasMatureTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return matureTime_ != null;
     }
     /**
      * <pre>
@@ -15179,7 +15093,7 @@ public final class LiquidstakeibcProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return amount_ != null;
     }
     /**
      * <pre>
@@ -15272,13 +15186,13 @@ public final class LiquidstakeibcProto {
       if (epochNumber_ != 0L) {
         output.writeInt64(2, epochNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (matureTime_ != null) {
         output.writeMessage(3, getMatureTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(5, getAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcSequenceId_)) {
@@ -15300,14 +15214,14 @@ public final class LiquidstakeibcProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, epochNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (matureTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMatureTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAmount());
       }
@@ -15494,20 +15408,13 @@ public final class LiquidstakeibcProto {
 
       // Construct using com.pstake.liquidstakeibc.v1beta1.LiquidstakeibcProto.ValidatorUnbonding.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMatureTimeFieldBuilder();
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15566,12 +15473,10 @@ public final class LiquidstakeibcProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.epochNumber_ = epochNumber_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.matureTime_ = matureTimeBuilder_ == null
               ? matureTime_
               : matureTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.validatorAddress_ = validatorAddress_;
@@ -15580,12 +15485,10 @@ public final class LiquidstakeibcProto {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.ibcSequenceId_ = ibcSequenceId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15955,10 +15858,8 @@ public final class LiquidstakeibcProto {
         } else {
           matureTimeBuilder_.mergeFrom(value);
         }
-        if (matureTime_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -16204,10 +16105,8 @@ public final class LiquidstakeibcProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

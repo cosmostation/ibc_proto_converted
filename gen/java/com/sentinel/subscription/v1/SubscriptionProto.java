@@ -189,7 +189,6 @@ public final class SubscriptionProto {
               com.sentinel.subscription.v1.SubscriptionProto.Subscription.class, com.sentinel.subscription.v1.SubscriptionProto.Subscription.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -287,7 +286,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return price_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false];</code>
@@ -313,7 +312,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return deposit_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deposit = 5 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
@@ -389,7 +388,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasExpiry() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return expiry_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiry = 8 [json_name = "expiry", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -472,7 +471,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasStatusAt() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return statusAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp status_at = 11 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -513,10 +512,10 @@ public final class SubscriptionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(node_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, node_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         output.writeMessage(4, getPrice());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deposit_ != null) {
         output.writeMessage(5, getDeposit());
       }
       if (plan_ != 0L) {
@@ -525,7 +524,7 @@ public final class SubscriptionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, denom_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (expiry_ != null) {
         output.writeMessage(8, getExpiry());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(free_)) {
@@ -534,7 +533,7 @@ public final class SubscriptionProto {
       if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(10, status_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (statusAt_ != null) {
         output.writeMessage(11, getStatusAt());
       }
       getUnknownFields().writeTo(output);
@@ -556,11 +555,11 @@ public final class SubscriptionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(node_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, node_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (price_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPrice());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deposit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDeposit());
       }
@@ -571,7 +570,7 @@ public final class SubscriptionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, denom_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (expiry_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getExpiry());
       }
@@ -582,7 +581,7 @@ public final class SubscriptionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(10, status_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (statusAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getStatusAt());
       }
@@ -796,22 +795,13 @@ public final class SubscriptionProto {
 
       // Construct using com.sentinel.subscription.v1.SubscriptionProto.Subscription.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceFieldBuilder();
-          getDepositFieldBuilder();
-          getExpiryFieldBuilder();
-          getStatusAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -886,18 +876,15 @@ public final class SubscriptionProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.node_ = node_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.plan_ = plan_;
@@ -909,7 +896,6 @@ public final class SubscriptionProto {
           result.expiry_ = expiryBuilder_ == null
               ? expiry_
               : expiryBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.free_ = free_;
@@ -921,9 +907,7 @@ public final class SubscriptionProto {
           result.statusAt_ = statusAtBuilder_ == null
               ? statusAt_
               : statusAtBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1359,10 +1343,8 @@ public final class SubscriptionProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        if (price_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1480,10 +1462,8 @@ public final class SubscriptionProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        if (deposit_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1705,10 +1685,8 @@ public final class SubscriptionProto {
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-        if (expiry_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -1951,10 +1929,8 @@ public final class SubscriptionProto {
         } else {
           statusAtBuilder_.mergeFrom(value);
         }
-        if (statusAt_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**

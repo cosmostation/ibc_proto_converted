@@ -299,8 +299,7 @@ public final class ClaimProto {
 
     public static final int ACTION_COMPLETED_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.BooleanList actionCompleted_ =
-        emptyBooleanList();
+    private com.google.protobuf.Internal.BooleanList actionCompleted_;
     /**
      * <code>repeated bool action_completed = 3 [json_name = "actionCompleted", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"action_completed&#92;""];</code>
      * @return A list containing the actionCompleted.
@@ -606,16 +605,17 @@ public final class ClaimProto {
         } else {
           result.initialClaimableAmount_ = initialClaimableAmountBuilder_.build();
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          actionCompleted_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.actionCompleted_ = actionCompleted_;
       }
 
       private void buildPartial0(com.lum.network.airdrop.ClaimProto.ClaimRecord result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          actionCompleted_.makeImmutable();
-          result.actionCompleted_ = actionCompleted_;
         }
       }
 
@@ -697,8 +697,7 @@ public final class ClaimProto {
         if (!other.actionCompleted_.isEmpty()) {
           if (actionCompleted_.isEmpty()) {
             actionCompleted_ = other.actionCompleted_;
-            actionCompleted_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureActionCompletedIsMutable();
             actionCompleted_.addAll(other.actionCompleted_);
@@ -758,8 +757,7 @@ public final class ClaimProto {
               case 26: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureActionCompletedIsMutable(alloc / 1);
+                ensureActionCompletedIsMutable();
                 while (input.getBytesUntilLimit() > 0) {
                   actionCompleted_.addBoolean(input.readBool());
                 }
@@ -1097,16 +1095,10 @@ public final class ClaimProto {
 
       private com.google.protobuf.Internal.BooleanList actionCompleted_ = emptyBooleanList();
       private void ensureActionCompletedIsMutable() {
-        if (!actionCompleted_.isModifiable()) {
-          actionCompleted_ = makeMutableCopy(actionCompleted_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          actionCompleted_ = mutableCopy(actionCompleted_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
-      }
-      private void ensureActionCompletedIsMutable(int capacity) {
-        if (!actionCompleted_.isModifiable()) {
-          actionCompleted_ = makeMutableCopy(actionCompleted_, capacity);
-        }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bool action_completed = 3 [json_name = "actionCompleted", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"action_completed&#92;""];</code>
@@ -1114,8 +1106,8 @@ public final class ClaimProto {
        */
       public java.util.List<java.lang.Boolean>
           getActionCompletedList() {
-        actionCompleted_.makeImmutable();
-        return actionCompleted_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(actionCompleted_) : actionCompleted_;
       }
       /**
        * <code>repeated bool action_completed = 3 [json_name = "actionCompleted", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"action_completed&#92;""];</code>
@@ -1143,7 +1135,6 @@ public final class ClaimProto {
 
         ensureActionCompletedIsMutable();
         actionCompleted_.setBoolean(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1156,7 +1147,6 @@ public final class ClaimProto {
 
         ensureActionCompletedIsMutable();
         actionCompleted_.addBoolean(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1170,7 +1160,6 @@ public final class ClaimProto {
         ensureActionCompletedIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, actionCompleted_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

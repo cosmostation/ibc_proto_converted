@@ -68,7 +68,6 @@ public final class TransactionResponseProto {
               com.assetmantle.modules.splits.transactions.wrap.TransactionResponseProto.TransactionResponse.class, com.assetmantle.modules.splits.transactions.wrap.TransactionResponseProto.TransactionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COIN_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.CoinIdProto.CoinID coinID_;
     /**
@@ -77,7 +76,7 @@ public final class TransactionResponseProto {
      */
     @java.lang.Override
     public boolean hasCoinID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return coinID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 1 [json_name = "coinID"];</code>
@@ -109,7 +108,7 @@ public final class TransactionResponseProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coinID_ != null) {
         output.writeMessage(1, getCoinID());
       }
       getUnknownFields().writeTo(output);
@@ -121,7 +120,7 @@ public final class TransactionResponseProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coinID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCoinID());
       }
@@ -279,19 +278,13 @@ public final class TransactionResponseProto {
 
       // Construct using com.assetmantle.modules.splits.transactions.wrap.TransactionResponseProto.TransactionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCoinIDFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -335,14 +328,11 @@ public final class TransactionResponseProto {
 
       private void buildPartial0(com.assetmantle.modules.splits.transactions.wrap.TransactionResponseProto.TransactionResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.coinID_ = coinIDBuilder_ == null
               ? coinID_
               : coinIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -508,10 +498,8 @@ public final class TransactionResponseProto {
         } else {
           coinIDBuilder_.mergeFrom(value);
         }
-        if (coinID_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

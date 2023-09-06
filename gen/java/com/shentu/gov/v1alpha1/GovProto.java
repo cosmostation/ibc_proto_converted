@@ -83,7 +83,6 @@ public final class GovProto {
               com.shentu.gov.v1alpha1.GovProto.CustomParams.class, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CERTIFIER_UPDATE_SECURITY_VOTE_TALLY_FIELD_NUMBER = 1;
     private com.cosmos.gov.v1beta1.GovProto.TallyParams certifierUpdateSecurityVoteTally_;
     /**
@@ -92,7 +91,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasCertifierUpdateSecurityVoteTally() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return certifierUpdateSecurityVoteTally_ != null;
     }
     /**
      * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
@@ -118,7 +117,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasCertifierUpdateStakeVoteTally() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return certifierUpdateStakeVoteTally_ != null;
     }
     /**
      * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
@@ -150,10 +149,10 @@ public final class GovProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (certifierUpdateSecurityVoteTally_ != null) {
         output.writeMessage(1, getCertifierUpdateSecurityVoteTally());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (certifierUpdateStakeVoteTally_ != null) {
         output.writeMessage(2, getCertifierUpdateStakeVoteTally());
       }
       getUnknownFields().writeTo(output);
@@ -165,11 +164,11 @@ public final class GovProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (certifierUpdateSecurityVoteTally_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCertifierUpdateSecurityVoteTally());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (certifierUpdateStakeVoteTally_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCertifierUpdateStakeVoteTally());
       }
@@ -336,20 +335,13 @@ public final class GovProto {
 
       // Construct using com.shentu.gov.v1alpha1.GovProto.CustomParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCertifierUpdateSecurityVoteTallyFieldBuilder();
-          getCertifierUpdateStakeVoteTallyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -398,20 +390,16 @@ public final class GovProto {
 
       private void buildPartial0(com.shentu.gov.v1alpha1.GovProto.CustomParams result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.certifierUpdateSecurityVoteTally_ = certifierUpdateSecurityVoteTallyBuilder_ == null
               ? certifierUpdateSecurityVoteTally_
               : certifierUpdateSecurityVoteTallyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.certifierUpdateStakeVoteTally_ = certifierUpdateStakeVoteTallyBuilder_ == null
               ? certifierUpdateStakeVoteTally_
               : certifierUpdateStakeVoteTallyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -587,10 +575,8 @@ public final class GovProto {
         } else {
           certifierUpdateSecurityVoteTallyBuilder_.mergeFrom(value);
         }
-        if (certifierUpdateSecurityVoteTally_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -708,10 +694,8 @@ public final class GovProto {
         } else {
           certifierUpdateStakeVoteTallyBuilder_.mergeFrom(value);
         }
-        if (certifierUpdateStakeVoteTally_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

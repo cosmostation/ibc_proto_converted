@@ -1549,7 +1549,6 @@ public final class NftProto {
               com.coreum.asset.nft.v1.NftProto.Class.class, com.coreum.asset.nft.v1.NftProto.Class.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -1831,7 +1830,7 @@ public final class NftProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return data_ != null;
     }
     /**
      * <code>.google.protobuf.Any data = 8 [json_name = "data"];</code>
@@ -1994,7 +1993,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, uriHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         output.writeMessage(8, getData());
       }
       if (getFeaturesList().size() > 0) {
@@ -2037,7 +2036,7 @@ public final class NftProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uriHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, uriHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getData());
       }
@@ -2251,19 +2250,13 @@ public final class NftProto {
 
       // Construct using com.coreum.asset.nft.v1.NftProto.Class.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2347,17 +2340,14 @@ public final class NftProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.uriHash_ = uriHash_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.royaltyRate_ = royaltyRate_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3134,10 +3124,8 @@ public final class NftProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**

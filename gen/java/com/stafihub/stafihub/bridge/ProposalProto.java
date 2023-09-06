@@ -101,7 +101,6 @@ public final class ProposalProto {
               com.stafihub.stafihub.bridge.ProposalProto.Proposal.class, com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTENT_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.bridge.ProposalProto.ProposalContent content_;
     /**
@@ -110,7 +109,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return content_ != null;
     }
     /**
      * <code>.stafihub.stafihub.bridge.ProposalContent content = 1 [json_name = "content"];</code>
@@ -190,7 +189,7 @@ public final class ProposalProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         output.writeMessage(1, getContent());
       }
       if (executed_ != false) {
@@ -208,7 +207,7 @@ public final class ProposalProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContent());
       }
@@ -389,19 +388,13 @@ public final class ProposalProto {
 
       // Construct using com.stafihub.stafihub.bridge.ProposalProto.Proposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -448,12 +441,10 @@ public final class ProposalProto {
 
       private void buildPartial0(com.stafihub.stafihub.bridge.ProposalProto.Proposal result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.executed_ = executed_;
@@ -462,7 +453,6 @@ public final class ProposalProto {
           voters_.makeImmutable();
           result.voters_ = voters_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -652,10 +642,8 @@ public final class ProposalProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        if (content_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

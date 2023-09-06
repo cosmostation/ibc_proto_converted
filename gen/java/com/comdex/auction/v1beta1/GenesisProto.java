@@ -224,7 +224,6 @@ public final class GenesisProto {
               com.comdex.auction.v1beta1.GenesisProto.GenesisState.class, com.comdex.auction.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SURPLUSAUCTION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction> surplusAuction_;
@@ -479,7 +478,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -540,7 +539,7 @@ public final class GenesisProto {
       for (int i = 0; i < dutchLendAuction_.size(); i++) {
         output.writeMessage(6, dutchLendAuction_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(7, getParams());
       }
       if (userBiddingID_ != 0L) {
@@ -579,7 +578,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, dutchLendAuction_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getParams());
       }
@@ -782,25 +781,13 @@ public final class GenesisProto {
 
       // Construct using com.comdex.auction.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSurplusAuctionFieldBuilder();
-          getDebtAuctionFieldBuilder();
-          getDutchAuctionFieldBuilder();
-          getProtocolStatisticsFieldBuilder();
-          getAuctionParamsFieldBuilder();
-          getDutchLendAuctionFieldBuilder();
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -945,17 +932,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.comdex.auction.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.userBiddingID_ = userBiddingID_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2803,10 +2787,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**

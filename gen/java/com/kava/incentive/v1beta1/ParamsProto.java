@@ -121,7 +121,6 @@ public final class ParamsProto {
               com.kava.incentive.v1beta1.ParamsProto.RewardPeriod.class, com.kava.incentive.v1beta1.ParamsProto.RewardPeriod.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACTIVE_FIELD_NUMBER = 1;
     private boolean active_ = false;
     /**
@@ -180,7 +179,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasStart() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return start_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start = 3 [json_name = "start", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -206,7 +205,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasEnd() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return end_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp end = 4 [json_name = "end", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -232,7 +231,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasRewardsPerSecond() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return rewardsPerSecond_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin rewards_per_second = 5 [json_name = "rewardsPerSecond", (.gogoproto.nullable) = false];</code>
@@ -270,13 +269,13 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         output.writeMessage(3, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         output.writeMessage(4, getEnd());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (rewardsPerSecond_ != null) {
         output.writeMessage(5, getRewardsPerSecond());
       }
       getUnknownFields().writeTo(output);
@@ -295,15 +294,15 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEnd());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (rewardsPerSecond_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getRewardsPerSecond());
       }
@@ -492,21 +491,13 @@ public final class ParamsProto {
 
       // Construct using com.kava.incentive.v1beta1.ParamsProto.RewardPeriod.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartFieldBuilder();
-          getEndFieldBuilder();
-          getRewardsPerSecondFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -568,26 +559,21 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.start_ = startBuilder_ == null
               ? start_
               : startBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.end_ = endBuilder_ == null
               ? end_
               : endBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.rewardsPerSecond_ = rewardsPerSecondBuilder_ == null
               ? rewardsPerSecond_
               : rewardsPerSecondBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -895,10 +881,8 @@ public final class ParamsProto {
         } else {
           startBuilder_.mergeFrom(value);
         }
-        if (start_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1016,10 +1000,8 @@ public final class ParamsProto {
         } else {
           endBuilder_.mergeFrom(value);
         }
-        if (end_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1137,10 +1119,8 @@ public final class ParamsProto {
         } else {
           rewardsPerSecondBuilder_.mergeFrom(value);
         }
-        if (rewardsPerSecond_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1372,7 +1352,6 @@ public final class ParamsProto {
               com.kava.incentive.v1beta1.ParamsProto.MultiRewardPeriod.class, com.kava.incentive.v1beta1.ParamsProto.MultiRewardPeriod.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACTIVE_FIELD_NUMBER = 1;
     private boolean active_ = false;
     /**
@@ -1431,7 +1410,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasStart() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return start_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start = 3 [json_name = "start", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1457,7 +1436,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasEnd() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return end_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp end = 4 [json_name = "end", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1536,10 +1515,10 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         output.writeMessage(3, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         output.writeMessage(4, getEnd());
       }
       for (int i = 0; i < rewardsPerSecond_.size(); i++) {
@@ -1561,11 +1540,11 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEnd());
       }
@@ -1755,21 +1734,13 @@ public final class ParamsProto {
 
       // Construct using com.kava.incentive.v1beta1.ParamsProto.MultiRewardPeriod.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartFieldBuilder();
-          getEndFieldBuilder();
-          getRewardsPerSecondFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1846,20 +1817,16 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.start_ = startBuilder_ == null
               ? start_
               : startBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.end_ = endBuilder_ == null
               ? end_
               : endBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2196,10 +2163,8 @@ public final class ParamsProto {
         } else {
           startBuilder_.mergeFrom(value);
         }
-        if (start_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2317,10 +2282,8 @@ public final class ParamsProto {
         } else {
           endBuilder_.mergeFrom(value);
         }
-        if (end_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4577,7 +4540,6 @@ public final class ParamsProto {
               com.kava.incentive.v1beta1.ParamsProto.Params.class, com.kava.incentive.v1beta1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int USDX_MINTING_REWARD_PERIODS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kava.incentive.v1beta1.ParamsProto.RewardPeriod> usdxMintingRewardPeriods_;
@@ -4832,7 +4794,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasClaimEnd() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return claimEnd_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp claim_end = 7 [json_name = "claimEnd", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -4964,7 +4926,7 @@ public final class ParamsProto {
       for (int i = 0; i < claimMultipliers_.size(); i++) {
         output.writeMessage(6, claimMultipliers_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimEnd_ != null) {
         output.writeMessage(7, getClaimEnd());
       }
       for (int i = 0; i < savingsRewardPeriods_.size(); i++) {
@@ -5006,7 +4968,7 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, claimMultipliers_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimEnd_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getClaimEnd());
       }
@@ -5224,27 +5186,13 @@ public final class ParamsProto {
 
       // Construct using com.kava.incentive.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUsdxMintingRewardPeriodsFieldBuilder();
-          getHardSupplyRewardPeriodsFieldBuilder();
-          getHardBorrowRewardPeriodsFieldBuilder();
-          getDelegatorRewardPeriodsFieldBuilder();
-          getSwapRewardPeriodsFieldBuilder();
-          getClaimMultipliersFieldBuilder();
-          getClaimEndFieldBuilder();
-          getSavingsRewardPeriodsFieldBuilder();
-          getEarnRewardPeriodsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5420,14 +5368,11 @@ public final class ParamsProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.claimEnd_ = claimEndBuilder_ == null
               ? claimEnd_
               : claimEndBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7345,10 +7290,8 @@ public final class ParamsProto {
         } else {
           claimEndBuilder_.mergeFrom(value);
         }
-        if (claimEnd_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**

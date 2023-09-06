@@ -143,7 +143,6 @@ public final class OrmProto {
               com.cosmos.orm.v1.OrmProto.TableDescriptor.class, com.cosmos.orm.v1.OrmProto.TableDescriptor.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PRIMARY_KEY_FIELD_NUMBER = 1;
     private com.cosmos.orm.v1.OrmProto.PrimaryKeyDescriptor primaryKey_;
     /**
@@ -156,7 +155,7 @@ public final class OrmProto {
      */
     @java.lang.Override
     public boolean hasPrimaryKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return primaryKey_ != null;
     }
     /**
      * <pre>
@@ -274,7 +273,7 @@ public final class OrmProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (primaryKey_ != null) {
         output.writeMessage(1, getPrimaryKey());
       }
       for (int i = 0; i < index_.size(); i++) {
@@ -292,7 +291,7 @@ public final class OrmProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (primaryKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPrimaryKey());
       }
@@ -472,20 +471,13 @@ public final class OrmProto {
 
       // Construct using com.cosmos.orm.v1.OrmProto.TableDescriptor.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPrimaryKeyFieldBuilder();
-          getIndexFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -550,17 +542,14 @@ public final class OrmProto {
 
       private void buildPartial0(com.cosmos.orm.v1.OrmProto.TableDescriptor result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.primaryKey_ = primaryKeyBuilder_ == null
               ? primaryKey_
               : primaryKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.id_ = id_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -793,10 +782,8 @@ public final class OrmProto {
         } else {
           primaryKeyBuilder_.mergeFrom(value);
         }
-        if (primaryKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

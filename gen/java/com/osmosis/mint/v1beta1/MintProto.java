@@ -2754,7 +2754,6 @@ public final class MintProto {
               com.osmosis.mint.v1beta1.MintProto.Params.class, com.osmosis.mint.v1beta1.MintProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MINT_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object mintDenom_ = "";
@@ -2975,7 +2974,7 @@ public final class MintProto {
      */
     @java.lang.Override
     public boolean hasDistributionProportions() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return distributionProportions_ != null;
     }
     /**
      * <pre>
@@ -3126,7 +3125,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reductionFactor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reductionFactor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributionProportions_ != null) {
         output.writeMessage(6, getDistributionProportions());
       }
       for (int i = 0; i < weightedDeveloperRewardsReceivers_.size(); i++) {
@@ -3160,7 +3159,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reductionFactor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reductionFactor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributionProportions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDistributionProportions());
       }
@@ -3362,20 +3361,13 @@ public final class MintProto {
 
       // Construct using com.osmosis.mint.v1beta1.MintProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDistributionProportionsFieldBuilder();
-          getWeightedDeveloperRewardsReceiversFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3460,17 +3452,14 @@ public final class MintProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.reductionFactor_ = reductionFactor_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.distributionProportions_ = distributionProportionsBuilder_ == null
               ? distributionProportions_
               : distributionProportionsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.mintingRewardsDistributionStartEpoch_ = mintingRewardsDistributionStartEpoch_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4181,10 +4170,8 @@ public final class MintProto {
         } else {
           distributionProportionsBuilder_.mergeFrom(value);
         }
-        if (distributionProportions_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

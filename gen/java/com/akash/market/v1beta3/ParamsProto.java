@@ -78,7 +78,6 @@ public final class ParamsProto {
               com.akash.market.v1beta3.ParamsProto.Params.class, com.akash.market.v1beta3.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BID_MIN_DEPOSIT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin bidMinDeposit_;
     /**
@@ -87,7 +86,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasBidMinDeposit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bidMinDeposit_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin bid_min_deposit = 1 [json_name = "bidMinDeposit", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidMinDeposit", (.gogoproto.jsontag) = "bid_min_deposit", (.gogoproto.moretags) = "yaml:&#92;"bid_min_deposit&#92;""];</code>
@@ -130,7 +129,7 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidMinDeposit_ != null) {
         output.writeMessage(1, getBidMinDeposit());
       }
       if (orderMaxBids_ != 0) {
@@ -145,7 +144,7 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidMinDeposit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBidMinDeposit());
       }
@@ -315,19 +314,13 @@ public final class ParamsProto {
 
       // Construct using com.akash.market.v1beta3.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBidMinDepositFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -372,17 +365,14 @@ public final class ParamsProto {
 
       private void buildPartial0(com.akash.market.v1beta3.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bidMinDeposit_ = bidMinDepositBuilder_ == null
               ? bidMinDeposit_
               : bidMinDepositBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderMaxBids_ = orderMaxBids_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -556,10 +546,8 @@ public final class ParamsProto {
         } else {
           bidMinDepositBuilder_.mergeFrom(value);
         }
-        if (bidMinDeposit_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -75,7 +75,6 @@ public final class TxProto {
               com.axelar.reward.v1beta1.TxProto.RefundMsgRequest.class, com.axelar.reward.v1beta1.TxProto.RefundMsgRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -95,7 +94,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInnerMessage() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return innerMessage_ != null;
     }
     /**
      * <code>.google.protobuf.Any inner_message = 2 [json_name = "innerMessage", (.cosmos_proto.accepts_interface) = "Refundable"];</code>
@@ -130,7 +129,7 @@ public final class TxProto {
       if (!sender_.isEmpty()) {
         output.writeBytes(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (innerMessage_ != null) {
         output.writeMessage(2, getInnerMessage());
       }
       getUnknownFields().writeTo(output);
@@ -146,7 +145,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (innerMessage_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInnerMessage());
       }
@@ -308,19 +307,13 @@ public final class TxProto {
 
       // Construct using com.axelar.reward.v1beta1.TxProto.RefundMsgRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInnerMessageFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -368,14 +361,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.innerMessage_ = innerMessageBuilder_ == null
               ? innerMessage_
               : innerMessageBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -581,10 +571,8 @@ public final class TxProto {
         } else {
           innerMessageBuilder_.mergeFrom(value);
         }
-        if (innerMessage_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -195,7 +195,6 @@ public final class GenesisProto {
               com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.class, com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.crescent.lpfarm.v1beta1.LpfarmProto.Params params_;
     /**
@@ -204,7 +203,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -230,7 +229,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasLastBlockTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return lastBlockTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
@@ -448,10 +447,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (lastBlockTime_ != null) {
         output.writeMessage(2, getLastBlockTime());
       }
       if (lastPlanId_ != 0L) {
@@ -481,11 +480,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (lastBlockTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLastBlockTime());
       }
@@ -710,24 +709,13 @@ public final class GenesisProto {
 
       // Construct using com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getLastBlockTimeFieldBuilder();
-          getPlansFieldBuilder();
-          getFarmsFieldBuilder();
-          getPositionsFieldBuilder();
-          getHistoricalRewardsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -846,18 +834,15 @@ public final class GenesisProto {
 
       private void buildPartial0(com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.lastBlockTime_ = lastBlockTimeBuilder_ == null
               ? lastBlockTime_
               : lastBlockTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.lastPlanId_ = lastPlanId_;
@@ -865,7 +850,6 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.numPrivatePlans_ = numPrivatePlans_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1213,10 +1197,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1334,10 +1316,8 @@ public final class GenesisProto {
         } else {
           lastBlockTimeBuilder_.mergeFrom(value);
         }
-        if (lastBlockTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2543,7 +2523,6 @@ public final class GenesisProto {
               com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.class, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -2591,7 +2570,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasFarm() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return farm_ != null;
     }
     /**
      * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
@@ -2626,7 +2605,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (farm_ != null) {
         output.writeMessage(2, getFarm());
       }
       getUnknownFields().writeTo(output);
@@ -2641,7 +2620,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (farm_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFarm());
       }
@@ -2803,19 +2782,13 @@ public final class GenesisProto {
 
       // Construct using com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFarmFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2863,14 +2836,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denom_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.farm_ = farmBuilder_ == null
               ? farm_
               : farmBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3118,10 +3088,8 @@ public final class GenesisProto {
         } else {
           farmBuilder_.mergeFrom(value);
         }
-        if (farm_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3309,7 +3277,6 @@ public final class GenesisProto {
               com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.class, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -3368,7 +3335,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasHistoricalRewards() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return historicalRewards_ != null;
     }
     /**
      * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
@@ -3406,7 +3373,7 @@ public final class GenesisProto {
       if (period_ != 0L) {
         output.writeUInt64(2, period_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (historicalRewards_ != null) {
         output.writeMessage(3, getHistoricalRewards());
       }
       getUnknownFields().writeTo(output);
@@ -3425,7 +3392,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, period_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (historicalRewards_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getHistoricalRewards());
       }
@@ -3592,19 +3559,13 @@ public final class GenesisProto {
 
       // Construct using com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHistoricalRewardsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3656,14 +3617,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.period_ = period_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.historicalRewards_ = historicalRewardsBuilder_ == null
               ? historicalRewards_
               : historicalRewardsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3951,10 +3909,8 @@ public final class GenesisProto {
         } else {
           historicalRewardsBuilder_.mergeFrom(value);
         }
-        if (historicalRewards_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

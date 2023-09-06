@@ -143,7 +143,6 @@ public final class SlashingProto {
               com.cosmos.slashing.v1beta1.SlashingProto.ValidatorSigningInfo.class, com.cosmos.slashing.v1beta1.SlashingProto.ValidatorSigningInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -227,7 +226,7 @@ public final class SlashingProto {
      */
     @java.lang.Override
     public boolean hasJailedUntil() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return jailedUntil_ != null;
     }
     /**
      * <pre>
@@ -309,7 +308,7 @@ public final class SlashingProto {
       if (indexOffset_ != 0L) {
         output.writeInt64(3, indexOffset_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (jailedUntil_ != null) {
         output.writeMessage(4, getJailedUntil());
       }
       if (tombstoned_ != false) {
@@ -338,7 +337,7 @@ public final class SlashingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, indexOffset_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (jailedUntil_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getJailedUntil());
       }
@@ -533,19 +532,13 @@ public final class SlashingProto {
 
       // Construct using com.cosmos.slashing.v1beta1.SlashingProto.ValidatorSigningInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getJailedUntilFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -603,12 +596,10 @@ public final class SlashingProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.indexOffset_ = indexOffset_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.jailedUntil_ = jailedUntilBuilder_ == null
               ? jailedUntil_
               : jailedUntilBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.tombstoned_ = tombstoned_;
@@ -616,7 +607,6 @@ public final class SlashingProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.missedBlocksCounter_ = missedBlocksCounter_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1010,10 +1000,8 @@ public final class SlashingProto {
         } else {
           jailedUntilBuilder_.mergeFrom(value);
         }
-        if (jailedUntil_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1326,7 +1314,6 @@ public final class SlashingProto {
               com.cosmos.slashing.v1beta1.SlashingProto.Params.class, com.cosmos.slashing.v1beta1.SlashingProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SIGNED_BLOCKS_WINDOW_FIELD_NUMBER = 1;
     private long signedBlocksWindow_ = 0L;
     /**
@@ -1357,7 +1344,7 @@ public final class SlashingProto {
      */
     @java.lang.Override
     public boolean hasDowntimeJailDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return downtimeJailDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration downtime_jail_duration = 3 [json_name = "downtimeJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
@@ -1417,7 +1404,7 @@ public final class SlashingProto {
       if (!minSignedPerWindow_.isEmpty()) {
         output.writeBytes(2, minSignedPerWindow_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (downtimeJailDuration_ != null) {
         output.writeMessage(3, getDowntimeJailDuration());
       }
       if (!slashFractionDoubleSign_.isEmpty()) {
@@ -1443,7 +1430,7 @@ public final class SlashingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, minSignedPerWindow_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (downtimeJailDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDowntimeJailDuration());
       }
@@ -1630,19 +1617,13 @@ public final class SlashingProto {
 
       // Construct using com.cosmos.slashing.v1beta1.SlashingProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDowntimeJailDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1696,12 +1677,10 @@ public final class SlashingProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.minSignedPerWindow_ = minSignedPerWindow_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.downtimeJailDuration_ = downtimeJailDurationBuilder_ == null
               ? downtimeJailDuration_
               : downtimeJailDurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.slashFractionDoubleSign_ = slashFractionDoubleSign_;
@@ -1709,7 +1688,6 @@ public final class SlashingProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.slashFractionDowntime_ = slashFractionDowntime_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1971,10 +1949,8 @@ public final class SlashingProto {
         } else {
           downtimeJailDurationBuilder_.mergeFrom(value);
         }
-        if (downtimeJailDuration_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

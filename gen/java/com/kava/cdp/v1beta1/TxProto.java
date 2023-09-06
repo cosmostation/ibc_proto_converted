@@ -113,7 +113,6 @@ public final class TxProto {
               com.kava.cdp.v1beta1.TxProto.MsgCreateCDP.class, com.kava.cdp.v1beta1.TxProto.MsgCreateCDP.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -161,7 +160,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 2 [json_name = "collateral", (.gogoproto.nullable) = false];</code>
@@ -187,7 +186,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrincipal() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return principal_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin principal = 3 [json_name = "principal", (.gogoproto.nullable) = false];</code>
@@ -261,10 +260,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         output.writeMessage(2, getCollateral());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (principal_ != null) {
         output.writeMessage(3, getPrincipal());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
@@ -282,11 +281,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCollateral());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (principal_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrincipal());
       }
@@ -468,20 +467,13 @@ public final class TxProto {
 
       // Construct using com.kava.cdp.v1beta1.TxProto.MsgCreateCDP.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollateralFieldBuilder();
-          getPrincipalFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -535,23 +527,19 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.principal_ = principalBuilder_ == null
               ? principal_
               : principalBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -819,10 +807,8 @@ public final class TxProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        if (collateral_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -940,10 +926,8 @@ public final class TxProto {
         } else {
           principalBuilder_.mergeFrom(value);
         }
-        if (principal_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1712,7 +1696,6 @@ public final class TxProto {
               com.kava.cdp.v1beta1.TxProto.MsgDeposit.class, com.kava.cdp.v1beta1.TxProto.MsgDeposit.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPOSITOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object depositor_ = "";
@@ -1799,7 +1782,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false];</code>
@@ -1876,7 +1859,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         output.writeMessage(3, getCollateral());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
@@ -1897,7 +1880,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCollateral());
       }
@@ -2074,19 +2057,13 @@ public final class TxProto {
 
       // Construct using com.kava.cdp.v1beta1.TxProto.MsgDeposit.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollateralFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2139,17 +2116,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.owner_ = owner_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2489,10 +2463,8 @@ public final class TxProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        if (collateral_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3181,7 +3153,6 @@ public final class TxProto {
               com.kava.cdp.v1beta1.TxProto.MsgWithdraw.class, com.kava.cdp.v1beta1.TxProto.MsgWithdraw.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPOSITOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object depositor_ = "";
@@ -3268,7 +3239,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false];</code>
@@ -3345,7 +3316,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         output.writeMessage(3, getCollateral());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
@@ -3366,7 +3337,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCollateral());
       }
@@ -3543,19 +3514,13 @@ public final class TxProto {
 
       // Construct using com.kava.cdp.v1beta1.TxProto.MsgWithdraw.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollateralFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3608,17 +3573,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.owner_ = owner_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3958,10 +3920,8 @@ public final class TxProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        if (collateral_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4637,7 +4597,6 @@ public final class TxProto {
               com.kava.cdp.v1beta1.TxProto.MsgDrawDebt.class, com.kava.cdp.v1beta1.TxProto.MsgDrawDebt.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -4724,7 +4683,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPrincipal() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return principal_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin principal = 3 [json_name = "principal", (.gogoproto.nullable) = false];</code>
@@ -4762,7 +4721,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (principal_ != null) {
         output.writeMessage(3, getPrincipal());
       }
       getUnknownFields().writeTo(output);
@@ -4780,7 +4739,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (principal_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrincipal());
       }
@@ -4950,19 +4909,13 @@ public final class TxProto {
 
       // Construct using com.kava.cdp.v1beta1.TxProto.MsgDrawDebt.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPrincipalFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5014,14 +4967,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.principal_ = principalBuilder_ == null
               ? principal_
               : principalBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5351,10 +5301,8 @@ public final class TxProto {
         } else {
           principalBuilder_.mergeFrom(value);
         }
-        if (principal_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5958,7 +5906,6 @@ public final class TxProto {
               com.kava.cdp.v1beta1.TxProto.MsgRepayDebt.class, com.kava.cdp.v1beta1.TxProto.MsgRepayDebt.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -6045,7 +5992,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPayment() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return payment_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin payment = 3 [json_name = "payment", (.gogoproto.nullable) = false];</code>
@@ -6083,7 +6030,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (payment_ != null) {
         output.writeMessage(3, getPayment());
       }
       getUnknownFields().writeTo(output);
@@ -6101,7 +6048,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (payment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPayment());
       }
@@ -6271,19 +6218,13 @@ public final class TxProto {
 
       // Construct using com.kava.cdp.v1beta1.TxProto.MsgRepayDebt.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaymentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6335,14 +6276,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.payment_ = paymentBuilder_ == null
               ? payment_
               : paymentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6672,10 +6610,8 @@ public final class TxProto {
         } else {
           paymentBuilder_.mergeFrom(value);
         }
-        if (payment_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

@@ -123,7 +123,6 @@ public final class MsgProto {
               com.sentinel.plan.v2.MsgProto.MsgCreateRequest.class, com.sentinel.plan.v2.MsgProto.MsgCreateRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -210,7 +209,7 @@ public final class MsgProto {
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return duration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -289,7 +288,7 @@ public final class MsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bytes_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bytes_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (duration_ != null) {
         output.writeMessage(3, getDuration());
       }
       for (int i = 0; i < prices_.size(); i++) {
@@ -310,7 +309,7 @@ public final class MsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bytes_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bytes_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (duration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDuration());
       }
@@ -490,20 +489,13 @@ public final class MsgProto {
 
       // Construct using com.sentinel.plan.v2.MsgProto.MsgCreateRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDurationFieldBuilder();
-          getPricesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -575,14 +567,11 @@ public final class MsgProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bytes_ = bytes_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -951,10 +940,8 @@ public final class MsgProto {
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        if (duration_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

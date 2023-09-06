@@ -2746,7 +2746,6 @@ public final class HtlcProto {
               com.irismod.htlc.HtlcProto.AssetSupply.class, com.irismod.htlc.HtlcProto.AssetSupply.Builder.class);
     }
 
-    private int bitField0_;
     public static final int INCOMING_SUPPLY_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin incomingSupply_;
     /**
@@ -2755,7 +2754,7 @@ public final class HtlcProto {
      */
     @java.lang.Override
     public boolean hasIncomingSupply() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return incomingSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
@@ -2781,7 +2780,7 @@ public final class HtlcProto {
      */
     @java.lang.Override
     public boolean hasOutgoingSupply() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return outgoingSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
@@ -2807,7 +2806,7 @@ public final class HtlcProto {
      */
     @java.lang.Override
     public boolean hasCurrentSupply() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return currentSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
@@ -2833,7 +2832,7 @@ public final class HtlcProto {
      */
     @java.lang.Override
     public boolean hasTimeLimitedCurrentSupply() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return timeLimitedCurrentSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
@@ -2859,7 +2858,7 @@ public final class HtlcProto {
      */
     @java.lang.Override
     public boolean hasTimeElapsed() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return timeElapsed_ != null;
     }
     /**
      * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -2891,19 +2890,19 @@ public final class HtlcProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (incomingSupply_ != null) {
         output.writeMessage(1, getIncomingSupply());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (outgoingSupply_ != null) {
         output.writeMessage(2, getOutgoingSupply());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (currentSupply_ != null) {
         output.writeMessage(3, getCurrentSupply());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (timeLimitedCurrentSupply_ != null) {
         output.writeMessage(4, getTimeLimitedCurrentSupply());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (timeElapsed_ != null) {
         output.writeMessage(5, getTimeElapsed());
       }
       getUnknownFields().writeTo(output);
@@ -2915,23 +2914,23 @@ public final class HtlcProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (incomingSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIncomingSupply());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (outgoingSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOutgoingSupply());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (currentSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCurrentSupply());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (timeLimitedCurrentSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTimeLimitedCurrentSupply());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (timeElapsed_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTimeElapsed());
       }
@@ -3125,23 +3124,13 @@ public final class HtlcProto {
 
       // Construct using com.irismod.htlc.HtlcProto.AssetSupply.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIncomingSupplyFieldBuilder();
-          getOutgoingSupplyFieldBuilder();
-          getCurrentSupplyFieldBuilder();
-          getTimeLimitedCurrentSupplyFieldBuilder();
-          getTimeElapsedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3205,38 +3194,31 @@ public final class HtlcProto {
 
       private void buildPartial0(com.irismod.htlc.HtlcProto.AssetSupply result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.incomingSupply_ = incomingSupplyBuilder_ == null
               ? incomingSupply_
               : incomingSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.outgoingSupply_ = outgoingSupplyBuilder_ == null
               ? outgoingSupply_
               : outgoingSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.currentSupply_ = currentSupplyBuilder_ == null
               ? currentSupply_
               : currentSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timeLimitedCurrentSupply_ = timeLimitedCurrentSupplyBuilder_ == null
               ? timeLimitedCurrentSupply_
               : timeLimitedCurrentSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.timeElapsed_ = timeElapsedBuilder_ == null
               ? timeElapsed_
               : timeElapsedBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3442,10 +3424,8 @@ public final class HtlcProto {
         } else {
           incomingSupplyBuilder_.mergeFrom(value);
         }
-        if (incomingSupply_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3563,10 +3543,8 @@ public final class HtlcProto {
         } else {
           outgoingSupplyBuilder_.mergeFrom(value);
         }
-        if (outgoingSupply_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3684,10 +3662,8 @@ public final class HtlcProto {
         } else {
           currentSupplyBuilder_.mergeFrom(value);
         }
-        if (currentSupply_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3805,10 +3781,8 @@ public final class HtlcProto {
         } else {
           timeLimitedCurrentSupplyBuilder_.mergeFrom(value);
         }
-        if (timeLimitedCurrentSupply_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3926,10 +3900,8 @@ public final class HtlcProto {
         } else {
           timeElapsedBuilder_.mergeFrom(value);
         }
-        if (timeElapsed_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5035,7 +5007,6 @@ public final class HtlcProto {
               com.irismod.htlc.HtlcProto.AssetParam.class, com.irismod.htlc.HtlcProto.AssetParam.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object denom_ = "";
@@ -5095,7 +5066,7 @@ public final class HtlcProto {
      */
     @java.lang.Override
     public boolean hasSupplyLimit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return supplyLimit_ != null;
     }
     /**
      * <pre>
@@ -5371,7 +5342,7 @@ public final class HtlcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (supplyLimit_ != null) {
         output.writeMessage(2, getSupplyLimit());
       }
       if (active_ != false) {
@@ -5407,7 +5378,7 @@ public final class HtlcProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (supplyLimit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSupplyLimit());
       }
@@ -5624,19 +5595,13 @@ public final class HtlcProto {
 
       // Construct using com.irismod.htlc.HtlcProto.AssetParam.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSupplyLimitFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5691,12 +5656,10 @@ public final class HtlcProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.denom_ = denom_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.supplyLimit_ = supplyLimitBuilder_ == null
               ? supplyLimit_
               : supplyLimitBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.active_ = active_;
@@ -5719,7 +5682,6 @@ public final class HtlcProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.maxBlockLock_ = maxBlockLock_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6071,10 +6033,8 @@ public final class HtlcProto {
         } else {
           supplyLimitBuilder_.mergeFrom(value);
         }
-        if (supplyLimit_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6823,7 +6783,6 @@ public final class HtlcProto {
               com.irismod.htlc.HtlcProto.SupplyLimit.class, com.irismod.htlc.HtlcProto.SupplyLimit.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LIMIT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object limit_ = "";
@@ -6898,7 +6857,7 @@ public final class HtlcProto {
      */
     @java.lang.Override
     public boolean hasTimePeriod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return timePeriod_ != null;
     }
     /**
      * <pre>
@@ -6991,7 +6950,7 @@ public final class HtlcProto {
       if (timeLimited_ != false) {
         output.writeBool(2, timeLimited_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timePeriod_ != null) {
         output.writeMessage(3, getTimePeriod());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeBasedLimit_)) {
@@ -7013,7 +6972,7 @@ public final class HtlcProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, timeLimited_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timePeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimePeriod());
       }
@@ -7187,19 +7146,13 @@ public final class HtlcProto {
 
       // Construct using com.irismod.htlc.HtlcProto.SupplyLimit.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimePeriodFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7252,17 +7205,14 @@ public final class HtlcProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.timeLimited_ = timeLimited_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timePeriod_ = timePeriodBuilder_ == null
               ? timePeriod_
               : timePeriodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.timeBasedLimit_ = timeBasedLimit_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7612,10 +7562,8 @@ public final class HtlcProto {
         } else {
           timePeriodBuilder_.mergeFrom(value);
         }
-        if (timePeriod_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

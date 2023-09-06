@@ -83,7 +83,6 @@ public final class TofndProto {
               com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.class, com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEYGEN_INIT_FIELD_NUMBER = 1;
     private com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit keygenInit_;
     /**
@@ -92,7 +91,7 @@ public final class TofndProto {
      */
     @java.lang.Override
     public boolean hasKeygenInit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return keygenInit_ != null;
     }
     /**
      * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
@@ -118,7 +117,7 @@ public final class TofndProto {
      */
     @java.lang.Override
     public boolean hasKeygenOutput() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return keygenOutput_ != null;
     }
     /**
      * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
@@ -150,10 +149,10 @@ public final class TofndProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (keygenInit_ != null) {
         output.writeMessage(1, getKeygenInit());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (keygenOutput_ != null) {
         output.writeMessage(2, getKeygenOutput());
       }
       getUnknownFields().writeTo(output);
@@ -165,11 +164,11 @@ public final class TofndProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (keygenInit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getKeygenInit());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (keygenOutput_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getKeygenOutput());
       }
@@ -336,20 +335,13 @@ public final class TofndProto {
 
       // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getKeygenInitFieldBuilder();
-          getKeygenOutputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -398,20 +390,16 @@ public final class TofndProto {
 
       private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.keygenInit_ = keygenInitBuilder_ == null
               ? keygenInit_
               : keygenInitBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.keygenOutput_ = keygenOutputBuilder_ == null
               ? keygenOutput_
               : keygenOutputBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -587,10 +575,8 @@ public final class TofndProto {
         } else {
           keygenInitBuilder_.mergeFrom(value);
         }
-        if (keygenInit_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -708,10 +694,8 @@ public final class TofndProto {
         } else {
           keygenOutputBuilder_.mergeFrom(value);
         }
-        if (keygenOutput_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -10185,8 +10169,7 @@ public final class TofndProto {
 
     public static final int PARTY_SHARE_COUNTS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList partyShareCounts_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList partyShareCounts_;
     /**
      * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
      * @return A list containing the partyShareCounts.
@@ -10528,9 +10511,18 @@ public final class TofndProto {
       @java.lang.Override
       public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit buildPartial() {
         com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit result = new com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          partyShareCounts_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.partyShareCounts_ = partyShareCounts_;
       }
 
       private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit result) {
@@ -10541,10 +10533,6 @@ public final class TofndProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           partyUids_.makeImmutable();
           result.partyUids_ = partyUids_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          partyShareCounts_.makeImmutable();
-          result.partyShareCounts_ = partyShareCounts_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.myPartyIndex_ = myPartyIndex_;
@@ -10616,8 +10604,7 @@ public final class TofndProto {
         if (!other.partyShareCounts_.isEmpty()) {
           if (partyShareCounts_.isEmpty()) {
             partyShareCounts_ = other.partyShareCounts_;
-            partyShareCounts_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensurePartyShareCountsIsMutable();
             partyShareCounts_.addAll(other.partyShareCounts_);
@@ -10895,10 +10882,10 @@ public final class TofndProto {
 
       private com.google.protobuf.Internal.IntList partyShareCounts_ = emptyIntList();
       private void ensurePartyShareCountsIsMutable() {
-        if (!partyShareCounts_.isModifiable()) {
-          partyShareCounts_ = makeMutableCopy(partyShareCounts_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          partyShareCounts_ = mutableCopy(partyShareCounts_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
@@ -10906,8 +10893,8 @@ public final class TofndProto {
        */
       public java.util.List<java.lang.Integer>
           getPartyShareCountsList() {
-        partyShareCounts_.makeImmutable();
-        return partyShareCounts_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(partyShareCounts_) : partyShareCounts_;
       }
       /**
        * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
@@ -10935,7 +10922,6 @@ public final class TofndProto {
 
         ensurePartyShareCountsIsMutable();
         partyShareCounts_.setInt(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10948,7 +10934,6 @@ public final class TofndProto {
 
         ensurePartyShareCountsIsMutable();
         partyShareCounts_.addInt(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10962,7 +10947,6 @@ public final class TofndProto {
         ensurePartyShareCountsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, partyShareCounts_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

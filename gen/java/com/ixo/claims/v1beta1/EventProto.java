@@ -72,7 +72,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.class, com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COLLECTION_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.ClaimsProto.Collection collection_;
     /**
@@ -81,7 +80,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasCollection() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collection_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
@@ -113,7 +112,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collection_ != null) {
         output.writeMessage(1, getCollection());
       }
       getUnknownFields().writeTo(output);
@@ -125,7 +124,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collection_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCollection());
       }
@@ -287,19 +286,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollectionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -343,14 +336,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collection_ = collectionBuilder_ == null
               ? collection_
               : collectionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -516,10 +506,8 @@ public final class EventProto {
         } else {
           collectionBuilder_.mergeFrom(value);
         }
-        if (collection_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -692,7 +680,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.class, com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COLLECTION_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.ClaimsProto.Collection collection_;
     /**
@@ -701,7 +688,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasCollection() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collection_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
@@ -733,7 +720,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collection_ != null) {
         output.writeMessage(1, getCollection());
       }
       getUnknownFields().writeTo(output);
@@ -745,7 +732,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collection_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCollection());
       }
@@ -907,19 +894,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollectionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -963,14 +944,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collection_ = collectionBuilder_ == null
               ? collection_
               : collectionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1136,10 +1114,8 @@ public final class EventProto {
         } else {
           collectionBuilder_.mergeFrom(value);
         }
-        if (collection_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1312,7 +1288,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLAIM_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.ClaimsProto.Claim claim_;
     /**
@@ -1321,7 +1296,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return claim_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
@@ -1353,7 +1328,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claim_ != null) {
         output.writeMessage(1, getClaim());
       }
       getUnknownFields().writeTo(output);
@@ -1365,7 +1340,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClaim());
       }
@@ -1527,19 +1502,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClaimFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1583,14 +1552,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.claim_ = claimBuilder_ == null
               ? claim_
               : claimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1756,10 +1722,8 @@ public final class EventProto {
         } else {
           claimBuilder_.mergeFrom(value);
         }
-        if (claim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1932,7 +1896,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLAIM_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.ClaimsProto.Claim claim_;
     /**
@@ -1941,7 +1904,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return claim_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
@@ -1973,7 +1936,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claim_ != null) {
         output.writeMessage(1, getClaim());
       }
       getUnknownFields().writeTo(output);
@@ -1985,7 +1948,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClaim());
       }
@@ -2147,19 +2110,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClaimFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2203,14 +2160,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.claim_ = claimBuilder_ == null
               ? claim_
               : claimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2376,10 +2330,8 @@ public final class EventProto {
         } else {
           claimBuilder_.mergeFrom(value);
         }
-        if (claim_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2552,7 +2504,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EVALUATION_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.ClaimsProto.Evaluation evaluation_;
     /**
@@ -2561,7 +2512,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasEvaluation() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return evaluation_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
@@ -2593,7 +2544,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (evaluation_ != null) {
         output.writeMessage(1, getEvaluation());
       }
       getUnknownFields().writeTo(output);
@@ -2605,7 +2556,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (evaluation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEvaluation());
       }
@@ -2767,19 +2718,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEvaluationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2823,14 +2768,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.evaluation_ = evaluationBuilder_ == null
               ? evaluation_
               : evaluationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2996,10 +2938,8 @@ public final class EventProto {
         } else {
           evaluationBuilder_.mergeFrom(value);
         }
-        if (evaluation_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3172,7 +3112,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DISPUTE_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.ClaimsProto.Dispute dispute_;
     /**
@@ -3181,7 +3120,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasDispute() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return dispute_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
@@ -3213,7 +3152,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dispute_ != null) {
         output.writeMessage(1, getDispute());
       }
       getUnknownFields().writeTo(output);
@@ -3225,7 +3164,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dispute_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDispute());
       }
@@ -3387,19 +3326,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDisputeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3443,14 +3376,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dispute_ = disputeBuilder_ == null
               ? dispute_
               : disputeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3616,10 +3546,8 @@ public final class EventProto {
         } else {
           disputeBuilder_.mergeFrom(value);
         }
-        if (dispute_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3792,7 +3720,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.class, com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int WITHDRAW_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints withdraw_;
     /**
@@ -3801,7 +3728,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasWithdraw() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return withdraw_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
@@ -3833,7 +3760,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (withdraw_ != null) {
         output.writeMessage(1, getWithdraw());
       }
       getUnknownFields().writeTo(output);
@@ -3845,7 +3772,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (withdraw_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getWithdraw());
       }
@@ -4007,19 +3934,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getWithdrawFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4063,14 +3984,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.withdraw_ = withdrawBuilder_ == null
               ? withdraw_
               : withdrawBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4236,10 +4154,8 @@ public final class EventProto {
         } else {
           withdrawBuilder_.mergeFrom(value);
         }
-        if (withdraw_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4412,7 +4328,6 @@ public final class EventProto {
               com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.class, com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int WITHDRAW_FIELD_NUMBER = 1;
     private com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints withdraw_;
     /**
@@ -4421,7 +4336,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasWithdraw() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return withdraw_ != null;
     }
     /**
      * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
@@ -4453,7 +4368,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (withdraw_ != null) {
         output.writeMessage(1, getWithdraw());
       }
       getUnknownFields().writeTo(output);
@@ -4465,7 +4380,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (withdraw_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getWithdraw());
       }
@@ -4627,19 +4542,13 @@ public final class EventProto {
 
       // Construct using com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getWithdrawFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4683,14 +4592,11 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.withdraw_ = withdrawBuilder_ == null
               ? withdraw_
               : withdrawBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4856,10 +4762,8 @@ public final class EventProto {
         } else {
           withdrawBuilder_.mergeFrom(value);
         }
-        if (withdraw_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

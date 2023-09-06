@@ -140,7 +140,6 @@ public final class FeegrantProto {
               com.cosmos.feegrant.v1beta1.FeegrantProto.BasicAllowance.class, com.cosmos.feegrant.v1beta1.FeegrantProto.BasicAllowance.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SPEND_LIMIT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> spendLimit_;
@@ -224,7 +223,7 @@ public final class FeegrantProto {
      */
     @java.lang.Override
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiration_ != null;
     }
     /**
      * <pre>
@@ -267,7 +266,7 @@ public final class FeegrantProto {
       for (int i = 0; i < spendLimit_.size(); i++) {
         output.writeMessage(1, spendLimit_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         output.writeMessage(2, getExpiration());
       }
       getUnknownFields().writeTo(output);
@@ -283,7 +282,7 @@ public final class FeegrantProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, spendLimit_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getExpiration());
       }
@@ -452,20 +451,13 @@ public final class FeegrantProto {
 
       // Construct using com.cosmos.feegrant.v1beta1.FeegrantProto.BasicAllowance.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSpendLimitFieldBuilder();
-          getExpirationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -529,14 +521,11 @@ public final class FeegrantProto {
 
       private void buildPartial0(com.cosmos.feegrant.v1beta1.FeegrantProto.BasicAllowance result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.expiration_ = expirationBuilder_ == null
               ? expiration_
               : expirationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1109,10 +1098,8 @@ public final class FeegrantProto {
         } else {
           expirationBuilder_.mergeFrom(value);
         }
-        if (expiration_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1472,7 +1459,6 @@ public final class FeegrantProto {
               com.cosmos.feegrant.v1beta1.FeegrantProto.PeriodicAllowance.class, com.cosmos.feegrant.v1beta1.FeegrantProto.PeriodicAllowance.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASIC_FIELD_NUMBER = 1;
     private com.cosmos.feegrant.v1beta1.FeegrantProto.BasicAllowance basic_;
     /**
@@ -1485,7 +1471,7 @@ public final class FeegrantProto {
      */
     @java.lang.Override
     public boolean hasBasic() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return basic_ != null;
     }
     /**
      * <pre>
@@ -1524,7 +1510,7 @@ public final class FeegrantProto {
      */
     @java.lang.Override
     public boolean hasPeriod() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return period_ != null;
     }
     /**
      * <pre>
@@ -1693,7 +1679,7 @@ public final class FeegrantProto {
      */
     @java.lang.Override
     public boolean hasPeriodReset() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return periodReset_ != null;
     }
     /**
      * <pre>
@@ -1737,10 +1723,10 @@ public final class FeegrantProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (basic_ != null) {
         output.writeMessage(1, getBasic());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (period_ != null) {
         output.writeMessage(2, getPeriod());
       }
       for (int i = 0; i < periodSpendLimit_.size(); i++) {
@@ -1749,7 +1735,7 @@ public final class FeegrantProto {
       for (int i = 0; i < periodCanSpend_.size(); i++) {
         output.writeMessage(4, periodCanSpend_.get(i));
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (periodReset_ != null) {
         output.writeMessage(5, getPeriodReset());
       }
       getUnknownFields().writeTo(output);
@@ -1761,11 +1747,11 @@ public final class FeegrantProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (basic_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBasic());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (period_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPeriod());
       }
@@ -1777,7 +1763,7 @@ public final class FeegrantProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, periodCanSpend_.get(i));
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (periodReset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPeriodReset());
       }
@@ -1970,23 +1956,13 @@ public final class FeegrantProto {
 
       // Construct using com.cosmos.feegrant.v1beta1.FeegrantProto.PeriodicAllowance.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBasicFieldBuilder();
-          getPeriodFieldBuilder();
-          getPeriodSpendLimitFieldBuilder();
-          getPeriodCanSpendFieldBuilder();
-          getPeriodResetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2076,26 +2052,21 @@ public final class FeegrantProto {
 
       private void buildPartial0(com.cosmos.feegrant.v1beta1.FeegrantProto.PeriodicAllowance result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.basic_ = basicBuilder_ == null
               ? basic_
               : basicBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.period_ = periodBuilder_ == null
               ? period_
               : periodBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.periodReset_ = periodResetBuilder_ == null
               ? periodReset_
               : periodResetBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2379,10 +2350,8 @@ public final class FeegrantProto {
         } else {
           basicBuilder_.mergeFrom(value);
         }
-        if (basic_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2541,10 +2510,8 @@ public final class FeegrantProto {
         } else {
           periodBuilder_.mergeFrom(value);
         }
-        if (period_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3354,10 +3321,8 @@ public final class FeegrantProto {
         } else {
           periodResetBuilder_.mergeFrom(value);
         }
-        if (periodReset_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3609,7 +3574,6 @@ public final class FeegrantProto {
               com.cosmos.feegrant.v1beta1.FeegrantProto.AllowedMsgAllowance.class, com.cosmos.feegrant.v1beta1.FeegrantProto.AllowedMsgAllowance.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ALLOWANCE_FIELD_NUMBER = 1;
     private com.google.protobuf.Any allowance_;
     /**
@@ -3622,7 +3586,7 @@ public final class FeegrantProto {
      */
     @java.lang.Override
     public boolean hasAllowance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return allowance_ != null;
     }
     /**
      * <pre>
@@ -3715,7 +3679,7 @@ public final class FeegrantProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (allowance_ != null) {
         output.writeMessage(1, getAllowance());
       }
       for (int i = 0; i < allowedMessages_.size(); i++) {
@@ -3730,7 +3694,7 @@ public final class FeegrantProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (allowance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAllowance());
       }
@@ -3906,19 +3870,13 @@ public final class FeegrantProto {
 
       // Construct using com.cosmos.feegrant.v1beta1.FeegrantProto.AllowedMsgAllowance.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAllowanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3964,18 +3922,15 @@ public final class FeegrantProto {
 
       private void buildPartial0(com.cosmos.feegrant.v1beta1.FeegrantProto.AllowedMsgAllowance result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.allowance_ = allowanceBuilder_ == null
               ? allowance_
               : allowanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           allowedMessages_.makeImmutable();
           result.allowedMessages_ = allowedMessages_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4177,10 +4132,8 @@ public final class FeegrantProto {
         } else {
           allowanceBuilder_.mergeFrom(value);
         }
-        if (allowance_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4570,7 +4523,6 @@ public final class FeegrantProto {
               com.cosmos.feegrant.v1beta1.FeegrantProto.Grant.class, com.cosmos.feegrant.v1beta1.FeegrantProto.Grant.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GRANTER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object granter_ = "";
@@ -4677,7 +4629,7 @@ public final class FeegrantProto {
      */
     @java.lang.Override
     public boolean hasAllowance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return allowance_ != null;
     }
     /**
      * <pre>
@@ -4723,7 +4675,7 @@ public final class FeegrantProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (allowance_ != null) {
         output.writeMessage(3, getAllowance());
       }
       getUnknownFields().writeTo(output);
@@ -4741,7 +4693,7 @@ public final class FeegrantProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (allowance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAllowance());
       }
@@ -4911,19 +4863,13 @@ public final class FeegrantProto {
 
       // Construct using com.cosmos.feegrant.v1beta1.FeegrantProto.Grant.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAllowanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4975,14 +4921,11 @@ public final class FeegrantProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.grantee_ = grantee_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.allowance_ = allowanceBuilder_ == null
               ? allowance_
               : allowanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5372,10 +5315,8 @@ public final class FeegrantProto {
         } else {
           allowanceBuilder_.mergeFrom(value);
         }
-        if (allowance_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

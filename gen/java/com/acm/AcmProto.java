@@ -227,7 +227,6 @@ public final class AcmProto {
               com.acm.AcmProto.Account.class, com.acm.AcmProto.Account.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -247,7 +246,7 @@ public final class AcmProto {
      */
     @java.lang.Override
     public boolean hasPublicKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publicKey_ != null;
     }
     /**
      * <code>.crypto.PublicKey PublicKey = 2 [json_name = "PublicKey", (.gogoproto.nullable) = false];</code>
@@ -319,7 +318,7 @@ public final class AcmProto {
      */
     @java.lang.Override
     public boolean hasPermissions() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return permissions_ != null;
     }
     /**
      * <code>.permission.AccountPermissions Permissions = 6 [json_name = "Permissions", (.gogoproto.nullable) = false];</code>
@@ -513,7 +512,7 @@ public final class AcmProto {
       if (!address_.isEmpty()) {
         output.writeBytes(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         output.writeMessage(2, getPublicKey());
       }
       if (sequence_ != 0L) {
@@ -525,7 +524,7 @@ public final class AcmProto {
       if (!eVMCode_.isEmpty()) {
         output.writeBytes(5, eVMCode_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (permissions_ != null) {
         output.writeMessage(6, getPermissions());
       }
       if (!wASMCode_.isEmpty()) {
@@ -556,7 +555,7 @@ public final class AcmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPublicKey());
       }
@@ -572,7 +571,7 @@ public final class AcmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, eVMCode_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (permissions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getPermissions());
       }
@@ -798,21 +797,13 @@ public final class AcmProto {
 
       // Construct using com.acm.AcmProto.Account.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublicKeyFieldBuilder();
-          getPermissionsFieldBuilder();
-          getContractMetaFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -892,12 +883,10 @@ public final class AcmProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.publicKey_ = publicKeyBuilder_ == null
               ? publicKey_
               : publicKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.sequence_ = sequence_;
@@ -912,7 +901,6 @@ public final class AcmProto {
           result.permissions_ = permissionsBuilder_ == null
               ? permissions_
               : permissionsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.wASMCode_ = wASMCode_;
@@ -926,7 +914,6 @@ public final class AcmProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.forebear_ = forebear_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1239,10 +1226,8 @@ public final class AcmProto {
         } else {
           publicKeyBuilder_.mergeFrom(value);
         }
-        if (publicKey_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1495,10 +1480,8 @@ public final class AcmProto {
         } else {
           permissionsBuilder_.mergeFrom(value);
         }
-        if (permissions_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

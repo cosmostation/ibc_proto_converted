@@ -68,7 +68,6 @@ public final class AssetIdProto {
               com.assetmantle.schema.ids.base.AssetIdProto.AssetID.class, com.assetmantle.schema.ids.base.AssetIdProto.AssetID.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HASH_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.HashIdProto.HashID hashID_;
     /**
@@ -77,7 +76,7 @@ public final class AssetIdProto {
      */
     @java.lang.Override
     public boolean hasHashID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return hashID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.HashID hash_i_d = 1 [json_name = "hashID"];</code>
@@ -109,7 +108,7 @@ public final class AssetIdProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (hashID_ != null) {
         output.writeMessage(1, getHashID());
       }
       getUnknownFields().writeTo(output);
@@ -121,7 +120,7 @@ public final class AssetIdProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (hashID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHashID());
       }
@@ -279,19 +278,13 @@ public final class AssetIdProto {
 
       // Construct using com.assetmantle.schema.ids.base.AssetIdProto.AssetID.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHashIDFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -335,14 +328,11 @@ public final class AssetIdProto {
 
       private void buildPartial0(com.assetmantle.schema.ids.base.AssetIdProto.AssetID result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.hashID_ = hashIDBuilder_ == null
               ? hashID_
               : hashIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -508,10 +498,8 @@ public final class AssetIdProto {
         } else {
           hashIDBuilder_.mergeFrom(value);
         }
-        if (hashID_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

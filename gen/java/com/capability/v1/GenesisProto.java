@@ -94,7 +94,6 @@ public final class GenesisProto {
               com.capability.v1.GenesisProto.GenesisOwners.class, com.capability.v1.GenesisProto.GenesisOwners.Builder.class);
     }
 
-    private int bitField0_;
     public static final int INDEX_FIELD_NUMBER = 1;
     private long index_ = 0L;
     /**
@@ -122,7 +121,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasIndexOwners() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return indexOwners_ != null;
     }
     /**
      * <pre>
@@ -165,7 +164,7 @@ public final class GenesisProto {
       if (index_ != 0L) {
         output.writeUInt64(1, index_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (indexOwners_ != null) {
         output.writeMessage(2, getIndexOwners());
       }
       getUnknownFields().writeTo(output);
@@ -181,7 +180,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, index_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (indexOwners_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getIndexOwners());
       }
@@ -348,19 +347,13 @@ public final class GenesisProto {
 
       // Construct using com.capability.v1.GenesisProto.GenesisOwners.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIndexOwnersFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -408,14 +401,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.index_ = index_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.indexOwners_ = indexOwnersBuilder_ == null
               ? indexOwners_
               : indexOwnersBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -653,10 +643,8 @@ public final class GenesisProto {
         } else {
           indexOwnersBuilder_.mergeFrom(value);
         }
-        if (indexOwners_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

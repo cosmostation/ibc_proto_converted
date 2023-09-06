@@ -6466,7 +6466,6 @@ public final class ProposalProto {
               com.injective.oracle.v1beta1.ProposalProto.AuthorizeBandOracleRequestProposal.class, com.injective.oracle.v1beta1.ProposalProto.AuthorizeBandOracleRequestProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -6553,7 +6552,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return request_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.BandOracleRequest request = 3 [json_name = "request", (.gogoproto.nullable) = false];</code>
@@ -6591,7 +6590,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (request_ != null) {
         output.writeMessage(3, getRequest());
       }
       getUnknownFields().writeTo(output);
@@ -6609,7 +6608,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (request_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRequest());
       }
@@ -6775,19 +6774,13 @@ public final class ProposalProto {
 
       // Construct using com.injective.oracle.v1beta1.ProposalProto.AuthorizeBandOracleRequestProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRequestFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6839,14 +6832,11 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.request_ = requestBuilder_ == null
               ? request_
               : requestBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7176,10 +7166,8 @@ public final class ProposalProto {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        if (request_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -7392,7 +7380,6 @@ public final class ProposalProto {
               com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal.class, com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -7473,8 +7460,7 @@ public final class ProposalProto {
 
     public static final int DELETE_REQUEST_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList deleteRequestIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList deleteRequestIds_;
     /**
      * <code>repeated uint64 delete_request_ids = 3 [json_name = "deleteRequestIds"];</code>
      * @return A list containing the deleteRequestIds.
@@ -7509,7 +7495,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasUpdateOracleRequest() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return updateOracleRequest_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.BandOracleRequest update_oracle_request = 4 [json_name = "updateOracleRequest"];</code>
@@ -7555,7 +7541,7 @@ public final class ProposalProto {
       for (int i = 0; i < deleteRequestIds_.size(); i++) {
         output.writeUInt64NoTag(deleteRequestIds_.getLong(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (updateOracleRequest_ != null) {
         output.writeMessage(4, getUpdateOracleRequest());
       }
       getUnknownFields().writeTo(output);
@@ -7587,7 +7573,7 @@ public final class ProposalProto {
         }
         deleteRequestIdsMemoizedSerializedSize = dataSize;
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (updateOracleRequest_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getUpdateOracleRequest());
       }
@@ -7759,19 +7745,13 @@ public final class ProposalProto {
 
       // Construct using com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUpdateOracleRequestFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7811,9 +7791,18 @@ public final class ProposalProto {
       @java.lang.Override
       public com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal buildPartial() {
         com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal result = new com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          deleteRequestIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.deleteRequestIds_ = deleteRequestIds_;
       }
 
       private void buildPartial0(com.injective.oracle.v1beta1.ProposalProto.UpdateBandOracleRequestProposal result) {
@@ -7824,18 +7813,11 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          deleteRequestIds_.makeImmutable();
-          result.deleteRequestIds_ = deleteRequestIds_;
-        }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.updateOracleRequest_ = updateOracleRequestBuilder_ == null
               ? updateOracleRequest_
               : updateOracleRequestBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7895,8 +7877,7 @@ public final class ProposalProto {
         if (!other.deleteRequestIds_.isEmpty()) {
           if (deleteRequestIds_.isEmpty()) {
             deleteRequestIds_ = other.deleteRequestIds_;
-            deleteRequestIds_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureDeleteRequestIdsIsMutable();
             deleteRequestIds_.addAll(other.deleteRequestIds_);
@@ -8128,10 +8109,10 @@ public final class ProposalProto {
 
       private com.google.protobuf.Internal.LongList deleteRequestIds_ = emptyLongList();
       private void ensureDeleteRequestIdsIsMutable() {
-        if (!deleteRequestIds_.isModifiable()) {
-          deleteRequestIds_ = makeMutableCopy(deleteRequestIds_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          deleteRequestIds_ = mutableCopy(deleteRequestIds_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 delete_request_ids = 3 [json_name = "deleteRequestIds"];</code>
@@ -8139,8 +8120,8 @@ public final class ProposalProto {
        */
       public java.util.List<java.lang.Long>
           getDeleteRequestIdsList() {
-        deleteRequestIds_.makeImmutable();
-        return deleteRequestIds_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(deleteRequestIds_) : deleteRequestIds_;
       }
       /**
        * <code>repeated uint64 delete_request_ids = 3 [json_name = "deleteRequestIds"];</code>
@@ -8168,7 +8149,6 @@ public final class ProposalProto {
 
         ensureDeleteRequestIdsIsMutable();
         deleteRequestIds_.setLong(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8181,7 +8161,6 @@ public final class ProposalProto {
 
         ensureDeleteRequestIdsIsMutable();
         deleteRequestIds_.addLong(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8195,7 +8174,6 @@ public final class ProposalProto {
         ensureDeleteRequestIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, deleteRequestIds_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8276,10 +8254,8 @@ public final class ProposalProto {
         } else {
           updateOracleRequestBuilder_.mergeFrom(value);
         }
-        if (updateOracleRequest_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -8474,7 +8450,6 @@ public final class ProposalProto {
               com.injective.oracle.v1beta1.ProposalProto.EnableBandIBCProposal.class, com.injective.oracle.v1beta1.ProposalProto.EnableBandIBCProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -8561,7 +8536,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasBandIbcParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bandIbcParams_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.BandIBCParams band_ibc_params = 3 [json_name = "bandIbcParams", (.gogoproto.nullable) = false];</code>
@@ -8599,7 +8574,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bandIbcParams_ != null) {
         output.writeMessage(3, getBandIbcParams());
       }
       getUnknownFields().writeTo(output);
@@ -8617,7 +8592,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bandIbcParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBandIbcParams());
       }
@@ -8783,19 +8758,13 @@ public final class ProposalProto {
 
       // Construct using com.injective.oracle.v1beta1.ProposalProto.EnableBandIBCProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBandIbcParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8847,14 +8816,11 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.bandIbcParams_ = bandIbcParamsBuilder_ == null
               ? bandIbcParams_
               : bandIbcParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9184,10 +9150,8 @@ public final class ProposalProto {
         } else {
           bandIbcParamsBuilder_.mergeFrom(value);
         }
-        if (bandIbcParams_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

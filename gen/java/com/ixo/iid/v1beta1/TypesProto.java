@@ -8503,7 +8503,6 @@ public final class TypesProto {
               com.ixo.iid.v1beta1.TypesProto.IidMetadata.class, com.ixo.iid.v1beta1.TypesProto.IidMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VERSIONID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object versionId_ = "";
@@ -8551,7 +8550,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasCreated() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return created_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created = 2 [json_name = "created", (.gogoproto.stdtime) = true];</code>
@@ -8577,7 +8576,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasUpdated() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return updated_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated = 3 [json_name = "updated", (.gogoproto.stdtime) = true];</code>
@@ -8623,10 +8622,10 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (created_ != null) {
         output.writeMessage(2, getCreated());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (updated_ != null) {
         output.writeMessage(3, getUpdated());
       }
       if (deactivated_ != false) {
@@ -8644,11 +8643,11 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, versionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (created_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCreated());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (updated_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdated());
       }
@@ -8828,20 +8827,13 @@ public final class TypesProto {
 
       // Construct using com.ixo.iid.v1beta1.TypesProto.IidMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreatedFieldBuilder();
-          getUpdatedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8895,23 +8887,19 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.versionId_ = versionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.created_ = createdBuilder_ == null
               ? created_
               : createdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.updated_ = updatedBuilder_ == null
               ? updated_
               : updatedBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.deactivated_ = deactivated_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9177,10 +9165,8 @@ public final class TypesProto {
         } else {
           createdBuilder_.mergeFrom(value);
         }
-        if (created_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -9298,10 +9284,8 @@ public final class TypesProto {
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-        if (updated_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

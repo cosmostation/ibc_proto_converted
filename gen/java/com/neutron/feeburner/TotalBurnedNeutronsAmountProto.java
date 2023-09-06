@@ -72,7 +72,6 @@ public final class TotalBurnedNeutronsAmountProto {
               com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.class, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COIN_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
     /**
@@ -81,7 +80,7 @@ public final class TotalBurnedNeutronsAmountProto {
      */
     @java.lang.Override
     public boolean hasCoin() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return coin_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
@@ -113,7 +112,7 @@ public final class TotalBurnedNeutronsAmountProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coin_ != null) {
         output.writeMessage(1, getCoin());
       }
       getUnknownFields().writeTo(output);
@@ -125,7 +124,7 @@ public final class TotalBurnedNeutronsAmountProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (coin_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCoin());
       }
@@ -287,19 +286,13 @@ public final class TotalBurnedNeutronsAmountProto {
 
       // Construct using com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCoinFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -343,14 +336,11 @@ public final class TotalBurnedNeutronsAmountProto {
 
       private void buildPartial0(com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.coin_ = coinBuilder_ == null
               ? coin_
               : coinBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -516,10 +506,8 @@ public final class TotalBurnedNeutronsAmountProto {
         } else {
           coinBuilder_.mergeFrom(value);
         }
-        if (coin_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

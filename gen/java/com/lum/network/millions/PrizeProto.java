@@ -276,7 +276,6 @@ public final class PrizeProto {
               com.lum.network.millions.PrizeProto.Prize.class, com.lum.network.millions.PrizeProto.Prize.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -375,7 +374,7 @@ public final class PrizeProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -423,7 +422,7 @@ public final class PrizeProto {
      */
     @java.lang.Override
     public boolean hasExpiresAt() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return expiresAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -449,7 +448,7 @@ public final class PrizeProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -475,7 +474,7 @@ public final class PrizeProto {
      */
     @java.lang.Override
     public boolean hasUpdatedAt() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -522,7 +521,7 @@ public final class PrizeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winnerAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, winnerAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(6, getAmount());
       }
       if (createdAtHeight_ != 0L) {
@@ -531,13 +530,13 @@ public final class PrizeProto {
       if (updatedAtHeight_ != 0L) {
         output.writeInt64(8, updatedAtHeight_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (expiresAt_ != null) {
         output.writeMessage(9, getExpiresAt());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (createdAt_ != null) {
         output.writeMessage(10, getCreatedAt());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (updatedAt_ != null) {
         output.writeMessage(11, getUpdatedAt());
       }
       getUnknownFields().writeTo(output);
@@ -568,7 +567,7 @@ public final class PrizeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winnerAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, winnerAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAmount());
       }
@@ -580,15 +579,15 @@ public final class PrizeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, updatedAtHeight_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (expiresAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getExpiresAt());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getCreatedAt());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (updatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getUpdatedAt());
       }
@@ -805,22 +804,13 @@ public final class PrizeProto {
 
       // Construct using com.lum.network.millions.PrizeProto.Prize.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-          getExpiresAtFieldBuilder();
-          getCreatedAtFieldBuilder();
-          getUpdatedAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -901,12 +891,10 @@ public final class PrizeProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.winnerAddress_ = winnerAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.createdAtHeight_ = createdAtHeight_;
@@ -918,21 +906,17 @@ public final class PrizeProto {
           result.expiresAt_ = expiresAtBuilder_ == null
               ? expiresAt_
               : expiresAtBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.updatedAt_ = updatedAtBuilder_ == null
               ? updatedAt_
               : updatedAtBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1407,10 +1391,8 @@ public final class PrizeProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1592,10 +1574,8 @@ public final class PrizeProto {
         } else {
           expiresAtBuilder_.mergeFrom(value);
         }
-        if (expiresAt_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -1713,10 +1693,8 @@ public final class PrizeProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        if (createdAt_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -1834,10 +1812,8 @@ public final class PrizeProto {
         } else {
           updatedAtBuilder_.mergeFrom(value);
         }
-        if (updatedAt_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**

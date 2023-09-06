@@ -1634,7 +1634,6 @@ public final class MetadataProto {
               com.provenance.metadata.v1.MetadataProto.SessionIdInfo.class, com.provenance.metadata.v1.MetadataProto.SessionIdInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SESSION_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -1801,7 +1800,7 @@ public final class MetadataProto {
      */
     @java.lang.Override
     public boolean hasScopeIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return scopeIdInfo_ != null;
     }
     /**
      * <pre>
@@ -1859,7 +1858,7 @@ public final class MetadataProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionUuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sessionUuid_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         output.writeMessage(7, getScopeIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -1893,7 +1892,7 @@ public final class MetadataProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionUuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sessionUuid_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getScopeIdInfo());
       }
@@ -2079,19 +2078,13 @@ public final class MetadataProto {
 
       // Construct using com.provenance.metadata.v1.MetadataProto.SessionIdInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScopeIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2159,14 +2152,11 @@ public final class MetadataProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.sessionUuid_ = sessionUuid_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.scopeIdInfo_ = scopeIdInfoBuilder_ == null
               ? scopeIdInfo_
               : scopeIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2764,10 +2754,8 @@ public final class MetadataProto {
         } else {
           scopeIdInfoBuilder_.mergeFrom(value);
         }
-        if (scopeIdInfo_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3033,7 +3021,6 @@ public final class MetadataProto {
               com.provenance.metadata.v1.MetadataProto.RecordIdInfo.class, com.provenance.metadata.v1.MetadataProto.RecordIdInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECORD_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString recordId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -3153,7 +3140,7 @@ public final class MetadataProto {
      */
     @java.lang.Override
     public boolean hasScopeIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return scopeIdInfo_ != null;
     }
     /**
      * <pre>
@@ -3208,7 +3195,7 @@ public final class MetadataProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, recordAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         output.writeMessage(6, getScopeIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -3239,7 +3226,7 @@ public final class MetadataProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, recordAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (scopeIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getScopeIdInfo());
       }
@@ -3421,19 +3408,13 @@ public final class MetadataProto {
 
       // Construct using com.provenance.metadata.v1.MetadataProto.RecordIdInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScopeIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3497,14 +3478,11 @@ public final class MetadataProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.recordAddr_ = recordAddr_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.scopeIdInfo_ = scopeIdInfoBuilder_ == null
               ? scopeIdInfo_
               : scopeIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4000,10 +3978,8 @@ public final class MetadataProto {
         } else {
           scopeIdInfoBuilder_.mergeFrom(value);
         }
-        if (scopeIdInfo_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -6387,7 +6363,6 @@ public final class MetadataProto {
               com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.class, com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECORD_SPEC_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString recordSpecId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -6507,7 +6482,7 @@ public final class MetadataProto {
      */
     @java.lang.Override
     public boolean hasContractSpecIdInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return contractSpecIdInfo_ != null;
     }
     /**
      * <pre>
@@ -6562,7 +6537,7 @@ public final class MetadataProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, recordSpecAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractSpecIdInfo_ != null) {
         output.writeMessage(6, getContractSpecIdInfo());
       }
       getUnknownFields().writeTo(output);
@@ -6593,7 +6568,7 @@ public final class MetadataProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, recordSpecAddr_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contractSpecIdInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getContractSpecIdInfo());
       }
@@ -6775,19 +6750,13 @@ public final class MetadataProto {
 
       // Construct using com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContractSpecIdInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6851,14 +6820,11 @@ public final class MetadataProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.recordSpecAddr_ = recordSpecAddr_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.contractSpecIdInfo_ = contractSpecIdInfoBuilder_ == null
               ? contractSpecIdInfo_
               : contractSpecIdInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7354,10 +7320,8 @@ public final class MetadataProto {
         } else {
           contractSpecIdInfoBuilder_.mergeFrom(value);
         }
-        if (contractSpecIdInfo_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

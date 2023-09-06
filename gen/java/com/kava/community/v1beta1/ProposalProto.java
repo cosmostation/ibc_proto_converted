@@ -2284,7 +2284,6 @@ public final class ProposalProto {
               com.kava.community.v1beta1.ProposalProto.CommunityCDPRepayDebtProposal.class, com.kava.community.v1beta1.ProposalProto.CommunityCDPRepayDebtProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -2410,7 +2409,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasPayment() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return payment_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin payment = 4 [json_name = "payment", (.gogoproto.nullable) = false];</code>
@@ -2451,7 +2450,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (payment_ != null) {
         output.writeMessage(4, getPayment());
       }
       getUnknownFields().writeTo(output);
@@ -2472,7 +2471,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (payment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPayment());
       }
@@ -2647,19 +2646,13 @@ public final class ProposalProto {
 
       // Construct using com.kava.community.v1beta1.ProposalProto.CommunityCDPRepayDebtProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaymentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2715,14 +2708,11 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.payment_ = paymentBuilder_ == null
               ? payment_
               : paymentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3134,10 +3124,8 @@ public final class ProposalProto {
         } else {
           paymentBuilder_.mergeFrom(value);
         }
-        if (payment_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3350,7 +3338,6 @@ public final class ProposalProto {
               com.kava.community.v1beta1.ProposalProto.CommunityCDPWithdrawCollateralProposal.class, com.kava.community.v1beta1.ProposalProto.CommunityCDPWithdrawCollateralProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -3476,7 +3463,7 @@ public final class ProposalProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 4 [json_name = "collateral", (.gogoproto.nullable) = false];</code>
@@ -3517,7 +3504,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         output.writeMessage(4, getCollateral());
       }
       getUnknownFields().writeTo(output);
@@ -3538,7 +3525,7 @@ public final class ProposalProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCollateral());
       }
@@ -3713,19 +3700,13 @@ public final class ProposalProto {
 
       // Construct using com.kava.community.v1beta1.ProposalProto.CommunityCDPWithdrawCollateralProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollateralFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3781,14 +3762,11 @@ public final class ProposalProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4200,10 +4178,8 @@ public final class ProposalProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        if (collateral_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

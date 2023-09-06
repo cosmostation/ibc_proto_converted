@@ -226,7 +226,6 @@ public final class ExtendedPairVaultProto {
               com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.class, com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -646,7 +645,7 @@ public final class ExtendedPairVaultProto {
      */
     @java.lang.Override
     public boolean hasBlockTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blockTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp block_time = 18 [json_name = "blockTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"block_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -729,7 +728,7 @@ public final class ExtendedPairVaultProto {
       if (blockHeight_ != 0L) {
         output.writeInt64(17, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockTime_ != null) {
         output.writeMessage(18, getBlockTime());
       }
       getUnknownFields().writeTo(output);
@@ -801,7 +800,7 @@ public final class ExtendedPairVaultProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(17, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getBlockTime());
       }
@@ -1036,19 +1035,13 @@ public final class ExtendedPairVaultProto {
 
       // Construct using com.comdex.asset.v1beta1.ExtendedPairVaultProto.ExtendedPairVault.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBlockTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1160,14 +1153,11 @@ public final class ExtendedPairVaultProto {
         if (((from_bitField0_ & 0x00010000) != 0)) {
           result.blockHeight_ = blockHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00020000) != 0)) {
           result.blockTime_ = blockTimeBuilder_ == null
               ? blockTime_
               : blockTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2349,10 +2339,8 @@ public final class ExtendedPairVaultProto {
         } else {
           blockTimeBuilder_.mergeFrom(value);
         }
-        if (blockTime_ != null) {
-          bitField0_ |= 0x00020000;
-          onChanged();
-        }
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**

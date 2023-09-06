@@ -2258,7 +2258,7 @@ public final class TxProto {
     private ConfirmGatewayTxsRequest() {
       sender_ = com.google.protobuf.ByteString.EMPTY;
       chain_ = "";
-      txIds_ = emptyList(com.google.protobuf.ByteString.class);
+      txIds_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2333,8 +2333,7 @@ public final class TxProto {
 
     public static final int TX_IDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txIds_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> txIds_;
     /**
      * <code>repeated bytes tx_ids = 3 [json_name = "txIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Hash", (.gogoproto.customname) = "TxIDs"];</code>
      * @return A list containing the txIds.
@@ -2581,7 +2580,7 @@ public final class TxProto {
         bitField0_ = 0;
         sender_ = com.google.protobuf.ByteString.EMPTY;
         chain_ = "";
-        txIds_ = emptyList(com.google.protobuf.ByteString.class);
+        txIds_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -2608,9 +2607,18 @@ public final class TxProto {
       @java.lang.Override
       public com.axelar.evm.v1beta1.TxProto.ConfirmGatewayTxsRequest buildPartial() {
         com.axelar.evm.v1beta1.TxProto.ConfirmGatewayTxsRequest result = new com.axelar.evm.v1beta1.TxProto.ConfirmGatewayTxsRequest(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.evm.v1beta1.TxProto.ConfirmGatewayTxsRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          txIds_ = java.util.Collections.unmodifiableList(txIds_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.txIds_ = txIds_;
       }
 
       private void buildPartial0(com.axelar.evm.v1beta1.TxProto.ConfirmGatewayTxsRequest result) {
@@ -2620,10 +2628,6 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chain_ = chain_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          txIds_.makeImmutable();
-          result.txIds_ = txIds_;
         }
       }
 
@@ -2682,8 +2686,7 @@ public final class TxProto {
         if (!other.txIds_.isEmpty()) {
           if (txIds_.isEmpty()) {
             txIds_ = other.txIds_;
-            txIds_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTxIdsIsMutable();
             txIds_.addAll(other.txIds_);
@@ -2853,12 +2856,12 @@ public final class TxProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> txIds_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> txIds_ = java.util.Collections.emptyList();
       private void ensureTxIdsIsMutable() {
-        if (!txIds_.isModifiable()) {
-          txIds_ = makeMutableCopy(txIds_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          txIds_ = new java.util.ArrayList<com.google.protobuf.ByteString>(txIds_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bytes tx_ids = 3 [json_name = "txIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Hash", (.gogoproto.customname) = "TxIDs"];</code>
@@ -2866,8 +2869,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getTxIdsList() {
-        txIds_.makeImmutable();
-        return txIds_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(txIds_) : txIds_;
       }
       /**
        * <code>repeated bytes tx_ids = 3 [json_name = "txIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Hash", (.gogoproto.customname) = "TxIDs"];</code>
@@ -2895,7 +2898,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxIdsIsMutable();
         txIds_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2908,7 +2910,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureTxIdsIsMutable();
         txIds_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2922,7 +2923,6 @@ public final class TxProto {
         ensureTxIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, txIds_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2931,7 +2931,7 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearTxIds() {
-        txIds_ = emptyList(com.google.protobuf.ByteString.class);
+        txIds_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -4741,7 +4741,6 @@ public final class TxProto {
               com.axelar.evm.v1beta1.TxProto.ConfirmTokenRequest.class, com.axelar.evm.v1beta1.TxProto.ConfirmTokenRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -4811,7 +4810,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.Asset asset = 4 [json_name = "asset", (.gogoproto.nullable) = false];</code>
@@ -4852,7 +4851,7 @@ public final class TxProto {
       if (!txId_.isEmpty()) {
         output.writeBytes(3, txId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(4, getAsset());
       }
       getUnknownFields().writeTo(output);
@@ -4875,7 +4874,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, txId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getAsset());
       }
@@ -5049,19 +5048,13 @@ public final class TxProto {
 
       // Construct using com.axelar.evm.v1beta1.TxProto.ConfirmTokenRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5117,14 +5110,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.txId_ = txId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5452,10 +5442,8 @@ public final class TxProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9839,7 +9827,6 @@ public final class TxProto {
               com.axelar.evm.v1beta1.TxProto.CreateDeployTokenRequest.class, com.axelar.evm.v1beta1.TxProto.CreateDeployTokenRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -9898,7 +9885,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
@@ -9924,7 +9911,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTokenDetails() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return tokenDetails_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.TokenDetails token_details = 4 [json_name = "tokenDetails", (.gogoproto.nullable) = false];</code>
@@ -10012,10 +9999,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(3, getAsset());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (tokenDetails_ != null) {
         output.writeMessage(4, getTokenDetails());
       }
       if (!address_.isEmpty()) {
@@ -10040,11 +10027,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAsset());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (tokenDetails_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTokenDetails());
       }
@@ -10239,20 +10226,13 @@ public final class TxProto {
 
       // Construct using com.axelar.evm.v1beta1.TxProto.CreateDeployTokenRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-          getTokenDetailsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10311,18 +10291,15 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chain_ = chain_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.tokenDetails_ = tokenDetailsBuilder_ == null
               ? tokenDetails_
               : tokenDetailsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.address_ = address_;
@@ -10330,7 +10307,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.dailyMintLimit_ = dailyMintLimit_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10646,10 +10622,8 @@ public final class TxProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10767,10 +10741,8 @@ public final class TxProto {
         } else {
           tokenDetailsBuilder_.mergeFrom(value);
         }
-        if (tokenDetails_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

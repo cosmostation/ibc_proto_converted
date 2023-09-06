@@ -6474,7 +6474,6 @@ public final class TxProto {
               com.shentu.oracle.v1alpha1.TxProto.MsgCreateTask.class, com.shentu.oracle.v1alpha1.TxProto.MsgCreateTask.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTRACT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contract_ = "";
@@ -6691,7 +6690,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasValidDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration valid_duration = 7 [json_name = "validDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"valid_duration&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -6741,7 +6740,7 @@ public final class TxProto {
       if (wait_ != 0L) {
         output.writeInt64(6, wait_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validDuration_ != null) {
         output.writeMessage(7, getValidDuration());
       }
       getUnknownFields().writeTo(output);
@@ -6773,7 +6772,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, wait_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getValidDuration());
       }
@@ -6958,20 +6957,13 @@ public final class TxProto {
 
       // Construct using com.shentu.oracle.v1alpha1.TxProto.MsgCreateTask.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBountyFieldBuilder();
-          getValidDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7055,14 +7047,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.wait_ = wait_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.validDuration_ = validDurationBuilder_ == null
               ? validDuration_
               : validDurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7875,10 +7864,8 @@ public final class TxProto {
         } else {
           validDurationBuilder_.mergeFrom(value);
         }
-        if (validDuration_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -11142,7 +11129,6 @@ public final class TxProto {
               com.shentu.oracle.v1alpha1.TxProto.MsgCreateTxTask.class, com.shentu.oracle.v1alpha1.TxProto.MsgCreateTxTask.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -11285,7 +11271,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasValidTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp valid_time = 5 [json_name = "validTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"valid_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -11329,7 +11315,7 @@ public final class TxProto {
       for (int i = 0; i < bounty_.size(); i++) {
         output.writeMessage(4, bounty_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validTime_ != null) {
         output.writeMessage(5, getValidTime());
       }
       getUnknownFields().writeTo(output);
@@ -11355,7 +11341,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, bounty_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getValidTime());
       }
@@ -11531,20 +11517,13 @@ public final class TxProto {
 
       // Construct using com.shentu.oracle.v1alpha1.TxProto.MsgCreateTxTask.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBountyFieldBuilder();
-          getValidTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11620,14 +11599,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.atxBytes_ = atxBytes_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.validTime_ = validTimeBuilder_ == null
               ? validTime_
               : validTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12288,10 +12264,8 @@ public final class TxProto {
         } else {
           validTimeBuilder_.mergeFrom(value);
         }
-        if (validTime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

@@ -88,7 +88,7 @@ public final class GenesisProto {
     }
     private GenesisState() {
       contentIdRecords_ = java.util.Collections.emptyList();
-      iscnRecords_ = emptyList(com.google.protobuf.ByteString.class);
+      iscnRecords_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -884,7 +884,6 @@ public final class GenesisProto {
 
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.likechain.iscn.ParamsProto.Params params_;
     /**
@@ -893,7 +892,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.likechain.iscn.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -954,8 +953,7 @@ public final class GenesisProto {
 
     public static final int ISCN_RECORDS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> iscnRecords_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> iscnRecords_;
     /**
      * <code>repeated bytes iscn_records = 3 [json_name = "iscnRecords", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
      * @return A list containing the iscnRecords.
@@ -995,7 +993,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < contentIdRecords_.size(); i++) {
@@ -1013,7 +1011,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -1196,20 +1194,13 @@ public final class GenesisProto {
 
       // Construct using com.likechain.iscn.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getContentIdRecordsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1227,7 +1218,7 @@ public final class GenesisProto {
           contentIdRecordsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
-        iscnRecords_ = emptyList(com.google.protobuf.ByteString.class);
+        iscnRecords_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -1270,22 +1261,20 @@ public final class GenesisProto {
         } else {
           result.contentIdRecords_ = contentIdRecordsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          iscnRecords_ = java.util.Collections.unmodifiableList(iscnRecords_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.iscnRecords_ = iscnRecords_;
       }
 
       private void buildPartial0(com.likechain.iscn.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          iscnRecords_.makeImmutable();
-          result.iscnRecords_ = iscnRecords_;
-        }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1364,8 +1353,7 @@ public final class GenesisProto {
         if (!other.iscnRecords_.isEmpty()) {
           if (iscnRecords_.isEmpty()) {
             iscnRecords_ = other.iscnRecords_;
-            iscnRecords_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureIscnRecordsIsMutable();
             iscnRecords_.addAll(other.iscnRecords_);
@@ -1507,10 +1495,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1802,12 +1788,12 @@ public final class GenesisProto {
         return contentIdRecordsBuilder_;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> iscnRecords_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> iscnRecords_ = java.util.Collections.emptyList();
       private void ensureIscnRecordsIsMutable() {
-        if (!iscnRecords_.isModifiable()) {
-          iscnRecords_ = makeMutableCopy(iscnRecords_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          iscnRecords_ = new java.util.ArrayList<com.google.protobuf.ByteString>(iscnRecords_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bytes iscn_records = 3 [json_name = "iscnRecords", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
@@ -1815,8 +1801,8 @@ public final class GenesisProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getIscnRecordsList() {
-        iscnRecords_.makeImmutable();
-        return iscnRecords_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(iscnRecords_) : iscnRecords_;
       }
       /**
        * <code>repeated bytes iscn_records = 3 [json_name = "iscnRecords", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
@@ -1844,7 +1830,6 @@ public final class GenesisProto {
         if (value == null) { throw new NullPointerException(); }
         ensureIscnRecordsIsMutable();
         iscnRecords_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1857,7 +1842,6 @@ public final class GenesisProto {
         if (value == null) { throw new NullPointerException(); }
         ensureIscnRecordsIsMutable();
         iscnRecords_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1871,7 +1855,6 @@ public final class GenesisProto {
         ensureIscnRecordsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, iscnRecords_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1880,7 +1863,7 @@ public final class GenesisProto {
        * @return This builder for chaining.
        */
       public Builder clearIscnRecords() {
-        iscnRecords_ = emptyList(com.google.protobuf.ByteString.class);
+        iscnRecords_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;

@@ -228,7 +228,6 @@ public final class VestingProto {
               com.evmos.vesting.v1.VestingProto.ClawbackVestingAccount.class, com.evmos.vesting.v1.VestingProto.ClawbackVestingAccount.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_VESTING_ACCOUNT_FIELD_NUMBER = 1;
     private com.cosmos.vesting.v1beta1.VestingProto.BaseVestingAccount baseVestingAccount_;
     /**
@@ -242,7 +241,7 @@ public final class VestingProto {
      */
     @java.lang.Override
     public boolean hasBaseVestingAccount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseVestingAccount_ != null;
     }
     /**
      * <pre>
@@ -329,7 +328,7 @@ public final class VestingProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -491,13 +490,13 @@ public final class VestingProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseVestingAccount_ != null) {
         output.writeMessage(1, getBaseVestingAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funderAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, funderAddress_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(3, getStartTime());
       }
       for (int i = 0; i < lockupPeriods_.size(); i++) {
@@ -515,14 +514,14 @@ public final class VestingProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseVestingAccount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseVestingAccount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funderAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, funderAddress_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStartTime());
       }
@@ -720,22 +719,13 @@ public final class VestingProto {
 
       // Construct using com.evmos.vesting.v1.VestingProto.ClawbackVestingAccount.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseVestingAccountFieldBuilder();
-          getStartTimeFieldBuilder();
-          getLockupPeriodsFieldBuilder();
-          getVestingPeriodsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -821,12 +811,10 @@ public final class VestingProto {
 
       private void buildPartial0(com.evmos.vesting.v1.VestingProto.ClawbackVestingAccount result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseVestingAccount_ = baseVestingAccountBuilder_ == null
               ? baseVestingAccount_
               : baseVestingAccountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.funderAddress_ = funderAddress_;
@@ -835,9 +823,7 @@ public final class VestingProto {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1126,10 +1112,8 @@ public final class VestingProto {
         } else {
           baseVestingAccountBuilder_.mergeFrom(value);
         }
-        if (baseVestingAccount_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1379,10 +1363,8 @@ public final class VestingProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

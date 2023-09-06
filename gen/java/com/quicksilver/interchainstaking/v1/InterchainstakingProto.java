@@ -360,7 +360,6 @@ public final class InterchainstakingProto {
               com.quicksilver.interchainstaking.v1.InterchainstakingProto.Zone.class, com.quicksilver.interchainstaking.v1.InterchainstakingProto.Zone.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object connectionId_ = "";
@@ -447,7 +446,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasDepositAddress() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return depositAddress_ != null;
     }
     /**
      * <code>.quicksilver.interchainstaking.v1.ICAAccount deposit_address = 3 [json_name = "depositAddress"];</code>
@@ -473,7 +472,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasWithdrawalAddress() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return withdrawalAddress_ != null;
     }
     /**
      * <code>.quicksilver.interchainstaking.v1.ICAAccount withdrawal_address = 4 [json_name = "withdrawalAddress"];</code>
@@ -499,7 +498,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasPerformanceAddress() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return performanceAddress_ != null;
     }
     /**
      * <code>.quicksilver.interchainstaking.v1.ICAAccount performance_address = 5 [json_name = "performanceAddress"];</code>
@@ -525,7 +524,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasDelegationAddress() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return delegationAddress_ != null;
     }
     /**
      * <code>.quicksilver.interchainstaking.v1.ICAAccount delegation_address = 6 [json_name = "delegationAddress"];</code>
@@ -1041,16 +1040,16 @@ public final class InterchainstakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (depositAddress_ != null) {
         output.writeMessage(3, getDepositAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (withdrawalAddress_ != null) {
         output.writeMessage(4, getWithdrawalAddress());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (performanceAddress_ != null) {
         output.writeMessage(5, getPerformanceAddress());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (delegationAddress_ != null) {
         output.writeMessage(6, getDelegationAddress());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountPrefix_)) {
@@ -1134,19 +1133,19 @@ public final class InterchainstakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (depositAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDepositAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (withdrawalAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getWithdrawalAddress());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (performanceAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPerformanceAddress());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (delegationAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDelegationAddress());
       }
@@ -1525,24 +1524,13 @@ public final class InterchainstakingProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.InterchainstakingProto.Zone.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDepositAddressFieldBuilder();
-          getWithdrawalAddressFieldBuilder();
-          getPerformanceAddressFieldBuilder();
-          getDelegationAddressFieldBuilder();
-          getValidatorsFieldBuilder();
-          getAggregateIntentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1665,30 +1653,25 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chainId_ = chainId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.depositAddress_ = depositAddressBuilder_ == null
               ? depositAddress_
               : depositAddressBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.withdrawalAddress_ = withdrawalAddressBuilder_ == null
               ? withdrawalAddress_
               : withdrawalAddressBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.performanceAddress_ = performanceAddressBuilder_ == null
               ? performanceAddress_
               : performanceAddressBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.delegationAddress_ = delegationAddressBuilder_ == null
               ? delegationAddress_
               : delegationAddressBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.accountPrefix_ = accountPrefix_;
@@ -1750,7 +1733,6 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x08000000) != 0)) {
           result.is118_ = is118_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2360,10 +2342,8 @@ public final class InterchainstakingProto {
         } else {
           depositAddressBuilder_.mergeFrom(value);
         }
-        if (depositAddress_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2481,10 +2461,8 @@ public final class InterchainstakingProto {
         } else {
           withdrawalAddressBuilder_.mergeFrom(value);
         }
-        if (withdrawalAddress_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2602,10 +2580,8 @@ public final class InterchainstakingProto {
         } else {
           performanceAddressBuilder_.mergeFrom(value);
         }
-        if (performanceAddress_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2723,10 +2699,8 @@ public final class InterchainstakingProto {
         } else {
           delegationAddressBuilder_.mergeFrom(value);
         }
-        if (delegationAddress_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -6443,7 +6417,6 @@ public final class InterchainstakingProto {
               com.quicksilver.interchainstaking.v1.InterchainstakingProto.WithdrawalRecord.class, com.quicksilver.interchainstaking.v1.InterchainstakingProto.WithdrawalRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -6651,7 +6624,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasBurnAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return burnAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin burn_amount = 6 [json_name = "burnAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin", (.cosmos_proto.scalar) = "cosmos.Coin"];</code>
@@ -6727,7 +6700,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasCompletionTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return completionTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp completion_time = 9 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -6785,7 +6758,7 @@ public final class InterchainstakingProto {
       for (int i = 0; i < amount_.size(); i++) {
         output.writeMessage(5, amount_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (burnAmount_ != null) {
         output.writeMessage(6, getBurnAmount());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txhash_)) {
@@ -6794,7 +6767,7 @@ public final class InterchainstakingProto {
       if (status_ != 0) {
         output.writeInt32(8, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (completionTime_ != null) {
         output.writeMessage(9, getCompletionTime());
       }
       if (requeued_ != false) {
@@ -6826,7 +6799,7 @@ public final class InterchainstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, amount_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (burnAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getBurnAmount());
       }
@@ -6837,7 +6810,7 @@ public final class InterchainstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(8, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (completionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getCompletionTime());
       }
@@ -7045,22 +7018,13 @@ public final class InterchainstakingProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.InterchainstakingProto.WithdrawalRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDistributionFieldBuilder();
-          getAmountFieldBuilder();
-          getBurnAmountFieldBuilder();
-          getCompletionTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7160,12 +7124,10 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.recipient_ = recipient_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.burnAmount_ = burnAmountBuilder_ == null
               ? burnAmount_
               : burnAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.txhash_ = txhash_;
@@ -7177,12 +7139,10 @@ public final class InterchainstakingProto {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.requeued_ = requeued_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8188,10 +8148,8 @@ public final class InterchainstakingProto {
         } else {
           burnAmountBuilder_.mergeFrom(value);
         }
-        if (burnAmount_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -8413,10 +8371,8 @@ public final class InterchainstakingProto {
         } else {
           completionTimeBuilder_.mergeFrom(value);
         }
-        if (completionTime_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -9655,7 +9611,6 @@ public final class InterchainstakingProto {
               com.quicksilver.interchainstaking.v1.InterchainstakingProto.RedelegationRecord.class, com.quicksilver.interchainstaking.v1.InterchainstakingProto.RedelegationRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -9803,7 +9758,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasCompletionTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return completionTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp completion_time = 6 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -9850,7 +9805,7 @@ public final class InterchainstakingProto {
       if (amount_ != 0L) {
         output.writeInt64(5, amount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         output.writeMessage(6, getCompletionTime());
       }
       getUnknownFields().writeTo(output);
@@ -9879,7 +9834,7 @@ public final class InterchainstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, amount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (completionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCompletionTime());
       }
@@ -10059,19 +10014,13 @@ public final class InterchainstakingProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.InterchainstakingProto.RedelegationRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCompletionTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10135,14 +10084,11 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.amount_ = amount_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10634,10 +10580,8 @@ public final class InterchainstakingProto {
         } else {
           completionTimeBuilder_.mergeFrom(value);
         }
-        if (completionTime_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -10832,7 +10776,6 @@ public final class InterchainstakingProto {
               com.quicksilver.interchainstaking.v1.InterchainstakingProto.TransferRecord.class, com.quicksilver.interchainstaking.v1.InterchainstakingProto.TransferRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -10919,7 +10862,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin", (.cosmos_proto.scalar) = "cosmos.Coin"];</code>
@@ -10957,7 +10900,7 @@ public final class InterchainstakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -10975,7 +10918,7 @@ public final class InterchainstakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -11141,19 +11084,13 @@ public final class InterchainstakingProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.InterchainstakingProto.TransferRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11205,14 +11142,11 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recipient_ = recipient_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11542,10 +11476,8 @@ public final class InterchainstakingProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -11804,7 +11736,6 @@ public final class InterchainstakingProto {
               com.quicksilver.interchainstaking.v1.InterchainstakingProto.Validator.class, com.quicksilver.interchainstaking.v1.InterchainstakingProto.Validator.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALOPER_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object valoperAddress_ = "";
@@ -12069,7 +12000,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasJailedSince() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return jailedSince_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp jailed_since = 9 [json_name = "jailedSince", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -12125,7 +12056,7 @@ public final class InterchainstakingProto {
       if (tombstoned_ != false) {
         output.writeBool(8, tombstoned_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (jailedSince_ != null) {
         output.writeMessage(9, getJailedSince());
       }
       getUnknownFields().writeTo(output);
@@ -12163,7 +12094,7 @@ public final class InterchainstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, tombstoned_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (jailedSince_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getJailedSince());
       }
@@ -12355,19 +12286,13 @@ public final class InterchainstakingProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.InterchainstakingProto.Validator.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getJailedSinceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12443,14 +12368,11 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.tombstoned_ = tombstoned_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.jailedSince_ = jailedSinceBuilder_ == null
               ? jailedSince_
               : jailedSinceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13188,10 +13110,8 @@ public final class InterchainstakingProto {
         } else {
           jailedSinceBuilder_.mergeFrom(value);
         }
-        if (jailedSince_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -15028,7 +14948,6 @@ public final class InterchainstakingProto {
               com.quicksilver.interchainstaking.v1.InterchainstakingProto.Delegation.class, com.quicksilver.interchainstaking.v1.InterchainstakingProto.Delegation.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATION_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegationAddress_ = "";
@@ -15115,7 +15034,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin", (.cosmos_proto.scalar) = "cosmos.Coin"];</code>
@@ -15175,7 +15094,7 @@ public final class InterchainstakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       if (height_ != 0L) {
@@ -15199,7 +15118,7 @@ public final class InterchainstakingProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -15383,19 +15302,13 @@ public final class InterchainstakingProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.InterchainstakingProto.Delegation.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15449,12 +15362,10 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.height_ = height_;
@@ -15462,7 +15373,6 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.redelegationEnd_ = redelegationEnd_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15808,10 +15718,8 @@ public final class InterchainstakingProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -16823,7 +16731,6 @@ public final class InterchainstakingProto {
               com.quicksilver.interchainstaking.v1.InterchainstakingProto.Receipt.class, com.quicksilver.interchainstaking.v1.InterchainstakingProto.Receipt.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -16990,7 +16897,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasFirstSeen() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return firstSeen_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen", (.gogoproto.nullable) = true, (.gogoproto.stdtime) = true];</code>
@@ -17016,7 +16923,7 @@ public final class InterchainstakingProto {
      */
     @java.lang.Override
     public boolean hasCompleted() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return completed_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp completed = 6 [json_name = "completed", (.gogoproto.nullable) = true, (.gogoproto.stdtime) = true];</code>
@@ -17060,10 +16967,10 @@ public final class InterchainstakingProto {
       for (int i = 0; i < amount_.size(); i++) {
         output.writeMessage(4, amount_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (firstSeen_ != null) {
         output.writeMessage(5, getFirstSeen());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (completed_ != null) {
         output.writeMessage(6, getCompleted());
       }
       getUnknownFields().writeTo(output);
@@ -17088,11 +16995,11 @@ public final class InterchainstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, amount_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (firstSeen_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getFirstSeen());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (completed_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCompleted());
       }
@@ -17277,21 +17184,13 @@ public final class InterchainstakingProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.InterchainstakingProto.Receipt.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-          getFirstSeenFieldBuilder();
-          getCompletedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -17372,20 +17271,16 @@ public final class InterchainstakingProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.txhash_ = txhash_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.firstSeen_ = firstSeenBuilder_ == null
               ? firstSeen_
               : firstSeenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.completed_ = completedBuilder_ == null
               ? completed_
               : completedBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18086,10 +17981,8 @@ public final class InterchainstakingProto {
         } else {
           firstSeenBuilder_.mergeFrom(value);
         }
-        if (firstSeen_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -18207,10 +18100,8 @@ public final class InterchainstakingProto {
         } else {
           completedBuilder_.mergeFrom(value);
         }
-        if (completed_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

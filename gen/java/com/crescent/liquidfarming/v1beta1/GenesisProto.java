@@ -212,7 +212,6 @@ public final class GenesisProto {
               com.crescent.liquidfarming.v1beta1.GenesisProto.GenesisState.class, com.crescent.liquidfarming.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.crescent.liquidfarming.v1beta1.ParamsProto.Params params_;
     /**
@@ -221,7 +220,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -452,7 +451,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasLastRewardsAuctionEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return lastRewardsAuctionEndTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_rewards_auction_end_time = 7 [json_name = "lastRewardsAuctionEndTime", (.gogoproto.stdtime) = true];</code>
@@ -484,7 +483,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < lastRewardsAuctionIdRecord_.size(); i++) {
@@ -502,7 +501,7 @@ public final class GenesisProto {
       for (int i = 0; i < winningBidRecords_.size(); i++) {
         output.writeMessage(6, winningBidRecords_.get(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (lastRewardsAuctionEndTime_ != null) {
         output.writeMessage(7, getLastRewardsAuctionEndTime());
       }
       getUnknownFields().writeTo(output);
@@ -514,7 +513,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -538,7 +537,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, winningBidRecords_.get(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (lastRewardsAuctionEndTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getLastRewardsAuctionEndTime());
       }
@@ -739,25 +738,13 @@ public final class GenesisProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getLastRewardsAuctionIdRecordFieldBuilder();
-          getLiquidFarmsFieldBuilder();
-          getRewardsAuctionsFieldBuilder();
-          getBidsFieldBuilder();
-          getWinningBidRecordsFieldBuilder();
-          getLastRewardsAuctionEndTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -890,20 +877,16 @@ public final class GenesisProto {
 
       private void buildPartial0(com.crescent.liquidfarming.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.lastRewardsAuctionEndTime_ = lastRewardsAuctionEndTimeBuilder_ == null
               ? lastRewardsAuctionEndTime_
               : lastRewardsAuctionEndTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1274,10 +1257,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2595,10 +2576,8 @@ public final class GenesisProto {
         } else {
           lastRewardsAuctionEndTimeBuilder_.mergeFrom(value);
         }
-        if (lastRewardsAuctionEndTime_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3328,7 +3307,6 @@ public final class GenesisProto {
               com.crescent.liquidfarming.v1beta1.GenesisProto.WinningBidRecord.class, com.crescent.liquidfarming.v1beta1.GenesisProto.WinningBidRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUCTION_ID_FIELD_NUMBER = 1;
     private long auctionId_ = 0L;
     /**
@@ -3348,7 +3326,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasWinningBid() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return winningBid_ != null;
     }
     /**
      * <code>.crescent.liquidfarming.v1beta1.Bid winning_bid = 2 [json_name = "winningBid", (.gogoproto.nullable) = false];</code>
@@ -3383,7 +3361,7 @@ public final class GenesisProto {
       if (auctionId_ != 0L) {
         output.writeUInt64(1, auctionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (winningBid_ != null) {
         output.writeMessage(2, getWinningBid());
       }
       getUnknownFields().writeTo(output);
@@ -3399,7 +3377,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, auctionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (winningBid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getWinningBid());
       }
@@ -3567,19 +3545,13 @@ public final class GenesisProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.GenesisProto.WinningBidRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getWinningBidFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3627,14 +3599,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.auctionId_ = auctionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.winningBid_ = winningBidBuilder_ == null
               ? winningBid_
               : winningBidBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3840,10 +3809,8 @@ public final class GenesisProto {
         } else {
           winningBidBuilder_.mergeFrom(value);
         }
-        if (winningBid_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

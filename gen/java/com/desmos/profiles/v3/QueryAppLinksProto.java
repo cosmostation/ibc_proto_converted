@@ -154,7 +154,6 @@ public final class QueryAppLinksProto {
               com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinksRequest.class, com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinksRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int USER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object user_ = "";
@@ -314,7 +313,7 @@ public final class QueryAppLinksProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -363,7 +362,7 @@ public final class QueryAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, username_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(4, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -384,7 +383,7 @@ public final class QueryAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, username_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPagination());
       }
@@ -559,19 +558,13 @@ public final class QueryAppLinksProto {
 
       // Construct using com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinksRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -627,14 +620,11 @@ public final class QueryAppLinksProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.username_ = username_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1141,10 +1131,8 @@ public final class QueryAppLinksProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1371,7 +1359,6 @@ public final class QueryAppLinksProto {
               com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinksResponse.class, com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinksResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LINKS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.profiles.v3.ModelsAppLinksProto.ApplicationLink> links_;
@@ -1425,7 +1412,7 @@ public final class QueryAppLinksProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -1468,7 +1455,7 @@ public final class QueryAppLinksProto {
       for (int i = 0; i < links_.size(); i++) {
         output.writeMessage(1, links_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1484,7 +1471,7 @@ public final class QueryAppLinksProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, links_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1653,20 +1640,13 @@ public final class QueryAppLinksProto {
 
       // Construct using com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinksResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLinksFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1730,14 +1710,11 @@ public final class QueryAppLinksProto {
 
       private void buildPartial0(com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinksResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2202,10 +2179,8 @@ public final class QueryAppLinksProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2993,7 +2968,6 @@ public final class QueryAppLinksProto {
               com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkByClientIDResponse.class, com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkByClientIDResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LINK_FIELD_NUMBER = 1;
     private com.desmos.profiles.v3.ModelsAppLinksProto.ApplicationLink link_;
     /**
@@ -3002,7 +2976,7 @@ public final class QueryAppLinksProto {
      */
     @java.lang.Override
     public boolean hasLink() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return link_ != null;
     }
     /**
      * <code>.desmos.profiles.v3.ApplicationLink link = 1 [json_name = "link", (.gogoproto.nullable) = false];</code>
@@ -3034,7 +3008,7 @@ public final class QueryAppLinksProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (link_ != null) {
         output.writeMessage(1, getLink());
       }
       getUnknownFields().writeTo(output);
@@ -3046,7 +3020,7 @@ public final class QueryAppLinksProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (link_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLink());
       }
@@ -3209,19 +3183,13 @@ public final class QueryAppLinksProto {
 
       // Construct using com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkByClientIDResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLinkFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3265,14 +3233,11 @@ public final class QueryAppLinksProto {
 
       private void buildPartial0(com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkByClientIDResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.link_ = linkBuilder_ == null
               ? link_
               : linkBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3438,10 +3403,8 @@ public final class QueryAppLinksProto {
         } else {
           linkBuilder_.mergeFrom(value);
         }
-        if (link_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3673,7 +3636,6 @@ public final class QueryAppLinksProto {
               com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkOwnersRequest.class, com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkOwnersRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int APPLICATION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object application_ = "";
@@ -3784,7 +3746,7 @@ public final class QueryAppLinksProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -3830,7 +3792,7 @@ public final class QueryAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3848,7 +3810,7 @@ public final class QueryAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -4019,19 +3981,13 @@ public final class QueryAppLinksProto {
 
       // Construct using com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkOwnersRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4083,14 +4039,11 @@ public final class QueryAppLinksProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.username_ = username_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4490,10 +4443,8 @@ public final class QueryAppLinksProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5598,7 +5549,6 @@ public final class QueryAppLinksProto {
 
     }
 
-    private int bitField0_;
     public static final int OWNERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkOwnersResponse.ApplicationLinkOwnerDetails> owners_;
@@ -5672,7 +5622,7 @@ public final class QueryAppLinksProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -5715,7 +5665,7 @@ public final class QueryAppLinksProto {
       for (int i = 0; i < owners_.size(); i++) {
         output.writeMessage(1, owners_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5731,7 +5681,7 @@ public final class QueryAppLinksProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, owners_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -5900,20 +5850,13 @@ public final class QueryAppLinksProto {
 
       // Construct using com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkOwnersResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOwnersFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5977,14 +5920,11 @@ public final class QueryAppLinksProto {
 
       private void buildPartial0(com.desmos.profiles.v3.QueryAppLinksProto.QueryApplicationLinkOwnersResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6521,10 +6461,8 @@ public final class QueryAppLinksProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

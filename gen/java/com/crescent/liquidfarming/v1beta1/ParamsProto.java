@@ -110,7 +110,6 @@ public final class ParamsProto {
               com.crescent.liquidfarming.v1beta1.ParamsProto.Params.class, com.crescent.liquidfarming.v1beta1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEE_COLLECTOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object feeCollector_ = "";
@@ -158,7 +157,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasRewardsAuctionDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return rewardsAuctionDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration rewards_auction_duration = 2 [json_name = "rewardsAuctionDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -234,7 +233,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeCollector_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feeCollector_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewardsAuctionDuration_ != null) {
         output.writeMessage(2, getRewardsAuctionDuration());
       }
       for (int i = 0; i < liquidFarms_.size(); i++) {
@@ -252,7 +251,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeCollector_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feeCollector_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewardsAuctionDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRewardsAuctionDuration());
       }
@@ -428,20 +427,13 @@ public final class ParamsProto {
 
       // Construct using com.crescent.liquidfarming.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRewardsAuctionDurationFieldBuilder();
-          getLiquidFarmsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -509,14 +501,11 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.feeCollector_ = feeCollector_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.rewardsAuctionDuration_ = rewardsAuctionDurationBuilder_ == null
               ? rewardsAuctionDuration_
               : rewardsAuctionDurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -803,10 +792,8 @@ public final class ParamsProto {
         } else {
           rewardsAuctionDurationBuilder_.mergeFrom(value);
         }
-        if (rewardsAuctionDuration_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

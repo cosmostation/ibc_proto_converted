@@ -212,7 +212,6 @@ public final class MsgsAppLinksProto {
               com.desmos.profiles.v3.MsgsAppLinksProto.MsgLinkApplication.class, com.desmos.profiles.v3.MsgsAppLinksProto.MsgLinkApplication.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -272,7 +271,7 @@ public final class MsgsAppLinksProto {
      */
     @java.lang.Override
     public boolean hasLinkData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return linkData_ != null;
     }
     /**
      * <pre>
@@ -454,7 +453,7 @@ public final class MsgsAppLinksProto {
      */
     @java.lang.Override
     public boolean hasTimeoutHeight() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return timeoutHeight_ != null;
     }
     /**
      * <pre>
@@ -515,7 +514,7 @@ public final class MsgsAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (linkData_ != null) {
         output.writeMessage(2, getLinkData());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callData_)) {
@@ -527,7 +526,7 @@ public final class MsgsAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChannel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sourceChannel_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (timeoutHeight_ != null) {
         output.writeMessage(6, getTimeoutHeight());
       }
       if (timeoutTimestamp_ != 0L) {
@@ -545,7 +544,7 @@ public final class MsgsAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (linkData_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLinkData());
       }
@@ -558,7 +557,7 @@ public final class MsgsAppLinksProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChannel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sourceChannel_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (timeoutHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTimeoutHeight());
       }
@@ -755,20 +754,13 @@ public final class MsgsAppLinksProto {
 
       // Construct using com.desmos.profiles.v3.MsgsAppLinksProto.MsgLinkApplication.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLinkDataFieldBuilder();
-          getTimeoutHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -825,12 +817,10 @@ public final class MsgsAppLinksProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.linkData_ = linkDataBuilder_ == null
               ? linkData_
               : linkDataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.callData_ = callData_;
@@ -845,12 +835,10 @@ public final class MsgsAppLinksProto {
           result.timeoutHeight_ = timeoutHeightBuilder_ == null
               ? timeoutHeight_
               : timeoutHeightBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.timeoutTimestamp_ = timeoutTimestamp_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1186,10 +1174,8 @@ public final class MsgsAppLinksProto {
         } else {
           linkDataBuilder_.mergeFrom(value);
         }
-        if (linkData_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1629,10 +1615,8 @@ public final class MsgsAppLinksProto {
         } else {
           timeoutHeightBuilder_.mergeFrom(value);
         }
-        if (timeoutHeight_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

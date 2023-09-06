@@ -156,7 +156,6 @@ public final class FarmProto {
               com.irismod.farm.FarmProto.FarmPool.class, com.irismod.farm.FarmProto.FarmPool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -326,7 +325,7 @@ public final class FarmProto {
      */
     @java.lang.Override
     public boolean hasTotalLptLocked() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return totalLptLocked_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_lpt_locked = 8 [json_name = "totalLptLocked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -420,7 +419,7 @@ public final class FarmProto {
       if (editable_ != false) {
         output.writeBool(7, editable_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalLptLocked_ != null) {
         output.writeMessage(8, getTotalLptLocked());
       }
       for (int i = 0; i < rules_.size(); i++) {
@@ -460,7 +459,7 @@ public final class FarmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, editable_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalLptLocked_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getTotalLptLocked());
       }
@@ -660,20 +659,13 @@ public final class FarmProto {
 
       // Construct using com.irismod.farm.FarmProto.FarmPool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTotalLptLockedFieldBuilder();
-          getRulesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -765,14 +757,11 @@ public final class FarmProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.editable_ = editable_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.totalLptLocked_ = totalLptLockedBuilder_ == null
               ? totalLptLocked_
               : totalLptLockedBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1383,10 +1372,8 @@ public final class FarmProto {
         } else {
           totalLptLockedBuilder_.mergeFrom(value);
         }
-        if (totalLptLocked_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -4171,7 +4158,6 @@ public final class FarmProto {
               com.irismod.farm.FarmProto.Params.class, com.irismod.farm.FarmProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATE_POOL_FEE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin createPoolFee_;
     /**
@@ -4180,7 +4166,7 @@ public final class FarmProto {
      */
     @java.lang.Override
     public boolean hasCreatePoolFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return createPoolFee_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin create_pool_fee = 1 [json_name = "createPoolFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4223,7 +4209,7 @@ public final class FarmProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createPoolFee_ != null) {
         output.writeMessage(1, getCreatePoolFee());
       }
       if (maxRewardCategories_ != 0) {
@@ -4238,7 +4224,7 @@ public final class FarmProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createPoolFee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreatePoolFee());
       }
@@ -4404,19 +4390,13 @@ public final class FarmProto {
 
       // Construct using com.irismod.farm.FarmProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreatePoolFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4461,17 +4441,14 @@ public final class FarmProto {
 
       private void buildPartial0(com.irismod.farm.FarmProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.createPoolFee_ = createPoolFeeBuilder_ == null
               ? createPoolFee_
               : createPoolFeeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maxRewardCategories_ = maxRewardCategories_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4645,10 +4622,8 @@ public final class FarmProto {
         } else {
           createPoolFeeBuilder_.mergeFrom(value);
         }
-        if (createPoolFee_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

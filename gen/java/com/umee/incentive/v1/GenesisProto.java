@@ -259,7 +259,6 @@ public final class GenesisProto {
               com.umee.incentive.v1.GenesisProto.GenesisState.class, com.umee.incentive.v1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.umee.incentive.v1.IncentiveProto.Params params_;
     /**
@@ -268,7 +267,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -609,7 +608,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       if (nextProgramId_ != 0) {
@@ -648,7 +647,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -897,26 +896,13 @@ public final class GenesisProto {
 
       // Construct using com.umee.incentive.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getRewardTrackersFieldBuilder();
-          getRewardAccumulatorsFieldBuilder();
-          getUpcomingProgramsFieldBuilder();
-          getOngoingProgramsFieldBuilder();
-          getCompletedProgramsFieldBuilder();
-          getBondsFieldBuilder();
-          getAccountUnbondingsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1078,12 +1064,10 @@ public final class GenesisProto {
 
       private void buildPartial0(com.umee.incentive.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.nextProgramId_ = nextProgramId_;
@@ -1091,7 +1075,6 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.lastRewardsTime_ = lastRewardsTime_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1546,10 +1529,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3480,7 +3461,6 @@ public final class GenesisProto {
               com.umee.incentive.v1.GenesisProto.Bond.class, com.umee.incentive.v1.GenesisProto.Bond.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object account_ = "";
@@ -3528,7 +3508,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasUToken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return uToken_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
@@ -3563,7 +3543,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (uToken_ != null) {
         output.writeMessage(2, getUToken());
       }
       getUnknownFields().writeTo(output);
@@ -3578,7 +3558,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (uToken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUToken());
       }
@@ -3745,19 +3725,13 @@ public final class GenesisProto {
 
       // Construct using com.umee.incentive.v1.GenesisProto.Bond.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUTokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3805,14 +3779,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.account_ = account_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.uToken_ = uTokenBuilder_ == null
               ? uToken_
               : uTokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4060,10 +4031,8 @@ public final class GenesisProto {
         } else {
           uTokenBuilder_.mergeFrom(value);
         }
-        if (uToken_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6363,7 +6332,6 @@ public final class GenesisProto {
               com.umee.incentive.v1.GenesisProto.Unbonding.class, com.umee.incentive.v1.GenesisProto.Unbonding.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_FIELD_NUMBER = 1;
     private long start_ = 0L;
     /**
@@ -6394,7 +6362,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasUToken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return uToken_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
@@ -6432,7 +6400,7 @@ public final class GenesisProto {
       if (end_ != 0L) {
         output.writeInt64(2, end_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (uToken_ != null) {
         output.writeMessage(3, getUToken());
       }
       getUnknownFields().writeTo(output);
@@ -6452,7 +6420,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, end_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (uToken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUToken());
       }
@@ -6627,19 +6595,13 @@ public final class GenesisProto {
 
       // Construct using com.umee.incentive.v1.GenesisProto.Unbonding.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUTokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6691,14 +6653,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.end_ = end_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.uToken_ = uTokenBuilder_ == null
               ? uToken_
               : uTokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6944,10 +6903,8 @@ public final class GenesisProto {
         } else {
           uTokenBuilder_.mergeFrom(value);
         }
-        if (uToken_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

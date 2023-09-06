@@ -286,7 +286,6 @@ public final class TxProto {
               com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.class, com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -440,7 +439,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTotalRewardPool() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return totalRewardPool_ != null;
     }
     /**
      * <pre>
@@ -478,7 +477,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMaxRewardPerClaimAddress() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return maxRewardPerClaimAddress_ != null;
     }
     /**
      * <pre>
@@ -516,7 +515,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasProgramStartTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return programStartTime_ != null;
     }
     /**
      * <pre>
@@ -686,13 +685,13 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributeFromAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, distributeFromAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalRewardPool_ != null) {
         output.writeMessage(4, getTotalRewardPool());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (maxRewardPerClaimAddress_ != null) {
         output.writeMessage(5, getMaxRewardPerClaimAddress());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (programStartTime_ != null) {
         output.writeMessage(6, getProgramStartTime());
       }
       if (claimPeriods_ != 0L) {
@@ -728,15 +727,15 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributeFromAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, distributeFromAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalRewardPool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTotalRewardPool());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (maxRewardPerClaimAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMaxRewardPerClaimAddress());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (programStartTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getProgramStartTime());
       }
@@ -974,22 +973,13 @@ public final class TxProto {
 
       // Construct using com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTotalRewardPoolFieldBuilder();
-          getMaxRewardPerClaimAddressFieldBuilder();
-          getProgramStartTimeFieldBuilder();
-          getQualifyingActionsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1079,24 +1069,20 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.distributeFromAddress_ = distributeFromAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.totalRewardPool_ = totalRewardPoolBuilder_ == null
               ? totalRewardPool_
               : totalRewardPoolBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maxRewardPerClaimAddress_ = maxRewardPerClaimAddressBuilder_ == null
               ? maxRewardPerClaimAddress_
               : maxRewardPerClaimAddressBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.programStartTime_ = programStartTimeBuilder_ == null
               ? programStartTime_
               : programStartTimeBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.claimPeriods_ = claimPeriods_;
@@ -1110,7 +1096,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.expireDays_ = expireDays_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1693,10 +1678,8 @@ public final class TxProto {
         } else {
           totalRewardPoolBuilder_.mergeFrom(value);
         }
-        if (totalRewardPool_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1850,10 +1833,8 @@ public final class TxProto {
         } else {
           maxRewardPerClaimAddressBuilder_.mergeFrom(value);
         }
-        if (maxRewardPerClaimAddress_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2007,10 +1988,8 @@ public final class TxProto {
         } else {
           programStartTimeBuilder_.mergeFrom(value);
         }
-        if (programStartTime_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -4987,7 +4966,6 @@ public final class TxProto {
               com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.class, com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLAIM_DETAILS_FIELD_NUMBER = 1;
     private com.provenance.reward.v1.TxProto.RewardProgramClaimDetail claimDetails_;
     /**
@@ -5000,7 +4978,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasClaimDetails() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return claimDetails_ != null;
     }
     /**
      * <pre>
@@ -5040,7 +5018,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimDetails_ != null) {
         output.writeMessage(1, getClaimDetails());
       }
       getUnknownFields().writeTo(output);
@@ -5052,7 +5030,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimDetails_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClaimDetails());
       }
@@ -5214,19 +5192,13 @@ public final class TxProto {
 
       // Construct using com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClaimDetailsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5270,14 +5242,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.claimDetails_ = claimDetailsBuilder_ == null
               ? claimDetails_
               : claimDetailsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5463,10 +5432,8 @@ public final class TxProto {
         } else {
           claimDetailsBuilder_.mergeFrom(value);
         }
-        if (claimDetails_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7671,7 +7638,6 @@ public final class TxProto {
               com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.class, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLAIM_PERIOD_ID_FIELD_NUMBER = 1;
     private long claimPeriodId_ = 0L;
     /**
@@ -7714,7 +7680,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasClaimPeriodReward() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return claimPeriodReward_ != null;
     }
     /**
      * <pre>
@@ -7760,7 +7726,7 @@ public final class TxProto {
       if (totalShares_ != 0L) {
         output.writeUInt64(2, totalShares_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimPeriodReward_ != null) {
         output.writeMessage(3, getClaimPeriodReward());
       }
       getUnknownFields().writeTo(output);
@@ -7780,7 +7746,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, totalShares_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimPeriodReward_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getClaimPeriodReward());
       }
@@ -7952,19 +7918,13 @@ public final class TxProto {
 
       // Construct using com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClaimPeriodRewardFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8016,14 +7976,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.totalShares_ = totalShares_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.claimPeriodReward_ = claimPeriodRewardBuilder_ == null
               ? claimPeriodReward_
               : claimPeriodRewardBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8313,10 +8270,8 @@ public final class TxProto {
         } else {
           claimPeriodRewardBuilder_.mergeFrom(value);
         }
-        if (claimPeriodReward_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8572,7 +8527,6 @@ public final class TxProto {
               com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.class, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REWARD_PROGRAM_ID_FIELD_NUMBER = 1;
     private long rewardProgramId_ = 0L;
     /**
@@ -8600,7 +8554,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTotalRewardClaim() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return totalRewardClaim_ != null;
     }
     /**
      * <pre>
@@ -8704,7 +8658,7 @@ public final class TxProto {
       if (rewardProgramId_ != 0L) {
         output.writeUInt64(1, rewardProgramId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalRewardClaim_ != null) {
         output.writeMessage(2, getTotalRewardClaim());
       }
       for (int i = 0; i < claimedRewardPeriodDetails_.size(); i++) {
@@ -8723,7 +8677,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, rewardProgramId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalRewardClaim_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTotalRewardClaim());
       }
@@ -8900,20 +8854,13 @@ public final class TxProto {
 
       // Construct using com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTotalRewardClaimFieldBuilder();
-          getClaimedRewardPeriodDetailsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8981,14 +8928,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.rewardProgramId_ = rewardProgramId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.totalRewardClaim_ = totalRewardClaimBuilder_ == null
               ? totalRewardClaim_
               : totalRewardClaimBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9265,10 +9209,8 @@ public final class TxProto {
         } else {
           totalRewardClaimBuilder_.mergeFrom(value);
         }
-        if (totalRewardClaim_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

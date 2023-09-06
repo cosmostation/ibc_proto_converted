@@ -620,7 +620,6 @@ public final class QueryProto {
               com.lum.network.beam.QueryProto.QueryGetBeamResponse.class, com.lum.network.beam.QueryProto.QueryGetBeamResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BEAM_FIELD_NUMBER = 1;
     private com.lum.network.beam.BeamProto.Beam beam_;
     /**
@@ -629,7 +628,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBeam() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return beam_ != null;
     }
     /**
      * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
@@ -661,7 +660,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (beam_ != null) {
         output.writeMessage(1, getBeam());
       }
       getUnknownFields().writeTo(output);
@@ -673,7 +672,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (beam_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBeam());
       }
@@ -831,19 +830,13 @@ public final class QueryProto {
 
       // Construct using com.lum.network.beam.QueryProto.QueryGetBeamResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBeamFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -887,14 +880,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.beam.QueryProto.QueryGetBeamResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.beam_ = beamBuilder_ == null
               ? beam_
               : beamBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1060,10 +1050,8 @@ public final class QueryProto {
         } else {
           beamBuilder_.mergeFrom(value);
         }
-        if (beam_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1244,7 +1232,6 @@ public final class QueryProto {
               com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.class, com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -1253,7 +1240,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -1303,7 +1290,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       if (state_ != com.lum.network.beam.BeamProto.BeamState.UNSPECIFIED.getNumber()) {
@@ -1318,7 +1305,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -1483,19 +1470,13 @@ public final class QueryProto {
 
       // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1540,17 +1521,14 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.beam.QueryProto.QueryFetchBeamsRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = state_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1724,10 +1702,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1974,7 +1950,6 @@ public final class QueryProto {
               com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.class, com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BEAMS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.lum.network.beam.BeamProto.Beam> beams_;
@@ -2024,7 +1999,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -2059,7 +2034,7 @@ public final class QueryProto {
       for (int i = 0; i < beams_.size(); i++) {
         output.writeMessage(1, beams_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2075,7 +2050,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, beams_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -2239,20 +2214,13 @@ public final class QueryProto {
 
       // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBeamsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2316,14 +2284,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.beam.QueryProto.QueryFetchBeamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2768,10 +2733,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2940,7 +2903,6 @@ public final class QueryProto {
               com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.class, com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 3;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -2949,7 +2911,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
@@ -2981,7 +2943,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -2993,7 +2955,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -3151,19 +3113,13 @@ public final class QueryProto {
 
       // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3207,14 +3163,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3380,10 +3333,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3579,7 +3530,6 @@ public final class QueryProto {
               com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.class, com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BEAM_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList beamIds_ =
@@ -3625,7 +3575,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -3660,7 +3610,7 @@ public final class QueryProto {
       for (int i = 0; i < beamIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, beamIds_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3680,7 +3630,7 @@ public final class QueryProto {
         size += dataSize;
         size += 1 * getBeamIdsList().size();
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -3844,19 +3794,13 @@ public final class QueryProto {
 
       // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3906,14 +3850,11 @@ public final class QueryProto {
           beamIds_.makeImmutable();
           result.beamIds_ = beamIds_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4206,10 +4147,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

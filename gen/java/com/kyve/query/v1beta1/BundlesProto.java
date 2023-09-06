@@ -94,7 +94,6 @@ public final class BundlesProto {
               com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -107,7 +106,7 @@ public final class BundlesProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -162,7 +161,7 @@ public final class BundlesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       if (poolId_ != 0L) {
@@ -177,7 +176,7 @@ public final class BundlesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -348,19 +347,13 @@ public final class BundlesProto {
 
       // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -405,17 +398,14 @@ public final class BundlesProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolId_ = poolId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -609,10 +599,8 @@ public final class BundlesProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -902,7 +890,6 @@ public final class BundlesProto {
               com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FINALIZED_BUNDLES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> finalizedBundles_;
@@ -976,7 +963,7 @@ public final class BundlesProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -1019,7 +1006,7 @@ public final class BundlesProto {
       for (int i = 0; i < finalizedBundles_.size(); i++) {
         output.writeMessage(1, finalizedBundles_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1035,7 +1022,7 @@ public final class BundlesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, finalizedBundles_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -1203,20 +1190,13 @@ public final class BundlesProto {
 
       // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFinalizedBundlesFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1280,14 +1260,11 @@ public final class BundlesProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1824,10 +1801,8 @@ public final class BundlesProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2626,7 +2601,6 @@ public final class BundlesProto {
               com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FINALIZED_BUNDLE_FIELD_NUMBER = 1;
     private com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle finalizedBundle_;
     /**
@@ -2639,7 +2613,7 @@ public final class BundlesProto {
      */
     @java.lang.Override
     public boolean hasFinalizedBundle() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return finalizedBundle_ != null;
     }
     /**
      * <pre>
@@ -2679,7 +2653,7 @@ public final class BundlesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (finalizedBundle_ != null) {
         output.writeMessage(1, getFinalizedBundle());
       }
       getUnknownFields().writeTo(output);
@@ -2691,7 +2665,7 @@ public final class BundlesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (finalizedBundle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFinalizedBundle());
       }
@@ -2853,19 +2827,13 @@ public final class BundlesProto {
 
       // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFinalizedBundleFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2909,14 +2877,11 @@ public final class BundlesProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.finalizedBundle_ = finalizedBundleBuilder_ == null
               ? finalizedBundle_
               : finalizedBundleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3102,10 +3067,8 @@ public final class BundlesProto {
         } else {
           finalizedBundleBuilder_.mergeFrom(value);
         }
-        if (finalizedBundle_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3904,7 +3867,6 @@ public final class BundlesProto {
               com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FINALIZED_BUNDLE_FIELD_NUMBER = 1;
     private com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle finalizedBundle_;
     /**
@@ -3917,7 +3879,7 @@ public final class BundlesProto {
      */
     @java.lang.Override
     public boolean hasFinalizedBundle() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return finalizedBundle_ != null;
     }
     /**
      * <pre>
@@ -3957,7 +3919,7 @@ public final class BundlesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (finalizedBundle_ != null) {
         output.writeMessage(1, getFinalizedBundle());
       }
       getUnknownFields().writeTo(output);
@@ -3969,7 +3931,7 @@ public final class BundlesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (finalizedBundle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFinalizedBundle());
       }
@@ -4131,19 +4093,13 @@ public final class BundlesProto {
 
       // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFinalizedBundleFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4187,14 +4143,11 @@ public final class BundlesProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.finalizedBundle_ = finalizedBundleBuilder_ == null
               ? finalizedBundle_
               : finalizedBundleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4380,10 +4333,8 @@ public final class BundlesProto {
         } else {
           finalizedBundleBuilder_.mergeFrom(value);
         }
-        if (finalizedBundle_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

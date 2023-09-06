@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: axelar/evm/v1beta1/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgServiceGrpc {
 
   private MsgServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "axelar.evm.v1beta1.MsgService";
+  public static final String SERVICE_NAME = "axelar.evm.v1beta1.MsgService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.axelar.evm.v1beta1.TxProto.SetGatewayRequest,
@@ -1240,9 +1240,9 @@ public final class MsgServiceGrpc {
   private static final class MsgServiceMethodDescriptorSupplier
       extends MsgServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    MsgServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    MsgServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

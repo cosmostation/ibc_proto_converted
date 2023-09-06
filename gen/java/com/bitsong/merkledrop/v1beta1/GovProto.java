@@ -94,7 +94,6 @@ public final class GovProto {
               com.bitsong.merkledrop.v1beta1.GovProto.UpdateFeesProposal.class, com.bitsong.merkledrop.v1beta1.GovProto.UpdateFeesProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -181,7 +180,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasCreationFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return creationFee_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin creation_fee = 3 [json_name = "creationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"creation_fee&#92;""];</code>
@@ -219,7 +218,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creationFee_ != null) {
         output.writeMessage(3, getCreationFee());
       }
       getUnknownFields().writeTo(output);
@@ -237,7 +236,7 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (creationFee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreationFee());
       }
@@ -403,19 +402,13 @@ public final class GovProto {
 
       // Construct using com.bitsong.merkledrop.v1beta1.GovProto.UpdateFeesProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreationFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -467,14 +460,11 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.creationFee_ = creationFeeBuilder_ == null
               ? creationFee_
               : creationFeeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -804,10 +794,8 @@ public final class GovProto {
         } else {
           creationFeeBuilder_.mergeFrom(value);
         }
-        if (creationFee_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

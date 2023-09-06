@@ -489,7 +489,6 @@ public final class QueryProto {
               com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.class, com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private com.cosmos.app.v1alpha1.ConfigProto.Config config_;
     /**
@@ -502,7 +501,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return config_ != null;
     }
     /**
      * <pre>
@@ -542,7 +541,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         output.writeMessage(1, getConfig());
       }
       getUnknownFields().writeTo(output);
@@ -554,7 +553,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (config_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConfig());
       }
@@ -716,19 +715,13 @@ public final class QueryProto {
 
       // Construct using com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -772,14 +765,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -965,10 +955,8 @@ public final class QueryProto {
         } else {
           configBuilder_.mergeFrom(value);
         }
-        if (config_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

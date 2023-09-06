@@ -3713,7 +3713,6 @@ public final class QueryProto {
               com.axelar.multisig.v1beta1.QueryProto.KeyResponse.class, com.axelar.multisig.v1beta1.QueryProto.KeyResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEY_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object keyId_ = "";
@@ -3790,7 +3789,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStartedAtTimestamp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startedAtTimestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp started_at_timestamp = 4 [json_name = "startedAtTimestamp", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -3914,7 +3913,7 @@ public final class QueryProto {
       if (startedAt_ != 0L) {
         output.writeInt64(3, startedAt_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startedAtTimestamp_ != null) {
         output.writeMessage(4, getStartedAtTimestamp());
       }
       if (!thresholdWeight_.isEmpty()) {
@@ -3946,7 +3945,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, startedAt_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startedAtTimestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getStartedAtTimestamp());
       }
@@ -4146,20 +4145,13 @@ public final class QueryProto {
 
       // Construct using com.axelar.multisig.v1beta1.QueryProto.KeyResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartedAtTimestampFieldBuilder();
-          getParticipantsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4237,12 +4229,10 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.startedAt_ = startedAt_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.startedAtTimestamp_ = startedAtTimestampBuilder_ == null
               ? startedAtTimestamp_
               : startedAtTimestampBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.thresholdWeight_ = thresholdWeight_;
@@ -4250,7 +4240,6 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.bondedWeight_ = bondedWeight_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4654,10 +4643,8 @@ public final class QueryProto {
         } else {
           startedAtTimestampBuilder_.mergeFrom(value);
         }
-        if (startedAtTimestamp_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5860,7 +5847,6 @@ public final class QueryProto {
               com.axelar.multisig.v1beta1.QueryProto.KeygenSessionResponse.class, com.axelar.multisig.v1beta1.QueryProto.KeygenSessionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STARTED_AT_FIELD_NUMBER = 1;
     private long startedAt_ = 0L;
     /**
@@ -5880,7 +5866,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasStartedAtTimestamp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startedAtTimestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp started_at_timestamp = 2 [json_name = "startedAtTimestamp", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -6060,7 +6046,7 @@ public final class QueryProto {
       if (startedAt_ != 0L) {
         output.writeInt64(1, startedAt_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startedAtTimestamp_ != null) {
         output.writeMessage(2, getStartedAtTimestamp());
       }
       if (expiresAt_ != 0L) {
@@ -6100,7 +6086,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, startedAt_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startedAtTimestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getStartedAtTimestamp());
       }
@@ -6335,20 +6321,13 @@ public final class QueryProto {
 
       // Construct using com.axelar.multisig.v1beta1.QueryProto.KeygenSessionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartedAtTimestampFieldBuilder();
-          getParticipantsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6423,12 +6402,10 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startedAt_ = startedAt_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.startedAtTimestamp_ = startedAtTimestampBuilder_ == null
               ? startedAtTimestamp_
               : startedAtTimestampBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.expiresAt_ = expiresAt_;
@@ -6451,7 +6428,6 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.bondedWeight_ = bondedWeight_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6752,10 +6728,8 @@ public final class QueryProto {
         } else {
           startedAtTimestampBuilder_.mergeFrom(value);
         }
-        if (startedAtTimestamp_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

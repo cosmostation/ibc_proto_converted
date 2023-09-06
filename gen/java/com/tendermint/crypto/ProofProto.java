@@ -67,7 +67,7 @@ public final class ProofProto {
     }
     private Proof() {
       leafHash_ = com.google.protobuf.ByteString.EMPTY;
-      aunts_ = emptyList(com.google.protobuf.ByteString.class);
+      aunts_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -125,8 +125,7 @@ public final class ProofProto {
 
     public static final int AUNTS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> aunts_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> aunts_;
     /**
      * <code>repeated bytes aunts = 4 [json_name = "aunts"];</code>
      * @return A list containing the aunts.
@@ -388,7 +387,7 @@ public final class ProofProto {
         total_ = 0L;
         index_ = 0L;
         leafHash_ = com.google.protobuf.ByteString.EMPTY;
-        aunts_ = emptyList(com.google.protobuf.ByteString.class);
+        aunts_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -415,9 +414,18 @@ public final class ProofProto {
       @java.lang.Override
       public com.tendermint.crypto.ProofProto.Proof buildPartial() {
         com.tendermint.crypto.ProofProto.Proof result = new com.tendermint.crypto.ProofProto.Proof(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tendermint.crypto.ProofProto.Proof result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          aunts_ = java.util.Collections.unmodifiableList(aunts_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.aunts_ = aunts_;
       }
 
       private void buildPartial0(com.tendermint.crypto.ProofProto.Proof result) {
@@ -430,10 +438,6 @@ public final class ProofProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.leafHash_ = leafHash_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          aunts_.makeImmutable();
-          result.aunts_ = aunts_;
         }
       }
 
@@ -493,8 +497,7 @@ public final class ProofProto {
         if (!other.aunts_.isEmpty()) {
           if (aunts_.isEmpty()) {
             aunts_ = other.aunts_;
-            aunts_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureAuntsIsMutable();
             aunts_.addAll(other.aunts_);
@@ -661,12 +664,12 @@ public final class ProofProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> aunts_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> aunts_ = java.util.Collections.emptyList();
       private void ensureAuntsIsMutable() {
-        if (!aunts_.isModifiable()) {
-          aunts_ = makeMutableCopy(aunts_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          aunts_ = new java.util.ArrayList<com.google.protobuf.ByteString>(aunts_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated bytes aunts = 4 [json_name = "aunts"];</code>
@@ -674,8 +677,8 @@ public final class ProofProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getAuntsList() {
-        aunts_.makeImmutable();
-        return aunts_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(aunts_) : aunts_;
       }
       /**
        * <code>repeated bytes aunts = 4 [json_name = "aunts"];</code>
@@ -703,7 +706,6 @@ public final class ProofProto {
         if (value == null) { throw new NullPointerException(); }
         ensureAuntsIsMutable();
         aunts_.set(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -716,7 +718,6 @@ public final class ProofProto {
         if (value == null) { throw new NullPointerException(); }
         ensureAuntsIsMutable();
         aunts_.add(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -730,7 +731,6 @@ public final class ProofProto {
         ensureAuntsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, aunts_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -739,7 +739,7 @@ public final class ProofProto {
        * @return This builder for chaining.
        */
       public Builder clearAunts() {
-        aunts_ = emptyList(com.google.protobuf.ByteString.class);
+        aunts_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
@@ -885,7 +885,6 @@ public final class ProofProto {
               com.tendermint.crypto.ProofProto.ValueOp.class, com.tendermint.crypto.ProofProto.ValueOp.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -913,7 +912,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proof_ != null;
     }
     /**
      * <pre>
@@ -956,7 +955,7 @@ public final class ProofProto {
       if (!key_.isEmpty()) {
         output.writeBytes(1, key_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(2, getProof());
       }
       getUnknownFields().writeTo(output);
@@ -972,7 +971,7 @@ public final class ProofProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, key_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProof());
       }
@@ -1134,19 +1133,13 @@ public final class ProofProto {
 
       // Construct using com.tendermint.crypto.ProofProto.ValueOp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1194,14 +1187,11 @@ public final class ProofProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.key_ = key_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1439,10 +1429,8 @@ public final class ProofProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -137,7 +137,6 @@ public final class MsgsTreasuryProto {
               com.desmos.subspaces.v3.MsgsTreasuryProto.MsgGrantTreasuryAuthorization.class, com.desmos.subspaces.v3.MsgsTreasuryProto.MsgGrantTreasuryAuthorization.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSPACE_ID_FIELD_NUMBER = 1;
     private long subspaceId_ = 0L;
     /**
@@ -259,7 +258,7 @@ public final class MsgsTreasuryProto {
      */
     @java.lang.Override
     public boolean hasGrant() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return grant_ != null;
     }
     /**
      * <pre>
@@ -308,7 +307,7 @@ public final class MsgsTreasuryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         output.writeMessage(4, getGrant());
       }
       getUnknownFields().writeTo(output);
@@ -330,7 +329,7 @@ public final class MsgsTreasuryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getGrant());
       }
@@ -506,19 +505,13 @@ public final class MsgsTreasuryProto {
 
       // Construct using com.desmos.subspaces.v3.MsgsTreasuryProto.MsgGrantTreasuryAuthorization.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGrantFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -574,14 +567,11 @@ public final class MsgsTreasuryProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.grantee_ = grantee_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.grant_ = grantBuilder_ == null
               ? grant_
               : grantBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1023,10 +1013,8 @@ public final class MsgsTreasuryProto {
         } else {
           grantBuilder_.mergeFrom(value);
         }
-        if (grant_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

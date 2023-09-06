@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: assetmantle/splits/transactions/unwrap/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ServiceGrpc {
 
   private ServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "assetmantle.modules.splits.transactions.unwrap.Service";
+  public static final String SERVICE_NAME = "assetmantle.modules.splits.transactions.unwrap.Service";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.assetmantle.modules.splits.transactions.unwrap.MessageProto.Message,
@@ -261,9 +261,9 @@ public final class ServiceGrpc {
   private static final class ServiceMethodDescriptorSupplier
       extends ServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    ServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    ServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

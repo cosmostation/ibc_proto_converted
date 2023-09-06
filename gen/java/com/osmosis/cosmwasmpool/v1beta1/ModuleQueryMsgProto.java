@@ -126,7 +126,6 @@ public final class ModuleQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKEN_IN_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin tokenIn_;
     /**
@@ -139,7 +138,7 @@ public final class ModuleQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasTokenIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tokenIn_ != null;
     }
     /**
      * <pre>
@@ -273,7 +272,7 @@ public final class ModuleQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenIn_ != null) {
         output.writeMessage(1, getTokenIn());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOutDenom_)) {
@@ -291,7 +290,7 @@ public final class ModuleQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenIn());
       }
@@ -467,19 +466,13 @@ public final class ModuleQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenInFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -525,12 +518,10 @@ public final class ModuleQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenIn_ = tokenInBuilder_ == null
               ? tokenIn_
               : tokenInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokenOutDenom_ = tokenOutDenom_;
@@ -538,7 +529,6 @@ public final class ModuleQueryMsgProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.swapFee_ = swapFee_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -744,10 +734,8 @@ public final class ModuleQueryMsgProto {
         } else {
           tokenInBuilder_.mergeFrom(value);
         }
-        if (tokenIn_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1131,7 +1119,6 @@ public final class ModuleQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CALC_OUT_AMT_GIVEN_IN_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenIn calcOutAmtGivenIn_;
     /**
@@ -1145,7 +1132,7 @@ public final class ModuleQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasCalcOutAmtGivenIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return calcOutAmtGivenIn_ != null;
     }
     /**
      * <pre>
@@ -1187,7 +1174,7 @@ public final class ModuleQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (calcOutAmtGivenIn_ != null) {
         output.writeMessage(1, getCalcOutAmtGivenIn());
       }
       getUnknownFields().writeTo(output);
@@ -1199,7 +1186,7 @@ public final class ModuleQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (calcOutAmtGivenIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCalcOutAmtGivenIn());
       }
@@ -1357,19 +1344,13 @@ public final class ModuleQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCalcOutAmtGivenInFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1413,14 +1394,11 @@ public final class ModuleQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.calcOutAmtGivenIn_ = calcOutAmtGivenInBuilder_ == null
               ? calcOutAmtGivenIn_
               : calcOutAmtGivenInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1611,10 +1589,8 @@ public final class ModuleQueryMsgProto {
         } else {
           calcOutAmtGivenInBuilder_.mergeFrom(value);
         }
-        if (calcOutAmtGivenIn_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1815,7 +1791,6 @@ public final class ModuleQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKEN_OUT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin tokenOut_;
     /**
@@ -1828,7 +1803,7 @@ public final class ModuleQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasTokenOut() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tokenOut_ != null;
     }
     /**
      * <pre>
@@ -1868,7 +1843,7 @@ public final class ModuleQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenOut_ != null) {
         output.writeMessage(1, getTokenOut());
       }
       getUnknownFields().writeTo(output);
@@ -1880,7 +1855,7 @@ public final class ModuleQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenOut_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenOut());
       }
@@ -2038,19 +2013,13 @@ public final class ModuleQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenOutFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2094,14 +2063,11 @@ public final class ModuleQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcOutAmtGivenInResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenOut_ = tokenOutBuilder_ == null
               ? tokenOut_
               : tokenOutBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2287,10 +2253,8 @@ public final class ModuleQueryMsgProto {
         } else {
           tokenOutBuilder_.mergeFrom(value);
         }
-        if (tokenOut_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2533,7 +2497,6 @@ public final class ModuleQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKEN_OUT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin tokenOut_;
     /**
@@ -2546,7 +2509,7 @@ public final class ModuleQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasTokenOut() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tokenOut_ != null;
     }
     /**
      * <pre>
@@ -2680,7 +2643,7 @@ public final class ModuleQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenOut_ != null) {
         output.writeMessage(1, getTokenOut());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenInDenom_)) {
@@ -2698,7 +2661,7 @@ public final class ModuleQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenOut_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenOut());
       }
@@ -2874,19 +2837,13 @@ public final class ModuleQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenOutFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2932,12 +2889,10 @@ public final class ModuleQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenOut_ = tokenOutBuilder_ == null
               ? tokenOut_
               : tokenOutBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.tokenInDenom_ = tokenInDenom_;
@@ -2945,7 +2900,6 @@ public final class ModuleQueryMsgProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.swapFee_ = swapFee_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3151,10 +3105,8 @@ public final class ModuleQueryMsgProto {
         } else {
           tokenOutBuilder_.mergeFrom(value);
         }
-        if (tokenOut_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3538,7 +3490,6 @@ public final class ModuleQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CALC_IN_AMT_GIVEN_OUT_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOut calcInAmtGivenOut_;
     /**
@@ -3552,7 +3503,7 @@ public final class ModuleQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasCalcInAmtGivenOut() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return calcInAmtGivenOut_ != null;
     }
     /**
      * <pre>
@@ -3594,7 +3545,7 @@ public final class ModuleQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (calcInAmtGivenOut_ != null) {
         output.writeMessage(1, getCalcInAmtGivenOut());
       }
       getUnknownFields().writeTo(output);
@@ -3606,7 +3557,7 @@ public final class ModuleQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (calcInAmtGivenOut_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCalcInAmtGivenOut());
       }
@@ -3764,19 +3715,13 @@ public final class ModuleQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCalcInAmtGivenOutFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3820,14 +3765,11 @@ public final class ModuleQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.calcInAmtGivenOut_ = calcInAmtGivenOutBuilder_ == null
               ? calcInAmtGivenOut_
               : calcInAmtGivenOutBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4018,10 +3960,8 @@ public final class ModuleQueryMsgProto {
         } else {
           calcInAmtGivenOutBuilder_.mergeFrom(value);
         }
-        if (calcInAmtGivenOut_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4222,7 +4162,6 @@ public final class ModuleQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.class, com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKEN_IN_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin tokenIn_;
     /**
@@ -4235,7 +4174,7 @@ public final class ModuleQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasTokenIn() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tokenIn_ != null;
     }
     /**
      * <pre>
@@ -4275,7 +4214,7 @@ public final class ModuleQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenIn_ != null) {
         output.writeMessage(1, getTokenIn());
       }
       getUnknownFields().writeTo(output);
@@ -4287,7 +4226,7 @@ public final class ModuleQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (tokenIn_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTokenIn());
       }
@@ -4445,19 +4384,13 @@ public final class ModuleQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTokenInFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4501,14 +4434,11 @@ public final class ModuleQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.ModuleQueryMsgProto.CalcInAmtGivenOutResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenIn_ = tokenInBuilder_ == null
               ? tokenIn_
               : tokenInBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4694,10 +4624,8 @@ public final class ModuleQueryMsgProto {
         } else {
           tokenInBuilder_.mergeFrom(value);
         }
-        if (tokenIn_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

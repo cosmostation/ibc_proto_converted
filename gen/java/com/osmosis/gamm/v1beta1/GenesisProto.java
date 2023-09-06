@@ -912,7 +912,6 @@ public final class GenesisProto {
               com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.class, com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOLS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.Any> pools_;
@@ -977,7 +976,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1003,7 +1002,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasMigrationRecords() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return migrationRecords_ != null;
     }
     /**
      * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
@@ -1041,10 +1040,10 @@ public final class GenesisProto {
       if (nextPoolNumber_ != 0L) {
         output.writeUInt64(2, nextPoolNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(3, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (migrationRecords_ != null) {
         output.writeMessage(4, getMigrationRecords());
       }
       getUnknownFields().writeTo(output);
@@ -1064,11 +1063,11 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, nextPoolNumber_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (migrationRecords_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMigrationRecords());
       }
@@ -1250,21 +1249,13 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolsFieldBuilder();
-          getParamsFieldBuilder();
-          getMigrationRecordsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1337,20 +1328,16 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.nextPoolNumber_ = nextPoolNumber_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.migrationRecords_ = migrationRecordsBuilder_ == null
               ? migrationRecords_
               : migrationRecordsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1857,10 +1844,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1978,10 +1963,8 @@ public final class GenesisProto {
         } else {
           migrationRecordsBuilder_.mergeFrom(value);
         }
-        if (migrationRecords_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

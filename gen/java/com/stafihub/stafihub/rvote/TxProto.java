@@ -1103,7 +1103,6 @@ public final class TxProto {
               com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.class, com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROPOSER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object proposer_ = "";
@@ -1151,7 +1150,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return content_ != null;
     }
     /**
      * <code>.google.protobuf.Any content = 2 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
@@ -1186,7 +1185,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, proposer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         output.writeMessage(2, getContent());
       }
       getUnknownFields().writeTo(output);
@@ -1201,7 +1200,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, proposer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getContent());
       }
@@ -1363,19 +1362,13 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rvote.TxProto.MsgSubmitProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1423,14 +1416,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proposer_ = proposer_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1678,10 +1668,8 @@ public final class TxProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        if (content_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

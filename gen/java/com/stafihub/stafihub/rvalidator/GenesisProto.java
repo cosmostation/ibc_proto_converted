@@ -242,7 +242,6 @@ public final class GenesisProto {
               com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.class, com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.stafihub.stafihub.rvalidator.ParamsProto.Params params_;
     /**
@@ -251,7 +250,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -549,7 +548,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < selectedRValidatorList_.size(); i++) {
@@ -579,7 +578,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -801,25 +800,13 @@ public final class GenesisProto {
 
       // Construct using com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getSelectedRValidatorListFieldBuilder();
-          getLatestVotedCycleListFieldBuilder();
-          getLatestDealedCycleListFieldBuilder();
-          getCycleSecondsListFieldBuilder();
-          getShuffleSecondsListFieldBuilder();
-          getDealingRValidatorListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -963,14 +950,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1370,10 +1354,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -488,7 +488,6 @@ public final class TransmuterMsgsProto {
               com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.JoinPoolExecuteMsgRequest.class, com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.JoinPoolExecuteMsgRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int JOIN_POOL_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.EmptyRequest joinPool_;
     /**
@@ -502,7 +501,7 @@ public final class TransmuterMsgsProto {
      */
     @java.lang.Override
     public boolean hasJoinPool() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return joinPool_ != null;
     }
     /**
      * <pre>
@@ -544,7 +543,7 @@ public final class TransmuterMsgsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (joinPool_ != null) {
         output.writeMessage(1, getJoinPool());
       }
       getUnknownFields().writeTo(output);
@@ -556,7 +555,7 @@ public final class TransmuterMsgsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (joinPool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getJoinPool());
       }
@@ -714,19 +713,13 @@ public final class TransmuterMsgsProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.JoinPoolExecuteMsgRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getJoinPoolFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -770,14 +763,11 @@ public final class TransmuterMsgsProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.JoinPoolExecuteMsgRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.joinPool_ = joinPoolBuilder_ == null
               ? joinPool_
               : joinPoolBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -968,10 +958,8 @@ public final class TransmuterMsgsProto {
         } else {
           joinPoolBuilder_.mergeFrom(value);
         }
-        if (joinPool_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1576,7 +1564,6 @@ public final class TransmuterMsgsProto {
               com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.ExitPoolExecuteMsgRequest.class, com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.ExitPoolExecuteMsgRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EXIT_POOL_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.EmptyRequest exitPool_;
     /**
@@ -1590,7 +1577,7 @@ public final class TransmuterMsgsProto {
      */
     @java.lang.Override
     public boolean hasExitPool() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return exitPool_ != null;
     }
     /**
      * <pre>
@@ -1632,7 +1619,7 @@ public final class TransmuterMsgsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (exitPool_ != null) {
         output.writeMessage(1, getExitPool());
       }
       getUnknownFields().writeTo(output);
@@ -1644,7 +1631,7 @@ public final class TransmuterMsgsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (exitPool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getExitPool());
       }
@@ -1806,19 +1793,13 @@ public final class TransmuterMsgsProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.ExitPoolExecuteMsgRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExitPoolFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1862,14 +1843,11 @@ public final class TransmuterMsgsProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.TransmuterMsgsProto.ExitPoolExecuteMsgRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.exitPool_ = exitPoolBuilder_ == null
               ? exitPool_
               : exitPoolBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2060,10 +2038,8 @@ public final class TransmuterMsgsProto {
         } else {
           exitPoolBuilder_.mergeFrom(value);
         }
-        if (exitPool_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

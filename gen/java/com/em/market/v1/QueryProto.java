@@ -1915,7 +1915,6 @@ public final class QueryProto {
                 com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.class, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder.class);
       }
 
-      private int bitField0_;
       public static final int SOURCE_FIELD_NUMBER = 1;
       @SuppressWarnings("serial")
       private volatile java.lang.Object source_ = "";
@@ -2080,7 +2079,7 @@ public final class QueryProto {
        */
       @java.lang.Override
       public boolean hasLastTraded() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return lastTraded_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2124,7 +2123,7 @@ public final class QueryProto {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bestPrice_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bestPrice_);
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (lastTraded_ != null) {
           output.writeMessage(5, getLastTraded());
         }
         getUnknownFields().writeTo(output);
@@ -2148,7 +2147,7 @@ public final class QueryProto {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bestPrice_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bestPrice_);
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (lastTraded_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, getLastTraded());
         }
@@ -2322,19 +2321,13 @@ public final class QueryProto {
 
         // Construct using com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getLastTradedFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -2394,14 +2387,11 @@ public final class QueryProto {
           if (((from_bitField0_ & 0x00000008) != 0)) {
             result.bestPrice_ = bestPrice_;
           }
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000010) != 0)) {
             result.lastTraded_ = lastTradedBuilder_ == null
                 ? lastTraded_
                 : lastTradedBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -2895,10 +2885,8 @@ public final class QueryProto {
           } else {
             lastTradedBuilder_.mergeFrom(value);
           }
-          if (lastTraded_ != null) {
-            bitField0_ |= 0x00000010;
-            onChanged();
-          }
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -5621,7 +5609,6 @@ public final class QueryProto {
               com.em.market.v1.QueryProto.QueryOrderResponse.class, com.em.market.v1.QueryProto.QueryOrderResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -5797,7 +5784,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCreated() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return created_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -5844,7 +5831,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (created_ != null) {
         output.writeMessage(6, getCreated());
       }
       getUnknownFields().writeTo(output);
@@ -5872,7 +5859,7 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, price_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (created_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCreated());
       }
@@ -6051,19 +6038,13 @@ public final class QueryProto {
 
       // Construct using com.em.market.v1.QueryProto.QueryOrderResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreatedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6127,14 +6108,11 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.price_ = price_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.created_ = createdBuilder_ == null
               ? created_
               : createdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6668,10 +6646,8 @@ public final class QueryProto {
         } else {
           createdBuilder_.mergeFrom(value);
         }
-        if (created_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

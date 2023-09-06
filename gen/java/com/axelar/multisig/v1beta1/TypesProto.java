@@ -154,7 +154,6 @@ com.google.protobuf.ByteString defaultValue);
               com.axelar.multisig.v1beta1.TypesProto.Key.class, com.axelar.multisig.v1beta1.TypesProto.Key.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -202,7 +201,7 @@ com.google.protobuf.ByteString defaultValue);
      */
     @java.lang.Override
     public boolean hasSnapshot() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return snapshot_ != null;
     }
     /**
      * <code>.axelar.snapshot.exported.v1beta1.Snapshot snapshot = 2 [json_name = "snapshot", (.gogoproto.nullable) = false];</code>
@@ -307,7 +306,7 @@ com.google.protobuf.ByteString defaultValue) {
      */
     @java.lang.Override
     public boolean hasSigningThreshold() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return signingThreshold_ != null;
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold signing_threshold = 4 [json_name = "signingThreshold", (.gogoproto.nullable) = false];</code>
@@ -360,7 +359,7 @@ com.google.protobuf.ByteString defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (snapshot_ != null) {
         output.writeMessage(2, getSnapshot());
       }
       com.google.protobuf.GeneratedMessageV3
@@ -369,7 +368,7 @@ com.google.protobuf.ByteString defaultValue) {
           internalGetPubKeys(),
           PubKeysDefaultEntryHolder.defaultEntry,
           3);
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signingThreshold_ != null) {
         output.writeMessage(4, getSigningThreshold());
       }
       if (state_ != com.axelar.multisig.exported.v1beta1.TypesProto.KeyState.KEY_STATE_UNSPECIFIED.getNumber()) {
@@ -387,7 +386,7 @@ com.google.protobuf.ByteString defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (snapshot_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSnapshot());
       }
@@ -401,7 +400,7 @@ com.google.protobuf.ByteString defaultValue) {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, pubKeys__);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (signingThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSigningThreshold());
       }
@@ -607,20 +606,13 @@ com.google.protobuf.ByteString defaultValue) {
 
       // Construct using com.axelar.multisig.v1beta1.TypesProto.Key.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSnapshotFieldBuilder();
-          getSigningThresholdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -675,12 +667,10 @@ com.google.protobuf.ByteString defaultValue) {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.snapshot_ = snapshotBuilder_ == null
               ? snapshot_
               : snapshotBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pubKeys_ = internalGetPubKeys();
@@ -690,12 +680,10 @@ com.google.protobuf.ByteString defaultValue) {
           result.signingThreshold_ = signingThresholdBuilder_ == null
               ? signingThreshold_
               : signingThresholdBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.state_ = state_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -973,10 +961,8 @@ com.google.protobuf.ByteString defaultValue) {
         } else {
           snapshotBuilder_.mergeFrom(value);
         }
-        if (snapshot_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1221,10 +1207,8 @@ com.google.protobuf.ByteString defaultValue) {
         } else {
           signingThresholdBuilder_.mergeFrom(value);
         }
-        if (signingThreshold_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1535,7 +1519,6 @@ com.google.protobuf.ByteString defaultValue) {
               com.axelar.multisig.v1beta1.TypesProto.KeygenSession.class, com.axelar.multisig.v1beta1.TypesProto.KeygenSession.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     private com.axelar.multisig.v1beta1.TypesProto.Key key_;
     /**
@@ -1544,7 +1527,7 @@ com.google.protobuf.ByteString defaultValue) {
      */
     @java.lang.Override
     public boolean hasKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return key_ != null;
     }
     /**
      * <code>.axelar.multisig.v1beta1.Key key = 1 [json_name = "key", (.gogoproto.nullable) = false];</code>
@@ -1588,7 +1571,7 @@ com.google.protobuf.ByteString defaultValue) {
      */
     @java.lang.Override
     public boolean hasKeygenThreshold() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return keygenThreshold_ != null;
     }
     /**
      * <code>.axelar.utils.v1beta1.Threshold keygen_threshold = 3 [json_name = "keygenThreshold", (.gogoproto.nullable) = false];</code>
@@ -1730,13 +1713,13 @@ com.google.protobuf.ByteString defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (key_ != null) {
         output.writeMessage(1, getKey());
       }
       if (state_ != com.axelar.multisig.exported.v1beta1.TypesProto.MultisigState.MULTISIG_STATE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (keygenThreshold_ != null) {
         output.writeMessage(3, getKeygenThreshold());
       }
       if (expiresAt_ != 0L) {
@@ -1763,7 +1746,7 @@ com.google.protobuf.ByteString defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (key_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getKey());
       }
@@ -1771,7 +1754,7 @@ com.google.protobuf.ByteString defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (keygenThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getKeygenThreshold());
       }
@@ -2006,20 +1989,13 @@ com.google.protobuf.ByteString defaultValue) {
 
       // Construct using com.axelar.multisig.v1beta1.TypesProto.KeygenSession.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getKeyFieldBuilder();
-          getKeygenThresholdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2073,12 +2049,10 @@ com.google.protobuf.ByteString defaultValue) {
 
       private void buildPartial0(com.axelar.multisig.v1beta1.TypesProto.KeygenSession result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.key_ = keyBuilder_ == null
               ? key_
               : keyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = state_;
@@ -2087,7 +2061,6 @@ com.google.protobuf.ByteString defaultValue) {
           result.keygenThreshold_ = keygenThresholdBuilder_ == null
               ? keygenThreshold_
               : keygenThresholdBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.expiresAt_ = expiresAt_;
@@ -2102,7 +2075,6 @@ com.google.protobuf.ByteString defaultValue) {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.gracePeriod_ = gracePeriod_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2322,10 +2294,8 @@ com.google.protobuf.ByteString defaultValue) {
         } else {
           keyBuilder_.mergeFrom(value);
         }
-        if (key_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2496,10 +2466,8 @@ com.google.protobuf.ByteString defaultValue) {
         } else {
           keygenThresholdBuilder_.mergeFrom(value);
         }
-        if (keygenThreshold_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3906,7 +3874,6 @@ com.google.protobuf.ByteString defaultValue) {
               com.axelar.multisig.v1beta1.TypesProto.SigningSession.class, com.axelar.multisig.v1beta1.TypesProto.SigningSession.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -3926,7 +3893,7 @@ com.google.protobuf.ByteString defaultValue) {
      */
     @java.lang.Override
     public boolean hasMultiSig() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return multiSig_ != null;
     }
     /**
      * <code>.axelar.multisig.v1beta1.MultiSig multi_sig = 2 [json_name = "multiSig", (.gogoproto.nullable) = false];</code>
@@ -3970,7 +3937,7 @@ com.google.protobuf.ByteString defaultValue) {
      */
     @java.lang.Override
     public boolean hasKey() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return key_ != null;
     }
     /**
      * <code>.axelar.multisig.v1beta1.Key key = 4 [json_name = "key", (.gogoproto.nullable) = false];</code>
@@ -4068,7 +4035,7 @@ com.google.protobuf.ByteString defaultValue) {
      */
     @java.lang.Override
     public boolean hasModuleMetadata() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return moduleMetadata_ != null;
     }
     /**
      * <code>.google.protobuf.Any module_metadata = 9 [json_name = "moduleMetadata", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
@@ -4103,13 +4070,13 @@ com.google.protobuf.ByteString defaultValue) {
       if (id_ != 0L) {
         output.writeUInt64(1, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (multiSig_ != null) {
         output.writeMessage(2, getMultiSig());
       }
       if (state_ != com.axelar.multisig.exported.v1beta1.TypesProto.MultisigState.MULTISIG_STATE_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (key_ != null) {
         output.writeMessage(4, getKey());
       }
       if (expiresAt_ != 0L) {
@@ -4124,7 +4091,7 @@ com.google.protobuf.ByteString defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, module_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (moduleMetadata_ != null) {
         output.writeMessage(9, getModuleMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -4140,7 +4107,7 @@ com.google.protobuf.ByteString defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (multiSig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMultiSig());
       }
@@ -4148,7 +4115,7 @@ com.google.protobuf.ByteString defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (key_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getKey());
       }
@@ -4167,7 +4134,7 @@ com.google.protobuf.ByteString defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, module_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (moduleMetadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getModuleMetadata());
       }
@@ -4370,21 +4337,13 @@ com.google.protobuf.ByteString defaultValue) {
 
       // Construct using com.axelar.multisig.v1beta1.TypesProto.SigningSession.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMultiSigFieldBuilder();
-          getKeyFieldBuilder();
-          getModuleMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4447,12 +4406,10 @@ com.google.protobuf.ByteString defaultValue) {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.multiSig_ = multiSigBuilder_ == null
               ? multiSig_
               : multiSigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.state_ = state_;
@@ -4461,7 +4418,6 @@ com.google.protobuf.ByteString defaultValue) {
           result.key_ = keyBuilder_ == null
               ? key_
               : keyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.expiresAt_ = expiresAt_;
@@ -4479,9 +4435,7 @@ com.google.protobuf.ByteString defaultValue) {
           result.moduleMetadata_ = moduleMetadataBuilder_ == null
               ? moduleMetadata_
               : moduleMetadataBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4749,10 +4703,8 @@ com.google.protobuf.ByteString defaultValue) {
         } else {
           multiSigBuilder_.mergeFrom(value);
         }
-        if (multiSig_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4923,10 +4875,8 @@ com.google.protobuf.ByteString defaultValue) {
         } else {
           keyBuilder_.mergeFrom(value);
         }
-        if (key_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5212,10 +5162,8 @@ com.google.protobuf.ByteString defaultValue) {
         } else {
           moduleMetadataBuilder_.mergeFrom(value);
         }
-        if (moduleMetadata_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**

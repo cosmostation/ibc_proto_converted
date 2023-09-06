@@ -465,7 +465,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryParamsResponse.class, com.injective.peggy.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.ParamsProto.Params params_;
     /**
@@ -474,7 +473,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.injective.peggy.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -506,7 +505,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -518,7 +517,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -676,19 +675,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -732,14 +725,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -905,10 +895,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1474,7 +1462,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryCurrentValsetResponse.class, com.injective.peggy.v1.QueryProto.QueryCurrentValsetResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALSET_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.TypesProto.Valset valset_;
     /**
@@ -1483,7 +1470,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasValset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return valset_ != null;
     }
     /**
      * <code>.injective.peggy.v1.Valset valset = 1 [json_name = "valset"];</code>
@@ -1515,7 +1502,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (valset_ != null) {
         output.writeMessage(1, getValset());
       }
       getUnknownFields().writeTo(output);
@@ -1527,7 +1514,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (valset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValset());
       }
@@ -1685,19 +1672,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryCurrentValsetResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValsetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1741,14 +1722,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryCurrentValsetResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.valset_ = valsetBuilder_ == null
               ? valset_
               : valsetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1914,10 +1892,8 @@ public final class QueryProto {
         } else {
           valsetBuilder_.mergeFrom(value);
         }
-        if (valset_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2563,7 +2539,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryValsetRequestResponse.class, com.injective.peggy.v1.QueryProto.QueryValsetRequestResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALSET_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.TypesProto.Valset valset_;
     /**
@@ -2572,7 +2547,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasValset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return valset_ != null;
     }
     /**
      * <code>.injective.peggy.v1.Valset valset = 1 [json_name = "valset"];</code>
@@ -2604,7 +2579,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (valset_ != null) {
         output.writeMessage(1, getValset());
       }
       getUnknownFields().writeTo(output);
@@ -2616,7 +2591,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (valset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValset());
       }
@@ -2774,19 +2749,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryValsetRequestResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValsetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2830,14 +2799,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryValsetRequestResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.valset_ = valsetBuilder_ == null
               ? valset_
               : valsetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3003,10 +2969,8 @@ public final class QueryProto {
         } else {
           valsetBuilder_.mergeFrom(value);
         }
-        if (valset_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3800,7 +3764,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryValsetConfirmResponse.class, com.injective.peggy.v1.QueryProto.QueryValsetConfirmResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONFIRM_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.MsgsProto.MsgValsetConfirm confirm_;
     /**
@@ -3809,7 +3772,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasConfirm() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return confirm_ != null;
     }
     /**
      * <code>.injective.peggy.v1.MsgValsetConfirm confirm = 1 [json_name = "confirm"];</code>
@@ -3841,7 +3804,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (confirm_ != null) {
         output.writeMessage(1, getConfirm());
       }
       getUnknownFields().writeTo(output);
@@ -3853,7 +3816,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (confirm_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConfirm());
       }
@@ -4011,19 +3974,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryValsetConfirmResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfirmFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4067,14 +4024,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryValsetConfirmResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.confirm_ = confirmBuilder_ == null
               ? confirm_
               : confirmBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4240,10 +4194,8 @@ public final class QueryProto {
         } else {
           confirmBuilder_.mergeFrom(value);
         }
-        if (confirm_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9915,7 +9867,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryLastPendingBatchRequestByAddrResponse.class, com.injective.peggy.v1.QueryProto.QueryLastPendingBatchRequestByAddrResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BATCH_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.BatchProto.OutgoingTxBatch batch_;
     /**
@@ -9924,7 +9875,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBatch() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return batch_ != null;
     }
     /**
      * <code>.injective.peggy.v1.OutgoingTxBatch batch = 1 [json_name = "batch"];</code>
@@ -9956,7 +9907,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (batch_ != null) {
         output.writeMessage(1, getBatch());
       }
       getUnknownFields().writeTo(output);
@@ -9968,7 +9919,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (batch_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBatch());
       }
@@ -10126,19 +10077,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryLastPendingBatchRequestByAddrResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBatchFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10182,14 +10127,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryLastPendingBatchRequestByAddrResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.batch_ = batchBuilder_ == null
               ? batch_
               : batchBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10355,10 +10297,8 @@ public final class QueryProto {
         } else {
           batchBuilder_.mergeFrom(value);
         }
-        if (batch_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12331,7 +12271,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryBatchRequestByNonceResponse.class, com.injective.peggy.v1.QueryProto.QueryBatchRequestByNonceResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BATCH_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.BatchProto.OutgoingTxBatch batch_;
     /**
@@ -12340,7 +12279,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBatch() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return batch_ != null;
     }
     /**
      * <code>.injective.peggy.v1.OutgoingTxBatch batch = 1 [json_name = "batch"];</code>
@@ -12372,7 +12311,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (batch_ != null) {
         output.writeMessage(1, getBatch());
       }
       getUnknownFields().writeTo(output);
@@ -12384,7 +12323,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (batch_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBatch());
       }
@@ -12542,19 +12481,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryBatchRequestByNonceResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBatchFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12598,14 +12531,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryBatchRequestByNonceResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.batch_ = batchBuilder_ == null
               ? batch_
               : batchBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12771,10 +12701,8 @@ public final class QueryProto {
         } else {
           batchBuilder_.mergeFrom(value);
         }
-        if (batch_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -14902,7 +14830,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryLastEventByAddrResponse.class, com.injective.peggy.v1.QueryProto.QueryLastEventByAddrResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LAST_CLAIM_EVENT_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.TypesProto.LastClaimEvent lastClaimEvent_;
     /**
@@ -14911,7 +14838,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLastClaimEvent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lastClaimEvent_ != null;
     }
     /**
      * <code>.injective.peggy.v1.LastClaimEvent last_claim_event = 1 [json_name = "lastClaimEvent"];</code>
@@ -14943,7 +14870,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastClaimEvent_ != null) {
         output.writeMessage(1, getLastClaimEvent());
       }
       getUnknownFields().writeTo(output);
@@ -14955,7 +14882,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastClaimEvent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLastClaimEvent());
       }
@@ -15113,19 +15040,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryLastEventByAddrResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLastClaimEventFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15169,14 +15090,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryLastEventByAddrResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lastClaimEvent_ = lastClaimEventBuilder_ == null
               ? lastClaimEvent_
               : lastClaimEventBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15342,10 +15260,8 @@ public final class QueryProto {
         } else {
           lastClaimEventBuilder_.mergeFrom(value);
         }
-        if (lastClaimEvent_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -23743,7 +23659,6 @@ public final class QueryProto {
               com.injective.peggy.v1.QueryProto.QueryModuleStateResponse.class, com.injective.peggy.v1.QueryProto.QueryModuleStateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STATE_FIELD_NUMBER = 1;
     private com.injective.peggy.v1.GenesisProto.GenesisState state_;
     /**
@@ -23752,7 +23667,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return state_ != null;
     }
     /**
      * <code>.injective.peggy.v1.GenesisState state = 1 [json_name = "state"];</code>
@@ -23784,7 +23699,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         output.writeMessage(1, getState());
       }
       getUnknownFields().writeTo(output);
@@ -23796,7 +23711,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getState());
       }
@@ -23958,19 +23873,13 @@ public final class QueryProto {
 
       // Construct using com.injective.peggy.v1.QueryProto.QueryModuleStateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -24014,14 +23923,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.injective.peggy.v1.QueryProto.QueryModuleStateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -24187,10 +24093,8 @@ public final class QueryProto {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        if (state_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

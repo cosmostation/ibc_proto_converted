@@ -4448,7 +4448,6 @@ public final class TxProto {
               com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.class, com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -4468,7 +4467,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasFeeInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return feeInfo_ != null;
     }
     /**
      * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
@@ -4503,7 +4502,7 @@ public final class TxProto {
       if (!sender_.isEmpty()) {
         output.writeBytes(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (feeInfo_ != null) {
         output.writeMessage(2, getFeeInfo());
       }
       getUnknownFields().writeTo(output);
@@ -4519,7 +4518,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (feeInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFeeInfo());
       }
@@ -4686,19 +4685,13 @@ public final class TxProto {
 
       // Construct using com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeeInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4746,14 +4739,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.feeInfo_ = feeInfoBuilder_ == null
               ? feeInfo_
               : feeInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4959,10 +4949,8 @@ public final class TxProto {
         } else {
           feeInfoBuilder_.mergeFrom(value);
         }
-        if (feeInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5568,7 +5556,6 @@ public final class TxProto {
               com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.class, com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -5627,7 +5614,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasLimit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return limit_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
@@ -5653,7 +5640,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasWindow() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return window_ != null;
     }
     /**
      * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -5691,10 +5678,10 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (limit_ != null) {
         output.writeMessage(3, getLimit());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (window_ != null) {
         output.writeMessage(4, getWindow());
       }
       getUnknownFields().writeTo(output);
@@ -5713,11 +5700,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chain_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (limit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLimit());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (window_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getWindow());
       }
@@ -5897,20 +5884,13 @@ public final class TxProto {
 
       // Construct using com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLimitFieldBuilder();
-          getWindowFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5967,20 +5947,16 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chain_ = chain_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.limit_ = limitBuilder_ == null
               ? limit_
               : limitBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.window_ = windowBuilder_ == null
               ? window_
               : windowBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6278,10 +6254,8 @@ public final class TxProto {
         } else {
           limitBuilder_.mergeFrom(value);
         }
-        if (limit_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6399,10 +6373,8 @@ public final class TxProto {
         } else {
           windowBuilder_.mergeFrom(value);
         }
-        if (window_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

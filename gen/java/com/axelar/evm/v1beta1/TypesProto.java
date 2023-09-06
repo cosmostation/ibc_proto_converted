@@ -8326,9 +8326,9 @@ public final class TypesProto {
       super(builder);
     }
     private EventMultisigOwnershipTransferred() {
-      preOwners_ = emptyList(com.google.protobuf.ByteString.class);
+      preOwners_ = java.util.Collections.emptyList();
       prevThreshold_ = com.google.protobuf.ByteString.EMPTY;
-      newOwners_ = emptyList(com.google.protobuf.ByteString.class);
+      newOwners_ = java.util.Collections.emptyList();
       newThreshold_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -8354,8 +8354,7 @@ public final class TypesProto {
 
     public static final int PRE_OWNERS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> preOwners_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> preOwners_;
     /**
      * <code>repeated bytes pre_owners = 1 [json_name = "preOwners", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
      * @return A list containing the preOwners.
@@ -8394,8 +8393,7 @@ public final class TypesProto {
 
     public static final int NEW_OWNERS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> newOwners_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> newOwners_;
     /**
      * <code>repeated bytes new_owners = 3 [json_name = "newOwners", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
      * @return A list containing the newOwners.
@@ -8670,9 +8668,9 @@ public final class TypesProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        preOwners_ = emptyList(com.google.protobuf.ByteString.class);
+        preOwners_ = java.util.Collections.emptyList();
         prevThreshold_ = com.google.protobuf.ByteString.EMPTY;
-        newOwners_ = emptyList(com.google.protobuf.ByteString.class);
+        newOwners_ = java.util.Collections.emptyList();
         newThreshold_ = com.google.protobuf.ByteString.EMPTY;
         return this;
       }
@@ -8700,23 +8698,29 @@ public final class TypesProto {
       @java.lang.Override
       public com.axelar.evm.v1beta1.TypesProto.EventMultisigOwnershipTransferred buildPartial() {
         com.axelar.evm.v1beta1.TypesProto.EventMultisigOwnershipTransferred result = new com.axelar.evm.v1beta1.TypesProto.EventMultisigOwnershipTransferred(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.axelar.evm.v1beta1.TypesProto.EventMultisigOwnershipTransferred result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          preOwners_ = java.util.Collections.unmodifiableList(preOwners_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.preOwners_ = preOwners_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          newOwners_ = java.util.Collections.unmodifiableList(newOwners_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.newOwners_ = newOwners_;
+      }
+
       private void buildPartial0(com.axelar.evm.v1beta1.TypesProto.EventMultisigOwnershipTransferred result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          preOwners_.makeImmutable();
-          result.preOwners_ = preOwners_;
-        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.prevThreshold_ = prevThreshold_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          newOwners_.makeImmutable();
-          result.newOwners_ = newOwners_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.newThreshold_ = newThreshold_;
@@ -8770,8 +8774,7 @@ public final class TypesProto {
         if (!other.preOwners_.isEmpty()) {
           if (preOwners_.isEmpty()) {
             preOwners_ = other.preOwners_;
-            preOwners_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensurePreOwnersIsMutable();
             preOwners_.addAll(other.preOwners_);
@@ -8784,8 +8787,7 @@ public final class TypesProto {
         if (!other.newOwners_.isEmpty()) {
           if (newOwners_.isEmpty()) {
             newOwners_ = other.newOwners_;
-            newOwners_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureNewOwnersIsMutable();
             newOwners_.addAll(other.newOwners_);
@@ -8860,12 +8862,12 @@ public final class TypesProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> preOwners_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> preOwners_ = java.util.Collections.emptyList();
       private void ensurePreOwnersIsMutable() {
-        if (!preOwners_.isModifiable()) {
-          preOwners_ = makeMutableCopy(preOwners_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          preOwners_ = new java.util.ArrayList<com.google.protobuf.ByteString>(preOwners_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes pre_owners = 1 [json_name = "preOwners", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
@@ -8873,8 +8875,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getPreOwnersList() {
-        preOwners_.makeImmutable();
-        return preOwners_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(preOwners_) : preOwners_;
       }
       /**
        * <code>repeated bytes pre_owners = 1 [json_name = "preOwners", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
@@ -8902,7 +8904,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensurePreOwnersIsMutable();
         preOwners_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8915,7 +8916,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensurePreOwnersIsMutable();
         preOwners_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8929,7 +8929,6 @@ public final class TypesProto {
         ensurePreOwnersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, preOwners_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8938,7 +8937,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearPreOwners() {
-        preOwners_ = emptyList(com.google.protobuf.ByteString.class);
+        preOwners_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -8976,12 +8975,12 @@ public final class TypesProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> newOwners_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> newOwners_ = java.util.Collections.emptyList();
       private void ensureNewOwnersIsMutable() {
-        if (!newOwners_.isModifiable()) {
-          newOwners_ = makeMutableCopy(newOwners_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          newOwners_ = new java.util.ArrayList<com.google.protobuf.ByteString>(newOwners_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bytes new_owners = 3 [json_name = "newOwners", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
@@ -8989,8 +8988,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getNewOwnersList() {
-        newOwners_.makeImmutable();
-        return newOwners_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(newOwners_) : newOwners_;
       }
       /**
        * <code>repeated bytes new_owners = 3 [json_name = "newOwners", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
@@ -9018,7 +9017,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureNewOwnersIsMutable();
         newOwners_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9031,7 +9029,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureNewOwnersIsMutable();
         newOwners_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9045,7 +9042,6 @@ public final class TypesProto {
         ensureNewOwnersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, newOwners_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9054,7 +9050,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearNewOwners() {
-        newOwners_ = emptyList(com.google.protobuf.ByteString.class);
+        newOwners_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -9212,9 +9208,9 @@ public final class TypesProto {
       super(builder);
     }
     private EventMultisigOperatorshipTransferred() {
-      newOperators_ = emptyList(com.google.protobuf.ByteString.class);
+      newOperators_ = java.util.Collections.emptyList();
       newThreshold_ = com.google.protobuf.ByteString.EMPTY;
-      newWeights_ = emptyList(com.google.protobuf.ByteString.class);
+      newWeights_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9239,8 +9235,7 @@ public final class TypesProto {
 
     public static final int NEW_OPERATORS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> newOperators_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> newOperators_;
     /**
      * <code>repeated bytes new_operators = 3 [json_name = "newOperators", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
      * @return A list containing the newOperators.
@@ -9279,8 +9274,7 @@ public final class TypesProto {
 
     public static final int NEW_WEIGHTS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> newWeights_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> newWeights_;
     /**
      * <code>repeated bytes new_weights = 5 [json_name = "newWeights", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
      * @return A list containing the newWeights.
@@ -9533,9 +9527,9 @@ public final class TypesProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        newOperators_ = emptyList(com.google.protobuf.ByteString.class);
+        newOperators_ = java.util.Collections.emptyList();
         newThreshold_ = com.google.protobuf.ByteString.EMPTY;
-        newWeights_ = emptyList(com.google.protobuf.ByteString.class);
+        newWeights_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -9562,23 +9556,29 @@ public final class TypesProto {
       @java.lang.Override
       public com.axelar.evm.v1beta1.TypesProto.EventMultisigOperatorshipTransferred buildPartial() {
         com.axelar.evm.v1beta1.TypesProto.EventMultisigOperatorshipTransferred result = new com.axelar.evm.v1beta1.TypesProto.EventMultisigOperatorshipTransferred(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.axelar.evm.v1beta1.TypesProto.EventMultisigOperatorshipTransferred result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          newOperators_ = java.util.Collections.unmodifiableList(newOperators_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.newOperators_ = newOperators_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          newWeights_ = java.util.Collections.unmodifiableList(newWeights_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.newWeights_ = newWeights_;
+      }
+
       private void buildPartial0(com.axelar.evm.v1beta1.TypesProto.EventMultisigOperatorshipTransferred result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          newOperators_.makeImmutable();
-          result.newOperators_ = newOperators_;
-        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.newThreshold_ = newThreshold_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          newWeights_.makeImmutable();
-          result.newWeights_ = newWeights_;
         }
       }
 
@@ -9629,8 +9629,7 @@ public final class TypesProto {
         if (!other.newOperators_.isEmpty()) {
           if (newOperators_.isEmpty()) {
             newOperators_ = other.newOperators_;
-            newOperators_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureNewOperatorsIsMutable();
             newOperators_.addAll(other.newOperators_);
@@ -9643,8 +9642,7 @@ public final class TypesProto {
         if (!other.newWeights_.isEmpty()) {
           if (newWeights_.isEmpty()) {
             newWeights_ = other.newWeights_;
-            newWeights_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureNewWeightsIsMutable();
             newWeights_.addAll(other.newWeights_);
@@ -9711,12 +9709,12 @@ public final class TypesProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> newOperators_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> newOperators_ = java.util.Collections.emptyList();
       private void ensureNewOperatorsIsMutable() {
-        if (!newOperators_.isModifiable()) {
-          newOperators_ = makeMutableCopy(newOperators_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          newOperators_ = new java.util.ArrayList<com.google.protobuf.ByteString>(newOperators_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated bytes new_operators = 3 [json_name = "newOperators", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
@@ -9724,8 +9722,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getNewOperatorsList() {
-        newOperators_.makeImmutable();
-        return newOperators_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(newOperators_) : newOperators_;
       }
       /**
        * <code>repeated bytes new_operators = 3 [json_name = "newOperators", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Address"];</code>
@@ -9753,7 +9751,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureNewOperatorsIsMutable();
         newOperators_.set(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9766,7 +9763,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureNewOperatorsIsMutable();
         newOperators_.add(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9780,7 +9776,6 @@ public final class TypesProto {
         ensureNewOperatorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, newOperators_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9789,7 +9784,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearNewOperators() {
-        newOperators_ = emptyList(com.google.protobuf.ByteString.class);
+        newOperators_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -9827,12 +9822,12 @@ public final class TypesProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> newWeights_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> newWeights_ = java.util.Collections.emptyList();
       private void ensureNewWeightsIsMutable() {
-        if (!newWeights_.isModifiable()) {
-          newWeights_ = makeMutableCopy(newWeights_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          newWeights_ = new java.util.ArrayList<com.google.protobuf.ByteString>(newWeights_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bytes new_weights = 5 [json_name = "newWeights", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
@@ -9840,8 +9835,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getNewWeightsList() {
-        newWeights_.makeImmutable();
-        return newWeights_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(newWeights_) : newWeights_;
       }
       /**
        * <code>repeated bytes new_weights = 5 [json_name = "newWeights", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
@@ -9869,7 +9864,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureNewWeightsIsMutable();
         newWeights_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9882,7 +9876,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureNewWeightsIsMutable();
         newWeights_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9896,7 +9889,6 @@ public final class TypesProto {
         ensureNewWeightsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, newWeights_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9905,7 +9897,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearNewWeights() {
-        newWeights_ = emptyList(com.google.protobuf.ByteString.class);
+        newWeights_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -12813,7 +12805,6 @@ public final class TypesProto {
               com.axelar.evm.v1beta1.TypesProto.ERC20TokenMetadata.class, com.axelar.evm.v1beta1.TypesProto.ERC20TokenMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ASSET_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object asset_ = "";
@@ -12872,7 +12863,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasDetails() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return details_ != null;
     }
     /**
      * <code>.axelar.evm.v1beta1.TokenDetails details = 3 [json_name = "details", (.gogoproto.nullable) = false];</code>
@@ -13028,7 +13019,7 @@ public final class TypesProto {
       if (!chainId_.isEmpty()) {
         output.writeBytes(2, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (details_ != null) {
         output.writeMessage(3, getDetails());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenAddress_)) {
@@ -13062,7 +13053,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (details_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDetails());
       }
@@ -13270,19 +13261,13 @@ public final class TypesProto {
 
       // Construct using com.axelar.evm.v1beta1.TypesProto.ERC20TokenMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDetailsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13339,12 +13324,10 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chainId_ = chainId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.details_ = detailsBuilder_ == null
               ? details_
               : detailsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.tokenAddress_ = tokenAddress_;
@@ -13361,7 +13344,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.burnerCode_ = burnerCode_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13693,10 +13675,8 @@ public final class TypesProto {
         } else {
           detailsBuilder_.mergeFrom(value);
         }
-        if (details_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -15760,7 +15740,7 @@ public final class TypesProto {
     }
     private CommandBatchMetadata() {
       id_ = com.google.protobuf.ByteString.EMPTY;
-      commandIds_ = emptyList(com.google.protobuf.ByteString.class);
+      commandIds_ = java.util.Collections.emptyList();
       data_ = com.google.protobuf.ByteString.EMPTY;
       sigHash_ = com.google.protobuf.ByteString.EMPTY;
       status_ = 0;
@@ -15788,7 +15768,6 @@ public final class TypesProto {
               com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata.class, com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString id_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -15802,8 +15781,7 @@ public final class TypesProto {
 
     public static final int COMMAND_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> commandIds_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> commandIds_;
     /**
      * <code>repeated bytes command_ids = 2 [json_name = "commandIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "CommandID", (.gogoproto.customname) = "CommandIDs"];</code>
      * @return A list containing the commandIds.
@@ -15927,7 +15905,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasSignature() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return signature_ != null;
     }
     /**
      * <code>.google.protobuf.Any signature = 8 [json_name = "signature", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
@@ -15980,7 +15958,7 @@ public final class TypesProto {
       if (!prevBatchedCommandsId_.isEmpty()) {
         output.writeBytes(7, prevBatchedCommandsId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signature_ != null) {
         output.writeMessage(8, getSignature());
       }
       getUnknownFields().writeTo(output);
@@ -16024,7 +16002,7 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, prevBatchedCommandsId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signature_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getSignature());
       }
@@ -16211,26 +16189,20 @@ public final class TypesProto {
 
       // Construct using com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSignatureFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
         id_ = com.google.protobuf.ByteString.EMPTY;
-        commandIds_ = emptyList(com.google.protobuf.ByteString.class);
+        commandIds_ = java.util.Collections.emptyList();
         data_ = com.google.protobuf.ByteString.EMPTY;
         sigHash_ = com.google.protobuf.ByteString.EMPTY;
         status_ = 0;
@@ -16267,19 +16239,24 @@ public final class TypesProto {
       @java.lang.Override
       public com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata buildPartial() {
         com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata result = new com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          commandIds_ = java.util.Collections.unmodifiableList(commandIds_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.commandIds_ = commandIds_;
       }
 
       private void buildPartial0(com.axelar.evm.v1beta1.TypesProto.CommandBatchMetadata result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          commandIds_.makeImmutable();
-          result.commandIds_ = commandIds_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.data_ = data_;
@@ -16296,14 +16273,11 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.prevBatchedCommandsId_ = prevBatchedCommandsId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.signature_ = signatureBuilder_ == null
               ? signature_
               : signatureBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16356,8 +16330,7 @@ public final class TypesProto {
         if (!other.commandIds_.isEmpty()) {
           if (commandIds_.isEmpty()) {
             commandIds_ = other.commandIds_;
-            commandIds_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureCommandIdsIsMutable();
             commandIds_.addAll(other.commandIds_);
@@ -16502,12 +16475,12 @@ public final class TypesProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> commandIds_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> commandIds_ = java.util.Collections.emptyList();
       private void ensureCommandIdsIsMutable() {
-        if (!commandIds_.isModifiable()) {
-          commandIds_ = makeMutableCopy(commandIds_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          commandIds_ = new java.util.ArrayList<com.google.protobuf.ByteString>(commandIds_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated bytes command_ids = 2 [json_name = "commandIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "CommandID", (.gogoproto.customname) = "CommandIDs"];</code>
@@ -16515,8 +16488,8 @@ public final class TypesProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getCommandIdsList() {
-        commandIds_.makeImmutable();
-        return commandIds_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(commandIds_) : commandIds_;
       }
       /**
        * <code>repeated bytes command_ids = 2 [json_name = "commandIds", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "CommandID", (.gogoproto.customname) = "CommandIDs"];</code>
@@ -16544,7 +16517,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureCommandIdsIsMutable();
         commandIds_.set(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -16557,7 +16529,6 @@ public final class TypesProto {
         if (value == null) { throw new NullPointerException(); }
         ensureCommandIdsIsMutable();
         commandIds_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -16571,7 +16542,6 @@ public final class TypesProto {
         ensureCommandIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, commandIds_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -16580,7 +16550,7 @@ public final class TypesProto {
        * @return This builder for chaining.
        */
       public Builder clearCommandIds() {
-        commandIds_ = emptyList(com.google.protobuf.ByteString.class);
+        commandIds_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -16873,10 +16843,8 @@ public final class TypesProto {
         } else {
           signatureBuilder_.mergeFrom(value);
         }
-        if (signature_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**

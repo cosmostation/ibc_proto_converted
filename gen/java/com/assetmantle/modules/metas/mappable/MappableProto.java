@@ -68,7 +68,6 @@ public final class MappableProto {
               com.assetmantle.modules.metas.mappable.MappableProto.Mappable.class, com.assetmantle.modules.metas.mappable.MappableProto.Mappable.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATA_FIELD_NUMBER = 1;
     private com.assetmantle.schema.data.base.AnyDataProto.AnyData data_;
     /**
@@ -77,7 +76,7 @@ public final class MappableProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return data_ != null;
     }
     /**
      * <code>.assetmantle.schema.data.base.AnyData data = 1 [json_name = "data"];</code>
@@ -109,7 +108,7 @@ public final class MappableProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         output.writeMessage(1, getData());
       }
       getUnknownFields().writeTo(output);
@@ -121,7 +120,7 @@ public final class MappableProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getData());
       }
@@ -279,19 +278,13 @@ public final class MappableProto {
 
       // Construct using com.assetmantle.modules.metas.mappable.MappableProto.Mappable.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -335,14 +328,11 @@ public final class MappableProto {
 
       private void buildPartial0(com.assetmantle.modules.metas.mappable.MappableProto.Mappable result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -508,10 +498,8 @@ public final class MappableProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -864,7 +864,6 @@ public final class DelegationProto {
               com.kyve.query.v1beta1.DelegationProto.QueryDelegatorResponse.class, com.kyve.query.v1beta1.DelegationProto.QueryDelegatorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_FIELD_NUMBER = 1;
     private com.kyve.query.v1beta1.DelegationProto.StakerDelegatorResponse delegator_;
     /**
@@ -877,7 +876,7 @@ public final class DelegationProto {
      */
     @java.lang.Override
     public boolean hasDelegator() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return delegator_ != null;
     }
     /**
      * <pre>
@@ -917,7 +916,7 @@ public final class DelegationProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (delegator_ != null) {
         output.writeMessage(1, getDelegator());
       }
       getUnknownFields().writeTo(output);
@@ -929,7 +928,7 @@ public final class DelegationProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (delegator_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDelegator());
       }
@@ -1091,19 +1090,13 @@ public final class DelegationProto {
 
       // Construct using com.kyve.query.v1beta1.DelegationProto.QueryDelegatorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDelegatorFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1147,14 +1140,11 @@ public final class DelegationProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.DelegationProto.QueryDelegatorResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.delegator_ = delegatorBuilder_ == null
               ? delegator_
               : delegatorBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1340,10 +1330,8 @@ public final class DelegationProto {
         } else {
           delegatorBuilder_.mergeFrom(value);
         }
-        if (delegator_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2531,7 +2519,6 @@ public final class DelegationProto {
               com.kyve.query.v1beta1.DelegationProto.QueryDelegatorsByStakerRequest.class, com.kyve.query.v1beta1.DelegationProto.QueryDelegatorsByStakerRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -2544,7 +2531,7 @@ public final class DelegationProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -2631,7 +2618,7 @@ public final class DelegationProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
@@ -2646,7 +2633,7 @@ public final class DelegationProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -2815,19 +2802,13 @@ public final class DelegationProto {
 
       // Construct using com.kyve.query.v1beta1.DelegationProto.QueryDelegatorsByStakerRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2872,17 +2853,14 @@ public final class DelegationProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.DelegationProto.QueryDelegatorsByStakerRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.staker_ = staker_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3078,10 +3056,8 @@ public final class DelegationProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3439,7 +3415,6 @@ public final class DelegationProto {
               com.kyve.query.v1beta1.DelegationProto.QueryDelegatorsByStakerResponse.class, com.kyve.query.v1beta1.DelegationProto.QueryDelegatorsByStakerResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATORS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.kyve.query.v1beta1.DelegationProto.StakerDelegatorResponse> delegators_;
@@ -3543,7 +3518,7 @@ public final class DelegationProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -3592,7 +3567,7 @@ public final class DelegationProto {
       if (totalDelegatorCount_ != 0L) {
         output.writeUInt64(3, totalDelegatorCount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(4, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -3616,7 +3591,7 @@ public final class DelegationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, totalDelegatorCount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPagination());
       }
@@ -3794,20 +3769,13 @@ public final class DelegationProto {
 
       // Construct using com.kyve.query.v1beta1.DelegationProto.QueryDelegatorsByStakerResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDelegatorsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3879,14 +3847,11 @@ public final class DelegationProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.totalDelegatorCount_ = totalDelegatorCount_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4527,10 +4492,8 @@ public final class DelegationProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4752,7 +4715,6 @@ public final class DelegationProto {
               com.kyve.query.v1beta1.DelegationProto.QueryStakersByDelegatorRequest.class, com.kyve.query.v1beta1.DelegationProto.QueryStakersByDelegatorRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -4765,7 +4727,7 @@ public final class DelegationProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -4852,7 +4814,7 @@ public final class DelegationProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
@@ -4867,7 +4829,7 @@ public final class DelegationProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -5036,19 +4998,13 @@ public final class DelegationProto {
 
       // Construct using com.kyve.query.v1beta1.DelegationProto.QueryStakersByDelegatorRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5093,17 +5049,14 @@ public final class DelegationProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.DelegationProto.QueryStakersByDelegatorRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.delegator_ = delegator_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5299,10 +5252,8 @@ public final class DelegationProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5661,7 +5612,6 @@ public final class DelegationProto {
               com.kyve.query.v1beta1.DelegationProto.QueryStakersByDelegatorResponse.class, com.kyve.query.v1beta1.DelegationProto.QueryStakersByDelegatorResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegator_ = "";
@@ -5782,7 +5732,7 @@ public final class DelegationProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -5828,7 +5778,7 @@ public final class DelegationProto {
       for (int i = 0; i < stakers_.size(); i++) {
         output.writeMessage(2, stakers_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -5847,7 +5797,7 @@ public final class DelegationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, stakers_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
@@ -6019,20 +5969,13 @@ public final class DelegationProto {
 
       // Construct using com.kyve.query.v1beta1.DelegationProto.QueryStakersByDelegatorResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStakersFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6100,14 +6043,11 @@ public final class DelegationProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.delegator_ = delegator_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6746,10 +6686,8 @@ public final class DelegationProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6970,7 +6908,6 @@ public final class DelegationProto {
               com.kyve.query.v1beta1.DelegationProto.DelegationForStakerResponse.class, com.kyve.query.v1beta1.DelegationProto.DelegationForStakerResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STAKER_FIELD_NUMBER = 1;
     private com.kyve.query.v1beta1.QueryProto.FullStaker staker_;
     /**
@@ -6983,7 +6920,7 @@ public final class DelegationProto {
      */
     @java.lang.Override
     public boolean hasStaker() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return staker_ != null;
     }
     /**
      * <pre>
@@ -7053,7 +6990,7 @@ public final class DelegationProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (staker_ != null) {
         output.writeMessage(1, getStaker());
       }
       if (currentReward_ != 0L) {
@@ -7071,7 +7008,7 @@ public final class DelegationProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (staker_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStaker());
       }
@@ -7251,19 +7188,13 @@ public final class DelegationProto {
 
       // Construct using com.kyve.query.v1beta1.DelegationProto.DelegationForStakerResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStakerFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7309,12 +7240,10 @@ public final class DelegationProto {
 
       private void buildPartial0(com.kyve.query.v1beta1.DelegationProto.DelegationForStakerResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.staker_ = stakerBuilder_ == null
               ? staker_
               : stakerBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.currentReward_ = currentReward_;
@@ -7322,7 +7251,6 @@ public final class DelegationProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.delegationAmount_ = delegationAmount_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7524,10 +7452,8 @@ public final class DelegationProto {
         } else {
           stakerBuilder_.mergeFrom(value);
         }
-        if (staker_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

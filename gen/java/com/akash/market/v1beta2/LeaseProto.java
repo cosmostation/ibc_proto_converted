@@ -1198,7 +1198,6 @@ public final class LeaseProto {
       // @@protoc_insertion_point(enum_scope:akash.market.v1beta2.Lease.State)
     }
 
-    private int bitField0_;
     public static final int LEASE_ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.LeaseProto.LeaseID leaseId_;
     /**
@@ -1207,7 +1206,7 @@ public final class LeaseProto {
      */
     @java.lang.Override
     public boolean hasLeaseId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return leaseId_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -1251,7 +1250,7 @@ public final class LeaseProto {
      */
     @java.lang.Override
     public boolean hasPrice() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return price_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin price = 3 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "price", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
@@ -1305,13 +1304,13 @@ public final class LeaseProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (leaseId_ != null) {
         output.writeMessage(1, getLeaseId());
       }
       if (state_ != com.akash.market.v1beta2.LeaseProto.Lease.State.invalid.getNumber()) {
         output.writeEnum(2, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (price_ != null) {
         output.writeMessage(3, getPrice());
       }
       if (createdAt_ != 0L) {
@@ -1329,7 +1328,7 @@ public final class LeaseProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (leaseId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLeaseId());
       }
@@ -1337,7 +1336,7 @@ public final class LeaseProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, state_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (price_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrice());
       }
@@ -1529,20 +1528,13 @@ public final class LeaseProto {
 
       // Construct using com.akash.market.v1beta2.LeaseProto.Lease.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLeaseIdFieldBuilder();
-          getPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1594,12 +1586,10 @@ public final class LeaseProto {
 
       private void buildPartial0(com.akash.market.v1beta2.LeaseProto.Lease result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.leaseId_ = leaseIdBuilder_ == null
               ? leaseId_
               : leaseIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = state_;
@@ -1608,7 +1598,6 @@ public final class LeaseProto {
           result.price_ = priceBuilder_ == null
               ? price_
               : priceBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.createdAt_ = createdAt_;
@@ -1616,7 +1605,6 @@ public final class LeaseProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.closedOn_ = closedOn_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1816,10 +1804,8 @@ public final class LeaseProto {
         } else {
           leaseIdBuilder_.mergeFrom(value);
         }
-        if (leaseId_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1990,10 +1976,8 @@ public final class LeaseProto {
         } else {
           priceBuilder_.mergeFrom(value);
         }
-        if (price_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3303,7 +3287,6 @@ public final class LeaseProto {
               com.akash.market.v1beta2.LeaseProto.MsgCreateLease.class, com.akash.market.v1beta2.LeaseProto.MsgCreateLease.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BID_ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.BidProto.BidID bidId_;
     /**
@@ -3312,7 +3295,7 @@ public final class LeaseProto {
      */
     @java.lang.Override
     public boolean hasBidId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bidId_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.BidID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "BidID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -3344,7 +3327,7 @@ public final class LeaseProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidId_ != null) {
         output.writeMessage(1, getBidId());
       }
       getUnknownFields().writeTo(output);
@@ -3356,7 +3339,7 @@ public final class LeaseProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBidId());
       }
@@ -3518,19 +3501,13 @@ public final class LeaseProto {
 
       // Construct using com.akash.market.v1beta2.LeaseProto.MsgCreateLease.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBidIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3574,14 +3551,11 @@ public final class LeaseProto {
 
       private void buildPartial0(com.akash.market.v1beta2.LeaseProto.MsgCreateLease result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bidId_ = bidIdBuilder_ == null
               ? bidId_
               : bidIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3747,10 +3721,8 @@ public final class LeaseProto {
         } else {
           bidIdBuilder_.mergeFrom(value);
         }
-        if (bidId_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4328,7 +4300,6 @@ public final class LeaseProto {
               com.akash.market.v1beta2.LeaseProto.MsgWithdrawLease.class, com.akash.market.v1beta2.LeaseProto.MsgWithdrawLease.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BID_ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.LeaseProto.LeaseID bidId_;
     /**
@@ -4337,7 +4308,7 @@ public final class LeaseProto {
      */
     @java.lang.Override
     public boolean hasBidId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bidId_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.LeaseID bid_id = 1 [json_name = "bidId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -4369,7 +4340,7 @@ public final class LeaseProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidId_ != null) {
         output.writeMessage(1, getBidId());
       }
       getUnknownFields().writeTo(output);
@@ -4381,7 +4352,7 @@ public final class LeaseProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bidId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBidId());
       }
@@ -4543,19 +4514,13 @@ public final class LeaseProto {
 
       // Construct using com.akash.market.v1beta2.LeaseProto.MsgWithdrawLease.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBidIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4599,14 +4564,11 @@ public final class LeaseProto {
 
       private void buildPartial0(com.akash.market.v1beta2.LeaseProto.MsgWithdrawLease result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bidId_ = bidIdBuilder_ == null
               ? bidId_
               : bidIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4772,10 +4734,8 @@ public final class LeaseProto {
         } else {
           bidIdBuilder_.mergeFrom(value);
         }
-        if (bidId_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5353,7 +5313,6 @@ public final class LeaseProto {
               com.akash.market.v1beta2.LeaseProto.MsgCloseLease.class, com.akash.market.v1beta2.LeaseProto.MsgCloseLease.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LEASE_ID_FIELD_NUMBER = 1;
     private com.akash.market.v1beta2.LeaseProto.LeaseID leaseId_;
     /**
@@ -5362,7 +5321,7 @@ public final class LeaseProto {
      */
     @java.lang.Override
     public boolean hasLeaseId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return leaseId_ != null;
     }
     /**
      * <code>.akash.market.v1beta2.LeaseID lease_id = 1 [json_name = "leaseId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LeaseID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
@@ -5394,7 +5353,7 @@ public final class LeaseProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (leaseId_ != null) {
         output.writeMessage(1, getLeaseId());
       }
       getUnknownFields().writeTo(output);
@@ -5406,7 +5365,7 @@ public final class LeaseProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (leaseId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLeaseId());
       }
@@ -5568,19 +5527,13 @@ public final class LeaseProto {
 
       // Construct using com.akash.market.v1beta2.LeaseProto.MsgCloseLease.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLeaseIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5624,14 +5577,11 @@ public final class LeaseProto {
 
       private void buildPartial0(com.akash.market.v1beta2.LeaseProto.MsgCloseLease result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.leaseId_ = leaseIdBuilder_ == null
               ? leaseId_
               : leaseIdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5797,10 +5747,8 @@ public final class LeaseProto {
         } else {
           leaseIdBuilder_.mergeFrom(value);
         }
-        if (leaseId_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

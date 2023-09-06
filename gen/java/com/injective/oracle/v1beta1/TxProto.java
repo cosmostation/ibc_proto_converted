@@ -3429,8 +3429,7 @@ public final class TxProto {
 
     public static final int RATES_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList rates_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList rates_;
     /**
      * <code>repeated uint64 rates = 3 [json_name = "rates"];</code>
      * @return A list containing the rates.
@@ -3459,8 +3458,7 @@ public final class TxProto {
 
     public static final int RESOLVE_TIMES_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList resolveTimes_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList resolveTimes_;
     /**
      * <code>repeated uint64 resolve_times = 4 [json_name = "resolveTimes"];</code>
      * @return A list containing the resolveTimes.
@@ -3489,8 +3487,7 @@ public final class TxProto {
 
     public static final int REQUESTIDS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList requestIDs_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList requestIDs_;
     /**
      * <code>repeated uint64 requestIDs = 5 [json_name = "requestIDs"];</code>
      * @return A list containing the requestIDs.
@@ -3838,9 +3835,28 @@ public final class TxProto {
       @java.lang.Override
       public com.injective.oracle.v1beta1.TxProto.MsgRelayBandRates buildPartial() {
         com.injective.oracle.v1beta1.TxProto.MsgRelayBandRates result = new com.injective.oracle.v1beta1.TxProto.MsgRelayBandRates(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.injective.oracle.v1beta1.TxProto.MsgRelayBandRates result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          rates_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.rates_ = rates_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          resolveTimes_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.resolveTimes_ = resolveTimes_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          requestIDs_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.requestIDs_ = requestIDs_;
       }
 
       private void buildPartial0(com.injective.oracle.v1beta1.TxProto.MsgRelayBandRates result) {
@@ -3851,18 +3867,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           symbols_.makeImmutable();
           result.symbols_ = symbols_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          rates_.makeImmutable();
-          result.rates_ = rates_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          resolveTimes_.makeImmutable();
-          result.resolveTimes_ = resolveTimes_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          requestIDs_.makeImmutable();
-          result.requestIDs_ = requestIDs_;
         }
       }
 
@@ -3928,8 +3932,7 @@ public final class TxProto {
         if (!other.rates_.isEmpty()) {
           if (rates_.isEmpty()) {
             rates_ = other.rates_;
-            rates_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureRatesIsMutable();
             rates_.addAll(other.rates_);
@@ -3939,8 +3942,7 @@ public final class TxProto {
         if (!other.resolveTimes_.isEmpty()) {
           if (resolveTimes_.isEmpty()) {
             resolveTimes_ = other.resolveTimes_;
-            resolveTimes_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureResolveTimesIsMutable();
             resolveTimes_.addAll(other.resolveTimes_);
@@ -3950,8 +3952,7 @@ public final class TxProto {
         if (!other.requestIDs_.isEmpty()) {
           if (requestIDs_.isEmpty()) {
             requestIDs_ = other.requestIDs_;
-            requestIDs_.makeImmutable();
-            bitField0_ |= 0x00000010;
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureRequestIDsIsMutable();
             requestIDs_.addAll(other.requestIDs_);
@@ -4245,10 +4246,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList rates_ = emptyLongList();
       private void ensureRatesIsMutable() {
-        if (!rates_.isModifiable()) {
-          rates_ = makeMutableCopy(rates_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          rates_ = mutableCopy(rates_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 rates = 3 [json_name = "rates"];</code>
@@ -4256,8 +4257,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getRatesList() {
-        rates_.makeImmutable();
-        return rates_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(rates_) : rates_;
       }
       /**
        * <code>repeated uint64 rates = 3 [json_name = "rates"];</code>
@@ -4285,7 +4286,6 @@ public final class TxProto {
 
         ensureRatesIsMutable();
         rates_.setLong(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4298,7 +4298,6 @@ public final class TxProto {
 
         ensureRatesIsMutable();
         rates_.addLong(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4312,7 +4311,6 @@ public final class TxProto {
         ensureRatesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, rates_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4329,10 +4327,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList resolveTimes_ = emptyLongList();
       private void ensureResolveTimesIsMutable() {
-        if (!resolveTimes_.isModifiable()) {
-          resolveTimes_ = makeMutableCopy(resolveTimes_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          resolveTimes_ = mutableCopy(resolveTimes_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated uint64 resolve_times = 4 [json_name = "resolveTimes"];</code>
@@ -4340,8 +4338,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getResolveTimesList() {
-        resolveTimes_.makeImmutable();
-        return resolveTimes_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(resolveTimes_) : resolveTimes_;
       }
       /**
        * <code>repeated uint64 resolve_times = 4 [json_name = "resolveTimes"];</code>
@@ -4369,7 +4367,6 @@ public final class TxProto {
 
         ensureResolveTimesIsMutable();
         resolveTimes_.setLong(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4382,7 +4379,6 @@ public final class TxProto {
 
         ensureResolveTimesIsMutable();
         resolveTimes_.addLong(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4396,7 +4392,6 @@ public final class TxProto {
         ensureResolveTimesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, resolveTimes_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4413,10 +4408,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList requestIDs_ = emptyLongList();
       private void ensureRequestIDsIsMutable() {
-        if (!requestIDs_.isModifiable()) {
-          requestIDs_ = makeMutableCopy(requestIDs_);
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          requestIDs_ = mutableCopy(requestIDs_);
+          bitField0_ |= 0x00000010;
         }
-        bitField0_ |= 0x00000010;
       }
       /**
        * <code>repeated uint64 requestIDs = 5 [json_name = "requestIDs"];</code>
@@ -4424,8 +4419,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getRequestIDsList() {
-        requestIDs_.makeImmutable();
-        return requestIDs_;
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(requestIDs_) : requestIDs_;
       }
       /**
        * <code>repeated uint64 requestIDs = 5 [json_name = "requestIDs"];</code>
@@ -4453,7 +4448,6 @@ public final class TxProto {
 
         ensureRequestIDsIsMutable();
         requestIDs_.setLong(index, value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4466,7 +4460,6 @@ public final class TxProto {
 
         ensureRequestIDsIsMutable();
         requestIDs_.addLong(value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4480,7 +4473,6 @@ public final class TxProto {
         ensureRequestIDsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, requestIDs_);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5024,8 +5016,8 @@ public final class TxProto {
     }
     private MsgRelayCoinbaseMessages() {
       sender_ = "";
-      messages_ = emptyList(com.google.protobuf.ByteString.class);
-      signatures_ = emptyList(com.google.protobuf.ByteString.class);
+      messages_ = java.util.Collections.emptyList();
+      signatures_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -5089,8 +5081,7 @@ public final class TxProto {
 
     public static final int MESSAGES_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> messages_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> messages_;
     /**
      * <code>repeated bytes messages = 2 [json_name = "messages"];</code>
      * @return A list containing the messages.
@@ -5118,8 +5109,7 @@ public final class TxProto {
 
     public static final int SIGNATURES_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> signatures_;
     /**
      * <code>repeated bytes signatures = 3 [json_name = "signatures"];</code>
      * @return A list containing the signatures.
@@ -5377,8 +5367,8 @@ public final class TxProto {
         super.clear();
         bitField0_ = 0;
         sender_ = "";
-        messages_ = emptyList(com.google.protobuf.ByteString.class);
-        signatures_ = emptyList(com.google.protobuf.ByteString.class);
+        messages_ = java.util.Collections.emptyList();
+        signatures_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -5405,23 +5395,29 @@ public final class TxProto {
       @java.lang.Override
       public com.injective.oracle.v1beta1.TxProto.MsgRelayCoinbaseMessages buildPartial() {
         com.injective.oracle.v1beta1.TxProto.MsgRelayCoinbaseMessages result = new com.injective.oracle.v1beta1.TxProto.MsgRelayCoinbaseMessages(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.injective.oracle.v1beta1.TxProto.MsgRelayCoinbaseMessages result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          messages_ = java.util.Collections.unmodifiableList(messages_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.messages_ = messages_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          signatures_ = java.util.Collections.unmodifiableList(signatures_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.signatures_ = signatures_;
       }
 
       private void buildPartial0(com.injective.oracle.v1beta1.TxProto.MsgRelayCoinbaseMessages result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          messages_.makeImmutable();
-          result.messages_ = messages_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          signatures_.makeImmutable();
-          result.signatures_ = signatures_;
         }
       }
 
@@ -5477,8 +5473,7 @@ public final class TxProto {
         if (!other.messages_.isEmpty()) {
           if (messages_.isEmpty()) {
             messages_ = other.messages_;
-            messages_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureMessagesIsMutable();
             messages_.addAll(other.messages_);
@@ -5488,8 +5483,7 @@ public final class TxProto {
         if (!other.signatures_.isEmpty()) {
           if (signatures_.isEmpty()) {
             signatures_ = other.signatures_;
-            signatures_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSignaturesIsMutable();
             signatures_.addAll(other.signatures_);
@@ -5628,12 +5622,12 @@ public final class TxProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> messages_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> messages_ = java.util.Collections.emptyList();
       private void ensureMessagesIsMutable() {
-        if (!messages_.isModifiable()) {
-          messages_ = makeMutableCopy(messages_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          messages_ = new java.util.ArrayList<com.google.protobuf.ByteString>(messages_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated bytes messages = 2 [json_name = "messages"];</code>
@@ -5641,8 +5635,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getMessagesList() {
-        messages_.makeImmutable();
-        return messages_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(messages_) : messages_;
       }
       /**
        * <code>repeated bytes messages = 2 [json_name = "messages"];</code>
@@ -5670,7 +5664,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureMessagesIsMutable();
         messages_.set(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5683,7 +5676,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureMessagesIsMutable();
         messages_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5697,7 +5689,6 @@ public final class TxProto {
         ensureMessagesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, messages_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5706,18 +5697,18 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearMessages() {
-        messages_ = emptyList(com.google.protobuf.ByteString.class);
+        messages_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> signatures_ = java.util.Collections.emptyList();
       private void ensureSignaturesIsMutable() {
-        if (!signatures_.isModifiable()) {
-          signatures_ = makeMutableCopy(signatures_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          signatures_ = new java.util.ArrayList<com.google.protobuf.ByteString>(signatures_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bytes signatures = 3 [json_name = "signatures"];</code>
@@ -5725,8 +5716,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getSignaturesList() {
-        signatures_.makeImmutable();
-        return signatures_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(signatures_) : signatures_;
       }
       /**
        * <code>repeated bytes signatures = 3 [json_name = "signatures"];</code>
@@ -5754,7 +5745,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5767,7 +5757,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5781,7 +5770,6 @@ public final class TxProto {
         ensureSignaturesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, signatures_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5790,7 +5778,7 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearSignatures() {
-        signatures_ = emptyList(com.google.protobuf.ByteString.class);
+        signatures_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -8732,7 +8720,6 @@ public final class TxProto {
               com.injective.oracle.v1beta1.TxProto.MsgUpdateParams.class, com.injective.oracle.v1beta1.TxProto.MsgUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -8794,7 +8781,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -8841,7 +8828,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -8856,7 +8843,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -9018,19 +9005,13 @@ public final class TxProto {
 
       // Construct using com.injective.oracle.v1beta1.TxProto.MsgUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9078,14 +9059,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9383,10 +9361,8 @@ public final class TxProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

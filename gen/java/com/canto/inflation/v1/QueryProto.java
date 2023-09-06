@@ -1402,7 +1402,6 @@ public final class QueryProto {
               com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.class, com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EPOCH_MINT_PROVISION_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.DecCoin epochMintProvision_;
     /**
@@ -1415,7 +1414,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEpochMintProvision() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return epochMintProvision_ != null;
     }
     /**
      * <pre>
@@ -1455,7 +1454,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochMintProvision_ != null) {
         output.writeMessage(1, getEpochMintProvision());
       }
       getUnknownFields().writeTo(output);
@@ -1467,7 +1466,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (epochMintProvision_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEpochMintProvision());
       }
@@ -1630,19 +1629,13 @@ public final class QueryProto {
 
       // Construct using com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEpochMintProvisionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1686,14 +1679,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryEpochMintProvisionResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.epochMintProvision_ = epochMintProvisionBuilder_ == null
               ? epochMintProvision_
               : epochMintProvisionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1879,10 +1869,8 @@ public final class QueryProto {
         } else {
           epochMintProvisionBuilder_.mergeFrom(value);
         }
-        if (epochMintProvision_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3405,7 +3393,6 @@ public final class QueryProto {
               com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.class, com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CIRCULATING_SUPPLY_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.DecCoin circulatingSupply_;
     /**
@@ -3418,7 +3405,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCirculatingSupply() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return circulatingSupply_ != null;
     }
     /**
      * <pre>
@@ -3458,7 +3445,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (circulatingSupply_ != null) {
         output.writeMessage(1, getCirculatingSupply());
       }
       getUnknownFields().writeTo(output);
@@ -3470,7 +3457,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (circulatingSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCirculatingSupply());
       }
@@ -3633,19 +3620,13 @@ public final class QueryProto {
 
       // Construct using com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCirculatingSupplyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3689,14 +3670,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryCirculatingSupplyResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.circulatingSupply_ = circulatingSupplyBuilder_ == null
               ? circulatingSupply_
               : circulatingSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3882,10 +3860,8 @@ public final class QueryProto {
         } else {
           circulatingSupplyBuilder_.mergeFrom(value);
         }
-        if (circulatingSupply_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5496,7 +5472,6 @@ public final class QueryProto {
               com.canto.inflation.v1.QueryProto.QueryParamsResponse.class, com.canto.inflation.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.canto.inflation.v1.GenesisProto.Params params_;
     /**
@@ -5509,7 +5484,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -5549,7 +5524,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -5561,7 +5536,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -5723,19 +5698,13 @@ public final class QueryProto {
 
       // Construct using com.canto.inflation.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5779,14 +5748,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.canto.inflation.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5972,10 +5938,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

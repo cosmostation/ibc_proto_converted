@@ -126,7 +126,6 @@ public final class EvidenceProto {
               com.cosmos.evidence.v1beta1.EvidenceProto.Equivocation.class, com.cosmos.evidence.v1beta1.EvidenceProto.Equivocation.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -154,7 +153,7 @@ public final class EvidenceProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return time_ != null;
     }
     /**
      * <pre>
@@ -259,7 +258,7 @@ public final class EvidenceProto {
       if (height_ != 0L) {
         output.writeInt64(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (time_ != null) {
         output.writeMessage(2, getTime());
       }
       if (power_ != 0L) {
@@ -281,7 +280,7 @@ public final class EvidenceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTime());
       }
@@ -465,19 +464,13 @@ public final class EvidenceProto {
 
       // Construct using com.cosmos.evidence.v1beta1.EvidenceProto.Equivocation.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -527,12 +520,10 @@ public final class EvidenceProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = height_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.power_ = power_;
@@ -540,7 +531,6 @@ public final class EvidenceProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.consensusAddress_ = consensusAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -796,10 +786,8 @@ public final class EvidenceProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

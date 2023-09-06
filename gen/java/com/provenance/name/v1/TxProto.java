@@ -113,7 +113,6 @@ public final class TxProto {
               com.provenance.name.v1.TxProto.MsgBindNameRequest.class, com.provenance.name.v1.TxProto.MsgBindNameRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARENT_FIELD_NUMBER = 1;
     private com.provenance.name.v1.NameProto.NameRecord parent_;
     /**
@@ -126,7 +125,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasParent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return parent_ != null;
     }
     /**
      * <pre>
@@ -164,7 +163,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return record_ != null;
     }
     /**
      * <pre>
@@ -204,10 +203,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (parent_ != null) {
         output.writeMessage(1, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (record_ != null) {
         output.writeMessage(2, getRecord());
       }
       getUnknownFields().writeTo(output);
@@ -219,11 +218,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (parent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (record_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecord());
       }
@@ -396,20 +395,13 @@ public final class TxProto {
 
       // Construct using com.provenance.name.v1.TxProto.MsgBindNameRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParentFieldBuilder();
-          getRecordFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -458,20 +450,16 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.name.v1.TxProto.MsgBindNameRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.parent_ = parentBuilder_ == null
               ? parent_
               : parentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -667,10 +655,8 @@ public final class TxProto {
         } else {
           parentBuilder_.mergeFrom(value);
         }
-        if (parent_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -824,10 +810,8 @@ public final class TxProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        if (record_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1435,7 +1419,6 @@ public final class TxProto {
               com.provenance.name.v1.TxProto.MsgDeleteNameRequest.class, com.provenance.name.v1.TxProto.MsgDeleteNameRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RECORD_FIELD_NUMBER = 1;
     private com.provenance.name.v1.NameProto.NameRecord record_;
     /**
@@ -1448,7 +1431,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return record_ != null;
     }
     /**
      * <pre>
@@ -1488,7 +1471,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         output.writeMessage(1, getRecord());
       }
       getUnknownFields().writeTo(output);
@@ -1500,7 +1483,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRecord());
       }
@@ -1664,19 +1647,13 @@ public final class TxProto {
 
       // Construct using com.provenance.name.v1.TxProto.MsgDeleteNameRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecordFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1720,14 +1697,11 @@ public final class TxProto {
 
       private void buildPartial0(com.provenance.name.v1.TxProto.MsgDeleteNameRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1913,10 +1887,8 @@ public final class TxProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        if (record_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2545,7 +2517,6 @@ public final class TxProto {
               com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.class, com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -2605,7 +2576,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return record_ != null;
     }
     /**
      * <pre>
@@ -2648,7 +2619,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         output.writeMessage(2, getRecord());
       }
       getUnknownFields().writeTo(output);
@@ -2663,7 +2634,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecord());
       }
@@ -2831,19 +2802,13 @@ public final class TxProto {
 
       // Construct using com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecordFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2891,14 +2856,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3186,10 +3148,8 @@ public final class TxProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        if (record_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3816,7 +3776,6 @@ public final class TxProto {
               com.provenance.name.v1.TxProto.MsgModifyNameRequest.class, com.provenance.name.v1.TxProto.MsgModifyNameRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -3876,7 +3835,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasRecord() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return record_ != null;
     }
     /**
      * <pre>
@@ -3919,7 +3878,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         output.writeMessage(2, getRecord());
       }
       getUnknownFields().writeTo(output);
@@ -3934,7 +3893,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (record_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRecord());
       }
@@ -4100,19 +4059,13 @@ public final class TxProto {
 
       // Construct using com.provenance.name.v1.TxProto.MsgModifyNameRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRecordFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4160,14 +4113,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authority_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.record_ = recordBuilder_ == null
               ? record_
               : recordBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4455,10 +4405,8 @@ public final class TxProto {
         } else {
           recordBuilder_.mergeFrom(value);
         }
-        if (record_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

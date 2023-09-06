@@ -545,7 +545,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.ShieldProto.Pool pool_;
     /**
@@ -554,7 +553,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPool() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pool_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
@@ -586,7 +585,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pool_ != null) {
         output.writeMessage(1, getPool());
       }
       getUnknownFields().writeTo(output);
@@ -598,7 +597,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPool());
       }
@@ -756,19 +755,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -812,14 +805,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pool_ = poolBuilder_ == null
               ? pool_
               : poolBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -985,10 +975,8 @@ public final class QueryProto {
         } else {
           poolBuilder_.mergeFrom(value);
         }
-        if (pool_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6106,7 +6094,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PURCHASE_LIST_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.ShieldProto.PurchaseList purchaseList_;
     /**
@@ -6115,7 +6102,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPurchaseList() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return purchaseList_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
@@ -6147,7 +6134,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (purchaseList_ != null) {
         output.writeMessage(1, getPurchaseList());
       }
       getUnknownFields().writeTo(output);
@@ -6159,7 +6146,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (purchaseList_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPurchaseList());
       }
@@ -6317,19 +6304,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPurchaseListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6373,14 +6354,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.purchaseList_ = purchaseListBuilder_ == null
               ? purchaseList_
               : purchaseListBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6546,10 +6524,8 @@ public final class QueryProto {
         } else {
           purchaseListBuilder_.mergeFrom(value);
         }
-        if (purchaseList_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8449,7 +8425,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROVIDER_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.ShieldProto.Provider provider_;
     /**
@@ -8458,7 +8433,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProvider() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return provider_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
@@ -8490,7 +8465,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (provider_ != null) {
         output.writeMessage(1, getProvider());
       }
       getUnknownFields().writeTo(output);
@@ -8502,7 +8477,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (provider_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProvider());
       }
@@ -8660,19 +8635,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProviderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8716,14 +8685,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.provider_ = providerBuilder_ == null
               ? provider_
               : providerBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8889,10 +8855,8 @@ public final class QueryProto {
         } else {
           providerBuilder_.mergeFrom(value);
         }
-        if (provider_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10637,7 +10601,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.GenesisProto.PoolParams params_;
     /**
@@ -10646,7 +10609,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -10678,7 +10641,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -10690,7 +10653,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -10848,19 +10811,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10904,14 +10861,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11077,10 +11031,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11646,7 +11598,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams params_;
     /**
@@ -11655,7 +11606,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -11687,7 +11638,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -11699,7 +11650,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -11857,19 +11808,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11913,14 +11858,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12086,10 +12028,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12655,7 +12595,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.GenesisProto.DistributionParams params_;
     /**
@@ -12664,7 +12603,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -12696,7 +12635,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -12708,7 +12647,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -12866,19 +12805,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12922,14 +12855,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13095,10 +13025,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16037,7 +15965,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SHIELD_STAKING_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking shieldStaking_;
     /**
@@ -16046,7 +15973,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasShieldStaking() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return shieldStaking_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
@@ -16078,7 +16005,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shieldStaking_ != null) {
         output.writeMessage(1, getShieldStaking());
       }
       getUnknownFields().writeTo(output);
@@ -16090,7 +16017,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (shieldStaking_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getShieldStaking());
       }
@@ -16248,19 +16175,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getShieldStakingFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16304,14 +16225,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.shieldStaking_ = shieldStakingBuilder_ == null
               ? shieldStaking_
               : shieldStakingBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16477,10 +16395,8 @@ public final class QueryProto {
         } else {
           shieldStakingBuilder_.mergeFrom(value);
         }
-        if (shieldStaking_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -18075,7 +17991,6 @@ public final class QueryProto {
               com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int REIMBURSEMENT_FIELD_NUMBER = 1;
     private com.shentu.shield.v1alpha1.GenesisProto.Reimbursement reimbursement_;
     /**
@@ -18084,7 +17999,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasReimbursement() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return reimbursement_ != null;
     }
     /**
      * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
@@ -18116,7 +18031,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (reimbursement_ != null) {
         output.writeMessage(1, getReimbursement());
       }
       getUnknownFields().writeTo(output);
@@ -18128,7 +18043,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (reimbursement_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getReimbursement());
       }
@@ -18286,19 +18201,13 @@ public final class QueryProto {
 
       // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getReimbursementFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18342,14 +18251,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.reimbursement_ = reimbursementBuilder_ == null
               ? reimbursement_
               : reimbursementBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18515,10 +18421,8 @@ public final class QueryProto {
         } else {
           reimbursementBuilder_.mergeFrom(value);
         }
-        if (reimbursement_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

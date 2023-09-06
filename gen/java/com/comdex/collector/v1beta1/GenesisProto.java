@@ -193,7 +193,6 @@ public final class GenesisProto {
               com.comdex.collector.v1beta1.GenesisProto.GenesisState.class, com.comdex.collector.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NETFEECOLLECTEDDATA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.comdex.collector.v1beta1.CollectorProto.AppAssetIdToFeeCollectedData> netFeeCollectedData_;
@@ -407,7 +406,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.comdex.collector.v1beta1.Params params = 6 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -454,7 +453,7 @@ public final class GenesisProto {
       for (int i = 0; i < appToDenomsMapping_.size(); i++) {
         output.writeMessage(5, appToDenomsMapping_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(6, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -486,7 +485,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, appToDenomsMapping_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getParams());
       }
@@ -674,24 +673,13 @@ public final class GenesisProto {
 
       // Construct using com.comdex.collector.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNetFeeCollectedDataFieldBuilder();
-          getAppIdToAssetCollectorMappingFieldBuilder();
-          getCollectorLookupFieldBuilder();
-          getCollectorAuctionLookupTableFieldBuilder();
-          getAppToDenomsMappingFieldBuilder();
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -819,14 +807,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.comdex.collector.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2387,10 +2372,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

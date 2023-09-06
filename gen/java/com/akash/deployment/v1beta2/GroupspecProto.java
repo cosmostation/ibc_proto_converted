@@ -110,7 +110,6 @@ public final class GroupspecProto {
               com.akash.deployment.v1beta2.GroupspecProto.GroupSpec.class, com.akash.deployment.v1beta2.GroupspecProto.GroupSpec.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -158,7 +157,7 @@ public final class GroupspecProto {
      */
     @java.lang.Override
     public boolean hasRequirements() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return requirements_ != null;
     }
     /**
      * <code>.akash.base.v1beta2.PlacementRequirements requirements = 2 [json_name = "requirements", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "requirements", (.gogoproto.moretags) = "yaml:&#92;"requirements&#92;""];</code>
@@ -234,7 +233,7 @@ public final class GroupspecProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (requirements_ != null) {
         output.writeMessage(2, getRequirements());
       }
       for (int i = 0; i < resources_.size(); i++) {
@@ -252,7 +251,7 @@ public final class GroupspecProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (requirements_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRequirements());
       }
@@ -428,20 +427,13 @@ public final class GroupspecProto {
 
       // Construct using com.akash.deployment.v1beta2.GroupspecProto.GroupSpec.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRequirementsFieldBuilder();
-          getResourcesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -509,14 +501,11 @@ public final class GroupspecProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.requirements_ = requirementsBuilder_ == null
               ? requirements_
               : requirementsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -803,10 +792,8 @@ public final class GroupspecProto {
         } else {
           requirementsBuilder_.mergeFrom(value);
         }
-        if (requirements_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

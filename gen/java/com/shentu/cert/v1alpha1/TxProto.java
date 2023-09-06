@@ -1525,7 +1525,6 @@ public final class TxProto {
               com.shentu.cert.v1alpha1.TxProto.MsgIssueCertificate.class, com.shentu.cert.v1alpha1.TxProto.MsgIssueCertificate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTENT_FIELD_NUMBER = 1;
     private com.google.protobuf.Any content_;
     /**
@@ -1534,7 +1533,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasContent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return content_ != null;
     }
     /**
      * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
@@ -1722,7 +1721,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         output.writeMessage(1, getContent());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(compiler_)) {
@@ -1746,7 +1745,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (content_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContent());
       }
@@ -1936,19 +1935,13 @@ public final class TxProto {
 
       // Construct using com.shentu.cert.v1alpha1.TxProto.MsgIssueCertificate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1996,12 +1989,10 @@ public final class TxProto {
 
       private void buildPartial0(com.shentu.cert.v1alpha1.TxProto.MsgIssueCertificate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.content_ = contentBuilder_ == null
               ? content_
               : contentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.compiler_ = compiler_;
@@ -2015,7 +2006,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.certifier_ = certifier_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2221,10 +2211,8 @@ public final class TxProto {
         } else {
           contentBuilder_.mergeFrom(value);
         }
-        if (content_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4286,7 +4274,6 @@ public final class TxProto {
               com.shentu.cert.v1alpha1.TxProto.MsgCertifyPlatform.class, com.shentu.cert.v1alpha1.TxProto.MsgCertifyPlatform.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CERTIFIER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object certifier_ = "";
@@ -4334,7 +4321,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasValidatorPubkey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validatorPubkey_ != null;
     }
     /**
      * <code>.google.protobuf.Any validator_pubkey = 2 [json_name = "validatorPubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
@@ -4408,7 +4395,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certifier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validatorPubkey_ != null) {
         output.writeMessage(2, getValidatorPubkey());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platform_)) {
@@ -4426,7 +4413,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certifier_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validatorPubkey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValidatorPubkey());
       }
@@ -4599,19 +4586,13 @@ public final class TxProto {
 
       // Construct using com.shentu.cert.v1alpha1.TxProto.MsgCertifyPlatform.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValidatorPubkeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4660,17 +4641,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.certifier_ = certifier_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorPubkey_ = validatorPubkeyBuilder_ == null
               ? validatorPubkey_
               : validatorPubkeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.platform_ = platform_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4928,10 +4906,8 @@ public final class TxProto {
         } else {
           validatorPubkeyBuilder_.mergeFrom(value);
         }
-        if (validatorPubkey_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

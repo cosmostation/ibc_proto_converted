@@ -722,7 +722,6 @@ public final class QueryProto {
               com.ibc.core.connection.v1.QueryProto.QueryConnectionResponse.class, com.ibc.core.connection.v1.QueryProto.QueryConnectionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private com.ibc.core.connection.v1.ConnectionProto.ConnectionEnd connection_;
     /**
@@ -735,7 +734,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasConnection() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return connection_ != null;
     }
     /**
      * <pre>
@@ -788,7 +787,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProofHeight() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return proofHeight_ != null;
     }
     /**
      * <pre>
@@ -828,13 +827,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (connection_ != null) {
         output.writeMessage(1, getConnection());
       }
       if (!proof_.isEmpty()) {
         output.writeBytes(2, proof_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proofHeight_ != null) {
         output.writeMessage(3, getProofHeight());
       }
       getUnknownFields().writeTo(output);
@@ -846,7 +845,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (connection_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConnection());
       }
@@ -854,7 +853,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, proof_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proofHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getProofHeight());
       }
@@ -1031,20 +1030,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.core.connection.v1.QueryProto.QueryConnectionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConnectionFieldBuilder();
-          getProofHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1094,12 +1086,10 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.core.connection.v1.QueryProto.QueryConnectionResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.connection_ = connectionBuilder_ == null
               ? connection_
               : connectionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proof_ = proof_;
@@ -1108,9 +1098,7 @@ public final class QueryProto {
           result.proofHeight_ = proofHeightBuilder_ == null
               ? proofHeight_
               : proofHeightBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1314,10 +1302,8 @@ public final class QueryProto {
         } else {
           connectionBuilder_.mergeFrom(value);
         }
-        if (connection_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1515,10 +1501,8 @@ public final class QueryProto {
         } else {
           proofHeightBuilder_.mergeFrom(value);
         }
-        if (proofHeight_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1708,7 +1692,6 @@ public final class QueryProto {
               com.ibc.core.connection.v1.QueryProto.QueryConnectionsRequest.class, com.ibc.core.connection.v1.QueryProto.QueryConnectionsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -1717,7 +1700,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -1749,7 +1732,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -1761,7 +1744,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -1924,19 +1907,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.core.connection.v1.QueryProto.QueryConnectionsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1980,14 +1957,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.core.connection.v1.QueryProto.QueryConnectionsRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2153,10 +2127,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2414,7 +2386,6 @@ public final class QueryProto {
               com.ibc.core.connection.v1.QueryProto.QueryConnectionsResponse.class, com.ibc.core.connection.v1.QueryProto.QueryConnectionsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.ibc.core.connection.v1.ConnectionProto.IdentifiedConnection> connections_;
@@ -2488,7 +2459,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <pre>
@@ -2526,7 +2497,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasHeight() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return height_ != null;
     }
     /**
      * <pre>
@@ -2569,10 +2540,10 @@ public final class QueryProto {
       for (int i = 0; i < connections_.size(); i++) {
         output.writeMessage(1, connections_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (height_ != null) {
         output.writeMessage(3, getHeight());
       }
       getUnknownFields().writeTo(output);
@@ -2588,11 +2559,11 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, connections_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (height_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getHeight());
       }
@@ -2770,21 +2741,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.core.connection.v1.QueryProto.QueryConnectionsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConnectionsFieldBuilder();
-          getPaginationFieldBuilder();
-          getHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2853,20 +2816,16 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.core.connection.v1.QueryProto.QueryConnectionsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.height_ = heightBuilder_ == null
               ? height_
               : heightBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3413,10 +3372,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3570,10 +3527,8 @@ public final class QueryProto {
         } else {
           heightBuilder_.mergeFrom(value);
         }
-        if (height_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4427,7 +4382,6 @@ public final class QueryProto {
               com.ibc.core.connection.v1.QueryProto.QueryClientConnectionsResponse.class, com.ibc.core.connection.v1.QueryProto.QueryClientConnectionsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONNECTION_PATHS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList connectionPaths_ =
@@ -4508,7 +4462,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProofHeight() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proofHeight_ != null;
     }
     /**
      * <pre>
@@ -4554,7 +4508,7 @@ public final class QueryProto {
       if (!proof_.isEmpty()) {
         output.writeBytes(2, proof_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofHeight_ != null) {
         output.writeMessage(3, getProofHeight());
       }
       getUnknownFields().writeTo(output);
@@ -4578,7 +4532,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, proof_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proofHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getProofHeight());
       }
@@ -4751,19 +4705,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.core.connection.v1.QueryProto.QueryClientConnectionsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4817,14 +4765,11 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proof_ = proof_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.proofHeight_ = proofHeightBuilder_ == null
               ? proofHeight_
               : proofHeightBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5225,10 +5170,8 @@ public final class QueryProto {
         } else {
           proofHeightBuilder_.mergeFrom(value);
         }
-        if (proofHeight_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6066,7 +6009,6 @@ public final class QueryProto {
               com.ibc.core.connection.v1.QueryProto.QueryConnectionClientStateResponse.class, com.ibc.core.connection.v1.QueryProto.QueryConnectionClientStateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int IDENTIFIED_CLIENT_STATE_FIELD_NUMBER = 1;
     private com.ibc.core.client.v1.ClientProto.IdentifiedClientState identifiedClientState_;
     /**
@@ -6079,7 +6021,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasIdentifiedClientState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return identifiedClientState_ != null;
     }
     /**
      * <pre>
@@ -6132,7 +6074,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProofHeight() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return proofHeight_ != null;
     }
     /**
      * <pre>
@@ -6172,13 +6114,13 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (identifiedClientState_ != null) {
         output.writeMessage(1, getIdentifiedClientState());
       }
       if (!proof_.isEmpty()) {
         output.writeBytes(2, proof_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proofHeight_ != null) {
         output.writeMessage(3, getProofHeight());
       }
       getUnknownFields().writeTo(output);
@@ -6190,7 +6132,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (identifiedClientState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getIdentifiedClientState());
       }
@@ -6198,7 +6140,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, proof_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proofHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getProofHeight());
       }
@@ -6374,20 +6316,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.core.connection.v1.QueryProto.QueryConnectionClientStateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIdentifiedClientStateFieldBuilder();
-          getProofHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6437,12 +6372,10 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.core.connection.v1.QueryProto.QueryConnectionClientStateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.identifiedClientState_ = identifiedClientStateBuilder_ == null
               ? identifiedClientState_
               : identifiedClientStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proof_ = proof_;
@@ -6451,9 +6384,7 @@ public final class QueryProto {
           result.proofHeight_ = proofHeightBuilder_ == null
               ? proofHeight_
               : proofHeightBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6657,10 +6588,8 @@ public final class QueryProto {
         } else {
           identifiedClientStateBuilder_.mergeFrom(value);
         }
-        if (identifiedClientState_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6858,10 +6787,8 @@ public final class QueryProto {
         } else {
           proofHeightBuilder_.mergeFrom(value);
         }
-        if (proofHeight_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -7866,7 +7793,6 @@ public final class QueryProto {
               com.ibc.core.connection.v1.QueryProto.QueryConnectionConsensusStateResponse.class, com.ibc.core.connection.v1.QueryProto.QueryConnectionConsensusStateResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONSENSUS_STATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Any consensusState_;
     /**
@@ -7879,7 +7805,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasConsensusState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return consensusState_ != null;
     }
     /**
      * <pre>
@@ -7979,7 +7905,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasProofHeight() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return proofHeight_ != null;
     }
     /**
      * <pre>
@@ -8019,7 +7945,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusState_ != null) {
         output.writeMessage(1, getConsensusState());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
@@ -8028,7 +7954,7 @@ public final class QueryProto {
       if (!proof_.isEmpty()) {
         output.writeBytes(3, proof_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proofHeight_ != null) {
         output.writeMessage(4, getProofHeight());
       }
       getUnknownFields().writeTo(output);
@@ -8040,7 +7966,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (consensusState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConsensusState());
       }
@@ -8051,7 +7977,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, proof_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (proofHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getProofHeight());
       }
@@ -8231,20 +8157,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.core.connection.v1.QueryProto.QueryConnectionConsensusStateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConsensusStateFieldBuilder();
-          getProofHeightFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8295,12 +8214,10 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.core.connection.v1.QueryProto.QueryConnectionConsensusStateResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.consensusState_ = consensusStateBuilder_ == null
               ? consensusState_
               : consensusStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.clientId_ = clientId_;
@@ -8312,9 +8229,7 @@ public final class QueryProto {
           result.proofHeight_ = proofHeightBuilder_ == null
               ? proofHeight_
               : proofHeightBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8528,10 +8443,8 @@ public final class QueryProto {
         } else {
           consensusStateBuilder_.mergeFrom(value);
         }
-        if (consensusState_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8821,10 +8734,8 @@ public final class QueryProto {
         } else {
           proofHeightBuilder_.mergeFrom(value);
         }
-        if (proofHeight_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9430,7 +9341,6 @@ public final class QueryProto {
               com.ibc.core.connection.v1.QueryProto.QueryConnectionParamsResponse.class, com.ibc.core.connection.v1.QueryProto.QueryConnectionParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.ibc.core.connection.v1.ConnectionProto.Params params_;
     /**
@@ -9443,7 +9353,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -9483,7 +9393,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -9495,7 +9405,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -9657,19 +9567,13 @@ public final class QueryProto {
 
       // Construct using com.ibc.core.connection.v1.QueryProto.QueryConnectionParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9713,14 +9617,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ibc.core.connection.v1.QueryProto.QueryConnectionParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9906,10 +9807,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -2178,7 +2178,6 @@ public final class ScopeProto {
               com.provenance.metadata.v1.ScopeProto.Session.class, com.provenance.metadata.v1.ScopeProto.Session.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SESSION_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -2340,7 +2339,7 @@ public final class ScopeProto {
      */
     @java.lang.Override
     public boolean hasAudit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return audit_ != null;
     }
     /**
      * <pre>
@@ -2395,7 +2394,7 @@ public final class ScopeProto {
       if (!context_.isEmpty()) {
         output.writeBytes(5, context_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (audit_ != null) {
         output.writeMessage(99, getAudit());
       }
       getUnknownFields().writeTo(output);
@@ -2426,7 +2425,7 @@ public final class ScopeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, context_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (audit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(99, getAudit());
       }
@@ -2613,20 +2612,13 @@ public final class ScopeProto {
 
       // Construct using com.provenance.metadata.v1.ScopeProto.Session.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPartiesFieldBuilder();
-          getAuditFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2706,14 +2698,11 @@ public final class ScopeProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.context_ = context_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.audit_ = auditBuilder_ == null
               ? audit_
               : auditBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3496,10 +3485,8 @@ public final class ScopeProto {
         } else {
           auditBuilder_.mergeFrom(value);
         }
-        if (audit_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -3833,7 +3820,6 @@ public final class ScopeProto {
               com.provenance.metadata.v1.ScopeProto.Record.class, com.provenance.metadata.v1.ScopeProto.Record.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -3908,7 +3894,7 @@ public final class ScopeProto {
      */
     @java.lang.Override
     public boolean hasProcess() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return process_ != null;
     }
     /**
      * <pre>
@@ -4091,7 +4077,7 @@ public final class ScopeProto {
       if (!sessionId_.isEmpty()) {
         output.writeBytes(2, sessionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (process_ != null) {
         output.writeMessage(3, getProcess());
       }
       for (int i = 0; i < inputs_.size(); i++) {
@@ -4119,7 +4105,7 @@ public final class ScopeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, sessionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (process_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getProcess());
       }
@@ -4317,21 +4303,13 @@ public final class ScopeProto {
 
       // Construct using com.provenance.metadata.v1.ScopeProto.Record.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProcessFieldBuilder();
-          getInputsFieldBuilder();
-          getOutputsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4420,17 +4398,14 @@ public final class ScopeProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sessionId_ = sessionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.process_ = processBuilder_ == null
               ? process_
               : processBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.specificationId_ = specificationId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4856,10 +4831,8 @@ public final class ScopeProto {
         } else {
           processBuilder_.mergeFrom(value);
         }
-        if (process_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10098,7 +10071,6 @@ public final class ScopeProto {
               com.provenance.metadata.v1.ScopeProto.AuditFields.class, com.provenance.metadata.v1.ScopeProto.AuditFields.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATED_DATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp createdDate_;
     /**
@@ -10111,7 +10083,7 @@ public final class ScopeProto {
      */
     @java.lang.Override
     public boolean hasCreatedDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return createdDate_ != null;
     }
     /**
      * <pre>
@@ -10196,7 +10168,7 @@ public final class ScopeProto {
      */
     @java.lang.Override
     public boolean hasUpdatedDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return updatedDate_ != null;
     }
     /**
      * <pre>
@@ -10345,13 +10317,13 @@ public final class ScopeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createdDate_ != null) {
         output.writeMessage(1, getCreatedDate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, createdBy_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (updatedDate_ != null) {
         output.writeMessage(3, getUpdatedDate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updatedBy_)) {
@@ -10372,14 +10344,14 @@ public final class ScopeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createdDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCreatedDate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, createdBy_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (updatedDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getUpdatedDate());
       }
@@ -10576,20 +10548,13 @@ public final class ScopeProto {
 
       // Construct using com.provenance.metadata.v1.ScopeProto.AuditFields.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreatedDateFieldBuilder();
-          getUpdatedDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10642,12 +10607,10 @@ public final class ScopeProto {
 
       private void buildPartial0(com.provenance.metadata.v1.ScopeProto.AuditFields result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.createdDate_ = createdDateBuilder_ == null
               ? createdDate_
               : createdDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.createdBy_ = createdBy_;
@@ -10656,7 +10619,6 @@ public final class ScopeProto {
           result.updatedDate_ = updatedDateBuilder_ == null
               ? updatedDate_
               : updatedDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.updatedBy_ = updatedBy_;
@@ -10667,7 +10629,6 @@ public final class ScopeProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.message_ = message_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10901,10 +10862,8 @@ public final class ScopeProto {
         } else {
           createdDateBuilder_.mergeFrom(value);
         }
-        if (createdDate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11150,10 +11109,8 @@ public final class ScopeProto {
         } else {
           updatedDateBuilder_.mergeFrom(value);
         }
-        if (updatedDate_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

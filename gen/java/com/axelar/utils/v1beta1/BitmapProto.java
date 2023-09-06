@@ -68,7 +68,6 @@ public final class BitmapProto {
               com.axelar.utils.v1beta1.BitmapProto.Bitmap.class, com.axelar.utils.v1beta1.BitmapProto.Bitmap.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TRUE_COUNT_CACHE_FIELD_NUMBER = 2;
     private com.axelar.utils.v1beta1.BitmapProto.CircularBuffer trueCountCache_;
     /**
@@ -77,7 +76,7 @@ public final class BitmapProto {
      */
     @java.lang.Override
     public boolean hasTrueCountCache() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return trueCountCache_ != null;
     }
     /**
      * <code>.axelar.utils.v1beta1.CircularBuffer true_count_cache = 2 [json_name = "trueCountCache"];</code>
@@ -109,7 +108,7 @@ public final class BitmapProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (trueCountCache_ != null) {
         output.writeMessage(2, getTrueCountCache());
       }
       getUnknownFields().writeTo(output);
@@ -121,7 +120,7 @@ public final class BitmapProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (trueCountCache_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTrueCountCache());
       }
@@ -279,19 +278,13 @@ public final class BitmapProto {
 
       // Construct using com.axelar.utils.v1beta1.BitmapProto.Bitmap.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTrueCountCacheFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -335,14 +328,11 @@ public final class BitmapProto {
 
       private void buildPartial0(com.axelar.utils.v1beta1.BitmapProto.Bitmap result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.trueCountCache_ = trueCountCacheBuilder_ == null
               ? trueCountCache_
               : trueCountCacheBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -508,10 +498,8 @@ public final class BitmapProto {
         } else {
           trueCountCacheBuilder_.mergeFrom(value);
         }
-        if (trueCountCache_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -697,8 +685,7 @@ public final class BitmapProto {
 
     public static final int CUMULATIVE_VALUE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList cumulativeValue_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList cumulativeValue_;
     /**
      * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
      * @return A list containing the cumulativeValue.
@@ -1006,17 +993,22 @@ public final class BitmapProto {
       @java.lang.Override
       public com.axelar.utils.v1beta1.BitmapProto.CircularBuffer buildPartial() {
         com.axelar.utils.v1beta1.BitmapProto.CircularBuffer result = new com.axelar.utils.v1beta1.BitmapProto.CircularBuffer(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          cumulativeValue_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.cumulativeValue_ = cumulativeValue_;
+      }
+
       private void buildPartial0(com.axelar.utils.v1beta1.BitmapProto.CircularBuffer result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          cumulativeValue_.makeImmutable();
-          result.cumulativeValue_ = cumulativeValue_;
-        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.index_ = index_;
         }
@@ -1072,8 +1064,7 @@ public final class BitmapProto {
         if (!other.cumulativeValue_.isEmpty()) {
           if (cumulativeValue_.isEmpty()) {
             cumulativeValue_ = other.cumulativeValue_;
-            cumulativeValue_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureCumulativeValueIsMutable();
             cumulativeValue_.addAll(other.cumulativeValue_);
@@ -1157,10 +1148,10 @@ public final class BitmapProto {
 
       private com.google.protobuf.Internal.LongList cumulativeValue_ = emptyLongList();
       private void ensureCumulativeValueIsMutable() {
-        if (!cumulativeValue_.isModifiable()) {
-          cumulativeValue_ = makeMutableCopy(cumulativeValue_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          cumulativeValue_ = mutableCopy(cumulativeValue_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
@@ -1168,8 +1159,8 @@ public final class BitmapProto {
        */
       public java.util.List<java.lang.Long>
           getCumulativeValueList() {
-        cumulativeValue_.makeImmutable();
-        return cumulativeValue_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(cumulativeValue_) : cumulativeValue_;
       }
       /**
        * <code>repeated uint64 cumulative_value = 1 [json_name = "cumulativeValue"];</code>
@@ -1197,7 +1188,6 @@ public final class BitmapProto {
 
         ensureCumulativeValueIsMutable();
         cumulativeValue_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1210,7 +1200,6 @@ public final class BitmapProto {
 
         ensureCumulativeValueIsMutable();
         cumulativeValue_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1224,7 +1213,6 @@ public final class BitmapProto {
         ensureCumulativeValueIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, cumulativeValue_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

@@ -105,7 +105,6 @@ public final class MintProto {
               com.irishub.mint.MintProto.Minter.class, com.irishub.mint.MintProto.Minter.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LAST_UPDATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp lastUpdate_;
     /**
@@ -118,7 +117,7 @@ public final class MintProto {
      */
     @java.lang.Override
     public boolean hasLastUpdate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lastUpdate_ != null;
     }
     /**
      * <pre>
@@ -205,7 +204,7 @@ public final class MintProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastUpdate_ != null) {
         output.writeMessage(1, getLastUpdate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflationBase_)) {
@@ -220,7 +219,7 @@ public final class MintProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastUpdate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLastUpdate());
       }
@@ -389,19 +388,13 @@ public final class MintProto {
 
       // Construct using com.irishub.mint.MintProto.Minter.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLastUpdateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -446,17 +439,14 @@ public final class MintProto {
 
       private void buildPartial0(com.irishub.mint.MintProto.Minter result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lastUpdate_ = lastUpdateBuilder_ == null
               ? lastUpdate_
               : lastUpdateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.inflationBase_ = inflationBase_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -652,10 +642,8 @@ public final class MintProto {
         } else {
           lastUpdateBuilder_.mergeFrom(value);
         }
-        if (lastUpdate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

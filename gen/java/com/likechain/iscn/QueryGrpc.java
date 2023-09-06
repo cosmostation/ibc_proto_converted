@@ -11,14 +11,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: likechain/iscn/query.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryGrpc {
 
   private QueryGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "likechain.iscn.Query";
+  public static final String SERVICE_NAME = "likechain.iscn.Query";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.likechain.iscn.QueryProto.QueryRecordsByIdRequest,
@@ -735,9 +735,9 @@ public final class QueryGrpc {
   private static final class QueryMethodDescriptorSupplier
       extends QueryBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    QueryMethodDescriptorSupplier(java.lang.String methodName) {
+    QueryMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

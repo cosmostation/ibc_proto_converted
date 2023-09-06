@@ -7579,7 +7579,6 @@ public final class TxProto {
               com.stafihub.stafihub.bridge.TxProto.MsgSetRelayFee.class, com.stafihub.stafihub.bridge.TxProto.MsgSetRelayFee.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -7638,7 +7637,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return value_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -7676,7 +7675,7 @@ public final class TxProto {
       if (chainId_ != 0) {
         output.writeUInt32(2, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         output.writeMessage(3, getValue());
       }
       getUnknownFields().writeTo(output);
@@ -7695,7 +7694,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getValue());
       }
@@ -7861,19 +7860,13 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.bridge.TxProto.MsgSetRelayFee.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7925,14 +7918,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chainId_ = chainId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8220,10 +8210,8 @@ public final class TxProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        if (value_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

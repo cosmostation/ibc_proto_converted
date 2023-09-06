@@ -178,7 +178,6 @@ public final class MintProto {
               com.crescent.mint.v1beta1.MintProto.Params.class, com.crescent.mint.v1beta1.MintProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MINT_DENOM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object mintDenom_ = "";
@@ -290,7 +289,7 @@ public final class MintProto {
      */
     @java.lang.Override
     public boolean hasBlockTimeThreshold() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blockTimeThreshold_ != null;
     }
     /**
      * <pre>
@@ -399,7 +398,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintPoolAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mintPoolAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockTimeThreshold_ != null) {
         output.writeMessage(3, getBlockTimeThreshold());
       }
       for (int i = 0; i < inflationSchedules_.size(); i++) {
@@ -420,7 +419,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintPoolAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mintPoolAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockTimeThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBlockTimeThreshold());
       }
@@ -600,20 +599,13 @@ public final class MintProto {
 
       // Construct using com.crescent.mint.v1beta1.MintProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBlockTimeThresholdFieldBuilder();
-          getInflationSchedulesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -685,14 +677,11 @@ public final class MintProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.mintPoolAddress_ = mintPoolAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.blockTimeThreshold_ = blockTimeThresholdBuilder_ == null
               ? blockTimeThreshold_
               : blockTimeThresholdBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1136,10 +1125,8 @@ public final class MintProto {
         } else {
           blockTimeThresholdBuilder_.mergeFrom(value);
         }
-        if (blockTimeThreshold_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1705,7 +1692,6 @@ public final class MintProto {
               com.crescent.mint.v1beta1.MintProto.InflationSchedule.class, com.crescent.mint.v1beta1.MintProto.InflationSchedule.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
@@ -1718,7 +1704,7 @@ public final class MintProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -1756,7 +1742,7 @@ public final class MintProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endTime_ != null;
     }
     /**
      * <pre>
@@ -1843,10 +1829,10 @@ public final class MintProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(1, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         output.writeMessage(2, getEndTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
@@ -1861,11 +1847,11 @@ public final class MintProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEndTime());
       }
@@ -2044,20 +2030,13 @@ public final class MintProto {
 
       // Construct using com.crescent.mint.v1beta1.MintProto.InflationSchedule.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-          getEndTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2107,23 +2086,19 @@ public final class MintProto {
 
       private void buildPartial0(com.crescent.mint.v1beta1.MintProto.InflationSchedule result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amount_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2329,10 +2304,8 @@ public final class MintProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2486,10 +2459,8 @@ public final class MintProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -85,7 +85,6 @@ public final class GenesisProto {
               com.kava.incentive.v1beta1.GenesisProto.AccumulationTime.class, com.kava.incentive.v1beta1.GenesisProto.AccumulationTime.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COLLATERAL_TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collateralType_ = "";
@@ -133,7 +132,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPreviousAccumulationTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return previousAccumulationTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp previous_accumulation_time = 2 [json_name = "previousAccumulationTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -168,7 +167,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (previousAccumulationTime_ != null) {
         output.writeMessage(2, getPreviousAccumulationTime());
       }
       getUnknownFields().writeTo(output);
@@ -183,7 +182,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (previousAccumulationTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPreviousAccumulationTime());
       }
@@ -349,19 +348,13 @@ public final class GenesisProto {
 
       // Construct using com.kava.incentive.v1beta1.GenesisProto.AccumulationTime.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPreviousAccumulationTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -409,14 +402,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.previousAccumulationTime_ = previousAccumulationTimeBuilder_ == null
               ? previousAccumulationTime_
               : previousAccumulationTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -664,10 +654,8 @@ public final class GenesisProto {
         } else {
           previousAccumulationTimeBuilder_.mergeFrom(value);
         }
-        if (previousAccumulationTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2259,7 +2247,6 @@ public final class GenesisProto {
               com.kava.incentive.v1beta1.GenesisProto.GenesisState.class, com.kava.incentive.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.kava.incentive.v1beta1.ParamsProto.Params params_;
     /**
@@ -2268,7 +2255,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -2294,7 +2281,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasUsdxRewardState() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return usdxRewardState_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.GenesisRewardState usdx_reward_state = 2 [json_name = "usdxRewardState", (.gogoproto.nullable) = false, (.gogoproto.customname) = "USDXRewardState"];</code>
@@ -2320,7 +2307,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasHardSupplyRewardState() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return hardSupplyRewardState_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.GenesisRewardState hard_supply_reward_state = 3 [json_name = "hardSupplyRewardState", (.gogoproto.nullable) = false];</code>
@@ -2346,7 +2333,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasHardBorrowRewardState() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return hardBorrowRewardState_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.GenesisRewardState hard_borrow_reward_state = 4 [json_name = "hardBorrowRewardState", (.gogoproto.nullable) = false];</code>
@@ -2372,7 +2359,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDelegatorRewardState() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return delegatorRewardState_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.GenesisRewardState delegator_reward_state = 5 [json_name = "delegatorRewardState", (.gogoproto.nullable) = false];</code>
@@ -2398,7 +2385,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSwapRewardState() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return swapRewardState_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.GenesisRewardState swap_reward_state = 6 [json_name = "swapRewardState", (.gogoproto.nullable) = false];</code>
@@ -2588,7 +2575,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasSavingsRewardState() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return savingsRewardState_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.GenesisRewardState savings_reward_state = 11 [json_name = "savingsRewardState", (.gogoproto.nullable) = false];</code>
@@ -2655,7 +2642,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasEarnRewardState() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return earnRewardState_ != null;
     }
     /**
      * <code>.kava.incentive.v1beta1.GenesisRewardState earn_reward_state = 13 [json_name = "earnRewardState", (.gogoproto.nullable) = false];</code>
@@ -2728,22 +2715,22 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (usdxRewardState_ != null) {
         output.writeMessage(2, getUsdxRewardState());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (hardSupplyRewardState_ != null) {
         output.writeMessage(3, getHardSupplyRewardState());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (hardBorrowRewardState_ != null) {
         output.writeMessage(4, getHardBorrowRewardState());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (delegatorRewardState_ != null) {
         output.writeMessage(5, getDelegatorRewardState());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (swapRewardState_ != null) {
         output.writeMessage(6, getSwapRewardState());
       }
       for (int i = 0; i < usdxMintingClaims_.size(); i++) {
@@ -2758,13 +2745,13 @@ public final class GenesisProto {
       for (int i = 0; i < swapClaims_.size(); i++) {
         output.writeMessage(10, swapClaims_.get(i));
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (savingsRewardState_ != null) {
         output.writeMessage(11, getSavingsRewardState());
       }
       for (int i = 0; i < savingsClaims_.size(); i++) {
         output.writeMessage(12, savingsClaims_.get(i));
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (earnRewardState_ != null) {
         output.writeMessage(13, getEarnRewardState());
       }
       for (int i = 0; i < earnClaims_.size(); i++) {
@@ -2779,27 +2766,27 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (usdxRewardState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUsdxRewardState());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (hardSupplyRewardState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getHardSupplyRewardState());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (hardBorrowRewardState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getHardBorrowRewardState());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (delegatorRewardState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDelegatorRewardState());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (swapRewardState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSwapRewardState());
       }
@@ -2819,7 +2806,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, swapClaims_.get(i));
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (savingsRewardState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getSavingsRewardState());
       }
@@ -2827,7 +2814,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, savingsClaims_.get(i));
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (earnRewardState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getEarnRewardState());
       }
@@ -3092,32 +3079,13 @@ public final class GenesisProto {
 
       // Construct using com.kava.incentive.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getUsdxRewardStateFieldBuilder();
-          getHardSupplyRewardStateFieldBuilder();
-          getHardBorrowRewardStateFieldBuilder();
-          getDelegatorRewardStateFieldBuilder();
-          getSwapRewardStateFieldBuilder();
-          getUsdxMintingClaimsFieldBuilder();
-          getHardLiquidityProviderClaimsFieldBuilder();
-          getDelegatorClaimsFieldBuilder();
-          getSwapClaimsFieldBuilder();
-          getSavingsRewardStateFieldBuilder();
-          getSavingsClaimsFieldBuilder();
-          getEarnRewardStateFieldBuilder();
-          getEarnClaimsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3296,56 +3264,46 @@ public final class GenesisProto {
 
       private void buildPartial0(com.kava.incentive.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.usdxRewardState_ = usdxRewardStateBuilder_ == null
               ? usdxRewardState_
               : usdxRewardStateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.hardSupplyRewardState_ = hardSupplyRewardStateBuilder_ == null
               ? hardSupplyRewardState_
               : hardSupplyRewardStateBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.hardBorrowRewardState_ = hardBorrowRewardStateBuilder_ == null
               ? hardBorrowRewardState_
               : hardBorrowRewardStateBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.delegatorRewardState_ = delegatorRewardStateBuilder_ == null
               ? delegatorRewardState_
               : delegatorRewardStateBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.swapRewardState_ = swapRewardStateBuilder_ == null
               ? swapRewardState_
               : swapRewardStateBuilder_.build();
-          to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.savingsRewardState_ = savingsRewardStateBuilder_ == null
               ? savingsRewardState_
               : savingsRewardStateBuilder_.build();
-          to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.earnRewardState_ = earnRewardStateBuilder_ == null
               ? earnRewardState_
               : earnRewardStateBuilder_.build();
-          to_bitField0_ |= 0x00000080;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3815,10 +3773,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3936,10 +3892,8 @@ public final class GenesisProto {
         } else {
           usdxRewardStateBuilder_.mergeFrom(value);
         }
-        if (usdxRewardState_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4057,10 +4011,8 @@ public final class GenesisProto {
         } else {
           hardSupplyRewardStateBuilder_.mergeFrom(value);
         }
-        if (hardSupplyRewardState_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4178,10 +4130,8 @@ public final class GenesisProto {
         } else {
           hardBorrowRewardStateBuilder_.mergeFrom(value);
         }
-        if (hardBorrowRewardState_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4299,10 +4249,8 @@ public final class GenesisProto {
         } else {
           delegatorRewardStateBuilder_.mergeFrom(value);
         }
-        if (delegatorRewardState_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4420,10 +4368,8 @@ public final class GenesisProto {
         } else {
           swapRewardStateBuilder_.mergeFrom(value);
         }
-        if (swapRewardState_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5501,10 +5447,8 @@ public final class GenesisProto {
         } else {
           savingsRewardStateBuilder_.mergeFrom(value);
         }
-        if (savingsRewardState_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -5862,10 +5806,8 @@ public final class GenesisProto {
         } else {
           earnRewardStateBuilder_.mergeFrom(value);
         }
-        if (earnRewardState_ != null) {
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**

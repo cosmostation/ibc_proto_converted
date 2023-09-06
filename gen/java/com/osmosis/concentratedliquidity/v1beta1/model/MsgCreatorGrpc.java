@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: osmosis/concentrated-liquidity/pool-model/tx.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgCreatorGrpc {
 
   private MsgCreatorGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "osmosis.concentratedliquidity.v1beta1.model.MsgCreator";
+  public static final String SERVICE_NAME = "osmosis.concentratedliquidity.v1beta1.model.MsgCreator";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.model.TxProto.MsgCreateConcentratedPool,
@@ -261,9 +261,9 @@ public final class MsgCreatorGrpc {
   private static final class MsgCreatorMethodDescriptorSupplier
       extends MsgCreatorBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    MsgCreatorMethodDescriptorSupplier(java.lang.String methodName) {
+    MsgCreatorMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

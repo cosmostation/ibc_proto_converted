@@ -1712,8 +1712,7 @@ public final class EventsProto {
 
     public static final int BATCH_TX_IDS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList batchTxIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList batchTxIds_;
     /**
      * <code>repeated uint64 batch_tx_ids = 5 [json_name = "batchTxIds"];</code>
      * @return A list containing the batchTxIds.
@@ -2023,9 +2022,18 @@ public final class EventsProto {
       @java.lang.Override
       public com.injective.peggy.v1.EventsProto.EventOutgoingBatch buildPartial() {
         com.injective.peggy.v1.EventsProto.EventOutgoingBatch result = new com.injective.peggy.v1.EventsProto.EventOutgoingBatch(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.injective.peggy.v1.EventsProto.EventOutgoingBatch result) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          batchTxIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.batchTxIds_ = batchTxIds_;
       }
 
       private void buildPartial0(com.injective.peggy.v1.EventsProto.EventOutgoingBatch result) {
@@ -2041,10 +2049,6 @@ public final class EventsProto {
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.batchTimeout_ = batchTimeout_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          batchTxIds_.makeImmutable();
-          result.batchTxIds_ = batchTxIds_;
         }
       }
 
@@ -2111,8 +2115,7 @@ public final class EventsProto {
         if (!other.batchTxIds_.isEmpty()) {
           if (batchTxIds_.isEmpty()) {
             batchTxIds_ = other.batchTxIds_;
-            batchTxIds_.makeImmutable();
-            bitField0_ |= 0x00000010;
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureBatchTxIdsIsMutable();
             batchTxIds_.addAll(other.batchTxIds_);
@@ -2408,10 +2411,10 @@ public final class EventsProto {
 
       private com.google.protobuf.Internal.LongList batchTxIds_ = emptyLongList();
       private void ensureBatchTxIdsIsMutable() {
-        if (!batchTxIds_.isModifiable()) {
-          batchTxIds_ = makeMutableCopy(batchTxIds_);
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          batchTxIds_ = mutableCopy(batchTxIds_);
+          bitField0_ |= 0x00000010;
         }
-        bitField0_ |= 0x00000010;
       }
       /**
        * <code>repeated uint64 batch_tx_ids = 5 [json_name = "batchTxIds"];</code>
@@ -2419,8 +2422,8 @@ public final class EventsProto {
        */
       public java.util.List<java.lang.Long>
           getBatchTxIdsList() {
-        batchTxIds_.makeImmutable();
-        return batchTxIds_;
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(batchTxIds_) : batchTxIds_;
       }
       /**
        * <code>repeated uint64 batch_tx_ids = 5 [json_name = "batchTxIds"];</code>
@@ -2448,7 +2451,6 @@ public final class EventsProto {
 
         ensureBatchTxIdsIsMutable();
         batchTxIds_.setLong(index, value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2461,7 +2463,6 @@ public final class EventsProto {
 
         ensureBatchTxIdsIsMutable();
         batchTxIds_.addLong(value);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2475,7 +2476,6 @@ public final class EventsProto {
         ensureBatchTxIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, batchTxIds_);
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }

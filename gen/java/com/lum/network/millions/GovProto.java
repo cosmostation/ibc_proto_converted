@@ -240,7 +240,6 @@ public final class GovProto {
               com.lum.network.millions.GovProto.ProposalRegisterPool.class, com.lum.network.millions.GovProto.ProposalRegisterPool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -559,7 +558,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasDrawSchedule() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return drawSchedule_ != null;
     }
     /**
      * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
@@ -585,7 +584,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasPrizeStrategy() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return prizeStrategy_ != null;
     }
     /**
      * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
@@ -758,10 +757,10 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, minDepositAmount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (drawSchedule_ != null) {
         output.writeMessage(9, getDrawSchedule());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (prizeStrategy_ != null) {
         output.writeMessage(10, getPrizeStrategy());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bech32PrefixAccAddr_)) {
@@ -811,11 +810,11 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, minDepositAmount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (drawSchedule_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getDrawSchedule());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (prizeStrategy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getPrizeStrategy());
       }
@@ -1037,20 +1036,13 @@ public final class GovProto {
 
       // Construct using com.lum.network.millions.GovProto.ProposalRegisterPool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDrawScheduleFieldBuilder();
-          getPrizeStrategyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1136,18 +1128,15 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.minDepositAmount_ = minDepositAmount_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.drawSchedule_ = drawScheduleBuilder_ == null
               ? drawSchedule_
               : drawScheduleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.prizeStrategy_ = prizeStrategyBuilder_ == null
               ? prizeStrategy_
               : prizeStrategyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.bech32PrefixAccAddr_ = bech32PrefixAccAddr_;
@@ -1158,7 +1147,6 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.transferChannelId_ = transferChannelId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2065,10 +2053,8 @@ public final class GovProto {
         } else {
           drawScheduleBuilder_.mergeFrom(value);
         }
-        if (drawSchedule_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2186,10 +2172,8 @@ public final class GovProto {
         } else {
           prizeStrategyBuilder_.mergeFrom(value);
         }
-        if (prizeStrategy_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2661,7 +2645,6 @@ public final class GovProto {
               com.lum.network.millions.GovProto.ProposalUpdatePool.class, com.lum.network.millions.GovProto.ProposalUpdatePool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -2835,7 +2818,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasDrawSchedule() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return drawSchedule_ != null;
     }
     /**
      * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
@@ -2861,7 +2844,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasPrizeStrategy() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return prizeStrategy_ != null;
     }
     /**
      * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
@@ -2908,10 +2891,10 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, minDepositAmount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (drawSchedule_ != null) {
         output.writeMessage(6, getDrawSchedule());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (prizeStrategy_ != null) {
         output.writeMessage(7, getPrizeStrategy());
       }
       getUnknownFields().writeTo(output);
@@ -2944,11 +2927,11 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, minDepositAmount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (drawSchedule_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDrawSchedule());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (prizeStrategy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getPrizeStrategy());
       }
@@ -3138,20 +3121,13 @@ public final class GovProto {
 
       // Construct using com.lum.network.millions.GovProto.ProposalUpdatePool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDrawScheduleFieldBuilder();
-          getPrizeStrategyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3222,20 +3198,16 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.minDepositAmount_ = minDepositAmount_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.drawSchedule_ = drawScheduleBuilder_ == null
               ? drawSchedule_
               : drawScheduleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.prizeStrategy_ = prizeStrategyBuilder_ == null
               ? prizeStrategy_
               : prizeStrategyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3824,10 +3796,8 @@ public final class GovProto {
         } else {
           drawScheduleBuilder_.mergeFrom(value);
         }
-        if (drawSchedule_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -3945,10 +3915,8 @@ public final class GovProto {
         } else {
           prizeStrategyBuilder_.mergeFrom(value);
         }
-        if (prizeStrategy_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -4240,7 +4208,6 @@ public final class GovProto {
               com.lum.network.millions.GovProto.ProposalUpdateParams.class, com.lum.network.millions.GovProto.ProposalUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -4444,7 +4411,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasMinDrawScheduleDelta() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return minDrawScheduleDelta_ != null;
     }
     /**
      * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -4470,7 +4437,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasMaxDrawScheduleDelta() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return maxDrawScheduleDelta_ != null;
     }
     /**
      * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -4496,7 +4463,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasPrizeExpirationDelta() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return prizeExpirationDelta_ != null;
     }
     /**
      * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -4561,7 +4528,7 @@ public final class GovProto {
      */
     @java.lang.Override
     public boolean hasMinDepositDrawDelta() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return minDepositDrawDelta_ != null;
     }
     /**
      * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
@@ -4608,19 +4575,19 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeBatchQuantity_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, maxPrizeBatchQuantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minDrawScheduleDelta_ != null) {
         output.writeMessage(6, getMinDrawScheduleDelta());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (maxDrawScheduleDelta_ != null) {
         output.writeMessage(7, getMaxDrawScheduleDelta());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (prizeExpirationDelta_ != null) {
         output.writeMessage(8, getPrizeExpirationDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, feesStakers_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (minDepositDrawDelta_ != null) {
         output.writeMessage(10, getMinDepositDrawDelta());
       }
       getUnknownFields().writeTo(output);
@@ -4647,22 +4614,22 @@ public final class GovProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeBatchQuantity_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, maxPrizeBatchQuantity_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minDrawScheduleDelta_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getMinDrawScheduleDelta());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (maxDrawScheduleDelta_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getMaxDrawScheduleDelta());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (prizeExpirationDelta_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getPrizeExpirationDelta());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, feesStakers_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (minDepositDrawDelta_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getMinDepositDrawDelta());
       }
@@ -4871,22 +4838,13 @@ public final class GovProto {
 
       // Construct using com.lum.network.millions.GovProto.ProposalUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMinDrawScheduleDeltaFieldBuilder();
-          getMaxDrawScheduleDeltaFieldBuilder();
-          getPrizeExpirationDeltaFieldBuilder();
-          getMinDepositDrawDeltaFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4966,24 +4924,20 @@ public final class GovProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maxPrizeBatchQuantity_ = maxPrizeBatchQuantity_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.minDrawScheduleDelta_ = minDrawScheduleDeltaBuilder_ == null
               ? minDrawScheduleDelta_
               : minDrawScheduleDeltaBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.maxDrawScheduleDelta_ = maxDrawScheduleDeltaBuilder_ == null
               ? maxDrawScheduleDelta_
               : maxDrawScheduleDeltaBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.prizeExpirationDelta_ = prizeExpirationDeltaBuilder_ == null
               ? prizeExpirationDelta_
               : prizeExpirationDeltaBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.feesStakers_ = feesStakers_;
@@ -4992,9 +4946,7 @@ public final class GovProto {
           result.minDepositDrawDelta_ = minDepositDrawDeltaBuilder_ == null
               ? minDepositDrawDelta_
               : minDepositDrawDeltaBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5610,10 +5562,8 @@ public final class GovProto {
         } else {
           minDrawScheduleDeltaBuilder_.mergeFrom(value);
         }
-        if (minDrawScheduleDelta_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5731,10 +5681,8 @@ public final class GovProto {
         } else {
           maxDrawScheduleDeltaBuilder_.mergeFrom(value);
         }
-        if (maxDrawScheduleDelta_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -5852,10 +5800,8 @@ public final class GovProto {
         } else {
           prizeExpirationDeltaBuilder_.mergeFrom(value);
         }
-        if (prizeExpirationDelta_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -6045,10 +5991,8 @@ public final class GovProto {
         } else {
           minDepositDrawDeltaBuilder_.mergeFrom(value);
         }
-        if (minDepositDrawDelta_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**

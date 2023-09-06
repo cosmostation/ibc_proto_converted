@@ -400,7 +400,6 @@ public final class DatasaleProto {
               com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.class, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SELLER_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sellerAddress_ = "";
@@ -594,7 +593,7 @@ public final class DatasaleProto {
      */
     @java.lang.Override
     public boolean hasVerificationVotingPeriod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return verificationVotingPeriod_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.VotingPeriod verification_voting_period = 7 [json_name = "verificationVotingPeriod"];</code>
@@ -620,7 +619,7 @@ public final class DatasaleProto {
      */
     @java.lang.Override
     public boolean hasDeliveryVotingPeriod() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return deliveryVotingPeriod_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.VotingPeriod delivery_voting_period = 8 [json_name = "deliveryVotingPeriod"];</code>
@@ -646,7 +645,7 @@ public final class DatasaleProto {
      */
     @java.lang.Override
     public boolean hasVerificationTallyResult() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return verificationTallyResult_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.TallyResult verification_tally_result = 9 [json_name = "verificationTallyResult"];</code>
@@ -672,7 +671,7 @@ public final class DatasaleProto {
      */
     @java.lang.Override
     public boolean hasDeliveryTallyResult() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return deliveryTallyResult_ != null;
     }
     /**
      * <code>.panacea.oracle.v2alpha2.TallyResult delivery_tally_result = 10 [json_name = "deliveryTallyResult"];</code>
@@ -722,16 +721,16 @@ public final class DatasaleProto {
       if (status_ != com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleStatus.DATA_SALE_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, status_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (verificationVotingPeriod_ != null) {
         output.writeMessage(7, getVerificationVotingPeriod());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deliveryVotingPeriod_ != null) {
         output.writeMessage(8, getDeliveryVotingPeriod());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (verificationTallyResult_ != null) {
         output.writeMessage(9, getVerificationTallyResult());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (deliveryTallyResult_ != null) {
         output.writeMessage(10, getDeliveryTallyResult());
       }
       getUnknownFields().writeTo(output);
@@ -763,19 +762,19 @@ public final class DatasaleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, status_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (verificationVotingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getVerificationVotingPeriod());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deliveryVotingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getDeliveryVotingPeriod());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (verificationTallyResult_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getVerificationTallyResult());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (deliveryTallyResult_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getDeliveryTallyResult());
       }
@@ -988,22 +987,13 @@ public final class DatasaleProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVerificationVotingPeriodFieldBuilder();
-          getDeliveryVotingPeriodFieldBuilder();
-          getVerificationTallyResultFieldBuilder();
-          getDeliveryTallyResultFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1086,32 +1076,26 @@ public final class DatasaleProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.status_ = status_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.verificationVotingPeriod_ = verificationVotingPeriodBuilder_ == null
               ? verificationVotingPeriod_
               : verificationVotingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.deliveryVotingPeriod_ = deliveryVotingPeriodBuilder_ == null
               ? deliveryVotingPeriod_
               : deliveryVotingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.verificationTallyResult_ = verificationTallyResultBuilder_ == null
               ? verificationTallyResult_
               : verificationTallyResultBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.deliveryTallyResult_ = deliveryTallyResultBuilder_ == null
               ? deliveryTallyResult_
               : deliveryTallyResultBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1736,10 +1720,8 @@ public final class DatasaleProto {
         } else {
           verificationVotingPeriodBuilder_.mergeFrom(value);
         }
-        if (verificationVotingPeriod_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1857,10 +1839,8 @@ public final class DatasaleProto {
         } else {
           deliveryVotingPeriodBuilder_.mergeFrom(value);
         }
-        if (deliveryVotingPeriod_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -1978,10 +1958,8 @@ public final class DatasaleProto {
         } else {
           verificationTallyResultBuilder_.mergeFrom(value);
         }
-        if (verificationTallyResult_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2099,10 +2077,8 @@ public final class DatasaleProto {
         } else {
           deliveryTallyResultBuilder_.mergeFrom(value);
         }
-        if (deliveryTallyResult_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**

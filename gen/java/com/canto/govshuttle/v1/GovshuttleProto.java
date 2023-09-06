@@ -511,7 +511,6 @@ public final class GovshuttleProto {
               com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.class, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -606,7 +605,7 @@ public final class GovshuttleProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
@@ -644,7 +643,7 @@ public final class GovshuttleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(3, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -662,7 +661,7 @@ public final class GovshuttleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMetadata());
       }
@@ -832,19 +831,13 @@ public final class GovshuttleProto {
 
       // Construct using com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -896,14 +889,11 @@ public final class GovshuttleProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1253,10 +1243,8 @@ public final class GovshuttleProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1455,7 +1443,6 @@ public final class GovshuttleProto {
               com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.class, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -1542,7 +1529,7 @@ public final class GovshuttleProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
@@ -1580,7 +1567,7 @@ public final class GovshuttleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(3, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -1598,7 +1585,7 @@ public final class GovshuttleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMetadata());
       }
@@ -1768,19 +1755,13 @@ public final class GovshuttleProto {
 
       // Construct using com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1832,14 +1813,11 @@ public final class GovshuttleProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2169,10 +2147,8 @@ public final class GovshuttleProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3419,8 +3395,7 @@ public final class GovshuttleProto {
 
     public static final int VALUES_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList values_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList values_;
     /**
      * <code>repeated uint64 values = 3 [json_name = "values"];</code>
      * @return A list containing the values.
@@ -3826,9 +3801,18 @@ public final class GovshuttleProto {
       @java.lang.Override
       public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata buildPartial() {
         com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata result = new com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          values_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.values_ = values_;
       }
 
       private void buildPartial0(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata result) {
@@ -3839,10 +3823,6 @@ public final class GovshuttleProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.propId_ = propId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          values_.makeImmutable();
-          result.values_ = values_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           calldatas_.makeImmutable();
@@ -3914,8 +3894,7 @@ public final class GovshuttleProto {
         if (!other.values_.isEmpty()) {
           if (values_.isEmpty()) {
             values_ = other.values_;
-            values_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureValuesIsMutable();
             values_.addAll(other.values_);
@@ -4169,10 +4148,10 @@ public final class GovshuttleProto {
 
       private com.google.protobuf.Internal.LongList values_ = emptyLongList();
       private void ensureValuesIsMutable() {
-        if (!values_.isModifiable()) {
-          values_ = makeMutableCopy(values_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          values_ = mutableCopy(values_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 values = 3 [json_name = "values"];</code>
@@ -4180,8 +4159,8 @@ public final class GovshuttleProto {
        */
       public java.util.List<java.lang.Long>
           getValuesList() {
-        values_.makeImmutable();
-        return values_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(values_) : values_;
       }
       /**
        * <code>repeated uint64 values = 3 [json_name = "values"];</code>
@@ -4209,7 +4188,6 @@ public final class GovshuttleProto {
 
         ensureValuesIsMutable();
         values_.setLong(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4222,7 +4200,6 @@ public final class GovshuttleProto {
 
         ensureValuesIsMutable();
         values_.addLong(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4236,7 +4213,6 @@ public final class GovshuttleProto {
         ensureValuesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, values_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

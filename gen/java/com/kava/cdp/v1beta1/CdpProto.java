@@ -156,7 +156,6 @@ public final class CdpProto {
               com.kava.cdp.v1beta1.CdpProto.CDP.class, com.kava.cdp.v1beta1.CdpProto.CDP.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -226,7 +225,7 @@ public final class CdpProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 4 [json_name = "collateral", (.gogoproto.nullable) = false];</code>
@@ -252,7 +251,7 @@ public final class CdpProto {
      */
     @java.lang.Override
     public boolean hasPrincipal() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return principal_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin principal = 5 [json_name = "principal", (.gogoproto.nullable) = false];</code>
@@ -278,7 +277,7 @@ public final class CdpProto {
      */
     @java.lang.Override
     public boolean hasAccumulatedFees() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return accumulatedFees_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin accumulated_fees = 6 [json_name = "accumulatedFees", (.gogoproto.nullable) = false];</code>
@@ -304,7 +303,7 @@ public final class CdpProto {
      */
     @java.lang.Override
     public boolean hasFeesUpdated() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return feesUpdated_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp fees_updated = 7 [json_name = "feesUpdated", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -384,16 +383,16 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         output.writeMessage(4, getCollateral());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (principal_ != null) {
         output.writeMessage(5, getPrincipal());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (accumulatedFees_ != null) {
         output.writeMessage(6, getAccumulatedFees());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (feesUpdated_ != null) {
         output.writeMessage(7, getFeesUpdated());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(interestFactor_)) {
@@ -419,19 +418,19 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCollateral());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (principal_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPrincipal());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (accumulatedFees_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAccumulatedFees());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (feesUpdated_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getFeesUpdated());
       }
@@ -640,22 +639,13 @@ public final class CdpProto {
 
       // Construct using com.kava.cdp.v1beta1.CdpProto.CDP.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollateralFieldBuilder();
-          getPrincipalFieldBuilder();
-          getAccumulatedFeesFieldBuilder();
-          getFeesUpdatedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -727,35 +717,29 @@ public final class CdpProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.type_ = type_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.principal_ = principalBuilder_ == null
               ? principal_
               : principalBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.accumulatedFees_ = accumulatedFeesBuilder_ == null
               ? accumulatedFees_
               : accumulatedFeesBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.feesUpdated_ = feesUpdatedBuilder_ == null
               ? feesUpdated_
               : feesUpdatedBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.interestFactor_ = interestFactor_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1123,10 +1107,8 @@ public final class CdpProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        if (collateral_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1244,10 +1226,8 @@ public final class CdpProto {
         } else {
           principalBuilder_.mergeFrom(value);
         }
-        if (principal_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1365,10 +1345,8 @@ public final class CdpProto {
         } else {
           accumulatedFeesBuilder_.mergeFrom(value);
         }
-        if (accumulatedFees_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1486,10 +1464,8 @@ public final class CdpProto {
         } else {
           feesUpdatedBuilder_.mergeFrom(value);
         }
-        if (feesUpdated_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1753,7 +1729,6 @@ public final class CdpProto {
               com.kava.cdp.v1beta1.CdpProto.Deposit.class, com.kava.cdp.v1beta1.CdpProto.Deposit.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CDP_ID_FIELD_NUMBER = 1;
     private long cdpId_ = 0L;
     /**
@@ -1812,7 +1787,7 @@ public final class CdpProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -1850,7 +1825,7 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, depositor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -1869,7 +1844,7 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, depositor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -2040,19 +2015,13 @@ public final class CdpProto {
 
       // Construct using com.kava.cdp.v1beta1.CdpProto.Deposit.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2104,14 +2073,11 @@ public final class CdpProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.depositor_ = depositor_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2399,10 +2365,8 @@ public final class CdpProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2588,7 +2552,6 @@ public final class CdpProto {
               com.kava.cdp.v1beta1.CdpProto.TotalPrincipal.class, com.kava.cdp.v1beta1.CdpProto.TotalPrincipal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COLLATERAL_TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collateralType_ = "";
@@ -2636,7 +2599,7 @@ public final class CdpProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -2671,7 +2634,7 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -2686,7 +2649,7 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -2852,19 +2815,13 @@ public final class CdpProto {
 
       // Construct using com.kava.cdp.v1beta1.CdpProto.TotalPrincipal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2912,14 +2869,11 @@ public final class CdpProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3167,10 +3121,8 @@ public final class CdpProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3356,7 +3308,6 @@ public final class CdpProto {
               com.kava.cdp.v1beta1.CdpProto.TotalCollateral.class, com.kava.cdp.v1beta1.CdpProto.TotalCollateral.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COLLATERAL_TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object collateralType_ = "";
@@ -3404,7 +3355,7 @@ public final class CdpProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -3439,7 +3390,7 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -3454,7 +3405,7 @@ public final class CdpProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -3620,19 +3571,13 @@ public final class CdpProto {
 
       // Construct using com.kava.cdp.v1beta1.CdpProto.TotalCollateral.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3680,14 +3625,11 @@ public final class CdpProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3935,10 +3877,8 @@ public final class CdpProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4116,8 +4056,7 @@ public final class CdpProto {
 
     public static final int CDP_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList cdpIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList cdpIds_;
     /**
      * <code>repeated uint64 cdp_ids = 1 [json_name = "cdpIds", (.gogoproto.customname) = "CdpIDs"];</code>
      * @return A list containing the cdpIds.
@@ -4383,17 +4322,22 @@ public final class CdpProto {
       @java.lang.Override
       public com.kava.cdp.v1beta1.CdpProto.OwnerCDPIndex buildPartial() {
         com.kava.cdp.v1beta1.CdpProto.OwnerCDPIndex result = new com.kava.cdp.v1beta1.CdpProto.OwnerCDPIndex(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.kava.cdp.v1beta1.CdpProto.OwnerCDPIndex result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          cdpIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.cdpIds_ = cdpIds_;
+      }
+
       private void buildPartial0(com.kava.cdp.v1beta1.CdpProto.OwnerCDPIndex result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          cdpIds_.makeImmutable();
-          result.cdpIds_ = cdpIds_;
-        }
       }
 
       @java.lang.Override
@@ -4443,8 +4387,7 @@ public final class CdpProto {
         if (!other.cdpIds_.isEmpty()) {
           if (cdpIds_.isEmpty()) {
             cdpIds_ = other.cdpIds_;
-            cdpIds_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureCdpIdsIsMutable();
             cdpIds_.addAll(other.cdpIds_);
@@ -4512,10 +4455,10 @@ public final class CdpProto {
 
       private com.google.protobuf.Internal.LongList cdpIds_ = emptyLongList();
       private void ensureCdpIdsIsMutable() {
-        if (!cdpIds_.isModifiable()) {
-          cdpIds_ = makeMutableCopy(cdpIds_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          cdpIds_ = mutableCopy(cdpIds_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 cdp_ids = 1 [json_name = "cdpIds", (.gogoproto.customname) = "CdpIDs"];</code>
@@ -4523,8 +4466,8 @@ public final class CdpProto {
        */
       public java.util.List<java.lang.Long>
           getCdpIdsList() {
-        cdpIds_.makeImmutable();
-        return cdpIds_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(cdpIds_) : cdpIds_;
       }
       /**
        * <code>repeated uint64 cdp_ids = 1 [json_name = "cdpIds", (.gogoproto.customname) = "CdpIDs"];</code>
@@ -4552,7 +4495,6 @@ public final class CdpProto {
 
         ensureCdpIdsIsMutable();
         cdpIds_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4565,7 +4507,6 @@ public final class CdpProto {
 
         ensureCdpIdsIsMutable();
         cdpIds_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4579,7 +4520,6 @@ public final class CdpProto {
         ensureCdpIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, cdpIds_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

@@ -103,7 +103,6 @@ public final class ParamsProto {
               com.kava.kavadist.v1beta1.ParamsProto.Params.class, com.kava.kavadist.v1beta1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACTIVE_FIELD_NUMBER = 1;
     private boolean active_ = false;
     /**
@@ -164,7 +163,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasInfrastructureParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return infrastructureParams_ != null;
     }
     /**
      * <code>.kava.kavadist.v1beta1.InfrastructureParams infrastructure_params = 4 [json_name = "infrastructureParams", (.gogoproto.nullable) = false];</code>
@@ -202,7 +201,7 @@ public final class ParamsProto {
       for (int i = 0; i < periods_.size(); i++) {
         output.writeMessage(3, periods_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (infrastructureParams_ != null) {
         output.writeMessage(4, getInfrastructureParams());
       }
       getUnknownFields().writeTo(output);
@@ -222,7 +221,7 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, periods_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (infrastructureParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getInfrastructureParams());
       }
@@ -395,20 +394,13 @@ public final class ParamsProto {
 
       // Construct using com.kava.kavadist.v1beta1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPeriodsFieldBuilder();
-          getInfrastructureParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -476,14 +468,11 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.active_ = active_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.infrastructureParams_ = infrastructureParamsBuilder_ == null
               ? infrastructureParams_
               : infrastructureParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -968,10 +957,8 @@ public final class ParamsProto {
         } else {
           infrastructureParamsBuilder_.mergeFrom(value);
         }
-        if (infrastructureParams_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3322,7 +3309,6 @@ public final class ParamsProto {
               com.kava.kavadist.v1beta1.ParamsProto.PartnerReward.class, com.kava.kavadist.v1beta1.ParamsProto.PartnerReward.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -3342,7 +3328,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasRewardsPerSecond() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return rewardsPerSecond_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin rewards_per_second = 2 [json_name = "rewardsPerSecond", (.gogoproto.nullable) = false];</code>
@@ -3377,7 +3363,7 @@ public final class ParamsProto {
       if (!address_.isEmpty()) {
         output.writeBytes(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewardsPerSecond_ != null) {
         output.writeMessage(2, getRewardsPerSecond());
       }
       getUnknownFields().writeTo(output);
@@ -3393,7 +3379,7 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewardsPerSecond_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRewardsPerSecond());
       }
@@ -3559,19 +3545,13 @@ public final class ParamsProto {
 
       // Construct using com.kava.kavadist.v1beta1.ParamsProto.PartnerReward.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRewardsPerSecondFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3619,14 +3599,11 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.rewardsPerSecond_ = rewardsPerSecondBuilder_ == null
               ? rewardsPerSecond_
               : rewardsPerSecondBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3832,10 +3809,8 @@ public final class ParamsProto {
         } else {
           rewardsPerSecondBuilder_.mergeFrom(value);
         }
-        if (rewardsPerSecond_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4059,7 +4034,6 @@ public final class ParamsProto {
               com.kava.kavadist.v1beta1.ParamsProto.Period.class, com.kava.kavadist.v1beta1.ParamsProto.Period.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp start_;
     /**
@@ -4072,7 +4046,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasStart() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return start_ != null;
     }
     /**
      * <pre>
@@ -4110,7 +4084,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasEnd() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return end_ != null;
     }
     /**
      * <pre>
@@ -4165,10 +4139,10 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         output.writeMessage(1, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         output.writeMessage(2, getEnd());
       }
       if (!inflation_.isEmpty()) {
@@ -4183,11 +4157,11 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEnd());
       }
@@ -4367,20 +4341,13 @@ public final class ParamsProto {
 
       // Construct using com.kava.kavadist.v1beta1.ParamsProto.Period.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartFieldBuilder();
-          getEndFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4430,23 +4397,19 @@ public final class ParamsProto {
 
       private void buildPartial0(com.kava.kavadist.v1beta1.ParamsProto.Period result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.start_ = startBuilder_ == null
               ? start_
               : startBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.end_ = endBuilder_ == null
               ? end_
               : endBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.inflation_ = inflation_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4650,10 +4613,8 @@ public final class ParamsProto {
         } else {
           startBuilder_.mergeFrom(value);
         }
-        if (start_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4807,10 +4768,8 @@ public final class ParamsProto {
         } else {
           endBuilder_.mergeFrom(value);
         }
-        if (end_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

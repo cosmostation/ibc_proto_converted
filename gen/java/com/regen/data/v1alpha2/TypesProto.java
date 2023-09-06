@@ -3717,7 +3717,6 @@ public final class TypesProto {
               com.regen.data.v1alpha2.TypesProto.SignerEntry.class, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SIGNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object signer_ = "";
@@ -3777,7 +3776,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return timestamp_ != null;
     }
     /**
      * <pre>
@@ -3820,7 +3819,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         output.writeMessage(2, getTimestamp());
       }
       getUnknownFields().writeTo(output);
@@ -3835,7 +3834,7 @@ public final class TypesProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTimestamp());
       }
@@ -4001,19 +4000,13 @@ public final class TypesProto {
 
       // Construct using com.regen.data.v1alpha2.TypesProto.SignerEntry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4061,14 +4054,11 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.signer_ = signer_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4356,10 +4346,8 @@ public final class TypesProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        if (timestamp_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

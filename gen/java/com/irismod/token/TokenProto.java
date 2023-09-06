@@ -1393,7 +1393,6 @@ public final class TokenProto {
               com.irismod.token.TokenProto.Params.class, com.irismod.token.TokenProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKEN_TAX_RATE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenTaxRate_ = "";
@@ -1441,7 +1440,7 @@ public final class TokenProto {
      */
     @java.lang.Override
     public boolean hasIssueTokenBaseFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return issueTokenBaseFee_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin issue_token_base_fee = 2 [json_name = "issueTokenBaseFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_token_base_fee&#92;""];</code>
@@ -1515,7 +1514,7 @@ public final class TokenProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenTaxRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tokenTaxRate_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (issueTokenBaseFee_ != null) {
         output.writeMessage(2, getIssueTokenBaseFee());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintTokenFeeRatio_)) {
@@ -1533,7 +1532,7 @@ public final class TokenProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenTaxRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tokenTaxRate_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (issueTokenBaseFee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getIssueTokenBaseFee());
       }
@@ -1706,19 +1705,13 @@ public final class TokenProto {
 
       // Construct using com.irismod.token.TokenProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIssueTokenBaseFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1767,17 +1760,14 @@ public final class TokenProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tokenTaxRate_ = tokenTaxRate_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.issueTokenBaseFee_ = issueTokenBaseFeeBuilder_ == null
               ? issueTokenBaseFee_
               : issueTokenBaseFeeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.mintTokenFeeRatio_ = mintTokenFeeRatio_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2035,10 +2025,8 @@ public final class TokenProto {
         } else {
           issueTokenBaseFeeBuilder_.mergeFrom(value);
         }
-        if (issueTokenBaseFee_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

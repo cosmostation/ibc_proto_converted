@@ -156,7 +156,7 @@ public final class VaultProto {
     private AllowedVault() {
       denom_ = "";
       strategies_ = java.util.Collections.emptyList();
-      allowedDepositors_ = emptyList(com.google.protobuf.ByteString.class);
+      allowedDepositors_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -322,8 +322,7 @@ public final class VaultProto {
 
     public static final int ALLOWED_DEPOSITORS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> allowedDepositors_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> allowedDepositors_;
     /**
      * <pre>
      * AllowedDepositors is a list of addresses that are allowed to deposit to
@@ -624,7 +623,7 @@ public final class VaultProto {
         strategies_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         isPrivateVault_ = false;
-        allowedDepositors_ = emptyList(com.google.protobuf.ByteString.class);
+        allowedDepositors_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -663,6 +662,11 @@ public final class VaultProto {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.strategies_ = strategies_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          allowedDepositors_ = java.util.Collections.unmodifiableList(allowedDepositors_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.allowedDepositors_ = allowedDepositors_;
       }
 
       private void buildPartial0(com.kava.earn.v1beta1.VaultProto.AllowedVault result) {
@@ -672,10 +676,6 @@ public final class VaultProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.isPrivateVault_ = isPrivateVault_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          allowedDepositors_.makeImmutable();
-          result.allowedDepositors_ = allowedDepositors_;
         }
       }
 
@@ -744,8 +744,7 @@ public final class VaultProto {
         if (!other.allowedDepositors_.isEmpty()) {
           if (allowedDepositors_.isEmpty()) {
             allowedDepositors_ = other.allowedDepositors_;
-            allowedDepositors_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureAllowedDepositorsIsMutable();
             allowedDepositors_.addAll(other.allowedDepositors_);
@@ -1155,12 +1154,12 @@ public final class VaultProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> allowedDepositors_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> allowedDepositors_ = java.util.Collections.emptyList();
       private void ensureAllowedDepositorsIsMutable() {
-        if (!allowedDepositors_.isModifiable()) {
-          allowedDepositors_ = makeMutableCopy(allowedDepositors_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          allowedDepositors_ = new java.util.ArrayList<com.google.protobuf.ByteString>(allowedDepositors_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -1175,8 +1174,8 @@ public final class VaultProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getAllowedDepositorsList() {
-        allowedDepositors_.makeImmutable();
-        return allowedDepositors_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(allowedDepositors_) : allowedDepositors_;
       }
       /**
        * <pre>
@@ -1225,7 +1224,6 @@ public final class VaultProto {
         if (value == null) { throw new NullPointerException(); }
         ensureAllowedDepositorsIsMutable();
         allowedDepositors_.set(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1245,7 +1243,6 @@ public final class VaultProto {
         if (value == null) { throw new NullPointerException(); }
         ensureAllowedDepositorsIsMutable();
         allowedDepositors_.add(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1266,7 +1263,6 @@ public final class VaultProto {
         ensureAllowedDepositorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, allowedDepositors_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1282,7 +1278,7 @@ public final class VaultProto {
        * @return This builder for chaining.
        */
       public Builder clearAllowedDepositors() {
-        allowedDepositors_ = emptyList(com.google.protobuf.ByteString.class);
+        allowedDepositors_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
@@ -1421,7 +1417,6 @@ public final class VaultProto {
               com.kava.earn.v1beta1.VaultProto.VaultRecord.class, com.kava.earn.v1beta1.VaultProto.VaultRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOTAL_SHARES_FIELD_NUMBER = 1;
     private com.kava.earn.v1beta1.VaultProto.VaultShare totalShares_;
     /**
@@ -1434,7 +1429,7 @@ public final class VaultProto {
      */
     @java.lang.Override
     public boolean hasTotalShares() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return totalShares_ != null;
     }
     /**
      * <pre>
@@ -1474,7 +1469,7 @@ public final class VaultProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalShares_ != null) {
         output.writeMessage(1, getTotalShares());
       }
       getUnknownFields().writeTo(output);
@@ -1486,7 +1481,7 @@ public final class VaultProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalShares_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTotalShares());
       }
@@ -1648,19 +1643,13 @@ public final class VaultProto {
 
       // Construct using com.kava.earn.v1beta1.VaultProto.VaultRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTotalSharesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1704,14 +1693,11 @@ public final class VaultProto {
 
       private void buildPartial0(com.kava.earn.v1beta1.VaultProto.VaultRecord result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.totalShares_ = totalSharesBuilder_ == null
               ? totalShares_
               : totalSharesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1897,10 +1883,8 @@ public final class VaultProto {
         } else {
           totalSharesBuilder_.mergeFrom(value);
         }
-        if (totalShares_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

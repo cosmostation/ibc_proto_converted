@@ -7084,7 +7084,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventBinaryOptionsMarketUpdate.class, com.injective.exchange.v1beta1.EventsProto.EventBinaryOptionsMarketUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.BinaryOptionsMarket market_;
     /**
@@ -7093,7 +7092,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return market_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.BinaryOptionsMarket market = 1 [json_name = "market", (.gogoproto.nullable) = false];</code>
@@ -7125,7 +7124,7 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         output.writeMessage(1, getMarket());
       }
       getUnknownFields().writeTo(output);
@@ -7137,7 +7136,7 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
@@ -7295,19 +7294,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventBinaryOptionsMarketUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMarketFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7351,14 +7344,11 @@ public final class EventsProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.EventBinaryOptionsMarketUpdate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7524,10 +7514,8 @@ public final class EventsProto {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        if (market_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10317,7 +10305,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventCancelSpotOrder.class, com.injective.exchange.v1beta1.EventsProto.EventCancelSpotOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -10365,7 +10352,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return order_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.SpotLimitOrder order = 2 [json_name = "order", (.gogoproto.nullable) = false];</code>
@@ -10400,7 +10387,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, marketId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (order_ != null) {
         output.writeMessage(2, getOrder());
       }
       getUnknownFields().writeTo(output);
@@ -10415,7 +10402,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, marketId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (order_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOrder());
       }
@@ -10577,19 +10564,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventCancelSpotOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10637,14 +10618,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketId_ = marketId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.order_ = orderBuilder_ == null
               ? order_
               : orderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10892,10 +10870,8 @@ public final class EventsProto {
         } else {
           orderBuilder_.mergeFrom(value);
         }
-        if (order_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11064,7 +11040,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventSpotMarketUpdate.class, com.injective.exchange.v1beta1.EventsProto.EventSpotMarketUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.SpotMarket market_;
     /**
@@ -11073,7 +11048,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return market_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.SpotMarket market = 1 [json_name = "market", (.gogoproto.nullable) = false];</code>
@@ -11105,7 +11080,7 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         output.writeMessage(1, getMarket());
       }
       getUnknownFields().writeTo(output);
@@ -11117,7 +11092,7 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
@@ -11275,19 +11250,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventSpotMarketUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMarketFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11331,14 +11300,11 @@ public final class EventsProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.EventSpotMarketUpdate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11504,10 +11470,8 @@ public final class EventsProto {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        if (market_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11706,7 +11670,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventPerpetualMarketUpdate.class, com.injective.exchange.v1beta1.EventsProto.EventPerpetualMarketUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.DerivativeMarket market_;
     /**
@@ -11715,7 +11678,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return market_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeMarket market = 1 [json_name = "market", (.gogoproto.nullable) = false];</code>
@@ -11741,7 +11704,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasPerpetualMarketInfo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return perpetualMarketInfo_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.PerpetualMarketInfo perpetual_market_info = 2 [json_name = "perpetualMarketInfo", (.gogoproto.nullable) = true];</code>
@@ -11767,7 +11730,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasFunding() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return funding_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.PerpetualMarketFunding funding = 3 [json_name = "funding", (.gogoproto.nullable) = true];</code>
@@ -11799,13 +11762,13 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         output.writeMessage(1, getMarket());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (perpetualMarketInfo_ != null) {
         output.writeMessage(2, getPerpetualMarketInfo());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (funding_ != null) {
         output.writeMessage(3, getFunding());
       }
       getUnknownFields().writeTo(output);
@@ -11817,15 +11780,15 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (perpetualMarketInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPerpetualMarketInfo());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (funding_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFunding());
       }
@@ -12001,21 +11964,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventPerpetualMarketUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMarketFieldBuilder();
-          getPerpetualMarketInfoFieldBuilder();
-          getFundingFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12069,26 +12024,21 @@ public final class EventsProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.EventPerpetualMarketUpdate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.perpetualMarketInfo_ = perpetualMarketInfoBuilder_ == null
               ? perpetualMarketInfo_
               : perpetualMarketInfoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.funding_ = fundingBuilder_ == null
               ? funding_
               : fundingBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12274,10 +12224,8 @@ public final class EventsProto {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        if (market_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12395,10 +12343,8 @@ public final class EventsProto {
         } else {
           perpetualMarketInfoBuilder_.mergeFrom(value);
         }
-        if (perpetualMarketInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -12516,10 +12462,8 @@ public final class EventsProto {
         } else {
           fundingBuilder_.mergeFrom(value);
         }
-        if (funding_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -12703,7 +12647,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventExpiryFuturesMarketUpdate.class, com.injective.exchange.v1beta1.EventsProto.EventExpiryFuturesMarketUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.DerivativeMarket market_;
     /**
@@ -12712,7 +12655,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMarket() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return market_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeMarket market = 1 [json_name = "market", (.gogoproto.nullable) = false];</code>
@@ -12738,7 +12681,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasExpiryFuturesMarketInfo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return expiryFuturesMarketInfo_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.ExpiryFuturesMarketInfo expiry_futures_market_info = 3 [json_name = "expiryFuturesMarketInfo", (.gogoproto.nullable) = true];</code>
@@ -12770,10 +12713,10 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         output.writeMessage(1, getMarket());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (expiryFuturesMarketInfo_ != null) {
         output.writeMessage(3, getExpiryFuturesMarketInfo());
       }
       getUnknownFields().writeTo(output);
@@ -12785,11 +12728,11 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (market_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarket());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (expiryFuturesMarketInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getExpiryFuturesMarketInfo());
       }
@@ -12956,20 +12899,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventExpiryFuturesMarketUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMarketFieldBuilder();
-          getExpiryFuturesMarketInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13018,20 +12954,16 @@ public final class EventsProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.EventExpiryFuturesMarketUpdate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.market_ = marketBuilder_ == null
               ? market_
               : marketBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.expiryFuturesMarketInfo_ = expiryFuturesMarketInfoBuilder_ == null
               ? expiryFuturesMarketInfo_
               : expiryFuturesMarketInfoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13207,10 +13139,8 @@ public final class EventsProto {
         } else {
           marketBuilder_.mergeFrom(value);
         }
-        if (market_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -13328,10 +13258,8 @@ public final class EventsProto {
         } else {
           expiryFuturesMarketInfoBuilder_.mergeFrom(value);
         }
-        if (expiryFuturesMarketInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -13545,7 +13473,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventPerpetualMarketFundingUpdate.class, com.injective.exchange.v1beta1.EventsProto.EventPerpetualMarketFundingUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -13593,7 +13520,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasFunding() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return funding_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.PerpetualMarketFunding funding = 2 [json_name = "funding", (.gogoproto.nullable) = false];</code>
@@ -13717,7 +13644,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, marketId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (funding_ != null) {
         output.writeMessage(2, getFunding());
       }
       if (isHourlyFunding_ != false) {
@@ -13741,7 +13668,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, marketId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (funding_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFunding());
       }
@@ -13926,19 +13853,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventPerpetualMarketFundingUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFundingFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13989,12 +13910,10 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketId_ = marketId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.funding_ = fundingBuilder_ == null
               ? funding_
               : fundingBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.isHourlyFunding_ = isHourlyFunding_;
@@ -14005,7 +13924,6 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.markPrice_ = markPrice_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14281,10 +14199,8 @@ public final class EventsProto {
         } else {
           fundingBuilder_.mergeFrom(value);
         }
-        if (funding_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -14649,7 +14565,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventSubaccountDeposit.class, com.injective.exchange.v1beta1.EventsProto.EventSubaccountDeposit.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SRC_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object srcAddress_ = "";
@@ -14708,7 +14623,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -14746,7 +14661,7 @@ public final class EventsProto {
       if (!subaccountId_.isEmpty()) {
         output.writeBytes(2, subaccountId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -14765,7 +14680,7 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, subaccountId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -14931,19 +14846,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventSubaccountDeposit.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14995,14 +14904,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.subaccountId_ = subaccountId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15290,10 +15196,8 @@ public final class EventsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -15482,7 +15386,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventSubaccountWithdraw.class, com.injective.exchange.v1beta1.EventsProto.EventSubaccountWithdraw.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBACCOUNT_ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString subaccountId_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -15541,7 +15444,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -15579,7 +15482,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dstAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -15598,7 +15501,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dstAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -15764,19 +15667,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventSubaccountWithdraw.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15828,14 +15725,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dstAddress_ = dstAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16123,10 +16017,8 @@ public final class EventsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -16321,7 +16213,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventSubaccountBalanceTransfer.class, com.injective.exchange.v1beta1.EventsProto.EventSubaccountBalanceTransfer.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SRC_SUBACCOUNT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object srcSubaccountId_ = "";
@@ -16408,7 +16299,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false];</code>
@@ -16446,7 +16337,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstSubaccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dstSubaccountId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(3, getAmount());
       }
       getUnknownFields().writeTo(output);
@@ -16464,7 +16355,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstSubaccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dstSubaccountId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAmount());
       }
@@ -16630,19 +16521,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventSubaccountBalanceTransfer.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16694,14 +16579,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dstSubaccountId_ = dstSubaccountId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17031,10 +16913,8 @@ public final class EventsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -17998,7 +17878,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.DerivativeMarketOrderCancel.class, com.injective.exchange.v1beta1.EventsProto.DerivativeMarketOrderCancel.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_ORDER_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.DerivativeMarketOrder marketOrder_;
     /**
@@ -18007,7 +17886,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMarketOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return marketOrder_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeMarketOrder market_order = 1 [json_name = "marketOrder", (.gogoproto.nullable) = true];</code>
@@ -18078,7 +17957,7 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (marketOrder_ != null) {
         output.writeMessage(1, getMarketOrder());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancelQuantity_)) {
@@ -18093,7 +17972,7 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (marketOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMarketOrder());
       }
@@ -18258,19 +18137,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.DerivativeMarketOrderCancel.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMarketOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18315,17 +18188,14 @@ public final class EventsProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.DerivativeMarketOrderCancel result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketOrder_ = marketOrderBuilder_ == null
               ? marketOrder_
               : marketOrderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.cancelQuantity_ = cancelQuantity_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18501,10 +18371,8 @@ public final class EventsProto {
         } else {
           marketOrderBuilder_.mergeFrom(value);
         }
-        if (marketOrder_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -18779,7 +18647,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventCancelDerivativeOrder.class, com.injective.exchange.v1beta1.EventsProto.EventCancelDerivativeOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -18838,7 +18705,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasLimitOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return limitOrder_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeLimitOrder limit_order = 3 [json_name = "limitOrder", (.gogoproto.nullable) = true];</code>
@@ -18864,7 +18731,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMarketOrderCancel() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return marketOrderCancel_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeMarketOrderCancel market_order_cancel = 4 [json_name = "marketOrderCancel", (.gogoproto.nullable) = true];</code>
@@ -18902,10 +18769,10 @@ public final class EventsProto {
       if (isLimitCancel_ != false) {
         output.writeBool(2, isLimitCancel_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (limitOrder_ != null) {
         output.writeMessage(3, getLimitOrder());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (marketOrderCancel_ != null) {
         output.writeMessage(4, getMarketOrderCancel());
       }
       getUnknownFields().writeTo(output);
@@ -18924,11 +18791,11 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, isLimitCancel_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (limitOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLimitOrder());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (marketOrderCancel_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMarketOrderCancel());
       }
@@ -19104,20 +18971,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventCancelDerivativeOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLimitOrderFieldBuilder();
-          getMarketOrderCancelFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -19174,20 +19034,16 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.isLimitCancel_ = isLimitCancel_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.limitOrder_ = limitOrderBuilder_ == null
               ? limitOrder_
               : limitOrderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.marketOrderCancel_ = marketOrderCancelBuilder_ == null
               ? marketOrderCancel_
               : marketOrderCancelBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -19485,10 +19341,8 @@ public final class EventsProto {
         } else {
           limitOrderBuilder_.mergeFrom(value);
         }
-        if (limitOrder_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -19606,10 +19460,8 @@ public final class EventsProto {
         } else {
           marketOrderCancelBuilder_.mergeFrom(value);
         }
-        if (marketOrderCancel_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -19778,7 +19630,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventFeeDiscountSchedule.class, com.injective.exchange.v1beta1.EventsProto.EventFeeDiscountSchedule.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SCHEDULE_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.FeeDiscountSchedule schedule_;
     /**
@@ -19787,7 +19638,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasSchedule() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return schedule_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.FeeDiscountSchedule schedule = 1 [json_name = "schedule"];</code>
@@ -19819,7 +19670,7 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (schedule_ != null) {
         output.writeMessage(1, getSchedule());
       }
       getUnknownFields().writeTo(output);
@@ -19831,7 +19682,7 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (schedule_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSchedule());
       }
@@ -19989,19 +19840,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventFeeDiscountSchedule.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScheduleFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20045,14 +19890,11 @@ public final class EventsProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.EventFeeDiscountSchedule result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.schedule_ = scheduleBuilder_ == null
               ? schedule_
               : scheduleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20218,10 +20060,8 @@ public final class EventsProto {
         } else {
           scheduleBuilder_.mergeFrom(value);
         }
-        if (schedule_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -20415,7 +20255,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventTradingRewardCampaignUpdate.class, com.injective.exchange.v1beta1.EventsProto.EventTradingRewardCampaignUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CAMPAIGN_INFO_FIELD_NUMBER = 1;
     private com.injective.exchange.v1beta1.ExchangeProto.TradingRewardCampaignInfo campaignInfo_;
     /**
@@ -20424,7 +20263,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasCampaignInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return campaignInfo_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.TradingRewardCampaignInfo campaign_info = 1 [json_name = "campaignInfo"];</code>
@@ -20497,7 +20336,7 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (campaignInfo_ != null) {
         output.writeMessage(1, getCampaignInfo());
       }
       for (int i = 0; i < campaignRewardPools_.size(); i++) {
@@ -20512,7 +20351,7 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (campaignInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCampaignInfo());
       }
@@ -20680,20 +20519,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventTradingRewardCampaignUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCampaignInfoFieldBuilder();
-          getCampaignRewardPoolsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -20757,14 +20589,11 @@ public final class EventsProto {
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.EventTradingRewardCampaignUpdate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.campaignInfo_ = campaignInfoBuilder_ == null
               ? campaignInfo_
               : campaignInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20969,10 +20798,8 @@ public final class EventsProto {
         } else {
           campaignInfoBuilder_.mergeFrom(value);
         }
-        if (campaignInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -22189,7 +22016,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventNewConditionalDerivativeOrder.class, com.injective.exchange.v1beta1.EventsProto.EventNewConditionalDerivativeOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -22237,7 +22063,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return order_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeOrder order = 2 [json_name = "order"];</code>
@@ -22294,7 +22120,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, marketId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (order_ != null) {
         output.writeMessage(2, getOrder());
       }
       if (!hash_.isEmpty()) {
@@ -22315,7 +22141,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(marketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, marketId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (order_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOrder());
       }
@@ -22494,19 +22320,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventNewConditionalDerivativeOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -22556,12 +22376,10 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketId_ = marketId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.order_ = orderBuilder_ == null
               ? order_
               : orderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.hash_ = hash_;
@@ -22569,7 +22387,6 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isMarket_ = isMarket_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -22833,10 +22650,8 @@ public final class EventsProto {
         } else {
           orderBuilder_.mergeFrom(value);
         }
-        if (order_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -23103,7 +22918,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.EventCancelConditionalDerivativeOrder.class, com.injective.exchange.v1beta1.EventsProto.EventCancelConditionalDerivativeOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MARKET_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object marketId_ = "";
@@ -23162,7 +22976,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasLimitOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return limitOrder_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeLimitOrder limit_order = 3 [json_name = "limitOrder", (.gogoproto.nullable) = true];</code>
@@ -23188,7 +23002,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasMarketOrder() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return marketOrder_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.DerivativeMarketOrder market_order = 4 [json_name = "marketOrder", (.gogoproto.nullable) = true];</code>
@@ -23226,10 +23040,10 @@ public final class EventsProto {
       if (isLimitCancel_ != false) {
         output.writeBool(2, isLimitCancel_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (limitOrder_ != null) {
         output.writeMessage(3, getLimitOrder());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (marketOrder_ != null) {
         output.writeMessage(4, getMarketOrder());
       }
       getUnknownFields().writeTo(output);
@@ -23248,11 +23062,11 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, isLimitCancel_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (limitOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLimitOrder());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (marketOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMarketOrder());
       }
@@ -23428,20 +23242,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.EventCancelConditionalDerivativeOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLimitOrderFieldBuilder();
-          getMarketOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -23498,20 +23305,16 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.isLimitCancel_ = isLimitCancel_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.limitOrder_ = limitOrderBuilder_ == null
               ? limitOrder_
               : limitOrderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.marketOrder_ = marketOrderBuilder_ == null
               ? marketOrder_
               : marketOrderBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -23809,10 +23612,8 @@ public final class EventsProto {
         } else {
           limitOrderBuilder_.mergeFrom(value);
         }
-        if (limitOrder_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -23930,10 +23731,8 @@ public final class EventsProto {
         } else {
           marketOrderBuilder_.mergeFrom(value);
         }
-        if (marketOrder_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -24802,7 +24601,7 @@ public final class EventsProto {
     }
     private EventOrderFail() {
       account_ = com.google.protobuf.ByteString.EMPTY;
-      hashes_ = emptyList(com.google.protobuf.ByteString.class);
+      hashes_ = java.util.Collections.emptyList();
       flags_ = emptyIntList();
     }
 
@@ -24839,8 +24638,7 @@ public final class EventsProto {
 
     public static final int HASHES_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> hashes_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> hashes_;
     /**
      * <code>repeated bytes hashes = 2 [json_name = "hashes"];</code>
      * @return A list containing the hashes.
@@ -24868,8 +24666,7 @@ public final class EventsProto {
 
     public static final int FLAGS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList flags_ =
-        emptyIntList();
+    private com.google.protobuf.Internal.IntList flags_;
     /**
      * <code>repeated uint32 flags = 3 [json_name = "flags"];</code>
      * @return A list containing the flags.
@@ -25134,7 +24931,7 @@ public final class EventsProto {
         super.clear();
         bitField0_ = 0;
         account_ = com.google.protobuf.ByteString.EMPTY;
-        hashes_ = emptyList(com.google.protobuf.ByteString.class);
+        hashes_ = java.util.Collections.emptyList();
         flags_ = emptyIntList();
         return this;
       }
@@ -25162,23 +24959,29 @@ public final class EventsProto {
       @java.lang.Override
       public com.injective.exchange.v1beta1.EventsProto.EventOrderFail buildPartial() {
         com.injective.exchange.v1beta1.EventsProto.EventOrderFail result = new com.injective.exchange.v1beta1.EventsProto.EventOrderFail(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.injective.exchange.v1beta1.EventsProto.EventOrderFail result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          hashes_ = java.util.Collections.unmodifiableList(hashes_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.hashes_ = hashes_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          flags_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.flags_ = flags_;
       }
 
       private void buildPartial0(com.injective.exchange.v1beta1.EventsProto.EventOrderFail result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.account_ = account_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          hashes_.makeImmutable();
-          result.hashes_ = hashes_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          flags_.makeImmutable();
-          result.flags_ = flags_;
         }
       }
 
@@ -25232,8 +25035,7 @@ public final class EventsProto {
         if (!other.hashes_.isEmpty()) {
           if (hashes_.isEmpty()) {
             hashes_ = other.hashes_;
-            hashes_.makeImmutable();
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureHashesIsMutable();
             hashes_.addAll(other.hashes_);
@@ -25243,8 +25045,7 @@ public final class EventsProto {
         if (!other.flags_.isEmpty()) {
           if (flags_.isEmpty()) {
             flags_ = other.flags_;
-            flags_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureFlagsIsMutable();
             flags_.addAll(other.flags_);
@@ -25353,12 +25154,12 @@ public final class EventsProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> hashes_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> hashes_ = java.util.Collections.emptyList();
       private void ensureHashesIsMutable() {
-        if (!hashes_.isModifiable()) {
-          hashes_ = makeMutableCopy(hashes_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          hashes_ = new java.util.ArrayList<com.google.protobuf.ByteString>(hashes_);
+          bitField0_ |= 0x00000002;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated bytes hashes = 2 [json_name = "hashes"];</code>
@@ -25366,8 +25167,8 @@ public final class EventsProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getHashesList() {
-        hashes_.makeImmutable();
-        return hashes_;
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(hashes_) : hashes_;
       }
       /**
        * <code>repeated bytes hashes = 2 [json_name = "hashes"];</code>
@@ -25395,7 +25196,6 @@ public final class EventsProto {
         if (value == null) { throw new NullPointerException(); }
         ensureHashesIsMutable();
         hashes_.set(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -25408,7 +25208,6 @@ public final class EventsProto {
         if (value == null) { throw new NullPointerException(); }
         ensureHashesIsMutable();
         hashes_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -25422,7 +25221,6 @@ public final class EventsProto {
         ensureHashesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, hashes_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -25431,7 +25229,7 @@ public final class EventsProto {
        * @return This builder for chaining.
        */
       public Builder clearHashes() {
-        hashes_ = emptyList(com.google.protobuf.ByteString.class);
+        hashes_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -25439,10 +25237,10 @@ public final class EventsProto {
 
       private com.google.protobuf.Internal.IntList flags_ = emptyIntList();
       private void ensureFlagsIsMutable() {
-        if (!flags_.isModifiable()) {
-          flags_ = makeMutableCopy(flags_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          flags_ = mutableCopy(flags_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint32 flags = 3 [json_name = "flags"];</code>
@@ -25450,8 +25248,8 @@ public final class EventsProto {
        */
       public java.util.List<java.lang.Integer>
           getFlagsList() {
-        flags_.makeImmutable();
-        return flags_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(flags_) : flags_;
       }
       /**
        * <code>repeated uint32 flags = 3 [json_name = "flags"];</code>
@@ -25479,7 +25277,6 @@ public final class EventsProto {
 
         ensureFlagsIsMutable();
         flags_.setInt(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -25492,7 +25289,6 @@ public final class EventsProto {
 
         ensureFlagsIsMutable();
         flags_.addInt(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -25506,7 +25302,6 @@ public final class EventsProto {
         ensureFlagsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, flags_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -27582,7 +27377,6 @@ public final class EventsProto {
               com.injective.exchange.v1beta1.EventsProto.OrderbookUpdate.class, com.injective.exchange.v1beta1.EventsProto.OrderbookUpdate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SEQ_FIELD_NUMBER = 1;
     private long seq_ = 0L;
     /**
@@ -27602,7 +27396,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasOrderbook() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return orderbook_ != null;
     }
     /**
      * <code>.injective.exchange.v1beta1.Orderbook orderbook = 2 [json_name = "orderbook"];</code>
@@ -27637,7 +27431,7 @@ public final class EventsProto {
       if (seq_ != 0L) {
         output.writeUInt64(1, seq_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (orderbook_ != null) {
         output.writeMessage(2, getOrderbook());
       }
       getUnknownFields().writeTo(output);
@@ -27653,7 +27447,7 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, seq_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (orderbook_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOrderbook());
       }
@@ -27816,19 +27610,13 @@ public final class EventsProto {
 
       // Construct using com.injective.exchange.v1beta1.EventsProto.OrderbookUpdate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrderbookFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -27876,14 +27664,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.seq_ = seq_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.orderbook_ = orderbookBuilder_ == null
               ? orderbook_
               : orderbookBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -28089,10 +27874,8 @@ public final class EventsProto {
         } else {
           orderbookBuilder_.mergeFrom(value);
         }
-        if (orderbook_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

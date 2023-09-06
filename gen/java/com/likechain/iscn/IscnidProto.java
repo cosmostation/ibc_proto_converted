@@ -774,7 +774,6 @@ public final class IscnidProto {
               com.likechain.iscn.IscnidProto.IscnId.class, com.likechain.iscn.IscnidProto.IscnId.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PREFIX_FIELD_NUMBER = 1;
     private com.likechain.iscn.IscnidProto.IscnIdPrefix prefix_;
     /**
@@ -783,7 +782,7 @@ public final class IscnidProto {
      */
     @java.lang.Override
     public boolean hasPrefix() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return prefix_ != null;
     }
     /**
      * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
@@ -826,7 +825,7 @@ public final class IscnidProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (prefix_ != null) {
         output.writeMessage(1, getPrefix());
       }
       if (version_ != 0L) {
@@ -841,7 +840,7 @@ public final class IscnidProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (prefix_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPrefix());
       }
@@ -1008,19 +1007,13 @@ public final class IscnidProto {
 
       // Construct using com.likechain.iscn.IscnidProto.IscnId.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPrefixFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1065,17 +1058,14 @@ public final class IscnidProto {
 
       private void buildPartial0(com.likechain.iscn.IscnidProto.IscnId result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.prefix_ = prefixBuilder_ == null
               ? prefix_
               : prefixBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.version_ = version_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1249,10 +1239,8 @@ public final class IscnidProto {
         } else {
           prefixBuilder_.mergeFrom(value);
         }
-        if (prefix_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

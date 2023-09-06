@@ -489,7 +489,6 @@ public final class QueryProto {
               com.cork.v1.QueryProto.QueryParamsResponse.class, com.cork.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.cork.v1.GenesisProto.Params params_;
     /**
@@ -502,7 +501,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -542,7 +541,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -554,7 +553,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -716,19 +715,13 @@ public final class QueryProto {
 
       // Construct using com.cork.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -772,14 +765,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.cork.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -965,10 +955,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6196,8 +6184,7 @@ public final class QueryProto {
 
     public static final int BLOCK_HEIGHTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList blockHeights_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList blockHeights_;
     /**
      * <code>repeated uint64 block_heights = 1 [json_name = "blockHeights"];</code>
      * @return A list containing the blockHeights.
@@ -6463,17 +6450,22 @@ public final class QueryProto {
       @java.lang.Override
       public com.cork.v1.QueryProto.QueryScheduledBlockHeightsResponse buildPartial() {
         com.cork.v1.QueryProto.QueryScheduledBlockHeightsResponse result = new com.cork.v1.QueryProto.QueryScheduledBlockHeightsResponse(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.cork.v1.QueryProto.QueryScheduledBlockHeightsResponse result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          blockHeights_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.blockHeights_ = blockHeights_;
+      }
+
       private void buildPartial0(com.cork.v1.QueryProto.QueryScheduledBlockHeightsResponse result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          blockHeights_.makeImmutable();
-          result.blockHeights_ = blockHeights_;
-        }
       }
 
       @java.lang.Override
@@ -6523,8 +6515,7 @@ public final class QueryProto {
         if (!other.blockHeights_.isEmpty()) {
           if (blockHeights_.isEmpty()) {
             blockHeights_ = other.blockHeights_;
-            blockHeights_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureBlockHeightsIsMutable();
             blockHeights_.addAll(other.blockHeights_);
@@ -6592,10 +6583,10 @@ public final class QueryProto {
 
       private com.google.protobuf.Internal.LongList blockHeights_ = emptyLongList();
       private void ensureBlockHeightsIsMutable() {
-        if (!blockHeights_.isModifiable()) {
-          blockHeights_ = makeMutableCopy(blockHeights_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          blockHeights_ = mutableCopy(blockHeights_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated uint64 block_heights = 1 [json_name = "blockHeights"];</code>
@@ -6603,8 +6594,8 @@ public final class QueryProto {
        */
       public java.util.List<java.lang.Long>
           getBlockHeightsList() {
-        blockHeights_.makeImmutable();
-        return blockHeights_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(blockHeights_) : blockHeights_;
       }
       /**
        * <code>repeated uint64 block_heights = 1 [json_name = "blockHeights"];</code>
@@ -6632,7 +6623,6 @@ public final class QueryProto {
 
         ensureBlockHeightsIsMutable();
         blockHeights_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6645,7 +6635,6 @@ public final class QueryProto {
 
         ensureBlockHeightsIsMutable();
         blockHeights_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6659,7 +6648,6 @@ public final class QueryProto {
         ensureBlockHeightsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, blockHeights_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

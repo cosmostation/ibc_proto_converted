@@ -147,7 +147,6 @@ public final class GenesisProto {
               com.desmos.reports.v1.GenesisProto.GenesisState.class, com.desmos.reports.v1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSPACES_DATA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.desmos.reports.v1.GenesisProto.SubspaceDataEntry> subspacesData_;
@@ -279,7 +278,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.desmos.reports.v1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -320,7 +319,7 @@ public final class GenesisProto {
       for (int i = 0; i < reports_.size(); i++) {
         output.writeMessage(3, reports_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(4, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -344,7 +343,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, reports_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getParams());
       }
@@ -524,22 +523,13 @@ public final class GenesisProto {
 
       // Construct using com.desmos.reports.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSubspacesDataFieldBuilder();
-          getReasonsFieldBuilder();
-          getReportsFieldBuilder();
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -635,14 +625,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.desmos.reports.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1645,10 +1632,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

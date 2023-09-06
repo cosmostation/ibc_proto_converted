@@ -190,7 +190,6 @@ public final class ModelsPacketsProto {
               com.desmos.profiles.v3.ModelsPacketsProto.LinkChainAccountPacketData.class, com.desmos.profiles.v3.ModelsPacketsProto.LinkChainAccountPacketData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SOURCE_ADDRESS_FIELD_NUMBER = 1;
     private com.google.protobuf.Any sourceAddress_;
     /**
@@ -203,7 +202,7 @@ public final class ModelsPacketsProto {
      */
     @java.lang.Override
     public boolean hasSourceAddress() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return sourceAddress_ != null;
     }
     /**
      * <pre>
@@ -241,7 +240,7 @@ public final class ModelsPacketsProto {
      */
     @java.lang.Override
     public boolean hasSourceProof() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return sourceProof_ != null;
     }
     /**
      * <pre>
@@ -279,7 +278,7 @@ public final class ModelsPacketsProto {
      */
     @java.lang.Override
     public boolean hasSourceChainConfig() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return sourceChainConfig_ != null;
     }
     /**
      * <pre>
@@ -366,7 +365,7 @@ public final class ModelsPacketsProto {
      */
     @java.lang.Override
     public boolean hasDestinationProof() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return destinationProof_ != null;
     }
     /**
      * <pre>
@@ -406,19 +405,19 @@ public final class ModelsPacketsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sourceAddress_ != null) {
         output.writeMessage(1, getSourceAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sourceProof_ != null) {
         output.writeMessage(2, getSourceProof());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (sourceChainConfig_ != null) {
         output.writeMessage(3, getSourceChainConfig());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, destinationAddress_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (destinationProof_ != null) {
         output.writeMessage(5, getDestinationProof());
       }
       getUnknownFields().writeTo(output);
@@ -430,22 +429,22 @@ public final class ModelsPacketsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (sourceAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSourceAddress());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (sourceProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSourceProof());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (sourceChainConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSourceChainConfig());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, destinationAddress_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (destinationProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDestinationProof());
       }
@@ -640,22 +639,13 @@ public final class ModelsPacketsProto {
 
       // Construct using com.desmos.profiles.v3.ModelsPacketsProto.LinkChainAccountPacketData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSourceAddressFieldBuilder();
-          getSourceProofFieldBuilder();
-          getSourceChainConfigFieldBuilder();
-          getDestinationProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -715,24 +705,20 @@ public final class ModelsPacketsProto {
 
       private void buildPartial0(com.desmos.profiles.v3.ModelsPacketsProto.LinkChainAccountPacketData result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sourceAddress_ = sourceAddressBuilder_ == null
               ? sourceAddress_
               : sourceAddressBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sourceProof_ = sourceProofBuilder_ == null
               ? sourceProof_
               : sourceProofBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.sourceChainConfig_ = sourceChainConfigBuilder_ == null
               ? sourceChainConfig_
               : sourceChainConfigBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.destinationAddress_ = destinationAddress_;
@@ -741,9 +727,7 @@ public final class ModelsPacketsProto {
           result.destinationProof_ = destinationProofBuilder_ == null
               ? destinationProof_
               : destinationProofBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -969,10 +953,8 @@ public final class ModelsPacketsProto {
         } else {
           sourceAddressBuilder_.mergeFrom(value);
         }
-        if (sourceAddress_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1126,10 +1108,8 @@ public final class ModelsPacketsProto {
         } else {
           sourceProofBuilder_.mergeFrom(value);
         }
-        if (sourceProof_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1283,10 +1263,8 @@ public final class ModelsPacketsProto {
         } else {
           sourceChainConfigBuilder_.mergeFrom(value);
         }
-        if (sourceChainConfig_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1537,10 +1515,8 @@ public final class ModelsPacketsProto {
         } else {
           destinationProofBuilder_.mergeFrom(value);
         }
-        if (destinationProof_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

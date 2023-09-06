@@ -117,7 +117,6 @@ public final class TxProto {
               com.irismod.coinswap.TxProto.MsgAddLiquidity.class, com.irismod.coinswap.TxProto.MsgAddLiquidity.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MAX_TOKEN_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin maxToken_;
     /**
@@ -126,7 +125,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMaxToken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return maxToken_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin max_token = 1 [json_name = "maxToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"max_token&#92;""];</code>
@@ -286,7 +285,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxToken_ != null) {
         output.writeMessage(1, getMaxToken());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exactStandardAmt_)) {
@@ -310,7 +309,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxToken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMaxToken());
       }
@@ -502,19 +501,13 @@ public final class TxProto {
 
       // Construct using com.irismod.coinswap.TxProto.MsgAddLiquidity.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMaxTokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -562,12 +555,10 @@ public final class TxProto {
 
       private void buildPartial0(com.irismod.coinswap.TxProto.MsgAddLiquidity result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.maxToken_ = maxTokenBuilder_ == null
               ? maxToken_
               : maxTokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.exactStandardAmt_ = exactStandardAmt_;
@@ -581,7 +572,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.sender_ = sender_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -785,10 +775,8 @@ public final class TxProto {
         } else {
           maxTokenBuilder_.mergeFrom(value);
         }
-        if (maxToken_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1209,7 +1197,6 @@ public final class TxProto {
               com.irismod.coinswap.TxProto.MsgAddLiquidityResponse.class, com.irismod.coinswap.TxProto.MsgAddLiquidityResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MINT_TOKEN_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin mintToken_;
     /**
@@ -1218,7 +1205,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMintToken() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return mintToken_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin mint_token = 1 [json_name = "mintToken"];</code>
@@ -1250,7 +1237,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (mintToken_ != null) {
         output.writeMessage(1, getMintToken());
       }
       getUnknownFields().writeTo(output);
@@ -1262,7 +1249,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (mintToken_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMintToken());
       }
@@ -1424,19 +1411,13 @@ public final class TxProto {
 
       // Construct using com.irismod.coinswap.TxProto.MsgAddLiquidityResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMintTokenFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1480,14 +1461,11 @@ public final class TxProto {
 
       private void buildPartial0(com.irismod.coinswap.TxProto.MsgAddLiquidityResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.mintToken_ = mintTokenBuilder_ == null
               ? mintToken_
               : mintTokenBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1653,10 +1631,8 @@ public final class TxProto {
         } else {
           mintTokenBuilder_.mergeFrom(value);
         }
-        if (mintToken_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1874,7 +1850,6 @@ public final class TxProto {
               com.irismod.coinswap.TxProto.MsgRemoveLiquidity.class, com.irismod.coinswap.TxProto.MsgRemoveLiquidity.Builder.class);
     }
 
-    private int bitField0_;
     public static final int WITHDRAW_LIQUIDITY_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin withdrawLiquidity_;
     /**
@@ -1883,7 +1858,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasWithdrawLiquidity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return withdrawLiquidity_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin withdraw_liquidity = 1 [json_name = "withdrawLiquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraw_liquidity&#92;""];</code>
@@ -2043,7 +2018,7 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (withdrawLiquidity_ != null) {
         output.writeMessage(1, getWithdrawLiquidity());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minToken_)) {
@@ -2067,7 +2042,7 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (withdrawLiquidity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getWithdrawLiquidity());
       }
@@ -2259,19 +2234,13 @@ public final class TxProto {
 
       // Construct using com.irismod.coinswap.TxProto.MsgRemoveLiquidity.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getWithdrawLiquidityFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2319,12 +2288,10 @@ public final class TxProto {
 
       private void buildPartial0(com.irismod.coinswap.TxProto.MsgRemoveLiquidity result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.withdrawLiquidity_ = withdrawLiquidityBuilder_ == null
               ? withdrawLiquidity_
               : withdrawLiquidityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.minToken_ = minToken_;
@@ -2338,7 +2305,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.sender_ = sender_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2542,10 +2508,8 @@ public final class TxProto {
         } else {
           withdrawLiquidityBuilder_.mergeFrom(value);
         }
-        if (withdrawLiquidity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3783,7 +3747,6 @@ public final class TxProto {
               com.irismod.coinswap.TxProto.MsgSwapOrder.class, com.irismod.coinswap.TxProto.MsgSwapOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.irismod.coinswap.CoinswapProto.Input input_;
     /**
@@ -3792,7 +3755,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return input_ != null;
     }
     /**
      * <code>.irismod.coinswap.Input input = 1 [json_name = "input", (.gogoproto.nullable) = false];</code>
@@ -3818,7 +3781,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasOutput() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return output_ != null;
     }
     /**
      * <code>.irismod.coinswap.Output output = 2 [json_name = "output", (.gogoproto.nullable) = false];</code>
@@ -3872,10 +3835,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         output.writeMessage(1, getInput());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (output_ != null) {
         output.writeMessage(2, getOutput());
       }
       if (deadline_ != 0L) {
@@ -3893,11 +3856,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInput());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (output_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOutput());
       }
@@ -4086,20 +4049,13 @@ public final class TxProto {
 
       // Construct using com.irismod.coinswap.TxProto.MsgSwapOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputFieldBuilder();
-          getOutputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4150,18 +4106,15 @@ public final class TxProto {
 
       private void buildPartial0(com.irismod.coinswap.TxProto.MsgSwapOrder result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.output_ = outputBuilder_ == null
               ? output_
               : outputBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.deadline_ = deadline_;
@@ -4169,7 +4122,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.isBuyOrder_ = isBuyOrder_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4361,10 +4313,8 @@ public final class TxProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        if (input_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4482,10 +4432,8 @@ public final class TxProto {
         } else {
           outputBuilder_.mergeFrom(value);
         }
-        if (output_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

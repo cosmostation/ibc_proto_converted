@@ -692,7 +692,6 @@ public final class ParamsProto {
               com.comdex.liquidity.v1beta1.ParamsProto.GenericParams.class, com.comdex.liquidity.v1beta1.ParamsProto.GenericParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BATCH_SIZE_FIELD_NUMBER = 1;
     private long batchSize_ = 0L;
     /**
@@ -1000,7 +999,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMaxOrderLifespan() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return maxOrderLifespan_ != null;
     }
     /**
      * <code>.google.protobuf.Duration max_order_lifespan = 10 [json_name = "maxOrderLifespan", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -1281,7 +1280,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPriceLimitRatio_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, maxPriceLimitRatio_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxOrderLifespan_ != null) {
         output.writeMessage(10, getMaxOrderLifespan());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapFeeRate_)) {
@@ -1354,7 +1353,7 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPriceLimitRatio_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, maxPriceLimitRatio_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxOrderLifespan_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getMaxOrderLifespan());
       }
@@ -1640,21 +1639,13 @@ public final class ParamsProto {
 
       // Construct using com.comdex.liquidity.v1beta1.ParamsProto.GenericParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPairCreationFeeFieldBuilder();
-          getPoolCreationFeeFieldBuilder();
-          getMaxOrderLifespanFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1772,12 +1763,10 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.maxPriceLimitRatio_ = maxPriceLimitRatio_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.maxOrderLifespan_ = maxOrderLifespanBuilder_ == null
               ? maxOrderLifespan_
               : maxOrderLifespanBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.swapFeeRate_ = swapFeeRate_;
@@ -1809,7 +1798,6 @@ public final class ParamsProto {
         if (((from_bitField0_ & 0x00080000) != 0)) {
           result.maxNumActivePoolsPerPair_ = maxNumActivePoolsPerPair_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3111,10 +3099,8 @@ public final class ParamsProto {
         } else {
           maxOrderLifespanBuilder_.mergeFrom(value);
         }
-        if (maxOrderLifespan_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**

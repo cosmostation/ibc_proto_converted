@@ -637,7 +637,6 @@ public final class TxProto {
               com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ENTITY_TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object entityType_ = "";
@@ -1133,7 +1132,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startDate_ != null;
     }
     /**
      * <pre>
@@ -1174,7 +1173,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasEndDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endDate_ != null;
     }
     /**
      * <pre>
@@ -1556,10 +1555,10 @@ public final class TxProto {
       for (int i = 0; i < linkedEntity_.size(); i++) {
         output.writeMessage(9, linkedEntity_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         output.writeMessage(10, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         output.writeMessage(11, getEndDate());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayerNode_)) {
@@ -1631,11 +1630,11 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, linkedEntity_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getEndDate());
       }
@@ -1912,27 +1911,13 @@ public final class TxProto {
 
       // Construct using com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContextFieldBuilder();
-          getVerificationFieldBuilder();
-          getServiceFieldBuilder();
-          getAccordedRightFieldBuilder();
-          getLinkedResourceFieldBuilder();
-          getLinkedEntityFieldBuilder();
-          getStartDateFieldBuilder();
-          getEndDateFieldBuilder();
-          getLinkedClaimFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2118,18 +2103,15 @@ public final class TxProto {
           controller_.makeImmutable();
           result.controller_ = controller_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.startDate_ = startDateBuilder_ == null
               ? startDate_
               : startDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.endDate_ = endDateBuilder_ == null
               ? endDate_
               : endDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.relayerNode_ = relayerNode_;
@@ -2150,7 +2132,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00010000) != 0)) {
           result.alsoKnownAs_ = alsoKnownAs_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4880,10 +4861,8 @@ public final class TxProto {
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-        if (startDate_ != null) {
-          bitField0_ |= 0x00000200;
-          onChanged();
-        }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5046,10 +5025,8 @@ public final class TxProto {
         } else {
           endDateBuilder_.mergeFrom(value);
         }
-        if (endDate_ != null) {
-          bitField0_ |= 0x00000400;
-          onChanged();
-        }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -7041,7 +7018,6 @@ public final class TxProto {
               com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -7118,7 +7094,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startDate_ != null;
     }
     /**
      * <pre>
@@ -7159,7 +7135,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasEndDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endDate_ != null;
     }
     /**
      * <pre>
@@ -7358,10 +7334,10 @@ public final class TxProto {
       if (entityStatus_ != 0) {
         output.writeInt32(2, entityStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         output.writeMessage(3, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         output.writeMessage(4, getEndDate());
       }
       for (int i = 0; i < credentials_.size(); i++) {
@@ -7389,11 +7365,11 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, entityStatus_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEndDate());
       }
@@ -7601,20 +7577,13 @@ public final class TxProto {
 
       // Construct using com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartDateFieldBuilder();
-          getEndDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7675,18 +7644,15 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.entityStatus_ = entityStatus_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.startDate_ = startDateBuilder_ == null
               ? startDate_
               : startDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.endDate_ = endDateBuilder_ == null
               ? endDate_
               : endDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           credentials_.makeImmutable();
@@ -7698,7 +7664,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.controllerAddress_ = controllerAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8092,10 +8057,8 @@ public final class TxProto {
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-        if (startDate_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8258,10 +8221,8 @@ public final class TxProto {
         } else {
           endDateBuilder_.mergeFrom(value);
         }
-        if (endDate_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -13761,7 +13722,6 @@ public final class TxProto {
               com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.class, com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -13915,7 +13875,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasGrant() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return grant_ != null;
     }
     /**
      * <pre>
@@ -14011,7 +13971,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granteeAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, granteeAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         output.writeMessage(4, getGrant());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
@@ -14035,7 +13995,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granteeAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, granteeAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getGrant());
       }
@@ -14217,19 +14177,13 @@ public final class TxProto {
 
       // Construct using com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGrantFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14286,17 +14240,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.granteeAddress_ = granteeAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.grant_ = grantBuilder_ == null
               ? grant_
               : grantBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.ownerAddress_ = ownerAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14798,10 +14749,8 @@ public final class TxProto {
         } else {
           grantBuilder_.mergeFrom(value);
         }
-        if (grant_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

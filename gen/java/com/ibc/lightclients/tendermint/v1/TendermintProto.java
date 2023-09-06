@@ -360,7 +360,6 @@ public final class TendermintProto {
               com.ibc.lightclients.tendermint.v1.TendermintProto.ClientState.class, com.ibc.lightclients.tendermint.v1.TendermintProto.ClientState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CHAIN_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object chainId_ = "";
@@ -408,7 +407,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasTrustLevel() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return trustLevel_ != null;
     }
     /**
      * <code>.ibc.lightclients.tendermint.v1.Fraction trust_level = 2 [json_name = "trustLevel", (.gogoproto.nullable) = false];</code>
@@ -439,7 +438,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasTrustingPeriod() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return trustingPeriod_ != null;
     }
     /**
      * <pre>
@@ -479,7 +478,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasUnbondingPeriod() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return unbondingPeriod_ != null;
     }
     /**
      * <pre>
@@ -517,7 +516,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasMaxClockDrift() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return maxClockDrift_ != null;
     }
     /**
      * <pre>
@@ -555,7 +554,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasFrozenHeight() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return frozenHeight_ != null;
     }
     /**
      * <pre>
@@ -593,7 +592,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasLatestHeight() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return latestHeight_ != null;
     }
     /**
      * <pre>
@@ -808,22 +807,22 @@ public final class TendermintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (trustLevel_ != null) {
         output.writeMessage(2, getTrustLevel());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (trustingPeriod_ != null) {
         output.writeMessage(3, getTrustingPeriod());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (unbondingPeriod_ != null) {
         output.writeMessage(4, getUnbondingPeriod());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (maxClockDrift_ != null) {
         output.writeMessage(5, getMaxClockDrift());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (frozenHeight_ != null) {
         output.writeMessage(6, getFrozenHeight());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (latestHeight_ != null) {
         output.writeMessage(7, getLatestHeight());
       }
       for (int i = 0; i < proofSpecs_.size(); i++) {
@@ -850,27 +849,27 @@ public final class TendermintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (trustLevel_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTrustLevel());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (trustingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTrustingPeriod());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (unbondingPeriod_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getUnbondingPeriod());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (maxClockDrift_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getMaxClockDrift());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (frozenHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getFrozenHeight());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (latestHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getLatestHeight());
       }
@@ -1124,25 +1123,13 @@ public final class TendermintProto {
 
       // Construct using com.ibc.lightclients.tendermint.v1.TendermintProto.ClientState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTrustLevelFieldBuilder();
-          getTrustingPeriodFieldBuilder();
-          getUnbondingPeriodFieldBuilder();
-          getMaxClockDriftFieldBuilder();
-          getFrozenHeightFieldBuilder();
-          getLatestHeightFieldBuilder();
-          getProofSpecsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1239,42 +1226,35 @@ public final class TendermintProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.chainId_ = chainId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.trustLevel_ = trustLevelBuilder_ == null
               ? trustLevel_
               : trustLevelBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.trustingPeriod_ = trustingPeriodBuilder_ == null
               ? trustingPeriod_
               : trustingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.unbondingPeriod_ = unbondingPeriodBuilder_ == null
               ? unbondingPeriod_
               : unbondingPeriodBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maxClockDrift_ = maxClockDriftBuilder_ == null
               ? maxClockDrift_
               : maxClockDriftBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.frozenHeight_ = frozenHeightBuilder_ == null
               ? frozenHeight_
               : frozenHeightBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.latestHeight_ = latestHeightBuilder_ == null
               ? latestHeight_
               : latestHeightBuilder_.build();
-          to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           upgradePath_.makeImmutable();
@@ -1286,7 +1266,6 @@ public final class TendermintProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.allowUpdateAfterMisbehaviour_ = allowUpdateAfterMisbehaviour_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1655,10 +1634,8 @@ public final class TendermintProto {
         } else {
           trustLevelBuilder_.mergeFrom(value);
         }
-        if (trustLevel_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1801,10 +1778,8 @@ public final class TendermintProto {
         } else {
           trustingPeriodBuilder_.mergeFrom(value);
         }
-        if (trustingPeriod_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1962,10 +1937,8 @@ public final class TendermintProto {
         } else {
           unbondingPeriodBuilder_.mergeFrom(value);
         }
-        if (unbondingPeriod_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2119,10 +2092,8 @@ public final class TendermintProto {
         } else {
           maxClockDriftBuilder_.mergeFrom(value);
         }
-        if (maxClockDrift_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2276,10 +2247,8 @@ public final class TendermintProto {
         } else {
           frozenHeightBuilder_.mergeFrom(value);
         }
-        if (frozenHeight_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2433,10 +2402,8 @@ public final class TendermintProto {
         } else {
           latestHeightBuilder_.mergeFrom(value);
         }
-        if (latestHeight_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3287,7 +3254,6 @@ public final class TendermintProto {
               com.ibc.lightclients.tendermint.v1.TendermintProto.ConsensusState.class, com.ibc.lightclients.tendermint.v1.TendermintProto.ConsensusState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TIMESTAMP_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp timestamp_;
     /**
@@ -3301,7 +3267,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return timestamp_ != null;
     }
     /**
      * <pre>
@@ -3341,7 +3307,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasRoot() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return root_ != null;
     }
     /**
      * <pre>
@@ -3392,10 +3358,10 @@ public final class TendermintProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         output.writeMessage(1, getTimestamp());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (root_ != null) {
         output.writeMessage(2, getRoot());
       }
       if (!nextValidatorsHash_.isEmpty()) {
@@ -3410,11 +3376,11 @@ public final class TendermintProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTimestamp());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (root_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRoot());
       }
@@ -3593,20 +3559,13 @@ public final class TendermintProto {
 
       // Construct using com.ibc.lightclients.tendermint.v1.TendermintProto.ConsensusState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimestampFieldBuilder();
-          getRootFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3656,23 +3615,19 @@ public final class TendermintProto {
 
       private void buildPartial0(com.ibc.lightclients.tendermint.v1.TendermintProto.ConsensusState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.root_ = rootBuilder_ == null
               ? root_
               : rootBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.nextValidatorsHash_ = nextValidatorsHash_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3881,10 +3836,8 @@ public final class TendermintProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        if (timestamp_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4042,10 +3995,8 @@ public final class TendermintProto {
         } else {
           rootBuilder_.mergeFrom(value);
         }
-        if (root_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4307,7 +4258,6 @@ public final class TendermintProto {
               com.ibc.lightclients.tendermint.v1.TendermintProto.Misbehaviour.class, com.ibc.lightclients.tendermint.v1.TendermintProto.Misbehaviour.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLIENT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object clientId_ = "";
@@ -4367,7 +4317,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasHeader1() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return header1_ != null;
     }
     /**
      * <code>.ibc.lightclients.tendermint.v1.Header header_1 = 2 [json_name = "header1", (.gogoproto.customname) = "Header1"];</code>
@@ -4393,7 +4343,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasHeader2() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return header2_ != null;
     }
     /**
      * <code>.ibc.lightclients.tendermint.v1.Header header_2 = 3 [json_name = "header2", (.gogoproto.customname) = "Header2"];</code>
@@ -4428,10 +4378,10 @@ public final class TendermintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (header1_ != null) {
         output.writeMessage(2, getHeader1());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (header2_ != null) {
         output.writeMessage(3, getHeader2());
       }
       getUnknownFields().writeTo(output);
@@ -4446,11 +4396,11 @@ public final class TendermintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clientId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (header1_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHeader1());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (header2_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getHeader2());
       }
@@ -4626,20 +4576,13 @@ public final class TendermintProto {
 
       // Construct using com.ibc.lightclients.tendermint.v1.TendermintProto.Misbehaviour.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHeader1FieldBuilder();
-          getHeader2FieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4692,20 +4635,16 @@ public final class TendermintProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.clientId_ = clientId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.header1_ = header1Builder_ == null
               ? header1_
               : header1Builder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.header2_ = header2Builder_ == null
               ? header2_
               : header2Builder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4993,10 +4932,8 @@ public final class TendermintProto {
         } else {
           header1Builder_.mergeFrom(value);
         }
-        if (header1_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5114,10 +5051,8 @@ public final class TendermintProto {
         } else {
           header2Builder_.mergeFrom(value);
         }
-        if (header2_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5346,7 +5281,6 @@ public final class TendermintProto {
               com.ibc.lightclients.tendermint.v1.TendermintProto.Header.class, com.ibc.lightclients.tendermint.v1.TendermintProto.Header.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SIGNED_HEADER_FIELD_NUMBER = 1;
     private com.tendermint.types.TypesProto.SignedHeader signedHeader_;
     /**
@@ -5355,7 +5289,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasSignedHeader() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return signedHeader_ != null;
     }
     /**
      * <code>.tendermint.types.SignedHeader signed_header = 1 [json_name = "signedHeader", (.gogoproto.embed) = true];</code>
@@ -5381,7 +5315,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasValidatorSet() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return validatorSet_ != null;
     }
     /**
      * <code>.tendermint.types.ValidatorSet validator_set = 2 [json_name = "validatorSet"];</code>
@@ -5407,7 +5341,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasTrustedHeight() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return trustedHeight_ != null;
     }
     /**
      * <code>.ibc.core.client.v1.Height trusted_height = 3 [json_name = "trustedHeight", (.gogoproto.nullable) = false];</code>
@@ -5433,7 +5367,7 @@ public final class TendermintProto {
      */
     @java.lang.Override
     public boolean hasTrustedValidators() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return trustedValidators_ != null;
     }
     /**
      * <code>.tendermint.types.ValidatorSet trusted_validators = 4 [json_name = "trustedValidators"];</code>
@@ -5465,16 +5399,16 @@ public final class TendermintProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signedHeader_ != null) {
         output.writeMessage(1, getSignedHeader());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (validatorSet_ != null) {
         output.writeMessage(2, getValidatorSet());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (trustedHeight_ != null) {
         output.writeMessage(3, getTrustedHeight());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (trustedValidators_ != null) {
         output.writeMessage(4, getTrustedValidators());
       }
       getUnknownFields().writeTo(output);
@@ -5486,19 +5420,19 @@ public final class TendermintProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signedHeader_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSignedHeader());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (validatorSet_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValidatorSet());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (trustedHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTrustedHeight());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (trustedValidators_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTrustedValidators());
       }
@@ -5698,22 +5632,13 @@ public final class TendermintProto {
 
       // Construct using com.ibc.lightclients.tendermint.v1.TendermintProto.Header.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSignedHeaderFieldBuilder();
-          getValidatorSetFieldBuilder();
-          getTrustedHeightFieldBuilder();
-          getTrustedValidatorsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5772,32 +5697,26 @@ public final class TendermintProto {
 
       private void buildPartial0(com.ibc.lightclients.tendermint.v1.TendermintProto.Header result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.signedHeader_ = signedHeaderBuilder_ == null
               ? signedHeader_
               : signedHeaderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorSet_ = validatorSetBuilder_ == null
               ? validatorSet_
               : validatorSetBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.trustedHeight_ = trustedHeightBuilder_ == null
               ? trustedHeight_
               : trustedHeightBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.trustedValidators_ = trustedValidatorsBuilder_ == null
               ? trustedValidators_
               : trustedValidatorsBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5993,10 +5912,8 @@ public final class TendermintProto {
         } else {
           signedHeaderBuilder_.mergeFrom(value);
         }
-        if (signedHeader_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6114,10 +6031,8 @@ public final class TendermintProto {
         } else {
           validatorSetBuilder_.mergeFrom(value);
         }
-        if (validatorSet_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6235,10 +6150,8 @@ public final class TendermintProto {
         } else {
           trustedHeightBuilder_.mergeFrom(value);
         }
-        if (trustedHeight_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6356,10 +6269,8 @@ public final class TendermintProto {
         } else {
           trustedValidatorsBuilder_.mergeFrom(value);
         }
-        if (trustedValidators_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

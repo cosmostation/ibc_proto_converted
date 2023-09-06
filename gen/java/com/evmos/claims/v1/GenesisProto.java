@@ -129,7 +129,6 @@ public final class GenesisProto {
               com.evmos.claims.v1.GenesisProto.GenesisState.class, com.evmos.claims.v1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.evmos.claims.v1.GenesisProto.Params params_;
     /**
@@ -142,7 +141,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -243,7 +242,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < claimsRecords_.size(); i++) {
@@ -258,7 +257,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -430,20 +429,13 @@ public final class GenesisProto {
 
       // Construct using com.evmos.claims.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getClaimsRecordsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -507,14 +499,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.evmos.claims.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -739,10 +728,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1430,7 +1417,6 @@ public final class GenesisProto {
               com.evmos.claims.v1.GenesisProto.Params.class, com.evmos.claims.v1.GenesisProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ENABLE_CLAIMS_FIELD_NUMBER = 1;
     private boolean enableClaims_ = false;
     /**
@@ -1458,7 +1444,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasAirdropStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return airdropStartTime_ != null;
     }
     /**
      * <pre>
@@ -1496,7 +1482,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDurationUntilDecay() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return durationUntilDecay_ != null;
     }
     /**
      * <pre>
@@ -1534,7 +1520,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDurationOfDecay() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return durationOfDecay_ != null;
     }
     /**
      * <pre>
@@ -1734,13 +1720,13 @@ public final class GenesisProto {
       if (enableClaims_ != false) {
         output.writeBool(1, enableClaims_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (airdropStartTime_ != null) {
         output.writeMessage(2, getAirdropStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (durationUntilDecay_ != null) {
         output.writeMessage(3, getDurationUntilDecay());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (durationOfDecay_ != null) {
         output.writeMessage(4, getDurationOfDecay());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimsDenom_)) {
@@ -1765,15 +1751,15 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, enableClaims_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (airdropStartTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAirdropStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (durationUntilDecay_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDurationUntilDecay());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (durationOfDecay_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDurationOfDecay());
       }
@@ -1993,21 +1979,13 @@ public final class GenesisProto {
 
       // Construct using com.evmos.claims.v1.GenesisProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAirdropStartTimeFieldBuilder();
-          getDurationUntilDecayFieldBuilder();
-          getDurationOfDecayFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2070,24 +2048,20 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.enableClaims_ = enableClaims_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.airdropStartTime_ = airdropStartTimeBuilder_ == null
               ? airdropStartTime_
               : airdropStartTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.durationUntilDecay_ = durationUntilDecayBuilder_ == null
               ? durationUntilDecay_
               : durationUntilDecayBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.durationOfDecay_ = durationOfDecayBuilder_ == null
               ? durationOfDecay_
               : durationOfDecayBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.claimsDenom_ = claimsDenom_;
@@ -2100,7 +2074,6 @@ public final class GenesisProto {
           evmChannels_.makeImmutable();
           result.evmChannels_ = evmChannels_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2400,10 +2373,8 @@ public final class GenesisProto {
         } else {
           airdropStartTimeBuilder_.mergeFrom(value);
         }
-        if (airdropStartTime_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2557,10 +2528,8 @@ public final class GenesisProto {
         } else {
           durationUntilDecayBuilder_.mergeFrom(value);
         }
-        if (durationUntilDecay_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2714,10 +2683,8 @@ public final class GenesisProto {
         } else {
           durationOfDecayBuilder_.mergeFrom(value);
         }
-        if (durationOfDecay_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

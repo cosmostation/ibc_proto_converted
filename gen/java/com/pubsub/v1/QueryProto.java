@@ -465,7 +465,6 @@ public final class QueryProto {
               com.pubsub.v1.QueryProto.QueryParamsResponse.class, com.pubsub.v1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.pubsub.v1.ParamsProto.Params params_;
     /**
@@ -474,7 +473,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -506,7 +505,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -518,7 +517,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -676,19 +675,13 @@ public final class QueryProto {
 
       // Construct using com.pubsub.v1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -732,14 +725,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pubsub.v1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -905,10 +895,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1629,7 +1617,6 @@ public final class QueryProto {
               com.pubsub.v1.QueryProto.QueryPublisherResponse.class, com.pubsub.v1.QueryProto.QueryPublisherResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PUBLISHER_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.Publisher publisher_;
     /**
@@ -1638,7 +1625,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPublisher() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publisher_ != null;
     }
     /**
      * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
@@ -1670,7 +1657,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publisher_ != null) {
         output.writeMessage(1, getPublisher());
       }
       getUnknownFields().writeTo(output);
@@ -1682,7 +1669,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publisher_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPublisher());
       }
@@ -1840,19 +1827,13 @@ public final class QueryProto {
 
       // Construct using com.pubsub.v1.QueryProto.QueryPublisherResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublisherFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1896,14 +1877,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.publisher_ = publisherBuilder_ == null
               ? publisher_
               : publisherBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2069,10 +2047,8 @@ public final class QueryProto {
         } else {
           publisherBuilder_.mergeFrom(value);
         }
-        if (publisher_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3972,7 +3948,6 @@ public final class QueryProto {
               com.pubsub.v1.QueryProto.QuerySubscriberResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSCRIBER_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.Subscriber subscriber_;
     /**
@@ -3981,7 +3956,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSubscriber() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return subscriber_ != null;
     }
     /**
      * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
@@ -4013,7 +3988,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (subscriber_ != null) {
         output.writeMessage(1, getSubscriber());
       }
       getUnknownFields().writeTo(output);
@@ -4025,7 +4000,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (subscriber_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubscriber());
       }
@@ -4183,19 +4158,13 @@ public final class QueryProto {
 
       // Construct using com.pubsub.v1.QueryProto.QuerySubscriberResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSubscriberFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4239,14 +4208,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subscriber_ = subscriberBuilder_ == null
               ? subscriber_
               : subscriberBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4412,10 +4378,8 @@ public final class QueryProto {
         } else {
           subscriberBuilder_.mergeFrom(value);
         }
-        if (subscriber_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6463,7 +6427,6 @@ public final class QueryProto {
               com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PUBLISHER_INTENT_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.PublisherIntent publisherIntent_;
     /**
@@ -6472,7 +6435,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPublisherIntent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publisherIntent_ != null;
     }
     /**
      * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
@@ -6504,7 +6467,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publisherIntent_ != null) {
         output.writeMessage(1, getPublisherIntent());
       }
       getUnknownFields().writeTo(output);
@@ -6516,7 +6479,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publisherIntent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPublisherIntent());
       }
@@ -6674,19 +6637,13 @@ public final class QueryProto {
 
       // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublisherIntentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6730,14 +6687,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.publisherIntent_ = publisherIntentBuilder_ == null
               ? publisherIntent_
               : publisherIntentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6903,10 +6857,8 @@ public final class QueryProto {
         } else {
           publisherIntentBuilder_.mergeFrom(value);
         }
-        if (publisherIntent_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11622,7 +11574,6 @@ public final class QueryProto {
               com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SUBSCRIBER_INTENT_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.SubscriberIntent subscriberIntent_;
     /**
@@ -11631,7 +11582,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasSubscriberIntent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return subscriberIntent_ != null;
     }
     /**
      * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
@@ -11663,7 +11614,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (subscriberIntent_ != null) {
         output.writeMessage(1, getSubscriberIntent());
       }
       getUnknownFields().writeTo(output);
@@ -11675,7 +11626,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (subscriberIntent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubscriberIntent());
       }
@@ -11833,19 +11784,13 @@ public final class QueryProto {
 
       // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSubscriberIntentFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11889,14 +11834,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.subscriberIntent_ = subscriberIntentBuilder_ == null
               ? subscriberIntent_
               : subscriberIntentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12062,10 +12004,8 @@ public final class QueryProto {
         } else {
           subscriberIntentBuilder_.mergeFrom(value);
         }
-        if (subscriberIntent_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17967,7 +17907,6 @@ public final class QueryProto {
               com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEFAULT_SUBSCRIPTION_FIELD_NUMBER = 1;
     private com.pubsub.v1.PubsubProto.DefaultSubscription defaultSubscription_;
     /**
@@ -17976,7 +17915,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDefaultSubscription() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return defaultSubscription_ != null;
     }
     /**
      * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
@@ -18008,7 +17947,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (defaultSubscription_ != null) {
         output.writeMessage(1, getDefaultSubscription());
       }
       getUnknownFields().writeTo(output);
@@ -18020,7 +17959,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (defaultSubscription_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDefaultSubscription());
       }
@@ -18178,19 +18117,13 @@ public final class QueryProto {
 
       // Construct using com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDefaultSubscriptionFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18234,14 +18167,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.defaultSubscription_ = defaultSubscriptionBuilder_ == null
               ? defaultSubscription_
               : defaultSubscriptionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -18407,10 +18337,8 @@ public final class QueryProto {
         } else {
           defaultSubscriptionBuilder_.mergeFrom(value);
         }
-        if (defaultSubscription_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

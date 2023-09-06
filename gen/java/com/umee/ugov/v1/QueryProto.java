@@ -477,7 +477,6 @@ public final class QueryProto {
               com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.class, com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MIN_GAS_PRICE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.DecCoin minGasPrice_;
     /**
@@ -486,7 +485,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasMinGasPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return minGasPrice_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.DecCoin min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false];</code>
@@ -518,7 +517,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minGasPrice_ != null) {
         output.writeMessage(1, getMinGasPrice());
       }
       getUnknownFields().writeTo(output);
@@ -530,7 +529,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minGasPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMinGasPrice());
       }
@@ -692,19 +691,13 @@ public final class QueryProto {
 
       // Construct using com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMinGasPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -748,14 +741,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.umee.ugov.v1.QueryProto.QueryMinGasPriceResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minGasPrice_ = minGasPriceBuilder_ == null
               ? minGasPrice_
               : minGasPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -921,10 +911,8 @@ public final class QueryProto {
         } else {
           minGasPriceBuilder_.mergeFrom(value);
         }
-        if (minGasPrice_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

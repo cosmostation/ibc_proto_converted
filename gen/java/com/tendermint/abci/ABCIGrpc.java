@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: tendermint/abci/types.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ABCIGrpc {
 
   private ABCIGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "tendermint.abci.ABCI";
+  public static final String SERVICE_NAME = "tendermint.abci.ABCI";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tendermint.abci.TypesProto.RequestEcho,
@@ -1356,9 +1356,9 @@ public final class ABCIGrpc {
   private static final class ABCIMethodDescriptorSupplier
       extends ABCIBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    ABCIMethodDescriptorSupplier(java.lang.String methodName) {
+    ABCIMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

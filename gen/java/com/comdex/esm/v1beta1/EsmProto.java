@@ -105,7 +105,6 @@ public final class EsmProto {
               com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.class, com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -125,7 +124,7 @@ public final class EsmProto {
      */
     @java.lang.Override
     public boolean hasTargetValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return targetValue_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin target_value = 2 [json_name = "targetValue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"target_value&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -212,7 +211,7 @@ public final class EsmProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (targetValue_ != null) {
         output.writeMessage(2, getTargetValue());
       }
       if (coolOffPeriod_ != 0L) {
@@ -234,7 +233,7 @@ public final class EsmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (targetValue_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTargetValue());
       }
@@ -416,20 +415,13 @@ public final class EsmProto {
 
       // Construct using com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetValueFieldBuilder();
-          getAssetsRatesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -498,17 +490,14 @@ public final class EsmProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.targetValue_ = targetValueBuilder_ == null
               ? targetValue_
               : targetValueBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.coolOffPeriod_ = coolOffPeriod_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -761,10 +750,8 @@ public final class EsmProto {
         } else {
           targetValueBuilder_.mergeFrom(value);
         }
-        if (targetValue_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1211,7 +1198,6 @@ public final class EsmProto {
               com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.class, com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.Builder.class);
     }
 
-    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -1231,7 +1217,7 @@ public final class EsmProto {
      */
     @java.lang.Override
     public boolean hasBalance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return balance_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin balance = 2 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"balance&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -1266,7 +1252,7 @@ public final class EsmProto {
       if (appId_ != 0L) {
         output.writeUInt64(1, appId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         output.writeMessage(2, getBalance());
       }
       getUnknownFields().writeTo(output);
@@ -1282,7 +1268,7 @@ public final class EsmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, appId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (balance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBalance());
       }
@@ -1445,19 +1431,13 @@ public final class EsmProto {
 
       // Construct using com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBalanceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1505,14 +1485,11 @@ public final class EsmProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.appId_ = appId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.balance_ = balanceBuilder_ == null
               ? balance_
               : balanceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1718,10 +1695,8 @@ public final class EsmProto {
         } else {
           balanceBuilder_.mergeFrom(value);
         }
-        if (balance_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1960,7 +1935,6 @@ public final class EsmProto {
               com.comdex.esm.v1beta1.EsmProto.ESMStatus.class, com.comdex.esm.v1beta1.EsmProto.ESMStatus.Builder.class);
     }
 
-    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -2030,7 +2004,7 @@ public final class EsmProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2056,7 +2030,7 @@ public final class EsmProto {
      */
     @java.lang.Override
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -2152,10 +2126,10 @@ public final class EsmProto {
       if (status_ != false) {
         output.writeBool(3, status_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(4, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         output.writeMessage(5, getEndTime());
       }
       if (vaultRedemptionStatus_ != false) {
@@ -2193,11 +2167,11 @@ public final class EsmProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, status_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getStartTime());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getEndTime());
       }
@@ -2423,20 +2397,13 @@ public final class EsmProto {
 
       // Construct using com.comdex.esm.v1beta1.EsmProto.ESMStatus.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartTimeFieldBuilder();
-          getEndTimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2502,18 +2469,15 @@ public final class EsmProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.status_ = status_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.endTime_ = endTimeBuilder_ == null
               ? endTime_
               : endTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.vaultRedemptionStatus_ = vaultRedemptionStatus_;
@@ -2530,7 +2494,6 @@ public final class EsmProto {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.shareCalculation_ = shareCalculation_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2908,10 +2871,8 @@ public final class EsmProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3029,10 +2990,8 @@ public final class EsmProto {
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-        if (endTime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3930,7 +3889,6 @@ public final class EsmProto {
               com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.class, com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.Builder.class);
     }
 
-    private int bitField0_;
     public static final int APP_ID_FIELD_NUMBER = 1;
     private long appId_ = 0L;
     /**
@@ -3989,7 +3947,7 @@ public final class EsmProto {
      */
     @java.lang.Override
     public boolean hasDeposits() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return deposits_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deposits = 3 [json_name = "deposits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposits&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
@@ -4027,7 +3985,7 @@ public final class EsmProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, depositor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deposits_ != null) {
         output.writeMessage(3, getDeposits());
       }
       getUnknownFields().writeTo(output);
@@ -4046,7 +4004,7 @@ public final class EsmProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, depositor_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deposits_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDeposits());
       }
@@ -4213,19 +4171,13 @@ public final class EsmProto {
 
       // Construct using com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDepositsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4277,14 +4229,11 @@ public final class EsmProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.depositor_ = depositor_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.deposits_ = depositsBuilder_ == null
               ? deposits_
               : depositsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4572,10 +4521,8 @@ public final class EsmProto {
         } else {
           depositsBuilder_.mergeFrom(value);
         }
-        if (deposits_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

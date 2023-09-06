@@ -98,7 +98,6 @@ public final class DocumentProto {
               com.assetmantle.schema.documents.base.DocumentProto.Document.class, com.assetmantle.schema.documents.base.DocumentProto.Document.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASSIFICATION_I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.ClassificationIdProto.ClassificationID classificationID_;
     /**
@@ -107,7 +106,7 @@ public final class DocumentProto {
      */
     @java.lang.Override
     public boolean hasClassificationID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return classificationID_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.ClassificationID classification_i_d = 1 [json_name = "classificationID"];</code>
@@ -133,7 +132,7 @@ public final class DocumentProto {
      */
     @java.lang.Override
     public boolean hasImmutables() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return immutables_ != null;
     }
     /**
      * <code>.assetmantle.schema.qualified.base.Immutables immutables = 2 [json_name = "immutables"];</code>
@@ -159,7 +158,7 @@ public final class DocumentProto {
      */
     @java.lang.Override
     public boolean hasMutables() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return mutables_ != null;
     }
     /**
      * <code>.assetmantle.schema.qualified.base.Mutables mutables = 3 [json_name = "mutables"];</code>
@@ -191,13 +190,13 @@ public final class DocumentProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (classificationID_ != null) {
         output.writeMessage(1, getClassificationID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (immutables_ != null) {
         output.writeMessage(2, getImmutables());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (mutables_ != null) {
         output.writeMessage(3, getMutables());
       }
       getUnknownFields().writeTo(output);
@@ -209,15 +208,15 @@ public final class DocumentProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (classificationID_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClassificationID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (immutables_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getImmutables());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (mutables_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMutables());
       }
@@ -393,21 +392,13 @@ public final class DocumentProto {
 
       // Construct using com.assetmantle.schema.documents.base.DocumentProto.Document.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClassificationIDFieldBuilder();
-          getImmutablesFieldBuilder();
-          getMutablesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -461,26 +452,21 @@ public final class DocumentProto {
 
       private void buildPartial0(com.assetmantle.schema.documents.base.DocumentProto.Document result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.classificationID_ = classificationIDBuilder_ == null
               ? classificationID_
               : classificationIDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.immutables_ = immutablesBuilder_ == null
               ? immutables_
               : immutablesBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.mutables_ = mutablesBuilder_ == null
               ? mutables_
               : mutablesBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -666,10 +652,8 @@ public final class DocumentProto {
         } else {
           classificationIDBuilder_.mergeFrom(value);
         }
-        if (classificationID_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -787,10 +771,8 @@ public final class DocumentProto {
         } else {
           immutablesBuilder_.mergeFrom(value);
         }
-        if (immutables_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -908,10 +890,8 @@ public final class DocumentProto {
         } else {
           mutablesBuilder_.mergeFrom(value);
         }
-        if (mutables_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

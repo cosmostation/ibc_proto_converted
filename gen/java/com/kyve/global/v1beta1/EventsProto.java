@@ -133,7 +133,6 @@ public final class EventsProto {
               com.kyve.global.v1beta1.EventsProto.EventUpdateParams.class, com.kyve.global.v1beta1.EventsProto.EventUpdateParams.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OLD_PARAMS_FIELD_NUMBER = 1;
     private com.kyve.global.v1beta1.GlobalProto.Params oldParams_;
     /**
@@ -146,7 +145,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasOldParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return oldParams_ != null;
     }
     /**
      * <pre>
@@ -184,7 +183,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasNewParams() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return newParams_ != null;
     }
     /**
      * <pre>
@@ -271,10 +270,10 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oldParams_ != null) {
         output.writeMessage(1, getOldParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (newParams_ != null) {
         output.writeMessage(2, getNewParams());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
@@ -289,11 +288,11 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oldParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOldParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (newParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNewParams());
       }
@@ -472,20 +471,13 @@ public final class EventsProto {
 
       // Construct using com.kyve.global.v1beta1.EventsProto.EventUpdateParams.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOldParamsFieldBuilder();
-          getNewParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -535,23 +527,19 @@ public final class EventsProto {
 
       private void buildPartial0(com.kyve.global.v1beta1.EventsProto.EventUpdateParams result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.oldParams_ = oldParamsBuilder_ == null
               ? oldParams_
               : oldParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.newParams_ = newParamsBuilder_ == null
               ? newParams_
               : newParamsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.payload_ = payload_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -757,10 +745,8 @@ public final class EventsProto {
         } else {
           oldParamsBuilder_.mergeFrom(value);
         }
-        if (oldParams_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -914,10 +900,8 @@ public final class EventsProto {
         } else {
           newParamsBuilder_.mergeFrom(value);
         }
-        if (newParams_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

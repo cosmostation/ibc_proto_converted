@@ -204,7 +204,6 @@ com.irismod.service.ServiceProto.RequestContext defaultValue);
               com.irismod.service.GenesisProto.GenesisState.class, com.irismod.service.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.irismod.service.ServiceProto.Params params_;
     /**
@@ -213,7 +212,7 @@ com.irismod.service.ServiceProto.RequestContext defaultValue);
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -485,7 +484,7 @@ com.irismod.service.ServiceProto.RequestContext defaultValue) {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < definitions_.size(); i++) {
@@ -515,7 +514,7 @@ com.irismod.service.ServiceProto.RequestContext defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -755,21 +754,13 @@ com.irismod.service.ServiceProto.RequestContext defaultValue) {
 
       // Construct using com.irismod.service.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getDefinitionsFieldBuilder();
-          getBindingsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -851,12 +842,10 @@ com.irismod.service.ServiceProto.RequestContext defaultValue) {
 
       private void buildPartial0(com.irismod.service.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.withdrawAddresses_ = internalGetWithdrawAddresses();
@@ -866,7 +855,6 @@ com.irismod.service.ServiceProto.RequestContext defaultValue) {
           result.requestContexts_ = internalGetRequestContexts();
           result.requestContexts_.makeImmutable();
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1134,10 +1122,8 @@ com.irismod.service.ServiceProto.RequestContext defaultValue) {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

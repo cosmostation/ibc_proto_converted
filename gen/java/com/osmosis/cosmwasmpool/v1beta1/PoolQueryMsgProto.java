@@ -84,7 +84,6 @@ public final class PoolQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetSwapFeeQueryMsg.class, com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetSwapFeeQueryMsg.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GET_SWAP_FEE_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStruct getSwapFee_;
     /**
@@ -97,7 +96,7 @@ public final class PoolQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasGetSwapFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return getSwapFee_ != null;
     }
     /**
      * <pre>
@@ -137,7 +136,7 @@ public final class PoolQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (getSwapFee_ != null) {
         output.writeMessage(1, getGetSwapFee());
       }
       getUnknownFields().writeTo(output);
@@ -149,7 +148,7 @@ public final class PoolQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (getSwapFee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGetSwapFee());
       }
@@ -311,19 +310,13 @@ public final class PoolQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetSwapFeeQueryMsg.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGetSwapFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -367,14 +360,11 @@ public final class PoolQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetSwapFeeQueryMsg result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.getSwapFee_ = getSwapFeeBuilder_ == null
               ? getSwapFee_
               : getSwapFeeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -560,10 +550,8 @@ public final class PoolQueryMsgProto {
         } else {
           getSwapFeeBuilder_.mergeFrom(value);
         }
-        if (getSwapFee_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2131,7 +2119,6 @@ public final class PoolQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.SpotPriceQueryMsg.class, com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.SpotPriceQueryMsg.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SPOT_PRICE_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.SpotPrice spotPrice_;
     /**
@@ -2145,7 +2132,7 @@ public final class PoolQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasSpotPrice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return spotPrice_ != null;
     }
     /**
      * <pre>
@@ -2187,7 +2174,7 @@ public final class PoolQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (spotPrice_ != null) {
         output.writeMessage(1, getSpotPrice());
       }
       getUnknownFields().writeTo(output);
@@ -2199,7 +2186,7 @@ public final class PoolQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (spotPrice_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSpotPrice());
       }
@@ -2357,19 +2344,13 @@ public final class PoolQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.SpotPriceQueryMsg.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSpotPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2413,14 +2394,11 @@ public final class PoolQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.SpotPriceQueryMsg result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.spotPrice_ = spotPriceBuilder_ == null
               ? spotPrice_
               : spotPriceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2611,10 +2589,8 @@ public final class PoolQueryMsgProto {
         } else {
           spotPriceBuilder_.mergeFrom(value);
         }
-        if (spotPrice_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3811,7 +3787,6 @@ public final class PoolQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalPoolLiquidityQueryMsg.class, com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalPoolLiquidityQueryMsg.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GET_TOTAL_POOL_LIQUIDITY_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStruct getTotalPoolLiquidity_;
     /**
@@ -3825,7 +3800,7 @@ public final class PoolQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasGetTotalPoolLiquidity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return getTotalPoolLiquidity_ != null;
     }
     /**
      * <pre>
@@ -3867,7 +3842,7 @@ public final class PoolQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (getTotalPoolLiquidity_ != null) {
         output.writeMessage(1, getGetTotalPoolLiquidity());
       }
       getUnknownFields().writeTo(output);
@@ -3879,7 +3854,7 @@ public final class PoolQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (getTotalPoolLiquidity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGetTotalPoolLiquidity());
       }
@@ -4037,19 +4012,13 @@ public final class PoolQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalPoolLiquidityQueryMsg.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGetTotalPoolLiquidityFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4093,14 +4062,11 @@ public final class PoolQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalPoolLiquidityQueryMsg result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.getTotalPoolLiquidity_ = getTotalPoolLiquidityBuilder_ == null
               ? getTotalPoolLiquidity_
               : getTotalPoolLiquidityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4291,10 +4257,8 @@ public final class PoolQueryMsgProto {
         } else {
           getTotalPoolLiquidityBuilder_.mergeFrom(value);
         }
-        if (getTotalPoolLiquidity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5424,7 +5388,6 @@ public final class PoolQueryMsgProto {
               com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalSharesQueryMsg.class, com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalSharesQueryMsg.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GET_TOTAL_SHARES_FIELD_NUMBER = 1;
     private com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStruct getTotalShares_;
     /**
@@ -5438,7 +5401,7 @@ public final class PoolQueryMsgProto {
      */
     @java.lang.Override
     public boolean hasGetTotalShares() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return getTotalShares_ != null;
     }
     /**
      * <pre>
@@ -5480,7 +5443,7 @@ public final class PoolQueryMsgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (getTotalShares_ != null) {
         output.writeMessage(1, getGetTotalShares());
       }
       getUnknownFields().writeTo(output);
@@ -5492,7 +5455,7 @@ public final class PoolQueryMsgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (getTotalShares_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getGetTotalShares());
       }
@@ -5654,19 +5617,13 @@ public final class PoolQueryMsgProto {
 
       // Construct using com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalSharesQueryMsg.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGetTotalSharesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5710,14 +5667,11 @@ public final class PoolQueryMsgProto {
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.GetTotalSharesQueryMsg result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.getTotalShares_ = getTotalSharesBuilder_ == null
               ? getTotalShares_
               : getTotalSharesBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5908,10 +5862,8 @@ public final class PoolQueryMsgProto {
         } else {
           getTotalSharesBuilder_.mergeFrom(value);
         }
-        if (getTotalShares_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

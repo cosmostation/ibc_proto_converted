@@ -72,7 +72,6 @@ public final class GenesisProto {
               com.akash.gov.v1beta3.GenesisProto.GenesisState.class, com.akash.gov.v1beta3.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPOSIT_PARAMS_FIELD_NUMBER = 1;
     private com.akash.gov.v1beta3.ParamsProto.DepositParams depositParams_;
     /**
@@ -81,7 +80,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasDepositParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return depositParams_ != null;
     }
     /**
      * <code>.akash.gov.v1beta3.DepositParams deposit_params = 1 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "deposit_params", (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
@@ -113,7 +112,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (depositParams_ != null) {
         output.writeMessage(1, getDepositParams());
       }
       getUnknownFields().writeTo(output);
@@ -125,7 +124,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (depositParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDepositParams());
       }
@@ -287,19 +286,13 @@ public final class GenesisProto {
 
       // Construct using com.akash.gov.v1beta3.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDepositParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -343,14 +336,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.akash.gov.v1beta3.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.depositParams_ = depositParamsBuilder_ == null
               ? depositParams_
               : depositParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -516,10 +506,8 @@ public final class GenesisProto {
         } else {
           depositParamsBuilder_.mergeFrom(value);
         }
-        if (depositParams_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

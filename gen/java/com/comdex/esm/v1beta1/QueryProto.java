@@ -465,7 +465,6 @@ public final class QueryProto {
               com.comdex.esm.v1beta1.QueryProto.QueryParamsResponse.class, com.comdex.esm.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.comdex.esm.v1beta1.ParamsProto.Params params_;
     /**
@@ -474,7 +473,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.comdex.esm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -506,7 +505,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -518,7 +517,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -676,19 +675,13 @@ public final class QueryProto {
 
       // Construct using com.comdex.esm.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -732,14 +725,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.esm.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -905,10 +895,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1554,7 +1542,6 @@ public final class QueryProto {
               com.comdex.esm.v1beta1.QueryProto.QueryESMTriggerParamsResponse.class, com.comdex.esm.v1beta1.QueryProto.QueryESMTriggerParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ESMTRIGGERPARAMS_FIELD_NUMBER = 1;
     private com.comdex.esm.v1beta1.EsmProto.ESMTriggerParams esmTriggerParams_;
     /**
@@ -1563,7 +1550,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEsmTriggerParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return esmTriggerParams_ != null;
     }
     /**
      * <code>.comdex.esm.v1beta1.ESMTriggerParams esmTriggerParams = 1 [json_name = "esmTriggerParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"esm_trigger_params&#92;""];</code>
@@ -1595,7 +1582,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (esmTriggerParams_ != null) {
         output.writeMessage(1, getEsmTriggerParams());
       }
       getUnknownFields().writeTo(output);
@@ -1607,7 +1594,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (esmTriggerParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEsmTriggerParams());
       }
@@ -1765,19 +1752,13 @@ public final class QueryProto {
 
       // Construct using com.comdex.esm.v1beta1.QueryProto.QueryESMTriggerParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEsmTriggerParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1821,14 +1802,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.esm.v1beta1.QueryProto.QueryESMTriggerParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.esmTriggerParams_ = esmTriggerParamsBuilder_ == null
               ? esmTriggerParams_
               : esmTriggerParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1994,10 +1972,8 @@ public final class QueryProto {
         } else {
           esmTriggerParamsBuilder_.mergeFrom(value);
         }
-        if (esmTriggerParams_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2643,7 +2619,6 @@ public final class QueryProto {
               com.comdex.esm.v1beta1.QueryProto.QueryESMStatusResponse.class, com.comdex.esm.v1beta1.QueryProto.QueryESMStatusResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ESMSTATUS_FIELD_NUMBER = 1;
     private com.comdex.esm.v1beta1.EsmProto.ESMStatus esmStatus_;
     /**
@@ -2652,7 +2627,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasEsmStatus() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return esmStatus_ != null;
     }
     /**
      * <code>.comdex.esm.v1beta1.ESMStatus esmStatus = 1 [json_name = "esmStatus", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"esm_status&#92;""];</code>
@@ -2684,7 +2659,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (esmStatus_ != null) {
         output.writeMessage(1, getEsmStatus());
       }
       getUnknownFields().writeTo(output);
@@ -2696,7 +2671,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (esmStatus_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEsmStatus());
       }
@@ -2854,19 +2829,13 @@ public final class QueryProto {
 
       // Construct using com.comdex.esm.v1beta1.QueryProto.QueryESMStatusResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEsmStatusFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2910,14 +2879,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.esm.v1beta1.QueryProto.QueryESMStatusResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.esmStatus_ = esmStatusBuilder_ == null
               ? esmStatus_
               : esmStatusBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3083,10 +3049,8 @@ public final class QueryProto {
         } else {
           esmStatusBuilder_.mergeFrom(value);
         }
-        if (esmStatus_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3732,7 +3696,6 @@ public final class QueryProto {
               com.comdex.esm.v1beta1.QueryProto.QueryCurrentDepositStatsResponse.class, com.comdex.esm.v1beta1.QueryProto.QueryCurrentDepositStatsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CURRENTDEPOSITSTATS_FIELD_NUMBER = 1;
     private com.comdex.esm.v1beta1.EsmProto.CurrentDepositStats currentDepositStats_;
     /**
@@ -3741,7 +3704,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasCurrentDepositStats() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return currentDepositStats_ != null;
     }
     /**
      * <code>.comdex.esm.v1beta1.CurrentDepositStats currentDepositStats = 1 [json_name = "currentDepositStats", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_deposit_stats&#92;""];</code>
@@ -3773,7 +3736,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (currentDepositStats_ != null) {
         output.writeMessage(1, getCurrentDepositStats());
       }
       getUnknownFields().writeTo(output);
@@ -3785,7 +3748,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (currentDepositStats_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCurrentDepositStats());
       }
@@ -3943,19 +3906,13 @@ public final class QueryProto {
 
       // Construct using com.comdex.esm.v1beta1.QueryProto.QueryCurrentDepositStatsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCurrentDepositStatsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3999,14 +3956,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.esm.v1beta1.QueryProto.QueryCurrentDepositStatsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.currentDepositStats_ = currentDepositStatsBuilder_ == null
               ? currentDepositStats_
               : currentDepositStatsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4172,10 +4126,8 @@ public final class QueryProto {
         } else {
           currentDepositStatsBuilder_.mergeFrom(value);
         }
-        if (currentDepositStats_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4969,7 +4921,6 @@ public final class QueryProto {
               com.comdex.esm.v1beta1.QueryProto.QueryUsersDepositMappingResponse.class, com.comdex.esm.v1beta1.QueryProto.QueryUsersDepositMappingResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int USERSDEPOSITMAPPING_FIELD_NUMBER = 1;
     private com.comdex.esm.v1beta1.EsmProto.UsersDepositMapping usersDepositMapping_;
     /**
@@ -4978,7 +4929,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasUsersDepositMapping() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return usersDepositMapping_ != null;
     }
     /**
      * <code>.comdex.esm.v1beta1.UsersDepositMapping usersDepositMapping = 1 [json_name = "usersDepositMapping", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"user_deposit_mapping&#92;""];</code>
@@ -5010,7 +4961,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (usersDepositMapping_ != null) {
         output.writeMessage(1, getUsersDepositMapping());
       }
       getUnknownFields().writeTo(output);
@@ -5022,7 +4973,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (usersDepositMapping_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUsersDepositMapping());
       }
@@ -5180,19 +5131,13 @@ public final class QueryProto {
 
       // Construct using com.comdex.esm.v1beta1.QueryProto.QueryUsersDepositMappingResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUsersDepositMappingFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5236,14 +5181,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.esm.v1beta1.QueryProto.QueryUsersDepositMappingResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.usersDepositMapping_ = usersDepositMappingBuilder_ == null
               ? usersDepositMapping_
               : usersDepositMappingBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5409,10 +5351,8 @@ public final class QueryProto {
         } else {
           usersDepositMappingBuilder_.mergeFrom(value);
         }
-        if (usersDepositMapping_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6058,7 +5998,6 @@ public final class QueryProto {
               com.comdex.esm.v1beta1.QueryProto.QueryDataAfterCoolOffResponse.class, com.comdex.esm.v1beta1.QueryProto.QueryDataAfterCoolOffResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATAAFTERCOOLOFF_FIELD_NUMBER = 1;
     private com.comdex.esm.v1beta1.EsmProto.DataAfterCoolOff dataAfterCoolOff_;
     /**
@@ -6067,7 +6006,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasDataAfterCoolOff() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return dataAfterCoolOff_ != null;
     }
     /**
      * <code>.comdex.esm.v1beta1.DataAfterCoolOff dataAfterCoolOff = 1 [json_name = "dataAfterCoolOff", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"data_after_cool_off&#92;""];</code>
@@ -6099,7 +6038,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dataAfterCoolOff_ != null) {
         output.writeMessage(1, getDataAfterCoolOff());
       }
       getUnknownFields().writeTo(output);
@@ -6111,7 +6050,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (dataAfterCoolOff_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataAfterCoolOff());
       }
@@ -6269,19 +6208,13 @@ public final class QueryProto {
 
       // Construct using com.comdex.esm.v1beta1.QueryProto.QueryDataAfterCoolOffResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataAfterCoolOffFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6325,14 +6258,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.comdex.esm.v1beta1.QueryProto.QueryDataAfterCoolOffResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataAfterCoolOff_ = dataAfterCoolOffBuilder_ == null
               ? dataAfterCoolOff_
               : dataAfterCoolOffBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6498,10 +6428,8 @@ public final class QueryProto {
         } else {
           dataAfterCoolOffBuilder_.mergeFrom(value);
         }
-        if (dataAfterCoolOff_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

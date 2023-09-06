@@ -197,7 +197,6 @@ public final class UpgradeProto {
               com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.class, com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -273,7 +272,7 @@ public final class UpgradeProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return time_ != null;
     }
     /**
      * <pre>
@@ -385,7 +384,7 @@ public final class UpgradeProto {
      */
     @java.lang.Override
     @java.lang.Deprecated public boolean hasUpgradedClientState() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return upgradedClientState_ != null;
     }
     /**
      * <pre>
@@ -434,7 +433,7 @@ public final class UpgradeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (time_ != null) {
         output.writeMessage(2, getTime());
       }
       if (height_ != 0L) {
@@ -443,7 +442,7 @@ public final class UpgradeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(info_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, info_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (upgradedClientState_ != null) {
         output.writeMessage(5, getUpgradedClientState());
       }
       getUnknownFields().writeTo(output);
@@ -458,7 +457,7 @@ public final class UpgradeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTime());
       }
@@ -469,7 +468,7 @@ public final class UpgradeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(info_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, info_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (upgradedClientState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getUpgradedClientState());
       }
@@ -653,20 +652,13 @@ public final class UpgradeProto {
 
       // Construct using com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimeFieldBuilder();
-          getUpgradedClientStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -721,12 +713,10 @@ public final class UpgradeProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.height_ = height_;
@@ -738,9 +728,7 @@ public final class UpgradeProto {
           result.upgradedClientState_ = upgradedClientStateBuilder_ == null
               ? upgradedClientState_
               : upgradedClientStateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1100,10 +1088,8 @@ public final class UpgradeProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1420,10 +1406,8 @@ public final class UpgradeProto {
         } else {
           upgradedClientStateBuilder_.mergeFrom(value);
         }
-        if (upgradedClientState_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1677,7 +1661,6 @@ public final class UpgradeProto {
               com.cosmos.upgrade.v1beta1.UpgradeProto.SoftwareUpgradeProposal.class, com.cosmos.upgrade.v1beta1.UpgradeProto.SoftwareUpgradeProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -1784,7 +1767,7 @@ public final class UpgradeProto {
      */
     @java.lang.Override
     public boolean hasPlan() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return plan_ != null;
     }
     /**
      * <pre>
@@ -1830,7 +1813,7 @@ public final class UpgradeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (plan_ != null) {
         output.writeMessage(3, getPlan());
       }
       getUnknownFields().writeTo(output);
@@ -1848,7 +1831,7 @@ public final class UpgradeProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (plan_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPlan());
       }
@@ -2021,19 +2004,13 @@ public final class UpgradeProto {
 
       // Construct using com.cosmos.upgrade.v1beta1.UpgradeProto.SoftwareUpgradeProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPlanFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2085,14 +2062,11 @@ public final class UpgradeProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.plan_ = planBuilder_ == null
               ? plan_
               : planBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2482,10 +2456,8 @@ public final class UpgradeProto {
         } else {
           planBuilder_.mergeFrom(value);
         }
-        if (plan_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

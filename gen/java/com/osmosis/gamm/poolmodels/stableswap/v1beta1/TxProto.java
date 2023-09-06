@@ -154,7 +154,6 @@ public final class TxProto {
               com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgCreateStableswapPool.class, com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgCreateStableswapPool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sender_ = "";
@@ -202,7 +201,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPoolParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return poolParams_ != null;
     }
     /**
      * <code>.osmosis.gamm.poolmodels.stableswap.v1beta1.PoolParams pool_params = 2 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
@@ -263,8 +262,7 @@ public final class TxProto {
 
     public static final int SCALING_FACTORS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList scalingFactors_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList scalingFactors_;
     /**
      * <code>repeated uint64 scaling_factors = 4 [json_name = "scalingFactors", (.gogoproto.moretags) = "yaml:&#92;"stableswap_scaling_factor&#92;""];</code>
      * @return A list containing the scalingFactors.
@@ -387,7 +385,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolParams_ != null) {
         output.writeMessage(2, getPoolParams());
       }
       for (int i = 0; i < initialPoolLiquidity_.size(); i++) {
@@ -418,7 +416,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (poolParams_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPoolParams());
       }
@@ -628,20 +626,13 @@ public final class TxProto {
 
       // Construct using com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgCreateStableswapPool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoolParamsFieldBuilder();
-          getInitialPoolLiquidityFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -705,6 +696,11 @@ public final class TxProto {
         } else {
           result.initialPoolLiquidity_ = initialPoolLiquidityBuilder_.build();
         }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          scalingFactors_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.scalingFactors_ = scalingFactors_;
       }
 
       private void buildPartial0(com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgCreateStableswapPool result) {
@@ -712,16 +708,10 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.sender_ = sender_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolParams_ = poolParamsBuilder_ == null
               ? poolParams_
               : poolParamsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          scalingFactors_.makeImmutable();
-          result.scalingFactors_ = scalingFactors_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.futurePoolGovernor_ = futurePoolGovernor_;
@@ -729,7 +719,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.scalingFactorController_ = scalingFactorController_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -813,8 +802,7 @@ public final class TxProto {
         if (!other.scalingFactors_.isEmpty()) {
           if (scalingFactors_.isEmpty()) {
             scalingFactors_ = other.scalingFactors_;
-            scalingFactors_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureScalingFactorsIsMutable();
             scalingFactors_.addAll(other.scalingFactors_);
@@ -1063,10 +1051,8 @@ public final class TxProto {
         } else {
           poolParamsBuilder_.mergeFrom(value);
         }
-        if (poolParams_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1360,10 +1346,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList scalingFactors_ = emptyLongList();
       private void ensureScalingFactorsIsMutable() {
-        if (!scalingFactors_.isModifiable()) {
-          scalingFactors_ = makeMutableCopy(scalingFactors_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          scalingFactors_ = mutableCopy(scalingFactors_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated uint64 scaling_factors = 4 [json_name = "scalingFactors", (.gogoproto.moretags) = "yaml:&#92;"stableswap_scaling_factor&#92;""];</code>
@@ -1371,8 +1357,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getScalingFactorsList() {
-        scalingFactors_.makeImmutable();
-        return scalingFactors_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(scalingFactors_) : scalingFactors_;
       }
       /**
        * <code>repeated uint64 scaling_factors = 4 [json_name = "scalingFactors", (.gogoproto.moretags) = "yaml:&#92;"stableswap_scaling_factor&#92;""];</code>
@@ -1400,7 +1386,6 @@ public final class TxProto {
 
         ensureScalingFactorsIsMutable();
         scalingFactors_.setLong(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1413,7 +1398,6 @@ public final class TxProto {
 
         ensureScalingFactorsIsMutable();
         scalingFactors_.addLong(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1427,7 +1411,6 @@ public final class TxProto {
         ensureScalingFactorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, scalingFactors_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2267,8 +2250,7 @@ public final class TxProto {
 
     public static final int SCALING_FACTORS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList scalingFactors_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList scalingFactors_;
     /**
      * <code>repeated uint64 scaling_factors = 3 [json_name = "scalingFactors", (.gogoproto.moretags) = "yaml:&#92;"stableswap_scaling_factor&#92;""];</code>
      * @return A list containing the scalingFactors.
@@ -2559,9 +2541,18 @@ public final class TxProto {
       @java.lang.Override
       public com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgStableSwapAdjustScalingFactors buildPartial() {
         com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgStableSwapAdjustScalingFactors result = new com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgStableSwapAdjustScalingFactors(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgStableSwapAdjustScalingFactors result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          scalingFactors_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.scalingFactors_ = scalingFactors_;
       }
 
       private void buildPartial0(com.osmosis.gamm.poolmodels.stableswap.v1beta1.TxProto.MsgStableSwapAdjustScalingFactors result) {
@@ -2571,10 +2562,6 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolId_ = poolId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          scalingFactors_.makeImmutable();
-          result.scalingFactors_ = scalingFactors_;
         }
       }
 
@@ -2633,8 +2620,7 @@ public final class TxProto {
         if (!other.scalingFactors_.isEmpty()) {
           if (scalingFactors_.isEmpty()) {
             scalingFactors_ = other.scalingFactors_;
-            scalingFactors_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureScalingFactorsIsMutable();
             scalingFactors_.addAll(other.scalingFactors_);
@@ -2816,10 +2802,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList scalingFactors_ = emptyLongList();
       private void ensureScalingFactorsIsMutable() {
-        if (!scalingFactors_.isModifiable()) {
-          scalingFactors_ = makeMutableCopy(scalingFactors_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          scalingFactors_ = mutableCopy(scalingFactors_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated uint64 scaling_factors = 3 [json_name = "scalingFactors", (.gogoproto.moretags) = "yaml:&#92;"stableswap_scaling_factor&#92;""];</code>
@@ -2827,8 +2813,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getScalingFactorsList() {
-        scalingFactors_.makeImmutable();
-        return scalingFactors_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(scalingFactors_) : scalingFactors_;
       }
       /**
        * <code>repeated uint64 scaling_factors = 3 [json_name = "scalingFactors", (.gogoproto.moretags) = "yaml:&#92;"stableswap_scaling_factor&#92;""];</code>
@@ -2856,7 +2842,6 @@ public final class TxProto {
 
         ensureScalingFactorsIsMutable();
         scalingFactors_.setLong(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2869,7 +2854,6 @@ public final class TxProto {
 
         ensureScalingFactorsIsMutable();
         scalingFactors_.addLong(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2883,7 +2867,6 @@ public final class TxProto {
         ensureScalingFactorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, scalingFactors_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

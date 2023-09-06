@@ -231,7 +231,6 @@ public final class SubscriptionProto {
               com.sentinel.subscription.v2.SubscriptionProto.BaseSubscription.class, com.sentinel.subscription.v2.SubscriptionProto.BaseSubscription.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -290,7 +289,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasExpiryAt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return expiryAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiry_at = 3 [json_name = "expiryAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -334,7 +333,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasStatusAt() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return statusAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp status_at = 5 [json_name = "statusAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -372,13 +371,13 @@ public final class SubscriptionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiryAt_ != null) {
         output.writeMessage(3, getExpiryAt());
       }
       if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (statusAt_ != null) {
         output.writeMessage(5, getStatusAt());
       }
       getUnknownFields().writeTo(output);
@@ -397,7 +396,7 @@ public final class SubscriptionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (expiryAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getExpiryAt());
       }
@@ -405,7 +404,7 @@ public final class SubscriptionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (statusAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStatusAt());
       }
@@ -584,20 +583,13 @@ public final class SubscriptionProto {
 
       // Construct using com.sentinel.subscription.v2.SubscriptionProto.BaseSubscription.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExpiryAtFieldBuilder();
-          getStatusAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -655,12 +647,10 @@ public final class SubscriptionProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.expiryAt_ = expiryAtBuilder_ == null
               ? expiryAt_
               : expiryAtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.status_ = status_;
@@ -669,9 +659,7 @@ public final class SubscriptionProto {
           result.statusAt_ = statusAtBuilder_ == null
               ? statusAt_
               : statusAtBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -977,10 +965,8 @@ public final class SubscriptionProto {
         } else {
           expiryAtBuilder_.mergeFrom(value);
         }
-        if (expiryAt_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1151,10 +1137,8 @@ public final class SubscriptionProto {
         } else {
           statusAtBuilder_.mergeFrom(value);
         }
-        if (statusAt_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1363,7 +1347,6 @@ public final class SubscriptionProto {
               com.sentinel.subscription.v2.SubscriptionProto.NodeSubscription.class, com.sentinel.subscription.v2.SubscriptionProto.NodeSubscription.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_FIELD_NUMBER = 1;
     private com.sentinel.subscription.v2.SubscriptionProto.BaseSubscription base_;
     /**
@@ -1372,7 +1355,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasBase() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return base_ != null;
     }
     /**
      * <code>.sentinel.subscription.v2.BaseSubscription base = 1 [json_name = "base", (.gogoproto.embed) = true];</code>
@@ -1459,7 +1442,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return deposit_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deposit = 5 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
@@ -1491,7 +1474,7 @@ public final class SubscriptionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (base_ != null) {
         output.writeMessage(1, getBase());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeAddress_)) {
@@ -1503,7 +1486,7 @@ public final class SubscriptionProto {
       if (hours_ != 0L) {
         output.writeInt64(4, hours_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deposit_ != null) {
         output.writeMessage(5, getDeposit());
       }
       getUnknownFields().writeTo(output);
@@ -1515,7 +1498,7 @@ public final class SubscriptionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (base_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBase());
       }
@@ -1530,7 +1513,7 @@ public final class SubscriptionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, hours_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (deposit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDeposit());
       }
@@ -1711,20 +1694,13 @@ public final class SubscriptionProto {
 
       // Construct using com.sentinel.subscription.v2.SubscriptionProto.NodeSubscription.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseFieldBuilder();
-          getDepositFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1776,12 +1752,10 @@ public final class SubscriptionProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.SubscriptionProto.NodeSubscription result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.base_ = baseBuilder_ == null
               ? base_
               : baseBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.nodeAddress_ = nodeAddress_;
@@ -1796,9 +1770,7 @@ public final class SubscriptionProto {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2000,10 +1972,8 @@ public final class SubscriptionProto {
         } else {
           baseBuilder_.mergeFrom(value);
         }
-        if (base_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2257,10 +2227,8 @@ public final class SubscriptionProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        if (deposit_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2448,7 +2416,6 @@ public final class SubscriptionProto {
               com.sentinel.subscription.v2.SubscriptionProto.PlanSubscription.class, com.sentinel.subscription.v2.SubscriptionProto.PlanSubscription.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_FIELD_NUMBER = 1;
     private com.sentinel.subscription.v2.SubscriptionProto.BaseSubscription base_;
     /**
@@ -2457,7 +2424,7 @@ public final class SubscriptionProto {
      */
     @java.lang.Override
     public boolean hasBase() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return base_ != null;
     }
     /**
      * <code>.sentinel.subscription.v2.BaseSubscription base = 1 [json_name = "base", (.gogoproto.embed) = true];</code>
@@ -2539,7 +2506,7 @@ public final class SubscriptionProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (base_ != null) {
         output.writeMessage(1, getBase());
       }
       if (planId_ != 0L) {
@@ -2557,7 +2524,7 @@ public final class SubscriptionProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (base_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBase());
       }
@@ -2731,19 +2698,13 @@ public final class SubscriptionProto {
 
       // Construct using com.sentinel.subscription.v2.SubscriptionProto.PlanSubscription.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2789,12 +2750,10 @@ public final class SubscriptionProto {
 
       private void buildPartial0(com.sentinel.subscription.v2.SubscriptionProto.PlanSubscription result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.base_ = baseBuilder_ == null
               ? base_
               : baseBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.planId_ = planId_;
@@ -2802,7 +2761,6 @@ public final class SubscriptionProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.denom_ = denom_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2986,10 +2944,8 @@ public final class SubscriptionProto {
         } else {
           baseBuilder_.mergeFrom(value);
         }
-        if (base_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

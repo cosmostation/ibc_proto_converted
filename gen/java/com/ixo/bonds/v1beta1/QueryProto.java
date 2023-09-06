@@ -2862,7 +2862,6 @@ public final class QueryProto {
               com.ixo.bonds.v1beta1.QueryProto.QueryBondResponse.class, com.ixo.bonds.v1beta1.QueryProto.QueryBondResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BOND_FIELD_NUMBER = 1;
     private com.ixo.bonds.v1beta1.BondsProto.Bond bond_;
     /**
@@ -2871,7 +2870,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBond() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return bond_ != null;
     }
     /**
      * <code>.ixo.bonds.v1beta1.Bond bond = 1 [json_name = "bond", (.gogoproto.moretags) = "yaml:&#92;"bond&#92;""];</code>
@@ -2903,7 +2902,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bond_ != null) {
         output.writeMessage(1, getBond());
       }
       getUnknownFields().writeTo(output);
@@ -2915,7 +2914,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (bond_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBond());
       }
@@ -3077,19 +3076,13 @@ public final class QueryProto {
 
       // Construct using com.ixo.bonds.v1beta1.QueryProto.QueryBondResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBondFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3133,14 +3126,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.QueryProto.QueryBondResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bond_ = bondBuilder_ == null
               ? bond_
               : bondBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3306,10 +3296,8 @@ public final class QueryProto {
         } else {
           bondBuilder_.mergeFrom(value);
         }
-        if (bond_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4042,7 +4030,6 @@ public final class QueryProto {
               com.ixo.bonds.v1beta1.QueryProto.QueryBatchResponse.class, com.ixo.bonds.v1beta1.QueryProto.QueryBatchResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BATCH_FIELD_NUMBER = 1;
     private com.ixo.bonds.v1beta1.BondsProto.Batch batch_;
     /**
@@ -4051,7 +4038,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasBatch() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return batch_ != null;
     }
     /**
      * <code>.ixo.bonds.v1beta1.Batch batch = 1 [json_name = "batch", (.gogoproto.moretags) = "yaml:&#92;"batch&#92;""];</code>
@@ -4083,7 +4070,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (batch_ != null) {
         output.writeMessage(1, getBatch());
       }
       getUnknownFields().writeTo(output);
@@ -4095,7 +4082,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (batch_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBatch());
       }
@@ -4257,19 +4244,13 @@ public final class QueryProto {
 
       // Construct using com.ixo.bonds.v1beta1.QueryProto.QueryBatchResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBatchFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4313,14 +4294,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.QueryProto.QueryBatchResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.batch_ = batchBuilder_ == null
               ? batch_
               : batchBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4486,10 +4464,8 @@ public final class QueryProto {
         } else {
           batchBuilder_.mergeFrom(value);
         }
-        if (batch_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5223,7 +5199,6 @@ public final class QueryProto {
               com.ixo.bonds.v1beta1.QueryProto.QueryLastBatchResponse.class, com.ixo.bonds.v1beta1.QueryProto.QueryLastBatchResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LAST_BATCH_FIELD_NUMBER = 1;
     private com.ixo.bonds.v1beta1.BondsProto.Batch lastBatch_;
     /**
@@ -5232,7 +5207,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasLastBatch() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lastBatch_ != null;
     }
     /**
      * <code>.ixo.bonds.v1beta1.Batch last_batch = 1 [json_name = "lastBatch", (.gogoproto.moretags) = "yaml:&#92;"last_batch&#92;""];</code>
@@ -5264,7 +5239,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastBatch_ != null) {
         output.writeMessage(1, getLastBatch());
       }
       getUnknownFields().writeTo(output);
@@ -5276,7 +5251,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastBatch_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLastBatch());
       }
@@ -5439,19 +5414,13 @@ public final class QueryProto {
 
       // Construct using com.ixo.bonds.v1beta1.QueryProto.QueryLastBatchResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLastBatchFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5495,14 +5464,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.QueryProto.QueryLastBatchResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lastBatch_ = lastBatchBuilder_ == null
               ? lastBatch_
               : lastBatchBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5668,10 +5634,8 @@ public final class QueryProto {
         } else {
           lastBatchBuilder_.mergeFrom(value);
         }
-        if (lastBatch_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -12219,7 +12183,6 @@ public final class QueryProto {
               com.ixo.bonds.v1beta1.QueryProto.QueryBuyPriceResponse.class, com.ixo.bonds.v1beta1.QueryProto.QueryBuyPriceResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADJUSTED_SUPPLY_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin adjustedSupply_;
     /**
@@ -12228,7 +12191,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAdjustedSupply() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return adjustedSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin adjusted_supply = 1 [json_name = "adjustedSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"adjusted_supply&#92;""];</code>
@@ -12424,7 +12387,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (adjustedSupply_ != null) {
         output.writeMessage(1, getAdjustedSupply());
       }
       for (int i = 0; i < prices_.size(); i++) {
@@ -12448,7 +12411,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (adjustedSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAdjustedSupply());
       }
@@ -12651,23 +12614,13 @@ public final class QueryProto {
 
       // Construct using com.ixo.bonds.v1beta1.QueryProto.QueryBuyPriceResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAdjustedSupplyFieldBuilder();
-          getPricesFieldBuilder();
-          getTxFeesFieldBuilder();
-          getTotalPricesFieldBuilder();
-          getTotalFeesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12779,14 +12732,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.QueryProto.QueryBuyPriceResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.adjustedSupply_ = adjustedSupplyBuilder_ == null
               ? adjustedSupply_
               : adjustedSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13108,10 +13058,8 @@ public final class QueryProto {
         } else {
           adjustedSupplyBuilder_.mergeFrom(value);
         }
-        if (adjustedSupply_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -15080,7 +15028,6 @@ public final class QueryProto {
               com.ixo.bonds.v1beta1.QueryProto.QuerySellReturnResponse.class, com.ixo.bonds.v1beta1.QueryProto.QuerySellReturnResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADJUSTED_SUPPLY_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin adjustedSupply_;
     /**
@@ -15089,7 +15036,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAdjustedSupply() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return adjustedSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin adjusted_supply = 1 [json_name = "adjustedSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"adjusted_supply&#92;""];</code>
@@ -15326,7 +15273,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (adjustedSupply_ != null) {
         output.writeMessage(1, getAdjustedSupply());
       }
       for (int i = 0; i < returns_.size(); i++) {
@@ -15353,7 +15300,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (adjustedSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAdjustedSupply());
       }
@@ -15566,24 +15513,13 @@ public final class QueryProto {
 
       // Construct using com.ixo.bonds.v1beta1.QueryProto.QuerySellReturnResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAdjustedSupplyFieldBuilder();
-          getReturnsFieldBuilder();
-          getTxFeesFieldBuilder();
-          getExitFeesFieldBuilder();
-          getTotalReturnsFieldBuilder();
-          getTotalFeesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15711,14 +15647,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.QueryProto.QuerySellReturnResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.adjustedSupply_ = adjustedSupplyBuilder_ == null
               ? adjustedSupply_
               : adjustedSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -16079,10 +16012,8 @@ public final class QueryProto {
         } else {
           adjustedSupplyBuilder_.mergeFrom(value);
         }
-        if (adjustedSupply_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -21156,7 +21087,6 @@ public final class QueryProto {
               com.ixo.bonds.v1beta1.QueryProto.QueryParamsResponse.class, com.ixo.bonds.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.ixo.bonds.v1beta1.BondsProto.Params params_;
     /**
@@ -21165,7 +21095,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.ixo.bonds.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
@@ -21197,7 +21127,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -21209,7 +21139,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -21371,19 +21301,13 @@ public final class QueryProto {
 
       // Construct using com.ixo.bonds.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -21427,14 +21351,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.QueryProto.QueryParamsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -21600,10 +21521,8 @@ public final class QueryProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

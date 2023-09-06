@@ -611,10 +611,8 @@ public final class PermissionProto {
         } else {
           baseBuilder_.mergeFrom(value);
         }
-        if (base_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -272,7 +272,6 @@ public final class GenesisProto {
               com.umee.oracle.v1.GenesisProto.GenesisState.class, com.umee.oracle.v1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.umee.oracle.v1.OracleProto.Params params_;
     /**
@@ -281,7 +280,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -641,7 +640,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < feederDelegations_.size(); i++) {
@@ -677,7 +676,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -919,27 +918,13 @@ public final class GenesisProto {
 
       // Construct using com.umee.oracle.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getFeederDelegationsFieldBuilder();
-          getExchangeRatesFieldBuilder();
-          getMissCountersFieldBuilder();
-          getAggregateExchangeRatePrevotesFieldBuilder();
-          getAggregateExchangeRateVotesFieldBuilder();
-          getMediansFieldBuilder();
-          getHistoricPricesFieldBuilder();
-          getMedianDeviationsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1115,14 +1100,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.umee.oracle.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1600,10 +1582,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5049,7 +5029,6 @@ public final class GenesisProto {
               com.umee.oracle.v1.GenesisProto.Price.class, com.umee.oracle.v1.GenesisProto.Price.Builder.class);
     }
 
-    private int bitField0_;
     public static final int EXCHANGE_RATE_TUPLE_FIELD_NUMBER = 1;
     private com.umee.oracle.v1.OracleProto.ExchangeRateTuple exchangeRateTuple_;
     /**
@@ -5058,7 +5037,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasExchangeRateTuple() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return exchangeRateTuple_ != null;
     }
     /**
      * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
@@ -5101,7 +5080,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (exchangeRateTuple_ != null) {
         output.writeMessage(1, getExchangeRateTuple());
       }
       if (blockNum_ != 0L) {
@@ -5116,7 +5095,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (exchangeRateTuple_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getExchangeRateTuple());
       }
@@ -5287,19 +5266,13 @@ public final class GenesisProto {
 
       // Construct using com.umee.oracle.v1.GenesisProto.Price.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExchangeRateTupleFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5344,17 +5317,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.umee.oracle.v1.GenesisProto.Price result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.exchangeRateTuple_ = exchangeRateTupleBuilder_ == null
               ? exchangeRateTuple_
               : exchangeRateTupleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.blockNum_ = blockNum_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5528,10 +5498,8 @@ public final class GenesisProto {
         } else {
           exchangeRateTupleBuilder_.mergeFrom(value);
         }
-        if (exchangeRateTuple_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

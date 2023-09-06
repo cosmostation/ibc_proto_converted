@@ -327,7 +327,6 @@ public final class GenesisProto {
               com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.class, com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.osmosis.protorev.v1beta1.ParamsProto.Params params_;
     /**
@@ -340,7 +339,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -506,7 +505,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasPoolWeights() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return poolWeights_ != null;
     }
     /**
      * <pre>
@@ -733,7 +732,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < tokenPairArbRoutes_.size(); i++) {
@@ -742,7 +741,7 @@ public final class GenesisProto {
       for (int i = 0; i < baseDenoms_.size(); i++) {
         output.writeMessage(3, baseDenoms_.get(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (poolWeights_ != null) {
         output.writeMessage(4, getPoolWeights());
       }
       if (daysSinceModuleGenesis_ != 0L) {
@@ -775,7 +774,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -787,7 +786,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, baseDenoms_.get(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (poolWeights_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPoolWeights());
       }
@@ -1032,23 +1031,13 @@ public final class GenesisProto {
 
       // Construct using com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getTokenPairArbRoutesFieldBuilder();
-          getBaseDenomsFieldBuilder();
-          getPoolWeightsFieldBuilder();
-          getDeveloperFeesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1155,18 +1144,15 @@ public final class GenesisProto {
 
       private void buildPartial0(com.osmosis.protorev.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.poolWeights_ = poolWeightsBuilder_ == null
               ? poolWeights_
               : poolWeightsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.daysSinceModuleGenesis_ = daysSinceModuleGenesis_;
@@ -1186,7 +1172,6 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.pointCountForBlock_ = pointCountForBlock_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1549,10 +1534,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2353,10 +2336,8 @@ public final class GenesisProto {
         } else {
           poolWeightsBuilder_.mergeFrom(value);
         }
-        if (poolWeights_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

@@ -72,7 +72,6 @@ public final class QueryProto {
               com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PAGINATION_FIELD_NUMBER = 1;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
@@ -81,7 +80,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
@@ -113,7 +112,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -125,7 +124,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPagination());
       }
@@ -287,19 +286,13 @@ public final class QueryProto {
 
       // Construct using com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -343,14 +336,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsRequest result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -516,10 +506,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -717,7 +705,6 @@ public final class QueryProto {
               com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AIRDROPS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> airdrops_;
@@ -767,7 +754,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasPagination() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pagination_ != null;
     }
     /**
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
@@ -802,7 +789,7 @@ public final class QueryProto {
       for (int i = 0; i < airdrops_.size(); i++) {
         output.writeMessage(1, airdrops_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
       getUnknownFields().writeTo(output);
@@ -818,7 +805,7 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, airdrops_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
@@ -986,20 +973,13 @@ public final class QueryProto {
 
       // Construct using com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAirdropsFieldBuilder();
-          getPaginationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1063,14 +1043,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryAirdropsResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1515,10 +1492,8 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        if (pagination_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2176,7 +2151,6 @@ public final class QueryProto {
               com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AIRDROP_FIELD_NUMBER = 1;
     private com.crescent.claim.v1beta1.ClaimProto.Airdrop airdrop_;
     /**
@@ -2185,7 +2159,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasAirdrop() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return airdrop_ != null;
     }
     /**
      * <code>.crescent.claim.v1beta1.Airdrop airdrop = 1 [json_name = "airdrop", (.gogoproto.nullable) = false];</code>
@@ -2217,7 +2191,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (airdrop_ != null) {
         output.writeMessage(1, getAirdrop());
       }
       getUnknownFields().writeTo(output);
@@ -2229,7 +2203,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (airdrop_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAirdrop());
       }
@@ -2391,19 +2365,13 @@ public final class QueryProto {
 
       // Construct using com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAirdropFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2447,14 +2415,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryAirdropResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.airdrop_ = airdropBuilder_ == null
               ? airdrop_
               : airdropBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2620,10 +2585,8 @@ public final class QueryProto {
         } else {
           airdropBuilder_.mergeFrom(value);
         }
-        if (airdrop_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3429,7 +3392,6 @@ public final class QueryProto {
               com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.class, com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLAIM_RECORD_FIELD_NUMBER = 1;
     private com.crescent.claim.v1beta1.ClaimProto.ClaimRecord claimRecord_;
     /**
@@ -3438,7 +3400,7 @@ public final class QueryProto {
      */
     @java.lang.Override
     public boolean hasClaimRecord() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return claimRecord_ != null;
     }
     /**
      * <code>.crescent.claim.v1beta1.ClaimRecord claim_record = 1 [json_name = "claimRecord", (.gogoproto.nullable) = false];</code>
@@ -3470,7 +3432,7 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimRecord_ != null) {
         output.writeMessage(1, getClaimRecord());
       }
       getUnknownFields().writeTo(output);
@@ -3482,7 +3444,7 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (claimRecord_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getClaimRecord());
       }
@@ -3644,19 +3606,13 @@ public final class QueryProto {
 
       // Construct using com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getClaimRecordFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3700,14 +3656,11 @@ public final class QueryProto {
 
       private void buildPartial0(com.crescent.claim.v1beta1.QueryProto.QueryClaimRecordResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.claimRecord_ = claimRecordBuilder_ == null
               ? claimRecord_
               : claimRecordBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3873,10 +3826,8 @@ public final class QueryProto {
         } else {
           claimRecordBuilder_.mergeFrom(value);
         }
-        if (claimRecord_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

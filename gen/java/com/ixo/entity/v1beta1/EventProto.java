@@ -85,7 +85,6 @@ public final class EventProto {
               com.ixo.entity.v1beta1.EventProto.EntityCreatedEvent.class, com.ixo.entity.v1beta1.EventProto.EntityCreatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ENTITY_FIELD_NUMBER = 1;
     private com.ixo.entity.v1beta1.EntityProto.Entity entity_;
     /**
@@ -94,7 +93,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasEntity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return entity_ != null;
     }
     /**
      * <code>.ixo.entity.v1beta1.Entity entity = 1 [json_name = "entity"];</code>
@@ -165,7 +164,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entity_ != null) {
         output.writeMessage(1, getEntity());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -180,7 +179,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEntity());
       }
@@ -349,19 +348,13 @@ public final class EventProto {
 
       // Construct using com.ixo.entity.v1beta1.EventProto.EntityCreatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEntityFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -406,17 +399,14 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.EventProto.EntityCreatedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entity_ = entityBuilder_ == null
               ? entity_
               : entityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signer_ = signer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -592,10 +582,8 @@ public final class EventProto {
         } else {
           entityBuilder_.mergeFrom(value);
         }
-        if (entity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -853,7 +841,6 @@ public final class EventProto {
               com.ixo.entity.v1beta1.EventProto.EntityUpdatedEvent.class, com.ixo.entity.v1beta1.EventProto.EntityUpdatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ENTITY_FIELD_NUMBER = 1;
     private com.ixo.entity.v1beta1.EntityProto.Entity entity_;
     /**
@@ -862,7 +849,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasEntity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return entity_ != null;
     }
     /**
      * <code>.ixo.entity.v1beta1.Entity entity = 1 [json_name = "entity"];</code>
@@ -933,7 +920,7 @@ public final class EventProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entity_ != null) {
         output.writeMessage(1, getEntity());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
@@ -948,7 +935,7 @@ public final class EventProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (entity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEntity());
       }
@@ -1117,19 +1104,13 @@ public final class EventProto {
 
       // Construct using com.ixo.entity.v1beta1.EventProto.EntityUpdatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEntityFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1174,17 +1155,14 @@ public final class EventProto {
 
       private void buildPartial0(com.ixo.entity.v1beta1.EventProto.EntityUpdatedEvent result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entity_ = entityBuilder_ == null
               ? entity_
               : entityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signer_ = signer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1360,10 +1338,8 @@ public final class EventProto {
         } else {
           entityBuilder_.mergeFrom(value);
         }
-        if (entity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4316,7 +4292,6 @@ public final class EventProto {
               com.ixo.entity.v1beta1.EventProto.EntityAccountAuthzCreatedEvent.class, com.ixo.entity.v1beta1.EventProto.EntityAccountAuthzCreatedEvent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -4520,7 +4495,7 @@ public final class EventProto {
      */
     @java.lang.Override
     public boolean hasGrant() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return grant_ != null;
     }
     /**
      * <code>.ixo.entity.v1beta1.Grant grant = 6 [json_name = "grant"];</code>
@@ -4567,7 +4542,7 @@ public final class EventProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         output.writeMessage(6, getGrant());
       }
       getUnknownFields().writeTo(output);
@@ -4594,7 +4569,7 @@ public final class EventProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(grantee_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, grantee_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (grant_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getGrant());
       }
@@ -4776,19 +4751,13 @@ public final class EventProto {
 
       // Construct using com.ixo.entity.v1beta1.EventProto.EntityAccountAuthzCreatedEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGrantFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4852,14 +4821,11 @@ public final class EventProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.grantee_ = grantee_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.grant_ = grantBuilder_ == null
               ? grant_
               : grantBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5435,10 +5401,8 @@ public final class EventProto {
         } else {
           grantBuilder_.mergeFrom(value);
         }
-        if (grant_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

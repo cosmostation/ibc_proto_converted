@@ -257,7 +257,6 @@ public final class GaugeProto {
               com.osmosis.incentives.GaugeProto.Gauge.class, com.osmosis.incentives.GaugeProto.Gauge.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -305,7 +304,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasDistributeTo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return distributeTo_ != null;
     }
     /**
      * <pre>
@@ -411,7 +410,7 @@ public final class GaugeProto {
      */
     @java.lang.Override
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return startTime_ != null;
     }
     /**
      * <pre>
@@ -550,13 +549,13 @@ public final class GaugeProto {
       if (isPerpetual_ != false) {
         output.writeBool(2, isPerpetual_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributeTo_ != null) {
         output.writeMessage(3, getDistributeTo());
       }
       for (int i = 0; i < coins_.size(); i++) {
         output.writeMessage(4, coins_.get(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (startTime_ != null) {
         output.writeMessage(5, getStartTime());
       }
       if (numEpochsPaidOver_ != 0L) {
@@ -585,7 +584,7 @@ public final class GaugeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, isPerpetual_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributeTo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDistributeTo());
       }
@@ -593,7 +592,7 @@ public final class GaugeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, coins_.get(i));
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartTime());
       }
@@ -810,22 +809,13 @@ public final class GaugeProto {
 
       // Construct using com.osmosis.incentives.GaugeProto.Gauge.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDistributeToFieldBuilder();
-          getCoinsFieldBuilder();
-          getStartTimeFieldBuilder();
-          getDistributedCoinsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -920,18 +910,15 @@ public final class GaugeProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.isPerpetual_ = isPerpetual_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.distributeTo_ = distributeToBuilder_ == null
               ? distributeTo_
               : distributeToBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.startTime_ = startTimeBuilder_ == null
               ? startTime_
               : startTimeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.numEpochsPaidOver_ = numEpochsPaidOver_;
@@ -939,7 +926,6 @@ public final class GaugeProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.filledEpochs_ = filledEpochs_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1350,10 +1336,8 @@ public final class GaugeProto {
         } else {
           distributeToBuilder_.mergeFrom(value);
         }
-        if (distributeTo_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1841,10 +1825,8 @@ public final class GaugeProto {
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-        if (startTime_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

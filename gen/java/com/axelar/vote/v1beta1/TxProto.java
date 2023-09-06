@@ -81,7 +81,6 @@ public final class TxProto {
               com.axelar.vote.v1beta1.TxProto.VoteRequest.class, com.axelar.vote.v1beta1.TxProto.VoteRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -112,7 +111,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasVote() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return vote_ != null;
     }
     /**
      * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
@@ -150,7 +149,7 @@ public final class TxProto {
       if (pollId_ != 0L) {
         output.writeUInt64(4, pollId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (vote_ != null) {
         output.writeMessage(5, getVote());
       }
       getUnknownFields().writeTo(output);
@@ -170,7 +169,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, pollId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (vote_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getVote());
       }
@@ -337,19 +336,13 @@ public final class TxProto {
 
       // Construct using com.axelar.vote.v1beta1.TxProto.VoteRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVoteFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -401,14 +394,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pollId_ = pollId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.vote_ = voteBuilder_ == null
               ? vote_
               : voteBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -654,10 +644,8 @@ public final class TxProto {
         } else {
           voteBuilder_.mergeFrom(value);
         }
-        if (vote_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

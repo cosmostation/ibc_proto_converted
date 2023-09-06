@@ -274,7 +274,6 @@ public final class RecordProto {
                 com.cosmos.crypto.keyring.v1.RecordProto.Record.Local.class, com.cosmos.crypto.keyring.v1.RecordProto.Record.Local.Builder.class);
       }
 
-      private int bitField0_;
       public static final int PRIV_KEY_FIELD_NUMBER = 1;
       private com.google.protobuf.Any privKey_;
       /**
@@ -283,7 +282,7 @@ public final class RecordProto {
        */
       @java.lang.Override
       public boolean hasPrivKey() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return privKey_ != null;
       }
       /**
        * <code>.google.protobuf.Any priv_key = 1 [json_name = "privKey"];</code>
@@ -315,7 +314,7 @@ public final class RecordProto {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (privKey_ != null) {
           output.writeMessage(1, getPrivKey());
         }
         getUnknownFields().writeTo(output);
@@ -327,7 +326,7 @@ public final class RecordProto {
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (privKey_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getPrivKey());
         }
@@ -490,19 +489,13 @@ public final class RecordProto {
 
         // Construct using com.cosmos.crypto.keyring.v1.RecordProto.Record.Local.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getPrivKeyFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -546,14 +539,11 @@ public final class RecordProto {
 
         private void buildPartial0(com.cosmos.crypto.keyring.v1.RecordProto.Record.Local result) {
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.privKey_ = privKeyBuilder_ == null
                 ? privKey_
                 : privKeyBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -719,10 +709,8 @@ public final class RecordProto {
           } else {
             privKeyBuilder_.mergeFrom(value);
           }
-          if (privKey_ != null) {
-            bitField0_ |= 0x00000001;
-            onChanged();
-          }
+          bitField0_ |= 0x00000001;
+          onChanged();
           return this;
         }
         /**
@@ -895,7 +883,6 @@ public final class RecordProto {
                 com.cosmos.crypto.keyring.v1.RecordProto.Record.Ledger.class, com.cosmos.crypto.keyring.v1.RecordProto.Record.Ledger.Builder.class);
       }
 
-      private int bitField0_;
       public static final int PATH_FIELD_NUMBER = 1;
       private com.cosmos.crypto.hd.v1.HdProto.BIP44Params path_;
       /**
@@ -904,7 +891,7 @@ public final class RecordProto {
        */
       @java.lang.Override
       public boolean hasPath() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return path_ != null;
       }
       /**
        * <code>.cosmos.crypto.hd.v1.BIP44Params path = 1 [json_name = "path"];</code>
@@ -936,7 +923,7 @@ public final class RecordProto {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (path_ != null) {
           output.writeMessage(1, getPath());
         }
         getUnknownFields().writeTo(output);
@@ -948,7 +935,7 @@ public final class RecordProto {
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (path_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getPath());
         }
@@ -1110,19 +1097,13 @@ public final class RecordProto {
 
         // Construct using com.cosmos.crypto.keyring.v1.RecordProto.Record.Ledger.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getPathFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -1166,14 +1147,11 @@ public final class RecordProto {
 
         private void buildPartial0(com.cosmos.crypto.keyring.v1.RecordProto.Record.Ledger result) {
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.path_ = pathBuilder_ == null
                 ? path_
                 : pathBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -1339,10 +1317,8 @@ public final class RecordProto {
           } else {
             pathBuilder_.mergeFrom(value);
           }
-          if (path_ != null) {
-            bitField0_ |= 0x00000001;
-            onChanged();
-          }
+          bitField0_ |= 0x00000001;
+          onChanged();
           return this;
         }
         /**
@@ -2267,7 +2243,6 @@ public final class RecordProto {
 
     }
 
-    private int bitField0_;
     private int itemCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object item_;
@@ -2373,7 +2348,7 @@ public final class RecordProto {
      */
     @java.lang.Override
     public boolean hasPubKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return pubKey_ != null;
     }
     /**
      * <pre>
@@ -2588,7 +2563,7 @@ public final class RecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         output.writeMessage(2, getPubKey());
       }
       if (itemCase_ == 3) {
@@ -2615,7 +2590,7 @@ public final class RecordProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (pubKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPubKey());
       }
@@ -2838,19 +2813,13 @@ public final class RecordProto {
 
       // Construct using com.cosmos.crypto.keyring.v1.RecordProto.Record.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPubKeyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2913,14 +2882,11 @@ public final class RecordProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pubKey_ = pubKeyBuilder_ == null
               ? pubKey_
               : pubKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       private void buildPartialOneofs(com.cosmos.crypto.keyring.v1.RecordProto.Record result) {
@@ -3293,10 +3259,8 @@ public final class RecordProto {
         } else {
           pubKeyBuilder_.mergeFrom(value);
         }
-        if (pubKey_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

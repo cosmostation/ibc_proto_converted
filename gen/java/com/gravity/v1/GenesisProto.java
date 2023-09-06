@@ -280,7 +280,6 @@ public final class GenesisProto {
               com.gravity.v1.GenesisProto.Params.class, com.gravity.v1.GenesisProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int GRAVITY_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object gravityId_ = "";
@@ -538,7 +537,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasValsetReward() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return valsetReward_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
@@ -694,7 +693,7 @@ public final class GenesisProto {
       if (!slashFractionBadEthSignature_.isEmpty()) {
         output.writeBytes(16, slashFractionBadEthSignature_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (valsetReward_ != null) {
         output.writeMessage(17, getValsetReward());
       }
       if (bridgeActive_ != false) {
@@ -772,7 +771,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(16, slashFractionBadEthSignature_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (valsetReward_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getValsetReward());
       }
@@ -1068,19 +1067,13 @@ public final class GenesisProto {
 
       // Construct using com.gravity.v1.GenesisProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValsetRewardFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1188,12 +1181,10 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.slashFractionBadEthSignature_ = slashFractionBadEthSignature_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.valsetReward_ = valsetRewardBuilder_ == null
               ? valsetReward_
               : valsetRewardBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00010000) != 0)) {
           result.bridgeActive_ = bridgeActive_;
@@ -1205,7 +1196,6 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00040000) != 0)) {
           result.minChainFeeBasisPoints_ = minChainFeeBasisPoints_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2129,10 +2119,8 @@ public final class GenesisProto {
         } else {
           valsetRewardBuilder_.mergeFrom(value);
         }
-        if (valsetReward_ != null) {
-          bitField0_ |= 0x00008000;
-          onChanged();
-        }
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -2815,7 +2803,6 @@ public final class GenesisProto {
               com.gravity.v1.GenesisProto.GenesisState.class, com.gravity.v1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.gravity.v1.GenesisProto.Params params_;
     /**
@@ -2824,7 +2811,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
@@ -2850,7 +2837,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasGravityNonces() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return gravityNonces_ != null;
     }
     /**
      * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
@@ -3333,10 +3320,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (gravityNonces_ != null) {
         output.writeMessage(2, getGravityNonces());
       }
       for (int i = 0; i < valsets_.size(); i++) {
@@ -3381,11 +3368,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (gravityNonces_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getGravityNonces());
       }
@@ -3666,31 +3653,13 @@ public final class GenesisProto {
 
       // Construct using com.gravity.v1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getGravityNoncesFieldBuilder();
-          getValsetsFieldBuilder();
-          getValsetConfirmsFieldBuilder();
-          getBatchesFieldBuilder();
-          getBatchConfirmsFieldBuilder();
-          getLogicCallsFieldBuilder();
-          getLogicCallConfirmsFieldBuilder();
-          getAttestationsFieldBuilder();
-          getDelegateKeysFieldBuilder();
-          getErc20ToDenomsFieldBuilder();
-          getUnbatchedTransfersFieldBuilder();
-          getPendingIbcAutoForwardsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3919,20 +3888,16 @@ public final class GenesisProto {
 
       private void buildPartial0(com.gravity.v1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.gravityNonces_ = gravityNoncesBuilder_ == null
               ? gravityNonces_
               : gravityNoncesBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4537,10 +4502,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4658,10 +4621,8 @@ public final class GenesisProto {
         } else {
           gravityNoncesBuilder_.mergeFrom(value);
         }
-        if (gravityNonces_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

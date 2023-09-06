@@ -87,7 +87,6 @@ public final class GenesisProto {
               com.quasarlabs.quasarnode.qoracle.GenesisProto.GenesisState.class, com.quasarlabs.quasarnode.qoracle.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.quasarlabs.quasarnode.qoracle.ParamsProto.Params params_;
     /**
@@ -96,7 +95,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.quasarlabs.quasarnode.qoracle.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
@@ -122,7 +121,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasOsmosisGenesisState() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return osmosisGenesisState_ != null;
     }
     /**
      * <code>.quasarlabs.quasarnode.qoracle.OsmosisGenesisState osmosis_genesis_state = 4 [json_name = "osmosisGenesisState", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"osmosis_genesis_state&#92;""];</code>
@@ -154,10 +153,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (osmosisGenesisState_ != null) {
         output.writeMessage(4, getOsmosisGenesisState());
       }
       getUnknownFields().writeTo(output);
@@ -169,11 +168,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (osmosisGenesisState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOsmosisGenesisState());
       }
@@ -344,20 +343,13 @@ public final class GenesisProto {
 
       // Construct using com.quasarlabs.quasarnode.qoracle.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getOsmosisGenesisStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -406,20 +398,16 @@ public final class GenesisProto {
 
       private void buildPartial0(com.quasarlabs.quasarnode.qoracle.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.osmosisGenesisState_ = osmosisGenesisStateBuilder_ == null
               ? osmosisGenesisState_
               : osmosisGenesisStateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -595,10 +583,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -716,10 +702,8 @@ public final class GenesisProto {
         } else {
           osmosisGenesisStateBuilder_.mergeFrom(value);
         }
-        if (osmosisGenesisState_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -905,7 +889,6 @@ public final class GenesisProto {
               com.quasarlabs.quasarnode.qoracle.GenesisProto.OsmosisGenesisState.class, com.quasarlabs.quasarnode.qoracle.GenesisProto.OsmosisGenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PORT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object port_ = "";
@@ -953,7 +936,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.quasarlabs.quasarnode.qoracle.osmosis.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
@@ -988,7 +971,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, port_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       getUnknownFields().writeTo(output);
@@ -1003,7 +986,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, port_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -1169,19 +1152,13 @@ public final class GenesisProto {
 
       // Construct using com.quasarlabs.quasarnode.qoracle.GenesisProto.OsmosisGenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1229,14 +1206,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.port_ = port_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1484,10 +1458,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

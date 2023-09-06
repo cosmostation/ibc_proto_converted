@@ -118,7 +118,6 @@ public final class TypesProto {
               com.cosmos.base.tendermint.v1beta1.TypesProto.Block.class, com.cosmos.base.tendermint.v1beta1.TypesProto.Block.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEADER_FIELD_NUMBER = 1;
     private com.cosmos.base.tendermint.v1beta1.TypesProto.Header header_;
     /**
@@ -127,7 +126,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasHeader() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return header_ != null;
     }
     /**
      * <code>.cosmos.base.tendermint.v1beta1.Header header = 1 [json_name = "header", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -153,7 +152,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return data_ != null;
     }
     /**
      * <code>.tendermint.types.Data data = 2 [json_name = "data", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -179,7 +178,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasEvidence() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return evidence_ != null;
     }
     /**
      * <code>.tendermint.types.EvidenceList evidence = 3 [json_name = "evidence", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -205,7 +204,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasLastCommit() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return lastCommit_ != null;
     }
     /**
      * <code>.tendermint.types.Commit last_commit = 4 [json_name = "lastCommit"];</code>
@@ -237,16 +236,16 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (header_ != null) {
         output.writeMessage(1, getHeader());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         output.writeMessage(2, getData());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (evidence_ != null) {
         output.writeMessage(3, getEvidence());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (lastCommit_ != null) {
         output.writeMessage(4, getLastCommit());
       }
       getUnknownFields().writeTo(output);
@@ -258,19 +257,19 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (header_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHeader());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getData());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (evidence_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEvidence());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (lastCommit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLastCommit());
       }
@@ -460,22 +459,13 @@ public final class TypesProto {
 
       // Construct using com.cosmos.base.tendermint.v1beta1.TypesProto.Block.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHeaderFieldBuilder();
-          getDataFieldBuilder();
-          getEvidenceFieldBuilder();
-          getLastCommitFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -534,32 +524,26 @@ public final class TypesProto {
 
       private void buildPartial0(com.cosmos.base.tendermint.v1beta1.TypesProto.Block result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.header_ = headerBuilder_ == null
               ? header_
               : headerBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.evidence_ = evidenceBuilder_ == null
               ? evidence_
               : evidenceBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.lastCommit_ = lastCommitBuilder_ == null
               ? lastCommit_
               : lastCommitBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -755,10 +739,8 @@ public final class TypesProto {
         } else {
           headerBuilder_.mergeFrom(value);
         }
-        if (header_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -876,10 +858,8 @@ public final class TypesProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -997,10 +977,8 @@ public final class TypesProto {
         } else {
           evidenceBuilder_.mergeFrom(value);
         }
-        if (evidence_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1118,10 +1096,8 @@ public final class TypesProto {
         } else {
           lastCommitBuilder_.mergeFrom(value);
         }
-        if (lastCommit_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1480,7 +1456,6 @@ public final class TypesProto {
               com.cosmos.base.tendermint.v1beta1.TypesProto.Header.class, com.cosmos.base.tendermint.v1beta1.TypesProto.Header.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private com.tendermint.version.TypesProto.Consensus version_;
     /**
@@ -1493,7 +1468,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasVersion() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return version_ != null;
     }
     /**
      * <pre>
@@ -1577,7 +1552,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return time_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp time = 4 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
@@ -1607,7 +1582,7 @@ public final class TypesProto {
      */
     @java.lang.Override
     public boolean hasLastBlockId() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return lastBlockId_ != null;
     }
     /**
      * <pre>
@@ -1818,7 +1793,7 @@ public final class TypesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (version_ != null) {
         output.writeMessage(1, getVersion());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
@@ -1827,10 +1802,10 @@ public final class TypesProto {
       if (height_ != 0L) {
         output.writeInt64(3, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         output.writeMessage(4, getTime());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lastBlockId_ != null) {
         output.writeMessage(5, getLastBlockId());
       }
       if (!lastCommitHash_.isEmpty()) {
@@ -1869,7 +1844,7 @@ public final class TypesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (version_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVersion());
       }
@@ -1880,11 +1855,11 @@ public final class TypesProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, height_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (time_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTime());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lastBlockId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLastBlockId());
       }
@@ -2144,21 +2119,13 @@ public final class TypesProto {
 
       // Construct using com.cosmos.base.tendermint.v1beta1.TypesProto.Header.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVersionFieldBuilder();
-          getTimeFieldBuilder();
-          getLastBlockIdFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2223,12 +2190,10 @@ public final class TypesProto {
 
       private void buildPartial0(com.cosmos.base.tendermint.v1beta1.TypesProto.Header result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.version_ = versionBuilder_ == null
               ? version_
               : versionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.chainId_ = chainId_;
@@ -2240,13 +2205,11 @@ public final class TypesProto {
           result.time_ = timeBuilder_ == null
               ? time_
               : timeBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.lastBlockId_ = lastBlockIdBuilder_ == null
               ? lastBlockId_
               : lastBlockIdBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.lastCommitHash_ = lastCommitHash_;
@@ -2275,7 +2238,6 @@ public final class TypesProto {
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.proposerAddress_ = proposerAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2573,10 +2535,8 @@ public final class TypesProto {
         } else {
           versionBuilder_.mergeFrom(value);
         }
-        if (version_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2814,10 +2774,8 @@ public final class TypesProto {
         } else {
           timeBuilder_.mergeFrom(value);
         }
-        if (time_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2955,10 +2913,8 @@ public final class TypesProto {
         } else {
           lastBlockIdBuilder_.mergeFrom(value);
         }
-        if (lastBlockId_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

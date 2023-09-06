@@ -873,7 +873,6 @@ public final class MsgProto {
               com.sentinel.session.v2.MsgProto.MsgUpdateDetailsRequest.class, com.sentinel.session.v2.MsgProto.MsgUpdateDetailsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FROM_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object from_ = "";
@@ -921,7 +920,7 @@ public final class MsgProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proof_ != null;
     }
     /**
      * <code>.sentinel.session.v2.Proof proof = 2 [json_name = "proof", (.gogoproto.nullable) = false];</code>
@@ -967,7 +966,7 @@ public final class MsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(2, getProof());
       }
       if (!signature_.isEmpty()) {
@@ -985,7 +984,7 @@ public final class MsgProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProof());
       }
@@ -1159,19 +1158,13 @@ public final class MsgProto {
 
       // Construct using com.sentinel.session.v2.MsgProto.MsgUpdateDetailsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1220,17 +1213,14 @@ public final class MsgProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.from_ = from_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.signature_ = signature_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1486,10 +1476,8 @@ public final class MsgProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

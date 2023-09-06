@@ -397,8 +397,7 @@ public final class ClaimRecordProto {
 
     public static final int ACTION_COMPLETED_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.BooleanList actionCompleted_ =
-        emptyBooleanList();
+    private com.google.protobuf.Internal.BooleanList actionCompleted_;
     /**
      * <pre>
      * true if action is completed
@@ -719,16 +718,17 @@ public final class ClaimRecordProto {
         } else {
           result.initialClaimableAmount_ = initialClaimableAmountBuilder_.build();
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          actionCompleted_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.actionCompleted_ = actionCompleted_;
       }
 
       private void buildPartial0(com.publicawesome.stargaze.claim.v1beta1.ClaimRecordProto.ClaimRecord result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          actionCompleted_.makeImmutable();
-          result.actionCompleted_ = actionCompleted_;
         }
       }
 
@@ -810,8 +810,7 @@ public final class ClaimRecordProto {
         if (!other.actionCompleted_.isEmpty()) {
           if (actionCompleted_.isEmpty()) {
             actionCompleted_ = other.actionCompleted_;
-            actionCompleted_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureActionCompletedIsMutable();
             actionCompleted_.addAll(other.actionCompleted_);
@@ -871,8 +870,7 @@ public final class ClaimRecordProto {
               case 34: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureActionCompletedIsMutable(alloc / 1);
+                ensureActionCompletedIsMutable();
                 while (input.getBytesUntilLimit() > 0) {
                   actionCompleted_.addBoolean(input.readBool());
                 }
@@ -1302,16 +1300,10 @@ public final class ClaimRecordProto {
 
       private com.google.protobuf.Internal.BooleanList actionCompleted_ = emptyBooleanList();
       private void ensureActionCompletedIsMutable() {
-        if (!actionCompleted_.isModifiable()) {
-          actionCompleted_ = makeMutableCopy(actionCompleted_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          actionCompleted_ = mutableCopy(actionCompleted_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
-      }
-      private void ensureActionCompletedIsMutable(int capacity) {
-        if (!actionCompleted_.isModifiable()) {
-          actionCompleted_ = makeMutableCopy(actionCompleted_, capacity);
-        }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1324,8 +1316,8 @@ public final class ClaimRecordProto {
        */
       public java.util.List<java.lang.Boolean>
           getActionCompletedList() {
-        actionCompleted_.makeImmutable();
-        return actionCompleted_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(actionCompleted_) : actionCompleted_;
       }
       /**
        * <pre>
@@ -1368,7 +1360,6 @@ public final class ClaimRecordProto {
 
         ensureActionCompletedIsMutable();
         actionCompleted_.setBoolean(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1386,7 +1377,6 @@ public final class ClaimRecordProto {
 
         ensureActionCompletedIsMutable();
         actionCompleted_.addBoolean(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1405,7 +1395,6 @@ public final class ClaimRecordProto {
         ensureActionCompletedIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, actionCompleted_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

@@ -81,7 +81,6 @@ public final class ParamsProto {
               com.sentinel.provider.v2.ParamsProto.Params.class, com.sentinel.provider.v2.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DEPOSIT_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin deposit_;
     /**
@@ -90,7 +89,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasDeposit() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return deposit_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin deposit = 1 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
@@ -161,7 +160,7 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deposit_ != null) {
         output.writeMessage(1, getDeposit());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(revenueShare_)) {
@@ -176,7 +175,7 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (deposit_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeposit());
       }
@@ -341,19 +340,13 @@ public final class ParamsProto {
 
       // Construct using com.sentinel.provider.v2.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDepositFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -398,17 +391,14 @@ public final class ParamsProto {
 
       private void buildPartial0(com.sentinel.provider.v2.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.deposit_ = depositBuilder_ == null
               ? deposit_
               : depositBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.revenueShare_ = revenueShare_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -584,10 +574,8 @@ public final class ParamsProto {
         } else {
           depositBuilder_.mergeFrom(value);
         }
-        if (deposit_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

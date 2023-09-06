@@ -5124,7 +5124,6 @@ public final class TxProto {
 
     }
 
-    private int bitField0_;
     public static final int ISSUER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuer_ = "";
@@ -5308,7 +5307,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startDate_ != null;
     }
     /**
      * <pre>
@@ -5349,7 +5348,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasEndDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return endDate_ != null;
     }
     /**
      * <pre>
@@ -5403,10 +5402,10 @@ public final class TxProto {
       if (!metadata_.isEmpty()) {
         output.writeBytes(4, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         output.writeMessage(5, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         output.writeMessage(6, getEndDate());
       }
       getUnknownFields().writeTo(output);
@@ -5432,11 +5431,11 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, metadata_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (endDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getEndDate());
       }
@@ -5625,21 +5624,13 @@ public final class TxProto {
 
       // Construct using com.regen.ecocredit.v1alpha2.TxProto.MsgCreateBatch.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIssuanceFieldBuilder();
-          getStartDateFieldBuilder();
-          getEndDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5720,20 +5711,16 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.metadata_ = metadata_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.startDate_ = startDateBuilder_ == null
               ? startDate_
               : startDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.endDate_ = endDateBuilder_ == null
               ? endDate_
               : endDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6541,10 +6528,8 @@ public final class TxProto {
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-        if (startDate_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -6707,10 +6692,8 @@ public final class TxProto {
         } else {
           endDateBuilder_.mergeFrom(value);
         }
-        if (endDate_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -19508,7 +19491,6 @@ public final class TxProto {
                 com.regen.ecocredit.v1alpha2.TxProto.MsgSell.Order.class, com.regen.ecocredit.v1alpha2.TxProto.MsgSell.Order.Builder.class);
       }
 
-      private int bitField0_;
       public static final int BATCH_DENOM_FIELD_NUMBER = 1;
       @SuppressWarnings("serial")
       private volatile java.lang.Object batchDenom_ = "";
@@ -19625,7 +19607,7 @@ public final class TxProto {
        */
       @java.lang.Override
       public boolean hasAskPrice() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return askPrice_ != null;
       }
       /**
        * <pre>
@@ -19692,7 +19674,7 @@ public final class TxProto {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, quantity_);
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (askPrice_ != null) {
           output.writeMessage(3, getAskPrice());
         }
         if (disableAutoRetire_ != false) {
@@ -19713,7 +19695,7 @@ public final class TxProto {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, quantity_);
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (askPrice_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getAskPrice());
         }
@@ -19892,19 +19874,13 @@ public final class TxProto {
 
         // Construct using com.regen.ecocredit.v1alpha2.TxProto.MsgSell.Order.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getAskPriceFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -19957,17 +19933,14 @@ public final class TxProto {
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.quantity_ = quantity_;
           }
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000004) != 0)) {
             result.askPrice_ = askPriceBuilder_ == null
                 ? askPrice_
                 : askPriceBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
           if (((from_bitField0_ & 0x00000008) != 0)) {
             result.disableAutoRetire_ = disableAutoRetire_;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -20395,10 +20368,8 @@ public final class TxProto {
           } else {
             askPriceBuilder_.mergeFrom(value);
           }
-          if (askPrice_ != null) {
-            bitField0_ |= 0x00000004;
-            onChanged();
-          }
+          bitField0_ |= 0x00000004;
+          onChanged();
           return this;
         }
         /**
@@ -21639,8 +21610,7 @@ public final class TxProto {
 
     public static final int SELL_ORDER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList sellOrderIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList sellOrderIds_;
     /**
      * <pre>
      * sell_order_ids are the sell order IDs of the newly created sell orders.
@@ -21918,17 +21888,22 @@ public final class TxProto {
       @java.lang.Override
       public com.regen.ecocredit.v1alpha2.TxProto.MsgSellResponse buildPartial() {
         com.regen.ecocredit.v1alpha2.TxProto.MsgSellResponse result = new com.regen.ecocredit.v1alpha2.TxProto.MsgSellResponse(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.regen.ecocredit.v1alpha2.TxProto.MsgSellResponse result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sellOrderIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sellOrderIds_ = sellOrderIds_;
+      }
+
       private void buildPartial0(com.regen.ecocredit.v1alpha2.TxProto.MsgSellResponse result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          sellOrderIds_.makeImmutable();
-          result.sellOrderIds_ = sellOrderIds_;
-        }
       }
 
       @java.lang.Override
@@ -21978,8 +21953,7 @@ public final class TxProto {
         if (!other.sellOrderIds_.isEmpty()) {
           if (sellOrderIds_.isEmpty()) {
             sellOrderIds_ = other.sellOrderIds_;
-            sellOrderIds_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSellOrderIdsIsMutable();
             sellOrderIds_.addAll(other.sellOrderIds_);
@@ -22047,10 +22021,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList sellOrderIds_ = emptyLongList();
       private void ensureSellOrderIdsIsMutable() {
-        if (!sellOrderIds_.isModifiable()) {
-          sellOrderIds_ = makeMutableCopy(sellOrderIds_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sellOrderIds_ = mutableCopy(sellOrderIds_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -22062,8 +22036,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getSellOrderIdsList() {
-        sellOrderIds_.makeImmutable();
-        return sellOrderIds_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(sellOrderIds_) : sellOrderIds_;
       }
       /**
        * <pre>
@@ -22103,7 +22077,6 @@ public final class TxProto {
 
         ensureSellOrderIdsIsMutable();
         sellOrderIds_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22120,7 +22093,6 @@ public final class TxProto {
 
         ensureSellOrderIdsIsMutable();
         sellOrderIds_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22138,7 +22110,6 @@ public final class TxProto {
         ensureSellOrderIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, sellOrderIds_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22442,7 +22413,6 @@ public final class TxProto {
                 com.regen.ecocredit.v1alpha2.TxProto.MsgUpdateSellOrders.Update.class, com.regen.ecocredit.v1alpha2.TxProto.MsgUpdateSellOrders.Update.Builder.class);
       }
 
-      private int bitField0_;
       public static final int SELL_ORDER_ID_FIELD_NUMBER = 1;
       private long sellOrderId_ = 0L;
       /**
@@ -22519,7 +22489,7 @@ public final class TxProto {
        */
       @java.lang.Override
       public boolean hasNewAskPrice() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return newAskPrice_ != null;
       }
       /**
        * <pre>
@@ -22580,7 +22550,7 @@ public final class TxProto {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newQuantity_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newQuantity_);
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (newAskPrice_ != null) {
           output.writeMessage(3, getNewAskPrice());
         }
         if (disableAutoRetire_ != false) {
@@ -22602,7 +22572,7 @@ public final class TxProto {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newQuantity_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newQuantity_);
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (newAskPrice_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getNewAskPrice());
         }
@@ -22782,19 +22752,13 @@ public final class TxProto {
 
         // Construct using com.regen.ecocredit.v1alpha2.TxProto.MsgUpdateSellOrders.Update.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getNewAskPriceFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -22847,17 +22811,14 @@ public final class TxProto {
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.newQuantity_ = newQuantity_;
           }
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000004) != 0)) {
             result.newAskPrice_ = newAskPriceBuilder_ == null
                 ? newAskPrice_
                 : newAskPriceBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
           if (((from_bitField0_ & 0x00000008) != 0)) {
             result.disableAutoRetire_ = disableAutoRetire_;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -23210,10 +23171,8 @@ public final class TxProto {
           } else {
             newAskPriceBuilder_.mergeFrom(value);
           }
-          if (newAskPrice_ != null) {
-            bitField0_ |= 0x00000004;
-            onChanged();
-          }
+          bitField0_ |= 0x00000004;
+          onChanged();
           return this;
         }
         /**
@@ -25675,7 +25634,6 @@ public final class TxProto {
 
       }
 
-      private int bitField0_;
       public static final int SELECTION_FIELD_NUMBER = 1;
       private com.regen.ecocredit.v1alpha2.TxProto.MsgBuy.Order.Selection selection_;
       /**
@@ -25688,7 +25646,7 @@ public final class TxProto {
        */
       @java.lang.Override
       public boolean hasSelection() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return selection_ != null;
       }
       /**
        * <pre>
@@ -25780,7 +25738,7 @@ public final class TxProto {
        */
       @java.lang.Override
       public boolean hasBidPrice() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return bidPrice_ != null;
       }
       /**
        * <pre>
@@ -25861,13 +25819,13 @@ public final class TxProto {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (selection_ != null) {
           output.writeMessage(1, getSelection());
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, quantity_);
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (bidPrice_ != null) {
           output.writeMessage(3, getBidPrice());
         }
         if (disableAutoRetire_ != false) {
@@ -25885,14 +25843,14 @@ public final class TxProto {
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (selection_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getSelection());
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, quantity_);
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (bidPrice_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getBidPrice());
         }
@@ -26085,20 +26043,13 @@ public final class TxProto {
 
         // Construct using com.regen.ecocredit.v1alpha2.TxProto.MsgBuy.Order.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getSelectionFieldBuilder();
-            getBidPriceFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -26150,12 +26101,10 @@ public final class TxProto {
 
         private void buildPartial0(com.regen.ecocredit.v1alpha2.TxProto.MsgBuy.Order result) {
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.selection_ = selectionBuilder_ == null
                 ? selection_
                 : selectionBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.quantity_ = quantity_;
@@ -26164,7 +26113,6 @@ public final class TxProto {
             result.bidPrice_ = bidPriceBuilder_ == null
                 ? bidPrice_
                 : bidPriceBuilder_.build();
-            to_bitField0_ |= 0x00000002;
           }
           if (((from_bitField0_ & 0x00000008) != 0)) {
             result.disableAutoRetire_ = disableAutoRetire_;
@@ -26172,7 +26120,6 @@ public final class TxProto {
           if (((from_bitField0_ & 0x00000010) != 0)) {
             result.disablePartialFill_ = disablePartialFill_;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -26394,10 +26341,8 @@ public final class TxProto {
           } else {
             selectionBuilder_.mergeFrom(value);
           }
-          if (selection_ != null) {
-            bitField0_ |= 0x00000001;
-            onChanged();
-          }
+          bitField0_ |= 0x00000001;
+          onChanged();
           return this;
         }
         /**
@@ -26668,10 +26613,8 @@ public final class TxProto {
           } else {
             bidPriceBuilder_.mergeFrom(value);
           }
-          if (bidPrice_ != null) {
-            bitField0_ |= 0x00000004;
-            onChanged();
-          }
+          bitField0_ |= 0x00000004;
+          onChanged();
           return this;
         }
         /**
@@ -27975,8 +27918,7 @@ public final class TxProto {
 
     public static final int BUY_ORDER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList buyOrderIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList buyOrderIds_;
     /**
      * <pre>
      * buy_order_ids are the buy order IDs of the newly created buy orders. Buy
@@ -28260,17 +28202,22 @@ public final class TxProto {
       @java.lang.Override
       public com.regen.ecocredit.v1alpha2.TxProto.MsgBuyResponse buildPartial() {
         com.regen.ecocredit.v1alpha2.TxProto.MsgBuyResponse result = new com.regen.ecocredit.v1alpha2.TxProto.MsgBuyResponse(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.regen.ecocredit.v1alpha2.TxProto.MsgBuyResponse result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          buyOrderIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.buyOrderIds_ = buyOrderIds_;
+      }
+
       private void buildPartial0(com.regen.ecocredit.v1alpha2.TxProto.MsgBuyResponse result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          buyOrderIds_.makeImmutable();
-          result.buyOrderIds_ = buyOrderIds_;
-        }
       }
 
       @java.lang.Override
@@ -28320,8 +28267,7 @@ public final class TxProto {
         if (!other.buyOrderIds_.isEmpty()) {
           if (buyOrderIds_.isEmpty()) {
             buyOrderIds_ = other.buyOrderIds_;
-            buyOrderIds_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureBuyOrderIdsIsMutable();
             buyOrderIds_.addAll(other.buyOrderIds_);
@@ -28389,10 +28335,10 @@ public final class TxProto {
 
       private com.google.protobuf.Internal.LongList buyOrderIds_ = emptyLongList();
       private void ensureBuyOrderIdsIsMutable() {
-        if (!buyOrderIds_.isModifiable()) {
-          buyOrderIds_ = makeMutableCopy(buyOrderIds_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          buyOrderIds_ = mutableCopy(buyOrderIds_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -28406,8 +28352,8 @@ public final class TxProto {
        */
       public java.util.List<java.lang.Long>
           getBuyOrderIdsList() {
-        buyOrderIds_.makeImmutable();
-        return buyOrderIds_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(buyOrderIds_) : buyOrderIds_;
       }
       /**
        * <pre>
@@ -28453,7 +28399,6 @@ public final class TxProto {
 
         ensureBuyOrderIdsIsMutable();
         buyOrderIds_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -28472,7 +28417,6 @@ public final class TxProto {
 
         ensureBuyOrderIdsIsMutable();
         buyOrderIds_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -28492,7 +28436,6 @@ public final class TxProto {
         ensureBuyOrderIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, buyOrderIds_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

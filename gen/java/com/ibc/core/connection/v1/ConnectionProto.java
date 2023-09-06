@@ -355,7 +355,6 @@ public final class ConnectionProto {
               com.ibc.core.connection.v1.ConnectionProto.ConnectionEnd.class, com.ibc.core.connection.v1.ConnectionProto.ConnectionEnd.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLIENT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object clientId_ = "";
@@ -507,7 +506,7 @@ public final class ConnectionProto {
      */
     @java.lang.Override
     public boolean hasCounterparty() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return counterparty_ != null;
     }
     /**
      * <pre>
@@ -573,7 +572,7 @@ public final class ConnectionProto {
       if (state_ != com.ibc.core.connection.v1.ConnectionProto.State.STATE_UNINITIALIZED_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, state_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (counterparty_ != null) {
         output.writeMessage(4, getCounterparty());
       }
       if (delayPeriod_ != 0L) {
@@ -599,7 +598,7 @@ public final class ConnectionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, state_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (counterparty_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCounterparty());
       }
@@ -786,20 +785,13 @@ public final class ConnectionProto {
 
       // Construct using com.ibc.core.connection.v1.ConnectionProto.ConnectionEnd.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVersionsFieldBuilder();
-          getCounterpartyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -872,17 +864,14 @@ public final class ConnectionProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.state_ = state_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.counterparty_ = counterpartyBuilder_ == null
               ? counterparty_
               : counterpartyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.delayPeriod_ = delayPeriod_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1628,10 +1617,8 @@ public final class ConnectionProto {
         } else {
           counterpartyBuilder_.mergeFrom(value);
         }
-        if (counterparty_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2005,7 +1992,6 @@ public final class ConnectionProto {
               com.ibc.core.connection.v1.ConnectionProto.IdentifiedConnection.class, com.ibc.core.connection.v1.ConnectionProto.IdentifiedConnection.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -2204,7 +2190,7 @@ public final class ConnectionProto {
      */
     @java.lang.Override
     public boolean hasCounterparty() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return counterparty_ != null;
     }
     /**
      * <pre>
@@ -2271,7 +2257,7 @@ public final class ConnectionProto {
       if (state_ != com.ibc.core.connection.v1.ConnectionProto.State.STATE_UNINITIALIZED_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, state_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (counterparty_ != null) {
         output.writeMessage(5, getCounterparty());
       }
       if (delayPeriod_ != 0L) {
@@ -2300,7 +2286,7 @@ public final class ConnectionProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, state_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (counterparty_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCounterparty());
       }
@@ -2489,20 +2475,13 @@ public final class ConnectionProto {
 
       // Construct using com.ibc.core.connection.v1.ConnectionProto.IdentifiedConnection.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getVersionsFieldBuilder();
-          getCounterpartyFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2579,17 +2558,14 @@ public final class ConnectionProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.state_ = state_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.counterparty_ = counterpartyBuilder_ == null
               ? counterparty_
               : counterpartyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.delayPeriod_ = delayPeriod_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3437,10 +3413,8 @@ public final class ConnectionProto {
         } else {
           counterpartyBuilder_.mergeFrom(value);
         }
-        if (counterparty_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3731,7 +3705,6 @@ public final class ConnectionProto {
               com.ibc.core.connection.v1.ConnectionProto.Counterparty.class, com.ibc.core.connection.v1.ConnectionProto.Counterparty.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLIENT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object clientId_ = "";
@@ -3842,7 +3815,7 @@ public final class ConnectionProto {
      */
     @java.lang.Override
     public boolean hasPrefix() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return prefix_ != null;
     }
     /**
      * <pre>
@@ -3888,7 +3861,7 @@ public final class ConnectionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (prefix_ != null) {
         output.writeMessage(3, getPrefix());
       }
       getUnknownFields().writeTo(output);
@@ -3906,7 +3879,7 @@ public final class ConnectionProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (prefix_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPrefix());
       }
@@ -4076,19 +4049,13 @@ public final class ConnectionProto {
 
       // Construct using com.ibc.core.connection.v1.ConnectionProto.Counterparty.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPrefixFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4140,14 +4107,11 @@ public final class ConnectionProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.connectionId_ = connectionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.prefix_ = prefixBuilder_ == null
               ? prefix_
               : prefixBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4547,10 +4511,8 @@ public final class ConnectionProto {
         } else {
           prefixBuilder_.mergeFrom(value);
         }
-        if (prefix_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

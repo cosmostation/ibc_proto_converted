@@ -1976,7 +1976,6 @@ public final class GenesisProto {
               com.cosmos.distribution.v1beta1.GenesisProto.ValidatorAccumulatedCommissionRecord.class, com.cosmos.distribution.v1beta1.GenesisProto.ValidatorAccumulatedCommissionRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
@@ -2036,7 +2035,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasAccumulated() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return accumulated_ != null;
     }
     /**
      * <pre>
@@ -2079,7 +2078,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (accumulated_ != null) {
         output.writeMessage(2, getAccumulated());
       }
       getUnknownFields().writeTo(output);
@@ -2094,7 +2093,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (accumulated_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAccumulated());
       }
@@ -2261,19 +2260,13 @@ public final class GenesisProto {
 
       // Construct using com.cosmos.distribution.v1beta1.GenesisProto.ValidatorAccumulatedCommissionRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAccumulatedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2321,14 +2314,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.accumulated_ = accumulatedBuilder_ == null
               ? accumulated_
               : accumulatedBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2616,10 +2606,8 @@ public final class GenesisProto {
         } else {
           accumulatedBuilder_.mergeFrom(value);
         }
-        if (accumulated_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2852,7 +2840,6 @@ public final class GenesisProto {
               com.cosmos.distribution.v1beta1.GenesisProto.ValidatorHistoricalRewardsRecord.class, com.cosmos.distribution.v1beta1.GenesisProto.ValidatorHistoricalRewardsRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
@@ -2927,7 +2914,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasRewards() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return rewards_ != null;
     }
     /**
      * <pre>
@@ -2973,7 +2960,7 @@ public final class GenesisProto {
       if (period_ != 0L) {
         output.writeUInt64(2, period_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewards_ != null) {
         output.writeMessage(3, getRewards());
       }
       getUnknownFields().writeTo(output);
@@ -2992,7 +2979,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, period_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewards_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRewards());
       }
@@ -3164,19 +3151,13 @@ public final class GenesisProto {
 
       // Construct using com.cosmos.distribution.v1beta1.GenesisProto.ValidatorHistoricalRewardsRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRewardsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3228,14 +3209,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.period_ = period_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.rewards_ = rewardsBuilder_ == null
               ? rewards_
               : rewardsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3575,10 +3553,8 @@ public final class GenesisProto {
         } else {
           rewardsBuilder_.mergeFrom(value);
         }
-        if (rewards_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3800,7 +3776,6 @@ public final class GenesisProto {
               com.cosmos.distribution.v1beta1.GenesisProto.ValidatorCurrentRewardsRecord.class, com.cosmos.distribution.v1beta1.GenesisProto.ValidatorCurrentRewardsRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
@@ -3860,7 +3835,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasRewards() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return rewards_ != null;
     }
     /**
      * <pre>
@@ -3903,7 +3878,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewards_ != null) {
         output.writeMessage(2, getRewards());
       }
       getUnknownFields().writeTo(output);
@@ -3918,7 +3893,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (rewards_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRewards());
       }
@@ -4084,19 +4059,13 @@ public final class GenesisProto {
 
       // Construct using com.cosmos.distribution.v1beta1.GenesisProto.ValidatorCurrentRewardsRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRewardsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4144,14 +4113,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.rewards_ = rewardsBuilder_ == null
               ? rewards_
               : rewardsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4439,10 +4405,8 @@ public final class GenesisProto {
         } else {
           rewardsBuilder_.mergeFrom(value);
         }
-        if (rewards_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4685,7 +4649,6 @@ public final class GenesisProto {
               com.cosmos.distribution.v1beta1.GenesisProto.DelegatorStartingInfoRecord.class, com.cosmos.distribution.v1beta1.GenesisProto.DelegatorStartingInfoRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorAddress_ = "";
@@ -4792,7 +4755,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasStartingInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startingInfo_ != null;
     }
     /**
      * <pre>
@@ -4838,7 +4801,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startingInfo_ != null) {
         output.writeMessage(3, getStartingInfo());
       }
       getUnknownFields().writeTo(output);
@@ -4856,7 +4819,7 @@ public final class GenesisProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validatorAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startingInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getStartingInfo());
       }
@@ -5026,19 +4989,13 @@ public final class GenesisProto {
 
       // Construct using com.cosmos.distribution.v1beta1.GenesisProto.DelegatorStartingInfoRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartingInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5090,14 +5047,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.validatorAddress_ = validatorAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.startingInfo_ = startingInfoBuilder_ == null
               ? startingInfo_
               : startingInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5487,10 +5441,8 @@ public final class GenesisProto {
         } else {
           startingInfoBuilder_.mergeFrom(value);
         }
-        if (startingInfo_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5732,7 +5684,6 @@ public final class GenesisProto {
               com.cosmos.distribution.v1beta1.GenesisProto.ValidatorSlashEventRecord.class, com.cosmos.distribution.v1beta1.GenesisProto.ValidatorSlashEventRecord.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
@@ -5822,7 +5773,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasValidatorSlashEvent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return validatorSlashEvent_ != null;
     }
     /**
      * <pre>
@@ -5871,7 +5822,7 @@ public final class GenesisProto {
       if (period_ != 0L) {
         output.writeUInt64(3, period_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validatorSlashEvent_ != null) {
         output.writeMessage(4, getValidatorSlashEvent());
       }
       getUnknownFields().writeTo(output);
@@ -5894,7 +5845,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, period_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (validatorSlashEvent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getValidatorSlashEvent());
       }
@@ -6070,19 +6021,13 @@ public final class GenesisProto {
 
       // Construct using com.cosmos.distribution.v1beta1.GenesisProto.ValidatorSlashEventRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValidatorSlashEventFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6138,14 +6083,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.period_ = period_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.validatorSlashEvent_ = validatorSlashEventBuilder_ == null
               ? validatorSlashEvent_
               : validatorSlashEventBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6537,10 +6479,8 @@ public final class GenesisProto {
         } else {
           validatorSlashEventBuilder_.mergeFrom(value);
         }
-        if (validatorSlashEvent_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -7104,7 +7044,6 @@ public final class GenesisProto {
               com.cosmos.distribution.v1beta1.GenesisProto.GenesisState.class, com.cosmos.distribution.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.cosmos.distribution.v1beta1.DistributionProto.Params params_;
     /**
@@ -7117,7 +7056,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <pre>
@@ -7155,7 +7094,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasFeePool() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return feePool_ != null;
     }
     /**
      * <pre>
@@ -7669,10 +7608,10 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (feePool_ != null) {
         output.writeMessage(2, getFeePool());
       }
       for (int i = 0; i < delegatorWithdrawInfos_.size(); i++) {
@@ -7708,11 +7647,11 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (feePool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFeePool());
       }
@@ -7960,27 +7899,13 @@ public final class GenesisProto {
 
       // Construct using com.cosmos.distribution.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getFeePoolFieldBuilder();
-          getDelegatorWithdrawInfosFieldBuilder();
-          getOutstandingRewardsFieldBuilder();
-          getValidatorAccumulatedCommissionsFieldBuilder();
-          getValidatorHistoricalRewardsFieldBuilder();
-          getValidatorCurrentRewardsFieldBuilder();
-          getDelegatorStartingInfosFieldBuilder();
-          getValidatorSlashEventsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8146,23 +8071,19 @@ public final class GenesisProto {
 
       private void buildPartial0(com.cosmos.distribution.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.feePool_ = feePoolBuilder_ == null
               ? feePool_
               : feePoolBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.previousProposer_ = previousProposer_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8641,10 +8562,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8798,10 +8717,8 @@ public final class GenesisProto {
         } else {
           feePoolBuilder_.mergeFrom(value);
         }
-        if (feePool_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

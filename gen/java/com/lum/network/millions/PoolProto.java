@@ -563,7 +563,6 @@ public final class PoolProto {
               com.lum.network.millions.PoolProto.Pool.class, com.lum.network.millions.PoolProto.Pool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int POOL_ID_FIELD_NUMBER = 1;
     private long poolId_ = 0L;
     /**
@@ -1014,7 +1013,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasDrawSchedule() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return drawSchedule_ != null;
     }
     /**
      * <code>.lum.network.millions.DrawSchedule draw_schedule = 14 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
@@ -1040,7 +1039,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasPrizeStrategy() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return prizeStrategy_ != null;
     }
     /**
      * <code>.lum.network.millions.PrizeStrategy prize_strategy = 15 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
@@ -1283,7 +1282,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasLastDrawCreatedAt() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return lastDrawCreatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_draw_created_at = 27 [json_name = "lastDrawCreatedAt", (.gogoproto.nullable) = true, (.gogoproto.stdtime) = true];</code>
@@ -1327,7 +1326,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasAvailablePrizePool() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return availablePrizePool_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin available_prize_pool = 29 [json_name = "availablePrizePool", (.gogoproto.nullable) = false];</code>
@@ -1393,7 +1392,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 35 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1419,7 +1418,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasUpdatedAt() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 36 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1487,10 +1486,10 @@ public final class PoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, minDepositAmount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (drawSchedule_ != null) {
         output.writeMessage(14, getDrawSchedule());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (prizeStrategy_ != null) {
         output.writeMessage(15, getPrizeStrategy());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localAddress_)) {
@@ -1514,13 +1513,13 @@ public final class PoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sponsorshipAmount_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 25, sponsorshipAmount_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lastDrawCreatedAt_ != null) {
         output.writeMessage(27, getLastDrawCreatedAt());
       }
       if (lastDrawState_ != com.lum.network.millions.DrawProto.DrawState.DRAW_STATE_UNSPECIFIED.getNumber()) {
         output.writeEnum(28, lastDrawState_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (availablePrizePool_ != null) {
         output.writeMessage(29, getAvailablePrizePool());
       }
       if (state_ != com.lum.network.millions.PoolProto.PoolState.POOL_STATE_UNSPECIFIED.getNumber()) {
@@ -1532,10 +1531,10 @@ public final class PoolProto {
       if (updatedAtHeight_ != 0L) {
         output.writeInt64(34, updatedAtHeight_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (createdAt_ != null) {
         output.writeMessage(35, getCreatedAt());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (updatedAt_ != null) {
         output.writeMessage(36, getUpdatedAt());
       }
       getUnknownFields().writeTo(output);
@@ -1585,11 +1584,11 @@ public final class PoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, minDepositAmount_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (drawSchedule_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getDrawSchedule());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (prizeStrategy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getPrizeStrategy());
       }
@@ -1616,7 +1615,7 @@ public final class PoolProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sponsorshipAmount_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, sponsorshipAmount_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (lastDrawCreatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(27, getLastDrawCreatedAt());
       }
@@ -1624,7 +1623,7 @@ public final class PoolProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(28, lastDrawState_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (availablePrizePool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(29, getAvailablePrizePool());
       }
@@ -1640,11 +1639,11 @@ public final class PoolProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(34, updatedAtHeight_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(35, getCreatedAt());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (updatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(36, getUpdatedAt());
       }
@@ -1944,25 +1943,13 @@ public final class PoolProto {
 
       // Construct using com.lum.network.millions.PoolProto.Pool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValidatorsFieldBuilder();
-          getDrawScheduleFieldBuilder();
-          getPrizeStrategyFieldBuilder();
-          getLastDrawCreatedAtFieldBuilder();
-          getAvailablePrizePoolFieldBuilder();
-          getCreatedAtFieldBuilder();
-          getUpdatedAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2106,18 +2093,15 @@ public final class PoolProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.minDepositAmount_ = minDepositAmount_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.drawSchedule_ = drawScheduleBuilder_ == null
               ? drawSchedule_
               : drawScheduleBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.prizeStrategy_ = prizeStrategyBuilder_ == null
               ? prizeStrategy_
               : prizeStrategyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.localAddress_ = localAddress_;
@@ -2144,7 +2128,6 @@ public final class PoolProto {
           result.lastDrawCreatedAt_ = lastDrawCreatedAtBuilder_ == null
               ? lastDrawCreatedAt_
               : lastDrawCreatedAtBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00400000) != 0)) {
           result.lastDrawState_ = lastDrawState_;
@@ -2153,7 +2136,6 @@ public final class PoolProto {
           result.availablePrizePool_ = availablePrizePoolBuilder_ == null
               ? availablePrizePool_
               : availablePrizePoolBuilder_.build();
-          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x01000000) != 0)) {
           result.state_ = state_;
@@ -2168,15 +2150,12 @@ public final class PoolProto {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
-          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x10000000) != 0)) {
           result.updatedAt_ = updatedAtBuilder_ == null
               ? updatedAt_
               : updatedAtBuilder_.build();
-          to_bitField0_ |= 0x00000020;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3629,10 +3608,8 @@ public final class PoolProto {
         } else {
           drawScheduleBuilder_.mergeFrom(value);
         }
-        if (drawSchedule_ != null) {
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3750,10 +3727,8 @@ public final class PoolProto {
         } else {
           prizeStrategyBuilder_.mergeFrom(value);
         }
-        if (prizeStrategy_ != null) {
-          bitField0_ |= 0x00002000;
-          onChanged();
-        }
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -4295,10 +4270,8 @@ public final class PoolProto {
         } else {
           lastDrawCreatedAtBuilder_.mergeFrom(value);
         }
-        if (lastDrawCreatedAt_ != null) {
-          bitField0_ |= 0x00200000;
-          onChanged();
-        }
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -4469,10 +4442,8 @@ public final class PoolProto {
         } else {
           availablePrizePoolBuilder_.mergeFrom(value);
         }
-        if (availablePrizePool_ != null) {
-          bitField0_ |= 0x00800000;
-          onChanged();
-        }
+        bitField0_ |= 0x00800000;
+        onChanged();
         return this;
       }
       /**
@@ -4707,10 +4678,8 @@ public final class PoolProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        if (createdAt_ != null) {
-          bitField0_ |= 0x08000000;
-          onChanged();
-        }
+        bitField0_ |= 0x08000000;
+        onChanged();
         return this;
       }
       /**
@@ -4828,10 +4797,8 @@ public final class PoolProto {
         } else {
           updatedAtBuilder_.mergeFrom(value);
         }
-        if (updatedAt_ != null) {
-          bitField0_ |= 0x10000000;
-          onChanged();
-        }
+        bitField0_ |= 0x10000000;
+        onChanged();
         return this;
       }
       /**

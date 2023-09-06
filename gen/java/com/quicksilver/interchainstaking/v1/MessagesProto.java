@@ -99,7 +99,6 @@ public final class MessagesProto {
               com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     private com.cosmos.base.v1beta1.CoinProto.Coin value_;
     /**
@@ -108,7 +107,7 @@ public final class MessagesProto {
      */
     @java.lang.Override
     public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return value_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
@@ -218,7 +217,7 @@ public final class MessagesProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         output.writeMessage(1, getValue());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationAddress_)) {
@@ -236,7 +235,7 @@ public final class MessagesProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValue());
       }
@@ -413,19 +412,13 @@ public final class MessagesProto {
 
       // Construct using com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -471,12 +464,10 @@ public final class MessagesProto {
 
       private void buildPartial0(com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.destinationAddress_ = destinationAddress_;
@@ -484,7 +475,6 @@ public final class MessagesProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.fromAddress_ = fromAddress_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -670,10 +660,8 @@ public final class MessagesProto {
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        if (value_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

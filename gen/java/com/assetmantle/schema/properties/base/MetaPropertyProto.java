@@ -83,7 +83,6 @@ public final class MetaPropertyProto {
               com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.class, com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.Builder.class);
     }
 
-    private int bitField0_;
     public static final int I_D_FIELD_NUMBER = 1;
     private com.assetmantle.schema.ids.base.PropertyIdProto.PropertyID iD_;
     /**
@@ -92,7 +91,7 @@ public final class MetaPropertyProto {
      */
     @java.lang.Override
     public boolean hasID() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return iD_ != null;
     }
     /**
      * <code>.assetmantle.schema.ids.base.PropertyID i_d = 1 [json_name = "iD"];</code>
@@ -118,7 +117,7 @@ public final class MetaPropertyProto {
      */
     @java.lang.Override
     public boolean hasData() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return data_ != null;
     }
     /**
      * <code>.assetmantle.schema.data.base.AnyData data = 2 [json_name = "data"];</code>
@@ -150,10 +149,10 @@ public final class MetaPropertyProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (iD_ != null) {
         output.writeMessage(1, getID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         output.writeMessage(2, getData());
       }
       getUnknownFields().writeTo(output);
@@ -165,11 +164,11 @@ public final class MetaPropertyProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (iD_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getID());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (data_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getData());
       }
@@ -336,20 +335,13 @@ public final class MetaPropertyProto {
 
       // Construct using com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIDFieldBuilder();
-          getDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -398,20 +390,16 @@ public final class MetaPropertyProto {
 
       private void buildPartial0(com.assetmantle.schema.properties.base.MetaPropertyProto.MetaProperty result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.iD_ = iDBuilder_ == null
               ? iD_
               : iDBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.data_ = dataBuilder_ == null
               ? data_
               : dataBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -587,10 +575,8 @@ public final class MetaPropertyProto {
         } else {
           iDBuilder_.mergeFrom(value);
         }
-        if (iD_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -708,10 +694,8 @@ public final class MetaPropertyProto {
         } else {
           dataBuilder_.mergeFrom(value);
         }
-        if (data_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

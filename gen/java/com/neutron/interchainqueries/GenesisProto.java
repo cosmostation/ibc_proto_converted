@@ -304,7 +304,6 @@ public final class GenesisProto {
               com.neutron.interchainqueries.GenesisProto.RegisteredQuery.class, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -611,7 +610,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasLastSubmittedResultRemoteHeight() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lastSubmittedResultRemoteHeight_ != null;
     }
     /**
      * <pre>
@@ -766,7 +765,7 @@ public final class GenesisProto {
       if (lastSubmittedResultLocalHeight_ != 0L) {
         output.writeUInt64(8, lastSubmittedResultLocalHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastSubmittedResultRemoteHeight_ != null) {
         output.writeMessage(9, getLastSubmittedResultRemoteHeight());
       }
       for (int i = 0; i < deposit_.size(); i++) {
@@ -815,7 +814,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(8, lastSubmittedResultLocalHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastSubmittedResultRemoteHeight_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getLastSubmittedResultRemoteHeight());
       }
@@ -1038,21 +1037,13 @@ public final class GenesisProto {
 
       // Construct using com.neutron.interchainqueries.GenesisProto.RegisteredQuery.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getKeysFieldBuilder();
-          getLastSubmittedResultRemoteHeightFieldBuilder();
-          getDepositFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1162,12 +1153,10 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.lastSubmittedResultLocalHeight_ = lastSubmittedResultLocalHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.lastSubmittedResultRemoteHeight_ = lastSubmittedResultRemoteHeightBuilder_ == null
               ? lastSubmittedResultRemoteHeight_
               : lastSubmittedResultRemoteHeightBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.submitTimeout_ = submitTimeout_;
@@ -1175,7 +1164,6 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.registeredAtHeight_ = registeredAtHeight_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2331,10 +2319,8 @@ public final class GenesisProto {
         } else {
           lastSubmittedResultRemoteHeightBuilder_.mergeFrom(value);
         }
-        if (lastSubmittedResultRemoteHeight_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -3638,7 +3624,6 @@ public final class GenesisProto {
               com.neutron.interchainqueries.GenesisProto.GenesisState.class, com.neutron.interchainqueries.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PARAMS_FIELD_NUMBER = 1;
     private com.neutron.interchainqueries.ParamsProto.Params params_;
     /**
@@ -3647,7 +3632,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -3720,7 +3705,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(1, getParams());
       }
       for (int i = 0; i < registeredQueries_.size(); i++) {
@@ -3735,7 +3720,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
       }
@@ -3907,20 +3892,13 @@ public final class GenesisProto {
 
       // Construct using com.neutron.interchainqueries.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getRegisteredQueriesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3984,14 +3962,11 @@ public final class GenesisProto {
 
       private void buildPartial0(com.neutron.interchainqueries.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4196,10 +4171,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

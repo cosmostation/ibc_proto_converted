@@ -74,7 +74,7 @@ public final class EventsProto {
     private KeygenStarted() {
       module_ = "";
       keyId_ = "";
-      participants_ = emptyList(com.google.protobuf.ByteString.class);
+      participants_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -177,8 +177,7 @@ public final class EventsProto {
 
     public static final int PARTICIPANTS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> participants_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> participants_;
     /**
      * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
      * @return A list containing the participants.
@@ -424,7 +423,7 @@ public final class EventsProto {
         bitField0_ = 0;
         module_ = "";
         keyId_ = "";
-        participants_ = emptyList(com.google.protobuf.ByteString.class);
+        participants_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -451,9 +450,18 @@ public final class EventsProto {
       @java.lang.Override
       public com.axelar.multisig.v1beta1.EventsProto.KeygenStarted buildPartial() {
         com.axelar.multisig.v1beta1.EventsProto.KeygenStarted result = new com.axelar.multisig.v1beta1.EventsProto.KeygenStarted(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.multisig.v1beta1.EventsProto.KeygenStarted result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          participants_ = java.util.Collections.unmodifiableList(participants_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.participants_ = participants_;
       }
 
       private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeygenStarted result) {
@@ -463,10 +471,6 @@ public final class EventsProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.keyId_ = keyId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          participants_.makeImmutable();
-          result.participants_ = participants_;
         }
       }
 
@@ -527,8 +531,7 @@ public final class EventsProto {
         if (!other.participants_.isEmpty()) {
           if (participants_.isEmpty()) {
             participants_ = other.participants_;
-            participants_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureParticipantsIsMutable();
             participants_.addAll(other.participants_);
@@ -738,12 +741,12 @@ public final class EventsProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> participants_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> participants_ = java.util.Collections.emptyList();
       private void ensureParticipantsIsMutable() {
-        if (!participants_.isModifiable()) {
-          participants_ = makeMutableCopy(participants_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          participants_ = new java.util.ArrayList<com.google.protobuf.ByteString>(participants_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
@@ -751,8 +754,8 @@ public final class EventsProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getParticipantsList() {
-        participants_.makeImmutable();
-        return participants_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(participants_) : participants_;
       }
       /**
        * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
@@ -780,7 +783,6 @@ public final class EventsProto {
         if (value == null) { throw new NullPointerException(); }
         ensureParticipantsIsMutable();
         participants_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -793,7 +795,6 @@ public final class EventsProto {
         if (value == null) { throw new NullPointerException(); }
         ensureParticipantsIsMutable();
         participants_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -807,7 +808,6 @@ public final class EventsProto {
         ensureParticipantsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, participants_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -816,7 +816,7 @@ public final class EventsProto {
        * @return This builder for chaining.
        */
       public Builder clearParticipants() {
-        participants_ = emptyList(com.google.protobuf.ByteString.class);
+        participants_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;

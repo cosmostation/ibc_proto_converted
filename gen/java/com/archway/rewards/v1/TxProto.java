@@ -108,7 +108,6 @@ public final class TxProto {
               com.archway.rewards.v1.TxProto.MsgSetContractMetadata.class, com.archway.rewards.v1.TxProto.MsgSetContractMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object senderAddress_ = "";
@@ -169,7 +168,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <pre>
@@ -214,7 +213,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(senderAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, senderAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(2, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -229,7 +228,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(senderAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, senderAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMetadata());
       }
@@ -395,19 +394,13 @@ public final class TxProto {
 
       // Construct using com.archway.rewards.v1.TxProto.MsgSetContractMetadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -455,14 +448,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.senderAddress_ = senderAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -755,10 +745,8 @@ public final class TxProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1957,8 +1945,7 @@ public final class TxProto {
 
       public static final int IDS_FIELD_NUMBER = 1;
       @SuppressWarnings("serial")
-      private com.google.protobuf.Internal.LongList ids_ =
-          emptyLongList();
+      private com.google.protobuf.Internal.LongList ids_;
       /**
        * <code>repeated uint64 ids = 1 [json_name = "ids", (.gogoproto.nullable) = false];</code>
        * @return A list containing the ids.
@@ -2220,17 +2207,22 @@ public final class TxProto {
         @java.lang.Override
         public com.archway.rewards.v1.TxProto.MsgWithdrawRewards.RecordIDs buildPartial() {
           com.archway.rewards.v1.TxProto.MsgWithdrawRewards.RecordIDs result = new com.archway.rewards.v1.TxProto.MsgWithdrawRewards.RecordIDs(this);
+          buildPartialRepeatedFields(result);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
+        private void buildPartialRepeatedFields(com.archway.rewards.v1.TxProto.MsgWithdrawRewards.RecordIDs result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            ids_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.ids_ = ids_;
+        }
+
         private void buildPartial0(com.archway.rewards.v1.TxProto.MsgWithdrawRewards.RecordIDs result) {
           int from_bitField0_ = bitField0_;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            ids_.makeImmutable();
-            result.ids_ = ids_;
-          }
         }
 
         @java.lang.Override
@@ -2280,8 +2272,7 @@ public final class TxProto {
           if (!other.ids_.isEmpty()) {
             if (ids_.isEmpty()) {
               ids_ = other.ids_;
-              ids_.makeImmutable();
-              bitField0_ |= 0x00000001;
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureIdsIsMutable();
               ids_.addAll(other.ids_);
@@ -2349,10 +2340,10 @@ public final class TxProto {
 
         private com.google.protobuf.Internal.LongList ids_ = emptyLongList();
         private void ensureIdsIsMutable() {
-          if (!ids_.isModifiable()) {
-            ids_ = makeMutableCopy(ids_);
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            ids_ = mutableCopy(ids_);
+            bitField0_ |= 0x00000001;
           }
-          bitField0_ |= 0x00000001;
         }
         /**
          * <code>repeated uint64 ids = 1 [json_name = "ids", (.gogoproto.nullable) = false];</code>
@@ -2360,8 +2351,8 @@ public final class TxProto {
          */
         public java.util.List<java.lang.Long>
             getIdsList() {
-          ids_.makeImmutable();
-          return ids_;
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(ids_) : ids_;
         }
         /**
          * <code>repeated uint64 ids = 1 [json_name = "ids", (.gogoproto.nullable) = false];</code>
@@ -2389,7 +2380,6 @@ public final class TxProto {
 
           ensureIdsIsMutable();
           ids_.setLong(index, value);
-          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2402,7 +2392,6 @@ public final class TxProto {
 
           ensureIdsIsMutable();
           ids_.addLong(value);
-          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2416,7 +2405,6 @@ public final class TxProto {
           ensureIdsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
               values, ids_);
-          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -4732,7 +4720,6 @@ public final class TxProto {
               com.archway.rewards.v1.TxProto.MsgSetFlatFee.class, com.archway.rewards.v1.TxProto.MsgSetFlatFee.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SENDER_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object senderAddress_ = "";
@@ -4839,7 +4826,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasFlatFeeAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return flatFeeAmount_ != null;
     }
     /**
      * <pre>
@@ -4885,7 +4872,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (flatFeeAmount_ != null) {
         output.writeMessage(3, getFlatFeeAmount());
       }
       getUnknownFields().writeTo(output);
@@ -4903,7 +4890,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (flatFeeAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFlatFeeAmount());
       }
@@ -5073,19 +5060,13 @@ public final class TxProto {
 
       // Construct using com.archway.rewards.v1.TxProto.MsgSetFlatFee.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFlatFeeAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5137,14 +5118,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractAddress_ = contractAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.flatFeeAmount_ = flatFeeAmountBuilder_ == null
               ? flatFeeAmount_
               : flatFeeAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5534,10 +5512,8 @@ public final class TxProto {
         } else {
           flatFeeAmountBuilder_.mergeFrom(value);
         }
-        if (flatFeeAmount_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

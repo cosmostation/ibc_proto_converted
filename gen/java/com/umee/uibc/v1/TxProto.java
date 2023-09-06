@@ -173,7 +173,6 @@ public final class TxProto {
               com.umee.uibc.v1.TxProto.MsgGovUpdateQuota.class, com.umee.uibc.v1.TxProto.MsgGovUpdateQuota.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object authority_ = "";
@@ -405,7 +404,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasQuotaDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return quotaDuration_ != null;
     }
     /**
      * <pre>
@@ -460,7 +459,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(perDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, perDenom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quotaDuration_ != null) {
         output.writeMessage(6, getQuotaDuration());
       }
       getUnknownFields().writeTo(output);
@@ -487,7 +486,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(perDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, perDenom_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (quotaDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getQuotaDuration());
       }
@@ -669,19 +668,13 @@ public final class TxProto {
 
       // Construct using com.umee.uibc.v1.TxProto.MsgGovUpdateQuota.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getQuotaDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -745,14 +738,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.perDenom_ = perDenom_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.quotaDuration_ = quotaDurationBuilder_ == null
               ? quotaDuration_
               : quotaDurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1408,10 +1398,8 @@ public final class TxProto {
         } else {
           quotaDurationBuilder_.mergeFrom(value);
         }
-        if (quotaDuration_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

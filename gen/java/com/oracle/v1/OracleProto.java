@@ -5262,7 +5262,6 @@ public final class OracleProto {
               com.oracle.v1.OracleProto.Request.class, com.oracle.v1.OracleProto.Request.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ORACLE_SCRIPT_ID_FIELD_NUMBER = 1;
     private long oracleScriptId_ = 0L;
     /**
@@ -5525,7 +5524,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasIbcChannel() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ibcChannel_ != null;
     }
     /**
      * <pre>
@@ -5608,7 +5607,7 @@ public final class OracleProto {
       for (int i = 0; i < rawRequests_.size(); i++) {
         output.writeMessage(8, rawRequests_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ibcChannel_ != null) {
         output.writeMessage(9, getIbcChannel());
       }
       if (executeGas_ != 0L) {
@@ -5658,7 +5657,7 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, rawRequests_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ibcChannel_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getIbcChannel());
       }
@@ -5869,20 +5868,13 @@ public final class OracleProto {
 
       // Construct using com.oracle.v1.OracleProto.Request.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRawRequestsFieldBuilder();
-          getIbcChannelFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5977,17 +5969,14 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.clientId_ = clientId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.ibcChannel_ = ibcChannelBuilder_ == null
               ? ibcChannel_
               : ibcChannelBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.executeGas_ = executeGas_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7102,10 +7091,8 @@ public final class OracleProto {
         } else {
           ibcChannelBuilder_.mergeFrom(value);
         }
-        if (ibcChannel_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -13694,7 +13681,6 @@ public final class OracleProto {
               com.oracle.v1.OracleProto.ValidatorStatus.class, com.oracle.v1.OracleProto.ValidatorStatus.Builder.class);
     }
 
-    private int bitField0_;
     public static final int IS_ACTIVE_FIELD_NUMBER = 1;
     private boolean isActive_ = false;
     /**
@@ -13724,7 +13710,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasSince() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return since_ != null;
     }
     /**
      * <pre>
@@ -13767,7 +13753,7 @@ public final class OracleProto {
       if (isActive_ != false) {
         output.writeBool(1, isActive_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (since_ != null) {
         output.writeMessage(2, getSince());
       }
       getUnknownFields().writeTo(output);
@@ -13783,7 +13769,7 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, isActive_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (since_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSince());
       }
@@ -13950,19 +13936,13 @@ public final class OracleProto {
 
       // Construct using com.oracle.v1.OracleProto.ValidatorStatus.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSinceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14010,14 +13990,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.isActive_ = isActive_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.since_ = sinceBuilder_ == null
               ? since_
               : sinceBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14261,10 +14238,8 @@ public final class OracleProto {
         } else {
           sinceBuilder_.mergeFrom(value);
         }
-        if (since_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -16639,8 +16614,7 @@ public final class OracleProto {
 
     public static final int REQUEST_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList requestIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList requestIds_;
     /**
      * <pre>
      * RequestIDs is a list of request IDs that are waiting to be resolved
@@ -16918,17 +16892,22 @@ public final class OracleProto {
       @java.lang.Override
       public com.oracle.v1.OracleProto.PendingResolveList buildPartial() {
         com.oracle.v1.OracleProto.PendingResolveList result = new com.oracle.v1.OracleProto.PendingResolveList(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.oracle.v1.OracleProto.PendingResolveList result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          requestIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.requestIds_ = requestIds_;
+      }
+
       private void buildPartial0(com.oracle.v1.OracleProto.PendingResolveList result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          requestIds_.makeImmutable();
-          result.requestIds_ = requestIds_;
-        }
       }
 
       @java.lang.Override
@@ -16978,8 +16957,7 @@ public final class OracleProto {
         if (!other.requestIds_.isEmpty()) {
           if (requestIds_.isEmpty()) {
             requestIds_ = other.requestIds_;
-            requestIds_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureRequestIdsIsMutable();
             requestIds_.addAll(other.requestIds_);
@@ -17047,10 +17025,10 @@ public final class OracleProto {
 
       private com.google.protobuf.Internal.LongList requestIds_ = emptyLongList();
       private void ensureRequestIdsIsMutable() {
-        if (!requestIds_.isModifiable()) {
-          requestIds_ = makeMutableCopy(requestIds_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requestIds_ = mutableCopy(requestIds_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -17062,8 +17040,8 @@ public final class OracleProto {
        */
       public java.util.List<java.lang.Long>
           getRequestIdsList() {
-        requestIds_.makeImmutable();
-        return requestIds_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(requestIds_) : requestIds_;
       }
       /**
        * <pre>
@@ -17103,7 +17081,6 @@ public final class OracleProto {
 
         ensureRequestIdsIsMutable();
         requestIds_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17120,7 +17097,6 @@ public final class OracleProto {
 
         ensureRequestIdsIsMutable();
         requestIds_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17138,7 +17114,6 @@ public final class OracleProto {
         ensureRequestIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, requestIds_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

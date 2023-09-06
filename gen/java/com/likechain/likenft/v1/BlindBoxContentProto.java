@@ -94,7 +94,6 @@ public final class BlindBoxContentProto {
               com.likechain.likenft.v1.BlindBoxContentProto.BlindBoxContent.class, com.likechain.likenft.v1.BlindBoxContentProto.BlindBoxContent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CLASS_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object classId_ = "";
@@ -181,7 +180,7 @@ public final class BlindBoxContentProto {
      */
     @java.lang.Override
     public boolean hasInput() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return input_ != null;
     }
     /**
      * <code>.likechain.likenft.v1.NFTInput input = 3 [json_name = "input", (.gogoproto.nullable) = false];</code>
@@ -219,7 +218,7 @@ public final class BlindBoxContentProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         output.writeMessage(3, getInput());
       }
       getUnknownFields().writeTo(output);
@@ -237,7 +236,7 @@ public final class BlindBoxContentProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInput());
       }
@@ -403,19 +402,13 @@ public final class BlindBoxContentProto {
 
       // Construct using com.likechain.likenft.v1.BlindBoxContentProto.BlindBoxContent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInputFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -467,14 +460,11 @@ public final class BlindBoxContentProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.input_ = inputBuilder_ == null
               ? input_
               : inputBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -804,10 +794,8 @@ public final class BlindBoxContentProto {
         } else {
           inputBuilder_.mergeFrom(value);
         }
-        if (input_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

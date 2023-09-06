@@ -963,7 +963,6 @@ public final class MintProto {
               com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.class, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ASSET_ID_FIELD_NUMBER = 1;
     private long assetId_ = 0L;
     /**
@@ -1022,7 +1021,7 @@ public final class MintProto {
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
@@ -1099,7 +1098,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisSupply_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, genesisSupply_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentSupply_)) {
@@ -1121,7 +1120,7 @@ public final class MintProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisSupply_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, genesisSupply_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedAt());
       }
@@ -1295,19 +1294,13 @@ public final class MintProto {
 
       // Construct using com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCreatedAtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1360,17 +1353,14 @@ public final class MintProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.genesisSupply_ = genesisSupply_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.createdAt_ = createdAtBuilder_ == null
               ? createdAt_
               : createdAtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.currentSupply_ = currentSupply_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1668,10 +1658,8 @@ public final class MintProto {
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-        if (createdAt_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

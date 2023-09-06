@@ -136,7 +136,6 @@ public final class EventsProto {
               com.axelar.axelarnet.v1beta1.EventsProto.IBCTransferSent.class, com.axelar.axelarnet.v1beta1.EventsProto.IBCTransferSent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -199,7 +198,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
@@ -365,7 +364,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receipient_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(3, getAsset());
       }
       if (sequence_ != 0L) {
@@ -396,7 +395,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receipient_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAsset());
       }
@@ -593,19 +592,13 @@ public final class EventsProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.EventsProto.IBCTransferSent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -661,12 +654,10 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.receipient_ = receipient_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.sequence_ = sequence_;
@@ -680,7 +671,6 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.recipient_ = recipient_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1016,10 +1006,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3196,7 +3184,6 @@ public final class EventsProto {
               com.axelar.axelarnet.v1beta1.EventsProto.IBCTransferRetried.class, com.axelar.axelarnet.v1beta1.EventsProto.IBCTransferRetried.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -3259,7 +3246,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
@@ -3425,7 +3412,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receipient_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(3, getAsset());
       }
       if (sequence_ != 0L) {
@@ -3456,7 +3443,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receipient_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAsset());
       }
@@ -3653,19 +3640,13 @@ public final class EventsProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.EventsProto.IBCTransferRetried.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3721,12 +3702,10 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.receipient_ = receipient_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.sequence_ = sequence_;
@@ -3740,7 +3719,6 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.recipient_ = recipient_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4076,10 +4054,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4532,7 +4508,6 @@ public final class EventsProto {
               com.axelar.axelarnet.v1beta1.EventsProto.AxelarTransferCompleted.class, com.axelar.axelarnet.v1beta1.EventsProto.AxelarTransferCompleted.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -4595,7 +4570,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
@@ -4672,7 +4647,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receipient_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(3, getAsset());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
@@ -4694,7 +4669,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receipient_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getAsset());
       }
@@ -4868,19 +4843,13 @@ public final class EventsProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.EventsProto.AxelarTransferCompleted.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4933,17 +4902,14 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.receipient_ = receipient_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.recipient_ = recipient_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5251,10 +5217,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5502,7 +5466,6 @@ public final class EventsProto {
               com.axelar.axelarnet.v1beta1.EventsProto.FeeCollected.class, com.axelar.axelarnet.v1beta1.EventsProto.FeeCollected.Builder.class);
     }
 
-    private int bitField0_;
     public static final int COLLECTOR_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString collector_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -5522,7 +5485,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fee_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin fee = 2 [json_name = "fee", (.gogoproto.nullable) = false];</code>
@@ -5557,7 +5520,7 @@ public final class EventsProto {
       if (!collector_.isEmpty()) {
         output.writeBytes(1, collector_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         output.writeMessage(2, getFee());
       }
       getUnknownFields().writeTo(output);
@@ -5573,7 +5536,7 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, collector_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFee());
       }
@@ -5735,19 +5698,13 @@ public final class EventsProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.EventsProto.FeeCollected.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5795,14 +5752,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.collector_ = collector_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6008,10 +5962,8 @@ public final class EventsProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        if (fee_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6200,7 +6152,6 @@ public final class EventsProto {
               com.axelar.axelarnet.v1beta1.EventsProto.FeePaid.class, com.axelar.axelarnet.v1beta1.EventsProto.FeePaid.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MESSAGE_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object messageId_ = "";
@@ -6259,7 +6210,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fee_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin fee = 3 [json_name = "fee", (.gogoproto.nullable) = false];</code>
@@ -6297,7 +6248,7 @@ public final class EventsProto {
       if (!recipient_.isEmpty()) {
         output.writeBytes(2, recipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         output.writeMessage(3, getFee());
       }
       getUnknownFields().writeTo(output);
@@ -6316,7 +6267,7 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, recipient_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFee());
       }
@@ -6482,19 +6433,13 @@ public final class EventsProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.EventsProto.FeePaid.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6546,14 +6491,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recipient_ = recipient_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6841,10 +6783,8 @@ public final class EventsProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        if (fee_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8382,7 +8322,6 @@ public final class EventsProto {
               com.axelar.axelarnet.v1beta1.EventsProto.ContractCallWithTokenSubmitted.class, com.axelar.axelarnet.v1beta1.EventsProto.ContractCallWithTokenSubmitted.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MESSAGE_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object messageId_ = "";
@@ -8608,7 +8547,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset = 8 [json_name = "asset", (.gogoproto.nullable) = false];</code>
@@ -8661,7 +8600,7 @@ public final class EventsProto {
       if (!payloadHash_.isEmpty()) {
         output.writeBytes(7, payloadHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(8, getAsset());
       }
       getUnknownFields().writeTo(output);
@@ -8696,7 +8635,7 @@ public final class EventsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, payloadHash_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getAsset());
       }
@@ -8882,19 +8821,13 @@ public final class EventsProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.EventsProto.ContractCallWithTokenSubmitted.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8966,14 +8899,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.payloadHash_ = payloadHash_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9629,10 +9559,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -9859,7 +9787,6 @@ public final class EventsProto {
               com.axelar.axelarnet.v1beta1.EventsProto.TokenSent.class, com.axelar.axelarnet.v1beta1.EventsProto.TokenSent.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TRANSFER_ID_FIELD_NUMBER = 1;
     private long transferId_ = 0L;
     /**
@@ -10035,7 +9962,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasAsset() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return asset_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin asset = 6 [json_name = "asset", (.gogoproto.nullable) = false];</code>
@@ -10082,7 +10009,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, destinationAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         output.writeMessage(6, getAsset());
       }
       getUnknownFields().writeTo(output);
@@ -10110,7 +10037,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, destinationAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (asset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAsset());
       }
@@ -10289,19 +10216,13 @@ public final class EventsProto {
 
       // Construct using com.axelar.axelarnet.v1beta1.EventsProto.TokenSent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAssetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10365,14 +10286,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.destinationAddress_ = destinationAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.asset_ = assetBuilder_ == null
               ? asset_
               : assetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10906,10 +10824,8 @@ public final class EventsProto {
         } else {
           assetBuilder_.mergeFrom(value);
         }
-        if (asset_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

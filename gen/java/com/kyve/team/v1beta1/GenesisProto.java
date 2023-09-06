@@ -139,7 +139,6 @@ public final class GenesisProto {
               com.kyve.team.v1beta1.GenesisProto.GenesisState.class, com.kyve.team.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int AUTHORITY_FIELD_NUMBER = 2;
     private com.kyve.team.v1beta1.TeamProto.Authority authority_;
     /**
@@ -152,7 +151,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasAuthority() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return authority_ != null;
     }
     /**
      * <pre>
@@ -268,7 +267,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (authority_ != null) {
         output.writeMessage(2, getAuthority());
       }
       for (int i = 0; i < accountList_.size(); i++) {
@@ -286,7 +285,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (authority_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAuthority());
       }
@@ -467,20 +466,13 @@ public final class GenesisProto {
 
       // Construct using com.kyve.team.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAuthorityFieldBuilder();
-          getAccountListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -545,17 +537,14 @@ public final class GenesisProto {
 
       private void buildPartial0(com.kyve.team.v1beta1.GenesisProto.GenesisState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.authority_ = authorityBuilder_ == null
               ? authority_
               : authorityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.accountCount_ = accountCount_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -788,10 +777,8 @@ public final class GenesisProto {
         } else {
           authorityBuilder_.mergeFrom(value);
         }
-        if (authority_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

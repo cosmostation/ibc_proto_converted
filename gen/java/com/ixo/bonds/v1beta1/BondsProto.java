@@ -845,7 +845,6 @@ public final class BondsProto {
               com.ixo.bonds.v1beta1.BondsProto.BondDetails.class, com.ixo.bonds.v1beta1.BondsProto.BondDetails.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BOND_DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object bondDid_ = "";
@@ -934,7 +933,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasSupply() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return supply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin supply = 3 [json_name = "supply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply&#92;""];</code>
@@ -1013,7 +1012,7 @@ public final class BondsProto {
       for (int i = 0; i < spotPrice_.size(); i++) {
         output.writeMessage(2, spotPrice_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (supply_ != null) {
         output.writeMessage(3, getSupply());
       }
       for (int i = 0; i < reserve_.size(); i++) {
@@ -1035,7 +1034,7 @@ public final class BondsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, spotPrice_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (supply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSupply());
       }
@@ -1217,21 +1216,13 @@ public final class BondsProto {
 
       // Construct using com.ixo.bonds.v1beta1.BondsProto.BondDetails.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSpotPriceFieldBuilder();
-          getSupplyFieldBuilder();
-          getReserveFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1315,14 +1306,11 @@ public final class BondsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bondDid_ = bondDid_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.supply_ = supplyBuilder_ == null
               ? supply_
               : supplyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1888,10 +1876,8 @@ public final class BondsProto {
         } else {
           supplyBuilder_.mergeFrom(value);
         }
-        if (supply_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2710,7 +2696,6 @@ public final class BondsProto {
               com.ixo.bonds.v1beta1.BondsProto.Bond.class, com.ixo.bonds.v1beta1.BondsProto.Bond.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOKEN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object token_ = "";
@@ -3187,7 +3172,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasMaxSupply() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return maxSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin max_supply = 13 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
@@ -3332,7 +3317,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasCurrentSupply() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return currentSupply_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin current_supply = 17 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
@@ -3751,7 +3736,7 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveWithdrawalAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, reserveWithdrawalAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxSupply_ != null) {
         output.writeMessage(13, getMaxSupply());
       }
       for (int i = 0; i < orderQuantityLimits_.size(); i++) {
@@ -3763,7 +3748,7 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sanityMarginPercentage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, sanityMarginPercentage_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (currentSupply_ != null) {
         output.writeMessage(17, getCurrentSupply());
       }
       for (int i = 0; i < currentReserve_.size(); i++) {
@@ -3850,7 +3835,7 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveWithdrawalAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, reserveWithdrawalAddress_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getMaxSupply());
       }
@@ -3864,7 +3849,7 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sanityMarginPercentage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, sanityMarginPercentage_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (currentSupply_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getCurrentSupply());
       }
@@ -4193,25 +4178,13 @@ public final class BondsProto {
 
       // Construct using com.ixo.bonds.v1beta1.BondsProto.Bond.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFunctionParametersFieldBuilder();
-          getMaxSupplyFieldBuilder();
-          getOrderQuantityLimitsFieldBuilder();
-          getCurrentSupplyFieldBuilder();
-          getCurrentReserveFieldBuilder();
-          getAvailableReserveFieldBuilder();
-          getCurrentOutcomePaymentReserveFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4400,12 +4373,10 @@ public final class BondsProto {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.reserveWithdrawalAddress_ = reserveWithdrawalAddress_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.maxSupply_ = maxSupplyBuilder_ == null
               ? maxSupply_
               : maxSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.sanityRate_ = sanityRate_;
@@ -4417,7 +4388,6 @@ public final class BondsProto {
           result.currentSupply_ = currentSupplyBuilder_ == null
               ? currentSupply_
               : currentSupplyBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00100000) != 0)) {
           result.allowSells_ = allowSells_;
@@ -4443,7 +4413,6 @@ public final class BondsProto {
         if (((from_bitField0_ & 0x08000000) != 0)) {
           result.oracleDid_ = oracleDid_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6095,10 +6064,8 @@ public final class BondsProto {
         } else {
           maxSupplyBuilder_.mergeFrom(value);
         }
-        if (maxSupply_ != null) {
-          bitField0_ |= 0x00001000;
-          onChanged();
-        }
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -6600,10 +6567,8 @@ public final class BondsProto {
         } else {
           currentSupplyBuilder_.mergeFrom(value);
         }
-        if (currentSupply_ != null) {
-          bitField0_ |= 0x00010000;
-          onChanged();
-        }
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -7985,7 +7950,6 @@ public final class BondsProto {
               com.ixo.bonds.v1beta1.BondsProto.BaseOrder.class, com.ixo.bonds.v1beta1.BondsProto.BaseOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ACCOUNT_DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object accountDid_ = "";
@@ -8033,7 +7997,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return amount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
@@ -8118,7 +8082,7 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountDid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accountDid_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         output.writeMessage(2, getAmount());
       }
       if (cancelled_ != false) {
@@ -8139,7 +8103,7 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountDid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accountDid_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (amount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAmount());
       }
@@ -8322,19 +8286,13 @@ public final class BondsProto {
 
       // Construct using com.ixo.bonds.v1beta1.BondsProto.BaseOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAmountFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8384,12 +8342,10 @@ public final class BondsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.accountDid_ = accountDid_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.amount_ = amountBuilder_ == null
               ? amount_
               : amountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.cancelled_ = cancelled_;
@@ -8397,7 +8353,6 @@ public final class BondsProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.cancelReason_ = cancelReason_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8663,10 +8618,8 @@ public final class BondsProto {
         } else {
           amountBuilder_.mergeFrom(value);
         }
-        if (amount_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8969,7 +8922,6 @@ public final class BondsProto {
               com.ixo.bonds.v1beta1.BondsProto.BuyOrder.class, com.ixo.bonds.v1beta1.BondsProto.BuyOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_ORDER_FIELD_NUMBER = 1;
     private com.ixo.bonds.v1beta1.BondsProto.BaseOrder baseOrder_;
     /**
@@ -8978,7 +8930,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasBaseOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseOrder_ != null;
     }
     /**
      * <code>.ixo.bonds.v1beta1.BaseOrder base_order = 1 [json_name = "baseOrder", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_order&#92;""];</code>
@@ -9051,7 +9003,7 @@ public final class BondsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseOrder_ != null) {
         output.writeMessage(1, getBaseOrder());
       }
       for (int i = 0; i < maxPrices_.size(); i++) {
@@ -9066,7 +9018,7 @@ public final class BondsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseOrder());
       }
@@ -9239,20 +9191,13 @@ public final class BondsProto {
 
       // Construct using com.ixo.bonds.v1beta1.BondsProto.BuyOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseOrderFieldBuilder();
-          getMaxPricesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9316,14 +9261,11 @@ public final class BondsProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.BondsProto.BuyOrder result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseOrder_ = baseOrderBuilder_ == null
               ? baseOrder_
               : baseOrderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9528,10 +9470,8 @@ public final class BondsProto {
         } else {
           baseOrderBuilder_.mergeFrom(value);
         }
-        if (baseOrder_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9944,7 +9884,6 @@ public final class BondsProto {
               com.ixo.bonds.v1beta1.BondsProto.SellOrder.class, com.ixo.bonds.v1beta1.BondsProto.SellOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_ORDER_FIELD_NUMBER = 1;
     private com.ixo.bonds.v1beta1.BondsProto.BaseOrder baseOrder_;
     /**
@@ -9953,7 +9892,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasBaseOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseOrder_ != null;
     }
     /**
      * <code>.ixo.bonds.v1beta1.BaseOrder base_order = 1 [json_name = "baseOrder", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_order&#92;""];</code>
@@ -9985,7 +9924,7 @@ public final class BondsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseOrder_ != null) {
         output.writeMessage(1, getBaseOrder());
       }
       getUnknownFields().writeTo(output);
@@ -9997,7 +9936,7 @@ public final class BondsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseOrder());
       }
@@ -10159,19 +10098,13 @@ public final class BondsProto {
 
       // Construct using com.ixo.bonds.v1beta1.BondsProto.SellOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10215,14 +10148,11 @@ public final class BondsProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.BondsProto.SellOrder result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseOrder_ = baseOrderBuilder_ == null
               ? baseOrder_
               : baseOrderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -10388,10 +10318,8 @@ public final class BondsProto {
         } else {
           baseOrderBuilder_.mergeFrom(value);
         }
-        if (baseOrder_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10578,7 +10506,6 @@ public final class BondsProto {
               com.ixo.bonds.v1beta1.BondsProto.SwapOrder.class, com.ixo.bonds.v1beta1.BondsProto.SwapOrder.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_ORDER_FIELD_NUMBER = 1;
     private com.ixo.bonds.v1beta1.BondsProto.BaseOrder baseOrder_;
     /**
@@ -10587,7 +10514,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasBaseOrder() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return baseOrder_ != null;
     }
     /**
      * <code>.ixo.bonds.v1beta1.BaseOrder base_order = 1 [json_name = "baseOrder", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_order&#92;""];</code>
@@ -10658,7 +10585,7 @@ public final class BondsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseOrder_ != null) {
         output.writeMessage(1, getBaseOrder());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toToken_)) {
@@ -10673,7 +10600,7 @@ public final class BondsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (baseOrder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBaseOrder());
       }
@@ -10843,19 +10770,13 @@ public final class BondsProto {
 
       // Construct using com.ixo.bonds.v1beta1.BondsProto.SwapOrder.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBaseOrderFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -10900,17 +10821,14 @@ public final class BondsProto {
 
       private void buildPartial0(com.ixo.bonds.v1beta1.BondsProto.SwapOrder result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.baseOrder_ = baseOrderBuilder_ == null
               ? baseOrder_
               : baseOrderBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.toToken_ = toToken_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11086,10 +11004,8 @@ public final class BondsProto {
         } else {
           baseOrderBuilder_.mergeFrom(value);
         }
-        if (baseOrder_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11514,7 +11430,6 @@ public final class BondsProto {
               com.ixo.bonds.v1beta1.BondsProto.Batch.class, com.ixo.bonds.v1beta1.BondsProto.Batch.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BOND_DID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object bondDid_ = "";
@@ -11640,7 +11555,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasTotalBuyAmount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return totalBuyAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_buy_amount = 4 [json_name = "totalBuyAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_buy_amount&#92;""];</code>
@@ -11666,7 +11581,7 @@ public final class BondsProto {
      */
     @java.lang.Override
     public boolean hasTotalSellAmount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return totalSellAmount_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin total_sell_amount = 5 [json_name = "totalSellAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_sell_amount&#92;""];</code>
@@ -11912,10 +11827,10 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPublicAlpha_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nextPublicAlpha_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalBuyAmount_ != null) {
         output.writeMessage(4, getTotalBuyAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (totalSellAmount_ != null) {
         output.writeMessage(5, getTotalSellAmount());
       }
       for (int i = 0; i < buyPrices_.size(); i++) {
@@ -11951,11 +11866,11 @@ public final class BondsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPublicAlpha_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nextPublicAlpha_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (totalBuyAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTotalBuyAmount());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (totalSellAmount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTotalSellAmount());
       }
@@ -12189,25 +12104,13 @@ public final class BondsProto {
 
       // Construct using com.ixo.bonds.v1beta1.BondsProto.Batch.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTotalBuyAmountFieldBuilder();
-          getTotalSellAmountFieldBuilder();
-          getBuyPricesFieldBuilder();
-          getSellPricesFieldBuilder();
-          getBuysFieldBuilder();
-          getSellsFieldBuilder();
-          getSwapsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12352,20 +12255,16 @@ public final class BondsProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.nextPublicAlpha_ = nextPublicAlpha_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.totalBuyAmount_ = totalBuyAmountBuilder_ == null
               ? totalBuyAmount_
               : totalBuyAmountBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.totalSellAmount_ = totalSellAmountBuilder_ == null
               ? totalSellAmount_
               : totalSellAmountBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12982,10 +12881,8 @@ public final class BondsProto {
         } else {
           totalBuyAmountBuilder_.mergeFrom(value);
         }
-        if (totalBuyAmount_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -13103,10 +13000,8 @@ public final class BondsProto {
         } else {
           totalSellAmountBuilder_.mergeFrom(value);
         }
-        if (totalSellAmount_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**

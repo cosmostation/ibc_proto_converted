@@ -107,7 +107,6 @@ public final class TxProto {
               com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.class, com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CREATOR_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object creator_ = "";
@@ -233,7 +232,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasMetadata() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return metadata_ != null;
     }
     /**
      * <code>.cosmos.bank.v1beta1.Metadata Metadata = 4 [json_name = "Metadata", (.gogoproto.nullable) = false];</code>
@@ -274,7 +273,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddressPrefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valAddressPrefix_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         output.writeMessage(4, getMetadata());
       }
       getUnknownFields().writeTo(output);
@@ -295,7 +294,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddressPrefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valAddressPrefix_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMetadata());
       }
@@ -465,19 +464,13 @@ public final class TxProto {
 
       // Construct using com.stafihub.stafihub.rbank.TxProto.MsgAddDenom.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMetadataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -533,14 +526,11 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.valAddressPrefix_ = valAddressPrefix_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.metadata_ = metadataBuilder_ == null
               ? metadata_
               : metadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -952,10 +942,8 @@ public final class TxProto {
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

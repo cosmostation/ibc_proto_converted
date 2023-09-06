@@ -1106,7 +1106,6 @@ public final class ParticipationrewardsProto {
               com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DISTRIBUTION_PROPORTIONS_FIELD_NUMBER = 1;
     private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions distributionProportions_;
     /**
@@ -1120,7 +1119,7 @@ public final class ParticipationrewardsProto {
      */
     @java.lang.Override
     public boolean hasDistributionProportions() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return distributionProportions_ != null;
     }
     /**
      * <pre>
@@ -1162,7 +1161,7 @@ public final class ParticipationrewardsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributionProportions_ != null) {
         output.writeMessage(1, getDistributionProportions());
       }
       getUnknownFields().writeTo(output);
@@ -1174,7 +1173,7 @@ public final class ParticipationrewardsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributionProportions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDistributionProportions());
       }
@@ -1336,19 +1335,13 @@ public final class ParticipationrewardsProto {
 
       // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDistributionProportionsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1392,14 +1385,11 @@ public final class ParticipationrewardsProto {
 
       private void buildPartial0(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params_v1 result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.distributionProportions_ = distributionProportionsBuilder_ == null
               ? distributionProportions_
               : distributionProportionsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1590,10 +1580,8 @@ public final class ParticipationrewardsProto {
         } else {
           distributionProportionsBuilder_.mergeFrom(value);
         }
-        if (distributionProportions_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1807,7 +1795,6 @@ public final class ParticipationrewardsProto {
               com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DISTRIBUTION_PROPORTIONS_FIELD_NUMBER = 1;
     private com.quicksilver.participationrewards.v1.ParticipationrewardsProto.DistributionProportions distributionProportions_;
     /**
@@ -1821,7 +1808,7 @@ public final class ParticipationrewardsProto {
      */
     @java.lang.Override
     public boolean hasDistributionProportions() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return distributionProportions_ != null;
     }
     /**
      * <pre>
@@ -1874,7 +1861,7 @@ public final class ParticipationrewardsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributionProportions_ != null) {
         output.writeMessage(1, getDistributionProportions());
       }
       if (claimsEnabled_ != false) {
@@ -1889,7 +1876,7 @@ public final class ParticipationrewardsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (distributionProportions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDistributionProportions());
       }
@@ -2060,19 +2047,13 @@ public final class ParticipationrewardsProto {
 
       // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDistributionProportionsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2117,17 +2098,14 @@ public final class ParticipationrewardsProto {
 
       private void buildPartial0(com.quicksilver.participationrewards.v1.ParticipationrewardsProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.distributionProportions_ = distributionProportionsBuilder_ == null
               ? distributionProportions_
               : distributionProportionsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.claimsEnabled_ = claimsEnabled_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2326,10 +2304,8 @@ public final class ParticipationrewardsProto {
         } else {
           distributionProportionsBuilder_.mergeFrom(value);
         }
-        if (distributionProportions_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2563,7 +2539,6 @@ public final class ParticipationrewardsProto {
               com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.class, com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object key_ = "";
@@ -2611,7 +2586,7 @@ public final class ParticipationrewardsProto {
      */
     @java.lang.Override
     public boolean hasProtocolData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return protocolData_ != null;
     }
     /**
      * <code>.quicksilver.participationrewards.v1.ProtocolData protocol_data = 2 [json_name = "protocolData"];</code>
@@ -2646,7 +2621,7 @@ public final class ParticipationrewardsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (protocolData_ != null) {
         output.writeMessage(2, getProtocolData());
       }
       getUnknownFields().writeTo(output);
@@ -2661,7 +2636,7 @@ public final class ParticipationrewardsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (protocolData_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProtocolData());
       }
@@ -2823,19 +2798,13 @@ public final class ParticipationrewardsProto {
 
       // Construct using com.quicksilver.participationrewards.v1.ParticipationrewardsProto.KeyedProtocolData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProtocolDataFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2883,14 +2852,11 @@ public final class ParticipationrewardsProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.key_ = key_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.protocolData_ = protocolDataBuilder_ == null
               ? protocolData_
               : protocolDataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3138,10 +3104,8 @@ public final class ParticipationrewardsProto {
         } else {
           protocolDataBuilder_.mergeFrom(value);
         }
-        if (protocolData_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

@@ -1475,7 +1475,6 @@ public final class TreeProto {
               com.osmosis.store.v1beta1.TreeProto.Leaf.class, com.osmosis.store.v1beta1.TreeProto.Leaf.Builder.class);
     }
 
-    private int bitField0_;
     public static final int LEAF_FIELD_NUMBER = 1;
     private com.osmosis.store.v1beta1.TreeProto.Child leaf_;
     /**
@@ -1484,7 +1483,7 @@ public final class TreeProto {
      */
     @java.lang.Override
     public boolean hasLeaf() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return leaf_ != null;
     }
     /**
      * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
@@ -1516,7 +1515,7 @@ public final class TreeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (leaf_ != null) {
         output.writeMessage(1, getLeaf());
       }
       getUnknownFields().writeTo(output);
@@ -1528,7 +1527,7 @@ public final class TreeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (leaf_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLeaf());
       }
@@ -1686,19 +1685,13 @@ public final class TreeProto {
 
       // Construct using com.osmosis.store.v1beta1.TreeProto.Leaf.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLeafFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1742,14 +1735,11 @@ public final class TreeProto {
 
       private void buildPartial0(com.osmosis.store.v1beta1.TreeProto.Leaf result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.leaf_ = leafBuilder_ == null
               ? leaf_
               : leafBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1915,10 +1905,8 @@ public final class TreeProto {
         } else {
           leafBuilder_.mergeFrom(value);
         }
-        if (leaf_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

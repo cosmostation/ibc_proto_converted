@@ -1579,7 +1579,6 @@ public final class OracleProto {
               com.injective.oracle.v1beta1.OracleProto.ChainlinkPriceState.class, com.injective.oracle.v1beta1.OracleProto.ChainlinkPriceState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int FEED_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object feedId_ = "";
@@ -1677,7 +1676,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasPriceState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return priceState_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.PriceState price_state = 4 [json_name = "priceState", (.gogoproto.nullable) = false];</code>
@@ -1718,7 +1717,7 @@ public final class OracleProto {
       if (timestamp_ != 0L) {
         output.writeUInt64(3, timestamp_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         output.writeMessage(4, getPriceState());
       }
       getUnknownFields().writeTo(output);
@@ -1740,7 +1739,7 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, timestamp_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPriceState());
       }
@@ -1911,19 +1910,13 @@ public final class OracleProto {
 
       // Construct using com.injective.oracle.v1beta1.OracleProto.ChainlinkPriceState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1979,14 +1972,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timestamp_ = timestamp_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.priceState_ = priceStateBuilder_ == null
               ? priceState_
               : priceStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2356,10 +2346,8 @@ public final class OracleProto {
         } else {
           priceStateBuilder_.mergeFrom(value);
         }
-        if (priceState_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2566,7 +2554,6 @@ public final class OracleProto {
               com.injective.oracle.v1beta1.OracleProto.BandPriceState.class, com.injective.oracle.v1beta1.OracleProto.BandPriceState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SYMBOL_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object symbol_ = "";
@@ -2675,7 +2662,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasPriceState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return priceState_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.PriceState price_state = 5 [json_name = "priceState", (.gogoproto.nullable) = false];</code>
@@ -2719,7 +2706,7 @@ public final class OracleProto {
       if (requestID_ != 0L) {
         output.writeUInt64(4, requestID_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         output.writeMessage(5, getPriceState());
       }
       getUnknownFields().writeTo(output);
@@ -2745,7 +2732,7 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, requestID_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPriceState());
       }
@@ -2921,19 +2908,13 @@ public final class OracleProto {
 
       // Construct using com.injective.oracle.v1beta1.OracleProto.BandPriceState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2993,14 +2974,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.requestID_ = requestID_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.priceState_ = priceStateBuilder_ == null
               ? priceState_
               : priceStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3410,10 +3388,8 @@ public final class OracleProto {
         } else {
           priceStateBuilder_.mergeFrom(value);
         }
-        if (priceState_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3635,7 +3611,6 @@ public final class OracleProto {
               com.injective.oracle.v1beta1.OracleProto.PriceFeedState.class, com.injective.oracle.v1beta1.OracleProto.PriceFeedState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BASE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object base_ = "";
@@ -3722,7 +3697,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasPriceState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return priceState_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.PriceState price_state = 3 [json_name = "priceState"];</code>
@@ -3797,7 +3772,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quote_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, quote_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         output.writeMessage(3, getPriceState());
       }
       for (int i = 0; i < relayers_.size(); i++) {
@@ -3818,7 +3793,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quote_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, quote_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPriceState());
       }
@@ -3998,19 +3973,13 @@ public final class OracleProto {
 
       // Construct using com.injective.oracle.v1beta1.OracleProto.PriceFeedState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4064,18 +4033,15 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.quote_ = quote_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.priceState_ = priceStateBuilder_ == null
               ? priceState_
               : priceStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           relayers_.makeImmutable();
           result.relayers_ = relayers_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4421,10 +4387,8 @@ public final class OracleProto {
         } else {
           priceStateBuilder_.mergeFrom(value);
         }
-        if (priceState_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5495,7 +5459,6 @@ public final class OracleProto {
               com.injective.oracle.v1beta1.OracleProto.ProviderState.class, com.injective.oracle.v1beta1.OracleProto.ProviderState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROVIDER_INFO_FIELD_NUMBER = 1;
     private com.injective.oracle.v1beta1.OracleProto.ProviderInfo providerInfo_;
     /**
@@ -5504,7 +5467,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasProviderInfo() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return providerInfo_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.ProviderInfo provider_info = 1 [json_name = "providerInfo"];</code>
@@ -5577,7 +5540,7 @@ public final class OracleProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (providerInfo_ != null) {
         output.writeMessage(1, getProviderInfo());
       }
       for (int i = 0; i < providerPriceStates_.size(); i++) {
@@ -5592,7 +5555,7 @@ public final class OracleProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (providerInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProviderInfo());
       }
@@ -5760,20 +5723,13 @@ public final class OracleProto {
 
       // Construct using com.injective.oracle.v1beta1.OracleProto.ProviderState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProviderInfoFieldBuilder();
-          getProviderPriceStatesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5837,14 +5793,11 @@ public final class OracleProto {
 
       private void buildPartial0(com.injective.oracle.v1beta1.OracleProto.ProviderState result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.providerInfo_ = providerInfoBuilder_ == null
               ? providerInfo_
               : providerInfoBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6049,10 +6002,8 @@ public final class OracleProto {
         } else {
           providerInfoBuilder_.mergeFrom(value);
         }
-        if (providerInfo_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6474,7 +6425,6 @@ public final class OracleProto {
               com.injective.oracle.v1beta1.OracleProto.ProviderPriceState.class, com.injective.oracle.v1beta1.OracleProto.ProviderPriceState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SYMBOL_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object symbol_ = "";
@@ -6522,7 +6472,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return state_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.PriceState state = 2 [json_name = "state"];</code>
@@ -6557,7 +6507,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         output.writeMessage(2, getState());
       }
       getUnknownFields().writeTo(output);
@@ -6572,7 +6522,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (state_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getState());
       }
@@ -6734,19 +6684,13 @@ public final class OracleProto {
 
       // Construct using com.injective.oracle.v1beta1.OracleProto.ProviderPriceState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6794,14 +6738,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.symbol_ = symbol_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.state_ = stateBuilder_ == null
               ? state_
               : stateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7049,10 +6990,8 @@ public final class OracleProto {
         } else {
           stateBuilder_.mergeFrom(value);
         }
-        if (state_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8547,7 +8486,6 @@ public final class OracleProto {
               com.injective.oracle.v1beta1.OracleProto.CoinbasePriceState.class, com.injective.oracle.v1beta1.OracleProto.CoinbasePriceState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int KIND_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object kind_ = "";
@@ -8684,7 +8622,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasPriceState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return priceState_ != null;
     }
     /**
      * <pre>
@@ -8736,7 +8674,7 @@ public final class OracleProto {
       if (value_ != 0L) {
         output.writeUInt64(4, value_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         output.writeMessage(5, getPriceState());
       }
       getUnknownFields().writeTo(output);
@@ -8762,7 +8700,7 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, value_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPriceState());
       }
@@ -8938,19 +8876,13 @@ public final class OracleProto {
 
       // Construct using com.injective.oracle.v1beta1.OracleProto.CoinbasePriceState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9010,14 +8942,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.value_ = value_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.priceState_ = priceStateBuilder_ == null
               ? priceState_
               : priceStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9511,10 +9440,8 @@ public final class OracleProto {
         } else {
           priceStateBuilder_.mergeFrom(value);
         }
-        if (priceState_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -10530,7 +10457,6 @@ public final class OracleProto {
               com.injective.oracle.v1beta1.OracleProto.PythPriceState.class, com.injective.oracle.v1beta1.OracleProto.PythPriceState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PRICE_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object priceId_ = "";
@@ -10706,7 +10632,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasPriceState() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return priceState_ != null;
     }
     /**
      * <code>.injective.oracle.v1beta1.PriceState price_state = 6 [json_name = "priceState", (.gogoproto.nullable) = false];</code>
@@ -10753,7 +10679,7 @@ public final class OracleProto {
       if (publishTime_ != 0L) {
         output.writeUInt64(5, publishTime_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         output.writeMessage(6, getPriceState());
       }
       getUnknownFields().writeTo(output);
@@ -10781,7 +10707,7 @@ public final class OracleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(5, publishTime_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (priceState_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getPriceState());
       }
@@ -10960,19 +10886,13 @@ public final class OracleProto {
 
       // Construct using com.injective.oracle.v1beta1.OracleProto.PythPriceState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPriceStateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11036,14 +10956,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.publishTime_ = publishTime_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.priceState_ = priceStateBuilder_ == null
               ? priceState_
               : priceStateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11577,10 +11494,8 @@ public final class OracleProto {
         } else {
           priceStateBuilder_.mergeFrom(value);
         }
-        if (priceState_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -13900,8 +13815,7 @@ public final class OracleProto {
 
     public static final int LEGACY_ORACLE_IDS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList legacyOracleIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList legacyOracleIds_;
     /**
      * <pre>
      *  legacy oracle scheme ids
@@ -14234,9 +14148,18 @@ public final class OracleProto {
       @java.lang.Override
       public com.injective.oracle.v1beta1.OracleProto.BandIBCParams buildPartial() {
         com.injective.oracle.v1beta1.OracleProto.BandIBCParams result = new com.injective.oracle.v1beta1.OracleProto.BandIBCParams(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.injective.oracle.v1beta1.OracleProto.BandIBCParams result) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          legacyOracleIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.legacyOracleIds_ = legacyOracleIds_;
       }
 
       private void buildPartial0(com.injective.oracle.v1beta1.OracleProto.BandIBCParams result) {
@@ -14255,10 +14178,6 @@ public final class OracleProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.ibcPortId_ = ibcPortId_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          legacyOracleIds_.makeImmutable();
-          result.legacyOracleIds_ = legacyOracleIds_;
         }
       }
 
@@ -14330,8 +14249,7 @@ public final class OracleProto {
         if (!other.legacyOracleIds_.isEmpty()) {
           if (legacyOracleIds_.isEmpty()) {
             legacyOracleIds_ = other.legacyOracleIds_;
-            legacyOracleIds_.makeImmutable();
-            bitField0_ |= 0x00000020;
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureLegacyOracleIdsIsMutable();
             legacyOracleIds_.addAll(other.legacyOracleIds_);
@@ -14788,10 +14706,10 @@ public final class OracleProto {
 
       private com.google.protobuf.Internal.LongList legacyOracleIds_ = emptyLongList();
       private void ensureLegacyOracleIdsIsMutable() {
-        if (!legacyOracleIds_.isModifiable()) {
-          legacyOracleIds_ = makeMutableCopy(legacyOracleIds_);
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          legacyOracleIds_ = mutableCopy(legacyOracleIds_);
+          bitField0_ |= 0x00000020;
         }
-        bitField0_ |= 0x00000020;
       }
       /**
        * <pre>
@@ -14803,8 +14721,8 @@ public final class OracleProto {
        */
       public java.util.List<java.lang.Long>
           getLegacyOracleIdsList() {
-        legacyOracleIds_.makeImmutable();
-        return legacyOracleIds_;
+        return ((bitField0_ & 0x00000020) != 0) ?
+                 java.util.Collections.unmodifiableList(legacyOracleIds_) : legacyOracleIds_;
       }
       /**
        * <pre>
@@ -14844,7 +14762,6 @@ public final class OracleProto {
 
         ensureLegacyOracleIdsIsMutable();
         legacyOracleIds_.setLong(index, value);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -14861,7 +14778,6 @@ public final class OracleProto {
 
         ensureLegacyOracleIdsIsMutable();
         legacyOracleIds_.addLong(value);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -14879,7 +14795,6 @@ public final class OracleProto {
         ensureLegacyOracleIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, legacyOracleIds_);
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }

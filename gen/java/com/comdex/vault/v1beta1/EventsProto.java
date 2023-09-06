@@ -794,7 +794,6 @@ public final class EventsProto {
               com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.class, com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -881,7 +880,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
@@ -919,7 +918,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         output.writeMessage(3, getCollateral());
       }
       getUnknownFields().writeTo(output);
@@ -937,7 +936,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCollateral());
       }
@@ -1103,19 +1102,13 @@ public final class EventsProto {
 
       // Construct using com.comdex.vault.v1beta1.EventsProto.EventDepositCollateral.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollateralFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1167,14 +1160,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1504,10 +1494,8 @@ public final class EventsProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        if (collateral_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1702,7 +1690,6 @@ public final class EventsProto {
               com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.class, com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -1789,7 +1776,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasCollateral() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return collateral_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin collateral = 3 [json_name = "collateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
@@ -1827,7 +1814,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         output.writeMessage(3, getCollateral());
       }
       getUnknownFields().writeTo(output);
@@ -1845,7 +1832,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (collateral_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCollateral());
       }
@@ -2011,19 +1998,13 @@ public final class EventsProto {
 
       // Construct using com.comdex.vault.v1beta1.EventsProto.EventWithdrawCollateral.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCollateralFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2075,14 +2056,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.collateral_ = collateralBuilder_ == null
               ? collateral_
               : collateralBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2412,10 +2390,8 @@ public final class EventsProto {
         } else {
           collateralBuilder_.mergeFrom(value);
         }
-        if (collateral_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2610,7 +2586,6 @@ public final class EventsProto {
               com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.class, com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -2697,7 +2672,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasDebt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return debt_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
@@ -2735,7 +2710,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (debt_ != null) {
         output.writeMessage(3, getDebt());
       }
       getUnknownFields().writeTo(output);
@@ -2753,7 +2728,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (debt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDebt());
       }
@@ -2919,19 +2894,13 @@ public final class EventsProto {
 
       // Construct using com.comdex.vault.v1beta1.EventsProto.EventDrawDebt.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDebtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2983,14 +2952,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.debt_ = debtBuilder_ == null
               ? debt_
               : debtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3320,10 +3286,8 @@ public final class EventsProto {
         } else {
           debtBuilder_.mergeFrom(value);
         }
-        if (debt_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3518,7 +3482,6 @@ public final class EventsProto {
               com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.class, com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OWNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object owner_ = "";
@@ -3605,7 +3568,7 @@ public final class EventsProto {
      */
     @java.lang.Override
     public boolean hasDebt() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return debt_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin debt = 3 [json_name = "debt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"payment&#92;""];</code>
@@ -3643,7 +3606,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (debt_ != null) {
         output.writeMessage(3, getDebt());
       }
       getUnknownFields().writeTo(output);
@@ -3661,7 +3624,7 @@ public final class EventsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collateralType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collateralType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (debt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDebt());
       }
@@ -3827,19 +3790,13 @@ public final class EventsProto {
 
       // Construct using com.comdex.vault.v1beta1.EventsProto.EventRepayDebt.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDebtFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3891,14 +3848,11 @@ public final class EventsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.collateralType_ = collateralType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.debt_ = debtBuilder_ == null
               ? debt_
               : debtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4228,10 +4182,8 @@ public final class EventsProto {
         } else {
           debtBuilder_.mergeFrom(value);
         }
-        if (debt_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

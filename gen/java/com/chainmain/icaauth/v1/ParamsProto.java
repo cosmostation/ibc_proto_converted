@@ -87,7 +87,6 @@ public final class ParamsProto {
               com.chainmain.icaauth.v1.ParamsProto.Params.class, com.chainmain.icaauth.v1.ParamsProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MINTIMEOUTDURATION_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration minTimeoutDuration_;
     /**
@@ -101,7 +100,7 @@ public final class ParamsProto {
      */
     @java.lang.Override
     public boolean hasMinTimeoutDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return minTimeoutDuration_ != null;
     }
     /**
      * <pre>
@@ -143,7 +142,7 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minTimeoutDuration_ != null) {
         output.writeMessage(1, getMinTimeoutDuration());
       }
       getUnknownFields().writeTo(output);
@@ -155,7 +154,7 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (minTimeoutDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMinTimeoutDuration());
       }
@@ -317,19 +316,13 @@ public final class ParamsProto {
 
       // Construct using com.chainmain.icaauth.v1.ParamsProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMinTimeoutDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -373,14 +366,11 @@ public final class ParamsProto {
 
       private void buildPartial0(com.chainmain.icaauth.v1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minTimeoutDuration_ = minTimeoutDurationBuilder_ == null
               ? minTimeoutDuration_
               : minTimeoutDurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -571,10 +561,8 @@ public final class ParamsProto {
         } else {
           minTimeoutDurationBuilder_.mergeFrom(value);
         }
-        if (minTimeoutDuration_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**

@@ -692,7 +692,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.QueryProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryProofResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -720,7 +719,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return result_ != null;
     }
     /**
      * <pre>
@@ -763,7 +762,7 @@ public final class ProofProto {
       if (height_ != 0L) {
         output.writeInt64(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         output.writeMessage(2, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -779,7 +778,7 @@ public final class ProofProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResult());
       }
@@ -946,19 +945,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.QueryProofResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getResultFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1006,14 +999,11 @@ public final class ProofProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = height_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1251,10 +1241,8 @@ public final class ProofProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1460,8 +1448,7 @@ public final class ProofProto {
 
     public static final int REQUEST_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList requestIds_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList requestIds_;
     /**
      * <pre>
      * request_ids is the list of request IDs
@@ -1739,17 +1726,22 @@ public final class ProofProto {
       @java.lang.Override
       public com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest buildPartial() {
         com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest result = new com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          requestIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.requestIds_ = requestIds_;
+      }
+
       private void buildPartial0(com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          requestIds_.makeImmutable();
-          result.requestIds_ = requestIds_;
-        }
       }
 
       @java.lang.Override
@@ -1799,8 +1791,7 @@ public final class ProofProto {
         if (!other.requestIds_.isEmpty()) {
           if (requestIds_.isEmpty()) {
             requestIds_ = other.requestIds_;
-            requestIds_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureRequestIdsIsMutable();
             requestIds_.addAll(other.requestIds_);
@@ -1868,10 +1859,10 @@ public final class ProofProto {
 
       private com.google.protobuf.Internal.LongList requestIds_ = emptyLongList();
       private void ensureRequestIdsIsMutable() {
-        if (!requestIds_.isModifiable()) {
-          requestIds_ = makeMutableCopy(requestIds_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requestIds_ = mutableCopy(requestIds_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -1883,8 +1874,8 @@ public final class ProofProto {
        */
       public java.util.List<java.lang.Long>
           getRequestIdsList() {
-        requestIds_.makeImmutable();
-        return requestIds_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(requestIds_) : requestIds_;
       }
       /**
        * <pre>
@@ -1924,7 +1915,6 @@ public final class ProofProto {
 
         ensureRequestIdsIsMutable();
         requestIds_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1941,7 +1931,6 @@ public final class ProofProto {
 
         ensureRequestIdsIsMutable();
         requestIds_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1959,7 +1948,6 @@ public final class ProofProto {
         ensureRequestIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, requestIds_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2105,7 +2093,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -2125,7 +2112,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return result_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
@@ -2160,7 +2147,7 @@ public final class ProofProto {
       if (height_ != 0L) {
         output.writeInt64(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         output.writeMessage(2, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -2176,7 +2163,7 @@ public final class ProofProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResult());
       }
@@ -2343,19 +2330,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getResultFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2403,14 +2384,11 @@ public final class ProofProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = height_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2616,10 +2594,8 @@ public final class ProofProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3203,7 +3179,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int HEIGHT_FIELD_NUMBER = 1;
     private long height_ = 0L;
     /**
@@ -3223,7 +3198,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return result_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
@@ -3258,7 +3233,7 @@ public final class ProofProto {
       if (height_ != 0L) {
         output.writeInt64(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         output.writeMessage(2, getResult());
       }
       getUnknownFields().writeTo(output);
@@ -3274,7 +3249,7 @@ public final class ProofProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, height_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getResult());
       }
@@ -3441,19 +3416,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getResultFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3501,14 +3470,11 @@ public final class ProofProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.height_ = height_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3714,10 +3680,8 @@ public final class ProofProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3897,7 +3861,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.SingleProofResponse.class, com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROOF_FIELD_NUMBER = 1;
     private com.bandchain.v1.oracle.ProofProto.SingleProof proof_;
     /**
@@ -3906,7 +3869,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
@@ -3949,7 +3912,7 @@ public final class ProofProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(1, getProof());
       }
       if (!evmProofBytes_.isEmpty()) {
@@ -3964,7 +3927,7 @@ public final class ProofProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProof());
       }
@@ -4134,19 +4097,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.SingleProofResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4191,17 +4148,14 @@ public final class ProofProto {
 
       private void buildPartial0(com.bandchain.v1.oracle.ProofProto.SingleProofResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.evmProofBytes_ = evmProofBytes_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4375,10 +4329,8 @@ public final class ProofProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4590,7 +4542,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.MultiProofResponse.class, com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROOF_FIELD_NUMBER = 1;
     private com.bandchain.v1.oracle.ProofProto.MultiProof proof_;
     /**
@@ -4599,7 +4550,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
@@ -4642,7 +4593,7 @@ public final class ProofProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(1, getProof());
       }
       if (!evmProofBytes_.isEmpty()) {
@@ -4657,7 +4608,7 @@ public final class ProofProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProof());
       }
@@ -4827,19 +4778,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.MultiProofResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4884,17 +4829,14 @@ public final class ProofProto {
 
       private void buildPartial0(com.bandchain.v1.oracle.ProofProto.MultiProofResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.evmProofBytes_ = evmProofBytes_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5068,10 +5010,8 @@ public final class ProofProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5283,7 +5223,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.CountProofResponse.class, com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PROOF_FIELD_NUMBER = 1;
     private com.bandchain.v1.oracle.ProofProto.CountProof proof_;
     /**
@@ -5292,7 +5231,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return proof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
@@ -5335,7 +5274,7 @@ public final class ProofProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         output.writeMessage(1, getProof());
       }
       if (!evmProofBytes_.isEmpty()) {
@@ -5350,7 +5289,7 @@ public final class ProofProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (proof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProof());
       }
@@ -5520,19 +5459,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.CountProofResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5577,17 +5510,14 @@ public final class ProofProto {
 
       private void buildPartial0(com.bandchain.v1.oracle.ProofProto.CountProofResponse result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.proof_ = proofBuilder_ == null
               ? proof_
               : proofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.evmProofBytes_ = evmProofBytes_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5761,10 +5691,8 @@ public final class ProofProto {
         } else {
           proofBuilder_.mergeFrom(value);
         }
-        if (proof_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5990,7 +5918,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.SingleProof.class, com.bandchain.v1.oracle.ProofProto.SingleProof.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
     private long blockHeight_ = 0L;
     /**
@@ -6010,7 +5937,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasOracleDataProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return oracleDataProof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
@@ -6036,7 +5963,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasBlockRelayProof() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return blockRelayProof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
@@ -6071,10 +5998,10 @@ public final class ProofProto {
       if (blockHeight_ != 0L) {
         output.writeUInt64(1, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleDataProof_ != null) {
         output.writeMessage(2, getOracleDataProof());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockRelayProof_ != null) {
         output.writeMessage(3, getBlockRelayProof());
       }
       getUnknownFields().writeTo(output);
@@ -6090,11 +6017,11 @@ public final class ProofProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (oracleDataProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOracleDataProof());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockRelayProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBlockRelayProof());
       }
@@ -6270,20 +6197,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.SingleProof.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOracleDataProofFieldBuilder();
-          getBlockRelayProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6336,20 +6256,16 @@ public final class ProofProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blockHeight_ = blockHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.oracleDataProof_ = oracleDataProofBuilder_ == null
               ? oracleDataProof_
               : oracleDataProofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.blockRelayProof_ = blockRelayProofBuilder_ == null
               ? blockRelayProof_
               : blockRelayProofBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6565,10 +6481,8 @@ public final class ProofProto {
         } else {
           oracleDataProofBuilder_.mergeFrom(value);
         }
-        if (oracleDataProof_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6686,10 +6600,8 @@ public final class ProofProto {
         } else {
           blockRelayProofBuilder_.mergeFrom(value);
         }
-        if (blockRelayProof_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6893,7 +6805,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.MultiProof.class, com.bandchain.v1.oracle.ProofProto.MultiProof.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
     private long blockHeight_ = 0L;
     /**
@@ -6954,7 +6865,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasBlockRelayProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return blockRelayProof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
@@ -6992,7 +6903,7 @@ public final class ProofProto {
       for (int i = 0; i < oracleDataMultiProof_.size(); i++) {
         output.writeMessage(2, oracleDataMultiProof_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockRelayProof_ != null) {
         output.writeMessage(3, getBlockRelayProof());
       }
       getUnknownFields().writeTo(output);
@@ -7012,7 +6923,7 @@ public final class ProofProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, oracleDataMultiProof_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (blockRelayProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBlockRelayProof());
       }
@@ -7185,20 +7096,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.MultiProof.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOracleDataMultiProofFieldBuilder();
-          getBlockRelayProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7266,14 +7170,11 @@ public final class ProofProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blockHeight_ = blockHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.blockRelayProof_ = blockRelayProofBuilder_ == null
               ? blockRelayProof_
               : blockRelayProofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7758,10 +7659,8 @@ public final class ProofProto {
         } else {
           blockRelayProofBuilder_.mergeFrom(value);
         }
-        if (blockRelayProof_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -7955,7 +7854,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.CountProof.class, com.bandchain.v1.oracle.ProofProto.CountProof.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
     private long blockHeight_ = 0L;
     /**
@@ -7975,7 +7873,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasCountProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return countProof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
@@ -8001,7 +7899,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasBlockRelayProof() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return blockRelayProof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
@@ -8036,10 +7934,10 @@ public final class ProofProto {
       if (blockHeight_ != 0L) {
         output.writeUInt64(1, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (countProof_ != null) {
         output.writeMessage(2, getCountProof());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockRelayProof_ != null) {
         output.writeMessage(3, getBlockRelayProof());
       }
       getUnknownFields().writeTo(output);
@@ -8055,11 +7953,11 @@ public final class ProofProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, blockHeight_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (countProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCountProof());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockRelayProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBlockRelayProof());
       }
@@ -8235,20 +8133,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.CountProof.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCountProofFieldBuilder();
-          getBlockRelayProofFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8301,20 +8192,16 @@ public final class ProofProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.blockHeight_ = blockHeight_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.countProof_ = countProofBuilder_ == null
               ? countProof_
               : countProofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.blockRelayProof_ = blockRelayProofBuilder_ == null
               ? blockRelayProof_
               : blockRelayProofBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8530,10 +8417,8 @@ public final class ProofProto {
         } else {
           countProofBuilder_.mergeFrom(value);
         }
-        if (countProof_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8651,10 +8536,8 @@ public final class ProofProto {
         } else {
           blockRelayProofBuilder_.mergeFrom(value);
         }
-        if (blockRelayProof_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8858,7 +8741,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.OracleDataProof.class, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder.class);
     }
 
-    private int bitField0_;
     public static final int RESULT_FIELD_NUMBER = 1;
     private com.oracle.v1.OracleProto.Result result_;
     /**
@@ -8867,7 +8749,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasResult() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return result_ != null;
     }
     /**
      * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
@@ -8951,7 +8833,7 @@ public final class ProofProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         output.writeMessage(1, getResult());
       }
       if (version_ != 0L) {
@@ -8969,7 +8851,7 @@ public final class ProofProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (result_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getResult());
       }
@@ -9150,20 +9032,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.OracleDataProof.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getResultFieldBuilder();
-          getMerklePathsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9228,17 +9103,14 @@ public final class ProofProto {
 
       private void buildPartial0(com.bandchain.v1.oracle.ProofProto.OracleDataProof result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = resultBuilder_ == null
               ? result_
               : resultBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.version_ = version_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9451,10 +9323,8 @@ public final class ProofProto {
         } else {
           resultBuilder_.mergeFrom(value);
         }
-        if (result_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -10730,7 +10600,6 @@ public final class ProofProto {
               com.bandchain.v1.oracle.ProofProto.BlockRelayProof.class, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MULTI_STORE_PROOF_FIELD_NUMBER = 1;
     private com.bandchain.v1.oracle.ProofProto.MultiStoreProof multiStoreProof_;
     /**
@@ -10739,7 +10608,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasMultiStoreProof() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return multiStoreProof_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
@@ -10765,7 +10634,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasBlockHeaderMerkleParts() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return blockHeaderMerkleParts_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
@@ -10791,7 +10660,7 @@ public final class ProofProto {
      */
     @java.lang.Override
     public boolean hasCommonEncodedVotePart() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return commonEncodedVotePart_ != null;
     }
     /**
      * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
@@ -10864,13 +10733,13 @@ public final class ProofProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (multiStoreProof_ != null) {
         output.writeMessage(1, getMultiStoreProof());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockHeaderMerkleParts_ != null) {
         output.writeMessage(2, getBlockHeaderMerkleParts());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (commonEncodedVotePart_ != null) {
         output.writeMessage(3, getCommonEncodedVotePart());
       }
       for (int i = 0; i < signatures_.size(); i++) {
@@ -10885,15 +10754,15 @@ public final class ProofProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (multiStoreProof_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMultiStoreProof());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (blockHeaderMerkleParts_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBlockHeaderMerkleParts());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (commonEncodedVotePart_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCommonEncodedVotePart());
       }
@@ -11083,22 +10952,13 @@ public final class ProofProto {
 
       // Construct using com.bandchain.v1.oracle.ProofProto.BlockRelayProof.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMultiStoreProofFieldBuilder();
-          getBlockHeaderMerklePartsFieldBuilder();
-          getCommonEncodedVotePartFieldBuilder();
-          getSignaturesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -11172,26 +11032,21 @@ public final class ProofProto {
 
       private void buildPartial0(com.bandchain.v1.oracle.ProofProto.BlockRelayProof result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.multiStoreProof_ = multiStoreProofBuilder_ == null
               ? multiStoreProof_
               : multiStoreProofBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.blockHeaderMerkleParts_ = blockHeaderMerklePartsBuilder_ == null
               ? blockHeaderMerkleParts_
               : blockHeaderMerklePartsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.commonEncodedVotePart_ = commonEncodedVotePartBuilder_ == null
               ? commonEncodedVotePart_
               : commonEncodedVotePartBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -11416,10 +11271,8 @@ public final class ProofProto {
         } else {
           multiStoreProofBuilder_.mergeFrom(value);
         }
-        if (multiStoreProof_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11537,10 +11390,8 @@ public final class ProofProto {
         } else {
           blockHeaderMerklePartsBuilder_.mergeFrom(value);
         }
-        if (blockHeaderMerkleParts_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11658,10 +11509,8 @@ public final class ProofProto {
         } else {
           commonEncodedVotePartBuilder_.mergeFrom(value);
         }
-        if (commonEncodedVotePart_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

@@ -341,7 +341,6 @@ public final class DealProto {
               com.panacea.datadeal.v2alpha2.DealProto.Deal.class, com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -437,7 +436,7 @@ public final class DealProto {
      */
     @java.lang.Override
     public boolean hasBudget() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return budget_ != null;
     }
     /**
      * <code>.cosmos.base.v1beta1.Coin budget = 4 [json_name = "budget"];</code>
@@ -568,7 +567,7 @@ public final class DealProto {
       for (int i = 0; i < dataSchema_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataSchema_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (budget_ != null) {
         output.writeMessage(4, getBudget());
       }
       if (maxNumData_ != 0L) {
@@ -610,7 +609,7 @@ public final class DealProto {
         size += dataSize;
         size += 1 * getDataSchemaList().size();
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (budget_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBudget());
       }
@@ -827,19 +826,13 @@ public final class DealProto {
 
       // Construct using com.panacea.datadeal.v2alpha2.DealProto.Deal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBudgetFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -902,12 +895,10 @@ public final class DealProto {
           dataSchema_.makeImmutable();
           result.dataSchema_ = dataSchema_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.budget_ = budgetBuilder_ == null
               ? budget_
               : budgetBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.maxNumData_ = maxNumData_;
@@ -924,7 +915,6 @@ public final class DealProto {
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.nonce_ = nonce_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1381,10 +1371,8 @@ public final class DealProto {
         } else {
           budgetBuilder_.mergeFrom(value);
         }
-        if (budget_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**

@@ -127,7 +127,7 @@ public final class TxProto {
       super(builder);
     }
     private Tx() {
-      signatures_ = emptyList(com.google.protobuf.ByteString.class);
+      signatures_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -150,7 +150,6 @@ public final class TxProto {
               com.cosmos.tx.v1beta1.TxProto.Tx.class, com.cosmos.tx.v1beta1.TxProto.Tx.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BODY_FIELD_NUMBER = 1;
     private com.cosmos.tx.v1beta1.TxProto.TxBody body_;
     /**
@@ -163,7 +162,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasBody() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return body_ != null;
     }
     /**
      * <pre>
@@ -202,7 +201,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasAuthInfo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return authInfo_ != null;
     }
     /**
      * <pre>
@@ -232,8 +231,7 @@ public final class TxProto {
 
     public static final int SIGNATURES_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> signatures_;
     /**
      * <pre>
      * signatures is a list of signatures that matches the length and order of
@@ -291,10 +289,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (body_ != null) {
         output.writeMessage(1, getBody());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (authInfo_ != null) {
         output.writeMessage(2, getAuthInfo());
       }
       for (int i = 0; i < signatures_.size(); i++) {
@@ -309,11 +307,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (body_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBody());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (authInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAuthInfo());
       }
@@ -499,20 +497,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.tx.v1beta1.TxProto.Tx.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBodyFieldBuilder();
-          getAuthInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -528,7 +519,7 @@ public final class TxProto {
           authInfoBuilder_.dispose();
           authInfoBuilder_ = null;
         }
-        signatures_ = emptyList(com.google.protobuf.ByteString.class);
+        signatures_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -555,31 +546,32 @@ public final class TxProto {
       @java.lang.Override
       public com.cosmos.tx.v1beta1.TxProto.Tx buildPartial() {
         com.cosmos.tx.v1beta1.TxProto.Tx result = new com.cosmos.tx.v1beta1.TxProto.Tx(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.cosmos.tx.v1beta1.TxProto.Tx result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          signatures_ = java.util.Collections.unmodifiableList(signatures_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.signatures_ = signatures_;
+      }
+
       private void buildPartial0(com.cosmos.tx.v1beta1.TxProto.Tx result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.body_ = bodyBuilder_ == null
               ? body_
               : bodyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.authInfo_ = authInfoBuilder_ == null
               ? authInfo_
               : authInfoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          signatures_.makeImmutable();
-          result.signatures_ = signatures_;
-        }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -635,8 +627,7 @@ public final class TxProto {
         if (!other.signatures_.isEmpty()) {
           if (signatures_.isEmpty()) {
             signatures_ = other.signatures_;
-            signatures_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSignaturesIsMutable();
             signatures_.addAll(other.signatures_);
@@ -792,10 +783,8 @@ public final class TxProto {
         } else {
           bodyBuilder_.mergeFrom(value);
         }
-        if (body_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -954,10 +943,8 @@ public final class TxProto {
         } else {
           authInfoBuilder_.mergeFrom(value);
         }
-        if (authInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1029,12 +1016,12 @@ public final class TxProto {
         return authInfoBuilder_;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> signatures_ = java.util.Collections.emptyList();
       private void ensureSignaturesIsMutable() {
-        if (!signatures_.isModifiable()) {
-          signatures_ = makeMutableCopy(signatures_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          signatures_ = new java.util.ArrayList<com.google.protobuf.ByteString>(signatures_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1048,8 +1035,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getSignaturesList() {
-        signatures_.makeImmutable();
-        return signatures_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(signatures_) : signatures_;
       }
       /**
        * <pre>
@@ -1095,7 +1082,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1114,7 +1100,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1134,7 +1119,6 @@ public final class TxProto {
         ensureSignaturesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, signatures_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1149,7 +1133,7 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearSignatures() {
-        signatures_ = emptyList(com.google.protobuf.ByteString.class);
+        signatures_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -1302,7 +1286,7 @@ public final class TxProto {
     private TxRaw() {
       bodyBytes_ = com.google.protobuf.ByteString.EMPTY;
       authInfoBytes_ = com.google.protobuf.ByteString.EMPTY;
-      signatures_ = emptyList(com.google.protobuf.ByteString.class);
+      signatures_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1359,8 +1343,7 @@ public final class TxProto {
 
     public static final int SIGNATURES_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ =
-        emptyList(com.google.protobuf.ByteString.class);
+    private java.util.List<com.google.protobuf.ByteString> signatures_;
     /**
      * <pre>
      * signatures is a list of signatures that matches the length and order of
@@ -1634,7 +1617,7 @@ public final class TxProto {
         bitField0_ = 0;
         bodyBytes_ = com.google.protobuf.ByteString.EMPTY;
         authInfoBytes_ = com.google.protobuf.ByteString.EMPTY;
-        signatures_ = emptyList(com.google.protobuf.ByteString.class);
+        signatures_ = java.util.Collections.emptyList();
         return this;
       }
 
@@ -1661,9 +1644,18 @@ public final class TxProto {
       @java.lang.Override
       public com.cosmos.tx.v1beta1.TxProto.TxRaw buildPartial() {
         com.cosmos.tx.v1beta1.TxProto.TxRaw result = new com.cosmos.tx.v1beta1.TxProto.TxRaw(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cosmos.tx.v1beta1.TxProto.TxRaw result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          signatures_ = java.util.Collections.unmodifiableList(signatures_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.signatures_ = signatures_;
       }
 
       private void buildPartial0(com.cosmos.tx.v1beta1.TxProto.TxRaw result) {
@@ -1673,10 +1665,6 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.authInfoBytes_ = authInfoBytes_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          signatures_.makeImmutable();
-          result.signatures_ = signatures_;
         }
       }
 
@@ -1733,8 +1721,7 @@ public final class TxProto {
         if (!other.signatures_.isEmpty()) {
           if (signatures_.isEmpty()) {
             signatures_ = other.signatures_;
-            signatures_.makeImmutable();
-            bitField0_ |= 0x00000004;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSignaturesIsMutable();
             signatures_.addAll(other.signatures_);
@@ -1894,12 +1881,12 @@ public final class TxProto {
         return this;
       }
 
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> signatures_ = emptyList(com.google.protobuf.ByteString.class);
+      private java.util.List<com.google.protobuf.ByteString> signatures_ = java.util.Collections.emptyList();
       private void ensureSignaturesIsMutable() {
-        if (!signatures_.isModifiable()) {
-          signatures_ = makeMutableCopy(signatures_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          signatures_ = new java.util.ArrayList<com.google.protobuf.ByteString>(signatures_);
+          bitField0_ |= 0x00000004;
         }
-        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1913,8 +1900,8 @@ public final class TxProto {
        */
       public java.util.List<com.google.protobuf.ByteString>
           getSignaturesList() {
-        signatures_.makeImmutable();
-        return signatures_;
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(signatures_) : signatures_;
       }
       /**
        * <pre>
@@ -1960,7 +1947,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.set(index, value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1979,7 +1965,6 @@ public final class TxProto {
         if (value == null) { throw new NullPointerException(); }
         ensureSignaturesIsMutable();
         signatures_.add(value);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1999,7 +1984,6 @@ public final class TxProto {
         ensureSignaturesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, signatures_);
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2014,7 +1998,7 @@ public final class TxProto {
        * @return This builder for chaining.
        */
       public Builder clearSignatures() {
-        signatures_ = emptyList(com.google.protobuf.ByteString.class);
+        signatures_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -3158,7 +3142,6 @@ public final class TxProto {
               com.cosmos.tx.v1beta1.TxProto.SignDocDirectAux.class, com.cosmos.tx.v1beta1.TxProto.SignDocDirectAux.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BODY_BYTES_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString bodyBytes_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -3187,7 +3170,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPublicKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publicKey_ != null;
     }
     /**
      * <pre>
@@ -3311,7 +3294,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTip() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return tip_ != null;
     }
     /**
      * <pre>
@@ -3364,7 +3347,7 @@ public final class TxProto {
       if (!bodyBytes_.isEmpty()) {
         output.writeBytes(1, bodyBytes_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         output.writeMessage(2, getPublicKey());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
@@ -3376,7 +3359,7 @@ public final class TxProto {
       if (sequence_ != 0L) {
         output.writeUInt64(5, sequence_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (tip_ != null) {
         output.writeMessage(6, getTip());
       }
       getUnknownFields().writeTo(output);
@@ -3392,7 +3375,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, bodyBytes_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPublicKey());
       }
@@ -3407,7 +3390,7 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(5, sequence_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (tip_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTip());
       }
@@ -3599,20 +3582,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.tx.v1beta1.TxProto.SignDocDirectAux.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublicKeyFieldBuilder();
-          getTipFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3668,12 +3644,10 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.bodyBytes_ = bodyBytes_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.publicKey_ = publicKeyBuilder_ == null
               ? publicKey_
               : publicKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.chainId_ = chainId_;
@@ -3688,9 +3662,7 @@ public final class TxProto {
           result.tip_ = tipBuilder_ == null
               ? tip_
               : tipBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3967,10 +3939,8 @@ public final class TxProto {
         } else {
           publicKeyBuilder_.mergeFrom(value);
         }
-        if (publicKey_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4339,10 +4309,8 @@ public final class TxProto {
         } else {
           tipBuilder_.mergeFrom(value);
         }
-        if (tip_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -7129,7 +7097,6 @@ public final class TxProto {
               com.cosmos.tx.v1beta1.TxProto.AuthInfo.class, com.cosmos.tx.v1beta1.TxProto.AuthInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SIGNER_INFOS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.tx.v1beta1.TxProto.SignerInfo> signerInfos_;
@@ -7221,7 +7188,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasFee() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return fee_ != null;
     }
     /**
      * <pre>
@@ -7270,7 +7237,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasTip() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return tip_ != null;
     }
     /**
      * <pre>
@@ -7323,10 +7290,10 @@ public final class TxProto {
       for (int i = 0; i < signerInfos_.size(); i++) {
         output.writeMessage(1, signerInfos_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         output.writeMessage(2, getFee());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (tip_ != null) {
         output.writeMessage(3, getTip());
       }
       getUnknownFields().writeTo(output);
@@ -7342,11 +7309,11 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, signerInfos_.get(i));
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (fee_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFee());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (tip_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTip());
       }
@@ -7524,21 +7491,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.tx.v1beta1.TxProto.AuthInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSignerInfosFieldBuilder();
-          getFeeFieldBuilder();
-          getTipFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7607,20 +7566,16 @@ public final class TxProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.TxProto.AuthInfo result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fee_ = feeBuilder_ == null
               ? fee_
               : feeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tip_ = tipBuilder_ == null
               ? tip_
               : tipBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8236,10 +8191,8 @@ public final class TxProto {
         } else {
           feeBuilder_.mergeFrom(value);
         }
-        if (fee_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8430,10 +8383,8 @@ public final class TxProto {
         } else {
           tipBuilder_.mergeFrom(value);
         }
-        if (tip_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -8703,7 +8654,6 @@ public final class TxProto {
               com.cosmos.tx.v1beta1.TxProto.SignerInfo.class, com.cosmos.tx.v1beta1.TxProto.SignerInfo.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
     private com.google.protobuf.Any publicKey_;
     /**
@@ -8718,7 +8668,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasPublicKey() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return publicKey_ != null;
     }
     /**
      * <pre>
@@ -8761,7 +8711,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasModeInfo() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return modeInfo_ != null;
     }
     /**
      * <pre>
@@ -8820,10 +8770,10 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         output.writeMessage(1, getPublicKey());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (modeInfo_ != null) {
         output.writeMessage(2, getModeInfo());
       }
       if (sequence_ != 0L) {
@@ -8838,11 +8788,11 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (publicKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPublicKey());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (modeInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getModeInfo());
       }
@@ -9023,20 +8973,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.tx.v1beta1.TxProto.SignerInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPublicKeyFieldBuilder();
-          getModeInfoFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9086,23 +9029,19 @@ public final class TxProto {
 
       private void buildPartial0(com.cosmos.tx.v1beta1.TxProto.SignerInfo result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.publicKey_ = publicKeyBuilder_ == null
               ? publicKey_
               : publicKeyBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.modeInfo_ = modeInfoBuilder_ == null
               ? modeInfo_
               : modeInfoBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.sequence_ = sequence_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9316,10 +9255,8 @@ public final class TxProto {
         } else {
           publicKeyBuilder_.mergeFrom(value);
         }
-        if (publicKey_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9486,10 +9423,8 @@ public final class TxProto {
         } else {
           modeInfoBuilder_.mergeFrom(value);
         }
-        if (modeInfo_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -10450,7 +10385,6 @@ public final class TxProto {
                 com.cosmos.tx.v1beta1.TxProto.ModeInfo.Multi.class, com.cosmos.tx.v1beta1.TxProto.ModeInfo.Multi.Builder.class);
       }
 
-      private int bitField0_;
       public static final int BITARRAY_FIELD_NUMBER = 1;
       private com.cosmos.crypto.multisig.v1beta1.MultisigProto.CompactBitArray bitarray_;
       /**
@@ -10463,7 +10397,7 @@ public final class TxProto {
        */
       @java.lang.Override
       public boolean hasBitarray() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return bitarray_ != null;
       }
       /**
        * <pre>
@@ -10569,7 +10503,7 @@ public final class TxProto {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (bitarray_ != null) {
           output.writeMessage(1, getBitarray());
         }
         for (int i = 0; i < modeInfos_.size(); i++) {
@@ -10584,7 +10518,7 @@ public final class TxProto {
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (bitarray_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getBitarray());
         }
@@ -10756,20 +10690,13 @@ public final class TxProto {
 
         // Construct using com.cosmos.tx.v1beta1.TxProto.ModeInfo.Multi.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getBitarrayFieldBuilder();
-            getModeInfosFieldBuilder();
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -10833,14 +10760,11 @@ public final class TxProto {
 
         private void buildPartial0(com.cosmos.tx.v1beta1.TxProto.ModeInfo.Multi result) {
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.bitarray_ = bitarrayBuilder_ == null
                 ? bitarray_
                 : bitarrayBuilder_.build();
-            to_bitField0_ |= 0x00000001;
           }
-          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -11065,10 +10989,8 @@ public final class TxProto {
           } else {
             bitarrayBuilder_.mergeFrom(value);
           }
-          if (bitarray_ != null) {
-            bitField0_ |= 0x00000001;
-            onChanged();
-          }
+          bitField0_ |= 0x00000001;
+          onChanged();
           return this;
         }
         /**
@@ -15120,7 +15042,6 @@ public final class TxProto {
               com.cosmos.tx.v1beta1.TxProto.AuxSignerData.class, com.cosmos.tx.v1beta1.TxProto.AuxSignerData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -15186,7 +15107,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasSignDoc() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return signDoc_ != null;
     }
     /**
      * <pre>
@@ -15274,7 +15195,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signDoc_ != null) {
         output.writeMessage(2, getSignDoc());
       }
       if (mode_ != com.cosmos.tx.signing.v1beta1.SigningProto.SignMode.SIGN_MODE_UNSPECIFIED.getNumber()) {
@@ -15295,7 +15216,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (signDoc_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSignDoc());
       }
@@ -15481,19 +15402,13 @@ public final class TxProto {
 
       // Construct using com.cosmos.tx.v1beta1.TxProto.AuxSignerData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSignDocFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15543,12 +15458,10 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.address_ = address_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.signDoc_ = signDocBuilder_ == null
               ? signDoc_
               : signDocBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.mode_ = mode_;
@@ -15556,7 +15469,6 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.sig_ = sig_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15880,10 +15792,8 @@ public final class TxProto {
         } else {
           signDocBuilder_.mergeFrom(value);
         }
-        if (signDoc_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

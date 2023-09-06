@@ -123,7 +123,6 @@ public final class GenesisProto {
               com.kava.auction.v1beta1.GenesisProto.GenesisState.class, com.kava.auction.v1beta1.GenesisProto.GenesisState.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NEXT_AUCTION_ID_FIELD_NUMBER = 1;
     private long nextAuctionId_ = 0L;
     /**
@@ -143,7 +142,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasParams() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return params_ != null;
     }
     /**
      * <code>.kava.auction.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -239,7 +238,7 @@ public final class GenesisProto {
       if (nextAuctionId_ != 0L) {
         output.writeUInt64(1, nextAuctionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         output.writeMessage(2, getParams());
       }
       for (int i = 0; i < auctions_.size(); i++) {
@@ -258,7 +257,7 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, nextAuctionId_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParams());
       }
@@ -435,20 +434,13 @@ public final class GenesisProto {
 
       // Construct using com.kava.auction.v1beta1.GenesisProto.GenesisState.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getParamsFieldBuilder();
-          getAuctionsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -516,14 +508,11 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.nextAuctionId_ = nextAuctionId_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -768,10 +757,8 @@ public final class GenesisProto {
         } else {
           paramsBuilder_.mergeFrom(value);
         }
-        if (params_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1307,7 +1294,6 @@ public final class GenesisProto {
               com.kava.auction.v1beta1.GenesisProto.Params.class, com.kava.auction.v1beta1.GenesisProto.Params.Builder.class);
     }
 
-    private int bitField0_;
     public static final int MAX_AUCTION_DURATION_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration maxAuctionDuration_;
     /**
@@ -1316,7 +1302,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasMaxAuctionDuration() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return maxAuctionDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration max_auction_duration = 1 [json_name = "maxAuctionDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -1342,7 +1328,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasForwardBidDuration() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return forwardBidDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration forward_bid_duration = 6 [json_name = "forwardBidDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -1368,7 +1354,7 @@ public final class GenesisProto {
      */
     @java.lang.Override
     public boolean hasReverseBidDuration() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return reverseBidDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration reverse_bid_duration = 7 [json_name = "reverseBidDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
@@ -1433,7 +1419,7 @@ public final class GenesisProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxAuctionDuration_ != null) {
         output.writeMessage(1, getMaxAuctionDuration());
       }
       if (!incrementSurplus_.isEmpty()) {
@@ -1445,10 +1431,10 @@ public final class GenesisProto {
       if (!incrementCollateral_.isEmpty()) {
         output.writeBytes(5, incrementCollateral_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (forwardBidDuration_ != null) {
         output.writeMessage(6, getForwardBidDuration());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (reverseBidDuration_ != null) {
         output.writeMessage(7, getReverseBidDuration());
       }
       getUnknownFields().writeTo(output);
@@ -1460,7 +1446,7 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (maxAuctionDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMaxAuctionDuration());
       }
@@ -1476,11 +1462,11 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, incrementCollateral_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (forwardBidDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getForwardBidDuration());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (reverseBidDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getReverseBidDuration());
       }
@@ -1672,21 +1658,13 @@ public final class GenesisProto {
 
       // Construct using com.kava.auction.v1beta1.GenesisProto.Params.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMaxAuctionDurationFieldBuilder();
-          getForwardBidDurationFieldBuilder();
-          getReverseBidDurationFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1743,24 +1721,20 @@ public final class GenesisProto {
 
       private void buildPartial0(com.kava.auction.v1beta1.GenesisProto.Params result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.maxAuctionDuration_ = maxAuctionDurationBuilder_ == null
               ? maxAuctionDuration_
               : maxAuctionDurationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.forwardBidDuration_ = forwardBidDurationBuilder_ == null
               ? forwardBidDuration_
               : forwardBidDurationBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.reverseBidDuration_ = reverseBidDurationBuilder_ == null
               ? reverseBidDuration_
               : reverseBidDurationBuilder_.build();
-          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.incrementSurplus_ = incrementSurplus_;
@@ -1771,7 +1745,6 @@ public final class GenesisProto {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.incrementCollateral_ = incrementCollateral_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1981,10 +1954,8 @@ public final class GenesisProto {
         } else {
           maxAuctionDurationBuilder_.mergeFrom(value);
         }
-        if (maxAuctionDuration_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2102,10 +2073,8 @@ public final class GenesisProto {
         } else {
           forwardBidDurationBuilder_.mergeFrom(value);
         }
-        if (forwardBidDuration_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2223,10 +2192,8 @@ public final class GenesisProto {
         } else {
           reverseBidDurationBuilder_.mergeFrom(value);
         }
-        if (reverseBidDuration_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

@@ -1458,7 +1458,6 @@ public final class OracleProto {
               com.irismod.oracle.OracleProto.FeedValue.class, com.irismod.oracle.OracleProto.FeedValue.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATA_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object data_ = "";
@@ -1506,7 +1505,7 @@ public final class OracleProto {
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return timestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
@@ -1541,7 +1540,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, data_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         output.writeMessage(2, getTimestamp());
       }
       getUnknownFields().writeTo(output);
@@ -1556,7 +1555,7 @@ public final class OracleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, data_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTimestamp());
       }
@@ -1722,19 +1721,13 @@ public final class OracleProto {
 
       // Construct using com.irismod.oracle.OracleProto.FeedValue.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimestampFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1782,14 +1775,11 @@ public final class OracleProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.data_ = data_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.timestamp_ = timestampBuilder_ == null
               ? timestamp_
               : timestampBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2037,10 +2027,8 @@ public final class OracleProto {
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-        if (timestamp_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

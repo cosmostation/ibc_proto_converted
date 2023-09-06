@@ -3175,7 +3175,6 @@ public final class PoolProto {
               com.kyve.pool.v1beta1.PoolProto.Pool.class, com.kyve.pool.v1beta1.PoolProto.Pool.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -3716,7 +3715,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasProtocol() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return protocol_ != null;
     }
     /**
      * <pre>
@@ -3754,7 +3753,7 @@ public final class PoolProto {
      */
     @java.lang.Override
     public boolean hasUpgradePlan() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return upgradePlan_ != null;
     }
     /**
      * <pre>
@@ -3875,10 +3874,10 @@ public final class PoolProto {
       if (totalFunds_ != 0L) {
         output.writeUInt64(17, totalFunds_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (protocol_ != null) {
         output.writeMessage(18, getProtocol());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (upgradePlan_ != null) {
         output.writeMessage(19, getUpgradePlan());
       }
       if (currentStorageProviderId_ != 0) {
@@ -3957,11 +3956,11 @@ public final class PoolProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(17, totalFunds_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (protocol_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getProtocol());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (upgradePlan_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getUpgradePlan());
       }
@@ -4227,21 +4226,13 @@ public final class PoolProto {
 
       // Construct using com.kyve.pool.v1beta1.PoolProto.Pool.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFundersFieldBuilder();
-          getProtocolFieldBuilder();
-          getUpgradePlanFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4376,18 +4367,15 @@ public final class PoolProto {
         if (((from_bitField0_ & 0x00010000) != 0)) {
           result.totalFunds_ = totalFunds_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00020000) != 0)) {
           result.protocol_ = protocolBuilder_ == null
               ? protocol_
               : protocolBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00040000) != 0)) {
           result.upgradePlan_ = upgradePlanBuilder_ == null
               ? upgradePlan_
               : upgradePlanBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00080000) != 0)) {
           result.currentStorageProviderId_ = currentStorageProviderId_;
@@ -4395,7 +4383,6 @@ public final class PoolProto {
         if (((from_bitField0_ & 0x00100000) != 0)) {
           result.currentCompressionId_ = currentCompressionId_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6148,10 +6135,8 @@ public final class PoolProto {
         } else {
           protocolBuilder_.mergeFrom(value);
         }
-        if (protocol_ != null) {
-          bitField0_ |= 0x00020000;
-          onChanged();
-        }
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -6305,10 +6290,8 @@ public final class PoolProto {
         } else {
           upgradePlanBuilder_.mergeFrom(value);
         }
-        if (upgradePlan_ != null) {
-          bitField0_ |= 0x00040000;
-          onChanged();
-        }
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**

@@ -101,7 +101,6 @@ public final class ProposalsProto {
               com.quicksilver.airdrop.v1.ProposalsProto.RegisterZoneDropProposal.class, com.quicksilver.airdrop.v1.ProposalsProto.RegisterZoneDropProposal.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TITLE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object title_ = "";
@@ -188,7 +187,7 @@ public final class ProposalsProto {
      */
     @java.lang.Override
     public boolean hasZoneDrop() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return zoneDrop_ != null;
     }
     /**
      * <code>.quicksilver.airdrop.v1.ZoneDrop zone_drop = 3 [json_name = "zoneDrop", (.gogoproto.moretags) = "yaml:&#92;"zone_drop&#92;""];</code>
@@ -237,7 +236,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (zoneDrop_ != null) {
         output.writeMessage(3, getZoneDrop());
       }
       if (!claimRecords_.isEmpty()) {
@@ -258,7 +257,7 @@ public final class ProposalsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (zoneDrop_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getZoneDrop());
       }
@@ -432,19 +431,13 @@ public final class ProposalsProto {
 
       // Construct using com.quicksilver.airdrop.v1.ProposalsProto.RegisterZoneDropProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getZoneDropFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -497,17 +490,14 @@ public final class ProposalsProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.description_ = description_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.zoneDrop_ = zoneDropBuilder_ == null
               ? zoneDrop_
               : zoneDropBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.claimRecords_ = claimRecords_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -845,10 +835,8 @@ public final class ProposalsProto {
         } else {
           zoneDropBuilder_.mergeFrom(value);
         }
-        if (zoneDrop_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**

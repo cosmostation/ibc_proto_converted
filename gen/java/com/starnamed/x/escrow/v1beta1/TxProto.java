@@ -129,7 +129,6 @@ public final class TxProto {
               com.starnamed.x.escrow.v1beta1.TxProto.MsgCreateEscrow.class, com.starnamed.x.escrow.v1beta1.TxProto.MsgCreateEscrow.Builder.class);
     }
 
-    private int bitField0_;
     public static final int SELLER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object seller_ = "";
@@ -216,7 +215,7 @@ public final class TxProto {
      */
     @java.lang.Override
     public boolean hasObject() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return object_ != null;
     }
     /**
      * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
@@ -306,7 +305,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feePayer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feePayer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (object_ != null) {
         output.writeMessage(3, getObject());
       }
       for (int i = 0; i < price_.size(); i++) {
@@ -330,7 +329,7 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feePayer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feePayer_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (object_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getObject());
       }
@@ -519,20 +518,13 @@ public final class TxProto {
 
       // Construct using com.starnamed.x.escrow.v1beta1.TxProto.MsgCreateEscrow.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getObjectFieldBuilder();
-          getPriceFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -605,17 +597,14 @@ public final class TxProto {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.feePayer_ = feePayer_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.object_ = objectBuilder_ == null
               ? object_
               : objectBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.deadline_ = deadline_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -992,10 +981,8 @@ public final class TxProto {
         } else {
           objectBuilder_.mergeFrom(value);
         }
-        if (object_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
