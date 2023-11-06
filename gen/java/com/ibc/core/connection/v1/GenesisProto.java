@@ -1494,7 +1494,7 @@ public final class GenesisProto {
       "\004 \001(\0132\036.ibc.core.connection.v1.ParamsB\004\310" +
       "\336\037\000R\006paramsB\341\001\n\032com.ibc.core.connection." +
       "v1B\014GenesisProtoZ<github.com/cosmos/ibc-" +
-      "go/v7/modules/core/03-connection/types\242\002" +
+      "go/v8/modules/core/03-connection/types\242\002" +
       "\003ICC\252\002\026Ibc.Core.Connection.V1\312\002\026Ibc\\Core" +
       "\\Connection\\V1\342\002\"Ibc\\Core\\Connection\\V1\\" +
       "GPBMetadata\352\002\031Ibc::Core::Connection::V1b" +

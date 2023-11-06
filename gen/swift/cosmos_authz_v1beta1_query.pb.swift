@@ -129,7 +129,7 @@ struct Cosmos_Authz_V1beta1_QueryGranterGrantsResponse {
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
-/// QueryGranteeGrantsRequest is the request type for the Query/IssuedGrants RPC method.
+/// QueryGranteeGrantsRequest is the request type for the Query/GranteeGrants RPC method.
 struct Cosmos_Authz_V1beta1_QueryGranteeGrantsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for

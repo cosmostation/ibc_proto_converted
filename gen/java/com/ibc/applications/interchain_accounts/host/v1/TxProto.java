@@ -20,23 +20,23 @@ public final class TxProto {
 
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
      */
-    java.lang.String getAuthority();
+    java.lang.String getSigner();
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
      */
     com.google.protobuf.ByteString
-        getAuthorityBytes();
+        getSignerBytes();
 
     /**
      * <pre>
@@ -88,7 +88,7 @@ public final class TxProto {
       super(builder);
     }
     private MsgUpdateParams() {
-      authority_ = "";
+      signer_ = "";
     }
 
     @java.lang.Override
@@ -111,47 +111,47 @@ public final class TxProto {
               com.ibc.applications.interchain_accounts.host.v1.TxProto.MsgUpdateParams.class, com.ibc.applications.interchain_accounts.host.v1.TxProto.MsgUpdateParams.Builder.class);
     }
 
-    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    public static final int SIGNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object authority_ = "";
+    private volatile java.lang.Object signer_ = "";
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
      */
     @java.lang.Override
-    public java.lang.String getAuthority() {
-      java.lang.Object ref = authority_;
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        authority_ = s;
+        signer_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAuthorityBytes() {
-      java.lang.Object ref = authority_;
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        authority_ = b;
+        signer_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -216,8 +216,8 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
       }
       if (params_ != null) {
         output.writeMessage(2, getParams());
@@ -231,8 +231,8 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
       }
       if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -253,8 +253,8 @@ public final class TxProto {
       }
       com.ibc.applications.interchain_accounts.host.v1.TxProto.MsgUpdateParams other = (com.ibc.applications.interchain_accounts.host.v1.TxProto.MsgUpdateParams) obj;
 
-      if (!getAuthority()
-          .equals(other.getAuthority())) return false;
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
       if (hasParams() != other.hasParams()) return false;
       if (hasParams()) {
         if (!getParams()
@@ -271,8 +271,8 @@ public final class TxProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
-      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
       if (hasParams()) {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParams().hashCode();
@@ -412,7 +412,7 @@ public final class TxProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        authority_ = "";
+        signer_ = "";
         params_ = null;
         if (paramsBuilder_ != null) {
           paramsBuilder_.dispose();
@@ -452,7 +452,7 @@ public final class TxProto {
       private void buildPartial0(com.ibc.applications.interchain_accounts.host.v1.TxProto.MsgUpdateParams result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.authority_ = authority_;
+          result.signer_ = signer_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
@@ -505,8 +505,8 @@ public final class TxProto {
 
       public Builder mergeFrom(com.ibc.applications.interchain_accounts.host.v1.TxProto.MsgUpdateParams other) {
         if (other == com.ibc.applications.interchain_accounts.host.v1.TxProto.MsgUpdateParams.getDefaultInstance()) return this;
-        if (!other.getAuthority().isEmpty()) {
-          authority_ = other.authority_;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -540,7 +540,7 @@ public final class TxProto {
                 done = true;
                 break;
               case 10: {
-                authority_ = input.readStringRequireUtf8();
+                signer_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -568,22 +568,22 @@ public final class TxProto {
       }
       private int bitField0_;
 
-      private java.lang.Object authority_ = "";
+      private java.lang.Object signer_ = "";
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @return The authority.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The signer.
        */
-      public java.lang.String getAuthority() {
-        java.lang.Object ref = authority_;
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          authority_ = s;
+          signer_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -591,20 +591,20 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @return The bytes for authority.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The bytes for signer.
        */
       public com.google.protobuf.ByteString
-          getAuthorityBytes() {
-        java.lang.Object ref = authority_;
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          authority_ = b;
+          signer_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -612,49 +612,49 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @param value The authority to set.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The signer to set.
        * @return This builder for chaining.
        */
-      public Builder setAuthority(
+      public Builder setSigner(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        authority_ = value;
+        signer_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
+       * <code>string signer = 1 [json_name = "signer"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearAuthority() {
-        authority_ = getDefaultInstance().getAuthority();
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @param value The bytes for authority to set.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
        * @return This builder for chaining.
        */
-      public Builder setAuthorityBytes(
+      public Builder setSignerBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        authority_ = value;
+        signer_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -1325,24 +1325,24 @@ public final class TxProto {
       "hain_accounts.host.v1\032\024gogoproto/gogo.pr" +
       "oto\032\027cosmos/msg/v1/msg.proto\0327ibc/applic" +
       "ations/interchain_accounts/host/v1/host." +
-      "proto\"\223\001\n\017MsgUpdateParams\022\034\n\tauthority\030\001" +
-      " \001(\tR\tauthority\022R\n\006params\030\002 \001(\01324.ibc.ap" +
-      "plications.interchain_accounts.host.v1.P" +
-      "aramsB\004\310\336\037\000R\006params:\016\202\347\260*\tauthority\"\031\n\027M" +
-      "sgUpdateParamsResponse2\234\001\n\003Msg\022\224\001\n\014Updat" +
-      "eParams\022=.ibc.applications.interchain_ac" +
-      "counts.host.v1.MsgUpdateParams\032E.ibc.app" +
-      "lications.interchain_accounts.host.v1.Ms" +
-      "gUpdateParamsResponseB\326\002\n0com.ibc.applic" +
-      "ations.interchain_accounts.host.v1B\007TxPr" +
-      "otoZJgithub.com/cosmos/ibc-go/v7/modules" +
-      "/apps/27-interchain-accounts/host/types\242" +
-      "\002\004IAIH\252\002+Ibc.Applications.InterchainAcco" +
-      "unts.Host.V1\312\002+Ibc\\Applications\\Intercha" +
-      "inAccounts\\Host\\V1\342\0027Ibc\\Applications\\In" +
-      "terchainAccounts\\Host\\V1\\GPBMetadata\352\002/I" +
-      "bc::Applications::InterchainAccounts::Ho" +
-      "st::V1b\006proto3"
+      "proto\"\216\001\n\017MsgUpdateParams\022\026\n\006signer\030\001 \001(" +
+      "\tR\006signer\022R\n\006params\030\002 \001(\01324.ibc.applicat" +
+      "ions.interchain_accounts.host.v1.ParamsB" +
+      "\004\310\336\037\000R\006params:\017\210\240\037\000\202\347\260*\006signer\"\031\n\027MsgUpd" +
+      "ateParamsResponse2\243\001\n\003Msg\022\224\001\n\014UpdatePara" +
+      "ms\022=.ibc.applications.interchain_account" +
+      "s.host.v1.MsgUpdateParams\032E.ibc.applicat" +
+      "ions.interchain_accounts.host.v1.MsgUpda" +
+      "teParamsResponse\032\005\200\347\260*\001B\326\002\n0com.ibc.appl" +
+      "ications.interchain_accounts.host.v1B\007Tx" +
+      "ProtoZJgithub.com/cosmos/ibc-go/v8/modul" +
+      "es/apps/27-interchain-accounts/host/type" +
+      "s\242\002\004IAIH\252\002+Ibc.Applications.InterchainAc" +
+      "counts.Host.V1\312\002+Ibc\\Applications\\Interc" +
+      "hainAccounts\\Host\\V1\342\0027Ibc\\Applications\\" +
+      "InterchainAccounts\\Host\\V1\\GPBMetadata\352\002" +
+      "/Ibc::Applications::InterchainAccounts::" +
+      "Host::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1356,7 +1356,7 @@ public final class TxProto {
     internal_static_ibc_applications_interchain_accounts_host_v1_MsgUpdateParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ibc_applications_interchain_accounts_host_v1_MsgUpdateParams_descriptor,
-        new java.lang.String[] { "Authority", "Params", });
+        new java.lang.String[] { "Signer", "Params", });
     internal_static_ibc_applications_interchain_accounts_host_v1_MsgUpdateParamsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ibc_applications_interchain_accounts_host_v1_MsgUpdateParamsResponse_fieldAccessorTable = new
@@ -1365,7 +1365,9 @@ public final class TxProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.cosmos.msg.v1.MsgProto.service);
     registry.add(com.cosmos.msg.v1.MsgProto.signer);
+    registry.add(com.gogoproto.GogoProto.goprotoGetters);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

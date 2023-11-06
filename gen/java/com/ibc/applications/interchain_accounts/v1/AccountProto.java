@@ -795,7 +795,7 @@ public final class AccountProto {
       "\000\312\264-:ibc.applications.interchain_account" +
       "s.v1.InterchainAccountIB\273\002\n+com.ibc.appl" +
       "ications.interchain_accounts.v1B\014Account" +
-      "ProtoZEgithub.com/cosmos/ibc-go/v7/modul" +
+      "ProtoZEgithub.com/cosmos/ibc-go/v8/modul" +
       "es/apps/27-interchain-accounts/types\242\002\003I" +
       "AI\252\002&Ibc.Applications.InterchainAccounts" +
       ".V1\312\002&Ibc\\Applications\\InterchainAccount" +

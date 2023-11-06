@@ -6708,7 +6708,7 @@ public final class SolomachineProto {
       "buf.AnyR\tnewPubKey\022\'\n\017new_diversifier\030\002 " +
       "\001(\tR\016newDiversifier:\004\210\240\037\000B\242\002\n#com.ibc.li" +
       "ghtclients.solomachine.v3B\020SolomachinePr" +
-      "otoZLgithub.com/cosmos/ibc-go/v7/modules" +
+      "otoZLgithub.com/cosmos/ibc-go/v8/modules" +
       "/light-clients/06-solomachine;solomachin" +
       "e\242\002\003ILS\252\002\037Ibc.Lightclients.Solomachine.V" +
       "3\312\002\037Ibc\\Lightclients\\Solomachine\\V3\342\002+Ib" +

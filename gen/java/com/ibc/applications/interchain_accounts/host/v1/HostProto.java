@@ -823,7 +823,7 @@ public final class HostProto {
       "t_enabled\030\001 \001(\010R\013hostEnabled\022%\n\016allow_me" +
       "ssages\030\002 \003(\tR\rallowMessagesB\330\002\n0com.ibc." +
       "applications.interchain_accounts.host.v1" +
-      "B\tHostProtoZJgithub.com/cosmos/ibc-go/v7" +
+      "B\tHostProtoZJgithub.com/cosmos/ibc-go/v8" +
       "/modules/apps/27-interchain-accounts/hos" +
       "t/types\242\002\004IAIH\252\002+Ibc.Applications.Interc" +
       "hainAccounts.Host.V1\312\002+Ibc\\Applications\\" +

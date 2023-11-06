@@ -97,7 +97,8 @@ proto.cosmos.gov.v1.Proposal.toObject = function(includeInstance, msg) {
     title: jspb.Message.getFieldWithDefault(msg, 11, ""),
     summary: jspb.Message.getFieldWithDefault(msg, 12, ""),
     proposer: jspb.Message.getFieldWithDefault(msg, 13, ""),
-    expedited: jspb.Message.getBooleanFieldWithDefault(msg, 14, false)
+    expedited: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
+    failedReason: jspb.Message.getFieldWithDefault(msg, 15, "")
   };
 
   if (includeInstance) {
@@ -196,6 +197,10 @@ proto.cosmos.gov.v1.Proposal.deserializeBinaryFromReader = function(msg, reader)
     case 14:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setExpedited(value);
+      break;
+    case 15:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFailedReason(value);
       break;
     default:
       reader.skipField();
@@ -328,6 +333,13 @@ proto.cosmos.gov.v1.Proposal.serializeBinaryToWriter = function(message, writer)
   if (f) {
     writer.writeBool(
       14,
+      f
+    );
+  }
+  f = message.getFailedReason();
+  if (f.length > 0) {
+    writer.writeString(
+      15,
       f
     );
   }
@@ -718,6 +730,24 @@ proto.cosmos.gov.v1.Proposal.prototype.getExpedited = function() {
  */
 proto.cosmos.gov.v1.Proposal.prototype.setExpedited = function(value) {
   return jspb.Message.setProto3BooleanField(this, 14, value);
+};
+
+
+/**
+ * optional string failed_reason = 15;
+ * @return {string}
+ */
+proto.cosmos.gov.v1.Proposal.prototype.getFailedReason = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.cosmos.gov.v1.Proposal} returns this
+ */
+proto.cosmos.gov.v1.Proposal.prototype.setFailedReason = function(value) {
+  return jspb.Message.setProto3StringField(this, 15, value);
 };
 
 

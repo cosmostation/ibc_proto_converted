@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Msg defines the crisis Msg service.
+ * Msg defines the circuit Msg service.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -157,7 +157,7 @@ public final class MsgGrpc {
 
   /**
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Msg defines the circuit Msg service.
    * </pre>
    */
   public interface AsyncService {
@@ -198,7 +198,7 @@ public final class MsgGrpc {
   /**
    * Base class for the server implementation of the service Msg.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Msg defines the circuit Msg service.
    * </pre>
    */
   public static abstract class MsgImplBase
@@ -212,7 +212,7 @@ public final class MsgGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Msg.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Msg defines the circuit Msg service.
    * </pre>
    */
   public static final class MsgStub
@@ -267,7 +267,7 @@ public final class MsgGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Msg.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Msg defines the circuit Msg service.
    * </pre>
    */
   public static final class MsgBlockingStub
@@ -319,7 +319,7 @@ public final class MsgGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Msg.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Msg defines the circuit Msg service.
    * </pre>
    */
   public static final class MsgFutureStub

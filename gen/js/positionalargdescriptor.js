@@ -71,7 +71,8 @@ proto.cosmos.autocli.v1.PositionalArgDescriptor.prototype.toObject = function(op
 proto.cosmos.autocli.v1.PositionalArgDescriptor.toObject = function(includeInstance, msg) {
   var f, obj = {
     protoField: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    varargs: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
+    varargs: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+    optional: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -116,6 +117,10 @@ proto.cosmos.autocli.v1.PositionalArgDescriptor.deserializeBinaryFromReader = fu
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setVarargs(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setOptional(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -159,6 +164,13 @@ proto.cosmos.autocli.v1.PositionalArgDescriptor.serializeBinaryToWriter = functi
       f
     );
   }
+  f = message.getOptional();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -195,6 +207,24 @@ proto.cosmos.autocli.v1.PositionalArgDescriptor.prototype.getVarargs = function(
  */
 proto.cosmos.autocli.v1.PositionalArgDescriptor.prototype.setVarargs = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional bool optional = 3;
+ * @return {boolean}
+ */
+proto.cosmos.autocli.v1.PositionalArgDescriptor.prototype.getOptional = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.cosmos.autocli.v1.PositionalArgDescriptor} returns this
+ */
+proto.cosmos.autocli.v1.PositionalArgDescriptor.prototype.setOptional = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 

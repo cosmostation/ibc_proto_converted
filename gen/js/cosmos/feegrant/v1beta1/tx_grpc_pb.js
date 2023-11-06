@@ -32,6 +32,28 @@ function deserialize_cosmos_feegrant_v1beta1_MsgGrantAllowanceResponse(buffer_ar
   return cosmos_feegrant_v1beta1_tx_pb.MsgGrantAllowanceResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_cosmos_feegrant_v1beta1_MsgPruneAllowances(arg) {
+  if (!(arg instanceof cosmos_feegrant_v1beta1_tx_pb.MsgPruneAllowances)) {
+    throw new Error('Expected argument of type cosmos.feegrant.v1beta1.MsgPruneAllowances');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_feegrant_v1beta1_MsgPruneAllowances(buffer_arg) {
+  return cosmos_feegrant_v1beta1_tx_pb.MsgPruneAllowances.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_feegrant_v1beta1_MsgPruneAllowancesResponse(arg) {
+  if (!(arg instanceof cosmos_feegrant_v1beta1_tx_pb.MsgPruneAllowancesResponse)) {
+    throw new Error('Expected argument of type cosmos.feegrant.v1beta1.MsgPruneAllowancesResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_feegrant_v1beta1_MsgPruneAllowancesResponse(buffer_arg) {
+  return cosmos_feegrant_v1beta1_tx_pb.MsgPruneAllowancesResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_cosmos_feegrant_v1beta1_MsgRevokeAllowance(arg) {
   if (!(arg instanceof cosmos_feegrant_v1beta1_tx_pb.MsgRevokeAllowance)) {
     throw new Error('Expected argument of type cosmos.feegrant.v1beta1.MsgRevokeAllowance');
@@ -82,6 +104,20 @@ revokeAllowance: {
     requestDeserialize: deserialize_cosmos_feegrant_v1beta1_MsgRevokeAllowance,
     responseSerialize: serialize_cosmos_feegrant_v1beta1_MsgRevokeAllowanceResponse,
     responseDeserialize: deserialize_cosmos_feegrant_v1beta1_MsgRevokeAllowanceResponse,
+  },
+  // PruneAllowances prunes expired fee allowances, currently up to 75 at a time.
+//
+// Since cosmos-sdk 0.50
+pruneAllowances: {
+    path: '/cosmos.feegrant.v1beta1.Msg/PruneAllowances',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_feegrant_v1beta1_tx_pb.MsgPruneAllowances,
+    responseType: cosmos_feegrant_v1beta1_tx_pb.MsgPruneAllowancesResponse,
+    requestSerialize: serialize_cosmos_feegrant_v1beta1_MsgPruneAllowances,
+    requestDeserialize: deserialize_cosmos_feegrant_v1beta1_MsgPruneAllowances,
+    responseSerialize: serialize_cosmos_feegrant_v1beta1_MsgPruneAllowancesResponse,
+    responseDeserialize: deserialize_cosmos_feegrant_v1beta1_MsgPruneAllowancesResponse,
   },
 };
 

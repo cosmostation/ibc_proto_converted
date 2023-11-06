@@ -6,7 +6,7 @@ from cosmos.circuit.v1 import query_pb2 as cosmos_dot_circuit_dot_v1_dot_query__
 
 
 class QueryStub(object):
-    """Msg defines the crisis Msg service.
+    """Query defines the circuit gRPC querier service.
     """
 
     def __init__(self, channel):
@@ -33,7 +33,7 @@ class QueryStub(object):
 
 
 class QueryServicer(object):
-    """Msg defines the crisis Msg service.
+    """Query defines the circuit gRPC querier service.
     """
 
     def Account(self, request, context):
@@ -83,7 +83,7 @@ def add_QueryServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Query(object):
-    """Msg defines the crisis Msg service.
+    """Query defines the circuit gRPC querier service.
     """
 
     @staticmethod

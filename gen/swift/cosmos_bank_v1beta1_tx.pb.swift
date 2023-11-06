@@ -132,6 +132,7 @@ struct Cosmos_Bank_V1beta1_MsgSetSendEnabled {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// authority is the address that controls the module.
   var authority: String = String()
 
   /// send_enabled is the list of entries to add or update.
@@ -161,6 +162,36 @@ struct Cosmos_Bank_V1beta1_MsgSetSendEnabledResponse {
   init() {}
 }
 
+/// MsgBurn defines a message for burning coins.
+///
+/// Since: cosmos-sdk 0.51
+struct Cosmos_Bank_V1beta1_MsgBurn {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var fromAddress: String = String()
+
+  var amount: [Cosmos_Base_V1beta1_Coin] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgBurnResponse defines the Msg/Burn response type.
+///
+/// Since: cosmos-sdk 0.51
+struct Cosmos_Bank_V1beta1_MsgBurnResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Bank_V1beta1_MsgSend: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_MsgSendResponse: @unchecked Sendable {}
@@ -170,6 +201,8 @@ extension Cosmos_Bank_V1beta1_MsgUpdateParams: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_MsgUpdateParamsResponse: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_MsgSetSendEnabled: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_MsgSetSendEnabledResponse: @unchecked Sendable {}
+extension Cosmos_Bank_V1beta1_MsgBurn: @unchecked Sendable {}
+extension Cosmos_Bank_V1beta1_MsgBurnResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -415,6 +448,63 @@ extension Cosmos_Bank_V1beta1_MsgSetSendEnabledResponse: SwiftProtobuf.Message, 
   }
 
   static func ==(lhs: Cosmos_Bank_V1beta1_MsgSetSendEnabledResponse, rhs: Cosmos_Bank_V1beta1_MsgSetSendEnabledResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Bank_V1beta1_MsgBurn: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgBurn"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "from_address"),
+    2: .same(proto: "amount"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.fromAddress) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.amount) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.fromAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.fromAddress, fieldNumber: 1)
+    }
+    if !self.amount.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.amount, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Bank_V1beta1_MsgBurn, rhs: Cosmos_Bank_V1beta1_MsgBurn) -> Bool {
+    if lhs.fromAddress != rhs.fromAddress {return false}
+    if lhs.amount != rhs.amount {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Bank_V1beta1_MsgBurnResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgBurnResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Bank_V1beta1_MsgBurnResponse, rhs: Cosmos_Bank_V1beta1_MsgBurnResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

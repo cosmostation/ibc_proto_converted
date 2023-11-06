@@ -122,6 +122,28 @@ function deserialize_cosmos_staking_v1beta1_MsgEditValidatorResponse(buffer_arg)
   return cosmos_staking_v1beta1_tx_pb.MsgEditValidatorResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_cosmos_staking_v1beta1_MsgRotateConsPubKey(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKey)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgRotateConsPubKey');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKey(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKey.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKeyResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgRotateConsPubKeyResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKeyResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_cosmos_staking_v1beta1_MsgUndelegate(arg) {
   if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgUndelegate)) {
     throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgUndelegate');
@@ -260,6 +282,20 @@ updateParams: {
     requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgUpdateParams,
     responseSerialize: serialize_cosmos_staking_v1beta1_MsgUpdateParamsResponse,
     responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgUpdateParamsResponse,
+  },
+  // RotateConsPubKey defines an operation for rotating the consensus keys
+// of a validator.
+// Since: cosmos-sdk 0.48
+rotateConsPubKey: {
+    path: '/cosmos.staking.v1beta1.Msg/RotateConsPubKey',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKey,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKeyResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgRotateConsPubKey,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKey,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse,
   },
 };
 

@@ -28,6 +28,9 @@ import SwiftProtobuf
 
 /// ABCIListenerService is the service for the BaseApp ABCIListener interface
 ///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
+///
 /// Usage: instantiate `Cosmos_Store_Streaming_Abci_ABCIListenerServiceClient`, then call methods of this protocol to make API calls.
 internal protocol Cosmos_Store_Streaming_Abci_ABCIListenerServiceClientProtocol: GRPCClient {
   var serviceName: String { get }
@@ -49,7 +52,8 @@ extension Cosmos_Store_Streaming_Abci_ABCIListenerServiceClientProtocol {
     return "cosmos.store.streaming.abci.ABCIListenerService"
   }
 
-  /// ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+  /// ListenFinalizeBlock is the corresponding endpoint for
+  /// ABCIListener.ListenEndBlock
   ///
   /// - Parameters:
   ///   - request: Request to send to ListenFinalizeBlock.
@@ -144,6 +148,9 @@ internal struct Cosmos_Store_Streaming_Abci_ABCIListenerServiceNIOClient: Cosmos
 }
 
 /// ABCIListenerService is the service for the BaseApp ABCIListener interface
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 internal protocol Cosmos_Store_Streaming_Abci_ABCIListenerServiceAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
@@ -275,11 +282,15 @@ internal enum Cosmos_Store_Streaming_Abci_ABCIListenerServiceClientMetadata {
 
 /// ABCIListenerService is the service for the BaseApp ABCIListener interface
 ///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
+///
 /// To build a server, implement a class that conforms to this protocol.
 internal protocol Cosmos_Store_Streaming_Abci_ABCIListenerServiceProvider: CallHandlerProvider {
   var interceptors: Cosmos_Store_Streaming_Abci_ABCIListenerServiceServerInterceptorFactoryProtocol? { get }
 
-  /// ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+  /// ListenFinalizeBlock is the corresponding endpoint for
+  /// ABCIListener.ListenEndBlock
   func listenFinalizeBlock(request: Cosmos_Store_Streaming_Abci_ListenFinalizeBlockRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Store_Streaming_Abci_ListenFinalizeBlockResponse>
 
   /// ListenCommit is the corresponding endpoint for ABCIListener.ListenCommit
@@ -324,13 +335,17 @@ extension Cosmos_Store_Streaming_Abci_ABCIListenerServiceProvider {
 
 /// ABCIListenerService is the service for the BaseApp ABCIListener interface
 ///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
+///
 /// To implement a server, implement an object which conforms to this protocol.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 internal protocol Cosmos_Store_Streaming_Abci_ABCIListenerServiceAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Cosmos_Store_Streaming_Abci_ABCIListenerServiceServerInterceptorFactoryProtocol? { get }
 
-  /// ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+  /// ListenFinalizeBlock is the corresponding endpoint for
+  /// ABCIListener.ListenEndBlock
   @Sendable func listenFinalizeBlock(
     request: Cosmos_Store_Streaming_Abci_ListenFinalizeBlockRequest,
     context: GRPCAsyncServerCallContext

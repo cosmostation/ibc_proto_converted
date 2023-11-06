@@ -5763,7 +5763,7 @@ public final class GenesisProto {
       "ress\030\003 \001(\tR\016accountAddressB\355\002\n3com.ibc.a" +
       "pplications.interchain_accounts.genesis." +
       "v1B\014GenesisProtoZMgithub.com/cosmos/ibc-" +
-      "go/v7/modules/apps/27-interchain-account" +
+      "go/v8/modules/apps/27-interchain-account" +
       "s/genesis/types\242\002\004IAIG\252\002.Ibc.Application" +
       "s.InterchainAccounts.Genesis.V1\312\002.Ibc\\Ap" +
       "plications\\InterchainAccounts\\Genesis\\V1" +

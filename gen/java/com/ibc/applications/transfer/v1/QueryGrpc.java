@@ -18,37 +18,6 @@ public final class QueryGrpc {
   public static final String SERVICE_NAME = "ibc.applications.transfer.v1.Query";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest,
-      com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> getDenomTraceMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DenomTrace",
-      requestType = com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest.class,
-      responseType = com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest,
-      com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> getDenomTraceMethod() {
-    io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest, com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> getDenomTraceMethod;
-    if ((getDenomTraceMethod = QueryGrpc.getDenomTraceMethod) == null) {
-      synchronized (QueryGrpc.class) {
-        if ((getDenomTraceMethod = QueryGrpc.getDenomTraceMethod) == null) {
-          QueryGrpc.getDenomTraceMethod = getDenomTraceMethod =
-              io.grpc.MethodDescriptor.<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest, com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DenomTrace"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("DenomTrace"))
-              .build();
-        }
-      }
-    }
-    return getDenomTraceMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest,
       com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse> getDenomTracesMethod;
 
@@ -78,6 +47,37 @@ public final class QueryGrpc {
       }
     }
     return getDenomTracesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest,
+      com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> getDenomTraceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DenomTrace",
+      requestType = com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest.class,
+      responseType = com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest,
+      com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> getDenomTraceMethod() {
+    io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest, com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> getDenomTraceMethod;
+    if ((getDenomTraceMethod = QueryGrpc.getDenomTraceMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getDenomTraceMethod = QueryGrpc.getDenomTraceMethod) == null) {
+          QueryGrpc.getDenomTraceMethod = getDenomTraceMethod =
+              io.grpc.MethodDescriptor.<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest, com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DenomTrace"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("DenomTrace"))
+              .build();
+        }
+      }
+    }
+    return getDenomTraceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.ibc.applications.transfer.v1.QueryProto.QueryParamsRequest,
@@ -257,22 +257,22 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DenomTrace queries a denomination trace information.
-     * </pre>
-     */
-    default void denomTrace(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request,
-        io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDenomTraceMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * DenomTraces queries all denomination traces.
      * </pre>
      */
     default void denomTraces(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest request,
         io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDenomTracesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DenomTrace queries a denomination trace information.
+     * </pre>
+     */
+    default void denomTrace(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request,
+        io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDenomTraceMethod(), responseObserver);
     }
 
     /**
@@ -351,17 +351,6 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DenomTrace queries a denomination trace information.
-     * </pre>
-     */
-    public void denomTrace(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request,
-        io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDenomTraceMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * DenomTraces queries all denomination traces.
      * </pre>
      */
@@ -369,6 +358,17 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDenomTracesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DenomTrace queries a denomination trace information.
+     * </pre>
+     */
+    public void denomTrace(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request,
+        io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDenomTraceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -437,22 +437,22 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DenomTrace queries a denomination trace information.
-     * </pre>
-     */
-    public com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse denomTrace(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDenomTraceMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * DenomTraces queries all denomination traces.
      * </pre>
      */
     public com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse denomTraces(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDenomTracesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DenomTrace queries a denomination trace information.
+     * </pre>
+     */
+    public com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse denomTrace(com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDenomTraceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -517,17 +517,6 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DenomTrace queries a denomination trace information.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> denomTrace(
-        com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDenomTraceMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * DenomTraces queries all denomination traces.
      * </pre>
      */
@@ -535,6 +524,17 @@ public final class QueryGrpc {
         com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDenomTracesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DenomTrace queries a denomination trace information.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse> denomTrace(
+        com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDenomTraceMethod(), getCallOptions()), request);
     }
 
     /**
@@ -582,8 +582,8 @@ public final class QueryGrpc {
     }
   }
 
-  private static final int METHODID_DENOM_TRACE = 0;
-  private static final int METHODID_DENOM_TRACES = 1;
+  private static final int METHODID_DENOM_TRACES = 0;
+  private static final int METHODID_DENOM_TRACE = 1;
   private static final int METHODID_PARAMS = 2;
   private static final int METHODID_DENOM_HASH = 3;
   private static final int METHODID_ESCROW_ADDRESS = 4;
@@ -606,13 +606,13 @@ public final class QueryGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_DENOM_TRACE:
-          serviceImpl.denomTrace((com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest) request,
-              (io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse>) responseObserver);
-          break;
         case METHODID_DENOM_TRACES:
           serviceImpl.denomTraces((com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest) request,
               (io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse>) responseObserver);
+          break;
+        case METHODID_DENOM_TRACE:
+          serviceImpl.denomTrace((com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest) request,
+              (io.grpc.stub.StreamObserver<com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse>) responseObserver);
           break;
         case METHODID_PARAMS:
           serviceImpl.params((com.ibc.applications.transfer.v1.QueryProto.QueryParamsRequest) request,
@@ -649,19 +649,19 @@ public final class QueryGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getDenomTraceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest,
-              com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse>(
-                service, METHODID_DENOM_TRACE)))
-        .addMethod(
           getDenomTracesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesRequest,
               com.ibc.applications.transfer.v1.QueryProto.QueryDenomTracesResponse>(
                 service, METHODID_DENOM_TRACES)))
+        .addMethod(
+          getDenomTraceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceRequest,
+              com.ibc.applications.transfer.v1.QueryProto.QueryDenomTraceResponse>(
+                service, METHODID_DENOM_TRACE)))
         .addMethod(
           getParamsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -738,8 +738,8 @@ public final class QueryGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new QueryFileDescriptorSupplier())
-              .addMethod(getDenomTraceMethod())
               .addMethod(getDenomTracesMethod())
+              .addMethod(getDenomTraceMethod())
               .addMethod(getParamsMethod())
               .addMethod(getDenomHashMethod())
               .addMethod(getEscrowAddressMethod())

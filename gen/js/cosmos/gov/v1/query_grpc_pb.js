@@ -283,7 +283,7 @@ params: {
     responseSerialize: serialize_cosmos_gov_v1_QueryParamsResponse,
     responseDeserialize: deserialize_cosmos_gov_v1_QueryParamsResponse,
   },
-  // Deposit queries single deposit information based proposalID, depositAddr.
+  // Deposit queries single deposit information based on proposalID, depositAddr.
 deposit: {
     path: '/cosmos.gov.v1.Query/Deposit',
     requestStream: false,

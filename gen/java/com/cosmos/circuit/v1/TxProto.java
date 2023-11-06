@@ -1101,7 +1101,7 @@ public final class TxProto {
   }
   /**
    * <pre>
-   * MsgAuthorizeCircuitBreaker defines the Msg/AuthorizeCircuitBreaker response type.
+   * MsgAuthorizeCircuitBreakerResponse defines the Msg/AuthorizeCircuitBreaker response type.
    * </pre>
    *
    * Protobuf type {@code cosmos.circuit.v1.MsgAuthorizeCircuitBreakerResponse}
@@ -1309,7 +1309,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * MsgAuthorizeCircuitBreaker defines the Msg/AuthorizeCircuitBreaker response type.
+     * MsgAuthorizeCircuitBreakerResponse defines the Msg/AuthorizeCircuitBreaker response type.
      * </pre>
      *
      * Protobuf type {@code cosmos.circuit.v1.MsgAuthorizeCircuitBreakerResponse}
@@ -2532,7 +2532,7 @@ public final class TxProto {
   }
   /**
    * <pre>
-   * MsgTripCircuitBreaker defines the Msg/TripCircuitBreaker response type.
+   * MsgTripCircuitBreakerResponse defines the Msg/TripCircuitBreaker response type.
    * </pre>
    *
    * Protobuf type {@code cosmos.circuit.v1.MsgTripCircuitBreakerResponse}
@@ -2740,7 +2740,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * MsgTripCircuitBreaker defines the Msg/TripCircuitBreaker response type.
+     * MsgTripCircuitBreakerResponse defines the Msg/TripCircuitBreaker response type.
      * </pre>
      *
      * Protobuf type {@code cosmos.circuit.v1.MsgTripCircuitBreakerResponse}

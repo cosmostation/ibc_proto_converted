@@ -26,7 +26,7 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-/// Msg defines the bank Msg service.
+/// Msg defines the consensus Msg service.
 ///
 /// Usage: instantiate `Cosmos_Consensus_V1_MsgClient`, then call methods of this protocol to make API calls.
 internal protocol Cosmos_Consensus_V1_MsgClientProtocol: GRPCClient {
@@ -44,7 +44,7 @@ extension Cosmos_Consensus_V1_MsgClientProtocol {
     return "cosmos.consensus.v1.Msg"
   }
 
-  /// UpdateParams defines a governance operation for updating the x/consensus_param module parameters.
+  /// UpdateParams defines a governance operation for updating the x/consensus module parameters.
   /// The authority is defined in the keeper.
   ///
   /// Since: cosmos-sdk 0.47
@@ -123,7 +123,7 @@ internal struct Cosmos_Consensus_V1_MsgNIOClient: Cosmos_Consensus_V1_MsgClientP
   }
 }
 
-/// Msg defines the bank Msg service.
+/// Msg defines the consensus Msg service.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 internal protocol Cosmos_Consensus_V1_MsgAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
@@ -214,13 +214,13 @@ internal enum Cosmos_Consensus_V1_MsgClientMetadata {
   }
 }
 
-/// Msg defines the bank Msg service.
+/// Msg defines the consensus Msg service.
 ///
 /// To build a server, implement a class that conforms to this protocol.
 internal protocol Cosmos_Consensus_V1_MsgProvider: CallHandlerProvider {
   var interceptors: Cosmos_Consensus_V1_MsgServerInterceptorFactoryProtocol? { get }
 
-  /// UpdateParams defines a governance operation for updating the x/consensus_param module parameters.
+  /// UpdateParams defines a governance operation for updating the x/consensus module parameters.
   /// The authority is defined in the keeper.
   ///
   /// Since: cosmos-sdk 0.47
@@ -254,7 +254,7 @@ extension Cosmos_Consensus_V1_MsgProvider {
   }
 }
 
-/// Msg defines the bank Msg service.
+/// Msg defines the consensus Msg service.
 ///
 /// To implement a server, implement an object which conforms to this protocol.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -262,7 +262,7 @@ internal protocol Cosmos_Consensus_V1_MsgAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Cosmos_Consensus_V1_MsgServerInterceptorFactoryProtocol? { get }
 
-  /// UpdateParams defines a governance operation for updating the x/consensus_param module parameters.
+  /// UpdateParams defines a governance operation for updating the x/consensus module parameters.
   /// The authority is defined in the keeper.
   ///
   /// Since: cosmos-sdk 0.47

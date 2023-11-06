@@ -464,7 +464,8 @@ struct Cosmos_Group_V1_GroupPolicyInfo {
   var admin: String = String()
 
   /// metadata is any arbitrary metadata attached to the group policy.
-  /// the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#decision-policy-1
+  /// the recommended format of the metadata is to be found here:
+  /// https://docs.cosmos.network/v0.47/modules/group#decision-policy-1
   var metadata: String = String()
 
   /// version is used to track changes to a group's GroupPolicyInfo structure that
@@ -521,7 +522,8 @@ struct Cosmos_Group_V1_Proposal {
   }
 
   /// metadata is any arbitrary metadata attached to the proposal.
-  /// the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#proposal-4
+  /// the recommended format of the metadata is to be found here:
+  /// https://docs.cosmos.network/v0.47/modules/group#proposal-4
   var metadata: String {
     get {return _storage._metadata}
     set {_uniqueStorage()._metadata = newValue}

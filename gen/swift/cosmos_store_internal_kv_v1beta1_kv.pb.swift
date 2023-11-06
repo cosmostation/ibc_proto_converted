@@ -21,6 +21,9 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Pairs defines a repeated slice of Pair objects.
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_Internal_Kv_V1beta1_Pairs {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -34,6 +37,9 @@ struct Cosmos_Store_Internal_Kv_V1beta1_Pairs {
 }
 
 /// Pair defines a key/value bytes tuple.
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_Internal_Kv_V1beta1_Pair {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for

@@ -7,6 +7,7 @@ var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var cosmos_mint_v1beta1_mint_pb = require('../../../cosmos/mint/v1beta1/mint_pb.js');
 var amino_amino_pb = require('../../../amino/amino_pb.js');
+var cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');
 
 function serialize_cosmos_mint_v1beta1_QueryAnnualProvisionsRequest(arg) {
   if (!(arg instanceof cosmos_mint_v1beta1_query_pb.QueryAnnualProvisionsRequest)) {

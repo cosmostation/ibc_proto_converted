@@ -100,7 +100,7 @@ function deserialize_cosmos_gov_v1beta1_MsgVoteWeightedResponse(buffer_arg) {
 }
 
 
-// Msg defines the bank Msg service.
+// Msg defines the gov Msg service.
 var MsgService = exports.MsgService = {
   // SubmitProposal defines a method to create new proposal given a content.
 submitProposal: {

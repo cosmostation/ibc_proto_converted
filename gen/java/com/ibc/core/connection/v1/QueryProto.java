@@ -10087,7 +10087,7 @@ public final class QueryProto {
       "nectionParamsResponse\"&\202\323\344\223\002 \022\036/ibc/core" +
       "/connection/v1/paramsB\337\001\n\032com.ibc.core.c" +
       "onnection.v1B\nQueryProtoZ<github.com/cos" +
-      "mos/ibc-go/v7/modules/core/03-connection" +
+      "mos/ibc-go/v8/modules/core/03-connection" +
       "/types\242\002\003ICC\252\002\026Ibc.Core.Connection.V1\312\002\026" +
       "Ibc\\Core\\Connection\\V1\342\002\"Ibc\\Core\\Connec" +
       "tion\\V1\\GPBMetadata\352\002\031Ibc::Core::Connect" +

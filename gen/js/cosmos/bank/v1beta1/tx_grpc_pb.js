@@ -10,6 +10,28 @@ var cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');
 var cosmos_msg_v1_msg_pb = require('../../../cosmos/msg/v1/msg_pb.js');
 var amino_amino_pb = require('../../../amino/amino_pb.js');
 
+function serialize_cosmos_bank_v1beta1_MsgBurn(arg) {
+  if (!(arg instanceof cosmos_bank_v1beta1_tx_pb.MsgBurn)) {
+    throw new Error('Expected argument of type cosmos.bank.v1beta1.MsgBurn');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_bank_v1beta1_MsgBurn(buffer_arg) {
+  return cosmos_bank_v1beta1_tx_pb.MsgBurn.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_bank_v1beta1_MsgBurnResponse(arg) {
+  if (!(arg instanceof cosmos_bank_v1beta1_tx_pb.MsgBurnResponse)) {
+    throw new Error('Expected argument of type cosmos.bank.v1beta1.MsgBurnResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_bank_v1beta1_MsgBurnResponse(buffer_arg) {
+  return cosmos_bank_v1beta1_tx_pb.MsgBurnResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_cosmos_bank_v1beta1_MsgMultiSend(arg) {
   if (!(arg instanceof cosmos_bank_v1beta1_tx_pb.MsgMultiSend)) {
     throw new Error('Expected argument of type cosmos.bank.v1beta1.MsgMultiSend');
@@ -124,6 +146,20 @@ multiSend: {
     requestDeserialize: deserialize_cosmos_bank_v1beta1_MsgMultiSend,
     responseSerialize: serialize_cosmos_bank_v1beta1_MsgMultiSendResponse,
     responseDeserialize: deserialize_cosmos_bank_v1beta1_MsgMultiSendResponse,
+  },
+  // Burn defines a method for burning coins by an account.
+//
+// Since: cosmos-sdk 0.51
+burn: {
+    path: '/cosmos.bank.v1beta1.Msg/Burn',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_bank_v1beta1_tx_pb.MsgBurn,
+    responseType: cosmos_bank_v1beta1_tx_pb.MsgBurnResponse,
+    requestSerialize: serialize_cosmos_bank_v1beta1_MsgBurn,
+    requestDeserialize: deserialize_cosmos_bank_v1beta1_MsgBurn,
+    responseSerialize: serialize_cosmos_bank_v1beta1_MsgBurnResponse,
+    responseDeserialize: deserialize_cosmos_bank_v1beta1_MsgBurnResponse,
   },
   // UpdateParams defines a governance operation for updating the x/bank module parameters.
 // The authority is defined in the keeper.

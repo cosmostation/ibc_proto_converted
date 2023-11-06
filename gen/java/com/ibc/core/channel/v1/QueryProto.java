@@ -27765,7 +27765,7 @@ public final class QueryProto {
       "/core/channel/v1/channels/{channel_id}/p" +
       "orts/{port_id}/next_sequence_sendB\315\001\n\027co" +
       "m.ibc.core.channel.v1B\nQueryProtoZ9githu" +
-      "b.com/cosmos/ibc-go/v7/modules/core/04-c" +
+      "b.com/cosmos/ibc-go/v8/modules/core/04-c" +
       "hannel/types\242\002\003ICC\252\002\023Ibc.Core.Channel.V1" +
       "\312\002\023Ibc\\Core\\Channel\\V1\342\002\037Ibc\\Core\\Channe" +
       "l\\V1\\GPBMetadata\352\002\026Ibc::Core::Channel::V" +

@@ -254,6 +254,9 @@ extension Cosmos_Distribution_V1beta1_QueryClientProtocol {
 
   /// CommunityPool queries the community pool coins.
   ///
+  /// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
+  /// Since: cosmos-sdk 0.50
+  ///
   /// - Parameters:
   ///   - request: Request to send to CommunityPool.
   ///   - callOptions: Call options.
@@ -805,6 +808,9 @@ internal protocol Cosmos_Distribution_V1beta1_QueryProvider: CallHandlerProvider
   func delegatorWithdrawAddress(request: Cosmos_Distribution_V1beta1_QueryDelegatorWithdrawAddressRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryDelegatorWithdrawAddressResponse>
 
   /// CommunityPool queries the community pool coins.
+  ///
+  /// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
+  /// Since: cosmos-sdk 0.50
   func communityPool(request: Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse>
 }
 
@@ -980,6 +986,9 @@ internal protocol Cosmos_Distribution_V1beta1_QueryAsyncProvider: CallHandlerPro
   ) async throws -> Cosmos_Distribution_V1beta1_QueryDelegatorWithdrawAddressResponse
 
   /// CommunityPool queries the community pool coins.
+  ///
+  /// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
+  /// Since: cosmos-sdk 0.50
   @Sendable func communityPool(
     request: Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest,
     context: GRPCAsyncServerCallContext

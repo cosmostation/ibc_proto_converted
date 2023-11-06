@@ -591,11 +591,21 @@ struct Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse {
   /// Clears the value of `hist`. Subsequent reads from it will return its default value.
   mutating func clearHist() {self._hist = nil}
 
+  var historicalRecord: Cosmos_Staking_V1beta1_HistoricalRecord {
+    get {return _historicalRecord ?? Cosmos_Staking_V1beta1_HistoricalRecord()}
+    set {_historicalRecord = newValue}
+  }
+  /// Returns true if `historicalRecord` has been explicitly set.
+  var hasHistoricalRecord: Bool {return self._historicalRecord != nil}
+  /// Clears the value of `historicalRecord`. Subsequent reads from it will return its default value.
+  mutating func clearHistoricalRecord() {self._historicalRecord = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
   fileprivate var _hist: Cosmos_Staking_V1beta1_HistoricalInfo? = nil
+  fileprivate var _historicalRecord: Cosmos_Staking_V1beta1_HistoricalRecord? = nil
 }
 
 /// QueryPoolRequest is request type for the Query/Pool RPC method.
@@ -1627,6 +1637,7 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse: SwiftProtobuf.Mess
   static let protoMessageName: String = _protobuf_package + ".QueryHistoricalInfoResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "hist"),
+    2: .standard(proto: "historical_record"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1636,6 +1647,7 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse: SwiftProtobuf.Mess
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularMessageField(value: &self._hist) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._historicalRecord) }()
       default: break
       }
     }
@@ -1649,11 +1661,15 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse: SwiftProtobuf.Mess
     try { if let v = self._hist {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
+    try { if let v = self._historicalRecord {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse, rhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse) -> Bool {
     if lhs._hist != rhs._hist {return false}
+    if lhs._historicalRecord != rhs._historicalRecord {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -344,6 +344,9 @@ delegatorWithdrawAddress: {
     responseDeserialize: deserialize_cosmos_distribution_v1beta1_QueryDelegatorWithdrawAddressResponse,
   },
   // CommunityPool queries the community pool coins.
+//
+// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
+// Since: cosmos-sdk 0.50
 communityPool: {
     path: '/cosmos.distribution.v1beta1.Query/CommunityPool',
     requestStream: false,

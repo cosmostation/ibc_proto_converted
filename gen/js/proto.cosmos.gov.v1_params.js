@@ -95,7 +95,8 @@ proto.cosmos.gov.v1.Params.toObject = function(includeInstance, msg) {
     proto.cosmos.base.v1beta1.Coin.toObject, includeInstance),
     burnVoteQuorum: jspb.Message.getBooleanFieldWithDefault(msg, 13, false),
     burnProposalDepositPrevote: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
-    burnVoteVeto: jspb.Message.getBooleanFieldWithDefault(msg, 15, false)
+    burnVoteVeto: jspb.Message.getBooleanFieldWithDefault(msg, 15, false),
+    minDepositRatio: jspb.Message.getFieldWithDefault(msg, 16, "")
   };
 
   if (includeInstance) {
@@ -196,6 +197,10 @@ proto.cosmos.gov.v1.Params.deserializeBinaryFromReader = function(msg, reader) {
     case 15:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setBurnVoteVeto(value);
+      break;
+    case 16:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMinDepositRatio(value);
       break;
     default:
       reader.skipField();
@@ -333,6 +338,13 @@ proto.cosmos.gov.v1.Params.serializeBinaryToWriter = function(message, writer) {
   if (f) {
     writer.writeBool(
       15,
+      f
+    );
+  }
+  f = message.getMinDepositRatio();
+  if (f.length > 0) {
+    writer.writeString(
+      16,
       f
     );
   }
@@ -703,6 +715,24 @@ proto.cosmos.gov.v1.Params.prototype.getBurnVoteVeto = function() {
  */
 proto.cosmos.gov.v1.Params.prototype.setBurnVoteVeto = function(value) {
   return jspb.Message.setProto3BooleanField(this, 15, value);
+};
+
+
+/**
+ * optional string min_deposit_ratio = 16;
+ * @return {string}
+ */
+proto.cosmos.gov.v1.Params.prototype.getMinDepositRatio = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 16, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.cosmos.gov.v1.Params} returns this
+ */
+proto.cosmos.gov.v1.Params.prototype.setMinDepositRatio = function(value) {
+  return jspb.Message.setProto3StringField(this, 16, value);
 };
 
 

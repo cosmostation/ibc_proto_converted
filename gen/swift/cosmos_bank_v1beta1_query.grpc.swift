@@ -73,6 +73,11 @@ internal protocol Cosmos_Bank_V1beta1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Bank_V1beta1_QueryDenomMetadataRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataResponse>
 
+  func denomMetadataByQueryString(
+    _ request: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse>
+
   func denomsMetadata(
     _ request: Cosmos_Bank_V1beta1_QueryDenomsMetadataRequest,
     callOptions: CallOptions?
@@ -259,6 +264,24 @@ extension Cosmos_Bank_V1beta1_QueryClientProtocol {
     )
   }
 
+  /// DenomsMetadata queries the client metadata of a given coin denomination.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to DenomMetadataByQueryString.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func denomMetadataByQueryString(
+    _ request: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse> {
+    return self.makeUnaryCall(
+      path: Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.denomMetadataByQueryString.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDenomMetadataByQueryStringInterceptors() ?? []
+    )
+  }
+
   /// DenomsMetadata queries the client metadata for all registered coin
   /// denominations.
   ///
@@ -430,6 +453,11 @@ internal protocol Cosmos_Bank_V1beta1_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Cosmos_Bank_V1beta1_QueryDenomMetadataRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataResponse>
 
+  func makeDenomMetadataByQueryStringCall(
+    _ request: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse>
+
   func makeDenomsMetadataCall(
     _ request: Cosmos_Bank_V1beta1_QueryDenomsMetadataRequest,
     callOptions: CallOptions?
@@ -549,6 +577,18 @@ extension Cosmos_Bank_V1beta1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeDenomMetadataInterceptors() ?? []
+    )
+  }
+
+  internal func makeDenomMetadataByQueryStringCall(
+    _ request: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.denomMetadataByQueryString.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDenomMetadataByQueryStringInterceptors() ?? []
     )
   }
 
@@ -687,6 +727,18 @@ extension Cosmos_Bank_V1beta1_QueryAsyncClientProtocol {
     )
   }
 
+  internal func denomMetadataByQueryString(
+    _ request: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.denomMetadataByQueryString.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDenomMetadataByQueryStringInterceptors() ?? []
+    )
+  }
+
   internal func denomsMetadata(
     _ request: Cosmos_Bank_V1beta1_QueryDenomsMetadataRequest,
     callOptions: CallOptions? = nil
@@ -767,6 +819,9 @@ internal protocol Cosmos_Bank_V1beta1_QueryClientInterceptorFactoryProtocol: Sen
   /// - Returns: Interceptors to use when invoking 'denomMetadata'.
   func makeDenomMetadataInterceptors() -> [ClientInterceptor<Cosmos_Bank_V1beta1_QueryDenomMetadataRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'denomMetadataByQueryString'.
+  func makeDenomMetadataByQueryStringInterceptors() -> [ClientInterceptor<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse>]
+
   /// - Returns: Interceptors to use when invoking 'denomsMetadata'.
   func makeDenomsMetadataInterceptors() -> [ClientInterceptor<Cosmos_Bank_V1beta1_QueryDenomsMetadataRequest, Cosmos_Bank_V1beta1_QueryDenomsMetadataResponse>]
 
@@ -790,6 +845,7 @@ internal enum Cosmos_Bank_V1beta1_QueryClientMetadata {
       Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.supplyOf,
       Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.params,
       Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.denomMetadata,
+      Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.denomMetadataByQueryString,
       Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.denomsMetadata,
       Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.denomOwners,
       Cosmos_Bank_V1beta1_QueryClientMetadata.Methods.sendEnabled,
@@ -842,6 +898,12 @@ internal enum Cosmos_Bank_V1beta1_QueryClientMetadata {
     internal static let denomMetadata = GRPCMethodDescriptor(
       name: "DenomMetadata",
       path: "/cosmos.bank.v1beta1.Query/DenomMetadata",
+      type: GRPCCallType.unary
+    )
+
+    internal static let denomMetadataByQueryString = GRPCMethodDescriptor(
+      name: "DenomMetadataByQueryString",
+      path: "/cosmos.bank.v1beta1.Query/DenomMetadataByQueryString",
       type: GRPCCallType.unary
     )
 
@@ -915,6 +977,9 @@ internal protocol Cosmos_Bank_V1beta1_QueryProvider: CallHandlerProvider {
 
   /// DenomsMetadata queries the client metadata of a given coin denomination.
   func denomMetadata(request: Cosmos_Bank_V1beta1_QueryDenomMetadataRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Bank_V1beta1_QueryDenomMetadataResponse>
+
+  /// DenomsMetadata queries the client metadata of a given coin denomination.
+  func denomMetadataByQueryString(request: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse>
 
   /// DenomsMetadata queries the client metadata for all registered coin
   /// denominations.
@@ -1021,6 +1086,15 @@ extension Cosmos_Bank_V1beta1_QueryProvider {
         responseSerializer: ProtobufSerializer<Cosmos_Bank_V1beta1_QueryDenomMetadataResponse>(),
         interceptors: self.interceptors?.makeDenomMetadataInterceptors() ?? [],
         userFunction: self.denomMetadata(request:context:)
+      )
+
+    case "DenomMetadataByQueryString":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse>(),
+        interceptors: self.interceptors?.makeDenomMetadataByQueryStringInterceptors() ?? [],
+        userFunction: self.denomMetadataByQueryString(request:context:)
       )
 
     case "DenomsMetadata":
@@ -1132,6 +1206,12 @@ internal protocol Cosmos_Bank_V1beta1_QueryAsyncProvider: CallHandlerProvider {
     request: Cosmos_Bank_V1beta1_QueryDenomMetadataRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Bank_V1beta1_QueryDenomMetadataResponse
+
+  /// DenomsMetadata queries the client metadata of a given coin denomination.
+  @Sendable func denomMetadataByQueryString(
+    request: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse
 
   /// DenomsMetadata queries the client metadata for all registered coin
   /// denominations.
@@ -1256,6 +1336,15 @@ extension Cosmos_Bank_V1beta1_QueryAsyncProvider {
         wrapping: self.denomMetadata(request:context:)
       )
 
+    case "DenomMetadataByQueryString":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse>(),
+        interceptors: self.interceptors?.makeDenomMetadataByQueryStringInterceptors() ?? [],
+        wrapping: self.denomMetadataByQueryString(request:context:)
+      )
+
     case "DenomsMetadata":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1323,6 +1412,10 @@ internal protocol Cosmos_Bank_V1beta1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeDenomMetadataInterceptors() -> [ServerInterceptor<Cosmos_Bank_V1beta1_QueryDenomMetadataRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataResponse>]
 
+  /// - Returns: Interceptors to use when handling 'denomMetadataByQueryString'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeDenomMetadataByQueryStringInterceptors() -> [ServerInterceptor<Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse>]
+
   /// - Returns: Interceptors to use when handling 'denomsMetadata'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeDenomsMetadataInterceptors() -> [ServerInterceptor<Cosmos_Bank_V1beta1_QueryDenomsMetadataRequest, Cosmos_Bank_V1beta1_QueryDenomsMetadataResponse>]
@@ -1349,6 +1442,7 @@ internal enum Cosmos_Bank_V1beta1_QueryServerMetadata {
       Cosmos_Bank_V1beta1_QueryServerMetadata.Methods.supplyOf,
       Cosmos_Bank_V1beta1_QueryServerMetadata.Methods.params,
       Cosmos_Bank_V1beta1_QueryServerMetadata.Methods.denomMetadata,
+      Cosmos_Bank_V1beta1_QueryServerMetadata.Methods.denomMetadataByQueryString,
       Cosmos_Bank_V1beta1_QueryServerMetadata.Methods.denomsMetadata,
       Cosmos_Bank_V1beta1_QueryServerMetadata.Methods.denomOwners,
       Cosmos_Bank_V1beta1_QueryServerMetadata.Methods.sendEnabled,
@@ -1401,6 +1495,12 @@ internal enum Cosmos_Bank_V1beta1_QueryServerMetadata {
     internal static let denomMetadata = GRPCMethodDescriptor(
       name: "DenomMetadata",
       path: "/cosmos.bank.v1beta1.Query/DenomMetadata",
+      type: GRPCCallType.unary
+    )
+
+    internal static let denomMetadataByQueryString = GRPCMethodDescriptor(
+      name: "DenomMetadataByQueryString",
+      path: "/cosmos.bank.v1beta1.Query/DenomMetadataByQueryString",
       type: GRPCCallType.unary
     )
 

@@ -3,9 +3,10 @@
 'use strict';
 var grpc = require('grpc');
 var ibc_applications_transfer_v1_tx_pb = require('../../../../ibc/applications/transfer/v1/tx_pb.js');
+var amino_amino_pb = require('../../../../amino/amino_pb.js');
 var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-var cosmos_base_v1beta1_coin_pb = require('../../../../cosmos/base/v1beta1/coin_pb.js');
 var cosmos_msg_v1_msg_pb = require('../../../../cosmos/msg/v1/msg_pb.js');
+var cosmos_base_v1beta1_coin_pb = require('../../../../cosmos/base/v1beta1/coin_pb.js');
 var ibc_core_client_v1_client_pb = require('../../../../ibc/core/client/v1/client_pb.js');
 var ibc_applications_transfer_v1_transfer_pb = require('../../../../ibc/applications/transfer/v1/transfer_pb.js');
 

@@ -8024,15 +8024,15 @@ public final class QueryProto {
       "denom\030\001 \001(\tR\005denom\"[\n QueryTotalEscrowFo" +
       "rDenomResponse\0227\n\006amount\030\001 \001(\0132\031.cosmos." +
       "base.v1beta1.CoinB\004\310\336\037\000R\006amount2\330\010\n\005Quer" +
-      "y\022\257\001\n\nDenomTrace\0224.ibc.applications.tran" +
-      "sfer.v1.QueryDenomTraceRequest\0325.ibc.app" +
-      "lications.transfer.v1.QueryDenomTraceRes" +
-      "ponse\"4\202\323\344\223\002.\022,/ibc/apps/transfer/v1/den" +
-      "om_traces/{hash=**}\022\250\001\n\013DenomTraces\0225.ib" +
-      "c.applications.transfer.v1.QueryDenomTra" +
-      "cesRequest\0326.ibc.applications.transfer.v" +
-      "1.QueryDenomTracesResponse\"*\202\323\344\223\002$\022\"/ibc" +
-      "/apps/transfer/v1/denom_traces\022\223\001\n\006Param" +
+      "y\022\250\001\n\013DenomTraces\0225.ibc.applications.tra" +
+      "nsfer.v1.QueryDenomTracesRequest\0326.ibc.a" +
+      "pplications.transfer.v1.QueryDenomTraces" +
+      "Response\"*\202\323\344\223\002$\022\"/ibc/apps/transfer/v1/" +
+      "denom_traces\022\257\001\n\nDenomTrace\0224.ibc.applic" +
+      "ations.transfer.v1.QueryDenomTraceReques" +
+      "t\0325.ibc.applications.transfer.v1.QueryDe" +
+      "nomTraceResponse\"4\202\323\344\223\002.\022,/ibc/apps/tran" +
+      "sfer/v1/denom_traces/{hash=**}\022\223\001\n\006Param" +
       "s\0220.ibc.applications.transfer.v1.QueryPa" +
       "ramsRequest\0321.ibc.applications.transfer." +
       "v1.QueryParamsResponse\"$\202\323\344\223\002\036\022\034/ibc/app" +
@@ -8053,7 +8053,7 @@ public final class QueryProto {
       "onse\"<\202\323\344\223\0026\0224/ibc/apps/transfer/v1/deno" +
       "ms/{denom=**}/total_escrowB\370\001\n com.ibc.a" +
       "pplications.transfer.v1B\nQueryProtoZ7git" +
-      "hub.com/cosmos/ibc-go/v7/modules/apps/tr" +
+      "hub.com/cosmos/ibc-go/v8/modules/apps/tr" +
       "ansfer/types\242\002\003IAT\252\002\034Ibc.Applications.Tr" +
       "ansfer.V1\312\002\034Ibc\\Applications\\Transfer\\V1" +
       "\342\002(Ibc\\Applications\\Transfer\\V1\\GPBMetad" +

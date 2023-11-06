@@ -9562,7 +9562,7 @@ public final class ChannelProto {
       "\r\212\235 \tUNORDERED\022\036\n\rORDER_ORDERED\020\002\032\013\212\235 \007O" +
       "RDERED\032\004\210\243\036\000B\317\001\n\027com.ibc.core.channel.v1" +
       "B\014ChannelProtoZ9github.com/cosmos/ibc-go" +
-      "/v7/modules/core/04-channel/types\242\002\003ICC\252" +
+      "/v8/modules/core/04-channel/types\242\002\003ICC\252" +
       "\002\023Ibc.Core.Channel.V1\312\002\023Ibc\\Core\\Channel" +
       "\\V1\342\002\037Ibc\\Core\\Channel\\V1\\GPBMetadata\352\002\026" +
       "Ibc::Core::Channel::V1b\006proto3"

@@ -375,6 +375,46 @@ struct Cosmos_Staking_V1beta1_MsgUpdateParamsResponse {
   init() {}
 }
 
+/// MsgRotateConsPubKey is the Msg/RotateConsPubKey request type.
+///
+/// Since: cosmos-sdk 0.51
+struct Cosmos_Staking_V1beta1_MsgRotateConsPubKey {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var validatorAddress: String = String()
+
+  var newPubkey: SwiftProtobuf.Google_Protobuf_Any {
+    get {return _newPubkey ?? SwiftProtobuf.Google_Protobuf_Any()}
+    set {_newPubkey = newValue}
+  }
+  /// Returns true if `newPubkey` has been explicitly set.
+  var hasNewPubkey: Bool {return self._newPubkey != nil}
+  /// Clears the value of `newPubkey`. Subsequent reads from it will return its default value.
+  mutating func clearNewPubkey() {self._newPubkey = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _newPubkey: SwiftProtobuf.Google_Protobuf_Any? = nil
+}
+
+/// MsgRotateConsPubKeyResponse defines the response structure for executing a
+/// MsgRotateConsPubKey message.
+///
+/// Since: cosmos-sdk 0.51
+struct Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Staking_V1beta1_MsgCreateValidator: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_MsgCreateValidatorResponse: @unchecked Sendable {}
@@ -390,6 +430,8 @@ extension Cosmos_Staking_V1beta1_MsgCancelUnbondingDelegation: @unchecked Sendab
 extension Cosmos_Staking_V1beta1_MsgCancelUnbondingDelegationResponse: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_MsgUpdateParams: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_MsgUpdateParamsResponse: @unchecked Sendable {}
+extension Cosmos_Staking_V1beta1_MsgRotateConsPubKey: @unchecked Sendable {}
+extension Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -936,6 +978,67 @@ extension Cosmos_Staking_V1beta1_MsgUpdateParamsResponse: SwiftProtobuf.Message,
   }
 
   static func ==(lhs: Cosmos_Staking_V1beta1_MsgUpdateParamsResponse, rhs: Cosmos_Staking_V1beta1_MsgUpdateParamsResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Staking_V1beta1_MsgRotateConsPubKey: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgRotateConsPubKey"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "validator_address"),
+    2: .standard(proto: "new_pubkey"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.validatorAddress) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._newPubkey) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.validatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.validatorAddress, fieldNumber: 1)
+    }
+    try { if let v = self._newPubkey {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Staking_V1beta1_MsgRotateConsPubKey, rhs: Cosmos_Staking_V1beta1_MsgRotateConsPubKey) -> Bool {
+    if lhs.validatorAddress != rhs.validatorAddress {return false}
+    if lhs._newPubkey != rhs._newPubkey {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgRotateConsPubKeyResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse, rhs: Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

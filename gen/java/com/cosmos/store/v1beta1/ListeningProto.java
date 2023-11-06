@@ -14,7 +14,7 @@ public final class ListeningProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface StoreKVPairOrBuilder extends
+  @java.lang.Deprecated public interface StoreKVPairOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.v1beta1.StoreKVPair)
       com.google.protobuf.MessageOrBuilder {
 
@@ -62,16 +62,19 @@ public final class ListeningProto {
   }
   /**
    * <pre>
-   * StoreKVPair is a KVStore KVPair used for listening to state changes (Sets and Deletes)
-   * It optionally includes the StoreKey for the originating KVStore and a Boolean flag to distinguish between Sets and
-   * Deletes
+   * StoreKVPair is a KVStore KVPair used for listening to state changes (Sets and
+   * Deletes) It optionally includes the StoreKey for the originating KVStore and
+   * a Boolean flag to distinguish between Sets and Deletes
    *
    * Since: cosmos-sdk 0.43
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.v1beta1.StoreKVPair}
    */
-  public static final class StoreKVPair extends
+  @java.lang.Deprecated public static final class StoreKVPair extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.v1beta1.StoreKVPair)
       StoreKVPairOrBuilder {
@@ -382,11 +385,14 @@ public final class ListeningProto {
     }
     /**
      * <pre>
-     * StoreKVPair is a KVStore KVPair used for listening to state changes (Sets and Deletes)
-     * It optionally includes the StoreKey for the originating KVStore and a Boolean flag to distinguish between Sets and
-     * Deletes
+     * StoreKVPair is a KVStore KVPair used for listening to state changes (Sets and
+     * Deletes) It optionally includes the StoreKey for the originating KVStore and
+     * a Boolean flag to distinguish between Sets and Deletes
      *
      * Since: cosmos-sdk 0.43
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.v1beta1.StoreKVPair}
@@ -857,7 +863,7 @@ public final class ListeningProto {
 
   }
 
-  public interface BlockMetadataOrBuilder extends
+  @java.lang.Deprecated public interface BlockMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.v1beta1.BlockMetadata)
       com.google.protobuf.MessageOrBuilder {
 
@@ -922,11 +928,14 @@ public final class ListeningProto {
    * <pre>
    * BlockMetadata contains all the abci event data of a block
    * the file streamer dump them into files together with the state changes.
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.v1beta1.BlockMetadata}
    */
-  public static final class BlockMetadata extends
+  @java.lang.Deprecated public static final class BlockMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.v1beta1.BlockMetadata)
       BlockMetadataOrBuilder {
@@ -1246,6 +1255,9 @@ public final class ListeningProto {
      * <pre>
      * BlockMetadata contains all the abci event data of a block
      * the file streamer dump them into files together with the state changes.
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.v1beta1.BlockMetadata}
@@ -1940,22 +1952,22 @@ public final class ListeningProto {
     java.lang.String[] descriptorData = {
       "\n$cosmos/store/v1beta1/listening.proto\022\024" +
       "cosmos.store.v1beta1\032\033tendermint/abci/ty" +
-      "pes.proto\"j\n\013StoreKVPair\022\033\n\tstore_key\030\001 " +
+      "pes.proto\"n\n\013StoreKVPair\022\033\n\tstore_key\030\001 " +
       "\001(\tR\010storeKey\022\026\n\006delete\030\002 \001(\010R\006delete\022\020\n" +
-      "\003key\030\003 \001(\014R\003key\022\024\n\005value\030\004 \001(\014R\005value\"\264\002" +
-      "\n\rBlockMetadata\022H\n\017response_commit\030\006 \001(\013" +
-      "2\037.tendermint.abci.ResponseCommitR\016respo" +
-      "nseCommit\022[\n\026request_finalize_block\030\007 \001(" +
-      "\0132%.tendermint.abci.RequestFinalizeBlock" +
-      "R\024requestFinalizeBlock\022^\n\027response_final" +
-      "ize_block\030\010 \001(\0132&.tendermint.abci.Respon" +
-      "seFinalizeBlockR\025responseFinalizeBlockJ\004" +
-      "\010\001\020\002J\004\010\002\020\003J\004\010\003\020\004J\004\010\004\020\005J\004\010\005\020\006B\264\001\n\030com.cos" +
-      "mos.store.v1beta1B\016ListeningProtoZ\030cosmo" +
-      "ssdk.io/store/types\242\002\003CSX\252\002\024Cosmos.Store" +
-      ".V1beta1\312\002\024Cosmos\\Store\\V1beta1\342\002 Cosmos" +
-      "\\Store\\V1beta1\\GPBMetadata\352\002\026Cosmos::Sto" +
-      "re::V1beta1b\006proto3"
+      "\003key\030\003 \001(\014R\003key\022\024\n\005value\030\004 \001(\014R\005value:\002\030" +
+      "\001\"\270\002\n\rBlockMetadata\022H\n\017response_commit\030\006" +
+      " \001(\0132\037.tendermint.abci.ResponseCommitR\016r" +
+      "esponseCommit\022[\n\026request_finalize_block\030" +
+      "\007 \001(\0132%.tendermint.abci.RequestFinalizeB" +
+      "lockR\024requestFinalizeBlock\022^\n\027response_f" +
+      "inalize_block\030\010 \001(\0132&.tendermint.abci.Re" +
+      "sponseFinalizeBlockR\025responseFinalizeBlo" +
+      "ck:\002\030\001J\004\010\001\020\002J\004\010\002\020\003J\004\010\003\020\004J\004\010\004\020\005J\004\010\005\020\006B\264\001\n" +
+      "\030com.cosmos.store.v1beta1B\016ListeningProt" +
+      "oZ\030cosmossdk.io/store/types\242\002\003CSX\252\002\024Cosm" +
+      "os.Store.V1beta1\312\002\024Cosmos\\Store\\V1beta1\342" +
+      "\002 Cosmos\\Store\\V1beta1\\GPBMetadata\352\002\026Cos" +
+      "mos::Store::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -33,9 +33,9 @@ function deserialize_cosmos_consensus_v1_MsgUpdateParamsResponse(buffer_arg) {
 }
 
 
-// Msg defines the bank Msg service.
+// Msg defines the consensus Msg service.
 var MsgService = exports.MsgService = {
-  // UpdateParams defines a governance operation for updating the x/consensus_param module parameters.
+  // UpdateParams defines a governance operation for updating the x/consensus module parameters.
 // The authority is defined in the keeper.
 //
 // Since: cosmos-sdk 0.47

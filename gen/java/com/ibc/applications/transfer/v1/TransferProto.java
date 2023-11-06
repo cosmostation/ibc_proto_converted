@@ -1445,7 +1445,7 @@ public final class TransferProto {
       "nabled\030\001 \001(\010R\013sendEnabled\022\'\n\017receive_ena" +
       "bled\030\002 \001(\010R\016receiveEnabledB\373\001\n com.ibc.a" +
       "pplications.transfer.v1B\rTransferProtoZ7" +
-      "github.com/cosmos/ibc-go/v7/modules/apps" +
+      "github.com/cosmos/ibc-go/v8/modules/apps" +
       "/transfer/types\242\002\003IAT\252\002\034Ibc.Applications" +
       ".Transfer.V1\312\002\034Ibc\\Applications\\Transfer" +
       "\\V1\342\002(Ibc\\Applications\\Transfer\\V1\\GPBMe" +

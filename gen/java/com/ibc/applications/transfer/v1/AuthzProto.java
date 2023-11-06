@@ -2504,7 +2504,7 @@ public final class AuthzProto {
       "locations:&\312\264-\"cosmos.authz.v1beta1.Auth" +
       "orizationB\370\001\n com.ibc.applications.trans" +
       "fer.v1B\nAuthzProtoZ7github.com/cosmos/ib" +
-      "c-go/v7/modules/apps/transfer/types\242\002\003IA" +
+      "c-go/v8/modules/apps/transfer/types\242\002\003IA" +
       "T\252\002\034Ibc.Applications.Transfer.V1\312\002\034Ibc\\A" +
       "pplications\\Transfer\\V1\342\002(Ibc\\Applicatio" +
       "ns\\Transfer\\V1\\GPBMetadata\352\002\037Ibc::Applic" +

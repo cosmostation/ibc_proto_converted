@@ -44,7 +44,7 @@ extension Cosmos_Consensus_V1_QueryClientProtocol {
     return "cosmos.consensus.v1.Query"
   }
 
-  /// Params queries the parameters of x/consensus_param module.
+  /// Params queries the parameters of x/consensus module.
   ///
   /// - Parameters:
   ///   - request: Request to send to Params.
@@ -217,7 +217,7 @@ internal enum Cosmos_Consensus_V1_QueryClientMetadata {
 internal protocol Cosmos_Consensus_V1_QueryProvider: CallHandlerProvider {
   var interceptors: Cosmos_Consensus_V1_QueryServerInterceptorFactoryProtocol? { get }
 
-  /// Params queries the parameters of x/consensus_param module.
+  /// Params queries the parameters of x/consensus module.
   func params(request: Cosmos_Consensus_V1_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Consensus_V1_QueryParamsResponse>
 }
 
@@ -256,7 +256,7 @@ internal protocol Cosmos_Consensus_V1_QueryAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Cosmos_Consensus_V1_QueryServerInterceptorFactoryProtocol? { get }
 
-  /// Params queries the parameters of x/consensus_param module.
+  /// Params queries the parameters of x/consensus module.
   @Sendable func params(
     request: Cosmos_Consensus_V1_QueryParamsRequest,
     context: GRPCAsyncServerCallContext

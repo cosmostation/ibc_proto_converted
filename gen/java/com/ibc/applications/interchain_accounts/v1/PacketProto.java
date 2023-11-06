@@ -1703,7 +1703,7 @@ public final class PacketProto {
       "_EXECUTE_TX\020\001\032\016\212\235 \nEXECUTE_TX\032\004\210\243\036\000B\272\002\n+" +
       "com.ibc.applications.interchain_accounts" +
       ".v1B\013PacketProtoZEgithub.com/cosmos/ibc-" +
-      "go/v7/modules/apps/27-interchain-account" +
+      "go/v8/modules/apps/27-interchain-account" +
       "s/types\242\002\003IAI\252\002&Ibc.Applications.Interch" +
       "ainAccounts.V1\312\002&Ibc\\Applications\\Interc" +
       "hainAccounts\\V1\342\0022Ibc\\Applications\\Inter" +

@@ -80,7 +80,7 @@ enum Cosmos_Tx_V1beta1_BroadcastMode: SwiftProtobuf.Enum {
   /// zero-value for mode ordering
   case unspecified // = 0
 
-  /// DEPRECATED: use BROADCAST_MODE_SYNC instead,
+  /// Deprecated: use BROADCAST_MODE_SYNC instead,
   /// BROADCAST_MODE_BLOCK is not supported by the SDK from v0.47.x onwards.
   case block // = 1
 
@@ -141,12 +141,12 @@ struct Cosmos_Tx_V1beta1_GetTxsEventRequest {
   // methods supported on all messages.
 
   /// events is the list of transaction event type.
-  /// Deprecated post v0.47.x: use query instead, which should contain a valid
+  /// Deprecated: post v0.47.x use query instead, which should contain a valid
   /// events query.
   var events: [String] = []
 
   /// pagination defines a pagination for the request.
-  /// Deprecated post v0.46.x: use page and limit instead.
+  /// Deprecated: post v0.46.x use page and limit instead.
   var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
@@ -193,7 +193,7 @@ struct Cosmos_Tx_V1beta1_GetTxsEventResponse {
   var txResponses: [Cosmos_Base_Abci_V1beta1_TxResponse] = []
 
   /// pagination defines a pagination for the response.
-  /// Deprecated post v0.46.x: use total instead.
+  /// Deprecated: post v0.46.x use total instead.
   var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}

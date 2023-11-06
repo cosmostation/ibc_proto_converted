@@ -1,4 +1,4 @@
-// source: cosmos/distribution/v1beta1/query.proto
+// source: cosmos/protocolpool/v1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest');
+goog.provide('proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest = function(opt_data) {
+proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest, jspb.Message);
+goog.inherits(proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.displayName = 'proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest';
+  proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.displayName = 'proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.toObject(opt_includeInstance, this);
+proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.prototype.toObject =
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest} msg The msg instance to transform.
+ * @param {!proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.toObject = function(includeInstance, msg) {
+proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -84,23 +84,23 @@ proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.toObject = function(
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest}
+ * @return {!proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest}
  */
-proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.deserializeBinary = function(bytes) {
+proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest;
-  return proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest;
+  return proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest} msg The message object to deserialize into.
+ * @param {!proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest}
+ * @return {!proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest}
  */
-proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.deserializeBinaryFro
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.prototype.serializeBinary = function() {
+proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.serializeBinaryToWriter(this, writer);
+  proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.prototype.serializeB
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest} message
+ * @param {!proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.QueryCommunityPoolRequest.serializeBinaryToWriter = function(message, writer) {
+proto.cosmos.protocolpool.v1.QueryCommunityPoolRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 

@@ -7,6 +7,9 @@ from cosmos.store.streaming.abci import grpc_pb2 as cosmos_dot_store_dot_streami
 
 class ABCIListenerServiceStub(object):
     """ABCIListenerService is the service for the BaseApp ABCIListener interface
+
+    Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+    instead.
     """
 
     def __init__(self, channel):
@@ -29,10 +32,14 @@ class ABCIListenerServiceStub(object):
 
 class ABCIListenerServiceServicer(object):
     """ABCIListenerService is the service for the BaseApp ABCIListener interface
+
+    Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+    instead.
     """
 
     def ListenFinalizeBlock(self, request, context):
-        """ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+        """ListenFinalizeBlock is the corresponding endpoint for
+        ABCIListener.ListenEndBlock
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -67,6 +74,9 @@ def add_ABCIListenerServiceServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class ABCIListenerService(object):
     """ABCIListenerService is the service for the BaseApp ABCIListener interface
+
+    Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+    instead.
     """
 
     @staticmethod

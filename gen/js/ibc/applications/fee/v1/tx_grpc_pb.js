@@ -3,6 +3,7 @@
 'use strict';
 var grpc = require('grpc');
 var ibc_applications_fee_v1_tx_pb = require('../../../../ibc/applications/fee/v1/tx_pb.js');
+var amino_amino_pb = require('../../../../amino/amino_pb.js');
 var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
 var ibc_applications_fee_v1_fee_pb = require('../../../../ibc/applications/fee/v1/fee_pb.js');
 var ibc_core_channel_v1_channel_pb = require('../../../../ibc/core/channel/v1/channel_pb.js');

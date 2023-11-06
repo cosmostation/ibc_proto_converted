@@ -1690,7 +1690,7 @@ public final class GenesisProto {
       "hub.com/cosmos/cosmos-sdk/types.CoinsR\rt" +
       "otalEscrowedB\372\001\n com.ibc.applications.tr" +
       "ansfer.v1B\014GenesisProtoZ7github.com/cosm" +
-      "os/ibc-go/v7/modules/apps/transfer/types" +
+      "os/ibc-go/v8/modules/apps/transfer/types" +
       "\242\002\003IAT\252\002\034Ibc.Applications.Transfer.V1\312\002\034" +
       "Ibc\\Applications\\Transfer\\V1\342\002(Ibc\\Appli" +
       "cations\\Transfer\\V1\\GPBMetadata\352\002\037Ibc::A" +

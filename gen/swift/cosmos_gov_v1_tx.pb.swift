@@ -51,7 +51,7 @@ struct Cosmos_Gov_V1_MsgSubmitProposal {
   /// Since: cosmos-sdk 0.47
   var summary: String = String()
 
-  /// expedided defines if the proposal is expedited or not
+  /// expedited defines if the proposal is expedited or not
   ///
   /// Since: cosmos-sdk 0.50
   var expedited: Bool = false
@@ -264,8 +264,10 @@ struct Cosmos_Gov_V1_MsgCancelProposal {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// proposal_id defines the unique id of the proposal.
   var proposalID: UInt64 = 0
 
+  /// proposer is the account address of the proposer.
   var proposer: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -282,6 +284,7 @@ struct Cosmos_Gov_V1_MsgCancelProposalResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// proposal_id defines the unique id of the proposal.
   var proposalID: UInt64 = 0
 
   /// canceled_time is the time when proposal is canceled.

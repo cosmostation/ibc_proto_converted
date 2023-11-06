@@ -14,7 +14,7 @@ public final class GrpcProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ListenFinalizeBlockRequestOrBuilder extends
+  @java.lang.Deprecated public interface ListenFinalizeBlockRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.streaming.abci.ListenFinalizeBlockRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -51,11 +51,14 @@ public final class GrpcProto {
   /**
    * <pre>
    * ListenEndBlockRequest is the request type for the ListenEndBlock RPC method
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.streaming.abci.ListenFinalizeBlockRequest}
    */
-  public static final class ListenFinalizeBlockRequest extends
+  @java.lang.Deprecated public static final class ListenFinalizeBlockRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.streaming.abci.ListenFinalizeBlockRequest)
       ListenFinalizeBlockRequestOrBuilder {
@@ -320,6 +323,9 @@ public final class GrpcProto {
     /**
      * <pre>
      * ListenEndBlockRequest is the request type for the ListenEndBlock RPC method
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.streaming.abci.ListenFinalizeBlockRequest}
@@ -818,18 +824,21 @@ public final class GrpcProto {
 
   }
 
-  public interface ListenFinalizeBlockResponseOrBuilder extends
+  @java.lang.Deprecated public interface ListenFinalizeBlockResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.streaming.abci.ListenFinalizeBlockResponse)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
    * <pre>
    * ListenEndBlockResponse is the response type for the ListenEndBlock RPC method
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.streaming.abci.ListenFinalizeBlockResponse}
    */
-  public static final class ListenFinalizeBlockResponse extends
+  @java.lang.Deprecated public static final class ListenFinalizeBlockResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.streaming.abci.ListenFinalizeBlockResponse)
       ListenFinalizeBlockResponseOrBuilder {
@@ -1010,6 +1019,9 @@ public final class GrpcProto {
     /**
      * <pre>
      * ListenEndBlockResponse is the response type for the ListenEndBlock RPC method
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.streaming.abci.ListenFinalizeBlockResponse}
@@ -1223,13 +1235,14 @@ public final class GrpcProto {
 
   }
 
-  public interface ListenCommitRequestOrBuilder extends
+  @java.lang.Deprecated public interface ListenCommitRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.streaming.abci.ListenCommitRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * explicitly pass in block height as ResponseCommit does not contain this info
+     * explicitly pass in block height as ResponseCommit does not contain this
+     * info
      * </pre>
      *
      * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -1279,11 +1292,14 @@ public final class GrpcProto {
   /**
    * <pre>
    * ListenCommitRequest is the request type for the ListenCommit RPC method
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.streaming.abci.ListenCommitRequest}
    */
-  public static final class ListenCommitRequest extends
+  @java.lang.Deprecated public static final class ListenCommitRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.streaming.abci.ListenCommitRequest)
       ListenCommitRequestOrBuilder {
@@ -1320,7 +1336,8 @@ public final class GrpcProto {
     private long blockHeight_ = 0L;
     /**
      * <pre>
-     * explicitly pass in block height as ResponseCommit does not contain this info
+     * explicitly pass in block height as ResponseCommit does not contain this
+     * info
      * </pre>
      *
      * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -1588,6 +1605,9 @@ public final class GrpcProto {
     /**
      * <pre>
      * ListenCommitRequest is the request type for the ListenCommit RPC method
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.streaming.abci.ListenCommitRequest}
@@ -1839,7 +1859,8 @@ public final class GrpcProto {
       private long blockHeight_ ;
       /**
        * <pre>
-       * explicitly pass in block height as ResponseCommit does not contain this info
+       * explicitly pass in block height as ResponseCommit does not contain this
+       * info
        * </pre>
        *
        * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -1851,7 +1872,8 @@ public final class GrpcProto {
       }
       /**
        * <pre>
-       * explicitly pass in block height as ResponseCommit does not contain this info
+       * explicitly pass in block height as ResponseCommit does not contain this
+       * info
        * </pre>
        *
        * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -1867,7 +1889,8 @@ public final class GrpcProto {
       }
       /**
        * <pre>
-       * explicitly pass in block height as ResponseCommit does not contain this info
+       * explicitly pass in block height as ResponseCommit does not contain this
+       * info
        * </pre>
        *
        * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -2302,18 +2325,21 @@ public final class GrpcProto {
 
   }
 
-  public interface ListenCommitResponseOrBuilder extends
+  @java.lang.Deprecated public interface ListenCommitResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.streaming.abci.ListenCommitResponse)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
    * <pre>
    * ListenCommitResponse is the response type for the ListenCommit RPC method
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.streaming.abci.ListenCommitResponse}
    */
-  public static final class ListenCommitResponse extends
+  @java.lang.Deprecated public static final class ListenCommitResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.streaming.abci.ListenCommitResponse)
       ListenCommitResponseOrBuilder {
@@ -2494,6 +2520,9 @@ public final class GrpcProto {
     /**
      * <pre>
      * ListenCommitResponse is the response type for the ListenCommit RPC method
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.streaming.abci.ListenCommitResponse}
@@ -2739,29 +2768,30 @@ public final class GrpcProto {
       "\n&cosmos/store/streaming/abci/grpc.proto" +
       "\022\033cosmos.store.streaming.abci\032\033tendermin" +
       "t/abci/types.proto\032$cosmos/store/v1beta1" +
-      "/listening.proto\"\217\001\n\032ListenFinalizeBlock" +
+      "/listening.proto\"\223\001\n\032ListenFinalizeBlock" +
       "Request\0227\n\003req\030\001 \001(\0132%.tendermint.abci.R" +
       "equestFinalizeBlockR\003req\0228\n\003res\030\002 \001(\0132&." +
       "tendermint.abci.ResponseFinalizeBlockR\003r" +
-      "es\"\035\n\033ListenFinalizeBlockResponse\"\255\001\n\023Li" +
-      "stenCommitRequest\022!\n\014block_height\030\001 \001(\003R" +
-      "\013blockHeight\0221\n\003res\030\002 \001(\0132\037.tendermint.a" +
-      "bci.ResponseCommitR\003res\022@\n\nchange_set\030\003 " +
-      "\003(\0132!.cosmos.store.v1beta1.StoreKVPairR\t" +
-      "changeSet\"\026\n\024ListenCommitResponse2\225\002\n\023AB" +
-      "CIListenerService\022\210\001\n\023ListenFinalizeBloc" +
-      "k\0227.cosmos.store.streaming.abci.ListenFi" +
-      "nalizeBlockRequest\0328.cosmos.store.stream" +
-      "ing.abci.ListenFinalizeBlockResponse\022s\n\014" +
-      "ListenCommit\0220.cosmos.store.streaming.ab" +
-      "ci.ListenCommitRequest\0321.cosmos.store.st" +
-      "reaming.abci.ListenCommitResponseB\335\001\n\037co" +
-      "m.cosmos.store.streaming.abciB\tGrpcProto" +
-      "Z!cosmossdk.io/store/streaming/abci\242\002\004CS" +
-      "SA\252\002\033Cosmos.Store.Streaming.Abci\312\002\033Cosmo" +
-      "s\\Store\\Streaming\\Abci\342\002\'Cosmos\\Store\\St" +
-      "reaming\\Abci\\GPBMetadata\352\002\036Cosmos::Store" +
-      "::Streaming::Abcib\006proto3"
+      "es:\002\030\001\"!\n\033ListenFinalizeBlockResponse:\002\030" +
+      "\001\"\261\001\n\023ListenCommitRequest\022!\n\014block_heigh" +
+      "t\030\001 \001(\003R\013blockHeight\0221\n\003res\030\002 \001(\0132\037.tend" +
+      "ermint.abci.ResponseCommitR\003res\022@\n\nchang" +
+      "e_set\030\003 \003(\0132!.cosmos.store.v1beta1.Store" +
+      "KVPairR\tchangeSet:\002\030\001\"\032\n\024ListenCommitRes" +
+      "ponse:\002\030\0012\232\002\n\023ABCIListenerService\022\210\001\n\023Li" +
+      "stenFinalizeBlock\0227.cosmos.store.streami" +
+      "ng.abci.ListenFinalizeBlockRequest\0328.cos" +
+      "mos.store.streaming.abci.ListenFinalizeB" +
+      "lockResponse\022s\n\014ListenCommit\0220.cosmos.st" +
+      "ore.streaming.abci.ListenCommitRequest\0321" +
+      ".cosmos.store.streaming.abci.ListenCommi" +
+      "tResponse\032\003\210\002\001B\335\001\n\037com.cosmos.store.stre" +
+      "aming.abciB\tGrpcProtoZ!cosmossdk.io/stor" +
+      "e/streaming/abci\242\002\004CSSA\252\002\033Cosmos.Store.S" +
+      "treaming.Abci\312\002\033Cosmos\\Store\\Streaming\\A" +
+      "bci\342\002\'Cosmos\\Store\\Streaming\\Abci\\GPBMet" +
+      "adata\352\002\036Cosmos::Store::Streaming::Abcib\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

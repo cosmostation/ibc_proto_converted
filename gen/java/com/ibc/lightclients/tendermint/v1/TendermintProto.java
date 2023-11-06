@@ -7029,7 +7029,7 @@ public final class TendermintProto {
       "ator\030\001 \001(\004R\tnumerator\022 \n\013denominator\030\002 \001" +
       "(\004R\013denominatorB\232\002\n\"com.ibc.lightclients" +
       ".tendermint.v1B\017TendermintProtoZJgithub." +
-      "com/cosmos/ibc-go/v7/modules/light-clien" +
+      "com/cosmos/ibc-go/v8/modules/light-clien" +
       "ts/07-tendermint;tendermint\242\002\003ILT\252\002\036Ibc." +
       "Lightclients.Tendermint.V1\312\002\036Ibc\\Lightcl" +
       "ients\\Tendermint\\V1\342\002*Ibc\\Lightclients\\T" +

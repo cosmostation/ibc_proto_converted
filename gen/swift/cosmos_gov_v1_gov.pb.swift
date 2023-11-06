@@ -280,7 +280,8 @@ struct Cosmos_Gov_V1_Proposal {
   mutating func clearVotingEndTime() {_uniqueStorage()._votingEndTime = nil}
 
   /// metadata is any arbitrary metadata attached to the proposal.
-  /// the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/gov#proposal-3
+  /// the recommended format of the metadata is to be found here:
+  /// https://docs.cosmos.network/v0.47/modules/gov#proposal-3
   var metadata: String {
     get {return _storage._metadata}
     set {_uniqueStorage()._metadata = newValue}
@@ -316,6 +317,14 @@ struct Cosmos_Gov_V1_Proposal {
   var expedited: Bool {
     get {return _storage._expedited}
     set {_uniqueStorage()._expedited = newValue}
+  }
+
+  /// failed_reason defines the reason why the proposal failed
+  ///
+  /// Since: cosmos-sdk 0.50
+  var failedReason: String {
+    get {return _storage._failedReason}
+    set {_uniqueStorage()._failedReason = newValue}
   }
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -364,7 +373,7 @@ struct Cosmos_Gov_V1_Vote {
   /// options is the weighted vote options.
   var options: [Cosmos_Gov_V1_WeightedVoteOption] = []
 
-  /// metadata is any arbitrary metadata to attached to the vote.
+  /// metadata is any arbitrary metadata attached to the vote.
   /// the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/gov#vote-5
   var metadata: String = String()
 
@@ -567,6 +576,16 @@ struct Cosmos_Gov_V1_Params {
     set {_uniqueStorage()._burnVoteVeto = newValue}
   }
 
+  /// The ratio representing the proportion of the deposit value minimum that must be met when making a deposit.
+  /// Default value: 0.01. Meaning that for a chain with a min_deposit of 100stake, a deposit of 1stake would be
+  /// required.
+  ///
+  /// Since: cosmos-sdk 0.50
+  var minDepositRatio: String {
+    get {return _storage._minDepositRatio}
+    set {_uniqueStorage()._minDepositRatio = newValue}
+  }
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -712,6 +731,7 @@ extension Cosmos_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     12: .same(proto: "summary"),
     13: .same(proto: "proposer"),
     14: .same(proto: "expedited"),
+    15: .standard(proto: "failed_reason"),
   ]
 
   fileprivate class _StorageClass {
@@ -729,6 +749,7 @@ extension Cosmos_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     var _summary: String = String()
     var _proposer: String = String()
     var _expedited: Bool = false
+    var _failedReason: String = String()
 
     static let defaultInstance = _StorageClass()
 
@@ -749,6 +770,7 @@ extension Cosmos_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageI
       _summary = source._summary
       _proposer = source._proposer
       _expedited = source._expedited
+      _failedReason = source._failedReason
     }
   }
 
@@ -781,6 +803,7 @@ extension Cosmos_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageI
         case 12: try { try decoder.decodeSingularStringField(value: &_storage._summary) }()
         case 13: try { try decoder.decodeSingularStringField(value: &_storage._proposer) }()
         case 14: try { try decoder.decodeSingularBoolField(value: &_storage._expedited) }()
+        case 15: try { try decoder.decodeSingularStringField(value: &_storage._failedReason) }()
         default: break
         }
       }
@@ -835,6 +858,9 @@ extension Cosmos_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageI
       if _storage._expedited != false {
         try visitor.visitSingularBoolField(value: _storage._expedited, fieldNumber: 14)
       }
+      if !_storage._failedReason.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._failedReason, fieldNumber: 15)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -858,6 +884,7 @@ extension Cosmos_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageI
         if _storage._summary != rhs_storage._summary {return false}
         if _storage._proposer != rhs_storage._proposer {return false}
         if _storage._expedited != rhs_storage._expedited {return false}
+        if _storage._failedReason != rhs_storage._failedReason {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -1107,6 +1134,7 @@ extension Cosmos_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     13: .standard(proto: "burn_vote_quorum"),
     14: .standard(proto: "burn_proposal_deposit_prevote"),
     15: .standard(proto: "burn_vote_veto"),
+    16: .standard(proto: "min_deposit_ratio"),
   ]
 
   fileprivate class _StorageClass {
@@ -1125,6 +1153,7 @@ extension Cosmos_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     var _burnVoteQuorum: Bool = false
     var _burnProposalDepositPrevote: Bool = false
     var _burnVoteVeto: Bool = false
+    var _minDepositRatio: String = String()
 
     static let defaultInstance = _StorageClass()
 
@@ -1146,6 +1175,7 @@ extension Cosmos_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
       _burnVoteQuorum = source._burnVoteQuorum
       _burnProposalDepositPrevote = source._burnProposalDepositPrevote
       _burnVoteVeto = source._burnVoteVeto
+      _minDepositRatio = source._minDepositRatio
     }
   }
 
@@ -1179,6 +1209,7 @@ extension Cosmos_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
         case 13: try { try decoder.decodeSingularBoolField(value: &_storage._burnVoteQuorum) }()
         case 14: try { try decoder.decodeSingularBoolField(value: &_storage._burnProposalDepositPrevote) }()
         case 15: try { try decoder.decodeSingularBoolField(value: &_storage._burnVoteVeto) }()
+        case 16: try { try decoder.decodeSingularStringField(value: &_storage._minDepositRatio) }()
         default: break
         }
       }
@@ -1236,6 +1267,9 @@ extension Cosmos_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
       if _storage._burnVoteVeto != false {
         try visitor.visitSingularBoolField(value: _storage._burnVoteVeto, fieldNumber: 15)
       }
+      if !_storage._minDepositRatio.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._minDepositRatio, fieldNumber: 16)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -1260,6 +1294,7 @@ extension Cosmos_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
         if _storage._burnVoteQuorum != rhs_storage._burnVoteQuorum {return false}
         if _storage._burnProposalDepositPrevote != rhs_storage._burnProposalDepositPrevote {return false}
         if _storage._burnVoteVeto != rhs_storage._burnVoteVeto {return false}
+        if _storage._minDepositRatio != rhs_storage._minDepositRatio {return false}
         return true
       }
       if !storagesAreEqual {return false}

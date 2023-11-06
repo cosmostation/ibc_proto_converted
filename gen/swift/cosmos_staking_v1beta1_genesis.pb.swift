@@ -56,6 +56,7 @@ struct Cosmos_Staking_V1beta1_GenesisState {
   /// redelegations defines the redelegations active at genesis.
   var redelegations: [Cosmos_Staking_V1beta1_Redelegation] = []
 
+  /// exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
   var exported: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()

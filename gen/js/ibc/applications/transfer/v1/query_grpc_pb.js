@@ -144,18 +144,6 @@ function deserialize_ibc_applications_transfer_v1_QueryTotalEscrowForDenomRespon
 
 // Query provides defines the gRPC querier service.
 var QueryService = exports.QueryService = {
-  // DenomTrace queries a denomination trace information.
-denomTrace: {
-    path: '/ibc.applications.transfer.v1.Query/DenomTrace',
-    requestStream: false,
-    responseStream: false,
-    requestType: ibc_applications_transfer_v1_query_pb.QueryDenomTraceRequest,
-    responseType: ibc_applications_transfer_v1_query_pb.QueryDenomTraceResponse,
-    requestSerialize: serialize_ibc_applications_transfer_v1_QueryDenomTraceRequest,
-    requestDeserialize: deserialize_ibc_applications_transfer_v1_QueryDenomTraceRequest,
-    responseSerialize: serialize_ibc_applications_transfer_v1_QueryDenomTraceResponse,
-    responseDeserialize: deserialize_ibc_applications_transfer_v1_QueryDenomTraceResponse,
-  },
   // DenomTraces queries all denomination traces.
 denomTraces: {
     path: '/ibc.applications.transfer.v1.Query/DenomTraces',
@@ -167,6 +155,18 @@ denomTraces: {
     requestDeserialize: deserialize_ibc_applications_transfer_v1_QueryDenomTracesRequest,
     responseSerialize: serialize_ibc_applications_transfer_v1_QueryDenomTracesResponse,
     responseDeserialize: deserialize_ibc_applications_transfer_v1_QueryDenomTracesResponse,
+  },
+  // DenomTrace queries a denomination trace information.
+denomTrace: {
+    path: '/ibc.applications.transfer.v1.Query/DenomTrace',
+    requestStream: false,
+    responseStream: false,
+    requestType: ibc_applications_transfer_v1_query_pb.QueryDenomTraceRequest,
+    responseType: ibc_applications_transfer_v1_query_pb.QueryDenomTraceResponse,
+    requestSerialize: serialize_ibc_applications_transfer_v1_QueryDenomTraceRequest,
+    requestDeserialize: deserialize_ibc_applications_transfer_v1_QueryDenomTraceRequest,
+    responseSerialize: serialize_ibc_applications_transfer_v1_QueryDenomTraceResponse,
+    responseDeserialize: deserialize_ibc_applications_transfer_v1_QueryDenomTraceResponse,
   },
   // Params queries all parameters of the ibc-transfer module.
 params: {

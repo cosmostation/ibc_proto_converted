@@ -224,6 +224,8 @@ struct Cosmos_Distribution_V1beta1_DelegationDelegatorReward {
 
 /// CommunityPoolSpendProposalWithDeposit defines a CommunityPoolSpendProposal
 /// with a deposit
+///
+/// Deprecated: Do not use.
 struct Cosmos_Distribution_V1beta1_CommunityPoolSpendProposalWithDeposit {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for

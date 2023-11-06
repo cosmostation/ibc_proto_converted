@@ -5,12 +5,15 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * ABCIListenerService is the service for the BaseApp ABCIListener interface
+ * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+ * instead.
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: cosmos/store/streaming/abci/grpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
+@java.lang.Deprecated
 public final class ABCIListenerServiceGrpc {
 
   private ABCIListenerServiceGrpc() {}
@@ -127,13 +130,17 @@ public final class ABCIListenerServiceGrpc {
   /**
    * <pre>
    * ABCIListenerService is the service for the BaseApp ABCIListener interface
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public interface AsyncService {
 
     /**
      * <pre>
-     * ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+     * ListenFinalizeBlock is the corresponding endpoint for
+     * ABCIListener.ListenEndBlock
      * </pre>
      */
     default void listenFinalizeBlock(com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockRequest request,
@@ -156,8 +163,11 @@ public final class ABCIListenerServiceGrpc {
    * Base class for the server implementation of the service ABCIListenerService.
    * <pre>
    * ABCIListenerService is the service for the BaseApp ABCIListener interface
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class ABCIListenerServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
@@ -170,8 +180,11 @@ public final class ABCIListenerServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service ABCIListenerService.
    * <pre>
    * ABCIListenerService is the service for the BaseApp ABCIListener interface
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class ABCIListenerServiceStub
       extends io.grpc.stub.AbstractAsyncStub<ABCIListenerServiceStub> {
     private ABCIListenerServiceStub(
@@ -187,7 +200,8 @@ public final class ABCIListenerServiceGrpc {
 
     /**
      * <pre>
-     * ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+     * ListenFinalizeBlock is the corresponding endpoint for
+     * ABCIListener.ListenEndBlock
      * </pre>
      */
     public void listenFinalizeBlock(com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockRequest request,
@@ -212,8 +226,11 @@ public final class ABCIListenerServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service ABCIListenerService.
    * <pre>
    * ABCIListenerService is the service for the BaseApp ABCIListener interface
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class ABCIListenerServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ABCIListenerServiceBlockingStub> {
     private ABCIListenerServiceBlockingStub(
@@ -229,7 +246,8 @@ public final class ABCIListenerServiceGrpc {
 
     /**
      * <pre>
-     * ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+     * ListenFinalizeBlock is the corresponding endpoint for
+     * ABCIListener.ListenEndBlock
      * </pre>
      */
     public com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockResponse listenFinalizeBlock(com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockRequest request) {
@@ -252,8 +270,11 @@ public final class ABCIListenerServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ABCIListenerService.
    * <pre>
    * ABCIListenerService is the service for the BaseApp ABCIListener interface
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class ABCIListenerServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<ABCIListenerServiceFutureStub> {
     private ABCIListenerServiceFutureStub(
@@ -269,7 +290,8 @@ public final class ABCIListenerServiceGrpc {
 
     /**
      * <pre>
-     * ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+     * ListenFinalizeBlock is the corresponding endpoint for
+     * ABCIListener.ListenEndBlock
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.cosmos.store.streaming.abci.GrpcProto.ListenFinalizeBlockResponse> listenFinalizeBlock(

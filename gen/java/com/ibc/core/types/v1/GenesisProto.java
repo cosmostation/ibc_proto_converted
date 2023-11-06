@@ -1220,7 +1220,7 @@ public final class GenesisProto {
       "nGenesis\022P\n\017channel_genesis\030\003 \001(\0132!.ibc." +
       "core.channel.v1.GenesisStateB\004\310\336\037\000R\016chan" +
       "nelGenesisB\272\001\n\025com.ibc.core.types.v1B\014Ge" +
-      "nesisProtoZ.github.com/cosmos/ibc-go/v7/" +
+      "nesisProtoZ.github.com/cosmos/ibc-go/v8/" +
       "modules/core/types\242\002\003ICT\252\002\021Ibc.Core.Type" +
       "s.V1\312\002\021Ibc\\Core\\Types\\V1\342\002\035Ibc\\Core\\Type" +
       "s\\V1\\GPBMetadata\352\002\024Ibc::Core::Types::V1b" +

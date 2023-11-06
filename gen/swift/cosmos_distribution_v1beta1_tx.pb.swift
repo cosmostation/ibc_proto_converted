@@ -110,6 +110,9 @@ struct Cosmos_Distribution_V1beta1_MsgWithdrawValidatorCommissionResponse {
 
 /// MsgFundCommunityPool allows an account to directly
 /// fund the community pool.
+///
+/// Deprecated: Use x/protocolpool module's MsgFundCommunityPool instead.
+/// Since: cosmos-sdk 0.50
 struct Cosmos_Distribution_V1beta1_MsgFundCommunityPool {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -125,6 +128,9 @@ struct Cosmos_Distribution_V1beta1_MsgFundCommunityPool {
 }
 
 /// MsgFundCommunityPoolResponse defines the Msg/FundCommunityPool response type.
+///
+/// Deprecated
+/// Since: cosmos-sdk 0.50
 struct Cosmos_Distribution_V1beta1_MsgFundCommunityPoolResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -179,11 +185,8 @@ struct Cosmos_Distribution_V1beta1_MsgUpdateParamsResponse {
   init() {}
 }
 
-/// MsgCommunityPoolSpend defines a message for sending tokens from the community
-/// pool to another account. This message is typically executed via a governance
-/// proposal with the governance module being the executing authority.
-///
-/// Since: cosmos-sdk 0.47
+/// Deprecated: Use x/protocolpool module's MsgCommunityPoolSpend instead
+/// Since: cosmos-sdk 0.50
 struct Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -204,7 +207,8 @@ struct Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend {
 /// MsgCommunityPoolSpendResponse defines the response to executing a
 /// MsgCommunityPoolSpend message.
 ///
-/// Since: cosmos-sdk 0.47
+/// Deprecated
+/// Since: cosmos-sdk 0.50
 struct Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for

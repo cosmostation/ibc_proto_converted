@@ -1,4 +1,4 @@
-// source: cosmos/distribution/v1beta1/tx.proto
+// source: cosmos/protocolpool/v1/tx.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend');
+goog.provide('proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -28,16 +28,16 @@ goog.require('proto.cosmos.base.v1beta1.Coin');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.repeatedFields_, null);
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.repeatedFields_, null);
 };
-goog.inherits(proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend, jspb.Message);
+goog.inherits(proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.displayName = 'proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend';
+  proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.displayName = 'proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend';
 }
 
 /**
@@ -45,7 +45,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.repeatedFields_ = [3];
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.repeatedFields_ = [3];
 
 
 
@@ -62,8 +62,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.toObject(opt_includeInstance, this);
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.toObject(opt_includeInstance, this);
 };
 
 
@@ -72,11 +72,11 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.toObject = fun
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend} msg The msg instance to transform.
+ * @param {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.toObject = function(includeInstance, msg) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.toObject = function(includeInstance, msg) {
   var f, obj = {
     authority: jspb.Message.getFieldWithDefault(msg, 1, ""),
     recipient: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -95,23 +95,23 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.toObject = function(incl
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend}
+ * @return {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.deserializeBinary = function(bytes) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend;
-  return proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend;
+  return proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend} msg The message object to deserialize into.
+ * @param {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend}
+ * @return {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -144,9 +144,9 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.deserializeBinaryFromRea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.serializeBinary = function() {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.serializeBinaryToWriter(this, writer);
+  proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -154,11 +154,11 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.serializeBinar
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend} message
+ * @param {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.serializeBinaryToWriter = function(message, writer) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAuthority();
   if (f.length > 0) {
@@ -189,16 +189,16 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.serializeBinaryToWriter 
  * optional string authority = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.getAuthority = function() {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.getAuthority = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend} returns this
+ * @return {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend} returns this
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.setAuthority = function(value) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.setAuthority = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -207,16 +207,16 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.setAuthority =
  * optional string recipient = 2;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.getRecipient = function() {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.getRecipient = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend} returns this
+ * @return {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend} returns this
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.setRecipient = function(value) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.setRecipient = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -225,7 +225,7 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.setRecipient =
  * repeated cosmos.base.v1beta1.Coin amount = 3;
  * @return {!Array<!proto.cosmos.base.v1beta1.Coin>}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.getAmountList = function() {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.getAmountList = function() {
   return /** @type{!Array<!proto.cosmos.base.v1beta1.Coin>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.v1beta1.Coin, 3));
 };
@@ -233,9 +233,9 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.getAmountList 
 
 /**
  * @param {!Array<!proto.cosmos.base.v1beta1.Coin>} value
- * @return {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend} returns this
+ * @return {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend} returns this
 */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.setAmountList = function(value) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.setAmountList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
 
@@ -245,16 +245,16 @@ proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.setAmountList 
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.v1beta1.Coin}
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.addAmount = function(opt_value, opt_index) {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.addAmount = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.cosmos.base.v1beta1.Coin, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend} returns this
+ * @return {!proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend} returns this
  */
-proto.cosmos.distribution.v1beta1.MsgCommunityPoolSpend.prototype.clearAmountList = function() {
+proto.cosmos.protocolpool.v1.MsgCommunityPoolSpend.prototype.clearAmountList = function() {
   return this.setAmountList([]);
 };
 

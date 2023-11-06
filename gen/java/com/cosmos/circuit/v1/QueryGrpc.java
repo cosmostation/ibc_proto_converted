@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Msg defines the crisis Msg service.
+ * Query defines the circuit gRPC querier service.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -157,7 +157,7 @@ public final class QueryGrpc {
 
   /**
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Query defines the circuit gRPC querier service.
    * </pre>
    */
   public interface AsyncService {
@@ -196,7 +196,7 @@ public final class QueryGrpc {
   /**
    * Base class for the server implementation of the service Query.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Query defines the circuit gRPC querier service.
    * </pre>
    */
   public static abstract class QueryImplBase
@@ -210,7 +210,7 @@ public final class QueryGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Query.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Query defines the circuit gRPC querier service.
    * </pre>
    */
   public static final class QueryStub
@@ -263,7 +263,7 @@ public final class QueryGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Query.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Query defines the circuit gRPC querier service.
    * </pre>
    */
   public static final class QueryBlockingStub
@@ -313,7 +313,7 @@ public final class QueryGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Query.
    * <pre>
-   * Msg defines the crisis Msg service.
+   * Query defines the circuit gRPC querier service.
    * </pre>
    */
   public static final class QueryFutureStub

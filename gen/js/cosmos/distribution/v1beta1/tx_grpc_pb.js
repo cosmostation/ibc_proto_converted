@@ -208,6 +208,9 @@ withdrawValidatorCommission: {
   },
   // FundCommunityPool defines a method to allow an account to directly
 // fund the community pool.
+//
+// Deprecated: Use x/protocolpool module's FundCommunityPool instead.
+// Since: cosmos-sdk 0.50
 fundCommunityPool: {
     path: '/cosmos.distribution.v1beta1.Msg/FundCommunityPool',
     requestStream: false,
@@ -239,7 +242,8 @@ updateParams: {
 // could be the governance module itself. The authority is defined in the
 // keeper.
 //
-// Since: cosmos-sdk 0.47
+// Deprecated: Use x/protocolpool module's CommunityPoolSpend instead.
+// Since: cosmos-sdk 0.50
 communityPoolSpend: {
     path: '/cosmos.distribution.v1beta1.Msg/CommunityPoolSpend',
     requestStream: false,

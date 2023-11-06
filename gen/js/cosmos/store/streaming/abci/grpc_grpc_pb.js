@@ -52,8 +52,12 @@ function deserialize_cosmos_store_streaming_abci_ListenFinalizeBlockResponse(buf
 
 
 // ABCIListenerService is the service for the BaseApp ABCIListener interface
+//
+// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+// instead.
 var ABCIListenerServiceService = exports.ABCIListenerServiceService = {
-  // ListenFinalizeBlock is the corresponding endpoint for ABCIListener.ListenEndBlock
+  // ListenFinalizeBlock is the corresponding endpoint for
+// ABCIListener.ListenEndBlock
 listenFinalizeBlock: {
     path: '/cosmos.store.streaming.abci.ABCIListenerService/ListenFinalizeBlock',
     requestStream: false,

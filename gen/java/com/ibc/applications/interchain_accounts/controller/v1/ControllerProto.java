@@ -542,7 +542,7 @@ public final class ControllerProto {
       "\021controllerEnabledB\202\003\n6com.ibc.applicati" +
       "ons.interchain_accounts.controller.v1B\017C" +
       "ontrollerProtoZPgithub.com/cosmos/ibc-go" +
-      "/v7/modules/apps/27-interchain-accounts/" +
+      "/v8/modules/apps/27-interchain-accounts/" +
       "controller/types\242\002\004IAIC\252\0021Ibc.Applicatio" +
       "ns.InterchainAccounts.Controller.V1\312\0021Ib" +
       "c\\Applications\\InterchainAccounts\\Contro" +

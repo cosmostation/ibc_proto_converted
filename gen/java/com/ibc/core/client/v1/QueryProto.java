@@ -13984,7 +13984,7 @@ public final class QueryProto {
       "se\"5\202\323\344\223\002/\022-/ibc/core/client/v1/upgraded" +
       "_consensus_statesB\307\001\n\026com.ibc.core.clien" +
       "t.v1B\nQueryProtoZ8github.com/cosmos/ibc-" +
-      "go/v7/modules/core/02-client/types\242\002\003ICC" +
+      "go/v8/modules/core/02-client/types\242\002\003ICC" +
       "\252\002\022Ibc.Core.Client.V1\312\002\022Ibc\\Core\\Client\\" +
       "V1\342\002\036Ibc\\Core\\Client\\V1\\GPBMetadata\352\002\025Ib" +
       "c::Core::Client::V1b\006proto3"

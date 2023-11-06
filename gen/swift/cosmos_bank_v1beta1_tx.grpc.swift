@@ -43,6 +43,11 @@ internal protocol Cosmos_Bank_V1beta1_MsgClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Bank_V1beta1_MsgMultiSend, Cosmos_Bank_V1beta1_MsgMultiSendResponse>
 
+  func burn(
+    _ request: Cosmos_Bank_V1beta1_MsgBurn,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Cosmos_Bank_V1beta1_MsgBurn, Cosmos_Bank_V1beta1_MsgBurnResponse>
+
   func updateParams(
     _ request: Cosmos_Bank_V1beta1_MsgUpdateParams,
     callOptions: CallOptions?
@@ -92,6 +97,26 @@ extension Cosmos_Bank_V1beta1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeMultiSendInterceptors() ?? []
+    )
+  }
+
+  /// Burn defines a method for burning coins by an account.
+  ///
+  /// Since: cosmos-sdk 0.51
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to Burn.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func burn(
+    _ request: Cosmos_Bank_V1beta1_MsgBurn,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Cosmos_Bank_V1beta1_MsgBurn, Cosmos_Bank_V1beta1_MsgBurnResponse> {
+    return self.makeUnaryCall(
+      path: Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.burn.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeBurnInterceptors() ?? []
     )
   }
 
@@ -213,6 +238,11 @@ internal protocol Cosmos_Bank_V1beta1_MsgAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Cosmos_Bank_V1beta1_MsgMultiSend, Cosmos_Bank_V1beta1_MsgMultiSendResponse>
 
+  func makeBurnCall(
+    _ request: Cosmos_Bank_V1beta1_MsgBurn,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Cosmos_Bank_V1beta1_MsgBurn, Cosmos_Bank_V1beta1_MsgBurnResponse>
+
   func makeUpdateParamsCall(
     _ request: Cosmos_Bank_V1beta1_MsgUpdateParams,
     callOptions: CallOptions?
@@ -255,6 +285,18 @@ extension Cosmos_Bank_V1beta1_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeMultiSendInterceptors() ?? []
+    )
+  }
+
+  internal func makeBurnCall(
+    _ request: Cosmos_Bank_V1beta1_MsgBurn,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Cosmos_Bank_V1beta1_MsgBurn, Cosmos_Bank_V1beta1_MsgBurnResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.burn.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeBurnInterceptors() ?? []
     )
   }
 
@@ -309,6 +351,18 @@ extension Cosmos_Bank_V1beta1_MsgAsyncClientProtocol {
     )
   }
 
+  internal func burn(
+    _ request: Cosmos_Bank_V1beta1_MsgBurn,
+    callOptions: CallOptions? = nil
+  ) async throws -> Cosmos_Bank_V1beta1_MsgBurnResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.burn.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeBurnInterceptors() ?? []
+    )
+  }
+
   internal func updateParams(
     _ request: Cosmos_Bank_V1beta1_MsgUpdateParams,
     callOptions: CallOptions? = nil
@@ -359,6 +413,9 @@ internal protocol Cosmos_Bank_V1beta1_MsgClientInterceptorFactoryProtocol: Senda
   /// - Returns: Interceptors to use when invoking 'multiSend'.
   func makeMultiSendInterceptors() -> [ClientInterceptor<Cosmos_Bank_V1beta1_MsgMultiSend, Cosmos_Bank_V1beta1_MsgMultiSendResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'burn'.
+  func makeBurnInterceptors() -> [ClientInterceptor<Cosmos_Bank_V1beta1_MsgBurn, Cosmos_Bank_V1beta1_MsgBurnResponse>]
+
   /// - Returns: Interceptors to use when invoking 'updateParams'.
   func makeUpdateParamsInterceptors() -> [ClientInterceptor<Cosmos_Bank_V1beta1_MsgUpdateParams, Cosmos_Bank_V1beta1_MsgUpdateParamsResponse>]
 
@@ -373,6 +430,7 @@ internal enum Cosmos_Bank_V1beta1_MsgClientMetadata {
     methods: [
       Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.send,
       Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.multiSend,
+      Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.burn,
       Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.updateParams,
       Cosmos_Bank_V1beta1_MsgClientMetadata.Methods.setSendEnabled,
     ]
@@ -388,6 +446,12 @@ internal enum Cosmos_Bank_V1beta1_MsgClientMetadata {
     internal static let multiSend = GRPCMethodDescriptor(
       name: "MultiSend",
       path: "/cosmos.bank.v1beta1.Msg/MultiSend",
+      type: GRPCCallType.unary
+    )
+
+    internal static let burn = GRPCMethodDescriptor(
+      name: "Burn",
+      path: "/cosmos.bank.v1beta1.Msg/Burn",
       type: GRPCCallType.unary
     )
 
@@ -416,6 +480,11 @@ internal protocol Cosmos_Bank_V1beta1_MsgProvider: CallHandlerProvider {
 
   /// MultiSend defines a method for sending coins from some accounts to other accounts.
   func multiSend(request: Cosmos_Bank_V1beta1_MsgMultiSend, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Bank_V1beta1_MsgMultiSendResponse>
+
+  /// Burn defines a method for burning coins by an account.
+  ///
+  /// Since: cosmos-sdk 0.51
+  func burn(request: Cosmos_Bank_V1beta1_MsgBurn, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Bank_V1beta1_MsgBurnResponse>
 
   /// UpdateParams defines a governance operation for updating the x/bank module parameters.
   /// The authority is defined in the keeper.
@@ -462,6 +531,15 @@ extension Cosmos_Bank_V1beta1_MsgProvider {
         userFunction: self.multiSend(request:context:)
       )
 
+    case "Burn":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Bank_V1beta1_MsgBurn>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Bank_V1beta1_MsgBurnResponse>(),
+        interceptors: self.interceptors?.makeBurnInterceptors() ?? [],
+        userFunction: self.burn(request:context:)
+      )
+
     case "UpdateParams":
       return UnaryServerHandler(
         context: context,
@@ -505,6 +583,14 @@ internal protocol Cosmos_Bank_V1beta1_MsgAsyncProvider: CallHandlerProvider {
     request: Cosmos_Bank_V1beta1_MsgMultiSend,
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Bank_V1beta1_MsgMultiSendResponse
+
+  /// Burn defines a method for burning coins by an account.
+  ///
+  /// Since: cosmos-sdk 0.51
+  @Sendable func burn(
+    request: Cosmos_Bank_V1beta1_MsgBurn,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Cosmos_Bank_V1beta1_MsgBurnResponse
 
   /// UpdateParams defines a governance operation for updating the x/bank module parameters.
   /// The authority is defined in the keeper.
@@ -564,6 +650,15 @@ extension Cosmos_Bank_V1beta1_MsgAsyncProvider {
         wrapping: self.multiSend(request:context:)
       )
 
+    case "Burn":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Bank_V1beta1_MsgBurn>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Bank_V1beta1_MsgBurnResponse>(),
+        interceptors: self.interceptors?.makeBurnInterceptors() ?? [],
+        wrapping: self.burn(request:context:)
+      )
+
     case "UpdateParams":
       return GRPCAsyncServerHandler(
         context: context,
@@ -598,6 +693,10 @@ internal protocol Cosmos_Bank_V1beta1_MsgServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeMultiSendInterceptors() -> [ServerInterceptor<Cosmos_Bank_V1beta1_MsgMultiSend, Cosmos_Bank_V1beta1_MsgMultiSendResponse>]
 
+  /// - Returns: Interceptors to use when handling 'burn'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeBurnInterceptors() -> [ServerInterceptor<Cosmos_Bank_V1beta1_MsgBurn, Cosmos_Bank_V1beta1_MsgBurnResponse>]
+
   /// - Returns: Interceptors to use when handling 'updateParams'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateParamsInterceptors() -> [ServerInterceptor<Cosmos_Bank_V1beta1_MsgUpdateParams, Cosmos_Bank_V1beta1_MsgUpdateParamsResponse>]
@@ -614,6 +713,7 @@ internal enum Cosmos_Bank_V1beta1_MsgServerMetadata {
     methods: [
       Cosmos_Bank_V1beta1_MsgServerMetadata.Methods.send,
       Cosmos_Bank_V1beta1_MsgServerMetadata.Methods.multiSend,
+      Cosmos_Bank_V1beta1_MsgServerMetadata.Methods.burn,
       Cosmos_Bank_V1beta1_MsgServerMetadata.Methods.updateParams,
       Cosmos_Bank_V1beta1_MsgServerMetadata.Methods.setSendEnabled,
     ]
@@ -629,6 +729,12 @@ internal enum Cosmos_Bank_V1beta1_MsgServerMetadata {
     internal static let multiSend = GRPCMethodDescriptor(
       name: "MultiSend",
       path: "/cosmos.bank.v1beta1.Msg/MultiSend",
+      type: GRPCCallType.unary
+    )
+
+    internal static let burn = GRPCMethodDescriptor(
+      name: "Burn",
+      path: "/cosmos.bank.v1beta1.Msg/Burn",
       type: GRPCCallType.unary
     )
 

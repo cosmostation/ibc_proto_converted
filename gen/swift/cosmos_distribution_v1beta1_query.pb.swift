@@ -353,6 +353,9 @@ struct Cosmos_Distribution_V1beta1_QueryDelegatorWithdrawAddressResponse {
 
 /// QueryCommunityPoolRequest is the request type for the Query/CommunityPool RPC
 /// method.
+///
+/// Deprecated
+/// Since: cosmos-sdk 0.50
 struct Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -365,6 +368,9 @@ struct Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest {
 
 /// QueryCommunityPoolResponse is the response type for the Query/CommunityPool
 /// RPC method.
+///
+/// Deprecated
+/// Since: cosmos-sdk 0.50
 struct Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for

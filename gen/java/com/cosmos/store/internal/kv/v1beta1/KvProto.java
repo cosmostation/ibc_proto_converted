@@ -14,7 +14,7 @@ public final class KvProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface PairsOrBuilder extends
+  @java.lang.Deprecated public interface PairsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.internal.kv.v1beta1.Pairs)
       com.google.protobuf.MessageOrBuilder {
 
@@ -45,11 +45,14 @@ public final class KvProto {
   /**
    * <pre>
    * Pairs defines a repeated slice of Pair objects.
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.internal.kv.v1beta1.Pairs}
    */
-  public static final class Pairs extends
+  @java.lang.Deprecated public static final class Pairs extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.internal.kv.v1beta1.Pairs)
       PairsOrBuilder {
@@ -285,6 +288,9 @@ public final class KvProto {
     /**
      * <pre>
      * Pairs defines a repeated slice of Pair objects.
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.internal.kv.v1beta1.Pairs}
@@ -804,7 +810,7 @@ public final class KvProto {
 
   }
 
-  public interface PairOrBuilder extends
+  @java.lang.Deprecated public interface PairOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.internal.kv.v1beta1.Pair)
       com.google.protobuf.MessageOrBuilder {
 
@@ -823,11 +829,14 @@ public final class KvProto {
   /**
    * <pre>
    * Pair defines a key/value bytes tuple.
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.internal.kv.v1beta1.Pair}
    */
-  public static final class Pair extends
+  @java.lang.Deprecated public static final class Pair extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.internal.kv.v1beta1.Pair)
       PairOrBuilder {
@@ -1054,6 +1063,9 @@ public final class KvProto {
     /**
      * <pre>
      * Pair defines a key/value bytes tuple.
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.internal.kv.v1beta1.Pair}
@@ -1383,16 +1395,17 @@ public final class KvProto {
     java.lang.String[] descriptorData = {
       "\n)cosmos/store/internal/kv/v1beta1/kv.pr" +
       "oto\022 cosmos.store.internal.kv.v1beta1\032\024g" +
-      "ogoproto/gogo.proto\"K\n\005Pairs\022B\n\005pairs\030\001 " +
+      "ogoproto/gogo.proto\"O\n\005Pairs\022B\n\005pairs\030\001 " +
       "\003(\0132&.cosmos.store.internal.kv.v1beta1.P" +
-      "airB\004\310\336\037\000R\005pairs\".\n\004Pair\022\020\n\003key\030\001 \001(\014R\003k" +
-      "ey\022\024\n\005value\030\002 \001(\014R\005valueB\362\001\n$com.cosmos." +
-      "store.internal.kv.v1beta1B\007KvProtoZ\036cosm" +
-      "ossdk.io/store/internal/kv\242\002\004CSIK\252\002 Cosm" +
-      "os.Store.Internal.Kv.V1beta1\312\002 Cosmos\\St" +
-      "ore\\Internal\\Kv\\V1beta1\342\002,Cosmos\\Store\\I" +
-      "nternal\\Kv\\V1beta1\\GPBMetadata\352\002$Cosmos:" +
-      ":Store::Internal::Kv::V1beta1b\006proto3"
+      "airB\004\310\336\037\000R\005pairs:\002\030\001\"2\n\004Pair\022\020\n\003key\030\001 \001(" +
+      "\014R\003key\022\024\n\005value\030\002 \001(\014R\005value:\002\030\001B\362\001\n$com" +
+      ".cosmos.store.internal.kv.v1beta1B\007KvPro" +
+      "toZ\036cosmossdk.io/store/internal/kv\242\002\004CSI" +
+      "K\252\002 Cosmos.Store.Internal.Kv.V1beta1\312\002 C" +
+      "osmos\\Store\\Internal\\Kv\\V1beta1\342\002,Cosmos" +
+      "\\Store\\Internal\\Kv\\V1beta1\\GPBMetadata\352\002" +
+      "$Cosmos::Store::Internal::Kv::V1beta1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -50,6 +50,11 @@ class MsgStub(object):
                 request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParams.SerializeToString,
                 response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParamsResponse.FromString,
                 )
+        self.RotateConsPubKey = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/RotateConsPubKey',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKey.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKeyResponse.FromString,
+                )
 
 
 class MsgServicer(object):
@@ -113,6 +118,15 @@ class MsgServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def RotateConsPubKey(self, request, context):
+        """RotateConsPubKey defines an operation for rotating the consensus keys
+        of a validator.
+        Since: cosmos-sdk 0.48
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_MsgServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -150,6 +164,11 @@ def add_MsgServicer_to_server(servicer, server):
                     servicer.UpdateParams,
                     request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParams.FromString,
                     response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParamsResponse.SerializeToString,
+            ),
+            'RotateConsPubKey': grpc.unary_unary_rpc_method_handler(
+                    servicer.RotateConsPubKey,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKey.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKeyResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -278,5 +297,22 @@ class Msg(object):
         return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/UpdateParams',
             cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParams.SerializeToString,
             cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParamsResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def RotateConsPubKey(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/RotateConsPubKey',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKey.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKeyResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

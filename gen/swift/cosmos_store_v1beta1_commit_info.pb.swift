@@ -22,6 +22,9 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// CommitInfo defines commit information used by the multi-store when committing
 /// a version/height.
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_V1beta1_CommitInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -49,6 +52,9 @@ struct Cosmos_Store_V1beta1_CommitInfo {
 
 /// StoreInfo defines store-specific commit information. It contains a reference
 /// between a store name and the commit ID.
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_V1beta1_StoreInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -74,6 +80,9 @@ struct Cosmos_Store_V1beta1_StoreInfo {
 
 /// CommitID defines the commitment information when a specific store is
 /// committed.
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_V1beta1_CommitID {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for

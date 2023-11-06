@@ -134,6 +134,9 @@ extension Cosmos_Distribution_V1beta1_MsgClientProtocol {
   /// FundCommunityPool defines a method to allow an account to directly
   /// fund the community pool.
   ///
+  /// Deprecated: Use x/protocolpool module's FundCommunityPool instead.
+  /// Since: cosmos-sdk 0.50
+  ///
   /// - Parameters:
   ///   - request: Request to send to FundCommunityPool.
   ///   - callOptions: Call options.
@@ -176,7 +179,8 @@ extension Cosmos_Distribution_V1beta1_MsgClientProtocol {
   /// could be the governance module itself. The authority is defined in the
   /// keeper.
   ///
-  /// Since: cosmos-sdk 0.47
+  /// Deprecated: Use x/protocolpool module's CommunityPoolSpend instead.
+  /// Since: cosmos-sdk 0.50
   ///
   /// - Parameters:
   ///   - request: Request to send to CommunityPoolSpend.
@@ -618,6 +622,9 @@ internal protocol Cosmos_Distribution_V1beta1_MsgProvider: CallHandlerProvider {
 
   /// FundCommunityPool defines a method to allow an account to directly
   /// fund the community pool.
+  ///
+  /// Deprecated: Use x/protocolpool module's FundCommunityPool instead.
+  /// Since: cosmos-sdk 0.50
   func fundCommunityPool(request: Cosmos_Distribution_V1beta1_MsgFundCommunityPool, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_MsgFundCommunityPoolResponse>
 
   /// UpdateParams defines a governance operation for updating the x/distribution
@@ -631,7 +638,8 @@ internal protocol Cosmos_Distribution_V1beta1_MsgProvider: CallHandlerProvider {
   /// could be the governance module itself. The authority is defined in the
   /// keeper.
   ///
-  /// Since: cosmos-sdk 0.47
+  /// Deprecated: Use x/protocolpool module's CommunityPoolSpend instead.
+  /// Since: cosmos-sdk 0.50
   func communityPoolSpend(request: Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse>
 
   /// DepositValidatorRewardsPool defines a method to provide additional rewards
@@ -753,6 +761,9 @@ internal protocol Cosmos_Distribution_V1beta1_MsgAsyncProvider: CallHandlerProvi
 
   /// FundCommunityPool defines a method to allow an account to directly
   /// fund the community pool.
+  ///
+  /// Deprecated: Use x/protocolpool module's FundCommunityPool instead.
+  /// Since: cosmos-sdk 0.50
   @Sendable func fundCommunityPool(
     request: Cosmos_Distribution_V1beta1_MsgFundCommunityPool,
     context: GRPCAsyncServerCallContext
@@ -772,7 +783,8 @@ internal protocol Cosmos_Distribution_V1beta1_MsgAsyncProvider: CallHandlerProvi
   /// could be the governance module itself. The authority is defined in the
   /// keeper.
   ///
-  /// Since: cosmos-sdk 0.47
+  /// Deprecated: Use x/protocolpool module's CommunityPoolSpend instead.
+  /// Since: cosmos-sdk 0.50
   @Sendable func communityPoolSpend(
     request: Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend,
     context: GRPCAsyncServerCallContext

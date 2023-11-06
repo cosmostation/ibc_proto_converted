@@ -82,7 +82,8 @@ proto.cosmos.autocli.v1.ServiceCommandDescriptor.toObject = function(includeInst
     service: jspb.Message.getFieldWithDefault(msg, 1, ""),
     rpcCommandOptionsList: jspb.Message.toObjectList(msg.getRpcCommandOptionsList(),
     proto.cosmos.autocli.v1.RpcCommandOptions.toObject, includeInstance),
-    subCommandsMap: (f = msg.getSubCommandsMap()) ? f.toObject(includeInstance, proto.cosmos.autocli.v1.ServiceCommandDescriptor.toObject) : []
+    subCommandsMap: (f = msg.getSubCommandsMap()) ? f.toObject(includeInstance, proto.cosmos.autocli.v1.ServiceCommandDescriptor.toObject) : [],
+    enhanceCustomCommand: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
   };
 
   if (includeInstance) {
@@ -134,6 +135,10 @@ proto.cosmos.autocli.v1.ServiceCommandDescriptor.deserializeBinaryFromReader = f
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.cosmos.autocli.v1.ServiceCommandDescriptor.deserializeBinaryFromReader, "", new proto.cosmos.autocli.v1.ServiceCommandDescriptor());
          });
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setEnhanceCustomCommand(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -181,6 +186,13 @@ proto.cosmos.autocli.v1.ServiceCommandDescriptor.serializeBinaryToWriter = funct
   f = message.getSubCommandsMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.cosmos.autocli.v1.ServiceCommandDescriptor.serializeBinaryToWriter);
+  }
+  f = message.getEnhanceCustomCommand();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
   }
 };
 
@@ -261,6 +273,24 @@ proto.cosmos.autocli.v1.ServiceCommandDescriptor.prototype.getSubCommandsMap = f
 proto.cosmos.autocli.v1.ServiceCommandDescriptor.prototype.clearSubCommandsMap = function() {
   this.getSubCommandsMap().clear();
   return this;
+};
+
+
+/**
+ * optional bool enhance_custom_command = 4;
+ * @return {boolean}
+ */
+proto.cosmos.autocli.v1.ServiceCommandDescriptor.prototype.getEnhanceCustomCommand = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.cosmos.autocli.v1.ServiceCommandDescriptor} returns this
+ */
+proto.cosmos.autocli.v1.ServiceCommandDescriptor.prototype.setEnhanceCustomCommand = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 

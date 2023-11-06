@@ -63,7 +63,7 @@ public final class TxProto {
      * the tokens to be transferred
      * </pre>
      *
-     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return Whether the token field is set.
      */
     boolean hasToken();
@@ -72,7 +72,7 @@ public final class TxProto {
      * the tokens to be transferred
      * </pre>
      *
-     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return The token.
      */
     com.cosmos.base.v1beta1.CoinProto.Coin getToken();
@@ -81,7 +81,7 @@ public final class TxProto {
      * the tokens to be transferred
      * </pre>
      *
-     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder();
 
@@ -131,7 +131,7 @@ public final class TxProto {
      * The timeout is disabled when set to 0.
      * </pre>
      *
-     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return Whether the timeoutHeight field is set.
      */
     boolean hasTimeoutHeight();
@@ -141,7 +141,7 @@ public final class TxProto {
      * The timeout is disabled when set to 0.
      * </pre>
      *
-     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return The timeoutHeight.
      */
     com.ibc.core.client.v1.ClientProto.Height getTimeoutHeight();
@@ -151,7 +151,7 @@ public final class TxProto {
      * The timeout is disabled when set to 0.
      * </pre>
      *
-     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     com.ibc.core.client.v1.ClientProto.HeightOrBuilder getTimeoutHeightOrBuilder();
 
@@ -333,7 +333,7 @@ public final class TxProto {
      * the tokens to be transferred
      * </pre>
      *
-     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return Whether the token field is set.
      */
     @java.lang.Override
@@ -345,7 +345,7 @@ public final class TxProto {
      * the tokens to be transferred
      * </pre>
      *
-     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return The token.
      */
     @java.lang.Override
@@ -357,7 +357,7 @@ public final class TxProto {
      * the tokens to be transferred
      * </pre>
      *
-     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+     * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder() {
@@ -466,7 +466,7 @@ public final class TxProto {
      * The timeout is disabled when set to 0.
      * </pre>
      *
-     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return Whether the timeoutHeight field is set.
      */
     @java.lang.Override
@@ -479,7 +479,7 @@ public final class TxProto {
      * The timeout is disabled when set to 0.
      * </pre>
      *
-     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return The timeoutHeight.
      */
     @java.lang.Override
@@ -492,7 +492,7 @@ public final class TxProto {
      * The timeout is disabled when set to 0.
      * </pre>
      *
-     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+     * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.ibc.core.client.v1.ClientProto.HeightOrBuilder getTimeoutHeightOrBuilder() {
@@ -1278,7 +1278,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        * @return Whether the token field is set.
        */
       public boolean hasToken() {
@@ -1289,7 +1289,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        * @return The token.
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin getToken() {
@@ -1304,7 +1304,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder setToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
         if (tokenBuilder_ == null) {
@@ -1324,7 +1324,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder setToken(
           com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
@@ -1342,7 +1342,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder mergeToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
         if (tokenBuilder_ == null) {
@@ -1365,7 +1365,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearToken() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -1382,7 +1382,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTokenBuilder() {
         bitField0_ |= 0x00000004;
@@ -1394,7 +1394,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder() {
         if (tokenBuilder_ != null) {
@@ -1409,7 +1409,7 @@ public final class TxProto {
        * the tokens to be transferred
        * </pre>
        *
-       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false];</code>
+       * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
@@ -1618,7 +1618,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        * @return Whether the timeoutHeight field is set.
        */
       public boolean hasTimeoutHeight() {
@@ -1630,7 +1630,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        * @return The timeoutHeight.
        */
       public com.ibc.core.client.v1.ClientProto.Height getTimeoutHeight() {
@@ -1646,7 +1646,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder setTimeoutHeight(com.ibc.core.client.v1.ClientProto.Height value) {
         if (timeoutHeightBuilder_ == null) {
@@ -1667,7 +1667,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder setTimeoutHeight(
           com.ibc.core.client.v1.ClientProto.Height.Builder builderForValue) {
@@ -1686,7 +1686,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder mergeTimeoutHeight(com.ibc.core.client.v1.ClientProto.Height value) {
         if (timeoutHeightBuilder_ == null) {
@@ -1710,7 +1710,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearTimeoutHeight() {
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -1728,7 +1728,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public com.ibc.core.client.v1.ClientProto.Height.Builder getTimeoutHeightBuilder() {
         bitField0_ |= 0x00000020;
@@ -1741,7 +1741,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public com.ibc.core.client.v1.ClientProto.HeightOrBuilder getTimeoutHeightOrBuilder() {
         if (timeoutHeightBuilder_ != null) {
@@ -1757,7 +1757,7 @@ public final class TxProto {
        * The timeout is disabled when set to 0.
        * </pre>
        *
-       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false];</code>
+       * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.ibc.core.client.v1.ClientProto.Height, com.ibc.core.client.v1.ClientProto.Height.Builder, com.ibc.core.client.v1.ClientProto.HeightOrBuilder> 
@@ -2486,23 +2486,23 @@ public final class TxProto {
 
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
      */
-    java.lang.String getAuthority();
+    java.lang.String getSigner();
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
      */
     com.google.protobuf.ByteString
-        getAuthorityBytes();
+        getSignerBytes();
 
     /**
      * <pre>
@@ -2554,7 +2554,7 @@ public final class TxProto {
       super(builder);
     }
     private MsgUpdateParams() {
-      authority_ = "";
+      signer_ = "";
     }
 
     @java.lang.Override
@@ -2577,47 +2577,47 @@ public final class TxProto {
               com.ibc.applications.transfer.v1.TxProto.MsgUpdateParams.class, com.ibc.applications.transfer.v1.TxProto.MsgUpdateParams.Builder.class);
     }
 
-    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    public static final int SIGNER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object authority_ = "";
+    private volatile java.lang.Object signer_ = "";
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
      */
     @java.lang.Override
-    public java.lang.String getAuthority() {
-      java.lang.Object ref = authority_;
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        authority_ = s;
+        signer_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * authority is the address that controls the module (defaults to x/gov unless overwritten).
+     * signer address
      * </pre>
      *
-     * <code>string authority = 1 [json_name = "authority"];</code>
-     * @return The bytes for authority.
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAuthorityBytes() {
-      java.lang.Object ref = authority_;
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        authority_ = b;
+        signer_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2682,8 +2682,8 @@ public final class TxProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
       }
       if (params_ != null) {
         output.writeMessage(2, getParams());
@@ -2697,8 +2697,8 @@ public final class TxProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
       }
       if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -2719,8 +2719,8 @@ public final class TxProto {
       }
       com.ibc.applications.transfer.v1.TxProto.MsgUpdateParams other = (com.ibc.applications.transfer.v1.TxProto.MsgUpdateParams) obj;
 
-      if (!getAuthority()
-          .equals(other.getAuthority())) return false;
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
       if (hasParams() != other.hasParams()) return false;
       if (hasParams()) {
         if (!getParams()
@@ -2737,8 +2737,8 @@ public final class TxProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
-      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
       if (hasParams()) {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParams().hashCode();
@@ -2878,7 +2878,7 @@ public final class TxProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        authority_ = "";
+        signer_ = "";
         params_ = null;
         if (paramsBuilder_ != null) {
           paramsBuilder_.dispose();
@@ -2918,7 +2918,7 @@ public final class TxProto {
       private void buildPartial0(com.ibc.applications.transfer.v1.TxProto.MsgUpdateParams result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.authority_ = authority_;
+          result.signer_ = signer_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.params_ = paramsBuilder_ == null
@@ -2971,8 +2971,8 @@ public final class TxProto {
 
       public Builder mergeFrom(com.ibc.applications.transfer.v1.TxProto.MsgUpdateParams other) {
         if (other == com.ibc.applications.transfer.v1.TxProto.MsgUpdateParams.getDefaultInstance()) return this;
-        if (!other.getAuthority().isEmpty()) {
-          authority_ = other.authority_;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -3006,7 +3006,7 @@ public final class TxProto {
                 done = true;
                 break;
               case 10: {
-                authority_ = input.readStringRequireUtf8();
+                signer_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -3034,22 +3034,22 @@ public final class TxProto {
       }
       private int bitField0_;
 
-      private java.lang.Object authority_ = "";
+      private java.lang.Object signer_ = "";
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @return The authority.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The signer.
        */
-      public java.lang.String getAuthority() {
-        java.lang.Object ref = authority_;
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          authority_ = s;
+          signer_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3057,20 +3057,20 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @return The bytes for authority.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The bytes for signer.
        */
       public com.google.protobuf.ByteString
-          getAuthorityBytes() {
-        java.lang.Object ref = authority_;
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          authority_ = b;
+          signer_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -3078,49 +3078,49 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @param value The authority to set.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The signer to set.
        * @return This builder for chaining.
        */
-      public Builder setAuthority(
+      public Builder setSigner(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        authority_ = value;
+        signer_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
+       * <code>string signer = 1 [json_name = "signer"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearAuthority() {
-        authority_ = getDefaultInstance().getAuthority();
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * authority is the address that controls the module (defaults to x/gov unless overwritten).
+       * signer address
        * </pre>
        *
-       * <code>string authority = 1 [json_name = "authority"];</code>
-       * @param value The bytes for authority to set.
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
        * @return This builder for chaining.
        */
-      public Builder setAuthorityBytes(
+      public Builder setSignerBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        authority_ = value;
+        signer_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -3799,44 +3799,47 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n%ibc/applications/transfer/v1/tx.proto\022" +
-      "\034ibc.applications.transfer.v1\032\024gogoproto" +
-      "/gogo.proto\032\036cosmos/base/v1beta1/coin.pr" +
-      "oto\032\027cosmos/msg/v1/msg.proto\032\037ibc/core/c" +
-      "lient/v1/client.proto\032+ibc/applications/" +
-      "transfer/v1/transfer.proto\"\337\002\n\013MsgTransf" +
-      "er\022\037\n\013source_port\030\001 \001(\tR\nsourcePort\022%\n\016s" +
-      "ource_channel\030\002 \001(\tR\rsourceChannel\0225\n\005to" +
-      "ken\030\003 \001(\0132\031.cosmos.base.v1beta1.CoinB\004\310\336" +
-      "\037\000R\005token\022\026\n\006sender\030\004 \001(\tR\006sender\022\032\n\010rec" +
-      "eiver\030\005 \001(\tR\010receiver\022G\n\016timeout_height\030" +
-      "\006 \001(\0132\032.ibc.core.client.v1.HeightB\004\310\336\037\000R" +
-      "\rtimeoutHeight\022+\n\021timeout_timestamp\030\007 \001(" +
-      "\004R\020timeoutTimestamp\022\022\n\004memo\030\010 \001(\tR\004memo:" +
-      "\023\210\240\037\000\350\240\037\000\202\347\260*\006sender\"1\n\023MsgTransferRespo" +
-      "nse\022\032\n\010sequence\030\001 \001(\004R\010sequence\"\203\001\n\017MsgU" +
-      "pdateParams\022\034\n\tauthority\030\001 \001(\tR\tauthorit" +
-      "y\022B\n\006params\030\002 \001(\0132$.ibc.applications.tra" +
-      "nsfer.v1.ParamsB\004\310\336\037\000R\006params:\016\202\347\260*\tauth" +
-      "ority\"\031\n\027MsgUpdateParamsResponse2\345\001\n\003Msg" +
-      "\022h\n\010Transfer\022).ibc.applications.transfer" +
-      ".v1.MsgTransfer\0321.ibc.applications.trans" +
-      "fer.v1.MsgTransferResponse\022t\n\014UpdatePara" +
-      "ms\022-.ibc.applications.transfer.v1.MsgUpd" +
-      "ateParams\0325.ibc.applications.transfer.v1" +
-      ".MsgUpdateParamsResponseB\365\001\n com.ibc.app" +
-      "lications.transfer.v1B\007TxProtoZ7github.c" +
-      "om/cosmos/ibc-go/v7/modules/apps/transfe" +
-      "r/types\242\002\003IAT\252\002\034Ibc.Applications.Transfe" +
-      "r.V1\312\002\034Ibc\\Applications\\Transfer\\V1\342\002(Ib" +
-      "c\\Applications\\Transfer\\V1\\GPBMetadata\352\002" +
-      "\037Ibc::Applications::Transfer::V1b\006proto3"
+      "\034ibc.applications.transfer.v1\032\021amino/ami" +
+      "no.proto\032\024gogoproto/gogo.proto\032\027cosmos/m" +
+      "sg/v1/msg.proto\032\036cosmos/base/v1beta1/coi" +
+      "n.proto\032\037ibc/core/client/v1/client.proto" +
+      "\032+ibc/applications/transfer/v1/transfer." +
+      "proto\"\200\003\n\013MsgTransfer\022\037\n\013source_port\030\001 \001" +
+      "(\tR\nsourcePort\022%\n\016source_channel\030\002 \001(\tR\r" +
+      "sourceChannel\022:\n\005token\030\003 \001(\0132\031.cosmos.ba" +
+      "se.v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\005token\022\026\n\006sen" +
+      "der\030\004 \001(\tR\006sender\022\032\n\010receiver\030\005 \001(\tR\010rec" +
+      "eiver\022L\n\016timeout_height\030\006 \001(\0132\032.ibc.core" +
+      ".client.v1.HeightB\t\310\336\037\000\250\347\260*\001R\rtimeoutHei" +
+      "ght\022+\n\021timeout_timestamp\030\007 \001(\004R\020timeoutT" +
+      "imestamp\022\022\n\004memo\030\010 \001(\tR\004memo:*\210\240\037\000\202\347\260*\006s" +
+      "ender\212\347\260*\026cosmos-sdk/MsgTransfer\"7\n\023MsgT" +
+      "ransferResponse\022\032\n\010sequence\030\001 \001(\004R\010seque" +
+      "nce:\004\210\240\037\000\"~\n\017MsgUpdateParams\022\026\n\006signer\030\001" +
+      " \001(\tR\006signer\022B\n\006params\030\002 \001(\0132$.ibc.appli" +
+      "cations.transfer.v1.ParamsB\004\310\336\037\000R\006params" +
+      ":\017\210\240\037\000\202\347\260*\006signer\"\031\n\027MsgUpdateParamsResp" +
+      "onse2\354\001\n\003Msg\022h\n\010Transfer\022).ibc.applicati" +
+      "ons.transfer.v1.MsgTransfer\0321.ibc.applic" +
+      "ations.transfer.v1.MsgTransferResponse\022t" +
+      "\n\014UpdateParams\022-.ibc.applications.transf" +
+      "er.v1.MsgUpdateParams\0325.ibc.applications" +
+      ".transfer.v1.MsgUpdateParamsResponse\032\005\200\347" +
+      "\260*\001B\365\001\n com.ibc.applications.transfer.v1" +
+      "B\007TxProtoZ7github.com/cosmos/ibc-go/v8/m" +
+      "odules/apps/transfer/types\242\002\003IAT\252\002\034Ibc.A" +
+      "pplications.Transfer.V1\312\002\034Ibc\\Applicatio" +
+      "ns\\Transfer\\V1\342\002(Ibc\\Applications\\Transf" +
+      "er\\V1\\GPBMetadata\352\002\037Ibc::Applications::T" +
+      "ransfer::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.amino.AminoProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
-          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.cosmos.msg.v1.MsgProto.getDescriptor(),
+          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.ibc.core.client.v1.ClientProto.getDescriptor(),
           com.ibc.applications.transfer.v1.TransferProto.getDescriptor(),
         });
@@ -3857,7 +3860,7 @@ public final class TxProto {
     internal_static_ibc_applications_transfer_v1_MsgUpdateParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ibc_applications_transfer_v1_MsgUpdateParams_descriptor,
-        new java.lang.String[] { "Authority", "Params", });
+        new java.lang.String[] { "Signer", "Params", });
     internal_static_ibc_applications_transfer_v1_MsgUpdateParamsResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ibc_applications_transfer_v1_MsgUpdateParamsResponse_fieldAccessorTable = new
@@ -3866,15 +3869,18 @@ public final class TxProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.amino.AminoProto.dontOmitempty);
+    registry.add(com.amino.AminoProto.name);
+    registry.add(com.cosmos.msg.v1.MsgProto.service);
     registry.add(com.cosmos.msg.v1.MsgProto.signer);
-    registry.add(com.gogoproto.GogoProto.equal);
     registry.add(com.gogoproto.GogoProto.goprotoGetters);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.amino.AminoProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
-    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.cosmos.msg.v1.MsgProto.getDescriptor();
+    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.ibc.core.client.v1.ClientProto.getDescriptor();
     com.ibc.applications.transfer.v1.TransferProto.getDescriptor();
   }

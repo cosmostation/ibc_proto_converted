@@ -33,15 +33,15 @@ internal protocol Ibc_Applications_Transfer_V1_QueryClientProtocol: GRPCClient {
   var serviceName: String { get }
   var interceptors: Ibc_Applications_Transfer_V1_QueryClientInterceptorFactoryProtocol? { get }
 
-  func denomTrace(
-    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>
-
   func denomTraces(
     _ request: Ibc_Applications_Transfer_V1_QueryDenomTracesRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTracesRequest, Ibc_Applications_Transfer_V1_QueryDenomTracesResponse>
+
+  func denomTrace(
+    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>
 
   func params(
     _ request: Ibc_Applications_Transfer_V1_QueryParamsRequest,
@@ -69,24 +69,6 @@ extension Ibc_Applications_Transfer_V1_QueryClientProtocol {
     return "ibc.applications.transfer.v1.Query"
   }
 
-  /// DenomTrace queries a denomination trace information.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to DenomTrace.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func denomTrace(
-    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse> {
-    return self.makeUnaryCall(
-      path: Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? []
-    )
-  }
-
   /// DenomTraces queries all denomination traces.
   ///
   /// - Parameters:
@@ -102,6 +84,24 @@ extension Ibc_Applications_Transfer_V1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeDenomTracesInterceptors() ?? []
+    )
+  }
+
+  /// DenomTrace queries a denomination trace information.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to DenomTrace.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func denomTrace(
+    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse> {
+    return self.makeUnaryCall(
+      path: Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? []
     )
   }
 
@@ -241,15 +241,15 @@ internal protocol Ibc_Applications_Transfer_V1_QueryAsyncClientProtocol: GRPCCli
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Ibc_Applications_Transfer_V1_QueryClientInterceptorFactoryProtocol? { get }
 
-  func makeDenomTraceCall(
-    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>
-
   func makeDenomTracesCall(
     _ request: Ibc_Applications_Transfer_V1_QueryDenomTracesRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTracesRequest, Ibc_Applications_Transfer_V1_QueryDenomTracesResponse>
+
+  func makeDenomTraceCall(
+    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>
 
   func makeParamsCall(
     _ request: Ibc_Applications_Transfer_V1_QueryParamsRequest,
@@ -282,18 +282,6 @@ extension Ibc_Applications_Transfer_V1_QueryAsyncClientProtocol {
     return nil
   }
 
-  internal func makeDenomTraceCall(
-    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? []
-    )
-  }
-
   internal func makeDenomTracesCall(
     _ request: Ibc_Applications_Transfer_V1_QueryDenomTracesRequest,
     callOptions: CallOptions? = nil
@@ -303,6 +291,18 @@ extension Ibc_Applications_Transfer_V1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeDenomTracesInterceptors() ?? []
+    )
+  }
+
+  internal func makeDenomTraceCall(
+    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? []
     )
   }
 
@@ -357,18 +357,6 @@ extension Ibc_Applications_Transfer_V1_QueryAsyncClientProtocol {
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Ibc_Applications_Transfer_V1_QueryAsyncClientProtocol {
-  internal func denomTrace(
-    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Ibc_Applications_Transfer_V1_QueryDenomTraceResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? []
-    )
-  }
-
   internal func denomTraces(
     _ request: Ibc_Applications_Transfer_V1_QueryDenomTracesRequest,
     callOptions: CallOptions? = nil
@@ -378,6 +366,18 @@ extension Ibc_Applications_Transfer_V1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeDenomTracesInterceptors() ?? []
+    )
+  }
+
+  internal func denomTrace(
+    _ request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Ibc_Applications_Transfer_V1_QueryDenomTraceResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? []
     )
   }
 
@@ -449,11 +449,11 @@ internal struct Ibc_Applications_Transfer_V1_QueryAsyncClient: Ibc_Applications_
 
 internal protocol Ibc_Applications_Transfer_V1_QueryClientInterceptorFactoryProtocol: Sendable {
 
-  /// - Returns: Interceptors to use when invoking 'denomTrace'.
-  func makeDenomTraceInterceptors() -> [ClientInterceptor<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>]
-
   /// - Returns: Interceptors to use when invoking 'denomTraces'.
   func makeDenomTracesInterceptors() -> [ClientInterceptor<Ibc_Applications_Transfer_V1_QueryDenomTracesRequest, Ibc_Applications_Transfer_V1_QueryDenomTracesResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'denomTrace'.
+  func makeDenomTraceInterceptors() -> [ClientInterceptor<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>]
 
   /// - Returns: Interceptors to use when invoking 'params'.
   func makeParamsInterceptors() -> [ClientInterceptor<Ibc_Applications_Transfer_V1_QueryParamsRequest, Ibc_Applications_Transfer_V1_QueryParamsResponse>]
@@ -473,8 +473,8 @@ internal enum Ibc_Applications_Transfer_V1_QueryClientMetadata {
     name: "Query",
     fullName: "ibc.applications.transfer.v1.Query",
     methods: [
-      Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace,
       Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTraces,
+      Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomTrace,
       Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.params,
       Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.denomHash,
       Ibc_Applications_Transfer_V1_QueryClientMetadata.Methods.escrowAddress,
@@ -483,15 +483,15 @@ internal enum Ibc_Applications_Transfer_V1_QueryClientMetadata {
   )
 
   internal enum Methods {
-    internal static let denomTrace = GRPCMethodDescriptor(
-      name: "DenomTrace",
-      path: "/ibc.applications.transfer.v1.Query/DenomTrace",
-      type: GRPCCallType.unary
-    )
-
     internal static let denomTraces = GRPCMethodDescriptor(
       name: "DenomTraces",
       path: "/ibc.applications.transfer.v1.Query/DenomTraces",
+      type: GRPCCallType.unary
+    )
+
+    internal static let denomTrace = GRPCMethodDescriptor(
+      name: "DenomTrace",
+      path: "/ibc.applications.transfer.v1.Query/DenomTrace",
       type: GRPCCallType.unary
     )
 
@@ -527,11 +527,11 @@ internal enum Ibc_Applications_Transfer_V1_QueryClientMetadata {
 internal protocol Ibc_Applications_Transfer_V1_QueryProvider: CallHandlerProvider {
   var interceptors: Ibc_Applications_Transfer_V1_QueryServerInterceptorFactoryProtocol? { get }
 
-  /// DenomTrace queries a denomination trace information.
-  func denomTrace(request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>
-
   /// DenomTraces queries all denomination traces.
   func denomTraces(request: Ibc_Applications_Transfer_V1_QueryDenomTracesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Ibc_Applications_Transfer_V1_QueryDenomTracesResponse>
+
+  /// DenomTrace queries a denomination trace information.
+  func denomTrace(request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>
 
   /// Params queries all parameters of the ibc-transfer module.
   func params(request: Ibc_Applications_Transfer_V1_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Ibc_Applications_Transfer_V1_QueryParamsResponse>
@@ -558,15 +558,6 @@ extension Ibc_Applications_Transfer_V1_QueryProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
-    case "DenomTrace":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest>(),
-        responseSerializer: ProtobufSerializer<Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>(),
-        interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? [],
-        userFunction: self.denomTrace(request:context:)
-      )
-
     case "DenomTraces":
       return UnaryServerHandler(
         context: context,
@@ -574,6 +565,15 @@ extension Ibc_Applications_Transfer_V1_QueryProvider {
         responseSerializer: ProtobufSerializer<Ibc_Applications_Transfer_V1_QueryDenomTracesResponse>(),
         interceptors: self.interceptors?.makeDenomTracesInterceptors() ?? [],
         userFunction: self.denomTraces(request:context:)
+      )
+
+    case "DenomTrace":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest>(),
+        responseSerializer: ProtobufSerializer<Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>(),
+        interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? [],
+        userFunction: self.denomTrace(request:context:)
       )
 
     case "Params":
@@ -626,17 +626,17 @@ internal protocol Ibc_Applications_Transfer_V1_QueryAsyncProvider: CallHandlerPr
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Ibc_Applications_Transfer_V1_QueryServerInterceptorFactoryProtocol? { get }
 
-  /// DenomTrace queries a denomination trace information.
-  @Sendable func denomTrace(
-    request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Ibc_Applications_Transfer_V1_QueryDenomTraceResponse
-
   /// DenomTraces queries all denomination traces.
   @Sendable func denomTraces(
     request: Ibc_Applications_Transfer_V1_QueryDenomTracesRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Ibc_Applications_Transfer_V1_QueryDenomTracesResponse
+
+  /// DenomTrace queries a denomination trace information.
+  @Sendable func denomTrace(
+    request: Ibc_Applications_Transfer_V1_QueryDenomTraceRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Ibc_Applications_Transfer_V1_QueryDenomTraceResponse
 
   /// Params queries all parameters of the ibc-transfer module.
   @Sendable func params(
@@ -682,15 +682,6 @@ extension Ibc_Applications_Transfer_V1_QueryAsyncProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
-    case "DenomTrace":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest>(),
-        responseSerializer: ProtobufSerializer<Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>(),
-        interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? [],
-        wrapping: self.denomTrace(request:context:)
-      )
-
     case "DenomTraces":
       return GRPCAsyncServerHandler(
         context: context,
@@ -698,6 +689,15 @@ extension Ibc_Applications_Transfer_V1_QueryAsyncProvider {
         responseSerializer: ProtobufSerializer<Ibc_Applications_Transfer_V1_QueryDenomTracesResponse>(),
         interceptors: self.interceptors?.makeDenomTracesInterceptors() ?? [],
         wrapping: self.denomTraces(request:context:)
+      )
+
+    case "DenomTrace":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest>(),
+        responseSerializer: ProtobufSerializer<Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>(),
+        interceptors: self.interceptors?.makeDenomTraceInterceptors() ?? [],
+        wrapping: self.denomTrace(request:context:)
       )
 
     case "Params":
@@ -744,13 +744,13 @@ extension Ibc_Applications_Transfer_V1_QueryAsyncProvider {
 
 internal protocol Ibc_Applications_Transfer_V1_QueryServerInterceptorFactoryProtocol {
 
-  /// - Returns: Interceptors to use when handling 'denomTrace'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeDenomTraceInterceptors() -> [ServerInterceptor<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>]
-
   /// - Returns: Interceptors to use when handling 'denomTraces'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeDenomTracesInterceptors() -> [ServerInterceptor<Ibc_Applications_Transfer_V1_QueryDenomTracesRequest, Ibc_Applications_Transfer_V1_QueryDenomTracesResponse>]
+
+  /// - Returns: Interceptors to use when handling 'denomTrace'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeDenomTraceInterceptors() -> [ServerInterceptor<Ibc_Applications_Transfer_V1_QueryDenomTraceRequest, Ibc_Applications_Transfer_V1_QueryDenomTraceResponse>]
 
   /// - Returns: Interceptors to use when handling 'params'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -774,8 +774,8 @@ internal enum Ibc_Applications_Transfer_V1_QueryServerMetadata {
     name: "Query",
     fullName: "ibc.applications.transfer.v1.Query",
     methods: [
-      Ibc_Applications_Transfer_V1_QueryServerMetadata.Methods.denomTrace,
       Ibc_Applications_Transfer_V1_QueryServerMetadata.Methods.denomTraces,
+      Ibc_Applications_Transfer_V1_QueryServerMetadata.Methods.denomTrace,
       Ibc_Applications_Transfer_V1_QueryServerMetadata.Methods.params,
       Ibc_Applications_Transfer_V1_QueryServerMetadata.Methods.denomHash,
       Ibc_Applications_Transfer_V1_QueryServerMetadata.Methods.escrowAddress,
@@ -784,15 +784,15 @@ internal enum Ibc_Applications_Transfer_V1_QueryServerMetadata {
   )
 
   internal enum Methods {
-    internal static let denomTrace = GRPCMethodDescriptor(
-      name: "DenomTrace",
-      path: "/ibc.applications.transfer.v1.Query/DenomTrace",
-      type: GRPCCallType.unary
-    )
-
     internal static let denomTraces = GRPCMethodDescriptor(
       name: "DenomTraces",
       path: "/ibc.applications.transfer.v1.Query/DenomTraces",
+      type: GRPCCallType.unary
+    )
+
+    internal static let denomTrace = GRPCMethodDescriptor(
+      name: "DenomTrace",
+      path: "/ibc.applications.transfer.v1.Query/DenomTrace",
       type: GRPCCallType.unary
     )
 

@@ -7688,7 +7688,7 @@ public final class ConnectionProto {
       "\013\212\235 \007TRYOPEN\022\030\n\nSTATE_OPEN\020\003\032\010\212\235 \004OPEN\032\004" +
       "\210\243\036\000B\344\001\n\032com.ibc.core.connection.v1B\017Con" +
       "nectionProtoZ<github.com/cosmos/ibc-go/v" +
-      "7/modules/core/03-connection/types\242\002\003ICC" +
+      "8/modules/core/03-connection/types\242\002\003ICC" +
       "\252\002\026Ibc.Core.Connection.V1\312\002\026Ibc\\Core\\Con" +
       "nection\\V1\342\002\"Ibc\\Core\\Connection\\V1\\GPBM" +
       "etadata\352\002\031Ibc::Core::Connection::V1b\006pro" +

@@ -484,7 +484,7 @@ tallyResult: {
     responseDeserialize: deserialize_cosmos_group_v1_QueryTallyResultResponse,
   },
   // Groups queries all groups in state.
-// 
+//
 // Since: cosmos-sdk 0.47.1
 groups: {
     path: '/cosmos.group.v1.Query/Groups',

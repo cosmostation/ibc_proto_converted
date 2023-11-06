@@ -1121,7 +1121,7 @@ public final class QueryProto {
       "bc/apps/interchain_accounts/host/v1/para" +
       "msB\331\002\n0com.ibc.applications.interchain_a" +
       "ccounts.host.v1B\nQueryProtoZJgithub.com/" +
-      "cosmos/ibc-go/v7/modules/apps/27-interch" +
+      "cosmos/ibc-go/v8/modules/apps/27-interch" +
       "ain-accounts/host/types\242\002\004IAIH\252\002+Ibc.App" +
       "lications.InterchainAccounts.Host.V1\312\002+I" +
       "bc\\Applications\\InterchainAccounts\\Host\\" +

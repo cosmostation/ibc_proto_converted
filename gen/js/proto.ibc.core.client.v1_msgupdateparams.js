@@ -71,7 +71,7 @@ proto.ibc.core.client.v1.MsgUpdateParams.prototype.toObject = function(opt_inclu
  */
 proto.ibc.core.client.v1.MsgUpdateParams.toObject = function(includeInstance, msg) {
   var f, obj = {
-    authority: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    signer: jspb.Message.getFieldWithDefault(msg, 1, ""),
     params: (f = msg.getParams()) && proto.ibc.core.client.v1.Params.toObject(includeInstance, f)
   };
 
@@ -111,7 +111,7 @@ proto.ibc.core.client.v1.MsgUpdateParams.deserializeBinaryFromReader = function(
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setAuthority(value);
+      msg.setSigner(value);
       break;
     case 2:
       var value = new proto.ibc.core.client.v1.Params;
@@ -147,7 +147,7 @@ proto.ibc.core.client.v1.MsgUpdateParams.prototype.serializeBinary = function() 
  */
 proto.ibc.core.client.v1.MsgUpdateParams.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAuthority();
+  f = message.getSigner();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -166,10 +166,10 @@ proto.ibc.core.client.v1.MsgUpdateParams.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional string authority = 1;
+ * optional string signer = 1;
  * @return {string}
  */
-proto.ibc.core.client.v1.MsgUpdateParams.prototype.getAuthority = function() {
+proto.ibc.core.client.v1.MsgUpdateParams.prototype.getSigner = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -178,7 +178,7 @@ proto.ibc.core.client.v1.MsgUpdateParams.prototype.getAuthority = function() {
  * @param {string} value
  * @return {!proto.ibc.core.client.v1.MsgUpdateParams} returns this
  */
-proto.ibc.core.client.v1.MsgUpdateParams.prototype.setAuthority = function(value) {
+proto.ibc.core.client.v1.MsgUpdateParams.prototype.setSigner = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 

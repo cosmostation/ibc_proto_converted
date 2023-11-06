@@ -75,7 +75,7 @@ function deserialize_cosmos_circuit_v1_QueryDisabledListRequest(buffer_arg) {
 }
 
 
-// Msg defines the crisis Msg service.
+// Query defines the circuit gRPC querier service.
 var QueryService = exports.QueryService = {
   // Account returns account permissions.
 account: {

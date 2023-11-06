@@ -67,6 +67,11 @@ internal protocol Cosmos_Staking_V1beta1_MsgClientProtocol: GRPCClient {
     _ request: Cosmos_Staking_V1beta1_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Staking_V1beta1_MsgUpdateParams, Cosmos_Staking_V1beta1_MsgUpdateParamsResponse>
+
+  func rotateConsPubKey(
+    _ request: Cosmos_Staking_V1beta1_MsgRotateConsPubKey,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Cosmos_Staking_V1beta1_MsgRotateConsPubKey, Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse>
 }
 
 extension Cosmos_Staking_V1beta1_MsgClientProtocol {
@@ -207,6 +212,26 @@ extension Cosmos_Staking_V1beta1_MsgClientProtocol {
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
+
+  /// RotateConsPubKey defines an operation for rotating the consensus keys
+  /// of a validator.
+  /// Since: cosmos-sdk 0.48
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to RotateConsPubKey.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func rotateConsPubKey(
+    _ request: Cosmos_Staking_V1beta1_MsgRotateConsPubKey,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Cosmos_Staking_V1beta1_MsgRotateConsPubKey, Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse> {
+    return self.makeUnaryCall(
+      path: Cosmos_Staking_V1beta1_MsgClientMetadata.Methods.rotateConsPubKey.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRotateConsPubKeyInterceptors() ?? []
+    )
+  }
 }
 
 @available(*, deprecated)
@@ -306,6 +331,11 @@ internal protocol Cosmos_Staking_V1beta1_MsgAsyncClientProtocol: GRPCClient {
     _ request: Cosmos_Staking_V1beta1_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Cosmos_Staking_V1beta1_MsgUpdateParams, Cosmos_Staking_V1beta1_MsgUpdateParamsResponse>
+
+  func makeRotateConsPubKeyCall(
+    _ request: Cosmos_Staking_V1beta1_MsgRotateConsPubKey,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Cosmos_Staking_V1beta1_MsgRotateConsPubKey, Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -401,6 +431,18 @@ extension Cosmos_Staking_V1beta1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
+
+  internal func makeRotateConsPubKeyCall(
+    _ request: Cosmos_Staking_V1beta1_MsgRotateConsPubKey,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Cosmos_Staking_V1beta1_MsgRotateConsPubKey, Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Cosmos_Staking_V1beta1_MsgClientMetadata.Methods.rotateConsPubKey.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRotateConsPubKeyInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -488,6 +530,18 @@ extension Cosmos_Staking_V1beta1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
+
+  internal func rotateConsPubKey(
+    _ request: Cosmos_Staking_V1beta1_MsgRotateConsPubKey,
+    callOptions: CallOptions? = nil
+  ) async throws -> Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Cosmos_Staking_V1beta1_MsgClientMetadata.Methods.rotateConsPubKey.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRotateConsPubKeyInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -529,6 +583,9 @@ internal protocol Cosmos_Staking_V1beta1_MsgClientInterceptorFactoryProtocol: Se
 
   /// - Returns: Interceptors to use when invoking 'updateParams'.
   func makeUpdateParamsInterceptors() -> [ClientInterceptor<Cosmos_Staking_V1beta1_MsgUpdateParams, Cosmos_Staking_V1beta1_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'rotateConsPubKey'.
+  func makeRotateConsPubKeyInterceptors() -> [ClientInterceptor<Cosmos_Staking_V1beta1_MsgRotateConsPubKey, Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse>]
 }
 
 internal enum Cosmos_Staking_V1beta1_MsgClientMetadata {
@@ -543,6 +600,7 @@ internal enum Cosmos_Staking_V1beta1_MsgClientMetadata {
       Cosmos_Staking_V1beta1_MsgClientMetadata.Methods.undelegate,
       Cosmos_Staking_V1beta1_MsgClientMetadata.Methods.cancelUnbondingDelegation,
       Cosmos_Staking_V1beta1_MsgClientMetadata.Methods.updateParams,
+      Cosmos_Staking_V1beta1_MsgClientMetadata.Methods.rotateConsPubKey,
     ]
   )
 
@@ -588,6 +646,12 @@ internal enum Cosmos_Staking_V1beta1_MsgClientMetadata {
       path: "/cosmos.staking.v1beta1.Msg/UpdateParams",
       type: GRPCCallType.unary
     )
+
+    internal static let rotateConsPubKey = GRPCMethodDescriptor(
+      name: "RotateConsPubKey",
+      path: "/cosmos.staking.v1beta1.Msg/RotateConsPubKey",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -625,6 +689,11 @@ internal protocol Cosmos_Staking_V1beta1_MsgProvider: CallHandlerProvider {
   /// parameters.
   /// Since: cosmos-sdk 0.47
   func updateParams(request: Cosmos_Staking_V1beta1_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Staking_V1beta1_MsgUpdateParamsResponse>
+
+  /// RotateConsPubKey defines an operation for rotating the consensus keys
+  /// of a validator.
+  /// Since: cosmos-sdk 0.48
+  func rotateConsPubKey(request: Cosmos_Staking_V1beta1_MsgRotateConsPubKey, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse>
 }
 
 extension Cosmos_Staking_V1beta1_MsgProvider {
@@ -702,6 +771,15 @@ extension Cosmos_Staking_V1beta1_MsgProvider {
         userFunction: self.updateParams(request:context:)
       )
 
+    case "RotateConsPubKey":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Staking_V1beta1_MsgRotateConsPubKey>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse>(),
+        interceptors: self.interceptors?.makeRotateConsPubKeyInterceptors() ?? [],
+        userFunction: self.rotateConsPubKey(request:context:)
+      )
+
     default:
       return nil
     }
@@ -765,6 +843,14 @@ internal protocol Cosmos_Staking_V1beta1_MsgAsyncProvider: CallHandlerProvider {
     request: Cosmos_Staking_V1beta1_MsgUpdateParams,
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Staking_V1beta1_MsgUpdateParamsResponse
+
+  /// RotateConsPubKey defines an operation for rotating the consensus keys
+  /// of a validator.
+  /// Since: cosmos-sdk 0.48
+  @Sendable func rotateConsPubKey(
+    request: Cosmos_Staking_V1beta1_MsgRotateConsPubKey,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -849,6 +935,15 @@ extension Cosmos_Staking_V1beta1_MsgAsyncProvider {
         wrapping: self.updateParams(request:context:)
       )
 
+    case "RotateConsPubKey":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Staking_V1beta1_MsgRotateConsPubKey>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse>(),
+        interceptors: self.interceptors?.makeRotateConsPubKeyInterceptors() ?? [],
+        wrapping: self.rotateConsPubKey(request:context:)
+      )
+
     default:
       return nil
     }
@@ -884,6 +979,10 @@ internal protocol Cosmos_Staking_V1beta1_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'updateParams'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateParamsInterceptors() -> [ServerInterceptor<Cosmos_Staking_V1beta1_MsgUpdateParams, Cosmos_Staking_V1beta1_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'rotateConsPubKey'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeRotateConsPubKeyInterceptors() -> [ServerInterceptor<Cosmos_Staking_V1beta1_MsgRotateConsPubKey, Cosmos_Staking_V1beta1_MsgRotateConsPubKeyResponse>]
 }
 
 internal enum Cosmos_Staking_V1beta1_MsgServerMetadata {
@@ -898,6 +997,7 @@ internal enum Cosmos_Staking_V1beta1_MsgServerMetadata {
       Cosmos_Staking_V1beta1_MsgServerMetadata.Methods.undelegate,
       Cosmos_Staking_V1beta1_MsgServerMetadata.Methods.cancelUnbondingDelegation,
       Cosmos_Staking_V1beta1_MsgServerMetadata.Methods.updateParams,
+      Cosmos_Staking_V1beta1_MsgServerMetadata.Methods.rotateConsPubKey,
     ]
   )
 
@@ -941,6 +1041,12 @@ internal enum Cosmos_Staking_V1beta1_MsgServerMetadata {
     internal static let updateParams = GRPCMethodDescriptor(
       name: "UpdateParams",
       path: "/cosmos.staking.v1beta1.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
+
+    internal static let rotateConsPubKey = GRPCMethodDescriptor(
+      name: "RotateConsPubKey",
+      path: "/cosmos.staking.v1beta1.Msg/RotateConsPubKey",
       type: GRPCCallType.unary
     )
   }

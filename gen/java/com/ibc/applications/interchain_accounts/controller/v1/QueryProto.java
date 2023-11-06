@@ -2411,7 +2411,7 @@ public final class QueryProto {
       "c/apps/interchain_accounts/controller/v1" +
       "/paramsB\375\002\n6com.ibc.applications.interch" +
       "ain_accounts.controller.v1B\nQueryProtoZP" +
-      "github.com/cosmos/ibc-go/v7/modules/apps" +
+      "github.com/cosmos/ibc-go/v8/modules/apps" +
       "/27-interchain-accounts/controller/types" +
       "\242\002\004IAIC\252\0021Ibc.Applications.InterchainAcc" +
       "ounts.Controller.V1\312\0021Ibc\\Applications\\I" +

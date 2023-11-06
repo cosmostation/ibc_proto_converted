@@ -109,7 +109,7 @@ class QueryServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Deposit(self, request, context):
-        """Deposit queries single deposit information based proposalID, depositAddr.
+        """Deposit queries single deposit information based on proposalID, depositAddr.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

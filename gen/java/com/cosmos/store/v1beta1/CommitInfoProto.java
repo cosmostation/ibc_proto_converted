@@ -14,7 +14,7 @@ public final class CommitInfoProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CommitInfoOrBuilder extends
+  @java.lang.Deprecated public interface CommitInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.v1beta1.CommitInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -67,11 +67,14 @@ public final class CommitInfoProto {
    * <pre>
    * CommitInfo defines commit information used by the multi-store when committing
    * a version/height.
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.v1beta1.CommitInfo}
    */
-  public static final class CommitInfo extends
+  @java.lang.Deprecated public static final class CommitInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.v1beta1.CommitInfo)
       CommitInfoOrBuilder {
@@ -373,6 +376,9 @@ public final class CommitInfoProto {
      * <pre>
      * CommitInfo defines commit information used by the multi-store when committing
      * a version/height.
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.v1beta1.CommitInfo}
@@ -1075,7 +1081,7 @@ public final class CommitInfoProto {
 
   }
 
-  public interface StoreInfoOrBuilder extends
+  @java.lang.Deprecated public interface StoreInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.v1beta1.StoreInfo)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1110,11 +1116,14 @@ public final class CommitInfoProto {
    * <pre>
    * StoreInfo defines store-specific commit information. It contains a reference
    * between a store name and the commit ID.
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.v1beta1.StoreInfo}
    */
-  public static final class StoreInfo extends
+  @java.lang.Deprecated public static final class StoreInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.v1beta1.StoreInfo)
       StoreInfoOrBuilder {
@@ -1388,6 +1397,9 @@ public final class CommitInfoProto {
      * <pre>
      * StoreInfo defines store-specific commit information. It contains a reference
      * between a store name and the commit ID.
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.v1beta1.StoreInfo}
@@ -1833,7 +1845,7 @@ public final class CommitInfoProto {
 
   }
 
-  public interface CommitIDOrBuilder extends
+  @java.lang.Deprecated public interface CommitIDOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cosmos.store.v1beta1.CommitID)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1853,11 +1865,14 @@ public final class CommitInfoProto {
    * <pre>
    * CommitID defines the commitment information when a specific store is
    * committed.
+   *
+   * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+   * instead.
    * </pre>
    *
    * Protobuf type {@code cosmos.store.v1beta1.CommitID}
    */
-  public static final class CommitID extends
+  @java.lang.Deprecated public static final class CommitID extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:cosmos.store.v1beta1.CommitID)
       CommitIDOrBuilder {
@@ -2085,6 +2100,9 @@ public final class CommitInfoProto {
      * <pre>
      * CommitID defines the commitment information when a specific store is
      * committed.
+     *
+     * Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+     * instead.
      * </pre>
      *
      * Protobuf type {@code cosmos.store.v1beta1.CommitID}
@@ -2419,21 +2437,21 @@ public final class CommitInfoProto {
     java.lang.String[] descriptorData = {
       "\n&cosmos/store/v1beta1/commit_info.proto" +
       "\022\024cosmos.store.v1beta1\032\024gogoproto/gogo.p" +
-      "roto\032\037google/protobuf/timestamp.proto\"\262\001" +
+      "roto\032\037google/protobuf/timestamp.proto\"\266\001" +
       "\n\nCommitInfo\022\030\n\007version\030\001 \001(\003R\007version\022F" +
       "\n\013store_infos\030\002 \003(\0132\037.cosmos.store.v1bet" +
       "a1.StoreInfoB\004\310\336\037\000R\nstoreInfos\022B\n\ttimest" +
       "amp\030\003 \001(\0132\032.google.protobuf.TimestampB\010\310" +
-      "\336\037\000\220\337\037\001R\ttimestamp\"b\n\tStoreInfo\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022A\n\tcommit_id\030\002 \001(\0132\036.cosmos." +
-      "store.v1beta1.CommitIDB\004\310\336\037\000R\010commitId\">" +
-      "\n\010CommitID\022\030\n\007version\030\001 \001(\003R\007version\022\022\n\004" +
-      "hash\030\002 \001(\014R\004hash:\004\230\240\037\000B\265\001\n\030com.cosmos.st" +
-      "ore.v1beta1B\017CommitInfoProtoZ\030cosmossdk." +
-      "io/store/types\242\002\003CSX\252\002\024Cosmos.Store.V1be" +
-      "ta1\312\002\024Cosmos\\Store\\V1beta1\342\002 Cosmos\\Stor" +
-      "e\\V1beta1\\GPBMetadata\352\002\026Cosmos::Store::V" +
-      "1beta1b\006proto3"
+      "\336\037\000\220\337\037\001R\ttimestamp:\002\030\001\"f\n\tStoreInfo\022\022\n\004n" +
+      "ame\030\001 \001(\tR\004name\022A\n\tcommit_id\030\002 \001(\0132\036.cos" +
+      "mos.store.v1beta1.CommitIDB\004\310\336\037\000R\010commit" +
+      "Id:\002\030\001\"@\n\010CommitID\022\030\n\007version\030\001 \001(\003R\007ver" +
+      "sion\022\022\n\004hash\030\002 \001(\014R\004hash:\006\030\001\230\240\037\000B\265\001\n\030com" +
+      ".cosmos.store.v1beta1B\017CommitInfoProtoZ\030" +
+      "cosmossdk.io/store/types\242\002\003CSX\252\002\024Cosmos." +
+      "Store.V1beta1\312\002\024Cosmos\\Store\\V1beta1\342\002 C" +
+      "osmos\\Store\\V1beta1\\GPBMetadata\352\002\026Cosmos" +
+      "::Store::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

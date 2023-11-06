@@ -38,6 +38,11 @@ struct Cosmos_Vesting_V1beta1_MsgCreateVestingAccount {
 
   var delayed: Bool = false
 
+  /// start of vesting as unix time (in seconds).
+  ///
+  /// Since 0.51.x
+  var startTime: Int64 = 0
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -145,6 +150,7 @@ extension Cosmos_Vesting_V1beta1_MsgCreateVestingAccount: SwiftProtobuf.Message,
     3: .same(proto: "amount"),
     4: .standard(proto: "end_time"),
     5: .same(proto: "delayed"),
+    6: .standard(proto: "start_time"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -158,6 +164,7 @@ extension Cosmos_Vesting_V1beta1_MsgCreateVestingAccount: SwiftProtobuf.Message,
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.amount) }()
       case 4: try { try decoder.decodeSingularInt64Field(value: &self.endTime) }()
       case 5: try { try decoder.decodeSingularBoolField(value: &self.delayed) }()
+      case 6: try { try decoder.decodeSingularInt64Field(value: &self.startTime) }()
       default: break
       }
     }
@@ -179,6 +186,9 @@ extension Cosmos_Vesting_V1beta1_MsgCreateVestingAccount: SwiftProtobuf.Message,
     if self.delayed != false {
       try visitor.visitSingularBoolField(value: self.delayed, fieldNumber: 5)
     }
+    if self.startTime != 0 {
+      try visitor.visitSingularInt64Field(value: self.startTime, fieldNumber: 6)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -188,6 +198,7 @@ extension Cosmos_Vesting_V1beta1_MsgCreateVestingAccount: SwiftProtobuf.Message,
     if lhs.amount != rhs.amount {return false}
     if lhs.endTime != rhs.endTime {return false}
     if lhs.delayed != rhs.delayed {return false}
+    if lhs.startTime != rhs.startTime {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

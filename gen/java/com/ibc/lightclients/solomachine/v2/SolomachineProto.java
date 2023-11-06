@@ -12292,7 +12292,7 @@ public final class SolomachineProto {
       "\010\032\024\212\235 \020NEXTSEQUENCERECV\022 \n\020DATA_TYPE_HEA" +
       "DER\020\t\032\n\212\235 \006HEADER\032\004\210\243\036\000B\226\002\n#com.ibc.ligh" +
       "tclients.solomachine.v2B\020SolomachineProt" +
-      "oZ@github.com/cosmos/ibc-go/v7/modules/c" +
+      "oZ@github.com/cosmos/ibc-go/v8/modules/c" +
       "ore/02-client/migrations/v7\242\002\003ILS\252\002\037Ibc." +
       "Lightclients.Solomachine.V2\312\002\037Ibc\\Lightc" +
       "lients\\Solomachine\\V2\342\002+Ibc\\Lightclients" +

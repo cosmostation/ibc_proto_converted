@@ -79,7 +79,7 @@ function deserialize_cosmos_feegrant_v1beta1_QueryAllowancesResponse(buffer_arg)
 
 // Query defines the gRPC querier service.
 var QueryService = exports.QueryService = {
-  // Allowance returns fee granted to the grantee by the granter.
+  // Allowance returns granted allwance to the grantee by the granter.
 allowance: {
     path: '/cosmos.feegrant.v1beta1.Query/Allowance',
     requestStream: false,
@@ -91,7 +91,7 @@ allowance: {
     responseSerialize: serialize_cosmos_feegrant_v1beta1_QueryAllowanceResponse,
     responseDeserialize: deserialize_cosmos_feegrant_v1beta1_QueryAllowanceResponse,
   },
-  // Allowances returns all the grants for address.
+  // Allowances returns all the grants for the given grantee address.
 allowances: {
     path: '/cosmos.feegrant.v1beta1.Query/Allowances',
     requestStream: false,

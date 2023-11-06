@@ -2452,16 +2452,15 @@ public final class CommitmentProto {
       "o.proto\032\034cosmos/ics23/v1/proofs.proto\"&\n" +
       "\nMerkleRoot\022\022\n\004hash\030\001 \001(\014R\004hash:\004\210\240\037\000\"-\n" +
       "\014MerklePrefix\022\035\n\nkey_prefix\030\001 \001(\014R\tkeyPr" +
-      "efix\"-\n\nMerklePath\022\031\n\010key_path\030\001 \003(\tR\007ke" +
-      "yPath:\004\230\240\037\000\"G\n\013MerkleProof\0228\n\006proofs\030\001 \003" +
-      "(\0132 .cosmos.ics23.v1.CommitmentProofR\006pr" +
-      "oofsB\344\001\n\032com.ibc.core.commitment.v1B\017Com" +
-      "mitmentProtoZ<github.com/cosmos/ibc-go/v" +
-      "7/modules/core/23-commitment/types\242\002\003ICC" +
-      "\252\002\026Ibc.Core.Commitment.V1\312\002\026Ibc\\Core\\Com" +
-      "mitment\\V1\342\002\"Ibc\\Core\\Commitment\\V1\\GPBM" +
-      "etadata\352\002\031Ibc::Core::Commitment::V1b\006pro" +
-      "to3"
+      "efix\"\'\n\nMerklePath\022\031\n\010key_path\030\001 \003(\tR\007ke" +
+      "yPath\"G\n\013MerkleProof\0228\n\006proofs\030\001 \003(\0132 .c" +
+      "osmos.ics23.v1.CommitmentProofR\006proofsB\344" +
+      "\001\n\032com.ibc.core.commitment.v1B\017Commitmen" +
+      "tProtoZ<github.com/cosmos/ibc-go/v8/modu" +
+      "les/core/23-commitment/types\242\002\003ICC\252\002\026Ibc" +
+      ".Core.Commitment.V1\312\002\026Ibc\\Core\\Commitmen" +
+      "t\\V1\342\002\"Ibc\\Core\\Commitment\\V1\\GPBMetadat" +
+      "a\352\002\031Ibc::Core::Commitment::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2496,7 +2495,6 @@ public final class CommitmentProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.goprotoGetters);
-    registry.add(com.gogoproto.GogoProto.goprotoStringer);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();

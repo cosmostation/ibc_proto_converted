@@ -77,7 +77,7 @@ extension Cosmos_Staking_V1beta1_BondStatus: CaseIterable {
 
 #endif  // swift(>=4.2)
 
-/// Infraction indicates the infraction a validator commited.
+/// Infraction indicates the infraction a validator committed.
 enum Cosmos_Staking_V1beta1_Infraction: SwiftProtobuf.Enum {
   typealias RawValue = Int
 
@@ -153,6 +153,35 @@ struct Cosmos_Staking_V1beta1_HistoricalInfo {
   init() {}
 
   fileprivate var _header: Tendermint_Types_Header? = nil
+}
+
+/// Historical contains a set of minimum values needed for evaluating historical validator sets and blocks.
+/// It is stored as part of staking module's state, which persists the `n` most
+/// recent HistoricalInfo
+/// (`n` is set by the staking module's `historical_entries` parameter).
+struct Cosmos_Staking_V1beta1_HistoricalRecord {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var apphash: Data = Data()
+
+  var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_time = newValue}
+  }
+  /// Returns true if `time` has been explicitly set.
+  var hasTime: Bool {return self._time != nil}
+  /// Clears the value of `time`. Subsequent reads from it will return its default value.
+  mutating func clearTime() {self._time = nil}
+
+  var validatorsHash: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 /// CommissionRates defines the initial commission rates to be used for creating
@@ -436,10 +465,10 @@ struct Cosmos_Staking_V1beta1_Delegation {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// delegator_address is the bech32-encoded address of the delegator.
+  /// delegator_address is the encoded address of the delegator.
   var delegatorAddress: String = String()
 
-  /// validator_address is the bech32-encoded address of the validator.
+  /// validator_address is the encoded address of the validator.
   var validatorAddress: String = String()
 
   /// shares define the delegation shares received.
@@ -457,10 +486,10 @@ struct Cosmos_Staking_V1beta1_UnbondingDelegation {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// delegator_address is the bech32-encoded address of the delegator.
+  /// delegator_address is the encoded address of the delegator.
   var delegatorAddress: String = String()
 
-  /// validator_address is the bech32-encoded address of the validator.
+  /// validator_address is the encoded address of the validator.
   var validatorAddress: String = String()
 
   /// entries are the unbonding delegation entries.
@@ -602,11 +631,23 @@ struct Cosmos_Staking_V1beta1_Params {
   /// min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
   var minCommissionRate: String = String()
 
+  /// key_rotation_fee is fee to be spent when rotating validator's key
+  /// (either consensus pubkey or operator key)
+  var keyRotationFee: Cosmos_Base_V1beta1_Coin {
+    get {return _keyRotationFee ?? Cosmos_Base_V1beta1_Coin()}
+    set {_keyRotationFee = newValue}
+  }
+  /// Returns true if `keyRotationFee` has been explicitly set.
+  var hasKeyRotationFee: Bool {return self._keyRotationFee != nil}
+  /// Clears the value of `keyRotationFee`. Subsequent reads from it will return its default value.
+  mutating func clearKeyRotationFee() {self._keyRotationFee = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
   fileprivate var _unbondingTime: SwiftProtobuf.Google_Protobuf_Duration? = nil
+  fileprivate var _keyRotationFee: Cosmos_Base_V1beta1_Coin? = nil
 }
 
 /// DelegationResponse is equivalent to Delegation except that it contains a
@@ -724,10 +765,76 @@ struct Cosmos_Staking_V1beta1_ValidatorUpdates {
   init() {}
 }
 
+/// ConsPubKeyRotationHistory contains a validator's consensus public key rotation history.
+struct Cosmos_Staking_V1beta1_ConsPubKeyRotationHistory {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// operator_address defines the address of the validator's operator; bech encoded in JSON.
+  var operatorAddress: String = String()
+
+  /// old_cons_pubkey is the old consensus public key of the validator, as a Protobuf Any.
+  var oldConsPubkey: SwiftProtobuf.Google_Protobuf_Any {
+    get {return _oldConsPubkey ?? SwiftProtobuf.Google_Protobuf_Any()}
+    set {_oldConsPubkey = newValue}
+  }
+  /// Returns true if `oldConsPubkey` has been explicitly set.
+  var hasOldConsPubkey: Bool {return self._oldConsPubkey != nil}
+  /// Clears the value of `oldConsPubkey`. Subsequent reads from it will return its default value.
+  mutating func clearOldConsPubkey() {self._oldConsPubkey = nil}
+
+  /// new_cons_pubkey is the new consensus public key of the validator, as a Protobuf Any.
+  var newConsPubkey: SwiftProtobuf.Google_Protobuf_Any {
+    get {return _newConsPubkey ?? SwiftProtobuf.Google_Protobuf_Any()}
+    set {_newConsPubkey = newValue}
+  }
+  /// Returns true if `newConsPubkey` has been explicitly set.
+  var hasNewConsPubkey: Bool {return self._newConsPubkey != nil}
+  /// Clears the value of `newConsPubkey`. Subsequent reads from it will return its default value.
+  mutating func clearNewConsPubkey() {self._newConsPubkey = nil}
+
+  /// height defines the block height at which the rotation event occured.
+  var height: UInt64 = 0
+
+  /// fee holds the amount of fee deduced for the rotation.
+  var fee: Cosmos_Base_V1beta1_Coin {
+    get {return _fee ?? Cosmos_Base_V1beta1_Coin()}
+    set {_fee = newValue}
+  }
+  /// Returns true if `fee` has been explicitly set.
+  var hasFee: Bool {return self._fee != nil}
+  /// Clears the value of `fee`. Subsequent reads from it will return its default value.
+  mutating func clearFee() {self._fee = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _oldConsPubkey: SwiftProtobuf.Google_Protobuf_Any? = nil
+  fileprivate var _newConsPubkey: SwiftProtobuf.Google_Protobuf_Any? = nil
+  fileprivate var _fee: Cosmos_Base_V1beta1_Coin? = nil
+}
+
+/// ValAddrsOfRotatedConsKeys contains the array of validator addresses which rotated their keys
+/// This is to block the validator's next rotation till unbonding period.
+struct Cosmos_Staking_V1beta1_ValAddrsOfRotatedConsKeys {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var addresses: [String] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Staking_V1beta1_BondStatus: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_Infraction: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_HistoricalInfo: @unchecked Sendable {}
+extension Cosmos_Staking_V1beta1_HistoricalRecord: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_CommissionRates: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_Commission: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_Description: @unchecked Sendable {}
@@ -748,6 +855,8 @@ extension Cosmos_Staking_V1beta1_RedelegationEntryResponse: @unchecked Sendable 
 extension Cosmos_Staking_V1beta1_RedelegationResponse: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_Pool: @unchecked Sendable {}
 extension Cosmos_Staking_V1beta1_ValidatorUpdates: @unchecked Sendable {}
+extension Cosmos_Staking_V1beta1_ConsPubKeyRotationHistory: @unchecked Sendable {}
+extension Cosmos_Staking_V1beta1_ValAddrsOfRotatedConsKeys: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -808,6 +917,54 @@ extension Cosmos_Staking_V1beta1_HistoricalInfo: SwiftProtobuf.Message, SwiftPro
   static func ==(lhs: Cosmos_Staking_V1beta1_HistoricalInfo, rhs: Cosmos_Staking_V1beta1_HistoricalInfo) -> Bool {
     if lhs._header != rhs._header {return false}
     if lhs.valset != rhs.valset {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Staking_V1beta1_HistoricalRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".HistoricalRecord"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "apphash"),
+    2: .same(proto: "time"),
+    3: .standard(proto: "validators_hash"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularBytesField(value: &self.apphash) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.validatorsHash) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.apphash.isEmpty {
+      try visitor.visitSingularBytesField(value: self.apphash, fieldNumber: 1)
+    }
+    try { if let v = self._time {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if !self.validatorsHash.isEmpty {
+      try visitor.visitSingularBytesField(value: self.validatorsHash, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Staking_V1beta1_HistoricalRecord, rhs: Cosmos_Staking_V1beta1_HistoricalRecord) -> Bool {
+    if lhs.apphash != rhs.apphash {return false}
+    if lhs._time != rhs._time {return false}
+    if lhs.validatorsHash != rhs.validatorsHash {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1576,6 +1733,7 @@ extension Cosmos_Staking_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._M
     4: .standard(proto: "historical_entries"),
     5: .standard(proto: "bond_denom"),
     6: .standard(proto: "min_commission_rate"),
+    7: .standard(proto: "key_rotation_fee"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1590,6 +1748,7 @@ extension Cosmos_Staking_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._M
       case 4: try { try decoder.decodeSingularUInt32Field(value: &self.historicalEntries) }()
       case 5: try { try decoder.decodeSingularStringField(value: &self.bondDenom) }()
       case 6: try { try decoder.decodeSingularStringField(value: &self.minCommissionRate) }()
+      case 7: try { try decoder.decodeSingularMessageField(value: &self._keyRotationFee) }()
       default: break
       }
     }
@@ -1618,6 +1777,9 @@ extension Cosmos_Staking_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._M
     if !self.minCommissionRate.isEmpty {
       try visitor.visitSingularStringField(value: self.minCommissionRate, fieldNumber: 6)
     }
+    try { if let v = self._keyRotationFee {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1628,6 +1790,7 @@ extension Cosmos_Staking_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._M
     if lhs.historicalEntries != rhs.historicalEntries {return false}
     if lhs.bondDenom != rhs.bondDenom {return false}
     if lhs.minCommissionRate != rhs.minCommissionRate {return false}
+    if lhs._keyRotationFee != rhs._keyRotationFee {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1824,6 +1987,98 @@ extension Cosmos_Staking_V1beta1_ValidatorUpdates: SwiftProtobuf.Message, SwiftP
 
   static func ==(lhs: Cosmos_Staking_V1beta1_ValidatorUpdates, rhs: Cosmos_Staking_V1beta1_ValidatorUpdates) -> Bool {
     if lhs.updates != rhs.updates {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Staking_V1beta1_ConsPubKeyRotationHistory: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ConsPubKeyRotationHistory"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "operator_address"),
+    2: .standard(proto: "old_cons_pubkey"),
+    3: .standard(proto: "new_cons_pubkey"),
+    4: .same(proto: "height"),
+    5: .same(proto: "fee"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.operatorAddress) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._oldConsPubkey) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._newConsPubkey) }()
+      case 4: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._fee) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.operatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.operatorAddress, fieldNumber: 1)
+    }
+    try { if let v = self._oldConsPubkey {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._newConsPubkey {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    if self.height != 0 {
+      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 4)
+    }
+    try { if let v = self._fee {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Staking_V1beta1_ConsPubKeyRotationHistory, rhs: Cosmos_Staking_V1beta1_ConsPubKeyRotationHistory) -> Bool {
+    if lhs.operatorAddress != rhs.operatorAddress {return false}
+    if lhs._oldConsPubkey != rhs._oldConsPubkey {return false}
+    if lhs._newConsPubkey != rhs._newConsPubkey {return false}
+    if lhs.height != rhs.height {return false}
+    if lhs._fee != rhs._fee {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Staking_V1beta1_ValAddrsOfRotatedConsKeys: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ValAddrsOfRotatedConsKeys"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "addresses"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.addresses) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.addresses.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.addresses, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Staking_V1beta1_ValAddrsOfRotatedConsKeys, rhs: Cosmos_Staking_V1beta1_ValAddrsOfRotatedConsKeys) -> Bool {
+    if lhs.addresses != rhs.addresses {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

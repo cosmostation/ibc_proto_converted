@@ -26,8 +26,8 @@ struct Ibc_Applications_InterchainAccounts_Host_V1_MsgUpdateParams {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// authority is the address that controls the module (defaults to x/gov unless overwritten).
-  var authority: String = String()
+  /// signer address
+  var signer: String = String()
 
   /// params defines the 27-interchain-accounts/host parameters to update.
   ///
@@ -71,7 +71,7 @@ fileprivate let _protobuf_package = "ibc.applications.interchain_accounts.host.v
 extension Ibc_Applications_InterchainAccounts_Host_V1_MsgUpdateParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".MsgUpdateParams"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "authority"),
+    1: .same(proto: "signer"),
     2: .same(proto: "params"),
   ]
 
@@ -81,7 +81,7 @@ extension Ibc_Applications_InterchainAccounts_Host_V1_MsgUpdateParams: SwiftProt
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.authority) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.signer) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._params) }()
       default: break
       }
@@ -93,8 +93,8 @@ extension Ibc_Applications_InterchainAccounts_Host_V1_MsgUpdateParams: SwiftProt
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.authority.isEmpty {
-      try visitor.visitSingularStringField(value: self.authority, fieldNumber: 1)
+    if !self.signer.isEmpty {
+      try visitor.visitSingularStringField(value: self.signer, fieldNumber: 1)
     }
     try { if let v = self._params {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
@@ -103,7 +103,7 @@ extension Ibc_Applications_InterchainAccounts_Host_V1_MsgUpdateParams: SwiftProt
   }
 
   static func ==(lhs: Ibc_Applications_InterchainAccounts_Host_V1_MsgUpdateParams, rhs: Ibc_Applications_InterchainAccounts_Host_V1_MsgUpdateParams) -> Bool {
-    if lhs.authority != rhs.authority {return false}
+    if lhs.signer != rhs.signer {return false}
     if lhs._params != rhs._params {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

@@ -83,6 +83,9 @@ class MsgServicer(object):
     def FundCommunityPool(self, request, context):
         """FundCommunityPool defines a method to allow an account to directly
         fund the community pool.
+
+        Deprecated: Use x/protocolpool module's FundCommunityPool instead.
+        Since: cosmos-sdk 0.50
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -104,7 +107,8 @@ class MsgServicer(object):
         could be the governance module itself. The authority is defined in the
         keeper.
 
-        Since: cosmos-sdk 0.47
+        Deprecated: Use x/protocolpool module's CommunityPoolSpend instead.
+        Since: cosmos-sdk 0.50
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

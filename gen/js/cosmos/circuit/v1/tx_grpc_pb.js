@@ -73,7 +73,7 @@ function deserialize_cosmos_circuit_v1_MsgTripCircuitBreakerResponse(buffer_arg)
 }
 
 
-// Msg defines the crisis Msg service.
+// Msg defines the circuit Msg service.
 var MsgService = exports.MsgService = {
   // AuthorizeCircuitBreaker allows a super-admin to grant (or revoke) another
 // account's circuit breaker permissions.

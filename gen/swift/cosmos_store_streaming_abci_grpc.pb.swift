@@ -21,6 +21,9 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// ListenEndBlockRequest is the request type for the ListenEndBlock RPC method
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_Streaming_Abci_ListenFinalizeBlockRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -52,6 +55,9 @@ struct Cosmos_Store_Streaming_Abci_ListenFinalizeBlockRequest {
 }
 
 /// ListenEndBlockResponse is the response type for the ListenEndBlock RPC method
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_Streaming_Abci_ListenFinalizeBlockResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -63,12 +69,16 @@ struct Cosmos_Store_Streaming_Abci_ListenFinalizeBlockResponse {
 }
 
 /// ListenCommitRequest is the request type for the ListenCommit RPC method
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_Streaming_Abci_ListenCommitRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// explicitly pass in block height as ResponseCommit does not contain this info
+  /// explicitly pass in block height as ResponseCommit does not contain this
+  /// info
   var blockHeight: Int64 = 0
 
   var res: Tendermint_Abci_ResponseCommit {
@@ -90,6 +100,9 @@ struct Cosmos_Store_Streaming_Abci_ListenCommitRequest {
 }
 
 /// ListenCommitResponse is the response type for the ListenCommit RPC method
+///
+/// Deprecated: Store v1 is deprecated as of v0.50.x, please use Store v2 types
+/// instead.
 struct Cosmos_Store_Streaming_Abci_ListenCommitResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
