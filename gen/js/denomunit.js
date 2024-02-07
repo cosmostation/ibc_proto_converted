@@ -1,4 +1,4 @@
-// source: cosmos/bank/v1beta1/bank.proto
+// source: dymension/rollapp/bank.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.cosmos.bank.v1beta1.DenomUnit');
+goog.provide('proto.dymensionxyz.dymension.rollapp.DenomUnit');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.DenomUnit = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.bank.v1beta1.DenomUnit.repeatedFields_, null);
+proto.dymensionxyz.dymension.rollapp.DenomUnit = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.dymensionxyz.dymension.rollapp.DenomUnit.repeatedFields_, null);
 };
-goog.inherits(proto.cosmos.bank.v1beta1.DenomUnit, jspb.Message);
+goog.inherits(proto.dymensionxyz.dymension.rollapp.DenomUnit, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.cosmos.bank.v1beta1.DenomUnit.displayName = 'proto.cosmos.bank.v1beta1.DenomUnit';
+  proto.dymensionxyz.dymension.rollapp.DenomUnit.displayName = 'proto.dymensionxyz.dymension.rollapp.DenomUnit';
 }
 
 /**
@@ -44,7 +44,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.bank.v1beta1.DenomUnit.repeatedFields_ = [3];
+proto.dymensionxyz.dymension.rollapp.DenomUnit.repeatedFields_ = [3];
 
 
 
@@ -61,8 +61,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.bank.v1beta1.DenomUnit.toObject(opt_includeInstance, this);
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.toObject = function(opt_includeInstance) {
+  return proto.dymensionxyz.dymension.rollapp.DenomUnit.toObject(opt_includeInstance, this);
 };
 
 
@@ -71,11 +71,11 @@ proto.cosmos.bank.v1beta1.DenomUnit.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.cosmos.bank.v1beta1.DenomUnit} msg The msg instance to transform.
+ * @param {!proto.dymensionxyz.dymension.rollapp.DenomUnit} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.DenomUnit.toObject = function(includeInstance, msg) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.toObject = function(includeInstance, msg) {
   var f, obj = {
     denom: jspb.Message.getFieldWithDefault(msg, 1, ""),
     exponent: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -93,23 +93,23 @@ proto.cosmos.bank.v1beta1.DenomUnit.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.cosmos.bank.v1beta1.DenomUnit}
+ * @return {!proto.dymensionxyz.dymension.rollapp.DenomUnit}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinary = function(bytes) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.bank.v1beta1.DenomUnit;
-  return proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.dymensionxyz.dymension.rollapp.DenomUnit;
+  return proto.dymensionxyz.dymension.rollapp.DenomUnit.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.cosmos.bank.v1beta1.DenomUnit} msg The message object to deserialize into.
+ * @param {!proto.dymensionxyz.dymension.rollapp.DenomUnit} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.cosmos.bank.v1beta1.DenomUnit}
+ * @return {!proto.dymensionxyz.dymension.rollapp.DenomUnit}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader = function(msg, reader) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -141,9 +141,9 @@ proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.serializeBinary = function() {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter(this, writer);
+  proto.dymensionxyz.dymension.rollapp.DenomUnit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -151,11 +151,11 @@ proto.cosmos.bank.v1beta1.DenomUnit.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.cosmos.bank.v1beta1.DenomUnit} message
+ * @param {!proto.dymensionxyz.dymension.rollapp.DenomUnit} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter = function(message, writer) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDenom();
   if (f.length > 0) {
@@ -185,16 +185,16 @@ proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter = function(message, 
  * optional string denom = 1;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.getDenom = function() {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.getDenom = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.cosmos.bank.v1beta1.DenomUnit} returns this
+ * @return {!proto.dymensionxyz.dymension.rollapp.DenomUnit} returns this
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.setDenom = function(value) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.setDenom = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -203,16 +203,16 @@ proto.cosmos.bank.v1beta1.DenomUnit.prototype.setDenom = function(value) {
  * optional uint32 exponent = 2;
  * @return {number}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.getExponent = function() {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.getExponent = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.cosmos.bank.v1beta1.DenomUnit} returns this
+ * @return {!proto.dymensionxyz.dymension.rollapp.DenomUnit} returns this
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.setExponent = function(value) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.setExponent = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -221,16 +221,16 @@ proto.cosmos.bank.v1beta1.DenomUnit.prototype.setExponent = function(value) {
  * repeated string aliases = 3;
  * @return {!Array<string>}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.getAliasesList = function() {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.getAliasesList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.cosmos.bank.v1beta1.DenomUnit} returns this
+ * @return {!proto.dymensionxyz.dymension.rollapp.DenomUnit} returns this
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.setAliasesList = function(value) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.setAliasesList = function(value) {
   return jspb.Message.setField(this, 3, value || []);
 };
 
@@ -238,18 +238,18 @@ proto.cosmos.bank.v1beta1.DenomUnit.prototype.setAliasesList = function(value) {
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.cosmos.bank.v1beta1.DenomUnit} returns this
+ * @return {!proto.dymensionxyz.dymension.rollapp.DenomUnit} returns this
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.addAliases = function(value, opt_index) {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.addAliases = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.bank.v1beta1.DenomUnit} returns this
+ * @return {!proto.dymensionxyz.dymension.rollapp.DenomUnit} returns this
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.clearAliasesList = function() {
+proto.dymensionxyz.dymension.rollapp.DenomUnit.prototype.clearAliasesList = function() {
   return this.setAliasesList([]);
 };
 
