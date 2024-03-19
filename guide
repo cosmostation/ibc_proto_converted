@@ -1,0 +1,11 @@
+How to re_generate
+
+## in proto folder
+buf mod update
+
+buf build
+
+echo $?
+
+## in root folder
+buf generate proto
