@@ -70,9 +70,7 @@ proto.cosmos.base.node.v1beta1.ConfigResponse.prototype.toObject = function(opt_
  */
 proto.cosmos.base.node.v1beta1.ConfigResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    minimumGasPrice: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    pruningKeepRecent: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    pruningInterval: jspb.Message.getFieldWithDefault(msg, 3, "")
+    minimumGasPrice: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -113,14 +111,6 @@ proto.cosmos.base.node.v1beta1.ConfigResponse.deserializeBinaryFromReader = func
       var value = /** @type {string} */ (reader.readString());
       msg.setMinimumGasPrice(value);
       break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPruningKeepRecent(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPruningInterval(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -157,20 +147,6 @@ proto.cosmos.base.node.v1beta1.ConfigResponse.serializeBinaryToWriter = function
       f
     );
   }
-  f = message.getPruningKeepRecent();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getPruningInterval();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
 };
 
 
@@ -189,42 +165,6 @@ proto.cosmos.base.node.v1beta1.ConfigResponse.prototype.getMinimumGasPrice = fun
  */
 proto.cosmos.base.node.v1beta1.ConfigResponse.prototype.setMinimumGasPrice = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string pruning_keep_recent = 2;
- * @return {string}
- */
-proto.cosmos.base.node.v1beta1.ConfigResponse.prototype.getPruningKeepRecent = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.base.node.v1beta1.ConfigResponse} returns this
- */
-proto.cosmos.base.node.v1beta1.ConfigResponse.prototype.setPruningKeepRecent = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string pruning_interval = 3;
- * @return {string}
- */
-proto.cosmos.base.node.v1beta1.ConfigResponse.prototype.getPruningInterval = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.base.node.v1beta1.ConfigResponse} returns this
- */
-proto.cosmos.base.node.v1beta1.ConfigResponse.prototype.setPruningInterval = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 

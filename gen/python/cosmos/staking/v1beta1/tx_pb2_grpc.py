@@ -50,10 +50,40 @@ class MsgStub(object):
                 request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParams.SerializeToString,
                 response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParamsResponse.FromString,
                 )
-        self.RotateConsPubKey = channel.unary_unary(
-                '/cosmos.staking.v1beta1.Msg/RotateConsPubKey',
-                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKey.SerializeToString,
-                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKeyResponse.FromString,
+        self.UnbondValidator = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/UnbondValidator',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUnbondValidator.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUnbondValidatorResponse.FromString,
+                )
+        self.TokenizeShares = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/TokenizeShares',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTokenizeShares.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTokenizeSharesResponse.FromString,
+                )
+        self.RedeemTokensForShares = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/RedeemTokensForShares',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRedeemTokensForShares.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRedeemTokensForSharesResponse.FromString,
+                )
+        self.TransferTokenizeShareRecord = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/TransferTokenizeShareRecord',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTransferTokenizeShareRecord.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTransferTokenizeShareRecordResponse.FromString,
+                )
+        self.DisableTokenizeShares = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/DisableTokenizeShares',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgDisableTokenizeShares.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgDisableTokenizeSharesResponse.FromString,
+                )
+        self.EnableTokenizeShares = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/EnableTokenizeShares',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgEnableTokenizeShares.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgEnableTokenizeSharesResponse.FromString,
+                )
+        self.ValidatorBond = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Msg/ValidatorBond',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgValidatorBond.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgValidatorBondResponse.FromString,
                 )
 
 
@@ -118,10 +148,56 @@ class MsgServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def RotateConsPubKey(self, request, context):
-        """RotateConsPubKey defines an operation for rotating the consensus keys
-        of a validator.
-        Since: cosmos-sdk 0.48
+    def UnbondValidator(self, request, context):
+        """UnbondValidator defines a method for performing the status transition for a validator
+        from bonded to unbonding
+        This allows a validator to stop their services and jail themselves without
+        experiencing a slash
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TokenizeShares(self, request, context):
+        """TokenizeShares defines a method for tokenizing shares from a validator.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def RedeemTokensForShares(self, request, context):
+        """RedeemTokensForShares defines a method for redeeming tokens from a validator for
+        shares.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TransferTokenizeShareRecord(self, request, context):
+        """TransferTokenizeShareRecord defines a method to transfer ownership of
+        TokenizeShareRecord
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DisableTokenizeShares(self, request, context):
+        """DisableTokenizeShares defines a method to prevent the tokenization of an addresses stake
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def EnableTokenizeShares(self, request, context):
+        """EnableTokenizeShares defines a method to re-enable the tokenization of an addresseses stake
+        after it has been disabled
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ValidatorBond(self, request, context):
+        """ValidatorBond defines a method for performing a validator self-bond
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -165,10 +241,40 @@ def add_MsgServicer_to_server(servicer, server):
                     request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParams.FromString,
                     response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUpdateParamsResponse.SerializeToString,
             ),
-            'RotateConsPubKey': grpc.unary_unary_rpc_method_handler(
-                    servicer.RotateConsPubKey,
-                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKey.FromString,
-                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKeyResponse.SerializeToString,
+            'UnbondValidator': grpc.unary_unary_rpc_method_handler(
+                    servicer.UnbondValidator,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUnbondValidator.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUnbondValidatorResponse.SerializeToString,
+            ),
+            'TokenizeShares': grpc.unary_unary_rpc_method_handler(
+                    servicer.TokenizeShares,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTokenizeShares.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTokenizeSharesResponse.SerializeToString,
+            ),
+            'RedeemTokensForShares': grpc.unary_unary_rpc_method_handler(
+                    servicer.RedeemTokensForShares,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRedeemTokensForShares.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRedeemTokensForSharesResponse.SerializeToString,
+            ),
+            'TransferTokenizeShareRecord': grpc.unary_unary_rpc_method_handler(
+                    servicer.TransferTokenizeShareRecord,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTransferTokenizeShareRecord.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTransferTokenizeShareRecordResponse.SerializeToString,
+            ),
+            'DisableTokenizeShares': grpc.unary_unary_rpc_method_handler(
+                    servicer.DisableTokenizeShares,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgDisableTokenizeShares.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgDisableTokenizeSharesResponse.SerializeToString,
+            ),
+            'EnableTokenizeShares': grpc.unary_unary_rpc_method_handler(
+                    servicer.EnableTokenizeShares,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgEnableTokenizeShares.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgEnableTokenizeSharesResponse.SerializeToString,
+            ),
+            'ValidatorBond': grpc.unary_unary_rpc_method_handler(
+                    servicer.ValidatorBond,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgValidatorBond.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgValidatorBondResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -301,7 +407,7 @@ class Msg(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def RotateConsPubKey(request,
+    def UnbondValidator(request,
             target,
             options=(),
             channel_credentials=None,
@@ -311,8 +417,110 @@ class Msg(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/RotateConsPubKey',
-            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKey.SerializeToString,
-            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRotateConsPubKeyResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/UnbondValidator',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUnbondValidator.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgUnbondValidatorResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TokenizeShares(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/TokenizeShares',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTokenizeShares.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTokenizeSharesResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def RedeemTokensForShares(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/RedeemTokensForShares',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRedeemTokensForShares.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgRedeemTokensForSharesResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TransferTokenizeShareRecord(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/TransferTokenizeShareRecord',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTransferTokenizeShareRecord.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgTransferTokenizeShareRecordResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DisableTokenizeShares(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/DisableTokenizeShares',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgDisableTokenizeShares.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgDisableTokenizeSharesResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def EnableTokenizeShares(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/EnableTokenizeShares',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgEnableTokenizeShares.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgEnableTokenizeSharesResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ValidatorBond(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Msg/ValidatorBond',
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgValidatorBond.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_tx__pb2.MsgValidatorBondResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

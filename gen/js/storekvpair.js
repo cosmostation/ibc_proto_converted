@@ -1,4 +1,4 @@
-// source: cosmos/store/v1beta1/listening.proto
+// source: cosmos/base/store/v1beta1/listening.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.cosmos.store.v1beta1.StoreKVPair');
+goog.provide('proto.cosmos.base.store.v1beta1.StoreKVPair');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.store.v1beta1.StoreKVPair = function(opt_data) {
+proto.cosmos.base.store.v1beta1.StoreKVPair = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.cosmos.store.v1beta1.StoreKVPair, jspb.Message);
+goog.inherits(proto.cosmos.base.store.v1beta1.StoreKVPair, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.cosmos.store.v1beta1.StoreKVPair.displayName = 'proto.cosmos.store.v1beta1.StoreKVPair';
+  proto.cosmos.base.store.v1beta1.StoreKVPair.displayName = 'proto.cosmos.base.store.v1beta1.StoreKVPair';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.store.v1beta1.StoreKVPair.toObject(opt_includeInstance, this);
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.store.v1beta1.StoreKVPair.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.toObject = function(opt_include
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.cosmos.store.v1beta1.StoreKVPair} msg The msg instance to transform.
+ * @param {!proto.cosmos.base.store.v1beta1.StoreKVPair} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.v1beta1.StoreKVPair.toObject = function(includeInstance, msg) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.toObject = function(includeInstance, msg) {
   var f, obj = {
     storeKey: jspb.Message.getFieldWithDefault(msg, 1, ""),
     pb_delete: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
@@ -87,23 +87,23 @@ proto.cosmos.store.v1beta1.StoreKVPair.toObject = function(includeInstance, msg)
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.cosmos.store.v1beta1.StoreKVPair}
+ * @return {!proto.cosmos.base.store.v1beta1.StoreKVPair}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.deserializeBinary = function(bytes) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.store.v1beta1.StoreKVPair;
-  return proto.cosmos.store.v1beta1.StoreKVPair.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.cosmos.base.store.v1beta1.StoreKVPair;
+  return proto.cosmos.base.store.v1beta1.StoreKVPair.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.cosmos.store.v1beta1.StoreKVPair} msg The message object to deserialize into.
+ * @param {!proto.cosmos.base.store.v1beta1.StoreKVPair} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.cosmos.store.v1beta1.StoreKVPair}
+ * @return {!proto.cosmos.base.store.v1beta1.StoreKVPair}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -139,9 +139,9 @@ proto.cosmos.store.v1beta1.StoreKVPair.deserializeBinaryFromReader = function(ms
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.serializeBinary = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.cosmos.store.v1beta1.StoreKVPair.serializeBinaryToWriter(this, writer);
+  proto.cosmos.base.store.v1beta1.StoreKVPair.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -149,11 +149,11 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.cosmos.store.v1beta1.StoreKVPair} message
+ * @param {!proto.cosmos.base.store.v1beta1.StoreKVPair} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.v1beta1.StoreKVPair.serializeBinaryToWriter = function(message, writer) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getStoreKey();
   if (f.length > 0) {
@@ -190,16 +190,16 @@ proto.cosmos.store.v1beta1.StoreKVPair.serializeBinaryToWriter = function(messag
  * optional string store_key = 1;
  * @return {string}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getStoreKey = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getStoreKey = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.cosmos.store.v1beta1.StoreKVPair} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.StoreKVPair} returns this
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.setStoreKey = function(value) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.setStoreKey = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -208,16 +208,16 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.setStoreKey = function(value) {
  * optional bool delete = 2;
  * @return {boolean}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getDelete = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getDelete = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.cosmos.store.v1beta1.StoreKVPair} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.StoreKVPair} returns this
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.setDelete = function(value) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.setDelete = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
@@ -226,7 +226,7 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.setDelete = function(value) {
  * optional bytes key = 3;
  * @return {string}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getKey = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getKey = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -236,7 +236,7 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.getKey = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getKey_asB64 = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getKey()));
 };
@@ -249,7 +249,7 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getKey_asU8 = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getKey()));
 };
@@ -257,9 +257,9 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.getKey_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.cosmos.store.v1beta1.StoreKVPair} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.StoreKVPair} returns this
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.setKey = function(value) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.setKey = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -268,7 +268,7 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.setKey = function(value) {
  * optional bytes value = 4;
  * @return {string}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getValue = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -278,7 +278,7 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getValue_asB64 = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -291,7 +291,7 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.getValue_asB64 = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.getValue_asU8 = function() {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -299,9 +299,9 @@ proto.cosmos.store.v1beta1.StoreKVPair.prototype.getValue_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.cosmos.store.v1beta1.StoreKVPair} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.StoreKVPair} returns this
  */
-proto.cosmos.store.v1beta1.StoreKVPair.prototype.setValue = function(value) {
+proto.cosmos.base.store.v1beta1.StoreKVPair.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 4, value);
 };
 

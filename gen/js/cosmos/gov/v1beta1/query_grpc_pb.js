@@ -214,7 +214,6 @@ proposals: {
     responseDeserialize: deserialize_cosmos_gov_v1beta1_QueryProposalsResponse,
   },
   // Vote queries voted information based on proposalID, voterAddr.
-// Due to how we handle state, this query would error for proposals that has already been finished.
 vote: {
     path: '/cosmos.gov.v1beta1.Query/Vote',
     requestStream: false,
@@ -250,7 +249,7 @@ params: {
     responseSerialize: serialize_cosmos_gov_v1beta1_QueryParamsResponse,
     responseDeserialize: deserialize_cosmos_gov_v1beta1_QueryParamsResponse,
   },
-  // Deposit queries single deposit information based on proposalID, depositor address.
+  // Deposit queries single deposit information based proposalID, depositAddr.
 deposit: {
     path: '/cosmos.gov.v1beta1.Query/Deposit',
     requestStream: false,

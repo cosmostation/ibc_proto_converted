@@ -27,7 +27,7 @@ class QueryServicer(object):
     """
 
     def Params(self, request, context):
-        """Params queries the parameters of x/consensus module.
+        """Params queries the parameters of x/consensus_param module.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

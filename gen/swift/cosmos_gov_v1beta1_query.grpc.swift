@@ -116,7 +116,6 @@ extension Cosmos_Gov_V1beta1_QueryClientProtocol {
   }
 
   /// Vote queries voted information based on proposalID, voterAddr.
-  /// Due to how we handle state, this query would error for proposals that has already been finished.
   ///
   /// - Parameters:
   ///   - request: Request to send to Vote.
@@ -170,7 +169,7 @@ extension Cosmos_Gov_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// Deposit queries single deposit information based on proposalID, depositor address.
+  /// Deposit queries single deposit information based proposalID, depositAddr.
   ///
   /// - Parameters:
   ///   - request: Request to send to Deposit.
@@ -659,7 +658,6 @@ internal protocol Cosmos_Gov_V1beta1_QueryProvider: CallHandlerProvider {
   func proposals(request: Cosmos_Gov_V1beta1_QueryProposalsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta1_QueryProposalsResponse>
 
   /// Vote queries voted information based on proposalID, voterAddr.
-  /// Due to how we handle state, this query would error for proposals that has already been finished.
   func vote(request: Cosmos_Gov_V1beta1_QueryVoteRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta1_QueryVoteResponse>
 
   /// Votes queries votes of a given proposal.
@@ -668,7 +666,7 @@ internal protocol Cosmos_Gov_V1beta1_QueryProvider: CallHandlerProvider {
   /// Params queries all parameters of the gov module.
   func params(request: Cosmos_Gov_V1beta1_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta1_QueryParamsResponse>
 
-  /// Deposit queries single deposit information based on proposalID, depositor address.
+  /// Deposit queries single deposit information based proposalID, depositAddr.
   func deposit(request: Cosmos_Gov_V1beta1_QueryDepositRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta1_QueryDepositResponse>
 
   /// Deposits queries all deposits of a single proposal.
@@ -789,7 +787,6 @@ internal protocol Cosmos_Gov_V1beta1_QueryAsyncProvider: CallHandlerProvider {
   ) async throws -> Cosmos_Gov_V1beta1_QueryProposalsResponse
 
   /// Vote queries voted information based on proposalID, voterAddr.
-  /// Due to how we handle state, this query would error for proposals that has already been finished.
   @Sendable func vote(
     request: Cosmos_Gov_V1beta1_QueryVoteRequest,
     context: GRPCAsyncServerCallContext
@@ -807,7 +804,7 @@ internal protocol Cosmos_Gov_V1beta1_QueryAsyncProvider: CallHandlerProvider {
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Gov_V1beta1_QueryParamsResponse
 
-  /// Deposit queries single deposit information based on proposalID, depositor address.
+  /// Deposit queries single deposit information based proposalID, depositAddr.
   @Sendable func deposit(
     request: Cosmos_Gov_V1beta1_QueryDepositRequest,
     context: GRPCAsyncServerCallContext

@@ -63,16 +63,6 @@ struct Cosmos_Consensus_V1_MsgUpdateParams {
   /// Clears the value of `validator`. Subsequent reads from it will return its default value.
   mutating func clearValidator() {self._validator = nil}
 
-  /// Since: cosmos-sdk 0.50
-  var abci: Tendermint_Types_ABCIParams {
-    get {return _abci ?? Tendermint_Types_ABCIParams()}
-    set {_abci = newValue}
-  }
-  /// Returns true if `abci` has been explicitly set.
-  var hasAbci: Bool {return self._abci != nil}
-  /// Clears the value of `abci`. Subsequent reads from it will return its default value.
-  mutating func clearAbci() {self._abci = nil}
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -80,7 +70,6 @@ struct Cosmos_Consensus_V1_MsgUpdateParams {
   fileprivate var _block: Tendermint_Types_BlockParams? = nil
   fileprivate var _evidence: Tendermint_Types_EvidenceParams? = nil
   fileprivate var _validator: Tendermint_Types_ValidatorParams? = nil
-  fileprivate var _abci: Tendermint_Types_ABCIParams? = nil
 }
 
 /// MsgUpdateParamsResponse defines the response structure for executing a
@@ -111,7 +100,6 @@ extension Cosmos_Consensus_V1_MsgUpdateParams: SwiftProtobuf.Message, SwiftProto
     2: .same(proto: "block"),
     3: .same(proto: "evidence"),
     4: .same(proto: "validator"),
-    5: .same(proto: "abci"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -124,7 +112,6 @@ extension Cosmos_Consensus_V1_MsgUpdateParams: SwiftProtobuf.Message, SwiftProto
       case 2: try { try decoder.decodeSingularMessageField(value: &self._block) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._evidence) }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._validator) }()
-      case 5: try { try decoder.decodeSingularMessageField(value: &self._abci) }()
       default: break
       }
     }
@@ -147,9 +134,6 @@ extension Cosmos_Consensus_V1_MsgUpdateParams: SwiftProtobuf.Message, SwiftProto
     try { if let v = self._validator {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
     } }()
-    try { if let v = self._abci {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -158,7 +142,6 @@ extension Cosmos_Consensus_V1_MsgUpdateParams: SwiftProtobuf.Message, SwiftProto
     if lhs._block != rhs._block {return false}
     if lhs._evidence != rhs._evidence {return false}
     if lhs._validator != rhs._validator {return false}
-    if lhs._abci != rhs._abci {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

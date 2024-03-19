@@ -32,28 +32,6 @@ function deserialize_cosmos_distribution_v1beta1_MsgCommunityPoolSpendResponse(b
   return cosmos_distribution_v1beta1_tx_pb.MsgCommunityPoolSpendResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPool(arg) {
-  if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgDepositValidatorRewardsPool)) {
-    throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgDepositValidatorRewardsPool');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPool(buffer_arg) {
-  return cosmos_distribution_v1beta1_tx_pb.MsgDepositValidatorRewardsPool.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPoolResponse(arg) {
-  if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgDepositValidatorRewardsPoolResponse)) {
-    throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgDepositValidatorRewardsPoolResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPoolResponse(buffer_arg) {
-  return cosmos_distribution_v1beta1_tx_pb.MsgDepositValidatorRewardsPoolResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 function serialize_cosmos_distribution_v1beta1_MsgFundCommunityPool(arg) {
   if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgFundCommunityPool)) {
     throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgFundCommunityPool');
@@ -120,6 +98,28 @@ function deserialize_cosmos_distribution_v1beta1_MsgUpdateParamsResponse(buffer_
   return cosmos_distribution_v1beta1_tx_pb.MsgUpdateParamsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordReward(arg) {
+  if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgWithdrawAllTokenizeShareRecordReward)) {
+    throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgWithdrawAllTokenizeShareRecordReward');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordReward(buffer_arg) {
+  return cosmos_distribution_v1beta1_tx_pb.MsgWithdrawAllTokenizeShareRecordReward.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordRewardResponse(arg) {
+  if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgWithdrawAllTokenizeShareRecordRewardResponse)) {
+    throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgWithdrawAllTokenizeShareRecordRewardResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordRewardResponse(buffer_arg) {
+  return cosmos_distribution_v1beta1_tx_pb.MsgWithdrawAllTokenizeShareRecordRewardResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_cosmos_distribution_v1beta1_MsgWithdrawDelegatorReward(arg) {
   if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgWithdrawDelegatorReward)) {
     throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward');
@@ -140,6 +140,28 @@ function serialize_cosmos_distribution_v1beta1_MsgWithdrawDelegatorRewardRespons
 
 function deserialize_cosmos_distribution_v1beta1_MsgWithdrawDelegatorRewardResponse(buffer_arg) {
   return cosmos_distribution_v1beta1_tx_pb.MsgWithdrawDelegatorRewardResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordReward(arg) {
+  if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgWithdrawTokenizeShareRecordReward)) {
+    throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgWithdrawTokenizeShareRecordReward');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordReward(buffer_arg) {
+  return cosmos_distribution_v1beta1_tx_pb.MsgWithdrawTokenizeShareRecordReward.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordRewardResponse(arg) {
+  if (!(arg instanceof cosmos_distribution_v1beta1_tx_pb.MsgWithdrawTokenizeShareRecordRewardResponse)) {
+    throw new Error('Expected argument of type cosmos.distribution.v1beta1.MsgWithdrawTokenizeShareRecordRewardResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordRewardResponse(buffer_arg) {
+  return cosmos_distribution_v1beta1_tx_pb.MsgWithdrawTokenizeShareRecordRewardResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_cosmos_distribution_v1beta1_MsgWithdrawValidatorCommission(arg) {
@@ -208,9 +230,6 @@ withdrawValidatorCommission: {
   },
   // FundCommunityPool defines a method to allow an account to directly
 // fund the community pool.
-//
-// Deprecated: Use x/protocolpool module's FundCommunityPool instead.
-// Since: cosmos-sdk 0.50
 fundCommunityPool: {
     path: '/cosmos.distribution.v1beta1.Msg/FundCommunityPool',
     requestStream: false,
@@ -242,8 +261,7 @@ updateParams: {
 // could be the governance module itself. The authority is defined in the
 // keeper.
 //
-// Deprecated: Use x/protocolpool module's CommunityPoolSpend instead.
-// Since: cosmos-sdk 0.50
+// Since: cosmos-sdk 0.47
 communityPoolSpend: {
     path: '/cosmos.distribution.v1beta1.Msg/CommunityPoolSpend',
     requestStream: false,
@@ -255,20 +273,29 @@ communityPoolSpend: {
     responseSerialize: serialize_cosmos_distribution_v1beta1_MsgCommunityPoolSpendResponse,
     responseDeserialize: deserialize_cosmos_distribution_v1beta1_MsgCommunityPoolSpendResponse,
   },
-  // DepositValidatorRewardsPool defines a method to provide additional rewards
-// to delegators to a specific validator.
-//
-// Since: cosmos-sdk 0.50
-depositValidatorRewardsPool: {
-    path: '/cosmos.distribution.v1beta1.Msg/DepositValidatorRewardsPool',
+  // WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
+withdrawTokenizeShareRecordReward: {
+    path: '/cosmos.distribution.v1beta1.Msg/WithdrawTokenizeShareRecordReward',
     requestStream: false,
     responseStream: false,
-    requestType: cosmos_distribution_v1beta1_tx_pb.MsgDepositValidatorRewardsPool,
-    responseType: cosmos_distribution_v1beta1_tx_pb.MsgDepositValidatorRewardsPoolResponse,
-    requestSerialize: serialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPool,
-    requestDeserialize: deserialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPool,
-    responseSerialize: serialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPoolResponse,
-    responseDeserialize: deserialize_cosmos_distribution_v1beta1_MsgDepositValidatorRewardsPoolResponse,
+    requestType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawTokenizeShareRecordReward,
+    responseType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawTokenizeShareRecordRewardResponse,
+    requestSerialize: serialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordReward,
+    requestDeserialize: deserialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordReward,
+    responseSerialize: serialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordRewardResponse,
+    responseDeserialize: deserialize_cosmos_distribution_v1beta1_MsgWithdrawTokenizeShareRecordRewardResponse,
+  },
+  // WithdrawAllTokenizeShareRecordReward defines a method to withdraw reward for all owning TokenizeShareRecord
+withdrawAllTokenizeShareRecordReward: {
+    path: '/cosmos.distribution.v1beta1.Msg/WithdrawAllTokenizeShareRecordReward',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawAllTokenizeShareRecordReward,
+    responseType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawAllTokenizeShareRecordRewardResponse,
+    requestSerialize: serialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordReward,
+    requestDeserialize: deserialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordReward,
+    responseSerialize: serialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordRewardResponse,
+    responseDeserialize: deserialize_cosmos_distribution_v1beta1_MsgWithdrawAllTokenizeShareRecordRewardResponse,
   },
 };
 

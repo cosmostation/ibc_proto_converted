@@ -34,12 +34,6 @@ struct Cosmos_Staking_Module_V1_Module {
   /// authority defines the custom module authority. If not set, defaults to the governance module.
   var authority: String = String()
 
-  /// bech32_prefix_validator is the bech32 validator prefix for the app.
-  var bech32PrefixValidator: String = String()
-
-  /// bech32_prefix_consensus is the bech32 consensus node prefix for the app.
-  var bech32PrefixConsensus: String = String()
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -58,8 +52,6 @@ extension Cosmos_Staking_Module_V1_Module: SwiftProtobuf.Message, SwiftProtobuf.
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "hooks_order"),
     2: .same(proto: "authority"),
-    3: .standard(proto: "bech32_prefix_validator"),
-    4: .standard(proto: "bech32_prefix_consensus"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -70,8 +62,6 @@ extension Cosmos_Staking_Module_V1_Module: SwiftProtobuf.Message, SwiftProtobuf.
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedStringField(value: &self.hooksOrder) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.authority) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.bech32PrefixValidator) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.bech32PrefixConsensus) }()
       default: break
       }
     }
@@ -84,20 +74,12 @@ extension Cosmos_Staking_Module_V1_Module: SwiftProtobuf.Message, SwiftProtobuf.
     if !self.authority.isEmpty {
       try visitor.visitSingularStringField(value: self.authority, fieldNumber: 2)
     }
-    if !self.bech32PrefixValidator.isEmpty {
-      try visitor.visitSingularStringField(value: self.bech32PrefixValidator, fieldNumber: 3)
-    }
-    if !self.bech32PrefixConsensus.isEmpty {
-      try visitor.visitSingularStringField(value: self.bech32PrefixConsensus, fieldNumber: 4)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Cosmos_Staking_Module_V1_Module, rhs: Cosmos_Staking_Module_V1_Module) -> Bool {
     if lhs.hooksOrder != rhs.hooksOrder {return false}
     if lhs.authority != rhs.authority {return false}
-    if lhs.bech32PrefixValidator != rhs.bech32PrefixValidator {return false}
-    if lhs.bech32PrefixConsensus != rhs.bech32PrefixConsensus {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

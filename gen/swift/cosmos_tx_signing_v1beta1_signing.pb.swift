@@ -41,14 +41,13 @@ enum Cosmos_Tx_Signing_V1beta1_SignMode: SwiftProtobuf.Enum {
 
   /// SIGN_MODE_TEXTUAL is a future signing mode that will verify some
   /// human-readable textual representation on top of the binary representation
-  /// from SIGN_MODE_DIRECT.
-  ///
-  /// Since: cosmos-sdk 0.50
+  /// from SIGN_MODE_DIRECT. It is currently not supported.
   case textual // = 2
 
   /// SIGN_MODE_DIRECT_AUX specifies a signing mode which uses
   /// SignDocDirectAux. As opposed to SIGN_MODE_DIRECT, this sign mode does not
-  /// require signers signing over other signers' `signer_info`.
+  /// require signers signing over other signers' `signer_info`. It also allows
+  /// for adding Tips in transactions.
   ///
   /// Since: cosmos-sdk 0.46
   case directAux // = 3
@@ -67,11 +66,6 @@ enum Cosmos_Tx_Signing_V1beta1_SignMode: SwiftProtobuf.Enum {
   /// EIP-191 in the future.
   ///
   /// Since: cosmos-sdk 0.45.2
-  /// Deprecated: post 0.47.x Sign mode refers to a method of encoding string data for
-  /// signing, but in the SDK, it also refers to how to encode a transaction into a string.
-  /// This opens the possibility for additional EIP191 sign modes, like SIGN_MODE_EIP_191_TEXTUAL,
-  /// SIGN_MODE_EIP_191_LEGACY_JSON, and more.
-  /// Each new EIP191 sign mode should be accompanied by an associated ADR.
   case eip191 // = 191
   case UNRECOGNIZED(Int)
 

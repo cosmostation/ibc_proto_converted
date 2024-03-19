@@ -19,6 +19,8 @@ goog.provide('proto.cosmos.orm.v1alpha1.StorageType');
 proto.cosmos.orm.v1alpha1.StorageType = {
   STORAGE_TYPE_DEFAULT_UNSPECIFIED: 0,
   STORAGE_TYPE_MEMORY: 1,
-  STORAGE_TYPE_TRANSIENT: 2
+  STORAGE_TYPE_TRANSIENT: 2,
+  STORAGE_TYPE_INDEX: 3,
+  STORAGE_TYPE_COMMITMENT: 4
 };
 

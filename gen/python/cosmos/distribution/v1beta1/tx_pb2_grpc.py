@@ -45,10 +45,15 @@ class MsgStub(object):
                 request_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgCommunityPoolSpend.SerializeToString,
                 response_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgCommunityPoolSpendResponse.FromString,
                 )
-        self.DepositValidatorRewardsPool = channel.unary_unary(
-                '/cosmos.distribution.v1beta1.Msg/DepositValidatorRewardsPool',
-                request_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgDepositValidatorRewardsPool.SerializeToString,
-                response_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgDepositValidatorRewardsPoolResponse.FromString,
+        self.WithdrawTokenizeShareRecordReward = channel.unary_unary(
+                '/cosmos.distribution.v1beta1.Msg/WithdrawTokenizeShareRecordReward',
+                request_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawTokenizeShareRecordReward.SerializeToString,
+                response_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawTokenizeShareRecordRewardResponse.FromString,
+                )
+        self.WithdrawAllTokenizeShareRecordReward = channel.unary_unary(
+                '/cosmos.distribution.v1beta1.Msg/WithdrawAllTokenizeShareRecordReward',
+                request_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawAllTokenizeShareRecordReward.SerializeToString,
+                response_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawAllTokenizeShareRecordRewardResponse.FromString,
                 )
 
 
@@ -83,9 +88,6 @@ class MsgServicer(object):
     def FundCommunityPool(self, request, context):
         """FundCommunityPool defines a method to allow an account to directly
         fund the community pool.
-
-        Deprecated: Use x/protocolpool module's FundCommunityPool instead.
-        Since: cosmos-sdk 0.50
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -107,18 +109,21 @@ class MsgServicer(object):
         could be the governance module itself. The authority is defined in the
         keeper.
 
-        Deprecated: Use x/protocolpool module's CommunityPoolSpend instead.
-        Since: cosmos-sdk 0.50
+        Since: cosmos-sdk 0.47
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def DepositValidatorRewardsPool(self, request, context):
-        """DepositValidatorRewardsPool defines a method to provide additional rewards
-        to delegators to a specific validator.
+    def WithdrawTokenizeShareRecordReward(self, request, context):
+        """WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-        Since: cosmos-sdk 0.50
+    def WithdrawAllTokenizeShareRecordReward(self, request, context):
+        """WithdrawAllTokenizeShareRecordReward defines a method to withdraw reward for all owning TokenizeShareRecord
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -157,10 +162,15 @@ def add_MsgServicer_to_server(servicer, server):
                     request_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgCommunityPoolSpend.FromString,
                     response_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgCommunityPoolSpendResponse.SerializeToString,
             ),
-            'DepositValidatorRewardsPool': grpc.unary_unary_rpc_method_handler(
-                    servicer.DepositValidatorRewardsPool,
-                    request_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgDepositValidatorRewardsPool.FromString,
-                    response_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgDepositValidatorRewardsPoolResponse.SerializeToString,
+            'WithdrawTokenizeShareRecordReward': grpc.unary_unary_rpc_method_handler(
+                    servicer.WithdrawTokenizeShareRecordReward,
+                    request_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawTokenizeShareRecordReward.FromString,
+                    response_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawTokenizeShareRecordRewardResponse.SerializeToString,
+            ),
+            'WithdrawAllTokenizeShareRecordReward': grpc.unary_unary_rpc_method_handler(
+                    servicer.WithdrawAllTokenizeShareRecordReward,
+                    request_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawAllTokenizeShareRecordReward.FromString,
+                    response_serializer=cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawAllTokenizeShareRecordRewardResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -276,7 +286,7 @@ class Msg(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def DepositValidatorRewardsPool(request,
+    def WithdrawTokenizeShareRecordReward(request,
             target,
             options=(),
             channel_credentials=None,
@@ -286,8 +296,25 @@ class Msg(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cosmos.distribution.v1beta1.Msg/DepositValidatorRewardsPool',
-            cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgDepositValidatorRewardsPool.SerializeToString,
-            cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgDepositValidatorRewardsPoolResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/cosmos.distribution.v1beta1.Msg/WithdrawTokenizeShareRecordReward',
+            cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawTokenizeShareRecordReward.SerializeToString,
+            cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawTokenizeShareRecordRewardResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def WithdrawAllTokenizeShareRecordReward(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.distribution.v1beta1.Msg/WithdrawAllTokenizeShareRecordReward',
+            cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawAllTokenizeShareRecordReward.SerializeToString,
+            cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2.MsgWithdrawAllTokenizeShareRecordRewardResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

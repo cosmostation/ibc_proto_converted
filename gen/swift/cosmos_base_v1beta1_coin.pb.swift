@@ -56,9 +56,37 @@ struct Cosmos_Base_V1beta1_DecCoin {
   init() {}
 }
 
+/// IntProto defines a Protobuf wrapper around an Int object.
+struct Cosmos_Base_V1beta1_IntProto {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var int: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// DecProto defines a Protobuf wrapper around a Dec object.
+struct Cosmos_Base_V1beta1_DecProto {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var dec: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Base_V1beta1_Coin: @unchecked Sendable {}
 extension Cosmos_Base_V1beta1_DecCoin: @unchecked Sendable {}
+extension Cosmos_Base_V1beta1_IntProto: @unchecked Sendable {}
+extension Cosmos_Base_V1beta1_DecProto: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -136,6 +164,70 @@ extension Cosmos_Base_V1beta1_DecCoin: SwiftProtobuf.Message, SwiftProtobuf._Mes
   static func ==(lhs: Cosmos_Base_V1beta1_DecCoin, rhs: Cosmos_Base_V1beta1_DecCoin) -> Bool {
     if lhs.denom != rhs.denom {return false}
     if lhs.amount != rhs.amount {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Base_V1beta1_IntProto: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".IntProto"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "int"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.int) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.int.isEmpty {
+      try visitor.visitSingularStringField(value: self.int, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Base_V1beta1_IntProto, rhs: Cosmos_Base_V1beta1_IntProto) -> Bool {
+    if lhs.int != rhs.int {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Base_V1beta1_DecProto: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".DecProto"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "dec"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.dec) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.dec.isEmpty {
+      try visitor.visitSingularStringField(value: self.dec, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Base_V1beta1_DecProto, rhs: Cosmos_Base_V1beta1_DecProto) -> Bool {
+    if lhs.dec != rhs.dec {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

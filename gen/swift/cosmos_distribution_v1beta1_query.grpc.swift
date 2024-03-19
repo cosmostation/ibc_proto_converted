@@ -82,6 +82,11 @@ internal protocol Cosmos_Distribution_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest, Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse>
+
+  func tokenizeShareRecordReward(
+    _ request: Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest, Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse>
 }
 
 extension Cosmos_Distribution_V1beta1_QueryClientProtocol {
@@ -197,7 +202,7 @@ extension Cosmos_Distribution_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// DelegationTotalRewards queries the total rewards accrued by each
+  /// DelegationTotalRewards queries the total rewards accrued by a each
   /// validator.
   ///
   /// - Parameters:
@@ -254,9 +259,6 @@ extension Cosmos_Distribution_V1beta1_QueryClientProtocol {
 
   /// CommunityPool queries the community pool coins.
   ///
-  /// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
-  /// Since: cosmos-sdk 0.50
-  ///
   /// - Parameters:
   ///   - request: Request to send to CommunityPool.
   ///   - callOptions: Call options.
@@ -270,6 +272,24 @@ extension Cosmos_Distribution_V1beta1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCommunityPoolInterceptors() ?? []
+    )
+  }
+
+  /// TokenizeShareRecordReward queries the tokenize share record rewards
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to TokenizeShareRecordReward.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func tokenizeShareRecordReward(
+    _ request: Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest, Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse> {
+    return self.makeUnaryCall(
+      path: Cosmos_Distribution_V1beta1_QueryClientMetadata.Methods.tokenizeShareRecordReward.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTokenizeShareRecordRewardInterceptors() ?? []
     )
   }
 }
@@ -386,6 +406,11 @@ internal protocol Cosmos_Distribution_V1beta1_QueryAsyncClientProtocol: GRPCClie
     _ request: Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest, Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse>
+
+  func makeTokenizeShareRecordRewardCall(
+    _ request: Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest, Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -517,6 +542,18 @@ extension Cosmos_Distribution_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeCommunityPoolInterceptors() ?? []
     )
   }
+
+  internal func makeTokenizeShareRecordRewardCall(
+    _ request: Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest, Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Cosmos_Distribution_V1beta1_QueryClientMetadata.Methods.tokenizeShareRecordReward.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTokenizeShareRecordRewardInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -640,6 +677,18 @@ extension Cosmos_Distribution_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeCommunityPoolInterceptors() ?? []
     )
   }
+
+  internal func tokenizeShareRecordReward(
+    _ request: Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Cosmos_Distribution_V1beta1_QueryClientMetadata.Methods.tokenizeShareRecordReward.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTokenizeShareRecordRewardInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -690,6 +739,9 @@ internal protocol Cosmos_Distribution_V1beta1_QueryClientInterceptorFactoryProto
 
   /// - Returns: Interceptors to use when invoking 'communityPool'.
   func makeCommunityPoolInterceptors() -> [ClientInterceptor<Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest, Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'tokenizeShareRecordReward'.
+  func makeTokenizeShareRecordRewardInterceptors() -> [ClientInterceptor<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest, Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse>]
 }
 
 internal enum Cosmos_Distribution_V1beta1_QueryClientMetadata {
@@ -707,6 +759,7 @@ internal enum Cosmos_Distribution_V1beta1_QueryClientMetadata {
       Cosmos_Distribution_V1beta1_QueryClientMetadata.Methods.delegatorValidators,
       Cosmos_Distribution_V1beta1_QueryClientMetadata.Methods.delegatorWithdrawAddress,
       Cosmos_Distribution_V1beta1_QueryClientMetadata.Methods.communityPool,
+      Cosmos_Distribution_V1beta1_QueryClientMetadata.Methods.tokenizeShareRecordReward,
     ]
   )
 
@@ -770,6 +823,12 @@ internal enum Cosmos_Distribution_V1beta1_QueryClientMetadata {
       path: "/cosmos.distribution.v1beta1.Query/CommunityPool",
       type: GRPCCallType.unary
     )
+
+    internal static let tokenizeShareRecordReward = GRPCMethodDescriptor(
+      name: "TokenizeShareRecordReward",
+      path: "/cosmos.distribution.v1beta1.Query/TokenizeShareRecordReward",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -797,7 +856,7 @@ internal protocol Cosmos_Distribution_V1beta1_QueryProvider: CallHandlerProvider
   /// DelegationRewards queries the total rewards accrued by a delegation.
   func delegationRewards(request: Cosmos_Distribution_V1beta1_QueryDelegationRewardsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryDelegationRewardsResponse>
 
-  /// DelegationTotalRewards queries the total rewards accrued by each
+  /// DelegationTotalRewards queries the total rewards accrued by a each
   /// validator.
   func delegationTotalRewards(request: Cosmos_Distribution_V1beta1_QueryDelegationTotalRewardsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryDelegationTotalRewardsResponse>
 
@@ -808,10 +867,10 @@ internal protocol Cosmos_Distribution_V1beta1_QueryProvider: CallHandlerProvider
   func delegatorWithdrawAddress(request: Cosmos_Distribution_V1beta1_QueryDelegatorWithdrawAddressRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryDelegatorWithdrawAddressResponse>
 
   /// CommunityPool queries the community pool coins.
-  ///
-  /// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
-  /// Since: cosmos-sdk 0.50
   func communityPool(request: Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse>
+
+  /// TokenizeShareRecordReward queries the tokenize share record rewards
+  func tokenizeShareRecordReward(request: Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse>
 }
 
 extension Cosmos_Distribution_V1beta1_QueryProvider {
@@ -916,6 +975,15 @@ extension Cosmos_Distribution_V1beta1_QueryProvider {
         userFunction: self.communityPool(request:context:)
       )
 
+    case "TokenizeShareRecordReward":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse>(),
+        interceptors: self.interceptors?.makeTokenizeShareRecordRewardInterceptors() ?? [],
+        userFunction: self.tokenizeShareRecordReward(request:context:)
+      )
+
     default:
       return nil
     }
@@ -966,7 +1034,7 @@ internal protocol Cosmos_Distribution_V1beta1_QueryAsyncProvider: CallHandlerPro
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Distribution_V1beta1_QueryDelegationRewardsResponse
 
-  /// DelegationTotalRewards queries the total rewards accrued by each
+  /// DelegationTotalRewards queries the total rewards accrued by a each
   /// validator.
   @Sendable func delegationTotalRewards(
     request: Cosmos_Distribution_V1beta1_QueryDelegationTotalRewardsRequest,
@@ -986,13 +1054,16 @@ internal protocol Cosmos_Distribution_V1beta1_QueryAsyncProvider: CallHandlerPro
   ) async throws -> Cosmos_Distribution_V1beta1_QueryDelegatorWithdrawAddressResponse
 
   /// CommunityPool queries the community pool coins.
-  ///
-  /// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
-  /// Since: cosmos-sdk 0.50
   @Sendable func communityPool(
     request: Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse
+
+  /// TokenizeShareRecordReward queries the tokenize share record rewards
+  @Sendable func tokenizeShareRecordReward(
+    request: Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1104,6 +1175,15 @@ extension Cosmos_Distribution_V1beta1_QueryAsyncProvider {
         wrapping: self.communityPool(request:context:)
       )
 
+    case "TokenizeShareRecordReward":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse>(),
+        interceptors: self.interceptors?.makeTokenizeShareRecordRewardInterceptors() ?? [],
+        wrapping: self.tokenizeShareRecordReward(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1151,6 +1231,10 @@ internal protocol Cosmos_Distribution_V1beta1_QueryServerInterceptorFactoryProto
   /// - Returns: Interceptors to use when handling 'communityPool'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeCommunityPoolInterceptors() -> [ServerInterceptor<Cosmos_Distribution_V1beta1_QueryCommunityPoolRequest, Cosmos_Distribution_V1beta1_QueryCommunityPoolResponse>]
+
+  /// - Returns: Interceptors to use when handling 'tokenizeShareRecordReward'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeTokenizeShareRecordRewardInterceptors() -> [ServerInterceptor<Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardRequest, Cosmos_Distribution_V1beta1_QueryTokenizeShareRecordRewardResponse>]
 }
 
 internal enum Cosmos_Distribution_V1beta1_QueryServerMetadata {
@@ -1168,6 +1252,7 @@ internal enum Cosmos_Distribution_V1beta1_QueryServerMetadata {
       Cosmos_Distribution_V1beta1_QueryServerMetadata.Methods.delegatorValidators,
       Cosmos_Distribution_V1beta1_QueryServerMetadata.Methods.delegatorWithdrawAddress,
       Cosmos_Distribution_V1beta1_QueryServerMetadata.Methods.communityPool,
+      Cosmos_Distribution_V1beta1_QueryServerMetadata.Methods.tokenizeShareRecordReward,
     ]
   )
 
@@ -1229,6 +1314,12 @@ internal enum Cosmos_Distribution_V1beta1_QueryServerMetadata {
     internal static let communityPool = GRPCMethodDescriptor(
       name: "CommunityPool",
       path: "/cosmos.distribution.v1beta1.Query/CommunityPool",
+      type: GRPCCallType.unary
+    )
+
+    internal static let tokenizeShareRecordReward = GRPCMethodDescriptor(
+      name: "TokenizeShareRecordReward",
+      path: "/cosmos.distribution.v1beta1.Query/TokenizeShareRecordReward",
       type: GRPCCallType.unary
     )
   }

@@ -1,4 +1,4 @@
-// source: cosmos/store/snapshots/v1/snapshot.proto
+// source: cosmos/base/snapshots/v1beta1/snapshot.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta');
+goog.provide('proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta = function(opt_data) {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta, jspb.Message);
+goog.inherits(proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.displayName = 'proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta';
+  proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.displayName = 'proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.toObject(opt_includeInstance, this);
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta} msg The msg instance to transform.
+ * @param {!proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.toObject = function(includeInstance, msg) {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     format: jspb.Message.getFieldWithDefault(msg, 2, 0)
@@ -85,23 +85,23 @@ proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta}
+ * @return {!proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta}
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.deserializeBinary = function(bytes) {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta;
-  return proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta;
+  return proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta} msg The message object to deserialize into.
+ * @param {!proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta}
+ * @return {!proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta}
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -129,9 +129,9 @@ proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.serializeBinary = function() {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.serializeBinaryToWriter(this, writer);
+  proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -139,11 +139,11 @@ proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta} message
+ * @param {!proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.serializeBinaryToWriter = function(message, writer) {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getName();
   if (f.length > 0) {
@@ -166,16 +166,16 @@ proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.serializeBinaryToWriter = 
  * optional string name = 1;
  * @return {string}
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.getName = function() {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta} returns this
+ * @return {!proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta} returns this
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.setName = function(value) {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -184,16 +184,16 @@ proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.setName = functi
  * optional uint32 format = 2;
  * @return {number}
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.getFormat = function() {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.prototype.getFormat = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta} returns this
+ * @return {!proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta} returns this
  */
-proto.cosmos.store.snapshots.v1.SnapshotExtensionMeta.prototype.setFormat = function(value) {
+proto.cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta.prototype.setFormat = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 

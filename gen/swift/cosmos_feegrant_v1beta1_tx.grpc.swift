@@ -42,11 +42,6 @@ internal protocol Cosmos_Feegrant_V1beta1_MsgClientProtocol: GRPCClient {
     _ request: Cosmos_Feegrant_V1beta1_MsgRevokeAllowance,
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Feegrant_V1beta1_MsgRevokeAllowance, Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse>
-
-  func pruneAllowances(
-    _ request: Cosmos_Feegrant_V1beta1_MsgPruneAllowances,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Feegrant_V1beta1_MsgPruneAllowances, Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse>
 }
 
 extension Cosmos_Feegrant_V1beta1_MsgClientProtocol {
@@ -89,26 +84,6 @@ extension Cosmos_Feegrant_V1beta1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeRevokeAllowanceInterceptors() ?? []
-    )
-  }
-
-  /// PruneAllowances prunes expired fee allowances, currently up to 75 at a time.
-  ///
-  /// Since cosmos-sdk 0.50
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PruneAllowances.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func pruneAllowances(
-    _ request: Cosmos_Feegrant_V1beta1_MsgPruneAllowances,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Feegrant_V1beta1_MsgPruneAllowances, Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse> {
-    return self.makeUnaryCall(
-      path: Cosmos_Feegrant_V1beta1_MsgClientMetadata.Methods.pruneAllowances.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePruneAllowancesInterceptors() ?? []
     )
   }
 }
@@ -185,11 +160,6 @@ internal protocol Cosmos_Feegrant_V1beta1_MsgAsyncClientProtocol: GRPCClient {
     _ request: Cosmos_Feegrant_V1beta1_MsgRevokeAllowance,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Cosmos_Feegrant_V1beta1_MsgRevokeAllowance, Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse>
-
-  func makePruneAllowancesCall(
-    _ request: Cosmos_Feegrant_V1beta1_MsgPruneAllowances,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Cosmos_Feegrant_V1beta1_MsgPruneAllowances, Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -225,18 +195,6 @@ extension Cosmos_Feegrant_V1beta1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeRevokeAllowanceInterceptors() ?? []
     )
   }
-
-  internal func makePruneAllowancesCall(
-    _ request: Cosmos_Feegrant_V1beta1_MsgPruneAllowances,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Cosmos_Feegrant_V1beta1_MsgPruneAllowances, Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Cosmos_Feegrant_V1beta1_MsgClientMetadata.Methods.pruneAllowances.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePruneAllowancesInterceptors() ?? []
-    )
-  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -262,18 +220,6 @@ extension Cosmos_Feegrant_V1beta1_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeRevokeAllowanceInterceptors() ?? []
-    )
-  }
-
-  internal func pruneAllowances(
-    _ request: Cosmos_Feegrant_V1beta1_MsgPruneAllowances,
-    callOptions: CallOptions? = nil
-  ) async throws -> Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Cosmos_Feegrant_V1beta1_MsgClientMetadata.Methods.pruneAllowances.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePruneAllowancesInterceptors() ?? []
     )
   }
 }
@@ -302,9 +248,6 @@ internal protocol Cosmos_Feegrant_V1beta1_MsgClientInterceptorFactoryProtocol: S
 
   /// - Returns: Interceptors to use when invoking 'revokeAllowance'.
   func makeRevokeAllowanceInterceptors() -> [ClientInterceptor<Cosmos_Feegrant_V1beta1_MsgRevokeAllowance, Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'pruneAllowances'.
-  func makePruneAllowancesInterceptors() -> [ClientInterceptor<Cosmos_Feegrant_V1beta1_MsgPruneAllowances, Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse>]
 }
 
 internal enum Cosmos_Feegrant_V1beta1_MsgClientMetadata {
@@ -314,7 +257,6 @@ internal enum Cosmos_Feegrant_V1beta1_MsgClientMetadata {
     methods: [
       Cosmos_Feegrant_V1beta1_MsgClientMetadata.Methods.grantAllowance,
       Cosmos_Feegrant_V1beta1_MsgClientMetadata.Methods.revokeAllowance,
-      Cosmos_Feegrant_V1beta1_MsgClientMetadata.Methods.pruneAllowances,
     ]
   )
 
@@ -328,12 +270,6 @@ internal enum Cosmos_Feegrant_V1beta1_MsgClientMetadata {
     internal static let revokeAllowance = GRPCMethodDescriptor(
       name: "RevokeAllowance",
       path: "/cosmos.feegrant.v1beta1.Msg/RevokeAllowance",
-      type: GRPCCallType.unary
-    )
-
-    internal static let pruneAllowances = GRPCMethodDescriptor(
-      name: "PruneAllowances",
-      path: "/cosmos.feegrant.v1beta1.Msg/PruneAllowances",
       type: GRPCCallType.unary
     )
   }
@@ -352,11 +288,6 @@ internal protocol Cosmos_Feegrant_V1beta1_MsgProvider: CallHandlerProvider {
   /// RevokeAllowance revokes any fee allowance of granter's account that
   /// has been granted to the grantee.
   func revokeAllowance(request: Cosmos_Feegrant_V1beta1_MsgRevokeAllowance, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse>
-
-  /// PruneAllowances prunes expired fee allowances, currently up to 75 at a time.
-  ///
-  /// Since cosmos-sdk 0.50
-  func pruneAllowances(request: Cosmos_Feegrant_V1beta1_MsgPruneAllowances, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse>
 }
 
 extension Cosmos_Feegrant_V1beta1_MsgProvider {
@@ -389,15 +320,6 @@ extension Cosmos_Feegrant_V1beta1_MsgProvider {
         userFunction: self.revokeAllowance(request:context:)
       )
 
-    case "PruneAllowances":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Feegrant_V1beta1_MsgPruneAllowances>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse>(),
-        interceptors: self.interceptors?.makePruneAllowancesInterceptors() ?? [],
-        userFunction: self.pruneAllowances(request:context:)
-      )
-
     default:
       return nil
     }
@@ -425,14 +347,6 @@ internal protocol Cosmos_Feegrant_V1beta1_MsgAsyncProvider: CallHandlerProvider 
     request: Cosmos_Feegrant_V1beta1_MsgRevokeAllowance,
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse
-
-  /// PruneAllowances prunes expired fee allowances, currently up to 75 at a time.
-  ///
-  /// Since cosmos-sdk 0.50
-  @Sendable func pruneAllowances(
-    request: Cosmos_Feegrant_V1beta1_MsgPruneAllowances,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -472,15 +386,6 @@ extension Cosmos_Feegrant_V1beta1_MsgAsyncProvider {
         wrapping: self.revokeAllowance(request:context:)
       )
 
-    case "PruneAllowances":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Feegrant_V1beta1_MsgPruneAllowances>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse>(),
-        interceptors: self.interceptors?.makePruneAllowancesInterceptors() ?? [],
-        wrapping: self.pruneAllowances(request:context:)
-      )
-
     default:
       return nil
     }
@@ -496,10 +401,6 @@ internal protocol Cosmos_Feegrant_V1beta1_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'revokeAllowance'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeRevokeAllowanceInterceptors() -> [ServerInterceptor<Cosmos_Feegrant_V1beta1_MsgRevokeAllowance, Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse>]
-
-  /// - Returns: Interceptors to use when handling 'pruneAllowances'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePruneAllowancesInterceptors() -> [ServerInterceptor<Cosmos_Feegrant_V1beta1_MsgPruneAllowances, Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse>]
 }
 
 internal enum Cosmos_Feegrant_V1beta1_MsgServerMetadata {
@@ -509,7 +410,6 @@ internal enum Cosmos_Feegrant_V1beta1_MsgServerMetadata {
     methods: [
       Cosmos_Feegrant_V1beta1_MsgServerMetadata.Methods.grantAllowance,
       Cosmos_Feegrant_V1beta1_MsgServerMetadata.Methods.revokeAllowance,
-      Cosmos_Feegrant_V1beta1_MsgServerMetadata.Methods.pruneAllowances,
     ]
   )
 
@@ -523,12 +423,6 @@ internal enum Cosmos_Feegrant_V1beta1_MsgServerMetadata {
     internal static let revokeAllowance = GRPCMethodDescriptor(
       name: "RevokeAllowance",
       path: "/cosmos.feegrant.v1beta1.Msg/RevokeAllowance",
-      type: GRPCCallType.unary
-    )
-
-    internal static let pruneAllowances = GRPCMethodDescriptor(
-      name: "PruneAllowances",
-      path: "/cosmos.feegrant.v1beta1.Msg/PruneAllowances",
       type: GRPCCallType.unary
     )
   }

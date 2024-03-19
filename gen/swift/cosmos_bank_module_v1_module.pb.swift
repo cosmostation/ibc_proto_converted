@@ -26,8 +26,8 @@ struct Cosmos_Bank_Module_V1_Module {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
-  /// funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
+  /// blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
+  /// If left empty it defaults to the list of account names supplied in the auth module configuration as
   /// module_account_permissions
   var blockedModuleAccountsOverride: [String] = []
 

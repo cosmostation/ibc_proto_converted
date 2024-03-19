@@ -77,7 +77,6 @@ class QueryServicer(object):
 
     def Vote(self, request, context):
         """Vote queries voted information based on proposalID, voterAddr.
-        Due to how we handle state, this query would error for proposals that has already been finished.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -98,7 +97,7 @@ class QueryServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Deposit(self, request, context):
-        """Deposit queries single deposit information based on proposalID, depositor address.
+        """Deposit queries single deposit information based proposalID, depositAddr.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

@@ -26,7 +26,7 @@ struct Cosmos_Autocli_V1_ModuleOptions {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// tx describes the tx commands for the module.
+  /// tx describes the tx command for the module.
   var tx: Cosmos_Autocli_V1_ServiceCommandDescriptor {
     get {return _tx ?? Cosmos_Autocli_V1_ServiceCommandDescriptor()}
     set {_tx = newValue}
@@ -36,7 +36,7 @@ struct Cosmos_Autocli_V1_ModuleOptions {
   /// Clears the value of `tx`. Subsequent reads from it will return its default value.
   mutating func clearTx() {self._tx = nil}
 
-  /// query describes the queries commands for the module.
+  /// query describes the tx command for the module.
   var query: Cosmos_Autocli_V1_ServiceCommandDescriptor {
     get {return _query ?? Cosmos_Autocli_V1_ServiceCommandDescriptor()}
     set {_query = newValue}
@@ -74,11 +74,6 @@ struct Cosmos_Autocli_V1_ServiceCommandDescriptor {
   /// different protobuf services. The map key is used as the name of the
   /// sub-command.
   var subCommands: Dictionary<String,Cosmos_Autocli_V1_ServiceCommandDescriptor> = [:]
-
-  /// enhance_custom_commands specifies whether to skip the service when generating commands, if a custom command already
-  /// exists, or enhance the existing command. If set to true, the custom command will be enhanced with the services from
-  /// gRPC. otherwise when a custom command exists, no commands will be generated for the service.
-  var enhanceCustomCommand: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -165,6 +160,9 @@ struct Cosmos_Autocli_V1_FlagOptions {
   /// default_value is the default value as text.
   var defaultValue: String = String()
 
+  /// default value is the default value as text if the flag is used without any value.
+  var noOptDefaultValue: String = String()
+
   /// deprecated is the usage text to show if this flag is deprecated.
   var deprecated: String = String()
 
@@ -191,12 +189,8 @@ struct Cosmos_Autocli_V1_PositionalArgDescriptor {
 
   /// varargs makes a positional parameter a varargs parameter. This can only be
   /// applied to last positional parameter and the proto_field must a repeated
-  /// field. Note: It is mutually exclusive with optional.
+  /// field.
   var varargs: Bool = false
-
-  /// optional makes the last positional parameter optional.
-  /// Note: It is mutually exclusive with varargs.
-  var optional: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -263,7 +257,6 @@ extension Cosmos_Autocli_V1_ServiceCommandDescriptor: SwiftProtobuf.Message, Swi
     1: .same(proto: "service"),
     2: .standard(proto: "rpc_command_options"),
     3: .standard(proto: "sub_commands"),
-    4: .standard(proto: "enhance_custom_command"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -275,7 +268,6 @@ extension Cosmos_Autocli_V1_ServiceCommandDescriptor: SwiftProtobuf.Message, Swi
       case 1: try { try decoder.decodeSingularStringField(value: &self.service) }()
       case 2: try { try decoder.decodeRepeatedMessageField(value: &self.rpcCommandOptions) }()
       case 3: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMessageMap<SwiftProtobuf.ProtobufString,Cosmos_Autocli_V1_ServiceCommandDescriptor>.self, value: &self.subCommands) }()
-      case 4: try { try decoder.decodeSingularBoolField(value: &self.enhanceCustomCommand) }()
       default: break
       }
     }
@@ -291,9 +283,6 @@ extension Cosmos_Autocli_V1_ServiceCommandDescriptor: SwiftProtobuf.Message, Swi
     if !self.subCommands.isEmpty {
       try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMessageMap<SwiftProtobuf.ProtobufString,Cosmos_Autocli_V1_ServiceCommandDescriptor>.self, value: self.subCommands, fieldNumber: 3)
     }
-    if self.enhanceCustomCommand != false {
-      try visitor.visitSingularBoolField(value: self.enhanceCustomCommand, fieldNumber: 4)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -301,7 +290,6 @@ extension Cosmos_Autocli_V1_ServiceCommandDescriptor: SwiftProtobuf.Message, Swi
     if lhs.service != rhs.service {return false}
     if lhs.rpcCommandOptions != rhs.rpcCommandOptions {return false}
     if lhs.subCommands != rhs.subCommands {return false}
-    if lhs.enhanceCustomCommand != rhs.enhanceCustomCommand {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -412,6 +400,7 @@ extension Cosmos_Autocli_V1_FlagOptions: SwiftProtobuf.Message, SwiftProtobuf._M
     2: .same(proto: "shorthand"),
     3: .same(proto: "usage"),
     4: .standard(proto: "default_value"),
+    5: .standard(proto: "no_opt_default_value"),
     6: .same(proto: "deprecated"),
     7: .standard(proto: "shorthand_deprecated"),
     8: .same(proto: "hidden"),
@@ -427,6 +416,7 @@ extension Cosmos_Autocli_V1_FlagOptions: SwiftProtobuf.Message, SwiftProtobuf._M
       case 2: try { try decoder.decodeSingularStringField(value: &self.shorthand) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.usage) }()
       case 4: try { try decoder.decodeSingularStringField(value: &self.defaultValue) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.noOptDefaultValue) }()
       case 6: try { try decoder.decodeSingularStringField(value: &self.deprecated) }()
       case 7: try { try decoder.decodeSingularStringField(value: &self.shorthandDeprecated) }()
       case 8: try { try decoder.decodeSingularBoolField(value: &self.hidden) }()
@@ -448,6 +438,9 @@ extension Cosmos_Autocli_V1_FlagOptions: SwiftProtobuf.Message, SwiftProtobuf._M
     if !self.defaultValue.isEmpty {
       try visitor.visitSingularStringField(value: self.defaultValue, fieldNumber: 4)
     }
+    if !self.noOptDefaultValue.isEmpty {
+      try visitor.visitSingularStringField(value: self.noOptDefaultValue, fieldNumber: 5)
+    }
     if !self.deprecated.isEmpty {
       try visitor.visitSingularStringField(value: self.deprecated, fieldNumber: 6)
     }
@@ -465,6 +458,7 @@ extension Cosmos_Autocli_V1_FlagOptions: SwiftProtobuf.Message, SwiftProtobuf._M
     if lhs.shorthand != rhs.shorthand {return false}
     if lhs.usage != rhs.usage {return false}
     if lhs.defaultValue != rhs.defaultValue {return false}
+    if lhs.noOptDefaultValue != rhs.noOptDefaultValue {return false}
     if lhs.deprecated != rhs.deprecated {return false}
     if lhs.shorthandDeprecated != rhs.shorthandDeprecated {return false}
     if lhs.hidden != rhs.hidden {return false}
@@ -478,7 +472,6 @@ extension Cosmos_Autocli_V1_PositionalArgDescriptor: SwiftProtobuf.Message, Swif
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proto_field"),
     2: .same(proto: "varargs"),
-    3: .same(proto: "optional"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -489,7 +482,6 @@ extension Cosmos_Autocli_V1_PositionalArgDescriptor: SwiftProtobuf.Message, Swif
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.protoField) }()
       case 2: try { try decoder.decodeSingularBoolField(value: &self.varargs) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.optional) }()
       default: break
       }
     }
@@ -502,16 +494,12 @@ extension Cosmos_Autocli_V1_PositionalArgDescriptor: SwiftProtobuf.Message, Swif
     if self.varargs != false {
       try visitor.visitSingularBoolField(value: self.varargs, fieldNumber: 2)
     }
-    if self.optional != false {
-      try visitor.visitSingularBoolField(value: self.optional, fieldNumber: 3)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Cosmos_Autocli_V1_PositionalArgDescriptor, rhs: Cosmos_Autocli_V1_PositionalArgDescriptor) -> Bool {
     if lhs.protoField != rhs.protoField {return false}
     if lhs.varargs != rhs.varargs {return false}
-    if lhs.optional != rhs.optional {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

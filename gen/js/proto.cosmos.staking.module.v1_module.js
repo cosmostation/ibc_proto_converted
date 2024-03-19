@@ -78,9 +78,7 @@ proto.cosmos.staking.module.v1.Module.prototype.toObject = function(opt_includeI
 proto.cosmos.staking.module.v1.Module.toObject = function(includeInstance, msg) {
   var f, obj = {
     hooksOrderList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-    authority: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    bech32PrefixValidator: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    bech32PrefixConsensus: jspb.Message.getFieldWithDefault(msg, 4, "")
+    authority: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -125,14 +123,6 @@ proto.cosmos.staking.module.v1.Module.deserializeBinaryFromReader = function(msg
       var value = /** @type {string} */ (reader.readString());
       msg.setAuthority(value);
       break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBech32PrefixValidator(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBech32PrefixConsensus(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -173,20 +163,6 @@ proto.cosmos.staking.module.v1.Module.serializeBinaryToWriter = function(message
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
-    );
-  }
-  f = message.getBech32PrefixValidator();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getBech32PrefixConsensus();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
       f
     );
   }
@@ -245,42 +221,6 @@ proto.cosmos.staking.module.v1.Module.prototype.getAuthority = function() {
  */
 proto.cosmos.staking.module.v1.Module.prototype.setAuthority = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string bech32_prefix_validator = 3;
- * @return {string}
- */
-proto.cosmos.staking.module.v1.Module.prototype.getBech32PrefixValidator = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.staking.module.v1.Module} returns this
- */
-proto.cosmos.staking.module.v1.Module.prototype.setBech32PrefixValidator = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional string bech32_prefix_consensus = 4;
- * @return {string}
- */
-proto.cosmos.staking.module.v1.Module.prototype.getBech32PrefixConsensus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.staking.module.v1.Module} returns this
- */
-proto.cosmos.staking.module.v1.Module.prototype.setBech32PrefixConsensus = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 

@@ -7,9 +7,32 @@ var cosmos_base_query_v1beta1_pagination_pb = require('../../../cosmos/base/quer
 var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var cosmos_staking_v1beta1_staking_pb = require('../../../cosmos/staking/v1beta1/staking_pb.js');
+var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');
 var cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');
 var cosmos_query_v1_query_pb = require('../../../cosmos/query/v1/query_pb.js');
 var amino_amino_pb = require('../../../amino/amino_pb.js');
+
+function serialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsRequest(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryAllTokenizeShareRecordsRequest)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryAllTokenizeShareRecordsRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsRequest(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryAllTokenizeShareRecordsRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryAllTokenizeShareRecordsResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryAllTokenizeShareRecordsResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryAllTokenizeShareRecordsResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
 
 function serialize_cosmos_staking_v1beta1_QueryDelegationRequest(arg) {
   if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryDelegationRequest)) {
@@ -143,6 +166,28 @@ function deserialize_cosmos_staking_v1beta1_QueryHistoricalInfoResponse(buffer_a
   return cosmos_staking_v1beta1_query_pb.QueryHistoricalInfoResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdRequest(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryLastTokenizeShareRecordIdRequest)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryLastTokenizeShareRecordIdRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdRequest(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryLastTokenizeShareRecordIdRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryLastTokenizeShareRecordIdResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryLastTokenizeShareRecordIdResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryLastTokenizeShareRecordIdResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_cosmos_staking_v1beta1_QueryParamsRequest(arg) {
   if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryParamsRequest)) {
     throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryParamsRequest');
@@ -207,6 +252,138 @@ function serialize_cosmos_staking_v1beta1_QueryRedelegationsResponse(arg) {
 
 function deserialize_cosmos_staking_v1beta1_QueryRedelegationsResponse(buffer_arg) {
   return cosmos_staking_v1beta1_query_pb.QueryRedelegationsResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfo(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareLockInfo)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareLockInfo');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfo(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareLockInfo.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfoResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareLockInfoResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareLockInfoResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfoResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareLockInfoResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomRequest(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByDenomRequest)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareRecordByDenomRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomRequest(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByDenomRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByDenomResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareRecordByDenomResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByDenomResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdRequest(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByIdRequest)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareRecordByIdRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdRequest(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByIdRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByIdResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareRecordByIdResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByIdResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedRequest(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordsOwnedRequest)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareRecordsOwnedRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedRequest(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordsOwnedRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordsOwnedResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTokenizeShareRecordsOwnedResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordsOwnedResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTotalLiquidStaked(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTotalLiquidStaked)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTotalLiquidStaked');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTotalLiquidStaked(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTotalLiquidStaked.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTotalLiquidStakedResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTotalLiquidStakedResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTotalLiquidStakedResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTotalLiquidStakedResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTotalLiquidStakedResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsRequest(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTotalTokenizeSharedAssetsRequest)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTotalTokenizeSharedAssetsRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsRequest(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTotalTokenizeSharedAssetsRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_query_pb.QueryTotalTokenizeSharedAssetsResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.QueryTotalTokenizeSharedAssetsResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_query_pb.QueryTotalTokenizeSharedAssetsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_cosmos_staking_v1beta1_QueryUnbondingDelegationRequest(arg) {
@@ -478,6 +655,102 @@ delegatorValidator: {
     requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryDelegatorValidatorRequest,
     responseSerialize: serialize_cosmos_staking_v1beta1_QueryDelegatorValidatorResponse,
     responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryDelegatorValidatorResponse,
+  },
+  // Query for individual tokenize share record information by share by id
+tokenizeShareRecordById: {
+    path: '/cosmos.staking.v1beta1.Query/TokenizeShareRecordById',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByIdRequest,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByIdResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdRequest,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdRequest,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByIdResponse,
+  },
+  // Query for individual tokenize share record information by share denom
+tokenizeShareRecordByDenom: {
+    path: '/cosmos.staking.v1beta1.Query/TokenizeShareRecordByDenom',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByDenomRequest,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordByDenomResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomRequest,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomRequest,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordByDenomResponse,
+  },
+  // Query tokenize share records by address
+tokenizeShareRecordsOwned: {
+    path: '/cosmos.staking.v1beta1.Query/TokenizeShareRecordsOwned',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordsOwnedRequest,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareRecordsOwnedResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedRequest,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedRequest,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareRecordsOwnedResponse,
+  },
+  // Query for all tokenize share records
+allTokenizeShareRecords: {
+    path: '/cosmos.staking.v1beta1.Query/AllTokenizeShareRecords',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryAllTokenizeShareRecordsRequest,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryAllTokenizeShareRecordsResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsRequest,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsRequest,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryAllTokenizeShareRecordsResponse,
+  },
+  // Query for last tokenize share record id
+lastTokenizeShareRecordId: {
+    path: '/cosmos.staking.v1beta1.Query/LastTokenizeShareRecordId',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryLastTokenizeShareRecordIdRequest,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryLastTokenizeShareRecordIdResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdRequest,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdRequest,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryLastTokenizeShareRecordIdResponse,
+  },
+  // Query for total tokenized staked assets
+totalTokenizeSharedAssets: {
+    path: '/cosmos.staking.v1beta1.Query/TotalTokenizeSharedAssets',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryTotalTokenizeSharedAssetsRequest,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryTotalTokenizeSharedAssetsResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsRequest,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsRequest,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryTotalTokenizeSharedAssetsResponse,
+  },
+  // Query for total liquid staked (including tokenized shares or owned by an liquid staking provider)
+totalLiquidStaked: {
+    path: '/cosmos.staking.v1beta1.Query/TotalLiquidStaked',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryTotalLiquidStaked,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryTotalLiquidStakedResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryTotalLiquidStaked,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryTotalLiquidStaked,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryTotalLiquidStakedResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryTotalLiquidStakedResponse,
+  },
+  // Query tokenize share locks
+tokenizeShareLockInfo: {
+    path: '/cosmos.staking.v1beta1.Query/TokenizeShareLockInfo',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareLockInfo,
+    responseType: cosmos_staking_v1beta1_query_pb.QueryTokenizeShareLockInfoResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfo,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfo,
+    responseSerialize: serialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfoResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_QueryTokenizeShareLockInfoResponse,
   },
   // HistoricalInfo queries the historical info for given height.
 historicalInfo: {

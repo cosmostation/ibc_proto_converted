@@ -46,7 +46,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.gov.v1.Params.repeatedFields_ = [1,12];
+proto.cosmos.gov.v1.Params.repeatedFields_ = [1];
 
 
 
@@ -87,12 +87,6 @@ proto.cosmos.gov.v1.Params.toObject = function(includeInstance, msg) {
     threshold: jspb.Message.getFieldWithDefault(msg, 5, ""),
     vetoThreshold: jspb.Message.getFieldWithDefault(msg, 6, ""),
     minInitialDepositRatio: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    proposalCancelRatio: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    proposalCancelDest: jspb.Message.getFieldWithDefault(msg, 9, ""),
-    expeditedVotingPeriod: (f = msg.getExpeditedVotingPeriod()) && proto.google.protobuf.Duration.toObject(includeInstance, f),
-    expeditedThreshold: jspb.Message.getFieldWithDefault(msg, 11, ""),
-    expeditedMinDepositList: jspb.Message.toObjectList(msg.getExpeditedMinDepositList(),
-    proto.cosmos.base.v1beta1.Coin.toObject, includeInstance),
     burnVoteQuorum: jspb.Message.getBooleanFieldWithDefault(msg, 13, false),
     burnProposalDepositPrevote: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
     burnVoteVeto: jspb.Message.getBooleanFieldWithDefault(msg, 15, false),
@@ -163,28 +157,6 @@ proto.cosmos.gov.v1.Params.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setMinInitialDepositRatio(value);
-      break;
-    case 8:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setProposalCancelRatio(value);
-      break;
-    case 9:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setProposalCancelDest(value);
-      break;
-    case 10:
-      var value = new proto.google.protobuf.Duration;
-      reader.readMessage(value,proto.google.protobuf.Duration.deserializeBinaryFromReader);
-      msg.setExpeditedVotingPeriod(value);
-      break;
-    case 11:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setExpeditedThreshold(value);
-      break;
-    case 12:
-      var value = new proto.cosmos.base.v1beta1.Coin;
-      reader.readMessage(value,proto.cosmos.base.v1beta1.Coin.deserializeBinaryFromReader);
-      msg.addExpeditedMinDeposit(value);
       break;
     case 13:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -281,43 +253,6 @@ proto.cosmos.gov.v1.Params.serializeBinaryToWriter = function(message, writer) {
     writer.writeString(
       7,
       f
-    );
-  }
-  f = message.getProposalCancelRatio();
-  if (f.length > 0) {
-    writer.writeString(
-      8,
-      f
-    );
-  }
-  f = message.getProposalCancelDest();
-  if (f.length > 0) {
-    writer.writeString(
-      9,
-      f
-    );
-  }
-  f = message.getExpeditedVotingPeriod();
-  if (f != null) {
-    writer.writeMessage(
-      10,
-      f,
-      proto.google.protobuf.Duration.serializeBinaryToWriter
-    );
-  }
-  f = message.getExpeditedThreshold();
-  if (f.length > 0) {
-    writer.writeString(
-      11,
-      f
-    );
-  }
-  f = message.getExpeditedMinDepositList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      12,
-      f,
-      proto.cosmos.base.v1beta1.Coin.serializeBinaryToWriter
     );
   }
   f = message.getBurnVoteQuorum();
@@ -532,135 +467,6 @@ proto.cosmos.gov.v1.Params.prototype.getMinInitialDepositRatio = function() {
  */
 proto.cosmos.gov.v1.Params.prototype.setMinInitialDepositRatio = function(value) {
   return jspb.Message.setProto3StringField(this, 7, value);
-};
-
-
-/**
- * optional string proposal_cancel_ratio = 8;
- * @return {string}
- */
-proto.cosmos.gov.v1.Params.prototype.getProposalCancelRatio = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.gov.v1.Params} returns this
- */
-proto.cosmos.gov.v1.Params.prototype.setProposalCancelRatio = function(value) {
-  return jspb.Message.setProto3StringField(this, 8, value);
-};
-
-
-/**
- * optional string proposal_cancel_dest = 9;
- * @return {string}
- */
-proto.cosmos.gov.v1.Params.prototype.getProposalCancelDest = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.gov.v1.Params} returns this
- */
-proto.cosmos.gov.v1.Params.prototype.setProposalCancelDest = function(value) {
-  return jspb.Message.setProto3StringField(this, 9, value);
-};
-
-
-/**
- * optional google.protobuf.Duration expedited_voting_period = 10;
- * @return {?proto.google.protobuf.Duration}
- */
-proto.cosmos.gov.v1.Params.prototype.getExpeditedVotingPeriod = function() {
-  return /** @type{?proto.google.protobuf.Duration} */ (
-    jspb.Message.getWrapperField(this, proto.google.protobuf.Duration, 10));
-};
-
-
-/**
- * @param {?proto.google.protobuf.Duration|undefined} value
- * @return {!proto.cosmos.gov.v1.Params} returns this
-*/
-proto.cosmos.gov.v1.Params.prototype.setExpeditedVotingPeriod = function(value) {
-  return jspb.Message.setWrapperField(this, 10, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.cosmos.gov.v1.Params} returns this
- */
-proto.cosmos.gov.v1.Params.prototype.clearExpeditedVotingPeriod = function() {
-  return this.setExpeditedVotingPeriod(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.cosmos.gov.v1.Params.prototype.hasExpeditedVotingPeriod = function() {
-  return jspb.Message.getField(this, 10) != null;
-};
-
-
-/**
- * optional string expedited_threshold = 11;
- * @return {string}
- */
-proto.cosmos.gov.v1.Params.prototype.getExpeditedThreshold = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.gov.v1.Params} returns this
- */
-proto.cosmos.gov.v1.Params.prototype.setExpeditedThreshold = function(value) {
-  return jspb.Message.setProto3StringField(this, 11, value);
-};
-
-
-/**
- * repeated cosmos.base.v1beta1.Coin expedited_min_deposit = 12;
- * @return {!Array<!proto.cosmos.base.v1beta1.Coin>}
- */
-proto.cosmos.gov.v1.Params.prototype.getExpeditedMinDepositList = function() {
-  return /** @type{!Array<!proto.cosmos.base.v1beta1.Coin>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.v1beta1.Coin, 12));
-};
-
-
-/**
- * @param {!Array<!proto.cosmos.base.v1beta1.Coin>} value
- * @return {!proto.cosmos.gov.v1.Params} returns this
-*/
-proto.cosmos.gov.v1.Params.prototype.setExpeditedMinDepositList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 12, value);
-};
-
-
-/**
- * @param {!proto.cosmos.base.v1beta1.Coin=} opt_value
- * @param {number=} opt_index
- * @return {!proto.cosmos.base.v1beta1.Coin}
- */
-proto.cosmos.gov.v1.Params.prototype.addExpeditedMinDeposit = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 12, opt_value, proto.cosmos.base.v1beta1.Coin, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.gov.v1.Params} returns this
- */
-proto.cosmos.gov.v1.Params.prototype.clearExpeditedMinDepositList = function() {
-  return this.setExpeditedMinDepositList([]);
 };
 
 

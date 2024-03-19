@@ -53,26 +53,6 @@ struct Cosmos_App_Runtime_V1alpha1_Module {
   /// to be used in keeper construction.
   var overrideStoreKeys: [Cosmos_App_Runtime_V1alpha1_StoreKeyConfig] = []
 
-  /// order_migrations defines the order in which module migrations are performed.
-  /// If this is left empty, it uses the default migration order.
-  /// https://pkg.go.dev/github.com/cosmos/cosmos-sdk@v0.47.0-alpha2/types/module#DefaultMigrationsOrder
-  var orderMigrations: [String] = []
-
-  /// precommiters specifies the module names of the precommiters
-  /// to call in the order in which they should be called. If this is left empty
-  /// no precommit function will be registered.
-  var precommiters: [String] = []
-
-  /// prepare_check_staters specifies the module names of the prepare_check_staters
-  /// to call in the order in which they should be called. If this is left empty
-  /// no preparecheckstate function will be registered.
-  var prepareCheckStaters: [String] = []
-
-  /// pre_blockers specifies the module names of pre blockers
-  /// to call in the order in which they should be called. If this is left empty
-  /// no pre blocker will be registered.
-  var preBlockers: [String] = []
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -114,10 +94,6 @@ extension Cosmos_App_Runtime_V1alpha1_Module: SwiftProtobuf.Message, SwiftProtob
     4: .standard(proto: "init_genesis"),
     5: .standard(proto: "export_genesis"),
     6: .standard(proto: "override_store_keys"),
-    7: .standard(proto: "order_migrations"),
-    8: .same(proto: "precommiters"),
-    9: .standard(proto: "prepare_check_staters"),
-    10: .standard(proto: "pre_blockers"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -132,10 +108,6 @@ extension Cosmos_App_Runtime_V1alpha1_Module: SwiftProtobuf.Message, SwiftProtob
       case 4: try { try decoder.decodeRepeatedStringField(value: &self.initGenesis) }()
       case 5: try { try decoder.decodeRepeatedStringField(value: &self.exportGenesis) }()
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.overrideStoreKeys) }()
-      case 7: try { try decoder.decodeRepeatedStringField(value: &self.orderMigrations) }()
-      case 8: try { try decoder.decodeRepeatedStringField(value: &self.precommiters) }()
-      case 9: try { try decoder.decodeRepeatedStringField(value: &self.prepareCheckStaters) }()
-      case 10: try { try decoder.decodeRepeatedStringField(value: &self.preBlockers) }()
       default: break
       }
     }
@@ -160,18 +132,6 @@ extension Cosmos_App_Runtime_V1alpha1_Module: SwiftProtobuf.Message, SwiftProtob
     if !self.overrideStoreKeys.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.overrideStoreKeys, fieldNumber: 6)
     }
-    if !self.orderMigrations.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.orderMigrations, fieldNumber: 7)
-    }
-    if !self.precommiters.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.precommiters, fieldNumber: 8)
-    }
-    if !self.prepareCheckStaters.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.prepareCheckStaters, fieldNumber: 9)
-    }
-    if !self.preBlockers.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.preBlockers, fieldNumber: 10)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -182,10 +142,6 @@ extension Cosmos_App_Runtime_V1alpha1_Module: SwiftProtobuf.Message, SwiftProtob
     if lhs.initGenesis != rhs.initGenesis {return false}
     if lhs.exportGenesis != rhs.exportGenesis {return false}
     if lhs.overrideStoreKeys != rhs.overrideStoreKeys {return false}
-    if lhs.orderMigrations != rhs.orderMigrations {return false}
-    if lhs.precommiters != rhs.precommiters {return false}
-    if lhs.prepareCheckStaters != rhs.prepareCheckStaters {return false}
-    if lhs.preBlockers != rhs.preBlockers {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

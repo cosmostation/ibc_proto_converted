@@ -79,11 +79,6 @@ struct Cosmos_Bank_V1beta1_QueryAllBalancesRequest {
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
   mutating func clearPagination() {self._pagination = nil}
 
-  /// resolve_denom is the flag to resolve the denom into a human-readable form from the metadata.
-  ///
-  /// Since: cosmos-sdk 0.50
-  var resolveDenom: Bool = false
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -331,7 +326,6 @@ struct Cosmos_Bank_V1beta1_QueryParamsResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// params provides the parameters of the bank module.
   var params: Cosmos_Bank_V1beta1_Params {
     get {return _params ?? Cosmos_Bank_V1beta1_Params()}
     set {_params = newValue}
@@ -415,45 +409,6 @@ struct Cosmos_Bank_V1beta1_QueryDenomMetadataRequest {
 /// QueryDenomMetadataResponse is the response type for the Query/DenomMetadata RPC
 /// method.
 struct Cosmos_Bank_V1beta1_QueryDenomMetadataResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// metadata describes and provides all the client information for the requested token.
-  var metadata: Cosmos_Bank_V1beta1_Metadata {
-    get {return _metadata ?? Cosmos_Bank_V1beta1_Metadata()}
-    set {_metadata = newValue}
-  }
-  /// Returns true if `metadata` has been explicitly set.
-  var hasMetadata: Bool {return self._metadata != nil}
-  /// Clears the value of `metadata`. Subsequent reads from it will return its default value.
-  mutating func clearMetadata() {self._metadata = nil}
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-
-  fileprivate var _metadata: Cosmos_Bank_V1beta1_Metadata? = nil
-}
-
-/// QueryDenomMetadataByQueryStringRequest is the request type for the Query/DenomMetadata RPC method.
-/// Identical with QueryDenomMetadataRequest but receives denom as query string.
-struct Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// denom is the coin denom to query the metadata for.
-  var denom: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// QueryDenomMetadataByQueryStringResponse is the response type for the Query/DenomMetadata RPC
-/// method. Identical with QueryDenomMetadataResponse but receives denom as query string in request.
-struct Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -636,8 +591,6 @@ extension Cosmos_Bank_V1beta1_QueryDenomsMetadataRequest: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_QueryDenomsMetadataResponse: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_QueryDenomMetadataRequest: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_QueryDenomMetadataResponse: @unchecked Sendable {}
-extension Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest: @unchecked Sendable {}
-extension Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_QueryDenomOwnersRequest: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_DenomOwner: @unchecked Sendable {}
 extension Cosmos_Bank_V1beta1_QueryDenomOwnersResponse: @unchecked Sendable {}
@@ -728,7 +681,6 @@ extension Cosmos_Bank_V1beta1_QueryAllBalancesRequest: SwiftProtobuf.Message, Sw
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .same(proto: "pagination"),
-    3: .standard(proto: "resolve_denom"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -739,7 +691,6 @@ extension Cosmos_Bank_V1beta1_QueryAllBalancesRequest: SwiftProtobuf.Message, Sw
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.address) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.resolveDenom) }()
       default: break
       }
     }
@@ -756,16 +707,12 @@ extension Cosmos_Bank_V1beta1_QueryAllBalancesRequest: SwiftProtobuf.Message, Sw
     try { if let v = self._pagination {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
     } }()
-    if self.resolveDenom != false {
-      try visitor.visitSingularBoolField(value: self.resolveDenom, fieldNumber: 3)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Cosmos_Bank_V1beta1_QueryAllBalancesRequest, rhs: Cosmos_Bank_V1beta1_QueryAllBalancesRequest) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs._pagination != rhs._pagination {return false}
-    if lhs.resolveDenom != rhs.resolveDenom {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1312,74 +1259,6 @@ extension Cosmos_Bank_V1beta1_QueryDenomMetadataResponse: SwiftProtobuf.Message,
   }
 
   static func ==(lhs: Cosmos_Bank_V1beta1_QueryDenomMetadataResponse, rhs: Cosmos_Bank_V1beta1_QueryDenomMetadataResponse) -> Bool {
-    if lhs._metadata != rhs._metadata {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDenomMetadataByQueryStringRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "denom"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.denom) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.denom.isEmpty {
-      try visitor.visitSingularStringField(value: self.denom, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest, rhs: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringRequest) -> Bool {
-    if lhs.denom != rhs.denom {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDenomMetadataByQueryStringResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "metadata"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._metadata) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._metadata {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse, rhs: Cosmos_Bank_V1beta1_QueryDenomMetadataByQueryStringResponse) -> Bool {
     if lhs._metadata != rhs._metadata {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

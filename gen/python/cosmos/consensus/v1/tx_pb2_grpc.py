@@ -6,7 +6,7 @@ from cosmos.consensus.v1 import tx_pb2 as cosmos_dot_consensus_dot_v1_dot_tx__pb
 
 
 class MsgStub(object):
-    """Msg defines the consensus Msg service.
+    """Msg defines the bank Msg service.
     """
 
     def __init__(self, channel):
@@ -23,11 +23,11 @@ class MsgStub(object):
 
 
 class MsgServicer(object):
-    """Msg defines the consensus Msg service.
+    """Msg defines the bank Msg service.
     """
 
     def UpdateParams(self, request, context):
-        """UpdateParams defines a governance operation for updating the x/consensus module parameters.
+        """UpdateParams defines a governance operation for updating the x/consensus_param module parameters.
         The authority is defined in the keeper.
 
         Since: cosmos-sdk 0.47
@@ -52,7 +52,7 @@ def add_MsgServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Msg(object):
-    """Msg defines the consensus Msg service.
+    """Msg defines the bank Msg service.
     """
 
     @staticmethod

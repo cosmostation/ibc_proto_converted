@@ -16,7 +16,6 @@ goog.provide('proto.cosmos.staking.v1beta1.Params');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.cosmos.base.v1beta1.Coin');
 goog.require('proto.google.protobuf.Duration');
 
 /**
@@ -78,7 +77,9 @@ proto.cosmos.staking.v1beta1.Params.toObject = function(includeInstance, msg) {
     historicalEntries: jspb.Message.getFieldWithDefault(msg, 4, 0),
     bondDenom: jspb.Message.getFieldWithDefault(msg, 5, ""),
     minCommissionRate: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    keyRotationFee: (f = msg.getKeyRotationFee()) && proto.cosmos.base.v1beta1.Coin.toObject(includeInstance, f)
+    validatorBondFactor: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    globalLiquidStakingCap: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    validatorLiquidStakingCap: jspb.Message.getFieldWithDefault(msg, 9, "")
   };
 
   if (includeInstance) {
@@ -141,9 +142,16 @@ proto.cosmos.staking.v1beta1.Params.deserializeBinaryFromReader = function(msg, 
       msg.setMinCommissionRate(value);
       break;
     case 7:
-      var value = new proto.cosmos.base.v1beta1.Coin;
-      reader.readMessage(value,proto.cosmos.base.v1beta1.Coin.deserializeBinaryFromReader);
-      msg.setKeyRotationFee(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValidatorBondFactor(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGlobalLiquidStakingCap(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValidatorLiquidStakingCap(value);
       break;
     default:
       reader.skipField();
@@ -217,12 +225,25 @@ proto.cosmos.staking.v1beta1.Params.serializeBinaryToWriter = function(message, 
       f
     );
   }
-  f = message.getKeyRotationFee();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getValidatorBondFactor();
+  if (f.length > 0) {
+    writer.writeString(
       7,
-      f,
-      proto.cosmos.base.v1beta1.Coin.serializeBinaryToWriter
+      f
+    );
+  }
+  f = message.getGlobalLiquidStakingCap();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
+      f
+    );
+  }
+  f = message.getValidatorLiquidStakingCap();
+  if (f.length > 0) {
+    writer.writeString(
+      9,
+      f
     );
   }
 };
@@ -356,39 +377,56 @@ proto.cosmos.staking.v1beta1.Params.prototype.setMinCommissionRate = function(va
 
 
 /**
- * optional cosmos.base.v1beta1.Coin key_rotation_fee = 7;
- * @return {?proto.cosmos.base.v1beta1.Coin}
+ * optional string validator_bond_factor = 7;
+ * @return {string}
  */
-proto.cosmos.staking.v1beta1.Params.prototype.getKeyRotationFee = function() {
-  return /** @type{?proto.cosmos.base.v1beta1.Coin} */ (
-    jspb.Message.getWrapperField(this, proto.cosmos.base.v1beta1.Coin, 7));
+proto.cosmos.staking.v1beta1.Params.prototype.getValidatorBondFactor = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /**
- * @param {?proto.cosmos.base.v1beta1.Coin|undefined} value
- * @return {!proto.cosmos.staking.v1beta1.Params} returns this
-*/
-proto.cosmos.staking.v1beta1.Params.prototype.setKeyRotationFee = function(value) {
-  return jspb.Message.setWrapperField(this, 7, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
+ * @param {string} value
  * @return {!proto.cosmos.staking.v1beta1.Params} returns this
  */
-proto.cosmos.staking.v1beta1.Params.prototype.clearKeyRotationFee = function() {
-  return this.setKeyRotationFee(undefined);
+proto.cosmos.staking.v1beta1.Params.prototype.setValidatorBondFactor = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
- * Returns whether this field is set.
- * @return {boolean}
+ * optional string global_liquid_staking_cap = 8;
+ * @return {string}
  */
-proto.cosmos.staking.v1beta1.Params.prototype.hasKeyRotationFee = function() {
-  return jspb.Message.getField(this, 7) != null;
+proto.cosmos.staking.v1beta1.Params.prototype.getGlobalLiquidStakingCap = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.cosmos.staking.v1beta1.Params} returns this
+ */
+proto.cosmos.staking.v1beta1.Params.prototype.setGlobalLiquidStakingCap = function(value) {
+  return jspb.Message.setProto3StringField(this, 8, value);
+};
+
+
+/**
+ * optional string validator_liquid_staking_cap = 9;
+ * @return {string}
+ */
+proto.cosmos.staking.v1beta1.Params.prototype.getValidatorLiquidStakingCap = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.cosmos.staking.v1beta1.Params} returns this
+ */
+proto.cosmos.staking.v1beta1.Params.prototype.setValidatorLiquidStakingCap = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 

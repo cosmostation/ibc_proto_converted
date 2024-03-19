@@ -45,7 +45,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.app.runtime.v1alpha1.Module.repeatedFields_ = [2,3,4,5,6,7,8,9,10];
+proto.cosmos.app.runtime.v1alpha1.Module.repeatedFields_ = [2,3,4,5,6];
 
 
 
@@ -84,11 +84,7 @@ proto.cosmos.app.runtime.v1alpha1.Module.toObject = function(includeInstance, ms
     initGenesisList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
     exportGenesisList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
     overrideStoreKeysList: jspb.Message.toObjectList(msg.getOverrideStoreKeysList(),
-    proto.cosmos.app.runtime.v1alpha1.StoreKeyConfig.toObject, includeInstance),
-    orderMigrationsList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
-    precommitersList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
-    prepareCheckStatersList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f,
-    preBlockersList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f
+    proto.cosmos.app.runtime.v1alpha1.StoreKeyConfig.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -149,22 +145,6 @@ proto.cosmos.app.runtime.v1alpha1.Module.deserializeBinaryFromReader = function(
       var value = new proto.cosmos.app.runtime.v1alpha1.StoreKeyConfig;
       reader.readMessage(value,proto.cosmos.app.runtime.v1alpha1.StoreKeyConfig.deserializeBinaryFromReader);
       msg.addOverrideStoreKeys(value);
-      break;
-    case 7:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addOrderMigrations(value);
-      break;
-    case 8:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addPrecommiters(value);
-      break;
-    case 9:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addPrepareCheckStaters(value);
-      break;
-    case 10:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addPreBlockers(value);
       break;
     default:
       reader.skipField();
@@ -236,34 +216,6 @@ proto.cosmos.app.runtime.v1alpha1.Module.serializeBinaryToWriter = function(mess
       6,
       f,
       proto.cosmos.app.runtime.v1alpha1.StoreKeyConfig.serializeBinaryToWriter
-    );
-  }
-  f = message.getOrderMigrationsList();
-  if (f.length > 0) {
-    writer.writeRepeatedString(
-      7,
-      f
-    );
-  }
-  f = message.getPrecommitersList();
-  if (f.length > 0) {
-    writer.writeRepeatedString(
-      8,
-      f
-    );
-  }
-  f = message.getPrepareCheckStatersList();
-  if (f.length > 0) {
-    writer.writeRepeatedString(
-      9,
-      f
-    );
-  }
-  f = message.getPreBlockersList();
-  if (f.length > 0) {
-    writer.writeRepeatedString(
-      10,
-      f
     );
   }
 };
@@ -470,154 +422,6 @@ proto.cosmos.app.runtime.v1alpha1.Module.prototype.addOverrideStoreKeys = functi
  */
 proto.cosmos.app.runtime.v1alpha1.Module.prototype.clearOverrideStoreKeysList = function() {
   return this.setOverrideStoreKeysList([]);
-};
-
-
-/**
- * repeated string order_migrations = 7;
- * @return {!Array<string>}
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.getOrderMigrationsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 7));
-};
-
-
-/**
- * @param {!Array<string>} value
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.setOrderMigrationsList = function(value) {
-  return jspb.Message.setField(this, 7, value || []);
-};
-
-
-/**
- * @param {string} value
- * @param {number=} opt_index
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.addOrderMigrations = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.clearOrderMigrationsList = function() {
-  return this.setOrderMigrationsList([]);
-};
-
-
-/**
- * repeated string precommiters = 8;
- * @return {!Array<string>}
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.getPrecommitersList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 8));
-};
-
-
-/**
- * @param {!Array<string>} value
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.setPrecommitersList = function(value) {
-  return jspb.Message.setField(this, 8, value || []);
-};
-
-
-/**
- * @param {string} value
- * @param {number=} opt_index
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.addPrecommiters = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 8, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.clearPrecommitersList = function() {
-  return this.setPrecommitersList([]);
-};
-
-
-/**
- * repeated string prepare_check_staters = 9;
- * @return {!Array<string>}
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.getPrepareCheckStatersList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
-};
-
-
-/**
- * @param {!Array<string>} value
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.setPrepareCheckStatersList = function(value) {
-  return jspb.Message.setField(this, 9, value || []);
-};
-
-
-/**
- * @param {string} value
- * @param {number=} opt_index
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.addPrepareCheckStaters = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.clearPrepareCheckStatersList = function() {
-  return this.setPrepareCheckStatersList([]);
-};
-
-
-/**
- * repeated string pre_blockers = 10;
- * @return {!Array<string>}
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.getPreBlockersList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 10));
-};
-
-
-/**
- * @param {!Array<string>} value
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.setPreBlockersList = function(value) {
-  return jspb.Message.setField(this, 10, value || []);
-};
-
-
-/**
- * @param {string} value
- * @param {number=} opt_index
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.addPreBlockers = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 10, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.app.runtime.v1alpha1.Module} returns this
- */
-proto.cosmos.app.runtime.v1alpha1.Module.prototype.clearPreBlockersList = function() {
-  return this.setPreBlockersList([]);
 };
 
 

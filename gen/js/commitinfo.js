@@ -1,4 +1,4 @@
-// source: cosmos/store/v1beta1/commit_info.proto
+// source: cosmos/base/store/v1beta1/commit_info.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,12 +11,12 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.cosmos.store.v1beta1.CommitInfo');
+goog.provide('proto.cosmos.base.store.v1beta1.CommitInfo');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.cosmos.store.v1beta1.StoreInfo');
+goog.require('proto.cosmos.base.store.v1beta1.StoreInfo');
 goog.require('proto.google.protobuf.Timestamp');
 
 /**
@@ -29,16 +29,16 @@ goog.require('proto.google.protobuf.Timestamp');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.store.v1beta1.CommitInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.store.v1beta1.CommitInfo.repeatedFields_, null);
+proto.cosmos.base.store.v1beta1.CommitInfo = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.store.v1beta1.CommitInfo.repeatedFields_, null);
 };
-goog.inherits(proto.cosmos.store.v1beta1.CommitInfo, jspb.Message);
+goog.inherits(proto.cosmos.base.store.v1beta1.CommitInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.cosmos.store.v1beta1.CommitInfo.displayName = 'proto.cosmos.store.v1beta1.CommitInfo';
+  proto.cosmos.base.store.v1beta1.CommitInfo.displayName = 'proto.cosmos.base.store.v1beta1.CommitInfo';
 }
 
 /**
@@ -46,7 +46,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.store.v1beta1.CommitInfo.repeatedFields_ = [2];
+proto.cosmos.base.store.v1beta1.CommitInfo.repeatedFields_ = [2];
 
 
 
@@ -63,8 +63,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.store.v1beta1.CommitInfo.toObject(opt_includeInstance, this);
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.store.v1beta1.CommitInfo.toObject(opt_includeInstance, this);
 };
 
 
@@ -73,15 +73,15 @@ proto.cosmos.store.v1beta1.CommitInfo.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.cosmos.store.v1beta1.CommitInfo} msg The msg instance to transform.
+ * @param {!proto.cosmos.base.store.v1beta1.CommitInfo} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.v1beta1.CommitInfo.toObject = function(includeInstance, msg) {
+proto.cosmos.base.store.v1beta1.CommitInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
     version: jspb.Message.getFieldWithDefault(msg, 1, 0),
     storeInfosList: jspb.Message.toObjectList(msg.getStoreInfosList(),
-    proto.cosmos.store.v1beta1.StoreInfo.toObject, includeInstance),
+    proto.cosmos.base.store.v1beta1.StoreInfo.toObject, includeInstance),
     timestamp: (f = msg.getTimestamp()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f)
   };
 
@@ -96,23 +96,23 @@ proto.cosmos.store.v1beta1.CommitInfo.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.cosmos.store.v1beta1.CommitInfo}
+ * @return {!proto.cosmos.base.store.v1beta1.CommitInfo}
  */
-proto.cosmos.store.v1beta1.CommitInfo.deserializeBinary = function(bytes) {
+proto.cosmos.base.store.v1beta1.CommitInfo.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.store.v1beta1.CommitInfo;
-  return proto.cosmos.store.v1beta1.CommitInfo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.cosmos.base.store.v1beta1.CommitInfo;
+  return proto.cosmos.base.store.v1beta1.CommitInfo.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.cosmos.store.v1beta1.CommitInfo} msg The message object to deserialize into.
+ * @param {!proto.cosmos.base.store.v1beta1.CommitInfo} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.cosmos.store.v1beta1.CommitInfo}
+ * @return {!proto.cosmos.base.store.v1beta1.CommitInfo}
  */
-proto.cosmos.store.v1beta1.CommitInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.store.v1beta1.CommitInfo.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -124,8 +124,8 @@ proto.cosmos.store.v1beta1.CommitInfo.deserializeBinaryFromReader = function(msg
       msg.setVersion(value);
       break;
     case 2:
-      var value = new proto.cosmos.store.v1beta1.StoreInfo;
-      reader.readMessage(value,proto.cosmos.store.v1beta1.StoreInfo.deserializeBinaryFromReader);
+      var value = new proto.cosmos.base.store.v1beta1.StoreInfo;
+      reader.readMessage(value,proto.cosmos.base.store.v1beta1.StoreInfo.deserializeBinaryFromReader);
       msg.addStoreInfos(value);
       break;
     case 3:
@@ -146,9 +146,9 @@ proto.cosmos.store.v1beta1.CommitInfo.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.serializeBinary = function() {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.cosmos.store.v1beta1.CommitInfo.serializeBinaryToWriter(this, writer);
+  proto.cosmos.base.store.v1beta1.CommitInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -156,11 +156,11 @@ proto.cosmos.store.v1beta1.CommitInfo.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.cosmos.store.v1beta1.CommitInfo} message
+ * @param {!proto.cosmos.base.store.v1beta1.CommitInfo} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.v1beta1.CommitInfo.serializeBinaryToWriter = function(message, writer) {
+proto.cosmos.base.store.v1beta1.CommitInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getVersion();
   if (f !== 0) {
@@ -174,7 +174,7 @@ proto.cosmos.store.v1beta1.CommitInfo.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.cosmos.store.v1beta1.StoreInfo.serializeBinaryToWriter
+      proto.cosmos.base.store.v1beta1.StoreInfo.serializeBinaryToWriter
     );
   }
   f = message.getTimestamp();
@@ -192,54 +192,54 @@ proto.cosmos.store.v1beta1.CommitInfo.serializeBinaryToWriter = function(message
  * optional int64 version = 1;
  * @return {number}
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.getVersion = function() {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.getVersion = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.cosmos.store.v1beta1.CommitInfo} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.CommitInfo} returns this
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.setVersion = function(value) {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.setVersion = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
 /**
  * repeated StoreInfo store_infos = 2;
- * @return {!Array<!proto.cosmos.store.v1beta1.StoreInfo>}
+ * @return {!Array<!proto.cosmos.base.store.v1beta1.StoreInfo>}
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.getStoreInfosList = function() {
-  return /** @type{!Array<!proto.cosmos.store.v1beta1.StoreInfo>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.cosmos.store.v1beta1.StoreInfo, 2));
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.getStoreInfosList = function() {
+  return /** @type{!Array<!proto.cosmos.base.store.v1beta1.StoreInfo>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.store.v1beta1.StoreInfo, 2));
 };
 
 
 /**
- * @param {!Array<!proto.cosmos.store.v1beta1.StoreInfo>} value
- * @return {!proto.cosmos.store.v1beta1.CommitInfo} returns this
+ * @param {!Array<!proto.cosmos.base.store.v1beta1.StoreInfo>} value
+ * @return {!proto.cosmos.base.store.v1beta1.CommitInfo} returns this
 */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.setStoreInfosList = function(value) {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.setStoreInfosList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
 /**
- * @param {!proto.cosmos.store.v1beta1.StoreInfo=} opt_value
+ * @param {!proto.cosmos.base.store.v1beta1.StoreInfo=} opt_value
  * @param {number=} opt_index
- * @return {!proto.cosmos.store.v1beta1.StoreInfo}
+ * @return {!proto.cosmos.base.store.v1beta1.StoreInfo}
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.addStoreInfos = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.store.v1beta1.StoreInfo, opt_index);
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.addStoreInfos = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.base.store.v1beta1.StoreInfo, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.cosmos.store.v1beta1.CommitInfo} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.CommitInfo} returns this
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.clearStoreInfosList = function() {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.clearStoreInfosList = function() {
   return this.setStoreInfosList([]);
 };
 
@@ -248,7 +248,7 @@ proto.cosmos.store.v1beta1.CommitInfo.prototype.clearStoreInfosList = function()
  * optional google.protobuf.Timestamp timestamp = 3;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.getTimestamp = function() {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.getTimestamp = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 3));
 };
@@ -256,18 +256,18 @@ proto.cosmos.store.v1beta1.CommitInfo.prototype.getTimestamp = function() {
 
 /**
  * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.cosmos.store.v1beta1.CommitInfo} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.CommitInfo} returns this
 */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.setTimestamp = function(value) {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.setTimestamp = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.cosmos.store.v1beta1.CommitInfo} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.CommitInfo} returns this
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.clearTimestamp = function() {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.clearTimestamp = function() {
   return this.setTimestamp(undefined);
 };
 
@@ -276,7 +276,7 @@ proto.cosmos.store.v1beta1.CommitInfo.prototype.clearTimestamp = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.cosmos.store.v1beta1.CommitInfo.prototype.hasTimestamp = function() {
+proto.cosmos.base.store.v1beta1.CommitInfo.prototype.hasTimestamp = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 

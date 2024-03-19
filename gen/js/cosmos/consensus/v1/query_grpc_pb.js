@@ -33,7 +33,7 @@ function deserialize_cosmos_consensus_v1_QueryParamsResponse(buffer_arg) {
 
 // Query defines the gRPC querier service.
 var QueryService = exports.QueryService = {
-  // Params queries the parameters of x/consensus module.
+  // Params queries the parameters of x/consensus_param module.
 params: {
     path: '/cosmos.consensus.v1.Query/Params',
     requestStream: false,

@@ -83,8 +83,7 @@ proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount.toObject = function(include
     amountList: jspb.Message.toObjectList(msg.getAmountList(),
     proto.cosmos.base.v1beta1.Coin.toObject, includeInstance),
     endTime: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    delayed: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
-    startTime: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    delayed: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
   if (includeInstance) {
@@ -141,10 +140,6 @@ proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount.deserializeBinaryFromReader
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setDelayed(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setStartTime(value);
       break;
     default:
       reader.skipField();
@@ -208,13 +203,6 @@ proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount.serializeBinaryToWriter = f
   if (f) {
     writer.writeBool(
       5,
-      f
-    );
-  }
-  f = message.getStartTime();
-  if (f !== 0) {
-    writer.writeInt64(
-      6,
       f
     );
   }
@@ -328,24 +316,6 @@ proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount.prototype.getDelayed = func
  */
 proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount.prototype.setDelayed = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
-};
-
-
-/**
- * optional int64 start_time = 6;
- * @return {number}
- */
-proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount.prototype.getStartTime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount} returns this
- */
-proto.cosmos.vesting.v1beta1.MsgCreateVestingAccount.prototype.setStartTime = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 

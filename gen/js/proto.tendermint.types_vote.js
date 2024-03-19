@@ -80,9 +80,7 @@ proto.tendermint.types.Vote.toObject = function(includeInstance, msg) {
     timestamp: (f = msg.getTimestamp()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
     validatorAddress: msg.getValidatorAddress_asB64(),
     validatorIndex: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    signature: msg.getSignature_asB64(),
-    extension: msg.getExtension_asB64(),
-    extensionSignature: msg.getExtensionSignature_asB64()
+    signature: msg.getSignature_asB64()
   };
 
   if (includeInstance) {
@@ -152,14 +150,6 @@ proto.tendermint.types.Vote.deserializeBinaryFromReader = function(msg, reader) 
     case 8:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setSignature(value);
-      break;
-    case 9:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setExtension$(value);
-      break;
-    case 10:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setExtensionSignature(value);
       break;
     default:
       reader.skipField();
@@ -245,20 +235,6 @@ proto.tendermint.types.Vote.serializeBinaryToWriter = function(message, writer) 
   if (f.length > 0) {
     writer.writeBytes(
       8,
-      f
-    );
-  }
-  f = message.getExtension_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      9,
-      f
-    );
-  }
-  f = message.getExtensionSignature_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      10,
       f
     );
   }
@@ -492,90 +468,6 @@ proto.tendermint.types.Vote.prototype.getSignature_asU8 = function() {
  */
 proto.tendermint.types.Vote.prototype.setSignature = function(value) {
   return jspb.Message.setProto3BytesField(this, 8, value);
-};
-
-
-/**
- * optional bytes extension = 9;
- * @return {string}
- */
-proto.tendermint.types.Vote.prototype.getExtension$ = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
-};
-
-
-/**
- * optional bytes extension = 9;
- * This is a type-conversion wrapper around `getExtension$()`
- * @return {string}
- */
-proto.tendermint.types.Vote.prototype.getExtension_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getExtension$()));
-};
-
-
-/**
- * optional bytes extension = 9;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getExtension$()`
- * @return {!Uint8Array}
- */
-proto.tendermint.types.Vote.prototype.getExtension_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getExtension$()));
-};
-
-
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.tendermint.types.Vote} returns this
- */
-proto.tendermint.types.Vote.prototype.setExtension$ = function(value) {
-  return jspb.Message.setProto3BytesField(this, 9, value);
-};
-
-
-/**
- * optional bytes extension_signature = 10;
- * @return {string}
- */
-proto.tendermint.types.Vote.prototype.getExtensionSignature = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
-};
-
-
-/**
- * optional bytes extension_signature = 10;
- * This is a type-conversion wrapper around `getExtensionSignature()`
- * @return {string}
- */
-proto.tendermint.types.Vote.prototype.getExtensionSignature_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getExtensionSignature()));
-};
-
-
-/**
- * optional bytes extension_signature = 10;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getExtensionSignature()`
- * @return {!Uint8Array}
- */
-proto.tendermint.types.Vote.prototype.getExtensionSignature_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getExtensionSignature()));
-};
-
-
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.tendermint.types.Vote} returns this
- */
-proto.tendermint.types.Vote.prototype.setExtensionSignature = function(value) {
-  return jspb.Message.setProto3BytesField(this, 10, value);
 };
 
 

@@ -65,6 +65,11 @@ class QueryStub(object):
                 request_serializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryCommunityPoolRequest.SerializeToString,
                 response_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryCommunityPoolResponse.FromString,
                 )
+        self.TokenizeShareRecordReward = channel.unary_unary(
+                '/cosmos.distribution.v1beta1.Query/TokenizeShareRecordReward',
+                request_serializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordRewardRequest.SerializeToString,
+                response_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordRewardResponse.FromString,
+                )
 
 
 class QueryServicer(object):
@@ -114,7 +119,7 @@ class QueryServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def DelegationTotalRewards(self, request, context):
-        """DelegationTotalRewards queries the total rewards accrued by each
+        """DelegationTotalRewards queries the total rewards accrued by a each
         validator.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -137,9 +142,13 @@ class QueryServicer(object):
 
     def CommunityPool(self, request, context):
         """CommunityPool queries the community pool coins.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-        Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
-        Since: cosmos-sdk 0.50
+    def TokenizeShareRecordReward(self, request, context):
+        """TokenizeShareRecordReward queries the tokenize share record rewards
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -197,6 +206,11 @@ def add_QueryServicer_to_server(servicer, server):
                     servicer.CommunityPool,
                     request_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryCommunityPoolRequest.FromString,
                     response_serializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryCommunityPoolResponse.SerializeToString,
+            ),
+            'TokenizeShareRecordReward': grpc.unary_unary_rpc_method_handler(
+                    servicer.TokenizeShareRecordReward,
+                    request_deserializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordRewardRequest.FromString,
+                    response_serializer=cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordRewardResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -376,5 +390,22 @@ class Query(object):
         return grpc.experimental.unary_unary(request, target, '/cosmos.distribution.v1beta1.Query/CommunityPool',
             cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryCommunityPoolRequest.SerializeToString,
             cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryCommunityPoolResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TokenizeShareRecordReward(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.distribution.v1beta1.Query/TokenizeShareRecordReward',
+            cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordRewardRequest.SerializeToString,
+            cosmos_dot_distribution_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordRewardResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

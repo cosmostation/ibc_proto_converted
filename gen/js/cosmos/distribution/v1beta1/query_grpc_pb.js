@@ -143,6 +143,28 @@ function deserialize_cosmos_distribution_v1beta1_QueryParamsResponse(buffer_arg)
   return cosmos_distribution_v1beta1_query_pb.QueryParamsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardRequest(arg) {
+  if (!(arg instanceof cosmos_distribution_v1beta1_query_pb.QueryTokenizeShareRecordRewardRequest)) {
+    throw new Error('Expected argument of type cosmos.distribution.v1beta1.QueryTokenizeShareRecordRewardRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardRequest(buffer_arg) {
+  return cosmos_distribution_v1beta1_query_pb.QueryTokenizeShareRecordRewardRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardResponse(arg) {
+  if (!(arg instanceof cosmos_distribution_v1beta1_query_pb.QueryTokenizeShareRecordRewardResponse)) {
+    throw new Error('Expected argument of type cosmos.distribution.v1beta1.QueryTokenizeShareRecordRewardResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardResponse(buffer_arg) {
+  return cosmos_distribution_v1beta1_query_pb.QueryTokenizeShareRecordRewardResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_cosmos_distribution_v1beta1_QueryValidatorCommissionRequest(arg) {
   if (!(arg instanceof cosmos_distribution_v1beta1_query_pb.QueryValidatorCommissionRequest)) {
     throw new Error('Expected argument of type cosmos.distribution.v1beta1.QueryValidatorCommissionRequest');
@@ -306,7 +328,7 @@ delegationRewards: {
     responseSerialize: serialize_cosmos_distribution_v1beta1_QueryDelegationRewardsResponse,
     responseDeserialize: deserialize_cosmos_distribution_v1beta1_QueryDelegationRewardsResponse,
   },
-  // DelegationTotalRewards queries the total rewards accrued by each
+  // DelegationTotalRewards queries the total rewards accrued by a each
 // validator.
 delegationTotalRewards: {
     path: '/cosmos.distribution.v1beta1.Query/DelegationTotalRewards',
@@ -344,9 +366,6 @@ delegatorWithdrawAddress: {
     responseDeserialize: deserialize_cosmos_distribution_v1beta1_QueryDelegatorWithdrawAddressResponse,
   },
   // CommunityPool queries the community pool coins.
-//
-// Deprecated: Prefer to use x/protocolpool module's CommunityPool rpc method.
-// Since: cosmos-sdk 0.50
 communityPool: {
     path: '/cosmos.distribution.v1beta1.Query/CommunityPool',
     requestStream: false,
@@ -357,6 +376,18 @@ communityPool: {
     requestDeserialize: deserialize_cosmos_distribution_v1beta1_QueryCommunityPoolRequest,
     responseSerialize: serialize_cosmos_distribution_v1beta1_QueryCommunityPoolResponse,
     responseDeserialize: deserialize_cosmos_distribution_v1beta1_QueryCommunityPoolResponse,
+  },
+  // TokenizeShareRecordReward queries the tokenize share record rewards
+tokenizeShareRecordReward: {
+    path: '/cosmos.distribution.v1beta1.Query/TokenizeShareRecordReward',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_distribution_v1beta1_query_pb.QueryTokenizeShareRecordRewardRequest,
+    responseType: cosmos_distribution_v1beta1_query_pb.QueryTokenizeShareRecordRewardResponse,
+    requestSerialize: serialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardRequest,
+    requestDeserialize: deserialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardRequest,
+    responseSerialize: serialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardResponse,
+    responseDeserialize: deserialize_cosmos_distribution_v1beta1_QueryTokenizeShareRecordRewardResponse,
   },
 };
 

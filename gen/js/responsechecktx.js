@@ -86,7 +86,10 @@ proto.tendermint.abci.ResponseCheckTx.toObject = function(includeInstance, msg) 
     gasUsed: jspb.Message.getFieldWithDefault(msg, 6, 0),
     eventsList: jspb.Message.toObjectList(msg.getEventsList(),
     proto.tendermint.abci.Event.toObject, includeInstance),
-    codespace: jspb.Message.getFieldWithDefault(msg, 8, "")
+    codespace: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    sender: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    priority: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    mempoolError: jspb.Message.getFieldWithDefault(msg, 11, "")
   };
 
   if (includeInstance) {
@@ -155,6 +158,18 @@ proto.tendermint.abci.ResponseCheckTx.deserializeBinaryFromReader = function(msg
     case 8:
       var value = /** @type {string} */ (reader.readString());
       msg.setCodespace(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSender(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setPriority(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMempoolError(value);
       break;
     default:
       reader.skipField();
@@ -239,6 +254,27 @@ proto.tendermint.abci.ResponseCheckTx.serializeBinaryToWriter = function(message
   if (f.length > 0) {
     writer.writeString(
       8,
+      f
+    );
+  }
+  f = message.getSender();
+  if (f.length > 0) {
+    writer.writeString(
+      9,
+      f
+    );
+  }
+  f = message.getPriority();
+  if (f !== 0) {
+    writer.writeInt64(
+      10,
+      f
+    );
+  }
+  f = message.getMempoolError();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
       f
     );
   }
@@ -430,6 +466,60 @@ proto.tendermint.abci.ResponseCheckTx.prototype.getCodespace = function() {
  */
 proto.tendermint.abci.ResponseCheckTx.prototype.setCodespace = function(value) {
   return jspb.Message.setProto3StringField(this, 8, value);
+};
+
+
+/**
+ * optional string sender = 9;
+ * @return {string}
+ */
+proto.tendermint.abci.ResponseCheckTx.prototype.getSender = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.tendermint.abci.ResponseCheckTx} returns this
+ */
+proto.tendermint.abci.ResponseCheckTx.prototype.setSender = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
+};
+
+
+/**
+ * optional int64 priority = 10;
+ * @return {number}
+ */
+proto.tendermint.abci.ResponseCheckTx.prototype.getPriority = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.tendermint.abci.ResponseCheckTx} returns this
+ */
+proto.tendermint.abci.ResponseCheckTx.prototype.setPriority = function(value) {
+  return jspb.Message.setProto3IntField(this, 10, value);
+};
+
+
+/**
+ * optional string mempool_error = 11;
+ * @return {string}
+ */
+proto.tendermint.abci.ResponseCheckTx.prototype.getMempoolError = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.tendermint.abci.ResponseCheckTx} returns this
+ */
+proto.tendermint.abci.ResponseCheckTx.prototype.setMempoolError = function(value) {
+  return jspb.Message.setProto3StringField(this, 11, value);
 };
 
 

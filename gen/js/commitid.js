@@ -1,4 +1,4 @@
-// source: cosmos/store/v1beta1/commit_info.proto
+// source: cosmos/base/store/v1beta1/commit_info.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.cosmos.store.v1beta1.CommitID');
+goog.provide('proto.cosmos.base.store.v1beta1.CommitID');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.store.v1beta1.CommitID = function(opt_data) {
+proto.cosmos.base.store.v1beta1.CommitID = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.cosmos.store.v1beta1.CommitID, jspb.Message);
+goog.inherits(proto.cosmos.base.store.v1beta1.CommitID, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.cosmos.store.v1beta1.CommitID.displayName = 'proto.cosmos.store.v1beta1.CommitID';
+  proto.cosmos.base.store.v1beta1.CommitID.displayName = 'proto.cosmos.base.store.v1beta1.CommitID';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.store.v1beta1.CommitID.toObject(opt_includeInstance, this);
+proto.cosmos.base.store.v1beta1.CommitID.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.store.v1beta1.CommitID.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.cosmos.store.v1beta1.CommitID.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.cosmos.store.v1beta1.CommitID} msg The msg instance to transform.
+ * @param {!proto.cosmos.base.store.v1beta1.CommitID} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.v1beta1.CommitID.toObject = function(includeInstance, msg) {
+proto.cosmos.base.store.v1beta1.CommitID.toObject = function(includeInstance, msg) {
   var f, obj = {
     version: jspb.Message.getFieldWithDefault(msg, 1, 0),
     hash: msg.getHash_asB64()
@@ -85,23 +85,23 @@ proto.cosmos.store.v1beta1.CommitID.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.cosmos.store.v1beta1.CommitID}
+ * @return {!proto.cosmos.base.store.v1beta1.CommitID}
  */
-proto.cosmos.store.v1beta1.CommitID.deserializeBinary = function(bytes) {
+proto.cosmos.base.store.v1beta1.CommitID.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.store.v1beta1.CommitID;
-  return proto.cosmos.store.v1beta1.CommitID.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.cosmos.base.store.v1beta1.CommitID;
+  return proto.cosmos.base.store.v1beta1.CommitID.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.cosmos.store.v1beta1.CommitID} msg The message object to deserialize into.
+ * @param {!proto.cosmos.base.store.v1beta1.CommitID} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.cosmos.store.v1beta1.CommitID}
+ * @return {!proto.cosmos.base.store.v1beta1.CommitID}
  */
-proto.cosmos.store.v1beta1.CommitID.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.store.v1beta1.CommitID.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -129,9 +129,9 @@ proto.cosmos.store.v1beta1.CommitID.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.serializeBinary = function() {
+proto.cosmos.base.store.v1beta1.CommitID.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.cosmos.store.v1beta1.CommitID.serializeBinaryToWriter(this, writer);
+  proto.cosmos.base.store.v1beta1.CommitID.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -139,11 +139,11 @@ proto.cosmos.store.v1beta1.CommitID.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.cosmos.store.v1beta1.CommitID} message
+ * @param {!proto.cosmos.base.store.v1beta1.CommitID} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.store.v1beta1.CommitID.serializeBinaryToWriter = function(message, writer) {
+proto.cosmos.base.store.v1beta1.CommitID.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getVersion();
   if (f !== 0) {
@@ -166,16 +166,16 @@ proto.cosmos.store.v1beta1.CommitID.serializeBinaryToWriter = function(message, 
  * optional int64 version = 1;
  * @return {number}
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.getVersion = function() {
+proto.cosmos.base.store.v1beta1.CommitID.prototype.getVersion = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.cosmos.store.v1beta1.CommitID} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.CommitID} returns this
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.setVersion = function(value) {
+proto.cosmos.base.store.v1beta1.CommitID.prototype.setVersion = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -184,7 +184,7 @@ proto.cosmos.store.v1beta1.CommitID.prototype.setVersion = function(value) {
  * optional bytes hash = 2;
  * @return {string}
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.getHash = function() {
+proto.cosmos.base.store.v1beta1.CommitID.prototype.getHash = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -194,7 +194,7 @@ proto.cosmos.store.v1beta1.CommitID.prototype.getHash = function() {
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.getHash_asB64 = function() {
+proto.cosmos.base.store.v1beta1.CommitID.prototype.getHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getHash()));
 };
@@ -207,7 +207,7 @@ proto.cosmos.store.v1beta1.CommitID.prototype.getHash_asB64 = function() {
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.getHash_asU8 = function() {
+proto.cosmos.base.store.v1beta1.CommitID.prototype.getHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getHash()));
 };
@@ -215,9 +215,9 @@ proto.cosmos.store.v1beta1.CommitID.prototype.getHash_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.cosmos.store.v1beta1.CommitID} returns this
+ * @return {!proto.cosmos.base.store.v1beta1.CommitID} returns this
  */
-proto.cosmos.store.v1beta1.CommitID.prototype.setHash = function(value) {
+proto.cosmos.base.store.v1beta1.CommitID.prototype.setHash = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 

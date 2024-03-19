@@ -12,29 +12,6 @@ var cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');
 var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 var cosmos_msg_v1_msg_pb = require('../../../cosmos/msg/v1/msg_pb.js');
 var amino_amino_pb = require('../../../amino/amino_pb.js');
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-
-function serialize_cosmos_gov_v1_MsgCancelProposal(arg) {
-  if (!(arg instanceof cosmos_gov_v1_tx_pb.MsgCancelProposal)) {
-    throw new Error('Expected argument of type cosmos.gov.v1.MsgCancelProposal');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_gov_v1_MsgCancelProposal(buffer_arg) {
-  return cosmos_gov_v1_tx_pb.MsgCancelProposal.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_cosmos_gov_v1_MsgCancelProposalResponse(arg) {
-  if (!(arg instanceof cosmos_gov_v1_tx_pb.MsgCancelProposalResponse)) {
-    throw new Error('Expected argument of type cosmos.gov.v1.MsgCancelProposalResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_gov_v1_MsgCancelProposalResponse(buffer_arg) {
-  return cosmos_gov_v1_tx_pb.MsgCancelProposalResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
 
 function serialize_cosmos_gov_v1_MsgDeposit(arg) {
   if (!(arg instanceof cosmos_gov_v1_tx_pb.MsgDeposit)) {
@@ -246,20 +223,6 @@ updateParams: {
     requestDeserialize: deserialize_cosmos_gov_v1_MsgUpdateParams,
     responseSerialize: serialize_cosmos_gov_v1_MsgUpdateParamsResponse,
     responseDeserialize: deserialize_cosmos_gov_v1_MsgUpdateParamsResponse,
-  },
-  // CancelProposal defines a method to cancel governance proposal
-//
-// Since: cosmos-sdk 0.50
-cancelProposal: {
-    path: '/cosmos.gov.v1.Msg/CancelProposal',
-    requestStream: false,
-    responseStream: false,
-    requestType: cosmos_gov_v1_tx_pb.MsgCancelProposal,
-    responseType: cosmos_gov_v1_tx_pb.MsgCancelProposalResponse,
-    requestSerialize: serialize_cosmos_gov_v1_MsgCancelProposal,
-    requestDeserialize: deserialize_cosmos_gov_v1_MsgCancelProposal,
-    responseSerialize: serialize_cosmos_gov_v1_MsgCancelProposalResponse,
-    responseDeserialize: deserialize_cosmos_gov_v1_MsgCancelProposalResponse,
   },
 };
 

@@ -37,14 +37,14 @@ class QueryServicer(object):
     """
 
     def Allowance(self, request, context):
-        """Allowance returns granted allwance to the grantee by the granter.
+        """Allowance returns fee granted to the grantee by the granter.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def Allowances(self, request, context):
-        """Allowances returns all the grants for the given grantee address.
+        """Allowances returns all the grants for address.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

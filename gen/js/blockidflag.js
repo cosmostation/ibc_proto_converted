@@ -1,4 +1,4 @@
-// source: tendermint/types/validator.proto
+// source: tendermint/types/types.proto
 /**
  * @fileoverview
  * @enhanceable

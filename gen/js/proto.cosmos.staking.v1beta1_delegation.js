@@ -72,7 +72,8 @@ proto.cosmos.staking.v1beta1.Delegation.toObject = function(includeInstance, msg
   var f, obj = {
     delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
     validatorAddress: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    shares: jspb.Message.getFieldWithDefault(msg, 3, "")
+    shares: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    validatorBond: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
   };
 
   if (includeInstance) {
@@ -121,6 +122,10 @@ proto.cosmos.staking.v1beta1.Delegation.deserializeBinaryFromReader = function(m
       var value = /** @type {string} */ (reader.readString());
       msg.setShares(value);
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setValidatorBond(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -168,6 +173,13 @@ proto.cosmos.staking.v1beta1.Delegation.serializeBinaryToWriter = function(messa
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getValidatorBond();
+  if (f) {
+    writer.writeBool(
+      4,
       f
     );
   }
@@ -225,6 +237,24 @@ proto.cosmos.staking.v1beta1.Delegation.prototype.getShares = function() {
  */
 proto.cosmos.staking.v1beta1.Delegation.prototype.setShares = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional bool validator_bond = 4;
+ * @return {boolean}
+ */
+proto.cosmos.staking.v1beta1.Delegation.prototype.getValidatorBond = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.cosmos.staking.v1beta1.Delegation} returns this
+ */
+proto.cosmos.staking.v1beta1.Delegation.prototype.setValidatorBond = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 

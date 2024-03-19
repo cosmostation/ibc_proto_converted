@@ -56,28 +56,6 @@ function deserialize_cosmos_bank_v1beta1_QueryBalanceResponse(buffer_arg) {
   return cosmos_bank_v1beta1_query_pb.QueryBalanceResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringRequest(arg) {
-  if (!(arg instanceof cosmos_bank_v1beta1_query_pb.QueryDenomMetadataByQueryStringRequest)) {
-    throw new Error('Expected argument of type cosmos.bank.v1beta1.QueryDenomMetadataByQueryStringRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringRequest(buffer_arg) {
-  return cosmos_bank_v1beta1_query_pb.QueryDenomMetadataByQueryStringRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringResponse(arg) {
-  if (!(arg instanceof cosmos_bank_v1beta1_query_pb.QueryDenomMetadataByQueryStringResponse)) {
-    throw new Error('Expected argument of type cosmos.bank.v1beta1.QueryDenomMetadataByQueryStringResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringResponse(buffer_arg) {
-  return cosmos_bank_v1beta1_query_pb.QueryDenomMetadataByQueryStringResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 function serialize_cosmos_bank_v1beta1_QueryDenomMetadataRequest(arg) {
   if (!(arg instanceof cosmos_bank_v1beta1_query_pb.QueryDenomMetadataRequest)) {
     throw new Error('Expected argument of type cosmos.bank.v1beta1.QueryDenomMetadataRequest');
@@ -395,18 +373,6 @@ denomMetadata: {
     requestDeserialize: deserialize_cosmos_bank_v1beta1_QueryDenomMetadataRequest,
     responseSerialize: serialize_cosmos_bank_v1beta1_QueryDenomMetadataResponse,
     responseDeserialize: deserialize_cosmos_bank_v1beta1_QueryDenomMetadataResponse,
-  },
-  // DenomsMetadata queries the client metadata of a given coin denomination.
-denomMetadataByQueryString: {
-    path: '/cosmos.bank.v1beta1.Query/DenomMetadataByQueryString',
-    requestStream: false,
-    responseStream: false,
-    requestType: cosmos_bank_v1beta1_query_pb.QueryDenomMetadataByQueryStringRequest,
-    responseType: cosmos_bank_v1beta1_query_pb.QueryDenomMetadataByQueryStringResponse,
-    requestSerialize: serialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringRequest,
-    requestDeserialize: deserialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringRequest,
-    responseSerialize: serialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringResponse,
-    responseDeserialize: deserialize_cosmos_bank_v1beta1_QueryDenomMetadataByQueryStringResponse,
   },
   // DenomsMetadata queries the client metadata for all registered coin
 // denominations.

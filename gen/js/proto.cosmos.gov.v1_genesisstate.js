@@ -94,8 +94,7 @@ proto.cosmos.gov.v1.GenesisState.toObject = function(includeInstance, msg) {
     depositParams: (f = msg.getDepositParams()) && proto.cosmos.gov.v1.DepositParams.toObject(includeInstance, f),
     votingParams: (f = msg.getVotingParams()) && proto.cosmos.gov.v1.VotingParams.toObject(includeInstance, f),
     tallyParams: (f = msg.getTallyParams()) && proto.cosmos.gov.v1.TallyParams.toObject(includeInstance, f),
-    params: (f = msg.getParams()) && proto.cosmos.gov.v1.Params.toObject(includeInstance, f),
-    constitution: jspb.Message.getFieldWithDefault(msg, 9, "")
+    params: (f = msg.getParams()) && proto.cosmos.gov.v1.Params.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -170,10 +169,6 @@ proto.cosmos.gov.v1.GenesisState.deserializeBinaryFromReader = function(msg, rea
       var value = new proto.cosmos.gov.v1.Params;
       reader.readMessage(value,proto.cosmos.gov.v1.Params.deserializeBinaryFromReader);
       msg.setParams(value);
-      break;
-    case 9:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setConstitution(value);
       break;
     default:
       reader.skipField();
@@ -265,13 +260,6 @@ proto.cosmos.gov.v1.GenesisState.serializeBinaryToWriter = function(message, wri
       8,
       f,
       proto.cosmos.gov.v1.Params.serializeBinaryToWriter
-    );
-  }
-  f = message.getConstitution();
-  if (f.length > 0) {
-    writer.writeString(
-      9,
-      f
     );
   }
 };
@@ -554,24 +542,6 @@ proto.cosmos.gov.v1.GenesisState.prototype.clearParams = function() {
  */
 proto.cosmos.gov.v1.GenesisState.prototype.hasParams = function() {
   return jspb.Message.getField(this, 8) != null;
-};
-
-
-/**
- * optional string constitution = 9;
- * @return {string}
- */
-proto.cosmos.gov.v1.GenesisState.prototype.getConstitution = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.gov.v1.GenesisState} returns this
- */
-proto.cosmos.gov.v1.GenesisState.prototype.setConstitution = function(value) {
-  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 

@@ -10,28 +10,6 @@ var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 var cosmos_gov_v1_gov_pb = require('../../../cosmos/gov/v1/gov_pb.js');
 var cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');
 
-function serialize_cosmos_gov_v1_QueryConstitutionRequest(arg) {
-  if (!(arg instanceof cosmos_gov_v1_query_pb.QueryConstitutionRequest)) {
-    throw new Error('Expected argument of type cosmos.gov.v1.QueryConstitutionRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_gov_v1_QueryConstitutionRequest(buffer_arg) {
-  return cosmos_gov_v1_query_pb.QueryConstitutionRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_cosmos_gov_v1_QueryConstitutionResponse(arg) {
-  if (!(arg instanceof cosmos_gov_v1_query_pb.QueryConstitutionResponse)) {
-    throw new Error('Expected argument of type cosmos.gov.v1.QueryConstitutionResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_cosmos_gov_v1_QueryConstitutionResponse(buffer_arg) {
-  return cosmos_gov_v1_query_pb.QueryConstitutionResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 function serialize_cosmos_gov_v1_QueryDepositRequest(arg) {
   if (!(arg instanceof cosmos_gov_v1_query_pb.QueryDepositRequest)) {
     throw new Error('Expected argument of type cosmos.gov.v1.QueryDepositRequest');
@@ -211,18 +189,6 @@ function deserialize_cosmos_gov_v1_QueryVotesResponse(buffer_arg) {
 
 // Query defines the gRPC querier service for gov module
 var QueryService = exports.QueryService = {
-  // Constitution queries the chain's constitution.
-constitution: {
-    path: '/cosmos.gov.v1.Query/Constitution',
-    requestStream: false,
-    responseStream: false,
-    requestType: cosmos_gov_v1_query_pb.QueryConstitutionRequest,
-    responseType: cosmos_gov_v1_query_pb.QueryConstitutionResponse,
-    requestSerialize: serialize_cosmos_gov_v1_QueryConstitutionRequest,
-    requestDeserialize: deserialize_cosmos_gov_v1_QueryConstitutionRequest,
-    responseSerialize: serialize_cosmos_gov_v1_QueryConstitutionResponse,
-    responseDeserialize: deserialize_cosmos_gov_v1_QueryConstitutionResponse,
-  },
   // Proposal queries proposal details based on ProposalID.
 proposal: {
     path: '/cosmos.gov.v1.Query/Proposal',
@@ -283,7 +249,7 @@ params: {
     responseSerialize: serialize_cosmos_gov_v1_QueryParamsResponse,
     responseDeserialize: deserialize_cosmos_gov_v1_QueryParamsResponse,
   },
-  // Deposit queries single deposit information based on proposalID, depositAddr.
+  // Deposit queries single deposit information based proposalID, depositAddr.
 deposit: {
     path: '/cosmos.gov.v1.Query/Deposit',
     requestStream: false,

@@ -16,7 +16,6 @@ goog.provide('proto.cosmos.staking.v1beta1.MsgUndelegateResponse');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.cosmos.base.v1beta1.Coin');
 goog.require('proto.google.protobuf.Timestamp');
 
 /**
@@ -72,8 +71,7 @@ proto.cosmos.staking.v1beta1.MsgUndelegateResponse.prototype.toObject = function
  */
 proto.cosmos.staking.v1beta1.MsgUndelegateResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    completionTime: (f = msg.getCompletionTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
-    amount: (f = msg.getAmount()) && proto.cosmos.base.v1beta1.Coin.toObject(includeInstance, f)
+    completionTime: (f = msg.getCompletionTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -115,11 +113,6 @@ proto.cosmos.staking.v1beta1.MsgUndelegateResponse.deserializeBinaryFromReader =
       reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
       msg.setCompletionTime(value);
       break;
-    case 2:
-      var value = new proto.cosmos.base.v1beta1.Coin;
-      reader.readMessage(value,proto.cosmos.base.v1beta1.Coin.deserializeBinaryFromReader);
-      msg.setAmount(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -155,14 +148,6 @@ proto.cosmos.staking.v1beta1.MsgUndelegateResponse.serializeBinaryToWriter = fun
       1,
       f,
       proto.google.protobuf.Timestamp.serializeBinaryToWriter
-    );
-  }
-  f = message.getAmount();
-  if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      proto.cosmos.base.v1beta1.Coin.serializeBinaryToWriter
     );
   }
 };
@@ -202,43 +187,6 @@ proto.cosmos.staking.v1beta1.MsgUndelegateResponse.prototype.clearCompletionTime
  */
 proto.cosmos.staking.v1beta1.MsgUndelegateResponse.prototype.hasCompletionTime = function() {
   return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional cosmos.base.v1beta1.Coin amount = 2;
- * @return {?proto.cosmos.base.v1beta1.Coin}
- */
-proto.cosmos.staking.v1beta1.MsgUndelegateResponse.prototype.getAmount = function() {
-  return /** @type{?proto.cosmos.base.v1beta1.Coin} */ (
-    jspb.Message.getWrapperField(this, proto.cosmos.base.v1beta1.Coin, 2));
-};
-
-
-/**
- * @param {?proto.cosmos.base.v1beta1.Coin|undefined} value
- * @return {!proto.cosmos.staking.v1beta1.MsgUndelegateResponse} returns this
-*/
-proto.cosmos.staking.v1beta1.MsgUndelegateResponse.prototype.setAmount = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.cosmos.staking.v1beta1.MsgUndelegateResponse} returns this
- */
-proto.cosmos.staking.v1beta1.MsgUndelegateResponse.prototype.clearAmount = function() {
-  return this.setAmount(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.cosmos.staking.v1beta1.MsgUndelegateResponse.prototype.hasAmount = function() {
-  return jspb.Message.getField(this, 2) != null;
 };
 
 

@@ -26,7 +26,7 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-/// Msg defines the gov Msg service.
+/// Msg defines the bank Msg service.
 ///
 /// Usage: instantiate `Cosmos_Gov_V1beta1_MsgClient`, then call methods of this protocol to make API calls.
 internal protocol Cosmos_Gov_V1beta1_MsgClientProtocol: GRPCClient {
@@ -191,7 +191,7 @@ internal struct Cosmos_Gov_V1beta1_MsgNIOClient: Cosmos_Gov_V1beta1_MsgClientPro
   }
 }
 
-/// Msg defines the gov Msg service.
+/// Msg defines the bank Msg service.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 internal protocol Cosmos_Gov_V1beta1_MsgAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
@@ -399,7 +399,7 @@ internal enum Cosmos_Gov_V1beta1_MsgClientMetadata {
   }
 }
 
-/// Msg defines the gov Msg service.
+/// Msg defines the bank Msg service.
 ///
 /// To build a server, implement a class that conforms to this protocol.
 internal protocol Cosmos_Gov_V1beta1_MsgProvider: CallHandlerProvider {
@@ -474,7 +474,7 @@ extension Cosmos_Gov_V1beta1_MsgProvider {
   }
 }
 
-/// Msg defines the gov Msg service.
+/// Msg defines the bank Msg service.
 ///
 /// To implement a server, implement an object which conforms to this protocol.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)

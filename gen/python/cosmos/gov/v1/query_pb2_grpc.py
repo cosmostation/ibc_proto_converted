@@ -15,11 +15,6 @@ class QueryStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.Constitution = channel.unary_unary(
-                '/cosmos.gov.v1.Query/Constitution',
-                request_serializer=cosmos_dot_gov_dot_v1_dot_query__pb2.QueryConstitutionRequest.SerializeToString,
-                response_deserializer=cosmos_dot_gov_dot_v1_dot_query__pb2.QueryConstitutionResponse.FromString,
-                )
         self.Proposal = channel.unary_unary(
                 '/cosmos.gov.v1.Query/Proposal',
                 request_serializer=cosmos_dot_gov_dot_v1_dot_query__pb2.QueryProposalRequest.SerializeToString,
@@ -66,13 +61,6 @@ class QueryServicer(object):
     """Query defines the gRPC querier service for gov module
     """
 
-    def Constitution(self, request, context):
-        """Constitution queries the chain's constitution.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def Proposal(self, request, context):
         """Proposal queries proposal details based on ProposalID.
         """
@@ -109,7 +97,7 @@ class QueryServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Deposit(self, request, context):
-        """Deposit queries single deposit information based on proposalID, depositAddr.
+        """Deposit queries single deposit information based proposalID, depositAddr.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -132,11 +120,6 @@ class QueryServicer(object):
 
 def add_QueryServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Constitution': grpc.unary_unary_rpc_method_handler(
-                    servicer.Constitution,
-                    request_deserializer=cosmos_dot_gov_dot_v1_dot_query__pb2.QueryConstitutionRequest.FromString,
-                    response_serializer=cosmos_dot_gov_dot_v1_dot_query__pb2.QueryConstitutionResponse.SerializeToString,
-            ),
             'Proposal': grpc.unary_unary_rpc_method_handler(
                     servicer.Proposal,
                     request_deserializer=cosmos_dot_gov_dot_v1_dot_query__pb2.QueryProposalRequest.FromString,
@@ -187,23 +170,6 @@ def add_QueryServicer_to_server(servicer, server):
 class Query(object):
     """Query defines the gRPC querier service for gov module
     """
-
-    @staticmethod
-    def Constitution(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cosmos.gov.v1.Query/Constitution',
-            cosmos_dot_gov_dot_v1_dot_query__pb2.QueryConstitutionRequest.SerializeToString,
-            cosmos_dot_gov_dot_v1_dot_query__pb2.QueryConstitutionResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Proposal(request,

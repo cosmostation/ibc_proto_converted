@@ -16,7 +16,6 @@ goog.provide('proto.tendermint.types.ConsensusParams');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
-goog.require('proto.tendermint.types.ABCIParams');
 goog.require('proto.tendermint.types.BlockParams');
 goog.require('proto.tendermint.types.EvidenceParams');
 goog.require('proto.tendermint.types.ValidatorParams');
@@ -78,8 +77,7 @@ proto.tendermint.types.ConsensusParams.toObject = function(includeInstance, msg)
     block: (f = msg.getBlock()) && proto.tendermint.types.BlockParams.toObject(includeInstance, f),
     evidence: (f = msg.getEvidence()) && proto.tendermint.types.EvidenceParams.toObject(includeInstance, f),
     validator: (f = msg.getValidator()) && proto.tendermint.types.ValidatorParams.toObject(includeInstance, f),
-    version: (f = msg.getVersion()) && proto.tendermint.types.VersionParams.toObject(includeInstance, f),
-    abci: (f = msg.getAbci()) && proto.tendermint.types.ABCIParams.toObject(includeInstance, f)
+    version: (f = msg.getVersion()) && proto.tendermint.types.VersionParams.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -135,11 +133,6 @@ proto.tendermint.types.ConsensusParams.deserializeBinaryFromReader = function(ms
       var value = new proto.tendermint.types.VersionParams;
       reader.readMessage(value,proto.tendermint.types.VersionParams.deserializeBinaryFromReader);
       msg.setVersion(value);
-      break;
-    case 5:
-      var value = new proto.tendermint.types.ABCIParams;
-      reader.readMessage(value,proto.tendermint.types.ABCIParams.deserializeBinaryFromReader);
-      msg.setAbci(value);
       break;
     default:
       reader.skipField();
@@ -200,14 +193,6 @@ proto.tendermint.types.ConsensusParams.serializeBinaryToWriter = function(messag
       4,
       f,
       proto.tendermint.types.VersionParams.serializeBinaryToWriter
-    );
-  }
-  f = message.getAbci();
-  if (f != null) {
-    writer.writeMessage(
-      5,
-      f,
-      proto.tendermint.types.ABCIParams.serializeBinaryToWriter
     );
   }
 };
@@ -358,43 +343,6 @@ proto.tendermint.types.ConsensusParams.prototype.clearVersion = function() {
  */
 proto.tendermint.types.ConsensusParams.prototype.hasVersion = function() {
   return jspb.Message.getField(this, 4) != null;
-};
-
-
-/**
- * optional ABCIParams abci = 5;
- * @return {?proto.tendermint.types.ABCIParams}
- */
-proto.tendermint.types.ConsensusParams.prototype.getAbci = function() {
-  return /** @type{?proto.tendermint.types.ABCIParams} */ (
-    jspb.Message.getWrapperField(this, proto.tendermint.types.ABCIParams, 5));
-};
-
-
-/**
- * @param {?proto.tendermint.types.ABCIParams|undefined} value
- * @return {!proto.tendermint.types.ConsensusParams} returns this
-*/
-proto.tendermint.types.ConsensusParams.prototype.setAbci = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.tendermint.types.ConsensusParams} returns this
- */
-proto.tendermint.types.ConsensusParams.prototype.clearAbci = function() {
-  return this.setAbci(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.tendermint.types.ConsensusParams.prototype.hasAbci = function() {
-  return jspb.Message.getField(this, 5) != null;
 };
 
 

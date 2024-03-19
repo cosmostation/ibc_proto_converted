@@ -94,7 +94,9 @@ proto.cosmos.staking.v1beta1.Validator.toObject = function(includeInstance, msg)
     commission: (f = msg.getCommission()) && proto.cosmos.staking.v1beta1.Commission.toObject(includeInstance, f),
     minSelfDelegation: jspb.Message.getFieldWithDefault(msg, 11, ""),
     unbondingOnHoldRefCount: jspb.Message.getFieldWithDefault(msg, 12, 0),
-    unbondingIdsList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f
+    unbondingIdsList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f,
+    validatorBondShares: jspb.Message.getFieldWithDefault(msg, 14, ""),
+    liquidShares: jspb.Message.getFieldWithDefault(msg, 15, "")
   };
 
   if (includeInstance) {
@@ -188,6 +190,14 @@ proto.cosmos.staking.v1beta1.Validator.deserializeBinaryFromReader = function(ms
       for (var i = 0; i < values.length; i++) {
         msg.addUnbondingIds(values[i]);
       }
+      break;
+    case 14:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValidatorBondShares(value);
+      break;
+    case 15:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLiquidShares(value);
       break;
     default:
       reader.skipField();
@@ -310,6 +320,20 @@ proto.cosmos.staking.v1beta1.Validator.serializeBinaryToWriter = function(messag
   if (f.length > 0) {
     writer.writePackedUint64(
       13,
+      f
+    );
+  }
+  f = message.getValidatorBondShares();
+  if (f.length > 0) {
+    writer.writeString(
+      14,
+      f
+    );
+  }
+  f = message.getLiquidShares();
+  if (f.length > 0) {
+    writer.writeString(
+      15,
       f
     );
   }
@@ -642,6 +666,42 @@ proto.cosmos.staking.v1beta1.Validator.prototype.addUnbondingIds = function(valu
  */
 proto.cosmos.staking.v1beta1.Validator.prototype.clearUnbondingIdsList = function() {
   return this.setUnbondingIdsList([]);
+};
+
+
+/**
+ * optional string validator_bond_shares = 14;
+ * @return {string}
+ */
+proto.cosmos.staking.v1beta1.Validator.prototype.getValidatorBondShares = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.cosmos.staking.v1beta1.Validator} returns this
+ */
+proto.cosmos.staking.v1beta1.Validator.prototype.setValidatorBondShares = function(value) {
+  return jspb.Message.setProto3StringField(this, 14, value);
+};
+
+
+/**
+ * optional string liquid_shares = 15;
+ * @return {string}
+ */
+proto.cosmos.staking.v1beta1.Validator.prototype.getLiquidShares = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.cosmos.staking.v1beta1.Validator} returns this
+ */
+proto.cosmos.staking.v1beta1.Validator.prototype.setLiquidShares = function(value) {
+  return jspb.Message.setProto3StringField(this, 15, value);
 };
 
 

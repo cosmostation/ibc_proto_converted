@@ -70,6 +70,7 @@ proto.tendermint.abci.ResponseCommit.prototype.toObject = function(opt_includeIn
  */
 proto.tendermint.abci.ResponseCommit.toObject = function(includeInstance, msg) {
   var f, obj = {
+    data: msg.getData_asB64(),
     retainHeight: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
@@ -107,6 +108,10 @@ proto.tendermint.abci.ResponseCommit.deserializeBinaryFromReader = function(msg,
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setData(value);
+      break;
     case 3:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setRetainHeight(value);
@@ -140,6 +145,13 @@ proto.tendermint.abci.ResponseCommit.prototype.serializeBinary = function() {
  */
 proto.tendermint.abci.ResponseCommit.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getData_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      2,
+      f
+    );
+  }
   f = message.getRetainHeight();
   if (f !== 0) {
     writer.writeInt64(
@@ -147,6 +159,48 @@ proto.tendermint.abci.ResponseCommit.serializeBinaryToWriter = function(message,
       f
     );
   }
+};
+
+
+/**
+ * optional bytes data = 2;
+ * @return {string}
+ */
+proto.tendermint.abci.ResponseCommit.prototype.getData = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * optional bytes data = 2;
+ * This is a type-conversion wrapper around `getData()`
+ * @return {string}
+ */
+proto.tendermint.abci.ResponseCommit.prototype.getData_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getData()));
+};
+
+
+/**
+ * optional bytes data = 2;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getData()`
+ * @return {!Uint8Array}
+ */
+proto.tendermint.abci.ResponseCommit.prototype.getData_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getData()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.tendermint.abci.ResponseCommit} returns this
+ */
+proto.tendermint.abci.ResponseCommit.prototype.setData = function(value) {
+  return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 

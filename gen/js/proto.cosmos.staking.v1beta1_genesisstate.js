@@ -20,6 +20,8 @@ goog.require('proto.cosmos.staking.v1beta1.Delegation');
 goog.require('proto.cosmos.staking.v1beta1.LastValidatorPower');
 goog.require('proto.cosmos.staking.v1beta1.Params');
 goog.require('proto.cosmos.staking.v1beta1.Redelegation');
+goog.require('proto.cosmos.staking.v1beta1.TokenizeShareLock');
+goog.require('proto.cosmos.staking.v1beta1.TokenizeShareRecord');
 goog.require('proto.cosmos.staking.v1beta1.UnbondingDelegation');
 goog.require('proto.cosmos.staking.v1beta1.Validator');
 
@@ -50,7 +52,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.staking.v1beta1.GenesisState.repeatedFields_ = [3,4,5,6,7];
+proto.cosmos.staking.v1beta1.GenesisState.repeatedFields_ = [3,4,5,6,7,9,12];
 
 
 
@@ -95,7 +97,13 @@ proto.cosmos.staking.v1beta1.GenesisState.toObject = function(includeInstance, m
     proto.cosmos.staking.v1beta1.UnbondingDelegation.toObject, includeInstance),
     redelegationsList: jspb.Message.toObjectList(msg.getRedelegationsList(),
     proto.cosmos.staking.v1beta1.Redelegation.toObject, includeInstance),
-    exported: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
+    exported: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    tokenizeShareRecordsList: jspb.Message.toObjectList(msg.getTokenizeShareRecordsList(),
+    proto.cosmos.staking.v1beta1.TokenizeShareRecord.toObject, includeInstance),
+    lastTokenizeShareRecordId: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    totalLiquidStakedTokens: msg.getTotalLiquidStakedTokens_asB64(),
+    tokenizeShareLocksList: jspb.Message.toObjectList(msg.getTokenizeShareLocksList(),
+    proto.cosmos.staking.v1beta1.TokenizeShareLock.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -169,6 +177,24 @@ proto.cosmos.staking.v1beta1.GenesisState.deserializeBinaryFromReader = function
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setExported(value);
+      break;
+    case 9:
+      var value = new proto.cosmos.staking.v1beta1.TokenizeShareRecord;
+      reader.readMessage(value,proto.cosmos.staking.v1beta1.TokenizeShareRecord.deserializeBinaryFromReader);
+      msg.addTokenizeShareRecords(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setLastTokenizeShareRecordId(value);
+      break;
+    case 11:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setTotalLiquidStakedTokens(value);
+      break;
+    case 12:
+      var value = new proto.cosmos.staking.v1beta1.TokenizeShareLock;
+      reader.readMessage(value,proto.cosmos.staking.v1beta1.TokenizeShareLock.deserializeBinaryFromReader);
+      msg.addTokenizeShareLocks(value);
       break;
     default:
       reader.skipField();
@@ -259,6 +285,36 @@ proto.cosmos.staking.v1beta1.GenesisState.serializeBinaryToWriter = function(mes
     writer.writeBool(
       8,
       f
+    );
+  }
+  f = message.getTokenizeShareRecordsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      proto.cosmos.staking.v1beta1.TokenizeShareRecord.serializeBinaryToWriter
+    );
+  }
+  f = message.getLastTokenizeShareRecordId();
+  if (f !== 0) {
+    writer.writeUint64(
+      10,
+      f
+    );
+  }
+  f = message.getTotalLiquidStakedTokens_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      11,
+      f
+    );
+  }
+  f = message.getTokenizeShareLocksList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      12,
+      f,
+      proto.cosmos.staking.v1beta1.TokenizeShareLock.serializeBinaryToWriter
     );
   }
 };
@@ -548,6 +604,142 @@ proto.cosmos.staking.v1beta1.GenesisState.prototype.getExported = function() {
  */
 proto.cosmos.staking.v1beta1.GenesisState.prototype.setExported = function(value) {
   return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * repeated TokenizeShareRecord tokenize_share_records = 9;
+ * @return {!Array<!proto.cosmos.staking.v1beta1.TokenizeShareRecord>}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.getTokenizeShareRecordsList = function() {
+  return /** @type{!Array<!proto.cosmos.staking.v1beta1.TokenizeShareRecord>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.cosmos.staking.v1beta1.TokenizeShareRecord, 9));
+};
+
+
+/**
+ * @param {!Array<!proto.cosmos.staking.v1beta1.TokenizeShareRecord>} value
+ * @return {!proto.cosmos.staking.v1beta1.GenesisState} returns this
+*/
+proto.cosmos.staking.v1beta1.GenesisState.prototype.setTokenizeShareRecordsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.cosmos.staking.v1beta1.TokenizeShareRecord=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.cosmos.staking.v1beta1.TokenizeShareRecord}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.addTokenizeShareRecords = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.cosmos.staking.v1beta1.TokenizeShareRecord, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.cosmos.staking.v1beta1.GenesisState} returns this
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.clearTokenizeShareRecordsList = function() {
+  return this.setTokenizeShareRecordsList([]);
+};
+
+
+/**
+ * optional uint64 last_tokenize_share_record_id = 10;
+ * @return {number}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.getLastTokenizeShareRecordId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.cosmos.staking.v1beta1.GenesisState} returns this
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.setLastTokenizeShareRecordId = function(value) {
+  return jspb.Message.setProto3IntField(this, 10, value);
+};
+
+
+/**
+ * optional bytes total_liquid_staked_tokens = 11;
+ * @return {string}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.getTotalLiquidStakedTokens = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/**
+ * optional bytes total_liquid_staked_tokens = 11;
+ * This is a type-conversion wrapper around `getTotalLiquidStakedTokens()`
+ * @return {string}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.getTotalLiquidStakedTokens_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getTotalLiquidStakedTokens()));
+};
+
+
+/**
+ * optional bytes total_liquid_staked_tokens = 11;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getTotalLiquidStakedTokens()`
+ * @return {!Uint8Array}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.getTotalLiquidStakedTokens_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getTotalLiquidStakedTokens()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.cosmos.staking.v1beta1.GenesisState} returns this
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.setTotalLiquidStakedTokens = function(value) {
+  return jspb.Message.setProto3BytesField(this, 11, value);
+};
+
+
+/**
+ * repeated TokenizeShareLock tokenize_share_locks = 12;
+ * @return {!Array<!proto.cosmos.staking.v1beta1.TokenizeShareLock>}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.getTokenizeShareLocksList = function() {
+  return /** @type{!Array<!proto.cosmos.staking.v1beta1.TokenizeShareLock>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.cosmos.staking.v1beta1.TokenizeShareLock, 12));
+};
+
+
+/**
+ * @param {!Array<!proto.cosmos.staking.v1beta1.TokenizeShareLock>} value
+ * @return {!proto.cosmos.staking.v1beta1.GenesisState} returns this
+*/
+proto.cosmos.staking.v1beta1.GenesisState.prototype.setTokenizeShareLocksList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 12, value);
+};
+
+
+/**
+ * @param {!proto.cosmos.staking.v1beta1.TokenizeShareLock=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.cosmos.staking.v1beta1.TokenizeShareLock}
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.addTokenizeShareLocks = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 12, opt_value, proto.cosmos.staking.v1beta1.TokenizeShareLock, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.cosmos.staking.v1beta1.GenesisState} returns this
+ */
+proto.cosmos.staking.v1beta1.GenesisState.prototype.clearTokenizeShareLocksList = function() {
+  return this.setTokenizeShareLocksList([]);
 };
 
 

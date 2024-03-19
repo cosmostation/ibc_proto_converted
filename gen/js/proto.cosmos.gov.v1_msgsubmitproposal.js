@@ -86,8 +86,7 @@ proto.cosmos.gov.v1.MsgSubmitProposal.toObject = function(includeInstance, msg) 
     proposer: jspb.Message.getFieldWithDefault(msg, 3, ""),
     metadata: jspb.Message.getFieldWithDefault(msg, 4, ""),
     title: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    summary: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    expedited: jspb.Message.getBooleanFieldWithDefault(msg, 7, false)
+    summary: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -149,10 +148,6 @@ proto.cosmos.gov.v1.MsgSubmitProposal.deserializeBinaryFromReader = function(msg
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setSummary(value);
-      break;
-    case 7:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setExpedited(value);
       break;
     default:
       reader.skipField();
@@ -224,13 +219,6 @@ proto.cosmos.gov.v1.MsgSubmitProposal.serializeBinaryToWriter = function(message
   if (f.length > 0) {
     writer.writeString(
       6,
-      f
-    );
-  }
-  f = message.getExpedited();
-  if (f) {
-    writer.writeBool(
-      7,
       f
     );
   }
@@ -382,24 +370,6 @@ proto.cosmos.gov.v1.MsgSubmitProposal.prototype.getSummary = function() {
  */
 proto.cosmos.gov.v1.MsgSubmitProposal.prototype.setSummary = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
-};
-
-
-/**
- * optional bool expedited = 7;
- * @return {boolean}
- */
-proto.cosmos.gov.v1.MsgSubmitProposal.prototype.getExpedited = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.cosmos.gov.v1.MsgSubmitProposal} returns this
- */
-proto.cosmos.gov.v1.MsgSubmitProposal.prototype.setExpedited = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 7, value);
 };
 
 

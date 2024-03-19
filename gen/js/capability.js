@@ -1,4 +1,4 @@
-// source: capability/v1/capability.proto
+// source: cosmos/capability/v1beta1/capability.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.capability.v1.Capability');
+goog.provide('proto.cosmos.capability.v1beta1.Capability');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.capability.v1.Capability = function(opt_data) {
+proto.cosmos.capability.v1beta1.Capability = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.capability.v1.Capability, jspb.Message);
+goog.inherits(proto.cosmos.capability.v1beta1.Capability, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.capability.v1.Capability.displayName = 'proto.capability.v1.Capability';
+  proto.cosmos.capability.v1beta1.Capability.displayName = 'proto.cosmos.capability.v1beta1.Capability';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.capability.v1.Capability.prototype.toObject = function(opt_includeInstance) {
-  return proto.capability.v1.Capability.toObject(opt_includeInstance, this);
+proto.cosmos.capability.v1beta1.Capability.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.capability.v1beta1.Capability.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.capability.v1.Capability.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.capability.v1.Capability} msg The msg instance to transform.
+ * @param {!proto.cosmos.capability.v1beta1.Capability} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.capability.v1.Capability.toObject = function(includeInstance, msg) {
+proto.cosmos.capability.v1beta1.Capability.toObject = function(includeInstance, msg) {
   var f, obj = {
     index: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -84,23 +84,23 @@ proto.capability.v1.Capability.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.capability.v1.Capability}
+ * @return {!proto.cosmos.capability.v1beta1.Capability}
  */
-proto.capability.v1.Capability.deserializeBinary = function(bytes) {
+proto.cosmos.capability.v1beta1.Capability.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.capability.v1.Capability;
-  return proto.capability.v1.Capability.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.cosmos.capability.v1beta1.Capability;
+  return proto.cosmos.capability.v1beta1.Capability.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.capability.v1.Capability} msg The message object to deserialize into.
+ * @param {!proto.cosmos.capability.v1beta1.Capability} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.capability.v1.Capability}
+ * @return {!proto.cosmos.capability.v1beta1.Capability}
  */
-proto.capability.v1.Capability.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.capability.v1beta1.Capability.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -124,9 +124,9 @@ proto.capability.v1.Capability.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.capability.v1.Capability.prototype.serializeBinary = function() {
+proto.cosmos.capability.v1beta1.Capability.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.capability.v1.Capability.serializeBinaryToWriter(this, writer);
+  proto.cosmos.capability.v1beta1.Capability.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -134,11 +134,11 @@ proto.capability.v1.Capability.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.capability.v1.Capability} message
+ * @param {!proto.cosmos.capability.v1beta1.Capability} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.capability.v1.Capability.serializeBinaryToWriter = function(message, writer) {
+proto.cosmos.capability.v1beta1.Capability.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getIndex();
   if (f !== 0) {
@@ -154,16 +154,16 @@ proto.capability.v1.Capability.serializeBinaryToWriter = function(message, write
  * optional uint64 index = 1;
  * @return {number}
  */
-proto.capability.v1.Capability.prototype.getIndex = function() {
+proto.cosmos.capability.v1beta1.Capability.prototype.getIndex = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.capability.v1.Capability} returns this
+ * @return {!proto.cosmos.capability.v1beta1.Capability} returns this
  */
-proto.capability.v1.Capability.prototype.setIndex = function(value) {
+proto.cosmos.capability.v1beta1.Capability.prototype.setIndex = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 

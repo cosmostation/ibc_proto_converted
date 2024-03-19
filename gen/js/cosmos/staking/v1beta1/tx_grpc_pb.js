@@ -100,6 +100,28 @@ function deserialize_cosmos_staking_v1beta1_MsgDelegateResponse(buffer_arg) {
   return cosmos_staking_v1beta1_tx_pb.MsgDelegateResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_cosmos_staking_v1beta1_MsgDisableTokenizeShares(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgDisableTokenizeShares)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgDisableTokenizeShares');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgDisableTokenizeShares(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgDisableTokenizeShares.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgDisableTokenizeSharesResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgDisableTokenizeSharesResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgDisableTokenizeSharesResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgDisableTokenizeSharesResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgDisableTokenizeSharesResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_cosmos_staking_v1beta1_MsgEditValidator(arg) {
   if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgEditValidator)) {
     throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgEditValidator');
@@ -122,26 +144,114 @@ function deserialize_cosmos_staking_v1beta1_MsgEditValidatorResponse(buffer_arg)
   return cosmos_staking_v1beta1_tx_pb.MsgEditValidatorResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_cosmos_staking_v1beta1_MsgRotateConsPubKey(arg) {
-  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKey)) {
-    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgRotateConsPubKey');
+function serialize_cosmos_staking_v1beta1_MsgEnableTokenizeShares(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgEnableTokenizeShares)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgEnableTokenizeShares');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKey(buffer_arg) {
-  return cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKey.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_cosmos_staking_v1beta1_MsgEnableTokenizeShares(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgEnableTokenizeShares.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse(arg) {
-  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKeyResponse)) {
-    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgRotateConsPubKeyResponse');
+function serialize_cosmos_staking_v1beta1_MsgEnableTokenizeSharesResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgEnableTokenizeSharesResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgEnableTokenizeSharesResponse');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse(buffer_arg) {
-  return cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKeyResponse.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_cosmos_staking_v1beta1_MsgEnableTokenizeSharesResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgEnableTokenizeSharesResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgRedeemTokensForShares(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgRedeemTokensForShares)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgRedeemTokensForShares');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgRedeemTokensForShares(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgRedeemTokensForShares.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgRedeemTokensForSharesResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgRedeemTokensForSharesResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgRedeemTokensForSharesResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgRedeemTokensForSharesResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgRedeemTokensForSharesResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgTokenizeShares(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgTokenizeShares)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgTokenizeShares');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgTokenizeShares(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgTokenizeShares.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgTokenizeSharesResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgTokenizeSharesResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgTokenizeSharesResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgTokenizeSharesResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgTokenizeSharesResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecord(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgTransferTokenizeShareRecord)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgTransferTokenizeShareRecord');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecord(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgTransferTokenizeShareRecord.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecordResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgTransferTokenizeShareRecordResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgTransferTokenizeShareRecordResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecordResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgTransferTokenizeShareRecordResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgUnbondValidator(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgUnbondValidator)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgUnbondValidator');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgUnbondValidator(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgUnbondValidator.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgUnbondValidatorResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgUnbondValidatorResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgUnbondValidatorResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgUnbondValidatorResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgUnbondValidatorResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_cosmos_staking_v1beta1_MsgUndelegate(arg) {
@@ -186,6 +296,28 @@ function serialize_cosmos_staking_v1beta1_MsgUpdateParamsResponse(arg) {
 
 function deserialize_cosmos_staking_v1beta1_MsgUpdateParamsResponse(buffer_arg) {
   return cosmos_staking_v1beta1_tx_pb.MsgUpdateParamsResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgValidatorBond(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgValidatorBond)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgValidatorBond');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgValidatorBond(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgValidatorBond.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_cosmos_staking_v1beta1_MsgValidatorBondResponse(arg) {
+  if (!(arg instanceof cosmos_staking_v1beta1_tx_pb.MsgValidatorBondResponse)) {
+    throw new Error('Expected argument of type cosmos.staking.v1beta1.MsgValidatorBondResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_cosmos_staking_v1beta1_MsgValidatorBondResponse(buffer_arg) {
+  return cosmos_staking_v1beta1_tx_pb.MsgValidatorBondResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 
@@ -283,19 +415,95 @@ updateParams: {
     responseSerialize: serialize_cosmos_staking_v1beta1_MsgUpdateParamsResponse,
     responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgUpdateParamsResponse,
   },
-  // RotateConsPubKey defines an operation for rotating the consensus keys
-// of a validator.
-// Since: cosmos-sdk 0.48
-rotateConsPubKey: {
-    path: '/cosmos.staking.v1beta1.Msg/RotateConsPubKey',
+  // UnbondValidator defines a method for performing the status transition for a validator
+// from bonded to unbonding
+// This allows a validator to stop their services and jail themselves without
+// experiencing a slash
+unbondValidator: {
+    path: '/cosmos.staking.v1beta1.Msg/UnbondValidator',
     requestStream: false,
     responseStream: false,
-    requestType: cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKey,
-    responseType: cosmos_staking_v1beta1_tx_pb.MsgRotateConsPubKeyResponse,
-    requestSerialize: serialize_cosmos_staking_v1beta1_MsgRotateConsPubKey,
-    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKey,
-    responseSerialize: serialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse,
-    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgRotateConsPubKeyResponse,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgUnbondValidator,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgUnbondValidatorResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgUnbondValidator,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgUnbondValidator,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgUnbondValidatorResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgUnbondValidatorResponse,
+  },
+  // TokenizeShares defines a method for tokenizing shares from a validator.
+tokenizeShares: {
+    path: '/cosmos.staking.v1beta1.Msg/TokenizeShares',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgTokenizeShares,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgTokenizeSharesResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgTokenizeShares,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgTokenizeShares,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgTokenizeSharesResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgTokenizeSharesResponse,
+  },
+  // RedeemTokensForShares defines a method for redeeming tokens from a validator for
+// shares.
+redeemTokensForShares: {
+    path: '/cosmos.staking.v1beta1.Msg/RedeemTokensForShares',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgRedeemTokensForShares,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgRedeemTokensForSharesResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgRedeemTokensForShares,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgRedeemTokensForShares,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgRedeemTokensForSharesResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgRedeemTokensForSharesResponse,
+  },
+  // TransferTokenizeShareRecord defines a method to transfer ownership of
+// TokenizeShareRecord
+transferTokenizeShareRecord: {
+    path: '/cosmos.staking.v1beta1.Msg/TransferTokenizeShareRecord',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgTransferTokenizeShareRecord,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgTransferTokenizeShareRecordResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecord,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecord,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecordResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgTransferTokenizeShareRecordResponse,
+  },
+  // DisableTokenizeShares defines a method to prevent the tokenization of an addresses stake
+disableTokenizeShares: {
+    path: '/cosmos.staking.v1beta1.Msg/DisableTokenizeShares',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgDisableTokenizeShares,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgDisableTokenizeSharesResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgDisableTokenizeShares,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgDisableTokenizeShares,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgDisableTokenizeSharesResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgDisableTokenizeSharesResponse,
+  },
+  // EnableTokenizeShares defines a method to re-enable the tokenization of an addresseses stake
+// after it has been disabled
+enableTokenizeShares: {
+    path: '/cosmos.staking.v1beta1.Msg/EnableTokenizeShares',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgEnableTokenizeShares,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgEnableTokenizeSharesResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgEnableTokenizeShares,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgEnableTokenizeShares,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgEnableTokenizeSharesResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgEnableTokenizeSharesResponse,
+  },
+  // ValidatorBond defines a method for performing a validator self-bond
+validatorBond: {
+    path: '/cosmos.staking.v1beta1.Msg/ValidatorBond',
+    requestStream: false,
+    responseStream: false,
+    requestType: cosmos_staking_v1beta1_tx_pb.MsgValidatorBond,
+    responseType: cosmos_staking_v1beta1_tx_pb.MsgValidatorBondResponse,
+    requestSerialize: serialize_cosmos_staking_v1beta1_MsgValidatorBond,
+    requestDeserialize: deserialize_cosmos_staking_v1beta1_MsgValidatorBond,
+    responseSerialize: serialize_cosmos_staking_v1beta1_MsgValidatorBondResponse,
+    responseDeserialize: deserialize_cosmos_staking_v1beta1_MsgValidatorBondResponse,
   },
 };
 

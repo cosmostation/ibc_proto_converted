@@ -6,7 +6,7 @@ from cosmos.gov.v1beta1 import tx_pb2 as cosmos_dot_gov_dot_v1beta1_dot_tx__pb2
 
 
 class MsgStub(object):
-    """Msg defines the gov Msg service.
+    """Msg defines the bank Msg service.
     """
 
     def __init__(self, channel):
@@ -38,7 +38,7 @@ class MsgStub(object):
 
 
 class MsgServicer(object):
-    """Msg defines the gov Msg service.
+    """Msg defines the bank Msg service.
     """
 
     def SubmitProposal(self, request, context):
@@ -102,7 +102,7 @@ def add_MsgServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Msg(object):
-    """Msg defines the gov Msg service.
+    """Msg defines the bank Msg service.
     """
 
     @staticmethod

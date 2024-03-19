@@ -149,7 +149,12 @@ struct Cosmos_Tx_V1beta1_SignDocDirectAux {
   /// sequence is the sequence number of the signing account.
   var sequence: UInt64 = 0
 
-  /// tips have been depreacted and should not be used
+  /// Tip is the optional tip used for transactions fees paid in another denom.
+  /// It should be left empty if the signer is not the tipper for this
+  /// transaction.
+  ///
+  /// This field is ignored if the chain didn't enable tips, i.e. didn't add the
+  /// `TipDecorator` in its posthandler.
   var tip: Cosmos_Tx_V1beta1_Tip {
     get {return _tip ?? Cosmos_Tx_V1beta1_Tip()}
     set {_tip = newValue}

@@ -70,6 +70,46 @@ class QueryStub(object):
                 request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryDelegatorValidatorRequest.SerializeToString,
                 response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryDelegatorValidatorResponse.FromString,
                 )
+        self.TokenizeShareRecordById = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/TokenizeShareRecordById',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByIdRequest.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByIdResponse.FromString,
+                )
+        self.TokenizeShareRecordByDenom = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/TokenizeShareRecordByDenom',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByDenomRequest.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByDenomResponse.FromString,
+                )
+        self.TokenizeShareRecordsOwned = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/TokenizeShareRecordsOwned',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordsOwnedRequest.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordsOwnedResponse.FromString,
+                )
+        self.AllTokenizeShareRecords = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/AllTokenizeShareRecords',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryAllTokenizeShareRecordsRequest.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryAllTokenizeShareRecordsResponse.FromString,
+                )
+        self.LastTokenizeShareRecordId = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/LastTokenizeShareRecordId',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryLastTokenizeShareRecordIdRequest.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryLastTokenizeShareRecordIdResponse.FromString,
+                )
+        self.TotalTokenizeSharedAssets = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/TotalTokenizeSharedAssets',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalTokenizeSharedAssetsRequest.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalTokenizeSharedAssetsResponse.FromString,
+                )
+        self.TotalLiquidStaked = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/TotalLiquidStaked',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalLiquidStaked.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalLiquidStakedResponse.FromString,
+                )
+        self.TokenizeShareLockInfo = channel.unary_unary(
+                '/cosmos.staking.v1beta1.Query/TokenizeShareLockInfo',
+                request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareLockInfo.SerializeToString,
+                response_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareLockInfoResponse.FromString,
+                )
         self.HistoricalInfo = channel.unary_unary(
                 '/cosmos.staking.v1beta1.Query/HistoricalInfo',
                 request_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryHistoricalInfoRequest.SerializeToString,
@@ -193,6 +233,62 @@ class QueryServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def TokenizeShareRecordById(self, request, context):
+        """Query for individual tokenize share record information by share by id
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TokenizeShareRecordByDenom(self, request, context):
+        """Query for individual tokenize share record information by share denom
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TokenizeShareRecordsOwned(self, request, context):
+        """Query tokenize share records by address
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def AllTokenizeShareRecords(self, request, context):
+        """Query for all tokenize share records
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def LastTokenizeShareRecordId(self, request, context):
+        """Query for last tokenize share record id
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TotalTokenizeSharedAssets(self, request, context):
+        """Query for total tokenized staked assets
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TotalLiquidStaked(self, request, context):
+        """Query for total liquid staked (including tokenized shares or owned by an liquid staking provider)
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TokenizeShareLockInfo(self, request, context):
+        """Query tokenize share locks
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def HistoricalInfo(self, request, context):
         """HistoricalInfo queries the historical info for given height.
         """
@@ -271,6 +367,46 @@ def add_QueryServicer_to_server(servicer, server):
                     servicer.DelegatorValidator,
                     request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryDelegatorValidatorRequest.FromString,
                     response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryDelegatorValidatorResponse.SerializeToString,
+            ),
+            'TokenizeShareRecordById': grpc.unary_unary_rpc_method_handler(
+                    servicer.TokenizeShareRecordById,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByIdRequest.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByIdResponse.SerializeToString,
+            ),
+            'TokenizeShareRecordByDenom': grpc.unary_unary_rpc_method_handler(
+                    servicer.TokenizeShareRecordByDenom,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByDenomRequest.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByDenomResponse.SerializeToString,
+            ),
+            'TokenizeShareRecordsOwned': grpc.unary_unary_rpc_method_handler(
+                    servicer.TokenizeShareRecordsOwned,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordsOwnedRequest.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordsOwnedResponse.SerializeToString,
+            ),
+            'AllTokenizeShareRecords': grpc.unary_unary_rpc_method_handler(
+                    servicer.AllTokenizeShareRecords,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryAllTokenizeShareRecordsRequest.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryAllTokenizeShareRecordsResponse.SerializeToString,
+            ),
+            'LastTokenizeShareRecordId': grpc.unary_unary_rpc_method_handler(
+                    servicer.LastTokenizeShareRecordId,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryLastTokenizeShareRecordIdRequest.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryLastTokenizeShareRecordIdResponse.SerializeToString,
+            ),
+            'TotalTokenizeSharedAssets': grpc.unary_unary_rpc_method_handler(
+                    servicer.TotalTokenizeSharedAssets,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalTokenizeSharedAssetsRequest.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalTokenizeSharedAssetsResponse.SerializeToString,
+            ),
+            'TotalLiquidStaked': grpc.unary_unary_rpc_method_handler(
+                    servicer.TotalLiquidStaked,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalLiquidStaked.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalLiquidStakedResponse.SerializeToString,
+            ),
+            'TokenizeShareLockInfo': grpc.unary_unary_rpc_method_handler(
+                    servicer.TokenizeShareLockInfo,
+                    request_deserializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareLockInfo.FromString,
+                    response_serializer=cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareLockInfoResponse.SerializeToString,
             ),
             'HistoricalInfo': grpc.unary_unary_rpc_method_handler(
                     servicer.HistoricalInfo,
@@ -482,6 +618,142 @@ class Query(object):
         return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/DelegatorValidator',
             cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryDelegatorValidatorRequest.SerializeToString,
             cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryDelegatorValidatorResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TokenizeShareRecordById(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/TokenizeShareRecordById',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByIdRequest.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByIdResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TokenizeShareRecordByDenom(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/TokenizeShareRecordByDenom',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByDenomRequest.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordByDenomResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TokenizeShareRecordsOwned(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/TokenizeShareRecordsOwned',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordsOwnedRequest.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareRecordsOwnedResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def AllTokenizeShareRecords(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/AllTokenizeShareRecords',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryAllTokenizeShareRecordsRequest.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryAllTokenizeShareRecordsResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def LastTokenizeShareRecordId(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/LastTokenizeShareRecordId',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryLastTokenizeShareRecordIdRequest.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryLastTokenizeShareRecordIdResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TotalTokenizeSharedAssets(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/TotalTokenizeSharedAssets',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalTokenizeSharedAssetsRequest.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalTokenizeSharedAssetsResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TotalLiquidStaked(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/TotalLiquidStaked',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalLiquidStaked.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTotalLiquidStakedResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TokenizeShareLockInfo(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cosmos.staking.v1beta1.Query/TokenizeShareLockInfo',
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareLockInfo.SerializeToString,
+            cosmos_dot_staking_dot_v1beta1_dot_query__pb2.QueryTokenizeShareLockInfoResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

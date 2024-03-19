@@ -4,9 +4,9 @@
 var grpc = require('grpc');
 var tendermint_abci_types_pb = require('../../tendermint/abci/types_pb.js');
 var tendermint_crypto_proof_pb = require('../../tendermint/crypto/proof_pb.js');
+var tendermint_types_types_pb = require('../../tendermint/types/types_pb.js');
 var tendermint_crypto_keys_pb = require('../../tendermint/crypto/keys_pb.js');
 var tendermint_types_params_pb = require('../../tendermint/types/params_pb.js');
-var tendermint_types_validator_pb = require('../../tendermint/types/validator_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 var gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
 
@@ -19,6 +19,17 @@ function serialize_tendermint_abci_RequestApplySnapshotChunk(arg) {
 
 function deserialize_tendermint_abci_RequestApplySnapshotChunk(buffer_arg) {
   return tendermint_abci_types_pb.RequestApplySnapshotChunk.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_tendermint_abci_RequestBeginBlock(arg) {
+  if (!(arg instanceof tendermint_abci_types_pb.RequestBeginBlock)) {
+    throw new Error('Expected argument of type tendermint.abci.RequestBeginBlock');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_tendermint_abci_RequestBeginBlock(buffer_arg) {
+  return tendermint_abci_types_pb.RequestBeginBlock.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_tendermint_abci_RequestCheckTx(arg) {
@@ -43,6 +54,17 @@ function deserialize_tendermint_abci_RequestCommit(buffer_arg) {
   return tendermint_abci_types_pb.RequestCommit.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_tendermint_abci_RequestDeliverTx(arg) {
+  if (!(arg instanceof tendermint_abci_types_pb.RequestDeliverTx)) {
+    throw new Error('Expected argument of type tendermint.abci.RequestDeliverTx');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_tendermint_abci_RequestDeliverTx(buffer_arg) {
+  return tendermint_abci_types_pb.RequestDeliverTx.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_tendermint_abci_RequestEcho(arg) {
   if (!(arg instanceof tendermint_abci_types_pb.RequestEcho)) {
     throw new Error('Expected argument of type tendermint.abci.RequestEcho');
@@ -54,26 +76,15 @@ function deserialize_tendermint_abci_RequestEcho(buffer_arg) {
   return tendermint_abci_types_pb.RequestEcho.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_tendermint_abci_RequestExtendVote(arg) {
-  if (!(arg instanceof tendermint_abci_types_pb.RequestExtendVote)) {
-    throw new Error('Expected argument of type tendermint.abci.RequestExtendVote');
+function serialize_tendermint_abci_RequestEndBlock(arg) {
+  if (!(arg instanceof tendermint_abci_types_pb.RequestEndBlock)) {
+    throw new Error('Expected argument of type tendermint.abci.RequestEndBlock');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_tendermint_abci_RequestExtendVote(buffer_arg) {
-  return tendermint_abci_types_pb.RequestExtendVote.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_tendermint_abci_RequestFinalizeBlock(arg) {
-  if (!(arg instanceof tendermint_abci_types_pb.RequestFinalizeBlock)) {
-    throw new Error('Expected argument of type tendermint.abci.RequestFinalizeBlock');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_tendermint_abci_RequestFinalizeBlock(buffer_arg) {
-  return tendermint_abci_types_pb.RequestFinalizeBlock.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_tendermint_abci_RequestEndBlock(buffer_arg) {
+  return tendermint_abci_types_pb.RequestEndBlock.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_tendermint_abci_RequestFlush(arg) {
@@ -175,17 +186,6 @@ function deserialize_tendermint_abci_RequestQuery(buffer_arg) {
   return tendermint_abci_types_pb.RequestQuery.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_tendermint_abci_RequestVerifyVoteExtension(arg) {
-  if (!(arg instanceof tendermint_abci_types_pb.RequestVerifyVoteExtension)) {
-    throw new Error('Expected argument of type tendermint.abci.RequestVerifyVoteExtension');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_tendermint_abci_RequestVerifyVoteExtension(buffer_arg) {
-  return tendermint_abci_types_pb.RequestVerifyVoteExtension.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 function serialize_tendermint_abci_ResponseApplySnapshotChunk(arg) {
   if (!(arg instanceof tendermint_abci_types_pb.ResponseApplySnapshotChunk)) {
     throw new Error('Expected argument of type tendermint.abci.ResponseApplySnapshotChunk');
@@ -195,6 +195,17 @@ function serialize_tendermint_abci_ResponseApplySnapshotChunk(arg) {
 
 function deserialize_tendermint_abci_ResponseApplySnapshotChunk(buffer_arg) {
   return tendermint_abci_types_pb.ResponseApplySnapshotChunk.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_tendermint_abci_ResponseBeginBlock(arg) {
+  if (!(arg instanceof tendermint_abci_types_pb.ResponseBeginBlock)) {
+    throw new Error('Expected argument of type tendermint.abci.ResponseBeginBlock');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_tendermint_abci_ResponseBeginBlock(buffer_arg) {
+  return tendermint_abci_types_pb.ResponseBeginBlock.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_tendermint_abci_ResponseCheckTx(arg) {
@@ -219,6 +230,17 @@ function deserialize_tendermint_abci_ResponseCommit(buffer_arg) {
   return tendermint_abci_types_pb.ResponseCommit.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_tendermint_abci_ResponseDeliverTx(arg) {
+  if (!(arg instanceof tendermint_abci_types_pb.ResponseDeliverTx)) {
+    throw new Error('Expected argument of type tendermint.abci.ResponseDeliverTx');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_tendermint_abci_ResponseDeliverTx(buffer_arg) {
+  return tendermint_abci_types_pb.ResponseDeliverTx.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_tendermint_abci_ResponseEcho(arg) {
   if (!(arg instanceof tendermint_abci_types_pb.ResponseEcho)) {
     throw new Error('Expected argument of type tendermint.abci.ResponseEcho');
@@ -230,26 +252,15 @@ function deserialize_tendermint_abci_ResponseEcho(buffer_arg) {
   return tendermint_abci_types_pb.ResponseEcho.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_tendermint_abci_ResponseExtendVote(arg) {
-  if (!(arg instanceof tendermint_abci_types_pb.ResponseExtendVote)) {
-    throw new Error('Expected argument of type tendermint.abci.ResponseExtendVote');
+function serialize_tendermint_abci_ResponseEndBlock(arg) {
+  if (!(arg instanceof tendermint_abci_types_pb.ResponseEndBlock)) {
+    throw new Error('Expected argument of type tendermint.abci.ResponseEndBlock');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_tendermint_abci_ResponseExtendVote(buffer_arg) {
-  return tendermint_abci_types_pb.ResponseExtendVote.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_tendermint_abci_ResponseFinalizeBlock(arg) {
-  if (!(arg instanceof tendermint_abci_types_pb.ResponseFinalizeBlock)) {
-    throw new Error('Expected argument of type tendermint.abci.ResponseFinalizeBlock');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_tendermint_abci_ResponseFinalizeBlock(buffer_arg) {
-  return tendermint_abci_types_pb.ResponseFinalizeBlock.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_tendermint_abci_ResponseEndBlock(buffer_arg) {
+  return tendermint_abci_types_pb.ResponseEndBlock.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_tendermint_abci_ResponseFlush(arg) {
@@ -351,24 +362,13 @@ function deserialize_tendermint_abci_ResponseQuery(buffer_arg) {
   return tendermint_abci_types_pb.ResponseQuery.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_tendermint_abci_ResponseVerifyVoteExtension(arg) {
-  if (!(arg instanceof tendermint_abci_types_pb.ResponseVerifyVoteExtension)) {
-    throw new Error('Expected argument of type tendermint.abci.ResponseVerifyVoteExtension');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
 
-function deserialize_tendermint_abci_ResponseVerifyVoteExtension(buffer_arg) {
-  return tendermint_abci_types_pb.ResponseVerifyVoteExtension.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-
-// NOTE: When using custom types, mind the warnings.
-// https://github.com/cosmos/gogoproto/blob/master/custom_types.md#warnings-and-issues
+// ----------------------------------------
+// Service Definition
 //
-var ABCIService = exports.ABCIService = {
+var ABCIApplicationService = exports.ABCIApplicationService = {
   echo: {
-    path: '/tendermint.abci.ABCI/Echo',
+    path: '/tendermint.abci.ABCIApplication/Echo',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestEcho,
@@ -379,7 +379,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseEcho,
   },
   flush: {
-    path: '/tendermint.abci.ABCI/Flush',
+    path: '/tendermint.abci.ABCIApplication/Flush',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestFlush,
@@ -390,7 +390,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseFlush,
   },
   info: {
-    path: '/tendermint.abci.ABCI/Info',
+    path: '/tendermint.abci.ABCIApplication/Info',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestInfo,
@@ -400,8 +400,19 @@ var ABCIService = exports.ABCIService = {
     responseSerialize: serialize_tendermint_abci_ResponseInfo,
     responseDeserialize: deserialize_tendermint_abci_ResponseInfo,
   },
+  deliverTx: {
+    path: '/tendermint.abci.ABCIApplication/DeliverTx',
+    requestStream: false,
+    responseStream: false,
+    requestType: tendermint_abci_types_pb.RequestDeliverTx,
+    responseType: tendermint_abci_types_pb.ResponseDeliverTx,
+    requestSerialize: serialize_tendermint_abci_RequestDeliverTx,
+    requestDeserialize: deserialize_tendermint_abci_RequestDeliverTx,
+    responseSerialize: serialize_tendermint_abci_ResponseDeliverTx,
+    responseDeserialize: deserialize_tendermint_abci_ResponseDeliverTx,
+  },
   checkTx: {
-    path: '/tendermint.abci.ABCI/CheckTx',
+    path: '/tendermint.abci.ABCIApplication/CheckTx',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestCheckTx,
@@ -412,7 +423,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseCheckTx,
   },
   query: {
-    path: '/tendermint.abci.ABCI/Query',
+    path: '/tendermint.abci.ABCIApplication/Query',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestQuery,
@@ -423,7 +434,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseQuery,
   },
   commit: {
-    path: '/tendermint.abci.ABCI/Commit',
+    path: '/tendermint.abci.ABCIApplication/Commit',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestCommit,
@@ -434,7 +445,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseCommit,
   },
   initChain: {
-    path: '/tendermint.abci.ABCI/InitChain',
+    path: '/tendermint.abci.ABCIApplication/InitChain',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestInitChain,
@@ -444,8 +455,30 @@ var ABCIService = exports.ABCIService = {
     responseSerialize: serialize_tendermint_abci_ResponseInitChain,
     responseDeserialize: deserialize_tendermint_abci_ResponseInitChain,
   },
+  beginBlock: {
+    path: '/tendermint.abci.ABCIApplication/BeginBlock',
+    requestStream: false,
+    responseStream: false,
+    requestType: tendermint_abci_types_pb.RequestBeginBlock,
+    responseType: tendermint_abci_types_pb.ResponseBeginBlock,
+    requestSerialize: serialize_tendermint_abci_RequestBeginBlock,
+    requestDeserialize: deserialize_tendermint_abci_RequestBeginBlock,
+    responseSerialize: serialize_tendermint_abci_ResponseBeginBlock,
+    responseDeserialize: deserialize_tendermint_abci_ResponseBeginBlock,
+  },
+  endBlock: {
+    path: '/tendermint.abci.ABCIApplication/EndBlock',
+    requestStream: false,
+    responseStream: false,
+    requestType: tendermint_abci_types_pb.RequestEndBlock,
+    responseType: tendermint_abci_types_pb.ResponseEndBlock,
+    requestSerialize: serialize_tendermint_abci_RequestEndBlock,
+    requestDeserialize: deserialize_tendermint_abci_RequestEndBlock,
+    responseSerialize: serialize_tendermint_abci_ResponseEndBlock,
+    responseDeserialize: deserialize_tendermint_abci_ResponseEndBlock,
+  },
   listSnapshots: {
-    path: '/tendermint.abci.ABCI/ListSnapshots',
+    path: '/tendermint.abci.ABCIApplication/ListSnapshots',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestListSnapshots,
@@ -456,7 +489,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseListSnapshots,
   },
   offerSnapshot: {
-    path: '/tendermint.abci.ABCI/OfferSnapshot',
+    path: '/tendermint.abci.ABCIApplication/OfferSnapshot',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestOfferSnapshot,
@@ -467,7 +500,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseOfferSnapshot,
   },
   loadSnapshotChunk: {
-    path: '/tendermint.abci.ABCI/LoadSnapshotChunk',
+    path: '/tendermint.abci.ABCIApplication/LoadSnapshotChunk',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestLoadSnapshotChunk,
@@ -478,7 +511,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseLoadSnapshotChunk,
   },
   applySnapshotChunk: {
-    path: '/tendermint.abci.ABCI/ApplySnapshotChunk',
+    path: '/tendermint.abci.ABCIApplication/ApplySnapshotChunk',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestApplySnapshotChunk,
@@ -489,7 +522,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponseApplySnapshotChunk,
   },
   prepareProposal: {
-    path: '/tendermint.abci.ABCI/PrepareProposal',
+    path: '/tendermint.abci.ABCIApplication/PrepareProposal',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestPrepareProposal,
@@ -500,7 +533,7 @@ var ABCIService = exports.ABCIService = {
     responseDeserialize: deserialize_tendermint_abci_ResponsePrepareProposal,
   },
   processProposal: {
-    path: '/tendermint.abci.ABCI/ProcessProposal',
+    path: '/tendermint.abci.ABCIApplication/ProcessProposal',
     requestStream: false,
     responseStream: false,
     requestType: tendermint_abci_types_pb.RequestProcessProposal,
@@ -510,39 +543,6 @@ var ABCIService = exports.ABCIService = {
     responseSerialize: serialize_tendermint_abci_ResponseProcessProposal,
     responseDeserialize: deserialize_tendermint_abci_ResponseProcessProposal,
   },
-  extendVote: {
-    path: '/tendermint.abci.ABCI/ExtendVote',
-    requestStream: false,
-    responseStream: false,
-    requestType: tendermint_abci_types_pb.RequestExtendVote,
-    responseType: tendermint_abci_types_pb.ResponseExtendVote,
-    requestSerialize: serialize_tendermint_abci_RequestExtendVote,
-    requestDeserialize: deserialize_tendermint_abci_RequestExtendVote,
-    responseSerialize: serialize_tendermint_abci_ResponseExtendVote,
-    responseDeserialize: deserialize_tendermint_abci_ResponseExtendVote,
-  },
-  verifyVoteExtension: {
-    path: '/tendermint.abci.ABCI/VerifyVoteExtension',
-    requestStream: false,
-    responseStream: false,
-    requestType: tendermint_abci_types_pb.RequestVerifyVoteExtension,
-    responseType: tendermint_abci_types_pb.ResponseVerifyVoteExtension,
-    requestSerialize: serialize_tendermint_abci_RequestVerifyVoteExtension,
-    requestDeserialize: deserialize_tendermint_abci_RequestVerifyVoteExtension,
-    responseSerialize: serialize_tendermint_abci_ResponseVerifyVoteExtension,
-    responseDeserialize: deserialize_tendermint_abci_ResponseVerifyVoteExtension,
-  },
-  finalizeBlock: {
-    path: '/tendermint.abci.ABCI/FinalizeBlock',
-    requestStream: false,
-    responseStream: false,
-    requestType: tendermint_abci_types_pb.RequestFinalizeBlock,
-    responseType: tendermint_abci_types_pb.ResponseFinalizeBlock,
-    requestSerialize: serialize_tendermint_abci_RequestFinalizeBlock,
-    requestDeserialize: deserialize_tendermint_abci_RequestFinalizeBlock,
-    responseSerialize: serialize_tendermint_abci_ResponseFinalizeBlock,
-    responseDeserialize: deserialize_tendermint_abci_ResponseFinalizeBlock,
-  },
 };
 
-exports.ABCIClient = grpc.makeGenericClientConstructor(ABCIService);
+exports.ABCIApplicationClient = grpc.makeGenericClientConstructor(ABCIApplicationService);

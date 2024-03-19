@@ -54,7 +54,7 @@ extension Cosmos_Feegrant_V1beta1_QueryClientProtocol {
     return "cosmos.feegrant.v1beta1.Query"
   }
 
-  /// Allowance returns granted allwance to the grantee by the granter.
+  /// Allowance returns fee granted to the grantee by the granter.
   ///
   /// - Parameters:
   ///   - request: Request to send to Allowance.
@@ -72,7 +72,7 @@ extension Cosmos_Feegrant_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// Allowances returns all the grants for the given grantee address.
+  /// Allowances returns all the grants for address.
   ///
   /// - Parameters:
   ///   - request: Request to send to Allowances.
@@ -343,10 +343,10 @@ internal enum Cosmos_Feegrant_V1beta1_QueryClientMetadata {
 internal protocol Cosmos_Feegrant_V1beta1_QueryProvider: CallHandlerProvider {
   var interceptors: Cosmos_Feegrant_V1beta1_QueryServerInterceptorFactoryProtocol? { get }
 
-  /// Allowance returns granted allwance to the grantee by the granter.
+  /// Allowance returns fee granted to the grantee by the granter.
   func allowance(request: Cosmos_Feegrant_V1beta1_QueryAllowanceRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Feegrant_V1beta1_QueryAllowanceResponse>
 
-  /// Allowances returns all the grants for the given grantee address.
+  /// Allowances returns all the grants for address.
   func allowances(request: Cosmos_Feegrant_V1beta1_QueryAllowancesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Feegrant_V1beta1_QueryAllowancesResponse>
 
   /// AllowancesByGranter returns all the grants given by an address
@@ -408,13 +408,13 @@ internal protocol Cosmos_Feegrant_V1beta1_QueryAsyncProvider: CallHandlerProvide
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Cosmos_Feegrant_V1beta1_QueryServerInterceptorFactoryProtocol? { get }
 
-  /// Allowance returns granted allwance to the grantee by the granter.
+  /// Allowance returns fee granted to the grantee by the granter.
   @Sendable func allowance(
     request: Cosmos_Feegrant_V1beta1_QueryAllowanceRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Feegrant_V1beta1_QueryAllowanceResponse
 
-  /// Allowances returns all the grants for the given grantee address.
+  /// Allowances returns all the grants for address.
   @Sendable func allowances(
     request: Cosmos_Feegrant_V1beta1_QueryAllowancesRequest,
     context: GRPCAsyncServerCallContext

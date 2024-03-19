@@ -72,8 +72,7 @@ proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.prototype.toObject = function(
 proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     address: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    pagination: (f = msg.getPagination()) && proto.cosmos.base.query.v1beta1.PageRequest.toObject(includeInstance, f),
-    resolveDenom: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
+    pagination: (f = msg.getPagination()) && proto.cosmos.base.query.v1beta1.PageRequest.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -119,10 +118,6 @@ proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.deserializeBinaryFromReader = 
       reader.readMessage(value,proto.cosmos.base.query.v1beta1.PageRequest.deserializeBinaryFromReader);
       msg.setPagination(value);
       break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setResolveDenom(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -165,13 +160,6 @@ proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.serializeBinaryToWriter = func
       2,
       f,
       proto.cosmos.base.query.v1beta1.PageRequest.serializeBinaryToWriter
-    );
-  }
-  f = message.getResolveDenom();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
     );
   }
 };
@@ -229,24 +217,6 @@ proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.prototype.clearPagination = fu
  */
 proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
-};
-
-
-/**
- * optional bool resolve_denom = 3;
- * @return {boolean}
- */
-proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.prototype.getResolveDenom = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.cosmos.bank.v1beta1.QueryAllBalancesRequest} returns this
- */
-proto.cosmos.bank.v1beta1.QueryAllBalancesRequest.prototype.setResolveDenom = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 

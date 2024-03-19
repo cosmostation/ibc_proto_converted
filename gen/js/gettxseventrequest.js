@@ -83,8 +83,7 @@ proto.cosmos.tx.v1beta1.GetTxsEventRequest.toObject = function(includeInstance, 
     pagination: (f = msg.getPagination()) && proto.cosmos.base.query.v1beta1.PageRequest.toObject(includeInstance, f),
     orderBy: jspb.Message.getFieldWithDefault(msg, 3, 0),
     page: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    limit: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    query: jspb.Message.getFieldWithDefault(msg, 6, "")
+    limit: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -141,10 +140,6 @@ proto.cosmos.tx.v1beta1.GetTxsEventRequest.deserializeBinaryFromReader = functio
     case 5:
       var value = /** @type {number} */ (reader.readUint64());
       msg.setLimit(value);
-      break;
-    case 6:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setQuery(value);
       break;
     default:
       reader.skipField();
@@ -208,13 +203,6 @@ proto.cosmos.tx.v1beta1.GetTxsEventRequest.serializeBinaryToWriter = function(me
   if (f !== 0) {
     writer.writeUint64(
       5,
-      f
-    );
-  }
-  f = message.getQuery();
-  if (f.length > 0) {
-    writer.writeString(
-      6,
       f
     );
   }
@@ -346,24 +334,6 @@ proto.cosmos.tx.v1beta1.GetTxsEventRequest.prototype.getLimit = function() {
  */
 proto.cosmos.tx.v1beta1.GetTxsEventRequest.prototype.setLimit = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional string query = 6;
- * @return {string}
- */
-proto.cosmos.tx.v1beta1.GetTxsEventRequest.prototype.getQuery = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.cosmos.tx.v1beta1.GetTxsEventRequest} returns this
- */
-proto.cosmos.tx.v1beta1.GetTxsEventRequest.prototype.setQuery = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 

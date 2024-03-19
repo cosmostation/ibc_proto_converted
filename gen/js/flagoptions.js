@@ -74,6 +74,7 @@ proto.cosmos.autocli.v1.FlagOptions.toObject = function(includeInstance, msg) {
     shorthand: jspb.Message.getFieldWithDefault(msg, 2, ""),
     usage: jspb.Message.getFieldWithDefault(msg, 3, ""),
     defaultValue: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    noOptDefaultValue: jspb.Message.getFieldWithDefault(msg, 5, ""),
     deprecated: jspb.Message.getFieldWithDefault(msg, 6, ""),
     shorthandDeprecated: jspb.Message.getFieldWithDefault(msg, 7, ""),
     hidden: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
@@ -128,6 +129,10 @@ proto.cosmos.autocli.v1.FlagOptions.deserializeBinaryFromReader = function(msg, 
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setDefaultValue(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNoOptDefaultValue(value);
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
@@ -195,6 +200,13 @@ proto.cosmos.autocli.v1.FlagOptions.serializeBinaryToWriter = function(message, 
   if (f.length > 0) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = message.getNoOptDefaultValue();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
       f
     );
   }
@@ -291,6 +303,24 @@ proto.cosmos.autocli.v1.FlagOptions.prototype.getDefaultValue = function() {
  */
 proto.cosmos.autocli.v1.FlagOptions.prototype.setDefaultValue = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string no_opt_default_value = 5;
+ * @return {string}
+ */
+proto.cosmos.autocli.v1.FlagOptions.prototype.getNoOptDefaultValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.cosmos.autocli.v1.FlagOptions} returns this
+ */
+proto.cosmos.autocli.v1.FlagOptions.prototype.setNoOptDefaultValue = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
