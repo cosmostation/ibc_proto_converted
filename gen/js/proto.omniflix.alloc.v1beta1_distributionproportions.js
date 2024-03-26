@@ -1,4 +1,4 @@
-// source: omniflix/alloc/v1beta1/params.proto
+// source: OmniFlix/alloc/v1beta1/params.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.omniflix.alloc.v1beta1.DistributionProportions');
+goog.provide('proto.OmniFlix.alloc.v1beta1.DistributionProportions');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions = function(opt_data) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.omniflix.alloc.v1beta1.DistributionProportions, jspb.Message);
+goog.inherits(proto.OmniFlix.alloc.v1beta1.DistributionProportions, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.omniflix.alloc.v1beta1.DistributionProportions.displayName = 'proto.omniflix.alloc.v1beta1.DistributionProportions';
+  proto.OmniFlix.alloc.v1beta1.DistributionProportions.displayName = 'proto.OmniFlix.alloc.v1beta1.DistributionProportions';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.toObject = function(opt_includeInstance) {
-  return proto.omniflix.alloc.v1beta1.DistributionProportions.toObject(opt_includeInstance, this);
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.toObject = function(opt_includeInstance) {
+  return proto.OmniFlix.alloc.v1beta1.DistributionProportions.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.toObject = functi
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.omniflix.alloc.v1beta1.DistributionProportions} msg The msg instance to transform.
+ * @param {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.toObject = function(includeInstance, msg) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.toObject = function(includeInstance, msg) {
   var f, obj = {
     stakingRewards: jspb.Message.getFieldWithDefault(msg, 1, ""),
     nftIncentives: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -88,23 +88,23 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.toObject = function(include
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.omniflix.alloc.v1beta1.DistributionProportions}
+ * @return {!proto.OmniFlix.alloc.v1beta1.DistributionProportions}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.deserializeBinary = function(bytes) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.omniflix.alloc.v1beta1.DistributionProportions;
-  return proto.omniflix.alloc.v1beta1.DistributionProportions.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.OmniFlix.alloc.v1beta1.DistributionProportions;
+  return proto.OmniFlix.alloc.v1beta1.DistributionProportions.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.omniflix.alloc.v1beta1.DistributionProportions} msg The message object to deserialize into.
+ * @param {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.omniflix.alloc.v1beta1.DistributionProportions}
+ * @return {!proto.OmniFlix.alloc.v1beta1.DistributionProportions}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.deserializeBinaryFromReader = function(msg, reader) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -144,9 +144,9 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.deserializeBinaryFromReader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.serializeBinary = function() {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.omniflix.alloc.v1beta1.DistributionProportions.serializeBinaryToWriter(this, writer);
+  proto.OmniFlix.alloc.v1beta1.DistributionProportions.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -154,11 +154,11 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.serializeBinary =
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.omniflix.alloc.v1beta1.DistributionProportions} message
+ * @param {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.serializeBinaryToWriter = function(message, writer) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getStakingRewards();
   if (f.length > 0) {
@@ -202,16 +202,16 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.serializeBinaryToWriter = f
  * optional string staking_rewards = 1;
  * @return {string}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.getStakingRewards = function() {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.getStakingRewards = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.omniflix.alloc.v1beta1.DistributionProportions} returns this
+ * @return {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} returns this
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setStakingRewards = function(value) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.setStakingRewards = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -220,16 +220,16 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setStakingRewards
  * optional string nft_incentives = 2;
  * @return {string}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.getNftIncentives = function() {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.getNftIncentives = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.omniflix.alloc.v1beta1.DistributionProportions} returns this
+ * @return {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} returns this
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setNftIncentives = function(value) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.setNftIncentives = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -238,16 +238,16 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setNftIncentives 
  * optional string node_hosts_incentives = 3;
  * @return {string}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.getNodeHostsIncentives = function() {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.getNodeHostsIncentives = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.omniflix.alloc.v1beta1.DistributionProportions} returns this
+ * @return {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} returns this
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setNodeHostsIncentives = function(value) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.setNodeHostsIncentives = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -256,16 +256,16 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setNodeHostsIncen
  * optional string developer_rewards = 4;
  * @return {string}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.getDeveloperRewards = function() {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.getDeveloperRewards = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.omniflix.alloc.v1beta1.DistributionProportions} returns this
+ * @return {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} returns this
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setDeveloperRewards = function(value) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.setDeveloperRewards = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -274,16 +274,16 @@ proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setDeveloperRewar
  * optional string community_pool = 5;
  * @return {string}
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.getCommunityPool = function() {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.getCommunityPool = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.omniflix.alloc.v1beta1.DistributionProportions} returns this
+ * @return {!proto.OmniFlix.alloc.v1beta1.DistributionProportions} returns this
  */
-proto.omniflix.alloc.v1beta1.DistributionProportions.prototype.setCommunityPool = function(value) {
+proto.OmniFlix.alloc.v1beta1.DistributionProportions.prototype.setCommunityPool = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
 };
 

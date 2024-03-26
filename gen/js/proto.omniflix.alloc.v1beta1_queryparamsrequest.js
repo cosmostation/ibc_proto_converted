@@ -1,4 +1,4 @@
-// source: omniflix/alloc/v1beta1/query.proto
+// source: OmniFlix/alloc/v1beta1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.omniflix.alloc.v1beta1.QueryParamsRequest');
+goog.provide('proto.OmniFlix.alloc.v1beta1.QueryParamsRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.omniflix.alloc.v1beta1.QueryParamsRequest = function(opt_data) {
+proto.OmniFlix.alloc.v1beta1.QueryParamsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.omniflix.alloc.v1beta1.QueryParamsRequest, jspb.Message);
+goog.inherits(proto.OmniFlix.alloc.v1beta1.QueryParamsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.omniflix.alloc.v1beta1.QueryParamsRequest.displayName = 'proto.omniflix.alloc.v1beta1.QueryParamsRequest';
+  proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.displayName = 'proto.OmniFlix.alloc.v1beta1.QueryParamsRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.omniflix.alloc.v1beta1.QueryParamsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.omniflix.alloc.v1beta1.QueryParamsRequest.toObject(opt_includeInstance, this);
+proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.omniflix.alloc.v1beta1.QueryParamsRequest.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.omniflix.alloc.v1beta1.QueryParamsRequest} msg The msg instance to transform.
+ * @param {!proto.OmniFlix.alloc.v1beta1.QueryParamsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.omniflix.alloc.v1beta1.QueryParamsRequest.toObject = function(includeInstance, msg) {
+proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -84,23 +84,23 @@ proto.omniflix.alloc.v1beta1.QueryParamsRequest.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.omniflix.alloc.v1beta1.QueryParamsRequest}
+ * @return {!proto.OmniFlix.alloc.v1beta1.QueryParamsRequest}
  */
-proto.omniflix.alloc.v1beta1.QueryParamsRequest.deserializeBinary = function(bytes) {
+proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.omniflix.alloc.v1beta1.QueryParamsRequest;
-  return proto.omniflix.alloc.v1beta1.QueryParamsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.OmniFlix.alloc.v1beta1.QueryParamsRequest;
+  return proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.omniflix.alloc.v1beta1.QueryParamsRequest} msg The message object to deserialize into.
+ * @param {!proto.OmniFlix.alloc.v1beta1.QueryParamsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.omniflix.alloc.v1beta1.QueryParamsRequest}
+ * @return {!proto.OmniFlix.alloc.v1beta1.QueryParamsRequest}
  */
-proto.omniflix.alloc.v1beta1.QueryParamsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.omniflix.alloc.v1beta1.QueryParamsRequest.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.omniflix.alloc.v1beta1.QueryParamsRequest.prototype.serializeBinary = function() {
+proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.omniflix.alloc.v1beta1.QueryParamsRequest.serializeBinaryToWriter(this, writer);
+  proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.omniflix.alloc.v1beta1.QueryParamsRequest.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.omniflix.alloc.v1beta1.QueryParamsRequest} message
+ * @param {!proto.OmniFlix.alloc.v1beta1.QueryParamsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.omniflix.alloc.v1beta1.QueryParamsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.OmniFlix.alloc.v1beta1.QueryParamsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 

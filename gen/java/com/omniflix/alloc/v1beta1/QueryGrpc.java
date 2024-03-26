@@ -1,4 +1,4 @@
-package com.omniflix.alloc.v1beta1;
+package com.OmniFlix.alloc.v1beta1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -9,38 +9,38 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
-    comments = "Source: omniflix/alloc/v1beta1/query.proto")
+    comments = "Source: OmniFlix/alloc/v1beta1/query.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryGrpc {
 
   private QueryGrpc() {}
 
-  public static final String SERVICE_NAME = "omniflix.alloc.v1beta1.Query";
+  public static final String SERVICE_NAME = "OmniFlix.alloc.v1beta1.Query";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest,
-      com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse> getParamsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest,
+      com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse> getParamsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Params",
-      requestType = com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest.class,
-      responseType = com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse.class,
+      requestType = com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest.class,
+      responseType = com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest,
-      com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse> getParamsMethod() {
-    io.grpc.MethodDescriptor<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest, com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse> getParamsMethod;
+  public static io.grpc.MethodDescriptor<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest,
+      com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse> getParamsMethod() {
+    io.grpc.MethodDescriptor<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest, com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse> getParamsMethod;
     if ((getParamsMethod = QueryGrpc.getParamsMethod) == null) {
       synchronized (QueryGrpc.class) {
         if ((getParamsMethod = QueryGrpc.getParamsMethod) == null) {
           QueryGrpc.getParamsMethod = getParamsMethod =
-              io.grpc.MethodDescriptor.<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest, com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest, com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Params"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()))
+                  com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()))
+                  com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Params"))
               .build();
         }
@@ -102,8 +102,8 @@ public final class QueryGrpc {
 
     /**
      */
-    default void params(com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest request,
-        io.grpc.stub.StreamObserver<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse> responseObserver) {
+    default void params(com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest request,
+        io.grpc.stub.StreamObserver<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParamsMethod(), responseObserver);
     }
   }
@@ -143,8 +143,8 @@ public final class QueryGrpc {
 
     /**
      */
-    public void params(com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest request,
-        io.grpc.stub.StreamObserver<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse> responseObserver) {
+    public void params(com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest request,
+        io.grpc.stub.StreamObserver<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getParamsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -171,7 +171,7 @@ public final class QueryGrpc {
 
     /**
      */
-    public com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse params(com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest request) {
+    public com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse params(com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getParamsMethod(), getCallOptions(), request);
     }
@@ -198,8 +198,8 @@ public final class QueryGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse> params(
-        com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse> params(
+        com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getParamsMethod(), getCallOptions()), request);
     }
@@ -225,8 +225,8 @@ public final class QueryGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_PARAMS:
-          serviceImpl.params((com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest) request,
-              (io.grpc.stub.StreamObserver<com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse>) responseObserver);
+          serviceImpl.params((com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest) request,
+              (io.grpc.stub.StreamObserver<com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -250,8 +250,8 @@ public final class QueryGrpc {
           getParamsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.omniflix.alloc.v1beta1.QueryProto.QueryParamsRequest,
-              com.omniflix.alloc.v1beta1.QueryProto.QueryParamsResponse>(
+              com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsRequest,
+              com.OmniFlix.alloc.v1beta1.QueryProto.QueryParamsResponse>(
                 service, METHODID_PARAMS)))
         .build();
   }
@@ -262,7 +262,7 @@ public final class QueryGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.omniflix.alloc.v1beta1.QueryProto.getDescriptor();
+      return com.OmniFlix.alloc.v1beta1.QueryProto.getDescriptor();
     }
 
     @java.lang.Override

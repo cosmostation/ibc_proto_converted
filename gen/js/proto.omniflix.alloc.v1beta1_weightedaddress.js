@@ -1,4 +1,4 @@
-// source: omniflix/alloc/v1beta1/params.proto
+// source: OmniFlix/alloc/v1beta1/params.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.omniflix.alloc.v1beta1.WeightedAddress');
+goog.provide('proto.OmniFlix.alloc.v1beta1.WeightedAddress');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress = function(opt_data) {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.omniflix.alloc.v1beta1.WeightedAddress, jspb.Message);
+goog.inherits(proto.OmniFlix.alloc.v1beta1.WeightedAddress, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.omniflix.alloc.v1beta1.WeightedAddress.displayName = 'proto.omniflix.alloc.v1beta1.WeightedAddress';
+  proto.OmniFlix.alloc.v1beta1.WeightedAddress.displayName = 'proto.OmniFlix.alloc.v1beta1.WeightedAddress';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.toObject = function(opt_includeInstance) {
-  return proto.omniflix.alloc.v1beta1.WeightedAddress.toObject(opt_includeInstance, this);
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.prototype.toObject = function(opt_includeInstance) {
+  return proto.OmniFlix.alloc.v1beta1.WeightedAddress.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.omniflix.alloc.v1beta1.WeightedAddress} msg The msg instance to transform.
+ * @param {!proto.OmniFlix.alloc.v1beta1.WeightedAddress} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.toObject = function(includeInstance, msg) {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.toObject = function(includeInstance, msg) {
   var f, obj = {
     address: jspb.Message.getFieldWithDefault(msg, 1, ""),
     weight: jspb.Message.getFieldWithDefault(msg, 2, "")
@@ -85,23 +85,23 @@ proto.omniflix.alloc.v1beta1.WeightedAddress.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.omniflix.alloc.v1beta1.WeightedAddress}
+ * @return {!proto.OmniFlix.alloc.v1beta1.WeightedAddress}
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.deserializeBinary = function(bytes) {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.omniflix.alloc.v1beta1.WeightedAddress;
-  return proto.omniflix.alloc.v1beta1.WeightedAddress.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.OmniFlix.alloc.v1beta1.WeightedAddress;
+  return proto.OmniFlix.alloc.v1beta1.WeightedAddress.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.omniflix.alloc.v1beta1.WeightedAddress} msg The message object to deserialize into.
+ * @param {!proto.OmniFlix.alloc.v1beta1.WeightedAddress} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.omniflix.alloc.v1beta1.WeightedAddress}
+ * @return {!proto.OmniFlix.alloc.v1beta1.WeightedAddress}
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.deserializeBinaryFromReader = function(msg, reader) {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -129,9 +129,9 @@ proto.omniflix.alloc.v1beta1.WeightedAddress.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.serializeBinary = function() {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.omniflix.alloc.v1beta1.WeightedAddress.serializeBinaryToWriter(this, writer);
+  proto.OmniFlix.alloc.v1beta1.WeightedAddress.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -139,11 +139,11 @@ proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.omniflix.alloc.v1beta1.WeightedAddress} message
+ * @param {!proto.OmniFlix.alloc.v1beta1.WeightedAddress} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.serializeBinaryToWriter = function(message, writer) {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAddress();
   if (f.length > 0) {
@@ -166,16 +166,16 @@ proto.omniflix.alloc.v1beta1.WeightedAddress.serializeBinaryToWriter = function(
  * optional string address = 1;
  * @return {string}
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.getAddress = function() {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.prototype.getAddress = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.omniflix.alloc.v1beta1.WeightedAddress} returns this
+ * @return {!proto.OmniFlix.alloc.v1beta1.WeightedAddress} returns this
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.setAddress = function(value) {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.prototype.setAddress = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -184,16 +184,16 @@ proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.setAddress = function(val
  * optional string weight = 2;
  * @return {string}
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.getWeight = function() {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.prototype.getWeight = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.omniflix.alloc.v1beta1.WeightedAddress} returns this
+ * @return {!proto.OmniFlix.alloc.v1beta1.WeightedAddress} returns this
  */
-proto.omniflix.alloc.v1beta1.WeightedAddress.prototype.setWeight = function(value) {
+proto.OmniFlix.alloc.v1beta1.WeightedAddress.prototype.setWeight = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 

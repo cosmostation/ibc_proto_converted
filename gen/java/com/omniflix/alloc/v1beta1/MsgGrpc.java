@@ -1,23 +1,51 @@
-package com.omniflix.alloc.v1beta1;
+package com.OmniFlix.alloc.v1beta1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- * Msg defines the alloc Msg service.
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
-    comments = "Source: omniflix/alloc/v1beta1/tx.proto")
+    comments = "Source: OmniFlix/alloc/v1beta1/tx.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgGrpc {
 
   private MsgGrpc() {}
 
-  public static final String SERVICE_NAME = "omniflix.alloc.v1beta1.Msg";
+  public static final String SERVICE_NAME = "OmniFlix.alloc.v1beta1.Msg";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams,
+      com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateParams",
+      requestType = com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams.class,
+      responseType = com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams,
+      com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod() {
+    io.grpc.MethodDescriptor<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams, com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+    if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+          MsgGrpc.getUpdateParamsMethod = getUpdateParamsMethod =
+              io.grpc.MethodDescriptor.<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams, com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateParams"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UpdateParams"))
+              .build();
+        }
+      }
+    }
+    return getUpdateParamsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -63,18 +91,24 @@ public final class MsgGrpc {
   }
 
   /**
-   * <pre>
-   * Msg defines the alloc Msg service.
-   * </pre>
    */
   public interface AsyncService {
+
+    /**
+     * <pre>
+     * UpdateParams defines a governance operation for updating the x/alloc module
+     * parameters. The authority is hard-coded to the x/gov module account.
+     * Since: cosmos-sdk 0.47
+     * </pre>
+     */
+    default void updateParams(com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateParamsMethod(), responseObserver);
+    }
   }
 
   /**
    * Base class for the server implementation of the service Msg.
-   * <pre>
-   * Msg defines the alloc Msg service.
-   * </pre>
    */
   public static abstract class MsgImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -86,9 +120,6 @@ public final class MsgGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Msg.
-   * <pre>
-   * Msg defines the alloc Msg service.
-   * </pre>
    */
   public static final class MsgStub
       extends io.grpc.stub.AbstractAsyncStub<MsgStub> {
@@ -102,13 +133,23 @@ public final class MsgGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsgStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     * UpdateParams defines a governance operation for updating the x/alloc module
+     * parameters. The authority is hard-coded to the x/gov module account.
+     * Since: cosmos-sdk 0.47
+     * </pre>
+     */
+    public void updateParams(com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Msg.
-   * <pre>
-   * Msg defines the alloc Msg service.
-   * </pre>
    */
   public static final class MsgBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<MsgBlockingStub> {
@@ -122,13 +163,22 @@ public final class MsgGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsgBlockingStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     * UpdateParams defines a governance operation for updating the x/alloc module
+     * parameters. The authority is hard-coded to the x/gov module account.
+     * Since: cosmos-sdk 0.47
+     * </pre>
+     */
+    public com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse updateParams(com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateParamsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Msg.
-   * <pre>
-   * Msg defines the alloc Msg service.
-   * </pre>
    */
   public static final class MsgFutureStub
       extends io.grpc.stub.AbstractFutureStub<MsgFutureStub> {
@@ -142,8 +192,22 @@ public final class MsgGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsgFutureStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     * UpdateParams defines a governance operation for updating the x/alloc module
+     * parameters. The authority is hard-coded to the x/gov module account.
+     * Since: cosmos-sdk 0.47
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse> updateParams(
+        com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request);
+    }
   }
 
+  private static final int METHODID_UPDATE_PARAMS = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -162,6 +226,10 @@ public final class MsgGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_UPDATE_PARAMS:
+          serviceImpl.updateParams((com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams) request,
+              (io.grpc.stub.StreamObserver<com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -180,6 +248,13 @@ public final class MsgGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUpdateParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParams,
+              com.OmniFlix.alloc.v1beta1.TxProto.MsgUpdateParamsResponse>(
+                service, METHODID_UPDATE_PARAMS)))
         .build();
   }
 
@@ -189,7 +264,7 @@ public final class MsgGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.omniflix.alloc.v1beta1.TxProto.getDescriptor();
+      return com.OmniFlix.alloc.v1beta1.TxProto.getDescriptor();
     }
 
     @java.lang.Override
@@ -228,6 +303,7 @@ public final class MsgGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MsgFileDescriptorSupplier())
+              .addMethod(getUpdateParamsMethod())
               .build();
         }
       }
