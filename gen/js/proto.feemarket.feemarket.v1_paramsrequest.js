@@ -1,4 +1,4 @@
-// source: feemarket/feemarket/module/v1/module.proto
+// source: feemarket/feemarket/v1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.feemarket.feemarket.module.v1.Module');
+goog.provide('proto.feemarket.feemarket.v1.ParamsRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.feemarket.feemarket.module.v1.Module = function(opt_data) {
+proto.feemarket.feemarket.v1.ParamsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.feemarket.feemarket.module.v1.Module, jspb.Message);
+goog.inherits(proto.feemarket.feemarket.v1.ParamsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.feemarket.feemarket.module.v1.Module.displayName = 'proto.feemarket.feemarket.module.v1.Module';
+  proto.feemarket.feemarket.v1.ParamsRequest.displayName = 'proto.feemarket.feemarket.v1.ParamsRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.feemarket.feemarket.module.v1.Module.prototype.toObject = function(opt_includeInstance) {
-  return proto.feemarket.feemarket.module.v1.Module.toObject(opt_includeInstance, this);
+proto.feemarket.feemarket.v1.ParamsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.feemarket.feemarket.v1.ParamsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,13 +64,13 @@ proto.feemarket.feemarket.module.v1.Module.prototype.toObject = function(opt_inc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.feemarket.feemarket.module.v1.Module} msg The msg instance to transform.
+ * @param {!proto.feemarket.feemarket.v1.ParamsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.feemarket.feemarket.module.v1.Module.toObject = function(includeInstance, msg) {
+proto.feemarket.feemarket.v1.ParamsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    authority: jspb.Message.getFieldWithDefault(msg, 1, "")
+
   };
 
   if (includeInstance) {
@@ -84,33 +84,29 @@ proto.feemarket.feemarket.module.v1.Module.toObject = function(includeInstance, 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.feemarket.feemarket.module.v1.Module}
+ * @return {!proto.feemarket.feemarket.v1.ParamsRequest}
  */
-proto.feemarket.feemarket.module.v1.Module.deserializeBinary = function(bytes) {
+proto.feemarket.feemarket.v1.ParamsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.feemarket.feemarket.module.v1.Module;
-  return proto.feemarket.feemarket.module.v1.Module.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.feemarket.feemarket.v1.ParamsRequest;
+  return proto.feemarket.feemarket.v1.ParamsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.feemarket.feemarket.module.v1.Module} msg The message object to deserialize into.
+ * @param {!proto.feemarket.feemarket.v1.ParamsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.feemarket.feemarket.module.v1.Module}
+ * @return {!proto.feemarket.feemarket.v1.ParamsRequest}
  */
-proto.feemarket.feemarket.module.v1.Module.deserializeBinaryFromReader = function(msg, reader) {
+proto.feemarket.feemarket.v1.ParamsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setAuthority(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -124,9 +120,9 @@ proto.feemarket.feemarket.module.v1.Module.deserializeBinaryFromReader = functio
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.feemarket.feemarket.module.v1.Module.prototype.serializeBinary = function() {
+proto.feemarket.feemarket.v1.ParamsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.feemarket.feemarket.module.v1.Module.serializeBinaryToWriter(this, writer);
+  proto.feemarket.feemarket.v1.ParamsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -134,37 +130,12 @@ proto.feemarket.feemarket.module.v1.Module.prototype.serializeBinary = function(
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.feemarket.feemarket.module.v1.Module} message
+ * @param {!proto.feemarket.feemarket.v1.ParamsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.feemarket.feemarket.module.v1.Module.serializeBinaryToWriter = function(message, writer) {
+proto.feemarket.feemarket.v1.ParamsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAuthority();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string authority = 1;
- * @return {string}
- */
-proto.feemarket.feemarket.module.v1.Module.prototype.getAuthority = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.feemarket.feemarket.module.v1.Module} returns this
- */
-proto.feemarket.feemarket.module.v1.Module.prototype.setAuthority = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
