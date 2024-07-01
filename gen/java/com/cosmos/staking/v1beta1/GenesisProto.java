@@ -51,7 +51,7 @@ public final class GenesisProto {
      * the previous end block.
      * </pre>
      *
-     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
      * @return The lastTotalPower.
      */
     com.google.protobuf.ByteString getLastTotalPower();
@@ -107,7 +107,7 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -116,7 +116,7 @@ public final class GenesisProto {
         getValidatorsList();
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -124,7 +124,7 @@ public final class GenesisProto {
     com.cosmos.staking.v1beta1.StakingProto.Validator getValidators(int index);
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -132,7 +132,7 @@ public final class GenesisProto {
     int getValidatorsCount();
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -141,7 +141,7 @@ public final class GenesisProto {
         getValidatorsOrBuilderList();
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -282,14 +282,118 @@ public final class GenesisProto {
         int index);
 
     /**
-     * <pre>
-     * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
-     * </pre>
-     *
      * <code>bool exported = 8 [json_name = "exported"];</code>
      * @return The exported.
      */
     boolean getExported();
+
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord> 
+        getTokenizeShareRecordsList();
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord getTokenizeShareRecords(int index);
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    int getTokenizeShareRecordsCount();
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder> 
+        getTokenizeShareRecordsOrBuilderList();
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder getTokenizeShareRecordsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * last tokenize share record id, used for next share record id calculation
+     * </pre>
+     *
+     * <code>uint64 last_tokenize_share_record_id = 10 [json_name = "lastTokenizeShareRecordId"];</code>
+     * @return The lastTokenizeShareRecordId.
+     */
+    long getLastTokenizeShareRecordId();
+
+    /**
+     * <pre>
+     * total number of liquid staked tokens at genesis
+     * </pre>
+     *
+     * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+     * @return The totalLiquidStakedTokens.
+     */
+    com.google.protobuf.ByteString getTotalLiquidStakedTokens();
+
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock> 
+        getTokenizeShareLocksList();
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock getTokenizeShareLocks(int index);
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    int getTokenizeShareLocksCount();
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder> 
+        getTokenizeShareLocksOrBuilderList();
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder getTokenizeShareLocksOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -314,6 +418,9 @@ public final class GenesisProto {
       delegations_ = java.util.Collections.emptyList();
       unbondingDelegations_ = java.util.Collections.emptyList();
       redelegations_ = java.util.Collections.emptyList();
+      tokenizeShareRecords_ = java.util.Collections.emptyList();
+      totalLiquidStakedTokens_ = com.google.protobuf.ByteString.EMPTY;
+      tokenizeShareLocks_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -382,7 +489,7 @@ public final class GenesisProto {
      * the previous end block.
      * </pre>
      *
-     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
      * @return The lastTotalPower.
      */
     @java.lang.Override
@@ -461,7 +568,7 @@ public final class GenesisProto {
     private java.util.List<com.cosmos.staking.v1beta1.StakingProto.Validator> validators_;
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -472,7 +579,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -484,7 +591,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -495,7 +602,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -506,7 +613,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * validators defines the validator set at genesis.
+     * delegations defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -703,16 +810,164 @@ public final class GenesisProto {
     public static final int EXPORTED_FIELD_NUMBER = 8;
     private boolean exported_ = false;
     /**
-     * <pre>
-     * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
-     * </pre>
-     *
      * <code>bool exported = 8 [json_name = "exported"];</code>
      * @return The exported.
      */
     @java.lang.Override
     public boolean getExported() {
       return exported_;
+    }
+
+    public static final int TOKENIZE_SHARE_RECORDS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord> tokenizeShareRecords_;
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord> getTokenizeShareRecordsList() {
+      return tokenizeShareRecords_;
+    }
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder> 
+        getTokenizeShareRecordsOrBuilderList() {
+      return tokenizeShareRecords_;
+    }
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTokenizeShareRecordsCount() {
+      return tokenizeShareRecords_.size();
+    }
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord getTokenizeShareRecords(int index) {
+      return tokenizeShareRecords_.get(index);
+    }
+    /**
+     * <pre>
+     * store tokenize share records to provide reward to record owners
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder getTokenizeShareRecordsOrBuilder(
+        int index) {
+      return tokenizeShareRecords_.get(index);
+    }
+
+    public static final int LAST_TOKENIZE_SHARE_RECORD_ID_FIELD_NUMBER = 10;
+    private long lastTokenizeShareRecordId_ = 0L;
+    /**
+     * <pre>
+     * last tokenize share record id, used for next share record id calculation
+     * </pre>
+     *
+     * <code>uint64 last_tokenize_share_record_id = 10 [json_name = "lastTokenizeShareRecordId"];</code>
+     * @return The lastTokenizeShareRecordId.
+     */
+    @java.lang.Override
+    public long getLastTokenizeShareRecordId() {
+      return lastTokenizeShareRecordId_;
+    }
+
+    public static final int TOTAL_LIQUID_STAKED_TOKENS_FIELD_NUMBER = 11;
+    private com.google.protobuf.ByteString totalLiquidStakedTokens_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * total number of liquid staked tokens at genesis
+     * </pre>
+     *
+     * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+     * @return The totalLiquidStakedTokens.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getTotalLiquidStakedTokens() {
+      return totalLiquidStakedTokens_;
+    }
+
+    public static final int TOKENIZE_SHARE_LOCKS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock> tokenizeShareLocks_;
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock> getTokenizeShareLocksList() {
+      return tokenizeShareLocks_;
+    }
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder> 
+        getTokenizeShareLocksOrBuilderList() {
+      return tokenizeShareLocks_;
+    }
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTokenizeShareLocksCount() {
+      return tokenizeShareLocks_.size();
+    }
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock getTokenizeShareLocks(int index) {
+      return tokenizeShareLocks_.get(index);
+    }
+    /**
+     * <pre>
+     * tokenize shares locks at genesis
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder getTokenizeShareLocksOrBuilder(
+        int index) {
+      return tokenizeShareLocks_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -752,6 +1007,18 @@ public final class GenesisProto {
       }
       if (exported_ != false) {
         output.writeBool(8, exported_);
+      }
+      for (int i = 0; i < tokenizeShareRecords_.size(); i++) {
+        output.writeMessage(9, tokenizeShareRecords_.get(i));
+      }
+      if (lastTokenizeShareRecordId_ != 0L) {
+        output.writeUInt64(10, lastTokenizeShareRecordId_);
+      }
+      if (!totalLiquidStakedTokens_.isEmpty()) {
+        output.writeBytes(11, totalLiquidStakedTokens_);
+      }
+      for (int i = 0; i < tokenizeShareLocks_.size(); i++) {
+        output.writeMessage(12, tokenizeShareLocks_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -794,6 +1061,22 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, exported_);
       }
+      for (int i = 0; i < tokenizeShareRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, tokenizeShareRecords_.get(i));
+      }
+      if (lastTokenizeShareRecordId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, lastTokenizeShareRecordId_);
+      }
+      if (!totalLiquidStakedTokens_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, totalLiquidStakedTokens_);
+      }
+      for (int i = 0; i < tokenizeShareLocks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, tokenizeShareLocks_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -828,6 +1111,14 @@ public final class GenesisProto {
           .equals(other.getRedelegationsList())) return false;
       if (getExported()
           != other.getExported()) return false;
+      if (!getTokenizeShareRecordsList()
+          .equals(other.getTokenizeShareRecordsList())) return false;
+      if (getLastTokenizeShareRecordId()
+          != other.getLastTokenizeShareRecordId()) return false;
+      if (!getTotalLiquidStakedTokens()
+          .equals(other.getTotalLiquidStakedTokens())) return false;
+      if (!getTokenizeShareLocksList()
+          .equals(other.getTokenizeShareLocksList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -868,6 +1159,19 @@ public final class GenesisProto {
       hash = (37 * hash) + EXPORTED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExported());
+      if (getTokenizeShareRecordsCount() > 0) {
+        hash = (37 * hash) + TOKENIZE_SHARE_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenizeShareRecordsList().hashCode();
+      }
+      hash = (37 * hash) + LAST_TOKENIZE_SHARE_RECORD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastTokenizeShareRecordId());
+      hash = (37 * hash) + TOTAL_LIQUID_STAKED_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalLiquidStakedTokens().hashCode();
+      if (getTokenizeShareLocksCount() > 0) {
+        hash = (37 * hash) + TOKENIZE_SHARE_LOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenizeShareLocksList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1045,6 +1349,22 @@ public final class GenesisProto {
         }
         bitField0_ = (bitField0_ & ~0x00000040);
         exported_ = false;
+        if (tokenizeShareRecordsBuilder_ == null) {
+          tokenizeShareRecords_ = java.util.Collections.emptyList();
+        } else {
+          tokenizeShareRecords_ = null;
+          tokenizeShareRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        lastTokenizeShareRecordId_ = 0L;
+        totalLiquidStakedTokens_ = com.google.protobuf.ByteString.EMPTY;
+        if (tokenizeShareLocksBuilder_ == null) {
+          tokenizeShareLocks_ = java.util.Collections.emptyList();
+        } else {
+          tokenizeShareLocks_ = null;
+          tokenizeShareLocksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -1123,6 +1443,24 @@ public final class GenesisProto {
         } else {
           result.redelegations_ = redelegationsBuilder_.build();
         }
+        if (tokenizeShareRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            tokenizeShareRecords_ = java.util.Collections.unmodifiableList(tokenizeShareRecords_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.tokenizeShareRecords_ = tokenizeShareRecords_;
+        } else {
+          result.tokenizeShareRecords_ = tokenizeShareRecordsBuilder_.build();
+        }
+        if (tokenizeShareLocksBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            tokenizeShareLocks_ = java.util.Collections.unmodifiableList(tokenizeShareLocks_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.tokenizeShareLocks_ = tokenizeShareLocks_;
+        } else {
+          result.tokenizeShareLocks_ = tokenizeShareLocksBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.cosmos.staking.v1beta1.GenesisProto.GenesisState result) {
@@ -1137,6 +1475,12 @@ public final class GenesisProto {
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.exported_ = exported_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.lastTokenizeShareRecordId_ = lastTokenizeShareRecordId_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.totalLiquidStakedTokens_ = totalLiquidStakedTokens_;
         }
       }
 
@@ -1323,6 +1667,64 @@ public final class GenesisProto {
         if (other.getExported() != false) {
           setExported(other.getExported());
         }
+        if (tokenizeShareRecordsBuilder_ == null) {
+          if (!other.tokenizeShareRecords_.isEmpty()) {
+            if (tokenizeShareRecords_.isEmpty()) {
+              tokenizeShareRecords_ = other.tokenizeShareRecords_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureTokenizeShareRecordsIsMutable();
+              tokenizeShareRecords_.addAll(other.tokenizeShareRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenizeShareRecords_.isEmpty()) {
+            if (tokenizeShareRecordsBuilder_.isEmpty()) {
+              tokenizeShareRecordsBuilder_.dispose();
+              tokenizeShareRecordsBuilder_ = null;
+              tokenizeShareRecords_ = other.tokenizeShareRecords_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              tokenizeShareRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenizeShareRecordsFieldBuilder() : null;
+            } else {
+              tokenizeShareRecordsBuilder_.addAllMessages(other.tokenizeShareRecords_);
+            }
+          }
+        }
+        if (other.getLastTokenizeShareRecordId() != 0L) {
+          setLastTokenizeShareRecordId(other.getLastTokenizeShareRecordId());
+        }
+        if (other.getTotalLiquidStakedTokens() != com.google.protobuf.ByteString.EMPTY) {
+          setTotalLiquidStakedTokens(other.getTotalLiquidStakedTokens());
+        }
+        if (tokenizeShareLocksBuilder_ == null) {
+          if (!other.tokenizeShareLocks_.isEmpty()) {
+            if (tokenizeShareLocks_.isEmpty()) {
+              tokenizeShareLocks_ = other.tokenizeShareLocks_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureTokenizeShareLocksIsMutable();
+              tokenizeShareLocks_.addAll(other.tokenizeShareLocks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenizeShareLocks_.isEmpty()) {
+            if (tokenizeShareLocksBuilder_.isEmpty()) {
+              tokenizeShareLocksBuilder_.dispose();
+              tokenizeShareLocksBuilder_ = null;
+              tokenizeShareLocks_ = other.tokenizeShareLocks_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              tokenizeShareLocksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenizeShareLocksFieldBuilder() : null;
+            } else {
+              tokenizeShareLocksBuilder_.addAllMessages(other.tokenizeShareLocks_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1431,6 +1833,42 @@ public final class GenesisProto {
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
+              case 74: {
+                com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord m =
+                    input.readMessage(
+                        com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.parser(),
+                        extensionRegistry);
+                if (tokenizeShareRecordsBuilder_ == null) {
+                  ensureTokenizeShareRecordsIsMutable();
+                  tokenizeShareRecords_.add(m);
+                } else {
+                  tokenizeShareRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 80: {
+                lastTokenizeShareRecordId_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 90: {
+                totalLiquidStakedTokens_ = input.readBytes();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock m =
+                    input.readMessage(
+                        com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.parser(),
+                        extensionRegistry);
+                if (tokenizeShareLocksBuilder_ == null) {
+                  ensureTokenizeShareLocksIsMutable();
+                  tokenizeShareLocks_.add(m);
+                } else {
+                  tokenizeShareLocksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1610,7 +2048,7 @@ public final class GenesisProto {
        * the previous end block.
        * </pre>
        *
-       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
        * @return The lastTotalPower.
        */
       @java.lang.Override
@@ -1623,7 +2061,7 @@ public final class GenesisProto {
        * the previous end block.
        * </pre>
        *
-       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
        * @param value The lastTotalPower to set.
        * @return This builder for chaining.
        */
@@ -1640,7 +2078,7 @@ public final class GenesisProto {
        * the previous end block.
        * </pre>
        *
-       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearLastTotalPower() {
@@ -1994,7 +2432,7 @@ public final class GenesisProto {
 
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2008,7 +2446,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2022,7 +2460,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2036,7 +2474,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2057,7 +2495,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2075,7 +2513,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2095,7 +2533,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2116,7 +2554,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2134,7 +2572,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2152,7 +2590,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2171,7 +2609,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2188,7 +2626,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2205,7 +2643,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2216,7 +2654,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2230,7 +2668,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2245,7 +2683,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2256,7 +2694,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2268,7 +2706,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * validators defines the validator set at genesis.
+       * delegations defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -3230,10 +3668,6 @@ public final class GenesisProto {
 
       private boolean exported_ ;
       /**
-       * <pre>
-       * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
-       * </pre>
-       *
        * <code>bool exported = 8 [json_name = "exported"];</code>
        * @return The exported.
        */
@@ -3242,10 +3676,6 @@ public final class GenesisProto {
         return exported_;
       }
       /**
-       * <pre>
-       * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
-       * </pre>
-       *
        * <code>bool exported = 8 [json_name = "exported"];</code>
        * @param value The exported to set.
        * @return This builder for chaining.
@@ -3258,10 +3688,6 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <pre>
-       * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
-       * </pre>
-       *
        * <code>bool exported = 8 [json_name = "exported"];</code>
        * @return This builder for chaining.
        */
@@ -3270,6 +3696,718 @@ public final class GenesisProto {
         exported_ = false;
         onChanged();
         return this;
+      }
+
+      private java.util.List<com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord> tokenizeShareRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenizeShareRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          tokenizeShareRecords_ = new java.util.ArrayList<com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord>(tokenizeShareRecords_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder> tokenizeShareRecordsBuilder_;
+
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord> getTokenizeShareRecordsList() {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenizeShareRecords_);
+        } else {
+          return tokenizeShareRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTokenizeShareRecordsCount() {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          return tokenizeShareRecords_.size();
+        } else {
+          return tokenizeShareRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord getTokenizeShareRecords(int index) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          return tokenizeShareRecords_.get(index);
+        } else {
+          return tokenizeShareRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenizeShareRecords(
+          int index, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord value) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenizeShareRecordsIsMutable();
+          tokenizeShareRecords_.set(index, value);
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenizeShareRecords(
+          int index, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder builderForValue) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          ensureTokenizeShareRecordsIsMutable();
+          tokenizeShareRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareRecords(com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord value) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenizeShareRecordsIsMutable();
+          tokenizeShareRecords_.add(value);
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareRecords(
+          int index, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord value) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenizeShareRecordsIsMutable();
+          tokenizeShareRecords_.add(index, value);
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareRecords(
+          com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder builderForValue) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          ensureTokenizeShareRecordsIsMutable();
+          tokenizeShareRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareRecords(
+          int index, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder builderForValue) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          ensureTokenizeShareRecordsIsMutable();
+          tokenizeShareRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTokenizeShareRecords(
+          java.lang.Iterable<? extends com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord> values) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          ensureTokenizeShareRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenizeShareRecords_);
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenizeShareRecords() {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          tokenizeShareRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTokenizeShareRecords(int index) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          ensureTokenizeShareRecordsIsMutable();
+          tokenizeShareRecords_.remove(index);
+          onChanged();
+        } else {
+          tokenizeShareRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder getTokenizeShareRecordsBuilder(
+          int index) {
+        return getTokenizeShareRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder getTokenizeShareRecordsOrBuilder(
+          int index) {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          return tokenizeShareRecords_.get(index);  } else {
+          return tokenizeShareRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder> 
+           getTokenizeShareRecordsOrBuilderList() {
+        if (tokenizeShareRecordsBuilder_ != null) {
+          return tokenizeShareRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenizeShareRecords_);
+        }
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder addTokenizeShareRecordsBuilder() {
+        return getTokenizeShareRecordsFieldBuilder().addBuilder(
+            com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder addTokenizeShareRecordsBuilder(
+          int index) {
+        return getTokenizeShareRecordsFieldBuilder().addBuilder(
+            index, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * store tokenize share records to provide reward to record owners
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareRecord tokenize_share_records = 9 [json_name = "tokenizeShareRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder> 
+           getTokenizeShareRecordsBuilderList() {
+        return getTokenizeShareRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder> 
+          getTokenizeShareRecordsFieldBuilder() {
+        if (tokenizeShareRecordsBuilder_ == null) {
+          tokenizeShareRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecord.Builder, com.cosmos.staking.v1beta1.StakingProto.TokenizeShareRecordOrBuilder>(
+                  tokenizeShareRecords_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenizeShareRecords_ = null;
+        }
+        return tokenizeShareRecordsBuilder_;
+      }
+
+      private long lastTokenizeShareRecordId_ ;
+      /**
+       * <pre>
+       * last tokenize share record id, used for next share record id calculation
+       * </pre>
+       *
+       * <code>uint64 last_tokenize_share_record_id = 10 [json_name = "lastTokenizeShareRecordId"];</code>
+       * @return The lastTokenizeShareRecordId.
+       */
+      @java.lang.Override
+      public long getLastTokenizeShareRecordId() {
+        return lastTokenizeShareRecordId_;
+      }
+      /**
+       * <pre>
+       * last tokenize share record id, used for next share record id calculation
+       * </pre>
+       *
+       * <code>uint64 last_tokenize_share_record_id = 10 [json_name = "lastTokenizeShareRecordId"];</code>
+       * @param value The lastTokenizeShareRecordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastTokenizeShareRecordId(long value) {
+
+        lastTokenizeShareRecordId_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last tokenize share record id, used for next share record id calculation
+       * </pre>
+       *
+       * <code>uint64 last_tokenize_share_record_id = 10 [json_name = "lastTokenizeShareRecordId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastTokenizeShareRecordId() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        lastTokenizeShareRecordId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString totalLiquidStakedTokens_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * total number of liquid staked tokens at genesis
+       * </pre>
+       *
+       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+       * @return The totalLiquidStakedTokens.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getTotalLiquidStakedTokens() {
+        return totalLiquidStakedTokens_;
+      }
+      /**
+       * <pre>
+       * total number of liquid staked tokens at genesis
+       * </pre>
+       *
+       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+       * @param value The totalLiquidStakedTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalLiquidStakedTokens(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalLiquidStakedTokens_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total number of liquid staked tokens at genesis
+       * </pre>
+       *
+       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalLiquidStakedTokens() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        totalLiquidStakedTokens_ = getDefaultInstance().getTotalLiquidStakedTokens();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock> tokenizeShareLocks_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenizeShareLocksIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          tokenizeShareLocks_ = new java.util.ArrayList<com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock>(tokenizeShareLocks_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder> tokenizeShareLocksBuilder_;
+
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock> getTokenizeShareLocksList() {
+        if (tokenizeShareLocksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenizeShareLocks_);
+        } else {
+          return tokenizeShareLocksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTokenizeShareLocksCount() {
+        if (tokenizeShareLocksBuilder_ == null) {
+          return tokenizeShareLocks_.size();
+        } else {
+          return tokenizeShareLocksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock getTokenizeShareLocks(int index) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          return tokenizeShareLocks_.get(index);
+        } else {
+          return tokenizeShareLocksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenizeShareLocks(
+          int index, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock value) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenizeShareLocksIsMutable();
+          tokenizeShareLocks_.set(index, value);
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenizeShareLocks(
+          int index, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder builderForValue) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          ensureTokenizeShareLocksIsMutable();
+          tokenizeShareLocks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareLocks(com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock value) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenizeShareLocksIsMutable();
+          tokenizeShareLocks_.add(value);
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareLocks(
+          int index, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock value) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenizeShareLocksIsMutable();
+          tokenizeShareLocks_.add(index, value);
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareLocks(
+          com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder builderForValue) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          ensureTokenizeShareLocksIsMutable();
+          tokenizeShareLocks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenizeShareLocks(
+          int index, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder builderForValue) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          ensureTokenizeShareLocksIsMutable();
+          tokenizeShareLocks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTokenizeShareLocks(
+          java.lang.Iterable<? extends com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock> values) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          ensureTokenizeShareLocksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenizeShareLocks_);
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenizeShareLocks() {
+        if (tokenizeShareLocksBuilder_ == null) {
+          tokenizeShareLocks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTokenizeShareLocks(int index) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          ensureTokenizeShareLocksIsMutable();
+          tokenizeShareLocks_.remove(index);
+          onChanged();
+        } else {
+          tokenizeShareLocksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder getTokenizeShareLocksBuilder(
+          int index) {
+        return getTokenizeShareLocksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder getTokenizeShareLocksOrBuilder(
+          int index) {
+        if (tokenizeShareLocksBuilder_ == null) {
+          return tokenizeShareLocks_.get(index);  } else {
+          return tokenizeShareLocksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder> 
+           getTokenizeShareLocksOrBuilderList() {
+        if (tokenizeShareLocksBuilder_ != null) {
+          return tokenizeShareLocksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenizeShareLocks_);
+        }
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder addTokenizeShareLocksBuilder() {
+        return getTokenizeShareLocksFieldBuilder().addBuilder(
+            com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder addTokenizeShareLocksBuilder(
+          int index) {
+        return getTokenizeShareLocksFieldBuilder().addBuilder(
+            index, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokenize shares locks at genesis
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.TokenizeShareLock tokenize_share_locks = 12 [json_name = "tokenizeShareLocks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder> 
+           getTokenizeShareLocksBuilderList() {
+        return getTokenizeShareLocksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder> 
+          getTokenizeShareLocksFieldBuilder() {
+        if (tokenizeShareLocksBuilder_ == null) {
+          tokenizeShareLocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder>(
+                  tokenizeShareLocks_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenizeShareLocks_ = null;
+        }
+        return tokenizeShareLocksBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3330,6 +4468,1042 @@ public final class GenesisProto {
 
     @java.lang.Override
     public com.cosmos.staking.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TokenizeShareLockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cosmos.staking.v1beta1.TokenizeShareLock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Address of the account that is locked
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * Address of the account that is locked
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * Status of the lock (LOCKED or LOCK_EXPIRING)
+     * </pre>
+     *
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <pre>
+     * Status of the lock (LOCKED or LOCK_EXPIRING)
+     * </pre>
+     *
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <pre>
+     * Completion time if the lock is expiring
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the completionTime field is set.
+     */
+    boolean hasCompletionTime();
+    /**
+     * <pre>
+     * Completion time if the lock is expiring
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The completionTime.
+     */
+    com.google.protobuf.Timestamp getCompletionTime();
+    /**
+     * <pre>
+     * Completion time if the lock is expiring
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCompletionTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * TokenizeSharesLock required for specifying account locks at genesis
+   * </pre>
+   *
+   * Protobuf type {@code cosmos.staking.v1beta1.TokenizeShareLock}
+   */
+  public static final class TokenizeShareLock extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cosmos.staking.v1beta1.TokenizeShareLock)
+      TokenizeShareLockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TokenizeShareLock.newBuilder() to construct.
+    private TokenizeShareLock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TokenizeShareLock() {
+      address_ = "";
+      status_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TokenizeShareLock();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cosmos.staking.v1beta1.GenesisProto.internal_static_cosmos_staking_v1beta1_TokenizeShareLock_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cosmos.staking.v1beta1.GenesisProto.internal_static_cosmos_staking_v1beta1_TokenizeShareLock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.class, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * Address of the account that is locked
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Address of the account that is locked
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
+    /**
+     * <pre>
+     * Status of the lock (LOCKED or LOCK_EXPIRING)
+     * </pre>
+     *
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Status of the lock (LOCKED or LOCK_EXPIRING)
+     * </pre>
+     *
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMPLETION_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp completionTime_;
+    /**
+     * <pre>
+     * Completion time if the lock is expiring
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the completionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCompletionTime() {
+      return completionTime_ != null;
+    }
+    /**
+     * <pre>
+     * Completion time if the lock is expiring
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The completionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCompletionTime() {
+      return completionTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+    }
+    /**
+     * <pre>
+     * Completion time if the lock is expiring
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCompletionTimeOrBuilder() {
+      return completionTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
+      }
+      if (completionTime_ != null) {
+        output.writeMessage(3, getCompletionTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
+      }
+      if (completionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCompletionTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock)) {
+        return super.equals(obj);
+      }
+      com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock other = (com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (hasCompletionTime() != other.hasCompletionTime()) return false;
+      if (hasCompletionTime()) {
+        if (!getCompletionTime()
+            .equals(other.getCompletionTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      if (hasCompletionTime()) {
+        hash = (37 * hash) + COMPLETION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCompletionTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TokenizeSharesLock required for specifying account locks at genesis
+     * </pre>
+     *
+     * Protobuf type {@code cosmos.staking.v1beta1.TokenizeShareLock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cosmos.staking.v1beta1.TokenizeShareLock)
+        com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cosmos.staking.v1beta1.GenesisProto.internal_static_cosmos_staking_v1beta1_TokenizeShareLock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cosmos.staking.v1beta1.GenesisProto.internal_static_cosmos_staking_v1beta1_TokenizeShareLock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.class, com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.Builder.class);
+      }
+
+      // Construct using com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        status_ = "";
+        completionTime_ = null;
+        if (completionTimeBuilder_ != null) {
+          completionTimeBuilder_.dispose();
+          completionTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cosmos.staking.v1beta1.GenesisProto.internal_static_cosmos_staking_v1beta1_TokenizeShareLock_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock getDefaultInstanceForType() {
+        return com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock build() {
+        com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock buildPartial() {
+        com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock result = new com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.completionTime_ = completionTimeBuilder_ == null
+              ? completionTime_
+              : completionTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock) {
+          return mergeFrom((com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock other) {
+        if (other == com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCompletionTime()) {
+          mergeCompletionTime(other.getCompletionTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                status_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCompletionTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * Address of the account that is locked
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address of the account that is locked
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address of the account that is locked
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the account that is locked
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the account that is locked
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <pre>
+       * Status of the lock (LOCKED or LOCK_EXPIRING)
+       * </pre>
+       *
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Status of the lock (LOCKED or LOCK_EXPIRING)
+       * </pre>
+       *
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Status of the lock (LOCKED or LOCK_EXPIRING)
+       * </pre>
+       *
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the lock (LOCKED or LOCK_EXPIRING)
+       * </pre>
+       *
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the lock (LOCKED or LOCK_EXPIRING)
+       * </pre>
+       *
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp completionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> completionTimeBuilder_;
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the completionTime field is set.
+       */
+      public boolean hasCompletionTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The completionTime.
+       */
+      public com.google.protobuf.Timestamp getCompletionTime() {
+        if (completionTimeBuilder_ == null) {
+          return completionTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+        } else {
+          return completionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCompletionTime(com.google.protobuf.Timestamp value) {
+        if (completionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          completionTime_ = value;
+        } else {
+          completionTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCompletionTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (completionTimeBuilder_ == null) {
+          completionTime_ = builderForValue.build();
+        } else {
+          completionTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCompletionTime(com.google.protobuf.Timestamp value) {
+        if (completionTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            completionTime_ != null &&
+            completionTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCompletionTimeBuilder().mergeFrom(value);
+          } else {
+            completionTime_ = value;
+          }
+        } else {
+          completionTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCompletionTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        completionTime_ = null;
+        if (completionTimeBuilder_ != null) {
+          completionTimeBuilder_.dispose();
+          completionTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCompletionTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCompletionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCompletionTimeOrBuilder() {
+        if (completionTimeBuilder_ != null) {
+          return completionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return completionTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Completion time if the lock is expiring
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completion_time = 3 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"completion_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCompletionTimeFieldBuilder() {
+        if (completionTimeBuilder_ == null) {
+          completionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCompletionTime(),
+                  getParentForChildren(),
+                  isClean());
+          completionTime_ = null;
+        }
+        return completionTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cosmos.staking.v1beta1.TokenizeShareLock)
+    }
+
+    // @@protoc_insertion_point(class_scope:cosmos.staking.v1beta1.TokenizeShareLock)
+    private static final com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock();
+    }
+
+    public static com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TokenizeShareLock>
+        PARSER = new com.google.protobuf.AbstractParser<TokenizeShareLock>() {
+      @java.lang.Override
+      public TokenizeShareLock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TokenizeShareLock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TokenizeShareLock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.GenesisProto.TokenizeShareLock getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4030,6 +6204,11 @@ public final class GenesisProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cosmos_staking_v1beta1_GenesisState_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cosmos_staking_v1beta1_TokenizeShareLock_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cosmos_staking_v1beta1_TokenizeShareLock_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cosmos_staking_v1beta1_LastValidatorPower_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4047,31 +6226,47 @@ public final class GenesisProto {
       "cosmos.staking.v1beta1\032\024gogoproto/gogo.p" +
       "roto\032$cosmos/staking/v1beta1/staking.pro" +
       "to\032\031cosmos_proto/cosmos.proto\032\021amino/ami" +
-      "no.proto\"\227\005\n\014GenesisState\022A\n\006params\030\001 \001(" +
-      "\0132\036.cosmos.staking.v1beta1.ParamsB\t\310\336\037\000\250" +
-      "\347\260*\001R\006params\022Z\n\020last_total_power\030\002 \001(\014B0" +
-      "\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\322\264-\ncosmos." +
-      "Int\250\347\260*\001R\016lastTotalPower\022i\n\025last_validat" +
-      "or_powers\030\003 \003(\0132*.cosmos.staking.v1beta1" +
-      ".LastValidatorPowerB\t\310\336\037\000\250\347\260*\001R\023lastVali" +
-      "datorPowers\022L\n\nvalidators\030\004 \003(\0132!.cosmos" +
-      ".staking.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\nv" +
-      "alidators\022O\n\013delegations\030\005 \003(\0132\".cosmos." +
-      "staking.v1beta1.DelegationB\t\310\336\037\000\250\347\260*\001R\013d" +
-      "elegations\022k\n\025unbonding_delegations\030\006 \003(" +
-      "\0132+.cosmos.staking.v1beta1.UnbondingDele" +
-      "gationB\t\310\336\037\000\250\347\260*\001R\024unbondingDelegations\022" +
-      "U\n\rredelegations\030\007 \003(\0132$.cosmos.staking." +
-      "v1beta1.RedelegationB\t\310\336\037\000\250\347\260*\001R\rredeleg" +
-      "ations\022\032\n\010exported\030\010 \001(\010R\010exported\"h\n\022La" +
-      "stValidatorPower\0222\n\007address\030\001 \001(\tB\030\322\264-\024c" +
-      "osmos.AddressStringR\007address\022\024\n\005power\030\002 " +
-      "\001(\003R\005power:\010\210\240\037\000\350\240\037\000B\300\001\n\032com.cosmos.stak" +
-      "ing.v1beta1B\014GenesisProtoZ\034cosmossdk.io/" +
-      "x/staking/types\242\002\003CSX\252\002\026Cosmos.Staking.V" +
-      "1beta1\312\002\026Cosmos\\Staking\\V1beta1\342\002\"Cosmos" +
-      "\\Staking\\V1beta1\\GPBMetadata\352\002\030Cosmos::S" +
-      "taking::V1beta1b\006proto3"
+      "no.proto\032\037google/protobuf/timestamp.prot" +
+      "o\"\273\010\n\014GenesisState\022A\n\006params\030\001 \001(\0132\036.cos" +
+      "mos.staking.v1beta1.ParamsB\t\310\336\037\000\250\347\260*\001R\006p" +
+      "arams\022]\n\020last_total_power\030\002 \001(\014B3\310\336\037\000\332\336\037" +
+      "&github.com/cosmos/cosmos-sdk/types.Int\250" +
+      "\347\260*\001R\016lastTotalPower\022i\n\025last_validator_p" +
+      "owers\030\003 \003(\0132*.cosmos.staking.v1beta1.Las" +
+      "tValidatorPowerB\t\310\336\037\000\250\347\260*\001R\023lastValidato" +
+      "rPowers\022L\n\nvalidators\030\004 \003(\0132!.cosmos.sta" +
+      "king.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\nvalid" +
+      "ators\022O\n\013delegations\030\005 \003(\0132\".cosmos.stak" +
+      "ing.v1beta1.DelegationB\t\310\336\037\000\250\347\260*\001R\013deleg" +
+      "ations\022k\n\025unbonding_delegations\030\006 \003(\0132+." +
+      "cosmos.staking.v1beta1.UnbondingDelegati" +
+      "onB\t\310\336\037\000\250\347\260*\001R\024unbondingDelegations\022U\n\rr" +
+      "edelegations\030\007 \003(\0132$.cosmos.staking.v1be" +
+      "ta1.RedelegationB\t\310\336\037\000\250\347\260*\001R\rredelegatio" +
+      "ns\022\032\n\010exported\030\010 \001(\010R\010exported\022g\n\026tokeni" +
+      "ze_share_records\030\t \003(\0132+.cosmos.staking." +
+      "v1beta1.TokenizeShareRecordB\004\310\336\037\000R\024token" +
+      "izeShareRecords\022@\n\035last_tokenize_share_r" +
+      "ecord_id\030\n \001(\004R\031lastTokenizeShareRecordI" +
+      "d\022\220\001\n\032total_liquid_staked_tokens\030\013 \001(\014BS" +
+      "\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/typ" +
+      "es.Int\362\336\037!yaml:\"total_liquid_staked_toke" +
+      "ns\"R\027totalLiquidStakedTokens\022a\n\024tokenize" +
+      "_share_locks\030\014 \003(\0132).cosmos.staking.v1be" +
+      "ta1.TokenizeShareLockB\004\310\336\037\000R\022tokenizeSha" +
+      "reLocks\"\256\001\n\021TokenizeShareLock\022\030\n\007address" +
+      "\030\001 \001(\tR\007address\022\026\n\006status\030\002 \001(\tR\006status\022" +
+      "g\n\017completion_time\030\003 \001(\0132\032.google.protob" +
+      "uf.TimestampB\"\310\336\037\000\362\336\037\026yaml:\"completion_t" +
+      "ime\"\220\337\037\001R\016completionTime\"h\n\022LastValidato" +
+      "rPower\0222\n\007address\030\001 \001(\tB\030\322\264-\024cosmos.Addr" +
+      "essStringR\007address\022\024\n\005power\030\002 \001(\003R\005power" +
+      ":\010\210\240\037\000\350\240\037\000B\320\001\n\032com.cosmos.staking.v1beta" +
+      "1B\014GenesisProtoZ,github.com/cosmos/cosmo" +
+      "s-sdk/x/staking/types\242\002\003CSX\252\002\026Cosmos.Sta" +
+      "king.V1beta1\312\002\026Cosmos\\Staking\\V1beta1\342\002\"" +
+      "Cosmos\\Staking\\V1beta1\\GPBMetadata\352\002\030Cos" +
+      "mos::Staking::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4080,15 +6275,22 @@ public final class GenesisProto {
           com.cosmos.staking.v1beta1.StakingProto.getDescriptor(),
           com.cosmos_proto.CosmosProto.getDescriptor(),
           com.amino.AminoProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_cosmos_staking_v1beta1_GenesisState_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_cosmos_staking_v1beta1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cosmos_staking_v1beta1_GenesisState_descriptor,
-        new java.lang.String[] { "Params", "LastTotalPower", "LastValidatorPowers", "Validators", "Delegations", "UnbondingDelegations", "Redelegations", "Exported", });
-    internal_static_cosmos_staking_v1beta1_LastValidatorPower_descriptor =
+        new java.lang.String[] { "Params", "LastTotalPower", "LastValidatorPowers", "Validators", "Delegations", "UnbondingDelegations", "Redelegations", "Exported", "TokenizeShareRecords", "LastTokenizeShareRecordId", "TotalLiquidStakedTokens", "TokenizeShareLocks", });
+    internal_static_cosmos_staking_v1beta1_TokenizeShareLock_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_cosmos_staking_v1beta1_TokenizeShareLock_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cosmos_staking_v1beta1_TokenizeShareLock_descriptor,
+        new java.lang.String[] { "Address", "Status", "CompletionTime", });
+    internal_static_cosmos_staking_v1beta1_LastValidatorPower_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_cosmos_staking_v1beta1_LastValidatorPower_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cosmos_staking_v1beta1_LastValidatorPower_descriptor,
@@ -4100,13 +6302,16 @@ public final class GenesisProto {
     registry.add(com.gogoproto.GogoProto.customtype);
     registry.add(com.gogoproto.GogoProto.equal);
     registry.add(com.gogoproto.GogoProto.goprotoGetters);
+    registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
+    registry.add(com.gogoproto.GogoProto.stdtime);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
     com.cosmos.staking.v1beta1.StakingProto.getDescriptor();
     com.cosmos_proto.CosmosProto.getDescriptor();
     com.amino.AminoProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

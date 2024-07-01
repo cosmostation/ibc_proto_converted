@@ -5816,12 +5816,12 @@ public final class QueryProto {
       "mos.upgrade.v1beta1.QueryAuthorityReques" +
       "t\032..cosmos.upgrade.v1beta1.QueryAuthorit" +
       "yResponse\")\202\323\344\223\002#\022!/cosmos/upgrade/v1bet" +
-      "a1/authorityB\276\001\n\032com.cosmos.upgrade.v1be" +
-      "ta1B\nQueryProtoZ\034cosmossdk.io/x/upgrade/" +
-      "types\242\002\003CUX\252\002\026Cosmos.Upgrade.V1beta1\312\002\026C" +
-      "osmos\\Upgrade\\V1beta1\342\002\"Cosmos\\Upgrade\\V" +
-      "1beta1\\GPBMetadata\352\002\030Cosmos::Upgrade::V1" +
-      "beta1b\006proto3"
+      "a1/authorityB\316\001\n\032com.cosmos.upgrade.v1be" +
+      "ta1B\nQueryProtoZ,github.com/cosmos/cosmo" +
+      "s-sdk/x/upgrade/types\242\002\003CUX\252\002\026Cosmos.Upg" +
+      "rade.V1beta1\312\002\026Cosmos\\Upgrade\\V1beta1\342\002\"" +
+      "Cosmos\\Upgrade\\V1beta1\\GPBMetadata\352\002\030Cos" +
+      "mos::Upgrade::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

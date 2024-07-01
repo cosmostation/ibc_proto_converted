@@ -626,13 +626,14 @@ public final class ModuleProto {
     java.lang.String[] descriptorData = {
       "\n%cosmos/upgrade/module/v1/module.proto\022" +
       "\030cosmos.upgrade.module.v1\032 cosmos/app/v1" +
-      "alpha1/module.proto\"F\n\006Module\022\034\n\tauthori" +
-      "ty\030\001 \001(\tR\tauthority:\036\272\300\226\332\001\030\n\026cosmossdk.i" +
-      "o/x/upgradeB\254\001\n\034com.cosmos.upgrade.modul" +
-      "e.v1B\013ModuleProto\242\002\003CUM\252\002\030Cosmos.Upgrade" +
-      ".Module.V1\312\002\030Cosmos\\Upgrade\\Module\\V1\342\002$" +
-      "Cosmos\\Upgrade\\Module\\V1\\GPBMetadata\352\002\033C" +
-      "osmos::Upgrade::Module::V1b\006proto3"
+      "alpha1/module.proto\"V\n\006Module\022\034\n\tauthori" +
+      "ty\030\001 \001(\tR\tauthority:.\272\300\226\332\001(\n&github.com/" +
+      "cosmos/cosmos-sdk/x/upgradeB\254\001\n\034com.cosm" +
+      "os.upgrade.module.v1B\013ModuleProto\242\002\003CUM\252" +
+      "\002\030Cosmos.Upgrade.Module.V1\312\002\030Cosmos\\Upgr" +
+      "ade\\Module\\V1\342\002$Cosmos\\Upgrade\\Module\\V1" +
+      "\\GPBMetadata\352\002\033Cosmos::Upgrade::Module::" +
+      "V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

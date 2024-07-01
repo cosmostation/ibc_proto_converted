@@ -22,6 +22,8 @@ public final class ParamsProto {
      * <pre>
      * Alpha is the amount we additively increase the learning rate
      * when it is above or below the target +/- threshold.
+     *
+     * Must be &gt; 0.
      * </pre>
      *
      * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -32,6 +34,8 @@ public final class ParamsProto {
      * <pre>
      * Alpha is the amount we additively increase the learning rate
      * when it is above or below the target +/- threshold.
+     *
+     * Must be &gt; 0.
      * </pre>
      *
      * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -44,6 +48,8 @@ public final class ParamsProto {
      * <pre>
      * Beta is the amount we multiplicatively decrease the learning rate
      * when it is within the target +/- threshold.
+     *
+     * Must be [0, 1].
      * </pre>
      *
      * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -54,6 +60,8 @@ public final class ParamsProto {
      * <pre>
      * Beta is the amount we multiplicatively decrease the learning rate
      * when it is within the target +/- threshold.
+     *
+     * Must be [0, 1].
      * </pre>
      *
      * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -64,33 +72,37 @@ public final class ParamsProto {
 
     /**
      * <pre>
-     * Theta is the threshold for the learning rate. If the learning rate is
+     * Gamma is the threshold for the learning rate. If the learning rate is
      * above or below the target +/- threshold, we additively increase the
      * learning rate by Alpha. Otherwise, we multiplicatively decrease the
      * learning rate by Beta.
+     *
+     * Must be [0, 0.5].
      * </pre>
      *
-     * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The theta.
+     * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The gamma.
      */
-    java.lang.String getTheta();
+    java.lang.String getGamma();
     /**
      * <pre>
-     * Theta is the threshold for the learning rate. If the learning rate is
+     * Gamma is the threshold for the learning rate. If the learning rate is
      * above or below the target +/- threshold, we additively increase the
      * learning rate by Alpha. Otherwise, we multiplicatively decrease the
      * learning rate by Beta.
+     *
+     * Must be [0, 0.5].
      * </pre>
      *
-     * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for theta.
+     * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for gamma.
      */
     com.google.protobuf.ByteString
-        getThetaBytes();
+        getGammaBytes();
 
     /**
      * <pre>
-     * Delta is the amount we additively increase/decrease the base fee when the
+     * Delta is the amount we additively increase/decrease the gas price when the
      * net block utilization difference in the window is above/below the target
      * utilization.
      * </pre>
@@ -101,7 +113,7 @@ public final class ParamsProto {
     java.lang.String getDelta();
     /**
      * <pre>
-     * Delta is the amount we additively increase/decrease the base fee when the
+     * Delta is the amount we additively increase/decrease the gas price when the
      * net block utilization difference in the window is above/below the target
      * utilization.
      * </pre>
@@ -114,25 +126,25 @@ public final class ParamsProto {
 
     /**
      * <pre>
-     * MinBaseFee determines the initial base fee of the module and the global
-     * minimum for the network. This is denominated in fee per gas unit.
+     * MinBaseGasPrice determines the initial gas price of the module and the
+     * global minimum for the network.
      * </pre>
      *
-     * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The minBaseFee.
+     * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The minBaseGasPrice.
      */
-    java.lang.String getMinBaseFee();
+    java.lang.String getMinBaseGasPrice();
     /**
      * <pre>
-     * MinBaseFee determines the initial base fee of the module and the global
-     * minimum for the network. This is denominated in fee per gas unit.
+     * MinBaseGasPrice determines the initial gas price of the module and the
+     * global minimum for the network.
      * </pre>
      *
-     * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for minBaseFee.
+     * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for minBaseGasPrice.
      */
     com.google.protobuf.ByteString
-        getMinBaseFeeBytes();
+        getMinBaseGasPriceBytes();
 
     /**
      * <pre>
@@ -176,20 +188,10 @@ public final class ParamsProto {
 
     /**
      * <pre>
-     * TargetBlockUtilization is the target block utilization.
-     * </pre>
-     *
-     * <code>uint64 target_block_utilization = 8 [json_name = "targetBlockUtilization"];</code>
-     * @return The targetBlockUtilization.
-     */
-    long getTargetBlockUtilization();
-
-    /**
-     * <pre>
      * MaxBlockUtilization is the maximum block utilization.
      * </pre>
      *
-     * <code>uint64 max_block_utilization = 9 [json_name = "maxBlockUtilization"];</code>
+     * <code>uint64 max_block_utilization = 8 [json_name = "maxBlockUtilization"];</code>
      * @return The maxBlockUtilization.
      */
     long getMaxBlockUtilization();
@@ -200,7 +202,7 @@ public final class ParamsProto {
      * over a moving window of blocks.
      * </pre>
      *
-     * <code>uint64 window = 10 [json_name = "window"];</code>
+     * <code>uint64 window = 9 [json_name = "window"];</code>
      * @return The window.
      */
     long getWindow();
@@ -210,7 +212,7 @@ public final class ParamsProto {
      * FeeDenom is the denom that will be used for all fee payments.
      * </pre>
      *
-     * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+     * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
      * @return The feeDenom.
      */
     java.lang.String getFeeDenom();
@@ -219,7 +221,7 @@ public final class ParamsProto {
      * FeeDenom is the denom that will be used for all fee payments.
      * </pre>
      *
-     * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+     * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
      * @return The bytes for feeDenom.
      */
     com.google.protobuf.ByteString
@@ -231,7 +233,7 @@ public final class ParamsProto {
      * enabled.
      * </pre>
      *
-     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * <code>bool enabled = 11 [json_name = "enabled"];</code>
      * @return The enabled.
      */
     boolean getEnabled();
@@ -242,7 +244,7 @@ public final class ParamsProto {
      * distributed to all stakers.
      * </pre>
      *
-     * <code>bool distribute_fees = 13 [json_name = "distributeFees"];</code>
+     * <code>bool distribute_fees = 12 [json_name = "distributeFees"];</code>
      * @return The distributeFees.
      */
     boolean getDistributeFees();
@@ -267,9 +269,9 @@ public final class ParamsProto {
     private Params() {
       alpha_ = "";
       beta_ = "";
-      theta_ = "";
+      gamma_ = "";
       delta_ = "";
-      minBaseFee_ = "";
+      minBaseGasPrice_ = "";
       minLearningRate_ = "";
       maxLearningRate_ = "";
       feeDenom_ = "";
@@ -302,6 +304,8 @@ public final class ParamsProto {
      * <pre>
      * Alpha is the amount we additively increase the learning rate
      * when it is above or below the target +/- threshold.
+     *
+     * Must be &gt; 0.
      * </pre>
      *
      * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -324,6 +328,8 @@ public final class ParamsProto {
      * <pre>
      * Alpha is the amount we additively increase the learning rate
      * when it is above or below the target +/- threshold.
+     *
+     * Must be &gt; 0.
      * </pre>
      *
      * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -351,6 +357,8 @@ public final class ParamsProto {
      * <pre>
      * Beta is the amount we multiplicatively decrease the learning rate
      * when it is within the target +/- threshold.
+     *
+     * Must be [0, 1].
      * </pre>
      *
      * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -373,6 +381,8 @@ public final class ParamsProto {
      * <pre>
      * Beta is the amount we multiplicatively decrease the learning rate
      * when it is within the target +/- threshold.
+     *
+     * Must be [0, 1].
      * </pre>
      *
      * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -393,53 +403,57 @@ public final class ParamsProto {
       }
     }
 
-    public static final int THETA_FIELD_NUMBER = 3;
+    public static final int GAMMA_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object theta_ = "";
+    private volatile java.lang.Object gamma_ = "";
     /**
      * <pre>
-     * Theta is the threshold for the learning rate. If the learning rate is
+     * Gamma is the threshold for the learning rate. If the learning rate is
      * above or below the target +/- threshold, we additively increase the
      * learning rate by Alpha. Otherwise, we multiplicatively decrease the
      * learning rate by Beta.
+     *
+     * Must be [0, 0.5].
      * </pre>
      *
-     * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The theta.
+     * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The gamma.
      */
     @java.lang.Override
-    public java.lang.String getTheta() {
-      java.lang.Object ref = theta_;
+    public java.lang.String getGamma() {
+      java.lang.Object ref = gamma_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        theta_ = s;
+        gamma_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * Theta is the threshold for the learning rate. If the learning rate is
+     * Gamma is the threshold for the learning rate. If the learning rate is
      * above or below the target +/- threshold, we additively increase the
      * learning rate by Alpha. Otherwise, we multiplicatively decrease the
      * learning rate by Beta.
+     *
+     * Must be [0, 0.5].
      * </pre>
      *
-     * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for theta.
+     * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for gamma.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getThetaBytes() {
-      java.lang.Object ref = theta_;
+        getGammaBytes() {
+      java.lang.Object ref = gamma_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        theta_ = b;
+        gamma_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -451,7 +465,7 @@ public final class ParamsProto {
     private volatile java.lang.Object delta_ = "";
     /**
      * <pre>
-     * Delta is the amount we additively increase/decrease the base fee when the
+     * Delta is the amount we additively increase/decrease the gas price when the
      * net block utilization difference in the window is above/below the target
      * utilization.
      * </pre>
@@ -474,7 +488,7 @@ public final class ParamsProto {
     }
     /**
      * <pre>
-     * Delta is the amount we additively increase/decrease the base fee when the
+     * Delta is the amount we additively increase/decrease the gas price when the
      * net block utilization difference in the window is above/below the target
      * utilization.
      * </pre>
@@ -497,49 +511,49 @@ public final class ParamsProto {
       }
     }
 
-    public static final int MIN_BASE_FEE_FIELD_NUMBER = 5;
+    public static final int MIN_BASE_GAS_PRICE_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object minBaseFee_ = "";
+    private volatile java.lang.Object minBaseGasPrice_ = "";
     /**
      * <pre>
-     * MinBaseFee determines the initial base fee of the module and the global
-     * minimum for the network. This is denominated in fee per gas unit.
+     * MinBaseGasPrice determines the initial gas price of the module and the
+     * global minimum for the network.
      * </pre>
      *
-     * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The minBaseFee.
+     * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The minBaseGasPrice.
      */
     @java.lang.Override
-    public java.lang.String getMinBaseFee() {
-      java.lang.Object ref = minBaseFee_;
+    public java.lang.String getMinBaseGasPrice() {
+      java.lang.Object ref = minBaseGasPrice_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        minBaseFee_ = s;
+        minBaseGasPrice_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * MinBaseFee determines the initial base fee of the module and the global
-     * minimum for the network. This is denominated in fee per gas unit.
+     * MinBaseGasPrice determines the initial gas price of the module and the
+     * global minimum for the network.
      * </pre>
      *
-     * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for minBaseFee.
+     * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for minBaseGasPrice.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getMinBaseFeeBytes() {
-      java.lang.Object ref = minBaseFee_;
+        getMinBaseGasPriceBytes() {
+      java.lang.Object ref = minBaseGasPrice_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        minBaseFee_ = b;
+        minBaseGasPrice_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -640,29 +654,14 @@ public final class ParamsProto {
       }
     }
 
-    public static final int TARGET_BLOCK_UTILIZATION_FIELD_NUMBER = 8;
-    private long targetBlockUtilization_ = 0L;
-    /**
-     * <pre>
-     * TargetBlockUtilization is the target block utilization.
-     * </pre>
-     *
-     * <code>uint64 target_block_utilization = 8 [json_name = "targetBlockUtilization"];</code>
-     * @return The targetBlockUtilization.
-     */
-    @java.lang.Override
-    public long getTargetBlockUtilization() {
-      return targetBlockUtilization_;
-    }
-
-    public static final int MAX_BLOCK_UTILIZATION_FIELD_NUMBER = 9;
+    public static final int MAX_BLOCK_UTILIZATION_FIELD_NUMBER = 8;
     private long maxBlockUtilization_ = 0L;
     /**
      * <pre>
      * MaxBlockUtilization is the maximum block utilization.
      * </pre>
      *
-     * <code>uint64 max_block_utilization = 9 [json_name = "maxBlockUtilization"];</code>
+     * <code>uint64 max_block_utilization = 8 [json_name = "maxBlockUtilization"];</code>
      * @return The maxBlockUtilization.
      */
     @java.lang.Override
@@ -670,7 +669,7 @@ public final class ParamsProto {
       return maxBlockUtilization_;
     }
 
-    public static final int WINDOW_FIELD_NUMBER = 10;
+    public static final int WINDOW_FIELD_NUMBER = 9;
     private long window_ = 0L;
     /**
      * <pre>
@@ -678,7 +677,7 @@ public final class ParamsProto {
      * over a moving window of blocks.
      * </pre>
      *
-     * <code>uint64 window = 10 [json_name = "window"];</code>
+     * <code>uint64 window = 9 [json_name = "window"];</code>
      * @return The window.
      */
     @java.lang.Override
@@ -686,7 +685,7 @@ public final class ParamsProto {
       return window_;
     }
 
-    public static final int FEE_DENOM_FIELD_NUMBER = 11;
+    public static final int FEE_DENOM_FIELD_NUMBER = 10;
     @SuppressWarnings("serial")
     private volatile java.lang.Object feeDenom_ = "";
     /**
@@ -694,7 +693,7 @@ public final class ParamsProto {
      * FeeDenom is the denom that will be used for all fee payments.
      * </pre>
      *
-     * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+     * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
      * @return The feeDenom.
      */
     @java.lang.Override
@@ -715,7 +714,7 @@ public final class ParamsProto {
      * FeeDenom is the denom that will be used for all fee payments.
      * </pre>
      *
-     * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+     * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
      * @return The bytes for feeDenom.
      */
     @java.lang.Override
@@ -733,7 +732,7 @@ public final class ParamsProto {
       }
     }
 
-    public static final int ENABLED_FIELD_NUMBER = 12;
+    public static final int ENABLED_FIELD_NUMBER = 11;
     private boolean enabled_ = false;
     /**
      * <pre>
@@ -741,7 +740,7 @@ public final class ParamsProto {
      * enabled.
      * </pre>
      *
-     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * <code>bool enabled = 11 [json_name = "enabled"];</code>
      * @return The enabled.
      */
     @java.lang.Override
@@ -749,7 +748,7 @@ public final class ParamsProto {
       return enabled_;
     }
 
-    public static final int DISTRIBUTE_FEES_FIELD_NUMBER = 13;
+    public static final int DISTRIBUTE_FEES_FIELD_NUMBER = 12;
     private boolean distributeFees_ = false;
     /**
      * <pre>
@@ -757,7 +756,7 @@ public final class ParamsProto {
      * distributed to all stakers.
      * </pre>
      *
-     * <code>bool distribute_fees = 13 [json_name = "distributeFees"];</code>
+     * <code>bool distribute_fees = 12 [json_name = "distributeFees"];</code>
      * @return The distributeFees.
      */
     @java.lang.Override
@@ -785,14 +784,14 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(beta_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, beta_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(theta_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, theta_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gamma_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, gamma_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delta_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, delta_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minBaseFee_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, minBaseFee_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minBaseGasPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, minBaseGasPrice_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minLearningRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, minLearningRate_);
@@ -800,23 +799,20 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxLearningRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, maxLearningRate_);
       }
-      if (targetBlockUtilization_ != 0L) {
-        output.writeUInt64(8, targetBlockUtilization_);
-      }
       if (maxBlockUtilization_ != 0L) {
-        output.writeUInt64(9, maxBlockUtilization_);
+        output.writeUInt64(8, maxBlockUtilization_);
       }
       if (window_ != 0L) {
-        output.writeUInt64(10, window_);
+        output.writeUInt64(9, window_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeDenom_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, feeDenom_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, feeDenom_);
       }
       if (enabled_ != false) {
-        output.writeBool(12, enabled_);
+        output.writeBool(11, enabled_);
       }
       if (distributeFees_ != false) {
-        output.writeBool(13, distributeFees_);
+        output.writeBool(12, distributeFees_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -833,14 +829,14 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(beta_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, beta_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(theta_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, theta_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gamma_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, gamma_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delta_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, delta_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minBaseFee_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, minBaseFee_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minBaseGasPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, minBaseGasPrice_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minLearningRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, minLearningRate_);
@@ -848,28 +844,24 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxLearningRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, maxLearningRate_);
       }
-      if (targetBlockUtilization_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, targetBlockUtilization_);
-      }
       if (maxBlockUtilization_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(9, maxBlockUtilization_);
+          .computeUInt64Size(8, maxBlockUtilization_);
       }
       if (window_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, window_);
+          .computeUInt64Size(9, window_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeDenom_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, feeDenom_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, feeDenom_);
       }
       if (enabled_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, enabled_);
+          .computeBoolSize(11, enabled_);
       }
       if (distributeFees_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, distributeFees_);
+          .computeBoolSize(12, distributeFees_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -890,18 +882,16 @@ public final class ParamsProto {
           .equals(other.getAlpha())) return false;
       if (!getBeta()
           .equals(other.getBeta())) return false;
-      if (!getTheta()
-          .equals(other.getTheta())) return false;
+      if (!getGamma()
+          .equals(other.getGamma())) return false;
       if (!getDelta()
           .equals(other.getDelta())) return false;
-      if (!getMinBaseFee()
-          .equals(other.getMinBaseFee())) return false;
+      if (!getMinBaseGasPrice()
+          .equals(other.getMinBaseGasPrice())) return false;
       if (!getMinLearningRate()
           .equals(other.getMinLearningRate())) return false;
       if (!getMaxLearningRate()
           .equals(other.getMaxLearningRate())) return false;
-      if (getTargetBlockUtilization()
-          != other.getTargetBlockUtilization()) return false;
       if (getMaxBlockUtilization()
           != other.getMaxBlockUtilization()) return false;
       if (getWindow()
@@ -927,19 +917,16 @@ public final class ParamsProto {
       hash = (53 * hash) + getAlpha().hashCode();
       hash = (37 * hash) + BETA_FIELD_NUMBER;
       hash = (53 * hash) + getBeta().hashCode();
-      hash = (37 * hash) + THETA_FIELD_NUMBER;
-      hash = (53 * hash) + getTheta().hashCode();
+      hash = (37 * hash) + GAMMA_FIELD_NUMBER;
+      hash = (53 * hash) + getGamma().hashCode();
       hash = (37 * hash) + DELTA_FIELD_NUMBER;
       hash = (53 * hash) + getDelta().hashCode();
-      hash = (37 * hash) + MIN_BASE_FEE_FIELD_NUMBER;
-      hash = (53 * hash) + getMinBaseFee().hashCode();
+      hash = (37 * hash) + MIN_BASE_GAS_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinBaseGasPrice().hashCode();
       hash = (37 * hash) + MIN_LEARNING_RATE_FIELD_NUMBER;
       hash = (53 * hash) + getMinLearningRate().hashCode();
       hash = (37 * hash) + MAX_LEARNING_RATE_FIELD_NUMBER;
       hash = (53 * hash) + getMaxLearningRate().hashCode();
-      hash = (37 * hash) + TARGET_BLOCK_UTILIZATION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getTargetBlockUtilization());
       hash = (37 * hash) + MAX_BLOCK_UTILIZATION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxBlockUtilization());
@@ -1092,12 +1079,11 @@ public final class ParamsProto {
         bitField0_ = 0;
         alpha_ = "";
         beta_ = "";
-        theta_ = "";
+        gamma_ = "";
         delta_ = "";
-        minBaseFee_ = "";
+        minBaseGasPrice_ = "";
         minLearningRate_ = "";
         maxLearningRate_ = "";
-        targetBlockUtilization_ = 0L;
         maxBlockUtilization_ = 0L;
         window_ = 0L;
         feeDenom_ = "";
@@ -1143,13 +1129,13 @@ public final class ParamsProto {
           result.beta_ = beta_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.theta_ = theta_;
+          result.gamma_ = gamma_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.delta_ = delta_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.minBaseFee_ = minBaseFee_;
+          result.minBaseGasPrice_ = minBaseGasPrice_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.minLearningRate_ = minLearningRate_;
@@ -1158,21 +1144,18 @@ public final class ParamsProto {
           result.maxLearningRate_ = maxLearningRate_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.targetBlockUtilization_ = targetBlockUtilization_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.maxBlockUtilization_ = maxBlockUtilization_;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.window_ = window_;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.feeDenom_ = feeDenom_;
         }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.enabled_ = enabled_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.distributeFees_ = distributeFees_;
         }
       }
@@ -1231,8 +1214,8 @@ public final class ParamsProto {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (!other.getTheta().isEmpty()) {
-          theta_ = other.theta_;
+        if (!other.getGamma().isEmpty()) {
+          gamma_ = other.gamma_;
           bitField0_ |= 0x00000004;
           onChanged();
         }
@@ -1241,8 +1224,8 @@ public final class ParamsProto {
           bitField0_ |= 0x00000008;
           onChanged();
         }
-        if (!other.getMinBaseFee().isEmpty()) {
-          minBaseFee_ = other.minBaseFee_;
+        if (!other.getMinBaseGasPrice().isEmpty()) {
+          minBaseGasPrice_ = other.minBaseGasPrice_;
           bitField0_ |= 0x00000010;
           onChanged();
         }
@@ -1256,9 +1239,6 @@ public final class ParamsProto {
           bitField0_ |= 0x00000040;
           onChanged();
         }
-        if (other.getTargetBlockUtilization() != 0L) {
-          setTargetBlockUtilization(other.getTargetBlockUtilization());
-        }
         if (other.getMaxBlockUtilization() != 0L) {
           setMaxBlockUtilization(other.getMaxBlockUtilization());
         }
@@ -1267,7 +1247,7 @@ public final class ParamsProto {
         }
         if (!other.getFeeDenom().isEmpty()) {
           feeDenom_ = other.feeDenom_;
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (other.getEnabled() != false) {
@@ -1313,7 +1293,7 @@ public final class ParamsProto {
                 break;
               } // case 18
               case 26: {
-                theta_ = input.readStringRequireUtf8();
+                gamma_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
@@ -1323,7 +1303,7 @@ public final class ParamsProto {
                 break;
               } // case 34
               case 42: {
-                minBaseFee_ = input.readStringRequireUtf8();
+                minBaseGasPrice_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
@@ -1338,35 +1318,30 @@ public final class ParamsProto {
                 break;
               } // case 58
               case 64: {
-                targetBlockUtilization_ = input.readUInt64();
+                maxBlockUtilization_ = input.readUInt64();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 72: {
-                maxBlockUtilization_ = input.readUInt64();
+                window_ = input.readUInt64();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 72
-              case 80: {
-                window_ = input.readUInt64();
+              case 82: {
+                feeDenom_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000200;
                 break;
-              } // case 80
-              case 90: {
-                feeDenom_ = input.readStringRequireUtf8();
+              } // case 82
+              case 88: {
+                enabled_ = input.readBool();
                 bitField0_ |= 0x00000400;
                 break;
-              } // case 90
+              } // case 88
               case 96: {
-                enabled_ = input.readBool();
+                distributeFees_ = input.readBool();
                 bitField0_ |= 0x00000800;
                 break;
               } // case 96
-              case 104: {
-                distributeFees_ = input.readBool();
-                bitField0_ |= 0x00001000;
-                break;
-              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1389,6 +1364,8 @@ public final class ParamsProto {
        * <pre>
        * Alpha is the amount we additively increase the learning rate
        * when it is above or below the target +/- threshold.
+       *
+       * Must be &gt; 0.
        * </pre>
        *
        * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1410,6 +1387,8 @@ public final class ParamsProto {
        * <pre>
        * Alpha is the amount we additively increase the learning rate
        * when it is above or below the target +/- threshold.
+       *
+       * Must be &gt; 0.
        * </pre>
        *
        * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1432,6 +1411,8 @@ public final class ParamsProto {
        * <pre>
        * Alpha is the amount we additively increase the learning rate
        * when it is above or below the target +/- threshold.
+       *
+       * Must be &gt; 0.
        * </pre>
        *
        * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1450,6 +1431,8 @@ public final class ParamsProto {
        * <pre>
        * Alpha is the amount we additively increase the learning rate
        * when it is above or below the target +/- threshold.
+       *
+       * Must be &gt; 0.
        * </pre>
        *
        * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1465,6 +1448,8 @@ public final class ParamsProto {
        * <pre>
        * Alpha is the amount we additively increase the learning rate
        * when it is above or below the target +/- threshold.
+       *
+       * Must be &gt; 0.
        * </pre>
        *
        * <code>string alpha = 1 [json_name = "alpha", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1486,6 +1471,8 @@ public final class ParamsProto {
        * <pre>
        * Beta is the amount we multiplicatively decrease the learning rate
        * when it is within the target +/- threshold.
+       *
+       * Must be [0, 1].
        * </pre>
        *
        * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1507,6 +1494,8 @@ public final class ParamsProto {
        * <pre>
        * Beta is the amount we multiplicatively decrease the learning rate
        * when it is within the target +/- threshold.
+       *
+       * Must be [0, 1].
        * </pre>
        *
        * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1529,6 +1518,8 @@ public final class ParamsProto {
        * <pre>
        * Beta is the amount we multiplicatively decrease the learning rate
        * when it is within the target +/- threshold.
+       *
+       * Must be [0, 1].
        * </pre>
        *
        * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1547,6 +1538,8 @@ public final class ParamsProto {
        * <pre>
        * Beta is the amount we multiplicatively decrease the learning rate
        * when it is within the target +/- threshold.
+       *
+       * Must be [0, 1].
        * </pre>
        *
        * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1562,6 +1555,8 @@ public final class ParamsProto {
        * <pre>
        * Beta is the amount we multiplicatively decrease the learning rate
        * when it is within the target +/- threshold.
+       *
+       * Must be [0, 1].
        * </pre>
        *
        * <code>string beta = 2 [json_name = "beta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
@@ -1578,25 +1573,27 @@ public final class ParamsProto {
         return this;
       }
 
-      private java.lang.Object theta_ = "";
+      private java.lang.Object gamma_ = "";
       /**
        * <pre>
-       * Theta is the threshold for the learning rate. If the learning rate is
+       * Gamma is the threshold for the learning rate. If the learning rate is
        * above or below the target +/- threshold, we additively increase the
        * learning rate by Alpha. Otherwise, we multiplicatively decrease the
        * learning rate by Beta.
+       *
+       * Must be [0, 0.5].
        * </pre>
        *
-       * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The theta.
+       * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The gamma.
        */
-      public java.lang.String getTheta() {
-        java.lang.Object ref = theta_;
+      public java.lang.String getGamma() {
+        java.lang.Object ref = gamma_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          theta_ = s;
+          gamma_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1604,23 +1601,25 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * Theta is the threshold for the learning rate. If the learning rate is
+       * Gamma is the threshold for the learning rate. If the learning rate is
        * above or below the target +/- threshold, we additively increase the
        * learning rate by Alpha. Otherwise, we multiplicatively decrease the
        * learning rate by Beta.
+       *
+       * Must be [0, 0.5].
        * </pre>
        *
-       * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The bytes for theta.
+       * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for gamma.
        */
       public com.google.protobuf.ByteString
-          getThetaBytes() {
-        java.lang.Object ref = theta_;
+          getGammaBytes() {
+        java.lang.Object ref = gamma_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          theta_ = b;
+          gamma_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1628,58 +1627,64 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * Theta is the threshold for the learning rate. If the learning rate is
+       * Gamma is the threshold for the learning rate. If the learning rate is
        * above or below the target +/- threshold, we additively increase the
        * learning rate by Alpha. Otherwise, we multiplicatively decrease the
        * learning rate by Beta.
+       *
+       * Must be [0, 0.5].
        * </pre>
        *
-       * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The theta to set.
+       * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The gamma to set.
        * @return This builder for chaining.
        */
-      public Builder setTheta(
+      public Builder setGamma(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        theta_ = value;
+        gamma_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Theta is the threshold for the learning rate. If the learning rate is
+       * Gamma is the threshold for the learning rate. If the learning rate is
        * above or below the target +/- threshold, we additively increase the
        * learning rate by Alpha. Otherwise, we multiplicatively decrease the
        * learning rate by Beta.
+       *
+       * Must be [0, 0.5].
        * </pre>
        *
-       * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearTheta() {
-        theta_ = getDefaultInstance().getTheta();
+      public Builder clearGamma() {
+        gamma_ = getDefaultInstance().getGamma();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Theta is the threshold for the learning rate. If the learning rate is
+       * Gamma is the threshold for the learning rate. If the learning rate is
        * above or below the target +/- threshold, we additively increase the
        * learning rate by Alpha. Otherwise, we multiplicatively decrease the
        * learning rate by Beta.
+       *
+       * Must be [0, 0.5].
        * </pre>
        *
-       * <code>string theta = 3 [json_name = "theta", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The bytes for theta to set.
+       * <code>string gamma = 3 [json_name = "gamma", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for gamma to set.
        * @return This builder for chaining.
        */
-      public Builder setThetaBytes(
+      public Builder setGammaBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        theta_ = value;
+        gamma_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
@@ -1688,7 +1693,7 @@ public final class ParamsProto {
       private java.lang.Object delta_ = "";
       /**
        * <pre>
-       * Delta is the amount we additively increase/decrease the base fee when the
+       * Delta is the amount we additively increase/decrease the gas price when the
        * net block utilization difference in the window is above/below the target
        * utilization.
        * </pre>
@@ -1710,7 +1715,7 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * Delta is the amount we additively increase/decrease the base fee when the
+       * Delta is the amount we additively increase/decrease the gas price when the
        * net block utilization difference in the window is above/below the target
        * utilization.
        * </pre>
@@ -1733,7 +1738,7 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * Delta is the amount we additively increase/decrease the base fee when the
+       * Delta is the amount we additively increase/decrease the gas price when the
        * net block utilization difference in the window is above/below the target
        * utilization.
        * </pre>
@@ -1752,7 +1757,7 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * Delta is the amount we additively increase/decrease the base fee when the
+       * Delta is the amount we additively increase/decrease the gas price when the
        * net block utilization difference in the window is above/below the target
        * utilization.
        * </pre>
@@ -1768,7 +1773,7 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * Delta is the amount we additively increase/decrease the base fee when the
+       * Delta is the amount we additively increase/decrease the gas price when the
        * net block utilization difference in the window is above/below the target
        * utilization.
        * </pre>
@@ -1787,23 +1792,23 @@ public final class ParamsProto {
         return this;
       }
 
-      private java.lang.Object minBaseFee_ = "";
+      private java.lang.Object minBaseGasPrice_ = "";
       /**
        * <pre>
-       * MinBaseFee determines the initial base fee of the module and the global
-       * minimum for the network. This is denominated in fee per gas unit.
+       * MinBaseGasPrice determines the initial gas price of the module and the
+       * global minimum for the network.
        * </pre>
        *
-       * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The minBaseFee.
+       * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The minBaseGasPrice.
        */
-      public java.lang.String getMinBaseFee() {
-        java.lang.Object ref = minBaseFee_;
+      public java.lang.String getMinBaseGasPrice() {
+        java.lang.Object ref = minBaseGasPrice_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          minBaseFee_ = s;
+          minBaseGasPrice_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1811,21 +1816,21 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * MinBaseFee determines the initial base fee of the module and the global
-       * minimum for the network. This is denominated in fee per gas unit.
+       * MinBaseGasPrice determines the initial gas price of the module and the
+       * global minimum for the network.
        * </pre>
        *
-       * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The bytes for minBaseFee.
+       * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for minBaseGasPrice.
        */
       public com.google.protobuf.ByteString
-          getMinBaseFeeBytes() {
-        java.lang.Object ref = minBaseFee_;
+          getMinBaseGasPriceBytes() {
+        java.lang.Object ref = minBaseGasPrice_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          minBaseFee_ = b;
+          minBaseGasPrice_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1833,52 +1838,52 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * MinBaseFee determines the initial base fee of the module and the global
-       * minimum for the network. This is denominated in fee per gas unit.
+       * MinBaseGasPrice determines the initial gas price of the module and the
+       * global minimum for the network.
        * </pre>
        *
-       * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The minBaseFee to set.
+       * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The minBaseGasPrice to set.
        * @return This builder for chaining.
        */
-      public Builder setMinBaseFee(
+      public Builder setMinBaseGasPrice(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        minBaseFee_ = value;
+        minBaseGasPrice_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * MinBaseFee determines the initial base fee of the module and the global
-       * minimum for the network. This is denominated in fee per gas unit.
+       * MinBaseGasPrice determines the initial gas price of the module and the
+       * global minimum for the network.
        * </pre>
        *
-       * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearMinBaseFee() {
-        minBaseFee_ = getDefaultInstance().getMinBaseFee();
+      public Builder clearMinBaseGasPrice() {
+        minBaseGasPrice_ = getDefaultInstance().getMinBaseGasPrice();
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * MinBaseFee determines the initial base fee of the module and the global
-       * minimum for the network. This is denominated in fee per gas unit.
+       * MinBaseGasPrice determines the initial gas price of the module and the
+       * global minimum for the network.
        * </pre>
        *
-       * <code>string min_base_fee = 5 [json_name = "minBaseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The bytes for minBaseFee to set.
+       * <code>string min_base_gas_price = 5 [json_name = "minBaseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for minBaseGasPrice to set.
        * @return This builder for chaining.
        */
-      public Builder setMinBaseFeeBytes(
+      public Builder setMinBaseGasPriceBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        minBaseFee_ = value;
+        minBaseGasPrice_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
@@ -2068,57 +2073,13 @@ public final class ParamsProto {
         return this;
       }
 
-      private long targetBlockUtilization_ ;
-      /**
-       * <pre>
-       * TargetBlockUtilization is the target block utilization.
-       * </pre>
-       *
-       * <code>uint64 target_block_utilization = 8 [json_name = "targetBlockUtilization"];</code>
-       * @return The targetBlockUtilization.
-       */
-      @java.lang.Override
-      public long getTargetBlockUtilization() {
-        return targetBlockUtilization_;
-      }
-      /**
-       * <pre>
-       * TargetBlockUtilization is the target block utilization.
-       * </pre>
-       *
-       * <code>uint64 target_block_utilization = 8 [json_name = "targetBlockUtilization"];</code>
-       * @param value The targetBlockUtilization to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTargetBlockUtilization(long value) {
-
-        targetBlockUtilization_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * TargetBlockUtilization is the target block utilization.
-       * </pre>
-       *
-       * <code>uint64 target_block_utilization = 8 [json_name = "targetBlockUtilization"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTargetBlockUtilization() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        targetBlockUtilization_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private long maxBlockUtilization_ ;
       /**
        * <pre>
        * MaxBlockUtilization is the maximum block utilization.
        * </pre>
        *
-       * <code>uint64 max_block_utilization = 9 [json_name = "maxBlockUtilization"];</code>
+       * <code>uint64 max_block_utilization = 8 [json_name = "maxBlockUtilization"];</code>
        * @return The maxBlockUtilization.
        */
       @java.lang.Override
@@ -2130,14 +2091,14 @@ public final class ParamsProto {
        * MaxBlockUtilization is the maximum block utilization.
        * </pre>
        *
-       * <code>uint64 max_block_utilization = 9 [json_name = "maxBlockUtilization"];</code>
+       * <code>uint64 max_block_utilization = 8 [json_name = "maxBlockUtilization"];</code>
        * @param value The maxBlockUtilization to set.
        * @return This builder for chaining.
        */
       public Builder setMaxBlockUtilization(long value) {
 
         maxBlockUtilization_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2146,11 +2107,11 @@ public final class ParamsProto {
        * MaxBlockUtilization is the maximum block utilization.
        * </pre>
        *
-       * <code>uint64 max_block_utilization = 9 [json_name = "maxBlockUtilization"];</code>
+       * <code>uint64 max_block_utilization = 8 [json_name = "maxBlockUtilization"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxBlockUtilization() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         maxBlockUtilization_ = 0L;
         onChanged();
         return this;
@@ -2163,7 +2124,7 @@ public final class ParamsProto {
        * over a moving window of blocks.
        * </pre>
        *
-       * <code>uint64 window = 10 [json_name = "window"];</code>
+       * <code>uint64 window = 9 [json_name = "window"];</code>
        * @return The window.
        */
       @java.lang.Override
@@ -2176,14 +2137,14 @@ public final class ParamsProto {
        * over a moving window of blocks.
        * </pre>
        *
-       * <code>uint64 window = 10 [json_name = "window"];</code>
+       * <code>uint64 window = 9 [json_name = "window"];</code>
        * @param value The window to set.
        * @return This builder for chaining.
        */
       public Builder setWindow(long value) {
 
         window_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2193,11 +2154,11 @@ public final class ParamsProto {
        * over a moving window of blocks.
        * </pre>
        *
-       * <code>uint64 window = 10 [json_name = "window"];</code>
+       * <code>uint64 window = 9 [json_name = "window"];</code>
        * @return This builder for chaining.
        */
       public Builder clearWindow() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         window_ = 0L;
         onChanged();
         return this;
@@ -2209,7 +2170,7 @@ public final class ParamsProto {
        * FeeDenom is the denom that will be used for all fee payments.
        * </pre>
        *
-       * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+       * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
        * @return The feeDenom.
        */
       public java.lang.String getFeeDenom() {
@@ -2229,7 +2190,7 @@ public final class ParamsProto {
        * FeeDenom is the denom that will be used for all fee payments.
        * </pre>
        *
-       * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+       * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
        * @return The bytes for feeDenom.
        */
       public com.google.protobuf.ByteString
@@ -2250,7 +2211,7 @@ public final class ParamsProto {
        * FeeDenom is the denom that will be used for all fee payments.
        * </pre>
        *
-       * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+       * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
        * @param value The feeDenom to set.
        * @return This builder for chaining.
        */
@@ -2258,7 +2219,7 @@ public final class ParamsProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         feeDenom_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2267,12 +2228,12 @@ public final class ParamsProto {
        * FeeDenom is the denom that will be used for all fee payments.
        * </pre>
        *
-       * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+       * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFeeDenom() {
         feeDenom_ = getDefaultInstance().getFeeDenom();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -2281,7 +2242,7 @@ public final class ParamsProto {
        * FeeDenom is the denom that will be used for all fee payments.
        * </pre>
        *
-       * <code>string fee_denom = 11 [json_name = "feeDenom"];</code>
+       * <code>string fee_denom = 10 [json_name = "feeDenom"];</code>
        * @param value The bytes for feeDenom to set.
        * @return This builder for chaining.
        */
@@ -2290,7 +2251,7 @@ public final class ParamsProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         feeDenom_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2302,7 +2263,7 @@ public final class ParamsProto {
        * enabled.
        * </pre>
        *
-       * <code>bool enabled = 12 [json_name = "enabled"];</code>
+       * <code>bool enabled = 11 [json_name = "enabled"];</code>
        * @return The enabled.
        */
       @java.lang.Override
@@ -2315,14 +2276,14 @@ public final class ParamsProto {
        * enabled.
        * </pre>
        *
-       * <code>bool enabled = 12 [json_name = "enabled"];</code>
+       * <code>bool enabled = 11 [json_name = "enabled"];</code>
        * @param value The enabled to set.
        * @return This builder for chaining.
        */
       public Builder setEnabled(boolean value) {
 
         enabled_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -2332,11 +2293,11 @@ public final class ParamsProto {
        * enabled.
        * </pre>
        *
-       * <code>bool enabled = 12 [json_name = "enabled"];</code>
+       * <code>bool enabled = 11 [json_name = "enabled"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEnabled() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         enabled_ = false;
         onChanged();
         return this;
@@ -2349,7 +2310,7 @@ public final class ParamsProto {
        * distributed to all stakers.
        * </pre>
        *
-       * <code>bool distribute_fees = 13 [json_name = "distributeFees"];</code>
+       * <code>bool distribute_fees = 12 [json_name = "distributeFees"];</code>
        * @return The distributeFees.
        */
       @java.lang.Override
@@ -2362,14 +2323,14 @@ public final class ParamsProto {
        * distributed to all stakers.
        * </pre>
        *
-       * <code>bool distribute_fees = 13 [json_name = "distributeFees"];</code>
+       * <code>bool distribute_fees = 12 [json_name = "distributeFees"];</code>
        * @param value The distributeFees to set.
        * @return This builder for chaining.
        */
       public Builder setDistributeFees(boolean value) {
 
         distributeFees_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2379,11 +2340,11 @@ public final class ParamsProto {
        * distributed to all stakers.
        * </pre>
        *
-       * <code>bool distribute_fees = 13 [json_name = "distributeFees"];</code>
+       * <code>bool distribute_fees = 12 [json_name = "distributeFees"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDistributeFees() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         distributeFees_ = false;
         onChanged();
         return this;
@@ -2468,33 +2429,32 @@ public final class ParamsProto {
     java.lang.String[] descriptorData = {
       "\n#feemarket/feemarket/v1/params.proto\022\026f" +
       "eemarket.feemarket.v1\032\031cosmos_proto/cosm" +
-      "os.proto\032\024gogoproto/gogo.proto\"\243\006\n\006Param" +
+      "os.proto\032\024gogoproto/gogo.proto\"\364\005\n\006Param" +
       "s\022G\n\005alpha\030\001 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/m" +
       "ath.LegacyDec\322\264-\ncosmos.DecR\005alpha\022E\n\004be" +
       "ta\030\002 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/math.Lega" +
-      "cyDec\322\264-\ncosmos.DecR\004beta\022G\n\005theta\030\003 \001(\t" +
+      "cyDec\322\264-\ncosmos.DecR\004beta\022G\n\005gamma\030\003 \001(\t" +
       "B1\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-" +
-      "\ncosmos.DecR\005theta\022G\n\005delta\030\004 \001(\tB1\310\336\037\000\332" +
+      "\ncosmos.DecR\005gamma\022G\n\005delta\030\004 \001(\tB1\310\336\037\000\332" +
       "\336\037\033cosmossdk.io/math.LegacyDec\322\264-\ncosmos" +
-      ".DecR\005delta\022S\n\014min_base_fee\030\005 \001(\tB1\310\336\037\000\332" +
-      "\336\037\033cosmossdk.io/math.LegacyDec\322\264-\ncosmos" +
-      ".DecR\nminBaseFee\022]\n\021min_learning_rate\030\006 " +
-      "\001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDec" +
-      "\322\264-\ncosmos.DecR\017minLearningRate\022]\n\021max_l" +
-      "earning_rate\030\007 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io" +
-      "/math.LegacyDec\322\264-\ncosmos.DecR\017maxLearni" +
-      "ngRate\0228\n\030target_block_utilization\030\010 \001(\004" +
-      "R\026targetBlockUtilization\0222\n\025max_block_ut" +
-      "ilization\030\t \001(\004R\023maxBlockUtilization\022\026\n\006" +
-      "window\030\n \001(\004R\006window\022\033\n\tfee_denom\030\013 \001(\tR" +
-      "\010feeDenom\022\030\n\007enabled\030\014 \001(\010R\007enabled\022\'\n\017d" +
-      "istribute_fees\030\r \001(\010R\016distributeFeesB\322\001\n" +
-      "\032com.feemarket.feemarket.v1B\013ParamsProto" +
-      "Z/github.com/skip-mev/feemarket/x/feemar" +
-      "ket/types\242\002\003FFX\252\002\026Feemarket.Feemarket.V1" +
-      "\312\002\026Feemarket\\Feemarket\\V1\342\002\"Feemarket\\Fe" +
-      "emarket\\V1\\GPBMetadata\352\002\030Feemarket::Feem" +
-      "arket::V1b\006proto3"
+      ".DecR\005delta\022^\n\022min_base_gas_price\030\005 \001(\tB" +
+      "1\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-\n" +
+      "cosmos.DecR\017minBaseGasPrice\022]\n\021min_learn" +
+      "ing_rate\030\006 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/mat" +
+      "h.LegacyDec\322\264-\ncosmos.DecR\017minLearningRa" +
+      "te\022]\n\021max_learning_rate\030\007 \001(\tB1\310\336\037\000\332\336\037\033c" +
+      "osmossdk.io/math.LegacyDec\322\264-\ncosmos.Dec" +
+      "R\017maxLearningRate\0222\n\025max_block_utilizati" +
+      "on\030\010 \001(\004R\023maxBlockUtilization\022\026\n\006window\030" +
+      "\t \001(\004R\006window\022\033\n\tfee_denom\030\n \001(\tR\010feeDen" +
+      "om\022\030\n\007enabled\030\013 \001(\010R\007enabled\022\'\n\017distribu" +
+      "te_fees\030\014 \001(\010R\016distributeFeesB\322\001\n\032com.fe" +
+      "emarket.feemarket.v1B\013ParamsProtoZ/githu" +
+      "b.com/skip-mev/feemarket/x/feemarket/typ" +
+      "es\242\002\003FFX\252\002\026Feemarket.Feemarket.V1\312\002\026Feem" +
+      "arket\\Feemarket\\V1\342\002\"Feemarket\\Feemarket" +
+      "\\V1\\GPBMetadata\352\002\030Feemarket::Feemarket::" +
+      "V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2507,7 +2467,7 @@ public final class ParamsProto {
     internal_static_feemarket_feemarket_v1_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_feemarket_feemarket_v1_Params_descriptor,
-        new java.lang.String[] { "Alpha", "Beta", "Theta", "Delta", "MinBaseFee", "MinLearningRate", "MaxLearningRate", "TargetBlockUtilization", "MaxBlockUtilization", "Window", "FeeDenom", "Enabled", "DistributeFees", });
+        new java.lang.String[] { "Alpha", "Beta", "Gamma", "Delta", "MinBaseGasPrice", "MinLearningRate", "MaxLearningRate", "MaxBlockUtilization", "Window", "FeeDenom", "Enabled", "DistributeFees", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);

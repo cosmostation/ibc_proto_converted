@@ -25,8 +25,7 @@ public final class ServiceProto {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults
-     * to ASC in this case.
+     * ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.
      * </pre>
      *
      * <code>ORDER_BY_UNSPECIFIED = 0;</code>
@@ -53,8 +52,7 @@ public final class ServiceProto {
 
     /**
      * <pre>
-     * ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults
-     * to ASC in this case.
+     * ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.
      * </pre>
      *
      * <code>ORDER_BY_UNSPECIFIED = 0;</code>
@@ -163,8 +161,7 @@ public final class ServiceProto {
 
   /**
    * <pre>
-   * BroadcastMode specifies the broadcast mode for the TxService.Broadcast RPC
-   * method.
+   * BroadcastMode specifies the broadcast mode for the TxService.Broadcast RPC method.
    * </pre>
    *
    * Protobuf enum {@code cosmos.tx.v1beta1.BroadcastMode}
@@ -181,7 +178,7 @@ public final class ServiceProto {
     BROADCAST_MODE_UNSPECIFIED(0),
     /**
      * <pre>
-     * Deprecated: use BROADCAST_MODE_SYNC instead,
+     * DEPRECATED: use BROADCAST_MODE_SYNC instead,
      * BROADCAST_MODE_BLOCK is not supported by the SDK from v0.47.x onwards.
      * </pre>
      *
@@ -191,8 +188,8 @@ public final class ServiceProto {
     BROADCAST_MODE_BLOCK(1),
     /**
      * <pre>
-     * BROADCAST_MODE_SYNC defines a tx broadcasting mode where the client waits
-     * for a CheckTx execution response only.
+     * BROADCAST_MODE_SYNC defines a tx broadcasting mode where the client waits for
+     * a CheckTx execution response only.
      * </pre>
      *
      * <code>BROADCAST_MODE_SYNC = 2;</code>
@@ -200,8 +197,8 @@ public final class ServiceProto {
     BROADCAST_MODE_SYNC(2),
     /**
      * <pre>
-     * BROADCAST_MODE_ASYNC defines a tx broadcasting mode where the client
-     * returns immediately.
+     * BROADCAST_MODE_ASYNC defines a tx broadcasting mode where the client returns
+     * immediately.
      * </pre>
      *
      * <code>BROADCAST_MODE_ASYNC = 3;</code>
@@ -220,7 +217,7 @@ public final class ServiceProto {
     public static final int BROADCAST_MODE_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * Deprecated: use BROADCAST_MODE_SYNC instead,
+     * DEPRECATED: use BROADCAST_MODE_SYNC instead,
      * BROADCAST_MODE_BLOCK is not supported by the SDK from v0.47.x onwards.
      * </pre>
      *
@@ -229,8 +226,8 @@ public final class ServiceProto {
     @java.lang.Deprecated public static final int BROADCAST_MODE_BLOCK_VALUE = 1;
     /**
      * <pre>
-     * BROADCAST_MODE_SYNC defines a tx broadcasting mode where the client waits
-     * for a CheckTx execution response only.
+     * BROADCAST_MODE_SYNC defines a tx broadcasting mode where the client waits for
+     * a CheckTx execution response only.
      * </pre>
      *
      * <code>BROADCAST_MODE_SYNC = 2;</code>
@@ -238,8 +235,8 @@ public final class ServiceProto {
     public static final int BROADCAST_MODE_SYNC_VALUE = 2;
     /**
      * <pre>
-     * BROADCAST_MODE_ASYNC defines a tx broadcasting mode where the client
-     * returns immediately.
+     * BROADCAST_MODE_ASYNC defines a tx broadcasting mode where the client returns
+     * immediately.
      * </pre>
      *
      * <code>BROADCAST_MODE_ASYNC = 3;</code>
@@ -338,88 +335,72 @@ public final class ServiceProto {
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @return A list containing the events.
      */
-    @java.lang.Deprecated java.util.List<java.lang.String>
+    java.util.List<java.lang.String>
         getEventsList();
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @return The count of events.
      */
-    @java.lang.Deprecated int getEventsCount();
+    int getEventsCount();
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @param index The index of the element to return.
      * @return The events at the given index.
      */
-    @java.lang.Deprecated java.lang.String getEvents(int index);
+    java.lang.String getEvents(int index);
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the events at the given index.
      */
-    @java.lang.Deprecated com.google.protobuf.ByteString
+    com.google.protobuf.ByteString
         getEventsBytes(int index);
 
     /**
      * <pre>
      * pagination defines a pagination for the request.
-     * Deprecated: post v0.46.x use page and limit instead.
+     * Deprecated post v0.46.x: use page and limit instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=90
+     *     See cosmos/tx/v1beta1/service.proto;l=87
      * @return Whether the pagination field is set.
      */
     @java.lang.Deprecated boolean hasPagination();
     /**
      * <pre>
      * pagination defines a pagination for the request.
-     * Deprecated: post v0.46.x use page and limit instead.
+     * Deprecated post v0.46.x: use page and limit instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=90
+     *     See cosmos/tx/v1beta1/service.proto;l=87
      * @return The pagination.
      */
     @java.lang.Deprecated com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
     /**
      * <pre>
      * pagination defines a pagination for the request.
-     * Deprecated: post v0.46.x use page and limit instead.
+     * Deprecated post v0.46.x: use page and limit instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -439,8 +420,7 @@ public final class ServiceProto {
 
     /**
      * <pre>
-     * page is the page number to query, starts at 1. If not provided, will
-     * default to first page.
+     * page is the page number to query, starts at 1. If not provided, will default to first page.
      * </pre>
      *
      * <code>uint64 page = 4 [json_name = "page"];</code>
@@ -458,32 +438,6 @@ public final class ServiceProto {
      * @return The limit.
      */
     long getLimit();
-
-    /**
-     * <pre>
-     * query defines the transaction event query that is proxied to Tendermint's
-     * TxSearch RPC method. The query must be valid.
-     *
-     * Since cosmos-sdk 0.50
-     * </pre>
-     *
-     * <code>string query = 6 [json_name = "query"];</code>
-     * @return The query.
-     */
-    java.lang.String getQuery();
-    /**
-     * <pre>
-     * query defines the transaction event query that is proxied to Tendermint's
-     * TxSearch RPC method. The query must be valid.
-     *
-     * Since cosmos-sdk 0.50
-     * </pre>
-     *
-     * <code>string query = 6 [json_name = "query"];</code>
-     * @return The bytes for query.
-     */
-    com.google.protobuf.ByteString
-        getQueryBytes();
   }
   /**
    * <pre>
@@ -506,7 +460,6 @@ public final class ServiceProto {
       events_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       orderBy_ = 0;
-      query_ = "";
     }
 
     @java.lang.Override
@@ -536,64 +489,48 @@ public final class ServiceProto {
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @return A list containing the events.
      */
-    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
+    public com.google.protobuf.ProtocolStringList
         getEventsList() {
       return events_;
     }
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @return The count of events.
      */
-    @java.lang.Deprecated public int getEventsCount() {
+    public int getEventsCount() {
       return events_.size();
     }
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @param index The index of the element to return.
      * @return The events at the given index.
      */
-    @java.lang.Deprecated public java.lang.String getEvents(int index) {
+    public java.lang.String getEvents(int index) {
       return events_.get(index);
     }
     /**
      * <pre>
      * events is the list of transaction event type.
-     * Deprecated: post v0.47.x use query instead, which should contain a valid
-     * events query.
      * </pre>
      *
-     * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-     * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=86
+     * <code>repeated string events = 1 [json_name = "events"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the events at the given index.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getEventsBytes(int index) {
       return events_.getByteString(index);
     }
@@ -603,12 +540,12 @@ public final class ServiceProto {
     /**
      * <pre>
      * pagination defines a pagination for the request.
-     * Deprecated: post v0.46.x use page and limit instead.
+     * Deprecated post v0.46.x: use page and limit instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=90
+     *     See cosmos/tx/v1beta1/service.proto;l=87
      * @return Whether the pagination field is set.
      */
     @java.lang.Override
@@ -618,12 +555,12 @@ public final class ServiceProto {
     /**
      * <pre>
      * pagination defines a pagination for the request.
-     * Deprecated: post v0.46.x use page and limit instead.
+     * Deprecated post v0.46.x: use page and limit instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=90
+     *     See cosmos/tx/v1beta1/service.proto;l=87
      * @return The pagination.
      */
     @java.lang.Override
@@ -633,7 +570,7 @@ public final class ServiceProto {
     /**
      * <pre>
      * pagination defines a pagination for the request.
-     * Deprecated: post v0.46.x use page and limit instead.
+     * Deprecated post v0.46.x: use page and limit instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -665,8 +602,7 @@ public final class ServiceProto {
     private long page_ = 0L;
     /**
      * <pre>
-     * page is the page number to query, starts at 1. If not provided, will
-     * default to first page.
+     * page is the page number to query, starts at 1. If not provided, will default to first page.
      * </pre>
      *
      * <code>uint64 page = 4 [json_name = "page"];</code>
@@ -691,59 +627,6 @@ public final class ServiceProto {
     @java.lang.Override
     public long getLimit() {
       return limit_;
-    }
-
-    public static final int QUERY_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object query_ = "";
-    /**
-     * <pre>
-     * query defines the transaction event query that is proxied to Tendermint's
-     * TxSearch RPC method. The query must be valid.
-     *
-     * Since cosmos-sdk 0.50
-     * </pre>
-     *
-     * <code>string query = 6 [json_name = "query"];</code>
-     * @return The query.
-     */
-    @java.lang.Override
-    public java.lang.String getQuery() {
-      java.lang.Object ref = query_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        query_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * query defines the transaction event query that is proxied to Tendermint's
-     * TxSearch RPC method. The query must be valid.
-     *
-     * Since cosmos-sdk 0.50
-     * </pre>
-     *
-     * <code>string query = 6 [json_name = "query"];</code>
-     * @return The bytes for query.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getQueryBytes() {
-      java.lang.Object ref = query_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        query_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -774,9 +657,6 @@ public final class ServiceProto {
       }
       if (limit_ != 0L) {
         output.writeUInt64(5, limit_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, query_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -811,9 +691,6 @@ public final class ServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(5, limit_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, query_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -841,8 +718,6 @@ public final class ServiceProto {
           != other.getPage()) return false;
       if (getLimit()
           != other.getLimit()) return false;
-      if (!getQuery()
-          .equals(other.getQuery())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -870,8 +745,6 @@ public final class ServiceProto {
       hash = (37 * hash) + LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getLimit());
-      hash = (37 * hash) + QUERY_FIELD_NUMBER;
-      hash = (53 * hash) + getQuery().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1018,7 +891,6 @@ public final class ServiceProto {
         orderBy_ = 0;
         page_ = 0L;
         limit_ = 0L;
-        query_ = "";
         return this;
       }
 
@@ -1069,9 +941,6 @@ public final class ServiceProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.limit_ = limit_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.query_ = query_;
         }
       }
 
@@ -1141,11 +1010,6 @@ public final class ServiceProto {
         if (other.getLimit() != 0L) {
           setLimit(other.getLimit());
         }
-        if (!other.getQuery().isEmpty()) {
-          query_ = other.query_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1200,11 +1064,6 @@ public final class ServiceProto {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
-              case 50: {
-                query_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1233,16 +1092,12 @@ public final class ServiceProto {
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @return A list containing the events.
        */
-      @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
+      public com.google.protobuf.ProtocolStringList
           getEventsList() {
         events_.makeImmutable();
         return events_;
@@ -1250,66 +1105,50 @@ public final class ServiceProto {
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @return The count of events.
        */
-      @java.lang.Deprecated public int getEventsCount() {
+      public int getEventsCount() {
         return events_.size();
       }
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @param index The index of the element to return.
        * @return The events at the given index.
        */
-      @java.lang.Deprecated public java.lang.String getEvents(int index) {
+      public java.lang.String getEvents(int index) {
         return events_.get(index);
       }
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the events at the given index.
        */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
+      public com.google.protobuf.ByteString
           getEventsBytes(int index) {
         return events_.getByteString(index);
       }
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @param index The index to set the value at.
        * @param value The events to set.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder setEvents(
+      public Builder setEvents(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         ensureEventsIsMutable();
@@ -1321,17 +1160,13 @@ public final class ServiceProto {
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @param value The events to add.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder addEvents(
+      public Builder addEvents(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         ensureEventsIsMutable();
@@ -1343,17 +1178,13 @@ public final class ServiceProto {
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @param values The events to add.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder addAllEvents(
+      public Builder addAllEvents(
           java.lang.Iterable<java.lang.String> values) {
         ensureEventsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1365,16 +1196,12 @@ public final class ServiceProto {
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder clearEvents() {
+      public Builder clearEvents() {
         events_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);;
@@ -1384,17 +1211,13 @@ public final class ServiceProto {
       /**
        * <pre>
        * events is the list of transaction event type.
-       * Deprecated: post v0.47.x use query instead, which should contain a valid
-       * events query.
        * </pre>
        *
-       * <code>repeated string events = 1 [json_name = "events", deprecated = true];</code>
-       * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.events is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=86
+       * <code>repeated string events = 1 [json_name = "events"];</code>
        * @param value The bytes of the events to add.
        * @return This builder for chaining.
        */
-      @java.lang.Deprecated public Builder addEventsBytes(
+      public Builder addEventsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -1411,12 +1234,12 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
        * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.pagination is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=90
+       *     See cosmos/tx/v1beta1/service.proto;l=87
        * @return Whether the pagination field is set.
        */
       @java.lang.Deprecated public boolean hasPagination() {
@@ -1425,12 +1248,12 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
        * @deprecated cosmos.tx.v1beta1.GetTxsEventRequest.pagination is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=90
+       *     See cosmos/tx/v1beta1/service.proto;l=87
        * @return The pagination.
        */
       @java.lang.Deprecated public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
@@ -1443,7 +1266,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -1464,7 +1287,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -1483,7 +1306,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -1507,7 +1330,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -1525,7 +1348,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -1538,7 +1361,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -1554,7 +1377,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the request.
-       * Deprecated: post v0.46.x use page and limit instead.
+       * Deprecated post v0.46.x: use page and limit instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", deprecated = true];</code>
@@ -1629,8 +1452,7 @@ public final class ServiceProto {
       private long page_ ;
       /**
        * <pre>
-       * page is the page number to query, starts at 1. If not provided, will
-       * default to first page.
+       * page is the page number to query, starts at 1. If not provided, will default to first page.
        * </pre>
        *
        * <code>uint64 page = 4 [json_name = "page"];</code>
@@ -1642,8 +1464,7 @@ public final class ServiceProto {
       }
       /**
        * <pre>
-       * page is the page number to query, starts at 1. If not provided, will
-       * default to first page.
+       * page is the page number to query, starts at 1. If not provided, will default to first page.
        * </pre>
        *
        * <code>uint64 page = 4 [json_name = "page"];</code>
@@ -1659,8 +1480,7 @@ public final class ServiceProto {
       }
       /**
        * <pre>
-       * page is the page number to query, starts at 1. If not provided, will
-       * default to first page.
+       * page is the page number to query, starts at 1. If not provided, will default to first page.
        * </pre>
        *
        * <code>uint64 page = 4 [json_name = "page"];</code>
@@ -1716,113 +1536,6 @@ public final class ServiceProto {
       public Builder clearLimit() {
         bitField0_ = (bitField0_ & ~0x00000010);
         limit_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object query_ = "";
-      /**
-       * <pre>
-       * query defines the transaction event query that is proxied to Tendermint's
-       * TxSearch RPC method. The query must be valid.
-       *
-       * Since cosmos-sdk 0.50
-       * </pre>
-       *
-       * <code>string query = 6 [json_name = "query"];</code>
-       * @return The query.
-       */
-      public java.lang.String getQuery() {
-        java.lang.Object ref = query_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          query_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * query defines the transaction event query that is proxied to Tendermint's
-       * TxSearch RPC method. The query must be valid.
-       *
-       * Since cosmos-sdk 0.50
-       * </pre>
-       *
-       * <code>string query = 6 [json_name = "query"];</code>
-       * @return The bytes for query.
-       */
-      public com.google.protobuf.ByteString
-          getQueryBytes() {
-        java.lang.Object ref = query_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          query_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * query defines the transaction event query that is proxied to Tendermint's
-       * TxSearch RPC method. The query must be valid.
-       *
-       * Since cosmos-sdk 0.50
-       * </pre>
-       *
-       * <code>string query = 6 [json_name = "query"];</code>
-       * @param value The query to set.
-       * @return This builder for chaining.
-       */
-      public Builder setQuery(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        query_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * query defines the transaction event query that is proxied to Tendermint's
-       * TxSearch RPC method. The query must be valid.
-       *
-       * Since cosmos-sdk 0.50
-       * </pre>
-       *
-       * <code>string query = 6 [json_name = "query"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearQuery() {
-        query_ = getDefaultInstance().getQuery();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * query defines the transaction event query that is proxied to Tendermint's
-       * TxSearch RPC method. The query must be valid.
-       *
-       * Since cosmos-sdk 0.50
-       * </pre>
-       *
-       * <code>string query = 6 [json_name = "query"];</code>
-       * @param value The bytes for query to set.
-       * @return This builder for chaining.
-       */
-      public Builder setQueryBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        query_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1985,31 +1698,31 @@ public final class ServiceProto {
     /**
      * <pre>
      * pagination defines a pagination for the response.
-     * Deprecated: post v0.46.x use total instead.
+     * Deprecated post v0.46.x: use total instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventResponse.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=129
+     *     See cosmos/tx/v1beta1/service.proto;l=116
      * @return Whether the pagination field is set.
      */
     @java.lang.Deprecated boolean hasPagination();
     /**
      * <pre>
      * pagination defines a pagination for the response.
-     * Deprecated: post v0.46.x use total instead.
+     * Deprecated post v0.46.x: use total instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventResponse.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=129
+     *     See cosmos/tx/v1beta1/service.proto;l=116
      * @return The pagination.
      */
     @java.lang.Deprecated com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
     /**
      * <pre>
      * pagination defines a pagination for the response.
-     * Deprecated: post v0.46.x use total instead.
+     * Deprecated post v0.46.x: use total instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -2195,12 +1908,12 @@ public final class ServiceProto {
     /**
      * <pre>
      * pagination defines a pagination for the response.
-     * Deprecated: post v0.46.x use total instead.
+     * Deprecated post v0.46.x: use total instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventResponse.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=129
+     *     See cosmos/tx/v1beta1/service.proto;l=116
      * @return Whether the pagination field is set.
      */
     @java.lang.Override
@@ -2210,12 +1923,12 @@ public final class ServiceProto {
     /**
      * <pre>
      * pagination defines a pagination for the response.
-     * Deprecated: post v0.46.x use total instead.
+     * Deprecated post v0.46.x: use total instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.GetTxsEventResponse.pagination is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=129
+     *     See cosmos/tx/v1beta1/service.proto;l=116
      * @return The pagination.
      */
     @java.lang.Override
@@ -2225,7 +1938,7 @@ public final class ServiceProto {
     /**
      * <pre>
      * pagination defines a pagination for the response.
-     * Deprecated: post v0.46.x use total instead.
+     * Deprecated post v0.46.x: use total instead.
      * </pre>
      *
      * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -3387,12 +3100,12 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
        * @deprecated cosmos.tx.v1beta1.GetTxsEventResponse.pagination is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=129
+       *     See cosmos/tx/v1beta1/service.proto;l=116
        * @return Whether the pagination field is set.
        */
       @java.lang.Deprecated public boolean hasPagination() {
@@ -3401,12 +3114,12 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
        * @deprecated cosmos.tx.v1beta1.GetTxsEventResponse.pagination is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=129
+       *     See cosmos/tx/v1beta1/service.proto;l=116
        * @return The pagination.
        */
       @java.lang.Deprecated public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
@@ -3419,7 +3132,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -3440,7 +3153,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -3459,7 +3172,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -3483,7 +3196,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -3501,7 +3214,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -3514,7 +3227,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -3530,7 +3243,7 @@ public final class ServiceProto {
       /**
        * <pre>
        * pagination defines a pagination for the response.
-       * Deprecated: post v0.46.x use total instead.
+       * Deprecated post v0.46.x: use total instead.
        * </pre>
        *
        * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination", deprecated = true];</code>
@@ -4950,7 +4663,7 @@ public final class ServiceProto {
      *
      * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.SimulateRequest.tx is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=170
+     *     See cosmos/tx/v1beta1/service.proto;l=156
      * @return Whether the tx field is set.
      */
     @java.lang.Deprecated boolean hasTx();
@@ -4962,7 +4675,7 @@ public final class ServiceProto {
      *
      * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.SimulateRequest.tx is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=170
+     *     See cosmos/tx/v1beta1/service.proto;l=156
      * @return The tx.
      */
     @java.lang.Deprecated com.cosmos.tx.v1beta1.TxProto.Tx getTx();
@@ -5039,7 +4752,7 @@ public final class ServiceProto {
      *
      * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.SimulateRequest.tx is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=170
+     *     See cosmos/tx/v1beta1/service.proto;l=156
      * @return Whether the tx field is set.
      */
     @java.lang.Override
@@ -5054,7 +4767,7 @@ public final class ServiceProto {
      *
      * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx", deprecated = true];</code>
      * @deprecated cosmos.tx.v1beta1.SimulateRequest.tx is deprecated.
-     *     See cosmos/tx/v1beta1/service.proto;l=170
+     *     See cosmos/tx/v1beta1/service.proto;l=156
      * @return The tx.
      */
     @java.lang.Override
@@ -5468,7 +5181,7 @@ public final class ServiceProto {
        *
        * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx", deprecated = true];</code>
        * @deprecated cosmos.tx.v1beta1.SimulateRequest.tx is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=170
+       *     See cosmos/tx/v1beta1/service.proto;l=156
        * @return Whether the tx field is set.
        */
       @java.lang.Deprecated public boolean hasTx() {
@@ -5482,7 +5195,7 @@ public final class ServiceProto {
        *
        * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx", deprecated = true];</code>
        * @deprecated cosmos.tx.v1beta1.SimulateRequest.tx is deprecated.
-       *     See cosmos/tx/v1beta1/service.proto;l=170
+       *     See cosmos/tx/v1beta1/service.proto;l=156
        * @return The tx.
        */
       @java.lang.Deprecated public com.cosmos.tx.v1beta1.TxProto.Tx getTx() {
@@ -9060,8 +8773,7 @@ public final class ServiceProto {
   }
   /**
    * <pre>
-   * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs
-   * method.
+   * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
    *
    * Since: cosmos-sdk 0.45.2
    * </pre>
@@ -9461,8 +9173,7 @@ public final class ServiceProto {
     }
     /**
      * <pre>
-     * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs
-     * method.
+     * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
      *
      * Since: cosmos-sdk 0.45.2
      * </pre>
@@ -15098,93 +14809,93 @@ public final class ServiceProto {
       "\032cosmos/tx/v1beta1/tx.proto\032*cosmos/base" +
       "/query/v1beta1/pagination.proto\032\034tenderm" +
       "int/types/block.proto\032\034tendermint/types/" +
-      "types.proto\"\363\001\n\022GetTxsEventRequest\022\032\n\006ev" +
-      "ents\030\001 \003(\tB\002\030\001R\006events\022J\n\npagination\030\002 \001" +
-      "(\0132&.cosmos.base.query.v1beta1.PageReque" +
-      "stB\002\030\001R\npagination\0225\n\010order_by\030\003 \001(\0162\032.c" +
-      "osmos.tx.v1beta1.OrderByR\007orderBy\022\022\n\004pag" +
-      "e\030\004 \001(\004R\004page\022\024\n\005limit\030\005 \001(\004R\005limit\022\024\n\005q" +
-      "uery\030\006 \001(\tR\005query\"\352\001\n\023GetTxsEventRespons" +
-      "e\022\'\n\003txs\030\001 \003(\0132\025.cosmos.tx.v1beta1.TxR\003t" +
-      "xs\022G\n\014tx_responses\030\002 \003(\0132$.cosmos.base.a" +
-      "bci.v1beta1.TxResponseR\013txResponses\022K\n\np" +
-      "agination\030\003 \001(\0132\'.cosmos.base.query.v1be" +
-      "ta1.PageResponseB\002\030\001R\npagination\022\024\n\005tota" +
-      "l\030\004 \001(\004R\005total\"e\n\022BroadcastTxRequest\022\031\n\010" +
-      "tx_bytes\030\001 \001(\014R\007txBytes\0224\n\004mode\030\002 \001(\0162 ." +
-      "cosmos.tx.v1beta1.BroadcastModeR\004mode\"\\\n" +
-      "\023BroadcastTxResponse\022E\n\013tx_response\030\001 \001(" +
-      "\0132$.cosmos.base.abci.v1beta1.TxResponseR" +
-      "\ntxResponse\"W\n\017SimulateRequest\022)\n\002tx\030\001 \001" +
-      "(\0132\025.cosmos.tx.v1beta1.TxB\002\030\001R\002tx\022\031\n\010tx_" +
-      "bytes\030\002 \001(\014R\007txBytes\"\212\001\n\020SimulateRespons" +
-      "e\022<\n\010gas_info\030\001 \001(\0132!.cosmos.base.abci.v" +
-      "1beta1.GasInfoR\007gasInfo\0228\n\006result\030\002 \001(\0132" +
-      " .cosmos.base.abci.v1beta1.ResultR\006resul" +
-      "t\"\"\n\014GetTxRequest\022\022\n\004hash\030\001 \001(\tR\004hash\"}\n" +
-      "\rGetTxResponse\022%\n\002tx\030\001 \001(\0132\025.cosmos.tx.v" +
-      "1beta1.TxR\002tx\022E\n\013tx_response\030\002 \001(\0132$.cos" +
-      "mos.base.abci.v1beta1.TxResponseR\ntxResp" +
-      "onse\"x\n\026GetBlockWithTxsRequest\022\026\n\006height" +
-      "\030\001 \001(\003R\006height\022F\n\npagination\030\002 \001(\0132&.cos" +
-      "mos.base.query.v1beta1.PageRequestR\npagi" +
-      "nation\"\360\001\n\027GetBlockWithTxsResponse\022\'\n\003tx" +
-      "s\030\001 \003(\0132\025.cosmos.tx.v1beta1.TxR\003txs\0224\n\010b" +
-      "lock_id\030\002 \001(\0132\031.tendermint.types.BlockID" +
-      "R\007blockId\022-\n\005block\030\003 \001(\0132\027.tendermint.ty" +
-      "pes.BlockR\005block\022G\n\npagination\030\004 \001(\0132\'.c" +
-      "osmos.base.query.v1beta1.PageResponseR\np" +
-      "agination\",\n\017TxDecodeRequest\022\031\n\010tx_bytes" +
-      "\030\001 \001(\014R\007txBytes\"9\n\020TxDecodeResponse\022%\n\002t" +
-      "x\030\001 \001(\0132\025.cosmos.tx.v1beta1.TxR\002tx\"8\n\017Tx" +
-      "EncodeRequest\022%\n\002tx\030\001 \001(\0132\025.cosmos.tx.v1" +
-      "beta1.TxR\002tx\"-\n\020TxEncodeResponse\022\031\n\010tx_b" +
-      "ytes\030\001 \001(\014R\007txBytes\"5\n\024TxEncodeAminoRequ" +
-      "est\022\035\n\namino_json\030\001 \001(\tR\taminoJson\":\n\025Tx" +
-      "EncodeAminoResponse\022!\n\014amino_binary\030\001 \001(" +
-      "\014R\013aminoBinary\"9\n\024TxDecodeAminoRequest\022!" +
-      "\n\014amino_binary\030\001 \001(\014R\013aminoBinary\"6\n\025TxD" +
-      "ecodeAminoResponse\022\035\n\namino_json\030\001 \001(\tR\t" +
-      "aminoJson*H\n\007OrderBy\022\030\n\024ORDER_BY_UNSPECI" +
-      "FIED\020\000\022\020\n\014ORDER_BY_ASC\020\001\022\021\n\rORDER_BY_DES" +
-      "C\020\002*\200\001\n\rBroadcastMode\022\036\n\032BROADCAST_MODE_" +
-      "UNSPECIFIED\020\000\022\034\n\024BROADCAST_MODE_BLOCK\020\001\032" +
-      "\002\010\001\022\027\n\023BROADCAST_MODE_SYNC\020\002\022\030\n\024BROADCAS" +
-      "T_MODE_ASYNC\020\0032\252\t\n\007Service\022{\n\010Simulate\022\"" +
-      ".cosmos.tx.v1beta1.SimulateRequest\032#.cos" +
-      "mos.tx.v1beta1.SimulateResponse\"&\202\323\344\223\002 \"" +
-      "\033/cosmos/tx/v1beta1/simulate:\001*\022q\n\005GetTx" +
-      "\022\037.cosmos.tx.v1beta1.GetTxRequest\032 .cosm" +
-      "os.tx.v1beta1.GetTxResponse\"%\202\323\344\223\002\037\022\035/co" +
-      "smos/tx/v1beta1/txs/{hash}\022\177\n\013BroadcastT" +
-      "x\022%.cosmos.tx.v1beta1.BroadcastTxRequest" +
-      "\032&.cosmos.tx.v1beta1.BroadcastTxResponse" +
-      "\"!\202\323\344\223\002\033\"\026/cosmos/tx/v1beta1/txs:\001*\022|\n\013G" +
-      "etTxsEvent\022%.cosmos.tx.v1beta1.GetTxsEve" +
-      "ntRequest\032&.cosmos.tx.v1beta1.GetTxsEven" +
-      "tResponse\"\036\202\323\344\223\002\030\022\026/cosmos/tx/v1beta1/tx" +
-      "s\022\227\001\n\017GetBlockWithTxs\022).cosmos.tx.v1beta" +
-      "1.GetBlockWithTxsRequest\032*.cosmos.tx.v1b" +
-      "eta1.GetBlockWithTxsResponse\"-\202\323\344\223\002\'\022%/c" +
-      "osmos/tx/v1beta1/txs/block/{height}\022y\n\010T" +
-      "xDecode\022\".cosmos.tx.v1beta1.TxDecodeRequ" +
-      "est\032#.cosmos.tx.v1beta1.TxDecodeResponse" +
-      "\"$\202\323\344\223\002\036\"\031/cosmos/tx/v1beta1/decode:\001*\022y" +
-      "\n\010TxEncode\022\".cosmos.tx.v1beta1.TxEncodeR" +
-      "equest\032#.cosmos.tx.v1beta1.TxEncodeRespo" +
-      "nse\"$\202\323\344\223\002\036\"\031/cosmos/tx/v1beta1/encode:\001" +
-      "*\022\216\001\n\rTxEncodeAmino\022\'.cosmos.tx.v1beta1." +
-      "TxEncodeAminoRequest\032(.cosmos.tx.v1beta1" +
-      ".TxEncodeAminoResponse\"*\202\323\344\223\002$\"\037/cosmos/" +
-      "tx/v1beta1/encode/amino:\001*\022\216\001\n\rTxDecodeA" +
-      "mino\022\'.cosmos.tx.v1beta1.TxDecodeAminoRe" +
-      "quest\032(.cosmos.tx.v1beta1.TxDecodeAminoR" +
-      "esponse\"*\202\323\344\223\002$\"\037/cosmos/tx/v1beta1/deco" +
-      "de/amino:\001*B\260\001\n\025com.cosmos.tx.v1beta1B\014S" +
-      "erviceProtoZ%github.com/cosmos/cosmos-sd" +
-      "k/types/tx\242\002\003CTX\252\002\021Cosmos.Tx.V1beta1\312\002\021C" +
-      "osmos\\Tx\\V1beta1\342\002\035Cosmos\\Tx\\V1beta1\\GPB" +
-      "Metadata\352\002\023Cosmos::Tx::V1beta1b\006proto3"
+      "types.proto\"\331\001\n\022GetTxsEventRequest\022\026\n\006ev" +
+      "ents\030\001 \003(\tR\006events\022J\n\npagination\030\002 \001(\0132&" +
+      ".cosmos.base.query.v1beta1.PageRequestB\002" +
+      "\030\001R\npagination\0225\n\010order_by\030\003 \001(\0162\032.cosmo" +
+      "s.tx.v1beta1.OrderByR\007orderBy\022\022\n\004page\030\004 " +
+      "\001(\004R\004page\022\024\n\005limit\030\005 \001(\004R\005limit\"\352\001\n\023GetT" +
+      "xsEventResponse\022\'\n\003txs\030\001 \003(\0132\025.cosmos.tx" +
+      ".v1beta1.TxR\003txs\022G\n\014tx_responses\030\002 \003(\0132$" +
+      ".cosmos.base.abci.v1beta1.TxResponseR\013tx" +
+      "Responses\022K\n\npagination\030\003 \001(\0132\'.cosmos.b" +
+      "ase.query.v1beta1.PageResponseB\002\030\001R\npagi" +
+      "nation\022\024\n\005total\030\004 \001(\004R\005total\"e\n\022Broadcas" +
+      "tTxRequest\022\031\n\010tx_bytes\030\001 \001(\014R\007txBytes\0224\n" +
+      "\004mode\030\002 \001(\0162 .cosmos.tx.v1beta1.Broadcas" +
+      "tModeR\004mode\"\\\n\023BroadcastTxResponse\022E\n\013tx" +
+      "_response\030\001 \001(\0132$.cosmos.base.abci.v1bet" +
+      "a1.TxResponseR\ntxResponse\"W\n\017SimulateReq" +
+      "uest\022)\n\002tx\030\001 \001(\0132\025.cosmos.tx.v1beta1.TxB" +
+      "\002\030\001R\002tx\022\031\n\010tx_bytes\030\002 \001(\014R\007txBytes\"\212\001\n\020S" +
+      "imulateResponse\022<\n\010gas_info\030\001 \001(\0132!.cosm" +
+      "os.base.abci.v1beta1.GasInfoR\007gasInfo\0228\n" +
+      "\006result\030\002 \001(\0132 .cosmos.base.abci.v1beta1" +
+      ".ResultR\006result\"\"\n\014GetTxRequest\022\022\n\004hash\030" +
+      "\001 \001(\tR\004hash\"}\n\rGetTxResponse\022%\n\002tx\030\001 \001(\013" +
+      "2\025.cosmos.tx.v1beta1.TxR\002tx\022E\n\013tx_respon" +
+      "se\030\002 \001(\0132$.cosmos.base.abci.v1beta1.TxRe" +
+      "sponseR\ntxResponse\"x\n\026GetBlockWithTxsReq" +
+      "uest\022\026\n\006height\030\001 \001(\003R\006height\022F\n\npaginati" +
+      "on\030\002 \001(\0132&.cosmos.base.query.v1beta1.Pag" +
+      "eRequestR\npagination\"\360\001\n\027GetBlockWithTxs" +
+      "Response\022\'\n\003txs\030\001 \003(\0132\025.cosmos.tx.v1beta" +
+      "1.TxR\003txs\0224\n\010block_id\030\002 \001(\0132\031.tendermint" +
+      ".types.BlockIDR\007blockId\022-\n\005block\030\003 \001(\0132\027" +
+      ".tendermint.types.BlockR\005block\022G\n\npagina" +
+      "tion\030\004 \001(\0132\'.cosmos.base.query.v1beta1.P" +
+      "ageResponseR\npagination\",\n\017TxDecodeReque" +
+      "st\022\031\n\010tx_bytes\030\001 \001(\014R\007txBytes\"9\n\020TxDecod" +
+      "eResponse\022%\n\002tx\030\001 \001(\0132\025.cosmos.tx.v1beta" +
+      "1.TxR\002tx\"8\n\017TxEncodeRequest\022%\n\002tx\030\001 \001(\0132" +
+      "\025.cosmos.tx.v1beta1.TxR\002tx\"-\n\020TxEncodeRe" +
+      "sponse\022\031\n\010tx_bytes\030\001 \001(\014R\007txBytes\"5\n\024TxE" +
+      "ncodeAminoRequest\022\035\n\namino_json\030\001 \001(\tR\ta" +
+      "minoJson\":\n\025TxEncodeAminoResponse\022!\n\014ami" +
+      "no_binary\030\001 \001(\014R\013aminoBinary\"9\n\024TxDecode" +
+      "AminoRequest\022!\n\014amino_binary\030\001 \001(\014R\013amin" +
+      "oBinary\"6\n\025TxDecodeAminoResponse\022\035\n\namin" +
+      "o_json\030\001 \001(\tR\taminoJson*H\n\007OrderBy\022\030\n\024OR" +
+      "DER_BY_UNSPECIFIED\020\000\022\020\n\014ORDER_BY_ASC\020\001\022\021" +
+      "\n\rORDER_BY_DESC\020\002*\200\001\n\rBroadcastMode\022\036\n\032B" +
+      "ROADCAST_MODE_UNSPECIFIED\020\000\022\034\n\024BROADCAST" +
+      "_MODE_BLOCK\020\001\032\002\010\001\022\027\n\023BROADCAST_MODE_SYNC" +
+      "\020\002\022\030\n\024BROADCAST_MODE_ASYNC\020\0032\252\t\n\007Service" +
+      "\022{\n\010Simulate\022\".cosmos.tx.v1beta1.Simulat" +
+      "eRequest\032#.cosmos.tx.v1beta1.SimulateRes" +
+      "ponse\"&\202\323\344\223\002 \"\033/cosmos/tx/v1beta1/simula" +
+      "te:\001*\022q\n\005GetTx\022\037.cosmos.tx.v1beta1.GetTx" +
+      "Request\032 .cosmos.tx.v1beta1.GetTxRespons" +
+      "e\"%\202\323\344\223\002\037\022\035/cosmos/tx/v1beta1/txs/{hash}" +
+      "\022\177\n\013BroadcastTx\022%.cosmos.tx.v1beta1.Broa" +
+      "dcastTxRequest\032&.cosmos.tx.v1beta1.Broad" +
+      "castTxResponse\"!\202\323\344\223\002\033\"\026/cosmos/tx/v1bet" +
+      "a1/txs:\001*\022|\n\013GetTxsEvent\022%.cosmos.tx.v1b" +
+      "eta1.GetTxsEventRequest\032&.cosmos.tx.v1be" +
+      "ta1.GetTxsEventResponse\"\036\202\323\344\223\002\030\022\026/cosmos" +
+      "/tx/v1beta1/txs\022\227\001\n\017GetBlockWithTxs\022).co" +
+      "smos.tx.v1beta1.GetBlockWithTxsRequest\032*" +
+      ".cosmos.tx.v1beta1.GetBlockWithTxsRespon" +
+      "se\"-\202\323\344\223\002\'\022%/cosmos/tx/v1beta1/txs/block" +
+      "/{height}\022y\n\010TxDecode\022\".cosmos.tx.v1beta" +
+      "1.TxDecodeRequest\032#.cosmos.tx.v1beta1.Tx" +
+      "DecodeResponse\"$\202\323\344\223\002\036\"\031/cosmos/tx/v1bet" +
+      "a1/decode:\001*\022y\n\010TxEncode\022\".cosmos.tx.v1b" +
+      "eta1.TxEncodeRequest\032#.cosmos.tx.v1beta1" +
+      ".TxEncodeResponse\"$\202\323\344\223\002\036\"\031/cosmos/tx/v1" +
+      "beta1/encode:\001*\022\216\001\n\rTxEncodeAmino\022\'.cosm" +
+      "os.tx.v1beta1.TxEncodeAminoRequest\032(.cos" +
+      "mos.tx.v1beta1.TxEncodeAminoResponse\"*\202\323" +
+      "\344\223\002$\"\037/cosmos/tx/v1beta1/encode/amino:\001*" +
+      "\022\216\001\n\rTxDecodeAmino\022\'.cosmos.tx.v1beta1.T" +
+      "xDecodeAminoRequest\032(.cosmos.tx.v1beta1." +
+      "TxDecodeAminoResponse\"*\202\323\344\223\002$\"\037/cosmos/t" +
+      "x/v1beta1/decode/amino:\001*B\260\001\n\025com.cosmos" +
+      ".tx.v1beta1B\014ServiceProtoZ%github.com/co" +
+      "smos/cosmos-sdk/types/tx\242\002\003CTX\252\002\021Cosmos." +
+      "Tx.V1beta1\312\002\021Cosmos\\Tx\\V1beta1\342\002\035Cosmos\\" +
+      "Tx\\V1beta1\\GPBMetadata\352\002\023Cosmos::Tx::V1b" +
+      "eta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15201,7 +14912,7 @@ public final class ServiceProto {
     internal_static_cosmos_tx_v1beta1_GetTxsEventRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cosmos_tx_v1beta1_GetTxsEventRequest_descriptor,
-        new java.lang.String[] { "Events", "Pagination", "OrderBy", "Page", "Limit", "Query", });
+        new java.lang.String[] { "Events", "Pagination", "OrderBy", "Page", "Limit", });
     internal_static_cosmos_tx_v1beta1_GetTxsEventResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cosmos_tx_v1beta1_GetTxsEventResponse_fieldAccessorTable = new

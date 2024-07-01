@@ -80,35 +80,66 @@ public final class QueryGrpc {
     return getStateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest,
-      com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse> getBaseFeeMethod;
+  private static volatile io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.GasPriceRequest,
+      com.feemarket.feemarket.v1.QueryProto.GasPriceResponse> getGasPriceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "BaseFee",
-      requestType = com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.class,
-      responseType = com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GasPrice",
+      requestType = com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.class,
+      responseType = com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest,
-      com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse> getBaseFeeMethod() {
-    io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest, com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse> getBaseFeeMethod;
-    if ((getBaseFeeMethod = QueryGrpc.getBaseFeeMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.GasPriceRequest,
+      com.feemarket.feemarket.v1.QueryProto.GasPriceResponse> getGasPriceMethod() {
+    io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.GasPriceRequest, com.feemarket.feemarket.v1.QueryProto.GasPriceResponse> getGasPriceMethod;
+    if ((getGasPriceMethod = QueryGrpc.getGasPriceMethod) == null) {
       synchronized (QueryGrpc.class) {
-        if ((getBaseFeeMethod = QueryGrpc.getBaseFeeMethod) == null) {
-          QueryGrpc.getBaseFeeMethod = getBaseFeeMethod =
-              io.grpc.MethodDescriptor.<com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest, com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse>newBuilder()
+        if ((getGasPriceMethod = QueryGrpc.getGasPriceMethod) == null) {
+          QueryGrpc.getGasPriceMethod = getGasPriceMethod =
+              io.grpc.MethodDescriptor.<com.feemarket.feemarket.v1.QueryProto.GasPriceRequest, com.feemarket.feemarket.v1.QueryProto.GasPriceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BaseFee"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GasPrice"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.getDefaultInstance()))
+                  com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("BaseFee"))
+                  com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GasPrice"))
               .build();
         }
       }
     }
-    return getBaseFeeMethod;
+    return getGasPriceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.GasPricesRequest,
+      com.feemarket.feemarket.v1.QueryProto.GasPricesResponse> getGasPricesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GasPrices",
+      requestType = com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.class,
+      responseType = com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.GasPricesRequest,
+      com.feemarket.feemarket.v1.QueryProto.GasPricesResponse> getGasPricesMethod() {
+    io.grpc.MethodDescriptor<com.feemarket.feemarket.v1.QueryProto.GasPricesRequest, com.feemarket.feemarket.v1.QueryProto.GasPricesResponse> getGasPricesMethod;
+    if ((getGasPricesMethod = QueryGrpc.getGasPricesMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getGasPricesMethod = QueryGrpc.getGasPricesMethod) == null) {
+          QueryGrpc.getGasPricesMethod = getGasPricesMethod =
+              io.grpc.MethodDescriptor.<com.feemarket.feemarket.v1.QueryProto.GasPricesRequest, com.feemarket.feemarket.v1.QueryProto.GasPricesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GasPrices"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GasPrices"))
+              .build();
+        }
+      }
+    }
+    return getGasPricesMethod;
   }
 
   /**
@@ -184,12 +215,24 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BaseFee returns the current feemarket module base fee.
+     * GasPrice returns the current feemarket module gas price
+     * for specified denom.
      * </pre>
      */
-    default void baseFee(com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest request,
-        io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBaseFeeMethod(), responseObserver);
+    default void gasPrice(com.feemarket.feemarket.v1.QueryProto.GasPriceRequest request,
+        io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.GasPriceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGasPriceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GasPrices returns the current feemarket module list of gas prices
+     * in all available denoms.
+     * </pre>
+     */
+    default void gasPrices(com.feemarket.feemarket.v1.QueryProto.GasPricesRequest request,
+        io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.GasPricesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGasPricesMethod(), responseObserver);
     }
   }
 
@@ -250,13 +293,26 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BaseFee returns the current feemarket module base fee.
+     * GasPrice returns the current feemarket module gas price
+     * for specified denom.
      * </pre>
      */
-    public void baseFee(com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest request,
-        io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse> responseObserver) {
+    public void gasPrice(com.feemarket.feemarket.v1.QueryProto.GasPriceRequest request,
+        io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.GasPriceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getBaseFeeMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGasPriceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GasPrices returns the current feemarket module list of gas prices
+     * in all available denoms.
+     * </pre>
+     */
+    public void gasPrices(com.feemarket.feemarket.v1.QueryProto.GasPricesRequest request,
+        io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.GasPricesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGasPricesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -301,12 +357,24 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BaseFee returns the current feemarket module base fee.
+     * GasPrice returns the current feemarket module gas price
+     * for specified denom.
      * </pre>
      */
-    public com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse baseFee(com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest request) {
+    public com.feemarket.feemarket.v1.QueryProto.GasPriceResponse gasPrice(com.feemarket.feemarket.v1.QueryProto.GasPriceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getBaseFeeMethod(), getCallOptions(), request);
+          getChannel(), getGasPriceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GasPrices returns the current feemarket module list of gas prices
+     * in all available denoms.
+     * </pre>
+     */
+    public com.feemarket.feemarket.v1.QueryProto.GasPricesResponse gasPrices(com.feemarket.feemarket.v1.QueryProto.GasPricesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGasPricesMethod(), getCallOptions(), request);
     }
   }
 
@@ -353,19 +421,33 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BaseFee returns the current feemarket module base fee.
+     * GasPrice returns the current feemarket module gas price
+     * for specified denom.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse> baseFee(
-        com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.feemarket.feemarket.v1.QueryProto.GasPriceResponse> gasPrice(
+        com.feemarket.feemarket.v1.QueryProto.GasPriceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getBaseFeeMethod(), getCallOptions()), request);
+          getChannel().newCall(getGasPriceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GasPrices returns the current feemarket module list of gas prices
+     * in all available denoms.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.feemarket.feemarket.v1.QueryProto.GasPricesResponse> gasPrices(
+        com.feemarket.feemarket.v1.QueryProto.GasPricesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGasPricesMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_PARAMS = 0;
   private static final int METHODID_STATE = 1;
-  private static final int METHODID_BASE_FEE = 2;
+  private static final int METHODID_GAS_PRICE = 2;
+  private static final int METHODID_GAS_PRICES = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -392,9 +474,13 @@ public final class QueryGrpc {
           serviceImpl.state((com.feemarket.feemarket.v1.QueryProto.StateRequest) request,
               (io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.StateResponse>) responseObserver);
           break;
-        case METHODID_BASE_FEE:
-          serviceImpl.baseFee((com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest) request,
-              (io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse>) responseObserver);
+        case METHODID_GAS_PRICE:
+          serviceImpl.gasPrice((com.feemarket.feemarket.v1.QueryProto.GasPriceRequest) request,
+              (io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.GasPriceResponse>) responseObserver);
+          break;
+        case METHODID_GAS_PRICES:
+          serviceImpl.gasPrices((com.feemarket.feemarket.v1.QueryProto.GasPricesRequest) request,
+              (io.grpc.stub.StreamObserver<com.feemarket.feemarket.v1.QueryProto.GasPricesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -429,12 +515,19 @@ public final class QueryGrpc {
               com.feemarket.feemarket.v1.QueryProto.StateResponse>(
                 service, METHODID_STATE)))
         .addMethod(
-          getBaseFeeMethod(),
+          getGasPriceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest,
-              com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse>(
-                service, METHODID_BASE_FEE)))
+              com.feemarket.feemarket.v1.QueryProto.GasPriceRequest,
+              com.feemarket.feemarket.v1.QueryProto.GasPriceResponse>(
+                service, METHODID_GAS_PRICE)))
+        .addMethod(
+          getGasPricesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.feemarket.feemarket.v1.QueryProto.GasPricesRequest,
+              com.feemarket.feemarket.v1.QueryProto.GasPricesResponse>(
+                service, METHODID_GAS_PRICES)))
         .build();
   }
 
@@ -485,7 +578,8 @@ public final class QueryGrpc {
               .setSchemaDescriptor(new QueryFileDescriptorSupplier())
               .addMethod(getParamsMethod())
               .addMethod(getStateMethod())
-              .addMethod(getBaseFeeMethod())
+              .addMethod(getGasPriceMethod())
+              .addMethod(getGasPricesMethod())
               .build();
         }
       }

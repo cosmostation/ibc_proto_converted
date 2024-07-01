@@ -2040,47 +2040,1253 @@ public final class QueryProto {
 
   }
 
-  public interface BaseFeeRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:feemarket.feemarket.v1.BaseFeeRequest)
+  public interface GasPriceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:feemarket.feemarket.v1.GasPriceRequest)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom we are querying gas price in
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom we are querying gas price in
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
   }
   /**
    * <pre>
-   * BaseFeeRequest is the request type for the Query/BaseFee RPC method.
+   * GasPriceRequest is the request type for the Query/GasPrice RPC method.
    * </pre>
    *
-   * Protobuf type {@code feemarket.feemarket.v1.BaseFeeRequest}
+   * Protobuf type {@code feemarket.feemarket.v1.GasPriceRequest}
    */
-  public static final class BaseFeeRequest extends
+  public static final class GasPriceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:feemarket.feemarket.v1.BaseFeeRequest)
-      BaseFeeRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:feemarket.feemarket.v1.GasPriceRequest)
+      GasPriceRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use BaseFeeRequest.newBuilder() to construct.
-    private BaseFeeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GasPriceRequest.newBuilder() to construct.
+    private GasPriceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private BaseFeeRequest() {
+    private GasPriceRequest() {
+      denom_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new BaseFeeRequest();
+      return new GasPriceRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeRequest_descriptor;
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeRequest_fieldAccessorTable
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.class, com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.Builder.class);
+              com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.class, com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom we are querying gas price in
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom we are querying gas price in
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.feemarket.feemarket.v1.QueryProto.GasPriceRequest)) {
+        return super.equals(obj);
+      }
+      com.feemarket.feemarket.v1.QueryProto.GasPriceRequest other = (com.feemarket.feemarket.v1.QueryProto.GasPriceRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.feemarket.feemarket.v1.QueryProto.GasPriceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GasPriceRequest is the request type for the Query/GasPrice RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code feemarket.feemarket.v1.GasPriceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:feemarket.feemarket.v1.GasPriceRequest)
+        com.feemarket.feemarket.v1.QueryProto.GasPriceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.class, com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.Builder.class);
+      }
+
+      // Construct using com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.feemarket.feemarket.v1.QueryProto.GasPriceRequest getDefaultInstanceForType() {
+        return com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.feemarket.feemarket.v1.QueryProto.GasPriceRequest build() {
+        com.feemarket.feemarket.v1.QueryProto.GasPriceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.feemarket.feemarket.v1.QueryProto.GasPriceRequest buildPartial() {
+        com.feemarket.feemarket.v1.QueryProto.GasPriceRequest result = new com.feemarket.feemarket.v1.QueryProto.GasPriceRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.feemarket.feemarket.v1.QueryProto.GasPriceRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.feemarket.feemarket.v1.QueryProto.GasPriceRequest) {
+          return mergeFrom((com.feemarket.feemarket.v1.QueryProto.GasPriceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.feemarket.feemarket.v1.QueryProto.GasPriceRequest other) {
+        if (other == com.feemarket.feemarket.v1.QueryProto.GasPriceRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom we are querying gas price in
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom we are querying gas price in
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom we are querying gas price in
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom we are querying gas price in
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom we are querying gas price in
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:feemarket.feemarket.v1.GasPriceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:feemarket.feemarket.v1.GasPriceRequest)
+    private static final com.feemarket.feemarket.v1.QueryProto.GasPriceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.feemarket.feemarket.v1.QueryProto.GasPriceRequest();
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GasPriceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GasPriceRequest>() {
+      @java.lang.Override
+      public GasPriceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GasPriceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GasPriceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.feemarket.feemarket.v1.QueryProto.GasPriceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GasPriceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:feemarket.feemarket.v1.GasPriceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the price field is set.
+     */
+    boolean hasPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return The price.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getPrice();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPriceOrBuilder();
+  }
+  /**
+   * <pre>
+   * GasPriceResponse is the response type for the Query/GasPrice RPC method.
+   * Returns a gas price in specified denom.
+   * </pre>
+   *
+   * Protobuf type {@code feemarket.feemarket.v1.GasPriceResponse}
+   */
+  public static final class GasPriceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:feemarket.feemarket.v1.GasPriceResponse)
+      GasPriceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GasPriceResponse.newBuilder() to construct.
+    private GasPriceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GasPriceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GasPriceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.class, com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.Builder.class);
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin price_;
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the price field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrice() {
+      return price_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getPrice() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPriceOrBuilder() {
+      return price_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (price_ != null) {
+        output.writeMessage(1, getPrice());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (price_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPrice());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.feemarket.feemarket.v1.QueryProto.GasPriceResponse)) {
+        return super.equals(obj);
+      }
+      com.feemarket.feemarket.v1.QueryProto.GasPriceResponse other = (com.feemarket.feemarket.v1.QueryProto.GasPriceResponse) obj;
+
+      if (hasPrice() != other.hasPrice()) return false;
+      if (hasPrice()) {
+        if (!getPrice()
+            .equals(other.getPrice())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPrice()) {
+        hash = (37 * hash) + PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getPrice().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.feemarket.feemarket.v1.QueryProto.GasPriceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GasPriceResponse is the response type for the Query/GasPrice RPC method.
+     * Returns a gas price in specified denom.
+     * </pre>
+     *
+     * Protobuf type {@code feemarket.feemarket.v1.GasPriceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:feemarket.feemarket.v1.GasPriceResponse)
+        com.feemarket.feemarket.v1.QueryProto.GasPriceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.class, com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.Builder.class);
+      }
+
+      // Construct using com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.feemarket.feemarket.v1.QueryProto.GasPriceResponse getDefaultInstanceForType() {
+        return com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.feemarket.feemarket.v1.QueryProto.GasPriceResponse build() {
+        com.feemarket.feemarket.v1.QueryProto.GasPriceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.feemarket.feemarket.v1.QueryProto.GasPriceResponse buildPartial() {
+        com.feemarket.feemarket.v1.QueryProto.GasPriceResponse result = new com.feemarket.feemarket.v1.QueryProto.GasPriceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.feemarket.feemarket.v1.QueryProto.GasPriceResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.price_ = priceBuilder_ == null
+              ? price_
+              : priceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.feemarket.feemarket.v1.QueryProto.GasPriceResponse) {
+          return mergeFrom((com.feemarket.feemarket.v1.QueryProto.GasPriceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.feemarket.feemarket.v1.QueryProto.GasPriceResponse other) {
+        if (other == com.feemarket.feemarket.v1.QueryProto.GasPriceResponse.getDefaultInstance()) return this;
+        if (other.hasPrice()) {
+          mergePrice(other.getPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin price_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> priceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * @return Whether the price field is set.
+       */
+      public boolean hasPrice() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * @return The price.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getPrice() {
+        if (priceBuilder_ == null) {
+          return price_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+        } else {
+          return priceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setPrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          price_ = value;
+        } else {
+          priceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setPrice(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          price_ = builderForValue.build();
+        } else {
+          priceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder mergePrice(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (priceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            price_ != null &&
+            price_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getPriceBuilder().mergeFrom(value);
+          } else {
+            price_ = value;
+          }
+        } else {
+          priceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        price_ = null;
+        if (priceBuilder_ != null) {
+          priceBuilder_.dispose();
+          priceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getPriceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPriceOrBuilder() {
+        if (priceBuilder_ != null) {
+          return priceBuilder_.getMessageOrBuilder();
+        } else {
+          return price_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : price_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getPriceFieldBuilder() {
+        if (priceBuilder_ == null) {
+          priceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getPrice(),
+                  getParentForChildren(),
+                  isClean());
+          price_ = null;
+        }
+        return priceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:feemarket.feemarket.v1.GasPriceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:feemarket.feemarket.v1.GasPriceResponse)
+    private static final com.feemarket.feemarket.v1.QueryProto.GasPriceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.feemarket.feemarket.v1.QueryProto.GasPriceResponse();
+    }
+
+    public static com.feemarket.feemarket.v1.QueryProto.GasPriceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GasPriceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GasPriceResponse>() {
+      @java.lang.Override
+      public GasPriceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GasPriceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GasPriceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.feemarket.feemarket.v1.QueryProto.GasPriceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GasPricesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:feemarket.feemarket.v1.GasPricesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * GasPriceRequest is the request type for the Query/GasPrices RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code feemarket.feemarket.v1.GasPricesRequest}
+   */
+  public static final class GasPricesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:feemarket.feemarket.v1.GasPricesRequest)
+      GasPricesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GasPricesRequest.newBuilder() to construct.
+    private GasPricesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GasPricesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GasPricesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.class, com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2116,10 +3322,10 @@ public final class QueryProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest)) {
+      if (!(obj instanceof com.feemarket.feemarket.v1.QueryProto.GasPricesRequest)) {
         return super.equals(obj);
       }
-      com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest other = (com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest) obj;
+      com.feemarket.feemarket.v1.QueryProto.GasPricesRequest other = (com.feemarket.feemarket.v1.QueryProto.GasPricesRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2137,44 +3343,44 @@ public final class QueryProto {
       return hash;
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(byte[] data)
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(java.io.InputStream input)
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2182,26 +3388,26 @@ public final class QueryProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseDelimitedFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2214,7 +3420,7 @@ public final class QueryProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest prototype) {
+    public static Builder newBuilder(com.feemarket.feemarket.v1.QueryProto.GasPricesRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2231,29 +3437,29 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * BaseFeeRequest is the request type for the Query/BaseFee RPC method.
+     * GasPriceRequest is the request type for the Query/GasPrices RPC method.
      * </pre>
      *
-     * Protobuf type {@code feemarket.feemarket.v1.BaseFeeRequest}
+     * Protobuf type {@code feemarket.feemarket.v1.GasPricesRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:feemarket.feemarket.v1.BaseFeeRequest)
-        com.feemarket.feemarket.v1.QueryProto.BaseFeeRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:feemarket.feemarket.v1.GasPricesRequest)
+        com.feemarket.feemarket.v1.QueryProto.GasPricesRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeRequest_descriptor;
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeRequest_fieldAccessorTable
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.class, com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.Builder.class);
+                com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.class, com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.Builder.class);
       }
 
-      // Construct using com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.newBuilder()
+      // Construct using com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.newBuilder()
       private Builder() {
 
       }
@@ -2272,17 +3478,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeRequest_descriptor;
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest getDefaultInstanceForType() {
-        return com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.getDefaultInstance();
+      public com.feemarket.feemarket.v1.QueryProto.GasPricesRequest getDefaultInstanceForType() {
+        return com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest build() {
-        com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest result = buildPartial();
+      public com.feemarket.feemarket.v1.QueryProto.GasPricesRequest build() {
+        com.feemarket.feemarket.v1.QueryProto.GasPricesRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2290,8 +3496,8 @@ public final class QueryProto {
       }
 
       @java.lang.Override
-      public com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest buildPartial() {
-        com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest result = new com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest(this);
+      public com.feemarket.feemarket.v1.QueryProto.GasPricesRequest buildPartial() {
+        com.feemarket.feemarket.v1.QueryProto.GasPricesRequest result = new com.feemarket.feemarket.v1.QueryProto.GasPricesRequest(this);
         onBuilt();
         return result;
       }
@@ -2330,16 +3536,16 @@ public final class QueryProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest) {
-          return mergeFrom((com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest)other);
+        if (other instanceof com.feemarket.feemarket.v1.QueryProto.GasPricesRequest) {
+          return mergeFrom((com.feemarket.feemarket.v1.QueryProto.GasPricesRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest other) {
-        if (other == com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.feemarket.feemarket.v1.QueryProto.GasPricesRequest other) {
+        if (other == com.feemarket.feemarket.v1.QueryProto.GasPricesRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2394,23 +3600,23 @@ public final class QueryProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:feemarket.feemarket.v1.BaseFeeRequest)
+      // @@protoc_insertion_point(builder_scope:feemarket.feemarket.v1.GasPricesRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:feemarket.feemarket.v1.BaseFeeRequest)
-    private static final com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:feemarket.feemarket.v1.GasPricesRequest)
+    private static final com.feemarket.feemarket.v1.QueryProto.GasPricesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest();
+      DEFAULT_INSTANCE = new com.feemarket.feemarket.v1.QueryProto.GasPricesRequest();
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest getDefaultInstance() {
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<BaseFeeRequest>
-        PARSER = new com.google.protobuf.AbstractParser<BaseFeeRequest>() {
+    private static final com.google.protobuf.Parser<GasPricesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GasPricesRequest>() {
       @java.lang.Override
-      public BaseFeeRequest parsePartialFrom(
+      public GasPricesRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2429,129 +3635,130 @@ public final class QueryProto {
       }
     };
 
-    public static com.google.protobuf.Parser<BaseFeeRequest> parser() {
+    public static com.google.protobuf.Parser<GasPricesRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<BaseFeeRequest> getParserForType() {
+    public com.google.protobuf.Parser<GasPricesRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.feemarket.feemarket.v1.QueryProto.BaseFeeRequest getDefaultInstanceForType() {
+    public com.feemarket.feemarket.v1.QueryProto.GasPricesRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface BaseFeeResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:feemarket.feemarket.v1.BaseFeeResponse)
+  public interface GasPricesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:feemarket.feemarket.v1.GasPricesResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
-        getFeesList();
+        getPricesList();
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
-    com.cosmos.base.v1beta1.CoinProto.DecCoin getFees(int index);
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getPrices(int index);
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
-    int getFeesCount();
+    int getPricesCount();
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
-        getFeesOrBuilderList();
+        getPricesOrBuilderList();
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
-    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getFeesOrBuilder(
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPricesOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * StateResponse is the response type for the Query/BaseFee RPC method.
+   * GasPricesResponse is the response type for the Query/GasPrices RPC method.
+   * Returns a gas price in all available denoms.
    * </pre>
    *
-   * Protobuf type {@code feemarket.feemarket.v1.BaseFeeResponse}
+   * Protobuf type {@code feemarket.feemarket.v1.GasPricesResponse}
    */
-  public static final class BaseFeeResponse extends
+  public static final class GasPricesResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:feemarket.feemarket.v1.BaseFeeResponse)
-      BaseFeeResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:feemarket.feemarket.v1.GasPricesResponse)
+      GasPricesResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use BaseFeeResponse.newBuilder() to construct.
-    private BaseFeeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GasPricesResponse.newBuilder() to construct.
+    private GasPricesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private BaseFeeResponse() {
-      fees_ = java.util.Collections.emptyList();
+    private GasPricesResponse() {
+      prices_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new BaseFeeResponse();
+      return new GasPricesResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeResponse_descriptor;
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeResponse_fieldAccessorTable
+      return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.class, com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.Builder.class);
+              com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.class, com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.Builder.class);
     }
 
-    public static final int FEES_FIELD_NUMBER = 1;
+    public static final int PRICES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> fees_;
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> prices_;
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getFeesList() {
-      return fees_;
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getPricesList() {
+      return prices_;
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
-        getFeesOrBuilderList() {
-      return fees_;
+        getPricesOrBuilderList() {
+      return prices_;
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public int getFeesCount() {
-      return fees_.size();
+    public int getPricesCount() {
+      return prices_.size();
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public com.cosmos.base.v1beta1.CoinProto.DecCoin getFees(int index) {
-      return fees_.get(index);
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getPrices(int index) {
+      return prices_.get(index);
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getFeesOrBuilder(
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPricesOrBuilder(
         int index) {
-      return fees_.get(index);
+      return prices_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2568,8 +3775,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < fees_.size(); i++) {
-        output.writeMessage(1, fees_.get(i));
+      for (int i = 0; i < prices_.size(); i++) {
+        output.writeMessage(1, prices_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -2580,9 +3787,9 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < fees_.size(); i++) {
+      for (int i = 0; i < prices_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, fees_.get(i));
+          .computeMessageSize(1, prices_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2594,13 +3801,13 @@ public final class QueryProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse)) {
+      if (!(obj instanceof com.feemarket.feemarket.v1.QueryProto.GasPricesResponse)) {
         return super.equals(obj);
       }
-      com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse other = (com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse) obj;
+      com.feemarket.feemarket.v1.QueryProto.GasPricesResponse other = (com.feemarket.feemarket.v1.QueryProto.GasPricesResponse) obj;
 
-      if (!getFeesList()
-          .equals(other.getFeesList())) return false;
+      if (!getPricesList()
+          .equals(other.getPricesList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2612,53 +3819,53 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getFeesCount() > 0) {
-        hash = (37 * hash) + FEES_FIELD_NUMBER;
-        hash = (53 * hash) + getFeesList().hashCode();
+      if (getPricesCount() > 0) {
+        hash = (37 * hash) + PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getPricesList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(byte[] data)
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(java.io.InputStream input)
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2666,26 +3873,26 @@ public final class QueryProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseDelimitedFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse parseFrom(
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2698,7 +3905,7 @@ public final class QueryProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse prototype) {
+    public static Builder newBuilder(com.feemarket.feemarket.v1.QueryProto.GasPricesResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2715,29 +3922,30 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * StateResponse is the response type for the Query/BaseFee RPC method.
+     * GasPricesResponse is the response type for the Query/GasPrices RPC method.
+     * Returns a gas price in all available denoms.
      * </pre>
      *
-     * Protobuf type {@code feemarket.feemarket.v1.BaseFeeResponse}
+     * Protobuf type {@code feemarket.feemarket.v1.GasPricesResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:feemarket.feemarket.v1.BaseFeeResponse)
-        com.feemarket.feemarket.v1.QueryProto.BaseFeeResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:feemarket.feemarket.v1.GasPricesResponse)
+        com.feemarket.feemarket.v1.QueryProto.GasPricesResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeResponse_descriptor;
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeResponse_fieldAccessorTable
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.class, com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.Builder.class);
+                com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.class, com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.Builder.class);
       }
 
-      // Construct using com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.newBuilder()
+      // Construct using com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.newBuilder()
       private Builder() {
 
       }
@@ -2751,11 +3959,11 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        if (feesBuilder_ == null) {
-          fees_ = java.util.Collections.emptyList();
+        if (pricesBuilder_ == null) {
+          prices_ = java.util.Collections.emptyList();
         } else {
-          fees_ = null;
-          feesBuilder_.clear();
+          prices_ = null;
+          pricesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -2764,17 +3972,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_BaseFeeResponse_descriptor;
+        return com.feemarket.feemarket.v1.QueryProto.internal_static_feemarket_feemarket_v1_GasPricesResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse getDefaultInstanceForType() {
-        return com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.getDefaultInstance();
+      public com.feemarket.feemarket.v1.QueryProto.GasPricesResponse getDefaultInstanceForType() {
+        return com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse build() {
-        com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse result = buildPartial();
+      public com.feemarket.feemarket.v1.QueryProto.GasPricesResponse build() {
+        com.feemarket.feemarket.v1.QueryProto.GasPricesResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2782,27 +3990,27 @@ public final class QueryProto {
       }
 
       @java.lang.Override
-      public com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse buildPartial() {
-        com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse result = new com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse(this);
+      public com.feemarket.feemarket.v1.QueryProto.GasPricesResponse buildPartial() {
+        com.feemarket.feemarket.v1.QueryProto.GasPricesResponse result = new com.feemarket.feemarket.v1.QueryProto.GasPricesResponse(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse result) {
-        if (feesBuilder_ == null) {
+      private void buildPartialRepeatedFields(com.feemarket.feemarket.v1.QueryProto.GasPricesResponse result) {
+        if (pricesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            fees_ = java.util.Collections.unmodifiableList(fees_);
+            prices_ = java.util.Collections.unmodifiableList(prices_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.fees_ = fees_;
+          result.prices_ = prices_;
         } else {
-          result.fees_ = feesBuilder_.build();
+          result.prices_ = pricesBuilder_.build();
         }
       }
 
-      private void buildPartial0(com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse result) {
+      private void buildPartial0(com.feemarket.feemarket.v1.QueryProto.GasPricesResponse result) {
         int from_bitField0_ = bitField0_;
       }
 
@@ -2840,39 +4048,39 @@ public final class QueryProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse) {
-          return mergeFrom((com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse)other);
+        if (other instanceof com.feemarket.feemarket.v1.QueryProto.GasPricesResponse) {
+          return mergeFrom((com.feemarket.feemarket.v1.QueryProto.GasPricesResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse other) {
-        if (other == com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse.getDefaultInstance()) return this;
-        if (feesBuilder_ == null) {
-          if (!other.fees_.isEmpty()) {
-            if (fees_.isEmpty()) {
-              fees_ = other.fees_;
+      public Builder mergeFrom(com.feemarket.feemarket.v1.QueryProto.GasPricesResponse other) {
+        if (other == com.feemarket.feemarket.v1.QueryProto.GasPricesResponse.getDefaultInstance()) return this;
+        if (pricesBuilder_ == null) {
+          if (!other.prices_.isEmpty()) {
+            if (prices_.isEmpty()) {
+              prices_ = other.prices_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureFeesIsMutable();
-              fees_.addAll(other.fees_);
+              ensurePricesIsMutable();
+              prices_.addAll(other.prices_);
             }
             onChanged();
           }
         } else {
-          if (!other.fees_.isEmpty()) {
-            if (feesBuilder_.isEmpty()) {
-              feesBuilder_.dispose();
-              feesBuilder_ = null;
-              fees_ = other.fees_;
+          if (!other.prices_.isEmpty()) {
+            if (pricesBuilder_.isEmpty()) {
+              pricesBuilder_.dispose();
+              pricesBuilder_ = null;
+              prices_ = other.prices_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              feesBuilder_ = 
+              pricesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getFeesFieldBuilder() : null;
+                   getPricesFieldBuilder() : null;
             } else {
-              feesBuilder_.addAllMessages(other.fees_);
+              pricesBuilder_.addAllMessages(other.prices_);
             }
           }
         }
@@ -2907,11 +4115,11 @@ public final class QueryProto {
                     input.readMessage(
                         com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
                         extensionRegistry);
-                if (feesBuilder_ == null) {
-                  ensureFeesIsMutable();
-                  fees_.add(m);
+                if (pricesBuilder_ == null) {
+                  ensurePricesIsMutable();
+                  prices_.add(m);
                 } else {
-                  feesBuilder_.addMessage(m);
+                  pricesBuilder_.addMessage(m);
                 }
                 break;
               } // case 10
@@ -2932,244 +4140,244 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> fees_ =
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> prices_ =
         java.util.Collections.emptyList();
-      private void ensureFeesIsMutable() {
+      private void ensurePricesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          fees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(fees_);
+          prices_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(prices_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> feesBuilder_;
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> pricesBuilder_;
 
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getFeesList() {
-        if (feesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(fees_);
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getPricesList() {
+        if (pricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(prices_);
         } else {
-          return feesBuilder_.getMessageList();
+          return pricesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public int getFeesCount() {
-        if (feesBuilder_ == null) {
-          return fees_.size();
+      public int getPricesCount() {
+        if (pricesBuilder_ == null) {
+          return prices_.size();
         } else {
-          return feesBuilder_.getCount();
+          return pricesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.DecCoin getFees(int index) {
-        if (feesBuilder_ == null) {
-          return fees_.get(index);
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getPrices(int index) {
+        if (pricesBuilder_ == null) {
+          return prices_.get(index);
         } else {
-          return feesBuilder_.getMessage(index);
+          return pricesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder setFees(
+      public Builder setPrices(
           int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
-        if (feesBuilder_ == null) {
+        if (pricesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureFeesIsMutable();
-          fees_.set(index, value);
+          ensurePricesIsMutable();
+          prices_.set(index, value);
           onChanged();
         } else {
-          feesBuilder_.setMessage(index, value);
+          pricesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder setFees(
+      public Builder setPrices(
           int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
-        if (feesBuilder_ == null) {
-          ensureFeesIsMutable();
-          fees_.set(index, builderForValue.build());
+        if (pricesBuilder_ == null) {
+          ensurePricesIsMutable();
+          prices_.set(index, builderForValue.build());
           onChanged();
         } else {
-          feesBuilder_.setMessage(index, builderForValue.build());
+          pricesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addFees(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
-        if (feesBuilder_ == null) {
+      public Builder addPrices(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (pricesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureFeesIsMutable();
-          fees_.add(value);
+          ensurePricesIsMutable();
+          prices_.add(value);
           onChanged();
         } else {
-          feesBuilder_.addMessage(value);
+          pricesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addFees(
+      public Builder addPrices(
           int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
-        if (feesBuilder_ == null) {
+        if (pricesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureFeesIsMutable();
-          fees_.add(index, value);
+          ensurePricesIsMutable();
+          prices_.add(index, value);
           onChanged();
         } else {
-          feesBuilder_.addMessage(index, value);
+          pricesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addFees(
+      public Builder addPrices(
           com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
-        if (feesBuilder_ == null) {
-          ensureFeesIsMutable();
-          fees_.add(builderForValue.build());
+        if (pricesBuilder_ == null) {
+          ensurePricesIsMutable();
+          prices_.add(builderForValue.build());
           onChanged();
         } else {
-          feesBuilder_.addMessage(builderForValue.build());
+          pricesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addFees(
+      public Builder addPrices(
           int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
-        if (feesBuilder_ == null) {
-          ensureFeesIsMutable();
-          fees_.add(index, builderForValue.build());
+        if (pricesBuilder_ == null) {
+          ensurePricesIsMutable();
+          prices_.add(index, builderForValue.build());
           onChanged();
         } else {
-          feesBuilder_.addMessage(index, builderForValue.build());
+          pricesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addAllFees(
+      public Builder addAllPrices(
           java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
-        if (feesBuilder_ == null) {
-          ensureFeesIsMutable();
+        if (pricesBuilder_ == null) {
+          ensurePricesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, fees_);
+              values, prices_);
           onChanged();
         } else {
-          feesBuilder_.addAllMessages(values);
+          pricesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder clearFees() {
-        if (feesBuilder_ == null) {
-          fees_ = java.util.Collections.emptyList();
+      public Builder clearPrices() {
+        if (pricesBuilder_ == null) {
+          prices_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          feesBuilder_.clear();
+          pricesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public Builder removeFees(int index) {
-        if (feesBuilder_ == null) {
-          ensureFeesIsMutable();
-          fees_.remove(index);
+      public Builder removePrices(int index) {
+        if (pricesBuilder_ == null) {
+          ensurePricesIsMutable();
+          prices_.remove(index);
           onChanged();
         } else {
-          feesBuilder_.remove(index);
+          pricesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getFeesBuilder(
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getPricesBuilder(
           int index) {
-        return getFeesFieldBuilder().getBuilder(index);
+        return getPricesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getFeesOrBuilder(
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getPricesOrBuilder(
           int index) {
-        if (feesBuilder_ == null) {
-          return fees_.get(index);  } else {
-          return feesBuilder_.getMessageOrBuilder(index);
+        if (pricesBuilder_ == null) {
+          return prices_.get(index);  } else {
+          return pricesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
-           getFeesOrBuilderList() {
-        if (feesBuilder_ != null) {
-          return feesBuilder_.getMessageOrBuilderList();
+           getPricesOrBuilderList() {
+        if (pricesBuilder_ != null) {
+          return pricesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(fees_);
+          return java.util.Collections.unmodifiableList(prices_);
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addFeesBuilder() {
-        return getFeesFieldBuilder().addBuilder(
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addPricesBuilder() {
+        return getPricesFieldBuilder().addBuilder(
             com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addFeesBuilder(
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addPricesBuilder(
           int index) {
-        return getFeesFieldBuilder().addBuilder(
+        return getPricesFieldBuilder().addBuilder(
             index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.DecCoin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.DecCoin prices = 1 [json_name = "prices", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
-           getFeesBuilderList() {
-        return getFeesFieldBuilder().getBuilderList();
+           getPricesBuilderList() {
+        return getPricesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
-          getFeesFieldBuilder() {
-        if (feesBuilder_ == null) {
-          feesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getPricesFieldBuilder() {
+        if (pricesBuilder_ == null) {
+          pricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
-                  fees_,
+                  prices_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          fees_ = null;
+          prices_ = null;
         }
-        return feesBuilder_;
+        return pricesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3184,23 +4392,23 @@ public final class QueryProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:feemarket.feemarket.v1.BaseFeeResponse)
+      // @@protoc_insertion_point(builder_scope:feemarket.feemarket.v1.GasPricesResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:feemarket.feemarket.v1.BaseFeeResponse)
-    private static final com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:feemarket.feemarket.v1.GasPricesResponse)
+    private static final com.feemarket.feemarket.v1.QueryProto.GasPricesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse();
+      DEFAULT_INSTANCE = new com.feemarket.feemarket.v1.QueryProto.GasPricesResponse();
     }
 
-    public static com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse getDefaultInstance() {
+    public static com.feemarket.feemarket.v1.QueryProto.GasPricesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<BaseFeeResponse>
-        PARSER = new com.google.protobuf.AbstractParser<BaseFeeResponse>() {
+    private static final com.google.protobuf.Parser<GasPricesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GasPricesResponse>() {
       @java.lang.Override
-      public BaseFeeResponse parsePartialFrom(
+      public GasPricesResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3219,17 +4427,17 @@ public final class QueryProto {
       }
     };
 
-    public static com.google.protobuf.Parser<BaseFeeResponse> parser() {
+    public static com.google.protobuf.Parser<GasPricesResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<BaseFeeResponse> getParserForType() {
+    public com.google.protobuf.Parser<GasPricesResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.feemarket.feemarket.v1.QueryProto.BaseFeeResponse getDefaultInstanceForType() {
+    public com.feemarket.feemarket.v1.QueryProto.GasPricesResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3256,15 +4464,25 @@ public final class QueryProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_feemarket_feemarket_v1_StateResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_feemarket_feemarket_v1_BaseFeeRequest_descriptor;
+    internal_static_feemarket_feemarket_v1_GasPriceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_feemarket_feemarket_v1_BaseFeeRequest_fieldAccessorTable;
+      internal_static_feemarket_feemarket_v1_GasPriceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_feemarket_feemarket_v1_BaseFeeResponse_descriptor;
+    internal_static_feemarket_feemarket_v1_GasPriceResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_feemarket_feemarket_v1_BaseFeeResponse_fieldAccessorTable;
+      internal_static_feemarket_feemarket_v1_GasPriceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_feemarket_feemarket_v1_GasPricesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_feemarket_feemarket_v1_GasPricesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_feemarket_feemarket_v1_GasPricesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_feemarket_feemarket_v1_GasPricesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3284,25 +4502,32 @@ public final class QueryProto {
       "ams\030\001 \001(\0132\036.feemarket.feemarket.v1.Param" +
       "sB\004\310\336\037\000R\006params\"\016\n\014StateRequest\"J\n\rState" +
       "Response\0229\n\005state\030\001 \001(\0132\035.feemarket.feem" +
-      "arket.v1.StateB\004\310\336\037\000R\005state\"\020\n\016BaseFeeRe" +
-      "quest\"}\n\017BaseFeeResponse\022j\n\004fees\030\001 \003(\0132\034" +
-      ".cosmos.base.v1beta1.DecCoinB8\310\336\037\000\252\337\037+gi" +
-      "thub.com/cosmos/cosmos-sdk/types.DecCoin" +
-      "s\250\347\260*\001R\004fees2\355\002\n\005Query\022u\n\006Params\022%.feema" +
-      "rket.feemarket.v1.ParamsRequest\032&.feemar" +
-      "ket.feemarket.v1.ParamsResponse\"\034\202\323\344\223\002\026\022" +
-      "\024/feemarket/v1/params\022q\n\005State\022$.feemark" +
-      "et.feemarket.v1.StateRequest\032%.feemarket" +
-      ".feemarket.v1.StateResponse\"\033\202\323\344\223\002\025\022\023/fe" +
-      "emarket/v1/state\022z\n\007BaseFee\022&.feemarket." +
-      "feemarket.v1.BaseFeeRequest\032\'.feemarket." +
-      "feemarket.v1.BaseFeeResponse\"\036\202\323\344\223\002\030\022\026/f" +
-      "eemarket/v1/base_feeB\321\001\n\032com.feemarket.f" +
-      "eemarket.v1B\nQueryProtoZ/github.com/skip" +
-      "-mev/feemarket/x/feemarket/types\242\002\003FFX\252\002" +
-      "\026Feemarket.Feemarket.V1\312\002\026Feemarket\\Feem" +
-      "arket\\V1\342\002\"Feemarket\\Feemarket\\V1\\GPBMet" +
-      "adata\352\002\030Feemarket::Feemarket::V1b\006proto3"
+      "arket.v1.StateB\004\310\336\037\000R\005state\"\'\n\017GasPriceR" +
+      "equest\022\024\n\005denom\030\001 \001(\tR\005denom\"Q\n\020GasPrice" +
+      "Response\022=\n\005price\030\001 \001(\0132\034.cosmos.base.v1" +
+      "beta1.DecCoinB\t\310\336\037\000\250\347\260*\001R\005price\"\022\n\020GasPr" +
+      "icesRequest\"\203\001\n\021GasPricesResponse\022n\n\006pri" +
+      "ces\030\001 \003(\0132\034.cosmos.base.v1beta1.DecCoinB" +
+      "8\310\336\037\000\252\337\037+github.com/cosmos/cosmos-sdk/ty" +
+      "pes.DecCoins\250\347\260*\001R\006prices2\377\003\n\005Query\022u\n\006P" +
+      "arams\022%.feemarket.feemarket.v1.ParamsReq" +
+      "uest\032&.feemarket.feemarket.v1.ParamsResp" +
+      "onse\"\034\202\323\344\223\002\026\022\024/feemarket/v1/params\022q\n\005St" +
+      "ate\022$.feemarket.feemarket.v1.StateReques" +
+      "t\032%.feemarket.feemarket.v1.StateResponse" +
+      "\"\033\202\323\344\223\002\025\022\023/feemarket/v1/state\022\206\001\n\010GasPri" +
+      "ce\022\'.feemarket.feemarket.v1.GasPriceRequ" +
+      "est\032(.feemarket.feemarket.v1.GasPriceRes" +
+      "ponse\"\'\202\323\344\223\002!\022\037/feemarket/v1/gas_price/{" +
+      "denom}\022\202\001\n\tGasPrices\022(.feemarket.feemark" +
+      "et.v1.GasPricesRequest\032).feemarket.feema" +
+      "rket.v1.GasPricesResponse\" \202\323\344\223\002\032\022\030/feem" +
+      "arket/v1/gas_pricesB\321\001\n\032com.feemarket.fe" +
+      "emarket.v1B\nQueryProtoZ/github.com/skip-" +
+      "mev/feemarket/x/feemarket/types\242\002\003FFX\252\002\026" +
+      "Feemarket.Feemarket.V1\312\002\026Feemarket\\Feema" +
+      "rket\\V1\342\002\"Feemarket\\Feemarket\\V1\\GPBMeta" +
+      "data\352\002\030Feemarket::Feemarket::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3338,18 +4563,30 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_feemarket_feemarket_v1_StateResponse_descriptor,
         new java.lang.String[] { "State", });
-    internal_static_feemarket_feemarket_v1_BaseFeeRequest_descriptor =
+    internal_static_feemarket_feemarket_v1_GasPriceRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_feemarket_feemarket_v1_BaseFeeRequest_fieldAccessorTable = new
+    internal_static_feemarket_feemarket_v1_GasPriceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_feemarket_feemarket_v1_BaseFeeRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_feemarket_feemarket_v1_BaseFeeResponse_descriptor =
+        internal_static_feemarket_feemarket_v1_GasPriceRequest_descriptor,
+        new java.lang.String[] { "Denom", });
+    internal_static_feemarket_feemarket_v1_GasPriceResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_feemarket_feemarket_v1_BaseFeeResponse_fieldAccessorTable = new
+    internal_static_feemarket_feemarket_v1_GasPriceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_feemarket_feemarket_v1_BaseFeeResponse_descriptor,
-        new java.lang.String[] { "Fees", });
+        internal_static_feemarket_feemarket_v1_GasPriceResponse_descriptor,
+        new java.lang.String[] { "Price", });
+    internal_static_feemarket_feemarket_v1_GasPricesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_feemarket_feemarket_v1_GasPricesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_feemarket_feemarket_v1_GasPricesRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_feemarket_feemarket_v1_GasPricesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_feemarket_feemarket_v1_GasPricesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_feemarket_feemarket_v1_GasPricesResponse_descriptor,
+        new java.lang.String[] { "Prices", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.dontOmitempty);

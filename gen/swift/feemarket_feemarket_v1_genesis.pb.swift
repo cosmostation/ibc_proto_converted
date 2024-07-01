@@ -30,29 +30,30 @@ struct Feemarket_Feemarket_V1_GenesisState {
   /// can be utilized to implement both the base EIP-1559 fee market and
   /// and the AIMD EIP-1559 fee market.
   var params: Feemarket_Feemarket_V1_Params {
-    get {return _storage._params ?? Feemarket_Feemarket_V1_Params()}
-    set {_uniqueStorage()._params = newValue}
+    get {return _params ?? Feemarket_Feemarket_V1_Params()}
+    set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return _storage._params != nil}
+  var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {_uniqueStorage()._params = nil}
+  mutating func clearParams() {self._params = nil}
 
   /// State contains the current state of the AIMD fee market.
   var state: Feemarket_Feemarket_V1_State {
-    get {return _storage._state ?? Feemarket_Feemarket_V1_State()}
-    set {_uniqueStorage()._state = newValue}
+    get {return _state ?? Feemarket_Feemarket_V1_State()}
+    set {_state = newValue}
   }
   /// Returns true if `state` has been explicitly set.
-  var hasState: Bool {return _storage._state != nil}
+  var hasState: Bool {return self._state != nil}
   /// Clears the value of `state`. Subsequent reads from it will return its default value.
-  mutating func clearState() {_uniqueStorage()._state = nil}
+  mutating func clearState() {self._state = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
-  fileprivate var _storage = _StorageClass.defaultInstance
+  fileprivate var _params: Feemarket_Feemarket_V1_Params? = nil
+  fileprivate var _state: Feemarket_Feemarket_V1_State? = nil
 }
 
 /// State is utilized to track the current state of the fee market. This includes
@@ -63,9 +64,9 @@ struct Feemarket_Feemarket_V1_State {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// BaseFee is the current base fee. This is denominated in the fee per gas
-  /// unit.
-  var baseFee: String = String()
+  /// BaseGasPrice is the current base fee. This is denominated in the fee per
+  /// gas unit.
+  var baseGasPrice: String = String()
 
   /// LearningRate is the current learning rate.
   var learningRate: String = String()
@@ -99,70 +100,36 @@ extension Feemarket_Feemarket_V1_GenesisState: SwiftProtobuf.Message, SwiftProto
     2: .same(proto: "state"),
   ]
 
-  fileprivate class _StorageClass {
-    var _params: Feemarket_Feemarket_V1_Params? = nil
-    var _state: Feemarket_Feemarket_V1_State? = nil
-
-    static let defaultInstance = _StorageClass()
-
-    private init() {}
-
-    init(copying source: _StorageClass) {
-      _params = source._params
-      _state = source._state
-    }
-  }
-
-  fileprivate mutating func _uniqueStorage() -> _StorageClass {
-    if !isKnownUniquelyReferenced(&_storage) {
-      _storage = _StorageClass(copying: _storage)
-    }
-    return _storage
-  }
-
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    _ = _uniqueStorage()
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      while let fieldNumber = try decoder.nextFieldNumber() {
-        // The use of inline closures is to circumvent an issue where the compiler
-        // allocates stack space for every case branch when no optimizations are
-        // enabled. https://github.com/apple/swift-protobuf/issues/1034
-        switch fieldNumber {
-        case 1: try { try decoder.decodeSingularMessageField(value: &_storage._params) }()
-        case 2: try { try decoder.decodeSingularMessageField(value: &_storage._state) }()
-        default: break
-        }
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._params) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._state) }()
+      default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every if/case branch local when no optimizations
-      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-      // https://github.com/apple/swift-protobuf/issues/1182
-      try { if let v = _storage._params {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-      } }()
-      try { if let v = _storage._state {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-      } }()
-    }
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._params {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._state {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Feemarket_Feemarket_V1_GenesisState, rhs: Feemarket_Feemarket_V1_GenesisState) -> Bool {
-    if lhs._storage !== rhs._storage {
-      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
-        let _storage = _args.0
-        let rhs_storage = _args.1
-        if _storage._params != rhs_storage._params {return false}
-        if _storage._state != rhs_storage._state {return false}
-        return true
-      }
-      if !storagesAreEqual {return false}
-    }
+    if lhs._params != rhs._params {return false}
+    if lhs._state != rhs._state {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -171,7 +138,7 @@ extension Feemarket_Feemarket_V1_GenesisState: SwiftProtobuf.Message, SwiftProto
 extension Feemarket_Feemarket_V1_State: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".State"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "base_fee"),
+    1: .standard(proto: "base_gas_price"),
     2: .standard(proto: "learning_rate"),
     3: .same(proto: "window"),
     4: .same(proto: "index"),
@@ -183,7 +150,7 @@ extension Feemarket_Feemarket_V1_State: SwiftProtobuf.Message, SwiftProtobuf._Me
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.baseFee) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.baseGasPrice) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.learningRate) }()
       case 3: try { try decoder.decodeRepeatedUInt64Field(value: &self.window) }()
       case 4: try { try decoder.decodeSingularUInt64Field(value: &self.index) }()
@@ -193,8 +160,8 @@ extension Feemarket_Feemarket_V1_State: SwiftProtobuf.Message, SwiftProtobuf._Me
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.baseFee.isEmpty {
-      try visitor.visitSingularStringField(value: self.baseFee, fieldNumber: 1)
+    if !self.baseGasPrice.isEmpty {
+      try visitor.visitSingularStringField(value: self.baseGasPrice, fieldNumber: 1)
     }
     if !self.learningRate.isEmpty {
       try visitor.visitSingularStringField(value: self.learningRate, fieldNumber: 2)
@@ -209,7 +176,7 @@ extension Feemarket_Feemarket_V1_State: SwiftProtobuf.Message, SwiftProtobuf._Me
   }
 
   static func ==(lhs: Feemarket_Feemarket_V1_State, rhs: Feemarket_Feemarket_V1_State) -> Bool {
-    if lhs.baseFee != rhs.baseFee {return false}
+    if lhs.baseGasPrice != rhs.baseGasPrice {return false}
     if lhs.learningRate != rhs.learningRate {return false}
     if lhs.window != rhs.window {return false}
     if lhs.index != rhs.index {return false}

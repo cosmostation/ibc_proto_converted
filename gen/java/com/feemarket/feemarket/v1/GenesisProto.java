@@ -974,25 +974,25 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * BaseFee is the current base fee. This is denominated in the fee per gas
-     * unit.
+     * BaseGasPrice is the current base fee. This is denominated in the fee per
+     * gas unit.
      * </pre>
      *
-     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The baseFee.
+     * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The baseGasPrice.
      */
-    java.lang.String getBaseFee();
+    java.lang.String getBaseGasPrice();
     /**
      * <pre>
-     * BaseFee is the current base fee. This is denominated in the fee per gas
-     * unit.
+     * BaseGasPrice is the current base fee. This is denominated in the fee per
+     * gas unit.
      * </pre>
      *
-     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for baseFee.
+     * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for baseGasPrice.
      */
     com.google.protobuf.ByteString
-        getBaseFeeBytes();
+        getBaseGasPriceBytes();
 
     /**
      * <pre>
@@ -1078,7 +1078,7 @@ public final class GenesisProto {
       super(builder);
     }
     private State() {
-      baseFee_ = "";
+      baseGasPrice_ = "";
       learningRate_ = "";
       window_ = emptyLongList();
     }
@@ -1103,49 +1103,49 @@ public final class GenesisProto {
               com.feemarket.feemarket.v1.GenesisProto.State.class, com.feemarket.feemarket.v1.GenesisProto.State.Builder.class);
     }
 
-    public static final int BASE_FEE_FIELD_NUMBER = 1;
+    public static final int BASE_GAS_PRICE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object baseFee_ = "";
+    private volatile java.lang.Object baseGasPrice_ = "";
     /**
      * <pre>
-     * BaseFee is the current base fee. This is denominated in the fee per gas
-     * unit.
+     * BaseGasPrice is the current base fee. This is denominated in the fee per
+     * gas unit.
      * </pre>
      *
-     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The baseFee.
+     * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The baseGasPrice.
      */
     @java.lang.Override
-    public java.lang.String getBaseFee() {
-      java.lang.Object ref = baseFee_;
+    public java.lang.String getBaseGasPrice() {
+      java.lang.Object ref = baseGasPrice_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        baseFee_ = s;
+        baseGasPrice_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * BaseFee is the current base fee. This is denominated in the fee per gas
-     * unit.
+     * BaseGasPrice is the current base fee. This is denominated in the fee per
+     * gas unit.
      * </pre>
      *
-     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for baseFee.
+     * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for baseGasPrice.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getBaseFeeBytes() {
-      java.lang.Object ref = baseFee_;
+        getBaseGasPriceBytes() {
+      java.lang.Object ref = baseGasPrice_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        baseFee_ = b;
+        baseGasPrice_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1276,8 +1276,8 @@ public final class GenesisProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseFee_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, baseFee_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseGasPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, baseGasPrice_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(learningRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, learningRate_);
@@ -1301,8 +1301,8 @@ public final class GenesisProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseFee_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, baseFee_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseGasPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, baseGasPrice_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(learningRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, learningRate_);
@@ -1340,8 +1340,8 @@ public final class GenesisProto {
       }
       com.feemarket.feemarket.v1.GenesisProto.State other = (com.feemarket.feemarket.v1.GenesisProto.State) obj;
 
-      if (!getBaseFee()
-          .equals(other.getBaseFee())) return false;
+      if (!getBaseGasPrice()
+          .equals(other.getBaseGasPrice())) return false;
       if (!getLearningRate()
           .equals(other.getLearningRate())) return false;
       if (!getWindowList()
@@ -1359,8 +1359,8 @@ public final class GenesisProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + BASE_FEE_FIELD_NUMBER;
-      hash = (53 * hash) + getBaseFee().hashCode();
+      hash = (37 * hash) + BASE_GAS_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseGasPrice().hashCode();
       hash = (37 * hash) + LEARNING_RATE_FIELD_NUMBER;
       hash = (53 * hash) + getLearningRate().hashCode();
       if (getWindowCount() > 0) {
@@ -1507,7 +1507,7 @@ public final class GenesisProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        baseFee_ = "";
+        baseGasPrice_ = "";
         learningRate_ = "";
         window_ = emptyLongList();
         index_ = 0L;
@@ -1554,7 +1554,7 @@ public final class GenesisProto {
       private void buildPartial0(com.feemarket.feemarket.v1.GenesisProto.State result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.baseFee_ = baseFee_;
+          result.baseGasPrice_ = baseGasPrice_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.learningRate_ = learningRate_;
@@ -1608,8 +1608,8 @@ public final class GenesisProto {
 
       public Builder mergeFrom(com.feemarket.feemarket.v1.GenesisProto.State other) {
         if (other == com.feemarket.feemarket.v1.GenesisProto.State.getDefaultInstance()) return this;
-        if (!other.getBaseFee().isEmpty()) {
-          baseFee_ = other.baseFee_;
+        if (!other.getBaseGasPrice().isEmpty()) {
+          baseGasPrice_ = other.baseGasPrice_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -1658,7 +1658,7 @@ public final class GenesisProto {
                 done = true;
                 break;
               case 10: {
-                baseFee_ = input.readStringRequireUtf8();
+                baseGasPrice_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -1705,23 +1705,23 @@ public final class GenesisProto {
       }
       private int bitField0_;
 
-      private java.lang.Object baseFee_ = "";
+      private java.lang.Object baseGasPrice_ = "";
       /**
        * <pre>
-       * BaseFee is the current base fee. This is denominated in the fee per gas
-       * unit.
+       * BaseGasPrice is the current base fee. This is denominated in the fee per
+       * gas unit.
        * </pre>
        *
-       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The baseFee.
+       * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The baseGasPrice.
        */
-      public java.lang.String getBaseFee() {
-        java.lang.Object ref = baseFee_;
+      public java.lang.String getBaseGasPrice() {
+        java.lang.Object ref = baseGasPrice_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          baseFee_ = s;
+          baseGasPrice_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1729,21 +1729,21 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * BaseFee is the current base fee. This is denominated in the fee per gas
-       * unit.
+       * BaseGasPrice is the current base fee. This is denominated in the fee per
+       * gas unit.
        * </pre>
        *
-       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The bytes for baseFee.
+       * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for baseGasPrice.
        */
       public com.google.protobuf.ByteString
-          getBaseFeeBytes() {
-        java.lang.Object ref = baseFee_;
+          getBaseGasPriceBytes() {
+        java.lang.Object ref = baseGasPrice_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          baseFee_ = b;
+          baseGasPrice_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1751,52 +1751,52 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * BaseFee is the current base fee. This is denominated in the fee per gas
-       * unit.
+       * BaseGasPrice is the current base fee. This is denominated in the fee per
+       * gas unit.
        * </pre>
        *
-       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The baseFee to set.
+       * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The baseGasPrice to set.
        * @return This builder for chaining.
        */
-      public Builder setBaseFee(
+      public Builder setBaseGasPrice(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        baseFee_ = value;
+        baseGasPrice_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * BaseFee is the current base fee. This is denominated in the fee per gas
-       * unit.
+       * BaseGasPrice is the current base fee. This is denominated in the fee per
+       * gas unit.
        * </pre>
        *
-       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearBaseFee() {
-        baseFee_ = getDefaultInstance().getBaseFee();
+      public Builder clearBaseGasPrice() {
+        baseGasPrice_ = getDefaultInstance().getBaseGasPrice();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * BaseFee is the current base fee. This is denominated in the fee per gas
-       * unit.
+       * BaseGasPrice is the current base fee. This is denominated in the fee per
+       * gas unit.
        * </pre>
        *
-       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The bytes for baseFee to set.
+       * <code>string base_gas_price = 1 [json_name = "baseGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for baseGasPrice to set.
        * @return This builder for chaining.
        */
-      public Builder setBaseFeeBytes(
+      public Builder setBaseGasPriceBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        baseFee_ = value;
+        baseGasPrice_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -2150,18 +2150,18 @@ public final class GenesisProto {
       "State\022<\n\006params\030\001 \001(\0132\036.feemarket.feemar" +
       "ket.v1.ParamsB\004\310\336\037\000R\006params\0229\n\005state\030\002 \001" +
       "(\0132\035.feemarket.feemarket.v1.StateB\004\310\336\037\000R" +
-      "\005state\"\333\001\n\005State\022L\n\010base_fee\030\001 \001(\tB1\310\336\037\000" +
-      "\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-\ncosmo" +
-      "s.DecR\007baseFee\022V\n\rlearning_rate\030\002 \001(\tB1\310" +
-      "\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-\nco" +
-      "smos.DecR\014learningRate\022\026\n\006window\030\003 \003(\004R\006" +
-      "window\022\024\n\005index\030\004 \001(\004R\005indexB\323\001\n\032com.fee" +
-      "market.feemarket.v1B\014GenesisProtoZ/githu" +
-      "b.com/skip-mev/feemarket/x/feemarket/typ" +
-      "es\242\002\003FFX\252\002\026Feemarket.Feemarket.V1\312\002\026Feem" +
-      "arket\\Feemarket\\V1\342\002\"Feemarket\\Feemarket" +
-      "\\V1\\GPBMetadata\352\002\030Feemarket::Feemarket::" +
-      "V1b\006proto3"
+      "\005state\"\346\001\n\005State\022W\n\016base_gas_price\030\001 \001(\t" +
+      "B1\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-" +
+      "\ncosmos.DecR\014baseGasPrice\022V\n\rlearning_ra" +
+      "te\030\002 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/math.Lega" +
+      "cyDec\322\264-\ncosmos.DecR\014learningRate\022\026\n\006win" +
+      "dow\030\003 \003(\004R\006window\022\024\n\005index\030\004 \001(\004R\005indexB" +
+      "\323\001\n\032com.feemarket.feemarket.v1B\014GenesisP" +
+      "rotoZ/github.com/skip-mev/feemarket/x/fe" +
+      "emarket/types\242\002\003FFX\252\002\026Feemarket.Feemarke" +
+      "t.V1\312\002\026Feemarket\\Feemarket\\V1\342\002\"Feemarke" +
+      "t\\Feemarket\\V1\\GPBMetadata\352\002\030Feemarket::" +
+      "Feemarket::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2181,7 +2181,7 @@ public final class GenesisProto {
     internal_static_feemarket_feemarket_v1_State_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_feemarket_feemarket_v1_State_descriptor,
-        new java.lang.String[] { "BaseFee", "LearningRate", "Window", "Index", });
+        new java.lang.String[] { "BaseGasPrice", "LearningRate", "Window", "Index", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);

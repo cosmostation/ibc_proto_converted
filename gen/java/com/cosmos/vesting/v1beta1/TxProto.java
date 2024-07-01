@@ -43,25 +43,25 @@ public final class TxProto {
         getToAddressBytes();
 
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
         getAmountList();
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index);
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     int getAmountCount();
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
         getAmountOrBuilderList();
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
         int index);
@@ -81,18 +81,6 @@ public final class TxProto {
      * @return The delayed.
      */
     boolean getDelayed();
-
-    /**
-     * <pre>
-     * start of vesting as unix time (in seconds).
-     *
-     * Since 0.51.x
-     * </pre>
-     *
-     * <code>int64 start_time = 6 [json_name = "startTime"];</code>
-     * @return The startTime.
-     */
-    long getStartTime();
   }
   /**
    * <pre>
@@ -219,14 +207,14 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_;
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
       return amount_;
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
@@ -234,21 +222,21 @@ public final class TxProto {
       return amount_;
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public int getAmountCount() {
       return amount_.size();
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
       return amount_.get(index);
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
@@ -282,23 +270,6 @@ public final class TxProto {
       return delayed_;
     }
 
-    public static final int START_TIME_FIELD_NUMBER = 6;
-    private long startTime_ = 0L;
-    /**
-     * <pre>
-     * start of vesting as unix time (in seconds).
-     *
-     * Since 0.51.x
-     * </pre>
-     *
-     * <code>int64 start_time = 6 [json_name = "startTime"];</code>
-     * @return The startTime.
-     */
-    @java.lang.Override
-    public long getStartTime() {
-      return startTime_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -328,9 +299,6 @@ public final class TxProto {
       if (delayed_ != false) {
         output.writeBool(5, delayed_);
       }
-      if (startTime_ != 0L) {
-        output.writeInt64(6, startTime_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -358,10 +326,6 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, delayed_);
       }
-      if (startTime_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, startTime_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -387,8 +351,6 @@ public final class TxProto {
           != other.getEndTime()) return false;
       if (getDelayed()
           != other.getDelayed()) return false;
-      if (getStartTime()
-          != other.getStartTime()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -414,9 +376,6 @@ public final class TxProto {
       hash = (37 * hash) + DELAYED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDelayed());
-      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getStartTime());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -564,7 +523,6 @@ public final class TxProto {
         bitField0_ = (bitField0_ & ~0x00000004);
         endTime_ = 0L;
         delayed_ = false;
-        startTime_ = 0L;
         return this;
       }
 
@@ -622,9 +580,6 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.delayed_ = delayed_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.startTime_ = startTime_;
         }
       }
 
@@ -714,9 +669,6 @@ public final class TxProto {
         if (other.getDelayed() != false) {
           setDelayed(other.getDelayed());
         }
-        if (other.getStartTime() != 0L) {
-          setStartTime(other.getStartTime());
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -776,11 +728,6 @@ public final class TxProto {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
-              case 48: {
-                startTime_ = input.readInt64();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -955,7 +902,7 @@ public final class TxProto {
           com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
 
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
         if (amountBuilder_ == null) {
@@ -965,7 +912,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public int getAmountCount() {
         if (amountBuilder_ == null) {
@@ -975,7 +922,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
         if (amountBuilder_ == null) {
@@ -985,7 +932,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
@@ -1002,7 +949,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
@@ -1016,7 +963,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
         if (amountBuilder_ == null) {
@@ -1032,7 +979,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
@@ -1049,7 +996,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(
           com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
@@ -1063,7 +1010,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
@@ -1077,7 +1024,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAllAmount(
           java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
@@ -1092,7 +1039,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearAmount() {
         if (amountBuilder_ == null) {
@@ -1105,7 +1052,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder removeAmount(int index) {
         if (amountBuilder_ == null) {
@@ -1118,14 +1065,14 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder(
           int index) {
         return getAmountFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
           int index) {
@@ -1135,7 +1082,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
            getAmountOrBuilderList() {
@@ -1146,14 +1093,14 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder() {
         return getAmountFieldBuilder().addBuilder(
             com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder(
           int index) {
@@ -1161,7 +1108,7 @@ public final class TxProto {
             index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
            getAmountBuilderList() {
@@ -1254,56 +1201,6 @@ public final class TxProto {
       public Builder clearDelayed() {
         bitField0_ = (bitField0_ & ~0x00000010);
         delayed_ = false;
-        onChanged();
-        return this;
-      }
-
-      private long startTime_ ;
-      /**
-       * <pre>
-       * start of vesting as unix time (in seconds).
-       *
-       * Since 0.51.x
-       * </pre>
-       *
-       * <code>int64 start_time = 6 [json_name = "startTime"];</code>
-       * @return The startTime.
-       */
-      @java.lang.Override
-      public long getStartTime() {
-        return startTime_;
-      }
-      /**
-       * <pre>
-       * start of vesting as unix time (in seconds).
-       *
-       * Since 0.51.x
-       * </pre>
-       *
-       * <code>int64 start_time = 6 [json_name = "startTime"];</code>
-       * @param value The startTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStartTime(long value) {
-
-        startTime_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * start of vesting as unix time (in seconds).
-       *
-       * Since 0.51.x
-       * </pre>
-       *
-       * <code>int64 start_time = 6 [json_name = "startTime"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStartTime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        startTime_ = 0L;
         onChanged();
         return this;
       }
@@ -1805,25 +1702,25 @@ public final class TxProto {
         getToAddressBytes();
 
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
         getAmountList();
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index);
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     int getAmountCount();
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
         getAmountOrBuilderList();
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
         int index);
@@ -1955,14 +1852,14 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_;
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
       return amount_;
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
@@ -1970,21 +1867,21 @@ public final class TxProto {
       return amount_;
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public int getAmountCount() {
       return amount_.size();
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
       return amount_.get(index);
     }
     /**
-     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
@@ -2578,7 +2475,7 @@ public final class TxProto {
           com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
 
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
         if (amountBuilder_ == null) {
@@ -2588,7 +2485,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public int getAmountCount() {
         if (amountBuilder_ == null) {
@@ -2598,7 +2495,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
         if (amountBuilder_ == null) {
@@ -2608,7 +2505,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
@@ -2625,7 +2522,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
@@ -2639,7 +2536,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
         if (amountBuilder_ == null) {
@@ -2655,7 +2552,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
@@ -2672,7 +2569,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(
           com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
@@ -2686,7 +2583,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAmount(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
@@ -2700,7 +2597,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAllAmount(
           java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
@@ -2715,7 +2612,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearAmount() {
         if (amountBuilder_ == null) {
@@ -2728,7 +2625,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public Builder removeAmount(int index) {
         if (amountBuilder_ == null) {
@@ -2741,14 +2638,14 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder(
           int index) {
         return getAmountFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
           int index) {
@@ -2758,7 +2655,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
            getAmountOrBuilderList() {
@@ -2769,14 +2666,14 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder() {
         return getAmountFieldBuilder().addBuilder(
             com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder(
           int index) {
@@ -2784,7 +2681,7 @@ public final class TxProto {
             index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
       }
       /**
-       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.encoding) = "legacy_coins", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
            getAmountBuilderList() {
@@ -4917,53 +4814,51 @@ public final class TxProto {
       "\036cosmos/base/v1beta1/coin.proto\032\031cosmos_" +
       "proto/cosmos.proto\032$cosmos/vesting/v1bet" +
       "a1/vesting.proto\032\027cosmos/msg/v1/msg.prot" +
-      "o\032\021amino/amino.proto\"\234\003\n\027MsgCreateVestin" +
+      "o\032\021amino/amino.proto\"\354\002\n\027MsgCreateVestin" +
       "gAccount\022;\n\014from_address\030\001 \001(\tB\030\322\264-\024cosm" +
       "os.AddressStringR\013fromAddress\0227\n\nto_addr" +
       "ess\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\ttoA" +
-      "ddress\022y\n\006amount\030\003 \003(\0132\031.cosmos.base.v1b" +
-      "eta1.CoinBF\310\336\037\000\252\337\037(github.com/cosmos/cos" +
-      "mos-sdk/types.Coins\232\347\260*\014legacy_coins\250\347\260*" +
-      "\001R\006amount\022\031\n\010end_time\030\004 \001(\003R\007endTime\022\030\n\007" +
-      "delayed\030\005 \001(\010R\007delayed\022\035\n\nstart_time\030\006 \001" +
-      "(\003R\tstartTime:<\350\240\037\001\202\347\260*\014from_address\212\347\260*" +
-      "\"cosmos-sdk/MsgCreateVestingAccount\"!\n\037M" +
-      "sgCreateVestingAccountResponse\"\317\002\n\037MsgCr" +
-      "eatePermanentLockedAccount\022:\n\014from_addre" +
-      "ss\030\001 \001(\tB\027\362\336\037\023yaml:\"from_address\"R\013fromA" +
-      "ddress\0224\n\nto_address\030\002 \001(\tB\025\362\336\037\021yaml:\"to" +
-      "_address\"R\ttoAddress\022y\n\006amount\030\003 \003(\0132\031.c" +
-      "osmos.base.v1beta1.CoinBF\310\336\037\000\252\337\037(github." +
-      "com/cosmos/cosmos-sdk/types.Coins\232\347\260*\014le" +
-      "gacy_coins\250\347\260*\001R\006amount:?\350\240\037\001\202\347\260*\014from_a" +
-      "ddress\212\347\260*%cosmos-sdk/MsgCreatePermLocke" +
-      "dAccount\")\n\'MsgCreatePermanentLockedAcco" +
-      "untResponse\"\227\002\n\037MsgCreatePeriodicVesting" +
-      "Account\022!\n\014from_address\030\001 \001(\tR\013fromAddre" +
-      "ss\022\035\n\nto_address\030\002 \001(\tR\ttoAddress\022\035\n\nsta" +
-      "rt_time\030\003 \001(\003R\tstartTime\022R\n\017vesting_peri" +
-      "ods\030\004 \003(\0132\036.cosmos.vesting.v1beta1.Perio" +
-      "dB\t\310\336\037\000\250\347\260*\001R\016vestingPeriods:?\350\240\037\000\202\347\260*\014f" +
-      "rom_address\212\347\260*%cosmos-sdk/MsgCreatePeri" +
-      "odVestAccount\")\n\'MsgCreatePeriodicVestin" +
-      "gAccountResponse2\305\003\n\003Msg\022\200\001\n\024CreateVesti" +
-      "ngAccount\022/.cosmos.vesting.v1beta1.MsgCr" +
-      "eateVestingAccount\0327.cosmos.vesting.v1be" +
-      "ta1.MsgCreateVestingAccountResponse\022\230\001\n\034" +
-      "CreatePermanentLockedAccount\0227.cosmos.ve" +
-      "sting.v1beta1.MsgCreatePermanentLockedAc" +
-      "count\032?.cosmos.vesting.v1beta1.MsgCreate" +
-      "PermanentLockedAccountResponse\022\230\001\n\034Creat" +
-      "ePeriodicVestingAccount\0227.cosmos.vesting" +
-      ".v1beta1.MsgCreatePeriodicVestingAccount" +
-      "\032?.cosmos.vesting.v1beta1.MsgCreatePerio" +
-      "dicVestingAccountResponse\032\005\200\347\260*\001B\320\001\n\032com" +
-      ".cosmos.vesting.v1beta1B\007TxProtoZ1github" +
-      ".com/cosmos/cosmos-sdk/x/auth/vesting/ty" +
-      "pes\242\002\003CVX\252\002\026Cosmos.Vesting.V1beta1\312\002\026Cos" +
-      "mos\\Vesting\\V1beta1\342\002\"Cosmos\\Vesting\\V1b" +
-      "eta1\\GPBMetadata\352\002\030Cosmos::Vesting::V1be" +
-      "ta1b\006proto3"
+      "ddress\022h\n\006amount\030\003 \003(\0132\031.cosmos.base.v1b" +
+      "eta1.CoinB5\310\336\037\000\252\337\037(github.com/cosmos/cos" +
+      "mos-sdk/types.Coins\250\347\260*\001R\006amount\022\031\n\010end_" +
+      "time\030\004 \001(\003R\007endTime\022\030\n\007delayed\030\005 \001(\010R\007de" +
+      "layed:<\350\240\037\001\202\347\260*\014from_address\212\347\260*\"cosmos-" +
+      "sdk/MsgCreateVestingAccount\"!\n\037MsgCreate" +
+      "VestingAccountResponse\"\276\002\n\037MsgCreatePerm" +
+      "anentLockedAccount\022:\n\014from_address\030\001 \001(\t" +
+      "B\027\362\336\037\023yaml:\"from_address\"R\013fromAddress\0224" +
+      "\n\nto_address\030\002 \001(\tB\025\362\336\037\021yaml:\"to_address" +
+      "\"R\ttoAddress\022h\n\006amount\030\003 \003(\0132\031.cosmos.ba" +
+      "se.v1beta1.CoinB5\310\336\037\000\252\337\037(github.com/cosm" +
+      "os/cosmos-sdk/types.Coins\250\347\260*\001R\006amount:?" +
+      "\350\240\037\001\202\347\260*\014from_address\212\347\260*%cosmos-sdk/Msg" +
+      "CreatePermLockedAccount\")\n\'MsgCreatePerm" +
+      "anentLockedAccountResponse\"\234\002\n\037MsgCreate" +
+      "PeriodicVestingAccount\022!\n\014from_address\030\001" +
+      " \001(\tR\013fromAddress\022\035\n\nto_address\030\002 \001(\tR\tt" +
+      "oAddress\022\035\n\nstart_time\030\003 \001(\003R\tstartTime\022" +
+      "R\n\017vesting_periods\030\004 \003(\0132\036.cosmos.vestin" +
+      "g.v1beta1.PeriodB\t\310\336\037\000\250\347\260*\001R\016vestingPeri" +
+      "ods:D\350\240\037\000\202\347\260*\014from_address\212\347\260**cosmos-sd" +
+      "k/MsgCreatePeriodicVestingAccount\")\n\'Msg" +
+      "CreatePeriodicVestingAccountResponse2\305\003\n" +
+      "\003Msg\022\200\001\n\024CreateVestingAccount\022/.cosmos.v" +
+      "esting.v1beta1.MsgCreateVestingAccount\0327" +
+      ".cosmos.vesting.v1beta1.MsgCreateVesting" +
+      "AccountResponse\022\230\001\n\034CreatePermanentLocke" +
+      "dAccount\0227.cosmos.vesting.v1beta1.MsgCre" +
+      "atePermanentLockedAccount\032?.cosmos.vesti" +
+      "ng.v1beta1.MsgCreatePermanentLockedAccou" +
+      "ntResponse\022\230\001\n\034CreatePeriodicVestingAcco" +
+      "unt\0227.cosmos.vesting.v1beta1.MsgCreatePe" +
+      "riodicVestingAccount\032?.cosmos.vesting.v1" +
+      "beta1.MsgCreatePeriodicVestingAccountRes" +
+      "ponse\032\005\200\347\260*\001B\320\001\n\032com.cosmos.vesting.v1be" +
+      "ta1B\007TxProtoZ1github.com/cosmos/cosmos-s" +
+      "dk/x/auth/vesting/types\242\002\003CVX\252\002\026Cosmos.V" +
+      "esting.V1beta1\312\002\026Cosmos\\Vesting\\V1beta1\342" +
+      "\002\"Cosmos\\Vesting\\V1beta1\\GPBMetadata\352\002\030C" +
+      "osmos::Vesting::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4980,7 +4875,7 @@ public final class TxProto {
     internal_static_cosmos_vesting_v1beta1_MsgCreateVestingAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cosmos_vesting_v1beta1_MsgCreateVestingAccount_descriptor,
-        new java.lang.String[] { "FromAddress", "ToAddress", "Amount", "EndTime", "Delayed", "StartTime", });
+        new java.lang.String[] { "FromAddress", "ToAddress", "Amount", "EndTime", "Delayed", });
     internal_static_cosmos_vesting_v1beta1_MsgCreateVestingAccountResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cosmos_vesting_v1beta1_MsgCreateVestingAccountResponse_fieldAccessorTable = new
@@ -5014,7 +4909,6 @@ public final class TxProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.dontOmitempty);
-    registry.add(com.amino.AminoProto.encoding);
     registry.add(com.amino.AminoProto.name);
     registry.add(com.cosmos.msg.v1.MsgProto.service);
     registry.add(com.cosmos.msg.v1.MsgProto.signer);

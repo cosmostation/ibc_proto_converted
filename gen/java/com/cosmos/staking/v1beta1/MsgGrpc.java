@@ -235,35 +235,221 @@ public final class MsgGrpc {
     return getUpdateParamsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey,
-      com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse> getRotateConsPubKeyMethod;
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator,
+      com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse> getUnbondValidatorMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RotateConsPubKey",
-      requestType = com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey.class,
-      responseType = com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "UnbondValidator",
+      requestType = com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator.class,
+      responseType = com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey,
-      com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse> getRotateConsPubKeyMethod() {
-    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey, com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse> getRotateConsPubKeyMethod;
-    if ((getRotateConsPubKeyMethod = MsgGrpc.getRotateConsPubKeyMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator,
+      com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse> getUnbondValidatorMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator, com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse> getUnbondValidatorMethod;
+    if ((getUnbondValidatorMethod = MsgGrpc.getUnbondValidatorMethod) == null) {
       synchronized (MsgGrpc.class) {
-        if ((getRotateConsPubKeyMethod = MsgGrpc.getRotateConsPubKeyMethod) == null) {
-          MsgGrpc.getRotateConsPubKeyMethod = getRotateConsPubKeyMethod =
-              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey, com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse>newBuilder()
+        if ((getUnbondValidatorMethod = MsgGrpc.getUnbondValidatorMethod) == null) {
+          MsgGrpc.getUnbondValidatorMethod = getUnbondValidatorMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator, com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RotateConsPubKey"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnbondValidator"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey.getDefaultInstance()))
+                  com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("RotateConsPubKey"))
+                  com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UnbondValidator"))
               .build();
         }
       }
     }
-    return getRotateConsPubKeyMethod;
+    return getUnbondValidatorMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse> getTokenizeSharesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TokenizeShares",
+      requestType = com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares.class,
+      responseType = com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse> getTokenizeSharesMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares, com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse> getTokenizeSharesMethod;
+    if ((getTokenizeSharesMethod = MsgGrpc.getTokenizeSharesMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getTokenizeSharesMethod = MsgGrpc.getTokenizeSharesMethod) == null) {
+          MsgGrpc.getTokenizeSharesMethod = getTokenizeSharesMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares, com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TokenizeShares"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("TokenizeShares"))
+              .build();
+        }
+      }
+    }
+    return getTokenizeSharesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse> getRedeemTokensForSharesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RedeemTokensForShares",
+      requestType = com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares.class,
+      responseType = com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse> getRedeemTokensForSharesMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares, com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse> getRedeemTokensForSharesMethod;
+    if ((getRedeemTokensForSharesMethod = MsgGrpc.getRedeemTokensForSharesMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getRedeemTokensForSharesMethod = MsgGrpc.getRedeemTokensForSharesMethod) == null) {
+          MsgGrpc.getRedeemTokensForSharesMethod = getRedeemTokensForSharesMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares, com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RedeemTokensForShares"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("RedeemTokensForShares"))
+              .build();
+        }
+      }
+    }
+    return getRedeemTokensForSharesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord,
+      com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse> getTransferTokenizeShareRecordMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TransferTokenizeShareRecord",
+      requestType = com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord.class,
+      responseType = com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord,
+      com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse> getTransferTokenizeShareRecordMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord, com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse> getTransferTokenizeShareRecordMethod;
+    if ((getTransferTokenizeShareRecordMethod = MsgGrpc.getTransferTokenizeShareRecordMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getTransferTokenizeShareRecordMethod = MsgGrpc.getTransferTokenizeShareRecordMethod) == null) {
+          MsgGrpc.getTransferTokenizeShareRecordMethod = getTransferTokenizeShareRecordMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord, com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransferTokenizeShareRecord"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("TransferTokenizeShareRecord"))
+              .build();
+        }
+      }
+    }
+    return getTransferTokenizeShareRecordMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse> getDisableTokenizeSharesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DisableTokenizeShares",
+      requestType = com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares.class,
+      responseType = com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse> getDisableTokenizeSharesMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares, com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse> getDisableTokenizeSharesMethod;
+    if ((getDisableTokenizeSharesMethod = MsgGrpc.getDisableTokenizeSharesMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getDisableTokenizeSharesMethod = MsgGrpc.getDisableTokenizeSharesMethod) == null) {
+          MsgGrpc.getDisableTokenizeSharesMethod = getDisableTokenizeSharesMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares, com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableTokenizeShares"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("DisableTokenizeShares"))
+              .build();
+        }
+      }
+    }
+    return getDisableTokenizeSharesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse> getEnableTokenizeSharesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableTokenizeShares",
+      requestType = com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares.class,
+      responseType = com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares,
+      com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse> getEnableTokenizeSharesMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares, com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse> getEnableTokenizeSharesMethod;
+    if ((getEnableTokenizeSharesMethod = MsgGrpc.getEnableTokenizeSharesMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getEnableTokenizeSharesMethod = MsgGrpc.getEnableTokenizeSharesMethod) == null) {
+          MsgGrpc.getEnableTokenizeSharesMethod = getEnableTokenizeSharesMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares, com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableTokenizeShares"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("EnableTokenizeShares"))
+              .build();
+        }
+      }
+    }
+    return getEnableTokenizeSharesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond,
+      com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse> getValidatorBondMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ValidatorBond",
+      requestType = com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond.class,
+      responseType = com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond,
+      com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse> getValidatorBondMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond, com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse> getValidatorBondMethod;
+    if ((getValidatorBondMethod = MsgGrpc.getValidatorBondMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getValidatorBondMethod = MsgGrpc.getValidatorBondMethod) == null) {
+          MsgGrpc.getValidatorBondMethod = getValidatorBondMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond, com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ValidatorBond"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("ValidatorBond"))
+              .build();
+        }
+      }
+    }
+    return getValidatorBondMethod;
   }
 
   /**
@@ -396,14 +582,78 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * RotateConsPubKey defines an operation for rotating the consensus keys
-     * of a validator.
-     * Since: cosmos-sdk 0.48
+     * UnbondValidator defines a method for performing the status transition for a validator
+     * from bonded to unbonding
+     * This allows a validator to stop their services and jail themselves without
+     * experiencing a slash
      * </pre>
      */
-    default void rotateConsPubKey(com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey request,
-        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRotateConsPubKeyMethod(), responseObserver);
+    default void unbondValidator(com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnbondValidatorMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TokenizeShares defines a method for tokenizing shares from a validator.
+     * </pre>
+     */
+    default void tokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTokenizeSharesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RedeemTokensForShares defines a method for redeeming tokens from a validator for
+     * shares.
+     * </pre>
+     */
+    default void redeemTokensForShares(com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRedeemTokensForSharesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TransferTokenizeShareRecord defines a method to transfer ownership of
+     * TokenizeShareRecord
+     * </pre>
+     */
+    default void transferTokenizeShareRecord(com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferTokenizeShareRecordMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DisableTokenizeShares defines a method to prevent the tokenization of an addresses stake
+     * </pre>
+     */
+    default void disableTokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableTokenizeSharesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EnableTokenizeShares defines a method to re-enable the tokenization of an addresseses stake
+     * after it has been disabled
+     * </pre>
+     */
+    default void enableTokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableTokenizeSharesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ValidatorBond defines a method for performing a validator self-bond
+     * </pre>
+     */
+    default void validatorBond(com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidatorBondMethod(), responseObserver);
     }
   }
 
@@ -526,15 +776,85 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * RotateConsPubKey defines an operation for rotating the consensus keys
-     * of a validator.
-     * Since: cosmos-sdk 0.48
+     * UnbondValidator defines a method for performing the status transition for a validator
+     * from bonded to unbonding
+     * This allows a validator to stop their services and jail themselves without
+     * experiencing a slash
      * </pre>
      */
-    public void rotateConsPubKey(com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey request,
-        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse> responseObserver) {
+    public void unbondValidator(com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRotateConsPubKeyMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUnbondValidatorMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TokenizeShares defines a method for tokenizing shares from a validator.
+     * </pre>
+     */
+    public void tokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTokenizeSharesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RedeemTokensForShares defines a method for redeeming tokens from a validator for
+     * shares.
+     * </pre>
+     */
+    public void redeemTokensForShares(com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRedeemTokensForSharesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TransferTokenizeShareRecord defines a method to transfer ownership of
+     * TokenizeShareRecord
+     * </pre>
+     */
+    public void transferTokenizeShareRecord(com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTransferTokenizeShareRecordMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DisableTokenizeShares defines a method to prevent the tokenization of an addresses stake
+     * </pre>
+     */
+    public void disableTokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDisableTokenizeSharesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EnableTokenizeShares defines a method to re-enable the tokenization of an addresseses stake
+     * after it has been disabled
+     * </pre>
+     */
+    public void enableTokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableTokenizeSharesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ValidatorBond defines a method for performing a validator self-bond
+     * </pre>
+     */
+    public void validatorBond(com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond request,
+        io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getValidatorBondMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -636,14 +956,78 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * RotateConsPubKey defines an operation for rotating the consensus keys
-     * of a validator.
-     * Since: cosmos-sdk 0.48
+     * UnbondValidator defines a method for performing the status transition for a validator
+     * from bonded to unbonding
+     * This allows a validator to stop their services and jail themselves without
+     * experiencing a slash
      * </pre>
      */
-    public com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse rotateConsPubKey(com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey request) {
+    public com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse unbondValidator(com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRotateConsPubKeyMethod(), getCallOptions(), request);
+          getChannel(), getUnbondValidatorMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TokenizeShares defines a method for tokenizing shares from a validator.
+     * </pre>
+     */
+    public com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse tokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTokenizeSharesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RedeemTokensForShares defines a method for redeeming tokens from a validator for
+     * shares.
+     * </pre>
+     */
+    public com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse redeemTokensForShares(com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRedeemTokensForSharesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TransferTokenizeShareRecord defines a method to transfer ownership of
+     * TokenizeShareRecord
+     * </pre>
+     */
+    public com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse transferTokenizeShareRecord(com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTransferTokenizeShareRecordMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DisableTokenizeShares defines a method to prevent the tokenization of an addresses stake
+     * </pre>
+     */
+    public com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse disableTokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDisableTokenizeSharesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * EnableTokenizeShares defines a method to re-enable the tokenization of an addresseses stake
+     * after it has been disabled
+     * </pre>
+     */
+    public com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse enableTokenizeShares(com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableTokenizeSharesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ValidatorBond defines a method for performing a validator self-bond
+     * </pre>
+     */
+    public com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse validatorBond(com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getValidatorBondMethod(), getCallOptions(), request);
     }
   }
 
@@ -752,15 +1136,85 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * RotateConsPubKey defines an operation for rotating the consensus keys
-     * of a validator.
-     * Since: cosmos-sdk 0.48
+     * UnbondValidator defines a method for performing the status transition for a validator
+     * from bonded to unbonding
+     * This allows a validator to stop their services and jail themselves without
+     * experiencing a slash
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse> rotateConsPubKey(
-        com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse> unbondValidator(
+        com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRotateConsPubKeyMethod(), getCallOptions()), request);
+          getChannel().newCall(getUnbondValidatorMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TokenizeShares defines a method for tokenizing shares from a validator.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse> tokenizeShares(
+        com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTokenizeSharesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RedeemTokensForShares defines a method for redeeming tokens from a validator for
+     * shares.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse> redeemTokensForShares(
+        com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRedeemTokensForSharesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TransferTokenizeShareRecord defines a method to transfer ownership of
+     * TokenizeShareRecord
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse> transferTokenizeShareRecord(
+        com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTransferTokenizeShareRecordMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DisableTokenizeShares defines a method to prevent the tokenization of an addresses stake
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse> disableTokenizeShares(
+        com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDisableTokenizeSharesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * EnableTokenizeShares defines a method to re-enable the tokenization of an addresseses stake
+     * after it has been disabled
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse> enableTokenizeShares(
+        com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableTokenizeSharesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ValidatorBond defines a method for performing a validator self-bond
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse> validatorBond(
+        com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getValidatorBondMethod(), getCallOptions()), request);
     }
   }
 
@@ -771,7 +1225,13 @@ public final class MsgGrpc {
   private static final int METHODID_UNDELEGATE = 4;
   private static final int METHODID_CANCEL_UNBONDING_DELEGATION = 5;
   private static final int METHODID_UPDATE_PARAMS = 6;
-  private static final int METHODID_ROTATE_CONS_PUB_KEY = 7;
+  private static final int METHODID_UNBOND_VALIDATOR = 7;
+  private static final int METHODID_TOKENIZE_SHARES = 8;
+  private static final int METHODID_REDEEM_TOKENS_FOR_SHARES = 9;
+  private static final int METHODID_TRANSFER_TOKENIZE_SHARE_RECORD = 10;
+  private static final int METHODID_DISABLE_TOKENIZE_SHARES = 11;
+  private static final int METHODID_ENABLE_TOKENIZE_SHARES = 12;
+  private static final int METHODID_VALIDATOR_BOND = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -818,9 +1278,33 @@ public final class MsgGrpc {
           serviceImpl.updateParams((com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) request,
               (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsResponse>) responseObserver);
           break;
-        case METHODID_ROTATE_CONS_PUB_KEY:
-          serviceImpl.rotateConsPubKey((com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey) request,
-              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse>) responseObserver);
+        case METHODID_UNBOND_VALIDATOR:
+          serviceImpl.unbondValidator((com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse>) responseObserver);
+          break;
+        case METHODID_TOKENIZE_SHARES:
+          serviceImpl.tokenizeShares((com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse>) responseObserver);
+          break;
+        case METHODID_REDEEM_TOKENS_FOR_SHARES:
+          serviceImpl.redeemTokensForShares((com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse>) responseObserver);
+          break;
+        case METHODID_TRANSFER_TOKENIZE_SHARE_RECORD:
+          serviceImpl.transferTokenizeShareRecord((com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse>) responseObserver);
+          break;
+        case METHODID_DISABLE_TOKENIZE_SHARES:
+          serviceImpl.disableTokenizeShares((com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse>) responseObserver);
+          break;
+        case METHODID_ENABLE_TOKENIZE_SHARES:
+          serviceImpl.enableTokenizeShares((com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse>) responseObserver);
+          break;
+        case METHODID_VALIDATOR_BOND:
+          serviceImpl.validatorBond((com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -890,12 +1374,54 @@ public final class MsgGrpc {
               com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsResponse>(
                 service, METHODID_UPDATE_PARAMS)))
         .addMethod(
-          getRotateConsPubKeyMethod(),
+          getUnbondValidatorMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKey,
-              com.cosmos.staking.v1beta1.TxProto.MsgRotateConsPubKeyResponse>(
-                service, METHODID_ROTATE_CONS_PUB_KEY)))
+              com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidator,
+              com.cosmos.staking.v1beta1.TxProto.MsgUnbondValidatorResponse>(
+                service, METHODID_UNBOND_VALIDATOR)))
+        .addMethod(
+          getTokenizeSharesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.cosmos.staking.v1beta1.TxProto.MsgTokenizeShares,
+              com.cosmos.staking.v1beta1.TxProto.MsgTokenizeSharesResponse>(
+                service, METHODID_TOKENIZE_SHARES)))
+        .addMethod(
+          getRedeemTokensForSharesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForShares,
+              com.cosmos.staking.v1beta1.TxProto.MsgRedeemTokensForSharesResponse>(
+                service, METHODID_REDEEM_TOKENS_FOR_SHARES)))
+        .addMethod(
+          getTransferTokenizeShareRecordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecord,
+              com.cosmos.staking.v1beta1.TxProto.MsgTransferTokenizeShareRecordResponse>(
+                service, METHODID_TRANSFER_TOKENIZE_SHARE_RECORD)))
+        .addMethod(
+          getDisableTokenizeSharesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeShares,
+              com.cosmos.staking.v1beta1.TxProto.MsgDisableTokenizeSharesResponse>(
+                service, METHODID_DISABLE_TOKENIZE_SHARES)))
+        .addMethod(
+          getEnableTokenizeSharesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeShares,
+              com.cosmos.staking.v1beta1.TxProto.MsgEnableTokenizeSharesResponse>(
+                service, METHODID_ENABLE_TOKENIZE_SHARES)))
+        .addMethod(
+          getValidatorBondMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.cosmos.staking.v1beta1.TxProto.MsgValidatorBond,
+              com.cosmos.staking.v1beta1.TxProto.MsgValidatorBondResponse>(
+                service, METHODID_VALIDATOR_BOND)))
         .build();
   }
 
@@ -951,7 +1477,13 @@ public final class MsgGrpc {
               .addMethod(getUndelegateMethod())
               .addMethod(getCancelUnbondingDelegationMethod())
               .addMethod(getUpdateParamsMethod())
-              .addMethod(getRotateConsPubKeyMethod())
+              .addMethod(getUnbondValidatorMethod())
+              .addMethod(getTokenizeSharesMethod())
+              .addMethod(getRedeemTokensForSharesMethod())
+              .addMethod(getTransferTokenizeShareRecordMethod())
+              .addMethod(getDisableTokenizeSharesMethod())
+              .addMethod(getEnableTokenizeSharesMethod())
+              .addMethod(getValidatorBondMethod())
               .build();
         }
       }

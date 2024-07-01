@@ -43,10 +43,15 @@ internal protocol Feemarket_Feemarket_V1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Feemarket_Feemarket_V1_StateRequest, Feemarket_Feemarket_V1_StateResponse>
 
-  func baseFee(
-    _ request: Feemarket_Feemarket_V1_BaseFeeRequest,
+  func gasPrice(
+    _ request: Feemarket_Feemarket_V1_GasPriceRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Feemarket_Feemarket_V1_BaseFeeRequest, Feemarket_Feemarket_V1_BaseFeeResponse>
+  ) -> UnaryCall<Feemarket_Feemarket_V1_GasPriceRequest, Feemarket_Feemarket_V1_GasPriceResponse>
+
+  func gasPrices(
+    _ request: Feemarket_Feemarket_V1_GasPricesRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Feemarket_Feemarket_V1_GasPricesRequest, Feemarket_Feemarket_V1_GasPricesResponse>
 }
 
 extension Feemarket_Feemarket_V1_QueryClientProtocol {
@@ -90,21 +95,41 @@ extension Feemarket_Feemarket_V1_QueryClientProtocol {
     )
   }
 
-  /// BaseFee returns the current feemarket module base fee.
+  /// GasPrice returns the current feemarket module gas price
+  /// for specified denom.
   ///
   /// - Parameters:
-  ///   - request: Request to send to BaseFee.
+  ///   - request: Request to send to GasPrice.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func baseFee(
-    _ request: Feemarket_Feemarket_V1_BaseFeeRequest,
+  internal func gasPrice(
+    _ request: Feemarket_Feemarket_V1_GasPriceRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Feemarket_Feemarket_V1_BaseFeeRequest, Feemarket_Feemarket_V1_BaseFeeResponse> {
+  ) -> UnaryCall<Feemarket_Feemarket_V1_GasPriceRequest, Feemarket_Feemarket_V1_GasPriceResponse> {
     return self.makeUnaryCall(
-      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.baseFee.path,
+      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrice.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBaseFeeInterceptors() ?? []
+      interceptors: self.interceptors?.makeGasPriceInterceptors() ?? []
+    )
+  }
+
+  /// GasPrices returns the current feemarket module list of gas prices
+  /// in all available denoms.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to GasPrices.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func gasPrices(
+    _ request: Feemarket_Feemarket_V1_GasPricesRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Feemarket_Feemarket_V1_GasPricesRequest, Feemarket_Feemarket_V1_GasPricesResponse> {
+    return self.makeUnaryCall(
+      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrices.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGasPricesInterceptors() ?? []
     )
   }
 }
@@ -182,10 +207,15 @@ internal protocol Feemarket_Feemarket_V1_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Feemarket_Feemarket_V1_StateRequest, Feemarket_Feemarket_V1_StateResponse>
 
-  func makeBaseFeeCall(
-    _ request: Feemarket_Feemarket_V1_BaseFeeRequest,
+  func makeGasPriceCall(
+    _ request: Feemarket_Feemarket_V1_GasPriceRequest,
     callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Feemarket_Feemarket_V1_BaseFeeRequest, Feemarket_Feemarket_V1_BaseFeeResponse>
+  ) -> GRPCAsyncUnaryCall<Feemarket_Feemarket_V1_GasPriceRequest, Feemarket_Feemarket_V1_GasPriceResponse>
+
+  func makeGasPricesCall(
+    _ request: Feemarket_Feemarket_V1_GasPricesRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Feemarket_Feemarket_V1_GasPricesRequest, Feemarket_Feemarket_V1_GasPricesResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -222,15 +252,27 @@ extension Feemarket_Feemarket_V1_QueryAsyncClientProtocol {
     )
   }
 
-  internal func makeBaseFeeCall(
-    _ request: Feemarket_Feemarket_V1_BaseFeeRequest,
+  internal func makeGasPriceCall(
+    _ request: Feemarket_Feemarket_V1_GasPriceRequest,
     callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Feemarket_Feemarket_V1_BaseFeeRequest, Feemarket_Feemarket_V1_BaseFeeResponse> {
+  ) -> GRPCAsyncUnaryCall<Feemarket_Feemarket_V1_GasPriceRequest, Feemarket_Feemarket_V1_GasPriceResponse> {
     return self.makeAsyncUnaryCall(
-      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.baseFee.path,
+      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrice.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBaseFeeInterceptors() ?? []
+      interceptors: self.interceptors?.makeGasPriceInterceptors() ?? []
+    )
+  }
+
+  internal func makeGasPricesCall(
+    _ request: Feemarket_Feemarket_V1_GasPricesRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Feemarket_Feemarket_V1_GasPricesRequest, Feemarket_Feemarket_V1_GasPricesResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrices.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGasPricesInterceptors() ?? []
     )
   }
 }
@@ -261,15 +303,27 @@ extension Feemarket_Feemarket_V1_QueryAsyncClientProtocol {
     )
   }
 
-  internal func baseFee(
-    _ request: Feemarket_Feemarket_V1_BaseFeeRequest,
+  internal func gasPrice(
+    _ request: Feemarket_Feemarket_V1_GasPriceRequest,
     callOptions: CallOptions? = nil
-  ) async throws -> Feemarket_Feemarket_V1_BaseFeeResponse {
+  ) async throws -> Feemarket_Feemarket_V1_GasPriceResponse {
     return try await self.performAsyncUnaryCall(
-      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.baseFee.path,
+      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrice.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBaseFeeInterceptors() ?? []
+      interceptors: self.interceptors?.makeGasPriceInterceptors() ?? []
+    )
+  }
+
+  internal func gasPrices(
+    _ request: Feemarket_Feemarket_V1_GasPricesRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Feemarket_Feemarket_V1_GasPricesResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrices.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGasPricesInterceptors() ?? []
     )
   }
 }
@@ -299,8 +353,11 @@ internal protocol Feemarket_Feemarket_V1_QueryClientInterceptorFactoryProtocol: 
   /// - Returns: Interceptors to use when invoking 'state'.
   func makeStateInterceptors() -> [ClientInterceptor<Feemarket_Feemarket_V1_StateRequest, Feemarket_Feemarket_V1_StateResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'baseFee'.
-  func makeBaseFeeInterceptors() -> [ClientInterceptor<Feemarket_Feemarket_V1_BaseFeeRequest, Feemarket_Feemarket_V1_BaseFeeResponse>]
+  /// - Returns: Interceptors to use when invoking 'gasPrice'.
+  func makeGasPriceInterceptors() -> [ClientInterceptor<Feemarket_Feemarket_V1_GasPriceRequest, Feemarket_Feemarket_V1_GasPriceResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'gasPrices'.
+  func makeGasPricesInterceptors() -> [ClientInterceptor<Feemarket_Feemarket_V1_GasPricesRequest, Feemarket_Feemarket_V1_GasPricesResponse>]
 }
 
 internal enum Feemarket_Feemarket_V1_QueryClientMetadata {
@@ -310,7 +367,8 @@ internal enum Feemarket_Feemarket_V1_QueryClientMetadata {
     methods: [
       Feemarket_Feemarket_V1_QueryClientMetadata.Methods.params,
       Feemarket_Feemarket_V1_QueryClientMetadata.Methods.state,
-      Feemarket_Feemarket_V1_QueryClientMetadata.Methods.baseFee,
+      Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrice,
+      Feemarket_Feemarket_V1_QueryClientMetadata.Methods.gasPrices,
     ]
   )
 
@@ -327,9 +385,15 @@ internal enum Feemarket_Feemarket_V1_QueryClientMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let baseFee = GRPCMethodDescriptor(
-      name: "BaseFee",
-      path: "/feemarket.feemarket.v1.Query/BaseFee",
+    internal static let gasPrice = GRPCMethodDescriptor(
+      name: "GasPrice",
+      path: "/feemarket.feemarket.v1.Query/GasPrice",
+      type: GRPCCallType.unary
+    )
+
+    internal static let gasPrices = GRPCMethodDescriptor(
+      name: "GasPrices",
+      path: "/feemarket.feemarket.v1.Query/GasPrices",
       type: GRPCCallType.unary
     )
   }
@@ -347,8 +411,13 @@ internal protocol Feemarket_Feemarket_V1_QueryProvider: CallHandlerProvider {
   /// State returns the current feemarket module state.
   func state(request: Feemarket_Feemarket_V1_StateRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Feemarket_Feemarket_V1_StateResponse>
 
-  /// BaseFee returns the current feemarket module base fee.
-  func baseFee(request: Feemarket_Feemarket_V1_BaseFeeRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Feemarket_Feemarket_V1_BaseFeeResponse>
+  /// GasPrice returns the current feemarket module gas price
+  /// for specified denom.
+  func gasPrice(request: Feemarket_Feemarket_V1_GasPriceRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Feemarket_Feemarket_V1_GasPriceResponse>
+
+  /// GasPrices returns the current feemarket module list of gas prices
+  /// in all available denoms.
+  func gasPrices(request: Feemarket_Feemarket_V1_GasPricesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Feemarket_Feemarket_V1_GasPricesResponse>
 }
 
 extension Feemarket_Feemarket_V1_QueryProvider {
@@ -381,13 +450,22 @@ extension Feemarket_Feemarket_V1_QueryProvider {
         userFunction: self.state(request:context:)
       )
 
-    case "BaseFee":
+    case "GasPrice":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Feemarket_Feemarket_V1_BaseFeeRequest>(),
-        responseSerializer: ProtobufSerializer<Feemarket_Feemarket_V1_BaseFeeResponse>(),
-        interceptors: self.interceptors?.makeBaseFeeInterceptors() ?? [],
-        userFunction: self.baseFee(request:context:)
+        requestDeserializer: ProtobufDeserializer<Feemarket_Feemarket_V1_GasPriceRequest>(),
+        responseSerializer: ProtobufSerializer<Feemarket_Feemarket_V1_GasPriceResponse>(),
+        interceptors: self.interceptors?.makeGasPriceInterceptors() ?? [],
+        userFunction: self.gasPrice(request:context:)
+      )
+
+    case "GasPrices":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Feemarket_Feemarket_V1_GasPricesRequest>(),
+        responseSerializer: ProtobufSerializer<Feemarket_Feemarket_V1_GasPricesResponse>(),
+        interceptors: self.interceptors?.makeGasPricesInterceptors() ?? [],
+        userFunction: self.gasPrices(request:context:)
       )
 
     default:
@@ -416,11 +494,19 @@ internal protocol Feemarket_Feemarket_V1_QueryAsyncProvider: CallHandlerProvider
     context: GRPCAsyncServerCallContext
   ) async throws -> Feemarket_Feemarket_V1_StateResponse
 
-  /// BaseFee returns the current feemarket module base fee.
-  @Sendable func baseFee(
-    request: Feemarket_Feemarket_V1_BaseFeeRequest,
+  /// GasPrice returns the current feemarket module gas price
+  /// for specified denom.
+  @Sendable func gasPrice(
+    request: Feemarket_Feemarket_V1_GasPriceRequest,
     context: GRPCAsyncServerCallContext
-  ) async throws -> Feemarket_Feemarket_V1_BaseFeeResponse
+  ) async throws -> Feemarket_Feemarket_V1_GasPriceResponse
+
+  /// GasPrices returns the current feemarket module list of gas prices
+  /// in all available denoms.
+  @Sendable func gasPrices(
+    request: Feemarket_Feemarket_V1_GasPricesRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Feemarket_Feemarket_V1_GasPricesResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -460,13 +546,22 @@ extension Feemarket_Feemarket_V1_QueryAsyncProvider {
         wrapping: self.state(request:context:)
       )
 
-    case "BaseFee":
+    case "GasPrice":
       return GRPCAsyncServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Feemarket_Feemarket_V1_BaseFeeRequest>(),
-        responseSerializer: ProtobufSerializer<Feemarket_Feemarket_V1_BaseFeeResponse>(),
-        interceptors: self.interceptors?.makeBaseFeeInterceptors() ?? [],
-        wrapping: self.baseFee(request:context:)
+        requestDeserializer: ProtobufDeserializer<Feemarket_Feemarket_V1_GasPriceRequest>(),
+        responseSerializer: ProtobufSerializer<Feemarket_Feemarket_V1_GasPriceResponse>(),
+        interceptors: self.interceptors?.makeGasPriceInterceptors() ?? [],
+        wrapping: self.gasPrice(request:context:)
+      )
+
+    case "GasPrices":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Feemarket_Feemarket_V1_GasPricesRequest>(),
+        responseSerializer: ProtobufSerializer<Feemarket_Feemarket_V1_GasPricesResponse>(),
+        interceptors: self.interceptors?.makeGasPricesInterceptors() ?? [],
+        wrapping: self.gasPrices(request:context:)
       )
 
     default:
@@ -485,9 +580,13 @@ internal protocol Feemarket_Feemarket_V1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeStateInterceptors() -> [ServerInterceptor<Feemarket_Feemarket_V1_StateRequest, Feemarket_Feemarket_V1_StateResponse>]
 
-  /// - Returns: Interceptors to use when handling 'baseFee'.
+  /// - Returns: Interceptors to use when handling 'gasPrice'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeBaseFeeInterceptors() -> [ServerInterceptor<Feemarket_Feemarket_V1_BaseFeeRequest, Feemarket_Feemarket_V1_BaseFeeResponse>]
+  func makeGasPriceInterceptors() -> [ServerInterceptor<Feemarket_Feemarket_V1_GasPriceRequest, Feemarket_Feemarket_V1_GasPriceResponse>]
+
+  /// - Returns: Interceptors to use when handling 'gasPrices'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeGasPricesInterceptors() -> [ServerInterceptor<Feemarket_Feemarket_V1_GasPricesRequest, Feemarket_Feemarket_V1_GasPricesResponse>]
 }
 
 internal enum Feemarket_Feemarket_V1_QueryServerMetadata {
@@ -497,7 +596,8 @@ internal enum Feemarket_Feemarket_V1_QueryServerMetadata {
     methods: [
       Feemarket_Feemarket_V1_QueryServerMetadata.Methods.params,
       Feemarket_Feemarket_V1_QueryServerMetadata.Methods.state,
-      Feemarket_Feemarket_V1_QueryServerMetadata.Methods.baseFee,
+      Feemarket_Feemarket_V1_QueryServerMetadata.Methods.gasPrice,
+      Feemarket_Feemarket_V1_QueryServerMetadata.Methods.gasPrices,
     ]
   )
 
@@ -514,9 +614,15 @@ internal enum Feemarket_Feemarket_V1_QueryServerMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let baseFee = GRPCMethodDescriptor(
-      name: "BaseFee",
-      path: "/feemarket.feemarket.v1.Query/BaseFee",
+    internal static let gasPrice = GRPCMethodDescriptor(
+      name: "GasPrice",
+      path: "/feemarket.feemarket.v1.Query/GasPrice",
+      type: GRPCCallType.unary
+    )
+
+    internal static let gasPrices = GRPCMethodDescriptor(
+      name: "GasPrices",
+      path: "/feemarket.feemarket.v1.Query/GasPrices",
       type: GRPCCallType.unary
     )
   }

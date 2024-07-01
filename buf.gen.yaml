@@ -4,13 +4,13 @@ managed:
   java_multiple_files: false
 
 plugins:  
-    # SWIFT proto & grpc
-    - plugin: buf.build/apple/swift:v1.21.0
-      opt: FileNaming=PathToUnderscores
-      out: gen/swift
-    - plugin: buf.build/grpc/swift:v1.16.0
-      opt: FileNaming=PathToUnderscores
-      out: gen/swift
+    # # SWIFT proto & grpc
+    # - plugin: buf.build/apple/swift:v1.21.0
+    #   opt: FileNaming=PathToUnderscores
+    #   out: gen/swift
+    # - plugin: buf.build/grpc/swift:v1.16.0
+    #   opt: FileNaming=PathToUnderscores
+    #   out: gen/swift
 
     ## JAVA proto & grpc
     - plugin: buf.build/protocolbuffers/java:v23.2
@@ -19,14 +19,14 @@ plugins:
       opt: paths=source_relative
       out: gen/java
 
-    ## JAVASCRIPT proto & grpc
-    - plugin: buf.build/protocolbuffers/js:v3.21.2
-      out: gen/js
-    - plugin: buf.build/grpc/node:v1.12.4
-      out: gen/js
+    # ## JAVASCRIPT proto & grpc
+    # - plugin: buf.build/protocolbuffers/js:v3.21.2
+    #   out: gen/js
+    # - plugin: buf.build/grpc/node:v1.12.4
+    #   out: gen/js
 
-    ## PYTHON proto & grpc
-    - plugin: buf.build/protocolbuffers/python
-      out: gen/python
-    - plugin: buf.build/grpc/python:v1.55.0
-      out: gen/python
+    # ## PYTHON proto & grpc
+    # - plugin: buf.build/protocolbuffers/python
+    #   out: gen/python
+    # - plugin: buf.build/grpc/python:v1.55.0
+    #   out: gen/python
