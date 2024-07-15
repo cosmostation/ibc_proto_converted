@@ -21,8 +21,11 @@ Using [buf](https://github.com/bufbuild)
 
 
  #### 🪐[Akash](https://github.com/akash-network/akash-api/tree/main/proto)
+ 
+ 
+ #### 🪐[Archway](https://github.com/archway-network/archway/tree/main/proto)
 
-
+ 
  #### 🪐AssetMantle [schema](https://github.com/AssetMantle/schema/tree/master/proto)  [modules](https://github.com/AssetMantle/modules/tree/master/proto)
 
 
@@ -57,6 +60,9 @@ Using [buf](https://github.com/bufbuild)
 
 
  #### 🪐[Desmos](https://github.com/desmos-labs/desmos/tree/master/proto)
+ 
+ 
+ #### 🪐[Dymenstion](https://github.com/dymensionxyz/dymension/tree/main/proto)
 
 
  #### 🪐Evmos [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)  [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
