@@ -20,7 +20,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-/// MsgCreateGauge creates a gague to distribute rewards to users
+/// MsgCreateGauge creates a gauge to distribute rewards to users
 struct Osmosis_Incentives_MsgCreateGauge {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -63,6 +63,15 @@ struct Osmosis_Incentives_MsgCreateGauge {
   /// num_epochs_paid_over is the number of epochs distribution will be completed
   /// over
   var numEpochsPaidOver: UInt64 = 0
+
+  /// pool_id is the ID of the pool that the gauge is meant to be associated
+  /// with. if pool_id is set, then the "QueryCondition.LockQueryType" must be
+  /// "NoLock" with all other fields of the "QueryCondition.LockQueryType" struct
+  /// unset, including "QueryCondition.Denom". However, note that, internally,
+  /// the empty string in "QueryCondition.Denom" ends up being overwritten with
+  /// incentivestypes.NoLockExternalGaugeDenom(<pool-id>) so that the gauges
+  /// associated with a pool can be queried by this prefix if needed.
+  var poolID: UInt64 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -112,11 +121,50 @@ struct Osmosis_Incentives_MsgAddToGaugeResponse {
   init() {}
 }
 
+/// MsgCreateGroup creates a group to distribute rewards to a group of pools
+struct Osmosis_Incentives_MsgCreateGroup {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// coins are the provided coins that the group will distribute
+  var coins: [Cosmos_Base_V1beta1_Coin] = []
+
+  /// num_epochs_paid_over is the number of epochs distribution will be completed
+  /// in. 0 means it's perpetual
+  var numEpochsPaidOver: UInt64 = 0
+
+  /// owner is the group owner's address
+  var owner: String = String()
+
+  /// pool_ids are the IDs of pools that the group is comprised of
+  var poolIds: [UInt64] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Incentives_MsgCreateGroupResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// group_id is the ID of the group that is created from this msg
+  var groupID: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Incentives_MsgCreateGauge: @unchecked Sendable {}
 extension Osmosis_Incentives_MsgCreateGaugeResponse: @unchecked Sendable {}
 extension Osmosis_Incentives_MsgAddToGauge: @unchecked Sendable {}
 extension Osmosis_Incentives_MsgAddToGaugeResponse: @unchecked Sendable {}
+extension Osmosis_Incentives_MsgCreateGroup: @unchecked Sendable {}
+extension Osmosis_Incentives_MsgCreateGroupResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -132,6 +180,7 @@ extension Osmosis_Incentives_MsgCreateGauge: SwiftProtobuf.Message, SwiftProtobu
     4: .same(proto: "coins"),
     5: .standard(proto: "start_time"),
     6: .standard(proto: "num_epochs_paid_over"),
+    7: .standard(proto: "pool_id"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -146,6 +195,7 @@ extension Osmosis_Incentives_MsgCreateGauge: SwiftProtobuf.Message, SwiftProtobu
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.coins) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._startTime) }()
       case 6: try { try decoder.decodeSingularUInt64Field(value: &self.numEpochsPaidOver) }()
+      case 7: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
       default: break
       }
     }
@@ -174,6 +224,9 @@ extension Osmosis_Incentives_MsgCreateGauge: SwiftProtobuf.Message, SwiftProtobu
     if self.numEpochsPaidOver != 0 {
       try visitor.visitSingularUInt64Field(value: self.numEpochsPaidOver, fieldNumber: 6)
     }
+    if self.poolID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.poolID, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -184,6 +237,7 @@ extension Osmosis_Incentives_MsgCreateGauge: SwiftProtobuf.Message, SwiftProtobu
     if lhs.coins != rhs.coins {return false}
     if lhs._startTime != rhs._startTime {return false}
     if lhs.numEpochsPaidOver != rhs.numEpochsPaidOver {return false}
+    if lhs.poolID != rhs.poolID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -266,6 +320,88 @@ extension Osmosis_Incentives_MsgAddToGaugeResponse: SwiftProtobuf.Message, Swift
   }
 
   static func ==(lhs: Osmosis_Incentives_MsgAddToGaugeResponse, rhs: Osmosis_Incentives_MsgAddToGaugeResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Incentives_MsgCreateGroup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroup"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "coins"),
+    2: .standard(proto: "num_epochs_paid_over"),
+    3: .same(proto: "owner"),
+    4: .standard(proto: "pool_ids"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.coins) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.numEpochsPaidOver) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.owner) }()
+      case 4: try { try decoder.decodeRepeatedUInt64Field(value: &self.poolIds) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.coins.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.coins, fieldNumber: 1)
+    }
+    if self.numEpochsPaidOver != 0 {
+      try visitor.visitSingularUInt64Field(value: self.numEpochsPaidOver, fieldNumber: 2)
+    }
+    if !self.owner.isEmpty {
+      try visitor.visitSingularStringField(value: self.owner, fieldNumber: 3)
+    }
+    if !self.poolIds.isEmpty {
+      try visitor.visitPackedUInt64Field(value: self.poolIds, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Incentives_MsgCreateGroup, rhs: Osmosis_Incentives_MsgCreateGroup) -> Bool {
+    if lhs.coins != rhs.coins {return false}
+    if lhs.numEpochsPaidOver != rhs.numEpochsPaidOver {return false}
+    if lhs.owner != rhs.owner {return false}
+    if lhs.poolIds != rhs.poolIds {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Incentives_MsgCreateGroupResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_id"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.groupID) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.groupID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Incentives_MsgCreateGroupResponse, rhs: Osmosis_Incentives_MsgCreateGroupResponse) -> Bool {
+    if lhs.groupID != rhs.groupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

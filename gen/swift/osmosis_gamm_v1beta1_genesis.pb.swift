@@ -20,19 +20,6 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-/// Params holds parameters for the incentives module
-struct Osmosis_Gamm_V1beta1_Params {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var poolCreationFee: [Cosmos_Base_V1beta1_Coin] = []
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
 /// GenesisState defines the gamm module's genesis state.
 struct Osmosis_Gamm_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -70,82 +57,13 @@ struct Osmosis_Gamm_V1beta1_GenesisState {
   fileprivate var _migrationRecords: Osmosis_Gamm_V1beta1_MigrationRecords? = nil
 }
 
-/// MigrationRecords contains all the links between balancer and concentrated
-/// pools
-struct Osmosis_Gamm_V1beta1_MigrationRecords {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var balancerToConcentratedPoolLinks: [Osmosis_Gamm_V1beta1_BalancerToConcentratedPoolLink] = []
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// BalancerToConcentratedPoolLink defines a single link between a single
-/// balancer pool and a single concentrated liquidity pool. This link is used to
-/// allow a balancer pool to migrate to a single canonical full range
-/// concentrated liquidity pool position
-/// A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
-/// be linked to a maximum of one balancer pool.
-struct Osmosis_Gamm_V1beta1_BalancerToConcentratedPoolLink {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var balancerPoolID: UInt64 = 0
-
-  var clPoolID: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Osmosis_Gamm_V1beta1_Params: @unchecked Sendable {}
 extension Osmosis_Gamm_V1beta1_GenesisState: @unchecked Sendable {}
-extension Osmosis_Gamm_V1beta1_MigrationRecords: @unchecked Sendable {}
-extension Osmosis_Gamm_V1beta1_BalancerToConcentratedPoolLink: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "osmosis.gamm.v1beta1"
-
-extension Osmosis_Gamm_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Params"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "pool_creation_fee"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.poolCreationFee) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.poolCreationFee.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.poolCreationFee, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Osmosis_Gamm_V1beta1_Params, rhs: Osmosis_Gamm_V1beta1_Params) -> Bool {
-    if lhs.poolCreationFee != rhs.poolCreationFee {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
 
 extension Osmosis_Gamm_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".GenesisState"
@@ -196,76 +114,6 @@ extension Osmosis_Gamm_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobu
     if lhs.nextPoolNumber != rhs.nextPoolNumber {return false}
     if lhs._params != rhs._params {return false}
     if lhs._migrationRecords != rhs._migrationRecords {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Osmosis_Gamm_V1beta1_MigrationRecords: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MigrationRecords"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "balancer_to_concentrated_pool_links"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.balancerToConcentratedPoolLinks) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.balancerToConcentratedPoolLinks.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.balancerToConcentratedPoolLinks, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Osmosis_Gamm_V1beta1_MigrationRecords, rhs: Osmosis_Gamm_V1beta1_MigrationRecords) -> Bool {
-    if lhs.balancerToConcentratedPoolLinks != rhs.balancerToConcentratedPoolLinks {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Osmosis_Gamm_V1beta1_BalancerToConcentratedPoolLink: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BalancerToConcentratedPoolLink"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "balancer_pool_id"),
-    2: .standard(proto: "cl_pool_id"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.balancerPoolID) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.clPoolID) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.balancerPoolID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.balancerPoolID, fieldNumber: 1)
-    }
-    if self.clPoolID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.clPoolID, fieldNumber: 2)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Osmosis_Gamm_V1beta1_BalancerToConcentratedPoolLink, rhs: Osmosis_Gamm_V1beta1_BalancerToConcentratedPoolLink) -> Bool {
-    if lhs.balancerPoolID != rhs.balancerPoolID {return false}
-    if lhs.clPoolID != rhs.clPoolID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

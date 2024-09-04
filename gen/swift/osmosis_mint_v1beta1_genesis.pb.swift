@@ -36,7 +36,7 @@ struct Osmosis_Mint_V1beta1_GenesisState {
   /// Clears the value of `minter`. Subsequent reads from it will return its default value.
   mutating func clearMinter() {self._minter = nil}
 
-  /// params defines all the paramaters of the mint module.
+  /// params defines all the parameters of the mint module.
   var params: Osmosis_Mint_V1beta1_Params {
     get {return _params ?? Osmosis_Mint_V1beta1_Params()}
     set {_params = newValue}

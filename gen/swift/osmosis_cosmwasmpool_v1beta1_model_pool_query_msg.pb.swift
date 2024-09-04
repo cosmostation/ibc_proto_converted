@@ -26,7 +26,7 @@ struct Osmosis_Cosmwasmpool_V1beta1_GetSwapFeeQueryMsg {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// get_swap_fee is the query strcuture to get swap fee.
+  /// get_swap_fee is the query structure to get swap fee.
   var getSwapFee: Osmosis_Cosmwasmpool_V1beta1_EmptyStruct {
     get {return _getSwapFee ?? Osmosis_Cosmwasmpool_V1beta1_EmptyStruct()}
     set {_getSwapFee = newValue}

@@ -65,9 +65,72 @@ struct Osmosis_Gamm_V1beta1_UpdateMigrationRecordsProposal {
   init() {}
 }
 
+struct Osmosis_Gamm_V1beta1_PoolRecordWithCFMMLink {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var denom0: String = String()
+
+  var denom1: String = String()
+
+  var tickSpacing: UInt64 = 0
+
+  var exponentAtPriceOne: String = String()
+
+  var spreadFactor: String = String()
+
+  var balancerPoolID: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal is a gov Content type
+/// for creating concentrated liquidity pools and linking it to a CFMM pool.
+struct Osmosis_Gamm_V1beta1_CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var title: String = String()
+
+  var description_p: String = String()
+
+  var poolRecordsWithCfmmLink: [Osmosis_Gamm_V1beta1_PoolRecordWithCFMMLink] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// SetScalingFactorControllerProposal is a gov Content type for updating the
+/// scaling factor controller address of a stableswap pool
+struct Osmosis_Gamm_V1beta1_SetScalingFactorControllerProposal {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var title: String = String()
+
+  var description_p: String = String()
+
+  var poolID: UInt64 = 0
+
+  var controllerAddress: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Gamm_V1beta1_ReplaceMigrationRecordsProposal: @unchecked Sendable {}
 extension Osmosis_Gamm_V1beta1_UpdateMigrationRecordsProposal: @unchecked Sendable {}
+extension Osmosis_Gamm_V1beta1_PoolRecordWithCFMMLink: @unchecked Sendable {}
+extension Osmosis_Gamm_V1beta1_CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal: @unchecked Sendable {}
+extension Osmosis_Gamm_V1beta1_SetScalingFactorControllerProposal: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -157,6 +220,162 @@ extension Osmosis_Gamm_V1beta1_UpdateMigrationRecordsProposal: SwiftProtobuf.Mes
     if lhs.title != rhs.title {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.records != rhs.records {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Gamm_V1beta1_PoolRecordWithCFMMLink: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".PoolRecordWithCFMMLink"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "denom0"),
+    2: .same(proto: "denom1"),
+    3: .standard(proto: "tick_spacing"),
+    4: .standard(proto: "exponent_at_price_one"),
+    5: .standard(proto: "spread_factor"),
+    6: .standard(proto: "balancer_pool_id"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.denom0) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.denom1) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.tickSpacing) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.exponentAtPriceOne) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.spreadFactor) }()
+      case 6: try { try decoder.decodeSingularUInt64Field(value: &self.balancerPoolID) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.denom0.isEmpty {
+      try visitor.visitSingularStringField(value: self.denom0, fieldNumber: 1)
+    }
+    if !self.denom1.isEmpty {
+      try visitor.visitSingularStringField(value: self.denom1, fieldNumber: 2)
+    }
+    if self.tickSpacing != 0 {
+      try visitor.visitSingularUInt64Field(value: self.tickSpacing, fieldNumber: 3)
+    }
+    if !self.exponentAtPriceOne.isEmpty {
+      try visitor.visitSingularStringField(value: self.exponentAtPriceOne, fieldNumber: 4)
+    }
+    if !self.spreadFactor.isEmpty {
+      try visitor.visitSingularStringField(value: self.spreadFactor, fieldNumber: 5)
+    }
+    if self.balancerPoolID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.balancerPoolID, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Gamm_V1beta1_PoolRecordWithCFMMLink, rhs: Osmosis_Gamm_V1beta1_PoolRecordWithCFMMLink) -> Bool {
+    if lhs.denom0 != rhs.denom0 {return false}
+    if lhs.denom1 != rhs.denom1 {return false}
+    if lhs.tickSpacing != rhs.tickSpacing {return false}
+    if lhs.exponentAtPriceOne != rhs.exponentAtPriceOne {return false}
+    if lhs.spreadFactor != rhs.spreadFactor {return false}
+    if lhs.balancerPoolID != rhs.balancerPoolID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Gamm_V1beta1_CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "title"),
+    2: .same(proto: "description"),
+    3: .standard(proto: "pool_records_with_cfmm_link"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.title) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.poolRecordsWithCfmmLink) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.title.isEmpty {
+      try visitor.visitSingularStringField(value: self.title, fieldNumber: 1)
+    }
+    if !self.description_p.isEmpty {
+      try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 2)
+    }
+    if !self.poolRecordsWithCfmmLink.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.poolRecordsWithCfmmLink, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Gamm_V1beta1_CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal, rhs: Osmosis_Gamm_V1beta1_CreateConcentratedLiquidityPoolsAndLinktoCFMMProposal) -> Bool {
+    if lhs.title != rhs.title {return false}
+    if lhs.description_p != rhs.description_p {return false}
+    if lhs.poolRecordsWithCfmmLink != rhs.poolRecordsWithCfmmLink {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Gamm_V1beta1_SetScalingFactorControllerProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".SetScalingFactorControllerProposal"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "title"),
+    2: .same(proto: "description"),
+    3: .standard(proto: "pool_id"),
+    4: .standard(proto: "controller_address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.title) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.controllerAddress) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.title.isEmpty {
+      try visitor.visitSingularStringField(value: self.title, fieldNumber: 1)
+    }
+    if !self.description_p.isEmpty {
+      try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 2)
+    }
+    if self.poolID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.poolID, fieldNumber: 3)
+    }
+    if !self.controllerAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.controllerAddress, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Gamm_V1beta1_SetScalingFactorControllerProposal, rhs: Osmosis_Gamm_V1beta1_SetScalingFactorControllerProposal) -> Bool {
+    if lhs.title != rhs.title {return false}
+    if lhs.description_p != rhs.description_p {return false}
+    if lhs.poolID != rhs.poolID {return false}
+    if lhs.controllerAddress != rhs.controllerAddress {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

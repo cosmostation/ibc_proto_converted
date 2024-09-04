@@ -26,7 +26,7 @@ struct Osmosis_Tokenfactory_V1beta1_GenesisState {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// params defines the paramaters of the module.
+  /// params defines the parameters of the module.
   var params: Osmosis_Tokenfactory_V1beta1_Params {
     get {return _params ?? Osmosis_Tokenfactory_V1beta1_Params()}
     set {_params = newValue}

@@ -26,6 +26,8 @@ enum Osmosis_Lockup_LockQueryType: SwiftProtobuf.Enum {
   typealias RawValue = Int
   case byDuration // = 0
   case byTime // = 1
+  case noLock // = 2
+  case byGroup // = 3
   case UNRECOGNIZED(Int)
 
   init() {
@@ -36,6 +38,8 @@ enum Osmosis_Lockup_LockQueryType: SwiftProtobuf.Enum {
     switch rawValue {
     case 0: self = .byDuration
     case 1: self = .byTime
+    case 2: self = .noLock
+    case 3: self = .byGroup
     default: self = .UNRECOGNIZED(rawValue)
     }
   }
@@ -44,6 +48,8 @@ enum Osmosis_Lockup_LockQueryType: SwiftProtobuf.Enum {
     switch self {
     case .byDuration: return 0
     case .byTime: return 1
+    case .noLock: return 2
+    case .byGroup: return 3
     case .UNRECOGNIZED(let i): return i
     }
   }
@@ -57,6 +63,8 @@ extension Osmosis_Lockup_LockQueryType: CaseIterable {
   static var allCases: [Osmosis_Lockup_LockQueryType] = [
     .byDuration,
     .byTime,
+    .noLock,
+    .byGroup,
   ]
 }
 
@@ -228,6 +236,8 @@ extension Osmosis_Lockup_LockQueryType: SwiftProtobuf._ProtoNameProviding {
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "ByDuration"),
     1: .same(proto: "ByTime"),
+    2: .same(proto: "NoLock"),
+    3: .same(proto: "ByGroup"),
   ]
 }
 

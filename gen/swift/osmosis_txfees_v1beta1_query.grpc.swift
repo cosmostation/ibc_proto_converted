@@ -50,6 +50,11 @@ internal protocol Osmosis_Txfees_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Txfees_V1beta1_QueryBaseDenomRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Txfees_V1beta1_QueryBaseDenomRequest, Osmosis_Txfees_V1beta1_QueryBaseDenomResponse>
+
+  func getEipBaseFee(
+    _ request: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse>
 }
 
 extension Osmosis_Txfees_V1beta1_QueryClientProtocol {
@@ -128,6 +133,24 @@ extension Osmosis_Txfees_V1beta1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeBaseDenomInterceptors() ?? []
+    )
+  }
+
+  /// Returns a list of all base denom tokens and their corresponding pools.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to GetEipBaseFee.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func getEipBaseFee(
+    _ request: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Txfees_V1beta1_QueryClientMetadata.Methods.getEipBaseFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetEipBaseFeeInterceptors() ?? []
     )
   }
 }
@@ -213,6 +236,11 @@ internal protocol Osmosis_Txfees_V1beta1_QueryAsyncClientProtocol: GRPCClient {
     _ request: Osmosis_Txfees_V1beta1_QueryBaseDenomRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Txfees_V1beta1_QueryBaseDenomRequest, Osmosis_Txfees_V1beta1_QueryBaseDenomResponse>
+
+  func makeGetEipBaseFeeCall(
+    _ request: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -272,6 +300,18 @@ extension Osmosis_Txfees_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeBaseDenomInterceptors() ?? []
     )
   }
+
+  internal func makeGetEipBaseFeeCall(
+    _ request: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Txfees_V1beta1_QueryClientMetadata.Methods.getEipBaseFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetEipBaseFeeInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -323,6 +363,18 @@ extension Osmosis_Txfees_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeBaseDenomInterceptors() ?? []
     )
   }
+
+  internal func getEipBaseFee(
+    _ request: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Txfees_V1beta1_QueryClientMetadata.Methods.getEipBaseFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetEipBaseFeeInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -355,6 +407,9 @@ internal protocol Osmosis_Txfees_V1beta1_QueryClientInterceptorFactoryProtocol: 
 
   /// - Returns: Interceptors to use when invoking 'baseDenom'.
   func makeBaseDenomInterceptors() -> [ClientInterceptor<Osmosis_Txfees_V1beta1_QueryBaseDenomRequest, Osmosis_Txfees_V1beta1_QueryBaseDenomResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'getEipBaseFee'.
+  func makeGetEipBaseFeeInterceptors() -> [ClientInterceptor<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse>]
 }
 
 internal enum Osmosis_Txfees_V1beta1_QueryClientMetadata {
@@ -366,6 +421,7 @@ internal enum Osmosis_Txfees_V1beta1_QueryClientMetadata {
       Osmosis_Txfees_V1beta1_QueryClientMetadata.Methods.denomSpotPrice,
       Osmosis_Txfees_V1beta1_QueryClientMetadata.Methods.denomPoolId,
       Osmosis_Txfees_V1beta1_QueryClientMetadata.Methods.baseDenom,
+      Osmosis_Txfees_V1beta1_QueryClientMetadata.Methods.getEipBaseFee,
     ]
   )
 
@@ -393,6 +449,12 @@ internal enum Osmosis_Txfees_V1beta1_QueryClientMetadata {
       path: "/osmosis.txfees.v1beta1.Query/BaseDenom",
       type: GRPCCallType.unary
     )
+
+    internal static let getEipBaseFee = GRPCMethodDescriptor(
+      name: "GetEipBaseFee",
+      path: "/osmosis.txfees.v1beta1.Query/GetEipBaseFee",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -413,6 +475,9 @@ internal protocol Osmosis_Txfees_V1beta1_QueryProvider: CallHandlerProvider {
 
   /// Returns a list of all base denom tokens and their corresponding pools.
   func baseDenom(request: Osmosis_Txfees_V1beta1_QueryBaseDenomRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Txfees_V1beta1_QueryBaseDenomResponse>
+
+  /// Returns a list of all base denom tokens and their corresponding pools.
+  func getEipBaseFee(request: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse>
 }
 
 extension Osmosis_Txfees_V1beta1_QueryProvider {
@@ -463,6 +528,15 @@ extension Osmosis_Txfees_V1beta1_QueryProvider {
         userFunction: self.baseDenom(request:context:)
       )
 
+    case "GetEipBaseFee":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse>(),
+        interceptors: self.interceptors?.makeGetEipBaseFeeInterceptors() ?? [],
+        userFunction: self.getEipBaseFee(request:context:)
+      )
+
     default:
       return nil
     }
@@ -500,6 +574,12 @@ internal protocol Osmosis_Txfees_V1beta1_QueryAsyncProvider: CallHandlerProvider
     request: Osmosis_Txfees_V1beta1_QueryBaseDenomRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Txfees_V1beta1_QueryBaseDenomResponse
+
+  /// Returns a list of all base denom tokens and their corresponding pools.
+  @Sendable func getEipBaseFee(
+    request: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -557,6 +637,15 @@ extension Osmosis_Txfees_V1beta1_QueryAsyncProvider {
         wrapping: self.baseDenom(request:context:)
       )
 
+    case "GetEipBaseFee":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse>(),
+        interceptors: self.interceptors?.makeGetEipBaseFeeInterceptors() ?? [],
+        wrapping: self.getEipBaseFee(request:context:)
+      )
+
     default:
       return nil
     }
@@ -580,6 +669,10 @@ internal protocol Osmosis_Txfees_V1beta1_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'baseDenom'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeBaseDenomInterceptors() -> [ServerInterceptor<Osmosis_Txfees_V1beta1_QueryBaseDenomRequest, Osmosis_Txfees_V1beta1_QueryBaseDenomResponse>]
+
+  /// - Returns: Interceptors to use when handling 'getEipBaseFee'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeGetEipBaseFeeInterceptors() -> [ServerInterceptor<Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse>]
 }
 
 internal enum Osmosis_Txfees_V1beta1_QueryServerMetadata {
@@ -591,6 +684,7 @@ internal enum Osmosis_Txfees_V1beta1_QueryServerMetadata {
       Osmosis_Txfees_V1beta1_QueryServerMetadata.Methods.denomSpotPrice,
       Osmosis_Txfees_V1beta1_QueryServerMetadata.Methods.denomPoolId,
       Osmosis_Txfees_V1beta1_QueryServerMetadata.Methods.baseDenom,
+      Osmosis_Txfees_V1beta1_QueryServerMetadata.Methods.getEipBaseFee,
     ]
   )
 
@@ -616,6 +710,12 @@ internal enum Osmosis_Txfees_V1beta1_QueryServerMetadata {
     internal static let baseDenom = GRPCMethodDescriptor(
       name: "BaseDenom",
       path: "/osmosis.txfees.v1beta1.Query/BaseDenom",
+      type: GRPCCallType.unary
+    )
+
+    internal static let getEipBaseFee = GRPCMethodDescriptor(
+      name: "GetEipBaseFee",
+      path: "/osmosis.txfees.v1beta1.Query/GetEipBaseFee",
       type: GRPCCallType.unary
     )
   }

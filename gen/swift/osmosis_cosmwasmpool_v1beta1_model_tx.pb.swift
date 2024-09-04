@@ -21,7 +21,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// ===================== MsgCreateCosmwasmPool
-struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool {
+struct Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -38,7 +38,7 @@ struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool {
 }
 
 /// Returns a unique poolID to identify the pool with.
-struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse {
+struct Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -51,15 +51,15 @@ struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool: @unchecked Sendable {}
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse: @unchecked Sendable {}
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool: @unchecked Sendable {}
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
-fileprivate let _protobuf_package = "osmosis.cosmwasmpool.v1beta1.model"
+fileprivate let _protobuf_package = "osmosis.cosmwasmpool.v1beta1"
 
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".MsgCreateCosmWasmPool"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "code_id"),
@@ -94,7 +94,7 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool: SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, rhs: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool) -> Bool {
+  static func ==(lhs: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, rhs: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool) -> Bool {
     if lhs.codeID != rhs.codeID {return false}
     if lhs.instantiateMsg != rhs.instantiateMsg {return false}
     if lhs.sender != rhs.sender {return false}
@@ -103,7 +103,7 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool: SwiftProtobu
   }
 }
 
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".MsgCreateCosmWasmPoolResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "pool_id"),
@@ -128,7 +128,7 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse: Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse, rhs: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse) -> Bool {
+  static func ==(lhs: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse, rhs: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse) -> Bool {
     if lhs.poolID != rhs.poolID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

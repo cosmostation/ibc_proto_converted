@@ -2,8 +2,8 @@ syntax = "proto3";
 package quasarlabs.quasarnode.qoracle.osmosis;
 
 import "gogoproto/gogo.proto";
-import "osmosis/pool-incentives/v1beta1/query.proto";
-import "osmosis/epochs/genesis.proto";
+import "osmosis/poolincentives/v1beta1/query.proto";
+import "osmosis/epochs/v1beta1/genesis.proto";
 
 option go_package = "github.com/quasarlabs/quasarnode/x/qoracle/osmosis/types";
 

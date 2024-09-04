@@ -77,6 +77,36 @@ internal protocol Osmosis_Incentives_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Incentives_QueryLockableDurationsRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Incentives_QueryLockableDurationsRequest, Osmosis_Incentives_QueryLockableDurationsResponse>
+
+  func allGroups(
+    _ request: Osmosis_Incentives_QueryAllGroupsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Incentives_QueryAllGroupsRequest, Osmosis_Incentives_QueryAllGroupsResponse>
+
+  func allGroupsGauges(
+    _ request: Osmosis_Incentives_QueryAllGroupsGaugesRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Incentives_QueryAllGroupsGaugesRequest, Osmosis_Incentives_QueryAllGroupsGaugesResponse>
+
+  func allGroupsWithGauge(
+    _ request: Osmosis_Incentives_QueryAllGroupsWithGaugeRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest, Osmosis_Incentives_QueryAllGroupsWithGaugeResponse>
+
+  func groupByGroupGaugeID(
+    _ request: Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest, Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse>
+
+  func currentWeightByGroupGaugeID(
+    _ request: Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest, Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse>
+
+  func params(
+    _ request: Osmosis_Incentives_ParamsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Incentives_ParamsRequest, Osmosis_Incentives_ParamsResponse>
 }
 
 extension Osmosis_Incentives_QueryClientProtocol {
@@ -174,7 +204,7 @@ extension Osmosis_Incentives_QueryClientProtocol {
     )
   }
 
-  /// Returns scheduled gauges that have not yet occured
+  /// Returns scheduled gauges that have not yet occurred
   ///
   /// - Parameters:
   ///   - request: Request to send to UpcomingGauges.
@@ -192,7 +222,7 @@ extension Osmosis_Incentives_QueryClientProtocol {
     )
   }
 
-  /// UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
+  /// UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
   /// by denom
   ///
   /// - Parameters:
@@ -247,6 +277,115 @@ extension Osmosis_Incentives_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeLockableDurationsInterceptors() ?? []
+    )
+  }
+
+  /// AllGroups returns all groups
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AllGroups.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func allGroups(
+    _ request: Osmosis_Incentives_QueryAllGroupsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Incentives_QueryAllGroupsRequest, Osmosis_Incentives_QueryAllGroupsResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroups.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsInterceptors() ?? []
+    )
+  }
+
+  /// AllGroupsGauges returns all group gauges
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AllGroupsGauges.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func allGroupsGauges(
+    _ request: Osmosis_Incentives_QueryAllGroupsGaugesRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Incentives_QueryAllGroupsGaugesRequest, Osmosis_Incentives_QueryAllGroupsGaugesResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsGauges.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsGaugesInterceptors() ?? []
+    )
+  }
+
+  /// AllGroupsWithGauge returns all groups with their group gauge
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AllGroupsWithGauge.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func allGroupsWithGauge(
+    _ request: Osmosis_Incentives_QueryAllGroupsWithGaugeRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest, Osmosis_Incentives_QueryAllGroupsWithGaugeResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsWithGauge.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsWithGaugeInterceptors() ?? []
+    )
+  }
+
+  /// GroupByGroupGaugeID returns a group given its group gauge ID
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to GroupByGroupGaugeID.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func groupByGroupGaugeID(
+    _ request: Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest, Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.groupByGroupGaugeID.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGroupByGroupGaugeIDInterceptors() ?? []
+    )
+  }
+
+  /// CurrentWeightByGroupGaugeID returns the current weight since the
+  /// the last epoch given a group gauge ID
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to CurrentWeightByGroupGaugeID.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func currentWeightByGroupGaugeID(
+    _ request: Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest, Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.currentWeightByGroupGaugeID.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCurrentWeightByGroupGaugeIDInterceptors() ?? []
+    )
+  }
+
+  /// Params returns incentives module params.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to Params.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func params(
+    _ request: Osmosis_Incentives_ParamsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Incentives_ParamsRequest, Osmosis_Incentives_ParamsResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.params.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsInterceptors() ?? []
     )
   }
 }
@@ -358,6 +497,36 @@ internal protocol Osmosis_Incentives_QueryAsyncClientProtocol: GRPCClient {
     _ request: Osmosis_Incentives_QueryLockableDurationsRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryLockableDurationsRequest, Osmosis_Incentives_QueryLockableDurationsResponse>
+
+  func makeAllGroupsCall(
+    _ request: Osmosis_Incentives_QueryAllGroupsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryAllGroupsRequest, Osmosis_Incentives_QueryAllGroupsResponse>
+
+  func makeAllGroupsGaugesCall(
+    _ request: Osmosis_Incentives_QueryAllGroupsGaugesRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryAllGroupsGaugesRequest, Osmosis_Incentives_QueryAllGroupsGaugesResponse>
+
+  func makeAllGroupsWithGaugeCall(
+    _ request: Osmosis_Incentives_QueryAllGroupsWithGaugeRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest, Osmosis_Incentives_QueryAllGroupsWithGaugeResponse>
+
+  func makeGroupByGroupGaugeIDCall(
+    _ request: Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest, Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse>
+
+  func makeCurrentWeightByGroupGaugeIDCall(
+    _ request: Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest, Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse>
+
+  func makeParamsCall(
+    _ request: Osmosis_Incentives_ParamsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_ParamsRequest, Osmosis_Incentives_ParamsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -477,6 +646,78 @@ extension Osmosis_Incentives_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeLockableDurationsInterceptors() ?? []
     )
   }
+
+  internal func makeAllGroupsCall(
+    _ request: Osmosis_Incentives_QueryAllGroupsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryAllGroupsRequest, Osmosis_Incentives_QueryAllGroupsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroups.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsInterceptors() ?? []
+    )
+  }
+
+  internal func makeAllGroupsGaugesCall(
+    _ request: Osmosis_Incentives_QueryAllGroupsGaugesRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryAllGroupsGaugesRequest, Osmosis_Incentives_QueryAllGroupsGaugesResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsGauges.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsGaugesInterceptors() ?? []
+    )
+  }
+
+  internal func makeAllGroupsWithGaugeCall(
+    _ request: Osmosis_Incentives_QueryAllGroupsWithGaugeRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest, Osmosis_Incentives_QueryAllGroupsWithGaugeResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsWithGauge.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsWithGaugeInterceptors() ?? []
+    )
+  }
+
+  internal func makeGroupByGroupGaugeIDCall(
+    _ request: Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest, Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.groupByGroupGaugeID.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGroupByGroupGaugeIDInterceptors() ?? []
+    )
+  }
+
+  internal func makeCurrentWeightByGroupGaugeIDCall(
+    _ request: Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest, Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.currentWeightByGroupGaugeID.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCurrentWeightByGroupGaugeIDInterceptors() ?? []
+    )
+  }
+
+  internal func makeParamsCall(
+    _ request: Osmosis_Incentives_ParamsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_ParamsRequest, Osmosis_Incentives_ParamsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.params.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -588,6 +829,78 @@ extension Osmosis_Incentives_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeLockableDurationsInterceptors() ?? []
     )
   }
+
+  internal func allGroups(
+    _ request: Osmosis_Incentives_QueryAllGroupsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Incentives_QueryAllGroupsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroups.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsInterceptors() ?? []
+    )
+  }
+
+  internal func allGroupsGauges(
+    _ request: Osmosis_Incentives_QueryAllGroupsGaugesRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Incentives_QueryAllGroupsGaugesResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsGauges.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsGaugesInterceptors() ?? []
+    )
+  }
+
+  internal func allGroupsWithGauge(
+    _ request: Osmosis_Incentives_QueryAllGroupsWithGaugeRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Incentives_QueryAllGroupsWithGaugeResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsWithGauge.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllGroupsWithGaugeInterceptors() ?? []
+    )
+  }
+
+  internal func groupByGroupGaugeID(
+    _ request: Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.groupByGroupGaugeID.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGroupByGroupGaugeIDInterceptors() ?? []
+    )
+  }
+
+  internal func currentWeightByGroupGaugeID(
+    _ request: Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.currentWeightByGroupGaugeID.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCurrentWeightByGroupGaugeIDInterceptors() ?? []
+    )
+  }
+
+  internal func params(
+    _ request: Osmosis_Incentives_ParamsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Incentives_ParamsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Incentives_QueryClientMetadata.Methods.params.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -635,6 +948,24 @@ internal protocol Osmosis_Incentives_QueryClientInterceptorFactoryProtocol: Send
 
   /// - Returns: Interceptors to use when invoking 'lockableDurations'.
   func makeLockableDurationsInterceptors() -> [ClientInterceptor<Osmosis_Incentives_QueryLockableDurationsRequest, Osmosis_Incentives_QueryLockableDurationsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'allGroups'.
+  func makeAllGroupsInterceptors() -> [ClientInterceptor<Osmosis_Incentives_QueryAllGroupsRequest, Osmosis_Incentives_QueryAllGroupsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'allGroupsGauges'.
+  func makeAllGroupsGaugesInterceptors() -> [ClientInterceptor<Osmosis_Incentives_QueryAllGroupsGaugesRequest, Osmosis_Incentives_QueryAllGroupsGaugesResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'allGroupsWithGauge'.
+  func makeAllGroupsWithGaugeInterceptors() -> [ClientInterceptor<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest, Osmosis_Incentives_QueryAllGroupsWithGaugeResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'groupByGroupGaugeID'.
+  func makeGroupByGroupGaugeIDInterceptors() -> [ClientInterceptor<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest, Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'currentWeightByGroupGaugeID'.
+  func makeCurrentWeightByGroupGaugeIDInterceptors() -> [ClientInterceptor<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest, Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'params'.
+  func makeParamsInterceptors() -> [ClientInterceptor<Osmosis_Incentives_ParamsRequest, Osmosis_Incentives_ParamsResponse>]
 }
 
 internal enum Osmosis_Incentives_QueryClientMetadata {
@@ -651,6 +982,12 @@ internal enum Osmosis_Incentives_QueryClientMetadata {
       Osmosis_Incentives_QueryClientMetadata.Methods.upcomingGaugesPerDenom,
       Osmosis_Incentives_QueryClientMetadata.Methods.rewardsEst,
       Osmosis_Incentives_QueryClientMetadata.Methods.lockableDurations,
+      Osmosis_Incentives_QueryClientMetadata.Methods.allGroups,
+      Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsGauges,
+      Osmosis_Incentives_QueryClientMetadata.Methods.allGroupsWithGauge,
+      Osmosis_Incentives_QueryClientMetadata.Methods.groupByGroupGaugeID,
+      Osmosis_Incentives_QueryClientMetadata.Methods.currentWeightByGroupGaugeID,
+      Osmosis_Incentives_QueryClientMetadata.Methods.params,
     ]
   )
 
@@ -708,6 +1045,42 @@ internal enum Osmosis_Incentives_QueryClientMetadata {
       path: "/osmosis.incentives.Query/LockableDurations",
       type: GRPCCallType.unary
     )
+
+    internal static let allGroups = GRPCMethodDescriptor(
+      name: "AllGroups",
+      path: "/osmosis.incentives.Query/AllGroups",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allGroupsGauges = GRPCMethodDescriptor(
+      name: "AllGroupsGauges",
+      path: "/osmosis.incentives.Query/AllGroupsGauges",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allGroupsWithGauge = GRPCMethodDescriptor(
+      name: "AllGroupsWithGauge",
+      path: "/osmosis.incentives.Query/AllGroupsWithGauge",
+      type: GRPCCallType.unary
+    )
+
+    internal static let groupByGroupGaugeID = GRPCMethodDescriptor(
+      name: "GroupByGroupGaugeID",
+      path: "/osmosis.incentives.Query/GroupByGroupGaugeID",
+      type: GRPCCallType.unary
+    )
+
+    internal static let currentWeightByGroupGaugeID = GRPCMethodDescriptor(
+      name: "CurrentWeightByGroupGaugeID",
+      path: "/osmosis.incentives.Query/CurrentWeightByGroupGaugeID",
+      type: GRPCCallType.unary
+    )
+
+    internal static let params = GRPCMethodDescriptor(
+      name: "Params",
+      path: "/osmosis.incentives.Query/Params",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -732,10 +1105,10 @@ internal protocol Osmosis_Incentives_QueryProvider: CallHandlerProvider {
   /// ActiveGaugesPerDenom returns active gauges by denom
   func activeGaugesPerDenom(request: Osmosis_Incentives_ActiveGaugesPerDenomRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_ActiveGaugesPerDenomResponse>
 
-  /// Returns scheduled gauges that have not yet occured
+  /// Returns scheduled gauges that have not yet occurred
   func upcomingGauges(request: Osmosis_Incentives_UpcomingGaugesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_UpcomingGaugesResponse>
 
-  /// UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
+  /// UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
   /// by denom
   func upcomingGaugesPerDenom(request: Osmosis_Incentives_UpcomingGaugesPerDenomRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_UpcomingGaugesPerDenomResponse>
 
@@ -747,6 +1120,25 @@ internal protocol Osmosis_Incentives_QueryProvider: CallHandlerProvider {
   /// LockableDurations returns lockable durations that are valid to distribute
   /// incentives for
   func lockableDurations(request: Osmosis_Incentives_QueryLockableDurationsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_QueryLockableDurationsResponse>
+
+  /// AllGroups returns all groups
+  func allGroups(request: Osmosis_Incentives_QueryAllGroupsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_QueryAllGroupsResponse>
+
+  /// AllGroupsGauges returns all group gauges
+  func allGroupsGauges(request: Osmosis_Incentives_QueryAllGroupsGaugesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_QueryAllGroupsGaugesResponse>
+
+  /// AllGroupsWithGauge returns all groups with their group gauge
+  func allGroupsWithGauge(request: Osmosis_Incentives_QueryAllGroupsWithGaugeRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_QueryAllGroupsWithGaugeResponse>
+
+  /// GroupByGroupGaugeID returns a group given its group gauge ID
+  func groupByGroupGaugeID(request: Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse>
+
+  /// CurrentWeightByGroupGaugeID returns the current weight since the
+  /// the last epoch given a group gauge ID
+  func currentWeightByGroupGaugeID(request: Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse>
+
+  /// Params returns incentives module params.
+  func params(request: Osmosis_Incentives_ParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_ParamsResponse>
 }
 
 extension Osmosis_Incentives_QueryProvider {
@@ -842,6 +1234,60 @@ extension Osmosis_Incentives_QueryProvider {
         userFunction: self.lockableDurations(request:context:)
       )
 
+    case "AllGroups":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryAllGroupsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryAllGroupsResponse>(),
+        interceptors: self.interceptors?.makeAllGroupsInterceptors() ?? [],
+        userFunction: self.allGroups(request:context:)
+      )
+
+    case "AllGroupsGauges":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryAllGroupsGaugesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryAllGroupsGaugesResponse>(),
+        interceptors: self.interceptors?.makeAllGroupsGaugesInterceptors() ?? [],
+        userFunction: self.allGroupsGauges(request:context:)
+      )
+
+    case "AllGroupsWithGauge":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryAllGroupsWithGaugeResponse>(),
+        interceptors: self.interceptors?.makeAllGroupsWithGaugeInterceptors() ?? [],
+        userFunction: self.allGroupsWithGauge(request:context:)
+      )
+
+    case "GroupByGroupGaugeID":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse>(),
+        interceptors: self.interceptors?.makeGroupByGroupGaugeIDInterceptors() ?? [],
+        userFunction: self.groupByGroupGaugeID(request:context:)
+      )
+
+    case "CurrentWeightByGroupGaugeID":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse>(),
+        interceptors: self.interceptors?.makeCurrentWeightByGroupGaugeIDInterceptors() ?? [],
+        userFunction: self.currentWeightByGroupGaugeID(request:context:)
+      )
+
+    case "Params":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_ParamsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_ParamsResponse>(),
+        interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
+        userFunction: self.params(request:context:)
+      )
+
     default:
       return nil
     }
@@ -886,13 +1332,13 @@ internal protocol Osmosis_Incentives_QueryAsyncProvider: CallHandlerProvider {
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Incentives_ActiveGaugesPerDenomResponse
 
-  /// Returns scheduled gauges that have not yet occured
+  /// Returns scheduled gauges that have not yet occurred
   @Sendable func upcomingGauges(
     request: Osmosis_Incentives_UpcomingGaugesRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Incentives_UpcomingGaugesResponse
 
-  /// UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
+  /// UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
   /// by denom
   @Sendable func upcomingGaugesPerDenom(
     request: Osmosis_Incentives_UpcomingGaugesPerDenomRequest,
@@ -913,6 +1359,43 @@ internal protocol Osmosis_Incentives_QueryAsyncProvider: CallHandlerProvider {
     request: Osmosis_Incentives_QueryLockableDurationsRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Incentives_QueryLockableDurationsResponse
+
+  /// AllGroups returns all groups
+  @Sendable func allGroups(
+    request: Osmosis_Incentives_QueryAllGroupsRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Incentives_QueryAllGroupsResponse
+
+  /// AllGroupsGauges returns all group gauges
+  @Sendable func allGroupsGauges(
+    request: Osmosis_Incentives_QueryAllGroupsGaugesRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Incentives_QueryAllGroupsGaugesResponse
+
+  /// AllGroupsWithGauge returns all groups with their group gauge
+  @Sendable func allGroupsWithGauge(
+    request: Osmosis_Incentives_QueryAllGroupsWithGaugeRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Incentives_QueryAllGroupsWithGaugeResponse
+
+  /// GroupByGroupGaugeID returns a group given its group gauge ID
+  @Sendable func groupByGroupGaugeID(
+    request: Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse
+
+  /// CurrentWeightByGroupGaugeID returns the current weight since the
+  /// the last epoch given a group gauge ID
+  @Sendable func currentWeightByGroupGaugeID(
+    request: Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse
+
+  /// Params returns incentives module params.
+  @Sendable func params(
+    request: Osmosis_Incentives_ParamsRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Incentives_ParamsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1015,6 +1498,60 @@ extension Osmosis_Incentives_QueryAsyncProvider {
         wrapping: self.lockableDurations(request:context:)
       )
 
+    case "AllGroups":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryAllGroupsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryAllGroupsResponse>(),
+        interceptors: self.interceptors?.makeAllGroupsInterceptors() ?? [],
+        wrapping: self.allGroups(request:context:)
+      )
+
+    case "AllGroupsGauges":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryAllGroupsGaugesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryAllGroupsGaugesResponse>(),
+        interceptors: self.interceptors?.makeAllGroupsGaugesInterceptors() ?? [],
+        wrapping: self.allGroupsGauges(request:context:)
+      )
+
+    case "AllGroupsWithGauge":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryAllGroupsWithGaugeResponse>(),
+        interceptors: self.interceptors?.makeAllGroupsWithGaugeInterceptors() ?? [],
+        wrapping: self.allGroupsWithGauge(request:context:)
+      )
+
+    case "GroupByGroupGaugeID":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse>(),
+        interceptors: self.interceptors?.makeGroupByGroupGaugeIDInterceptors() ?? [],
+        wrapping: self.groupByGroupGaugeID(request:context:)
+      )
+
+    case "CurrentWeightByGroupGaugeID":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse>(),
+        interceptors: self.interceptors?.makeCurrentWeightByGroupGaugeIDInterceptors() ?? [],
+        wrapping: self.currentWeightByGroupGaugeID(request:context:)
+      )
+
+    case "Params":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_ParamsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_ParamsResponse>(),
+        interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
+        wrapping: self.params(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1058,6 +1595,30 @@ internal protocol Osmosis_Incentives_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'lockableDurations'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeLockableDurationsInterceptors() -> [ServerInterceptor<Osmosis_Incentives_QueryLockableDurationsRequest, Osmosis_Incentives_QueryLockableDurationsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'allGroups'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAllGroupsInterceptors() -> [ServerInterceptor<Osmosis_Incentives_QueryAllGroupsRequest, Osmosis_Incentives_QueryAllGroupsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'allGroupsGauges'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAllGroupsGaugesInterceptors() -> [ServerInterceptor<Osmosis_Incentives_QueryAllGroupsGaugesRequest, Osmosis_Incentives_QueryAllGroupsGaugesResponse>]
+
+  /// - Returns: Interceptors to use when handling 'allGroupsWithGauge'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAllGroupsWithGaugeInterceptors() -> [ServerInterceptor<Osmosis_Incentives_QueryAllGroupsWithGaugeRequest, Osmosis_Incentives_QueryAllGroupsWithGaugeResponse>]
+
+  /// - Returns: Interceptors to use when handling 'groupByGroupGaugeID'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeGroupByGroupGaugeIDInterceptors() -> [ServerInterceptor<Osmosis_Incentives_QueryGroupByGroupGaugeIDRequest, Osmosis_Incentives_QueryGroupByGroupGaugeIDResponse>]
+
+  /// - Returns: Interceptors to use when handling 'currentWeightByGroupGaugeID'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeCurrentWeightByGroupGaugeIDInterceptors() -> [ServerInterceptor<Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDRequest, Osmosis_Incentives_QueryCurrentWeightByGroupGaugeIDResponse>]
+
+  /// - Returns: Interceptors to use when handling 'params'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeParamsInterceptors() -> [ServerInterceptor<Osmosis_Incentives_ParamsRequest, Osmosis_Incentives_ParamsResponse>]
 }
 
 internal enum Osmosis_Incentives_QueryServerMetadata {
@@ -1074,6 +1635,12 @@ internal enum Osmosis_Incentives_QueryServerMetadata {
       Osmosis_Incentives_QueryServerMetadata.Methods.upcomingGaugesPerDenom,
       Osmosis_Incentives_QueryServerMetadata.Methods.rewardsEst,
       Osmosis_Incentives_QueryServerMetadata.Methods.lockableDurations,
+      Osmosis_Incentives_QueryServerMetadata.Methods.allGroups,
+      Osmosis_Incentives_QueryServerMetadata.Methods.allGroupsGauges,
+      Osmosis_Incentives_QueryServerMetadata.Methods.allGroupsWithGauge,
+      Osmosis_Incentives_QueryServerMetadata.Methods.groupByGroupGaugeID,
+      Osmosis_Incentives_QueryServerMetadata.Methods.currentWeightByGroupGaugeID,
+      Osmosis_Incentives_QueryServerMetadata.Methods.params,
     ]
   )
 
@@ -1129,6 +1696,42 @@ internal enum Osmosis_Incentives_QueryServerMetadata {
     internal static let lockableDurations = GRPCMethodDescriptor(
       name: "LockableDurations",
       path: "/osmosis.incentives.Query/LockableDurations",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allGroups = GRPCMethodDescriptor(
+      name: "AllGroups",
+      path: "/osmosis.incentives.Query/AllGroups",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allGroupsGauges = GRPCMethodDescriptor(
+      name: "AllGroupsGauges",
+      path: "/osmosis.incentives.Query/AllGroupsGauges",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allGroupsWithGauge = GRPCMethodDescriptor(
+      name: "AllGroupsWithGauge",
+      path: "/osmosis.incentives.Query/AllGroupsWithGauge",
+      type: GRPCCallType.unary
+    )
+
+    internal static let groupByGroupGaugeID = GRPCMethodDescriptor(
+      name: "GroupByGroupGaugeID",
+      path: "/osmosis.incentives.Query/GroupByGroupGaugeID",
+      type: GRPCCallType.unary
+    )
+
+    internal static let currentWeightByGroupGaugeID = GRPCMethodDescriptor(
+      name: "CurrentWeightByGroupGaugeID",
+      path: "/osmosis.incentives.Query/CurrentWeightByGroupGaugeID",
+      type: GRPCCallType.unary
+    )
+
+    internal static let params = GRPCMethodDescriptor(
+      name: "Params",
+      path: "/osmosis.incentives.Query/Params",
       type: GRPCCallType.unary
     )
   }

@@ -28,9 +28,31 @@ struct Osmosis_Poolmanager_V1beta1_Params {
 
   var poolCreationFee: [Cosmos_Base_V1beta1_Coin] = []
 
+  /// taker_fee_params is the container of taker fee parameters.
+  var takerFeeParams: Osmosis_Poolmanager_V1beta1_TakerFeeParams {
+    get {return _takerFeeParams ?? Osmosis_Poolmanager_V1beta1_TakerFeeParams()}
+    set {_takerFeeParams = newValue}
+  }
+  /// Returns true if `takerFeeParams` has been explicitly set.
+  var hasTakerFeeParams: Bool {return self._takerFeeParams != nil}
+  /// Clears the value of `takerFeeParams`. Subsequent reads from it will return its default value.
+  mutating func clearTakerFeeParams() {self._takerFeeParams = nil}
+
+  /// authorized_quote_denoms is a list of quote denoms that can be used as
+  /// token1 when creating a concentrated pool. We limit the quote assets to a
+  /// small set for the purposes of having convenient price increments stemming
+  /// from tick to price conversion. These increments are in a human readable
+  /// magnitude only for token1 as a quote. For limit orders in the future, this
+  /// will be a desirable property in terms of UX as to allow users to set limit
+  /// orders at prices in terms of token1 (quote asset) that are easy to reason
+  /// about.
+  var authorizedQuoteDenoms: [String] = []
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _takerFeeParams: Osmosis_Poolmanager_V1beta1_TakerFeeParams? = nil
 }
 
 /// GenesisState defines the poolmanager module's genesis state.
@@ -40,31 +62,182 @@ struct Osmosis_Poolmanager_V1beta1_GenesisState {
   // methods supported on all messages.
 
   /// the next_pool_id
-  var nextPoolID: UInt64 = 0
+  var nextPoolID: UInt64 {
+    get {return _storage._nextPoolID}
+    set {_uniqueStorage()._nextPoolID = newValue}
+  }
 
   /// params is the container of poolmanager parameters.
   var params: Osmosis_Poolmanager_V1beta1_Params {
-    get {return _params ?? Osmosis_Poolmanager_V1beta1_Params()}
-    set {_params = newValue}
+    get {return _storage._params ?? Osmosis_Poolmanager_V1beta1_Params()}
+    set {_uniqueStorage()._params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  var hasParams: Bool {return _storage._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  mutating func clearParams() {_uniqueStorage()._params = nil}
 
   /// pool_routes is the container of the mappings from pool id to pool type.
-  var poolRoutes: [Osmosis_Poolmanager_V1beta1_ModuleRoute] = []
+  var poolRoutes: [Osmosis_Poolmanager_V1beta1_ModuleRoute] {
+    get {return _storage._poolRoutes}
+    set {_uniqueStorage()._poolRoutes = newValue}
+  }
+
+  /// KVStore state
+  var takerFeesTracker: Osmosis_Poolmanager_V1beta1_TakerFeesTracker {
+    get {return _storage._takerFeesTracker ?? Osmosis_Poolmanager_V1beta1_TakerFeesTracker()}
+    set {_uniqueStorage()._takerFeesTracker = newValue}
+  }
+  /// Returns true if `takerFeesTracker` has been explicitly set.
+  var hasTakerFeesTracker: Bool {return _storage._takerFeesTracker != nil}
+  /// Clears the value of `takerFeesTracker`. Subsequent reads from it will return its default value.
+  mutating func clearTakerFeesTracker() {_uniqueStorage()._takerFeesTracker = nil}
+
+  var poolVolumes: [Osmosis_Poolmanager_V1beta1_PoolVolume] {
+    get {return _storage._poolVolumes}
+    set {_uniqueStorage()._poolVolumes = newValue}
+  }
+
+  var denomPairTakerFeeStore: [Osmosis_Poolmanager_V1beta1_DenomPairTakerFee] {
+    get {return _storage._denomPairTakerFeeStore}
+    set {_uniqueStorage()._denomPairTakerFeeStore = newValue}
+  }
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
-  fileprivate var _params: Osmosis_Poolmanager_V1beta1_Params? = nil
+  fileprivate var _storage = _StorageClass.defaultInstance
+}
+
+/// TakerFeeParams consolidates the taker fee parameters for the poolmanager.
+struct Osmosis_Poolmanager_V1beta1_TakerFeeParams {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// default_taker_fee is the fee used when creating a new pool that doesn't
+  /// fall under a custom pool taker fee or stableswap taker fee category.
+  var defaultTakerFee: String = String()
+
+  /// osmo_taker_fee_distribution defines the distribution of taker fees
+  /// generated in OSMO. As of this writing, it has two categories:
+  /// - staking_rewards: the percent of the taker fee that gets distributed to
+  ///   stakers.
+  /// - community_pool: the percent of the taker fee that gets sent to the
+  ///   community pool.
+  var osmoTakerFeeDistribution: Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage {
+    get {return _osmoTakerFeeDistribution ?? Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage()}
+    set {_osmoTakerFeeDistribution = newValue}
+  }
+  /// Returns true if `osmoTakerFeeDistribution` has been explicitly set.
+  var hasOsmoTakerFeeDistribution: Bool {return self._osmoTakerFeeDistribution != nil}
+  /// Clears the value of `osmoTakerFeeDistribution`. Subsequent reads from it will return its default value.
+  mutating func clearOsmoTakerFeeDistribution() {self._osmoTakerFeeDistribution = nil}
+
+  /// non_osmo_taker_fee_distribution defines the distribution of taker fees
+  /// generated in non-OSMO. As of this writing, it has two categories:
+  /// - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+  ///   and then distributed to stakers.
+  /// - community_pool: the percent of the taker fee that gets sent to the
+  ///   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+  ///   that denom is sent directly to the community pool. Otherwise, it is
+  ///   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+  ///   then sent to the community pool as that denom.
+  var nonOsmoTakerFeeDistribution: Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage {
+    get {return _nonOsmoTakerFeeDistribution ?? Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage()}
+    set {_nonOsmoTakerFeeDistribution = newValue}
+  }
+  /// Returns true if `nonOsmoTakerFeeDistribution` has been explicitly set.
+  var hasNonOsmoTakerFeeDistribution: Bool {return self._nonOsmoTakerFeeDistribution != nil}
+  /// Clears the value of `nonOsmoTakerFeeDistribution`. Subsequent reads from it will return its default value.
+  mutating func clearNonOsmoTakerFeeDistribution() {self._nonOsmoTakerFeeDistribution = nil}
+
+  /// admin_addresses is a list of addresses that are allowed to set and remove
+  /// custom taker fees for denom pairs. Governance also has the ability to set
+  /// and remove custom taker fees for denom pairs, but with the normal
+  /// governance delay.
+  var adminAddresses: [String] = []
+
+  /// community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+  /// non-whitelisted taker fees will be swapped to before being sent to
+  /// the community pool.
+  var communityPoolDenomToSwapNonWhitelistedAssetsTo: String = String()
+
+  /// reduced_fee_whitelist is a list of addresses that are
+  /// allowed to pay a reduce taker fee when performing a swap
+  /// (i.e. swap without paying the taker fee).
+  /// It is intended to be used for integrators who meet qualifying factors
+  /// that are approved by governance.
+  /// Initially, the taker fee is allowed to be bypassed completely. However
+  /// In the future, we will charge a reduced taker fee instead of no fee at all.
+  var reducedFeeWhitelist: [String] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _osmoTakerFeeDistribution: Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage? = nil
+  fileprivate var _nonOsmoTakerFeeDistribution: Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage? = nil
+}
+
+/// TakerFeeDistributionPercentage defines what percent of the taker fee category
+/// gets distributed to the available categories.
+struct Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var stakingRewards: String = String()
+
+  var communityPool: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Poolmanager_V1beta1_TakerFeesTracker {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var takerFeesToStakers: [Cosmos_Base_V1beta1_Coin] = []
+
+  var takerFeesToCommunityPool: [Cosmos_Base_V1beta1_Coin] = []
+
+  var heightAccountingStartsFrom: Int64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// PoolVolume stores the KVStore entries for each pool's volume, which
+/// is used in export/import genesis.
+struct Osmosis_Poolmanager_V1beta1_PoolVolume {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// pool_id is the id of the pool.
+  var poolID: UInt64 = 0
+
+  /// pool_volume is the cumulative volume of the pool.
+  var poolVolume: [Cosmos_Base_V1beta1_Coin] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Poolmanager_V1beta1_Params: @unchecked Sendable {}
 extension Osmosis_Poolmanager_V1beta1_GenesisState: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_TakerFeeParams: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_TakerFeesTracker: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_PoolVolume: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -75,6 +248,8 @@ extension Osmosis_Poolmanager_V1beta1_Params: SwiftProtobuf.Message, SwiftProtob
   static let protoMessageName: String = _protobuf_package + ".Params"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "pool_creation_fee"),
+    2: .standard(proto: "taker_fee_params"),
+    3: .standard(proto: "authorized_quote_denoms"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -84,20 +259,34 @@ extension Osmosis_Poolmanager_V1beta1_Params: SwiftProtobuf.Message, SwiftProtob
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedMessageField(value: &self.poolCreationFee) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._takerFeeParams) }()
+      case 3: try { try decoder.decodeRepeatedStringField(value: &self.authorizedQuoteDenoms) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.poolCreationFee.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.poolCreationFee, fieldNumber: 1)
+    }
+    try { if let v = self._takerFeeParams {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if !self.authorizedQuoteDenoms.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.authorizedQuoteDenoms, fieldNumber: 3)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Osmosis_Poolmanager_V1beta1_Params, rhs: Osmosis_Poolmanager_V1beta1_Params) -> Bool {
     if lhs.poolCreationFee != rhs.poolCreationFee {return false}
+    if lhs._takerFeeParams != rhs._takerFeeParams {return false}
+    if lhs.authorizedQuoteDenoms != rhs.authorizedQuoteDenoms {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -109,6 +298,117 @@ extension Osmosis_Poolmanager_V1beta1_GenesisState: SwiftProtobuf.Message, Swift
     1: .standard(proto: "next_pool_id"),
     2: .same(proto: "params"),
     3: .standard(proto: "pool_routes"),
+    4: .standard(proto: "taker_fees_tracker"),
+    5: .standard(proto: "pool_volumes"),
+    6: .standard(proto: "denom_pair_taker_fee_store"),
+  ]
+
+  fileprivate class _StorageClass {
+    var _nextPoolID: UInt64 = 0
+    var _params: Osmosis_Poolmanager_V1beta1_Params? = nil
+    var _poolRoutes: [Osmosis_Poolmanager_V1beta1_ModuleRoute] = []
+    var _takerFeesTracker: Osmosis_Poolmanager_V1beta1_TakerFeesTracker? = nil
+    var _poolVolumes: [Osmosis_Poolmanager_V1beta1_PoolVolume] = []
+    var _denomPairTakerFeeStore: [Osmosis_Poolmanager_V1beta1_DenomPairTakerFee] = []
+
+    static let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _nextPoolID = source._nextPoolID
+      _params = source._params
+      _poolRoutes = source._poolRoutes
+      _takerFeesTracker = source._takerFeesTracker
+      _poolVolumes = source._poolVolumes
+      _denomPairTakerFeeStore = source._denomPairTakerFeeStore
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularUInt64Field(value: &_storage._nextPoolID) }()
+        case 2: try { try decoder.decodeSingularMessageField(value: &_storage._params) }()
+        case 3: try { try decoder.decodeRepeatedMessageField(value: &_storage._poolRoutes) }()
+        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._takerFeesTracker) }()
+        case 5: try { try decoder.decodeRepeatedMessageField(value: &_storage._poolVolumes) }()
+        case 6: try { try decoder.decodeRepeatedMessageField(value: &_storage._denomPairTakerFeeStore) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if _storage._nextPoolID != 0 {
+        try visitor.visitSingularUInt64Field(value: _storage._nextPoolID, fieldNumber: 1)
+      }
+      try { if let v = _storage._params {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+      } }()
+      if !_storage._poolRoutes.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._poolRoutes, fieldNumber: 3)
+      }
+      try { if let v = _storage._takerFeesTracker {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+      } }()
+      if !_storage._poolVolumes.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._poolVolumes, fieldNumber: 5)
+      }
+      if !_storage._denomPairTakerFeeStore.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._denomPairTakerFeeStore, fieldNumber: 6)
+      }
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_GenesisState, rhs: Osmosis_Poolmanager_V1beta1_GenesisState) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._nextPoolID != rhs_storage._nextPoolID {return false}
+        if _storage._params != rhs_storage._params {return false}
+        if _storage._poolRoutes != rhs_storage._poolRoutes {return false}
+        if _storage._takerFeesTracker != rhs_storage._takerFeesTracker {return false}
+        if _storage._poolVolumes != rhs_storage._poolVolumes {return false}
+        if _storage._denomPairTakerFeeStore != rhs_storage._denomPairTakerFeeStore {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_TakerFeeParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".TakerFeeParams"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "default_taker_fee"),
+    2: .standard(proto: "osmo_taker_fee_distribution"),
+    3: .standard(proto: "non_osmo_taker_fee_distribution"),
+    4: .standard(proto: "admin_addresses"),
+    5: .standard(proto: "community_pool_denom_to_swap_non_whitelisted_assets_to"),
+    6: .standard(proto: "reduced_fee_whitelist"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -117,9 +417,12 @@ extension Osmosis_Poolmanager_V1beta1_GenesisState: SwiftProtobuf.Message, Swift
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.nextPoolID) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._params) }()
-      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.poolRoutes) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.defaultTakerFee) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._osmoTakerFeeDistribution) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._nonOsmoTakerFeeDistribution) }()
+      case 4: try { try decoder.decodeRepeatedStringField(value: &self.adminAddresses) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.communityPoolDenomToSwapNonWhitelistedAssetsTo) }()
+      case 6: try { try decoder.decodeRepeatedStringField(value: &self.reducedFeeWhitelist) }()
       default: break
       }
     }
@@ -130,22 +433,154 @@ extension Osmosis_Poolmanager_V1beta1_GenesisState: SwiftProtobuf.Message, Swift
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if self.nextPoolID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.nextPoolID, fieldNumber: 1)
+    if !self.defaultTakerFee.isEmpty {
+      try visitor.visitSingularStringField(value: self.defaultTakerFee, fieldNumber: 1)
     }
-    try { if let v = self._params {
+    try { if let v = self._osmoTakerFeeDistribution {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
     } }()
-    if !self.poolRoutes.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.poolRoutes, fieldNumber: 3)
+    try { if let v = self._nonOsmoTakerFeeDistribution {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    if !self.adminAddresses.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.adminAddresses, fieldNumber: 4)
+    }
+    if !self.communityPoolDenomToSwapNonWhitelistedAssetsTo.isEmpty {
+      try visitor.visitSingularStringField(value: self.communityPoolDenomToSwapNonWhitelistedAssetsTo, fieldNumber: 5)
+    }
+    if !self.reducedFeeWhitelist.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.reducedFeeWhitelist, fieldNumber: 6)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Osmosis_Poolmanager_V1beta1_GenesisState, rhs: Osmosis_Poolmanager_V1beta1_GenesisState) -> Bool {
-    if lhs.nextPoolID != rhs.nextPoolID {return false}
-    if lhs._params != rhs._params {return false}
-    if lhs.poolRoutes != rhs.poolRoutes {return false}
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_TakerFeeParams, rhs: Osmosis_Poolmanager_V1beta1_TakerFeeParams) -> Bool {
+    if lhs.defaultTakerFee != rhs.defaultTakerFee {return false}
+    if lhs._osmoTakerFeeDistribution != rhs._osmoTakerFeeDistribution {return false}
+    if lhs._nonOsmoTakerFeeDistribution != rhs._nonOsmoTakerFeeDistribution {return false}
+    if lhs.adminAddresses != rhs.adminAddresses {return false}
+    if lhs.communityPoolDenomToSwapNonWhitelistedAssetsTo != rhs.communityPoolDenomToSwapNonWhitelistedAssetsTo {return false}
+    if lhs.reducedFeeWhitelist != rhs.reducedFeeWhitelist {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".TakerFeeDistributionPercentage"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "staking_rewards"),
+    2: .standard(proto: "community_pool"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.stakingRewards) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.communityPool) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.stakingRewards.isEmpty {
+      try visitor.visitSingularStringField(value: self.stakingRewards, fieldNumber: 1)
+    }
+    if !self.communityPool.isEmpty {
+      try visitor.visitSingularStringField(value: self.communityPool, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage, rhs: Osmosis_Poolmanager_V1beta1_TakerFeeDistributionPercentage) -> Bool {
+    if lhs.stakingRewards != rhs.stakingRewards {return false}
+    if lhs.communityPool != rhs.communityPool {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_TakerFeesTracker: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".TakerFeesTracker"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "taker_fees_to_stakers"),
+    2: .standard(proto: "taker_fees_to_community_pool"),
+    3: .standard(proto: "height_accounting_starts_from"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.takerFeesToStakers) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.takerFeesToCommunityPool) }()
+      case 3: try { try decoder.decodeSingularInt64Field(value: &self.heightAccountingStartsFrom) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.takerFeesToStakers.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.takerFeesToStakers, fieldNumber: 1)
+    }
+    if !self.takerFeesToCommunityPool.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.takerFeesToCommunityPool, fieldNumber: 2)
+    }
+    if self.heightAccountingStartsFrom != 0 {
+      try visitor.visitSingularInt64Field(value: self.heightAccountingStartsFrom, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_TakerFeesTracker, rhs: Osmosis_Poolmanager_V1beta1_TakerFeesTracker) -> Bool {
+    if lhs.takerFeesToStakers != rhs.takerFeesToStakers {return false}
+    if lhs.takerFeesToCommunityPool != rhs.takerFeesToCommunityPool {return false}
+    if lhs.heightAccountingStartsFrom != rhs.heightAccountingStartsFrom {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_PoolVolume: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".PoolVolume"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "pool_id"),
+    2: .standard(proto: "pool_volume"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.poolVolume) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.poolID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.poolID, fieldNumber: 1)
+    }
+    if !self.poolVolume.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.poolVolume, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_PoolVolume, rhs: Osmosis_Poolmanager_V1beta1_PoolVolume) -> Bool {
+    if lhs.poolID != rhs.poolID {return false}
+    if lhs.poolVolume != rhs.poolVolume {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

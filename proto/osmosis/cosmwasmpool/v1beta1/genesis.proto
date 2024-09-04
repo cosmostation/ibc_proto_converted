@@ -4,16 +4,15 @@ package osmosis.cosmwasmpool.v1beta1;
 import "gogoproto/gogo.proto";
 import "google/protobuf/any.proto";
 import "cosmos_proto/cosmos.proto";
-import "google/protobuf/duration.proto";
-import "cosmos/base/v1beta1/coin.proto";
 
-option go_package = "github.com/osmosis-labs/osmosis/v15/x/cosmwasmpool/types";
+import "osmosis/cosmwasmpool/v1beta1/params.proto";
 
-// Params holds parameters for the cosmwasmpool module
-message Params {}
+option go_package = "github.com/osmosis-labs/osmosis/v26/x/cosmwasmpool/types";
 
 // GenesisState defines the cosmwasmpool module's genesis state.
 message GenesisState {
   // params is the container of cosmwasmpool parameters.
   Params params = 1 [ (gogoproto.nullable) = false ];
+  repeated google.protobuf.Any pools = 2
+      [ (cosmos_proto.accepts_interface) = "PoolI" ];
 }

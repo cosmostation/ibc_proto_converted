@@ -31,10 +31,20 @@ internal protocol Osmosis_Cosmwasmpool_V1beta1_QueryClientProtocol: GRPCClient {
   var serviceName: String { get }
   var interceptors: Osmosis_Cosmwasmpool_V1beta1_QueryClientInterceptorFactoryProtocol? { get }
 
+  func pools(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_PoolsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest, Osmosis_Cosmwasmpool_V1beta1_PoolsResponse>
+
   func params(
     _ request: Osmosis_Cosmwasmpool_V1beta1_ParamsRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_ParamsRequest, Osmosis_Cosmwasmpool_V1beta1_ParamsResponse>
+
+  func contractInfoByPoolId(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest, Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse>
 }
 
 extension Osmosis_Cosmwasmpool_V1beta1_QueryClientProtocol {
@@ -42,7 +52,25 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryClientProtocol {
     return "osmosis.cosmwasmpool.v1beta1.Query"
   }
 
-  /// Unary call to Params
+  /// Pools returns all cosmwasm pools
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to Pools.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func pools(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_PoolsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest, Osmosis_Cosmwasmpool_V1beta1_PoolsResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.pools.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makePoolsInterceptors() ?? []
+    )
+  }
+
+  /// Params returns the parameters of the x/cosmwasmpool module.
   ///
   /// - Parameters:
   ///   - request: Request to send to Params.
@@ -57,6 +85,24 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to ContractInfoByPoolId
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to ContractInfoByPoolId.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func contractInfoByPoolId(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest, Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.contractInfoByPoolId.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeContractInfoByPoolIdInterceptors() ?? []
     )
   }
 }
@@ -123,10 +169,20 @@ internal protocol Osmosis_Cosmwasmpool_V1beta1_QueryAsyncClientProtocol: GRPCCli
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Osmosis_Cosmwasmpool_V1beta1_QueryClientInterceptorFactoryProtocol? { get }
 
+  func makePoolsCall(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_PoolsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest, Osmosis_Cosmwasmpool_V1beta1_PoolsResponse>
+
   func makeParamsCall(
     _ request: Osmosis_Cosmwasmpool_V1beta1_ParamsRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_ParamsRequest, Osmosis_Cosmwasmpool_V1beta1_ParamsResponse>
+
+  func makeContractInfoByPoolIDCall(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest, Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -137,6 +193,18 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryAsyncClientProtocol {
 
   internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_QueryClientInterceptorFactoryProtocol? {
     return nil
+  }
+
+  internal func makePoolsCall(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_PoolsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest, Osmosis_Cosmwasmpool_V1beta1_PoolsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.pools.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makePoolsInterceptors() ?? []
+    )
   }
 
   internal func makeParamsCall(
@@ -150,10 +218,34 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
     )
   }
+
+  internal func makeContractInfoByPoolIDCall(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest, Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.contractInfoByPoolId.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeContractInfoByPoolIdInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Osmosis_Cosmwasmpool_V1beta1_QueryAsyncClientProtocol {
+  internal func pools(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_PoolsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_PoolsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.pools.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makePoolsInterceptors() ?? []
+    )
+  }
+
   internal func params(
     _ request: Osmosis_Cosmwasmpool_V1beta1_ParamsRequest,
     callOptions: CallOptions? = nil
@@ -163,6 +255,18 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
+
+  internal func contractInfoByPoolId(
+    _ request: Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.contractInfoByPoolId.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeContractInfoByPoolIdInterceptors() ?? []
     )
   }
 }
@@ -186,8 +290,14 @@ internal struct Osmosis_Cosmwasmpool_V1beta1_QueryAsyncClient: Osmosis_Cosmwasmp
 
 internal protocol Osmosis_Cosmwasmpool_V1beta1_QueryClientInterceptorFactoryProtocol: Sendable {
 
+  /// - Returns: Interceptors to use when invoking 'pools'.
+  func makePoolsInterceptors() -> [ClientInterceptor<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest, Osmosis_Cosmwasmpool_V1beta1_PoolsResponse>]
+
   /// - Returns: Interceptors to use when invoking 'params'.
   func makeParamsInterceptors() -> [ClientInterceptor<Osmosis_Cosmwasmpool_V1beta1_ParamsRequest, Osmosis_Cosmwasmpool_V1beta1_ParamsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'contractInfoByPoolId'.
+  func makeContractInfoByPoolIdInterceptors() -> [ClientInterceptor<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest, Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse>]
 }
 
 internal enum Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata {
@@ -195,14 +305,28 @@ internal enum Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata {
     name: "Query",
     fullName: "osmosis.cosmwasmpool.v1beta1.Query",
     methods: [
+      Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.pools,
       Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.params,
+      Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata.Methods.contractInfoByPoolId,
     ]
   )
 
   internal enum Methods {
+    internal static let pools = GRPCMethodDescriptor(
+      name: "Pools",
+      path: "/osmosis.cosmwasmpool.v1beta1.Query/Pools",
+      type: GRPCCallType.unary
+    )
+
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
       path: "/osmosis.cosmwasmpool.v1beta1.Query/Params",
+      type: GRPCCallType.unary
+    )
+
+    internal static let contractInfoByPoolId = GRPCMethodDescriptor(
+      name: "ContractInfoByPoolId",
+      path: "/osmosis.cosmwasmpool.v1beta1.Query/ContractInfoByPoolId",
       type: GRPCCallType.unary
     )
   }
@@ -212,7 +336,13 @@ internal enum Osmosis_Cosmwasmpool_V1beta1_QueryClientMetadata {
 internal protocol Osmosis_Cosmwasmpool_V1beta1_QueryProvider: CallHandlerProvider {
   var interceptors: Osmosis_Cosmwasmpool_V1beta1_QueryServerInterceptorFactoryProtocol? { get }
 
+  /// Pools returns all cosmwasm pools
+  func pools(request: Osmosis_Cosmwasmpool_V1beta1_PoolsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Cosmwasmpool_V1beta1_PoolsResponse>
+
+  /// Params returns the parameters of the x/cosmwasmpool module.
   func params(request: Osmosis_Cosmwasmpool_V1beta1_ParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Cosmwasmpool_V1beta1_ParamsResponse>
+
+  func contractInfoByPoolId(request: Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse>
 }
 
 extension Osmosis_Cosmwasmpool_V1beta1_QueryProvider {
@@ -227,6 +357,15 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
+    case "Pools":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_PoolsResponse>(),
+        interceptors: self.interceptors?.makePoolsInterceptors() ?? [],
+        userFunction: self.pools(request:context:)
+      )
+
     case "Params":
       return UnaryServerHandler(
         context: context,
@@ -234,6 +373,15 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryProvider {
         responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_ParamsResponse>(),
         interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
         userFunction: self.params(request:context:)
+      )
+
+    case "ContractInfoByPoolId":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse>(),
+        interceptors: self.interceptors?.makeContractInfoByPoolIdInterceptors() ?? [],
+        userFunction: self.contractInfoByPoolId(request:context:)
       )
 
     default:
@@ -248,10 +396,22 @@ internal protocol Osmosis_Cosmwasmpool_V1beta1_QueryAsyncProvider: CallHandlerPr
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Osmosis_Cosmwasmpool_V1beta1_QueryServerInterceptorFactoryProtocol? { get }
 
+  /// Pools returns all cosmwasm pools
+  @Sendable func pools(
+    request: Osmosis_Cosmwasmpool_V1beta1_PoolsRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_PoolsResponse
+
+  /// Params returns the parameters of the x/cosmwasmpool module.
   @Sendable func params(
     request: Osmosis_Cosmwasmpool_V1beta1_ParamsRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Cosmwasmpool_V1beta1_ParamsResponse
+
+  @Sendable func contractInfoByPoolId(
+    request: Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -273,6 +433,15 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryAsyncProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
+    case "Pools":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_PoolsResponse>(),
+        interceptors: self.interceptors?.makePoolsInterceptors() ?? [],
+        wrapping: self.pools(request:context:)
+      )
+
     case "Params":
       return GRPCAsyncServerHandler(
         context: context,
@@ -280,6 +449,15 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryAsyncProvider {
         responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_ParamsResponse>(),
         interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
         wrapping: self.params(request:context:)
+      )
+
+    case "ContractInfoByPoolId":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse>(),
+        interceptors: self.interceptors?.makeContractInfoByPoolIdInterceptors() ?? [],
+        wrapping: self.contractInfoByPoolId(request:context:)
       )
 
     default:
@@ -290,9 +468,17 @@ extension Osmosis_Cosmwasmpool_V1beta1_QueryAsyncProvider {
 
 internal protocol Osmosis_Cosmwasmpool_V1beta1_QueryServerInterceptorFactoryProtocol {
 
+  /// - Returns: Interceptors to use when handling 'pools'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makePoolsInterceptors() -> [ServerInterceptor<Osmosis_Cosmwasmpool_V1beta1_PoolsRequest, Osmosis_Cosmwasmpool_V1beta1_PoolsResponse>]
+
   /// - Returns: Interceptors to use when handling 'params'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeParamsInterceptors() -> [ServerInterceptor<Osmosis_Cosmwasmpool_V1beta1_ParamsRequest, Osmosis_Cosmwasmpool_V1beta1_ParamsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'contractInfoByPoolId'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeContractInfoByPoolIdInterceptors() -> [ServerInterceptor<Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdRequest, Osmosis_Cosmwasmpool_V1beta1_ContractInfoByPoolIdResponse>]
 }
 
 internal enum Osmosis_Cosmwasmpool_V1beta1_QueryServerMetadata {
@@ -300,14 +486,28 @@ internal enum Osmosis_Cosmwasmpool_V1beta1_QueryServerMetadata {
     name: "Query",
     fullName: "osmosis.cosmwasmpool.v1beta1.Query",
     methods: [
+      Osmosis_Cosmwasmpool_V1beta1_QueryServerMetadata.Methods.pools,
       Osmosis_Cosmwasmpool_V1beta1_QueryServerMetadata.Methods.params,
+      Osmosis_Cosmwasmpool_V1beta1_QueryServerMetadata.Methods.contractInfoByPoolId,
     ]
   )
 
   internal enum Methods {
+    internal static let pools = GRPCMethodDescriptor(
+      name: "Pools",
+      path: "/osmosis.cosmwasmpool.v1beta1.Query/Pools",
+      type: GRPCCallType.unary
+    )
+
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
       path: "/osmosis.cosmwasmpool.v1beta1.Query/Params",
+      type: GRPCCallType.unary
+    )
+
+    internal static let contractInfoByPoolId = GRPCMethodDescriptor(
+      name: "ContractInfoByPoolId",
+      path: "/osmosis.cosmwasmpool.v1beta1.Query/ContractInfoByPoolId",
       type: GRPCCallType.unary
     )
   }

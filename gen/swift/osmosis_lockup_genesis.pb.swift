@@ -32,9 +32,20 @@ struct Osmosis_Lockup_GenesisState {
 
   var syntheticLocks: [Osmosis_Lockup_SyntheticLock] = []
 
+  var params: Osmosis_Lockup_Params {
+    get {return _params ?? Osmosis_Lockup_Params()}
+    set {_params = newValue}
+  }
+  /// Returns true if `params` has been explicitly set.
+  var hasParams: Bool {return self._params != nil}
+  /// Clears the value of `params`. Subsequent reads from it will return its default value.
+  mutating func clearParams() {self._params = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _params: Osmosis_Lockup_Params? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -51,6 +62,7 @@ extension Osmosis_Lockup_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     1: .standard(proto: "last_lock_id"),
     2: .same(proto: "locks"),
     3: .standard(proto: "synthetic_locks"),
+    4: .same(proto: "params"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -62,12 +74,17 @@ extension Osmosis_Lockup_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.lastLockID) }()
       case 2: try { try decoder.decodeRepeatedMessageField(value: &self.locks) }()
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.syntheticLocks) }()
+      case 4: try { try decoder.decodeSingularMessageField(value: &self._params) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if self.lastLockID != 0 {
       try visitor.visitSingularUInt64Field(value: self.lastLockID, fieldNumber: 1)
     }
@@ -77,6 +94,9 @@ extension Osmosis_Lockup_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     if !self.syntheticLocks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.syntheticLocks, fieldNumber: 3)
     }
+    try { if let v = self._params {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -84,6 +104,7 @@ extension Osmosis_Lockup_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     if lhs.lastLockID != rhs.lastLockID {return false}
     if lhs.locks != rhs.locks {return false}
     if lhs.syntheticLocks != rhs.syntheticLocks {return false}
+    if lhs._params != rhs._params {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -162,6 +162,122 @@ struct Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse {
   init() {}
 }
 
+/// ===================== MsgSetDenomPairTakerFee
+struct Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var sender: String = String()
+
+  var denomPairTakerFee: [Osmosis_Poolmanager_V1beta1_DenomPairTakerFee] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var success: Bool = false
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// ===================== MsgSetTakerFeeShareAgreementForDenom
+struct Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var sender: String = String()
+
+  /// denom is the denom that the taker fee share agreement is being set for.
+  /// Ex. If this is set to "nBTC", then any trade route that includes "nBTC"
+  /// will have the skim_percent skimmed from the taker fees and sent to the
+  /// skim_address.
+  var denom: String = String()
+
+  /// skim_percent is the percentage of taker fees that will be skimmed for the
+  /// bridge provider, in the event that the bridge provider's denom is included
+  /// in the swap route.
+  var skimPercent: String = String()
+
+  /// skim_address is the address belonging to the respective bridge provider
+  /// that the skimmed taker fees will be sent to at the end of each epoch.
+  var skimAddress: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// ===================== MsgSetRegisteredAlloyedPool
+struct Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var sender: String = String()
+
+  /// pool_id is the id of the pool that is being registered as an alloyed pool.
+  /// Only alloyed pools that intend to be used in taker fee revenue sharing
+  /// should be registered.
+  var poolID: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Poolmanager_V1beta1_DenomPairTakerFee {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// DEPRECATED: Now that we are using uni-directional trading pairs, we are
+  /// using tokenInDenom and tokenOutDenom instead of denom0 and denom1 to
+  /// prevent confusion.
+  var denom0: String = String()
+
+  var denom1: String = String()
+
+  var takerFee: String = String()
+
+  var tokenInDenom: String = String()
+
+  var tokenOutDenom: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Poolmanager_V1beta1_MsgSwapExactAmountIn: @unchecked Sendable {}
 extension Osmosis_Poolmanager_V1beta1_MsgSwapExactAmountInResponse: @unchecked Sendable {}
@@ -171,6 +287,13 @@ extension Osmosis_Poolmanager_V1beta1_MsgSwapExactAmountOut: @unchecked Sendable
 extension Osmosis_Poolmanager_V1beta1_MsgSwapExactAmountOutResponse: @unchecked Sendable {}
 extension Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut: @unchecked Sendable {}
 extension Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse: @unchecked Sendable {}
+extension Osmosis_Poolmanager_V1beta1_DenomPairTakerFee: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -508,6 +631,258 @@ extension Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse: S
 
   static func ==(lhs: Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse, rhs: Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse) -> Bool {
     if lhs.tokenInAmount != rhs.tokenInAmount {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetDenomPairTakerFee"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "sender"),
+    2: .standard(proto: "denom_pair_taker_fee"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.sender) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.denomPairTakerFee) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.sender.isEmpty {
+      try visitor.visitSingularStringField(value: self.sender, fieldNumber: 1)
+    }
+    if !self.denomPairTakerFee.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.denomPairTakerFee, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, rhs: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee) -> Bool {
+    if lhs.sender != rhs.sender {return false}
+    if lhs.denomPairTakerFee != rhs.denomPairTakerFee {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetDenomPairTakerFeeResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "success"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularBoolField(value: &self.success) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.success != false {
+      try visitor.visitSingularBoolField(value: self.success, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse, rhs: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse) -> Bool {
+    if lhs.success != rhs.success {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetTakerFeeShareAgreementForDenom"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "sender"),
+    2: .same(proto: "denom"),
+    3: .standard(proto: "skim_percent"),
+    4: .standard(proto: "skim_address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.sender) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.denom) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.skimPercent) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.skimAddress) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.sender.isEmpty {
+      try visitor.visitSingularStringField(value: self.sender, fieldNumber: 1)
+    }
+    if !self.denom.isEmpty {
+      try visitor.visitSingularStringField(value: self.denom, fieldNumber: 2)
+    }
+    if !self.skimPercent.isEmpty {
+      try visitor.visitSingularStringField(value: self.skimPercent, fieldNumber: 3)
+    }
+    if !self.skimAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.skimAddress, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, rhs: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom) -> Bool {
+    if lhs.sender != rhs.sender {return false}
+    if lhs.denom != rhs.denom {return false}
+    if lhs.skimPercent != rhs.skimPercent {return false}
+    if lhs.skimAddress != rhs.skimAddress {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetTakerFeeShareAgreementForDenomResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse, rhs: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetRegisteredAlloyedPool"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "sender"),
+    2: .standard(proto: "pool_id"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.sender) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.sender.isEmpty {
+      try visitor.visitSingularStringField(value: self.sender, fieldNumber: 1)
+    }
+    if self.poolID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.poolID, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, rhs: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool) -> Bool {
+    if lhs.sender != rhs.sender {return false}
+    if lhs.poolID != rhs.poolID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetRegisteredAlloyedPoolResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse, rhs: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Poolmanager_V1beta1_DenomPairTakerFee: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".DenomPairTakerFee"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "denom0"),
+    2: .same(proto: "denom1"),
+    3: .standard(proto: "taker_fee"),
+    4: .same(proto: "tokenInDenom"),
+    5: .same(proto: "tokenOutDenom"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.denom0) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.denom1) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.takerFee) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.tokenInDenom) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.tokenOutDenom) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.denom0.isEmpty {
+      try visitor.visitSingularStringField(value: self.denom0, fieldNumber: 1)
+    }
+    if !self.denom1.isEmpty {
+      try visitor.visitSingularStringField(value: self.denom1, fieldNumber: 2)
+    }
+    if !self.takerFee.isEmpty {
+      try visitor.visitSingularStringField(value: self.takerFee, fieldNumber: 3)
+    }
+    if !self.tokenInDenom.isEmpty {
+      try visitor.visitSingularStringField(value: self.tokenInDenom, fieldNumber: 4)
+    }
+    if !self.tokenOutDenom.isEmpty {
+      try visitor.visitSingularStringField(value: self.tokenOutDenom, fieldNumber: 5)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Poolmanager_V1beta1_DenomPairTakerFee, rhs: Osmosis_Poolmanager_V1beta1_DenomPairTakerFee) -> Bool {
+    if lhs.denom0 != rhs.denom0 {return false}
+    if lhs.denom1 != rhs.denom1 {return false}
+    if lhs.takerFee != rhs.takerFee {return false}
+    if lhs.tokenInDenom != rhs.tokenInDenom {return false}
+    if lhs.tokenOutDenom != rhs.tokenOutDenom {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

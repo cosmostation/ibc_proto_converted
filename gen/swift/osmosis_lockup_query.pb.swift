@@ -346,6 +346,30 @@ struct Osmosis_Lockup_LockedResponse {
   fileprivate var _lock: Osmosis_Lockup_PeriodLock? = nil
 }
 
+struct Osmosis_Lockup_LockRewardReceiverRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var lockID: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Lockup_LockRewardReceiverResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var rewardReceiver: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 struct Osmosis_Lockup_NextLockIDRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -621,6 +645,8 @@ extension Osmosis_Lockup_LockedDenomRequest: @unchecked Sendable {}
 extension Osmosis_Lockup_LockedDenomResponse: @unchecked Sendable {}
 extension Osmosis_Lockup_LockedRequest: @unchecked Sendable {}
 extension Osmosis_Lockup_LockedResponse: @unchecked Sendable {}
+extension Osmosis_Lockup_LockRewardReceiverRequest: @unchecked Sendable {}
+extension Osmosis_Lockup_LockRewardReceiverResponse: @unchecked Sendable {}
 extension Osmosis_Lockup_NextLockIDRequest: @unchecked Sendable {}
 extension Osmosis_Lockup_NextLockIDResponse: @unchecked Sendable {}
 extension Osmosis_Lockup_SyntheticLockupsByLockupIDRequest: @unchecked Sendable {}
@@ -1376,6 +1402,70 @@ extension Osmosis_Lockup_LockedResponse: SwiftProtobuf.Message, SwiftProtobuf._M
 
   static func ==(lhs: Osmosis_Lockup_LockedResponse, rhs: Osmosis_Lockup_LockedResponse) -> Bool {
     if lhs._lock != rhs._lock {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Lockup_LockRewardReceiverRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".LockRewardReceiverRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "lock_id"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.lockID) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.lockID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.lockID, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Lockup_LockRewardReceiverRequest, rhs: Osmosis_Lockup_LockRewardReceiverRequest) -> Bool {
+    if lhs.lockID != rhs.lockID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Lockup_LockRewardReceiverResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".LockRewardReceiverResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "reward_receiver"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.rewardReceiver) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.rewardReceiver.isEmpty {
+      try visitor.visitSingularStringField(value: self.rewardReceiver, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Lockup_LockRewardReceiverResponse, rhs: Osmosis_Lockup_LockRewardReceiverResponse) -> Bool {
+    if lhs.rewardReceiver != rhs.rewardReceiver {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

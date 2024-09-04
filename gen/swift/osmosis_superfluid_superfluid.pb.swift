@@ -109,10 +109,10 @@ struct Osmosis_Superfluid_SuperfluidIntermediaryAccount {
 /// The Osmo-Equivalent-Multiplier Record for epoch N refers to the osmo worth we
 /// treat an LP share as having, for all of epoch N. Eventually this is intended
 /// to be set as the Time-weighted-average-osmo-backing for the entire duration
-/// of epoch N-1. (Thereby locking whats in use for epoch N as based on the prior
-/// epochs rewards) However for now, this is not the TWAP but instead the spot
-/// price at the boundary. For different types of assets in the future, it could
-/// change.
+/// of epoch N-1. (Thereby locking what's in use for epoch N as based on the
+/// prior epochs rewards) However for now, this is not the TWAP but instead the
+/// spot price at the boundary. For different types of assets in the future, it
+/// could change.
 struct Osmosis_Superfluid_OsmoEquivalentMultiplierRecord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -196,6 +196,53 @@ struct Osmosis_Superfluid_UnpoolWhitelistedPools {
   init() {}
 }
 
+struct Osmosis_Superfluid_ConcentratedPoolUserPositionRecord {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var validatorAddress: String = String()
+
+  var positionID: UInt64 = 0
+
+  var lockID: UInt64 = 0
+
+  var syntheticLock: Osmosis_Lockup_SyntheticLock {
+    get {return _syntheticLock ?? Osmosis_Lockup_SyntheticLock()}
+    set {_syntheticLock = newValue}
+  }
+  /// Returns true if `syntheticLock` has been explicitly set.
+  var hasSyntheticLock: Bool {return self._syntheticLock != nil}
+  /// Clears the value of `syntheticLock`. Subsequent reads from it will return its default value.
+  mutating func clearSyntheticLock() {self._syntheticLock = nil}
+
+  var delegationAmount: Cosmos_Base_V1beta1_Coin {
+    get {return _delegationAmount ?? Cosmos_Base_V1beta1_Coin()}
+    set {_delegationAmount = newValue}
+  }
+  /// Returns true if `delegationAmount` has been explicitly set.
+  var hasDelegationAmount: Bool {return self._delegationAmount != nil}
+  /// Clears the value of `delegationAmount`. Subsequent reads from it will return its default value.
+  mutating func clearDelegationAmount() {self._delegationAmount = nil}
+
+  var equivalentStakedAmount: Cosmos_Base_V1beta1_Coin {
+    get {return _equivalentStakedAmount ?? Cosmos_Base_V1beta1_Coin()}
+    set {_equivalentStakedAmount = newValue}
+  }
+  /// Returns true if `equivalentStakedAmount` has been explicitly set.
+  var hasEquivalentStakedAmount: Bool {return self._equivalentStakedAmount != nil}
+  /// Clears the value of `equivalentStakedAmount`. Subsequent reads from it will return its default value.
+  mutating func clearEquivalentStakedAmount() {self._equivalentStakedAmount = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _syntheticLock: Osmosis_Lockup_SyntheticLock? = nil
+  fileprivate var _delegationAmount: Cosmos_Base_V1beta1_Coin? = nil
+  fileprivate var _equivalentStakedAmount: Cosmos_Base_V1beta1_Coin? = nil
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Superfluid_SuperfluidAssetType: @unchecked Sendable {}
 extension Osmosis_Superfluid_SuperfluidAsset: @unchecked Sendable {}
@@ -204,6 +251,7 @@ extension Osmosis_Superfluid_OsmoEquivalentMultiplierRecord: @unchecked Sendable
 extension Osmosis_Superfluid_SuperfluidDelegationRecord: @unchecked Sendable {}
 extension Osmosis_Superfluid_LockIdIntermediaryAccountConnection: @unchecked Sendable {}
 extension Osmosis_Superfluid_UnpoolWhitelistedPools: @unchecked Sendable {}
+extension Osmosis_Superfluid_ConcentratedPoolUserPositionRecord: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -463,6 +511,72 @@ extension Osmosis_Superfluid_UnpoolWhitelistedPools: SwiftProtobuf.Message, Swif
 
   static func ==(lhs: Osmosis_Superfluid_UnpoolWhitelistedPools, rhs: Osmosis_Superfluid_UnpoolWhitelistedPools) -> Bool {
     if lhs.ids != rhs.ids {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_ConcentratedPoolUserPositionRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ConcentratedPoolUserPositionRecord"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "validator_address"),
+    2: .standard(proto: "position_id"),
+    3: .standard(proto: "lock_id"),
+    4: .standard(proto: "synthetic_lock"),
+    5: .standard(proto: "delegation_amount"),
+    6: .standard(proto: "equivalent_staked_amount"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.validatorAddress) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.positionID) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.lockID) }()
+      case 4: try { try decoder.decodeSingularMessageField(value: &self._syntheticLock) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._delegationAmount) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._equivalentStakedAmount) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.validatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.validatorAddress, fieldNumber: 1)
+    }
+    if self.positionID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.positionID, fieldNumber: 2)
+    }
+    if self.lockID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.lockID, fieldNumber: 3)
+    }
+    try { if let v = self._syntheticLock {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    } }()
+    try { if let v = self._delegationAmount {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
+    try { if let v = self._equivalentStakedAmount {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_ConcentratedPoolUserPositionRecord, rhs: Osmosis_Superfluid_ConcentratedPoolUserPositionRecord) -> Bool {
+    if lhs.validatorAddress != rhs.validatorAddress {return false}
+    if lhs.positionID != rhs.positionID {return false}
+    if lhs.lockID != rhs.lockID {return false}
+    if lhs._syntheticLock != rhs._syntheticLock {return false}
+    if lhs._delegationAmount != rhs._delegationAmount {return false}
+    if lhs._equivalentStakedAmount != rhs._equivalentStakedAmount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

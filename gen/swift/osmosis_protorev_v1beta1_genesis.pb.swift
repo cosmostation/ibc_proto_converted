@@ -28,61 +28,114 @@ struct Osmosis_Protorev_V1beta1_GenesisState {
 
   /// Parameters for the protorev module.
   var params: Osmosis_Protorev_V1beta1_Params {
-    get {return _params ?? Osmosis_Protorev_V1beta1_Params()}
-    set {_params = newValue}
+    get {return _storage._params ?? Osmosis_Protorev_V1beta1_Params()}
+    set {_uniqueStorage()._params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  var hasParams: Bool {return _storage._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  mutating func clearParams() {_uniqueStorage()._params = nil}
 
   /// Token pair arb routes for the protorev module (hot routes).
-  var tokenPairArbRoutes: [Osmosis_Protorev_V1beta1_TokenPairArbRoutes] = []
+  var tokenPairArbRoutes: [Osmosis_Protorev_V1beta1_TokenPairArbRoutes] {
+    get {return _storage._tokenPairArbRoutes}
+    set {_uniqueStorage()._tokenPairArbRoutes = newValue}
+  }
 
   /// The base denominations being used to create cyclic arbitrage routes via the
   /// highest liquidity method.
-  var baseDenoms: [Osmosis_Protorev_V1beta1_BaseDenom] = []
+  var baseDenoms: [Osmosis_Protorev_V1beta1_BaseDenom] {
+    get {return _storage._baseDenoms}
+    set {_uniqueStorage()._baseDenoms = newValue}
+  }
 
-  /// The pool weights that are being used to calculate the weight (compute cost)
-  /// of each route.
+  /// DEPRECATED: pool_weights are weights that are being used to calculate the
+  /// compute cost of each route. This field is deprecated.
+  /// It is replaced by the `info_by_pool_type` field.
   var poolWeights: Osmosis_Protorev_V1beta1_PoolWeights {
-    get {return _poolWeights ?? Osmosis_Protorev_V1beta1_PoolWeights()}
-    set {_poolWeights = newValue}
+    get {return _storage._poolWeights ?? Osmosis_Protorev_V1beta1_PoolWeights()}
+    set {_uniqueStorage()._poolWeights = newValue}
   }
   /// Returns true if `poolWeights` has been explicitly set.
-  var hasPoolWeights: Bool {return self._poolWeights != nil}
+  var hasPoolWeights: Bool {return _storage._poolWeights != nil}
   /// Clears the value of `poolWeights`. Subsequent reads from it will return its default value.
-  mutating func clearPoolWeights() {self._poolWeights = nil}
+  mutating func clearPoolWeights() {_uniqueStorage()._poolWeights = nil}
 
   /// The number of days since module genesis.
-  var daysSinceModuleGenesis: UInt64 = 0
+  var daysSinceModuleGenesis: UInt64 {
+    get {return _storage._daysSinceModuleGenesis}
+    set {_uniqueStorage()._daysSinceModuleGenesis = newValue}
+  }
 
   /// The fees the developer account has accumulated over time.
-  var developerFees: [Cosmos_Base_V1beta1_Coin] = []
+  var developerFees: [Cosmos_Base_V1beta1_Coin] {
+    get {return _storage._developerFees}
+    set {_uniqueStorage()._developerFees = newValue}
+  }
 
   /// The latest block height that the module has processed.
-  var latestBlockHeight: UInt64 = 0
+  var latestBlockHeight: UInt64 {
+    get {return _storage._latestBlockHeight}
+    set {_uniqueStorage()._latestBlockHeight = newValue}
+  }
 
   /// The developer account address of the module.
-  var developerAddress: String = String()
+  var developerAddress: String {
+    get {return _storage._developerAddress}
+    set {_uniqueStorage()._developerAddress = newValue}
+  }
 
   /// Max pool points per block i.e. the maximum compute time (in ms)
   /// that protorev can use per block.
-  var maxPoolPointsPerBlock: UInt64 = 0
+  var maxPoolPointsPerBlock: UInt64 {
+    get {return _storage._maxPoolPointsPerBlock}
+    set {_uniqueStorage()._maxPoolPointsPerBlock = newValue}
+  }
 
   /// Max pool points per tx i.e. the maximum compute time (in ms) that
   /// protorev can use per tx.
-  var maxPoolPointsPerTx: UInt64 = 0
+  var maxPoolPointsPerTx: UInt64 {
+    get {return _storage._maxPoolPointsPerTx}
+    set {_uniqueStorage()._maxPoolPointsPerTx = newValue}
+  }
 
   /// The number of pool points that have been consumed in the current block.
-  var pointCountForBlock: UInt64 = 0
+  var pointCountForBlock: UInt64 {
+    get {return _storage._pointCountForBlock}
+    set {_uniqueStorage()._pointCountForBlock = newValue}
+  }
+
+  /// All of the profits that have been accumulated by the module.
+  var profits: [Cosmos_Base_V1beta1_Coin] {
+    get {return _storage._profits}
+    set {_uniqueStorage()._profits = newValue}
+  }
+
+  /// Information that is used to estimate execution time / gas
+  /// consumption of a swap on a given pool type.
+  var infoByPoolType: Osmosis_Protorev_V1beta1_InfoByPoolType {
+    get {return _storage._infoByPoolType ?? Osmosis_Protorev_V1beta1_InfoByPoolType()}
+    set {_uniqueStorage()._infoByPoolType = newValue}
+  }
+  /// Returns true if `infoByPoolType` has been explicitly set.
+  var hasInfoByPoolType: Bool {return _storage._infoByPoolType != nil}
+  /// Clears the value of `infoByPoolType`. Subsequent reads from it will return its default value.
+  mutating func clearInfoByPoolType() {_uniqueStorage()._infoByPoolType = nil}
+
+  var cyclicArbTracker: Osmosis_Protorev_V1beta1_CyclicArbTracker {
+    get {return _storage._cyclicArbTracker ?? Osmosis_Protorev_V1beta1_CyclicArbTracker()}
+    set {_uniqueStorage()._cyclicArbTracker = newValue}
+  }
+  /// Returns true if `cyclicArbTracker` has been explicitly set.
+  var hasCyclicArbTracker: Bool {return _storage._cyclicArbTracker != nil}
+  /// Clears the value of `cyclicArbTracker`. Subsequent reads from it will return its default value.
+  mutating func clearCyclicArbTracker() {_uniqueStorage()._cyclicArbTracker = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
-  fileprivate var _params: Osmosis_Protorev_V1beta1_Params? = nil
-  fileprivate var _poolWeights: Osmosis_Protorev_V1beta1_PoolWeights? = nil
+  fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -107,83 +160,159 @@ extension Osmosis_Protorev_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftPro
     9: .standard(proto: "max_pool_points_per_block"),
     10: .standard(proto: "max_pool_points_per_tx"),
     11: .standard(proto: "point_count_for_block"),
+    12: .same(proto: "profits"),
+    13: .standard(proto: "info_by_pool_type"),
+    14: .standard(proto: "cyclic_arb_tracker"),
   ]
 
+  fileprivate class _StorageClass {
+    var _params: Osmosis_Protorev_V1beta1_Params? = nil
+    var _tokenPairArbRoutes: [Osmosis_Protorev_V1beta1_TokenPairArbRoutes] = []
+    var _baseDenoms: [Osmosis_Protorev_V1beta1_BaseDenom] = []
+    var _poolWeights: Osmosis_Protorev_V1beta1_PoolWeights? = nil
+    var _daysSinceModuleGenesis: UInt64 = 0
+    var _developerFees: [Cosmos_Base_V1beta1_Coin] = []
+    var _latestBlockHeight: UInt64 = 0
+    var _developerAddress: String = String()
+    var _maxPoolPointsPerBlock: UInt64 = 0
+    var _maxPoolPointsPerTx: UInt64 = 0
+    var _pointCountForBlock: UInt64 = 0
+    var _profits: [Cosmos_Base_V1beta1_Coin] = []
+    var _infoByPoolType: Osmosis_Protorev_V1beta1_InfoByPoolType? = nil
+    var _cyclicArbTracker: Osmosis_Protorev_V1beta1_CyclicArbTracker? = nil
+
+    static let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _params = source._params
+      _tokenPairArbRoutes = source._tokenPairArbRoutes
+      _baseDenoms = source._baseDenoms
+      _poolWeights = source._poolWeights
+      _daysSinceModuleGenesis = source._daysSinceModuleGenesis
+      _developerFees = source._developerFees
+      _latestBlockHeight = source._latestBlockHeight
+      _developerAddress = source._developerAddress
+      _maxPoolPointsPerBlock = source._maxPoolPointsPerBlock
+      _maxPoolPointsPerTx = source._maxPoolPointsPerTx
+      _pointCountForBlock = source._pointCountForBlock
+      _profits = source._profits
+      _infoByPoolType = source._infoByPoolType
+      _cyclicArbTracker = source._cyclicArbTracker
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._params) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.tokenPairArbRoutes) }()
-      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.baseDenoms) }()
-      case 4: try { try decoder.decodeSingularMessageField(value: &self._poolWeights) }()
-      case 5: try { try decoder.decodeSingularUInt64Field(value: &self.daysSinceModuleGenesis) }()
-      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.developerFees) }()
-      case 7: try { try decoder.decodeSingularUInt64Field(value: &self.latestBlockHeight) }()
-      case 8: try { try decoder.decodeSingularStringField(value: &self.developerAddress) }()
-      case 9: try { try decoder.decodeSingularUInt64Field(value: &self.maxPoolPointsPerBlock) }()
-      case 10: try { try decoder.decodeSingularUInt64Field(value: &self.maxPoolPointsPerTx) }()
-      case 11: try { try decoder.decodeSingularUInt64Field(value: &self.pointCountForBlock) }()
-      default: break
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularMessageField(value: &_storage._params) }()
+        case 2: try { try decoder.decodeRepeatedMessageField(value: &_storage._tokenPairArbRoutes) }()
+        case 3: try { try decoder.decodeRepeatedMessageField(value: &_storage._baseDenoms) }()
+        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._poolWeights) }()
+        case 5: try { try decoder.decodeSingularUInt64Field(value: &_storage._daysSinceModuleGenesis) }()
+        case 6: try { try decoder.decodeRepeatedMessageField(value: &_storage._developerFees) }()
+        case 7: try { try decoder.decodeSingularUInt64Field(value: &_storage._latestBlockHeight) }()
+        case 8: try { try decoder.decodeSingularStringField(value: &_storage._developerAddress) }()
+        case 9: try { try decoder.decodeSingularUInt64Field(value: &_storage._maxPoolPointsPerBlock) }()
+        case 10: try { try decoder.decodeSingularUInt64Field(value: &_storage._maxPoolPointsPerTx) }()
+        case 11: try { try decoder.decodeSingularUInt64Field(value: &_storage._pointCountForBlock) }()
+        case 12: try { try decoder.decodeRepeatedMessageField(value: &_storage._profits) }()
+        case 13: try { try decoder.decodeSingularMessageField(value: &_storage._infoByPoolType) }()
+        case 14: try { try decoder.decodeSingularMessageField(value: &_storage._cyclicArbTracker) }()
+        default: break
+        }
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._params {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    if !self.tokenPairArbRoutes.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.tokenPairArbRoutes, fieldNumber: 2)
-    }
-    if !self.baseDenoms.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.baseDenoms, fieldNumber: 3)
-    }
-    try { if let v = self._poolWeights {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    } }()
-    if self.daysSinceModuleGenesis != 0 {
-      try visitor.visitSingularUInt64Field(value: self.daysSinceModuleGenesis, fieldNumber: 5)
-    }
-    if !self.developerFees.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.developerFees, fieldNumber: 6)
-    }
-    if self.latestBlockHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.latestBlockHeight, fieldNumber: 7)
-    }
-    if !self.developerAddress.isEmpty {
-      try visitor.visitSingularStringField(value: self.developerAddress, fieldNumber: 8)
-    }
-    if self.maxPoolPointsPerBlock != 0 {
-      try visitor.visitSingularUInt64Field(value: self.maxPoolPointsPerBlock, fieldNumber: 9)
-    }
-    if self.maxPoolPointsPerTx != 0 {
-      try visitor.visitSingularUInt64Field(value: self.maxPoolPointsPerTx, fieldNumber: 10)
-    }
-    if self.pointCountForBlock != 0 {
-      try visitor.visitSingularUInt64Field(value: self.pointCountForBlock, fieldNumber: 11)
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      try { if let v = _storage._params {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+      } }()
+      if !_storage._tokenPairArbRoutes.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._tokenPairArbRoutes, fieldNumber: 2)
+      }
+      if !_storage._baseDenoms.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._baseDenoms, fieldNumber: 3)
+      }
+      try { if let v = _storage._poolWeights {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+      } }()
+      if _storage._daysSinceModuleGenesis != 0 {
+        try visitor.visitSingularUInt64Field(value: _storage._daysSinceModuleGenesis, fieldNumber: 5)
+      }
+      if !_storage._developerFees.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._developerFees, fieldNumber: 6)
+      }
+      if _storage._latestBlockHeight != 0 {
+        try visitor.visitSingularUInt64Field(value: _storage._latestBlockHeight, fieldNumber: 7)
+      }
+      if !_storage._developerAddress.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._developerAddress, fieldNumber: 8)
+      }
+      if _storage._maxPoolPointsPerBlock != 0 {
+        try visitor.visitSingularUInt64Field(value: _storage._maxPoolPointsPerBlock, fieldNumber: 9)
+      }
+      if _storage._maxPoolPointsPerTx != 0 {
+        try visitor.visitSingularUInt64Field(value: _storage._maxPoolPointsPerTx, fieldNumber: 10)
+      }
+      if _storage._pointCountForBlock != 0 {
+        try visitor.visitSingularUInt64Field(value: _storage._pointCountForBlock, fieldNumber: 11)
+      }
+      if !_storage._profits.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._profits, fieldNumber: 12)
+      }
+      try { if let v = _storage._infoByPoolType {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 13)
+      } }()
+      try { if let v = _storage._cyclicArbTracker {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Osmosis_Protorev_V1beta1_GenesisState, rhs: Osmosis_Protorev_V1beta1_GenesisState) -> Bool {
-    if lhs._params != rhs._params {return false}
-    if lhs.tokenPairArbRoutes != rhs.tokenPairArbRoutes {return false}
-    if lhs.baseDenoms != rhs.baseDenoms {return false}
-    if lhs._poolWeights != rhs._poolWeights {return false}
-    if lhs.daysSinceModuleGenesis != rhs.daysSinceModuleGenesis {return false}
-    if lhs.developerFees != rhs.developerFees {return false}
-    if lhs.latestBlockHeight != rhs.latestBlockHeight {return false}
-    if lhs.developerAddress != rhs.developerAddress {return false}
-    if lhs.maxPoolPointsPerBlock != rhs.maxPoolPointsPerBlock {return false}
-    if lhs.maxPoolPointsPerTx != rhs.maxPoolPointsPerTx {return false}
-    if lhs.pointCountForBlock != rhs.pointCountForBlock {return false}
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._params != rhs_storage._params {return false}
+        if _storage._tokenPairArbRoutes != rhs_storage._tokenPairArbRoutes {return false}
+        if _storage._baseDenoms != rhs_storage._baseDenoms {return false}
+        if _storage._poolWeights != rhs_storage._poolWeights {return false}
+        if _storage._daysSinceModuleGenesis != rhs_storage._daysSinceModuleGenesis {return false}
+        if _storage._developerFees != rhs_storage._developerFees {return false}
+        if _storage._latestBlockHeight != rhs_storage._latestBlockHeight {return false}
+        if _storage._developerAddress != rhs_storage._developerAddress {return false}
+        if _storage._maxPoolPointsPerBlock != rhs_storage._maxPoolPointsPerBlock {return false}
+        if _storage._maxPoolPointsPerTx != rhs_storage._maxPoolPointsPerTx {return false}
+        if _storage._pointCountForBlock != rhs_storage._pointCountForBlock {return false}
+        if _storage._profits != rhs_storage._profits {return false}
+        if _storage._infoByPoolType != rhs_storage._infoByPoolType {return false}
+        if _storage._cyclicArbTracker != rhs_storage._cyclicArbTracker {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
