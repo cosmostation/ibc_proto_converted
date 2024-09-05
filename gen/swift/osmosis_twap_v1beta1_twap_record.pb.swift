@@ -66,7 +66,7 @@ struct Osmosis_Twap_V1beta1_TwapRecord {
 
   var geometricTwapAccumulator: String = String()
 
-  /// This field contains the time in which the last spot price error occured.
+  /// This field contains the time in which the last spot price error occurred.
   /// It is used to alert the caller if they are getting a potentially erroneous
   /// TWAP, due to an unforeseen underlying error.
   var lastErrorTime: SwiftProtobuf.Google_Protobuf_Timestamp {
@@ -86,8 +86,49 @@ struct Osmosis_Twap_V1beta1_TwapRecord {
   fileprivate var _lastErrorTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
+/// PruningState allows us to spread out the pruning of TWAP records over time,
+/// instead of pruning all at once at the end of the epoch.
+struct Osmosis_Twap_V1beta1_PruningState {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// is_pruning is true if the pruning process is ongoing.
+  /// This tells the module to continue pruning the TWAP records
+  /// at the EndBlock.
+  var isPruning: Bool = false
+
+  /// last_kept_time is the time of the last kept TWAP record.
+  /// This is used to determine all TWAP records that are older than
+  /// last_kept_time and should be pruned.
+  var lastKeptTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _lastKeptTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_lastKeptTime = newValue}
+  }
+  /// Returns true if `lastKeptTime` has been explicitly set.
+  var hasLastKeptTime: Bool {return self._lastKeptTime != nil}
+  /// Clears the value of `lastKeptTime`. Subsequent reads from it will return its default value.
+  mutating func clearLastKeptTime() {self._lastKeptTime = nil}
+
+  /// Deprecated: This field is deprecated.
+  var lastKeySeen: Data = Data()
+
+  /// last_seen_pool_id is the pool_id that we will begin pruning in the next
+  /// block. This value starts at the highest pool_id at time of epoch, and
+  /// decreases until it reaches 1. When it reaches 1, the pruning
+  /// process is complete.
+  var lastSeenPoolID: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _lastKeptTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Twap_V1beta1_TwapRecord: @unchecked Sendable {}
+extension Osmosis_Twap_V1beta1_PruningState: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -185,6 +226,60 @@ extension Osmosis_Twap_V1beta1_TwapRecord: SwiftProtobuf.Message, SwiftProtobuf.
     if lhs.p1ArithmeticTwapAccumulator != rhs.p1ArithmeticTwapAccumulator {return false}
     if lhs.geometricTwapAccumulator != rhs.geometricTwapAccumulator {return false}
     if lhs._lastErrorTime != rhs._lastErrorTime {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Twap_V1beta1_PruningState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".PruningState"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "is_pruning"),
+    2: .standard(proto: "last_kept_time"),
+    3: .standard(proto: "last_key_seen"),
+    4: .standard(proto: "last_seen_pool_id"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularBoolField(value: &self.isPruning) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._lastKeptTime) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.lastKeySeen) }()
+      case 4: try { try decoder.decodeSingularUInt64Field(value: &self.lastSeenPoolID) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.isPruning != false {
+      try visitor.visitSingularBoolField(value: self.isPruning, fieldNumber: 1)
+    }
+    try { if let v = self._lastKeptTime {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if !self.lastKeySeen.isEmpty {
+      try visitor.visitSingularBytesField(value: self.lastKeySeen, fieldNumber: 3)
+    }
+    if self.lastSeenPoolID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.lastSeenPoolID, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Twap_V1beta1_PruningState, rhs: Osmosis_Twap_V1beta1_PruningState) -> Bool {
+    if lhs.isPruning != rhs.isPruning {return false}
+    if lhs._lastKeptTime != rhs._lastKeptTime {return false}
+    if lhs.lastKeySeen != rhs.lastKeySeen {return false}
+    if lhs.lastSeenPoolID != rhs.lastSeenPoolID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

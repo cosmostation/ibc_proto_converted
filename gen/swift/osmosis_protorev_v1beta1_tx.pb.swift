@@ -78,8 +78,8 @@ struct Osmosis_Protorev_V1beta1_MsgSetDeveloperAccountResponse {
   init() {}
 }
 
-/// MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
-struct Osmosis_Protorev_V1beta1_MsgSetPoolWeights {
+/// MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type.
+struct Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -87,25 +87,25 @@ struct Osmosis_Protorev_V1beta1_MsgSetPoolWeights {
   /// admin is the account that is authorized to set the pool weights.
   var admin: String = String()
 
-  /// pool_weights is the list of pool weights to set.
-  var poolWeights: Osmosis_Protorev_V1beta1_PoolWeights {
-    get {return _poolWeights ?? Osmosis_Protorev_V1beta1_PoolWeights()}
-    set {_poolWeights = newValue}
+  /// info_by_pool_type contains information about the pool types.
+  var infoByPoolType: Osmosis_Protorev_V1beta1_InfoByPoolType {
+    get {return _infoByPoolType ?? Osmosis_Protorev_V1beta1_InfoByPoolType()}
+    set {_infoByPoolType = newValue}
   }
-  /// Returns true if `poolWeights` has been explicitly set.
-  var hasPoolWeights: Bool {return self._poolWeights != nil}
-  /// Clears the value of `poolWeights`. Subsequent reads from it will return its default value.
-  mutating func clearPoolWeights() {self._poolWeights = nil}
+  /// Returns true if `infoByPoolType` has been explicitly set.
+  var hasInfoByPoolType: Bool {return self._infoByPoolType != nil}
+  /// Clears the value of `infoByPoolType`. Subsequent reads from it will return its default value.
+  mutating func clearInfoByPoolType() {self._infoByPoolType = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
-  fileprivate var _poolWeights: Osmosis_Protorev_V1beta1_PoolWeights? = nil
+  fileprivate var _infoByPoolType: Osmosis_Protorev_V1beta1_InfoByPoolType? = nil
 }
 
-/// MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
-struct Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse {
+/// MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type.
+struct Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -210,8 +210,8 @@ extension Osmosis_Protorev_V1beta1_MsgSetHotRoutes: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_MsgSetHotRoutesResponse: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_MsgSetDeveloperAccount: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_MsgSetDeveloperAccountResponse: @unchecked Sendable {}
-extension Osmosis_Protorev_V1beta1_MsgSetPoolWeights: @unchecked Sendable {}
-extension Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerTx: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerTxResponse: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlock: @unchecked Sendable {}
@@ -338,11 +338,11 @@ extension Osmosis_Protorev_V1beta1_MsgSetDeveloperAccountResponse: SwiftProtobuf
   }
 }
 
-extension Osmosis_Protorev_V1beta1_MsgSetPoolWeights: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSetPoolWeights"
+extension Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetInfoByPoolType"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
-    2: .standard(proto: "pool_weights"),
+    2: .standard(proto: "info_by_pool_type"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -352,7 +352,7 @@ extension Osmosis_Protorev_V1beta1_MsgSetPoolWeights: SwiftProtobuf.Message, Swi
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.admin) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._poolWeights) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._infoByPoolType) }()
       default: break
       }
     }
@@ -366,22 +366,22 @@ extension Osmosis_Protorev_V1beta1_MsgSetPoolWeights: SwiftProtobuf.Message, Swi
     if !self.admin.isEmpty {
       try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
     }
-    try { if let v = self._poolWeights {
+    try { if let v = self._infoByPoolType {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
     } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Osmosis_Protorev_V1beta1_MsgSetPoolWeights, rhs: Osmosis_Protorev_V1beta1_MsgSetPoolWeights) -> Bool {
+  static func ==(lhs: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, rhs: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType) -> Bool {
     if lhs.admin != rhs.admin {return false}
-    if lhs._poolWeights != rhs._poolWeights {return false}
+    if lhs._infoByPoolType != rhs._infoByPoolType {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSetPoolWeightsResponse"
+extension Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetInfoByPoolTypeResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -393,7 +393,7 @@ extension Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse: SwiftProtobuf.Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse, rhs: Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse) -> Bool {
+  static func ==(lhs: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse, rhs: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

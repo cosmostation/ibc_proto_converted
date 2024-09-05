@@ -51,10 +51,10 @@ internal protocol Osmosis_Protorev_V1beta1_MsgClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlock, Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlockResponse>
 
-  func setPoolWeights(
-    _ request: Osmosis_Protorev_V1beta1_MsgSetPoolWeights,
+  func setInfoByPoolType(
+    _ request: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType,
     callOptions: CallOptions?
-  ) -> UnaryCall<Osmosis_Protorev_V1beta1_MsgSetPoolWeights, Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse>
+  ) -> UnaryCall<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse>
 
   func setBaseDenoms(
     _ request: Osmosis_Protorev_V1beta1_MsgSetBaseDenoms,
@@ -143,22 +143,22 @@ extension Osmosis_Protorev_V1beta1_MsgClientProtocol {
     )
   }
 
-  /// SetPoolWeights sets the weights of each pool type in the store. Can only be
-  /// called by the admin account.
+  /// SetInfoByPoolType sets the pool type information needed to make smart
+  /// assumptions about swapping on different pool types
   ///
   /// - Parameters:
-  ///   - request: Request to send to SetPoolWeights.
+  ///   - request: Request to send to SetInfoByPoolType.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func setPoolWeights(
-    _ request: Osmosis_Protorev_V1beta1_MsgSetPoolWeights,
+  internal func setInfoByPoolType(
+    _ request: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Osmosis_Protorev_V1beta1_MsgSetPoolWeights, Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse> {
+  ) -> UnaryCall<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse> {
     return self.makeUnaryCall(
-      path: Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setPoolWeights.path,
+      path: Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setInfoByPoolType.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSetPoolWeightsInterceptors() ?? []
+      interceptors: self.interceptors?.makeSetInfoByPoolTypeInterceptors() ?? []
     )
   }
 
@@ -264,10 +264,10 @@ internal protocol Osmosis_Protorev_V1beta1_MsgAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlock, Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlockResponse>
 
-  func makeSetPoolWeightsCall(
-    _ request: Osmosis_Protorev_V1beta1_MsgSetPoolWeights,
+  func makeSetInfoByPoolTypeCall(
+    _ request: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType,
     callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_MsgSetPoolWeights, Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse>
+  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse>
 
   func makeSetBaseDenomsCall(
     _ request: Osmosis_Protorev_V1beta1_MsgSetBaseDenoms,
@@ -333,15 +333,15 @@ extension Osmosis_Protorev_V1beta1_MsgAsyncClientProtocol {
     )
   }
 
-  internal func makeSetPoolWeightsCall(
-    _ request: Osmosis_Protorev_V1beta1_MsgSetPoolWeights,
+  internal func makeSetInfoByPoolTypeCall(
+    _ request: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType,
     callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_MsgSetPoolWeights, Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse> {
+  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse> {
     return self.makeAsyncUnaryCall(
-      path: Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setPoolWeights.path,
+      path: Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setInfoByPoolType.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSetPoolWeightsInterceptors() ?? []
+      interceptors: self.interceptors?.makeSetInfoByPoolTypeInterceptors() ?? []
     )
   }
 
@@ -408,15 +408,15 @@ extension Osmosis_Protorev_V1beta1_MsgAsyncClientProtocol {
     )
   }
 
-  internal func setPoolWeights(
-    _ request: Osmosis_Protorev_V1beta1_MsgSetPoolWeights,
+  internal func setInfoByPoolType(
+    _ request: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType,
     callOptions: CallOptions? = nil
-  ) async throws -> Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse {
+  ) async throws -> Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse {
     return try await self.performAsyncUnaryCall(
-      path: Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setPoolWeights.path,
+      path: Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setInfoByPoolType.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSetPoolWeightsInterceptors() ?? []
+      interceptors: self.interceptors?.makeSetInfoByPoolTypeInterceptors() ?? []
     )
   }
 
@@ -464,8 +464,8 @@ internal protocol Osmosis_Protorev_V1beta1_MsgClientInterceptorFactoryProtocol: 
   /// - Returns: Interceptors to use when invoking 'setMaxPoolPointsPerBlock'.
   func makeSetMaxPoolPointsPerBlockInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlock, Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlockResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'setPoolWeights'.
-  func makeSetPoolWeightsInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_MsgSetPoolWeights, Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse>]
+  /// - Returns: Interceptors to use when invoking 'setInfoByPoolType'.
+  func makeSetInfoByPoolTypeInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse>]
 
   /// - Returns: Interceptors to use when invoking 'setBaseDenoms'.
   func makeSetBaseDenomsInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_MsgSetBaseDenoms, Osmosis_Protorev_V1beta1_MsgSetBaseDenomsResponse>]
@@ -480,7 +480,7 @@ internal enum Osmosis_Protorev_V1beta1_MsgClientMetadata {
       Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setDeveloperAccount,
       Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setMaxPoolPointsPerTx,
       Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setMaxPoolPointsPerBlock,
-      Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setPoolWeights,
+      Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setInfoByPoolType,
       Osmosis_Protorev_V1beta1_MsgClientMetadata.Methods.setBaseDenoms,
     ]
   )
@@ -510,9 +510,9 @@ internal enum Osmosis_Protorev_V1beta1_MsgClientMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let setPoolWeights = GRPCMethodDescriptor(
-      name: "SetPoolWeights",
-      path: "/osmosis.protorev.v1beta1.Msg/SetPoolWeights",
+    internal static let setInfoByPoolType = GRPCMethodDescriptor(
+      name: "SetInfoByPoolType",
+      path: "/osmosis.protorev.v1beta1.Msg/SetInfoByPoolType",
       type: GRPCCallType.unary
     )
 
@@ -544,9 +544,9 @@ internal protocol Osmosis_Protorev_V1beta1_MsgProvider: CallHandlerProvider {
   /// consumed per block. Can only be called by the admin account.
   func setMaxPoolPointsPerBlock(request: Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlock, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlockResponse>
 
-  /// SetPoolWeights sets the weights of each pool type in the store. Can only be
-  /// called by the admin account.
-  func setPoolWeights(request: Osmosis_Protorev_V1beta1_MsgSetPoolWeights, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse>
+  /// SetInfoByPoolType sets the pool type information needed to make smart
+  /// assumptions about swapping on different pool types
+  func setInfoByPoolType(request: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse>
 
   /// SetBaseDenoms sets the base denoms that will be used to create cyclic
   /// arbitrage routes. Can only be called by the admin account.
@@ -601,13 +601,13 @@ extension Osmosis_Protorev_V1beta1_MsgProvider {
         userFunction: self.setMaxPoolPointsPerBlock(request:context:)
       )
 
-    case "SetPoolWeights":
+    case "SetInfoByPoolType":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_MsgSetPoolWeights>(),
-        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse>(),
-        interceptors: self.interceptors?.makeSetPoolWeightsInterceptors() ?? [],
-        userFunction: self.setPoolWeights(request:context:)
+        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse>(),
+        interceptors: self.interceptors?.makeSetInfoByPoolTypeInterceptors() ?? [],
+        userFunction: self.setInfoByPoolType(request:context:)
       )
 
     case "SetBaseDenoms":
@@ -659,12 +659,12 @@ internal protocol Osmosis_Protorev_V1beta1_MsgAsyncProvider: CallHandlerProvider
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlockResponse
 
-  /// SetPoolWeights sets the weights of each pool type in the store. Can only be
-  /// called by the admin account.
-  @Sendable func setPoolWeights(
-    request: Osmosis_Protorev_V1beta1_MsgSetPoolWeights,
+  /// SetInfoByPoolType sets the pool type information needed to make smart
+  /// assumptions about swapping on different pool types
+  @Sendable func setInfoByPoolType(
+    request: Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType,
     context: GRPCAsyncServerCallContext
-  ) async throws -> Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse
+  ) async throws -> Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse
 
   /// SetBaseDenoms sets the base denoms that will be used to create cyclic
   /// arbitrage routes. Can only be called by the admin account.
@@ -729,13 +729,13 @@ extension Osmosis_Protorev_V1beta1_MsgAsyncProvider {
         wrapping: self.setMaxPoolPointsPerBlock(request:context:)
       )
 
-    case "SetPoolWeights":
+    case "SetInfoByPoolType":
       return GRPCAsyncServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_MsgSetPoolWeights>(),
-        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse>(),
-        interceptors: self.interceptors?.makeSetPoolWeightsInterceptors() ?? [],
-        wrapping: self.setPoolWeights(request:context:)
+        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse>(),
+        interceptors: self.interceptors?.makeSetInfoByPoolTypeInterceptors() ?? [],
+        wrapping: self.setInfoByPoolType(request:context:)
       )
 
     case "SetBaseDenoms":
@@ -771,9 +771,9 @@ internal protocol Osmosis_Protorev_V1beta1_MsgServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeSetMaxPoolPointsPerBlockInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlock, Osmosis_Protorev_V1beta1_MsgSetMaxPoolPointsPerBlockResponse>]
 
-  /// - Returns: Interceptors to use when handling 'setPoolWeights'.
+  /// - Returns: Interceptors to use when handling 'setInfoByPoolType'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeSetPoolWeightsInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_MsgSetPoolWeights, Osmosis_Protorev_V1beta1_MsgSetPoolWeightsResponse>]
+  func makeSetInfoByPoolTypeInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_MsgSetInfoByPoolType, Osmosis_Protorev_V1beta1_MsgSetInfoByPoolTypeResponse>]
 
   /// - Returns: Interceptors to use when handling 'setBaseDenoms'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -789,7 +789,7 @@ internal enum Osmosis_Protorev_V1beta1_MsgServerMetadata {
       Osmosis_Protorev_V1beta1_MsgServerMetadata.Methods.setDeveloperAccount,
       Osmosis_Protorev_V1beta1_MsgServerMetadata.Methods.setMaxPoolPointsPerTx,
       Osmosis_Protorev_V1beta1_MsgServerMetadata.Methods.setMaxPoolPointsPerBlock,
-      Osmosis_Protorev_V1beta1_MsgServerMetadata.Methods.setPoolWeights,
+      Osmosis_Protorev_V1beta1_MsgServerMetadata.Methods.setInfoByPoolType,
       Osmosis_Protorev_V1beta1_MsgServerMetadata.Methods.setBaseDenoms,
     ]
   )
@@ -819,9 +819,9 @@ internal enum Osmosis_Protorev_V1beta1_MsgServerMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let setPoolWeights = GRPCMethodDescriptor(
-      name: "SetPoolWeights",
-      path: "/osmosis.protorev.v1beta1.Msg/SetPoolWeights",
+    internal static let setInfoByPoolType = GRPCMethodDescriptor(
+      name: "SetInfoByPoolType",
+      path: "/osmosis.protorev.v1beta1.Msg/SetInfoByPoolType",
       type: GRPCCallType.unary
     )
 

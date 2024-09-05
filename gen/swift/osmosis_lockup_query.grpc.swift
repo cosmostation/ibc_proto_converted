@@ -88,6 +88,11 @@ internal protocol Osmosis_Lockup_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Lockup_LockedRequest, Osmosis_Lockup_LockedResponse>
 
+  func lockRewardReceiver(
+    _ request: Osmosis_Lockup_LockRewardReceiverRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Lockup_LockRewardReceiverRequest, Osmosis_Lockup_LockRewardReceiverResponse>
+
   func nextLockID(
     _ request: Osmosis_Lockup_NextLockIDRequest,
     callOptions: CallOptions?
@@ -330,6 +335,24 @@ extension Osmosis_Lockup_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeLockedByIDInterceptors() ?? []
+    )
+  }
+
+  /// Returns lock record by id
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to LockRewardReceiver.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func lockRewardReceiver(
+    _ request: Osmosis_Lockup_LockRewardReceiverRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Lockup_LockRewardReceiverRequest, Osmosis_Lockup_LockRewardReceiverResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Lockup_QueryClientMetadata.Methods.lockRewardReceiver.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeLockRewardReceiverInterceptors() ?? []
     )
   }
 
@@ -598,6 +621,11 @@ internal protocol Osmosis_Lockup_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Lockup_LockedRequest, Osmosis_Lockup_LockedResponse>
 
+  func makeLockRewardReceiverCall(
+    _ request: Osmosis_Lockup_LockRewardReceiverRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Lockup_LockRewardReceiverRequest, Osmosis_Lockup_LockRewardReceiverResponse>
+
   func makeNextLockIDCall(
     _ request: Osmosis_Lockup_NextLockIDRequest,
     callOptions: CallOptions?
@@ -778,6 +806,18 @@ extension Osmosis_Lockup_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeLockedByIDInterceptors() ?? []
+    )
+  }
+
+  internal func makeLockRewardReceiverCall(
+    _ request: Osmosis_Lockup_LockRewardReceiverRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Lockup_LockRewardReceiverRequest, Osmosis_Lockup_LockRewardReceiverResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Lockup_QueryClientMetadata.Methods.lockRewardReceiver.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeLockRewardReceiverInterceptors() ?? []
     )
   }
 
@@ -1012,6 +1052,18 @@ extension Osmosis_Lockup_QueryAsyncClientProtocol {
     )
   }
 
+  internal func lockRewardReceiver(
+    _ request: Osmosis_Lockup_LockRewardReceiverRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Lockup_LockRewardReceiverResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Lockup_QueryClientMetadata.Methods.lockRewardReceiver.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeLockRewardReceiverInterceptors() ?? []
+    )
+  }
+
   internal func nextLockID(
     _ request: Osmosis_Lockup_NextLockIDRequest,
     callOptions: CallOptions? = nil
@@ -1161,6 +1213,9 @@ internal protocol Osmosis_Lockup_QueryClientInterceptorFactoryProtocol: Sendable
   /// - Returns: Interceptors to use when invoking 'lockedByID'.
   func makeLockedByIDInterceptors() -> [ClientInterceptor<Osmosis_Lockup_LockedRequest, Osmosis_Lockup_LockedResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'lockRewardReceiver'.
+  func makeLockRewardReceiverInterceptors() -> [ClientInterceptor<Osmosis_Lockup_LockRewardReceiverRequest, Osmosis_Lockup_LockRewardReceiverResponse>]
+
   /// - Returns: Interceptors to use when invoking 'nextLockID'.
   func makeNextLockIDInterceptors() -> [ClientInterceptor<Osmosis_Lockup_NextLockIDRequest, Osmosis_Lockup_NextLockIDResponse>]
 
@@ -1202,6 +1257,7 @@ internal enum Osmosis_Lockup_QueryClientMetadata {
       Osmosis_Lockup_QueryClientMetadata.Methods.accountLockedPastTimeDenom,
       Osmosis_Lockup_QueryClientMetadata.Methods.lockedDenom,
       Osmosis_Lockup_QueryClientMetadata.Methods.lockedByID,
+      Osmosis_Lockup_QueryClientMetadata.Methods.lockRewardReceiver,
       Osmosis_Lockup_QueryClientMetadata.Methods.nextLockID,
       Osmosis_Lockup_QueryClientMetadata.Methods.syntheticLockupsByLockupID,
       Osmosis_Lockup_QueryClientMetadata.Methods.syntheticLockupByLockupID,
@@ -1277,6 +1333,12 @@ internal enum Osmosis_Lockup_QueryClientMetadata {
     internal static let lockedByID = GRPCMethodDescriptor(
       name: "LockedByID",
       path: "/osmosis.lockup.Query/LockedByID",
+      type: GRPCCallType.unary
+    )
+
+    internal static let lockRewardReceiver = GRPCMethodDescriptor(
+      name: "LockRewardReceiver",
+      path: "/osmosis.lockup.Query/LockRewardReceiver",
       type: GRPCCallType.unary
     )
 
@@ -1369,6 +1431,9 @@ internal protocol Osmosis_Lockup_QueryProvider: CallHandlerProvider {
 
   /// Returns lock record by id
   func lockedByID(request: Osmosis_Lockup_LockedRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Lockup_LockedResponse>
+
+  /// Returns lock record by id
+  func lockRewardReceiver(request: Osmosis_Lockup_LockRewardReceiverRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Lockup_LockRewardReceiverResponse>
 
   /// Returns next lock ID
   func nextLockID(request: Osmosis_Lockup_NextLockIDRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Lockup_NextLockIDResponse>
@@ -1506,6 +1571,15 @@ extension Osmosis_Lockup_QueryProvider {
         responseSerializer: ProtobufSerializer<Osmosis_Lockup_LockedResponse>(),
         interceptors: self.interceptors?.makeLockedByIDInterceptors() ?? [],
         userFunction: self.lockedByID(request:context:)
+      )
+
+    case "LockRewardReceiver":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Lockup_LockRewardReceiverRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Lockup_LockRewardReceiverResponse>(),
+        interceptors: self.interceptors?.makeLockRewardReceiverInterceptors() ?? [],
+        userFunction: self.lockRewardReceiver(request:context:)
       )
 
     case "NextLockID":
@@ -1660,6 +1734,12 @@ internal protocol Osmosis_Lockup_QueryAsyncProvider: CallHandlerProvider {
     request: Osmosis_Lockup_LockedRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Lockup_LockedResponse
+
+  /// Returns lock record by id
+  @Sendable func lockRewardReceiver(
+    request: Osmosis_Lockup_LockRewardReceiverRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Lockup_LockRewardReceiverResponse
 
   /// Returns next lock ID
   @Sendable func nextLockID(
@@ -1830,6 +1910,15 @@ extension Osmosis_Lockup_QueryAsyncProvider {
         wrapping: self.lockedByID(request:context:)
       )
 
+    case "LockRewardReceiver":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Lockup_LockRewardReceiverRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Lockup_LockRewardReceiverResponse>(),
+        interceptors: self.interceptors?.makeLockRewardReceiverInterceptors() ?? [],
+        wrapping: self.lockRewardReceiver(request:context:)
+      )
+
     case "NextLockID":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1954,6 +2043,10 @@ internal protocol Osmosis_Lockup_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeLockedByIDInterceptors() -> [ServerInterceptor<Osmosis_Lockup_LockedRequest, Osmosis_Lockup_LockedResponse>]
 
+  /// - Returns: Interceptors to use when handling 'lockRewardReceiver'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeLockRewardReceiverInterceptors() -> [ServerInterceptor<Osmosis_Lockup_LockRewardReceiverRequest, Osmosis_Lockup_LockRewardReceiverResponse>]
+
   /// - Returns: Interceptors to use when handling 'nextLockID'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeNextLockIDInterceptors() -> [ServerInterceptor<Osmosis_Lockup_NextLockIDRequest, Osmosis_Lockup_NextLockIDResponse>]
@@ -2003,6 +2096,7 @@ internal enum Osmosis_Lockup_QueryServerMetadata {
       Osmosis_Lockup_QueryServerMetadata.Methods.accountLockedPastTimeDenom,
       Osmosis_Lockup_QueryServerMetadata.Methods.lockedDenom,
       Osmosis_Lockup_QueryServerMetadata.Methods.lockedByID,
+      Osmosis_Lockup_QueryServerMetadata.Methods.lockRewardReceiver,
       Osmosis_Lockup_QueryServerMetadata.Methods.nextLockID,
       Osmosis_Lockup_QueryServerMetadata.Methods.syntheticLockupsByLockupID,
       Osmosis_Lockup_QueryServerMetadata.Methods.syntheticLockupByLockupID,
@@ -2078,6 +2172,12 @@ internal enum Osmosis_Lockup_QueryServerMetadata {
     internal static let lockedByID = GRPCMethodDescriptor(
       name: "LockedByID",
       path: "/osmosis.lockup.Query/LockedByID",
+      type: GRPCCallType.unary
+    )
+
+    internal static let lockRewardReceiver = GRPCMethodDescriptor(
+      name: "LockRewardReceiver",
+      path: "/osmosis.lockup.Query/LockRewardReceiver",
       type: GRPCCallType.unary
     )
 

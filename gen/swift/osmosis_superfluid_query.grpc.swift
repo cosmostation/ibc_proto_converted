@@ -107,6 +107,21 @@ internal protocol Osmosis_Superfluid_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Superfluid_QueryUnpoolWhitelistRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Superfluid_QueryUnpoolWhitelistRequest, Osmosis_Superfluid_QueryUnpoolWhitelistResponse>
+
+  func userConcentratedSuperfluidPositionsDelegated(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse>
+
+  func userConcentratedSuperfluidPositionsUndelegating(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse>
+
+  func restSupply(
+    _ request: Osmosis_Superfluid_QueryRestSupplyRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Superfluid_QueryRestSupplyRequest, Osmosis_Superfluid_QueryRestSupplyResponse>
 }
 
 extension Osmosis_Superfluid_QueryClientProtocol {
@@ -279,7 +294,7 @@ extension Osmosis_Superfluid_QueryClientProtocol {
     )
   }
 
-  /// Returns all the delegated superfluid poistions for a specific delegator.
+  /// Returns all the delegated superfluid positions for a specific delegator.
   ///
   /// - Parameters:
   ///   - request: Request to send to SuperfluidDelegationsByDelegator.
@@ -297,7 +312,7 @@ extension Osmosis_Superfluid_QueryClientProtocol {
     )
   }
 
-  /// Returns all the undelegating superfluid poistions for a specific delegator.
+  /// Returns all the undelegating superfluid positions for a specific delegator.
   ///
   /// - Parameters:
   ///   - request: Request to send to SuperfluidUndelegationsByDelegator.
@@ -387,6 +402,60 @@ extension Osmosis_Superfluid_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeUnpoolWhitelistInterceptors() ?? []
+    )
+  }
+
+  /// Returns all of a user's full range CL positions that are superfluid staked.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UserConcentratedSuperfluidPositionsDelegated.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func userConcentratedSuperfluidPositionsDelegated(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsDelegated.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsDelegatedInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to UserConcentratedSuperfluidPositionsUndelegating
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UserConcentratedSuperfluidPositionsUndelegating.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func userConcentratedSuperfluidPositionsUndelegating(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsUndelegating.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsUndelegatingInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to RestSupply
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to RestSupply.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func restSupply(
+    _ request: Osmosis_Superfluid_QueryRestSupplyRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Superfluid_QueryRestSupplyRequest, Osmosis_Superfluid_QueryRestSupplyResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.restSupply.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRestSupplyInterceptors() ?? []
     )
   }
 }
@@ -528,6 +597,21 @@ internal protocol Osmosis_Superfluid_QueryAsyncClientProtocol: GRPCClient {
     _ request: Osmosis_Superfluid_QueryUnpoolWhitelistRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_QueryUnpoolWhitelistRequest, Osmosis_Superfluid_QueryUnpoolWhitelistResponse>
+
+  func makeUserConcentratedSuperfluidPositionsDelegatedCall(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse>
+
+  func makeUserConcentratedSuperfluidPositionsUndelegatingCall(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse>
+
+  func makeRestSupplyCall(
+    _ request: Osmosis_Superfluid_QueryRestSupplyRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_QueryRestSupplyRequest, Osmosis_Superfluid_QueryRestSupplyResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -719,6 +803,42 @@ extension Osmosis_Superfluid_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeUnpoolWhitelistInterceptors() ?? []
     )
   }
+
+  internal func makeUserConcentratedSuperfluidPositionsDelegatedCall(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsDelegated.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsDelegatedInterceptors() ?? []
+    )
+  }
+
+  internal func makeUserConcentratedSuperfluidPositionsUndelegatingCall(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsUndelegating.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsUndelegatingInterceptors() ?? []
+    )
+  }
+
+  internal func makeRestSupplyCall(
+    _ request: Osmosis_Superfluid_QueryRestSupplyRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_QueryRestSupplyRequest, Osmosis_Superfluid_QueryRestSupplyResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.restSupply.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRestSupplyInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -902,6 +1022,42 @@ extension Osmosis_Superfluid_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeUnpoolWhitelistInterceptors() ?? []
     )
   }
+
+  internal func userConcentratedSuperfluidPositionsDelegated(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsDelegated.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsDelegatedInterceptors() ?? []
+    )
+  }
+
+  internal func userConcentratedSuperfluidPositionsUndelegating(
+    _ request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsUndelegating.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsUndelegatingInterceptors() ?? []
+    )
+  }
+
+  internal func restSupply(
+    _ request: Osmosis_Superfluid_QueryRestSupplyRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Superfluid_QueryRestSupplyResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Superfluid_QueryClientMetadata.Methods.restSupply.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRestSupplyInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -967,6 +1123,15 @@ internal protocol Osmosis_Superfluid_QueryClientInterceptorFactoryProtocol: Send
 
   /// - Returns: Interceptors to use when invoking 'unpoolWhitelist'.
   func makeUnpoolWhitelistInterceptors() -> [ClientInterceptor<Osmosis_Superfluid_QueryUnpoolWhitelistRequest, Osmosis_Superfluid_QueryUnpoolWhitelistResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'userConcentratedSuperfluidPositionsDelegated'.
+  func makeUserConcentratedSuperfluidPositionsDelegatedInterceptors() -> [ClientInterceptor<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'userConcentratedSuperfluidPositionsUndelegating'.
+  func makeUserConcentratedSuperfluidPositionsUndelegatingInterceptors() -> [ClientInterceptor<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'restSupply'.
+  func makeRestSupplyInterceptors() -> [ClientInterceptor<Osmosis_Superfluid_QueryRestSupplyRequest, Osmosis_Superfluid_QueryRestSupplyResponse>]
 }
 
 internal enum Osmosis_Superfluid_QueryClientMetadata {
@@ -989,6 +1154,9 @@ internal enum Osmosis_Superfluid_QueryClientMetadata {
       Osmosis_Superfluid_QueryClientMetadata.Methods.estimateSuperfluidDelegatedAmountByValidatorDenom,
       Osmosis_Superfluid_QueryClientMetadata.Methods.totalDelegationByDelegator,
       Osmosis_Superfluid_QueryClientMetadata.Methods.unpoolWhitelist,
+      Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsDelegated,
+      Osmosis_Superfluid_QueryClientMetadata.Methods.userConcentratedSuperfluidPositionsUndelegating,
+      Osmosis_Superfluid_QueryClientMetadata.Methods.restSupply,
     ]
   )
 
@@ -1082,6 +1250,24 @@ internal enum Osmosis_Superfluid_QueryClientMetadata {
       path: "/osmosis.superfluid.Query/UnpoolWhitelist",
       type: GRPCCallType.unary
     )
+
+    internal static let userConcentratedSuperfluidPositionsDelegated = GRPCMethodDescriptor(
+      name: "UserConcentratedSuperfluidPositionsDelegated",
+      path: "/osmosis.superfluid.Query/UserConcentratedSuperfluidPositionsDelegated",
+      type: GRPCCallType.unary
+    )
+
+    internal static let userConcentratedSuperfluidPositionsUndelegating = GRPCMethodDescriptor(
+      name: "UserConcentratedSuperfluidPositionsUndelegating",
+      path: "/osmosis.superfluid.Query/UserConcentratedSuperfluidPositionsUndelegating",
+      type: GRPCCallType.unary
+    )
+
+    internal static let restSupply = GRPCMethodDescriptor(
+      name: "RestSupply",
+      path: "/osmosis.superfluid.Query/RestSupply",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -1121,10 +1307,10 @@ internal protocol Osmosis_Superfluid_QueryProvider: CallHandlerProvider {
   /// triplet
   func superfluidDelegationAmount(request: Osmosis_Superfluid_SuperfluidDelegationAmountRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_SuperfluidDelegationAmountResponse>
 
-  /// Returns all the delegated superfluid poistions for a specific delegator.
+  /// Returns all the delegated superfluid positions for a specific delegator.
   func superfluidDelegationsByDelegator(request: Osmosis_Superfluid_SuperfluidDelegationsByDelegatorRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_SuperfluidDelegationsByDelegatorResponse>
 
-  /// Returns all the undelegating superfluid poistions for a specific delegator.
+  /// Returns all the undelegating superfluid positions for a specific delegator.
   func superfluidUndelegationsByDelegator(request: Osmosis_Superfluid_SuperfluidUndelegationsByDelegatorRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_SuperfluidUndelegationsByDelegatorResponse>
 
   /// Returns all the superfluid positions of a specific denom delegated to one
@@ -1141,6 +1327,13 @@ internal protocol Osmosis_Superfluid_QueryProvider: CallHandlerProvider {
 
   /// Returns a list of whitelisted pool ids to unpool.
   func unpoolWhitelist(request: Osmosis_Superfluid_QueryUnpoolWhitelistRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_QueryUnpoolWhitelistResponse>
+
+  /// Returns all of a user's full range CL positions that are superfluid staked.
+  func userConcentratedSuperfluidPositionsDelegated(request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse>
+
+  func userConcentratedSuperfluidPositionsUndelegating(request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse>
+
+  func restSupply(request: Osmosis_Superfluid_QueryRestSupplyRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_QueryRestSupplyResponse>
 }
 
 extension Osmosis_Superfluid_QueryProvider {
@@ -1290,6 +1483,33 @@ extension Osmosis_Superfluid_QueryProvider {
         userFunction: self.unpoolWhitelist(request:context:)
       )
 
+    case "UserConcentratedSuperfluidPositionsDelegated":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse>(),
+        interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsDelegatedInterceptors() ?? [],
+        userFunction: self.userConcentratedSuperfluidPositionsDelegated(request:context:)
+      )
+
+    case "UserConcentratedSuperfluidPositionsUndelegating":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse>(),
+        interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsUndelegatingInterceptors() ?? [],
+        userFunction: self.userConcentratedSuperfluidPositionsUndelegating(request:context:)
+      )
+
+    case "RestSupply":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_QueryRestSupplyRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_QueryRestSupplyResponse>(),
+        interceptors: self.interceptors?.makeRestSupplyInterceptors() ?? [],
+        userFunction: self.restSupply(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1361,13 +1581,13 @@ internal protocol Osmosis_Superfluid_QueryAsyncProvider: CallHandlerProvider {
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Superfluid_SuperfluidDelegationAmountResponse
 
-  /// Returns all the delegated superfluid poistions for a specific delegator.
+  /// Returns all the delegated superfluid positions for a specific delegator.
   @Sendable func superfluidDelegationsByDelegator(
     request: Osmosis_Superfluid_SuperfluidDelegationsByDelegatorRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Superfluid_SuperfluidDelegationsByDelegatorResponse
 
-  /// Returns all the undelegating superfluid poistions for a specific delegator.
+  /// Returns all the undelegating superfluid positions for a specific delegator.
   @Sendable func superfluidUndelegationsByDelegator(
     request: Osmosis_Superfluid_SuperfluidUndelegationsByDelegatorRequest,
     context: GRPCAsyncServerCallContext
@@ -1399,6 +1619,22 @@ internal protocol Osmosis_Superfluid_QueryAsyncProvider: CallHandlerProvider {
     request: Osmosis_Superfluid_QueryUnpoolWhitelistRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Superfluid_QueryUnpoolWhitelistResponse
+
+  /// Returns all of a user's full range CL positions that are superfluid staked.
+  @Sendable func userConcentratedSuperfluidPositionsDelegated(
+    request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse
+
+  @Sendable func userConcentratedSuperfluidPositionsUndelegating(
+    request: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse
+
+  @Sendable func restSupply(
+    request: Osmosis_Superfluid_QueryRestSupplyRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Superfluid_QueryRestSupplyResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1555,6 +1791,33 @@ extension Osmosis_Superfluid_QueryAsyncProvider {
         wrapping: self.unpoolWhitelist(request:context:)
       )
 
+    case "UserConcentratedSuperfluidPositionsDelegated":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse>(),
+        interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsDelegatedInterceptors() ?? [],
+        wrapping: self.userConcentratedSuperfluidPositionsDelegated(request:context:)
+      )
+
+    case "UserConcentratedSuperfluidPositionsUndelegating":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse>(),
+        interceptors: self.interceptors?.makeUserConcentratedSuperfluidPositionsUndelegatingInterceptors() ?? [],
+        wrapping: self.userConcentratedSuperfluidPositionsUndelegating(request:context:)
+      )
+
+    case "RestSupply":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_QueryRestSupplyRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_QueryRestSupplyResponse>(),
+        interceptors: self.interceptors?.makeRestSupplyInterceptors() ?? [],
+        wrapping: self.restSupply(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1622,6 +1885,18 @@ internal protocol Osmosis_Superfluid_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'unpoolWhitelist'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUnpoolWhitelistInterceptors() -> [ServerInterceptor<Osmosis_Superfluid_QueryUnpoolWhitelistRequest, Osmosis_Superfluid_QueryUnpoolWhitelistResponse>]
+
+  /// - Returns: Interceptors to use when handling 'userConcentratedSuperfluidPositionsDelegated'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUserConcentratedSuperfluidPositionsDelegatedInterceptors() -> [ServerInterceptor<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse>]
+
+  /// - Returns: Interceptors to use when handling 'userConcentratedSuperfluidPositionsUndelegating'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUserConcentratedSuperfluidPositionsUndelegatingInterceptors() -> [ServerInterceptor<Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse>]
+
+  /// - Returns: Interceptors to use when handling 'restSupply'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeRestSupplyInterceptors() -> [ServerInterceptor<Osmosis_Superfluid_QueryRestSupplyRequest, Osmosis_Superfluid_QueryRestSupplyResponse>]
 }
 
 internal enum Osmosis_Superfluid_QueryServerMetadata {
@@ -1644,6 +1919,9 @@ internal enum Osmosis_Superfluid_QueryServerMetadata {
       Osmosis_Superfluid_QueryServerMetadata.Methods.estimateSuperfluidDelegatedAmountByValidatorDenom,
       Osmosis_Superfluid_QueryServerMetadata.Methods.totalDelegationByDelegator,
       Osmosis_Superfluid_QueryServerMetadata.Methods.unpoolWhitelist,
+      Osmosis_Superfluid_QueryServerMetadata.Methods.userConcentratedSuperfluidPositionsDelegated,
+      Osmosis_Superfluid_QueryServerMetadata.Methods.userConcentratedSuperfluidPositionsUndelegating,
+      Osmosis_Superfluid_QueryServerMetadata.Methods.restSupply,
     ]
   )
 
@@ -1735,6 +2013,24 @@ internal enum Osmosis_Superfluid_QueryServerMetadata {
     internal static let unpoolWhitelist = GRPCMethodDescriptor(
       name: "UnpoolWhitelist",
       path: "/osmosis.superfluid.Query/UnpoolWhitelist",
+      type: GRPCCallType.unary
+    )
+
+    internal static let userConcentratedSuperfluidPositionsDelegated = GRPCMethodDescriptor(
+      name: "UserConcentratedSuperfluidPositionsDelegated",
+      path: "/osmosis.superfluid.Query/UserConcentratedSuperfluidPositionsDelegated",
+      type: GRPCCallType.unary
+    )
+
+    internal static let userConcentratedSuperfluidPositionsUndelegating = GRPCMethodDescriptor(
+      name: "UserConcentratedSuperfluidPositionsUndelegating",
+      path: "/osmosis.superfluid.Query/UserConcentratedSuperfluidPositionsUndelegating",
+      type: GRPCCallType.unary
+    )
+
+    internal static let restSupply = GRPCMethodDescriptor(
+      name: "RestSupply",
+      path: "/osmosis.superfluid.Query/RestSupply",
       type: GRPCCallType.unary
     )
   }

@@ -77,6 +77,11 @@ internal protocol Osmosis_Superfluid_MsgClientProtocol: GRPCClient {
     _ request: Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition, Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse>
+
+  func unbondConvertAndStake(
+    _ request: Osmosis_Superfluid_MsgUnbondConvertAndStake,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Superfluid_MsgUnbondConvertAndStake, Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse>
 }
 
 extension Osmosis_Superfluid_MsgClientProtocol {
@@ -246,6 +251,25 @@ extension Osmosis_Superfluid_MsgClientProtocol {
       interceptors: self.interceptors?.makeAddToConcentratedLiquiditySuperfluidPositionInterceptors() ?? []
     )
   }
+
+  /// UnbondConvertAndStake breaks all locks / superfluid staked assets,
+  /// converts them to osmo then stakes the osmo to the designated validator.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UnbondConvertAndStake.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func unbondConvertAndStake(
+    _ request: Osmosis_Superfluid_MsgUnbondConvertAndStake,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Superfluid_MsgUnbondConvertAndStake, Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Superfluid_MsgClientMetadata.Methods.unbondConvertAndStake.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUnbondConvertAndStakeInterceptors() ?? []
+    )
+  }
 }
 
 @available(*, deprecated)
@@ -355,6 +379,11 @@ internal protocol Osmosis_Superfluid_MsgAsyncClientProtocol: GRPCClient {
     _ request: Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition, Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse>
+
+  func makeUnbondConvertAndStakeCall(
+    _ request: Osmosis_Superfluid_MsgUnbondConvertAndStake,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_MsgUnbondConvertAndStake, Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -474,6 +503,18 @@ extension Osmosis_Superfluid_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeAddToConcentratedLiquiditySuperfluidPositionInterceptors() ?? []
     )
   }
+
+  internal func makeUnbondConvertAndStakeCall(
+    _ request: Osmosis_Superfluid_MsgUnbondConvertAndStake,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Superfluid_MsgUnbondConvertAndStake, Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Superfluid_MsgClientMetadata.Methods.unbondConvertAndStake.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUnbondConvertAndStakeInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -585,6 +626,18 @@ extension Osmosis_Superfluid_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeAddToConcentratedLiquiditySuperfluidPositionInterceptors() ?? []
     )
   }
+
+  internal func unbondConvertAndStake(
+    _ request: Osmosis_Superfluid_MsgUnbondConvertAndStake,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Superfluid_MsgClientMetadata.Methods.unbondConvertAndStake.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUnbondConvertAndStakeInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -632,6 +685,9 @@ internal protocol Osmosis_Superfluid_MsgClientInterceptorFactoryProtocol: Sendab
 
   /// - Returns: Interceptors to use when invoking 'addToConcentratedLiquiditySuperfluidPosition'.
   func makeAddToConcentratedLiquiditySuperfluidPositionInterceptors() -> [ClientInterceptor<Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition, Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'unbondConvertAndStake'.
+  func makeUnbondConvertAndStakeInterceptors() -> [ClientInterceptor<Osmosis_Superfluid_MsgUnbondConvertAndStake, Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse>]
 }
 
 internal enum Osmosis_Superfluid_MsgClientMetadata {
@@ -648,6 +704,7 @@ internal enum Osmosis_Superfluid_MsgClientMetadata {
       Osmosis_Superfluid_MsgClientMetadata.Methods.unPoolWhitelistedPool,
       Osmosis_Superfluid_MsgClientMetadata.Methods.unlockAndMigrateSharesToFullRangeConcentratedPosition,
       Osmosis_Superfluid_MsgClientMetadata.Methods.addToConcentratedLiquiditySuperfluidPosition,
+      Osmosis_Superfluid_MsgClientMetadata.Methods.unbondConvertAndStake,
     ]
   )
 
@@ -705,6 +762,12 @@ internal enum Osmosis_Superfluid_MsgClientMetadata {
       path: "/osmosis.superfluid.Msg/AddToConcentratedLiquiditySuperfluidPosition",
       type: GRPCCallType.unary
     )
+
+    internal static let unbondConvertAndStake = GRPCMethodDescriptor(
+      name: "UnbondConvertAndStake",
+      path: "/osmosis.superfluid.Msg/UnbondConvertAndStake",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -737,6 +800,10 @@ internal protocol Osmosis_Superfluid_MsgProvider: CallHandlerProvider {
   func unlockAndMigrateSharesToFullRangeConcentratedPosition(request: Osmosis_Superfluid_MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse>
 
   func addToConcentratedLiquiditySuperfluidPosition(request: Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse>
+
+  /// UnbondConvertAndStake breaks all locks / superfluid staked assets,
+  /// converts them to osmo then stakes the osmo to the designated validator.
+  func unbondConvertAndStake(request: Osmosis_Superfluid_MsgUnbondConvertAndStake, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse>
 }
 
 extension Osmosis_Superfluid_MsgProvider {
@@ -832,6 +899,15 @@ extension Osmosis_Superfluid_MsgProvider {
         userFunction: self.addToConcentratedLiquiditySuperfluidPosition(request:context:)
       )
 
+    case "UnbondConvertAndStake":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_MsgUnbondConvertAndStake>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse>(),
+        interceptors: self.interceptors?.makeUnbondConvertAndStakeInterceptors() ?? [],
+        userFunction: self.unbondConvertAndStake(request:context:)
+      )
+
     default:
       return nil
     }
@@ -896,6 +972,13 @@ internal protocol Osmosis_Superfluid_MsgAsyncProvider: CallHandlerProvider {
     request: Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse
+
+  /// UnbondConvertAndStake breaks all locks / superfluid staked assets,
+  /// converts them to osmo then stakes the osmo to the designated validator.
+  @Sendable func unbondConvertAndStake(
+    request: Osmosis_Superfluid_MsgUnbondConvertAndStake,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -998,6 +1081,15 @@ extension Osmosis_Superfluid_MsgAsyncProvider {
         wrapping: self.addToConcentratedLiquiditySuperfluidPosition(request:context:)
       )
 
+    case "UnbondConvertAndStake":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Superfluid_MsgUnbondConvertAndStake>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse>(),
+        interceptors: self.interceptors?.makeUnbondConvertAndStakeInterceptors() ?? [],
+        wrapping: self.unbondConvertAndStake(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1041,6 +1133,10 @@ internal protocol Osmosis_Superfluid_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'addToConcentratedLiquiditySuperfluidPosition'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeAddToConcentratedLiquiditySuperfluidPositionInterceptors() -> [ServerInterceptor<Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition, Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse>]
+
+  /// - Returns: Interceptors to use when handling 'unbondConvertAndStake'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUnbondConvertAndStakeInterceptors() -> [ServerInterceptor<Osmosis_Superfluid_MsgUnbondConvertAndStake, Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse>]
 }
 
 internal enum Osmosis_Superfluid_MsgServerMetadata {
@@ -1057,6 +1153,7 @@ internal enum Osmosis_Superfluid_MsgServerMetadata {
       Osmosis_Superfluid_MsgServerMetadata.Methods.unPoolWhitelistedPool,
       Osmosis_Superfluid_MsgServerMetadata.Methods.unlockAndMigrateSharesToFullRangeConcentratedPosition,
       Osmosis_Superfluid_MsgServerMetadata.Methods.addToConcentratedLiquiditySuperfluidPosition,
+      Osmosis_Superfluid_MsgServerMetadata.Methods.unbondConvertAndStake,
     ]
   )
 
@@ -1112,6 +1209,12 @@ internal enum Osmosis_Superfluid_MsgServerMetadata {
     internal static let addToConcentratedLiquiditySuperfluidPosition = GRPCMethodDescriptor(
       name: "AddToConcentratedLiquiditySuperfluidPosition",
       path: "/osmosis.superfluid.Msg/AddToConcentratedLiquiditySuperfluidPosition",
+      type: GRPCCallType.unary
+    )
+
+    internal static let unbondConvertAndStake = GRPCMethodDescriptor(
+      name: "UnbondConvertAndStake",
+      path: "/osmosis.superfluid.Msg/UnbondConvertAndStake",
       type: GRPCCallType.unary
     )
   }

@@ -20,17 +20,6 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-/// Params holds parameters for the cosmwasmpool module
-struct Osmosis_Cosmwasmpool_V1beta1_Params {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
 /// GenesisState defines the cosmwasmpool module's genesis state.
 struct Osmosis_Cosmwasmpool_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -47,6 +36,8 @@ struct Osmosis_Cosmwasmpool_V1beta1_GenesisState {
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
   mutating func clearParams() {self._params = nil}
 
+  var pools: [SwiftProtobuf.Google_Protobuf_Any] = []
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -55,7 +46,6 @@ struct Osmosis_Cosmwasmpool_V1beta1_GenesisState {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Osmosis_Cosmwasmpool_V1beta1_Params: @unchecked Sendable {}
 extension Osmosis_Cosmwasmpool_V1beta1_GenesisState: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
@@ -63,29 +53,11 @@ extension Osmosis_Cosmwasmpool_V1beta1_GenesisState: @unchecked Sendable {}
 
 fileprivate let _protobuf_package = "osmosis.cosmwasmpool.v1beta1"
 
-extension Osmosis_Cosmwasmpool_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Params"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Osmosis_Cosmwasmpool_V1beta1_Params, rhs: Osmosis_Cosmwasmpool_V1beta1_Params) -> Bool {
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
 extension Osmosis_Cosmwasmpool_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".GenesisState"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
+    2: .same(proto: "pools"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -95,6 +67,7 @@ extension Osmosis_Cosmwasmpool_V1beta1_GenesisState: SwiftProtobuf.Message, Swif
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularMessageField(value: &self._params) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.pools) }()
       default: break
       }
     }
@@ -108,11 +81,15 @@ extension Osmosis_Cosmwasmpool_V1beta1_GenesisState: SwiftProtobuf.Message, Swif
     try { if let v = self._params {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
+    if !self.pools.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.pools, fieldNumber: 2)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Osmosis_Cosmwasmpool_V1beta1_GenesisState, rhs: Osmosis_Cosmwasmpool_V1beta1_GenesisState) -> Bool {
     if lhs._params != rhs._params {return false}
+    if lhs.pools != rhs.pools {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

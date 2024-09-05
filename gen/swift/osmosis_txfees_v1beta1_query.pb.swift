@@ -118,6 +118,28 @@ struct Osmosis_Txfees_V1beta1_QueryBaseDenomResponse {
   init() {}
 }
 
+struct Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var baseFee: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Txfees_V1beta1_QueryFeeTokensRequest: @unchecked Sendable {}
 extension Osmosis_Txfees_V1beta1_QueryFeeTokensResponse: @unchecked Sendable {}
@@ -127,6 +149,8 @@ extension Osmosis_Txfees_V1beta1_QueryDenomPoolIdRequest: @unchecked Sendable {}
 extension Osmosis_Txfees_V1beta1_QueryDenomPoolIdResponse: @unchecked Sendable {}
 extension Osmosis_Txfees_V1beta1_QueryBaseDenomRequest: @unchecked Sendable {}
 extension Osmosis_Txfees_V1beta1_QueryBaseDenomResponse: @unchecked Sendable {}
+extension Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest: @unchecked Sendable {}
+extension Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -364,6 +388,57 @@ extension Osmosis_Txfees_V1beta1_QueryBaseDenomResponse: SwiftProtobuf.Message, 
 
   static func ==(lhs: Osmosis_Txfees_V1beta1_QueryBaseDenomResponse, rhs: Osmosis_Txfees_V1beta1_QueryBaseDenomResponse) -> Bool {
     if lhs.baseDenom != rhs.baseDenom {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryEipBaseFeeRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest, rhs: Osmosis_Txfees_V1beta1_QueryEipBaseFeeRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryEipBaseFeeResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "base_fee"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.baseFee) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.baseFee.isEmpty {
+      try visitor.visitSingularStringField(value: self.baseFee, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse, rhs: Osmosis_Txfees_V1beta1_QueryEipBaseFeeResponse) -> Bool {
+    if lhs.baseFee != rhs.baseFee {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

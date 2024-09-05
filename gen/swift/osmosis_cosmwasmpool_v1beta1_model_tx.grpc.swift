@@ -26,20 +26,20 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-/// Usage: instantiate `Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClient`, then call methods of this protocol to make API calls.
-internal protocol Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientProtocol: GRPCClient {
+/// Usage: instantiate `Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClient`, then call methods of this protocol to make API calls.
+internal protocol Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientProtocol: GRPCClient {
   var serviceName: String { get }
-  var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol? { get }
+  var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol? { get }
 
   func createCosmWasmPool(
-    _ request: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool,
+    _ request: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool,
     callOptions: CallOptions?
-  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse>
+  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse>
 }
 
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientProtocol {
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientProtocol {
   internal var serviceName: String {
-    return "osmosis.cosmwasmpool.v1beta1.model.MsgCreator"
+    return "osmosis.cosmwasmpool.v1beta1.MsgCreator"
   }
 
   /// Unary call to CreateCosmWasmPool
@@ -49,11 +49,11 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientProtocol {
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
   internal func createCosmWasmPool(
-    _ request: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool,
+    _ request: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse> {
+  ) -> UnaryCall<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse> {
     return self.makeUnaryCall(
-      path: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientMetadata.Methods.createCosmWasmPool.path,
+      path: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientMetadata.Methods.createCosmWasmPool.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCreateCosmWasmPoolInterceptors() ?? []
@@ -62,24 +62,24 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientProtocol {
 }
 
 @available(*, deprecated)
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClient: @unchecked Sendable {}
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClient: @unchecked Sendable {}
 
-@available(*, deprecated, renamed: "Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorNIOClient")
-internal final class Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClient: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientProtocol {
+@available(*, deprecated, renamed: "Osmosis_Cosmwasmpool_V1beta1_MsgCreatorNIOClient")
+internal final class Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClient: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientProtocol {
   private let lock = Lock()
   private var _defaultCallOptions: CallOptions
-  private var _interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol?
+  private var _interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol?
   internal let channel: GRPCChannel
   internal var defaultCallOptions: CallOptions {
     get { self.lock.withLock { return self._defaultCallOptions } }
     set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
   }
-  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol? {
+  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol? {
     get { self.lock.withLock { return self._interceptors } }
     set { self.lock.withLockVoid { self._interceptors = newValue } }
   }
 
-  /// Creates a client for the osmosis.cosmwasmpool.v1beta1.model.MsgCreator service.
+  /// Creates a client for the osmosis.cosmwasmpool.v1beta1.MsgCreator service.
   ///
   /// - Parameters:
   ///   - channel: `GRPCChannel` to the service host.
@@ -88,7 +88,7 @@ internal final class Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClient: Osmosi
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol? = nil
+    interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self._defaultCallOptions = defaultCallOptions
@@ -96,12 +96,12 @@ internal final class Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClient: Osmosi
   }
 }
 
-internal struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorNIOClient: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientProtocol {
+internal struct Osmosis_Cosmwasmpool_V1beta1_MsgCreatorNIOClient: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientProtocol {
   internal var channel: GRPCChannel
   internal var defaultCallOptions: CallOptions
-  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol?
+  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol?
 
-  /// Creates a client for the osmosis.cosmwasmpool.v1beta1.model.MsgCreator service.
+  /// Creates a client for the osmosis.cosmwasmpool.v1beta1.MsgCreator service.
   ///
   /// - Parameters:
   ///   - channel: `GRPCChannel` to the service host.
@@ -110,7 +110,7 @@ internal struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorNIOClient: Osmosis_
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol? = nil
+    interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self.defaultCallOptions = defaultCallOptions
@@ -119,32 +119,32 @@ internal struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorNIOClient: Osmosis_
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal protocol Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClientProtocol: GRPCClient {
+internal protocol Osmosis_Cosmwasmpool_V1beta1_MsgCreatorAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol? { get }
+  var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol? { get }
 
   func makeCreateCosmWasmPoolCall(
-    _ request: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool,
+    _ request: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool,
     callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse>
+  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClientProtocol {
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreatorAsyncClientProtocol {
   internal static var serviceDescriptor: GRPCServiceDescriptor {
-    return Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientMetadata.serviceDescriptor
+    return Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientMetadata.serviceDescriptor
   }
 
-  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol? {
+  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol? {
     return nil
   }
 
   internal func makeCreateCosmWasmPoolCall(
-    _ request: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool,
+    _ request: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool,
     callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse> {
+  ) -> GRPCAsyncUnaryCall<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse> {
     return self.makeAsyncUnaryCall(
-      path: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientMetadata.Methods.createCosmWasmPool.path,
+      path: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientMetadata.Methods.createCosmWasmPool.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCreateCosmWasmPoolInterceptors() ?? []
@@ -153,13 +153,13 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClientProtocol {
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClientProtocol {
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreatorAsyncClientProtocol {
   internal func createCosmWasmPool(
-    _ request: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool,
+    _ request: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool,
     callOptions: CallOptions? = nil
-  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse {
+  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse {
     return try await self.performAsyncUnaryCall(
-      path: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientMetadata.Methods.createCosmWasmPool.path,
+      path: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientMetadata.Methods.createCosmWasmPool.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCreateCosmWasmPoolInterceptors() ?? []
@@ -168,15 +168,15 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClientProtocol {
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClient: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClientProtocol {
+internal struct Osmosis_Cosmwasmpool_V1beta1_MsgCreatorAsyncClient: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorAsyncClientProtocol {
   internal var channel: GRPCChannel
   internal var defaultCallOptions: CallOptions
-  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol?
+  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol?
 
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol? = nil
+    interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self.defaultCallOptions = defaultCallOptions
@@ -184,40 +184,40 @@ internal struct Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncClient: Osmosi
   }
 }
 
-internal protocol Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientInterceptorFactoryProtocol: Sendable {
+internal protocol Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientInterceptorFactoryProtocol: Sendable {
 
   /// - Returns: Interceptors to use when invoking 'createCosmWasmPool'.
-  func makeCreateCosmWasmPoolInterceptors() -> [ClientInterceptor<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse>]
+  func makeCreateCosmWasmPoolInterceptors() -> [ClientInterceptor<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse>]
 }
 
-internal enum Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientMetadata {
+internal enum Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientMetadata {
   internal static let serviceDescriptor = GRPCServiceDescriptor(
     name: "MsgCreator",
-    fullName: "osmosis.cosmwasmpool.v1beta1.model.MsgCreator",
+    fullName: "osmosis.cosmwasmpool.v1beta1.MsgCreator",
     methods: [
-      Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorClientMetadata.Methods.createCosmWasmPool,
+      Osmosis_Cosmwasmpool_V1beta1_MsgCreatorClientMetadata.Methods.createCosmWasmPool,
     ]
   )
 
   internal enum Methods {
     internal static let createCosmWasmPool = GRPCMethodDescriptor(
       name: "CreateCosmWasmPool",
-      path: "/osmosis.cosmwasmpool.v1beta1.model.MsgCreator/CreateCosmWasmPool",
+      path: "/osmosis.cosmwasmpool.v1beta1.MsgCreator/CreateCosmWasmPool",
       type: GRPCCallType.unary
     )
   }
 }
 
 /// To build a server, implement a class that conforms to this protocol.
-internal protocol Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorProvider: CallHandlerProvider {
-  var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerInterceptorFactoryProtocol? { get }
+internal protocol Osmosis_Cosmwasmpool_V1beta1_MsgCreatorProvider: CallHandlerProvider {
+  var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerInterceptorFactoryProtocol? { get }
 
-  func createCosmWasmPool(request: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse>
+  func createCosmWasmPool(request: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse>
 }
 
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorProvider {
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreatorProvider {
   internal var serviceName: Substring {
-    return Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerMetadata.serviceDescriptor.fullName[...]
+    return Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerMetadata.serviceDescriptor.fullName[...]
   }
 
   /// Determines, calls and returns the appropriate request handler, depending on the request's method.
@@ -230,8 +230,8 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorProvider {
     case "CreateCosmWasmPool":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool>(),
-        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse>(),
+        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse>(),
         interceptors: self.interceptors?.makeCreateCosmWasmPoolInterceptors() ?? [],
         userFunction: self.createCosmWasmPool(request:context:)
       )
@@ -244,27 +244,27 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorProvider {
 
 /// To implement a server, implement an object which conforms to this protocol.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal protocol Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncProvider: CallHandlerProvider {
+internal protocol Osmosis_Cosmwasmpool_V1beta1_MsgCreatorAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerInterceptorFactoryProtocol? { get }
+  var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerInterceptorFactoryProtocol? { get }
 
   @Sendable func createCosmWasmPool(
-    request: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool,
+    request: Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool,
     context: GRPCAsyncServerCallContext
-  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse
+  ) async throws -> Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncProvider {
+extension Osmosis_Cosmwasmpool_V1beta1_MsgCreatorAsyncProvider {
   internal static var serviceDescriptor: GRPCServiceDescriptor {
-    return Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerMetadata.serviceDescriptor
+    return Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerMetadata.serviceDescriptor
   }
 
   internal var serviceName: Substring {
-    return Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerMetadata.serviceDescriptor.fullName[...]
+    return Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerMetadata.serviceDescriptor.fullName[...]
   }
 
-  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerInterceptorFactoryProtocol? {
+  internal var interceptors: Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerInterceptorFactoryProtocol? {
     return nil
   }
 
@@ -276,8 +276,8 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncProvider {
     case "CreateCosmWasmPool":
       return GRPCAsyncServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool>(),
-        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse>(),
+        requestDeserializer: ProtobufDeserializer<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse>(),
         interceptors: self.interceptors?.makeCreateCosmWasmPoolInterceptors() ?? [],
         wrapping: self.createCosmWasmPool(request:context:)
       )
@@ -288,26 +288,26 @@ extension Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorAsyncProvider {
   }
 }
 
-internal protocol Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerInterceptorFactoryProtocol {
+internal protocol Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerInterceptorFactoryProtocol {
 
   /// - Returns: Interceptors to use when handling 'createCosmWasmPool'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeCreateCosmWasmPoolInterceptors() -> [ServerInterceptor<Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreateCosmWasmPoolResponse>]
+  func makeCreateCosmWasmPoolInterceptors() -> [ServerInterceptor<Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPool, Osmosis_Cosmwasmpool_V1beta1_MsgCreateCosmWasmPoolResponse>]
 }
 
-internal enum Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerMetadata {
+internal enum Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerMetadata {
   internal static let serviceDescriptor = GRPCServiceDescriptor(
     name: "MsgCreator",
-    fullName: "osmosis.cosmwasmpool.v1beta1.model.MsgCreator",
+    fullName: "osmosis.cosmwasmpool.v1beta1.MsgCreator",
     methods: [
-      Osmosis_Cosmwasmpool_V1beta1_Model_MsgCreatorServerMetadata.Methods.createCosmWasmPool,
+      Osmosis_Cosmwasmpool_V1beta1_MsgCreatorServerMetadata.Methods.createCosmWasmPool,
     ]
   )
 
   internal enum Methods {
     internal static let createCosmWasmPool = GRPCMethodDescriptor(
       name: "CreateCosmWasmPool",
-      path: "/osmosis.cosmwasmpool.v1beta1.model.MsgCreator/CreateCosmWasmPool",
+      path: "/osmosis.cosmwasmpool.v1beta1.MsgCreator/CreateCosmWasmPool",
       type: GRPCCallType.unary
     )
   }

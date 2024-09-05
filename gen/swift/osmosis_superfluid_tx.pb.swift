@@ -243,7 +243,7 @@ struct Osmosis_Superfluid_MsgUnlockAndMigrateSharesToFullRangeConcentratedPositi
 
   var sender: String = String()
 
-  var lockID: UInt64 = 0
+  var lockID: Int64 = 0
 
   var sharesToMigrate: Cosmos_Base_V1beta1_Coin {
     get {return _sharesToMigrate ?? Cosmos_Base_V1beta1_Coin()}
@@ -350,6 +350,57 @@ struct Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionRespons
   init() {}
 }
 
+/// ===================== MsgUnbondConvertAndStake
+struct Osmosis_Superfluid_MsgUnbondConvertAndStake {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// lock ID to convert and stake.
+  /// lock id with 0 should be provided if converting liquid gamm shares to stake
+  var lockID: UInt64 = 0
+
+  var sender: String = String()
+
+  /// validator address to delegate to.
+  /// If provided empty string, we use the validators returned from
+  /// valset-preference module.
+  var valAddr: String = String()
+
+  /// min_amt_to_stake indicates the minimum amount to stake after conversion
+  var minAmtToStake: String = String()
+
+  /// shares_to_convert indicates shares wanted to stake.
+  /// Note that this field is only used for liquid(unlocked) gamm shares.
+  /// For all other cases, this field would be disregarded.
+  var sharesToConvert: Cosmos_Base_V1beta1_Coin {
+    get {return _sharesToConvert ?? Cosmos_Base_V1beta1_Coin()}
+    set {_sharesToConvert = newValue}
+  }
+  /// Returns true if `sharesToConvert` has been explicitly set.
+  var hasSharesToConvert: Bool {return self._sharesToConvert != nil}
+  /// Clears the value of `sharesToConvert`. Subsequent reads from it will return its default value.
+  mutating func clearSharesToConvert() {self._sharesToConvert = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _sharesToConvert: Cosmos_Base_V1beta1_Coin? = nil
+}
+
+struct Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var totalAmtStaked: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Superfluid_MsgSuperfluidDelegate: @unchecked Sendable {}
 extension Osmosis_Superfluid_MsgSuperfluidDelegateResponse: @unchecked Sendable {}
@@ -369,6 +420,8 @@ extension Osmosis_Superfluid_MsgUnlockAndMigrateSharesToFullRangeConcentratedPos
 extension Osmosis_Superfluid_MsgUnlockAndMigrateSharesToFullRangeConcentratedPositionResponse: @unchecked Sendable {}
 extension Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPosition: @unchecked Sendable {}
 extension Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse: @unchecked Sendable {}
+extension Osmosis_Superfluid_MsgUnbondConvertAndStake: @unchecked Sendable {}
+extension Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -882,7 +935,7 @@ extension Osmosis_Superfluid_MsgUnlockAndMigrateSharesToFullRangeConcentratedPos
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.sender) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.lockID) }()
+      case 2: try { try decoder.decodeSingularInt64Field(value: &self.lockID) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._sharesToMigrate) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.tokenOutMins) }()
       default: break
@@ -899,7 +952,7 @@ extension Osmosis_Superfluid_MsgUnlockAndMigrateSharesToFullRangeConcentratedPos
       try visitor.visitSingularStringField(value: self.sender, fieldNumber: 1)
     }
     if self.lockID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.lockID, fieldNumber: 2)
+      try visitor.visitSingularInt64Field(value: self.lockID, fieldNumber: 2)
     }
     try { if let v = self._sharesToMigrate {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
@@ -1079,6 +1132,98 @@ extension Osmosis_Superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResp
     if lhs.amount1 != rhs.amount1 {return false}
     if lhs.newLiquidity != rhs.newLiquidity {return false}
     if lhs.lockID != rhs.lockID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_MsgUnbondConvertAndStake: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUnbondConvertAndStake"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "lock_id"),
+    2: .same(proto: "sender"),
+    3: .standard(proto: "val_addr"),
+    4: .standard(proto: "min_amt_to_stake"),
+    5: .standard(proto: "shares_to_convert"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.lockID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.sender) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.valAddr) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.minAmtToStake) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._sharesToConvert) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.lockID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.lockID, fieldNumber: 1)
+    }
+    if !self.sender.isEmpty {
+      try visitor.visitSingularStringField(value: self.sender, fieldNumber: 2)
+    }
+    if !self.valAddr.isEmpty {
+      try visitor.visitSingularStringField(value: self.valAddr, fieldNumber: 3)
+    }
+    if !self.minAmtToStake.isEmpty {
+      try visitor.visitSingularStringField(value: self.minAmtToStake, fieldNumber: 4)
+    }
+    try { if let v = self._sharesToConvert {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_MsgUnbondConvertAndStake, rhs: Osmosis_Superfluid_MsgUnbondConvertAndStake) -> Bool {
+    if lhs.lockID != rhs.lockID {return false}
+    if lhs.sender != rhs.sender {return false}
+    if lhs.valAddr != rhs.valAddr {return false}
+    if lhs.minAmtToStake != rhs.minAmtToStake {return false}
+    if lhs._sharesToConvert != rhs._sharesToConvert {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUnbondConvertAndStakeResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "total_amt_staked"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.totalAmtStaked) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.totalAmtStaked.isEmpty {
+      try visitor.visitSingularStringField(value: self.totalAmtStaked, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse, rhs: Osmosis_Superfluid_MsgUnbondConvertAndStakeResponse) -> Bool {
+    if lhs.totalAmtStaked != rhs.totalAmtStaked {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -20,12 +20,26 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
+/// CosmWasmPool represents the data serialized into state for each CW pool.
+///
+/// Note: CW Pool has 2 pool models:
+/// - CosmWasmPool which is a proto-generated store model used for serialization
+/// into state.
+/// - Pool struct that encapsulates the CosmWasmPool and wasmKeeper for calling
+/// the contract.
+///
+/// CosmWasmPool implements the poolmanager.PoolI interface but it panics on all
+/// methods. The reason is that access to wasmKeeper is required to call the
+/// contract.
+///
+/// Instead, all interactions and poolmanager.PoolI methods are to be performed
+/// on the Pool struct. The reason why we cannot have a Pool struct only is
+/// because it cannot be serialized into state due to having a non-serializable
+/// wasmKeeper field.
 struct Osmosis_Cosmwasmpool_V1beta1_CosmWasmPool {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
-
-  var poolAddress: String = String()
 
   var contractAddress: String = String()
 
@@ -51,11 +65,10 @@ fileprivate let _protobuf_package = "osmosis.cosmwasmpool.v1beta1"
 extension Osmosis_Cosmwasmpool_V1beta1_CosmWasmPool: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".CosmWasmPool"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "pool_address"),
-    2: .standard(proto: "contract_address"),
-    3: .standard(proto: "pool_id"),
-    4: .standard(proto: "code_id"),
-    5: .standard(proto: "instantiate_msg"),
+    1: .standard(proto: "contract_address"),
+    2: .standard(proto: "pool_id"),
+    3: .standard(proto: "code_id"),
+    4: .standard(proto: "instantiate_msg"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -64,37 +77,32 @@ extension Osmosis_Cosmwasmpool_V1beta1_CosmWasmPool: SwiftProtobuf.Message, Swif
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.poolAddress) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.contractAddress) }()
-      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
-      case 4: try { try decoder.decodeSingularUInt64Field(value: &self.codeID) }()
-      case 5: try { try decoder.decodeSingularBytesField(value: &self.instantiateMsg) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.contractAddress) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.codeID) }()
+      case 4: try { try decoder.decodeSingularBytesField(value: &self.instantiateMsg) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.poolAddress.isEmpty {
-      try visitor.visitSingularStringField(value: self.poolAddress, fieldNumber: 1)
-    }
     if !self.contractAddress.isEmpty {
-      try visitor.visitSingularStringField(value: self.contractAddress, fieldNumber: 2)
+      try visitor.visitSingularStringField(value: self.contractAddress, fieldNumber: 1)
     }
     if self.poolID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.poolID, fieldNumber: 3)
+      try visitor.visitSingularUInt64Field(value: self.poolID, fieldNumber: 2)
     }
     if self.codeID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.codeID, fieldNumber: 4)
+      try visitor.visitSingularUInt64Field(value: self.codeID, fieldNumber: 3)
     }
     if !self.instantiateMsg.isEmpty {
-      try visitor.visitSingularBytesField(value: self.instantiateMsg, fieldNumber: 5)
+      try visitor.visitSingularBytesField(value: self.instantiateMsg, fieldNumber: 4)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Osmosis_Cosmwasmpool_V1beta1_CosmWasmPool, rhs: Osmosis_Cosmwasmpool_V1beta1_CosmWasmPool) -> Bool {
-    if lhs.poolAddress != rhs.poolAddress {return false}
     if lhs.contractAddress != rhs.contractAddress {return false}
     if lhs.poolID != rhs.poolID {return false}
     if lhs.codeID != rhs.codeID {return false}

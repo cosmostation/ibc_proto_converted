@@ -78,10 +78,10 @@ internal protocol Osmosis_Protorev_V1beta1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse>
 
-  func getProtoRevPoolWeights(
-    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest,
+  func getProtoRevInfoByPoolType(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse>
+  ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse>
 
   func getProtoRevMaxPoolPointsPerTx(
     _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevMaxPoolPointsPerTxRequest,
@@ -107,6 +107,11 @@ internal protocol Osmosis_Protorev_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse>
+
+  func getAllProtocolRevenue(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse>
 }
 
 extension Osmosis_Protorev_V1beta1_QueryClientProtocol {
@@ -281,22 +286,22 @@ extension Osmosis_Protorev_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// GetProtoRevPoolWeights queries the weights of each pool type currently
-  /// being used by the module
+  /// GetProtoRevInfoByPoolType queries pool type information that is currently
+  /// being utilized by the module
   ///
   /// - Parameters:
-  ///   - request: Request to send to GetProtoRevPoolWeights.
+  ///   - request: Request to send to GetProtoRevInfoByPoolType.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func getProtoRevPoolWeights(
-    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest,
+  internal func getProtoRevInfoByPoolType(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse> {
+  ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse> {
     return self.makeUnaryCall(
-      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevPoolWeights.path,
+      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevInfoByPoolType.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetProtoRevPoolWeightsInterceptors() ?? []
+      interceptors: self.interceptors?.makeGetProtoRevInfoByPoolTypeInterceptors() ?? []
     )
   }
 
@@ -391,6 +396,25 @@ extension Osmosis_Protorev_V1beta1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeGetProtoRevPoolInterceptors() ?? []
+    )
+  }
+
+  /// GetAllProtocolRevenue queries all of the protocol revenue that has been
+  /// accumulated by any module
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to GetAllProtocolRevenue.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func getAllProtocolRevenue(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getAllProtocolRevenue.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetAllProtocolRevenueInterceptors() ?? []
     )
   }
 }
@@ -503,10 +527,10 @@ internal protocol Osmosis_Protorev_V1beta1_QueryAsyncClientProtocol: GRPCClient 
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse>
 
-  func makeGetProtoRevPoolWeightsCall(
-    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest,
+  func makeGetProtoRevInfoByPoolTypeCall(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest,
     callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse>
+  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse>
 
   func makeGetProtoRevMaxPoolPointsPerTxCall(
     _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevMaxPoolPointsPerTxRequest,
@@ -532,6 +556,11 @@ internal protocol Osmosis_Protorev_V1beta1_QueryAsyncClientProtocol: GRPCClient 
     _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse>
+
+  func makeGetAllProtocolRevenueCall(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -652,15 +681,15 @@ extension Osmosis_Protorev_V1beta1_QueryAsyncClientProtocol {
     )
   }
 
-  internal func makeGetProtoRevPoolWeightsCall(
-    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest,
+  internal func makeGetProtoRevInfoByPoolTypeCall(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest,
     callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse> {
+  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse> {
     return self.makeAsyncUnaryCall(
-      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevPoolWeights.path,
+      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevInfoByPoolType.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetProtoRevPoolWeightsInterceptors() ?? []
+      interceptors: self.interceptors?.makeGetProtoRevInfoByPoolTypeInterceptors() ?? []
     )
   }
 
@@ -721,6 +750,18 @@ extension Osmosis_Protorev_V1beta1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeGetProtoRevPoolInterceptors() ?? []
+    )
+  }
+
+  internal func makeGetAllProtocolRevenueCall(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getAllProtocolRevenue.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetAllProtocolRevenueInterceptors() ?? []
     )
   }
 }
@@ -835,15 +876,15 @@ extension Osmosis_Protorev_V1beta1_QueryAsyncClientProtocol {
     )
   }
 
-  internal func getProtoRevPoolWeights(
-    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest,
+  internal func getProtoRevInfoByPoolType(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest,
     callOptions: CallOptions? = nil
-  ) async throws -> Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse {
+  ) async throws -> Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse {
     return try await self.performAsyncUnaryCall(
-      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevPoolWeights.path,
+      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevInfoByPoolType.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetProtoRevPoolWeightsInterceptors() ?? []
+      interceptors: self.interceptors?.makeGetProtoRevInfoByPoolTypeInterceptors() ?? []
     )
   }
 
@@ -906,6 +947,18 @@ extension Osmosis_Protorev_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeGetProtoRevPoolInterceptors() ?? []
     )
   }
+
+  internal func getAllProtocolRevenue(
+    _ request: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getAllProtocolRevenue.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetAllProtocolRevenueInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -954,8 +1007,8 @@ internal protocol Osmosis_Protorev_V1beta1_QueryClientInterceptorFactoryProtocol
   /// - Returns: Interceptors to use when invoking 'getProtoRevDeveloperAccount'.
   func makeGetProtoRevDeveloperAccountInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'getProtoRevPoolWeights'.
-  func makeGetProtoRevPoolWeightsInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse>]
+  /// - Returns: Interceptors to use when invoking 'getProtoRevInfoByPoolType'.
+  func makeGetProtoRevInfoByPoolTypeInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse>]
 
   /// - Returns: Interceptors to use when invoking 'getProtoRevMaxPoolPointsPerTx'.
   func makeGetProtoRevMaxPoolPointsPerTxInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevMaxPoolPointsPerTxRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevMaxPoolPointsPerTxResponse>]
@@ -971,6 +1024,9 @@ internal protocol Osmosis_Protorev_V1beta1_QueryClientInterceptorFactoryProtocol
 
   /// - Returns: Interceptors to use when invoking 'getProtoRevPool'.
   func makeGetProtoRevPoolInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'getAllProtocolRevenue'.
+  func makeGetAllProtocolRevenueInterceptors() -> [ClientInterceptor<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse>]
 }
 
 internal enum Osmosis_Protorev_V1beta1_QueryClientMetadata {
@@ -987,12 +1043,13 @@ internal enum Osmosis_Protorev_V1beta1_QueryClientMetadata {
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevTokenPairArbRoutes,
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevAdminAccount,
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevDeveloperAccount,
-      Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevPoolWeights,
+      Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevInfoByPoolType,
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevMaxPoolPointsPerTx,
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevMaxPoolPointsPerBlock,
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevBaseDenoms,
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevEnabled,
       Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getProtoRevPool,
+      Osmosis_Protorev_V1beta1_QueryClientMetadata.Methods.getAllProtocolRevenue,
     ]
   )
 
@@ -1051,9 +1108,9 @@ internal enum Osmosis_Protorev_V1beta1_QueryClientMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let getProtoRevPoolWeights = GRPCMethodDescriptor(
-      name: "GetProtoRevPoolWeights",
-      path: "/osmosis.protorev.v1beta1.Query/GetProtoRevPoolWeights",
+    internal static let getProtoRevInfoByPoolType = GRPCMethodDescriptor(
+      name: "GetProtoRevInfoByPoolType",
+      path: "/osmosis.protorev.v1beta1.Query/GetProtoRevInfoByPoolType",
       type: GRPCCallType.unary
     )
 
@@ -1084,6 +1141,12 @@ internal enum Osmosis_Protorev_V1beta1_QueryClientMetadata {
     internal static let getProtoRevPool = GRPCMethodDescriptor(
       name: "GetProtoRevPool",
       path: "/osmosis.protorev.v1beta1.Query/GetProtoRevPool",
+      type: GRPCCallType.unary
+    )
+
+    internal static let getAllProtocolRevenue = GRPCMethodDescriptor(
+      name: "GetAllProtocolRevenue",
+      path: "/osmosis.protorev.v1beta1.Query/GetAllProtocolRevenue",
       type: GRPCCallType.unary
     )
   }
@@ -1127,9 +1190,9 @@ internal protocol Osmosis_Protorev_V1beta1_QueryProvider: CallHandlerProvider {
   /// GetProtoRevDeveloperAccount queries the developer account of the module
   func getProtoRevDeveloperAccount(request: Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse>
 
-  /// GetProtoRevPoolWeights queries the weights of each pool type currently
-  /// being used by the module
-  func getProtoRevPoolWeights(request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse>
+  /// GetProtoRevInfoByPoolType queries pool type information that is currently
+  /// being utilized by the module
+  func getProtoRevInfoByPoolType(request: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse>
 
   /// GetProtoRevMaxPoolPointsPerTx queries the maximum number of pool points
   /// that can be consumed per transaction
@@ -1149,6 +1212,10 @@ internal protocol Osmosis_Protorev_V1beta1_QueryProvider: CallHandlerProvider {
   /// GetProtoRevPool queries the pool id used via the highest liquidity method
   /// for arbitrage route building given a pair of denominations
   func getProtoRevPool(request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse>
+
+  /// GetAllProtocolRevenue queries all of the protocol revenue that has been
+  /// accumulated by any module
+  func getAllProtocolRevenue(request: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse>
 }
 
 extension Osmosis_Protorev_V1beta1_QueryProvider {
@@ -1244,13 +1311,13 @@ extension Osmosis_Protorev_V1beta1_QueryProvider {
         userFunction: self.getProtoRevDeveloperAccount(request:context:)
       )
 
-    case "GetProtoRevPoolWeights":
+    case "GetProtoRevInfoByPoolType":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest>(),
-        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse>(),
-        interceptors: self.interceptors?.makeGetProtoRevPoolWeightsInterceptors() ?? [],
-        userFunction: self.getProtoRevPoolWeights(request:context:)
+        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse>(),
+        interceptors: self.interceptors?.makeGetProtoRevInfoByPoolTypeInterceptors() ?? [],
+        userFunction: self.getProtoRevInfoByPoolType(request:context:)
       )
 
     case "GetProtoRevMaxPoolPointsPerTx":
@@ -1296,6 +1363,15 @@ extension Osmosis_Protorev_V1beta1_QueryProvider {
         responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse>(),
         interceptors: self.interceptors?.makeGetProtoRevPoolInterceptors() ?? [],
         userFunction: self.getProtoRevPool(request:context:)
+      )
+
+    case "GetAllProtocolRevenue":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse>(),
+        interceptors: self.interceptors?.makeGetAllProtocolRevenueInterceptors() ?? [],
+        userFunction: self.getAllProtocolRevenue(request:context:)
       )
 
     default:
@@ -1371,12 +1447,12 @@ internal protocol Osmosis_Protorev_V1beta1_QueryAsyncProvider: CallHandlerProvid
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse
 
-  /// GetProtoRevPoolWeights queries the weights of each pool type currently
-  /// being used by the module
-  @Sendable func getProtoRevPoolWeights(
-    request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest,
+  /// GetProtoRevInfoByPoolType queries pool type information that is currently
+  /// being utilized by the module
+  @Sendable func getProtoRevInfoByPoolType(
+    request: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest,
     context: GRPCAsyncServerCallContext
-  ) async throws -> Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse
+  ) async throws -> Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse
 
   /// GetProtoRevMaxPoolPointsPerTx queries the maximum number of pool points
   /// that can be consumed per transaction
@@ -1411,6 +1487,13 @@ internal protocol Osmosis_Protorev_V1beta1_QueryAsyncProvider: CallHandlerProvid
     request: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse
+
+  /// GetAllProtocolRevenue queries all of the protocol revenue that has been
+  /// accumulated by any module
+  @Sendable func getAllProtocolRevenue(
+    request: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1513,13 +1596,13 @@ extension Osmosis_Protorev_V1beta1_QueryAsyncProvider {
         wrapping: self.getProtoRevDeveloperAccount(request:context:)
       )
 
-    case "GetProtoRevPoolWeights":
+    case "GetProtoRevInfoByPoolType":
       return GRPCAsyncServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest>(),
-        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse>(),
-        interceptors: self.interceptors?.makeGetProtoRevPoolWeightsInterceptors() ?? [],
-        wrapping: self.getProtoRevPoolWeights(request:context:)
+        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse>(),
+        interceptors: self.interceptors?.makeGetProtoRevInfoByPoolTypeInterceptors() ?? [],
+        wrapping: self.getProtoRevInfoByPoolType(request:context:)
       )
 
     case "GetProtoRevMaxPoolPointsPerTx":
@@ -1567,6 +1650,15 @@ extension Osmosis_Protorev_V1beta1_QueryAsyncProvider {
         wrapping: self.getProtoRevPool(request:context:)
       )
 
+    case "GetAllProtocolRevenue":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse>(),
+        interceptors: self.interceptors?.makeGetAllProtocolRevenueInterceptors() ?? [],
+        wrapping: self.getAllProtocolRevenue(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1611,9 +1703,9 @@ internal protocol Osmosis_Protorev_V1beta1_QueryServerInterceptorFactoryProtocol
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeGetProtoRevDeveloperAccountInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse>]
 
-  /// - Returns: Interceptors to use when handling 'getProtoRevPoolWeights'.
+  /// - Returns: Interceptors to use when handling 'getProtoRevInfoByPoolType'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeGetProtoRevPoolWeightsInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse>]
+  func makeGetProtoRevInfoByPoolTypeInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse>]
 
   /// - Returns: Interceptors to use when handling 'getProtoRevMaxPoolPointsPerTx'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -1634,6 +1726,10 @@ internal protocol Osmosis_Protorev_V1beta1_QueryServerInterceptorFactoryProtocol
   /// - Returns: Interceptors to use when handling 'getProtoRevPool'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeGetProtoRevPoolInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest, Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse>]
+
+  /// - Returns: Interceptors to use when handling 'getAllProtocolRevenue'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeGetAllProtocolRevenueInterceptors() -> [ServerInterceptor<Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse>]
 }
 
 internal enum Osmosis_Protorev_V1beta1_QueryServerMetadata {
@@ -1650,12 +1746,13 @@ internal enum Osmosis_Protorev_V1beta1_QueryServerMetadata {
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevTokenPairArbRoutes,
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevAdminAccount,
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevDeveloperAccount,
-      Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevPoolWeights,
+      Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevInfoByPoolType,
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevMaxPoolPointsPerTx,
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevMaxPoolPointsPerBlock,
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevBaseDenoms,
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevEnabled,
       Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getProtoRevPool,
+      Osmosis_Protorev_V1beta1_QueryServerMetadata.Methods.getAllProtocolRevenue,
     ]
   )
 
@@ -1714,9 +1811,9 @@ internal enum Osmosis_Protorev_V1beta1_QueryServerMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let getProtoRevPoolWeights = GRPCMethodDescriptor(
-      name: "GetProtoRevPoolWeights",
-      path: "/osmosis.protorev.v1beta1.Query/GetProtoRevPoolWeights",
+    internal static let getProtoRevInfoByPoolType = GRPCMethodDescriptor(
+      name: "GetProtoRevInfoByPoolType",
+      path: "/osmosis.protorev.v1beta1.Query/GetProtoRevInfoByPoolType",
       type: GRPCCallType.unary
     )
 
@@ -1747,6 +1844,12 @@ internal enum Osmosis_Protorev_V1beta1_QueryServerMetadata {
     internal static let getProtoRevPool = GRPCMethodDescriptor(
       name: "GetProtoRevPool",
       path: "/osmosis.protorev.v1beta1.Query/GetProtoRevPool",
+      type: GRPCCallType.unary
+    )
+
+    internal static let getAllProtocolRevenue = GRPCMethodDescriptor(
+      name: "GetAllProtocolRevenue",
+      path: "/osmosis.protorev.v1beta1.Query/GetAllProtocolRevenue",
       type: GRPCCallType.unary
     )
   }

@@ -40,6 +40,11 @@ internal protocol Osmosis_Incentives_MsgClientProtocol: GRPCClient {
     _ request: Osmosis_Incentives_MsgAddToGauge,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Incentives_MsgAddToGauge, Osmosis_Incentives_MsgAddToGaugeResponse>
+
+  func createGroup(
+    _ request: Osmosis_Incentives_MsgCreateGroup,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Incentives_MsgCreateGroup, Osmosis_Incentives_MsgCreateGroupResponse>
 }
 
 extension Osmosis_Incentives_MsgClientProtocol {
@@ -80,6 +85,24 @@ extension Osmosis_Incentives_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeAddToGaugeInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to CreateGroup
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to CreateGroup.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func createGroup(
+    _ request: Osmosis_Incentives_MsgCreateGroup,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Incentives_MsgCreateGroup, Osmosis_Incentives_MsgCreateGroupResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Incentives_MsgClientMetadata.Methods.createGroup.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCreateGroupInterceptors() ?? []
     )
   }
 }
@@ -155,6 +178,11 @@ internal protocol Osmosis_Incentives_MsgAsyncClientProtocol: GRPCClient {
     _ request: Osmosis_Incentives_MsgAddToGauge,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_MsgAddToGauge, Osmosis_Incentives_MsgAddToGaugeResponse>
+
+  func makeCreateGroupCall(
+    _ request: Osmosis_Incentives_MsgCreateGroup,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_MsgCreateGroup, Osmosis_Incentives_MsgCreateGroupResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -190,6 +218,18 @@ extension Osmosis_Incentives_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeAddToGaugeInterceptors() ?? []
     )
   }
+
+  internal func makeCreateGroupCall(
+    _ request: Osmosis_Incentives_MsgCreateGroup,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Incentives_MsgCreateGroup, Osmosis_Incentives_MsgCreateGroupResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Incentives_MsgClientMetadata.Methods.createGroup.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCreateGroupInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -215,6 +255,18 @@ extension Osmosis_Incentives_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeAddToGaugeInterceptors() ?? []
+    )
+  }
+
+  internal func createGroup(
+    _ request: Osmosis_Incentives_MsgCreateGroup,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Incentives_MsgCreateGroupResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Incentives_MsgClientMetadata.Methods.createGroup.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCreateGroupInterceptors() ?? []
     )
   }
 }
@@ -243,6 +295,9 @@ internal protocol Osmosis_Incentives_MsgClientInterceptorFactoryProtocol: Sendab
 
   /// - Returns: Interceptors to use when invoking 'addToGauge'.
   func makeAddToGaugeInterceptors() -> [ClientInterceptor<Osmosis_Incentives_MsgAddToGauge, Osmosis_Incentives_MsgAddToGaugeResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'createGroup'.
+  func makeCreateGroupInterceptors() -> [ClientInterceptor<Osmosis_Incentives_MsgCreateGroup, Osmosis_Incentives_MsgCreateGroupResponse>]
 }
 
 internal enum Osmosis_Incentives_MsgClientMetadata {
@@ -252,6 +307,7 @@ internal enum Osmosis_Incentives_MsgClientMetadata {
     methods: [
       Osmosis_Incentives_MsgClientMetadata.Methods.createGauge,
       Osmosis_Incentives_MsgClientMetadata.Methods.addToGauge,
+      Osmosis_Incentives_MsgClientMetadata.Methods.createGroup,
     ]
   )
 
@@ -267,6 +323,12 @@ internal enum Osmosis_Incentives_MsgClientMetadata {
       path: "/osmosis.incentives.Msg/AddToGauge",
       type: GRPCCallType.unary
     )
+
+    internal static let createGroup = GRPCMethodDescriptor(
+      name: "CreateGroup",
+      path: "/osmosis.incentives.Msg/CreateGroup",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -277,6 +339,8 @@ internal protocol Osmosis_Incentives_MsgProvider: CallHandlerProvider {
   func createGauge(request: Osmosis_Incentives_MsgCreateGauge, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_MsgCreateGaugeResponse>
 
   func addToGauge(request: Osmosis_Incentives_MsgAddToGauge, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_MsgAddToGaugeResponse>
+
+  func createGroup(request: Osmosis_Incentives_MsgCreateGroup, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Incentives_MsgCreateGroupResponse>
 }
 
 extension Osmosis_Incentives_MsgProvider {
@@ -309,6 +373,15 @@ extension Osmosis_Incentives_MsgProvider {
         userFunction: self.addToGauge(request:context:)
       )
 
+    case "CreateGroup":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_MsgCreateGroup>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_MsgCreateGroupResponse>(),
+        interceptors: self.interceptors?.makeCreateGroupInterceptors() ?? [],
+        userFunction: self.createGroup(request:context:)
+      )
+
     default:
       return nil
     }
@@ -330,6 +403,11 @@ internal protocol Osmosis_Incentives_MsgAsyncProvider: CallHandlerProvider {
     request: Osmosis_Incentives_MsgAddToGauge,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Incentives_MsgAddToGaugeResponse
+
+  @Sendable func createGroup(
+    request: Osmosis_Incentives_MsgCreateGroup,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Incentives_MsgCreateGroupResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -369,6 +447,15 @@ extension Osmosis_Incentives_MsgAsyncProvider {
         wrapping: self.addToGauge(request:context:)
       )
 
+    case "CreateGroup":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Incentives_MsgCreateGroup>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Incentives_MsgCreateGroupResponse>(),
+        interceptors: self.interceptors?.makeCreateGroupInterceptors() ?? [],
+        wrapping: self.createGroup(request:context:)
+      )
+
     default:
       return nil
     }
@@ -384,6 +471,10 @@ internal protocol Osmosis_Incentives_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'addToGauge'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeAddToGaugeInterceptors() -> [ServerInterceptor<Osmosis_Incentives_MsgAddToGauge, Osmosis_Incentives_MsgAddToGaugeResponse>]
+
+  /// - Returns: Interceptors to use when handling 'createGroup'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeCreateGroupInterceptors() -> [ServerInterceptor<Osmosis_Incentives_MsgCreateGroup, Osmosis_Incentives_MsgCreateGroupResponse>]
 }
 
 internal enum Osmosis_Incentives_MsgServerMetadata {
@@ -393,6 +484,7 @@ internal enum Osmosis_Incentives_MsgServerMetadata {
     methods: [
       Osmosis_Incentives_MsgServerMetadata.Methods.createGauge,
       Osmosis_Incentives_MsgServerMetadata.Methods.addToGauge,
+      Osmosis_Incentives_MsgServerMetadata.Methods.createGroup,
     ]
   )
 
@@ -406,6 +498,12 @@ internal enum Osmosis_Incentives_MsgServerMetadata {
     internal static let addToGauge = GRPCMethodDescriptor(
       name: "AddToGauge",
       path: "/osmosis.incentives.Msg/AddToGauge",
+      type: GRPCCallType.unary
+    )
+
+    internal static let createGroup = GRPCMethodDescriptor(
+      name: "CreateGroup",
+      path: "/osmosis.incentives.Msg/CreateGroup",
       type: GRPCCallType.unary
     )
   }

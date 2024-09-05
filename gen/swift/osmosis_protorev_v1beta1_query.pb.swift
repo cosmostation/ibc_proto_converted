@@ -297,9 +297,9 @@ struct Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse {
   init() {}
 }
 
-/// QueryGetProtoRevPoolWeightsRequest is request type for the
-/// Query/GetProtoRevPoolWeights RPC method.
-struct Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest {
+/// QueryGetProtoRevInfoByPoolTypeRequest is request type for the
+/// Query/GetProtoRevInfoByPoolType RPC method.
+struct Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -309,28 +309,29 @@ struct Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest {
   init() {}
 }
 
-/// QueryGetProtoRevPoolWeightsResponse is response type for the
-/// Query/GetProtoRevPoolWeights RPC method.
-struct Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse {
+/// QueryGetProtoRevInfoByPoolTypeResponse is response type for the
+/// Query/GetProtoRevInfoByPoolType RPC method.
+struct Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// pool_weights is a list of all of the pool weights
-  var poolWeights: Osmosis_Protorev_V1beta1_PoolWeights {
-    get {return _poolWeights ?? Osmosis_Protorev_V1beta1_PoolWeights()}
-    set {_poolWeights = newValue}
+  /// InfoByPoolType contains all information pertaining to how different
+  /// pool types are handled by the module.
+  var infoByPoolType: Osmosis_Protorev_V1beta1_InfoByPoolType {
+    get {return _infoByPoolType ?? Osmosis_Protorev_V1beta1_InfoByPoolType()}
+    set {_infoByPoolType = newValue}
   }
-  /// Returns true if `poolWeights` has been explicitly set.
-  var hasPoolWeights: Bool {return self._poolWeights != nil}
-  /// Clears the value of `poolWeights`. Subsequent reads from it will return its default value.
-  mutating func clearPoolWeights() {self._poolWeights = nil}
+  /// Returns true if `infoByPoolType` has been explicitly set.
+  var hasInfoByPoolType: Bool {return self._infoByPoolType != nil}
+  /// Clears the value of `infoByPoolType`. Subsequent reads from it will return its default value.
+  mutating func clearInfoByPoolType() {self._infoByPoolType = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
-  fileprivate var _poolWeights: Osmosis_Protorev_V1beta1_PoolWeights? = nil
+  fileprivate var _infoByPoolType: Osmosis_Protorev_V1beta1_InfoByPoolType? = nil
 }
 
 /// QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
@@ -477,6 +478,37 @@ struct Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse {
   init() {}
 }
 
+struct Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var allProtocolRevenue: Osmosis_Protorev_V1beta1_AllProtocolRevenue {
+    get {return _allProtocolRevenue ?? Osmosis_Protorev_V1beta1_AllProtocolRevenue()}
+    set {_allProtocolRevenue = newValue}
+  }
+  /// Returns true if `allProtocolRevenue` has been explicitly set.
+  var hasAllProtocolRevenue: Bool {return self._allProtocolRevenue != nil}
+  /// Clears the value of `allProtocolRevenue`. Subsequent reads from it will return its default value.
+  mutating func clearAllProtocolRevenue() {self._allProtocolRevenue = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _allProtocolRevenue: Osmosis_Protorev_V1beta1_AllProtocolRevenue? = nil
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Protorev_V1beta1_QueryParamsRequest: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryParamsResponse: @unchecked Sendable {}
@@ -496,8 +528,8 @@ extension Osmosis_Protorev_V1beta1_QueryGetProtoRevAdminAccountRequest: @uncheck
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevAdminAccountResponse: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountRequest: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse: @unchecked Sendable {}
-extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest: @unchecked Sendable {}
-extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevMaxPoolPointsPerBlockRequest: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevMaxPoolPointsPerBlockResponse: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevMaxPoolPointsPerTxRequest: @unchecked Sendable {}
@@ -508,6 +540,8 @@ extension Osmosis_Protorev_V1beta1_QueryGetProtoRevEnabledRequest: @unchecked Se
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevEnabledResponse: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolRequest: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -1011,8 +1045,8 @@ extension Osmosis_Protorev_V1beta1_QueryGetProtoRevDeveloperAccountResponse: Swi
   }
 }
 
-extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryGetProtoRevPoolWeightsRequest"
+extension Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryGetProtoRevInfoByPoolTypeRequest"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1024,16 +1058,16 @@ extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest: SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest, rhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsRequest) -> Bool {
+  static func ==(lhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest, rhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryGetProtoRevPoolWeightsResponse"
+extension Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryGetProtoRevInfoByPoolTypeResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "pool_weights"),
+    1: .standard(proto: "info_by_pool_type"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1042,7 +1076,7 @@ extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse: SwiftPro
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._poolWeights) }()
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._infoByPoolType) }()
       default: break
       }
     }
@@ -1053,14 +1087,14 @@ extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse: SwiftPro
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._poolWeights {
+    try { if let v = self._infoByPoolType {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse, rhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolWeightsResponse) -> Bool {
-    if lhs._poolWeights != rhs._poolWeights {return false}
+  static func ==(lhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse, rhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevInfoByPoolTypeResponse) -> Bool {
+    if lhs._infoByPoolType != rhs._infoByPoolType {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1335,6 +1369,61 @@ extension Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse: SwiftProtobuf.M
 
   static func ==(lhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse, rhs: Osmosis_Protorev_V1beta1_QueryGetProtoRevPoolResponse) -> Bool {
     if lhs.poolID != rhs.poolID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryGetAllProtocolRevenueRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest, rhs: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryGetAllProtocolRevenueResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "all_protocol_revenue"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._allProtocolRevenue) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._allProtocolRevenue {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse, rhs: Osmosis_Protorev_V1beta1_QueryGetAllProtocolRevenueResponse) -> Bool {
+    if lhs._allProtocolRevenue != rhs._allProtocolRevenue {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -50,6 +50,21 @@ internal protocol Osmosis_Poolmanager_V1beta1_MsgClientProtocol: GRPCClient {
     _ request: Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut, Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse>
+
+  func setDenomPairTakerFee(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse>
+
+  func setTakerFeeShareAgreementForDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse>
+
+  func setRegisteredAlloyedPool(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse>
 }
 
 extension Osmosis_Poolmanager_V1beta1_MsgClientProtocol {
@@ -126,6 +141,60 @@ extension Osmosis_Poolmanager_V1beta1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeSplitRouteSwapExactAmountOutInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to SetDenomPairTakerFee
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to SetDenomPairTakerFee.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func setDenomPairTakerFee(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setDenomPairTakerFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetDenomPairTakerFeeInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to SetTakerFeeShareAgreementForDenom
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to SetTakerFeeShareAgreementForDenom.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func setTakerFeeShareAgreementForDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setTakerFeeShareAgreementForDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetTakerFeeShareAgreementForDenomInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to SetRegisteredAlloyedPool
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to SetRegisteredAlloyedPool.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func setRegisteredAlloyedPool(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setRegisteredAlloyedPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetRegisteredAlloyedPoolInterceptors() ?? []
     )
   }
 }
@@ -211,6 +280,21 @@ internal protocol Osmosis_Poolmanager_V1beta1_MsgAsyncClientProtocol: GRPCClient
     _ request: Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut, Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse>
+
+  func makeSetDenomPairTakerFeeCall(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse>
+
+  func makeSetTakerFeeShareAgreementForDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse>
+
+  func makeSetRegisteredAlloyedPoolCall(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -270,6 +354,42 @@ extension Osmosis_Poolmanager_V1beta1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeSplitRouteSwapExactAmountOutInterceptors() ?? []
     )
   }
+
+  internal func makeSetDenomPairTakerFeeCall(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setDenomPairTakerFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetDenomPairTakerFeeInterceptors() ?? []
+    )
+  }
+
+  internal func makeSetTakerFeeShareAgreementForDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setTakerFeeShareAgreementForDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetTakerFeeShareAgreementForDenomInterceptors() ?? []
+    )
+  }
+
+  internal func makeSetRegisteredAlloyedPoolCall(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setRegisteredAlloyedPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetRegisteredAlloyedPoolInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -321,6 +441,42 @@ extension Osmosis_Poolmanager_V1beta1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeSplitRouteSwapExactAmountOutInterceptors() ?? []
     )
   }
+
+  internal func setDenomPairTakerFee(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setDenomPairTakerFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetDenomPairTakerFeeInterceptors() ?? []
+    )
+  }
+
+  internal func setTakerFeeShareAgreementForDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setTakerFeeShareAgreementForDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetTakerFeeShareAgreementForDenomInterceptors() ?? []
+    )
+  }
+
+  internal func setRegisteredAlloyedPool(
+    _ request: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setRegisteredAlloyedPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetRegisteredAlloyedPoolInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -353,6 +509,15 @@ internal protocol Osmosis_Poolmanager_V1beta1_MsgClientInterceptorFactoryProtoco
 
   /// - Returns: Interceptors to use when invoking 'splitRouteSwapExactAmountOut'.
   func makeSplitRouteSwapExactAmountOutInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut, Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'setDenomPairTakerFee'.
+  func makeSetDenomPairTakerFeeInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'setTakerFeeShareAgreementForDenom'.
+  func makeSetTakerFeeShareAgreementForDenomInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'setRegisteredAlloyedPool'.
+  func makeSetRegisteredAlloyedPoolInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse>]
 }
 
 internal enum Osmosis_Poolmanager_V1beta1_MsgClientMetadata {
@@ -364,6 +529,9 @@ internal enum Osmosis_Poolmanager_V1beta1_MsgClientMetadata {
       Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.swapExactAmountOut,
       Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.splitRouteSwapExactAmountIn,
       Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.splitRouteSwapExactAmountOut,
+      Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setDenomPairTakerFee,
+      Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setTakerFeeShareAgreementForDenom,
+      Osmosis_Poolmanager_V1beta1_MsgClientMetadata.Methods.setRegisteredAlloyedPool,
     ]
   )
 
@@ -391,6 +559,24 @@ internal enum Osmosis_Poolmanager_V1beta1_MsgClientMetadata {
       path: "/osmosis.poolmanager.v1beta1.Msg/SplitRouteSwapExactAmountOut",
       type: GRPCCallType.unary
     )
+
+    internal static let setDenomPairTakerFee = GRPCMethodDescriptor(
+      name: "SetDenomPairTakerFee",
+      path: "/osmosis.poolmanager.v1beta1.Msg/SetDenomPairTakerFee",
+      type: GRPCCallType.unary
+    )
+
+    internal static let setTakerFeeShareAgreementForDenom = GRPCMethodDescriptor(
+      name: "SetTakerFeeShareAgreementForDenom",
+      path: "/osmosis.poolmanager.v1beta1.Msg/SetTakerFeeShareAgreementForDenom",
+      type: GRPCCallType.unary
+    )
+
+    internal static let setRegisteredAlloyedPool = GRPCMethodDescriptor(
+      name: "SetRegisteredAlloyedPool",
+      path: "/osmosis.poolmanager.v1beta1.Msg/SetRegisteredAlloyedPool",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -405,6 +591,12 @@ internal protocol Osmosis_Poolmanager_V1beta1_MsgProvider: CallHandlerProvider {
   func splitRouteSwapExactAmountIn(request: Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountIn, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountInResponse>
 
   func splitRouteSwapExactAmountOut(request: Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse>
+
+  func setDenomPairTakerFee(request: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse>
+
+  func setTakerFeeShareAgreementForDenom(request: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse>
+
+  func setRegisteredAlloyedPool(request: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse>
 }
 
 extension Osmosis_Poolmanager_V1beta1_MsgProvider {
@@ -455,6 +647,33 @@ extension Osmosis_Poolmanager_V1beta1_MsgProvider {
         userFunction: self.splitRouteSwapExactAmountOut(request:context:)
       )
 
+    case "SetDenomPairTakerFee":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse>(),
+        interceptors: self.interceptors?.makeSetDenomPairTakerFeeInterceptors() ?? [],
+        userFunction: self.setDenomPairTakerFee(request:context:)
+      )
+
+    case "SetTakerFeeShareAgreementForDenom":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse>(),
+        interceptors: self.interceptors?.makeSetTakerFeeShareAgreementForDenomInterceptors() ?? [],
+        userFunction: self.setTakerFeeShareAgreementForDenom(request:context:)
+      )
+
+    case "SetRegisteredAlloyedPool":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse>(),
+        interceptors: self.interceptors?.makeSetRegisteredAlloyedPoolInterceptors() ?? [],
+        userFunction: self.setRegisteredAlloyedPool(request:context:)
+      )
+
     default:
       return nil
     }
@@ -486,6 +705,21 @@ internal protocol Osmosis_Poolmanager_V1beta1_MsgAsyncProvider: CallHandlerProvi
     request: Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse
+
+  @Sendable func setDenomPairTakerFee(
+    request: Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse
+
+  @Sendable func setTakerFeeShareAgreementForDenom(
+    request: Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse
+
+  @Sendable func setRegisteredAlloyedPool(
+    request: Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -543,6 +777,33 @@ extension Osmosis_Poolmanager_V1beta1_MsgAsyncProvider {
         wrapping: self.splitRouteSwapExactAmountOut(request:context:)
       )
 
+    case "SetDenomPairTakerFee":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse>(),
+        interceptors: self.interceptors?.makeSetDenomPairTakerFeeInterceptors() ?? [],
+        wrapping: self.setDenomPairTakerFee(request:context:)
+      )
+
+    case "SetTakerFeeShareAgreementForDenom":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse>(),
+        interceptors: self.interceptors?.makeSetTakerFeeShareAgreementForDenomInterceptors() ?? [],
+        wrapping: self.setTakerFeeShareAgreementForDenom(request:context:)
+      )
+
+    case "SetRegisteredAlloyedPool":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse>(),
+        interceptors: self.interceptors?.makeSetRegisteredAlloyedPoolInterceptors() ?? [],
+        wrapping: self.setRegisteredAlloyedPool(request:context:)
+      )
+
     default:
       return nil
     }
@@ -566,6 +827,18 @@ internal protocol Osmosis_Poolmanager_V1beta1_MsgServerInterceptorFactoryProtoco
   /// - Returns: Interceptors to use when handling 'splitRouteSwapExactAmountOut'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeSplitRouteSwapExactAmountOutInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOut, Osmosis_Poolmanager_V1beta1_MsgSplitRouteSwapExactAmountOutResponse>]
+
+  /// - Returns: Interceptors to use when handling 'setDenomPairTakerFee'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeSetDenomPairTakerFeeInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFee, Osmosis_Poolmanager_V1beta1_MsgSetDenomPairTakerFeeResponse>]
+
+  /// - Returns: Interceptors to use when handling 'setTakerFeeShareAgreementForDenom'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeSetTakerFeeShareAgreementForDenomInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenom, Osmosis_Poolmanager_V1beta1_MsgSetTakerFeeShareAgreementForDenomResponse>]
+
+  /// - Returns: Interceptors to use when handling 'setRegisteredAlloyedPool'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeSetRegisteredAlloyedPoolInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPool, Osmosis_Poolmanager_V1beta1_MsgSetRegisteredAlloyedPoolResponse>]
 }
 
 internal enum Osmosis_Poolmanager_V1beta1_MsgServerMetadata {
@@ -577,6 +850,9 @@ internal enum Osmosis_Poolmanager_V1beta1_MsgServerMetadata {
       Osmosis_Poolmanager_V1beta1_MsgServerMetadata.Methods.swapExactAmountOut,
       Osmosis_Poolmanager_V1beta1_MsgServerMetadata.Methods.splitRouteSwapExactAmountIn,
       Osmosis_Poolmanager_V1beta1_MsgServerMetadata.Methods.splitRouteSwapExactAmountOut,
+      Osmosis_Poolmanager_V1beta1_MsgServerMetadata.Methods.setDenomPairTakerFee,
+      Osmosis_Poolmanager_V1beta1_MsgServerMetadata.Methods.setTakerFeeShareAgreementForDenom,
+      Osmosis_Poolmanager_V1beta1_MsgServerMetadata.Methods.setRegisteredAlloyedPool,
     ]
   )
 
@@ -602,6 +878,24 @@ internal enum Osmosis_Poolmanager_V1beta1_MsgServerMetadata {
     internal static let splitRouteSwapExactAmountOut = GRPCMethodDescriptor(
       name: "SplitRouteSwapExactAmountOut",
       path: "/osmosis.poolmanager.v1beta1.Msg/SplitRouteSwapExactAmountOut",
+      type: GRPCCallType.unary
+    )
+
+    internal static let setDenomPairTakerFee = GRPCMethodDescriptor(
+      name: "SetDenomPairTakerFee",
+      path: "/osmosis.poolmanager.v1beta1.Msg/SetDenomPairTakerFee",
+      type: GRPCCallType.unary
+    )
+
+    internal static let setTakerFeeShareAgreementForDenom = GRPCMethodDescriptor(
+      name: "SetTakerFeeShareAgreementForDenom",
+      path: "/osmosis.poolmanager.v1beta1.Msg/SetTakerFeeShareAgreementForDenom",
+      type: GRPCCallType.unary
+    )
+
+    internal static let setRegisteredAlloyedPool = GRPCMethodDescriptor(
+      name: "SetRegisteredAlloyedPool",
+      path: "/osmosis.poolmanager.v1beta1.Msg/SetRegisteredAlloyedPool",
       type: GRPCCallType.unary
     )
   }

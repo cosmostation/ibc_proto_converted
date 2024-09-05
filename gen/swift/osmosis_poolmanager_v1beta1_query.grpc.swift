@@ -41,6 +41,11 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>
 
+  func estimateSwapExactAmountInWithPrimitiveTypes(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>
+
   func estimateSinglePoolSwapExactAmountIn(
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest,
     callOptions: CallOptions?
@@ -50,6 +55,11 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>
+
+  func estimateSwapExactAmountOutWithPrimitiveTypes(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>
 
   func estimateSinglePoolSwapExactAmountOut(
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountOutRequest,
@@ -71,6 +81,11 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_AllPoolsRequest, Osmosis_Poolmanager_V1beta1_AllPoolsResponse>
 
+  func listPoolsByDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest, Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse>
+
   func spotPrice(
     _ request: Osmosis_Poolmanager_V1beta1_SpotPriceRequest,
     callOptions: CallOptions?
@@ -80,6 +95,61 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityResponse>
+
+  func totalLiquidity(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse>
+
+  func totalVolumeForPool(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest, Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse>
+
+  func tradingPairTakerFee(
+    _ request: Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest, Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse>
+
+  func estimateTradeBasedOnPriceImpact(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest, Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse>
+
+  func allTakerFeeShareAgreements(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse>
+
+  func takerFeeShareAgreementFromDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse>
+
+  func takerFeeShareDenomsToAccruedValue(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse>
+
+  func allTakerFeeShareAccumulators(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse>
+
+  func registeredAlloyedPoolFromDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse>
+
+  func registeredAlloyedPoolFromPoolId(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse>
+
+  func allRegisteredAlloyedPools(
+    _ request: Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest, Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse>
 }
 
 extension Osmosis_Poolmanager_V1beta1_QueryClientProtocol {
@@ -123,6 +193,33 @@ extension Osmosis_Poolmanager_V1beta1_QueryClientProtocol {
     )
   }
 
+  /// EstimateSwapExactAmountInWithPrimitiveTypes is an alternative query for
+  /// EstimateSwapExactAmountIn. Supports query via GRPC-Gateway by using
+  /// primitive types instead of repeated structs. Each index in the
+  /// routes_pool_id field corresponds to the respective routes_token_out_denom
+  /// value, thus they are required to have the same length and are grouped
+  /// together as pairs.
+  /// example usage:
+  /// http://0.0.0.0:1317/osmosis/poolmanager/v1beta1/1/estimate/
+  /// swap_exact_amount_in_with_primitive_types?token_in=100000stake&routes_token_out_denom=uatom
+  /// &routes_token_out_denom=uion&routes_pool_id=1&routes_pool_id=2
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to EstimateSwapExactAmountInWithPrimitiveTypes.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func estimateSwapExactAmountInWithPrimitiveTypes(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountInWithPrimitiveTypes.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateSwapExactAmountInWithPrimitiveTypesInterceptors() ?? []
+    )
+  }
+
   /// Unary call to EstimateSinglePoolSwapExactAmountIn
   ///
   /// - Parameters:
@@ -156,6 +253,24 @@ extension Osmosis_Poolmanager_V1beta1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeEstimateSwapExactAmountOutInterceptors() ?? []
+    )
+  }
+
+  /// Estimates swap amount in given out.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to EstimateSwapExactAmountOutWithPrimitiveTypes.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func estimateSwapExactAmountOutWithPrimitiveTypes(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountOutWithPrimitiveTypes.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateSwapExactAmountOutWithPrimitiveTypesInterceptors() ?? []
     )
   }
 
@@ -231,6 +346,24 @@ extension Osmosis_Poolmanager_V1beta1_QueryClientProtocol {
     )
   }
 
+  /// ListPoolsByDenom return all pools by denom
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to ListPoolsByDenom.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func listPoolsByDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest, Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.listPoolsByDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeListPoolsByDenomInterceptors() ?? []
+    )
+  }
+
   /// SpotPrice defines a gRPC query handler that returns the spot price given
   /// a base denomination and a quote denomination.
   ///
@@ -250,7 +383,7 @@ extension Osmosis_Poolmanager_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// Unary call to TotalPoolLiquidity
+  /// TotalPoolLiquidity returns the total liquidity of the specified pool.
   ///
   /// - Parameters:
   ///   - request: Request to send to TotalPoolLiquidity.
@@ -265,6 +398,228 @@ extension Osmosis_Poolmanager_V1beta1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeTotalPoolLiquidityInterceptors() ?? []
+    )
+  }
+
+  /// TotalLiquidity returns the total liquidity across all pools.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to TotalLiquidity.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func totalLiquidity(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalLiquidity.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTotalLiquidityInterceptors() ?? []
+    )
+  }
+
+  /// TotalVolumeForPool returns the total volume of the specified pool.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to TotalVolumeForPool.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func totalVolumeForPool(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest, Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalVolumeForPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTotalVolumeForPoolInterceptors() ?? []
+    )
+  }
+
+  /// TradingPairTakerFee returns the taker fee for a given set of denoms
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to TradingPairTakerFee.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func tradingPairTakerFee(
+    _ request: Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest, Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.tradingPairTakerFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTradingPairTakerFeeInterceptors() ?? []
+    )
+  }
+
+  /// EstimateTradeBasedOnPriceImpact returns an estimated trade based on price
+  /// impact, if a trade cannot be estimated a 0 input and 0 output would be
+  /// returned.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to EstimateTradeBasedOnPriceImpact.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func estimateTradeBasedOnPriceImpact(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest, Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateTradeBasedOnPriceImpact.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateTradeBasedOnPriceImpactInterceptors() ?? []
+    )
+  }
+
+  /// AllTakerFeeShareAgreements returns all taker fee share agreements.
+  /// A taker fee share agreement includes the denom of the denom getting the
+  /// taker fees, the percent of the taker fees that the denom gets when it is
+  /// in the route being traded against, and the address that the taker fees are
+  /// sent to at epoch.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AllTakerFeeShareAgreements.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func allTakerFeeShareAgreements(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAgreements.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllTakerFeeShareAgreementsInterceptors() ?? []
+    )
+  }
+
+  /// TakerFeeShareAgreementFromDenom returns the taker fee share agreement for a
+  /// given denom. A taker fee share agreement includes the denom of the denom
+  /// getting the taker fees, the percent of the taker fees that the denom gets
+  /// when it is in the route being traded against, and the address that the
+  /// taker fees are sent to at epoch.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to TakerFeeShareAgreementFromDenom.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func takerFeeShareAgreementFromDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareAgreementFromDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTakerFeeShareAgreementFromDenomInterceptors() ?? []
+    )
+  }
+
+  /// TakerFeeShareDenomsToAccruedValue returns the accrued value (as an Int) of
+  /// the given taker fee denom (the collected fees) for the given fee share
+  /// denom (the denom with the taker fee share agreement)
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to TakerFeeShareDenomsToAccruedValue.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func takerFeeShareDenomsToAccruedValue(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareDenomsToAccruedValue.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTakerFeeShareDenomsToAccruedValueInterceptors() ?? []
+    )
+  }
+
+  /// AllTakerFeeShareAccumulators returns all taker fee share accumulators. A
+  /// taker fee share accumulator includes the denom of the denom getting the
+  /// taker fees, and an accumulated value of coins that the denom has accrued
+  /// since the last time it was distributed in the epoch prior.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AllTakerFeeShareAccumulators.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func allTakerFeeShareAccumulators(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAccumulators.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllTakerFeeShareAccumulatorsInterceptors() ?? []
+    )
+  }
+
+  /// RegisteredAlloyedPoolFromDenom returns the registered alloyed pool state
+  /// from the given denom. The registered alloyed pool contains the pool's
+  /// contract address, along with the current distribution composition of taker
+  /// fee share denoms within the alloyed pool.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to RegisteredAlloyedPoolFromDenom.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func registeredAlloyedPoolFromDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromDenomInterceptors() ?? []
+    )
+  }
+
+  /// RegisteredAlloyedPoolFromPoolId returns the registered alloyed pool state
+  /// from the given pool id. The registered alloyed pool contains the pool's
+  /// contract address, along with the current distribution composition of taker
+  /// fee share denoms within the alloyed pool.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to RegisteredAlloyedPoolFromPoolId.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func registeredAlloyedPoolFromPoolId(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromPoolId.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromPoolIdInterceptors() ?? []
+    )
+  }
+
+  /// AllRegisteredAlloyedPools returns all registered alloyed pools. The
+  /// registered alloyed pool contains the pool's contract address, along with
+  /// the current distribution composition of taker fee share denoms within the
+  /// alloyed pool.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AllRegisteredAlloyedPools.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func allRegisteredAlloyedPools(
+    _ request: Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest, Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allRegisteredAlloyedPools.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllRegisteredAlloyedPoolsInterceptors() ?? []
     )
   }
 }
@@ -341,6 +696,11 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol: GRPCClie
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>
 
+  func makeEstimateSwapExactAmountInWithPrimitiveTypesCall(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>
+
   func makeEstimateSinglePoolSwapExactAmountInCall(
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest,
     callOptions: CallOptions?
@@ -350,6 +710,11 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol: GRPCClie
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>
+
+  func makeEstimateSwapExactAmountOutWithPrimitiveTypesCall(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>
 
   func makeEstimateSinglePoolSwapExactAmountOutCall(
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountOutRequest,
@@ -371,6 +736,11 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol: GRPCClie
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_AllPoolsRequest, Osmosis_Poolmanager_V1beta1_AllPoolsResponse>
 
+  func makeListPoolsByDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest, Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse>
+
   func makeSpotPriceCall(
     _ request: Osmosis_Poolmanager_V1beta1_SpotPriceRequest,
     callOptions: CallOptions?
@@ -380,6 +750,61 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol: GRPCClie
     _ request: Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityResponse>
+
+  func makeTotalLiquidityCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse>
+
+  func makeTotalVolumeForPoolCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest, Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse>
+
+  func makeTradingPairTakerFeeCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest, Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse>
+
+  func makeEstimateTradeBasedOnPriceImpactCall(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest, Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse>
+
+  func makeAllTakerFeeShareAgreementsCall(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse>
+
+  func makeTakerFeeShareAgreementFromDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse>
+
+  func makeTakerFeeShareDenomsToAccruedValueCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse>
+
+  func makeAllTakerFeeShareAccumulatorsCall(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse>
+
+  func makeRegisteredAlloyedPoolFromDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse>
+
+  func makeRegisteredAlloyedPoolFromPoolIDCall(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse>
+
+  func makeAllRegisteredAlloyedPoolsCall(
+    _ request: Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest, Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -416,6 +841,18 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
     )
   }
 
+  internal func makeEstimateSwapExactAmountInWithPrimitiveTypesCall(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountInWithPrimitiveTypes.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateSwapExactAmountInWithPrimitiveTypesInterceptors() ?? []
+    )
+  }
+
   internal func makeEstimateSinglePoolSwapExactAmountInCall(
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest,
     callOptions: CallOptions? = nil
@@ -437,6 +874,18 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeEstimateSwapExactAmountOutInterceptors() ?? []
+    )
+  }
+
+  internal func makeEstimateSwapExactAmountOutWithPrimitiveTypesCall(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountOutWithPrimitiveTypes.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateSwapExactAmountOutWithPrimitiveTypesInterceptors() ?? []
     )
   }
 
@@ -488,6 +937,18 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
     )
   }
 
+  internal func makeListPoolsByDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest, Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.listPoolsByDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeListPoolsByDenomInterceptors() ?? []
+    )
+  }
+
   internal func makeSpotPriceCall(
     _ request: Osmosis_Poolmanager_V1beta1_SpotPriceRequest,
     callOptions: CallOptions? = nil
@@ -509,6 +970,138 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeTotalPoolLiquidityInterceptors() ?? []
+    )
+  }
+
+  internal func makeTotalLiquidityCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalLiquidity.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTotalLiquidityInterceptors() ?? []
+    )
+  }
+
+  internal func makeTotalVolumeForPoolCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest, Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalVolumeForPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTotalVolumeForPoolInterceptors() ?? []
+    )
+  }
+
+  internal func makeTradingPairTakerFeeCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest, Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.tradingPairTakerFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTradingPairTakerFeeInterceptors() ?? []
+    )
+  }
+
+  internal func makeEstimateTradeBasedOnPriceImpactCall(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest, Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateTradeBasedOnPriceImpact.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateTradeBasedOnPriceImpactInterceptors() ?? []
+    )
+  }
+
+  internal func makeAllTakerFeeShareAgreementsCall(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAgreements.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllTakerFeeShareAgreementsInterceptors() ?? []
+    )
+  }
+
+  internal func makeTakerFeeShareAgreementFromDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareAgreementFromDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTakerFeeShareAgreementFromDenomInterceptors() ?? []
+    )
+  }
+
+  internal func makeTakerFeeShareDenomsToAccruedValueCall(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareDenomsToAccruedValue.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTakerFeeShareDenomsToAccruedValueInterceptors() ?? []
+    )
+  }
+
+  internal func makeAllTakerFeeShareAccumulatorsCall(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAccumulators.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllTakerFeeShareAccumulatorsInterceptors() ?? []
+    )
+  }
+
+  internal func makeRegisteredAlloyedPoolFromDenomCall(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromDenomInterceptors() ?? []
+    )
+  }
+
+  internal func makeRegisteredAlloyedPoolFromPoolIDCall(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromPoolId.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromPoolIdInterceptors() ?? []
+    )
+  }
+
+  internal func makeAllRegisteredAlloyedPoolsCall(
+    _ request: Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest, Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allRegisteredAlloyedPools.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllRegisteredAlloyedPoolsInterceptors() ?? []
     )
   }
 }
@@ -539,6 +1132,18 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
     )
   }
 
+  internal func estimateSwapExactAmountInWithPrimitiveTypes(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountInWithPrimitiveTypes.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateSwapExactAmountInWithPrimitiveTypesInterceptors() ?? []
+    )
+  }
+
   internal func estimateSinglePoolSwapExactAmountIn(
     _ request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest,
     callOptions: CallOptions? = nil
@@ -560,6 +1165,18 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeEstimateSwapExactAmountOutInterceptors() ?? []
+    )
+  }
+
+  internal func estimateSwapExactAmountOutWithPrimitiveTypes(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountOutWithPrimitiveTypes.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateSwapExactAmountOutWithPrimitiveTypesInterceptors() ?? []
     )
   }
 
@@ -611,6 +1228,18 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
     )
   }
 
+  internal func listPoolsByDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.listPoolsByDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeListPoolsByDenomInterceptors() ?? []
+    )
+  }
+
   internal func spotPrice(
     _ request: Osmosis_Poolmanager_V1beta1_SpotPriceRequest,
     callOptions: CallOptions? = nil
@@ -632,6 +1261,138 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeTotalPoolLiquidityInterceptors() ?? []
+    )
+  }
+
+  internal func totalLiquidity(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalLiquidity.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTotalLiquidityInterceptors() ?? []
+    )
+  }
+
+  internal func totalVolumeForPool(
+    _ request: Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalVolumeForPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTotalVolumeForPoolInterceptors() ?? []
+    )
+  }
+
+  internal func tradingPairTakerFee(
+    _ request: Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.tradingPairTakerFee.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTradingPairTakerFeeInterceptors() ?? []
+    )
+  }
+
+  internal func estimateTradeBasedOnPriceImpact(
+    _ request: Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateTradeBasedOnPriceImpact.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEstimateTradeBasedOnPriceImpactInterceptors() ?? []
+    )
+  }
+
+  internal func allTakerFeeShareAgreements(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAgreements.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllTakerFeeShareAgreementsInterceptors() ?? []
+    )
+  }
+
+  internal func takerFeeShareAgreementFromDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareAgreementFromDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTakerFeeShareAgreementFromDenomInterceptors() ?? []
+    )
+  }
+
+  internal func takerFeeShareDenomsToAccruedValue(
+    _ request: Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareDenomsToAccruedValue.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTakerFeeShareDenomsToAccruedValueInterceptors() ?? []
+    )
+  }
+
+  internal func allTakerFeeShareAccumulators(
+    _ request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAccumulators.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllTakerFeeShareAccumulatorsInterceptors() ?? []
+    )
+  }
+
+  internal func registeredAlloyedPoolFromDenom(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromDenom.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromDenomInterceptors() ?? []
+    )
+  }
+
+  internal func registeredAlloyedPoolFromPoolId(
+    _ request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromPoolId.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromPoolIdInterceptors() ?? []
+    )
+  }
+
+  internal func allRegisteredAlloyedPools(
+    _ request: Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allRegisteredAlloyedPools.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllRegisteredAlloyedPoolsInterceptors() ?? []
     )
   }
 }
@@ -661,11 +1422,17 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryClientInterceptorFactoryProto
   /// - Returns: Interceptors to use when invoking 'estimateSwapExactAmountIn'.
   func makeEstimateSwapExactAmountInInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'estimateSwapExactAmountInWithPrimitiveTypes'.
+  func makeEstimateSwapExactAmountInWithPrimitiveTypesInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>]
+
   /// - Returns: Interceptors to use when invoking 'estimateSinglePoolSwapExactAmountIn'.
   func makeEstimateSinglePoolSwapExactAmountInInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>]
 
   /// - Returns: Interceptors to use when invoking 'estimateSwapExactAmountOut'.
   func makeEstimateSwapExactAmountOutInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'estimateSwapExactAmountOutWithPrimitiveTypes'.
+  func makeEstimateSwapExactAmountOutWithPrimitiveTypesInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>]
 
   /// - Returns: Interceptors to use when invoking 'estimateSinglePoolSwapExactAmountOut'.
   func makeEstimateSinglePoolSwapExactAmountOutInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountOutRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>]
@@ -679,11 +1446,47 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryClientInterceptorFactoryProto
   /// - Returns: Interceptors to use when invoking 'allPools'.
   func makeAllPoolsInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_AllPoolsRequest, Osmosis_Poolmanager_V1beta1_AllPoolsResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'listPoolsByDenom'.
+  func makeListPoolsByDenomInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest, Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse>]
+
   /// - Returns: Interceptors to use when invoking 'spotPrice'.
   func makeSpotPriceInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_SpotPriceRequest, Osmosis_Poolmanager_V1beta1_SpotPriceResponse>]
 
   /// - Returns: Interceptors to use when invoking 'totalPoolLiquidity'.
   func makeTotalPoolLiquidityInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'totalLiquidity'.
+  func makeTotalLiquidityInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'totalVolumeForPool'.
+  func makeTotalVolumeForPoolInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest, Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'tradingPairTakerFee'.
+  func makeTradingPairTakerFeeInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest, Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'estimateTradeBasedOnPriceImpact'.
+  func makeEstimateTradeBasedOnPriceImpactInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest, Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'allTakerFeeShareAgreements'.
+  func makeAllTakerFeeShareAgreementsInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'takerFeeShareAgreementFromDenom'.
+  func makeTakerFeeShareAgreementFromDenomInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'takerFeeShareDenomsToAccruedValue'.
+  func makeTakerFeeShareDenomsToAccruedValueInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'allTakerFeeShareAccumulators'.
+  func makeAllTakerFeeShareAccumulatorsInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'registeredAlloyedPoolFromDenom'.
+  func makeRegisteredAlloyedPoolFromDenomInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'registeredAlloyedPoolFromPoolId'.
+  func makeRegisteredAlloyedPoolFromPoolIdInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'allRegisteredAlloyedPools'.
+  func makeAllRegisteredAlloyedPoolsInterceptors() -> [ClientInterceptor<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest, Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse>]
 }
 
 internal enum Osmosis_Poolmanager_V1beta1_QueryClientMetadata {
@@ -693,14 +1496,28 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryClientMetadata {
     methods: [
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.params,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountIn,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountInWithPrimitiveTypes,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSinglePoolSwapExactAmountIn,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountOut,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountOutWithPrimitiveTypes,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateSinglePoolSwapExactAmountOut,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.numPools,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.pool,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allPools,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.listPoolsByDenom,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.spotPrice,
       Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalPoolLiquidity,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalLiquidity,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.totalVolumeForPool,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.tradingPairTakerFee,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.estimateTradeBasedOnPriceImpact,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAgreements,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareAgreementFromDenom,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.takerFeeShareDenomsToAccruedValue,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allTakerFeeShareAccumulators,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromDenom,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.registeredAlloyedPoolFromPoolId,
+      Osmosis_Poolmanager_V1beta1_QueryClientMetadata.Methods.allRegisteredAlloyedPools,
     ]
   )
 
@@ -717,6 +1534,12 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryClientMetadata {
       type: GRPCCallType.unary
     )
 
+    internal static let estimateSwapExactAmountInWithPrimitiveTypes = GRPCMethodDescriptor(
+      name: "EstimateSwapExactAmountInWithPrimitiveTypes",
+      path: "/osmosis.poolmanager.v1beta1.Query/EstimateSwapExactAmountInWithPrimitiveTypes",
+      type: GRPCCallType.unary
+    )
+
     internal static let estimateSinglePoolSwapExactAmountIn = GRPCMethodDescriptor(
       name: "EstimateSinglePoolSwapExactAmountIn",
       path: "/osmosis.poolmanager.v1beta1.Query/EstimateSinglePoolSwapExactAmountIn",
@@ -726,6 +1549,12 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryClientMetadata {
     internal static let estimateSwapExactAmountOut = GRPCMethodDescriptor(
       name: "EstimateSwapExactAmountOut",
       path: "/osmosis.poolmanager.v1beta1.Query/EstimateSwapExactAmountOut",
+      type: GRPCCallType.unary
+    )
+
+    internal static let estimateSwapExactAmountOutWithPrimitiveTypes = GRPCMethodDescriptor(
+      name: "EstimateSwapExactAmountOutWithPrimitiveTypes",
+      path: "/osmosis.poolmanager.v1beta1.Query/EstimateSwapExactAmountOutWithPrimitiveTypes",
       type: GRPCCallType.unary
     )
 
@@ -753,6 +1582,12 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryClientMetadata {
       type: GRPCCallType.unary
     )
 
+    internal static let listPoolsByDenom = GRPCMethodDescriptor(
+      name: "ListPoolsByDenom",
+      path: "/osmosis.poolmanager.v1beta1.Query/ListPoolsByDenom",
+      type: GRPCCallType.unary
+    )
+
     internal static let spotPrice = GRPCMethodDescriptor(
       name: "SpotPrice",
       path: "/osmosis.poolmanager.v1beta1.Query/SpotPrice",
@@ -762,6 +1597,72 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryClientMetadata {
     internal static let totalPoolLiquidity = GRPCMethodDescriptor(
       name: "TotalPoolLiquidity",
       path: "/osmosis.poolmanager.v1beta1.Query/TotalPoolLiquidity",
+      type: GRPCCallType.unary
+    )
+
+    internal static let totalLiquidity = GRPCMethodDescriptor(
+      name: "TotalLiquidity",
+      path: "/osmosis.poolmanager.v1beta1.Query/TotalLiquidity",
+      type: GRPCCallType.unary
+    )
+
+    internal static let totalVolumeForPool = GRPCMethodDescriptor(
+      name: "TotalVolumeForPool",
+      path: "/osmosis.poolmanager.v1beta1.Query/TotalVolumeForPool",
+      type: GRPCCallType.unary
+    )
+
+    internal static let tradingPairTakerFee = GRPCMethodDescriptor(
+      name: "TradingPairTakerFee",
+      path: "/osmosis.poolmanager.v1beta1.Query/TradingPairTakerFee",
+      type: GRPCCallType.unary
+    )
+
+    internal static let estimateTradeBasedOnPriceImpact = GRPCMethodDescriptor(
+      name: "EstimateTradeBasedOnPriceImpact",
+      path: "/osmosis.poolmanager.v1beta1.Query/EstimateTradeBasedOnPriceImpact",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allTakerFeeShareAgreements = GRPCMethodDescriptor(
+      name: "AllTakerFeeShareAgreements",
+      path: "/osmosis.poolmanager.v1beta1.Query/AllTakerFeeShareAgreements",
+      type: GRPCCallType.unary
+    )
+
+    internal static let takerFeeShareAgreementFromDenom = GRPCMethodDescriptor(
+      name: "TakerFeeShareAgreementFromDenom",
+      path: "/osmosis.poolmanager.v1beta1.Query/TakerFeeShareAgreementFromDenom",
+      type: GRPCCallType.unary
+    )
+
+    internal static let takerFeeShareDenomsToAccruedValue = GRPCMethodDescriptor(
+      name: "TakerFeeShareDenomsToAccruedValue",
+      path: "/osmosis.poolmanager.v1beta1.Query/TakerFeeShareDenomsToAccruedValue",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allTakerFeeShareAccumulators = GRPCMethodDescriptor(
+      name: "AllTakerFeeShareAccumulators",
+      path: "/osmosis.poolmanager.v1beta1.Query/AllTakerFeeShareAccumulators",
+      type: GRPCCallType.unary
+    )
+
+    internal static let registeredAlloyedPoolFromDenom = GRPCMethodDescriptor(
+      name: "RegisteredAlloyedPoolFromDenom",
+      path: "/osmosis.poolmanager.v1beta1.Query/RegisteredAlloyedPoolFromDenom",
+      type: GRPCCallType.unary
+    )
+
+    internal static let registeredAlloyedPoolFromPoolId = GRPCMethodDescriptor(
+      name: "RegisteredAlloyedPoolFromPoolId",
+      path: "/osmosis.poolmanager.v1beta1.Query/RegisteredAlloyedPoolFromPoolId",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allRegisteredAlloyedPools = GRPCMethodDescriptor(
+      name: "AllRegisteredAlloyedPools",
+      path: "/osmosis.poolmanager.v1beta1.Query/AllRegisteredAlloyedPools",
       type: GRPCCallType.unary
     )
   }
@@ -776,10 +1677,25 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryProvider: CallHandlerProvider
   /// Estimates swap amount out given in.
   func estimateSwapExactAmountIn(request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>
 
+  /// EstimateSwapExactAmountInWithPrimitiveTypes is an alternative query for
+  /// EstimateSwapExactAmountIn. Supports query via GRPC-Gateway by using
+  /// primitive types instead of repeated structs. Each index in the
+  /// routes_pool_id field corresponds to the respective routes_token_out_denom
+  /// value, thus they are required to have the same length and are grouped
+  /// together as pairs.
+  /// example usage:
+  /// http://0.0.0.0:1317/osmosis/poolmanager/v1beta1/1/estimate/
+  /// swap_exact_amount_in_with_primitive_types?token_in=100000stake&routes_token_out_denom=uatom
+  /// &routes_token_out_denom=uion&routes_pool_id=1&routes_pool_id=2
+  func estimateSwapExactAmountInWithPrimitiveTypes(request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>
+
   func estimateSinglePoolSwapExactAmountIn(request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>
 
   /// Estimates swap amount in given out.
   func estimateSwapExactAmountOut(request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>
+
+  /// Estimates swap amount in given out.
+  func estimateSwapExactAmountOutWithPrimitiveTypes(request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>
 
   func estimateSinglePoolSwapExactAmountOut(request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountOutRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>
 
@@ -792,11 +1708,72 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryProvider: CallHandlerProvider
   /// AllPools returns all pools on the Osmosis chain sorted by IDs.
   func allPools(request: Osmosis_Poolmanager_V1beta1_AllPoolsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_AllPoolsResponse>
 
+  /// ListPoolsByDenom return all pools by denom
+  func listPoolsByDenom(request: Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse>
+
   /// SpotPrice defines a gRPC query handler that returns the spot price given
   /// a base denomination and a quote denomination.
   func spotPrice(request: Osmosis_Poolmanager_V1beta1_SpotPriceRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_SpotPriceResponse>
 
+  /// TotalPoolLiquidity returns the total liquidity of the specified pool.
   func totalPoolLiquidity(request: Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityResponse>
+
+  /// TotalLiquidity returns the total liquidity across all pools.
+  func totalLiquidity(request: Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse>
+
+  /// TotalVolumeForPool returns the total volume of the specified pool.
+  func totalVolumeForPool(request: Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse>
+
+  /// TradingPairTakerFee returns the taker fee for a given set of denoms
+  func tradingPairTakerFee(request: Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse>
+
+  /// EstimateTradeBasedOnPriceImpact returns an estimated trade based on price
+  /// impact, if a trade cannot be estimated a 0 input and 0 output would be
+  /// returned.
+  func estimateTradeBasedOnPriceImpact(request: Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse>
+
+  /// AllTakerFeeShareAgreements returns all taker fee share agreements.
+  /// A taker fee share agreement includes the denom of the denom getting the
+  /// taker fees, the percent of the taker fees that the denom gets when it is
+  /// in the route being traded against, and the address that the taker fees are
+  /// sent to at epoch.
+  func allTakerFeeShareAgreements(request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse>
+
+  /// TakerFeeShareAgreementFromDenom returns the taker fee share agreement for a
+  /// given denom. A taker fee share agreement includes the denom of the denom
+  /// getting the taker fees, the percent of the taker fees that the denom gets
+  /// when it is in the route being traded against, and the address that the
+  /// taker fees are sent to at epoch.
+  func takerFeeShareAgreementFromDenom(request: Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse>
+
+  /// TakerFeeShareDenomsToAccruedValue returns the accrued value (as an Int) of
+  /// the given taker fee denom (the collected fees) for the given fee share
+  /// denom (the denom with the taker fee share agreement)
+  func takerFeeShareDenomsToAccruedValue(request: Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse>
+
+  /// AllTakerFeeShareAccumulators returns all taker fee share accumulators. A
+  /// taker fee share accumulator includes the denom of the denom getting the
+  /// taker fees, and an accumulated value of coins that the denom has accrued
+  /// since the last time it was distributed in the epoch prior.
+  func allTakerFeeShareAccumulators(request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse>
+
+  /// RegisteredAlloyedPoolFromDenom returns the registered alloyed pool state
+  /// from the given denom. The registered alloyed pool contains the pool's
+  /// contract address, along with the current distribution composition of taker
+  /// fee share denoms within the alloyed pool.
+  func registeredAlloyedPoolFromDenom(request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse>
+
+  /// RegisteredAlloyedPoolFromPoolId returns the registered alloyed pool state
+  /// from the given pool id. The registered alloyed pool contains the pool's
+  /// contract address, along with the current distribution composition of taker
+  /// fee share denoms within the alloyed pool.
+  func registeredAlloyedPoolFromPoolId(request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse>
+
+  /// AllRegisteredAlloyedPools returns all registered alloyed pools. The
+  /// registered alloyed pool contains the pool's contract address, along with
+  /// the current distribution composition of taker fee share denoms within the
+  /// alloyed pool.
+  func allRegisteredAlloyedPools(request: Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse>
 }
 
 extension Osmosis_Poolmanager_V1beta1_QueryProvider {
@@ -829,6 +1806,15 @@ extension Osmosis_Poolmanager_V1beta1_QueryProvider {
         userFunction: self.estimateSwapExactAmountIn(request:context:)
       )
 
+    case "EstimateSwapExactAmountInWithPrimitiveTypes":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>(),
+        interceptors: self.interceptors?.makeEstimateSwapExactAmountInWithPrimitiveTypesInterceptors() ?? [],
+        userFunction: self.estimateSwapExactAmountInWithPrimitiveTypes(request:context:)
+      )
+
     case "EstimateSinglePoolSwapExactAmountIn":
       return UnaryServerHandler(
         context: context,
@@ -845,6 +1831,15 @@ extension Osmosis_Poolmanager_V1beta1_QueryProvider {
         responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>(),
         interceptors: self.interceptors?.makeEstimateSwapExactAmountOutInterceptors() ?? [],
         userFunction: self.estimateSwapExactAmountOut(request:context:)
+      )
+
+    case "EstimateSwapExactAmountOutWithPrimitiveTypes":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>(),
+        interceptors: self.interceptors?.makeEstimateSwapExactAmountOutWithPrimitiveTypesInterceptors() ?? [],
+        userFunction: self.estimateSwapExactAmountOutWithPrimitiveTypes(request:context:)
       )
 
     case "EstimateSinglePoolSwapExactAmountOut":
@@ -883,6 +1878,15 @@ extension Osmosis_Poolmanager_V1beta1_QueryProvider {
         userFunction: self.allPools(request:context:)
       )
 
+    case "ListPoolsByDenom":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse>(),
+        interceptors: self.interceptors?.makeListPoolsByDenomInterceptors() ?? [],
+        userFunction: self.listPoolsByDenom(request:context:)
+      )
+
     case "SpotPrice":
       return UnaryServerHandler(
         context: context,
@@ -899,6 +1903,105 @@ extension Osmosis_Poolmanager_V1beta1_QueryProvider {
         responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityResponse>(),
         interceptors: self.interceptors?.makeTotalPoolLiquidityInterceptors() ?? [],
         userFunction: self.totalPoolLiquidity(request:context:)
+      )
+
+    case "TotalLiquidity":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse>(),
+        interceptors: self.interceptors?.makeTotalLiquidityInterceptors() ?? [],
+        userFunction: self.totalLiquidity(request:context:)
+      )
+
+    case "TotalVolumeForPool":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse>(),
+        interceptors: self.interceptors?.makeTotalVolumeForPoolInterceptors() ?? [],
+        userFunction: self.totalVolumeForPool(request:context:)
+      )
+
+    case "TradingPairTakerFee":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse>(),
+        interceptors: self.interceptors?.makeTradingPairTakerFeeInterceptors() ?? [],
+        userFunction: self.tradingPairTakerFee(request:context:)
+      )
+
+    case "EstimateTradeBasedOnPriceImpact":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse>(),
+        interceptors: self.interceptors?.makeEstimateTradeBasedOnPriceImpactInterceptors() ?? [],
+        userFunction: self.estimateTradeBasedOnPriceImpact(request:context:)
+      )
+
+    case "AllTakerFeeShareAgreements":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse>(),
+        interceptors: self.interceptors?.makeAllTakerFeeShareAgreementsInterceptors() ?? [],
+        userFunction: self.allTakerFeeShareAgreements(request:context:)
+      )
+
+    case "TakerFeeShareAgreementFromDenom":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse>(),
+        interceptors: self.interceptors?.makeTakerFeeShareAgreementFromDenomInterceptors() ?? [],
+        userFunction: self.takerFeeShareAgreementFromDenom(request:context:)
+      )
+
+    case "TakerFeeShareDenomsToAccruedValue":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse>(),
+        interceptors: self.interceptors?.makeTakerFeeShareDenomsToAccruedValueInterceptors() ?? [],
+        userFunction: self.takerFeeShareDenomsToAccruedValue(request:context:)
+      )
+
+    case "AllTakerFeeShareAccumulators":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse>(),
+        interceptors: self.interceptors?.makeAllTakerFeeShareAccumulatorsInterceptors() ?? [],
+        userFunction: self.allTakerFeeShareAccumulators(request:context:)
+      )
+
+    case "RegisteredAlloyedPoolFromDenom":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse>(),
+        interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromDenomInterceptors() ?? [],
+        userFunction: self.registeredAlloyedPoolFromDenom(request:context:)
+      )
+
+    case "RegisteredAlloyedPoolFromPoolId":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse>(),
+        interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromPoolIdInterceptors() ?? [],
+        userFunction: self.registeredAlloyedPoolFromPoolId(request:context:)
+      )
+
+    case "AllRegisteredAlloyedPools":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse>(),
+        interceptors: self.interceptors?.makeAllRegisteredAlloyedPoolsInterceptors() ?? [],
+        userFunction: self.allRegisteredAlloyedPools(request:context:)
       )
 
     default:
@@ -924,6 +2027,21 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncProvider: CallHandlerPro
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse
 
+  /// EstimateSwapExactAmountInWithPrimitiveTypes is an alternative query for
+  /// EstimateSwapExactAmountIn. Supports query via GRPC-Gateway by using
+  /// primitive types instead of repeated structs. Each index in the
+  /// routes_pool_id field corresponds to the respective routes_token_out_denom
+  /// value, thus they are required to have the same length and are grouped
+  /// together as pairs.
+  /// example usage:
+  /// http://0.0.0.0:1317/osmosis/poolmanager/v1beta1/1/estimate/
+  /// swap_exact_amount_in_with_primitive_types?token_in=100000stake&routes_token_out_denom=uatom
+  /// &routes_token_out_denom=uion&routes_pool_id=1&routes_pool_id=2
+  @Sendable func estimateSwapExactAmountInWithPrimitiveTypes(
+    request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse
+
   @Sendable func estimateSinglePoolSwapExactAmountIn(
     request: Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest,
     context: GRPCAsyncServerCallContext
@@ -932,6 +2050,12 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncProvider: CallHandlerPro
   /// Estimates swap amount in given out.
   @Sendable func estimateSwapExactAmountOut(
     request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse
+
+  /// Estimates swap amount in given out.
+  @Sendable func estimateSwapExactAmountOutWithPrimitiveTypes(
+    request: Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse
 
@@ -958,6 +2082,12 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncProvider: CallHandlerPro
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Poolmanager_V1beta1_AllPoolsResponse
 
+  /// ListPoolsByDenom return all pools by denom
+  @Sendable func listPoolsByDenom(
+    request: Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse
+
   /// SpotPrice defines a gRPC query handler that returns the spot price given
   /// a base denomination and a quote denomination.
   @Sendable func spotPrice(
@@ -965,10 +2095,101 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryAsyncProvider: CallHandlerPro
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Poolmanager_V1beta1_SpotPriceResponse
 
+  /// TotalPoolLiquidity returns the total liquidity of the specified pool.
   @Sendable func totalPoolLiquidity(
     request: Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityResponse
+
+  /// TotalLiquidity returns the total liquidity across all pools.
+  @Sendable func totalLiquidity(
+    request: Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse
+
+  /// TotalVolumeForPool returns the total volume of the specified pool.
+  @Sendable func totalVolumeForPool(
+    request: Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse
+
+  /// TradingPairTakerFee returns the taker fee for a given set of denoms
+  @Sendable func tradingPairTakerFee(
+    request: Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse
+
+  /// EstimateTradeBasedOnPriceImpact returns an estimated trade based on price
+  /// impact, if a trade cannot be estimated a 0 input and 0 output would be
+  /// returned.
+  @Sendable func estimateTradeBasedOnPriceImpact(
+    request: Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse
+
+  /// AllTakerFeeShareAgreements returns all taker fee share agreements.
+  /// A taker fee share agreement includes the denom of the denom getting the
+  /// taker fees, the percent of the taker fees that the denom gets when it is
+  /// in the route being traded against, and the address that the taker fees are
+  /// sent to at epoch.
+  @Sendable func allTakerFeeShareAgreements(
+    request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse
+
+  /// TakerFeeShareAgreementFromDenom returns the taker fee share agreement for a
+  /// given denom. A taker fee share agreement includes the denom of the denom
+  /// getting the taker fees, the percent of the taker fees that the denom gets
+  /// when it is in the route being traded against, and the address that the
+  /// taker fees are sent to at epoch.
+  @Sendable func takerFeeShareAgreementFromDenom(
+    request: Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse
+
+  /// TakerFeeShareDenomsToAccruedValue returns the accrued value (as an Int) of
+  /// the given taker fee denom (the collected fees) for the given fee share
+  /// denom (the denom with the taker fee share agreement)
+  @Sendable func takerFeeShareDenomsToAccruedValue(
+    request: Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse
+
+  /// AllTakerFeeShareAccumulators returns all taker fee share accumulators. A
+  /// taker fee share accumulator includes the denom of the denom getting the
+  /// taker fees, and an accumulated value of coins that the denom has accrued
+  /// since the last time it was distributed in the epoch prior.
+  @Sendable func allTakerFeeShareAccumulators(
+    request: Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse
+
+  /// RegisteredAlloyedPoolFromDenom returns the registered alloyed pool state
+  /// from the given denom. The registered alloyed pool contains the pool's
+  /// contract address, along with the current distribution composition of taker
+  /// fee share denoms within the alloyed pool.
+  @Sendable func registeredAlloyedPoolFromDenom(
+    request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse
+
+  /// RegisteredAlloyedPoolFromPoolId returns the registered alloyed pool state
+  /// from the given pool id. The registered alloyed pool contains the pool's
+  /// contract address, along with the current distribution composition of taker
+  /// fee share denoms within the alloyed pool.
+  @Sendable func registeredAlloyedPoolFromPoolId(
+    request: Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse
+
+  /// AllRegisteredAlloyedPools returns all registered alloyed pools. The
+  /// registered alloyed pool contains the pool's contract address, along with
+  /// the current distribution composition of taker fee share denoms within the
+  /// alloyed pool.
+  @Sendable func allRegisteredAlloyedPools(
+    request: Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1008,6 +2229,15 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncProvider {
         wrapping: self.estimateSwapExactAmountIn(request:context:)
       )
 
+    case "EstimateSwapExactAmountInWithPrimitiveTypes":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>(),
+        interceptors: self.interceptors?.makeEstimateSwapExactAmountInWithPrimitiveTypesInterceptors() ?? [],
+        wrapping: self.estimateSwapExactAmountInWithPrimitiveTypes(request:context:)
+      )
+
     case "EstimateSinglePoolSwapExactAmountIn":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1024,6 +2254,15 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncProvider {
         responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>(),
         interceptors: self.interceptors?.makeEstimateSwapExactAmountOutInterceptors() ?? [],
         wrapping: self.estimateSwapExactAmountOut(request:context:)
+      )
+
+    case "EstimateSwapExactAmountOutWithPrimitiveTypes":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>(),
+        interceptors: self.interceptors?.makeEstimateSwapExactAmountOutWithPrimitiveTypesInterceptors() ?? [],
+        wrapping: self.estimateSwapExactAmountOutWithPrimitiveTypes(request:context:)
       )
 
     case "EstimateSinglePoolSwapExactAmountOut":
@@ -1062,6 +2301,15 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncProvider {
         wrapping: self.allPools(request:context:)
       )
 
+    case "ListPoolsByDenom":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse>(),
+        interceptors: self.interceptors?.makeListPoolsByDenomInterceptors() ?? [],
+        wrapping: self.listPoolsByDenom(request:context:)
+      )
+
     case "SpotPrice":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1080,6 +2328,105 @@ extension Osmosis_Poolmanager_V1beta1_QueryAsyncProvider {
         wrapping: self.totalPoolLiquidity(request:context:)
       )
 
+    case "TotalLiquidity":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse>(),
+        interceptors: self.interceptors?.makeTotalLiquidityInterceptors() ?? [],
+        wrapping: self.totalLiquidity(request:context:)
+      )
+
+    case "TotalVolumeForPool":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse>(),
+        interceptors: self.interceptors?.makeTotalVolumeForPoolInterceptors() ?? [],
+        wrapping: self.totalVolumeForPool(request:context:)
+      )
+
+    case "TradingPairTakerFee":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse>(),
+        interceptors: self.interceptors?.makeTradingPairTakerFeeInterceptors() ?? [],
+        wrapping: self.tradingPairTakerFee(request:context:)
+      )
+
+    case "EstimateTradeBasedOnPriceImpact":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse>(),
+        interceptors: self.interceptors?.makeEstimateTradeBasedOnPriceImpactInterceptors() ?? [],
+        wrapping: self.estimateTradeBasedOnPriceImpact(request:context:)
+      )
+
+    case "AllTakerFeeShareAgreements":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse>(),
+        interceptors: self.interceptors?.makeAllTakerFeeShareAgreementsInterceptors() ?? [],
+        wrapping: self.allTakerFeeShareAgreements(request:context:)
+      )
+
+    case "TakerFeeShareAgreementFromDenom":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse>(),
+        interceptors: self.interceptors?.makeTakerFeeShareAgreementFromDenomInterceptors() ?? [],
+        wrapping: self.takerFeeShareAgreementFromDenom(request:context:)
+      )
+
+    case "TakerFeeShareDenomsToAccruedValue":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse>(),
+        interceptors: self.interceptors?.makeTakerFeeShareDenomsToAccruedValueInterceptors() ?? [],
+        wrapping: self.takerFeeShareDenomsToAccruedValue(request:context:)
+      )
+
+    case "AllTakerFeeShareAccumulators":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse>(),
+        interceptors: self.interceptors?.makeAllTakerFeeShareAccumulatorsInterceptors() ?? [],
+        wrapping: self.allTakerFeeShareAccumulators(request:context:)
+      )
+
+    case "RegisteredAlloyedPoolFromDenom":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse>(),
+        interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromDenomInterceptors() ?? [],
+        wrapping: self.registeredAlloyedPoolFromDenom(request:context:)
+      )
+
+    case "RegisteredAlloyedPoolFromPoolId":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse>(),
+        interceptors: self.interceptors?.makeRegisteredAlloyedPoolFromPoolIdInterceptors() ?? [],
+        wrapping: self.registeredAlloyedPoolFromPoolId(request:context:)
+      )
+
+    case "AllRegisteredAlloyedPools":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse>(),
+        interceptors: self.interceptors?.makeAllRegisteredAlloyedPoolsInterceptors() ?? [],
+        wrapping: self.allRegisteredAlloyedPools(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1096,6 +2443,10 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryServerInterceptorFactoryProto
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeEstimateSwapExactAmountInInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>]
 
+  /// - Returns: Interceptors to use when handling 'estimateSwapExactAmountInWithPrimitiveTypes'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeEstimateSwapExactAmountInWithPrimitiveTypesInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>]
+
   /// - Returns: Interceptors to use when handling 'estimateSinglePoolSwapExactAmountIn'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeEstimateSinglePoolSwapExactAmountInInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSinglePoolSwapExactAmountInRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountInResponse>]
@@ -1103,6 +2454,10 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryServerInterceptorFactoryProto
   /// - Returns: Interceptors to use when handling 'estimateSwapExactAmountOut'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeEstimateSwapExactAmountOutInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>]
+
+  /// - Returns: Interceptors to use when handling 'estimateSwapExactAmountOutWithPrimitiveTypes'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeEstimateSwapExactAmountOutWithPrimitiveTypesInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest, Osmosis_Poolmanager_V1beta1_EstimateSwapExactAmountOutResponse>]
 
   /// - Returns: Interceptors to use when handling 'estimateSinglePoolSwapExactAmountOut'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -1120,6 +2475,10 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryServerInterceptorFactoryProto
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeAllPoolsInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_AllPoolsRequest, Osmosis_Poolmanager_V1beta1_AllPoolsResponse>]
 
+  /// - Returns: Interceptors to use when handling 'listPoolsByDenom'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeListPoolsByDenomInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_ListPoolsByDenomRequest, Osmosis_Poolmanager_V1beta1_ListPoolsByDenomResponse>]
+
   /// - Returns: Interceptors to use when handling 'spotPrice'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeSpotPriceInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_SpotPriceRequest, Osmosis_Poolmanager_V1beta1_SpotPriceResponse>]
@@ -1127,6 +2486,50 @@ internal protocol Osmosis_Poolmanager_V1beta1_QueryServerInterceptorFactoryProto
   /// - Returns: Interceptors to use when handling 'totalPoolLiquidity'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeTotalPoolLiquidityInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalPoolLiquidityResponse>]
+
+  /// - Returns: Interceptors to use when handling 'totalLiquidity'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeTotalLiquidityInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_TotalLiquidityRequest, Osmosis_Poolmanager_V1beta1_TotalLiquidityResponse>]
+
+  /// - Returns: Interceptors to use when handling 'totalVolumeForPool'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeTotalVolumeForPoolInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolRequest, Osmosis_Poolmanager_V1beta1_TotalVolumeForPoolResponse>]
+
+  /// - Returns: Interceptors to use when handling 'tradingPairTakerFee'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeTradingPairTakerFeeInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeRequest, Osmosis_Poolmanager_V1beta1_TradingPairTakerFeeResponse>]
+
+  /// - Returns: Interceptors to use when handling 'estimateTradeBasedOnPriceImpact'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeEstimateTradeBasedOnPriceImpactInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactRequest, Osmosis_Poolmanager_V1beta1_EstimateTradeBasedOnPriceImpactResponse>]
+
+  /// - Returns: Interceptors to use when handling 'allTakerFeeShareAgreements'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAllTakerFeeShareAgreementsInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAgreementsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'takerFeeShareAgreementFromDenom'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeTakerFeeShareAgreementFromDenomInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareAgreementFromDenomResponse>]
+
+  /// - Returns: Interceptors to use when handling 'takerFeeShareDenomsToAccruedValue'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeTakerFeeShareDenomsToAccruedValueInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueRequest, Osmosis_Poolmanager_V1beta1_TakerFeeShareDenomsToAccruedValueResponse>]
+
+  /// - Returns: Interceptors to use when handling 'allTakerFeeShareAccumulators'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAllTakerFeeShareAccumulatorsInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsRequest, Osmosis_Poolmanager_V1beta1_AllTakerFeeShareAccumulatorsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'registeredAlloyedPoolFromDenom'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeRegisteredAlloyedPoolFromDenomInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromDenomResponse>]
+
+  /// - Returns: Interceptors to use when handling 'registeredAlloyedPoolFromPoolId'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeRegisteredAlloyedPoolFromPoolIdInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdRequest, Osmosis_Poolmanager_V1beta1_RegisteredAlloyedPoolFromPoolIdResponse>]
+
+  /// - Returns: Interceptors to use when handling 'allRegisteredAlloyedPools'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAllRegisteredAlloyedPoolsInterceptors() -> [ServerInterceptor<Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsRequest, Osmosis_Poolmanager_V1beta1_AllRegisteredAlloyedPoolsResponse>]
 }
 
 internal enum Osmosis_Poolmanager_V1beta1_QueryServerMetadata {
@@ -1136,14 +2539,28 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryServerMetadata {
     methods: [
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.params,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.estimateSwapExactAmountIn,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.estimateSwapExactAmountInWithPrimitiveTypes,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.estimateSinglePoolSwapExactAmountIn,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.estimateSwapExactAmountOut,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.estimateSwapExactAmountOutWithPrimitiveTypes,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.estimateSinglePoolSwapExactAmountOut,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.numPools,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.pool,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.allPools,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.listPoolsByDenom,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.spotPrice,
       Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.totalPoolLiquidity,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.totalLiquidity,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.totalVolumeForPool,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.tradingPairTakerFee,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.estimateTradeBasedOnPriceImpact,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.allTakerFeeShareAgreements,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.takerFeeShareAgreementFromDenom,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.takerFeeShareDenomsToAccruedValue,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.allTakerFeeShareAccumulators,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.registeredAlloyedPoolFromDenom,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.registeredAlloyedPoolFromPoolId,
+      Osmosis_Poolmanager_V1beta1_QueryServerMetadata.Methods.allRegisteredAlloyedPools,
     ]
   )
 
@@ -1160,6 +2577,12 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryServerMetadata {
       type: GRPCCallType.unary
     )
 
+    internal static let estimateSwapExactAmountInWithPrimitiveTypes = GRPCMethodDescriptor(
+      name: "EstimateSwapExactAmountInWithPrimitiveTypes",
+      path: "/osmosis.poolmanager.v1beta1.Query/EstimateSwapExactAmountInWithPrimitiveTypes",
+      type: GRPCCallType.unary
+    )
+
     internal static let estimateSinglePoolSwapExactAmountIn = GRPCMethodDescriptor(
       name: "EstimateSinglePoolSwapExactAmountIn",
       path: "/osmosis.poolmanager.v1beta1.Query/EstimateSinglePoolSwapExactAmountIn",
@@ -1169,6 +2592,12 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryServerMetadata {
     internal static let estimateSwapExactAmountOut = GRPCMethodDescriptor(
       name: "EstimateSwapExactAmountOut",
       path: "/osmosis.poolmanager.v1beta1.Query/EstimateSwapExactAmountOut",
+      type: GRPCCallType.unary
+    )
+
+    internal static let estimateSwapExactAmountOutWithPrimitiveTypes = GRPCMethodDescriptor(
+      name: "EstimateSwapExactAmountOutWithPrimitiveTypes",
+      path: "/osmosis.poolmanager.v1beta1.Query/EstimateSwapExactAmountOutWithPrimitiveTypes",
       type: GRPCCallType.unary
     )
 
@@ -1196,6 +2625,12 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryServerMetadata {
       type: GRPCCallType.unary
     )
 
+    internal static let listPoolsByDenom = GRPCMethodDescriptor(
+      name: "ListPoolsByDenom",
+      path: "/osmosis.poolmanager.v1beta1.Query/ListPoolsByDenom",
+      type: GRPCCallType.unary
+    )
+
     internal static let spotPrice = GRPCMethodDescriptor(
       name: "SpotPrice",
       path: "/osmosis.poolmanager.v1beta1.Query/SpotPrice",
@@ -1205,6 +2640,72 @@ internal enum Osmosis_Poolmanager_V1beta1_QueryServerMetadata {
     internal static let totalPoolLiquidity = GRPCMethodDescriptor(
       name: "TotalPoolLiquidity",
       path: "/osmosis.poolmanager.v1beta1.Query/TotalPoolLiquidity",
+      type: GRPCCallType.unary
+    )
+
+    internal static let totalLiquidity = GRPCMethodDescriptor(
+      name: "TotalLiquidity",
+      path: "/osmosis.poolmanager.v1beta1.Query/TotalLiquidity",
+      type: GRPCCallType.unary
+    )
+
+    internal static let totalVolumeForPool = GRPCMethodDescriptor(
+      name: "TotalVolumeForPool",
+      path: "/osmosis.poolmanager.v1beta1.Query/TotalVolumeForPool",
+      type: GRPCCallType.unary
+    )
+
+    internal static let tradingPairTakerFee = GRPCMethodDescriptor(
+      name: "TradingPairTakerFee",
+      path: "/osmosis.poolmanager.v1beta1.Query/TradingPairTakerFee",
+      type: GRPCCallType.unary
+    )
+
+    internal static let estimateTradeBasedOnPriceImpact = GRPCMethodDescriptor(
+      name: "EstimateTradeBasedOnPriceImpact",
+      path: "/osmosis.poolmanager.v1beta1.Query/EstimateTradeBasedOnPriceImpact",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allTakerFeeShareAgreements = GRPCMethodDescriptor(
+      name: "AllTakerFeeShareAgreements",
+      path: "/osmosis.poolmanager.v1beta1.Query/AllTakerFeeShareAgreements",
+      type: GRPCCallType.unary
+    )
+
+    internal static let takerFeeShareAgreementFromDenom = GRPCMethodDescriptor(
+      name: "TakerFeeShareAgreementFromDenom",
+      path: "/osmosis.poolmanager.v1beta1.Query/TakerFeeShareAgreementFromDenom",
+      type: GRPCCallType.unary
+    )
+
+    internal static let takerFeeShareDenomsToAccruedValue = GRPCMethodDescriptor(
+      name: "TakerFeeShareDenomsToAccruedValue",
+      path: "/osmosis.poolmanager.v1beta1.Query/TakerFeeShareDenomsToAccruedValue",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allTakerFeeShareAccumulators = GRPCMethodDescriptor(
+      name: "AllTakerFeeShareAccumulators",
+      path: "/osmosis.poolmanager.v1beta1.Query/AllTakerFeeShareAccumulators",
+      type: GRPCCallType.unary
+    )
+
+    internal static let registeredAlloyedPoolFromDenom = GRPCMethodDescriptor(
+      name: "RegisteredAlloyedPoolFromDenom",
+      path: "/osmosis.poolmanager.v1beta1.Query/RegisteredAlloyedPoolFromDenom",
+      type: GRPCCallType.unary
+    )
+
+    internal static let registeredAlloyedPoolFromPoolId = GRPCMethodDescriptor(
+      name: "RegisteredAlloyedPoolFromPoolId",
+      path: "/osmosis.poolmanager.v1beta1.Query/RegisteredAlloyedPoolFromPoolId",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allRegisteredAlloyedPools = GRPCMethodDescriptor(
+      name: "AllRegisteredAlloyedPools",
+      path: "/osmosis.poolmanager.v1beta1.Query/AllRegisteredAlloyedPools",
       type: GRPCCallType.unary
     )
   }

@@ -52,6 +52,11 @@ internal protocol Osmosis_Tokenfactory_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest, Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressResponse>
+
+  func allBeforeSendHooksAddresses(
+    _ request: Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest, Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse>
 }
 
 extension Osmosis_Tokenfactory_V1beta1_QueryClientProtocol {
@@ -132,6 +137,28 @@ extension Osmosis_Tokenfactory_V1beta1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeBeforeSendHookAddressInterceptors() ?? []
+    )
+  }
+
+  /// AllBeforeSendHooksAddresses defines a gRPC query method for
+  /// getting all addresses with before send hook registered.
+  /// The response returns two arrays, an array with a list of denom and an array
+  /// of before send hook addresses. The idx of denom corresponds to before send
+  /// hook addresse's idx.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AllBeforeSendHooksAddresses.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func allBeforeSendHooksAddresses(
+    _ request: Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest, Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Tokenfactory_V1beta1_QueryClientMetadata.Methods.allBeforeSendHooksAddresses.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllBeforeSendHooksAddressesInterceptors() ?? []
     )
   }
 }
@@ -218,6 +245,11 @@ internal protocol Osmosis_Tokenfactory_V1beta1_QueryAsyncClientProtocol: GRPCCli
     _ request: Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest, Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressResponse>
+
+  func makeAllBeforeSendHooksAddressesCall(
+    _ request: Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest, Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -277,6 +309,18 @@ extension Osmosis_Tokenfactory_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeBeforeSendHookAddressInterceptors() ?? []
     )
   }
+
+  internal func makeAllBeforeSendHooksAddressesCall(
+    _ request: Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest, Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Tokenfactory_V1beta1_QueryClientMetadata.Methods.allBeforeSendHooksAddresses.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllBeforeSendHooksAddressesInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -328,6 +372,18 @@ extension Osmosis_Tokenfactory_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeBeforeSendHookAddressInterceptors() ?? []
     )
   }
+
+  internal func allBeforeSendHooksAddresses(
+    _ request: Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Tokenfactory_V1beta1_QueryClientMetadata.Methods.allBeforeSendHooksAddresses.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAllBeforeSendHooksAddressesInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -360,6 +416,9 @@ internal protocol Osmosis_Tokenfactory_V1beta1_QueryClientInterceptorFactoryProt
 
   /// - Returns: Interceptors to use when invoking 'beforeSendHookAddress'.
   func makeBeforeSendHookAddressInterceptors() -> [ClientInterceptor<Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest, Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'allBeforeSendHooksAddresses'.
+  func makeAllBeforeSendHooksAddressesInterceptors() -> [ClientInterceptor<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest, Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse>]
 }
 
 internal enum Osmosis_Tokenfactory_V1beta1_QueryClientMetadata {
@@ -371,6 +430,7 @@ internal enum Osmosis_Tokenfactory_V1beta1_QueryClientMetadata {
       Osmosis_Tokenfactory_V1beta1_QueryClientMetadata.Methods.denomAuthorityMetadata,
       Osmosis_Tokenfactory_V1beta1_QueryClientMetadata.Methods.denomsFromCreator,
       Osmosis_Tokenfactory_V1beta1_QueryClientMetadata.Methods.beforeSendHookAddress,
+      Osmosis_Tokenfactory_V1beta1_QueryClientMetadata.Methods.allBeforeSendHooksAddresses,
     ]
   )
 
@@ -398,6 +458,12 @@ internal enum Osmosis_Tokenfactory_V1beta1_QueryClientMetadata {
       path: "/osmosis.tokenfactory.v1beta1.Query/BeforeSendHookAddress",
       type: GRPCCallType.unary
     )
+
+    internal static let allBeforeSendHooksAddresses = GRPCMethodDescriptor(
+      name: "AllBeforeSendHooksAddresses",
+      path: "/osmosis.tokenfactory.v1beta1.Query/AllBeforeSendHooksAddresses",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -422,6 +488,13 @@ internal protocol Osmosis_Tokenfactory_V1beta1_QueryProvider: CallHandlerProvide
   /// BeforeSendHookAddress defines a gRPC query method for
   /// getting the address registered for the before send hook.
   func beforeSendHookAddress(request: Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressResponse>
+
+  /// AllBeforeSendHooksAddresses defines a gRPC query method for
+  /// getting all addresses with before send hook registered.
+  /// The response returns two arrays, an array with a list of denom and an array
+  /// of before send hook addresses. The idx of denom corresponds to before send
+  /// hook addresse's idx.
+  func allBeforeSendHooksAddresses(request: Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse>
 }
 
 extension Osmosis_Tokenfactory_V1beta1_QueryProvider {
@@ -472,6 +545,15 @@ extension Osmosis_Tokenfactory_V1beta1_QueryProvider {
         userFunction: self.beforeSendHookAddress(request:context:)
       )
 
+    case "AllBeforeSendHooksAddresses":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse>(),
+        interceptors: self.interceptors?.makeAllBeforeSendHooksAddressesInterceptors() ?? [],
+        userFunction: self.allBeforeSendHooksAddresses(request:context:)
+      )
+
     default:
       return nil
     }
@@ -513,6 +595,16 @@ internal protocol Osmosis_Tokenfactory_V1beta1_QueryAsyncProvider: CallHandlerPr
     request: Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressResponse
+
+  /// AllBeforeSendHooksAddresses defines a gRPC query method for
+  /// getting all addresses with before send hook registered.
+  /// The response returns two arrays, an array with a list of denom and an array
+  /// of before send hook addresses. The idx of denom corresponds to before send
+  /// hook addresse's idx.
+  @Sendable func allBeforeSendHooksAddresses(
+    request: Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -570,6 +662,15 @@ extension Osmosis_Tokenfactory_V1beta1_QueryAsyncProvider {
         wrapping: self.beforeSendHookAddress(request:context:)
       )
 
+    case "AllBeforeSendHooksAddresses":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse>(),
+        interceptors: self.interceptors?.makeAllBeforeSendHooksAddressesInterceptors() ?? [],
+        wrapping: self.allBeforeSendHooksAddresses(request:context:)
+      )
+
     default:
       return nil
     }
@@ -593,6 +694,10 @@ internal protocol Osmosis_Tokenfactory_V1beta1_QueryServerInterceptorFactoryProt
   /// - Returns: Interceptors to use when handling 'beforeSendHookAddress'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeBeforeSendHookAddressInterceptors() -> [ServerInterceptor<Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressRequest, Osmosis_Tokenfactory_V1beta1_QueryBeforeSendHookAddressResponse>]
+
+  /// - Returns: Interceptors to use when handling 'allBeforeSendHooksAddresses'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAllBeforeSendHooksAddressesInterceptors() -> [ServerInterceptor<Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesRequest, Osmosis_Tokenfactory_V1beta1_QueryAllBeforeSendHooksAddressesResponse>]
 }
 
 internal enum Osmosis_Tokenfactory_V1beta1_QueryServerMetadata {
@@ -604,6 +709,7 @@ internal enum Osmosis_Tokenfactory_V1beta1_QueryServerMetadata {
       Osmosis_Tokenfactory_V1beta1_QueryServerMetadata.Methods.denomAuthorityMetadata,
       Osmosis_Tokenfactory_V1beta1_QueryServerMetadata.Methods.denomsFromCreator,
       Osmosis_Tokenfactory_V1beta1_QueryServerMetadata.Methods.beforeSendHookAddress,
+      Osmosis_Tokenfactory_V1beta1_QueryServerMetadata.Methods.allBeforeSendHooksAddresses,
     ]
   )
 
@@ -629,6 +735,12 @@ internal enum Osmosis_Tokenfactory_V1beta1_QueryServerMetadata {
     internal static let beforeSendHookAddress = GRPCMethodDescriptor(
       name: "BeforeSendHookAddress",
       path: "/osmosis.tokenfactory.v1beta1.Query/BeforeSendHookAddress",
+      type: GRPCCallType.unary
+    )
+
+    internal static let allBeforeSendHooksAddresses = GRPCMethodDescriptor(
+      name: "AllBeforeSendHooksAddresses",
+      path: "/osmosis.tokenfactory.v1beta1.Query/AllBeforeSendHooksAddresses",
       type: GRPCCallType.unary
     )
   }

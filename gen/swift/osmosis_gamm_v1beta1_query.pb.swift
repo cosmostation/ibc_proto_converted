@@ -20,6 +20,38 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
+///=============================== Params
+struct Osmosis_Gamm_V1beta1_ParamsRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Gamm_V1beta1_ParamsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var params: Osmosis_Gamm_V1beta1_Params {
+    get {return _params ?? Osmosis_Gamm_V1beta1_Params()}
+    set {_params = newValue}
+  }
+  /// Returns true if `params` has been explicitly set.
+  var hasParams: Bool {return self._params != nil}
+  /// Clears the value of `params`. Subsequent reads from it will return its default value.
+  mutating func clearParams() {self._params = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _params: Osmosis_Gamm_V1beta1_Params? = nil
+}
+
 ///=============================== Pool
 /// Deprecated: please use the alternative in x/poolmanager
 struct Osmosis_Gamm_V1beta1_QueryPoolRequest {
@@ -344,6 +376,9 @@ struct Osmosis_Gamm_V1beta1_QuerySpotPriceRequest {
 
   var quoteAssetDenom: String = String()
 
+  /// DEPRECATED
+  var withSwapFee: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -354,7 +389,7 @@ struct Osmosis_Gamm_V1beta1_QueryPoolsWithFilterRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// String of the coins in single string seperated by comma. Ex)
+  /// String of the coins in single string separated by comma. Ex)
   /// 10uatom,100uosmo
   var minLiquidity: String = String()
 
@@ -524,7 +559,41 @@ struct Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse {
   init() {}
 }
 
+///=============================== QueryCFMMConcentratedPoolLinks
+struct Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var migrationRecords: Osmosis_Gamm_V1beta1_MigrationRecords {
+    get {return _migrationRecords ?? Osmosis_Gamm_V1beta1_MigrationRecords()}
+    set {_migrationRecords = newValue}
+  }
+  /// Returns true if `migrationRecords` has been explicitly set.
+  var hasMigrationRecords: Bool {return self._migrationRecords != nil}
+  /// Clears the value of `migrationRecords`. Subsequent reads from it will return its default value.
+  mutating func clearMigrationRecords() {self._migrationRecords = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _migrationRecords: Osmosis_Gamm_V1beta1_MigrationRecords? = nil
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
+extension Osmosis_Gamm_V1beta1_ParamsRequest: @unchecked Sendable {}
+extension Osmosis_Gamm_V1beta1_ParamsResponse: @unchecked Sendable {}
 extension Osmosis_Gamm_V1beta1_QueryPoolRequest: @unchecked Sendable {}
 extension Osmosis_Gamm_V1beta1_QueryPoolResponse: @unchecked Sendable {}
 extension Osmosis_Gamm_V1beta1_QueryPoolsRequest: @unchecked Sendable {}
@@ -557,11 +626,68 @@ extension Osmosis_Gamm_V1beta1_QueryTotalLiquidityRequest: @unchecked Sendable {
 extension Osmosis_Gamm_V1beta1_QueryTotalLiquidityResponse: @unchecked Sendable {}
 extension Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest: @unchecked Sendable {}
 extension Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse: @unchecked Sendable {}
+extension Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest: @unchecked Sendable {}
+extension Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "osmosis.gamm.v1beta1"
+
+extension Osmosis_Gamm_V1beta1_ParamsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ParamsRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Gamm_V1beta1_ParamsRequest, rhs: Osmosis_Gamm_V1beta1_ParamsRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Gamm_V1beta1_ParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ParamsResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "params"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._params) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._params {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Gamm_V1beta1_ParamsResponse, rhs: Osmosis_Gamm_V1beta1_ParamsResponse) -> Bool {
+    if lhs._params != rhs._params {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
 
 extension Osmosis_Gamm_V1beta1_QueryPoolRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryPoolRequest"
@@ -1252,6 +1378,7 @@ extension Osmosis_Gamm_V1beta1_QuerySpotPriceRequest: SwiftProtobuf.Message, Swi
     1: .standard(proto: "pool_id"),
     2: .standard(proto: "base_asset_denom"),
     3: .standard(proto: "quote_asset_denom"),
+    4: .same(proto: "withSwapFee"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1263,6 +1390,7 @@ extension Osmosis_Gamm_V1beta1_QuerySpotPriceRequest: SwiftProtobuf.Message, Swi
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.baseAssetDenom) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.quoteAssetDenom) }()
+      case 4: try { try decoder.decodeSingularBoolField(value: &self.withSwapFee) }()
       default: break
       }
     }
@@ -1278,6 +1406,9 @@ extension Osmosis_Gamm_V1beta1_QuerySpotPriceRequest: SwiftProtobuf.Message, Swi
     if !self.quoteAssetDenom.isEmpty {
       try visitor.visitSingularStringField(value: self.quoteAssetDenom, fieldNumber: 3)
     }
+    if self.withSwapFee != false {
+      try visitor.visitSingularBoolField(value: self.withSwapFee, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1285,6 +1416,7 @@ extension Osmosis_Gamm_V1beta1_QuerySpotPriceRequest: SwiftProtobuf.Message, Swi
     if lhs.poolID != rhs.poolID {return false}
     if lhs.baseAssetDenom != rhs.baseAssetDenom {return false}
     if lhs.quoteAssetDenom != rhs.quoteAssetDenom {return false}
+    if lhs.withSwapFee != rhs.withSwapFee {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1686,6 +1818,61 @@ extension Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse: Swif
 
   static func ==(lhs: Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse, rhs: Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse) -> Bool {
     if lhs.concentratedPoolID != rhs.concentratedPoolID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryCFMMConcentratedPoolLinksRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, rhs: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryCFMMConcentratedPoolLinksResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "migration_records"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._migrationRecords) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._migrationRecords {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse, rhs: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse) -> Bool {
+    if lhs._migrationRecords != rhs._migrationRecords {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -110,6 +110,16 @@ internal protocol Osmosis_Gamm_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest, Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse>
+
+  func cFMMConcentratedPoolLinks(
+    _ request: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse>
+
+  func params(
+    _ request: Osmosis_Gamm_V1beta1_ParamsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Osmosis_Gamm_V1beta1_ParamsRequest, Osmosis_Gamm_V1beta1_ParamsResponse>
 }
 
 extension Osmosis_Gamm_V1beta1_QueryClientProtocol {
@@ -410,6 +420,43 @@ extension Osmosis_Gamm_V1beta1_QueryClientProtocol {
       interceptors: self.interceptors?.makeConcentratedPoolIdLinkFromCFMMInterceptors() ?? []
     )
   }
+
+  /// CFMMConcentratedPoolLinks returns migration links between CFMM and
+  /// Concentrated pools.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to CFMMConcentratedPoolLinks.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func cFMMConcentratedPoolLinks(
+    _ request: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.cFMMConcentratedPoolLinks.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCFMMConcentratedPoolLinksInterceptors() ?? []
+    )
+  }
+
+  /// Params returns gamm module params.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to Params.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func params(
+    _ request: Osmosis_Gamm_V1beta1_ParamsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Osmosis_Gamm_V1beta1_ParamsRequest, Osmosis_Gamm_V1beta1_ParamsResponse> {
+    return self.makeUnaryCall(
+      path: Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.params.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(*, deprecated)
@@ -553,6 +600,16 @@ internal protocol Osmosis_Gamm_V1beta1_QueryAsyncClientProtocol: GRPCClient {
     _ request: Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest, Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse>
+
+  func makeCfmmconcentratedPoolLinksCall(
+    _ request: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse>
+
+  func makeParamsCall(
+    _ request: Osmosis_Gamm_V1beta1_ParamsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Osmosis_Gamm_V1beta1_ParamsRequest, Osmosis_Gamm_V1beta1_ParamsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -756,6 +813,30 @@ extension Osmosis_Gamm_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeConcentratedPoolIdLinkFromCFMMInterceptors() ?? []
     )
   }
+
+  internal func makeCfmmconcentratedPoolLinksCall(
+    _ request: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.cFMMConcentratedPoolLinks.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCFMMConcentratedPoolLinksInterceptors() ?? []
+    )
+  }
+
+  internal func makeParamsCall(
+    _ request: Osmosis_Gamm_V1beta1_ParamsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Osmosis_Gamm_V1beta1_ParamsRequest, Osmosis_Gamm_V1beta1_ParamsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.params.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -951,6 +1032,30 @@ extension Osmosis_Gamm_V1beta1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeConcentratedPoolIdLinkFromCFMMInterceptors() ?? []
     )
   }
+
+  internal func cFMMConcentratedPoolLinks(
+    _ request: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.cFMMConcentratedPoolLinks.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeCFMMConcentratedPoolLinksInterceptors() ?? []
+    )
+  }
+
+  internal func params(
+    _ request: Osmosis_Gamm_V1beta1_ParamsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Osmosis_Gamm_V1beta1_ParamsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.params.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1019,6 +1124,12 @@ internal protocol Osmosis_Gamm_V1beta1_QueryClientInterceptorFactoryProtocol: Se
 
   /// - Returns: Interceptors to use when invoking 'concentratedPoolIdLinkFromCFMM'.
   func makeConcentratedPoolIdLinkFromCFMMInterceptors() -> [ClientInterceptor<Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest, Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'cFMMConcentratedPoolLinks'.
+  func makeCFMMConcentratedPoolLinksInterceptors() -> [ClientInterceptor<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'params'.
+  func makeParamsInterceptors() -> [ClientInterceptor<Osmosis_Gamm_V1beta1_ParamsRequest, Osmosis_Gamm_V1beta1_ParamsResponse>]
 }
 
 internal enum Osmosis_Gamm_V1beta1_QueryClientMetadata {
@@ -1042,6 +1153,8 @@ internal enum Osmosis_Gamm_V1beta1_QueryClientMetadata {
       Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountIn,
       Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.estimateSwapExactAmountOut,
       Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.concentratedPoolIdLinkFromCFMM,
+      Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.cFMMConcentratedPoolLinks,
+      Osmosis_Gamm_V1beta1_QueryClientMetadata.Methods.params,
     ]
   )
 
@@ -1141,6 +1254,18 @@ internal enum Osmosis_Gamm_V1beta1_QueryClientMetadata {
       path: "/osmosis.gamm.v1beta1.Query/ConcentratedPoolIdLinkFromCFMM",
       type: GRPCCallType.unary
     )
+
+    internal static let cFMMConcentratedPoolLinks = GRPCMethodDescriptor(
+      name: "CFMMConcentratedPoolLinks",
+      path: "/osmosis.gamm.v1beta1.Query/CFMMConcentratedPoolLinks",
+      type: GRPCCallType.unary
+    )
+
+    internal static let params = GRPCMethodDescriptor(
+      name: "Params",
+      path: "/osmosis.gamm.v1beta1.Query/Params",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -1195,6 +1320,13 @@ internal protocol Osmosis_Gamm_V1beta1_QueryProvider: CallHandlerProvider {
   /// ConcentratedPoolIdLinkFromBalancer returns the pool id of the concentrated
   /// pool that is linked with the given CFMM pool.
   func concentratedPoolIdLinkFromCFMM(request: Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse>
+
+  /// CFMMConcentratedPoolLinks returns migration links between CFMM and
+  /// Concentrated pools.
+  func cFMMConcentratedPoolLinks(request: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse>
+
+  /// Params returns gamm module params.
+  func params(request: Osmosis_Gamm_V1beta1_ParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Osmosis_Gamm_V1beta1_ParamsResponse>
 }
 
 extension Osmosis_Gamm_V1beta1_QueryProvider {
@@ -1353,6 +1485,24 @@ extension Osmosis_Gamm_V1beta1_QueryProvider {
         userFunction: self.concentratedPoolIdLinkFromCFMM(request:context:)
       )
 
+    case "CFMMConcentratedPoolLinks":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse>(),
+        interceptors: self.interceptors?.makeCFMMConcentratedPoolLinksInterceptors() ?? [],
+        userFunction: self.cFMMConcentratedPoolLinks(request:context:)
+      )
+
+    case "Params":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Gamm_V1beta1_ParamsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Gamm_V1beta1_ParamsResponse>(),
+        interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
+        userFunction: self.params(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1460,6 +1610,19 @@ internal protocol Osmosis_Gamm_V1beta1_QueryAsyncProvider: CallHandlerProvider {
     request: Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse
+
+  /// CFMMConcentratedPoolLinks returns migration links between CFMM and
+  /// Concentrated pools.
+  @Sendable func cFMMConcentratedPoolLinks(
+    request: Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse
+
+  /// Params returns gamm module params.
+  @Sendable func params(
+    request: Osmosis_Gamm_V1beta1_ParamsRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Osmosis_Gamm_V1beta1_ParamsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1625,6 +1788,24 @@ extension Osmosis_Gamm_V1beta1_QueryAsyncProvider {
         wrapping: self.concentratedPoolIdLinkFromCFMM(request:context:)
       )
 
+    case "CFMMConcentratedPoolLinks":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse>(),
+        interceptors: self.interceptors?.makeCFMMConcentratedPoolLinksInterceptors() ?? [],
+        wrapping: self.cFMMConcentratedPoolLinks(request:context:)
+      )
+
+    case "Params":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Osmosis_Gamm_V1beta1_ParamsRequest>(),
+        responseSerializer: ProtobufSerializer<Osmosis_Gamm_V1beta1_ParamsResponse>(),
+        interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
+        wrapping: self.params(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1696,6 +1877,14 @@ internal protocol Osmosis_Gamm_V1beta1_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'concentratedPoolIdLinkFromCFMM'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeConcentratedPoolIdLinkFromCFMMInterceptors() -> [ServerInterceptor<Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMRequest, Osmosis_Gamm_V1beta1_QueryConcentratedPoolIdLinkFromCFMMResponse>]
+
+  /// - Returns: Interceptors to use when handling 'cFMMConcentratedPoolLinks'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeCFMMConcentratedPoolLinksInterceptors() -> [ServerInterceptor<Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksRequest, Osmosis_Gamm_V1beta1_QueryCFMMConcentratedPoolLinksResponse>]
+
+  /// - Returns: Interceptors to use when handling 'params'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeParamsInterceptors() -> [ServerInterceptor<Osmosis_Gamm_V1beta1_ParamsRequest, Osmosis_Gamm_V1beta1_ParamsResponse>]
 }
 
 internal enum Osmosis_Gamm_V1beta1_QueryServerMetadata {
@@ -1719,6 +1908,8 @@ internal enum Osmosis_Gamm_V1beta1_QueryServerMetadata {
       Osmosis_Gamm_V1beta1_QueryServerMetadata.Methods.estimateSwapExactAmountIn,
       Osmosis_Gamm_V1beta1_QueryServerMetadata.Methods.estimateSwapExactAmountOut,
       Osmosis_Gamm_V1beta1_QueryServerMetadata.Methods.concentratedPoolIdLinkFromCFMM,
+      Osmosis_Gamm_V1beta1_QueryServerMetadata.Methods.cFMMConcentratedPoolLinks,
+      Osmosis_Gamm_V1beta1_QueryServerMetadata.Methods.params,
     ]
   )
 
@@ -1816,6 +2007,18 @@ internal enum Osmosis_Gamm_V1beta1_QueryServerMetadata {
     internal static let concentratedPoolIdLinkFromCFMM = GRPCMethodDescriptor(
       name: "ConcentratedPoolIdLinkFromCFMM",
       path: "/osmosis.gamm.v1beta1.Query/ConcentratedPoolIdLinkFromCFMM",
+      type: GRPCCallType.unary
+    )
+
+    internal static let cFMMConcentratedPoolLinks = GRPCMethodDescriptor(
+      name: "CFMMConcentratedPoolLinks",
+      path: "/osmosis.gamm.v1beta1.Query/CFMMConcentratedPoolLinks",
+      type: GRPCCallType.unary
+    )
+
+    internal static let params = GRPCMethodDescriptor(
+      name: "Params",
+      path: "/osmosis.gamm.v1beta1.Query/Params",
       type: GRPCCallType.unary
     )
   }

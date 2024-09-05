@@ -32,12 +32,15 @@ struct Osmosis_Gamm_V2_QuerySpotPriceRequest {
 
   var quoteAssetDenom: String = String()
 
+  /// DEPRECATED
+  var withSwapFee: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 }
 
-/// Depreacted: please use alternate in x/poolmanager
+/// Deprecated: please use alternate in x/poolmanager
 struct Osmosis_Gamm_V2_QuerySpotPriceResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -66,6 +69,7 @@ extension Osmosis_Gamm_V2_QuerySpotPriceRequest: SwiftProtobuf.Message, SwiftPro
     1: .standard(proto: "pool_id"),
     2: .standard(proto: "base_asset_denom"),
     3: .standard(proto: "quote_asset_denom"),
+    4: .same(proto: "withSwapFee"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -77,6 +81,7 @@ extension Osmosis_Gamm_V2_QuerySpotPriceRequest: SwiftProtobuf.Message, SwiftPro
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.poolID) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.baseAssetDenom) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.quoteAssetDenom) }()
+      case 4: try { try decoder.decodeSingularBoolField(value: &self.withSwapFee) }()
       default: break
       }
     }
@@ -92,6 +97,9 @@ extension Osmosis_Gamm_V2_QuerySpotPriceRequest: SwiftProtobuf.Message, SwiftPro
     if !self.quoteAssetDenom.isEmpty {
       try visitor.visitSingularStringField(value: self.quoteAssetDenom, fieldNumber: 3)
     }
+    if self.withSwapFee != false {
+      try visitor.visitSingularBoolField(value: self.withSwapFee, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -99,6 +107,7 @@ extension Osmosis_Gamm_V2_QuerySpotPriceRequest: SwiftProtobuf.Message, SwiftPro
     if lhs.poolID != rhs.poolID {return false}
     if lhs.baseAssetDenom != rhs.baseAssetDenom {return false}
     if lhs.quoteAssetDenom != rhs.quoteAssetDenom {return false}
+    if lhs.withSwapFee != rhs.withSwapFee {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

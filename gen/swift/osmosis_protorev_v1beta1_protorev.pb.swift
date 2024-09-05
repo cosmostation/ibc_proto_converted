@@ -46,7 +46,8 @@ struct Osmosis_Protorev_V1beta1_Route {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// The pool IDs that are travered in the directed cyclic graph (traversed left
+  /// The pool IDs that are traversed in the directed cyclic graph (traversed
+  /// left
   /// -> right)
   var trades: [Osmosis_Protorev_V1beta1_Trade] = []
 
@@ -106,6 +107,9 @@ struct Osmosis_Protorev_V1beta1_RouteStatistics {
 /// significantly between the different pool types. Each weight roughly
 /// corresponds to the amount of time (in ms) it takes to execute a swap on that
 /// pool type.
+///
+/// DEPRECATED: This field is deprecated and will be removed in the next
+/// release. It is replaced by the `info_by_pool_type` field.
 struct Osmosis_Protorev_V1beta1_PoolWeights {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -119,6 +123,146 @@ struct Osmosis_Protorev_V1beta1_PoolWeights {
 
   /// The weight of a concentrated pool
   var concentratedWeight: UInt64 = 0
+
+  /// The weight of a cosmwasm pool
+  var cosmwasmWeight: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// InfoByPoolType contains information pertaining to how expensive (in terms of
+/// gas and time) it is to execute a swap on a given pool type. This distinction
+/// is made and necessary because the execution time ranges significantly between
+/// the different pool types.
+struct Osmosis_Protorev_V1beta1_InfoByPoolType {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// The stable pool info
+  var stable: Osmosis_Protorev_V1beta1_StablePoolInfo {
+    get {return _stable ?? Osmosis_Protorev_V1beta1_StablePoolInfo()}
+    set {_stable = newValue}
+  }
+  /// Returns true if `stable` has been explicitly set.
+  var hasStable: Bool {return self._stable != nil}
+  /// Clears the value of `stable`. Subsequent reads from it will return its default value.
+  mutating func clearStable() {self._stable = nil}
+
+  /// The balancer pool info
+  var balancer: Osmosis_Protorev_V1beta1_BalancerPoolInfo {
+    get {return _balancer ?? Osmosis_Protorev_V1beta1_BalancerPoolInfo()}
+    set {_balancer = newValue}
+  }
+  /// Returns true if `balancer` has been explicitly set.
+  var hasBalancer: Bool {return self._balancer != nil}
+  /// Clears the value of `balancer`. Subsequent reads from it will return its default value.
+  mutating func clearBalancer() {self._balancer = nil}
+
+  /// The concentrated pool info
+  var concentrated: Osmosis_Protorev_V1beta1_ConcentratedPoolInfo {
+    get {return _concentrated ?? Osmosis_Protorev_V1beta1_ConcentratedPoolInfo()}
+    set {_concentrated = newValue}
+  }
+  /// Returns true if `concentrated` has been explicitly set.
+  var hasConcentrated: Bool {return self._concentrated != nil}
+  /// Clears the value of `concentrated`. Subsequent reads from it will return its default value.
+  mutating func clearConcentrated() {self._concentrated = nil}
+
+  /// The cosmwasm pool info
+  var cosmwasm: Osmosis_Protorev_V1beta1_CosmwasmPoolInfo {
+    get {return _cosmwasm ?? Osmosis_Protorev_V1beta1_CosmwasmPoolInfo()}
+    set {_cosmwasm = newValue}
+  }
+  /// Returns true if `cosmwasm` has been explicitly set.
+  var hasCosmwasm: Bool {return self._cosmwasm != nil}
+  /// Clears the value of `cosmwasm`. Subsequent reads from it will return its default value.
+  mutating func clearCosmwasm() {self._cosmwasm = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _stable: Osmosis_Protorev_V1beta1_StablePoolInfo? = nil
+  fileprivate var _balancer: Osmosis_Protorev_V1beta1_BalancerPoolInfo? = nil
+  fileprivate var _concentrated: Osmosis_Protorev_V1beta1_ConcentratedPoolInfo? = nil
+  fileprivate var _cosmwasm: Osmosis_Protorev_V1beta1_CosmwasmPoolInfo? = nil
+}
+
+/// StablePoolInfo contains meta data pertaining to a stableswap pool type.
+struct Osmosis_Protorev_V1beta1_StablePoolInfo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// The weight of a stableswap pool
+  var weight: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// BalancerPoolInfo contains meta data pertaining to a balancer pool type.
+struct Osmosis_Protorev_V1beta1_BalancerPoolInfo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// The weight of a balancer pool
+  var weight: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// ConcentratedPoolInfo contains meta data pertaining to a concentrated pool
+/// type.
+struct Osmosis_Protorev_V1beta1_ConcentratedPoolInfo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// The weight of a concentrated pool
+  var weight: UInt64 = 0
+
+  /// The maximum number of ticks we can move when rebalancing
+  var maxTicksCrossed: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// CosmwasmPoolInfo contains meta data pertaining to a cosmwasm pool type.
+struct Osmosis_Protorev_V1beta1_CosmwasmPoolInfo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// The weight of a cosmwasm pool (by contract address)
+  var weightMaps: [Osmosis_Protorev_V1beta1_WeightMap] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// WeightMap maps a contract address to a weight. The weight of an address
+/// corresponds to the amount of ms required to execute a swap on that contract.
+struct Osmosis_Protorev_V1beta1_WeightMap {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// The weight of a cosmwasm pool (by contract address)
+  var weight: UInt64 = 0
+
+  /// The contract address
+  var contractAddress: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -145,13 +289,92 @@ struct Osmosis_Protorev_V1beta1_BaseDenom {
   init() {}
 }
 
+/// BaseDenoms represents all of the base denoms that the module uses for its
+/// arbitrage trades.
+struct Osmosis_Protorev_V1beta1_BaseDenoms {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var baseDenoms: [Osmosis_Protorev_V1beta1_BaseDenom] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Protorev_V1beta1_AllProtocolRevenue {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var takerFeesTracker: Osmosis_Poolmanager_V1beta1_TakerFeesTracker {
+    get {return _takerFeesTracker ?? Osmosis_Poolmanager_V1beta1_TakerFeesTracker()}
+    set {_takerFeesTracker = newValue}
+  }
+  /// Returns true if `takerFeesTracker` has been explicitly set.
+  var hasTakerFeesTracker: Bool {return self._takerFeesTracker != nil}
+  /// Clears the value of `takerFeesTracker`. Subsequent reads from it will return its default value.
+  mutating func clearTakerFeesTracker() {self._takerFeesTracker = nil}
+
+  /// DEPRECATED
+  var txFeesTracker: Osmosis_Txfees_V1beta1_TxFeesTracker {
+    get {return _txFeesTracker ?? Osmosis_Txfees_V1beta1_TxFeesTracker()}
+    set {_txFeesTracker = newValue}
+  }
+  /// Returns true if `txFeesTracker` has been explicitly set.
+  var hasTxFeesTracker: Bool {return self._txFeesTracker != nil}
+  /// Clears the value of `txFeesTracker`. Subsequent reads from it will return its default value.
+  mutating func clearTxFeesTracker() {self._txFeesTracker = nil}
+
+  var cyclicArbTracker: Osmosis_Protorev_V1beta1_CyclicArbTracker {
+    get {return _cyclicArbTracker ?? Osmosis_Protorev_V1beta1_CyclicArbTracker()}
+    set {_cyclicArbTracker = newValue}
+  }
+  /// Returns true if `cyclicArbTracker` has been explicitly set.
+  var hasCyclicArbTracker: Bool {return self._cyclicArbTracker != nil}
+  /// Clears the value of `cyclicArbTracker`. Subsequent reads from it will return its default value.
+  mutating func clearCyclicArbTracker() {self._cyclicArbTracker = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _takerFeesTracker: Osmosis_Poolmanager_V1beta1_TakerFeesTracker? = nil
+  fileprivate var _txFeesTracker: Osmosis_Txfees_V1beta1_TxFeesTracker? = nil
+  fileprivate var _cyclicArbTracker: Osmosis_Protorev_V1beta1_CyclicArbTracker? = nil
+}
+
+struct Osmosis_Protorev_V1beta1_CyclicArbTracker {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var cyclicArb: [Cosmos_Base_V1beta1_Coin] = []
+
+  var heightAccountingStartsFrom: Int64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Protorev_V1beta1_TokenPairArbRoutes: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_Route: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_Trade: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_RouteStatistics: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_PoolWeights: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_InfoByPoolType: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_StablePoolInfo: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_BalancerPoolInfo: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_ConcentratedPoolInfo: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_CosmwasmPoolInfo: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_WeightMap: @unchecked Sendable {}
 extension Osmosis_Protorev_V1beta1_BaseDenom: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_BaseDenoms: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_AllProtocolRevenue: @unchecked Sendable {}
+extension Osmosis_Protorev_V1beta1_CyclicArbTracker: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -334,6 +557,7 @@ extension Osmosis_Protorev_V1beta1_PoolWeights: SwiftProtobuf.Message, SwiftProt
     1: .standard(proto: "stable_weight"),
     2: .standard(proto: "balancer_weight"),
     3: .standard(proto: "concentrated_weight"),
+    4: .standard(proto: "cosmwasm_weight"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -345,6 +569,7 @@ extension Osmosis_Protorev_V1beta1_PoolWeights: SwiftProtobuf.Message, SwiftProt
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.stableWeight) }()
       case 2: try { try decoder.decodeSingularUInt64Field(value: &self.balancerWeight) }()
       case 3: try { try decoder.decodeSingularUInt64Field(value: &self.concentratedWeight) }()
+      case 4: try { try decoder.decodeSingularUInt64Field(value: &self.cosmwasmWeight) }()
       default: break
       }
     }
@@ -360,6 +585,9 @@ extension Osmosis_Protorev_V1beta1_PoolWeights: SwiftProtobuf.Message, SwiftProt
     if self.concentratedWeight != 0 {
       try visitor.visitSingularUInt64Field(value: self.concentratedWeight, fieldNumber: 3)
     }
+    if self.cosmwasmWeight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.cosmwasmWeight, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -367,6 +595,233 @@ extension Osmosis_Protorev_V1beta1_PoolWeights: SwiftProtobuf.Message, SwiftProt
     if lhs.stableWeight != rhs.stableWeight {return false}
     if lhs.balancerWeight != rhs.balancerWeight {return false}
     if lhs.concentratedWeight != rhs.concentratedWeight {return false}
+    if lhs.cosmwasmWeight != rhs.cosmwasmWeight {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_InfoByPoolType: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".InfoByPoolType"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "stable"),
+    2: .same(proto: "balancer"),
+    3: .same(proto: "concentrated"),
+    4: .same(proto: "cosmwasm"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._stable) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._balancer) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._concentrated) }()
+      case 4: try { try decoder.decodeSingularMessageField(value: &self._cosmwasm) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._stable {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._balancer {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._concentrated {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    try { if let v = self._cosmwasm {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_InfoByPoolType, rhs: Osmosis_Protorev_V1beta1_InfoByPoolType) -> Bool {
+    if lhs._stable != rhs._stable {return false}
+    if lhs._balancer != rhs._balancer {return false}
+    if lhs._concentrated != rhs._concentrated {return false}
+    if lhs._cosmwasm != rhs._cosmwasm {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_StablePoolInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".StablePoolInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "weight"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.weight) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.weight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.weight, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_StablePoolInfo, rhs: Osmosis_Protorev_V1beta1_StablePoolInfo) -> Bool {
+    if lhs.weight != rhs.weight {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_BalancerPoolInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".BalancerPoolInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "weight"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.weight) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.weight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.weight, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_BalancerPoolInfo, rhs: Osmosis_Protorev_V1beta1_BalancerPoolInfo) -> Bool {
+    if lhs.weight != rhs.weight {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_ConcentratedPoolInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ConcentratedPoolInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "weight"),
+    2: .standard(proto: "max_ticks_crossed"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.weight) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.maxTicksCrossed) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.weight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.weight, fieldNumber: 1)
+    }
+    if self.maxTicksCrossed != 0 {
+      try visitor.visitSingularUInt64Field(value: self.maxTicksCrossed, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_ConcentratedPoolInfo, rhs: Osmosis_Protorev_V1beta1_ConcentratedPoolInfo) -> Bool {
+    if lhs.weight != rhs.weight {return false}
+    if lhs.maxTicksCrossed != rhs.maxTicksCrossed {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_CosmwasmPoolInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".CosmwasmPoolInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "weight_maps"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.weightMaps) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.weightMaps.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.weightMaps, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_CosmwasmPoolInfo, rhs: Osmosis_Protorev_V1beta1_CosmwasmPoolInfo) -> Bool {
+    if lhs.weightMaps != rhs.weightMaps {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_WeightMap: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".WeightMap"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "weight"),
+    2: .standard(proto: "contract_address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.weight) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.contractAddress) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.weight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.weight, fieldNumber: 1)
+    }
+    if !self.contractAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.contractAddress, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_WeightMap, rhs: Osmosis_Protorev_V1beta1_WeightMap) -> Bool {
+    if lhs.weight != rhs.weight {return false}
+    if lhs.contractAddress != rhs.contractAddress {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -405,6 +860,124 @@ extension Osmosis_Protorev_V1beta1_BaseDenom: SwiftProtobuf.Message, SwiftProtob
   static func ==(lhs: Osmosis_Protorev_V1beta1_BaseDenom, rhs: Osmosis_Protorev_V1beta1_BaseDenom) -> Bool {
     if lhs.denom != rhs.denom {return false}
     if lhs.stepSize != rhs.stepSize {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_BaseDenoms: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".BaseDenoms"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "base_denoms"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.baseDenoms) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.baseDenoms.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.baseDenoms, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_BaseDenoms, rhs: Osmosis_Protorev_V1beta1_BaseDenoms) -> Bool {
+    if lhs.baseDenoms != rhs.baseDenoms {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_AllProtocolRevenue: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".AllProtocolRevenue"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "taker_fees_tracker"),
+    2: .standard(proto: "tx_fees_tracker"),
+    3: .standard(proto: "cyclic_arb_tracker"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._takerFeesTracker) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._txFeesTracker) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._cyclicArbTracker) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._takerFeesTracker {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._txFeesTracker {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._cyclicArbTracker {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_AllProtocolRevenue, rhs: Osmosis_Protorev_V1beta1_AllProtocolRevenue) -> Bool {
+    if lhs._takerFeesTracker != rhs._takerFeesTracker {return false}
+    if lhs._txFeesTracker != rhs._txFeesTracker {return false}
+    if lhs._cyclicArbTracker != rhs._cyclicArbTracker {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Protorev_V1beta1_CyclicArbTracker: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".CyclicArbTracker"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "cyclic_arb"),
+    2: .standard(proto: "height_accounting_starts_from"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.cyclicArb) }()
+      case 2: try { try decoder.decodeSingularInt64Field(value: &self.heightAccountingStartsFrom) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.cyclicArb.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.cyclicArb, fieldNumber: 1)
+    }
+    if self.heightAccountingStartsFrom != 0 {
+      try visitor.visitSingularInt64Field(value: self.heightAccountingStartsFrom, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Protorev_V1beta1_CyclicArbTracker, rhs: Osmosis_Protorev_V1beta1_CyclicArbTracker) -> Bool {
+    if lhs.cyclicArb != rhs.cyclicArb {return false}
+    if lhs.heightAccountingStartsFrom != rhs.heightAccountingStartsFrom {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -37,16 +37,23 @@ struct Osmosis_Incentives_GenesisState {
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
   mutating func clearParams() {self._params = nil}
 
-  /// gauges are all gauges that should exist at genesis
+  /// gauges are all gauges (not including group gauges) that should exist at
+  /// genesis
   var gauges: [Osmosis_Incentives_Gauge] = []
 
   /// lockable_durations are all lockup durations that gauges can be locked for
-  /// in order to recieve incentives
+  /// in order to receive incentives
   var lockableDurations: [SwiftProtobuf.Google_Protobuf_Duration] = []
 
   /// last_gauge_id is what the gauge number will increment from when creating
   /// the next gauge after genesis
   var lastGaugeID: UInt64 = 0
+
+  /// gauges are all group gauges that should exist at genesis
+  var groupGauges: [Osmosis_Incentives_Gauge] = []
+
+  /// groups are all the groups that should exist at genesis
+  var groups: [Osmosis_Incentives_Group] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -70,6 +77,8 @@ extension Osmosis_Incentives_GenesisState: SwiftProtobuf.Message, SwiftProtobuf.
     2: .same(proto: "gauges"),
     3: .standard(proto: "lockable_durations"),
     4: .standard(proto: "last_gauge_id"),
+    5: .standard(proto: "group_gauges"),
+    6: .same(proto: "groups"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -82,6 +91,8 @@ extension Osmosis_Incentives_GenesisState: SwiftProtobuf.Message, SwiftProtobuf.
       case 2: try { try decoder.decodeRepeatedMessageField(value: &self.gauges) }()
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.lockableDurations) }()
       case 4: try { try decoder.decodeSingularUInt64Field(value: &self.lastGaugeID) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.groupGauges) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.groups) }()
       default: break
       }
     }
@@ -104,6 +115,12 @@ extension Osmosis_Incentives_GenesisState: SwiftProtobuf.Message, SwiftProtobuf.
     if self.lastGaugeID != 0 {
       try visitor.visitSingularUInt64Field(value: self.lastGaugeID, fieldNumber: 4)
     }
+    if !self.groupGauges.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.groupGauges, fieldNumber: 5)
+    }
+    if !self.groups.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.groups, fieldNumber: 6)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -112,6 +129,8 @@ extension Osmosis_Incentives_GenesisState: SwiftProtobuf.Message, SwiftProtobuf.
     if lhs.gauges != rhs.gauges {return false}
     if lhs.lockableDurations != rhs.lockableDurations {return false}
     if lhs.lastGaugeID != rhs.lastGaugeID {return false}
+    if lhs.groupGauges != rhs.groupGauges {return false}
+    if lhs.groups != rhs.groups {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

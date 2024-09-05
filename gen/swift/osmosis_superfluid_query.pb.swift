@@ -496,6 +496,89 @@ struct Osmosis_Superfluid_QueryUnpoolWhitelistResponse {
   init() {}
 }
 
+struct Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var delegatorAddress: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var clPoolUserPositionRecords: [Osmosis_Superfluid_ConcentratedPoolUserPositionRecord] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var delegatorAddress: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var clPoolUserPositionRecords: [Osmosis_Superfluid_ConcentratedPoolUserPositionRecord] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// THIS QUERY IS TEMPORARY
+struct Osmosis_Superfluid_QueryRestSupplyRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var denom: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Osmosis_Superfluid_QueryRestSupplyResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// amount is the supply of the coin.
+  var amount: Cosmos_Base_V1beta1_Coin {
+    get {return _amount ?? Cosmos_Base_V1beta1_Coin()}
+    set {_amount = newValue}
+  }
+  /// Returns true if `amount` has been explicitly set.
+  var hasAmount: Bool {return self._amount != nil}
+  /// Clears the value of `amount`. Subsequent reads from it will return its default value.
+  mutating func clearAmount() {self._amount = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _amount: Cosmos_Base_V1beta1_Coin? = nil
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Osmosis_Superfluid_QueryParamsRequest: @unchecked Sendable {}
 extension Osmosis_Superfluid_QueryParamsResponse: @unchecked Sendable {}
@@ -529,6 +612,12 @@ extension Osmosis_Superfluid_QueryTotalDelegationByDelegatorRequest: @unchecked 
 extension Osmosis_Superfluid_QueryTotalDelegationByDelegatorResponse: @unchecked Sendable {}
 extension Osmosis_Superfluid_QueryUnpoolWhitelistRequest: @unchecked Sendable {}
 extension Osmosis_Superfluid_QueryUnpoolWhitelistResponse: @unchecked Sendable {}
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest: @unchecked Sendable {}
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse: @unchecked Sendable {}
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest: @unchecked Sendable {}
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse: @unchecked Sendable {}
+extension Osmosis_Superfluid_QueryRestSupplyRequest: @unchecked Sendable {}
+extension Osmosis_Superfluid_QueryRestSupplyResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -1638,6 +1727,202 @@ extension Osmosis_Superfluid_QueryUnpoolWhitelistResponse: SwiftProtobuf.Message
 
   static func ==(lhs: Osmosis_Superfluid_QueryUnpoolWhitelistResponse, rhs: Osmosis_Superfluid_QueryUnpoolWhitelistResponse) -> Bool {
     if lhs.poolIds != rhs.poolIds {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".UserConcentratedSuperfluidPositionsDelegatedRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "delegator_address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.delegatorAddress) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.delegatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.delegatorAddress, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest, rhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest) -> Bool {
+    if lhs.delegatorAddress != rhs.delegatorAddress {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".UserConcentratedSuperfluidPositionsDelegatedResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "cl_pool_user_position_records"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.clPoolUserPositionRecords) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.clPoolUserPositionRecords.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.clPoolUserPositionRecords, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse, rhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse) -> Bool {
+    if lhs.clPoolUserPositionRecords != rhs.clPoolUserPositionRecords {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".UserConcentratedSuperfluidPositionsUndelegatingRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "delegator_address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.delegatorAddress) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.delegatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.delegatorAddress, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest, rhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest) -> Bool {
+    if lhs.delegatorAddress != rhs.delegatorAddress {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".UserConcentratedSuperfluidPositionsUndelegatingResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "cl_pool_user_position_records"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.clPoolUserPositionRecords) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.clPoolUserPositionRecords.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.clPoolUserPositionRecords, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse, rhs: Osmosis_Superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse) -> Bool {
+    if lhs.clPoolUserPositionRecords != rhs.clPoolUserPositionRecords {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_QueryRestSupplyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryRestSupplyRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "denom"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.denom) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.denom.isEmpty {
+      try visitor.visitSingularStringField(value: self.denom, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_QueryRestSupplyRequest, rhs: Osmosis_Superfluid_QueryRestSupplyRequest) -> Bool {
+    if lhs.denom != rhs.denom {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Osmosis_Superfluid_QueryRestSupplyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryRestSupplyResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "amount"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._amount) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._amount {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Osmosis_Superfluid_QueryRestSupplyResponse, rhs: Osmosis_Superfluid_QueryRestSupplyResponse) -> Bool {
+    if lhs._amount != rhs._amount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
